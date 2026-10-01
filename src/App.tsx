@@ -956,25 +956,28 @@ export default function App() {
                     </p>
                   </div>
 
-                  {/* PUNTOS DE ESTA PÁGINA (EN LA PÁGINA MISMA, COMO FUE SOLICITADO) */}
+                  {/* PUNTOS DE ESTA PÁGINA (MISMO ESTILO MINIMALISTA CON LÍNEA SUTIL) */}
                   {selectedTramite.puntosMenu && (
-                    <div className="p-5 bg-slate-50 border border-[#DCDCDC] rounded-[16px] space-y-3">
-                      <div className="flex items-center justify-between">
-                        <h3 className="text-xs font-bold text-[#14649B] uppercase tracking-wider">
+                    <div className="space-y-1 pt-1 pb-4 border-b border-[#DCDCDC]/60">
+                      <div className="pb-2">
+                        <h3 className="text-sm font-bold text-[#19324B] tracking-tight">
                           Puntos de esta página
                         </h3>
-                        <span className="text-[11px] text-slate-400 font-medium">Navegación de secciones</span>
                       </div>
                       
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                      <div className="divide-y divide-[#DCDCDC]/60">
                         {selectedTramite.puntosMenu.map((punto) => (
                           <button
                             key={punto.id}
                             onClick={() => scrollToSection(punto.id)}
-                            className="py-2 px-3 rounded-lg border border-[#DCDCDC] bg-white text-[#19324B] hover:text-[#14649B] hover:border-[#14649B] transition-colors font-medium flex items-center justify-between group text-left"
+                            className="w-full py-2 flex items-center justify-between gap-3 text-left group transition-colors"
                           >
-                            <span>{punto.titulo}</span>
-                            <span className="text-slate-300 group-hover:text-[#14649B] text-xs">↓</span>
+                            <span className="text-[12px] text-slate-700 group-hover:text-[#14649B] transition-colors">
+                              {punto.titulo}
+                            </span>
+                            <span className="text-slate-400 group-hover:text-[#14649B] transition-colors text-xs shrink-0">
+                              ↓
+                            </span>
                           </button>
                         ))}
                       </div>
