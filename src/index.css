@@ -1,1 +1,31 @@
 @import "tailwindcss";
+
+:root {
+  --sat-primary: #14649B;
+  --sat-primary-light: #19AFE1;
+  --sat-primary-dark: #19324B;
+  --sat-success: #8CC63F;
+  --sat-warning: #FFB806;
+  --sat-error: #D9336E;
+  --sat-info: #19AFE1;
+  --sat-secondary: #824491;
+  
+  --sat-gray-50: #FFFFFF;
+  --sat-gray-100: #DCDCDC;
+  --sat-gray-900: #000000;
+
+  --font-h1: 48px;
+  --font-h2: 36px;
+  --font-h3: 28px;
+  --font-h4: 24px;
+  --font-body-lg: 18px;
+  --font-body: 16px;
+  --font-caption: 14px;
+}
+
+body {
+  font-family: "Gotham", "Montserrat", "Segoe UI", sans-serif;
+  color: var(--sat-primary-dark);
+  background-color: #FFFFFF;
+  -webkit-font-smoothing: antialiased;
+}
