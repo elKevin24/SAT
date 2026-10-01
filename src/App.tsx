@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Menu, X, ChevronRight, ChevronDown } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Menu, X, ChevronRight, ChevronDown, Check, Copy, Printer, ExternalLink, Search } from 'lucide-react';
 
 type PillarType = 'contribuyentes' | 'comercio_exterior' | 'profesionales' | 'organismos_especiales';
 
@@ -21,7 +21,7 @@ interface TramiteItem {
   requisitos?: string[];
   pasos?: string[];
   notasImportantes?: string[];
-  puntosMenu?: {
+  puntosMenu: {
     id: string;
     titulo: string;
   }[];
@@ -149,6 +149,7 @@ const TRAMITES_DATA: TramiteItem[] = [
     puntosMenu: [
       { id: 'requisitos', titulo: 'Requisitos obligatorios' },
       { id: 'pasos', titulo: 'Procedimiento y pasos' },
+      { id: 'formulario', titulo: 'Formulario oficial SAT' },
       { id: 'notas', titulo: 'Comisiones y notas importantes' },
       { id: 'base-legal', titulo: 'Base legal y normativa' },
       { id: 'enlace', titulo: 'Enlace oficial SAT' }
@@ -183,6 +184,7 @@ const TRAMITES_DATA: TramiteItem[] = [
     puntosMenu: [
       { id: 'requisitos', titulo: 'Requisitos obligatorios' },
       { id: 'pasos', titulo: 'Procedimiento y pasos' },
+      { id: 'formulario', titulo: 'Memorial y Formulario' },
       { id: 'base-legal', titulo: 'Base legal y normativa' },
       { id: 'enlace', titulo: 'Enlace oficial SAT' }
     ],
@@ -213,6 +215,8 @@ const TRAMITES_DATA: TramiteItem[] = [
     puntosMenu: [
       { id: 'requisitos', titulo: 'Requisitos obligatorios' },
       { id: 'pasos', titulo: 'Pasos de activación' },
+      { id: 'formulario', titulo: 'Agencia Virtual SAT' },
+      { id: 'base-legal', titulo: 'Base legal' },
       { id: 'enlace', titulo: 'Enlace oficial SAT' }
     ],
     requisitos: [
@@ -243,6 +247,8 @@ const TRAMITES_DATA: TramiteItem[] = [
     puntosMenu: [
       { id: 'requisitos', titulo: 'Requisitos obligatorios' },
       { id: 'pasos', titulo: 'Pasos de inscripción' },
+      { id: 'formulario', titulo: 'Formulario de Solicitud' },
+      { id: 'base-legal', titulo: 'Base legal' },
       { id: 'enlace', titulo: 'Enlace oficial SAT' }
     ],
     requisitos: [
@@ -348,6 +354,7 @@ const TRAMITES_DATA: TramiteItem[] = [
     puntosMenu: [
       { id: 'requisitos', titulo: 'Requisitos obligatorios' },
       { id: 'pasos', titulo: 'Pasos del traspaso' },
+      { id: 'formulario', titulo: 'Declaraguate SAT-8611' },
       { id: 'enlace', titulo: 'Enlace oficial SAT' }
     ],
     requisitos: [
@@ -480,17 +487,32 @@ const PILLARS_CONFIG: { id: PillarType; name: string; desc: string }[] = [
 ];
 
 export default function App() {
-  const [level, setLevel] = useState<1 | 2 | 3 | 4>(1);
+  const [level, setLevel] = useState<1 | 2 | 3 | 4>(4);
   const [selectedPillar, setSelectedPillar] = useState<PillarType>('profesionales');
   const [selectedCategoria, setSelectedCategoria] = useState<string>('Notarios y Abogados');
   const [selectedSubcategoria, setSelectedSubcategoria] = useState<string>('Especies Fiscales');
-  const [selectedTramite, setSelectedTramite] = useState<TramiteItem | null>(null);
   
-  // Accordion state in sidebar menu: ALL CLOSED BY DEFAULT
+  // Set default initial trámite to Venta de Especies Fiscales
+  const [selectedTramite, setSelectedTramite] = useState<TramiteItem | null>(TRAMITES_DATA[0]);
+  
+  // Accordion state in sidebar menu: starts closed
   const [openAccordionId, setOpenAccordionId] = useState<string | null>(null);
 
-  const [menuSidebarOpen, setMenuSidebarOpen] = useState<boolean>(false);
+  // Active section for highlight
+  const [activeSectionId, setActiveSectionId] = useState<string>('');
+
+  // Interactive requirement checklist state
+  const [checkedRequirements, setCheckedRequirements] = useState<Record<string, boolean>>({});
+
+  // Copy notification state
+  const [copiedLink, setCopiedLink] = useState(false);
+
+  // Sidebar visibility
+  const [menuSidebarOpen, setMenuSidebarOpen] = useState<boolean>(true);
+
+  // Search query & results
   const [searchQuery, setSearchQuery] = useState('');
+  const [isSearchFocused, setIsSearchFocused] = useState(false);
 
   const currentPillarItems = TRAMITES_DATA.filter(i => i.pillar === selectedPillar);
   const currentCategoriaItems = currentPillarItems.filter(i => i.categoria === selectedCategoria);
@@ -499,11 +521,20 @@ export default function App() {
   const categoriasInPillar = Array.from(new Set(currentPillarItems.map(i => i.categoria)));
   const subcategoriasInCategoria = Array.from(new Set(currentCategoriaItems.map(i => i.subcategoria)));
 
+  // Filtered search results
+  const searchResults = searchQuery.trim().length > 1
+    ? TRAMITES_DATA.filter(t => 
+        t.tramite.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        t.descripcion.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        (t.formulario && t.formulario.toLowerCase().includes(searchQuery.toLowerCase())) ||
+        t.subcategoria.toLowerCase().includes(searchQuery.toLowerCase())
+      )
+    : [];
+
   const handleGoHome = () => {
     setLevel(1);
     setSelectedTramite(null);
     setOpenAccordionId(null);
-    setMenuSidebarOpen(false);
   };
 
   const handleSelectPillar = (pillarId: PillarType) => {
@@ -516,7 +547,6 @@ export default function App() {
     setSelectedTramite(null);
     setOpenAccordionId(null);
     setLevel(2);
-    setMenuSidebarOpen(false);
   };
 
   const handleSelectCategoria = (cat: string) => {
@@ -527,7 +557,6 @@ export default function App() {
     setSelectedTramite(null);
     setOpenAccordionId(null);
     setLevel(3);
-    setMenuSidebarOpen(false);
   };
 
   const handleSelectSubcategoria = (sub: string) => {
@@ -535,29 +564,66 @@ export default function App() {
     const trms = currentCategoriaItems.filter(i => i.subcategoria === sub);
     const item = trms[0] || null;
     setSelectedTramite(item);
-    // Menu accordions closed by default as instructed
     setOpenAccordionId(null);
     setLevel(4);
-    setMenuSidebarOpen(true);
   };
 
-  const handleSelectTramite = (item: TramiteItem) => {
+  // FULL FUNCTIONALITY: Clicking any menu gestion loads it immediately AND opens its accordion
+  const handleSelectMenuGestion = (item: TramiteItem) => {
     setSelectedTramite(item);
-    setLevel(4);
-    setMenuSidebarOpen(true);
+    // If it's already open, keep it or toggle; otherwise open it
+    setOpenAccordionId(item.id);
+    setActiveSectionId('');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  // Toggle accordion in sidebar
-  const handleToggleAccordion = (itemId: string) => {
+  // Toggle accordion without navigating
+  const handleToggleAccordionOnly = (e: React.MouseEvent, itemId: string) => {
+    e.stopPropagation();
     setOpenAccordionId(prev => (prev === itemId ? null : itemId));
   };
 
-  // Smooth in-page scrolling function
+  // Smooth scroll to in-page section with sticky header offset
   const scrollToSection = (id: string) => {
+    setActiveSectionId(id);
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const headerOffset = 135;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
     }
+  };
+
+  // Toggle requirement check
+  const handleToggleRequirement = (key: string) => {
+    setCheckedRequirements(prev => ({
+      ...prev,
+      [key]: !prev[key]
+    }));
+  };
+
+  // Copy trámite URL
+  const handleCopyLink = () => {
+    navigator.clipboard.writeText(window.location.href);
+    setCopiedLink(true);
+    setTimeout(() => setCopiedLink(false), 2500);
+  };
+
+  // Select from search results
+  const handleSelectSearchResult = (item: TramiteItem) => {
+    setSelectedPillar(item.pillar);
+    setSelectedCategoria(item.categoria);
+    setSelectedSubcategoria(item.subcategoria);
+    setSelectedTramite(item);
+    setLevel(4);
+    setSearchQuery('');
+    setIsSearchFocused(false);
+    setOpenAccordionId(item.id);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
@@ -567,7 +633,7 @@ export default function App() {
       <div className="h-1 w-full bg-gradient-to-r from-[#19324B] via-[#14649B] to-[#19AFE1]" />
 
       {/* Fixed Sticky Header Container (Height 72px for top header + Second Nav Bar) */}
-      <div className="sticky top-0 z-40 bg-white border-b border-[#DCDCDC] shadow-sm">
+      <div className="sticky top-0 z-40 bg-white border-b border-[#DCDCDC] shadow-xs">
         
         {/* 1st Top Header: Height 72px */}
         <header className="h-[72px] flex items-center border-b border-[#DCDCDC]">
@@ -576,7 +642,7 @@ export default function App() {
             {/* Logo SAT: Confiable, Institucional, Moderno */}
             <div className="flex items-center gap-3.5 cursor-pointer group" onClick={handleGoHome}>
               <div className="relative">
-                <div className="w-10 h-10 rounded-lg bg-[#19324B] group-hover:bg-[#14649B] flex items-center justify-center text-white font-black text-sm tracking-tight transition-colors shadow-sm">
+                <div className="w-10 h-10 rounded-lg bg-[#19324B] group-hover:bg-[#14649B] flex items-center justify-center text-white font-black text-sm tracking-tight transition-colors shadow-xs">
                   SAT
                 </div>
                 {/* Subtle Institutional Orange Touch (#FFB806 warning accent) */}
@@ -588,15 +654,44 @@ export default function App() {
               </div>
             </div>
 
-            {/* Búsqueda: Input altura 48px, borde #DCDCDC, radio 8px, foco #14649B */}
+            {/* Búsqueda Interactiva con resultados en tiempo real */}
             <div className="flex-1 max-w-md relative">
-              <input 
-                type="text" 
-                placeholder="Buscar trámites, formularios o requisitos..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full h-[44px] pl-4 pr-4 bg-white border border-[#DCDCDC] rounded-lg text-sm text-[#19324B] placeholder:text-slate-400 focus:outline-none focus:border-[#14649B] focus:ring-4 focus:ring-[#14649B]/15 transition-all"
-              />
+              <div className="relative">
+                <input 
+                  type="text" 
+                  placeholder="Buscar trámites, formularios o requisitos..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onFocus={() => setIsSearchFocused(true)}
+                  className="w-full h-[44px] pl-10 pr-4 bg-white border border-[#DCDCDC] rounded-lg text-sm text-[#19324B] placeholder:text-slate-400 focus:outline-none focus:border-[#14649B] focus:ring-4 focus:ring-[#14649B]/15 transition-all"
+                />
+                <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5" />
+                {searchQuery && (
+                  <button 
+                    onClick={() => setSearchQuery('')}
+                    className="absolute right-3 top-3 text-slate-400 hover:text-slate-600 text-xs"
+                  >
+                    ✕
+                  </button>
+                )}
+              </div>
+
+              {/* Resultados interactivos de búsqueda en vivo */}
+              {isSearchFocused && searchResults.length > 0 && (
+                <div className="absolute left-0 right-0 top-[48px] bg-white border border-[#DCDCDC] rounded-lg shadow-lg z-50 max-h-80 overflow-y-auto divide-y divide-[#DCDCDC]/60">
+                  {searchResults.map((res) => (
+                    <div
+                      key={res.id}
+                      onClick={() => handleSelectSearchResult(res)}
+                      className="p-3 hover:bg-[#14649B]/5 cursor-pointer transition-colors"
+                    >
+                      <div className="text-xs font-bold text-[#14649B]">{res.tramite}</div>
+                      <div className="text-[11px] text-slate-500 line-clamp-1">{res.descripcion}</div>
+                      <div className="text-[10px] text-slate-400 pt-1 font-medium">{res.subcategoria} · {res.categoria}</div>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
         </header>
@@ -604,13 +699,13 @@ export default function App() {
         {/* 2nd Bar: Centered Contents (Menú, Inicio, and Pillars) */}
         <div className="bg-[#FFFFFF] px-8 py-2.5 flex items-center justify-center gap-6 overflow-x-auto text-sm font-medium">
           
-          {/* Hamburger Menu button with ONLY the menu outline icon as requested */}
+          {/* Hamburger Menu button */}
           <button 
             onClick={() => setMenuSidebarOpen(!menuSidebarOpen)}
-            className="px-3.5 py-1.5 bg-white border border-[#DCDCDC] hover:border-[#14649B] text-[#19324B] hover:text-[#14649B] rounded-lg font-bold shrink-0 transition-colors flex items-center gap-2 shadow-sm"
+            className="px-3.5 py-1.5 bg-white border border-[#DCDCDC] hover:border-[#14649B] text-[#19324B] hover:text-[#14649B] rounded-lg font-bold shrink-0 transition-colors flex items-center gap-2 shadow-xs"
           >
             {menuSidebarOpen ? <X className="w-4 h-4 text-[#D9336E]" /> : <Menu className="w-4 h-4 text-[#14649B]" />}
-            {menuSidebarOpen ? 'Cerrar Menú' : 'Menú'}
+            {menuSidebarOpen ? 'Ocultar Menú' : 'Mostrar Menú'}
           </button>
 
           {/* Inicio button right after Menú */}
@@ -618,7 +713,7 @@ export default function App() {
             onClick={handleGoHome}
             className={`px-4 py-1.5 rounded-lg font-bold shrink-0 transition-all ${
               level === 1 
-                ? 'bg-[#14649B] text-white shadow-sm' 
+                ? 'bg-[#14649B] text-white shadow-xs' 
                 : 'bg-white border border-[#DCDCDC] hover:border-[#14649B] text-[#19324B]'
             }`}
           >
@@ -650,15 +745,15 @@ export default function App() {
       {/* Two-column layout: Context-Aware Lateral Menu + Main Content */}
       <div className="flex-1 max-w-7xl w-full mx-auto flex flex-col md:flex-row">
         
-        {/* LATERAL MENU (ACORDEÓN DE GESTIONES CERRADO POR DEFECTO) */}
+        {/* LATERAL MENU (MINIMALISTA, FUNCIONAL, CON ACCIÓN DIRECTA) */}
         {menuSidebarOpen && (
           <aside className="w-full md:w-80 border-r border-[#DCDCDC] p-6 space-y-6 shrink-0 bg-white md:sticky md:top-[124px] md:h-[calc(100vh-124px)] md:overflow-y-auto">
             
             {/* Nivel 1 Menu: Lista de Macro Grupos */}
             {level === 1 && (
               <div className="space-y-3">
-                <div className="border-b border-[#DCDCDC] pb-2">
-                  <h3 className="text-base font-extrabold text-[#19324B]">Grupos Tributarios</h3>
+                <div className="border-b border-[#DCDCDC]/60 pb-2">
+                  <h3 className="text-base font-bold text-[#19324B]">Grupos Tributarios</h3>
                 </div>
                 <ul className="space-y-1.5 border-l-2 border-[#DCDCDC] pl-2.5 text-sm">
                   {PILLARS_CONFIG.map((p) => (
@@ -682,9 +777,9 @@ export default function App() {
             {/* Nivel 2 Menu: Categorías dentro del Pilar */}
             {level === 2 && (
               <div className="space-y-3">
-                <div className="border-b border-[#DCDCDC] pb-2">
+                <div className="border-b border-[#DCDCDC]/60 pb-2">
                   <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">Pilar activo</span>
-                  <h3 className="text-base font-extrabold text-[#19324B]">
+                  <h3 className="text-base font-bold text-[#19324B]">
                     {PILLARS_CONFIG.find(p => p.id === selectedPillar)?.name}
                   </h3>
                 </div>
@@ -710,9 +805,9 @@ export default function App() {
             {/* Nivel 3 Menu: Subcategorías dentro de la Categoría */}
             {level === 3 && (
               <div className="space-y-3">
-                <div className="border-b border-[#DCDCDC] pb-2">
+                <div className="border-b border-[#DCDCDC]/60 pb-2">
                   <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">Categoría activa</span>
-                  <h3 className="text-base font-extrabold text-[#19324B]">{selectedCategoria}</h3>
+                  <h3 className="text-base font-bold text-[#19324B]">{selectedCategoria}</h3>
                 </div>
                 <ul className="space-y-1.5 border-l-2 border-[#DCDCDC] pl-2.5 text-sm">
                   {subcategoriasInCategoria.map((sub, idx) => (
@@ -744,7 +839,7 @@ export default function App() {
                   </h3>
                 </div>
 
-                {/* Acordeón de gestiones minimalista con línea sutil divisoria */}
+                {/* Acordeón de gestiones con funcionalidad completa e inmediata al hacer clic */}
                 <div className="divide-y divide-[#DCDCDC]/60">
                   {currentSubcategoriaItems.map((item) => {
                     const isOpen = openAccordionId === item.id;
@@ -752,10 +847,11 @@ export default function App() {
 
                     return (
                       <div key={item.id} className="py-2.5">
-                        {/* Botón de opción del menú con flecha sutil */}
-                        <button
-                          onClick={() => handleToggleAccordion(item.id)}
-                          className="w-full flex items-center justify-between gap-3 text-left group transition-colors py-0.5"
+                        
+                        {/* Al hacer clic en el nombre se carga directamente la gestión en pantalla */}
+                        <div 
+                          onClick={() => handleSelectMenuGestion(item)}
+                          className="w-full flex items-center justify-between gap-3 text-left group transition-colors py-0.5 cursor-pointer"
                         >
                           <span className={`text-[12px] leading-snug transition-colors ${
                             isSelected 
@@ -764,32 +860,23 @@ export default function App() {
                           }`}>
                             {item.tramite}
                           </span>
-                          <span className="shrink-0 text-slate-400 group-hover:text-[#14649B]">
+                          
+                          <button
+                            type="button"
+                            onClick={(e) => handleToggleAccordionOnly(e, item.id)}
+                            className="p-1 text-slate-400 group-hover:text-[#14649B] hover:bg-slate-100 rounded transition-colors shrink-0"
+                            title={isOpen ? 'Contraer resumen' : 'Expandir resumen'}
+                          >
                             {isOpen ? <ChevronDown className="w-3.5 h-3.5 text-[#14649B]" /> : <ChevronRight className="w-3.5 h-3.5" />}
-                          </span>
-                        </button>
+                          </button>
+                        </div>
 
-                        {/* Contenido desplegable sutil y sin cajas voluminosas */}
+                        {/* Contenido desplegable sutil: únicamente la descripción breve */}
                         {isOpen && (
-                          <div className="pt-2 pb-1 space-y-1.5 text-xs">
-                            <p className="text-slate-600 text-[11px] leading-relaxed">
+                          <div className="pt-1.5 pb-0.5 text-xs">
+                            <p className="text-slate-500 text-[11px] leading-relaxed">
                               {item.descripcion}
                             </p>
-                            {item.formulario && (
-                              <div className="text-[11px] text-[#14649B] font-medium">
-                                {item.formulario}
-                              </div>
-                            )}
-                            <button
-                              onClick={() => handleSelectTramite(item)}
-                              className={`text-[11px] font-bold transition-colors underline pt-0.5 block ${
-                                isSelected 
-                                  ? 'text-[#14649B] cursor-default' 
-                                  : 'text-[#14649B] hover:text-[#19324B]'
-                              }`}
-                            >
-                              {isSelected ? 'Gestión abierta en pantalla' : 'Abrir gestión'}
-                            </button>
                           </div>
                         )}
                       </div>
@@ -800,8 +887,8 @@ export default function App() {
               </div>
             )}
 
-            {/* Quick reset navigation */}
-            <div className="pt-4 border-t border-[#DCDCDC]">
+            {/* Botón de volver al inicio */}
+            <div className="pt-4 border-t border-[#DCDCDC]/60">
               <button 
                 onClick={handleGoHome}
                 className="text-xs text-[#14649B] hover:text-[#19324B] font-semibold underline"
@@ -937,7 +1024,7 @@ export default function App() {
           )}
 
           {/* ========================================================
-              LEVEL 4: TRÁMITES & DETAIL (CON PUNTOS DE ESTA PÁGINA AQUÍ)
+              LEVEL 4: TRÁMITES & DETAIL CON FUNCIONALIDAD COMPLETA
               ======================================================== */}
           {level === 4 && (
             <div className="space-y-8 max-w-3xl animate-fadeIn">
@@ -945,24 +1032,53 @@ export default function App() {
               {selectedTramite ? (
                 <div className="space-y-8">
                   
-                  {/* Título y Resumen del Trámite */}
-                  <div className="space-y-3 border-b border-[#DCDCDC] pb-6">
-                    <h2 className="text-2xl md:text-3xl font-black text-[#19324B] tracking-tight">
-                      {selectedTramite.tramite}
-                    </h2>
+                  {/* Título, Resumen y Barra de Acciones del Trámite */}
+                  <div className="space-y-4 border-b border-[#DCDCDC]/60 pb-6">
+                    <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
+                      <div>
+                        <span className="text-[11px] font-bold text-[#14649B] uppercase tracking-wider block pb-1">
+                          {selectedTramite.subcategoria}
+                        </span>
+                        <h2 className="text-2xl md:text-3xl font-black text-[#19324B] tracking-tight">
+                          {selectedTramite.tramite}
+                        </h2>
+                      </div>
+
+                      {/* Botones de acción funcional: Copiar enlace & Imprimir */}
+                      <div className="flex items-center gap-2 shrink-0">
+                        <button
+                          onClick={handleCopyLink}
+                          className="px-3 py-1.5 text-xs font-bold border border-[#DCDCDC] rounded-lg hover:border-[#14649B] hover:text-[#14649B] transition-colors flex items-center gap-1.5"
+                          title="Copiar enlace directo"
+                        >
+                          {copiedLink ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5" />}
+                          {copiedLink ? '¡Copiado!' : 'Compartir'}
+                        </button>
+
+                        <button
+                          onClick={() => window.print()}
+                          className="px-3 py-1.5 text-xs font-bold border border-[#DCDCDC] rounded-lg hover:border-[#14649B] hover:text-[#14649B] transition-colors flex items-center gap-1.5"
+                          title="Imprimir resumen"
+                        >
+                          <Printer className="w-3.5 h-3.5" />
+                          Imprimir
+                        </button>
+                      </div>
+                    </div>
 
                     <p className="text-base text-slate-700 leading-relaxed font-normal">
                       {selectedTramite.descripcion}
                     </p>
                   </div>
 
-                  {/* PUNTOS DE ESTA PÁGINA (MISMO ESTILO MINIMALISTA CON LÍNEA SUTIL) */}
+                  {/* PUNTOS DE ESTA PÁGINA (MISMO ESTILO MINIMALISTA CON LÍNEA SUTIL Y SCROLL SUAVE) */}
                   {selectedTramite.puntosMenu && (
                     <div className="space-y-1 pt-1 pb-4 border-b border-[#DCDCDC]/60">
-                      <div className="pb-2">
+                      <div className="pb-2 flex items-center justify-between">
                         <h3 className="text-sm font-bold text-[#19324B] tracking-tight">
                           Puntos de esta página
                         </h3>
+                        <span className="text-[10px] text-slate-400 font-medium">Navegación de secciones</span>
                       </div>
                       
                       <div className="divide-y divide-[#DCDCDC]/60">
@@ -970,9 +1086,15 @@ export default function App() {
                           <button
                             key={punto.id}
                             onClick={() => scrollToSection(punto.id)}
-                            className="w-full py-2 flex items-center justify-between gap-3 text-left group transition-colors"
+                            className={`w-full py-2 flex items-center justify-between gap-3 text-left group transition-colors ${
+                              activeSectionId === punto.id ? 'text-[#14649B] font-bold' : ''
+                            }`}
                           >
-                            <span className="text-[12px] text-slate-700 group-hover:text-[#14649B] transition-colors">
+                            <span className={`text-[12px] transition-colors ${
+                              activeSectionId === punto.id 
+                                ? 'text-[#14649B] font-bold' 
+                                : 'text-slate-700 group-hover:text-[#14649B]'
+                            }`}>
                               {punto.titulo}
                             </span>
                             <span className="text-slate-400 group-hover:text-[#14649B] transition-colors text-xs shrink-0">
@@ -984,7 +1106,7 @@ export default function App() {
                     </div>
                   )}
 
-                  {/* Modality Points if present (Venta de Especies Fiscales) */}
+                  {/* Requisitos por Modalidad si están presentes (Venta de Especies Fiscales) */}
                   {selectedTramite.requisitosPorModalidad && (
                     <div className="space-y-8">
                       
@@ -997,12 +1119,27 @@ export default function App() {
                         <p className="text-sm text-slate-600">Requisitos obligatorios para la adquisición directa por parte del profesional Notario habilitado.</p>
                         
                         <div className="space-y-2.5">
-                          {selectedTramite.requisitosPorModalidad[0]?.requisitos.map((req, idx) => (
-                            <div key={idx} className="p-4 bg-white border border-[#DCDCDC] rounded-lg text-sm text-slate-700 leading-relaxed flex items-start gap-3">
-                              <span className="w-2 h-2 rounded-full bg-[#14649B] shrink-0 mt-1.5" />
-                              <span>{req}</span>
-                            </div>
-                          ))}
+                          {selectedTramite.requisitosPorModalidad[0]?.requisitos.map((req, idx) => {
+                            const reqKey = `${selectedTramite.id}-notario-${idx}`;
+                            const isChecked = !!checkedRequirements[reqKey];
+
+                            return (
+                              <div 
+                                key={idx} 
+                                onClick={() => handleToggleRequirement(reqKey)}
+                                className={`p-4 bg-white border rounded-lg text-sm leading-relaxed flex items-start gap-3 transition-colors cursor-pointer ${
+                                  isChecked ? 'border-emerald-500 bg-emerald-50/20 text-slate-600' : 'border-[#DCDCDC] text-slate-700'
+                                }`}
+                              >
+                                <span className={`w-4 h-4 rounded border mt-0.5 flex items-center justify-center shrink-0 transition-colors ${
+                                  isChecked ? 'bg-emerald-600 border-emerald-600 text-white' : 'border-slate-300 bg-white'
+                                }`}>
+                                  {isChecked && <Check className="w-3 h-3 stroke-3" />}
+                                </span>
+                                <span className={isChecked ? 'line-through text-slate-500' : ''}>{req}</span>
+                              </div>
+                            );
+                          })}
                         </div>
                       </section>
 
@@ -1015,12 +1152,27 @@ export default function App() {
                         <p className="text-sm text-slate-600">Documentación que debe presentar la persona designada por el Notario para realizar el retiro.</p>
 
                         <div className="space-y-2.5">
-                          {selectedTramite.requisitosPorModalidad[1]?.requisitos.map((req, idx) => (
-                            <div key={idx} className="p-4 bg-white border border-[#DCDCDC] rounded-lg text-sm text-slate-700 leading-relaxed flex items-start gap-3">
-                              <span className="w-2 h-2 rounded-full bg-[#19AFE1] shrink-0 mt-1.5" />
-                              <span>{req}</span>
-                            </div>
-                          ))}
+                          {selectedTramite.requisitosPorModalidad[1]?.requisitos.map((req, idx) => {
+                            const reqKey = `${selectedTramite.id}-tercero-${idx}`;
+                            const isChecked = !!checkedRequirements[reqKey];
+
+                            return (
+                              <div 
+                                key={idx} 
+                                onClick={() => handleToggleRequirement(reqKey)}
+                                className={`p-4 bg-white border rounded-lg text-sm leading-relaxed flex items-start gap-3 transition-colors cursor-pointer ${
+                                  isChecked ? 'border-emerald-500 bg-emerald-50/20 text-slate-600' : 'border-[#DCDCDC] text-slate-700'
+                                }`}
+                              >
+                                <span className={`w-4 h-4 rounded border mt-0.5 flex items-center justify-center shrink-0 transition-colors ${
+                                  isChecked ? 'bg-emerald-600 border-emerald-600 text-white' : 'border-slate-300 bg-white'
+                                }`}>
+                                  {isChecked && <Check className="w-3 h-3 stroke-3" />}
+                                </span>
+                                <span className={isChecked ? 'line-through text-slate-500' : ''}>{req}</span>
+                              </div>
+                            );
+                          })}
                         </div>
                       </section>
 
@@ -1033,29 +1185,59 @@ export default function App() {
                         <p className="text-sm text-slate-600">Requisitos para personas individuales o jurídicas acreditadas con patente de expendio.</p>
 
                         <div className="space-y-2.5">
-                          {selectedTramite.requisitosPorModalidad[2]?.requisitos.map((req, idx) => (
-                            <div key={idx} className="p-4 bg-white border border-[#DCDCDC] rounded-lg text-sm text-slate-700 leading-relaxed flex items-start gap-3">
-                              <span className="w-2 h-2 rounded-full bg-[#8CC63F] shrink-0 mt-1.5" />
-                              <span>{req}</span>
-                            </div>
-                          ))}
+                          {selectedTramite.requisitosPorModalidad[2]?.requisitos.map((req, idx) => {
+                            const reqKey = `${selectedTramite.id}-pat-${idx}`;
+                            const isChecked = !!checkedRequirements[reqKey];
+
+                            return (
+                              <div 
+                                key={idx} 
+                                onClick={() => handleToggleRequirement(reqKey)}
+                                className={`p-4 bg-white border rounded-lg text-sm leading-relaxed flex items-start gap-3 transition-colors cursor-pointer ${
+                                  isChecked ? 'border-emerald-500 bg-emerald-50/20 text-slate-600' : 'border-[#DCDCDC] text-slate-700'
+                                }`}
+                              >
+                                <span className={`w-4 h-4 rounded border mt-0.5 flex items-center justify-center shrink-0 transition-colors ${
+                                  isChecked ? 'bg-emerald-600 border-emerald-600 text-white' : 'border-slate-300 bg-white'
+                                }`}>
+                                  {isChecked && <Check className="w-3 h-3 stroke-3" />}
+                                </span>
+                                <span className={isChecked ? 'line-through text-slate-500' : ''}>{req}</span>
+                              </div>
+                            );
+                          })}
                         </div>
                       </section>
 
                     </div>
                   )}
 
-                  {/* Standard requirements if no modality split */}
+                  {/* Requisitos estándar si no tiene modalidades */}
                   {!selectedTramite.requisitosPorModalidad && selectedTramite.requisitos && (
                     <section id="requisitos" className="scroll-mt-36 space-y-4">
                       <h3 className="text-xl font-bold text-[#19324B]">Requisitos obligatorios</h3>
                       <div className="space-y-2.5">
-                        {selectedTramite.requisitos.map((req, idx) => (
-                          <div key={idx} className="p-4 bg-white border border-[#DCDCDC] rounded-lg text-sm text-slate-700 leading-relaxed flex items-start gap-3">
-                            <span className="w-2 h-2 rounded-full bg-[#14649B] shrink-0 mt-1.5" />
-                            <span>{req}</span>
-                          </div>
-                        ))}
+                        {selectedTramite.requisitos.map((req, idx) => {
+                          const reqKey = `${selectedTramite.id}-req-${idx}`;
+                          const isChecked = !!checkedRequirements[reqKey];
+
+                          return (
+                            <div 
+                              key={idx} 
+                              onClick={() => handleToggleRequirement(reqKey)}
+                              className={`p-4 bg-white border rounded-lg text-sm leading-relaxed flex items-start gap-3 transition-colors cursor-pointer ${
+                                isChecked ? 'border-emerald-500 bg-emerald-50/20 text-slate-600' : 'border-[#DCDCDC] text-slate-700'
+                              }`}
+                            >
+                              <span className={`w-4 h-4 rounded border mt-0.5 flex items-center justify-center shrink-0 transition-colors ${
+                                isChecked ? 'bg-emerald-600 border-emerald-600 text-white' : 'border-slate-300 bg-white'
+                              }`}>
+                                {isChecked && <Check className="w-3 h-3 stroke-3" />}
+                              </span>
+                              <span className={isChecked ? 'line-through text-slate-500' : ''}>{req}</span>
+                            </div>
+                          );
+                        })}
                       </div>
                     </section>
                   )}
@@ -1077,18 +1259,27 @@ export default function App() {
                     </section>
                   )}
 
-                  {/* Punto: Formulario Declaraguate */}
+                  {/* Punto: Formulario Oficial */}
                   {selectedTramite.formulario && (
                     <section id="formulario" className="scroll-mt-36 space-y-3 pt-2">
-                      <h3 className="text-xl font-bold text-[#19324B]">Formulario oficial Declaraguate</h3>
-                      <div className="p-5 bg-[#14649B]/5 border border-[#14649B]/20 rounded-xl space-y-2">
+                      <h3 className="text-xl font-bold text-[#19324B]">Formulario oficial de gestión</h3>
+                      <div className="p-5 bg-[#14649B]/5 border border-[#14649B]/20 rounded-xl space-y-3">
                         <div className="flex items-center justify-between">
                           <span className="font-bold text-[#14649B] text-base">{selectedTramite.formulario}</span>
                           <span className="text-xs font-bold text-white bg-[#14649B] px-2 py-0.5 rounded">En línea 24/7</span>
                         </div>
                         <p className="text-xs text-slate-600 leading-relaxed">
-                          Generar de forma gratuita en el portal oficial de Declaraguate (declaraguate.sat.gob.gt). Al completarlo y congelarlo, se obtiene la boleta SAT-2000 para el pago electrónico o presencial en bancos del sistema.
+                          Llenar en el portal oficial Declaraguate o Agencia Virtual. Al congelarlo se emite la boleta SAT-2000 para el pago presencial o electrónico.
                         </p>
+                        <a 
+                          href="https://declaraguate.sat.gob.gt" 
+                          target="_blank" 
+                          rel="noreferrer"
+                          className="inline-flex items-center gap-1.5 text-xs font-bold text-[#14649B] hover:underline"
+                        >
+                          <span>Ir al sistema de formularios Declaraguate</span>
+                          <ExternalLink className="w-3.5 h-3.5" />
+                        </a>
                       </div>
                     </section>
                   )}
@@ -1118,18 +1309,20 @@ export default function App() {
                     </section>
                   )}
 
-                  {/* Punto: Retiro en Agencias SAT */}
-                  <section id="agencias" className="scroll-mt-36 space-y-3 pt-2">
-                    <h3 className="text-xl font-bold text-[#19324B]">Retiro en Oficinas y Agencias Tributarias SAT</h3>
-                    <div className="p-5 bg-white border border-[#DCDCDC] rounded-xl space-y-2 text-sm text-slate-700">
-                      <p>
-                        Efectuar la recepción de las especies fiscales y la razón electrónica de correlativos de Papel de Protocolo en cualquier oficina o agencia tributaria de la SAT a nivel nacional.
-                      </p>
-                      <div className="text-xs text-[#14649B] font-semibold pt-1">
-                        Horario habitual: Lunes a viernes de 08:00 a 16:00 horas (sin cerrar al mediodía).
+                  {/* Punto: Retiro en Agencias SAT (condicional) */}
+                  {selectedTramite.puntosMenu?.some(p => p.id === 'agencias') && (
+                    <section id="agencias" className="scroll-mt-36 space-y-3 pt-2">
+                      <h3 className="text-xl font-bold text-[#19324B]">Retiro en Oficinas y Agencias Tributarias SAT</h3>
+                      <div className="p-5 bg-white border border-[#DCDCDC] rounded-xl space-y-2 text-sm text-slate-700">
+                        <p>
+                          Efectuar la recepción de las especies fiscales y la razón electrónica de correlativos de Papel de Protocolo en cualquier oficina o agencia tributaria de la SAT a nivel nacional.
+                        </p>
+                        <div className="text-xs text-[#14649B] font-semibold pt-1">
+                          Horario habitual: Lunes a viernes de 08:00 a 16:00 horas (sin cerrar al mediodía).
+                        </div>
                       </div>
-                    </div>
-                  </section>
+                    </section>
+                  )}
 
                   {/* Punto: Enlace Oficial SAT */}
                   <section id="enlace" className="scroll-mt-36 pt-4 border-t border-[#DCDCDC]">
@@ -1142,9 +1335,10 @@ export default function App() {
                         href={selectedTramite.url}
                         target="_blank"
                         rel="noreferrer"
-                        className="px-5 py-2.5 bg-[#14649B] hover:bg-[#19AFE1] text-white font-bold text-xs rounded-lg transition-all shadow-sm shrink-0"
+                        className="px-5 py-2.5 bg-[#14649B] hover:bg-[#19AFE1] text-white font-bold text-xs rounded-lg transition-all shadow-sm shrink-0 flex items-center gap-1.5"
                       >
-                        Abrir trámite oficial en la SAT
+                        <span>Abrir trámite oficial en la SAT</span>
+                        <ExternalLink className="w-3.5 h-3.5" />
                       </a>
                     </div>
                   </section>
@@ -1157,7 +1351,7 @@ export default function App() {
                     {currentSubcategoriaItems.map((item) => (
                       <div 
                         key={item.id}
-                        onClick={() => handleSelectTramite(item)}
+                        onClick={() => handleSelectMenuGestion(item)}
                         className="p-6 bg-white border border-[#DCDCDC] rounded-[16px] hover:border-[#14649B] hover:shadow-[0_4px_12px_rgba(0,0,0,0.12)] transition-all cursor-pointer space-y-2.5 group"
                       >
                         <h4 className="text-base font-bold text-[#19324B] group-hover:text-[#14649B]">{item.tramite}</h4>
