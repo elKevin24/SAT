@@ -1,0 +1,6 @@
+{
+  "name": "Portal Tributario SAT Guatemala (Estilo ATO)",
+  "description": "Portal interactivo de impuestos para SAT Guatemala inspirado en el ATO australiano, con calculadoras fiscales, asistente IA, guías y importador de Excel/CSV.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
