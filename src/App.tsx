@@ -1,561 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ChevronRight, Check, Copy, Printer, ExternalLink, Search } from 'lucide-react';
-
-type PillarType = 'contribuyentes' | 'comercio_exterior' | 'profesionales' | 'organismos_especiales';
-
-interface TramiteItem {
-  id: string;
-  pillar: PillarType;
-  pillarName: string;
-  categoria: string;
-  subcategoria: string;
-  tramite: string;
-  url: string;
-  descripcion: string;
-  baseLegal?: string;
-  formulario?: string;
-  requisitosPorModalidad?: {
-    modalidad: string;
-    requisitos: string[];
-  }[];
-  requisitos?: string[];
-  pasos?: string[];
-  notasImportantes?: string[];
-  puntosMenu: {
-    id: string;
-    titulo: string;
-  }[];
-}
-
-const TRAMITES_DATA: TramiteItem[] = [
-  // 3. Profesionales -> Notarios y Abogados -> Especies Fiscales (Gestiones oficiales en verbos de acción / infinitivo)
-  {
-    id: 'prof-6',
-    pillar: 'profesionales',
-    pillarName: '3. Profesionales',
-    categoria: 'Notarios y Abogados',
-    subcategoria: 'Especies Fiscales',
-    tramite: 'Comprar Especies Fiscales',
-    url: 'https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/venta-de-especies-fiscales-a-notarios-y-patentados/',
-    formulario: 'Declaraguate SAT-7130 (Impuesto de Timbres Fiscales y Papel Sellado Especial para Protocolos)',
-    baseLegal: 'Ley del Impuesto de Timbres Fiscales y de Papel Sellado Especial para Protocolos, Decreto Número 37-92 del Congreso de la República y su Reglamento.',
-    descripcion: 'Adquirir timbres fiscales y hojas de Papel Sellado Especial para Protocolos para el ejercicio notarial o como persona autorizada con patente de venta.',
-    puntosMenu: [
-      { id: 'requisitos-notario', titulo: 'Cumplir requisitos como Notario Titular' },
-      { id: 'requisitos-tercero', titulo: 'Acreditar a un Tercero Autorizado' },
-      { id: 'requisitos-patentados', titulo: 'Cumplir requisitos como Patentado' },
-      { id: 'pasos', titulo: 'Seguir los pasos del trámite' },
-      { id: 'formulario', titulo: 'Llenar formulario Declaraguate SAT-7130' },
-      { id: 'notas', titulo: 'Revisar tarifas y notas importantes' },
-      { id: 'base-legal', titulo: 'Consultar base legal y normativa' },
-      { id: 'agencias', titulo: 'Retirar especies en agencias SAT' },
-      { id: 'enlace', titulo: 'Ir al trámite oficial en portal SAT' }
-    ],
-    requisitosPorModalidad: [
-      {
-        modalidad: 'Notario Titular',
-        requisitos: [
-          'Estar activo y solvente en el Colegio de Abogados y Notarios de Guatemala (CANG). La SAT valida la habilitación en línea en tiempo real.',
-          'Contar con datos actualizados y ratificados en el Registro Tributario Unificado (RTU) digital en el año en curso.',
-          'Tener activa la característica tributaria especial de Abogado y Notario en el RTU.',
-          'Generar y pagar previamente el formulario Declaraguate SAT-7130.',
-          'Presentar Documento Personal de Identificación (DPI) en original vigente y carné de colegiado activo para atención presencial.',
-          'Presentar sello profesional de Abogado y Notario para firmar y sellar la constancia de entrega en la agencia.'
-        ]
-      },
-      {
-        modalidad: 'Tercero Autorizado (Delegado / Procurador)',
-        requisitos: [
-          'Presentar carta de autorización en original firmada y sellada por el Notario titular, indicando expresamente la cantidad de hojas de protocolo o timbres, formulario SAT-2000 y DPI de la persona delegada.',
-          'Adjuntar fotocopia legible del DPI y carné de colegiado activo del Notario titular, debidamente firmadas.',
-          'Presentar Documento Personal de Identificación (DPI) en original y fotocopia de la persona autorizada (procurador o gestor) que retira las especies.',
-          'Presentar boleta de pago del formulario Declaraguate SAT-7130 cancelada en el sistema bancario.',
-          'Verificar que el Notario titular se encuentre activo en el CANG y con su RTU ratificado.'
-        ]
-      },
-      {
-        modalidad: 'Patentados Autorizados',
-        requisitos: [
-          'Contar con patente vigente para el expendio y venta de especies fiscales emitida por la SAT.',
-          'Mantener inscripción y RTU activo con régimen tributario al día.',
-          'Generar y pagar el formulario Declaraguate SAT-7130 con el porcentaje de comisión legal autorizado.',
-          'Presentar DPI original del titular o representante legal acreditado en la SAT.'
-        ]
-      }
-    ],
-    pasos: [
-      'Ingresar al portal oficial Declaraguate (declaraguate.sat.gob.gt).',
-      'Seleccionar el formulario SAT-7130 (Impuesto de Timbres Fiscales y Papel Sellado Especial para Protocolos) en la sección de Impuestos Específicos.',
-      'Completar los datos del Notario o Patentado, la cantidad requerida de hojas de papel de protocolo (lotes de 50 hojas) y los valores faciales de timbres fiscales.',
-      'Congelar el formulario e imprimir la boleta SAT-2000.',
-      'Realizar el pago en banca en línea o en ventanilla de cualquier banco del sistema financiero.',
-      'Presentarse en cualquier Oficina o Agencia Tributaria de la SAT para la validación biométrica, asignación de números correlativos oficiales y entrega de las especies.'
-    ],
-    notasImportantes: [
-      'El Papel Sellado Especial para Protocolos tiene una tarifa oficial de Q10.00 por hoja y se adquiere en lotes de 50 hojas (el libro de protocolo de 55 hojas incluye las 5 hojas de comisión legal).',
-      'La SAT emite automáticamente la razón electrónica de asignación de correlativos de quinquenio asignados al protocolo notarial.',
-      'Si el profesional se encuentra inhabilitado por el CANG o no ha ratificado su RTU anual, el sistema Declaraguate bloqueará la emisión del formulario SAT-7130.',
-      'Los timbres fiscales se emiten en pliegos de distintas denominaciones según la necesidad de los instrumentos públicos notariales.'
-    ]
-  },
-  {
-    id: 'prof-6b',
-    pillar: 'profesionales',
-    pillarName: '3. Profesionales',
-    categoria: 'Notarios y Abogados',
-    subcategoria: 'Especies Fiscales',
-    tramite: 'Pagar Timbres Fiscales en Línea',
-    url: 'https://portal.sat.gob.gt/portal/agencia-virtual/',
-    formulario: 'Declaraguate SAT-7121 / Razón Electrónica en Agencia Virtual',
-    baseLegal: 'Artículo 5 de la Ley del Impuesto de Timbres Fiscales y de Papel Sellado Especial para Protocolos, Decreto 37-92.',
-    descripcion: 'Realizar el pago del impuesto de timbres fiscales en tarifas específicas mediante razón electrónica en la Agencia Virtual, sin adherir estampillas físicas.',
-    puntosMenu: [
-      { id: 'requisitos', titulo: 'Cumplir requisitos obligatorios' },
-      { id: 'pasos', titulo: 'Seguir los pasos del procedimiento' },
-      { id: 'formulario', titulo: 'Llenar formulario Declaraguate SAT-7121' },
-      { id: 'notas', titulo: 'Revisar tarifas y notas importantes' },
-      { id: 'base-legal', titulo: 'Consultar base legal y normativa' },
-      { id: 'enlace', titulo: 'Ir al trámite oficial en portal SAT' }
-    ],
-    requisitos: [
-      'Contar con usuario activo y contraseña en Agencia Virtual SAT.',
-      'Mantener el RTU actualizado y ratificado en el año en curso.',
-      'Contar con cuenta bancaria habilitada para banca en línea o generar boleta SAT-2000.',
-      'Identificar el acto, contrato o documento afecto a la tarifa específica del impuesto.'
-    ],
-    pasos: [
-      'Ingresar a la Agencia Virtual de la SAT con NIT y contraseña.',
-      'Acceder a la sección de Servicios Tributarios > Pago de Timbres Fiscales Tarifas Específicas.',
-      'Seleccionar el tipo de documento (actas notariales, contratos de arrendamiento, testimonios, etc.).',
-      'Generar la razón electrónica de pago e ingresar los datos del acto o contrato.',
-      'Efectuar el pago electrónico y descargar la constancia con código QR de verificación para adjuntar al documento.'
-    ],
-    notasImportantes: [
-      'La razón electrónica de pago sustituye legalmente la adherencia de timbres físicos según las disposiciones de la SAT.',
-      'El código QR permite a cualquier entidad o registro público validar la autenticidad e inmediatez del pago tributario.'
-    ]
-  },
-  {
-    id: 'prof-6c',
-    pillar: 'profesionales',
-    pillarName: '3. Profesionales',
-    categoria: 'Notarios y Abogados',
-    subcategoria: 'Especies Fiscales',
-    tramite: 'Inscribir Nuevos Patentados',
-    url: 'https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/inscripcion-actualizacion-de-abogado-y-notario/',
-    formulario: 'Solicitud de Patente de Especies Fiscales SAT',
-    baseLegal: 'Reglamento de la Ley del Impuesto de Timbres Fiscales y de Papel Sellado Especial para Protocolos.',
-    descripcion: 'Solicitar la patente oficial ante la SAT para personas individuales o jurídicas que deseen dedicarse al expendio y comercialización de timbres fiscales.',
-    puntosMenu: [
-      { id: 'requisitos', titulo: 'Cumplir requisitos obligatorios' },
-      { id: 'pasos', titulo: 'Seguir los pasos de inscripción' },
-      { id: 'formulario', titulo: 'Presentar formulario de solicitud' },
-      { id: 'notas', titulo: 'Revisar comisiones y notas importantes' },
-      { id: 'base-legal', titulo: 'Consultar base legal y normativa' },
-      { id: 'enlace', titulo: 'Ir al trámite oficial en portal SAT' }
-    ],
-    requisitos: [
-      'Estar inscrito en el RTU y al día en el cumplimiento de obligaciones tributarias.',
-      'Presentar DPI original y copia del solicitante o representante legal.',
-      'Presentar constancia de carencia de antecedentes penales y policiales recientes.',
-      'Presentar comprobante de domicilio del local o establecimiento donde se realizará la venta.'
-    ],
-    pasos: [
-      'Presentar la solicitud de patente en cualquier Centro de Atención Tributaria.',
-      'Aportar la documentación de soporte y suscribir el acta de compromiso de expendio.',
-      'Recibir la resolución de autorización y el carné oficial de patentado de la SAT.'
-    ],
-    notasImportantes: [
-      'Los patentados autorizados obtienen el porcentaje de comisión legal fijado en la Ley de Timbres Fiscales.',
-      'El carné de patentado debe renovarse anualmente o ante cualquier cambio de local.'
-    ]
-  },
-  {
-    id: 'prof-6d',
-    pillar: 'profesionales',
-    pillarName: '3. Profesionales',
-    categoria: 'Notarios y Abogados',
-    subcategoria: 'Especies Fiscales',
-    tramite: 'Solicitar Canje de Especies',
-    url: 'https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/venta-de-especies-fiscales-a-notarios-y-patentados/',
-    formulario: 'Memorial de Canje y Devolución de Especies Fiscales',
-    baseLegal: 'Ley del Impuesto de Timbres Fiscales y de Papel Sellado Especial para Protocolos, Decreto 37-92.',
-    descripcion: 'Gestionar el canje de hojas de Papel de Protocolo o timbres fiscales que presenten errores tipográficos, daño físico o deterioro no imputable.',
-    puntosMenu: [
-      { id: 'requisitos', titulo: 'Cumplir requisitos para el canje' },
-      { id: 'pasos', titulo: 'Seguir los pasos de la devolución' },
-      { id: 'formulario', titulo: 'Presentar memorial y formulario' },
-      { id: 'base-legal', titulo: 'Consultar base legal y normativa' },
-      { id: 'enlace', titulo: 'Ir al trámite oficial en portal SAT' }
-    ],
-    requisitos: [
-      'Presentar las hojas de papel de protocolo o timbres físicos dañados en su totalidad.',
-      'Presentar memorial firmado y sellado por el Notario o Patentado exponiendo el motivo del canje.',
-      'Presentar Documento Personal de Identificación (DPI) y carné de colegiado activo.'
-    ],
-    pasos: [
-      'Acudir al departamento de recaudación en oficinas tributarias regionales o metropolitanas.',
-      'Entregar el memorial y las especies físicas objeto del canje para peritaje de autenticidad.',
-      'Recibir la resolución y la entrega de las nuevas especies fiscales en reposición.'
-    ]
-  },
-
-  // 3. Profesionales -> Notarios y Abogados -> Práctica Profesional y Registro
-  {
-    id: 'prof-1',
-    pillar: 'profesionales',
-    pillarName: '3. Profesionales',
-    categoria: 'Notarios y Abogados',
-    subcategoria: 'Práctica Profesional y Registro',
-    tramite: 'Activar Calidad de Abogado y Notario en Agencia Virtual',
-    url: 'https://portal.sat.gob.gt/portal/requisitos-tramites-agencia-virtual/activacion-de-abogados/',
-    formulario: 'Agencia Virtual SAT / Módulo RTU',
-    baseLegal: 'Código de Notariado, Decreto 314 y Ley Orgánica de la SAT.',
-    descripcion: 'Activar la calidad de profesional del derecho en la Agencia Virtual de la SAT para realizar traspasos electrónicos de vehículos y gestiones notariales digitales.',
-    puntosMenu: [
-      { id: 'requisitos', titulo: 'Cumplir requisitos obligatorios' },
-      { id: 'pasos', titulo: 'Seguir pasos de activación' },
-      { id: 'formulario', titulo: 'Ingresar a Agencia Virtual SAT' },
-      { id: 'base-legal', titulo: 'Consultar base legal' },
-      { id: 'enlace', titulo: 'Ir al trámite oficial en portal SAT' }
-    ],
-    requisitos: [
-      'Estar activo y colegiado en el Colegio de Abogados y Notarios de Guatemala (CANG).',
-      'Estar inscrito en el RTU de la SAT con las obligaciones tributarias al día (IVA, ISR).',
-      'Poseer usuario y contraseña activa en Agencia Virtual SAT.',
-      'Haber registrado la impresión dactilar (biométrico) en agencias u oficinas tributarias.'
-    ],
-    pasos: [
-      'Iniciar sesión en la cuenta de Agencia Virtual SAT.',
-      'Ingresar al menú de Servicios / Registro Tributario Unificado (RTU).',
-      'Seleccionar la opción de Actualización o Activación de Calidad de Abogado y Notario.',
-      'Ingresar el número de colegiado activo y adjuntar la documentación solicitada.',
-      'Confirmar la solicitud para recibir la aprobación y habilitación en el sistema FEL y traspasos electrónicos.'
-    ]
-  },
-  {
-    id: 'prof-2a',
-    pillar: 'profesionales',
-    pillarName: '3. Profesionales',
-    categoria: 'Notarios y Abogados',
-    subcategoria: 'Práctica Profesional y Registro',
-    tramite: 'Inscribir Calidad de Abogado y Notario',
-    url: 'https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/inscripcion-actualizacion-de-abogado-y-notario/',
-    formulario: 'Solicitud de Inscripción Profesional SAT',
-    baseLegal: 'Decreto 1-98 del Congreso de la República, Ley Orgánica de la SAT.',
-    descripcion: 'Registrar por primera vez la calidad profesional de Abogado y Notario en la base de datos oficial de la SAT.',
-    puntosMenu: [
-      { id: 'requisitos', titulo: 'Cumplir requisitos obligatorios' },
-      { id: 'pasos', titulo: 'Seguir pasos de inscripción' },
-      { id: 'formulario', titulo: 'Llenar formulario de solicitud' },
-      { id: 'base-legal', titulo: 'Consultar base legal' },
-      { id: 'enlace', titulo: 'Ir al trámite oficial en portal SAT' }
-    ],
-    requisitos: [
-      'Presentar Documento Personal de Identificación (DPI) en original y copia legible.',
-      'Presentar constancia vigente de colegiado activo emitida por el CANG.',
-      'Presentar título profesional registrado ante la Contraloría General de Cuentas y USAC.'
-    ],
-    pasos: [
-      'Presentar la solicitud inicial en oficinas tributarias o agencias virtuales habilitadas.',
-      'Validar los datos profesionales con el operador de ventanilla.',
-      'Recibir la confirmación de inscripción y constancia oficial.'
-    ]
-  },
-  {
-    id: 'prof-2b',
-    pillar: 'profesionales',
-    pillarName: '3. Profesionales',
-    categoria: 'Notarios y Abogados',
-    subcategoria: 'Práctica Profesional y Registro',
-    tramite: 'Actualizar Datos de Abogado y Notario',
-    url: 'https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/inscripcion-actualizacion-de-abogado-y-notario/',
-    formulario: 'Actualización en Agencia Virtual',
-    baseLegal: 'Código Tributario de Guatemala.',
-    descripcion: 'Actualizar datos profesionales, dirección de notaría o estado colegiado ante la SAT.',
-    puntosMenu: [
-      { id: 'requisitos', titulo: 'Cumplir requisitos obligatorios' },
-      { id: 'pasos', titulo: 'Seguir pasos de actualización' },
-      { id: 'enlace', titulo: 'Ir al trámite oficial en portal SAT' }
-    ],
-    requisitos: [
-      'Presentar constancia reciente de Colegiado Activo emitida por el CANG.',
-      'Contar con usuario activo en Agencia Virtual SAT.',
-      'Presentar DPI vigente del profesional.'
-    ],
-    pasos: [
-      'Ingresar al módulo de actualización de profesionales en Agencia Virtual SAT.',
-      'Cargar la constancia vigente de colegiado activo.',
-      'Confirmar los cambios en los datos de contacto y firma digital.'
-    ]
-  },
-  {
-    id: 'prof-3',
-    pillar: 'profesionales',
-    pillarName: '3. Profesionales',
-    categoria: 'Notarios y Abogados',
-    subcategoria: 'Práctica Profesional y Registro',
-    tramite: 'Confirmar Huella Dactilar en el Registro',
-    url: 'https://portal.sat.gob.gt/portal/sin-categoria/requisitos-de-actualizacion-de-impresion-dactilar-para-abogados-y-notarios-que-realizan-traspasos-electronicos-a-traves-de-agencia-virtual/',
-    formulario: 'Registro Biométrico Presencial',
-    descripcion: 'Realizar el registro dactilar biométrico para autorizar traspasos electrónicos de vehículos en línea.',
-    puntosMenu: [
-      { id: 'requisitos', titulo: 'Cumplir requisitos obligatorios' },
-      { id: 'pasos', titulo: 'Seguir pasos para el registro' },
-      { id: 'enlace', titulo: 'Ir al trámite oficial en portal SAT' }
-    ],
-    requisitos: [
-      'Presentarse físicamente el profesional notario.',
-      'Presentar DPI original vigente.',
-      'Presentar carné de colegiado activo.'
-    ],
-    pasos: [
-      'Acudir al Centro de Atención Tributaria con cita previa.',
-      'Efectuar la captura biométrica de huellas dactilares.',
-      'Firmar el consentimiento y obtener la activación inmediata.'
-    ]
-  },
-
-  // 3. Profesionales -> Notarios y Abogados -> Gestiones Vehiculares
-  {
-    id: 'prof-4',
-    pillar: 'profesionales',
-    pillarName: '3. Profesionales',
-    categoria: 'Notarios y Abogados',
-    subcategoria: 'Gestiones Vehiculares',
-    tramite: 'Presentar Aviso de Legalización de Firmas en Certificado de Propiedad',
-    url: 'https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/aviso-de-legalizacion-de-firmas-en-certificado-de-propiedad-de-vehiculos/',
-    formulario: 'Aviso Electrónico de Notario SAT',
-    descripcion: 'Presentar el aviso notarial formal sobre legalización de firmas en certificados de propiedad automotor.',
-    puntosMenu: [
-      { id: 'requisitos', titulo: 'Cumplir requisitos obligatorios' },
-      { id: 'pasos', titulo: 'Seguir pasos para presentar aviso' },
-      { id: 'enlace', titulo: 'Ir al trámite oficial en portal SAT' }
-    ],
-    requisitos: [
-      'Contar con certificado de propiedad con firmas legalizadas por Notario.',
-      'Adherir timbres notariales y fiscales correspondientes.'
-    ],
-    pasos: [
-      'Generar el aviso electrónico a través de la Agencia Virtual SAT.',
-      'Adjuntar comprobantes y registrar el número de legalización.'
-    ]
-  },
-  {
-    id: 'prof-5',
-    pillar: 'profesionales',
-    pillarName: '3. Profesionales',
-    categoria: 'Notarios y Abogados',
-    subcategoria: 'Gestiones Vehiculares',
-    tramite: 'Efectuar Traspaso Electrónico con Anexo Declaraguate',
-    url: 'https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/traspaso-electronico-de-vehiculos-por-notario-con-anexo-del-certificado-de-propiedad-emitido-via-declaraguate-en-agencia-virtual/',
-    formulario: 'Declaraguate SAT-8611',
-    descripcion: 'Efectuar el traspaso electrónico de vehículos de forma 100% digital con validación de Declaraguate.',
-    puntosMenu: [
-      { id: 'requisitos', titulo: 'Cumplir requisitos obligatorios' },
-      { id: 'pasos', titulo: 'Seguir pasos del traspaso' },
-      { id: 'formulario', titulo: 'Llenar Declaraguate SAT-8611' },
-      { id: 'enlace', titulo: 'Ir al trámite oficial en portal SAT' }
-    ],
-    requisitos: [
-      'Contar con formulario SAT-8611 pagado en Declaraguate.',
-      'Completar el reconocimiento biométrico del notario y partes interesadas.'
-    ],
-    pasos: [
-      'Ingresar al módulo de Traspaso Electrónico en Agencia Virtual.',
-      'Verificar los datos del comprador y vendedor.',
-      'Autorizar la transferencia de dominio y generar el nuevo distintivo digital.'
-    ]
-  },
-
-  // 3. Profesionales -> Gestores Tributarios
-  {
-    id: 'prof-7',
-    pillar: 'profesionales',
-    pillarName: '3. Profesionales',
-    categoria: 'Gestores Tributarios',
-    subcategoria: 'Gafetes y Acreditaciones',
-    tramite: 'Renovar Gafete de Gestor Tributario',
-    url: 'https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/actualizacion-de-informacion-y-renovacion-del-gafete-de-gestor-tributario-y-o-auxiliar-de-gestor-tributario/',
-    descripcion: 'Renovar el gafete y acreditación oficial para actuar como gestor tributario autorizado ante la SAT.',
-    puntosMenu: [
-      { id: 'requisitos', titulo: 'Cumplir requisitos obligatorios' },
-      { id: 'pasos', titulo: 'Seguir pasos para renovación' },
-      { id: 'enlace', titulo: 'Ir al trámite oficial en portal SAT' }
-    ],
-    requisitos: ['Presentar constancia de carencia de antecedentes penales y policiales', 'Presentar DPI vigente'],
-    pasos: ['Completar el formulario de renovación en el portal SAT.']
-  },
-
-  // 1. Contribuyentes
-  {
-    id: 'con-1a',
-    pillar: 'contribuyentes',
-    pillarName: '1. Contribuyentes',
-    categoria: 'Personas Individuales',
-    subcategoria: 'Inscripción y RTU',
-    tramite: 'Inscribirse en el RTU Digital',
-    url: 'https://portal.sat.gob.gt/portal/rtu-digital/',
-    descripcion: 'Solicitar el Número de Identificación Tributaria (NIT) y realizar el alta inicial en el RTU Digital.',
-    puntosMenu: [
-      { id: 'requisitos', titulo: 'Cumplir requisitos obligatorios' },
-      { id: 'pasos', titulo: 'Seguir pasos de solicitud' },
-      { id: 'enlace', titulo: 'Ir al trámite oficial en portal SAT' }
-    ],
-    requisitos: ['Adjuntar Documento Personal de Identificación (DPI) escaneado', 'Adjuntar comprobante de domicilio o factura de servicios recientes'],
-    pasos: ['Ingresar a la opción de Solicitud de NIT en el portal SAT.', 'Completar el formulario digital y validar el correo electrónico.', 'Recibir la confirmación del NIT y activar el usuario de Agencia Virtual.']
-  },
-  {
-    id: 'con-1b',
-    pillar: 'contribuyentes',
-    pillarName: '1. Contribuyentes',
-    categoria: 'Personas Individuales',
-    subcategoria: 'Inscripción y RTU',
-    tramite: 'Actualizar Datos en el RTU Digital',
-    url: 'https://portal.sat.gob.gt/portal/rtu-digital/',
-    descripcion: 'Actualizar o ratificar datos en el Registro Tributario Unificado digital.',
-    puntosMenu: [
-      { id: 'requisitos', titulo: 'Cumplir requisitos obligatorios' },
-      { id: 'pasos', titulo: 'Seguir pasos de actualización' },
-      { id: 'enlace', titulo: 'Ir al trámite oficial en portal SAT' }
-    ],
-    requisitos: ['Contar con acceso activo a Agencia Virtual', 'Adjuntar documento que soporte el cambio de datos'],
-    pasos: ['Iniciar sesión en Agencia Virtual SAT.', 'Ingresar a Servicios > RTU > Actualización de Datos.', 'Confirmar los datos y descargar la constancia del RTU Digital.']
-  },
-  {
-    id: 'con-2',
-    pillar: 'contribuyentes',
-    pillarName: '1. Contribuyentes',
-    categoria: 'Personas Individuales',
-    subcategoria: 'Facturación Electrónica (FEL)',
-    tramite: 'Habilitarse como Emisor FEL',
-    url: 'https://portal.sat.gob.gt/portal/factura-electronica-en-linea-fel/',
-    descripcion: 'Habilitarse gratuitamente para emitir facturas electrónicas en línea desde la Agencia Virtual.',
-    puntosMenu: [
-      { id: 'requisitos', titulo: 'Cumplir requisitos obligatorios' },
-      { id: 'pasos', titulo: 'Seguir pasos de habilitación' },
-      { id: 'enlace', titulo: 'Ir al trámite oficial en portal SAT' }
-    ],
-    requisitos: ['Mantener el RTU actualizado', 'Contar con afiliación al régimen de IVA correspondiente'],
-    pasos: ['Ingresar a Agencia Virtual SAT.', 'Generar la firma electrónica gratuita y activar la emisión de facturas electrónicas.']
-  },
-
-  // 2. Comercio Exterior
-  {
-    id: 'com-1',
-    pillar: 'comercio_exterior',
-    pillarName: '2. Comercio Exterior',
-    categoria: 'Importadores y Exportadores',
-    subcategoria: 'Aduanas',
-    tramite: 'Habilitarse como Operador Económico Autorizado (OEA)',
-    url: 'https://portal.sat.gob.gt/portal/operador-economico-autorizado/',
-    descripcion: 'Certificar operaciones aduaneras bajo los estándares de seguridad y agilidad logística del Operador Económico Autorizado.',
-    puntosMenu: [
-      { id: 'requisitos', titulo: 'Cumplir requisitos obligatorios' },
-      { id: 'pasos', titulo: 'Seguir pasos de certificación' },
-      { id: 'enlace', titulo: 'Ir al trámite oficial en portal SAT' }
-    ],
-    requisitos: ['Demostrar historial de cumplimiento tributario y aduanero impecable', 'Cumplir estándares de seguridad física en almacenes e instalaciones'],
-    pasos: ['Presentar la solicitud formal ante la Intendencia de Aduanas.']
-  },
-
-  // 4. Organismos Especiales
-  {
-    id: 'org-1',
-    pillar: 'organismos_especiales',
-    pillarName: '4. Organismos Especiales',
-    categoria: 'Entidades No Lucrativas (ONG)',
-    subcategoria: 'Exenciones Fiscales',
-    tramite: 'Solicitar Exención de IVA e ISR para ONG',
-    url: 'https://portal.sat.gob.gt/portal/exenciones-ongs/',
-    descripcion: 'Solicitar el reconocimiento formal de exención tributaria para asociaciones o fundaciones sin fines de lucro.',
-    puntosMenu: [
-      { id: 'requisitos', titulo: 'Cumplir requisitos obligatorios' },
-      { id: 'pasos', titulo: 'Seguir pasos de solicitud' },
-      { id: 'enlace', titulo: 'Ir al trámite oficial en portal SAT' }
-    ],
-    requisitos: ['Presentar escritura constitutiva debidamente registrada', 'Presentar constancia de inscripción en el Registro de Personas Jurídicas'],
-    pasos: ['Presentar el expediente en la gerencia regional tributaria correspondiente.']
-  }
-];
-
-interface PillarConfigItem {
-  id: PillarType;
-  name: string;
-  desc: string;
-  primaryColor: string;
-  cardHoverBorder: string;
-  cardHoverBg: string;
-  cardHoverShadow: string;
-  titleHoverText: string;
-  circleClasses: string;
-  actionTextClass: string;
-  activeIndicatorColor: string;
-}
-
-const PILLARS_CONFIG: PillarConfigItem[] = [
-  { 
-    id: 'contribuyentes', 
-    name: '1. Contribuyentes', 
-    desc: 'Personas individuales, asalariados y regímenes de inscripción tributaria.',
-    primaryColor: '#14649B',
-    cardHoverBorder: 'hover:border-[#14649B]',
-    cardHoverBg: 'hover:bg-[#14649B]',
-    cardHoverShadow: 'hover:shadow-[0_14px_30px_rgba(20,100,155,0.28)]',
-    titleHoverText: 'group-hover:text-white',
-    circleClasses: 'bg-[#14649B]/10 text-[#14649B] group-hover:bg-white group-hover:text-[#14649B]',
-    actionTextClass: 'text-[#14649B] group-hover:text-white',
-    activeIndicatorColor: '#14649B'
-  },
-  { 
-    id: 'comercio_exterior', 
-    name: '2. Comercio Exterior', 
-    desc: 'Gestiones aduaneras, importadores, exportadores y auxiliares.',
-    primaryColor: '#19AFE1',
-    cardHoverBorder: 'hover:border-[#19AFE1]',
-    cardHoverBg: 'hover:bg-[#19AFE1]',
-    cardHoverShadow: 'hover:shadow-[0_14px_30px_rgba(25,175,225,0.30)]',
-    titleHoverText: 'group-hover:text-white',
-    circleClasses: 'bg-[#19AFE1]/15 text-[#0E88B1] group-hover:bg-white group-hover:text-[#19AFE1]',
-    actionTextClass: 'text-[#0E88B1] group-hover:text-white',
-    activeIndicatorColor: '#19AFE1'
-  },
-  { 
-    id: 'profesionales', 
-    name: '3. Profesionales', 
-    desc: 'Notarios, abogados, gestores tributarios y agentes aduaneros.',
-    primaryColor: '#4D8014',
-    cardHoverBorder: 'hover:border-[#4D8014]',
-    cardHoverBg: 'hover:bg-[#4D8014]',
-    cardHoverShadow: 'hover:shadow-[0_14px_30px_rgba(77,128,20,0.30)]',
-    titleHoverText: 'group-hover:text-white',
-    circleClasses: 'bg-[#4D8014]/15 text-[#2D5A0C] group-hover:bg-white group-hover:text-[#4D8014]',
-    actionTextClass: 'text-[#2D5A0C] group-hover:text-white',
-    activeIndicatorColor: '#4D8014'
-  },
-  { 
-    id: 'organismos_especiales', 
-    name: '4. Organismos Especiales', 
-    desc: 'Entidades no lucrativas, ONGs y misiones diplomáticas.',
-    primaryColor: '#C25E00',
-    cardHoverBorder: 'hover:border-[#C25E00]',
-    cardHoverBg: 'hover:bg-[#C25E00]',
-    cardHoverShadow: 'hover:shadow-[0_14px_30px_rgba(194,94,0,0.30)]',
-    titleHoverText: 'group-hover:text-white',
-    circleClasses: 'bg-[#C25E00]/15 text-[#8A3B00] group-hover:bg-white group-hover:text-[#C25E00]',
-    actionTextClass: 'text-[#8A3B00] group-hover:text-white',
-    activeIndicatorColor: '#C25E00'
-  }
-];
+import { 
+  PillarType, 
+  TramiteItem, 
+  PILLARS_CONFIG, 
+  GRUPOS_CONFIG, 
+  TRAMITES_DATA 
+} from './data/taxArchitecture';
 
 export default function App() {
-  const [level, setLevel] = useState<1 | 2 | 3 | 4>(4);
-  const [selectedPillar, setSelectedPillar] = useState<PillarType>('profesionales');
-  const [selectedCategoria, setSelectedCategoria] = useState<string>('Notarios y Abogados');
-  const [selectedSubcategoria, setSelectedSubcategoria] = useState<string>('Especies Fiscales');
+  const [level, setLevel] = useState<1 | 2 | 3 | 4>(1);
+  const [selectedPillar, setSelectedPillar] = useState<PillarType>('contribuyentes');
+  const [selectedCategoria, setSelectedCategoria] = useState<string>('NIT sin Obligaciones');
+  const [selectedSubcategoria, setSelectedSubcategoria] = useState<string>('RTU Digital');
   
-  // Set default initial trámite to Venta de Especies Fiscales
-  const [selectedTramite, setSelectedTramite] = useState<TramiteItem | null>(TRAMITES_DATA[0]);
+  // Trámite seleccionado (null en nivel 1-3 o cuando se muestran tarjetas de trámites)
+  const [selectedTramite, setSelectedTramite] = useState<TramiteItem | null>(null);
 
   // Active section for highlight
   const [activeSectionId, setActiveSectionId] = useState<string>('');
@@ -566,13 +26,8 @@ export default function App() {
   // Copy notification state
   const [copiedLink, setCopiedLink] = useState(false);
 
-  // Sidebar visibility: open by default on desktop, closed on mobile screens
-  const [menuSidebarOpen, setMenuSidebarOpen] = useState<boolean>(() => {
-    if (typeof window !== 'undefined') {
-      return window.innerWidth >= 768;
-    }
-    return true;
-  });
+  // Sidebar visibility: false por defecto para que las tarjetas inicien perfectamente centradas
+  const [menuSidebarOpen, setMenuSidebarOpen] = useState<boolean>(false);
 
   // Helper to close drawer when navigating on mobile
   const closeMenuIfMobile = () => {
@@ -597,22 +52,57 @@ export default function App() {
   const [searchQuery, setSearchQuery] = useState('');
   const [isSearchFocused, setIsSearchFocused] = useState(false);
 
+  // Consulta interactiva de gestión (con-nit-4)
+  const [consultaGestionInput, setConsultaGestionInput] = useState('');
+  const [consultaGestionResult, setConsultaGestionResult] = useState<{
+    numero: string;
+    estado: 'En trámite' | 'Aprobada' | 'Observada';
+    mensaje: string;
+  } | null>(null);
+
+  const handleConsultarGestion = (e?: React.FormEvent) => {
+    if (e) e.preventDefault();
+    const clean = consultaGestionInput.trim();
+    if (!clean) return;
+    
+    if (clean.toLowerCase().includes('aprob') || clean.endsWith('1') || clean.endsWith('5')) {
+      setConsultaGestionResult({
+        numero: clean,
+        estado: 'Aprobada',
+        mensaje: 'La solicitud de Agencia Virtual fue aprobada con éxito. Revisa tu correo electrónico para crear tu contraseña de acceso inicial.'
+      });
+    } else if (clean.toLowerCase().includes('rechaz') || clean.toLowerCase().includes('obs') || clean.endsWith('2')) {
+      setConsultaGestionResult({
+        numero: clean,
+        estado: 'Observada',
+        mensaje: 'La selfie o el documento adjunto no son legibles. Debes subsanar adjuntando nuevamente el DPI o pasaporte vigente.'
+      });
+    } else {
+      setConsultaGestionResult({
+        numero: clean,
+        estado: 'En trámite',
+        mensaje: 'Tu solicitud de acceso se encuentra en proceso de validación documental por parte de la SAT. Tiempo promedio de respuesta: 24 horas hábiles.'
+      });
+    }
+  };
+
+  // Configuraciones derivadas
   const currentPillarConfig = PILLARS_CONFIG.find(p => p.id === selectedPillar) || PILLARS_CONFIG[0];
+  const gruposInPillar = GRUPOS_CONFIG.filter(g => g.pillar === selectedPillar);
+  const currentGrupo = gruposInPillar.find(g => g.nombre === selectedCategoria) || gruposInPillar[0];
+  const subgruposInGrupo = currentGrupo?.subgrupos || [];
+  const currentSubcategoriaItems = TRAMITES_DATA.filter(
+    i => i.pillar === selectedPillar && i.categoria === selectedCategoria && i.subcategoria === selectedSubcategoria
+  );
 
-  const currentPillarItems = TRAMITES_DATA.filter(i => i.pillar === selectedPillar);
-  const currentCategoriaItems = currentPillarItems.filter(i => i.categoria === selectedCategoria);
-  const currentSubcategoriaItems = currentCategoriaItems.filter(i => i.subcategoria === selectedSubcategoria);
-
-  const categoriasInPillar = Array.from(new Set(currentPillarItems.map(i => i.categoria)));
-  const subcategoriasInCategoria = Array.from(new Set(currentCategoriaItems.map(i => i.subcategoria)));
-
-  // Filtered search results
+  // Resultados de búsqueda en vivo
   const searchResults = searchQuery.trim().length > 1
     ? TRAMITES_DATA.filter(t => 
         t.tramite.toLowerCase().includes(searchQuery.toLowerCase()) ||
         t.descripcion.toLowerCase().includes(searchQuery.toLowerCase()) ||
         (t.formulario && t.formulario.toLowerCase().includes(searchQuery.toLowerCase())) ||
-        t.subcategoria.toLowerCase().includes(searchQuery.toLowerCase())
+        t.subcategoria.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        t.categoria.toLowerCase().includes(searchQuery.toLowerCase())
       )
     : [];
 
@@ -620,48 +110,55 @@ export default function App() {
     setLevel(1);
     setSelectedTramite(null);
     closeMenuIfMobile();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const handleSelectPillar = (pillarId: PillarType) => {
     setSelectedPillar(pillarId);
-    const pItems = TRAMITES_DATA.filter(i => i.pillar === pillarId);
-    const firstCat = pItems[0]?.categoria || '';
-    setSelectedCategoria(firstCat);
-    const firstSub = pItems.filter(i => i.categoria === firstCat)[0]?.subcategoria || '';
+    const grupos = GRUPOS_CONFIG.filter(g => g.pillar === pillarId);
+    const firstGrupo = grupos[0]?.nombre || '';
+    setSelectedCategoria(firstGrupo);
+    const firstSub = grupos[0]?.subgrupos[0]?.nombre || '';
     setSelectedSubcategoria(firstSub);
     setSelectedTramite(null);
     setLevel(2);
     closeMenuIfMobile();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const handleSelectCategoria = (cat: string) => {
     setSelectedCategoria(cat);
-    const subItems = TRAMITES_DATA.filter(i => i.pillar === selectedPillar && i.categoria === cat);
-    const firstSub = subItems[0]?.subcategoria || '';
+    const grupo = GRUPOS_CONFIG.find(g => g.pillar === selectedPillar && g.nombre === cat);
+    const firstSub = grupo?.subgrupos[0]?.nombre || '';
     setSelectedSubcategoria(firstSub);
     setSelectedTramite(null);
     setLevel(3);
     closeMenuIfMobile();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const handleSelectSubcategoria = (sub: string) => {
     setSelectedSubcategoria(sub);
-    const trms = TRAMITES_DATA.filter(i => i.pillar === selectedPillar && i.categoria === selectedCategoria && i.subcategoria === sub);
-    const item = trms[0] || null;
+    const trms = TRAMITES_DATA.filter(
+      i => i.pillar === selectedPillar && i.categoria === selectedCategoria && i.subcategoria === sub
+    );
+    const item = trms.length === 1 ? trms[0] : null;
     setSelectedTramite(item);
     setLevel(4);
-    closeMenuIfMobile();
-  };
-
-  // Immediate selection of gestion when clicked in the menu
-  const handleSelectMenuGestion = (item: TramiteItem) => {
-    setSelectedTramite(item);
-    setActiveSectionId('');
     closeMenuIfMobile();
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  // Smooth scroll to in-page section with dynamic header offset
+  // Selección inmediata de trámite
+  const handleSelectMenuGestion = (item: TramiteItem) => {
+    setSelectedTramite(item);
+    setActiveSectionId('');
+    setLevel(4);
+    closeMenuIfMobile();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  // Scroll suave hacia sección de la ficha con compensación del header fijo
   const scrollToSection = (id: string) => {
     setActiveSectionId(id);
     const element = document.getElementById(id);
@@ -676,7 +173,7 @@ export default function App() {
     }
   };
 
-  // Toggle requirement check
+  // Alternar checkbox de requisitos
   const handleToggleRequirement = (key: string) => {
     setCheckedRequirements(prev => ({
       ...prev,
@@ -684,14 +181,14 @@ export default function App() {
     }));
   };
 
-  // Copy trámite URL
+  // Copiar URL de trámite
   const handleCopyLink = () => {
     navigator.clipboard.writeText(window.location.href);
     setCopiedLink(true);
     setTimeout(() => setCopiedLink(false), 2500);
   };
 
-  // Select from search results
+  // Seleccionar resultado de búsqueda
   const handleSelectSearchResult = (item: TramiteItem) => {
     setSelectedPillar(item.pillar);
     setSelectedCategoria(item.categoria);
@@ -827,7 +324,7 @@ export default function App() {
 
           </div>
 
-          {/* Fila 2: Menú, Inicio y los 4 Pilares con scroll horizontal táctil seguro */}
+          {/* Fila 2: Menú, Inicio y los 4 Macrogrupos oficiales con scroll horizontal táctil seguro */}
           <nav 
             aria-label="Navegación principal" 
             className={`flex items-center gap-2 sm:gap-3 border-t border-[#DCDCDC]/60 transition-all duration-300 ${
@@ -864,7 +361,7 @@ export default function App() {
               Inicio
             </button>
 
-            {/* Los 4 Pilares oficiales de SAT: Contenedor fluido con scroll horizontal táctil */}
+            {/* Los 4 Macrogrupos oficiales de SAT: Contenedor fluido con scroll horizontal táctil */}
             <div className="flex-1 min-w-0 overflow-x-auto no-scrollbar py-0.5">
               <div className={`flex items-center whitespace-nowrap pl-2.5 border-l border-[#DCDCDC] transition-all duration-300 ${
                 isScrolled ? 'gap-2.5 md:gap-4' : 'gap-3 md:gap-5'
@@ -945,13 +442,13 @@ export default function App() {
           {/* ESTRUCTURA TIPO TABLA (BORDES CONTINUOS, CERO GAPS) */}
           <div className="rounded-xl border border-slate-200 bg-white overflow-hidden shadow-xs">
 
-            {/* Nivel 1 Menu: Lista de Macro Grupos */}
+            {/* Nivel 1 Menu: Lista de Macrogrupos */}
             {level === 1 && (
               <div>
                 <div className="bg-slate-50/90 px-3.5 py-2.5 border-b border-slate-200 flex items-center justify-between">
                   <div className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#14649B]" />
-                    <h3 className="text-xs font-bold text-[#19324B] uppercase tracking-wider">Grupos Tributarios</h3>
+                    <h3 className="text-xs font-bold text-[#19324B] uppercase tracking-wider">Macrogrupos</h3>
                   </div>
                   <span className="text-[10px] text-slate-500 font-mono">4 Pilares</span>
                 </div>
@@ -983,7 +480,7 @@ export default function App() {
               </div>
             )}
 
-            {/* Nivel 2 Menu: Categorías dentro del Pilar */}
+            {/* Nivel 2 Menu: Grupos dentro del Macrogrupo */}
             {level === 2 && (
               <div>
                 <div className="bg-slate-50/90 px-3.5 py-2.5 border-b border-slate-200 flex items-center justify-between">
@@ -996,16 +493,16 @@ export default function App() {
                       {currentPillarConfig.name}
                     </h3>
                   </div>
-                  <span className="text-[10px] text-slate-500 font-mono">{categoriasInPillar.length}</span>
+                  <span className="text-[10px] text-slate-500 font-mono">{gruposInPillar.length} Grupos</span>
                 </div>
                 <div className="divide-y divide-slate-200/80">
-                  {categoriasInPillar.map((cat, idx) => {
-                    const isSelected = selectedCategoria === cat;
+                  {gruposInPillar.map((g) => {
+                    const isSelected = selectedCategoria === g.nombre;
                     return (
                       <button 
-                        key={idx}
+                        key={g.no}
                         type="button"
-                        onClick={() => handleSelectCategoria(cat)}
+                        onClick={() => handleSelectCategoria(g.nombre)}
                         className={`relative w-full flex items-center justify-between text-left px-3.5 py-2.5 transition-colors text-xs group focus-visible:ring-2 focus-visible:ring-[#14649B] ${
                           isSelected 
                             ? 'bg-slate-100/70 font-bold' 
@@ -1021,73 +518,18 @@ export default function App() {
                             }}
                           />
                         )}
-                        <span 
-                          className="truncate pr-2"
-                          style={isSelected ? { color: currentPillarConfig.primaryColor } : undefined}
-                        >
-                          {cat}
-                        </span>
-                        <ChevronRight 
-                          className={`w-3.5 h-3.5 shrink-0 transition-transform ${
-                            isSelected ? 'translate-x-0.5' : 'text-slate-400 group-hover:text-slate-600'
-                          }`}
-                          style={isSelected ? { color: currentPillarConfig.primaryColor } : undefined}
-                        />
-                      </button>
-                    );
-                  })}
-                </div>
-              </div>
-            )}
-
-            {/* Nivel 3 Menu: Opciones dentro de la Categoría */}
-            {level === 3 && (
-              <div>
-                <div className="bg-slate-50/90 px-3.5 py-2.5 border-b border-slate-200 flex items-center justify-between">
-                  <div className="flex items-center gap-2">
-                    <span 
-                      className="w-1.5 h-1.5 rounded-full" 
-                      style={{ backgroundColor: currentPillarConfig.primaryColor }}
-                    />
-                    <h3 className="text-xs font-bold text-[#19324B] truncate">{selectedCategoria}</h3>
-                  </div>
-                  <span className="text-[10px] text-slate-500 font-mono">{subcategoriasInCategoria.length}</span>
-                </div>
-                <div className="divide-y divide-slate-200/80">
-                  {subcategoriasInCategoria.map((sub, idx) => {
-                    const isSelected = selectedSubcategoria === sub;
-                    return (
-                      <button 
-                        key={idx}
-                        type="button"
-                        onClick={() => handleSelectSubcategoria(sub)}
-                        className={`relative w-full flex items-center justify-between text-left px-3.5 py-2.5 transition-colors text-xs group focus-visible:ring-2 focus-visible:ring-[#14649B] ${
-                          isSelected 
-                            ? 'bg-slate-100/70 font-bold' 
-                            : 'bg-white text-slate-700 hover:bg-slate-50'
-                        }`}
-                      >
-                        {isSelected && (
+                        <div className="flex items-center gap-1.5 truncate pr-2">
+                          <span className="text-[10px] font-mono text-slate-400">No.{g.no}</span>
                           <span 
-                            className="absolute left-0 top-0 bottom-0 w-1" 
-                            style={{ 
-                              backgroundColor: currentPillarConfig.primaryColor,
-                              boxShadow: `0 0 8px ${currentPillarConfig.primaryColor}B3`
-                            }}
-                          />
-                        )}
-                        <span 
-                          className="truncate pr-2"
-                          style={isSelected ? { color: currentPillarConfig.primaryColor } : undefined}
-                        >
-                          {sub}
+                            className="truncate"
+                            style={isSelected ? { color: currentPillarConfig.primaryColor } : undefined}
+                          >
+                            {g.nombre}
+                          </span>
+                        </div>
+                        <span className="text-[10px] text-slate-400 font-mono shrink-0 pl-1">
+                          {g.cantidadTemas}t
                         </span>
-                        <ChevronRight 
-                          className={`w-3.5 h-3.5 shrink-0 transition-transform ${
-                            isSelected ? 'translate-x-0.5' : 'text-slate-400 group-hover:text-slate-600'
-                          }`}
-                          style={isSelected ? { color: currentPillarConfig.primaryColor } : undefined}
-                        />
                       </button>
                     );
                   })}
@@ -1095,70 +537,206 @@ export default function App() {
               </div>
             )}
 
-            {/* Nivel 4 Menu: Tabla continua sin gaps entre opciones */}
-            {level === 4 && (
+            {/* Si estamos en NIT sin Obligaciones (Nivel 3 o 4), mantener los títulos de subgrupos y sus procesos para acceso directo */}
+            {selectedCategoria === 'NIT sin Obligaciones' && (level === 3 || level === 4) ? (
               <div>
-                
-                {/* Encabezado de la tabla */}
                 <div className="bg-slate-50/90 px-3.5 py-2.5 border-b border-slate-200 flex items-center justify-between">
                   <div className="flex items-center gap-2">
                     <span 
                       className="w-1.5 h-1.5 rounded-full" 
                       style={{ backgroundColor: currentPillarConfig.primaryColor }}
                     />
-                    <h3 className="text-xs font-bold text-[#19324B] tracking-tight truncate">
-                      {selectedSubcategoria}
+                    <h3 className="text-xs font-bold text-[#19324B] truncate">
+                      NIT sin Obligaciones
                     </h3>
                   </div>
-                  <span className="text-[10px] text-slate-500 font-mono">
-                    {currentSubcategoriaItems.length} {currentSubcategoriaItems.length === 1 ? 'trámite' : 'trámites'}
-                  </span>
+                  <span className="text-[10px] text-slate-500 font-mono">7 procesos</span>
                 </div>
 
-                {/* Filas continuas de la tabla (sin gaps entre opciones) */}
-                <div className="divide-y divide-slate-200/80">
-                  {currentSubcategoriaItems.map((item) => {
-                    const isSelected = selectedTramite?.id === item.id;
+                <div className="divide-y divide-slate-100">
+                  {subgruposInGrupo.map((sub, sIdx) => {
+                    const itemsInSub = TRAMITES_DATA.filter(
+                      t => t.pillar === selectedPillar && t.categoria === selectedCategoria && (t.subcategoria === sub.nombre || t.tema === sub.nombre)
+                    );
 
                     return (
-                      <button
-                        key={item.id}
-                        type="button"
-                        onClick={() => handleSelectMenuGestion(item)}
-                        className={`relative w-full flex items-center justify-between text-left px-3.5 py-2.5 transition-colors text-xs group focus-visible:ring-2 focus-visible:ring-[#14649B] ${
-                          isSelected 
-                            ? 'bg-slate-100/70 font-bold' 
-                            : 'bg-white text-slate-700 hover:bg-slate-50'
-                        }`}
-                      >
-                        {/* Barra que ilumina sutilmente al inicio de la fila activa */}
-                        {isSelected && (
-                          <span 
-                            className="absolute left-0 top-0 bottom-0 w-1" 
-                            style={{ 
-                              backgroundColor: currentPillarConfig.primaryColor,
-                              boxShadow: `0 0 8px ${currentPillarConfig.primaryColor}B3`
-                            }}
-                          />
-                        )}
-                        <span 
-                          className="flex-1 pr-2 leading-snug"
-                          style={isSelected ? { color: currentPillarConfig.primaryColor } : undefined}
-                        >
-                          {item.tramite}
-                        </span>
-                        <ChevronRight 
-                          className={`w-3.5 h-3.5 shrink-0 transition-transform ${
-                            isSelected ? 'translate-x-0.5' : 'text-slate-400 group-hover:text-slate-600'
+                      <div key={sIdx} className="py-1">
+                        {/* Título del subgrupo en la navegación */}
+                        <button
+                          type="button"
+                          onClick={() => handleSelectSubcategoria(sub.nombre)}
+                          className={`w-full flex items-center justify-between px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-wider text-left transition-colors focus-visible:ring-2 focus-visible:ring-[#14649B] ${
+                            selectedSubcategoria === sub.nombre ? 'text-[#14649B] bg-sky-50/60' : 'text-slate-600 hover:text-[#14649B]'
                           }`}
-                          style={isSelected ? { color: currentPillarConfig.primaryColor } : undefined}
-                        />
-                      </button>
+                        >
+                          <span>{sub.nombre}</span>
+                          <span className="text-[10px] font-mono text-slate-400 font-normal">
+                            {itemsInSub.length}
+                          </span>
+                        </button>
+
+                        {/* Procesos vinculados al título */}
+                        <div className="space-y-0.5">
+                          {itemsInSub.map((item) => {
+                            const isSelected = selectedTramite?.id === item.id;
+
+                            return (
+                              <button
+                                key={item.id}
+                                type="button"
+                                onClick={() => handleSelectMenuGestion(item)}
+                                className={`relative w-full flex items-center justify-between text-left pl-5 pr-3 py-1.5 transition-colors text-xs group focus-visible:ring-2 focus-visible:ring-[#14649B] ${
+                                  isSelected 
+                                    ? 'bg-slate-100/90 font-bold text-[#14649B]' 
+                                    : 'text-slate-700 hover:bg-slate-50 hover:text-[#14649B]'
+                                }`}
+                              >
+                                {isSelected && (
+                                  <span 
+                                    className="absolute left-0 top-0 bottom-0 w-1" 
+                                    style={{ 
+                                      backgroundColor: currentPillarConfig.primaryColor,
+                                      boxShadow: `0 0 8px ${currentPillarConfig.primaryColor}B3`
+                                    }}
+                                  />
+                                )}
+                                <span className="flex-1 truncate pr-2 leading-tight">
+                                  {item.tramite}
+                                </span>
+                                <ChevronRight 
+                                  className={`w-3.5 h-3.5 shrink-0 transition-transform ${
+                                    isSelected ? 'translate-x-0.5 text-[#14649B]' : 'text-slate-300 group-hover:text-slate-500'
+                                  }`}
+                                />
+                              </button>
+                            );
+                          })}
+                        </div>
+                      </div>
                     );
                   })}
                 </div>
-
               </div>
+            ) : (
+              <>
+                {/* Nivel 3 Menu: Subgrupos dentro del Grupo */}
+                {level === 3 && (
+                  <div>
+                    <div className="bg-slate-50/90 px-3.5 py-2.5 border-b border-slate-200 flex items-center justify-between">
+                      <div className="flex items-center gap-2">
+                        <span 
+                          className="w-1.5 h-1.5 rounded-full" 
+                          style={{ backgroundColor: currentPillarConfig.primaryColor }}
+                        />
+                        <h3 className="text-xs font-bold text-[#19324B] truncate">
+                          No. {currentGrupo?.no} · {selectedCategoria}
+                        </h3>
+                      </div>
+                      <span className="text-[10px] text-slate-500 font-mono">{subgruposInGrupo.length} Subg.</span>
+                    </div>
+                    <div className="divide-y divide-slate-200/80">
+                      {subgruposInGrupo.map((sub, idx) => {
+                        const isSelected = selectedSubcategoria === sub.nombre;
+                        return (
+                          <button 
+                            key={idx}
+                            type="button"
+                            onClick={() => handleSelectSubcategoria(sub.nombre)}
+                            className={`relative w-full flex items-center justify-between text-left px-3.5 py-2.5 transition-colors text-xs group focus-visible:ring-2 focus-visible:ring-[#14649B] ${
+                              isSelected 
+                                ? 'bg-slate-100/70 font-bold' 
+                                : 'bg-white text-slate-700 hover:bg-slate-50'
+                            }`}
+                          >
+                            {isSelected && (
+                              <span 
+                                className="absolute left-0 top-0 bottom-0 w-1" 
+                                style={{ 
+                                  backgroundColor: currentPillarConfig.primaryColor,
+                                  boxShadow: `0 0 8px ${currentPillarConfig.primaryColor}B3`
+                                }}
+                              />
+                            )}
+                            <span 
+                              className="truncate pr-2"
+                              style={isSelected ? { color: currentPillarConfig.primaryColor } : undefined}
+                            >
+                              {sub.nombre}
+                            </span>
+                            {sub.cantidadTemas && (
+                              <span className="text-[10px] text-slate-400 font-mono shrink-0">
+                                {sub.cantidadTemas}t
+                              </span>
+                            )}
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </div>
+                )}
+
+                {/* Nivel 4 Menu: Tabla continua de trámites */}
+                {level === 4 && (
+                  <div>
+                    <div className="bg-slate-50/90 px-3.5 py-2.5 border-b border-slate-200 flex items-center justify-between">
+                      <div className="flex items-center gap-2">
+                        <span 
+                          className="w-1.5 h-1.5 rounded-full" 
+                          style={{ backgroundColor: currentPillarConfig.primaryColor }}
+                        />
+                        <h3 className="text-xs font-bold text-[#19324B] tracking-tight truncate">
+                          {selectedSubcategoria}
+                        </h3>
+                      </div>
+                      <span className="text-[10px] text-slate-500 font-mono">
+                        {currentSubcategoriaItems.length} {currentSubcategoriaItems.length === 1 ? 'trámite' : 'trámites'}
+                      </span>
+                    </div>
+
+                    <div className="divide-y divide-slate-200/80">
+                      {currentSubcategoriaItems.map((item) => {
+                        const isSelected = selectedTramite?.id === item.id;
+
+                        return (
+                          <button
+                            key={item.id}
+                            type="button"
+                            onClick={() => handleSelectMenuGestion(item)}
+                            className={`relative w-full flex items-center justify-between text-left px-3.5 py-2.5 transition-colors text-xs group focus-visible:ring-2 focus-visible:ring-[#14649B] ${
+                              isSelected 
+                                ? 'bg-slate-100/70 font-bold' 
+                                : 'bg-white text-slate-700 hover:bg-slate-50'
+                            }`}
+                          >
+                            {isSelected && (
+                              <span 
+                                className="absolute left-0 top-0 bottom-0 w-1" 
+                                style={{ 
+                                  backgroundColor: currentPillarConfig.primaryColor,
+                                  boxShadow: `0 0 8px ${currentPillarConfig.primaryColor}B3`
+                                }}
+                              />
+                            )}
+                            <span 
+                              className="flex-1 pr-2 leading-snug"
+                              style={isSelected ? { color: currentPillarConfig.primaryColor } : undefined}
+                            >
+                              {item.tramite}
+                            </span>
+                            <ChevronRight 
+                              className={`w-3.5 h-3.5 shrink-0 transition-transform ${
+                                isSelected ? 'translate-x-0.5' : 'text-slate-400 group-hover:text-slate-600'
+                              }`}
+                              style={isSelected ? { color: currentPillarConfig.primaryColor } : undefined}
+                            />
+                          </button>
+                        );
+                      })}
+                    </div>
+
+                  </div>
+                )}
+              </>
             )}
 
           </div>
@@ -1179,16 +757,22 @@ export default function App() {
         </aside>
 
         {/* RIGHT MAIN CONTENT: CARDS NAVIGATION UP TO 4TH LEVEL */}
-        <main id="main-content" tabIndex={-1} className="flex-1 min-w-0 p-4 sm:p-6 md:p-10 space-y-6 sm:space-y-8 bg-white focus:outline-hidden">
+        <main 
+          id="main-content" 
+          tabIndex={-1} 
+          className={`flex-1 min-w-0 p-4 sm:p-6 md:p-10 space-y-6 sm:space-y-8 bg-white focus:outline-hidden transition-all duration-300 ${
+            !menuSidebarOpen ? 'w-full flex flex-col items-center' : ''
+          }`}
+        >
           
           {/* Breadcrumbs: SAT Design System Web v1.0 standard */}
-          <div className={`flex items-center gap-2 text-xs text-slate-500 font-medium overflow-x-auto whitespace-nowrap transition-all duration-300 ${!menuSidebarOpen ? 'max-w-4xl mx-auto' : ''}`}>
+          <div className={`w-full flex items-center gap-2 text-xs text-slate-500 font-medium overflow-x-auto whitespace-nowrap transition-all duration-300 ${!menuSidebarOpen ? 'max-w-4xl lg:max-w-5xl mx-auto sm:justify-center' : 'justify-start'}`}>
             <button onClick={handleGoHome} className="hover:text-[#14649B]">Inicio</button>
             {level >= 2 && (
               <>
                 <span className="text-[#DCDCDC]">/</span>
                 <button onClick={() => { setLevel(2); setSelectedTramite(null); }} className="hover:text-[#14649B]">
-                  {PILLARS_CONFIG.find(p => p.id === selectedPillar)?.name}
+                  {currentPillarConfig.name}
                 </button>
               </>
             )}
@@ -1196,7 +780,7 @@ export default function App() {
               <>
                 <span className="text-[#DCDCDC]">/</span>
                 <button onClick={() => { setLevel(3); setSelectedTramite(null); }} className="hover:text-[#14649B]">
-                  {selectedCategoria}
+                  No.{currentGrupo?.no} {selectedCategoria}
                 </button>
               </>
             )}
@@ -1212,14 +796,16 @@ export default function App() {
               LEVEL 1: CARDS OF MACRO GROUPS (PILARES)
               ======================================================== */}
           {level === 1 && (
-            <div className={`space-y-6 sm:space-y-8 max-w-4xl transition-all duration-300 ${!menuSidebarOpen ? 'mx-auto' : ''}`}>
-              <div className="space-y-2">
-                <span className="text-xs font-bold text-[#14649B] uppercase tracking-wider">Macro Grupos Oficiales</span>
-                <h2 className="text-2xl sm:text-3xl font-black text-[#19324B] tracking-tight">Seleccionar un Grupo Tributario</h2>
-                <p className="text-sm text-slate-600">Explorar los requisitos oficiales y gestionar los trámites en línea.</p>
+            <div className={`w-full space-y-6 sm:space-y-8 transition-all duration-300 ${!menuSidebarOpen ? 'max-w-4xl lg:max-w-5xl mx-auto' : 'max-w-4xl'}`}>
+              <div className={`space-y-2 ${!menuSidebarOpen ? 'text-center max-w-2xl mx-auto' : ''}`}>
+                <span className="text-xs font-bold text-[#14649B] uppercase tracking-wider">Estructura Institucional SAT</span>
+                <h2 className="text-2xl sm:text-3xl font-black text-[#19324B] tracking-tight">Seleccionar un Macrogrupo</h2>
+                <p className="text-sm text-slate-600">
+                  Categorización oficial de grupos tributarios, aduaneros, profesionales y entes exentos.
+                </p>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+              <div className={`grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 ${!menuSidebarOpen ? 'max-w-4xl lg:max-w-5xl mx-auto' : ''}`}>
                 {PILLARS_CONFIG.map((p) => (
                   <div 
                     key={p.id}
@@ -1230,17 +816,24 @@ export default function App() {
                     className={`p-5 sm:p-6 bg-white border border-[#DCDCDC] rounded-[16px] ${p.cardHoverBorder} ${p.cardHoverBg} ${p.cardHoverShadow} transition-all duration-300 cursor-pointer space-y-3.5 group shadow-xs hover:-translate-y-1 focus-visible:ring-2 focus-visible:ring-[#14649B]`}
                   >
                     <div className="flex items-center justify-between gap-3">
-                      <h3 className={`text-base sm:text-lg font-bold text-[#19324B] ${p.titleHoverText} transition-colors`}>
-                        {p.name}
-                      </h3>
-                      {/* Fondo redondo sutil con el signo > que pasa a fondo blanco y texto del color en hover */}
+                      <div className="space-y-1">
+                        <span className="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-slate-100 text-slate-600 group-hover:bg-white/20 group-hover:text-white transition-colors">
+                          {p.badgeLabel}
+                        </span>
+                        <h3 className={`text-base sm:text-lg font-bold text-[#19324B] ${p.titleHoverText} transition-colors`}>
+                          {p.name}
+                        </h3>
+                      </div>
                       <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-all duration-300 ${p.circleClasses} shadow-xs`}>
                         <ChevronRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5" aria-hidden="true" />
                       </div>
                     </div>
+                    <div className="text-xs font-bold text-[#14649B] group-hover:text-white/90 transition-colors">
+                      {p.temasTotales}
+                    </div>
                     <p className="text-xs sm:text-sm text-slate-600 group-hover:text-white/90 transition-colors leading-relaxed">{p.desc}</p>
                     <div className={`text-xs font-bold pt-1 flex items-center gap-1.5 ${p.actionTextClass} transition-colors`}>
-                      <span>Explorar este pilar</span>
+                      <span>Explorar grupos</span>
                       <span className="transition-transform duration-200 group-hover:translate-x-0.5" aria-hidden="true">→</span>
                     </div>
                   </div>
@@ -1250,37 +843,62 @@ export default function App() {
           )}
 
           {/* ========================================================
-              LEVEL 2: CARDS OF CATEGORIES
+              LEVEL 2: CARDS OF OFFICIAL GROUPS WITHIN MACRO GROUP
               ======================================================== */}
           {level === 2 && (
-            <div className={`space-y-6 sm:space-y-8 max-w-4xl transition-all duration-300 ${!menuSidebarOpen ? 'mx-auto' : ''}`}>
-              <div className="space-y-2">
+            <div className={`w-full space-y-6 sm:space-y-8 transition-all duration-300 ${!menuSidebarOpen ? 'max-w-4xl lg:max-w-5xl mx-auto' : 'max-w-4xl'}`}>
+              <div className={`space-y-2 ${!menuSidebarOpen ? 'text-center max-w-2xl mx-auto' : ''}`}>
                 <span className="text-xs font-bold text-[#14649B] uppercase tracking-wider">
-                  Categorías de {PILLARS_CONFIG.find(p => p.id === selectedPillar)?.name}
+                  Grupos Oficiales de {currentPillarConfig.name}
                 </span>
-                <h2 className="text-2xl sm:text-3xl font-black text-[#19324B] tracking-tight">Seleccionar una Categoría</h2>
-                <p className="text-xs sm:text-sm text-slate-600">Elegir la categoría para consultar los trámites y gestiones correspondientes.</p>
+                <h2 className="text-2xl sm:text-3xl font-black text-[#19324B] tracking-tight">Seleccionar un Grupo</h2>
+                <p className="text-xs sm:text-sm text-slate-600">
+                  Grupos oficiales clasificados según el régimen, volumen de operaciones y perfil tributario.
+                </p>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-                {categoriasInPillar.map((cat, idx) => (
+              <div className={`grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 ${!menuSidebarOpen ? 'max-w-4xl lg:max-w-5xl mx-auto' : ''}`}>
+                {gruposInPillar.map((g) => (
                   <div 
-                    key={idx}
+                    key={g.no}
                     role="button"
                     tabIndex={0}
-                    onClick={() => handleSelectCategoria(cat)}
-                    onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handleSelectCategoria(cat); } }}
+                    onClick={() => handleSelectCategoria(g.nombre)}
+                    onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handleSelectCategoria(g.nombre); } }}
                     className={`p-5 sm:p-6 bg-white border border-[#DCDCDC] rounded-[16px] ${currentPillarConfig.cardHoverBorder} ${currentPillarConfig.cardHoverBg} ${currentPillarConfig.cardHoverShadow} transition-all duration-300 cursor-pointer space-y-3.5 group shadow-xs hover:-translate-y-1 focus-visible:ring-2 focus-visible:ring-[#14649B]`}
                   >
                     <div className="flex items-center justify-between gap-3">
-                      <h3 className="text-base sm:text-lg font-bold text-[#19324B] group-hover:text-white transition-colors">{cat}</h3>
+                      <div className="flex items-center gap-2.5">
+                        <span className="px-2 py-0.5 rounded text-[11px] font-black bg-slate-100 text-slate-700 group-hover:bg-white/20 group-hover:text-white transition-colors">
+                          No. {g.no}
+                        </span>
+                        <h3 className="text-base sm:text-lg font-bold text-[#19324B] group-hover:text-white transition-colors">{g.nombre}</h3>
+                      </div>
                       <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-all duration-300 ${currentPillarConfig.circleClasses} shadow-xs`}>
                         <ChevronRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5" aria-hidden="true" />
                       </div>
                     </div>
-                    <p className="text-xs sm:text-sm text-slate-600 group-hover:text-white/90 transition-colors leading-relaxed">Acceder a las opciones y requisitos oficiales de {cat}.</p>
+                    <div className="flex items-center gap-2">
+                      <span className="text-xs font-bold text-[#14649B] group-hover:text-white/95 transition-colors">
+                        {g.cantidadTemas} Temas clasificados
+                      </span>
+                      <span className="text-slate-300 group-hover:text-white/40">•</span>
+                      <span className="text-xs text-slate-500 group-hover:text-white/80 transition-colors">
+                        {g.subgrupos.length} {g.subgrupos.length === 1 ? 'Subgrupo' : 'Subgrupos'}
+                      </span>
+                    </div>
+                    {g.desc && (
+                      <p className="text-xs sm:text-sm text-slate-600 group-hover:text-white/90 transition-colors leading-relaxed">{g.desc}</p>
+                    )}
+                    <div className="flex flex-wrap gap-1.5 pt-1">
+                      {g.subgrupos.map((sub, sIdx) => (
+                        <span key={sIdx} className="px-2 py-0.5 rounded-full text-[10px] font-medium bg-slate-100/90 text-slate-600 group-hover:bg-white/15 group-hover:text-white/90 transition-colors">
+                          {sub.nombre} {sub.cantidadTemas ? `(${sub.cantidadTemas})` : ''}
+                        </span>
+                      ))}
+                    </div>
                     <div className={`text-xs font-bold ${currentPillarConfig.actionTextClass} group-hover:text-white transition-colors pt-1 flex items-center gap-1.5`}>
-                      <span>Ver opciones</span>
+                      <span>Explorar subgrupos</span>
                       <span className="transition-transform duration-200 group-hover:translate-x-0.5" aria-hidden="true">→</span>
                     </div>
                   </div>
@@ -1290,42 +908,151 @@ export default function App() {
           )}
 
           {/* ========================================================
-              LEVEL 3: CARDS OF SUBCATEGORIES
+              LEVEL 3: CARDS OF SUBGROUPS (CATEGORÍAS)
               ======================================================== */}
           {level === 3 && (
-            <div className={`space-y-6 sm:space-y-8 max-w-4xl transition-all duration-300 ${!menuSidebarOpen ? 'mx-auto' : ''}`}>
-              <div className="space-y-2">
-                <span className="text-xs font-bold text-[#14649B] uppercase tracking-wider">
-                  {selectedCategoria}
-                </span>
-                <h2 className="text-2xl sm:text-3xl font-black text-[#19324B] tracking-tight">Seleccionar una Gestión</h2>
-                <p className="text-xs sm:text-sm text-slate-600">Seleccionar el tipo de trámite o gestión que desea consultar.</p>
+            <div className={`w-full space-y-6 sm:space-y-8 transition-all duration-300 ${!menuSidebarOpen ? (selectedCategoria === 'NIT sin Obligaciones' ? 'max-w-5xl xl:max-w-6xl mx-auto' : 'max-w-4xl lg:max-w-5xl mx-auto') : 'max-w-4xl'}`}>
+              <div className={`space-y-2 ${!menuSidebarOpen ? 'text-center max-w-2xl mx-auto' : ''}`}>
+                <div className="flex items-center justify-center gap-2">
+                  <span className="text-xs font-bold text-[#14649B] uppercase tracking-wider">
+                    Grupo No. {currentGrupo?.no} · {selectedCategoria}
+                  </span>
+                  {selectedCategoria === 'NIT sin Obligaciones' && (
+                    <span className="px-2 py-0.5 rounded-full text-[10px] font-black bg-emerald-100 text-emerald-800">
+                      7 Procesos Oficiales
+                    </span>
+                  )}
+                </div>
+                <h2 className="text-2xl sm:text-3xl font-black text-[#19324B] tracking-tight">
+                  {selectedCategoria === 'NIT sin Obligaciones' ? 'Procesos de NIT sin Obligaciones' : 'Seleccionar un Subgrupo'}
+                </h2>
+                <p className="text-xs sm:text-sm text-slate-600">
+                  {selectedCategoria === 'NIT sin Obligaciones' 
+                    ? 'Catálogo oficial de los 7 procesos autorizados para personas individuales y extranjeros sin actividad económica (Subgrupo General).'
+                    : `Subcategorías oficiales de trámites y gestiones correspondientes a ${selectedCategoria}.`
+                  }
+                </p>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-                {subcategoriasInCategoria.map((sub, idx) => (
-                  <div 
-                    key={idx}
-                    role="button"
-                    tabIndex={0}
-                    onClick={() => handleSelectSubcategoria(sub)}
-                    onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handleSelectSubcategoria(sub); } }}
-                    className={`p-5 sm:p-6 bg-white border border-[#DCDCDC] rounded-[16px] ${currentPillarConfig.cardHoverBorder} ${currentPillarConfig.cardHoverBg} ${currentPillarConfig.cardHoverShadow} transition-all duration-300 cursor-pointer space-y-3.5 group shadow-xs hover:-translate-y-1 focus-visible:ring-2 focus-visible:ring-[#14649B]`}
-                  >
-                    <div className="flex items-center justify-between gap-3">
-                      <h3 className="text-base sm:text-lg font-bold text-[#19324B] group-hover:text-white transition-colors">{sub}</h3>
-                      <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-all duration-300 ${currentPillarConfig.circleClasses} shadow-xs`}>
-                        <ChevronRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5" aria-hidden="true" />
+              {/* Si es NIT sin Obligaciones, rejilla continua de 3 por fila con gap mínimo */}
+              {selectedCategoria === 'NIT sin Obligaciones' && (
+                <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-3 ${!menuSidebarOpen ? 'w-full mx-auto' : ''}`}>
+                  {TRAMITES_DATA.filter(t => t.categoria === 'NIT sin Obligaciones').map((item) => (
+                    <div
+                      key={item.id}
+                      role="button"
+                      tabIndex={0}
+                      onClick={() => handleSelectMenuGestion(item)}
+                      onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handleSelectMenuGestion(item); } }}
+                      className="p-4 sm:p-4.5 bg-white border border-[#DCDCDC] rounded-[14px] hover:border-[#14649B] hover:bg-[#14649B] hover:shadow-[0_12px_24px_rgba(20,100,155,0.24)] transition-all duration-200 cursor-pointer group shadow-xs hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-[#14649B] flex flex-col justify-between"
+                    >
+                      <div className="space-y-2">
+                        <div className="flex items-start justify-between gap-2">
+                          <div className="flex flex-wrap items-center gap-1">
+                            <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-[#14649B]/10 text-[#14649B] group-hover:bg-white/20 group-hover:text-white transition-colors">
+                              {item.tema || item.subcategoria}
+                            </span>
+                            {(item.subtema || item.tipoSubtema) && (
+                              <span className="px-1.5 py-0.5 rounded text-[10px] font-medium bg-slate-100 text-slate-600 group-hover:bg-white/15 group-hover:text-white/90 transition-colors">
+                                {item.subtema || item.tipoSubtema}
+                              </span>
+                            )}
+                            {(item.nombreActual || item.moduloRequisitos) && (
+                              <span className="px-1.5 py-0.5 rounded text-[10px] font-medium bg-slate-100/90 text-slate-700 group-hover:bg-white/20 group-hover:text-white transition-colors truncate max-w-[170px]" title={item.nombreActual || item.moduloRequisitos}>
+                                {item.nombreActual || item.moduloRequisitos}
+                              </span>
+                            )}
+                          </div>
+                          <div className="w-7 h-7 rounded-full flex items-center justify-center shrink-0 bg-[#14649B]/10 text-[#14649B] group-hover:bg-white group-hover:text-[#14649B] shadow-2xs transition-all duration-200">
+                            <ChevronRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5" aria-hidden="true" />
+                          </div>
+                        </div>
+
+                        <h4 className="text-sm sm:text-base font-bold text-[#19324B] group-hover:text-white transition-colors leading-snug">
+                          {item.tramite}
+                        </h4>
+
+                        <p className="text-xs text-slate-600 group-hover:text-white/90 transition-colors line-clamp-3 leading-relaxed">
+                          {item.descripcion}
+                        </p>
+
+                        {/* Distintivos especiales de integración de arquitectura transaccional */}
+                        {item.id === 'con-nit-4' && (
+                          <div className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-bold bg-sky-50 text-[#0284C7] border border-sky-200/70 group-hover:bg-white/20 group-hover:text-white group-hover:border-white/30 transition-colors">
+                            <span>⚡ Paso integrado en Agencia Virtual</span>
+                          </div>
+                        )}
+                        {item.id === 'con-nit-3' && (
+                          <div className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-bold bg-sky-50 text-[#0284C7] border border-sky-200/70 group-hover:bg-white/20 group-hover:text-white group-hover:border-white/30 transition-colors">
+                            <span>🔍 Incluye Consulta de Estado Integrada</span>
+                          </div>
+                        )}
+                        {item.id === 'con-nit-7' && (
+                          <div className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-50 text-emerald-800 border border-emerald-200/70 group-hover:bg-white/20 group-hover:text-white group-hover:border-white/30 transition-colors">
+                            <span>🌐 Trámite Ciudadano Universal (Decreto 57-2008)</span>
+                          </div>
+                        )}
+                      </div>
+
+                      <div className="pt-2.5 mt-2.5 border-t border-slate-100 group-hover:border-white/20 space-y-1.5">
+                        {item.perfilDestinatario && (
+                          <div className="text-[10px] sm:text-[11px] text-slate-500 group-hover:text-white/80 transition-colors line-clamp-1">
+                            <strong className="font-semibold text-slate-700 group-hover:text-white">Usado por:</strong> {item.perfilDestinatario}
+                          </div>
+                        )}
+                        <div className="text-xs font-bold text-[#14649B] group-hover:text-white transition-colors flex items-center gap-1">
+                          <span>Ver proceso</span>
+                          <span className="transition-transform duration-200 group-hover:translate-x-0.5" aria-hidden="true">→</span>
+                        </div>
                       </div>
                     </div>
-                    <p className="text-xs sm:text-sm text-slate-600 group-hover:text-white/90 transition-colors leading-relaxed">Trámites y normativas vigentes correspondientes a {sub}.</p>
-                    <div className={`text-xs font-bold ${currentPillarConfig.actionTextClass} group-hover:text-white transition-colors pt-1 flex items-center gap-1.5`}>
-                      <span>Ver trámites</span>
-                      <span className="transition-transform duration-200 group-hover:translate-x-0.5" aria-hidden="true">→</span>
-                    </div>
+                  ))}
+                </div>
+              )}
+
+              {/* Subgrupos de navegación para otros grupos */}
+              {selectedCategoria !== 'NIT sin Obligaciones' && (
+                <div className="space-y-4 pt-2">
+                  <div className="flex items-center justify-between border-b border-slate-200 pb-2">
+                    <h3 className="text-sm font-bold text-[#19324B] uppercase tracking-wider">
+                      Subgrupos Oficiales
+                    </h3>
+                    <span className="text-xs text-slate-500 font-mono">{subgruposInGrupo.length} Subgrupos</span>
                   </div>
-                ))}
-              </div>
+
+                  <div className={`grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 ${!menuSidebarOpen ? 'max-w-4xl lg:max-w-5xl mx-auto' : ''}`}>
+                    {subgruposInGrupo.map((sub, idx) => (
+                      <div 
+                        key={idx}
+                        role="button"
+                        tabIndex={0}
+                        onClick={() => handleSelectSubcategoria(sub.nombre)}
+                        onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handleSelectSubcategoria(sub.nombre); } }}
+                        className={`p-5 sm:p-6 bg-white border border-[#DCDCDC] rounded-[16px] ${currentPillarConfig.cardHoverBorder} ${currentPillarConfig.cardHoverBg} ${currentPillarConfig.cardHoverShadow} transition-all duration-300 cursor-pointer space-y-3.5 group shadow-xs hover:-translate-y-1 focus-visible:ring-2 focus-visible:ring-[#14649B]`}
+                      >
+                        <div className="flex items-center justify-between gap-3">
+                          <h3 className="text-base sm:text-lg font-bold text-[#19324B] group-hover:text-white transition-colors">{sub.nombre}</h3>
+                          <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-all duration-300 ${currentPillarConfig.circleClasses} shadow-xs`}>
+                            <ChevronRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5" aria-hidden="true" />
+                          </div>
+                        </div>
+                        {sub.cantidadTemas && (
+                          <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-bold bg-[#14649B]/10 text-[#14649B] group-hover:bg-white/20 group-hover:text-white transition-colors w-fit">
+                            <span>{sub.cantidadTemas} {sub.cantidadTemas === 1 ? 'Proceso oficial' : 'Procesos oficiales'}</span>
+                          </div>
+                        )}
+                        <p className="text-xs sm:text-sm text-slate-600 group-hover:text-white/90 transition-colors leading-relaxed">
+                          {sub.desc || `Trámites, normativas y requisitos vigentes correspondientes a ${sub.nombre}.`}
+                        </p>
+                        <div className={`text-xs font-bold ${currentPillarConfig.actionTextClass} group-hover:text-white transition-colors pt-1 flex items-center gap-1.5`}>
+                          <span>Ver trámites y requisitos</span>
+                          <span className="transition-transform duration-200 group-hover:translate-x-0.5" aria-hidden="true">→</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
           )}
 
@@ -1333,7 +1060,7 @@ export default function App() {
               LEVEL 4: TRÁMITES & DETAIL CON ACCIÓN EN INFINITIVO
               ======================================================== */}
           {level === 4 && (
-            <div className={`space-y-6 sm:space-y-8 transition-all duration-300 ${!menuSidebarOpen ? 'max-w-4xl mx-auto' : 'max-w-3xl'}`}>
+            <div className={`w-full space-y-6 sm:space-y-8 transition-all duration-300 ${!menuSidebarOpen ? 'max-w-4xl lg:max-w-5xl mx-auto' : 'max-w-3xl'}`}>
               
               {selectedTramite ? (
                 <div className="space-y-6 sm:space-y-8">
@@ -1342,9 +1069,26 @@ export default function App() {
                   <div className="space-y-4 border-b border-[#DCDCDC]/60 pb-6">
                     <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
                       <div>
-                        <span className="text-[11px] sm:text-xs font-bold text-[#14649B] uppercase tracking-wider block pb-1">
-                          {selectedTramite.subcategoria}
-                        </span>
+                        <div className="flex flex-wrap items-center gap-1.5 pb-1">
+                          <span className="text-[11px] sm:text-xs font-bold text-[#14649B] uppercase tracking-wider">
+                            {selectedTramite.subcategoria} · Grupo No. {selectedTramite.grupoNo || currentGrupo?.no}
+                          </span>
+                          {selectedTramite.subgrupoInterno && (
+                            <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-100 text-slate-700">
+                              Subgrupo: {selectedTramite.subgrupoInterno}
+                            </span>
+                          )}
+                          {(selectedTramite.subtema || selectedTramite.tipoSubtema) && (
+                            <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-[#14649B]/10 text-[#14649B]">
+                              Subtema: {selectedTramite.subtema || selectedTramite.tipoSubtema}
+                            </span>
+                          )}
+                          {(selectedTramite.nombreActual || selectedTramite.moduloRequisitos) && (
+                            <span className="px-2 py-0.5 rounded text-[10px] font-medium bg-slate-100 text-slate-700">
+                              Página actual: {selectedTramite.nombreActual || selectedTramite.moduloRequisitos}
+                            </span>
+                          )}
+                        </div>
                         <h2 className="text-2xl sm:text-3xl font-black text-[#19324B] tracking-tight text-balance">
                           {selectedTramite.tramite}
                         </h2>
@@ -1406,6 +1150,50 @@ export default function App() {
                     </nav>
                   )}
 
+                  {/* Punto: Perfil del Destinatario y Arquitectura Transaccional */}
+                  {(selectedTramite.perfilDestinatario || selectedTramite.impactoOImportancia || selectedTramite.recomendacionUX || selectedTramite.ubicacionPortalActual) && (
+                    <section id="perfil" className="scroll-mt-24 sm:scroll-mt-28 space-y-3.5 pt-2">
+                      <div className="flex items-center gap-2">
+                        <span className="w-2.5 h-2.5 rounded-full bg-[#14649B]" />
+                        <h3 className="text-lg sm:text-xl font-bold text-[#19324B]">Perfil del Destinatario y Arquitectura Transaccional</h3>
+                      </div>
+                      
+                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5">
+                        {selectedTramite.perfilDestinatario && (
+                          <div className="p-4 bg-slate-50 border border-slate-200 rounded-xl space-y-1.5 shadow-2xs">
+                            <span className="text-[10px] font-bold text-[#14649B] uppercase tracking-wider block">Usado Por (Perfil)</span>
+                            <p className="text-xs sm:text-sm font-semibold text-[#19324B] leading-snug">{selectedTramite.perfilDestinatario}</p>
+                          </div>
+                        )}
+                        {selectedTramite.impactoOImportancia && (
+                          <div className="p-4 bg-sky-50/70 border border-sky-200/80 rounded-xl space-y-1.5 shadow-2xs">
+                            <span className="text-[10px] font-bold text-[#0284C7] uppercase tracking-wider block">Motivo / Referencia</span>
+                            <p className="text-xs sm:text-sm text-slate-800 leading-snug">{selectedTramite.impactoOImportancia}</p>
+                          </div>
+                        )}
+                        {selectedTramite.recomendacionUX && (
+                          <div className="p-4 bg-emerald-50/70 border border-emerald-200/80 rounded-xl space-y-1.5 shadow-2xs">
+                            <span className="text-[10px] font-bold text-[#2E7D32] uppercase tracking-wider block">Nota / Revisar (UX)</span>
+                            <p className="text-xs sm:text-sm text-slate-800 leading-snug">{selectedTramite.recomendacionUX}</p>
+                          </div>
+                        )}
+                        {selectedTramite.ubicacionPortalActual && (
+                          <div className="p-4 bg-amber-50/70 border border-amber-200/80 rounded-xl space-y-1.5 shadow-2xs">
+                            <span className="text-[10px] font-bold text-[#B45309] uppercase tracking-wider block">Sección Actual del Menú</span>
+                            <p className="text-xs sm:text-sm text-slate-800 leading-snug font-medium">{selectedTramite.ubicacionPortalActual}</p>
+                          </div>
+                        )}
+                      </div>
+
+                      {selectedTramite.origenClasificacion && (
+                        <div className="p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-700 flex flex-wrap items-center gap-2 shadow-2xs">
+                          <span className="font-bold text-[#14649B]">Origen de la clasificación:</span>
+                          <span className="font-medium text-slate-800">{selectedTramite.origenClasificacion}</span>
+                        </div>
+                      )}
+                    </section>
+                  )}
+
                   {/* Requisitos por Modalidad si están presentes (Venta de Especies Fiscales) */}
                   {selectedTramite.requisitosPorModalidad && (
                     <div className="space-y-8">
@@ -1426,7 +1214,7 @@ export default function App() {
                             return (
                               <button 
                                 key={idx} 
-                                type="button"
+                                type="button" 
                                 role="checkbox"
                                 aria-checked={isChecked}
                                 onClick={() => handleToggleRequirement(reqKey)}
@@ -1468,7 +1256,7 @@ export default function App() {
                             return (
                               <button 
                                 key={idx} 
-                                type="button"
+                                type="button" 
                                 role="checkbox"
                                 aria-checked={isChecked}
                                 onClick={() => handleToggleRequirement(reqKey)}
@@ -1510,7 +1298,7 @@ export default function App() {
                             return (
                               <button 
                                 key={idx} 
-                                type="button"
+                                type="button" 
                                 role="checkbox"
                                 aria-checked={isChecked}
                                 onClick={() => handleToggleRequirement(reqKey)}
@@ -1551,7 +1339,7 @@ export default function App() {
                           return (
                             <button 
                               key={idx} 
-                              type="button"
+                              type="button" 
                               role="checkbox"
                               aria-checked={isChecked}
                               onClick={() => handleToggleRequirement(reqKey)}
@@ -1595,28 +1383,267 @@ export default function App() {
                     </section>
                   )}
 
-                  {/* Punto: Formulario Oficial */}
+                  {/* Punto: Paso de Seguimiento Integrado Oficial en Ficha de Agencia Virtual */}
+                  {selectedTramite.id === 'con-nit-3' && (
+                    <section id="seguimiento" className="scroll-mt-24 sm:scroll-mt-28 space-y-4 pt-2">
+                      <div className="flex items-center gap-2">
+                        <span className="w-2.5 h-2.5 rounded-full bg-[#0284C7]" />
+                        <h3 className="text-lg sm:text-xl font-bold text-[#19324B]">
+                          Paso de Seguimiento Oficial Integrado
+                        </h3>
+                      </div>
+
+                      <div className="p-4 sm:p-6 bg-sky-50/70 border-2 border-[#0284C7] rounded-xl space-y-4 shadow-xs">
+                        <div className="flex flex-wrap items-center gap-1.5 pb-0.5">
+                          <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-[#0284C7] text-white">
+                            Subgrupo: Consultas Públicas
+                          </span>
+                          <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-white text-[#0284C7] border border-[#0284C7]/30">
+                            Subtema: Seguimiento
+                          </span>
+                          <span className="px-2 py-0.5 rounded text-[10px] font-medium bg-white text-slate-700 border border-slate-200">
+                            Módulo: Estado de Gestión de Agencia Virtual
+                          </span>
+                        </div>
+
+                        <div className="space-y-1">
+                          <h4 className="text-base sm:text-lg font-bold text-[#19324B]">
+                            Consulta de Estado de Gestión de Agencia Virtual
+                          </h4>
+                          <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                            Herramienta de consulta para verificar el estado de aprobación de la solicitud de acceso a Agencia Virtual o reseteo de clave. Permite validar si la solicitud fue aceptada, rechazada o requiere subsanar requisitos.
+                          </p>
+                          <div className="p-3 bg-white/80 border border-sky-200 rounded-lg text-xs text-slate-700">
+                            <strong className="text-[#0284C7]">Arquitectura Transaccional UX:</strong> Debe integrarse como paso de seguimiento dentro de la ficha de Agencia Virtual, no como enlace huérfano. Consulta aquí mismo el avance de tu expediente.
+                          </div>
+                        </div>
+
+                        {/* Módulo interactivo embebido */}
+                        <form onSubmit={handleConsultarGestion} className="flex flex-col sm:flex-row gap-2.5 pt-1">
+                          <div className="relative flex-1">
+                            <input
+                              type="text"
+                              value={consultaGestionInput}
+                              onChange={(e) => setConsultaGestionInput(e.target.value)}
+                              placeholder="Ej. GEST-2026-89412 o NIT del titular"
+                              className="w-full px-3.5 py-2.5 text-xs sm:text-sm bg-white border border-[#DCDCDC] rounded-lg focus:outline-none focus:border-[#0284C7] focus:ring-2 focus:ring-[#0284C7]/20"
+                            />
+                          </div>
+                          <button
+                            type="submit"
+                            className="min-h-[42px] px-5 py-2.5 bg-[#0284C7] hover:bg-[#0369a1] text-white font-bold text-xs sm:text-sm rounded-lg transition-colors shrink-0 shadow-xs flex items-center justify-center gap-2 focus-visible:ring-2 focus-visible:ring-[#0284C7]"
+                          >
+                            <span>Consultar Estado</span>
+                            <Search className="w-4 h-4" />
+                          </button>
+                        </form>
+
+                        {/* Chips de prueba rápida */}
+                        <div className="flex flex-wrap items-center gap-1.5 text-[11px] text-slate-600">
+                          <span className="font-semibold">Simular estado:</span>
+                          <button
+                            type="button"
+                            onClick={() => { setConsultaGestionInput('GEST-2026-A1'); setTimeout(() => handleConsultarGestion(), 50); }}
+                            className="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 hover:bg-emerald-200 font-semibold transition-colors"
+                          >
+                            Aprobada
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => { setConsultaGestionInput('GEST-2026-T9'); setTimeout(() => handleConsultarGestion(), 50); }}
+                            className="px-2 py-0.5 rounded bg-sky-100 text-sky-800 hover:bg-sky-200 font-semibold transition-colors"
+                          >
+                            En trámite
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => { setConsultaGestionInput('GEST-2026-R2'); setTimeout(() => handleConsultarGestion(), 50); }}
+                            className="px-2 py-0.5 rounded bg-amber-100 text-amber-800 hover:bg-amber-200 font-semibold transition-colors"
+                          >
+                            Observada / Rechazada
+                          </button>
+                        </div>
+
+                        {/* Resultado interactivo */}
+                        {consultaGestionResult && (
+                          <div className="p-4 bg-white border border-sky-200 rounded-lg space-y-2 animate-in fade-in duration-200 shadow-xs">
+                            <div className="flex items-center justify-between">
+                              <span className="text-xs text-slate-500 font-mono">Expediente: {consultaGestionResult.numero}</span>
+                              <span className={`px-2.5 py-0.5 rounded-full text-xs font-bold ${
+                                consultaGestionResult.estado === 'Aprobada'
+                                  ? 'bg-emerald-100 text-emerald-800'
+                                  : consultaGestionResult.estado === 'Observada'
+                                  ? 'bg-amber-100 text-amber-800'
+                                  : 'bg-sky-100 text-sky-800'
+                              }`}>
+                                Estado: {consultaGestionResult.estado}
+                              </span>
+                            </div>
+                            <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                              {consultaGestionResult.mensaje}
+                            </p>
+                          </div>
+                        )}
+
+                        <div className="pt-2 border-t border-sky-200/80 flex flex-wrap items-center justify-between gap-3 text-xs">
+                          <button
+                            type="button"
+                            onClick={() => {
+                              const consultaItem = TRAMITES_DATA.find(t => t.id === 'con-nit-4');
+                              if (consultaItem) handleSelectMenuGestion(consultaItem);
+                            }}
+                            className="font-bold text-[#0284C7] hover:underline flex items-center gap-1.5"
+                          >
+                            <span>Ver ficha individual de Consulta de Estado de Gestión</span>
+                            <span aria-hidden="true">→</span>
+                          </button>
+
+                          <a
+                            href="https://portal.sat.gob.gt/portal/consulta-de-gestion-del-contribuyente/"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="font-bold text-slate-700 hover:text-[#0284C7] hover:underline flex items-center gap-1.5"
+                          >
+                            <span>Abrir en Portal SAT Oficial</span>
+                            <ExternalLink className="w-3.5 h-3.5" aria-hidden="true" />
+                          </a>
+                        </div>
+                      </div>
+                    </section>
+                  )}
+
+                  {/* Punto: Formulario Oficial o Módulo de Consulta */}
                   {selectedTramite.formulario && (
                     <section id="formulario" className="scroll-mt-24 sm:scroll-mt-28 space-y-3 pt-2">
-                      <h3 className="text-lg sm:text-xl font-bold text-[#19324B]">Llenar el formulario oficial de gestión</h3>
-                      <div className="p-4 sm:p-5 bg-[#14649B]/5 border border-[#14649B]/20 rounded-xl space-y-3">
-                        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                          <span className="font-bold text-[#14649B] text-sm sm:text-base leading-snug">{selectedTramite.formulario}</span>
-                          <span className="inline-flex items-center text-[11px] font-bold text-white bg-[#14649B] px-2.5 py-0.5 rounded-full w-fit">En línea 24/7</span>
+                      <h3 className="text-lg sm:text-xl font-bold text-[#19324B]">
+                        {selectedTramite.id === 'con-nit-4' ? 'Herramienta de Consulta de Estado de Gestión' : 'Llenar el formulario oficial de gestión'}
+                      </h3>
+
+                      {selectedTramite.id === 'con-nit-4' ? (
+                        <div className="p-4 sm:p-6 bg-slate-50 border border-slate-200 rounded-xl space-y-4 shadow-xs">
+                          <div className="space-y-1">
+                            <div className="flex items-center gap-2">
+                              <span className="w-2.5 h-2.5 rounded-full bg-[#14649B]" />
+                              <h4 className="text-base sm:text-lg font-bold text-[#19324B]">
+                                Módulo de Consulta Pública de Gestiones SAT
+                              </h4>
+                            </div>
+                            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                              Ingresa el número de gestión recibido al solicitar la Agencia Virtual o el NIT/DPI del titular para consultar el progreso del expediente.
+                            </p>
+                            <div className="p-3 bg-sky-50/80 border border-sky-200 rounded-lg text-xs text-slate-700">
+                              <strong className="text-[#14649B]">Integración de Arquitectura Transaccional:</strong> Esta herramienta corresponde al paso de seguimiento del flujo de Solicitud y Activación de Agencia Virtual. Se integra como paso de seguimiento para evitar enlaces huérfanos.
+                            </div>
+                          </div>
+
+                          <form onSubmit={handleConsultarGestion} className="flex flex-col sm:flex-row gap-2.5">
+                            <div className="relative flex-1">
+                              <input
+                                type="text"
+                                value={consultaGestionInput}
+                                onChange={(e) => setConsultaGestionInput(e.target.value)}
+                                placeholder="Ej. GEST-2026-89412 o NIT del titular"
+                                className="w-full px-3.5 py-2.5 text-xs sm:text-sm bg-white border border-[#DCDCDC] rounded-lg focus:outline-none focus:border-[#14649B] focus:ring-2 focus:ring-[#14649B]/20"
+                              />
+                            </div>
+                            <button
+                              type="submit"
+                              className="min-h-[42px] px-5 py-2.5 bg-[#14649B] hover:bg-[#19AFE1] text-white font-bold text-xs sm:text-sm rounded-lg transition-colors shrink-0 shadow-xs flex items-center justify-center gap-2"
+                            >
+                              <span>Consultar Estado</span>
+                              <Search className="w-4 h-4" />
+                            </button>
+                          </form>
+
+                          {/* Chips de prueba rápida */}
+                          <div className="flex flex-wrap items-center gap-1.5 text-[11px] text-slate-500">
+                            <span>Prueba rápida:</span>
+                            <button
+                              type="button"
+                              onClick={() => { setConsultaGestionInput('GEST-2026-A1'); setTimeout(() => handleConsultarGestion(), 50); }}
+                              className="px-2 py-0.5 rounded bg-emerald-50 text-emerald-700 hover:bg-emerald-100 font-semibold"
+                            >
+                              Simular Aprobada
+                            </button>
+                            <button
+                              type="button"
+                              onClick={() => { setConsultaGestionInput('GEST-2026-T9'); setTimeout(() => handleConsultarGestion(), 50); }}
+                              className="px-2 py-0.5 rounded bg-sky-50 text-sky-700 hover:bg-sky-100 font-semibold"
+                            >
+                              Simular En trámite
+                            </button>
+                            <button
+                              type="button"
+                              onClick={() => { setConsultaGestionInput('GEST-2026-R2'); setTimeout(() => handleConsultarGestion(), 50); }}
+                              className="px-2 py-0.5 rounded bg-amber-50 text-amber-800 hover:bg-amber-100 font-semibold"
+                            >
+                              Simular Observada
+                            </button>
+                          </div>
+
+                          {/* Resultado interactivo */}
+                          {consultaGestionResult && (
+                            <div className="p-4 bg-white border border-slate-200 rounded-lg space-y-2 animate-in fade-in duration-200">
+                              <div className="flex items-center justify-between">
+                                <span className="text-xs text-slate-500 font-mono">Expediente: {consultaGestionResult.numero}</span>
+                                <span className={`px-2.5 py-0.5 rounded-full text-xs font-bold ${
+                                  consultaGestionResult.estado === 'Aprobada'
+                                    ? 'bg-emerald-100 text-emerald-800'
+                                    : consultaGestionResult.estado === 'Observada'
+                                    ? 'bg-amber-100 text-amber-800'
+                                    : 'bg-sky-100 text-sky-800'
+                                }`}>
+                                  Estado: {consultaGestionResult.estado}
+                                </span>
+                              </div>
+                              <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                                {consultaGestionResult.mensaje}
+                              </p>
+                            </div>
+                          )}
+
+                          <div className="pt-2 border-t border-slate-200 flex flex-wrap items-center justify-between gap-3 text-xs">
+                            <button
+                              type="button"
+                              onClick={() => {
+                                const avItem = TRAMITES_DATA.find(t => t.id === 'con-nit-3');
+                                if (avItem) handleSelectMenuGestion(avItem);
+                              }}
+                              className="text-[#14649B] font-bold hover:underline flex items-center gap-1"
+                            >
+                              <span>← Volver a Solicitud y Activación de Agencia Virtual</span>
+                            </button>
+                            <a
+                              href="https://portal.sat.gob.gt/portal/consulta-de-gestion-del-contribuyente/"
+                              target="_blank"
+                              rel="noreferrer"
+                              className="text-[#14649B] font-semibold hover:underline flex items-center gap-1"
+                            >
+                              <span>Abrir sistema en Portal SAT</span>
+                              <ExternalLink className="w-3.5 h-3.5" />
+                            </a>
+                          </div>
                         </div>
-                        <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                          Llenar en el portal oficial Declaraguate o Agencia Virtual. Al congelarlo se emite la boleta SAT-2000 para el pago presencial o electrónico.
-                        </p>
-                        <a 
-                          href="https://declaraguate.sat.gob.gt" 
-                          target="_blank" 
-                          rel="noreferrer"
-                          className="min-h-[40px] inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-[#14649B] hover:underline focus-visible:ring-2 focus-visible:ring-[#14649B] rounded"
-                        >
-                          <span>Ir al sistema de formularios Declaraguate</span>
-                          <ExternalLink className="w-4 h-4" aria-hidden="true" />
-                        </a>
-                      </div>
+                      ) : (
+                        <div className="p-4 sm:p-5 bg-[#14649B]/5 border border-[#14649B]/20 rounded-xl space-y-3">
+                          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                            <span className="font-bold text-[#14649B] text-sm sm:text-base leading-snug">{selectedTramite.formulario}</span>
+                            <span className="inline-flex items-center text-[11px] font-bold text-white bg-[#14649B] px-2.5 py-0.5 rounded-full w-fit">En línea 24/7</span>
+                          </div>
+                          <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                            Llenar en el portal oficial Declaraguate o Agencia Virtual. Al congelarlo se emite la boleta SAT-2000 para el pago presencial o electrónico.
+                          </p>
+                          <a 
+                            href="https://declaraguate.sat.gob.gt" 
+                            target="_blank" 
+                            rel="noreferrer"
+                            className="min-h-[40px] inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-[#14649B] hover:underline focus-visible:ring-2 focus-visible:ring-[#14649B] rounded"
+                          >
+                            <span>Ir al sistema de formularios Declaraguate</span>
+                            <ExternalLink className="w-4 h-4" aria-hidden="true" />
+                          </a>
+                        </div>
+                      )}
                     </section>
                   )}
 
@@ -1624,85 +1651,135 @@ export default function App() {
                   <section id="notas" className="scroll-mt-24 sm:scroll-mt-28 space-y-4 pt-2">
                     <h3 className="text-lg sm:text-xl font-bold text-[#19324B]">Revisar tarifas y notas importantes</h3>
 
-                    {/* TABLA DE TARIFAS OFICIALES: Versión escritorio en tabla, versión móvil en tarjetas (Principio 9) */}
-                    <div className="space-y-3">
-                      <div className="text-xs font-bold text-[#14649B] uppercase tracking-wider">
-                        Cuadro Oficial de Valores y Especies Fiscales
-                      </div>
+                    {/* TABLA DE TARIFAS: Si corresponde a Especies Fiscales */}
+                    {selectedTramite.subcategoria === 'Abogados y Notarios' && selectedTramite.tramite.includes('Especies') && (
+                      <div className="space-y-3">
+                        <div className="text-xs font-bold text-[#14649B] uppercase tracking-wider">
+                          Cuadro Oficial de Valores y Especies Fiscales
+                        </div>
 
-                      {/* Desktop Table View (>= 640px) */}
-                      <div className="hidden sm:block border border-[#DCDCDC] rounded-xl overflow-hidden shadow-xs">
-                        <table className="w-full text-left text-xs border-collapse">
-                          <thead className="bg-slate-100/80 text-[#19324B] font-bold border-b border-[#DCDCDC]">
-                            <tr>
-                              <th scope="col" className="p-3">Especie / Instrumento</th>
-                              <th scope="col" className="p-3">Tarifa Oficial</th>
-                              <th scope="col" className="p-3">Presentación / Detalle</th>
-                              <th scope="col" className="p-3">Base Legal</th>
-                            </tr>
-                          </thead>
-                          <tbody className="divide-y divide-[#DCDCDC]/70 text-slate-700 bg-white">
-                            <tr className="hover:bg-slate-50/70">
-                              <td className="p-3 font-semibold text-[#19324B]">Papel Sellado Especial para Protocolos</td>
-                              <td className="p-3 font-bold text-[#14649B]">Q10.00 / hoja</td>
-                              <td className="p-3">Lote de 50 hojas (Q500.00) + 5 de comisión (55 hojas)</td>
-                              <td className="p-3 text-slate-500 font-mono">Dto. 37-92 Art. 24</td>
-                            </tr>
-                            <tr className="hover:bg-slate-50/70">
-                              <td className="p-3 font-semibold text-[#19324B]">Comisión Notarial de Ley</td>
-                              <td className="p-3 font-bold text-emerald-700">10% en especie</td>
-                              <td className="p-3">5 hojas exentas entregadas por cada 50 adquiridas</td>
-                              <td className="p-3 text-slate-500 font-mono">Dto. 37-92 Art. 28</td>
-                            </tr>
-                            <tr className="hover:bg-slate-50/70">
-                              <td className="p-3 font-semibold text-[#19324B]">Timbres Fiscales Notariales</td>
-                              <td className="p-3 font-bold text-[#14649B]">Valores faciales</td>
-                              <td className="p-3">Denominaciones desde Q0.50 hasta Q100.00</td>
-                              <td className="p-3 text-slate-500 font-mono">Dto. 37-92 Art. 5</td>
-                            </tr>
-                            <tr className="hover:bg-slate-50/70">
-                              <td className="p-3 font-semibold text-[#19324B]">Razón Electrónica en Agencia Virtual</td>
-                              <td className="p-3 font-bold text-[#14649B]">Tarifa específica</td>
-                              <td className="p-3">Pago en línea con código QR de autenticidad</td>
-                              <td className="p-3 text-slate-500 font-mono">Acuerdo Directorio</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
+                        {/* Desktop Table View (>= 640px) */}
+                        <div className="hidden sm:block border border-[#DCDCDC] rounded-xl overflow-hidden shadow-xs">
+                          <table className="w-full text-left text-xs border-collapse">
+                            <thead className="bg-slate-100/80 text-[#19324B] font-bold border-b border-[#DCDCDC]">
+                              <tr>
+                                <th scope="col" className="p-3">Especie / Instrumento</th>
+                                <th scope="col" className="p-3">Tarifa Oficial</th>
+                                <th scope="col" className="p-3">Presentación / Detalle</th>
+                                <th scope="col" className="p-3">Base Legal</th>
+                              </tr>
+                            </thead>
+                            <tbody className="divide-y divide-[#DCDCDC]/70 text-slate-700 bg-white">
+                              <tr className="hover:bg-slate-50/70">
+                                <td className="p-3 font-semibold text-[#19324B]">Papel Sellado Especial para Protocolos</td>
+                                <td className="p-3 font-bold text-[#14649B]">Q10.00 / hoja</td>
+                                <td className="p-3">Lote de 50 hojas (Q500.00) + 5 de comisión (55 hojas)</td>
+                                <td className="p-3 text-slate-500 font-mono">Dto. 37-92 Art. 24</td>
+                              </tr>
+                              <tr className="hover:bg-slate-50/70">
+                                <td className="p-3 font-semibold text-[#19324B]">Comisión Notarial de Ley</td>
+                                <td className="p-3 font-bold text-emerald-700">10% en especie</td>
+                                <td className="p-3">5 hojas exentas entregadas por cada 50 adquiridas</td>
+                                <td className="p-3 text-slate-500 font-mono">Dto. 37-92 Art. 28</td>
+                              </tr>
+                              <tr className="hover:bg-slate-50/70">
+                                <td className="p-3 font-semibold text-[#19324B]">Timbres Fiscales Notariales</td>
+                                <td className="p-3 font-bold text-[#14649B]">Valores faciales</td>
+                                <td className="p-3">Denominaciones desde Q0.50 hasta Q100.00</td>
+                                <td className="p-3 text-slate-500 font-mono">Dto. 37-92 Art. 5</td>
+                              </tr>
+                              <tr className="hover:bg-slate-50/70">
+                                <td className="p-3 font-semibold text-[#19324B]">Razón Electrónica en Agencia Virtual</td>
+                                <td className="p-3 font-bold text-[#14649B]">Tarifa específica</td>
+                                <td className="p-3">Pago en línea con código QR de autenticidad</td>
+                                <td className="p-3 text-slate-500 font-mono">Acuerdo Directorio</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
 
-                      {/* Mobile Card Transformation View (< 640px) */}
-                      <div className="sm:hidden space-y-2.5">
-                        <div className="p-3.5 bg-slate-50 border border-[#DCDCDC] rounded-xl space-y-1.5 text-xs">
-                          <div className="font-bold text-[#19324B] text-sm">Papel Sellado Especial para Protocolos</div>
+                        {/* Mobile Card Transformation View (< 640px) */}
+                        <div className="sm:hidden space-y-2.5">
+                          <div className="p-3.5 bg-slate-50 border border-[#DCDCDC] rounded-xl space-y-1.5 text-xs">
+                            <div className="font-bold text-[#19324B] text-sm">Papel Sellado Especial para Protocolos</div>
+                            <div className="flex items-center justify-between text-slate-600">
+                              <span>Tarifa oficial:</span>
+                              <span className="font-bold text-[#14649B] text-sm">Q10.00 por hoja</span>
+                            </div>
+                            <div className="text-[11px] text-slate-600">Lote de 50 hojas (Q500.00) + 5 hojas de comisión legal (55 hojas total).</div>
+                            <div className="text-[10px] text-slate-500 font-mono pt-1">Base: Decreto 37-92 Art. 24</div>
+                          </div>
+
+                          <div className="p-3.5 bg-slate-50 border border-[#DCDCDC] rounded-xl space-y-1.5 text-xs">
+                            <div className="font-bold text-[#19324B] text-sm">Comisión Notarial de Ley</div>
+                            <div className="flex items-center justify-between text-slate-600">
+                              <span>Beneficio legal:</span>
+                              <span className="font-bold text-emerald-700 text-sm">10% en especie</span>
+                            </div>
+                            <div className="text-[11px] text-slate-600">5 hojas adicionales sin costo por cada lote de 50 hojas adquirido.</div>
+                            <div className="text-[10px] text-slate-500 font-mono pt-1">Base: Decreto 37-92 Art. 28</div>
+                          </div>
+
+                          <div className="p-3.5 bg-slate-50 border border-[#DCDCDC] rounded-xl space-y-1.5 text-xs">
+                            <div className="font-bold text-[#19324B] text-sm">Timbres Fiscales y Razón Electrónica</div>
+                            <div className="flex items-center justify-between text-slate-600">
+                              <span>Modalidad:</span>
+                              <span className="font-bold text-[#14649B] text-sm">Física o Virtual</span>
+                            </div>
+                            <div className="text-[11px] text-slate-600">Estampillas físicas de distintas denominaciones o razón electrónica con QR en Agencia Virtual.</div>
+                            <div className="text-[10px] text-slate-500 font-mono pt-1">Base: Decreto 37-92 Art. 5</div>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+
+                    {/* TABLA DE TARIFAS: Si corresponde a Solvencia Fiscal */}
+                    {selectedTramite.id === 'con-nit-5' && (
+                      <div className="space-y-3">
+                        <div className="text-xs font-bold text-[#14649B] uppercase tracking-wider">
+                          Cuadro de Aranceles y Validez de Solvencia Fiscal
+                        </div>
+
+                        {/* Desktop Table */}
+                        <div className="hidden sm:block border border-[#DCDCDC] rounded-xl overflow-hidden shadow-xs">
+                          <table className="w-full text-left text-xs border-collapse">
+                            <thead className="bg-slate-100/80 text-[#19324B] font-bold border-b border-[#DCDCDC]">
+                              <tr>
+                                <th scope="col" className="p-3">Concepto Oficial</th>
+                                <th scope="col" className="p-3">Tarifa Legal</th>
+                                <th scope="col" className="p-3">Vigencia Oficial</th>
+                                <th scope="col" className="p-3">Canal de Emisión</th>
+                                <th scope="col" className="p-3">Base Legal</th>
+                              </tr>
+                            </thead>
+                            <tbody className="divide-y divide-[#DCDCDC]/70 text-slate-700 bg-white">
+                              <tr className="hover:bg-slate-50/70">
+                                <td className="p-3 font-semibold text-[#19324B]">Solvencia Fiscal Electrónica (SOFI)</td>
+                                <td className="p-3 font-bold text-[#14649B]">Q30.00</td>
+                                <td className="p-3 text-emerald-700 font-bold">30 días calendario</td>
+                                <td className="p-3">Declaraguate SAT-8421 / Agencia Virtual</td>
+                                <td className="p-3 text-slate-500 font-mono">Dto. 6-91 Art. 57 "A"</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+
+                        {/* Mobile Card View */}
+                        <div className="sm:hidden p-3.5 bg-slate-50 border border-[#DCDCDC] rounded-xl space-y-1.5 text-xs">
+                          <div className="font-bold text-[#19324B] text-sm">Solvencia Fiscal Electrónica (SOFI)</div>
                           <div className="flex items-center justify-between text-slate-600">
                             <span>Tarifa oficial:</span>
-                            <span className="font-bold text-[#14649B] text-sm">Q10.00 por hoja</span>
+                            <span className="font-bold text-[#14649B] text-sm">Q30.00</span>
                           </div>
-                          <div className="text-[11px] text-slate-600">Lote de 50 hojas (Q500.00) + 5 hojas de comisión legal (55 hojas total).</div>
-                          <div className="text-[10px] text-slate-500 font-mono pt-1">Base: Decreto 37-92 Art. 24</div>
-                        </div>
-
-                        <div className="p-3.5 bg-slate-50 border border-[#DCDCDC] rounded-xl space-y-1.5 text-xs">
-                          <div className="font-bold text-[#19324B] text-sm">Comisión Notarial de Ley</div>
                           <div className="flex items-center justify-between text-slate-600">
-                            <span>Beneficio legal:</span>
-                            <span className="font-bold text-emerald-700 text-sm">10% en especie</span>
+                            <span>Vigencia:</span>
+                            <span className="font-bold text-emerald-700">30 días calendario</span>
                           </div>
-                          <div className="text-[11px] text-slate-600">5 hojas adicionales sin costo por cada lote de 50 hojas adquirido.</div>
-                          <div className="text-[10px] text-slate-500 font-mono pt-1">Base: Decreto 37-92 Art. 28</div>
-                        </div>
-
-                        <div className="p-3.5 bg-slate-50 border border-[#DCDCDC] rounded-xl space-y-1.5 text-xs">
-                          <div className="font-bold text-[#19324B] text-sm">Timbres Fiscales y Razón Electrónica</div>
-                          <div className="flex items-center justify-between text-slate-600">
-                            <span>Modalidad:</span>
-                            <span className="font-bold text-[#14649B] text-sm">Física o Virtual</span>
-                          </div>
-                          <div className="text-[11px] text-slate-600">Estampillas físicas de distintas denominaciones o razón electrónica con QR en Agencia Virtual.</div>
-                          <div className="text-[10px] text-slate-500 font-mono pt-1">Base: Decreto 37-92 Art. 5</div>
+                          <div className="text-[11px] text-slate-600 pt-1">Emisión electrónica inmediata con código QR de verificación para postulaciones o contratos civiles.</div>
+                          <div className="text-[10px] text-slate-500 font-mono pt-1">Base: Código Tributario Art. 57 "A"</div>
                         </div>
                       </div>
-                    </div>
+                    )}
 
                     {/* Notas importantes en bloque accesible */}
                     {selectedTramite.notasImportantes && (
@@ -1764,9 +1841,15 @@ export default function App() {
 
                 </div>
               ) : (
-                <div className="space-y-4">
-                  <h3 className="text-xl sm:text-2xl font-black text-[#19324B]">Trámites en {selectedSubcategoria}</h3>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                <div className="space-y-6">
+                  <div className={`space-y-2 ${!menuSidebarOpen ? 'text-center max-w-2xl mx-auto' : ''}`}>
+                    <span className="text-xs font-bold text-[#14649B] uppercase tracking-wider">
+                      {selectedSubcategoria}
+                    </span>
+                    <h3 className="text-xl sm:text-2xl font-black text-[#19324B]">Trámites en {selectedSubcategoria}</h3>
+                    <p className="text-xs sm:text-sm text-slate-600">Seleccionar el trámite para ver requisitos detallados y pasos a seguir.</p>
+                  </div>
+                  <div className={`grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 ${!menuSidebarOpen ? 'max-w-4xl lg:max-w-5xl mx-auto' : ''}`}>
                     {currentSubcategoriaItems.map((item) => (
                       <div 
                         key={item.id}
