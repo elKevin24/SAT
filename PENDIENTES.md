@@ -49,17 +49,30 @@ Este documento registra los puntos pendientes acordados para continuar con la ev
 
 ## 5. Auditoría y Saneamiento Canónico de Datos por Segmento
 - **Abogados y Notarios** (`profesionales`): ✅ **Completado**. Reestructurado en 4 subtemas canónicos (*Habilitación*, *Timbres y Papel Sellado*, *e-Traspasos* y *Avisos Notariales*).
-- **Operadores de Comercio Exterior** (`comercio_exterior`): ✅ **Completado**. Reestructurado en 8 categorías oficiales (150 trámites limpios):
-  - *Importadores* (58 trámites en 6 subtemas: Padrón, DUCAs, Vehículos, Distribuidores, Despacho, Abandono/Franquicias).
+- **Operadores de Comercio Exterior** (`comercio_exterior`): ✅ **Completado**. Reestructurado en 8 categorías oficiales (162 trámites canónicos):
+  - *Importadores* (64 trámites en 6 subtemas: Padrón, DUCAs, Vehículos, Distribuidores, Despacho, Abandono/Franquicias).
   - *Exportadores* (21 trámites en 3 subtemas: Padrón, Devolución Crédito Fiscal, Embarques).
-  - *Transportistas* (13 trámites: Equipos ATC, Manifiestos CUSCAR, Marchamo Electrónico).
+  - *Transportistas* (14 trámites: Equipos ATC, Manifiestos CUSCAR, Marchamo Electrónico).
   - *Agentes Aduaneros* (7 trámites: Habilitación y Sistemas).
-  - *Normativa y Aranceles* (46 trámites: SAC, Acuerdos, COCONAD, Infraestructura, Consultas).
-  - *OEA* (1), *Courier* (3), *Almacenes Fiscales* (1).
-- **Peritos Contadores y Auditores** (`profesionales`): ⏳ **Pendiente de análisis y saneamiento**.
-  - Clasificar trámites de habilitación de contadores, actualización en RTU, habilitación de libros, nombramiento de contadores y dictámenes de auditoría tributaria.
-- **Entes Exentos y Organismos Especiales** (`organismos_especiales`): ⏳ **Pendiente de análisis y saneamiento**.
-  - Normalizar trámites para entidades constitucionales, no lucrativas (ONGs, fundaciones, iglesias), municipalidades y dependencias del Estado.
+  - *Normativa y Aranceles* (50 trámites: SAC, Acuerdos, COCONAD, Infraestructura, Consultas).
+  - *OEA* (2), *Courier* (3), *Almacenes Fiscales* (1).
+- **Peritos Contadores, Auditores y Gestores** (`profesionales`): ✅ **Completado**. Depurado el ruido tributario general (45 trámites limpios):
+  - *Abogados y Notarios* (17 trámites canónicos).
+  - *Peritos Contadores* (11 trámites: Habilitación/Registro y Consultas, Retenciones y Libros Contables).
+  - *Gestores Tributarios* (8 trámites: Acreditación/Carné Oficial y Renovación/Gestión de Gafetes).
+  - *Servicios Profesionales* (5 trámites: Honorarios, RTU, Consultas y Retenciones Web).
+  - *Auditores* (4 trámites: Habilitación CPA y Dictámenes de Crédito Fiscal).
+- **Entes Exentos y Organismos Especiales** (`organismos_especiales`): ✅ **Completado** (79 trámites canónicos):
+  - *Entidades del Estado* (26 trámites limpios de gestión institucional y órdenes judiciales).
+  - *Constitucionales* (18 trámites: Universidades, Colegios e Iglesias).
+  - *Decreto* (16 trámites: Regímenes especiales, fomento y cooperativas).
+  - *No Lucrativos* (14 trámites: ONGs, fundaciones, sindicatos y asociaciones).
+  - *Municipalidades* (5 trámites: Registro, exenciones CIVA y patrimonio).
+- **Contribuyentes**: ✅ **Completado** (404 trámites canónicos):
+  - *NIT sin Obligaciones* (12 trámites en sus 4 subtemas).
+  - *Pequeños Contribuyentes* (22 trámites: Régimen 5% y Régimen Agropecuario).
+  - *Contribuyentes Especiales* (15 trámites: Gerencias de Grandes/Medianos y Retenciones).
+  - *Contribuyente General* (355 trámites consolidados con gestión vehicular y servicios unificados).
 
 ---
 

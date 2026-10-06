@@ -101,9 +101,9 @@ export const PILLARS_CONFIG: PillarConfigItem[] = [
   { 
     id: 'profesionales', 
     name: 'Profesionales', 
-    desc: 'Terceras personas: gestores tributarios, abogados y notarios, peritos contadores y auditores.',
-    temasTotales: '1 Grupo · 62 Temas',
-    badgeLabel: '1 Grupo',
+    desc: 'Abogados y notarios, peritos contadores, auditores (CPA), gestores tributarios y servicios profesionales.',
+    temasTotales: '5 Categorías · 45 Trámites',
+    badgeLabel: '5 Categorías',
     primaryColor: '#4D8014',
     cardHoverBorder: 'hover:border-[#4D8014]',
     cardHoverBg: 'hover:bg-[#4D8014]',
@@ -116,9 +116,9 @@ export const PILLARS_CONFIG: PillarConfigItem[] = [
   { 
     id: 'entes_exentos', 
     name: 'Entes Exentos', 
-    desc: 'Entidades exentas constitucionales, no lucrativas, por decreto, ZOLIC, municipalidades y entidades del Estado.',
-    temasTotales: '2 Grupos · 75 Temas',
-    badgeLabel: '2 Grupos',
+    desc: 'Entidades constitucionales, educativas, no lucrativas, por decreto de fomento, municipalidades y entidades del Estado.',
+    temasTotales: '5 Categorías · 79 Trámites',
+    badgeLabel: '5 Categorías',
     primaryColor: '#C25E00',
     cardHoverBorder: 'hover:border-[#C25E00]',
     cardHoverBg: 'hover:bg-[#C25E00]',
@@ -217,16 +217,16 @@ export const GRUPOS_CONFIG: GrupoInfo[] = [
   // Profesionales
   {
     no: 7,
-    nombre: 'Terceras Personas',
-    cantidadTemas: 62,
+    nombre: 'Profesionales y Terceras Personas',
+    cantidadTemas: 45,
     pillar: 'profesionales',
-    desc: 'Gestores tributarios, auxiliares, abogados y notarios, peritos contadores y contadores públicos y auditores.',
+    desc: 'Habilitación y gestiones para abogados y notarios, peritos contadores, auditores (CPA), gestores tributarios y servicios profesionales.',
     subgrupos: [
-      { nombre: 'Gestores Tributarios', cantidadTemas: 53, desc: 'Acreditación, registro y renovación de gafetes oficiales ante la SAT.' },
-      { nombre: 'Auxiliar Tributario', cantidadTemas: 53, desc: 'Registro y habilitación de auxiliares autorizados para gestiones tributarias.' },
-      { nombre: 'Abogados y Notarios', cantidadTemas: 17, desc: 'Habilitación profesional ante SAT, compra de Papel Sellado de Protocolo y timbres fiscales, traspasos electrónicos (TEV) y avisos notariales obligatorios.' },
-      { nombre: 'Peritos Contadores', cantidadTemas: 61, desc: 'Inscripción, habilitación y asignación en RTU de peritos contadores acreditados.' },
-      { nombre: 'Auditores', cantidadTemas: 59, desc: 'Contadores Públicos y Auditores habilitados para dictámenes de estados financieros.' }
+      { nombre: 'Abogados y Notarios', cantidadTemas: 17, desc: 'Papel Sellado de Protocolos, timbres fiscales, traspasos electrónicos (TEV) y avisos notariales obligatorios.' },
+      { nombre: 'Peritos Contadores', cantidadTemas: 11, desc: 'Inscripción en RTU, habilitación en Agencia Virtual, Libro Electrónico Tributario (LET) y retenciones.' },
+      { nombre: 'Gestores Tributarios', cantidadTemas: 8, desc: 'Acreditación oficial, requisitos de carné, renovación de gafetes y verificación en línea.' },
+      { nombre: 'Servicios Profesionales', cantidadTemas: 5, desc: 'Facturación de honorarios, retenciones en la fuente, consultas jurídicas y actualización.' },
+      { nombre: 'Auditores', cantidadTemas: 4, desc: 'Habilitación de Contadores Públicos y Auditores (CPA) y dictámenes de crédito fiscal.' }
     ]
   },
 
@@ -234,28 +234,24 @@ export const GRUPOS_CONFIG: GrupoInfo[] = [
   {
     no: 6,
     nombre: 'Exentos',
-    cantidadTemas: 49,
-    pillar: 'entes_exentos',
-    desc: 'Entidades exentas constitucionales, no lucrativas, por decreto de ley, ZOLIC y corporaciones municipales.',
+    cantidadTemas: 53,
+    pillar: 'organismos_especiales',
+    desc: 'Entidades exentas constitucionales, no lucrativas, por decreto de fomento y corporaciones municipales.',
     subgrupos: [
-      { nombre: 'Constitucionales', cantidadTemas: 29, desc: 'Universidades, centros educativos y entidades expresamente exentas en la Constitución.' },
-      { nombre: 'No Lucrativos', cantidadTemas: 28, desc: 'Asociaciones civiles, fundaciones benéficas y ONGs sin fines de lucro.' },
-      { nombre: 'Decreto', cantidadTemas: 39, desc: 'Entidades y proyectos beneficiarios de leyes o decretos de fomento específicos.' },
-      { nombre: 'ZOLIC', cantidadTemas: 6, desc: 'Zona Libre de Industria y Comercio "Santo Tomás de Castilla".' },
-      { nombre: 'Municipalidades', cantidadTemas: 33, desc: 'Gobiernos locales, corporaciones municipales y mancomunidades de municipios.' }
+      { nombre: 'Constitucionales', cantidadTemas: 18, desc: 'Centros educativos, universidades privadas y entidades de la Iglesia Católica.' },
+      { nombre: 'Decreto', cantidadTemas: 16, desc: 'Entidades y proyectos beneficiarios de leyes especiales de fomento y cooperativas.' },
+      { nombre: 'No Lucrativos', cantidadTemas: 14, desc: 'Fundaciones, asociaciones benéficas, ONGs, OPF y sindicatos.' },
+      { nombre: 'Municipalidades', cantidadTemas: 5, desc: 'Gobiernos locales, exenciones del IVA (CIVA) y patrimonio municipal.' }
     ]
   },
   {
     no: 9,
     nombre: 'Entidades del Estado',
     cantidadTemas: 26,
-    pillar: 'entes_exentos',
-    desc: 'Organismos de Estado, entes autónomos, ministerios y dependencias públicas oficiales.',
+    pillar: 'organismos_especiales',
+    desc: 'Ministerios, dependencias del Estado, Organismo Judicial, Ministerio Público y SENABED.',
     subgrupos: [
-      { nombre: 'Organismo Judicial', desc: 'Juzgados, tribunales y dependencias administrativas del OJ.' },
-      { nombre: 'Ministerio Público', desc: 'Fiscalías y dependencias del ente acusador oficial.' },
-      { nombre: 'SENABED / CONABED', desc: 'Bienes objeto de extinción de dominio y administración de bienes incautados.' },
-      { nombre: 'PDH', desc: 'Procuraduría de los Derechos Humanos e instituciones conexas.' }
+      { nombre: 'Entidades del Estado', cantidadTemas: 26, desc: 'Acreditación en RTU estatal, gestión vehicular oficial, exenciones y órdenes de autoridad judicial.' }
     ]
   }
 ];

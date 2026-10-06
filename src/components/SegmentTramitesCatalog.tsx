@@ -176,6 +176,41 @@ const SUBCATEGORY_DESCRIPTIONS: Record<string, string> = {
   'Traspaso Electrónico Vehicular (e-Traspaso)': 'Habilitación en sistema TEV con firma electrónica avanzada, formalización notarial de compraventa y envío de expedientes digitales.',
   'Avisos Notariales ante la SAT': 'Presentación obligatoria de avisos de legalización de firmas, transferencias de dominio vehicular y calendario de plazos legales.',
 
+  // Profesionales: Peritos Contadores
+  'Habilitación y Registro de Perito Contador': 'Inscripción en RTU, habilitación de perito contador en Agencia Virtual, actualización y aviso de cese.',
+  'Consultas, Retenciones y Libros Contables': 'Libro Electrónico Tributario (LET), planilla del IVA en FEL, consulta de retenciones y autoliquidación.',
+
+  // Profesionales: Auditores (CPA)
+  'Habilitación y Registro de Auditor (CPA)': 'Inscripción y actualización de Contadores Públicos y Auditores habilitados ante la SAT.',
+  'Dictámenes de Crédito Fiscal y Auditoría': 'Registro de contadores y auditores autorizados para emitir dictámenes especiales de devolución de crédito fiscal.',
+
+  // Profesionales: Gestores Tributarios
+  'Acreditación y Carné Oficial de Gestor': 'Requisitos de inscripción, resoluciones oficiales, manual de herramientas y acreditación de gestores y auxiliares.',
+  'Renovación y Gestión de Gafetes': 'Actualización de datos, reposición de gafetes oficiales, renovación anual y verificación pública de gestores activos.',
+
+  // Profesionales: Servicios Profesionales
+  'Facturación por Honorarios y Formularios': 'Emisión de facturas por servicios profesionales, retenciones aplicables y acceso a formularios de impuestos.',
+  'Actualización de Actividad y RTU': 'Actualización de datos de actividad económica profesional y notificaciones en Agencia Virtual.',
+  'Consultas Jurídico Tributarias': 'Procedimientos formales para plantear consultas jurídicas tributarias a la SAT y orientación legal.',
+  'Sistemas de Retención en la Fuente': 'Operación en sistemas de retenciones web, retenciones de confianza y acreditaciones impositivas.',
+
+  // Contribuyentes: Pequeños Contribuyentes
+  'Régimen de Pequeño Contribuyente': 'Inscripción, facturación FEL, declaración mensual de tarifa fija del 5% y consulta de estado de NIT.',
+  'Régimen Agropecuario y Productores': 'Régimen especial para productores agropecuarios, artesanales y de reciclaje con tarifas reducidas.',
+
+  // Contribuyentes: Especiales
+  'Gerencias Especiales y Control Tributario': 'Gestiones diferenciadas ante las gerencias de medianos y grandes contribuyentes especiales y agentes de retención.',
+  'Declaraciones e Informes Especiales': 'Declaraciones de ISR transporte internacional, alcoholes y bebidas, e informes electrónicos de compras y ventas.',
+  'Capacitación y Orientación Diferenciada': 'Cursos especializados para agentes de retención y normativa para contribuyentes bajo control intensivo.',
+
+  // Organismos Especiales
+  'Centros Educativos y Universidades': 'Inscripción y actualización en RTU de universidades y colegios, exenciones y actividades formativas.',
+  'Iglesias y Comunidades Religiosas': 'Registro y actualización de entidades religiosas y reconocimiento de exención tributaria.',
+  'Registro y Exenciones Municipales': 'Inscripción de municipalidades, actualización y emisión de constancias de exención del IVA (CIVA).',
+  'Vehículos y Patrimonio Municipal': 'Gestión de placas oficiales, traspasos adjudicados y bajas de vehículos de corporaciones municipales.',
+  'Vehículos por orden de autoridad (Ministerio Público / Organismo Judicial)': 'Bajas, reactivaciones y traspasos ordenados por tribunales judiciales o fiscalías.',
+  'Gestión institucional y RTU estatal': 'Acreditación de dependencias de ministerios, entes descentralizados y nombramientos de representantes públicos.',
+
   // NIT sin Obligaciones
   'Inscripción de NIT': 'Solicitud de primer NIT para personas individuales sin actividad mercantil y actualización de datos de identificación.',
   'Servicios en Línea y Solvencias': 'Habilitación de Agencia Virtual, solicitud de Solvencia Fiscal, cita previa y consulta de expedientes.',
@@ -354,6 +389,73 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
         ];
         const idxA = orderNorm.indexOf(a);
         const idxB = orderNorm.indexOf(b);
+        if (idxA !== -1 && idxB !== -1) return idxA - idxB;
+        if (idxA !== -1) return -1;
+        if (idxB !== -1) return 1;
+      }
+
+      // Regla canónica para Peritos Contadores
+      if (selectedCategory === 'Peritos Contadores') {
+        const orderPer = [
+          'Habilitación y Registro de Perito Contador',
+          'Consultas, Retenciones y Libros Contables'
+        ];
+        const idxA = orderPer.indexOf(a);
+        const idxB = orderPer.indexOf(b);
+        if (idxA !== -1 && idxB !== -1) return idxA - idxB;
+        if (idxA !== -1) return -1;
+        if (idxB !== -1) return 1;
+      }
+
+      // Regla canónica para Auditores
+      if (selectedCategory === 'Auditores') {
+        const orderAud = [
+          'Habilitación y Registro de Auditor (CPA)',
+          'Dictámenes de Crédito Fiscal y Auditoría'
+        ];
+        const idxA = orderAud.indexOf(a);
+        const idxB = orderAud.indexOf(b);
+        if (idxA !== -1 && idxB !== -1) return idxA - idxB;
+        if (idxA !== -1) return -1;
+        if (idxB !== -1) return 1;
+      }
+
+      // Regla canónica para Gestores Tributarios
+      if (selectedCategory === 'Gestores Tributarios') {
+        const orderGes = [
+          'Acreditación y Carné Oficial de Gestor',
+          'Renovación y Gestión de Gafetes'
+        ];
+        const idxA = orderGes.indexOf(a);
+        const idxB = orderGes.indexOf(b);
+        if (idxA !== -1 && idxB !== -1) return idxA - idxB;
+        if (idxA !== -1) return -1;
+        if (idxB !== -1) return 1;
+      }
+
+      // Regla canónica para Servicios Profesionales
+      if (selectedCategory === 'Servicios Profesionales') {
+        const orderSP = [
+          'Facturación por Honorarios y Formularios',
+          'Actualización de Actividad y RTU',
+          'Consultas Jurídico Tributarias',
+          'Sistemas de Retención en la Fuente'
+        ];
+        const idxA = orderSP.indexOf(a);
+        const idxB = orderSP.indexOf(b);
+        if (idxA !== -1 && idxB !== -1) return idxA - idxB;
+        if (idxA !== -1) return -1;
+        if (idxB !== -1) return 1;
+      }
+
+      // Regla canónica para Pequeños Contribuyentes
+      if (selectedCategory === 'Pequeños Contribuyentes') {
+        const orderPC = [
+          'Régimen de Pequeño Contribuyente',
+          'Régimen Agropecuario y Productores'
+        ];
+        const idxA = orderPC.indexOf(a);
+        const idxB = orderPC.indexOf(b);
         if (idxA !== -1 && idxB !== -1) return idxA - idxB;
         if (idxA !== -1) return -1;
         if (idxB !== -1) return 1;
