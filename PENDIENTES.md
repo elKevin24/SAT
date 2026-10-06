@@ -30,17 +30,20 @@ Este documento registra los puntos pendientes acordados para continuar con la ev
 
 ---
 
-## 4. Integración Contextual de Recursos de Ayuda, Capacitaciones y Guías (Ayuda en Contexto)
-- **Diagnóstico**: Tradicionalmente en portales gubernamentales, las guías de estudio, capacitaciones virtuales, preguntas frecuentes (FAQ) y manuales se aíslan en silos genéricos y lejanos (ej. una sección global de "Cultura Tributaria" o "Descargas"). Esto obliga al usuario a abandonar el trámite que está intentando resolver para buscar ayuda en otro lugar.
+## 4. Integración Contextual de «Cultura tributaria y capacitación» (Ayuda, Guías y Cursos en Contexto)
+- **Denominación Oficial de la SAT**: Toda la oferta formativa, cursos virtuales, diplomados, talleres, seminarios, guías interactivas y recursos de estudio se denomina formalmente **«Cultura tributaria y capacitación»** (o *Capacitación y orientación aduanera* en aduanas).
+- **Diagnóstico**: Tradicionalmente en portales gubernamentales, estos recursos se aíslan en silos genéricos distantes (ej. una sección global aislada de "Cultura Tributaria" o "Descargas"). Esto obliga al usuario a abandonar el trámite que está intentando resolver para buscar capacitación o ayuda en otro lugar.
 - **Regla y Mandato**:
-  - **Cero silos desconectados**: Todo recurso formativo, instructivo, guía en PDF, video explicativo o capacitación virtual debe ubicarse **directamente dentro del mismo segmento, categoría y subtema de la gestión a la que asiste**.
-  - **Ejemplos de aplicación ya implementados y a estandarizar**:
-    - *Capacitación de Factura y DUCA (FYDUCA)* ➔ Ubicada directamente dentro de *Comercio Exterior › Importadores › Declaraciones Aduaneras y DUCAs*.
-    - *Capacitación de Régimen Electrónico de Devolución de Crédito Fiscal* ➔ Ubicada directamente en *Comercio Exterior › Exportadores › Devolución de Crédito Fiscal*.
-    - *Guía de Franquicias Electrónicas* ➔ Ubicada en *Comercio Exterior › Importadores › Mercancías en Abandono, Depósitos y Franquicias*.
-    - *Instructivo para Adquisición de Papel Sellado* ➔ Ubicado en *Profesionales › Abogados y Notarios › Timbres Fiscales y Papel Sellado*.
+  - **Cero silos desconectados**: Ningún curso o recurso de **«Cultura tributaria y capacitación»** debe existir como un trámite suelto o huérfano. Cada capacitación o material de estudio debe ubicarse **directamente dentro del mismo segmento, categoría y subtema de la gestión a la que asiste**.
+  - **Ejemplos de aplicación canónica**:
+    - *Curso: Obligaciones del Pequeño Contribuyente* ➔ Directamente en *Contribuyentes › Pequeños Contribuyentes › Pequeño Contribuyente*.
+    - *Curso: Productores Agropecuarios y Artesanales* ➔ Directamente en *Contribuyentes › Pequeños Contribuyentes › Régimen Agropecuario (Primario / Pecuario)*.
+    - *Capacitación: Factura y DUCA (FYDUCA)* ➔ Directamente en *Comercio Exterior › Importadores › Declaraciones Aduaneras y DUCAs*.
+    - *Capacitación: Régimen Electrónico de Devolución de Crédito Fiscal* ➔ Directamente en *Comercio Exterior › Exportadores › Devolución de Crédito Fiscal*.
+    - *Capacitación: Equipaje del Viajero y Franquicias* ➔ Directamente en *Comercio Exterior › Importadores › Mercancías en Abandono, Depósitos y Franquicias*.
+    - *Capacitación / Instructivo: Adquisición de Papel Sellado y Timbres* ➔ Directamente en *Profesionales › Abogados y Notarios › Timbres Fiscales y Papel Sellado*.
 - **Acción a realizar**:
-  - Auditar en todos los segmentos (`contribuyentes`, `profesionales`, `organismos_especiales`) que las capacitaciones, leyes tributarias aplicables, preguntas frecuentes y herramientas de apoyo no queden flotando como "ruido general", sino integradas orgánicamente como ítems o recursos de soporte en su respectivo trámite.
+  - Reubicar los 64 recursos de **«Cultura tributaria y capacitación»** distribuyéndolos de forma contextual en cada trámite respectivo dentro de los 4 segmentos (`contribuyentes`, `comercio_exterior`, `profesionales`, `organismos_especiales`).
 
 ---
 
