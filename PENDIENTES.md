@@ -30,7 +30,25 @@ Este documento registra los puntos pendientes acordados para continuar con la ev
 
 ---
 
-## 4. Gestión de Ramas y Cierre en Git Flow
+---
+
+## 4. Auditoría y Saneamiento Canónico de Datos por Segmento
+- **Abogados y Notarios** (`profesionales`): ✅ **Completado**. Reestructurado en 4 subtemas canónicos (*Habilitación*, *Timbres y Papel Sellado*, *e-Traspasos* y *Avisos Notariales*).
+- **Operadores de Comercio Exterior** (`comercio_exterior`): ✅ **Completado**. Reestructurado en 8 categorías oficiales (150 trámites limpios):
+  - *Importadores* (58 trámites en 6 subtemas: Padrón, DUCAs, Vehículos, Distribuidores, Despacho, Abandono/Franquicias).
+  - *Exportadores* (21 trámites en 3 subtemas: Padrón, Devolución Crédito Fiscal, Embarques).
+  - *Transportistas* (13 trámites: Equipos ATC, Manifiestos CUSCAR, Marchamo Electrónico).
+  - *Agentes Aduaneros* (7 trámites: Habilitación y Sistemas).
+  - *Normativa y Aranceles* (46 trámites: SAC, Acuerdos, COCONAD, Infraestructura, Consultas).
+  - *OEA* (1), *Courier* (3), *Almacenes Fiscales* (1).
+- **Peritos Contadores y Auditores** (`profesionales`): ⏳ **Pendiente de análisis y saneamiento**.
+  - Clasificar trámites de habilitación de contadores, actualización en RTU, habilitación de libros, nombramiento de contadores y dictámenes de auditoría tributaria.
+- **Entes Exentos y Organismos Especiales** (`organismos_especiales`): ⏳ **Pendiente de análisis y saneamiento**.
+  - Normalizar trámites para entidades constitucionales, no lucrativas (ONGs, fundaciones, iglesias), municipalidades y dependencias del Estado.
+
+---
+
+## 5. Gestión de Ramas y Cierre en Git Flow
 - **Rama activa**: `feature/portal-architecture-content`.
 - **Acción a realizar**:
   - Al completar las tareas pendientes o estabilizar este sprint, realizar el merge hacia la rama `develop` siguiendo el estándar de Git Flow del repositorio.
