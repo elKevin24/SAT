@@ -120,7 +120,7 @@ const CATEGORY_DESCRIPTIONS: Record<string, string> = {
   'Transportistas': 'Empresas de transporte terrestre, aéreo y marítimo internacional, tránsito aduanero y manifiestos de carga.',
   'Agentes Aduaneros': 'Auxiliares de la función pública autorizados para el despacho oficial y representación aduanera.',
   'Normativa y Aranceles': 'Criterios aduaneros oficiales, Sistema Arancelario Centroamericano (SAC) y facilitación de comercio.',
-  'Abogados y Notarios': 'Habilitación de e-Traspaso vehicular, registro notarial y legalización de documentos tributarios.',
+  'Abogados y Notarios': 'Habilitación profesional ante la SAT, adquisición de Papel Sellado Especial para Protocolos y timbres fiscales, traspasos electrónicos y avisos notariales obligatorios.',
   'Peritos Contadores': 'Inscripción y actualización de contadores autorizados ante la SAT para llevar contabilidades formales.',
   'Auditores': 'Habilitación para dictámenes fiscales, auditorías tributarias y trámites de devolución de crédito fiscal.',
   'Gestores Tributarios': 'Acreditación de gestores y personas autorizadas para tramitar ante agencias de la SAT.',
@@ -133,6 +133,13 @@ const CATEGORY_DESCRIPTIONS: Record<string, string> = {
 };
 
 const SUBCATEGORY_DESCRIPTIONS: Record<string, string> = {
+  // Abogados y Notarios (4 Subtemas Canónicos)
+  'Habilitación y Registro Profesional': 'Inscripción y actualización en RTU como Abogado y Notario (CANG), registro de huella biométrica y activación en Agencia Virtual.',
+  'Timbres Fiscales y Papel Sellado de Protocolo': 'Compra de Papel Sellado Especial para Protocolos (SAT-7130), timbres fiscales, razón electrónica en línea y retiro por procurador.',
+  'Traspaso Electrónico Vehicular (e-Traspaso)': 'Habilitación en sistema TEV con firma electrónica avanzada, formalización notarial de compraventa y envío de expedientes digitales.',
+  'Avisos Notariales ante la SAT': 'Presentación obligatoria de avisos de legalización de firmas, transferencias de dominio vehicular y calendario de plazos legales.',
+
+  // NIT sin Obligaciones
   'Inscripción de NIT': 'Solicitud de primer NIT para personas individuales sin actividad mercantil y actualización de datos de identificación.',
   'Servicios en Línea y Solvencias': 'Habilitación de Agencia Virtual, solicitud de Solvencia Fiscal, cita previa y consulta de expedientes.',
   'Títulos Universitarios': 'Registro de títulos a nivel medio y universitario para habilitación profesional y consulta con código QR.',
@@ -221,6 +228,21 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
         ];
         const idxA = orderNIT.indexOf(a);
         const idxB = orderNIT.indexOf(b);
+        if (idxA !== -1 && idxB !== -1) return idxA - idxB;
+        if (idxA !== -1) return -1;
+        if (idxB !== -1) return 1;
+      }
+
+      // Regla canónica estricta para Abogados y Notarios
+      if (selectedCategory === 'Abogados y Notarios') {
+        const orderAN = [
+          'Habilitación y Registro Profesional',
+          'Timbres Fiscales y Papel Sellado de Protocolo',
+          'Traspaso Electrónico Vehicular (e-Traspaso)',
+          'Avisos Notariales ante la SAT'
+        ];
+        const idxA = orderAN.indexOf(a);
+        const idxB = orderAN.indexOf(b);
         if (idxA !== -1 && idxB !== -1) return idxA - idxB;
         if (idxA !== -1) return -1;
         if (idxB !== -1) return 1;

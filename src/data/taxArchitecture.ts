@@ -228,7 +228,7 @@ export const GRUPOS_CONFIG: GrupoInfo[] = [
     subgrupos: [
       { nombre: 'Gestores Tributarios', cantidadTemas: 53, desc: 'Acreditación, registro y renovación de gafetes oficiales ante la SAT.' },
       { nombre: 'Auxiliar Tributario', cantidadTemas: 53, desc: 'Registro y habilitación de auxiliares autorizados para gestiones tributarias.' },
-      { nombre: 'Abogados y Notarios', cantidadTemas: 61, desc: 'Venta de especies fiscales, traspasos electrónicos de vehículos y legalizaciones notariales.' },
+      { nombre: 'Abogados y Notarios', cantidadTemas: 17, desc: 'Habilitación profesional ante SAT, compra de Papel Sellado de Protocolo y timbres fiscales, traspasos electrónicos (TEV) y avisos notariales obligatorios.' },
       { nombre: 'Peritos Contadores', cantidadTemas: 61, desc: 'Inscripción, habilitación y asignación en RTU de peritos contadores acreditados.' },
       { nombre: 'Auditores', cantidadTemas: 59, desc: 'Contadores Públicos y Auditores habilitados para dictámenes de estados financieros.' }
     ]
