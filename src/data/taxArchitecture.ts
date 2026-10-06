@@ -86,9 +86,9 @@ export const PILLARS_CONFIG: PillarConfigItem[] = [
   { 
     id: 'comercio_exterior', 
     name: 'Operadores de Comercio Exterior', 
-    desc: 'Importadores, exportadores, OEA y auxiliares de la función pública aduanera.',
-    temasTotales: '2 Grupos · 98 Temas',
-    badgeLabel: '2 Grupos',
+    desc: 'Importadores, exportadores, transportistas, auxiliares aduaneros, agentes y normativa arancelaria.',
+    temasTotales: '8 Categorías · 150 Trámites',
+    badgeLabel: '8 Categorías',
     primaryColor: '#0284C7',
     cardHoverBorder: 'hover:border-[#0284C7]',
     cardHoverBg: 'hover:bg-[#0284C7]',
@@ -101,9 +101,9 @@ export const PILLARS_CONFIG: PillarConfigItem[] = [
   { 
     id: 'profesionales', 
     name: 'Profesionales', 
-    desc: 'Terceras personas: gestores tributarios, abogados y notarios, peritos contadores y auditores.',
-    temasTotales: '1 Grupo · 62 Temas',
-    badgeLabel: '1 Grupo',
+    desc: 'Abogados y notarios, peritos contadores, auditores (CPA), gestores tributarios y servicios profesionales.',
+    temasTotales: '5 Categorías · 45 Trámites',
+    badgeLabel: '5 Categorías',
     primaryColor: '#4D8014',
     cardHoverBorder: 'hover:border-[#4D8014]',
     cardHoverBg: 'hover:bg-[#4D8014]',
@@ -116,9 +116,9 @@ export const PILLARS_CONFIG: PillarConfigItem[] = [
   { 
     id: 'entes_exentos', 
     name: 'Entes Exentos', 
-    desc: 'Entidades exentas constitucionales, no lucrativas, por decreto, ZOLIC, municipalidades y entidades del Estado.',
-    temasTotales: '2 Grupos · 75 Temas',
-    badgeLabel: '2 Grupos',
+    desc: 'Entidades constitucionales, educativas, no lucrativas, por decreto de fomento, municipalidades y entidades del Estado.',
+    temasTotales: '5 Categorías · 79 Trámites',
+    badgeLabel: '5 Categorías',
     primaryColor: '#C25E00',
     cardHoverBorder: 'hover:border-[#C25E00]',
     cardHoverBg: 'hover:bg-[#C25E00]',
@@ -135,17 +135,14 @@ export const GRUPOS_CONFIG: GrupoInfo[] = [
   {
     no: 1,
     nombre: 'NIT sin Obligaciones',
-    cantidadTemas: 8,
+    cantidadTemas: 10,
     pillar: 'contribuyentes',
-    desc: 'Estudiantes, personas individuales y graduados sin actividad económica que requieren NIT para trámites bancarios, actos civiles, cobro de remesas, registro de títulos y acceso a información (8 procesos oficiales).',
+    desc: 'Personas individuales, estudiantes y graduados sin actividad económica que requieren NIT para actos civiles, cuentas bancarias, cobro de remesas, registro de títulos y acceso a información pública (cero trabajadores asalariados).',
     subgrupos: [
-      { nombre: 'Inscripción y Actualización en RTU', cantidadTemas: 2, desc: 'Inscripción por primera vez y actualización o transición a con obligaciones.' },
-      { nombre: 'Sistemas Web y Seguridad', cantidadTemas: 1, desc: 'Acceso a plataforma, solicitud y activación de usuario en Agencia Virtual.' },
-      { nombre: 'Consultas y Verificadores', cantidadTemas: 1, desc: 'Seguimiento de trámites y consulta de estado de gestión de Agencia Virtual.' },
-      { nombre: 'Certificaciones y Solvencias', cantidadTemas: 1, desc: 'Solvencias y emisión electrónica de Solvencia Fiscal (SOFI).' },
-      { nombre: 'Citas y Agencias', cantidadTemas: 1, desc: 'Atención presencial y cita previa para trámites en agencias tributarias.' },
-      { nombre: 'Transparencia y Ciudadanía', cantidadTemas: 1, desc: 'Acceso a la información pública conforme al Decreto 57-2008 en español y lenguas mayas.' },
-      { nombre: 'Habilitación Profesional', cantidadTemas: 1, desc: 'Registro y habilitación de títulos universitarios y pago de timbres fiscales para ejercer profesión.' }
+      { nombre: 'Inscripción de NIT', cantidadTemas: 2, desc: 'Solicitud de primer NIT y actualización de datos de identificación personal.' },
+      { nombre: 'Títulos Universitarios', cantidadTemas: 2, desc: 'Registro y habilitación de títulos para ejercer y verificación digital mediante código QR.' },
+      { nombre: 'Información Pública', cantidadTemas: 2, desc: 'Solicitud formal y consulta de información pública de oficio de la SAT conforme al Decreto 57-2008.' },
+      { nombre: 'Servicios en Línea y Solvencias', cantidadTemas: 4, desc: 'Agencia Virtual, consulta de expedientes, Solvencia Fiscal en línea y cita previa.' }
     ]
   },
   {
@@ -163,12 +160,17 @@ export const GRUPOS_CONFIG: GrupoInfo[] = [
   {
     no: 3,
     nombre: 'Contribuyente General',
-    cantidadTemas: 37,
+    cantidadTemas: 295,
     pillar: 'contribuyentes',
-    desc: 'Contribuyentes inscritos en el Régimen General del IVA (12%) e ISR, y gestión de representantes legales.',
+    desc: 'Personas individuales y jurídicas con obligaciones tributarias generales, IVA (12%), regímenes de ISR, vehículos como propietarios, facturación y servicios del RTU.',
     subgrupos: [
-      { nombre: 'Contribuyente General', cantidadTemas: 37, desc: 'Régimen general del IVA e Impuesto Sobre la Renta (Opcional Simplificado o Sobre Utilidades).' },
-      { nombre: 'Rep. Legales', cantidadTemas: 36, desc: 'Inscripción, acreditación y poderes de mandatarios o representantes legales.' }
+      { nombre: 'RTU e Inscripción', cantidadTemas: 48, desc: 'Inscripción de sociedades, actualización de datos, nombramientos de representantes y cese de negocios.' },
+      { nombre: 'Obligaciones y Regímenes', cantidadTemas: 41, desc: 'Declaraciones de impuestos, regímenes tributarios, facturación electrónica FEL y autorizaciones.' },
+      { nombre: 'Registro Fiscal de Vehículos', cantidadTemas: 75, desc: 'Inscripción, traspasos, distintivos, impuesto de circulación ISCV, modificaciones y consultas vehiculares.' },
+      { nombre: 'Capacitación y Cultura Tributaria', cantidadTemas: 60, desc: 'Cursos por impuesto, herramientas electrónicas, calendario, biblioteca virtual y formación ciudadana.' },
+      { nombre: 'Devoluciones y Créditos Fiscales', cantidadTemas: 22, desc: 'Devolución de ISR asalariados/empresas, IVA crédito fiscal, pagos indebidos y en exceso.' },
+      { nombre: 'Servicios al Contribuyente', cantidadTemas: 33, desc: 'Constancias del RTU, libros contables, Agencia Virtual, citas presenciales y correcciones de formularios.' },
+      { nombre: 'Consultas y Verificadores', cantidadTemas: 16, desc: 'Verificadores públicos de documentos, solvencias, consultas tributarias y atención de quejas.' }
     ]
   },
   {
@@ -188,47 +190,43 @@ export const GRUPOS_CONFIG: GrupoInfo[] = [
   {
     no: 5,
     nombre: 'Importadores y Exportadores',
-    cantidadTemas: 48,
+    cantidadTemas: 80,
     pillar: 'comercio_exterior',
-    desc: 'Operaciones aduaneras de importación, exportación y certificación OEA.',
+    desc: 'Operaciones aduaneras de importación, exportación, certificación OEA y normativa arancelaria.',
     subgrupos: [
-      { nombre: 'Importadores', cantidadTemas: 45, desc: 'Padrón de importadores, aranceles DAI, DUCA y levante aduanero.' },
-      { nombre: 'OEA', cantidadTemas: 46, desc: 'Programa de Operador Económico Autorizado y certificación de seguridad en cadena logística.' },
-      { nombre: 'Exportadores', cantidadTemas: 44, desc: 'Régimen de exportación definitiva, devolución de crédito fiscal y trámites aduaneros.' }
+      { nombre: 'Importadores', cantidadTemas: 58, desc: 'Padrón de importadores, declaraciones DUCA, aranceles DAI, levante aduanero y nacionalización de vehículos.' },
+      { nombre: 'Exportadores', cantidadTemas: 21, desc: 'Padrón de exportadores, declaraciones aduaneras y devolución de crédito fiscal del IVA.' },
+      { nombre: 'OEA', cantidadTemas: 1, desc: 'Programa de Operador Económico Autorizado y certificación de seguridad en la cadena logística.' }
     ]
   },
   {
     no: 8,
-    nombre: 'Auxiliares de la Función Pública',
-    cantidadTemas: 50,
+    nombre: 'Auxiliares de la Función Pública Aduanera',
+    cantidadTemas: 70,
     pillar: 'comercio_exterior',
-    desc: 'Personas individuales o jurídicas autorizadas que colaboran en la gestión y custodia aduanera oficial.',
+    desc: 'Personas individuales o jurídicas autorizadas que colaboran en la gestión, transporte y custodia aduanera oficial.',
     subgrupos: [
-      { nombre: 'Courier', cantidadTemas: 48, desc: 'Empresas de entrega rápida y paquetería expresa internacional.' },
-      { nombre: 'Consolidadores y Desconsolidadores de Carga', cantidadTemas: 47, desc: 'Operadores logísticos de transporte multimodal y manifiestos de carga.' },
-      { nombre: 'Almacenes Fiscales', cantidadTemas: 45, desc: 'Recintos habilitados para depósito de mercancías bajo control aduanero.' },
-      { nombre: 'Almacenadoras', cantidadTemas: 45, desc: 'Almacenes generales de depósito y emisión de certificados de depósito y bonos de prenda.' },
-      { nombre: 'Depósitos Aduaneros', cantidadTemas: 45, desc: 'Depósitos aduaneros temporales y de almacenamiento autorizado.' },
-      { nombre: 'ZDEEP', cantidadTemas: 45, desc: 'Zonas de Desarrollo Económico Especial Público y régimen de incentivos aduaneros.' },
-      { nombre: 'Agentes Aduaneros', cantidadTemas: 50, desc: 'Autorización, refrendo y operaciones de despacho aduanal por agente habilitado.' },
-      { nombre: 'Transportistas', cantidadTemas: 48, desc: 'Registro de empresas de transporte terrestre, aéreo y marítimo internacional.' },
-      { nombre: 'Apoderado Especial Aduanero', cantidadTemas: 45, desc: 'Representación directa exclusiva para trámites aduaneros de personas jurídicas.' }
+      { nombre: 'Transportistas', cantidadTemas: 13, desc: 'Admisión temporal de equipo de carga (ATC), manifiestos CUSCAR y marchamo electrónico.' },
+      { nombre: 'Agentes Aduaneros', cantidadTemas: 7, desc: 'Acreditación oficial, componente ActiveX PKI/DUA y representación aduanera.' },
+      { nombre: 'Normativa y Aranceles', cantidadTemas: 46, desc: 'Sistema Arancelario Centroamericano (SAC), facilitación comercial, modernización y prevención de contrabando.' },
+      { nombre: 'Courier', cantidadTemas: 3, desc: 'Empresas de entrega rápida, paquetería expresa internacional y despacho simplificado.' },
+      { nombre: 'Almacenes Fiscales', cantidadTemas: 1, desc: 'Depósitos aduaneros temporales, almacenadoras y recintos bajo custodia fiscal.' }
     ]
   },
 
   // Profesionales
   {
     no: 7,
-    nombre: 'Terceras Personas',
-    cantidadTemas: 62,
+    nombre: 'Profesionales y Terceras Personas',
+    cantidadTemas: 45,
     pillar: 'profesionales',
-    desc: 'Gestores tributarios, auxiliares, abogados y notarios, peritos contadores y contadores públicos y auditores.',
+    desc: 'Habilitación y gestiones para abogados y notarios, peritos contadores, auditores (CPA), gestores tributarios y servicios profesionales.',
     subgrupos: [
-      { nombre: 'Gestores Tributarios', cantidadTemas: 53, desc: 'Acreditación, registro y renovación de gafetes oficiales ante la SAT.' },
-      { nombre: 'Auxiliar Tributario', cantidadTemas: 53, desc: 'Registro y habilitación de auxiliares autorizados para gestiones tributarias.' },
-      { nombre: 'Abogados y Notarios', cantidadTemas: 61, desc: 'Venta de especies fiscales, traspasos electrónicos de vehículos y legalizaciones notariales.' },
-      { nombre: 'Peritos Contadores', cantidadTemas: 61, desc: 'Inscripción, habilitación y asignación en RTU de peritos contadores acreditados.' },
-      { nombre: 'Auditores', cantidadTemas: 59, desc: 'Contadores Públicos y Auditores habilitados para dictámenes de estados financieros.' }
+      { nombre: 'Abogados y Notarios', cantidadTemas: 17, desc: 'Papel Sellado de Protocolos, timbres fiscales, traspasos electrónicos (TEV) y avisos notariales obligatorios.' },
+      { nombre: 'Peritos Contadores', cantidadTemas: 11, desc: 'Inscripción en RTU, habilitación en Agencia Virtual, Libro Electrónico Tributario (LET) y retenciones.' },
+      { nombre: 'Gestores Tributarios', cantidadTemas: 8, desc: 'Acreditación oficial, requisitos de carné, renovación de gafetes y verificación en línea.' },
+      { nombre: 'Servicios Profesionales', cantidadTemas: 5, desc: 'Facturación de honorarios, retenciones en la fuente, consultas jurídicas y actualización.' },
+      { nombre: 'Auditores', cantidadTemas: 4, desc: 'Habilitación de Contadores Públicos y Auditores (CPA) y dictámenes de crédito fiscal.' }
     ]
   },
 
@@ -236,28 +234,24 @@ export const GRUPOS_CONFIG: GrupoInfo[] = [
   {
     no: 6,
     nombre: 'Exentos',
-    cantidadTemas: 49,
-    pillar: 'entes_exentos',
-    desc: 'Entidades exentas constitucionales, no lucrativas, por decreto de ley, ZOLIC y corporaciones municipales.',
+    cantidadTemas: 53,
+    pillar: 'organismos_especiales',
+    desc: 'Entidades exentas constitucionales, no lucrativas, por decreto de fomento y corporaciones municipales.',
     subgrupos: [
-      { nombre: 'Constitucionales', cantidadTemas: 29, desc: 'Universidades, centros educativos y entidades expresamente exentas en la Constitución.' },
-      { nombre: 'No Lucrativos', cantidadTemas: 28, desc: 'Asociaciones civiles, fundaciones benéficas y ONGs sin fines de lucro.' },
-      { nombre: 'Decreto', cantidadTemas: 39, desc: 'Entidades y proyectos beneficiarios de leyes o decretos de fomento específicos.' },
-      { nombre: 'ZOLIC', cantidadTemas: 6, desc: 'Zona Libre de Industria y Comercio "Santo Tomás de Castilla".' },
-      { nombre: 'Municipalidades', cantidadTemas: 33, desc: 'Gobiernos locales, corporaciones municipales y mancomunidades de municipios.' }
+      { nombre: 'Constitucionales', cantidadTemas: 18, desc: 'Centros educativos, universidades privadas y entidades de la Iglesia Católica.' },
+      { nombre: 'Decreto', cantidadTemas: 16, desc: 'Entidades y proyectos beneficiarios de leyes especiales de fomento y cooperativas.' },
+      { nombre: 'No Lucrativos', cantidadTemas: 14, desc: 'Fundaciones, asociaciones benéficas, ONGs, OPF y sindicatos.' },
+      { nombre: 'Municipalidades', cantidadTemas: 5, desc: 'Gobiernos locales, exenciones del IVA (CIVA) y patrimonio municipal.' }
     ]
   },
   {
     no: 9,
     nombre: 'Entidades del Estado',
     cantidadTemas: 26,
-    pillar: 'entes_exentos',
-    desc: 'Organismos de Estado, entes autónomos, ministerios y dependencias públicas oficiales.',
+    pillar: 'organismos_especiales',
+    desc: 'Ministerios, dependencias del Estado, Organismo Judicial, Ministerio Público y SENABED.',
     subgrupos: [
-      { nombre: 'Organismo Judicial', desc: 'Juzgados, tribunales y dependencias administrativas del OJ.' },
-      { nombre: 'Ministerio Público', desc: 'Fiscalías y dependencias del ente acusador oficial.' },
-      { nombre: 'SENABED / CONABED', desc: 'Bienes objeto de extinción de dominio y administración de bienes incautados.' },
-      { nombre: 'PDH', desc: 'Procuraduría de los Derechos Humanos e instituciones conexas.' }
+      { nombre: 'Entidades del Estado', cantidadTemas: 26, desc: 'Acreditación en RTU estatal, gestión vehicular oficial, exenciones y órdenes de autoridad judicial.' }
     ]
   }
 ];
@@ -281,8 +275,7 @@ export const TRAMITES_DATA: TramiteItem[] = [
     tramite: 'Inscripción de NIT sin Obligaciones',
     url: 'https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1615485066841-639e67c5-51e3',
     formulario: 'Solicitud de NIT Digital / Portal Web SAT',
-    baseLegal: 'Decreto 6-91 del Congreso de la República de Guatemala, Código Tributario y Ley Orgánica de la SAT.',
-    descripcion: 'Solicitud y requisitos para la obtención electrónica de NIT sin obligaciones tributarias por primera vez; utilizado frecuentemente por estudiantes, jóvenes en proceso de matrícula universitaria, beneficiarios de remesas familiares y personas individuales que lo requieren para realizar gestiones bancarias (apertura de cuentas de ahorro o monetarias, créditos), actos civiles y contratos sin realizar actividades económicas afectas.',
+    descripcion: 'Solicitud y requisitos para la obtención electrónica de tu Número de Identificación Tributaria (NIT) sin obligaciones tributarias por primera vez; utilizado por estudiantes, jóvenes y personas individuales que lo requieren para realizar gestiones bancarias (apertura de cuentas de ahorro o monetarias), actos civiles y recepción de remesas familiares.',
     perfilDestinatario: 'Estudiantes, jóvenes y personas individuales (gestiones bancarias, remesas o actos civiles sin actividad mercantil)',
     origenClasificacion: 'Análisis de arquitectura transaccional',
     impactoOImportancia: 'Trámite inicial obligatorio para trámites bancarios, acreditación estudiantil, recepción de remesas y actos civiles no tributarios.',
@@ -479,16 +472,16 @@ export const TRAMITES_DATA: TramiteItem[] = [
     subgrupoInterno: 'General',
     tema: 'Certificaciones y Solvencias',
     subtema: 'Solvencias',
-    nombreActual: 'Solvencia Fiscal',
+    nombreActual: 'Solvencia Fiscal en Línea',
     grupoNo: 1,
     tipoSubtema: 'Solvencias',
     moduloRequisitos: 'Solvencia Fiscal',
     ubicacionPortalActual: 'Consultas / Solvencias',
-    tramite: 'Solicitud y Emisión de Solvencia Fiscal (SOFI)',
+    tramite: 'Solicitud y Emisión de Solvencia Fiscal en Línea',
     url: 'https://portal.sat.gob.gt/portal/solvencia-fiscal/',
-    formulario: 'Declaraguate SAT-8421 / Agencia Virtual (SOFI)',
+    formulario: 'Declaraguate SAT-8421 / Agencia Virtual',
     baseLegal: 'Artículo 57 "A" del Código Tributario, Decreto 6-91 del Congreso de la República.',
-    descripcion: 'Consulta, pago y descarga de la Solvencia Fiscal Electrónica para certificar ausencia de adeudos tributarios.',
+    descripcion: 'Consulta, pago y descarga del certificado electrónico que acredita la ausencia de adeudos tributarios ante la SAT para fines laborales o personales.',
     perfilDestinatario: 'Personas Individuales',
     origenClasificacion: 'Análisis de arquitectura transaccional',
     impactoOImportancia: 'Exigida comúnmente a personas sin obligaciones para postulaciones laborales, trámites consulares/visas y contratos civiles.',

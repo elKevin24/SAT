@@ -1,436 +1,169 @@
-import React, { useState, useEffect } from 'react';
-import { Menu, X, ChevronRight, Check, Copy, Printer, ExternalLink, Search } from 'lucide-react';
-import { 
-  PillarType, 
-  TramiteItem, 
-  PILLARS_CONFIG, 
-  GRUPOS_CONFIG, 
-  TRAMITES_DATA 
-} from './data/taxArchitecture';
+import React, { useState } from 'react';
+import { Header } from './components/Header';
+import { UserSegmentCards, SegmentId } from './components/UserSegmentCards';
+import { RotaryBanner } from './components/RotaryBanner';
+import { QuickAccessCarousel } from './components/QuickAccessCarousel';
+import { PopularTopicsTabs } from './components/PopularTopicsTabs';
+import { GuidedProcessesSection } from './components/GuidedProcessesSection';
+import { NewsAndTransparencySection } from './components/NewsAndTransparencySection';
+import { InstitutionalFooter } from './components/InstitutionalFooter';
+import { UserWayAccessibilityModal } from './components/UserWayAccessibilityModal';
+import { DirectConsultasModal } from './components/DirectConsultasModal';
+import { GuidedProcessModal } from './components/GuidedProcessModal';
+import { TramiteDetailModal } from './components/TramiteDetailModal';
+import { SegmentTramitesCatalog } from './components/SegmentTramitesCatalog';
+
+// Import official extracted datasets
+import rawTramites from './data/allTramites.json';
+import rawProcesos from './data/allProcesos.json';
+
+interface AccessibilitySettings {
+  contrastMode: 'normal' | 'high' | 'dark' | 'inverted';
+  fontSizeStep: number;
+  dyslexiaFont: boolean;
+  reducedMotion: boolean;
+  highlightLinks: boolean;
+  readingGuide: boolean;
+  textSpacing: boolean;
+  cursorBig: boolean;
+}
+
+const DEFAULT_ACCESSIBILITY: AccessibilitySettings = {
+  contrastMode: 'normal',
+  fontSizeStep: 0,
+  dyslexiaFont: false,
+  reducedMotion: false,
+  highlightLinks: false,
+  readingGuide: false,
+  textSpacing: false,
+  cursorBig: false,
+};
 
 export default function App() {
-  const [level, setLevel] = useState<1 | 2 | 3 | 4>(1);
-  const [selectedPillar, setSelectedPillar] = useState<PillarType>('contribuyentes');
-  const [selectedCategoria, setSelectedCategoria] = useState<string>('NIT sin Obligaciones');
-  const [selectedSubcategoria, setSelectedSubcategoria] = useState<string>('RTU Digital');
-  
-  // Trámite seleccionado (null en nivel 1-3 o cuando se muestran tarjetas de trámites)
-  const [selectedTramite, setSelectedTramite] = useState<TramiteItem | null>(null);
+  const [currentView, setCurrentView] = useState<'home' | 'catalog'>('home');
+  const [activeSegment, setActiveSegment] = useState<SegmentId>('contribuyentes');
+  const [activeCategory, setActiveCategory] = useState<string>('Todas las categorías');
 
-  // Active section for highlight
-  const [activeSectionId, setActiveSectionId] = useState<string>('');
-
-  // Interactive requirement checklist state
-  const [checkedRequirements, setCheckedRequirements] = useState<Record<string, boolean>>({});
-
-  // Copy notification state
-  const [copiedLink, setCopiedLink] = useState(false);
-
-  // Sidebar visibility: false por defecto para que las tarjetas inicien perfectamente centradas
-  const [menuSidebarOpen, setMenuSidebarOpen] = useState<boolean>(false);
-
-  // Helper to close drawer when navigating on mobile
-  const closeMenuIfMobile = () => {
-    if (typeof window !== 'undefined' && window.innerWidth < 768) {
-      setMenuSidebarOpen(false);
-    }
-  };
-
-  // Scroll detection to compact spacing when scrolling down
-  const [isScrolled, setIsScrolled] = useState<boolean>(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 40);
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  // Search query & results
+  // Search query
   const [searchQuery, setSearchQuery] = useState('');
-  const [isSearchFocused, setIsSearchFocused] = useState(false);
 
-  // Consulta interactiva de gestión (con-nit-4)
-  const [consultaGestionInput, setConsultaGestionInput] = useState('');
-  const [consultaGestionResult, setConsultaGestionResult] = useState<{
-    numero: string;
-    estado: 'En trámite' | 'Aprobada' | 'Observada';
-    mensaje: string;
-  } | null>(null);
+  // Selected modals
+  const [selectedTramite, setSelectedTramite] = useState<any | null>(null);
+  const [selectedProceso, setSelectedProceso] = useState<any | null>(null);
+  const [consultasModalSegment, setConsultasModalSegment] = useState<SegmentId | null>(null);
+  const [accessibilityModalOpen, setAccessibilityModalOpen] = useState(false);
 
-  // Consulta interactiva de títulos QR (con-nit-8)
-  const [consultaTituloInput, setConsultaTituloInput] = useState('');
-  const [consultaTituloResult, setConsultaTituloResult] = useState<{
-    numero: string;
-    profesional: string;
-    titulo: string;
-    grado: string;
-    estado: string;
-    timbres: string;
-  } | null>(null);
+  // Accessibility State
+  const [accSettings, setAccSettings] = useState<AccessibilitySettings>(DEFAULT_ACCESSIBILITY);
 
-  const handleConsultarTitulo = (e?: React.FormEvent) => {
-    if (e) e.preventDefault();
-    const clean = consultaTituloInput.trim();
-    if (!clean) return;
+  // Nota: el enrutado del styleguide vive en src/main.tsx (isStyleGuideHash).
+  // App solo fija el hash; main.tsx decide que vista montar. Duplicar la
+  // comparacion del hash aqui provocaba que el styleguide se desmontara al
+  // navegar entre sus secciones internas.
 
-    setConsultaTituloResult({
-      numero: clean.toUpperCase(),
-      profesional: 'Profesional Colegiado Activo',
-      titulo: 'Licenciatura Universitaria / Grado Académico Superior',
-      grado: 'Nivel Licenciatura (100% acreditado)',
-      estado: 'Habilitado y Registrado Oficialmente ante SAT',
-      timbres: 'Impuesto de Timbres Fiscales cancelado conforme al Art. 5 num. 3 Dto. 37-92'
-    });
+  const handleUpdateAccessibility = (updates: Partial<AccessibilitySettings>) => {
+    setAccSettings(prev => ({ ...prev, ...updates }));
   };
 
-  const handleConsultarGestion = (e?: React.FormEvent) => {
-    if (e) e.preventDefault();
-    const clean = consultaGestionInput.trim();
-    if (!clean) return;
-    
-    if (clean.toLowerCase().includes('aprob') || clean.endsWith('1') || clean.endsWith('5')) {
-      setConsultaGestionResult({
-        numero: clean,
-        estado: 'Aprobada',
-        mensaje: 'La solicitud de Agencia Virtual fue aprobada con éxito. Revisa tu correo electrónico para crear tu contraseña de acceso inicial.'
-      });
-    } else if (clean.toLowerCase().includes('rechaz') || clean.toLowerCase().includes('obs') || clean.endsWith('2')) {
-      setConsultaGestionResult({
-        numero: clean,
-        estado: 'Observada',
-        mensaje: 'La selfie o el documento adjunto no son legibles. Debes subsanar adjuntando nuevamente el DPI o pasaporte vigente.'
-      });
-    } else {
-      setConsultaGestionResult({
-        numero: clean,
-        estado: 'En trámite',
-        mensaje: 'Tu solicitud de acceso se encuentra en proceso de validación documental por parte de la SAT. Tiempo promedio de respuesta: 24 horas hábiles.'
-      });
-    }
+  const handleResetAccessibility = () => {
+    setAccSettings(DEFAULT_ACCESSIBILITY);
   };
 
-  // Configuraciones derivadas
-  const currentPillarConfig = PILLARS_CONFIG.find(p => p.id === selectedPillar) || PILLARS_CONFIG[0];
-  const gruposInPillar = GRUPOS_CONFIG.filter(g => g.pillar === selectedPillar);
-  const currentGrupo = gruposInPillar.find(g => g.nombre === selectedCategoria) || gruposInPillar[0];
-  const subgruposInGrupo = currentGrupo?.subgrupos || [];
-  const currentSubcategoriaItems = TRAMITES_DATA.filter(
-    i => i.pillar === selectedPillar && i.categoria === selectedCategoria && i.subcategoria === selectedSubcategoria
-  );
-
-  // Resultados de búsqueda en vivo
-  const searchResults = searchQuery.trim().length > 1
-    ? TRAMITES_DATA.filter(t => 
-        t.tramite.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        t.descripcion.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        (t.formulario && t.formulario.toLowerCase().includes(searchQuery.toLowerCase())) ||
-        t.subcategoria.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        t.categoria.toLowerCase().includes(searchQuery.toLowerCase())
-      )
-    : [];
+  const handleSelectSegment = (segId: SegmentId, category?: string) => {
+    setActiveSegment(segId);
+    setActiveCategory(category || 'Todas las categorías');
+    setCurrentView('catalog');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   const handleGoHome = () => {
-    setLevel(1);
-    setSelectedTramite(null);
-    closeMenuIfMobile();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
-  const handleSelectPillar = (pillarId: PillarType) => {
-    setSelectedPillar(pillarId);
-    const grupos = GRUPOS_CONFIG.filter(g => g.pillar === pillarId);
-    const firstGrupo = grupos[0]?.nombre || '';
-    setSelectedCategoria(firstGrupo);
-    const firstSub = grupos[0]?.subgrupos[0]?.nombre || '';
-    setSelectedSubcategoria(firstSub);
-    setSelectedTramite(null);
-    setLevel(2);
-    closeMenuIfMobile();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
-  const handleSelectCategoria = (cat: string) => {
-    setSelectedCategoria(cat);
-    const grupo = GRUPOS_CONFIG.find(g => g.pillar === selectedPillar && g.nombre === cat);
-    const firstSub = grupo?.subgrupos[0]?.nombre || '';
-    setSelectedSubcategoria(firstSub);
-    setSelectedTramite(null);
-    setLevel(3);
-    closeMenuIfMobile();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
-  const handleSelectSubcategoria = (sub: string) => {
-    setSelectedSubcategoria(sub);
-    const trms = TRAMITES_DATA.filter(
-      i => i.pillar === selectedPillar && i.categoria === selectedCategoria && i.subcategoria === sub
-    );
-    const item = trms.length === 1 ? trms[0] : null;
-    setSelectedTramite(item);
-    setLevel(4);
-    closeMenuIfMobile();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
-  // Selección inmediata de trámite
-  const handleSelectMenuGestion = (item: TramiteItem) => {
-    setSelectedTramite(item);
-    setActiveSectionId('');
-    setLevel(4);
-    closeMenuIfMobile();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
-  // Scroll suave hacia sección de la ficha con compensación del header fijo
-  const scrollToSection = (id: string) => {
-    setActiveSectionId(id);
-    const element = document.getElementById(id);
-    if (element) {
-      const headerOffset = isScrolled ? 80 : 110;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-    }
-  };
-
-  // Alternar checkbox de requisitos
-  const handleToggleRequirement = (key: string) => {
-    setCheckedRequirements(prev => ({
-      ...prev,
-      [key]: !prev[key]
-    }));
-  };
-
-  // Copiar URL de trámite
-  const handleCopyLink = () => {
-    navigator.clipboard.writeText(window.location.href);
-    setCopiedLink(true);
-    setTimeout(() => setCopiedLink(false), 2500);
-  };
-
-  // Seleccionar resultado de búsqueda
-  const handleSelectSearchResult = (item: TramiteItem) => {
-    setSelectedPillar(item.pillar);
-    setSelectedCategoria(item.categoria);
-    setSelectedSubcategoria(item.subcategoria);
-    setSelectedTramite(item);
-    setLevel(4);
+    window.location.hash = '';
+    setCurrentView('home');
+    setActiveCategory('Todas las categorías');
     setSearchQuery('');
-    setIsSearchFocused(false);
-    closeMenuIfMobile();
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleGoStyleGuide = () => {
+    window.location.hash = '#/estilo';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const getAccessibilityClasses = () => {
+    const classes = [];
+    if (accSettings.contrastMode === 'high') classes.push('contrast-125 saturate-150');
+    if (accSettings.contrastMode === 'dark') classes.push('invert hue-rotate-180 bg-slate-900');
+    if (accSettings.contrastMode === 'inverted') classes.push('invert');
+    if (accSettings.highlightLinks) classes.push('[&_a]:underline [&_a]:bg-yellow-100 [&_a]:text-blue-900');
+    if (accSettings.textSpacing) classes.push('tracking-wide leading-loose');
+    if (accSettings.dyslexiaFont) classes.push('font-mono');
+    return classes.join(' ');
   };
 
   return (
-    <div className="min-h-screen bg-white text-[#19324B] font-sans antialiased flex flex-col selection:bg-[#14649B] selection:text-white">
-      
-      {/* Skip to Main Content Link for Keyboard Accessibility (WCAG 2.2 AA) */}
-      <a 
-        href="#main-content" 
-        className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:px-4 focus:py-2.5 focus:bg-[#14649B] focus:text-white focus:rounded-lg focus:shadow-xl focus:text-xs focus:font-bold focus:outline-hidden"
-      >
-        Saltar al contenido principal
-      </a>
+    <div 
+      className={`min-h-screen bg-white text-slate-800 flex flex-col antialiased transition-all ${getAccessibilityClasses()}`}
+      style={{
+        fontSize: accSettings.fontSizeStep ? `${100 + accSettings.fontSizeStep * 8}%` : undefined
+      }}
+    >
+      {/* 1. Official Institutional Header */}
+      <Header
+        onGoHome={handleGoHome}
+        onGoStyleGuide={handleGoStyleGuide}
+        searchQuery={searchQuery}
+        onSearchChange={setSearchQuery}
+        onSelectTramite={(t) => setSelectedTramite(t)}
+        onSelectProceso={(p) => setSelectedProceso(p)}
+        onOpenAccessibility={() => setAccessibilityModalOpen(true)}
+        allTramites={rawTramites}
+        allProcesos={rawProcesos}
+      />
 
-      {/* SAT Institutional Gradient Stripe (Manual SAT Design System Web v1.0) */}
-      <div className="h-1 w-full bg-gradient-to-r from-[#19324B] via-[#14649B] to-[#19AFE1]" />
+      {/* Main Content Area */}
+      <main className="flex-1">
+        {currentView === 'home' && (
+          <>
+            {/* 2. User Segments */}
+            <UserSegmentCards
+              selectedSegment={null}
+              onSelectSegment={handleSelectSegment}
+            />
 
-      {/* HEADER INTEGRAL: Totalmente responsive con safe-area y micro-compactación al scroll */}
-      <header className={`sticky top-0 z-40 bg-white border-b border-[#DCDCDC] shadow-xs transition-all duration-300 ${
-        isScrolled ? 'py-1' : 'py-2 sm:py-2.5'
-      }`}>
-        <div className="max-w-7xl mx-auto px-3 sm:px-6 md:px-8">
-          
-          {/* Fila 1: Marca Institucional adaptativa e Input de Búsqueda fluido */}
-          <div className={`flex items-center justify-between gap-2.5 sm:gap-4 transition-all duration-300 ${
-            isScrolled ? 'py-0.5' : 'py-1'
-          }`}>
-            
-            {/* Logotipo y Títulos Institucionales */}
-            <div 
-              role="button"
-              tabIndex={0}
-              onClick={handleGoHome}
-              onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handleGoHome(); } }}
-              className="flex items-center gap-2 sm:gap-2.5 cursor-pointer group shrink-0 rounded-lg p-1 -m-1 focus-visible:ring-2 focus-visible:ring-[#14649B]"
-              aria-label="Ir al inicio del portal SAT"
-            >
-              <div className="relative">
-                <div className={`rounded-lg bg-[#19324B] group-hover:bg-[#14649B] flex items-center justify-center text-white font-black tracking-tight transition-all duration-300 shadow-xs ${
-                  isScrolled ? 'w-7 h-7 text-xs' : 'w-8 h-8 sm:w-9 sm:h-9 text-xs sm:text-sm'
-                }`}>
-                  SAT
-                </div>
-                <div className="absolute -top-0.5 -right-0.5 w-1.5 h-1.5 rounded-full bg-[#FFB806]" />
-              </div>
-              
-              <div>
-                <span className={`text-[#14649B] uppercase tracking-wider block font-bold leading-tight transition-all duration-300 ${
-                  isScrolled ? 'text-[9px]' : 'text-[9px] sm:text-[10px]'
-                }`}>
-                  Portal Institucional
-                </span>
-                <span className={`font-extrabold text-[#19324B] tracking-tight leading-none transition-all duration-300 ${
-                  isScrolled ? 'text-xs sm:text-sm' : 'text-xs sm:text-sm md:text-base'
-                }`}>
-                  <span className="sm:hidden">SAT Guatemala</span>
-                  <span className="hidden sm:inline">Superintendencia de Administración Tributaria</span>
-                </span>
-              </div>
-            </div>
+            {/* 3. Rotary Banner */}
+            <RotaryBanner />
 
-            {/* Input de Búsqueda fluido sin desbordamiento */}
-            <div 
-              role="search" 
-              className={`relative min-w-0 flex-1 transition-all duration-300 ${
-                isScrolled ? 'max-w-[170px] sm:max-w-xs md:max-w-sm' : 'max-w-[190px] sm:max-w-xs md:max-w-sm lg:max-w-md'
-              }`}
-            >
-              <div className="relative">
-                <input 
-                  type="search" 
-                  aria-label="Buscar trámites o requisitos oficiales"
-                  placeholder="Buscar trámites o requisitos..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  onFocus={() => setIsSearchFocused(true)}
-                  className={`w-full bg-white border border-[#DCDCDC] rounded-lg text-xs text-[#19324B] placeholder:text-slate-500 focus:outline-hidden focus:border-[#14649B] focus:ring-2 focus:ring-[#14649B]/20 transition-all duration-200 ${
-                    isScrolled ? 'h-[32px] sm:h-[34px] pl-7 sm:pl-8 pr-7 text-xs' : 'h-[36px] sm:h-[40px] pl-8 sm:pl-9 pr-8 text-xs sm:text-sm'
-                  }`}
-                />
-                <Search 
-                  className={`text-slate-400 absolute left-2 sm:left-2.5 pointer-events-none transition-all duration-200 ${
-                    isScrolled ? 'top-2 sm:top-2.5 w-3.5 h-3.5' : 'top-2.5 sm:top-3 w-4 h-4'
-                  }`} 
-                  aria-hidden="true" 
-                />
-                {searchQuery && (
-                  <button 
-                    type="button"
-                    onClick={() => setSearchQuery('')}
-                    aria-label="Limpiar campo de búsqueda"
-                    className="absolute right-1 top-1/2 -translate-y-1/2 w-6 h-6 flex items-center justify-center text-slate-400 hover:text-slate-700 text-xs rounded-full hover:bg-slate-100"
-                  >
-                    ✕
-                  </button>
-                )}
-              </div>
+            {/* 4. Quick Access Carousel */}
+            <QuickAccessCarousel />
 
-              {/* Resultados interactivos de búsqueda en vivo */}
-              {isSearchFocused && searchResults.length > 0 && (
-                <div 
-                  role="listbox" 
-                  aria-label="Resultados de búsqueda"
-                  className="absolute left-0 right-0 top-full mt-1.5 bg-white border border-[#DCDCDC] rounded-xl shadow-xl z-50 max-h-80 overflow-y-auto divide-y divide-[#DCDCDC]/60"
-                >
-                  {searchResults.map((res) => (
-                    <div
-                      key={res.id}
-                      role="option"
-                      aria-selected={false}
-                      tabIndex={0}
-                      onClick={() => handleSelectSearchResult(res)}
-                      onKeyDown={(e) => { if (e.key === 'Enter') handleSelectSearchResult(res); }}
-                      className="p-3 hover:bg-[#14649B]/5 cursor-pointer transition-colors focus:bg-[#14649B]/10 focus:outline-hidden"
-                    >
-                      <div className="text-xs sm:text-sm font-bold text-[#14649B]">{res.tramite}</div>
-                      <div className="text-[11px] sm:text-xs text-slate-600 line-clamp-1">{res.descripcion}</div>
-                      <div className="text-[10px] text-slate-500 pt-1 font-medium">{res.subcategoria} · {res.categoria}</div>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
+            {/* 5. Popular Topics Tabs */}
+            <PopularTopicsTabs
+              onOpenConsultasModal={(segId) => setConsultasModalSegment(segId)}
+            />
 
-          </div>
+            {/* 6. Guided Processes Section */}
+            <GuidedProcessesSection
+              procesos={rawProcesos as any}
+              onSelectProceso={(p) => setSelectedProceso(p)}
+            />
 
-          {/* Fila 2: Menú, Inicio y los 4 Macrogrupos oficiales con scroll horizontal táctil seguro */}
-          <nav 
-            aria-label="Navegación principal" 
-            className={`flex items-center gap-2 sm:gap-3 border-t border-[#DCDCDC]/60 transition-all duration-300 ${
-              isScrolled ? 'pt-1 mt-1 text-xs' : 'pt-1.5 sm:pt-2 mt-1.5 sm:mt-2 text-xs md:text-sm'
-            }`}
-          >
-            
-            {/* Botón de Menú lateral con accesibilidad */}
-            <button 
-              type="button"
-              onClick={() => setMenuSidebarOpen(!menuSidebarOpen)}
-              aria-expanded={menuSidebarOpen}
-              aria-controls="lateral-menu"
-              className={`bg-white border border-[#DCDCDC] hover:border-[#14649B] text-[#19324B] hover:text-[#14649B] rounded-lg font-bold shrink-0 transition-all duration-200 flex items-center gap-1.5 shadow-2xs focus-visible:ring-2 focus-visible:ring-[#14649B] ${
-                isScrolled ? 'min-h-[32px] sm:min-h-[34px] px-2 sm:px-2.5 py-1 text-xs' : 'min-h-[36px] sm:min-h-[38px] px-2.5 sm:px-3 py-1.5 text-xs'
-              }`}
-            >
-              {menuSidebarOpen ? <X className="w-3.5 h-3.5 text-[#C2185B]" /> : <Menu className="w-3.5 h-3.5 text-[#14649B]" />}
-              <span>{menuSidebarOpen ? 'Ocultar' : 'Menú'}</span>
-            </button>
+            {/* 7. News & Transparency Section */}
+            <NewsAndTransparencySection />
+          </>
+        )}
 
-            {/* Botón de Inicio */}
-            <button 
-              type="button"
-              onClick={handleGoHome}
-              className={`rounded-lg font-bold shrink-0 transition-all duration-200 text-xs focus-visible:ring-2 focus-visible:ring-[#14649B] ${
-                isScrolled ? 'min-h-[32px] sm:min-h-[34px] px-2.5 py-1' : 'min-h-[36px] sm:min-h-[38px] px-3 py-1.5'
-              } ${
-                level === 1 
-                  ? 'bg-[#14649B] text-white shadow-xs' 
-                  : 'bg-white border border-[#DCDCDC] hover:border-[#14649B] text-[#19324B]'
-              }`}
-            >
-              Inicio
-            </button>
-
-            {/* Los 4 Macrogrupos oficiales de SAT: Contenedor fluido con scroll horizontal táctil */}
-            <div className="flex-1 min-w-0 overflow-x-auto no-scrollbar py-0.5">
-              <div className={`flex items-center whitespace-nowrap pl-2.5 border-l border-[#DCDCDC] transition-all duration-300 ${
-                isScrolled ? 'gap-2.5 md:gap-4' : 'gap-3 md:gap-5'
-              }`}>
-                {PILLARS_CONFIG.map((p) => (
-                  <button 
-                    key={p.id}
-                    type="button"
-                    onClick={() => handleSelectPillar(p.id)}
-                    className={`relative font-semibold transition-colors shrink-0 rounded-md focus-visible:ring-2 focus-visible:ring-[#14649B] ${
-                      isScrolled ? 'py-1 px-1 text-xs' : 'py-1.5 px-1 text-xs md:text-sm'
-                    } ${
-                      selectedPillar === p.id && level > 1 
-                        ? 'text-[#14649B] font-extrabold' 
-                        : 'text-slate-700 hover:text-[#14649B]'
-                    }`}
-                  >
-                    {p.name}
-                    {selectedPillar === p.id && level > 1 && (
-                      <span 
-                        className="absolute bottom-0 left-0 right-0 h-0.5 rounded-full" 
-                        style={{ backgroundColor: p.activeIndicatorColor }} 
-                      />
-                    )}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-          </nav>
-
-        </div>
-      </header>
-
-      {/* Two-column layout: Context-Aware Lateral Menu + Main Content */}
-      <div className="flex-1 max-w-7xl w-full mx-auto flex flex-col md:flex-row">
-        
-        {/* Mobile Backdrop for Off-Canvas Drawer (WCAG dialog overlay) */}
-        {menuSidebarOpen && (
-          <div 
-            className="fixed inset-0 bg-slate-900/50 backdrop-blur-xs z-40 md:hidden transition-opacity"
-            onClick={() => setMenuSidebarOpen(false)}
-            aria-hidden="true"
+        {currentView === 'catalog' && (
+          /* Segment Trámites Catalog */
+          <SegmentTramitesCatalog
+            segmentId={activeSegment}
+            initialCategory={activeCategory}
+            allTramites={rawTramites as any}
+            onSelectTramite={(t) => setSelectedTramite(t)}
+            onBackToHome={handleGoHome}
+            onSwitchSegment={(segId) => {
+              setActiveSegment(segId);
+              setActiveCategory('Todas las categorías');
+            }}
           />
         )}
 
@@ -1990,24 +1723,33 @@ export default function App() {
 
         </main>
 
-      </div>
+      {/* 8. Institutional Footer */}
+      <InstitutionalFooter onOpenStyleGuide={handleGoStyleGuide} />
 
-      {/* Institutional SAT Footer conforming to Design System Web v1.0 and Safe Area */}
-      <footer className="border-t border-[#DCDCDC] py-6 sm:py-8 px-4 sm:px-8 bg-white pb-[calc(1.5rem+var(--safe-bottom))]">
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-600">
-          <div className="text-center sm:text-left leading-relaxed">
-            © 2026 Superintendencia de Administración Tributaria — SAT Guatemala. SAT Design System Web v1.0.
-          </div>
-          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-[#14649B] font-semibold">
-            <a href="https://portal.sat.gob.gt" target="_blank" rel="noreferrer" className="min-h-[36px] inline-flex items-center px-1 rounded hover:underline focus-visible:ring-2 focus-visible:ring-[#14649B]">Portal SAT</a>
-            <span className="text-slate-300" aria-hidden="true">·</span>
-            <a href="https://declaraguate.sat.gob.gt" target="_blank" rel="noreferrer" className="min-h-[36px] inline-flex items-center px-1 rounded hover:underline focus-visible:ring-2 focus-visible:ring-[#14649B]">Declaraguate</a>
-            <span className="text-slate-300" aria-hidden="true">·</span>
-            <a href="https://portal.sat.gob.gt/portal/agencia-virtual/" target="_blank" rel="noreferrer" className="min-h-[36px] inline-flex items-center px-1 rounded hover:underline focus-visible:ring-2 focus-visible:ring-[#14649B]">Agencia Virtual</a>
-          </div>
-        </div>
-      </footer>
+      {/* Modals & Overlays */}
+      <UserWayAccessibilityModal
+        isOpen={accessibilityModalOpen}
+        onClose={() => setAccessibilityModalOpen(false)}
+        settings={accSettings}
+        onUpdateSettings={handleUpdateAccessibility}
+        onReset={handleResetAccessibility}
+      />
 
+      <DirectConsultasModal
+        isOpen={!!consultasModalSegment}
+        onClose={() => setConsultasModalSegment(null)}
+        segmentId={consultasModalSegment || 'contribuyentes'}
+      />
+
+      <GuidedProcessModal
+        proceso={selectedProceso}
+        onClose={() => setSelectedProceso(null)}
+      />
+
+      <TramiteDetailModal
+        tramite={selectedTramite}
+        onClose={() => setSelectedTramite(null)}
+      />
     </div>
   );
 }
