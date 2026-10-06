@@ -11,7 +11,7 @@ interface TopicItem {
 
 const TOPICS_BY_SEGMENT: Record<SegmentId, { label: string; primaryColor: string; hoverBg: string; hoverBorder: string; hoverShadow: string; topics: TopicItem[] }> = {
   contribuyentes: {
-    label: 'Contribuyentes',
+    label: 'Personas y Empresas',
     primaryColor: '#14649B',
     hoverBg: 'hover:bg-[#14649B]',
     hoverBorder: 'hover:border-[#14649B]',
@@ -19,45 +19,45 @@ const TOPICS_BY_SEGMENT: Record<SegmentId, { label: string; primaryColor: string
     topics: [
       {
         id: 'con-consultas',
-        title: 'Consultas y Verificadores en Línea',
-        desc: 'Acceso directo a las herramientas web de verificación de omisos, búsqueda de NIT, estado de solicitudes y solvencias.',
+        title: 'Verificadores y Consultas en Línea',
+        desc: 'Consulta si tienes declaraciones pendientes, verifica tu número de NIT, revisa el estado de tu trámite en Agencia Virtual y genera tu solvencia fiscal.',
         isPermanentConsultas: true,
         url: 'https://portal.sat.gob.gt/portal/consultas/'
       },
       {
         id: 'con-rtu',
-        title: 'Inscripción y Actualización en RTU Digital',
-        desc: 'Realiza tu registro por primera vez o actualiza tus datos de contacto y domicilio fiscal sin acudir a una agencia.',
+        title: 'Registro Tributario Unificado (RTU Digital)',
+        desc: 'Inscríbete por primera vez o actualiza tus datos personales, dirección de vivienda o negocio de forma 100% digital sin hacer filas.',
         url: 'https://portal.sat.gob.gt/portal/rtu-digital/'
       },
       {
         id: 'con-fel',
         title: 'Facturación Electrónica en Línea (FEL)',
-        desc: 'Habilítate como emisor de facturas electrónicas y genera comprobantes de venta sin costo desde web o móvil.',
+        desc: 'Aprende a emitir facturas electrónicas gratuitas desde la web o con la App SAT FEL, y entrega comprobantes válidos a tus clientes.',
         url: 'https://portal.sat.gob.gt/portal/factura-electronica-fel/'
       },
       {
         id: 'con-declaraguate',
-        title: 'Presentación y Pago en Declaraguate',
-        desc: 'Completa los formularios electrónicos de IVA, ISR u otros impuestos y genera la boleta SAT-2000 para pagar en tu banco.',
+        title: 'Declaración y Pago de Impuestos (Declaraguate)',
+        desc: 'Llena tus formularios de IVA mensual o Impuesto Sobre la Renta (ISR) y genera tu boleta SAT-2000 para pagar desde la banca en línea.',
         url: 'https://declaraguate.sat.gob.gt/'
       },
       {
         id: 'con-vehiculos',
-        title: 'Impuesto de Circulación y Distintivos',
-        desc: 'Consulta montos a pagar, descarga tu calcomanía electrónica e inicia el traspaso digital de vehículos.',
+        title: 'Impuesto de Circulación y Calcomanía Vehicular',
+        desc: 'Consulta cuánto debes pagar por tu vehículo, imprime tu calcomanía anual o inicia el traspaso electrónico de propiedad.',
         url: 'https://portal.sat.gob.gt/portal/consulta-de-vehiculos/'
       },
       {
         id: 'con-solvencia',
-        title: 'Emisión de Solvencia Fiscal (SOFI)',
-        desc: 'Obtén la constancia oficial que acredita que no posees deudas tributarias ante la administración.',
+        title: 'Certificado de Solvencia Fiscal (SOFI)',
+        desc: 'Descarga al instante la constancia digital que demuestra que no tienes deudas ni declaraciones pendientes con el Estado.',
         url: 'https://portal.sat.gob.gt/portal/solvencia-fiscal/'
       }
     ]
   },
   comercio_exterior: {
-    label: 'Operadores de Comercio Exterior',
+    label: 'Comercio Exterior y Aduanas',
     primaryColor: '#0284C7',
     hoverBg: 'hover:bg-[#0284C7]',
     hoverBorder: 'hover:border-[#0284C7]',
@@ -65,45 +65,45 @@ const TOPICS_BY_SEGMENT: Record<SegmentId, { label: string; primaryColor: string
     topics: [
       {
         id: 'ce-consultas',
-        title: 'Consultas Aduaneras y DUCA',
-        desc: 'Herramientas de consulta arancelaria, verificación de declaraciones aduaneras y estado de tránsitos internacionales.',
+        title: 'Consultas de Aduanas y Declaraciones (DUCA)',
+        desc: 'Verifica el estado de tus declaraciones de aduanas, consulta aranceles vigentes y da seguimiento a tránsitos de mercancías.',
         isPermanentConsultas: true,
         url: 'https://portal.sat.gob.gt/portal/aduanas/'
       },
       {
         id: 'ce-conceptos',
-        title: 'Clasificación y Arancel Integrado',
-        desc: 'Revisa la nomenclatura oficial del Sistema Arancelario Centroamericano y las tarifas aplicables por mercancía.',
+        title: 'Arancel e Impuestos de Importación',
+        desc: 'Conoce los códigos arancelarios y el porcentaje de impuestos que aplican a tus productos según el Sistema Arancelario Centroamericano.',
         url: 'https://portal.sat.gob.gt/portal/arancel-integrado/'
       },
       {
         id: 'ce-facilitacion',
-        title: 'Programas de Facilitación del Comercio',
-        desc: 'Procedimientos ágiles de despacho aduanero conjunto y mecanismos para reducir tiempos en frontera.',
+        title: 'Paso Ágil y Facilitación de Comercio',
+        desc: 'Descubre los procesos de despacho aduanero conjunto entre aduanas de Guatemala y países vecinos para agilizar tus envíos.',
         url: 'https://portal.sat.gob.gt/portal/facilitacion-comercio/'
       },
       {
         id: 'ce-miad',
-        title: 'Mesa Integral de Aduanas (MIAD)',
-        desc: 'Canal de atención directa y resolución técnica de consultas especializadas para auxiliares y operadores.',
+        title: 'Mesa Integral de Atención en Aduanas (MIAD)',
+        desc: 'Atención personalizada para importadores, exportadores y agentes que necesiten soporte técnico sobre procesos aduaneros.',
         url: 'https://portal.sat.gob.gt/portal/miad/'
       },
       {
         id: 'ce-oea',
-        title: 'Operador Económico Autorizado (OEA)',
-        desc: 'Requisitos y beneficios para certificar tu empresa como un socio comercial seguro y confiable en la cadena logística.',
+        title: 'Certificación de Empresa Segura (OEA)',
+        desc: 'Requisitos y pasos para acreditar a tu empresa como Operador Económico Autorizado y obtener paso prioritario en aduanas.',
         url: 'https://portal.sat.gob.gt/portal/oea/'
       },
       {
         id: 'ce-defraudacion',
-        title: 'Prevención de Defraudación y Contrabando',
-        desc: 'Líneas directas de reporte confidencial y normativas del Consejo Interinstitucional contra el Contrabando (COINCON).',
+        title: 'Lucha contra el Contrabando y Denuncias',
+        desc: 'Reporta de forma confidencial el ingreso ilegal de mercancías ante el Consejo Interinstitucional contra el Contrabando (COINCON).',
         url: 'https://portal.sat.gob.gt/portal/lucha-contra-el-contrabando/'
       }
     ]
   },
   profesionales: {
-    label: 'Profesionales',
+    label: 'Profesionales y Contadores',
     primaryColor: '#4D8014',
     hoverBg: 'hover:bg-[#4D8014]',
     hoverBorder: 'hover:border-[#4D8014]',
@@ -111,39 +111,39 @@ const TOPICS_BY_SEGMENT: Record<SegmentId, { label: string; primaryColor: string
     topics: [
       {
         id: 'prof-consultas',
-        title: 'Consultas para Profesionales y Terceros',
-        desc: 'Validación de títulos universitarios, timbres fiscales cancelados y verificación de acreditación de contadores.',
+        title: 'Consultas y Verificación Profesional',
+        desc: 'Comprueba el registro de colegiados activos, pago de timbres fiscales y vigencia de poderes legales de representación.',
         isPermanentConsultas: true,
         url: 'https://portal.sat.gob.gt/portal/consultas-profesionales/'
       },
       {
         id: 'prof-contadores',
-        title: 'Registro de Peritos Contadores y Auditores',
-        desc: 'Inscripción oficial ante el registro de contadores y proceso de nombramiento o acreditación para llevar libros.',
+        title: 'Inscripción de Peritos Contadores y Auditores',
+        desc: 'Habilítate ante la SAT para llevar la contabilidad de empresas, autorizar libros contables y firmar estados financieros.',
         url: 'https://portal.sat.gob.gt/portal/peritos-contadores/'
       },
       {
         id: 'prof-titulos',
-        title: 'Registro de Títulos y Pago de Timbres',
-        desc: 'Habilita tu grado universitario ante la SAT pagando la tarifa de timbres fiscales correspondiente para ejercer.',
+        title: 'Registro de Título Universitario y Timbres',
+        desc: 'Acredita tu licenciatura o grado superior ante la SAT pagando la tarifa única de timbres fiscales para poder ejercer tu profesión.',
         url: 'https://portal.sat.gob.gt/portal/habilitacion-titulos/'
       },
       {
         id: 'prof-gestores',
-        title: 'Acreditación de Gestores y Auxiliares',
-        desc: 'Presentación de poderes y mandatos para realizar trámites en representación de terceros en oficinas tributarias.',
+        title: 'Acreditación de Gestores Tributarios',
+        desc: 'Registra tus poderes y autorizaciones notariales para gestionar trámites presenciales en nombre de tus clientes.',
         url: 'https://portal.sat.gob.gt/portal/gestores-tributarios/'
       },
       {
         id: 'prof-criterios',
-        title: 'Criterios Tributarios Institucionales',
-        desc: 'Consulta resoluciones y directrices técnicas oficiales aprobadas por el Directorio de SAT.',
+        title: 'Criterios Legales e Interpretaciones de SAT',
+        desc: 'Revisa las resoluciones oficiales emitidas por las autoridades tributarias sobre la aplicación correcta de las leyes fiscales.',
         url: 'https://portal.sat.gob.gt/portal/criterios-tributarios/'
       }
     ]
   },
   organismos_especiales: {
-    label: 'Organismos Especiales',
+    label: 'Entidades Exentas y Estado',
     primaryColor: '#C25E00',
     hoverBg: 'hover:bg-[#C25E00]',
     hoverBorder: 'hover:border-[#C25E00]',
@@ -151,27 +151,27 @@ const TOPICS_BY_SEGMENT: Record<SegmentId, { label: string; primaryColor: string
     topics: [
       {
         id: 'org-consultas',
-        title: 'Consultas de Entes Exentos y Estado',
-        desc: 'Verificación del estatus de resoluciones de exención y autenticidad de constancias electrónicas.',
+        title: 'Verificación de Exenciones y Constancias',
+        desc: 'Consulta la vigencia de resoluciones de exención y valida constancias electrónicas emitidas para compras sin impuestos.',
         isPermanentConsultas: true,
         url: 'https://portal.sat.gob.gt/portal/consultas-exenciones/'
       },
       {
         id: 'org-exenciones',
-        title: 'Reconocimiento de Exenciones Tributarias',
-        desc: 'Guía y base legal para entidades no lucrativas, diplomáticas, religiosas y educativas reconocidas por ley.',
+        title: 'Reconocimiento de Exención de Impuestos',
+        desc: 'Guía para solicitar el reconocimiento fiscal si eres una ONG, iglesia, cooperativa, universidad o entidad diplomática.',
         url: 'https://portal.sat.gob.gt/portal/entes-exentos/'
       },
       {
         id: 'org-constancias',
-        title: 'Constancias de Adquisición de Insumos',
-        desc: 'Genera y entrega constancias de exención del IVA para compras institucionales exentas de impuestos.',
+        title: 'Constancia para Compras sin IVA',
+        desc: 'Genera las constancias oficiales que debes entregar a tus proveedores para adquirir insumos y bienes libres de IVA.',
         url: 'https://portal.sat.gob.gt/portal/constancias-exencion/'
       },
       {
         id: 'org-estado',
-        title: 'Sector Público y Municipalidades',
-        desc: 'Obligaciones de retención del IVA y compras gubernamentales en coordinación con Guatecompras.',
+        title: 'Gestiones para el Sector Público',
+        desc: 'Trámites de retenciones de impuestos y rendición de cuentas para ministerios, secretarías y municipalidades de Guatemala.',
         url: 'https://portal.sat.gob.gt/portal/sector-publico/'
       }
     ]
@@ -205,7 +205,7 @@ export const PopularTopicsTabs: React.FC<PopularTopicsTabsProps> = ({
               </h3>
             </div>
             <p className="text-xs text-slate-500 mt-1">
-              Servicios y temas con mayor demanda ciudadana según tu grupo de interés.
+              Encuentra los trámites más solicitados según tu perfil, explicados paso a paso.
             </p>
           </div>
 
@@ -260,7 +260,7 @@ export const PopularTopicsTabs: React.FC<PopularTopicsTabsProps> = ({
                 </div>
 
                 <div className="pt-3.5 mt-3.5 border-t border-slate-100 group-hover:border-white/20 flex items-center justify-between text-xs font-bold text-[#14649B] group-hover:text-white transition-colors">
-                  <span>{isConsultas ? 'Abrir herramientas web' : 'Ver requisitos y detalles'}</span>
+                  <span>{isConsultas ? 'Abrir verificadores en línea' : 'Ver requisitos y pasos'}</span>
                   <span className="transition-transform duration-200 group-hover:translate-x-0.5">→</span>
                 </div>
               </div>

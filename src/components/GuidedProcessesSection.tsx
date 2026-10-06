@@ -24,7 +24,13 @@ export const GuidedProcessesSection: React.FC<GuidedProcessesSectionProps> = ({
 }) => {
   const [activeStage, setActiveStage] = useState<string>('Todos');
 
-  const stages = ['Todos', 'Empezar', 'Cumplir', 'Cambiar', 'Cesar/Cerrar'];
+  const stages = [
+    { id: 'Todos', label: 'Todos los Procesos' },
+    { id: 'Empezar', label: 'Iniciar mi Trámite o Negocio' },
+    { id: 'Cumplir', label: 'Declarar y Facturar' },
+    { id: 'Cambiar', label: 'Actualizar mis Datos' },
+    { id: 'Cesar/Cerrar', label: 'Cerrar o Dar de Baja' }
+  ];
 
   const filtered = activeStage === 'Todos'
     ? procesos
@@ -38,38 +44,38 @@ export const GuidedProcessesSection: React.FC<GuidedProcessesSectionProps> = ({
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
           <div>
             <span className="text-xs font-bold text-[#14649B] uppercase tracking-wider block mb-1">
-              Guías Paso a Paso
+              Guías Paso a Paso para Ciudadanos
             </span>
             <h3 className="text-xl sm:text-2xl font-extrabold text-[#19324B] tracking-tight">
-              Rutas de Trámites y Cumplimiento
+              Rutas Guiadas de Trámites y Cumplimiento
             </h3>
             <p className="text-xs sm:text-sm text-slate-600 mt-0.5">
-              Instrucciones guiadas para completar tus gestiones de inicio a fin.
+              Aprende exactamente qué documentos necesitas, cómo solicitarlos y qué pasos seguir sin perderte entre leyes o tecnicismos.
             </p>
           </div>
 
-          {/* Filtros de etapas */}
+          {/* Filtros de etapas en lenguaje claro */}
           <div className="flex items-center gap-1.5 p-1 bg-white rounded-xl border border-[#DCDCDC] overflow-x-auto no-scrollbar">
             {stages.map((stg) => {
-              const isActive = activeStage === stg;
+              const isActive = activeStage === stg.id;
               return (
                 <button
-                  key={stg}
-                  onClick={() => setActiveStage(stg)}
+                  key={stg.id}
+                  onClick={() => setActiveStage(stg.id)}
                   className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all whitespace-nowrap ${
                     isActive 
                       ? 'bg-[#14649B] text-white shadow-2xs' 
                       : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
                   }`}
                 >
-                  {stg}
+                  {stg.label}
                 </button>
               );
             })}
           </div>
         </div>
 
-        {/* Process Cards Grid sin números (Solo Título y Descripción con UX Writing) */}
+        {/* Process Cards Grid: Solo Título y Descripción en Lenguaje Claro */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {filtered.slice(0, 9).map((p) => (
             <div
@@ -83,12 +89,12 @@ export const GuidedProcessesSection: React.FC<GuidedProcessesSectionProps> = ({
                 </h4>
 
                 <p className="text-xs sm:text-sm text-slate-600 group-hover:text-white/90 transition-colors leading-relaxed mb-3">
-                  Diseñado para {p.paraQuien.toLowerCase()}. Te guía por los requisitos oficiales y la plataforma en línea para completar tu gestión exitosamente.
+                  Guía paso a paso para {p.paraQuien.toLowerCase()}. Te orienta con los requisitos previos y el acceso directo al sistema oficial de la SAT.
                 </p>
               </div>
 
               <div className="pt-3.5 mt-3.5 border-t border-slate-100 group-hover:border-white/20 flex items-center justify-between text-xs font-bold text-[#14649B] group-hover:text-white transition-colors">
-                <span>Ver ruta guiada</span>
+                <span>Ver guía completa</span>
                 <span className="transition-transform duration-200 group-hover:translate-x-0.5">→</span>
               </div>
             </div>

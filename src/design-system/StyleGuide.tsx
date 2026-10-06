@@ -16,6 +16,8 @@ interface Swatch {
   pantone?: string;
   autoridad: Autoridad;
   uso: string;
+  /** true = el blanco alcanza AA como texto sobre este color. */
+  claro: boolean;
 }
 
 const INSTITUCIONAL: Swatch[] = [
@@ -23,6 +25,7 @@ const INSTITUCIONAL: Swatch[] = [
     token: '--sat-celeste',
     nombre: 'Celeste institucional',
     hex: '#19AFE1',
+    claro: false,
     rgb: '25 175 225',
     cmyk: 'C89 M22 Y00 K12',
     autoridad: 'NORMATIVO',
@@ -32,6 +35,7 @@ const INSTITUCIONAL: Swatch[] = [
     token: '--sat-azul',
     nombre: 'AZUL SAT',
     hex: '#14649B',
+    claro: true,
     rgb: '20 100 155',
     cmyk: 'C87 M35 Y00 K39',
     pantone: 'PANTONE 647 C',
@@ -42,6 +46,7 @@ const INSTITUCIONAL: Swatch[] = [
     token: '--sat-azul-oscuro',
     nombre: 'Azul oscuro',
     hex: '#19324B',
+    claro: true,
     rgb: '25 50 75',
     cmyk: 'C67 M33 Y00 K71',
     autoridad: 'NORMATIVO',
@@ -51,6 +56,7 @@ const INSTITUCIONAL: Swatch[] = [
     token: '--sat-gris',
     nombre: 'Gris institucional',
     hex: '#DCDCDC',
+    claro: false,
     rgb: '220 220 220',
     cmyk: 'C00 M00 Y00 K14',
     autoridad: 'NORMATIVO',
@@ -60,6 +66,7 @@ const INSTITUCIONAL: Swatch[] = [
     token: '--sat-negro',
     nombre: 'Negro',
     hex: '#000000',
+    claro: true,
     rgb: '0 0 0',
     cmyk: 'C00 M00 Y00 K100',
     autoridad: 'NORMATIVO',
@@ -69,6 +76,7 @@ const INSTITUCIONAL: Swatch[] = [
     token: '--sat-blanco',
     nombre: 'Blanco',
     hex: '#FFFFFF',
+    claro: false,
     rgb: '255 255 255',
     cmyk: 'C00 M00 Y00 K00',
     autoridad: 'NORMATIVO',
@@ -81,6 +89,7 @@ const COMPLEMENTARIOS: Swatch[] = [
     token: '--sat-comp-magenta',
     nombre: 'Magenta',
     hex: '#D9336E',
+    claro: true,
     autoridad: 'NORMATIVO',
     uso: 'Aporta color y dinamismo. No debe competir con la paleta institucional.',
   },
@@ -88,6 +97,7 @@ const COMPLEMENTARIOS: Swatch[] = [
     token: '--sat-comp-morado',
     nombre: 'Morado',
     hex: '#824491',
+    claro: true,
     autoridad: 'NORMATIVO',
     uso: 'Aporta color y dinamismo. No debe competir con la paleta institucional.',
   },
@@ -95,6 +105,7 @@ const COMPLEMENTARIOS: Swatch[] = [
     token: '--sat-comp-verde',
     nombre: 'Verde',
     hex: '#8CC63F',
+    claro: false,
     autoridad: 'NORMATIVO',
     uso: 'Aporta color y dinamismo. No debe competir con la paleta institucional.',
   },
@@ -102,6 +113,7 @@ const COMPLEMENTARIOS: Swatch[] = [
     token: '--sat-comp-naranja',
     nombre: 'Naranja',
     hex: '#F37521',
+    claro: false,
     autoridad: 'NORMATIVO',
     uso: 'Aporta color y dinamismo. No debe competir con la paleta institucional.',
   },
@@ -109,6 +121,7 @@ const COMPLEMENTARIOS: Swatch[] = [
     token: '--sat-comp-ambar',
     nombre: 'Ambar',
     hex: '#FFB806',
+    claro: false,
     autoridad: 'NORMATIVO',
     uso: 'Aporta color y dinamismo. No debe competir con la paleta institucional.',
   },
@@ -233,6 +246,66 @@ const USO_INCORRECTO = [
   },
 ];
 
+/* Razones de contraste medidas con la formula de WCAG 2.1 sobre los
+ * valores reales de la paleta. El blanco falla en cinco superficies,
+ * por eso existen los tokens --sat-ui-texto-sobre-*. */
+const CONTRASTE: { fondo: string; token: string; blanco: string; oscuro: string }[] = [
+  {
+    fondo: '#14649B',
+    token: '--sat-ui-texto-sobre-azul',
+    blanco: '6.31 AA',
+    oscuro: '2.08 FAIL',
+  },
+  {
+    fondo: '#19324B',
+    token: '--sat-ui-texto-sobre-azul-oscuro',
+    blanco: '13.13 AA',
+    oscuro: '1.00 FAIL',
+  },
+  {
+    fondo: '#19AFE1',
+    token: '--sat-ui-texto-sobre-celeste',
+    blanco: '2.54 FAIL',
+    oscuro: '5.17 AA',
+  },
+  {
+    fondo: '#8CC63F',
+    token: '--sat-ui-texto-sobre-verde',
+    blanco: '2.05 FAIL',
+    oscuro: '6.42 AA',
+  },
+  {
+    fondo: '#FFB806',
+    token: '--sat-ui-texto-sobre-ambar',
+    blanco: '1.73 FAIL',
+    oscuro: '7.57 AA',
+  },
+  {
+    fondo: '#F37521',
+    token: '--sat-ui-texto-sobre-naranja',
+    blanco: '2.85 FAIL',
+    oscuro: '4.61 AA',
+  },
+  {
+    fondo: '#DCDCDC',
+    token: '--sat-ui-texto-sobre-gris',
+    blanco: '1.37 FAIL',
+    oscuro: '9.58 AA',
+  },
+  {
+    fondo: '#D9336E',
+    token: '— sin token',
+    blanco: '4.52 AA',
+    oscuro: '2.91 FAIL',
+  },
+  {
+    fondo: '#824491',
+    token: '— sin token',
+    blanco: '6.59 AA',
+    oscuro: '1.99 FAIL',
+  },
+];
+
 /* ------------------------- Componentes de apoyo ------------------------- */
 
 function Badge({ autoridad }: { autoridad: Autoridad }) {
@@ -251,18 +324,18 @@ function Badge({ autoridad }: { autoridad: Autoridad }) {
 }
 
 function SwatchCard({ s }: { s: Swatch }) {
-  const oscuro = ['#19324B', '#000000', '#14649B', '#824491', '#D9336E'].includes(
-    s.hex.toUpperCase()
-  );
+  /* Usa el token de texto-sobre-color validado por contraste. */
+  const textoClaro = s.claro === true;
+  const color = textoClaro ? 'var(--sat-ui-texto-sobre-azul)' : 'var(--sat-ui-texto-sobre-celeste)';
   return (
     <li className="overflow-hidden rounded-[16px] border border-[#DCDCDC] bg-white">
       <div
         className="flex h-24 items-end justify-between p-3"
-        style={{ backgroundColor: s.hex, color: oscuro ? '#fff' : '#19324B' }}
+        style={{ backgroundColor: s.hex, color }}
       >
         <span className="font-mono text-sm font-bold">{s.hex.toUpperCase()}</span>
         {s.pantone && (
-          <span className="rounded bg-black/25 px-1.5 py-0.5 text-[10px] font-bold">
+          <span className="rounded bg-black/25 px-1.5 py-0.5 text-[10px] font-bold text-white">
             {s.pantone}
           </span>
         )}
@@ -375,6 +448,7 @@ export default function StyleGuide() {
             ['patron', 'Patron'],
             ['tono', 'Tono y lenguaje'],
             ['restricciones', 'Restricciones'],
+            ['contraste', 'Contraste'],
             ['interfaz', 'Tokens de interfaz'],
             ['pendientes', 'Pendientes'],
           ].map(([id, txt]) => (
@@ -712,6 +786,78 @@ export default function StyleGuide() {
                 ))}
               </ul>
             </div>
+          </div>
+        </Section>
+
+        {/* CONTRASTE */}
+        <Section
+          id="contraste"
+          titulo="Contraste de color"
+          pagina="—"
+          descripcion="Razones de contraste medidas con la formula de WCAG 2.1 sobre los valores reales de la paleta. El blanco NO alcanza AA sobre celeste, verde, ambar, naranja ni gris: sobre cualquiera de esos cinco fondos el texto debe ser azul oscuro. Por eso existen los tokens --sat-ui-texto-sobre-*."
+        >
+          <div className="overflow-x-auto rounded-[16px] border border-[#DCDCDC] bg-white">
+            <table className="w-full text-sm">
+              <caption className="sr-only">Contraste de texto sobre cada color de la paleta</caption>
+              <thead>
+                <tr className="border-b border-[#DCDCDC] bg-[#F4F6F9] text-left">
+                  <th scope="col" className="px-4 py-3 font-black">
+                    Fondo
+                  </th>
+                  <th scope="col" className="px-4 py-3 font-black">
+                    Token de texto
+                  </th>
+                  <th scope="col" className="px-4 py-3 font-black">
+                    Blanco
+                  </th>
+                  <th scope="col" className="px-4 py-3 font-black">
+                    Azul oscuro
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {CONTRASTE.map((c) => {
+                  const blancoOk = c.blanco.endsWith('AA');
+                  const oscuroOk = c.oscuro.endsWith('AA');
+                  return (
+                    <tr key={c.fondo} className="border-b border-[#DCDCDC] last:border-b-0">
+                      <td className="px-4 py-3">
+                        <span className="flex items-center gap-2">
+                          <span
+                            className="h-6 w-6 shrink-0 rounded border border-[#DCDCDC]"
+                            style={{ backgroundColor: c.fondo }}
+                          />
+                          <code className="font-mono text-xs">{c.fondo}</code>
+                        </span>
+                      </td>
+                      <td className="px-4 py-3">
+                        <code className="font-mono text-[11px] text-[#475569]">{c.token}</code>
+                      </td>
+                      <td className="px-4 py-3">
+                        <span
+                          className="rounded-full px-2 py-0.5 font-mono text-[11px] font-bold text-white"
+                          style={{
+                            backgroundColor: blancoOk ? 'var(--sat-ui-exito)' : 'var(--sat-ui-error)',
+                          }}
+                        >
+                          {c.blanco}
+                        </span>
+                      </td>
+                      <td className="px-4 py-3">
+                        <span
+                          className="rounded-full px-2 py-0.5 font-mono text-[11px] font-bold text-white"
+                          style={{
+                            backgroundColor: oscuroOk ? 'var(--sat-ui-exito)' : 'var(--sat-ui-error)',
+                          }}
+                        >
+                          {c.oscuro}
+                        </span>
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
           </div>
         </Section>
 

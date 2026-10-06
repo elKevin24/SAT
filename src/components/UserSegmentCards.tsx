@@ -25,9 +25,9 @@ interface SegmentDef {
 const SEGMENTS: SegmentDef[] = [
   {
     id: 'contribuyentes',
-    name: 'Contribuyentes',
-    desc: 'Inscripción en RTU, emisión de facturas electrónicas, presentación de declaraciones y gestión de impuestos para personas y negocios.',
-    actionText: 'Explorar trámites de contribuyentes',
+    name: 'Personas y Empresas (Contribuyentes)',
+    desc: 'Inscríbete en el Registro Tributario (RTU), emite facturas electrónicas gratuitas, presenta tus declaraciones y gestiona tus impuestos con y sin negocio.',
+    actionText: 'Ver trámites de personas y empresas',
     primaryColor: '#14649B',
     cardHoverBorder: 'hover:border-[#14649B]',
     cardHoverBg: 'hover:bg-[#14649B]',
@@ -38,9 +38,9 @@ const SEGMENTS: SegmentDef[] = [
   },
   {
     id: 'comercio_exterior',
-    name: 'Operadores de Comercio Exterior',
-    desc: 'Gestión aduanera, registro de importadores y exportadores, trámites de DUCA y certificación de Operador Económico Autorizado.',
-    actionText: 'Explorar trámites aduaneros',
+    name: 'Comercio Exterior y Aduanas',
+    desc: 'Realiza gestiones para importar o exportar mercancías, consulta declaraciones aduaneras (DUCA) y certifícate como empresa de transporte o logística segura.',
+    actionText: 'Ver trámites de comercio exterior',
     primaryColor: '#0284C7',
     cardHoverBorder: 'hover:border-[#0284C7]',
     cardHoverBg: 'hover:bg-[#0284C7]',
@@ -51,9 +51,9 @@ const SEGMENTS: SegmentDef[] = [
   },
   {
     id: 'profesionales',
-    name: 'Profesionales',
-    desc: 'Habilitación de contadores y auditores, acreditación de gestores tributarios y registro de títulos universitarios con timbres fiscales.',
-    actionText: 'Explorar trámites profesionales',
+    name: 'Profesionales y Contadores',
+    desc: 'Habilita tu registro de Perito Contador o Auditor, acredita gestiones como abogado o representante y registra tus títulos universitarios pagando timbres fiscales.',
+    actionText: 'Ver trámites para profesionales',
     primaryColor: '#4D8014',
     cardHoverBorder: 'hover:border-[#4D8014]',
     cardHoverBg: 'hover:bg-[#4D8014]',
@@ -64,9 +64,9 @@ const SEGMENTS: SegmentDef[] = [
   },
   {
     id: 'organismos_especiales',
-    name: 'Organismos Especiales',
-    desc: 'Gestión de exenciones tributarias, constancias de adquisición de insumos y trámites para entidades del Estado y municipalidades.',
-    actionText: 'Explorar trámites especiales',
+    name: 'Entidades Exentas y Sector Público',
+    desc: 'Gestiona la constancia para comprar sin IVA si perteneces a una entidad sin fines de lucro, educativa, religiosa, municipalidad o institución del Estado.',
+    actionText: 'Ver trámites de exentos y Estado',
     primaryColor: '#C25E00',
     cardHoverBorder: 'hover:border-[#C25E00]',
     cardHoverBg: 'hover:bg-[#C25E00]',
@@ -88,17 +88,17 @@ export const UserSegmentCards: React.FC<UserSegmentCardsProps> = ({
         {/* Encabezado */}
         <div className="text-center max-w-2xl mx-auto mb-8 space-y-1.5">
           <span className="text-xs font-bold text-[#14649B] uppercase tracking-wider">
-            Estructura Institucional SAT
+            Portal Tributario y Aduanero
           </span>
           <h2 className="text-2xl sm:text-3xl font-black text-[#19324B] tracking-tight">
-            Selecciona tu perfil o tipo de trámite
+            ¿Qué deseas gestionar hoy?
           </h2>
           <p className="text-xs sm:text-sm text-slate-600">
-            Encuentra requisitos actualizados, normativas y accesos directos adaptados a tus gestiones tributarias.
+            Selecciona tu perfil para encontrar requisitos claros, pasos guiados y sistemas oficiales en línea.
           </p>
         </div>
 
-        {/* 4 Tarjetas: Solo Título y Descripción con UX Writing (Sin números ni íconos) */}
+        {/* 4 Tarjetas: Solo Título y Descripción en Lenguaje Claro */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {SEGMENTS.map((p) => {
             const isSelected = selectedSegment === p.id;

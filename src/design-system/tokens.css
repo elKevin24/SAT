@@ -67,9 +67,18 @@
   --sat-ui-texto: var(--sat-azul-oscuro);
   --sat-ui-texto-suave: #475569;
   --sat-ui-texto-tenue: #64748b;
-  --sat-ui-texto-sobre-azul: var(--sat-blanco);
-  --sat-ui-texto-sobre-oscuro: #ffffff;
   --sat-ui-texto-acento: var(--sat-azul);
+
+  /* Texto sobre superficies de color. Medido contra WCAG 2.1.
+   * El blanco NO alcanza AA sobre celeste, naranja, verde, ambar ni
+   * gris; el azul oscuro si alcanza AA en las cinco. */
+  --sat-ui-texto-sobre-azul: var(--sat-blanco);
+  --sat-ui-texto-sobre-azul-oscuro: var(--sat-blanco);
+  --sat-ui-texto-sobre-celeste: var(--sat-azul-oscuro);
+  --sat-ui-texto-sobre-naranja: var(--sat-azul-oscuro);
+  --sat-ui-texto-sobre-verde: var(--sat-azul-oscuro);
+  --sat-ui-texto-sobre-ambar: var(--sat-azul-oscuro);
+  --sat-ui-texto-sobre-gris: var(--sat-azul-oscuro);
 
   --sat-ui-foco: var(--sat-azul);
   --sat-ui-error: #b3261e;

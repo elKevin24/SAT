@@ -29,34 +29,38 @@ interface SegmentTramitesCatalogProps {
   onSwitchSegment: (segId: SegmentId) => void;
 }
 
-const SEGMENT_METADATA: Record<SegmentId, { title: string; desc: string; color: string; hoverBg: string; hoverBorder: string; hoverShadow: string }> = {
+const SEGMENT_METADATA: Record<SegmentId, { title: string; shortTitle: string; desc: string; color: string; hoverBg: string; hoverBorder: string; hoverShadow: string }> = {
   contribuyentes: {
-    title: 'Catálogo de Trámites para Contribuyentes',
-    desc: 'NIT sin obligaciones, Pequeño Contribuyente, Régimen General y Contribuyentes Especiales.',
+    title: 'Catálogo de Trámites para Personas y Empresas',
+    shortTitle: 'Personas y Empresas',
+    desc: 'Trámites para personas individuales, pequeños contribuyentes, negocios en régimen general y empresas con obligaciones tributarias.',
     color: '#14649B',
     hoverBg: 'hover:bg-[#14649B]',
     hoverBorder: 'hover:border-[#14649B]',
     hoverShadow: 'hover:shadow-[0_12px_24px_rgba(20,100,155,0.24)]'
   },
   comercio_exterior: {
-    title: 'Catálogo de Trámites de Comercio Exterior',
-    desc: 'Importadores, exportadores, OEA y auxiliares de la función pública aduanera.',
+    title: 'Catálogo de Trámites de Comercio Exterior y Aduanas',
+    shortTitle: 'Comercio Exterior',
+    desc: 'Gestiones para importadores, exportadores, empresas de transporte internacional y agentes aduaneros.',
     color: '#0284C7',
     hoverBg: 'hover:bg-[#0284C7]',
     hoverBorder: 'hover:border-[#0284C7]',
     hoverShadow: 'hover:shadow-[0_12px_24px_rgba(2,132,199,0.24)]'
   },
   profesionales: {
-    title: 'Catálogo para Profesionales y Terceras Personas',
-    desc: 'Gestores tributarios, abogados, notarios, contadores públicos y auditores.',
+    title: 'Catálogo para Profesionales, Notarios y Contadores',
+    shortTitle: 'Profesionales',
+    desc: 'Habilitación de peritos contadores, auditores, registro de títulos universitarios y acreditación de gestores.',
     color: '#4D8014',
     hoverBg: 'hover:bg-[#4D8014]',
     hoverBorder: 'hover:border-[#4D8014]',
     hoverShadow: 'hover:shadow-[0_12px_24px_rgba(77,128,20,0.24)]'
   },
   organismos_especiales: {
-    title: 'Catálogo de Organismos Especiales y Exentos',
-    desc: 'Entidades exentas por ley, instituciones del Estado, municipalidades y diplomáticas.',
+    title: 'Catálogo para Entidades Exentas y Sector Público',
+    shortTitle: 'Entidades Exentas',
+    desc: 'Reconocimiento de exenciones tributarias para ONG, iglesias, universidades, municipalidades y entidades del Estado.',
     color: '#C25E00',
     hoverBg: 'hover:bg-[#C25E00]',
     hoverBorder: 'hover:border-[#C25E00]',
@@ -87,13 +91,13 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
     segmentTramites.forEach(t => {
       if (t.categoria) set.add(t.categoria);
     });
-    return ['Todas', ...Array.from(set)];
+    return ['Todas las categorías', ...Array.from(set)];
   }, [segmentTramites]);
 
   // Apply filters and search
   const filteredTramites = useMemo(() => {
     return segmentTramites.filter(t => {
-      const matchCat = selectedCategory === 'Todas' || t.categoria === selectedCategory;
+      const matchCat = selectedCategory === 'Todas las categorías' || t.categoria === selectedCategory;
       const matchQ = !internalQuery.trim() || 
         (t.tramite && t.tramite.toLowerCase().includes(internalQuery.toLowerCase())) ||
         (t.descripcion && t.descripcion.toLowerCase().includes(internalQuery.toLowerCase())) ||
@@ -125,7 +129,7 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
               <button
                 key={segKey}
                 onClick={() => {
-                  setSelectedCategory('Todas');
+                  setSelectedCategory('Todas las categorías');
                   setInternalQuery('');
                   onSwitchSegment(segKey);
                 }}
@@ -135,7 +139,7 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
                     : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
                 }`}
               >
-                {SEGMENT_METADATA[segKey].title.split(' ')[2] || 'Grupo'}
+                {SEGMENT_METADATA[segKey].shortTitle}
               </button>
             ))}
           </div>
@@ -147,7 +151,7 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
             <h2 className="text-xl sm:text-2xl font-black text-[#19324B] tracking-tight">
               {meta.title}
             </h2>
-            <p className="text-xs sm:text-sm text-slate-600 mt-1 max-w-2xl">
+            <p className="text-xs sm:text-sm text-slate-600 mt-1 max-w-2xl leading-relaxed">
               {meta.desc}
             </p>
           </div>
@@ -180,13 +184,13 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
               type="text"
               value={internalQuery}
               onChange={(e) => setInternalQuery(e.target.value)}
-              placeholder="Filtrar en este segmento..."
+              placeholder="Buscar trámite en esta sección..."
               className="w-full pl-9 pr-3 py-1.5 text-xs bg-white border border-[#DCDCDC] rounded-xl focus:border-[#14649B] focus:ring-1 focus:ring-[#14649B] outline-none"
             />
           </div>
         </div>
 
-        {/* Results Grid: Solo Título y Descripción con UX writing */}
+        {/* Results Grid: Solo Título y Descripción en Lenguaje Claro */}
         {filteredTramites.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {filteredTramites.map((tramite) => (
@@ -214,15 +218,15 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
           </div>
         ) : (
           <div className="p-12 text-center bg-slate-50 rounded-[16px] border border-[#DCDCDC] text-slate-500">
-            <p className="text-sm font-semibold">No se encontraron trámites con los filtros seleccionados.</p>
+            <p className="text-sm font-semibold">No encontramos trámites que coincidan con tu búsqueda.</p>
             <button
               onClick={() => {
-                setSelectedCategory('Todas');
+                setSelectedCategory('Todas las categorías');
                 setInternalQuery('');
               }}
               className="mt-3 px-4 py-2 bg-[#14649B] text-white text-xs font-bold rounded-xl"
             >
-              Restablecer filtros
+              Restablecer búsqueda
             </button>
           </div>
         )}

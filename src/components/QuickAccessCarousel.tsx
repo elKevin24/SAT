@@ -11,56 +11,56 @@ interface QuickAccessItem {
 const QUICK_ITEMS: QuickAccessItem[] = [
   {
     id: 'solicitar-nit',
-    title: 'Solicitar NIT',
-    desc: 'Obtén tu Número de Identificación Tributaria por primera vez en línea.',
+    title: 'Solicitar NIT por primera vez',
+    desc: 'Obtén tu Número de Identificación Tributaria para trámites de trabajo, bancos o abrir tu negocio.',
     url: 'https://portal.sat.gob.gt/portal/rtu-digital/inscripcion-solicitud-de-nit/'
   },
   {
     id: 'cual-es-mi-nit',
-    title: 'Consultar mi NIT',
-    desc: 'Recupera o verifica tu número de NIT ingresando tu Código Único de Identificación (CUI).',
+    title: 'Consultar mi NIT con DPI',
+    desc: 'Verifica tu número de NIT asignado ingresando los 13 dígitos de tu Documento Personal de Identificación (DPI).',
     url: 'https://portal.sat.gob.gt/portal/consulta-cui-nit/'
   },
   {
     id: 'imprimir-rtu',
-    title: 'Imprimir Constancia RTU',
-    desc: 'Descarga tu constancia de inscripción o actualización en formato digital.',
+    title: 'Descargar Constancia de RTU',
+    desc: 'Obtén en formato digital la constancia oficial de tus datos actualizados en el Registro Tributario Unificado.',
     url: 'https://portal.sat.gob.gt/portal/constancia-rtu/'
   },
   {
     id: 'fel',
-    title: 'Factura Electrónica FEL',
-    desc: 'Emite y valida Documentos Tributarios Electrónicos de forma gratuita.',
+    title: 'Facturación Electrónica (FEL)',
+    desc: 'Emite facturas y notas de crédito electrónicas de forma gratuita desde la web o con la aplicación en tu celular.',
     url: 'https://portal.sat.gob.gt/portal/factura-electronica-fel/'
   },
   {
     id: 'calendario-tributario',
-    title: 'Calendario Tributario',
-    desc: 'Revisa las fechas límite para presentar y pagar tus obligaciones fiscales.',
+    title: 'Fechas de Pago y Calendario',
+    desc: 'Revisa las fechas límite del mes para presentar y pagar tus declaraciones de IVA, ISR u otros impuestos.',
     url: 'https://portal.sat.gob.gt/portal/calendario-tributario/'
   },
   {
     id: 'omisos',
-    title: 'Verificar Omisos',
-    desc: 'Comprueba si tienes declaraciones o pagos pendientes ante la SAT.',
+    title: 'Consultar Pagos Pendientes',
+    desc: 'Verifica si tienes declaraciones no presentadas o pagos pendientes para mantenerte al día ante la SAT.',
     url: 'https://portal.sat.gob.gt/portal/consulta-de-omisos/'
   },
   {
     id: 'consultar-vehiculos',
-    title: 'Consultar Vehículos',
-    desc: 'Paga el Impuesto de Circulación y descarga tu calcomanía electrónica.',
+    title: 'Impuesto de Vehículos y Calcomanía',
+    desc: 'Consulta el monto del Impuesto de Circulación, realiza el pago e imprime tu calcomanía electrónica.',
     url: 'https://portal.sat.gob.gt/portal/consulta-de-vehiculos/'
   },
   {
     id: 'solvencia-fiscal',
-    title: 'Solvencia Fiscal',
-    desc: 'Genera tu constancia de solvencia SOFI libre de deudas tributarias.',
+    title: 'Solvencia Fiscal en Línea (SOFI)',
+    desc: 'Genera el certificado oficial que comprueba que estás solvente y al día con todas tus obligaciones.',
     url: 'https://portal.sat.gob.gt/portal/solvencia-fiscal/'
   },
   {
     id: 'validar-documentos',
-    title: 'Validar Documentos',
-    desc: 'Comprueba la autenticidad de resoluciones y firmas electrónicas emitidas por SAT.',
+    title: 'Verificar Firmas y Documentos QR',
+    desc: 'Comprueba la autenticidad de resoluciones, constancias y firmas electrónicas emitidas por la SAT.',
     url: 'https://portal.sat.gob.gt/portal/verificador-de-documentos/'
   }
 ];
@@ -93,11 +93,11 @@ export const QuickAccessCarousel: React.FC<QuickAccessCarouselProps> = ({ onSele
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-[#14649B]" />
               <h3 className="text-base font-extrabold text-[#19324B] tracking-tight">
-                Accesos Rápidos
+                Accesos Rápidos y Consultas Clave
               </h3>
             </div>
             <p className="text-xs text-slate-500 mt-0.5">
-              Herramientas de consulta y servicios transaccionales más utilizados.
+              Servicios en línea y verificadores más utilizados para resolver tus trámites frecuentes.
             </p>
           </div>
 
@@ -122,7 +122,7 @@ export const QuickAccessCarousel: React.FC<QuickAccessCarouselProps> = ({ onSele
           </div>
         </div>
 
-        {/* 7 Tarjetas con solo Título y Descripción con UX writing */}
+        {/* 7 Tarjetas con UX writing ciudadano */}
         <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-3">
           {visibleItems.map((item) => (
             <a
@@ -144,7 +144,7 @@ export const QuickAccessCarousel: React.FC<QuickAccessCarouselProps> = ({ onSele
                 </div>
               </div>
               <div className="pt-2 mt-2 border-t border-slate-100 group-hover:border-white/20 text-[11px] font-bold text-[#14649B] group-hover:text-white transition-colors flex items-center justify-between">
-                <span>Acceder</span>
+                <span>Ingresar</span>
                 <span className="group-hover:translate-x-1 transition-transform">→</span>
               </div>
             </a>
