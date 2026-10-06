@@ -3,11 +3,6 @@ import { ChevronRight } from 'lucide-react';
 
 export type SegmentId = 'contribuyentes' | 'comercio_exterior' | 'profesionales' | 'organismos_especiales';
 
-interface UserSegmentCardsProps {
-  selectedSegment: SegmentId | null;
-  onSelectSegment: (segmentId: SegmentId) => void;
-}
-
 interface SegmentDef {
   id: SegmentId;
   name: string;
@@ -69,7 +64,7 @@ const SEGMENTS: SegmentDef[] = [
 
 interface UserSegmentCardsProps {
   selectedSegment: SegmentId | null;
-  onSelectSegment: (segmentId: SegmentId) => void;
+  onSelectSegment: (segmentId: SegmentId, category?: string) => void;
 }
 
 export const UserSegmentCards: React.FC<UserSegmentCardsProps> = ({
@@ -93,7 +88,7 @@ export const UserSegmentCards: React.FC<UserSegmentCardsProps> = ({
           </p>
         </div>
 
-        {/* Las 4 Tarjetas con los nombres EXACTOS del mapa oficial y sus ramas Nivel 2 */}
+        {/* Las 4 Tarjetas con los nombres EXACTOS del mapa oficial y sus clasificaciones canónicas */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-3.5">
           {SEGMENTS.map((p) => {
             const isSelected = selectedSegment === p.id;
@@ -115,8 +110,8 @@ export const UserSegmentCards: React.FC<UserSegmentCardsProps> = ({
                 }`}
               >
                 <div>
-                  <div className="flex items-start justify-between gap-2.5 mb-2.5">
-                    <h3 className={`text-base sm:text-lg font-bold text-[#19324B] ${p.titleHoverText} transition-colors leading-snug`}>
+                  <div className="flex items-start justify-between gap-2.5 mb-2">
+                    <h3 className={`text-base font-bold text-[#19324B] ${p.titleHoverText} transition-colors leading-snug`}>
                       {p.name}
                     </h3>
                     <div className={`w-6 h-6 rounded-full flex items-center justify-center shrink-0 transition-all duration-300 ${p.circleClasses} shadow-xs mt-0.5`}>

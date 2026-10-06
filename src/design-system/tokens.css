@@ -69,7 +69,7 @@
   --sat-ui-texto-tenue: #64748b;
   --sat-ui-texto-acento: var(--sat-azul);
 
-  /* Texto sobre superficies de color. Medido contra WCAG 2.1.
+  /* Texto sobre superficies de color. Medido contra WCAG 2.1 / 2.2 AA.
    * El blanco NO alcanza AA sobre celeste, naranja, verde, ambar ni
    * gris; el azul oscuro si alcanza AA en las cinco. */
   --sat-ui-texto-sobre-azul: var(--sat-blanco);
@@ -82,15 +82,32 @@
 
   --sat-ui-foco: var(--sat-azul);
   --sat-ui-error: #b3261e;
+  --sat-ui-error-bg: #fef2f2;
+  --sat-ui-error-borde: #fecaca;
   --sat-ui-exito: #216e39;
+  --sat-ui-exito-bg: #f0fdf4;
+  --sat-ui-exito-borde: #bbf7d0;
   --sat-ui-alerta: #a15c00;
+  --sat-ui-alerta-bg: #fffbeb;
+  --sat-ui-alerta-borde: #fde68a;
+  --sat-ui-info: var(--sat-azul);
+  --sat-ui-info-bg: #f0f9ff;
+  --sat-ui-info-borde: #bae6fd;
+
+  /* ------------------------------------------------------------------
+   * COLORES DE SEGMENTOS OFICIALES [DERIVADOS DE PALETA SAT]
+   * ------------------------------------------------------------------ */
+  --sat-segmento-personas: #0284c7;
+  --sat-segmento-empresas: #4d8014;
+  --sat-segmento-aduanas: #c25e00;
+  --sat-segmento-auxiliares: #6366f1;
 
   /* ------------------------------------------------------------------
    * TIPOGRAFIA  [NORMATIVO] p.43 y p.45
    * Oficial: Gotham (Hoefler & Co) - tipo palo seco, 6 grosores.
    * Gotham es licencia comercial y no puede servirse desde CDN.
    * Se declara como primer valor y se usa Montserrat como sustituta
-   * geometrica mientras SAT no Counties con la licencia.
+   * geometrica mientras SAT no cuente con la licencia.
    * ------------------------------------------------------------------ */
   --sat-font-oficial: "Gotham", "Montserrat", -apple-system,
     BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -104,7 +121,7 @@
   --sat-weight-black: 900;
 
   /* Eslogan [NORMATIVO] p.58-59 - solo claims, no pesos de fuente.
-   * Interletrado -25 (/1000 em) e itlica segun el manual. */
+   * Interletrado -25 (/1000 em) e italica segun el manual. */
   --sat-eslogan-tracking: -0.025em;
   --sat-eslogan-font: "Gotham", "Montserrat", sans-serif;
 

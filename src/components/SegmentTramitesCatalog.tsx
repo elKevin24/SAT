@@ -69,6 +69,61 @@ const SEGMENT_METADATA: Record<SegmentId, { title: string; shortTitle: string; d
   }
 };
 
+const CANONICAL_CATEGORY_ORDER: Record<string, string[]> = {
+  contribuyentes: [
+    'NIT sin Obligaciones',
+    'Pequeños Contribuyentes',
+    'Contribuyente General',
+    'Contribuyentes Especiales'
+  ],
+  comercio_exterior: [
+    'Importadores',
+    'Exportadores',
+    'Transportistas',
+    'Agentes Aduaneros',
+    'Normativa y Aranceles',
+    'OEA',
+    'Courier',
+    'Almacenes Fiscales'
+  ],
+  profesionales: [
+    'Abogados y Notarios',
+    'Peritos Contadores',
+    'Auditores',
+    'Gestores Tributarios',
+    'Servicios Profesionales'
+  ],
+  organismos_especiales: [
+    'Entidades del Estado',
+    'Constitucionales',
+    'No Lucrativos',
+    'Municipalidades',
+    'Decreto'
+  ]
+};
+
+const CATEGORY_DESCRIPTIONS: Record<string, string> = {
+  'NIT sin Obligaciones': 'Personas individuales, estudiantes y graduados sin actividad económica que requieren NIT para actos civiles, cuentas bancarias, títulos y remesas (cero asalariados).',
+  'Pequeños Contribuyentes': 'Régimen simplificado de tributación del 5% definitivo (hasta Q150,000 anuales) y actividades agropecuarias especiales primarias y pecuarias.',
+  'Contribuyente General': 'Personas y empresas con obligaciones generales de IVA (12%) e ISR, asalariados, gestión vehicular como propietarios y trámites del RTU.',
+  'Contribuyentes Especiales': 'Medianos y grandes contribuyentes asignados a gerencias especiales con control y fiscalización tributaria intensiva.',
+  'Importadores': 'Padrón de importadores, declaraciones DUCA, aranceles DAI, levante aduanero y vehículos para importadores.',
+  'Exportadores': 'Padrón de exportadores, declaraciones aduaneras y solicitud de Devolución de Crédito Fiscal del IVA.',
+  'Transportistas': 'Empresas de transporte terrestre, aéreo y marítimo internacional, tránsito aduanero y manifiestos de carga.',
+  'Agentes Aduaneros': 'Auxiliares de la función pública autorizados para el despacho aduanero oficial y representación de operadores.',
+  'Normativa y Aranceles': 'Criterios aduaneros oficiales, Sistema Arancelario Centroamericano (SAC), facilitación y combate al contrabando.',
+  'Abogados y Notarios': 'Habilitación de e-Traspaso vehicular, registro notarial y legalización de documentos tributarios.',
+  'Peritos Contadores': 'Inscripción y actualización de contadores autorizados ante la SAT para llevar contabilidades formales.',
+  'Auditores': 'Habilitación para auditorías fiscales, dictámenes y trámites de devolución de crédito fiscal.',
+  'Gestores Tributarios': 'Acreditación de gestores y personas autorizadas para tramitar ante agencias tributarias.',
+  'Servicios Profesionales': 'Profesionales liberales independientes, emisión de facturas y pago de timbres profesionales.',
+  'Entidades del Estado': 'Ministerios, secretarías y dependencias públicas con retenciones tributarias y exenciones oficiales.',
+  'Constitucionales': 'Universidades, centros educativos y cuerpos diplomáticos exentos de tributos por mandato constitucional.',
+  'No Lucrativos': 'Asociaciones, fundaciones, cooperativas e iglesias con reconocimiento de exención de impuestos.',
+  'Municipalidades': 'Gobiernos locales y empresas municipales con trámites tributarios y acreditaciones ante SAT.',
+  'Decreto': 'Entidades beneficiarias de incentivos fiscales y exenciones específicas por decreto legislativo.'
+};
+
 export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
   segmentId,
   initialCategory,
@@ -104,8 +159,17 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
     segmentTramites.forEach(t => {
       if (t.categoria) set.add(t.categoria);
     });
-    return ['Todas las categorías', ...Array.from(set)];
-  }, [segmentTramites]);
+    const orderList = CANONICAL_CATEGORY_ORDER[segmentId] || [];
+    const sorted = Array.from(set).sort((a, b) => {
+      const idxA = orderList.indexOf(a);
+      const idxB = orderList.indexOf(b);
+      if (idxA !== -1 && idxB !== -1) return idxA - idxB;
+      if (idxA !== -1) return -1;
+      if (idxB !== -1) return 1;
+      return a.localeCompare(b);
+    });
+    return ['Todas las categorías', ...sorted];
+  }, [segmentTramites, segmentId]);
 
   // Extract unique subcategories (Level 3 - Branch nodes) for current category selection
   const subcategories = useMemo(() => {
@@ -347,6 +411,7 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
             })}
           </div>
         )}
+
 
         {/* Banner contextual orientado al ciudadano para NIT sin Obligaciones */}
         {selectedCategory === 'NIT sin Obligaciones' && !internalQuery && (
