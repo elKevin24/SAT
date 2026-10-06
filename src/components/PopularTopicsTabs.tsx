@@ -6,7 +6,6 @@ interface TopicItem {
   title: string;
   desc: string;
   isPermanentConsultas?: boolean;
-  category: string;
   url: string;
 }
 
@@ -20,45 +19,39 @@ const TOPICS_BY_SEGMENT: Record<SegmentId, { label: string; primaryColor: string
     topics: [
       {
         id: 'con-consultas',
-        title: 'Consultas Transaccionales',
-        desc: 'Catálogo oficial de verificadores, omisos, NIT y solvencias.',
+        title: 'Consultas y Verificadores en Línea',
+        desc: 'Acceso directo a las herramientas web de verificación de omisos, búsqueda de NIT, estado de solicitudes y solvencias.',
         isPermanentConsultas: true,
-        category: 'Consultas Web',
         url: 'https://portal.sat.gob.gt/portal/consultas/'
       },
       {
         id: 'con-rtu',
-        title: 'RTU Digital y Actualización',
-        desc: 'Inscripción y actualización obligatoria de datos anuales.',
-        category: 'Registro',
+        title: 'Inscripción y Actualización en RTU Digital',
+        desc: 'Realiza tu registro por primera vez o actualiza tus datos de contacto y domicilio fiscal sin acudir a una agencia.',
         url: 'https://portal.sat.gob.gt/portal/rtu-digital/'
       },
       {
         id: 'con-fel',
-        title: 'Emisión de Facturas FEL',
-        desc: 'Régimen de Factura Electrónica en Línea sin costo.',
-        category: 'Facturación',
+        title: 'Facturación Electrónica en Línea (FEL)',
+        desc: 'Habilítate como emisor de facturas electrónicas y genera comprobantes de venta sin costo desde web o móvil.',
         url: 'https://portal.sat.gob.gt/portal/factura-electronica-fel/'
       },
       {
         id: 'con-declaraguate',
-        title: 'Llenado y Pago en Declaraguate',
-        desc: 'Formularios SAT-2000, IVA mensual e ISR trimestral.',
-        category: 'Declaraciones',
+        title: 'Presentación y Pago en Declaraguate',
+        desc: 'Completa los formularios electrónicos de IVA, ISR u otros impuestos y genera la boleta SAT-2000 para pagar en tu banco.',
         url: 'https://declaraguate.sat.gob.gt/'
       },
       {
         id: 'con-vehiculos',
-        title: 'Impuesto de Circulación (ISCV)',
-        desc: 'Consulta de calcomanía electrónica y traspaso de vehículos.',
-        category: 'Vehículos',
+        title: 'Impuesto de Circulación y Distintivos',
+        desc: 'Consulta montos a pagar, descarga tu calcomanía electrónica e inicia el traspaso digital de vehículos.',
         url: 'https://portal.sat.gob.gt/portal/consulta-de-vehiculos/'
       },
       {
         id: 'con-solvencia',
-        title: 'Solvencia Fiscal (SOFI)',
-        desc: 'Certificación electrónica de solvencia libre de adeudos.',
-        category: 'Certificaciones',
+        title: 'Emisión de Solvencia Fiscal (SOFI)',
+        desc: 'Obtén la constancia oficial que acredita que no posees deudas tributarias ante la administración.',
         url: 'https://portal.sat.gob.gt/portal/solvencia-fiscal/'
       }
     ]
@@ -72,45 +65,39 @@ const TOPICS_BY_SEGMENT: Record<SegmentId, { label: string; primaryColor: string
     topics: [
       {
         id: 'ce-consultas',
-        title: 'Consultas Aduanas & DUCA',
-        desc: 'Catálogo de consultas arancelarias, manifiestos y DUCA.',
+        title: 'Consultas Aduaneras y DUCA',
+        desc: 'Herramientas de consulta arancelaria, verificación de declaraciones aduaneras y estado de tránsitos internacionales.',
         isPermanentConsultas: true,
-        category: 'Consultas Aduaneras',
         url: 'https://portal.sat.gob.gt/portal/aduanas/'
       },
       {
         id: 'ce-conceptos',
-        title: 'Conceptos Generales y Arancel',
-        desc: 'Sistema Arancelario Centroamericano (SAC) y clasificaciones.',
-        category: 'Normativa',
+        title: 'Clasificación y Arancel Integrado',
+        desc: 'Revisa la nomenclatura oficial del Sistema Arancelario Centroamericano y las tarifas aplicables por mercancía.',
         url: 'https://portal.sat.gob.gt/portal/arancel-integrado/'
       },
       {
         id: 'ce-facilitacion',
-        title: 'Facilitación del Comercio',
-        desc: 'Medidas de agilización aduanera y despacho conjunto.',
-        category: 'Procesos',
+        title: 'Programas de Facilitación del Comercio',
+        desc: 'Procedimientos ágiles de despacho aduanero conjunto y mecanismos para reducir tiempos en frontera.',
         url: 'https://portal.sat.gob.gt/portal/facilitacion-comercio/'
       },
       {
         id: 'ce-miad',
         title: 'Mesa Integral de Aduanas (MIAD)',
-        desc: 'Atención especializada para operadores de comercio exterior.',
-        category: 'Atención',
+        desc: 'Canal de atención directa y resolución técnica de consultas especializadas para auxiliares y operadores.',
         url: 'https://portal.sat.gob.gt/portal/miad/'
       },
       {
         id: 'ce-oea',
         title: 'Operador Económico Autorizado (OEA)',
-        desc: 'Certificación de seguridad de la cadena logística internacional.',
-        category: 'Certificación',
+        desc: 'Requisitos y beneficios para certificar tu empresa como un socio comercial seguro y confiable en la cadena logística.',
         url: 'https://portal.sat.gob.gt/portal/oea/'
       },
       {
         id: 'ce-defraudacion',
-        title: 'Lucha contra la Defraudación y Contrabando',
-        desc: 'COINCON y denuncias confidenciales de contrabando aduanero.',
-        category: 'Fiscalización',
+        title: 'Prevención de Defraudación y Contrabando',
+        desc: 'Líneas directas de reporte confidencial y normativas del Consejo Interinstitucional contra el Contrabando (COINCON).',
         url: 'https://portal.sat.gob.gt/portal/lucha-contra-el-contrabando/'
       }
     ]
@@ -124,38 +111,33 @@ const TOPICS_BY_SEGMENT: Record<SegmentId, { label: string; primaryColor: string
     topics: [
       {
         id: 'prof-consultas',
-        title: 'Consultas para Profesionales',
-        desc: 'Verificación de títulos universitarios, colegiados y poderes.',
+        title: 'Consultas para Profesionales y Terceros',
+        desc: 'Validación de títulos universitarios, timbres fiscales cancelados y verificación de acreditación de contadores.',
         isPermanentConsultas: true,
-        category: 'Consultas Colegiados',
         url: 'https://portal.sat.gob.gt/portal/consultas-profesionales/'
       },
       {
         id: 'prof-contadores',
-        title: 'Habilitación de Peritos Contadores y Auditores',
-        desc: 'Registro ante SAT y acreditación de libros contables.',
-        category: 'Contadores',
+        title: 'Registro de Peritos Contadores y Auditores',
+        desc: 'Inscripción oficial ante el registro de contadores y proceso de nombramiento o acreditación para llevar libros.',
         url: 'https://portal.sat.gob.gt/portal/peritos-contadores/'
       },
       {
         id: 'prof-titulos',
-        title: 'Registro de Títulos Universitarios y Timbres',
-        desc: 'Habilitación oficial y pago de timbres fiscales por QR.',
-        category: 'Títulos',
+        title: 'Registro de Títulos y Pago de Timbres',
+        desc: 'Habilita tu grado universitario ante la SAT pagando la tarifa de timbres fiscales correspondiente para ejercer.',
         url: 'https://portal.sat.gob.gt/portal/habilitacion-titulos/'
       },
       {
         id: 'prof-gestores',
-        title: 'Acreditación de Gestores Tributarios',
-        desc: 'Poderes de representación y mandatos ante agencias SAT.',
-        category: 'Gestores',
+        title: 'Acreditación de Gestores y Auxiliares',
+        desc: 'Presentación de poderes y mandatos para realizar trámites en representación de terceros en oficinas tributarias.',
         url: 'https://portal.sat.gob.gt/portal/gestores-tributarios/'
       },
       {
         id: 'prof-criterios',
         title: 'Criterios Tributarios Institucionales',
-        desc: 'Doctrina y resoluciones emitidas por el Directorio de SAT.',
-        category: 'Doctrina Legal',
+        desc: 'Consulta resoluciones y directrices técnicas oficiales aprobadas por el Directorio de SAT.',
         url: 'https://portal.sat.gob.gt/portal/criterios-tributarios/'
       }
     ]
@@ -169,31 +151,27 @@ const TOPICS_BY_SEGMENT: Record<SegmentId, { label: string; primaryColor: string
     topics: [
       {
         id: 'org-consultas',
-        title: 'Consultas Entes Exentos',
-        desc: 'Verificación de exenciones vigentes y constancias electrónicas.',
+        title: 'Consultas de Entes Exentos y Estado',
+        desc: 'Verificación del estatus de resoluciones de exención y autenticidad de constancias electrónicas.',
         isPermanentConsultas: true,
-        category: 'Consultas Exenciones',
         url: 'https://portal.sat.gob.gt/portal/consultas-exenciones/'
       },
       {
         id: 'org-exenciones',
-        title: 'Régimen de Exenciones Tributarias',
-        desc: 'Entidades religiosas, educativas, diplomáticas y ONG.',
-        category: 'Exenciones',
+        title: 'Reconocimiento de Exenciones Tributarias',
+        desc: 'Guía y base legal para entidades no lucrativas, diplomáticas, religiosas y educativas reconocidas por ley.',
         url: 'https://portal.sat.gob.gt/portal/entes-exentos/'
       },
       {
         id: 'org-constancias',
         title: 'Constancias de Adquisición de Insumos',
-        desc: 'Emisión y validación de constancias de exención del IVA.',
-        category: 'Constancias',
+        desc: 'Genera y entrega constancias de exención del IVA para compras institucionales exentas de impuestos.',
         url: 'https://portal.sat.gob.gt/portal/constancias-exencion/'
       },
       {
         id: 'org-estado',
         title: 'Sector Público y Municipalidades',
-        desc: 'Cumplimiento de retenciones y compras gubernamentales.',
-        category: 'Sector Público',
+        desc: 'Obligaciones de retención del IVA y compras gubernamentales en coordinación con Guatecompras.',
         url: 'https://portal.sat.gob.gt/portal/sector-publico/'
       }
     ]
@@ -227,7 +205,7 @@ export const PopularTopicsTabs: React.FC<PopularTopicsTabsProps> = ({
               </h3>
             </div>
             <p className="text-xs text-slate-500 mt-1">
-              Contenido de mayor frecuencia mensual por grupo de interés (conforme a la Ley de Miller UX).
+              Servicios y temas con mayor demanda ciudadana según tu grupo de interés.
             </p>
           </div>
 
@@ -252,7 +230,7 @@ export const PopularTopicsTabs: React.FC<PopularTopicsTabsProps> = ({
           </div>
         </div>
 
-        {/* Topics Grid con hover de fondo y texto en blanco */}
+        {/* Topics Grid con solo Título y Descripción con UX writing */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {currentSegmentData.topics.map((topic) => {
             const isConsultas = topic.isPermanentConsultas;
@@ -272,24 +250,11 @@ export const PopularTopicsTabs: React.FC<PopularTopicsTabsProps> = ({
                 className={`p-5 rounded-[16px] border border-[#DCDCDC] ${currentSegmentData.hoverBorder} ${currentSegmentData.hoverBg} ${currentSegmentData.hoverShadow} transition-all duration-300 cursor-pointer flex flex-col justify-between group shadow-xs hover:-translate-y-0.5`}
               >
                 <div>
-                  <div className="flex items-center justify-between mb-2.5">
-                    <span 
-                      className="text-[10px] font-bold px-2.5 py-0.5 rounded bg-slate-100 text-slate-700 group-hover:bg-white/20 group-hover:text-white transition-colors"
-                    >
-                      {topic.category}
-                    </span>
-                    {isConsultas && (
-                      <span className="text-[10px] font-bold text-[#14649B] group-hover:text-white transition-colors">
-                        Catálogo Directo
-                      </span>
-                    )}
-                  </div>
-
                   <h4 className="text-sm sm:text-base font-bold text-[#19324B] group-hover:text-white transition-colors leading-tight mb-2">
                     {topic.title}
                   </h4>
 
-                  <p className="text-xs text-slate-600 group-hover:text-white/90 transition-colors leading-relaxed">
+                  <p className="text-xs sm:text-sm text-slate-600 group-hover:text-white/90 transition-colors leading-relaxed">
                     {topic.desc}
                   </p>
                 </div>

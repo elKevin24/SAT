@@ -38,13 +38,13 @@ export const GuidedProcessesSection: React.FC<GuidedProcessesSectionProps> = ({
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
           <div>
             <span className="text-xs font-bold text-[#14649B] uppercase tracking-wider block mb-1">
-              Procesos Core Guiados
+              Guías Paso a Paso
             </span>
             <h3 className="text-xl sm:text-2xl font-extrabold text-[#19324B] tracking-tight">
-              Rutas y Ciclos de Vida del Contribuyente
+              Rutas de Trámites y Cumplimiento
             </h3>
             <p className="text-xs sm:text-sm text-slate-600 mt-0.5">
-              Guías paso a paso para resolver tus trámites sin perderte entre normas o requisitos.
+              Instrucciones guiadas para completar tus gestiones de inicio a fin.
             </p>
           </div>
 
@@ -69,7 +69,7 @@ export const GuidedProcessesSection: React.FC<GuidedProcessesSectionProps> = ({
           </div>
         </div>
 
-        {/* Process Cards Grid con el estilo previo idéntico */}
+        {/* Process Cards Grid sin números (Solo Título y Descripción con UX Writing) */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {filtered.slice(0, 9).map((p) => (
             <div
@@ -78,43 +78,17 @@ export const GuidedProcessesSection: React.FC<GuidedProcessesSectionProps> = ({
               className="group bg-white rounded-[16px] border border-[#DCDCDC] hover:border-[#14649B] hover:bg-[#14649B] hover:shadow-[0_12px_24px_rgba(20,100,155,0.24)] p-5 shadow-xs hover:-translate-y-1 transition-all duration-300 cursor-pointer flex flex-col justify-between"
             >
               <div>
-                <div className="flex items-center justify-between gap-2 mb-2.5">
-                  <span className="text-[10px] font-bold px-2.5 py-0.5 rounded bg-slate-100 text-slate-700 group-hover:bg-white/20 group-hover:text-white transition-colors">
-                    {p.etapa || 'Proceso Core'}
-                  </span>
-                  <span className="text-[11px] font-bold text-slate-400 group-hover:text-white/80 transition-colors">
-                    {p.totalPasos} pasos
-                  </span>
-                </div>
-
                 <h4 className="text-sm sm:text-base font-bold text-[#19324B] group-hover:text-white transition-colors leading-snug mb-2">
                   {p.nombre}
                 </h4>
 
-                <p className="text-xs text-slate-600 group-hover:text-white/90 transition-colors leading-relaxed line-clamp-2 mb-3">
-                  <span className="font-semibold text-slate-800 group-hover:text-white">Para:</span> {p.paraQuien}
+                <p className="text-xs sm:text-sm text-slate-600 group-hover:text-white/90 transition-colors leading-relaxed mb-3">
+                  Diseñado para {p.paraQuien.toLowerCase()}. Te guía por los requisitos oficiales y la plataforma en línea para completar tu gestión exitosamente.
                 </p>
-
-                {/* Micro preview de pasos en texto limpio */}
-                {p.rutaPasosResumen && p.rutaPasosResumen.length > 0 && (
-                  <div className="p-3 bg-slate-50 group-hover:bg-white/10 rounded-xl border border-slate-100 group-hover:border-white/20 text-[11px] text-slate-600 group-hover:text-white/90 transition-colors space-y-1">
-                    {p.rutaPasosResumen.slice(0, 2).map((paso, idx) => (
-                      <div key={idx} className="flex items-center gap-2 truncate">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#14649B] group-hover:bg-white shrink-0" />
-                        <span className="truncate">{paso}</span>
-                      </div>
-                    ))}
-                    {p.rutaPasosResumen.length > 2 && (
-                      <div className="text-[10px] text-slate-400 group-hover:text-white/70 font-medium pl-3.5">
-                        + {p.rutaPasosResumen.length - 2} pasos adicionales...
-                      </div>
-                    )}
-                  </div>
-                )}
               </div>
 
-              <div className="pt-4 mt-4 border-t border-slate-100 group-hover:border-white/20 flex items-center justify-between text-xs font-bold text-[#14649B] group-hover:text-white transition-colors">
-                <span>Ver ruta paso a paso</span>
+              <div className="pt-3.5 mt-3.5 border-t border-slate-100 group-hover:border-white/20 flex items-center justify-between text-xs font-bold text-[#14649B] group-hover:text-white transition-colors">
+                <span>Ver ruta guiada</span>
                 <span className="transition-transform duration-200 group-hover:translate-x-0.5">→</span>
               </div>
             </div>

@@ -1,0 +1,228 @@
+/*
+ * SAT Design System — tokens
+ * Fuente normativa: Manual de Imagen y Normas Graficas SAT V.5
+ * (Resolucion SAT-DSI-597-2016, aprobado 18/02/2026).
+ *
+ * Las referencias "p.N" apuntan al numero de pagina IMPRESO del manual.
+ * El PDF escaneado usa paginacion impresa = indice PDF - 1.
+ *
+ * Regla de autoridad:
+ *   [NORMATIVO]  = transcrito literalmente del manual. No cambiar sin
+ *                  visto bueno de Comunicacion Social Externa.
+ *   [DERIVADO]   = decision de proyecto para traducir la marca a UI web.
+ *                  Requiere aprobacion de Comunicacion Social Externa.
+ */
+
+:root {
+  /* ------------------------------------------------------------------
+   * COLOR INSTITUCIONAL  [NORMATIVO] p.23-24
+   * 6 colores. Hex y CMYK verificados consistentes entre si (delta 0).
+   * ------------------------------------------------------------------ */
+
+  /* Celeste institucional - RGB 25 175 225 */
+  --sat-celeste: #19afe1;
+  /* AZUL SAT - color principal de marca - RGB 20 100 155 */
+  --sat-azul: #14649b;
+  /* Azul oscuro - RGB 25 50 75 */
+  --sat-azul-oscuro: #19324b;
+  /* Gris institucional - K14 - RGB 220 220 220 */
+  --sat-gris: #dcdcdc;
+  --sat-negro: #000000;
+  --sat-blanco: #ffffff;
+
+  /* ------------------------------------------------------------------
+   * COLOR COMPLEMENTARIO  [NORMATIVO] p.26
+   * Regla del manual: debe prevalecer la paleta institucional. Los
+   * complementarios aportan unicamente color y dinamismo. Para mensajes
+   * publicitarios el uso del color queda libre.
+   * ------------------------------------------------------------------ */
+  --sat-comp-magenta: #d9336e;
+  --sat-comp-morado: #824491;
+  --sat-comp-verde: #8cc63f;
+  --sat-comp-naranja: #f37521;
+  --sat-comp-ambar: #ffb806;
+
+  /* ------------------------------------------------------------------
+   * DEGRADOS OFICIALES  [NORMATIVO] p.25
+   * Combinaciones recomendadas por el manual sobre la numeracion
+   * 1=celeste 2=azul SAT 3=azul oscuro 4=gris 5=negro 6=blanco.
+   * ------------------------------------------------------------------ */
+  --sat-degradado-1-2: linear-gradient(135deg, #19afe1 0%, #14649b 100%);
+  --sat-degradado-2-3: linear-gradient(135deg, #14649b 0%, #19324b 100%);
+  --sat-degradado-1-6: linear-gradient(135deg, #19afe1 0%, #ffffff 100%);
+  --sat-degradado-4-6: linear-gradient(135deg, #dcdcdc 0%, #ffffff 100%);
+
+  /* ------------------------------------------------------------------
+   * COLOR DE INTERFAZ  [DERIVADO]
+   * Roles semanticos construidos sobre la paleta institucional.
+   * El gris azulado se deriva de #19324B al 8% para separar superficies
+   * sin introducir un color fuera de norma.
+   * ------------------------------------------------------------------ */
+  --sat-ui-fondo: var(--sat-blanco);
+  --sat-ui-fondo-tenue: #f4f6f9;
+  --sat-ui-fondo-medio: #e9edf2;
+  --sat-ui-borde: var(--sat-gris);
+  --sat-ui-borde-fuerte: #b9c3cd;
+
+  --sat-ui-texto: var(--sat-azul-oscuro);
+  --sat-ui-texto-suave: #475569;
+  --sat-ui-texto-tenue: #64748b;
+  --sat-ui-texto-sobre-azul: var(--sat-blanco);
+  --sat-ui-texto-sobre-oscuro: #ffffff;
+  --sat-ui-texto-acento: var(--sat-azul);
+
+  --sat-ui-foco: var(--sat-azul);
+  --sat-ui-error: #b3261e;
+  --sat-ui-exito: #216e39;
+  --sat-ui-alerta: #a15c00;
+
+  /* ------------------------------------------------------------------
+   * TIPOGRAFIA  [NORMATIVO] p.43 y p.45
+   * Oficial: Gotham (Hoefler & Co) - tipo palo seco, 6 grosores.
+   * Gotham es licencia comercial y no puede servirse desde CDN.
+   * Se declara como primer valor y se usa Montserrat como sustituta
+   * geometrica mientras SAT no Counties con la licencia.
+   * ------------------------------------------------------------------ */
+  --sat-font-oficial: "Gotham", "Montserrat", -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --sat-fuente: var(--sat-font-oficial);
+
+  /* Grosores con el uso que asigna el manual p.45 */
+  --sat-weight-light: 300;
+  --sat-weight-book: 400;
+  --sat-weight-medium: 500;
+  --sat-weight-bold: 700;
+  --sat-weight-black: 900;
+
+  /* Eslogan [NORMATIVO] p.58-59 - solo claims, no pesos de fuente.
+   * Interletrado -25 (/1000 em) e itlica segun el manual. */
+  --sat-eslogan-tracking: -0.025em;
+  --sat-eslogan-font: "Gotham", "Montserrat", sans-serif;
+
+  /* ------------------------------------------------------------------
+   * ISOLOGOTIPO  [NORMATIVO] p.34-37
+   * Proporcion verificada contra el manual: 5.0 x 1.60 cm optimo,
+   * 4.0 x 1.25 cm minimo -> ambas dan 3.125:1.
+   * Tamano base de pantalla = ancho optimo (5cm) expresado en rem.
+   * ------------------------------------------------------------------ */
+  --sat-logo-relacion: 3.125;
+  --sat-logo-ancho-base: 8.75rem; /* ~140px, equivalente a 5.0 cm de imprenta */
+  --sat-logo-alto-base: calc(var(--sat-logo-ancho-base) / var(--sat-logo-relacion));
+  --sat-logo-ancho-minimo: 7rem; /* ~112px, equivalente a 4.0 cm */
+
+  /* Referencia de construccion 2.5 x 8 [NORMATIVO] p.34 */
+  --sat-referencia-alto: 1;
+  --sat-referencia-ancho: 0.3125;
+  --sat-referencia: calc(var(--sat-logo-alto-base) / 8);
+
+  /* Separacion entre logos y del borde: una referencia [NORMATIVO] p.35, p.37 */
+  --sat-logo-area-segura: var(--sat-referencia);
+
+  /* ------------------------------------------------------------------
+   * ESPACIADO  [DERIVADO]
+   * Base 8px. No definido por el manual.
+   * ------------------------------------------------------------------ */
+  --sat-space-0: 0;
+  --sat-space-1: 0.25rem;
+  --sat-space-2: 0.5rem;
+  --sat-space-3: 0.75rem;
+  --sat-space-4: 1rem;
+  --sat-space-5: 1.5rem;
+  --sat-space-6: 2rem;
+  --sat-space-7: 3rem;
+  --sat-space-8: 4rem;
+  --sat-space-9: 6rem;
+
+  /* Contenedor [DERIVADO] */
+  --sat-ancho-maximo: 80rem;
+  --sat-ancho-texto: 68ch;
+
+  /* ------------------------------------------------------------------
+   * RADIOS  [DERIVADO]
+   * El manual exige "redondeamos las esquinas para brindar suavidad"
+   * al patron (p.41). No fija radios exactos.
+   * ------------------------------------------------------------------ */
+  --sat-radio-sm: 8px;
+  --sat-radio-md: 14px;
+  --sat-radio-lg: 16px;
+  --sat-radio-full: 999px;
+
+  /* ------------------------------------------------------------------
+   * ELEVACION  [DERIVADO]
+   * El manual prohibe sombras y efectos sobre el ISOLOGOTIPO (p.19-21).
+   * Estas sombras son para superficies de UI, nunca para la marca.
+   * ------------------------------------------------------------------ */
+  --sat-shadow-sm: 0 1px 2px rgba(25, 50, 75, 0.06);
+  --sat-shadow-md: 0 4px 12px rgba(25, 50, 75, 0.08);
+  --sat-shadow-lg: 0 14px 30px rgba(25, 50, 75, 0.14);
+
+  /* Foco accesible [DERIVADO] */
+  --sat-foco-ancho: 2px;
+  --sat-foco-offset: 2px;
+  --sat-foco-radio: var(--sat-radio-sm);
+
+  /* Movimiento [DERIVADO] */
+  --sat-transicion: 180ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Safe Area Insets */
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left: env(safe-area-inset-left, 0px);
+  --safe-right: env(safe-area-inset-right, 0px);
+
+  /* ------------------------------------------------------------------
+   * ALIAS LEGACY  [DERIVADO]
+   * Nombres que ya consumia el proyecto antes de existir este archivo.
+   * Se mantienen para no romper App.tsx ni los componentes actuales.
+   * Nota: --sat-success/warning/error/info NO provienen del manual;
+   * los valores se ajustan a la paleta institucional.
+   * ------------------------------------------------------------------ */
+  --sat-primary: var(--sat-azul);
+  --sat-primary-light: var(--sat-celeste);
+  --sat-primary-dark: var(--sat-azul-oscuro);
+  --sat-secondary: var(--sat-comp-morado);
+  --sat-success: #216e39;
+  --sat-warning: #a15c00;
+  --sat-error: #b3261e;
+  --sat-info: var(--sat-celeste);
+  --sat-gray-50: var(--sat-blanco);
+  --sat-gray-100: var(--sat-gris);
+  --sat-gray-900: var(--sat-azul-oscuro);
+}
+
+/* -------------------------------------------------------------------------
+ * Integracion con Tailwind v4.
+ * @theme inline expone los tokens como utilidades (bg-sat-azul, etc.)
+ * sin re-declarar los custom properties en :root.
+ * ------------------------------------------------------------------------- */
+@theme inline {
+  --color-sat-celeste: var(--sat-celeste);
+  --color-sat-azul: var(--sat-azul);
+  --color-sat-azul-oscuro: var(--sat-azul-oscuro);
+  --color-sat-gris: var(--sat-gris);
+  --color-sat-blanco: var(--sat-blanco);
+  --color-sat-negro: var(--sat-negro);
+
+  --color-sat-comp-magenta: var(--sat-comp-magenta);
+  --color-sat-comp-morado: var(--sat-comp-morado);
+  --color-sat-comp-verde: var(--sat-comp-verde);
+  --color-sat-comp-naranja: var(--sat-comp-naranja);
+  --color-sat-comp-ambar: var(--sat-comp-ambar);
+
+  --color-sat-fondo: var(--sat-ui-fondo);
+  --color-sat-fondo-tenue: var(--sat-ui-fondo-tenue);
+  --color-sat-fondo-medio: var(--sat-ui-fondo-medio);
+  --color-sat-texto: var(--sat-ui-texto);
+  --color-sat-texto-suave: var(--sat-ui-texto-suave);
+  --color-sat-texto-tenue: var(--sat-ui-texto-tenue);
+
+  --font-sans: var(--sat-fuente);
+
+  --radius-sat-sm: var(--sat-radio-sm);
+  --radius-sat-md: var(--sat-radio-md);
+  --radius-sat-lg: var(--sat-radio-lg);
+
+  --shadow-sat-sm: var(--sat-shadow-sm);
+  --shadow-sat-md: var(--sat-shadow-md);
+  --shadow-sat-lg: var(--sat-shadow-lg);
+}

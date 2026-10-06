@@ -3,7 +3,6 @@ import React from 'react';
 interface NewsItem {
   id: number;
   title: string;
-  date: string;
   category: string;
   url: string;
 }
@@ -12,28 +11,24 @@ const NEWS: NewsItem[] = [
   {
     id: 1,
     title: 'SAT con más acciones de facilitación y mejora continua para el contribuyente',
-    date: '10 de marzo 2026',
     category: 'Facilitación',
     url: 'https://portal.sat.gob.gt/portal/noticias/'
   },
   {
     id: 2,
     title: 'Facilitarán reintegración productiva de migrantes retornados al sistema formal',
-    date: '08 de marzo 2026',
     category: 'Inclusión Social',
     url: 'https://portal.sat.gob.gt/portal/noticias/'
   },
   {
     id: 3,
     title: 'Guatemala moderniza su sistema aduanero con tecnología no intrusiva y DUCA',
-    date: '06 de marzo 2026',
     category: 'Aduanas',
     url: 'https://portal.sat.gob.gt/portal/noticias/'
   },
   {
     id: 4,
     title: 'Coordinación estratégica interinstitucional facilita combate a ilícitos y contrabando',
-    date: '01 de marzo 2026',
     category: 'Fiscalización',
     url: 'https://portal.sat.gob.gt/portal/noticias/'
   }
@@ -42,27 +37,27 @@ const NEWS: NewsItem[] = [
 const TRANSPARENCY_BUTTONS = [
   {
     title: 'Marco Legal',
-    desc: 'Leyes y Decretos tributarios',
+    desc: 'Leyes, decretos y acuerdos gubernativos en materia tributaria.',
     url: 'https://portal.sat.gob.gt/portal/leyes-tributarias/'
   },
   {
     title: 'Transparencia',
-    desc: 'Rendición de cuentas oficial',
+    desc: 'Informes de rendición de cuentas y ejecución presupuestaria.',
     url: 'https://portal.sat.gob.gt/portal/transparencia/'
   },
   {
     title: 'SATData+',
-    desc: 'Portal estadístico y cifras',
+    desc: 'Estadísticas del comercio exterior y recaudación en tiempo real.',
     url: 'https://portal.sat.gob.gt/portal/satdata/'
   },
   {
     title: 'Información Pública',
-    desc: 'Decreto 57-2008 de libre acceso',
+    desc: 'Solicitudes y acceso a la información según Decreto 57-2008.',
     url: 'https://portal.sat.gob.gt/portal/informacion-publica/'
   },
   {
     title: 'El Poder Anticorrupción',
-    desc: 'Denuncias y ética institucional',
+    desc: 'Canal de denuncia confidencial y código de ética institucional.',
     url: 'https://portal.sat.gob.gt/portal/anticorrupcion/'
   }
 ];
@@ -103,12 +98,6 @@ export const NewsAndTransparencySection: React.FC = () => {
                 className="p-5 bg-white rounded-[16px] border border-[#DCDCDC] hover:border-[#14649B] shadow-xs hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>
-                  <div className="flex items-center justify-between text-[11px] text-slate-400 mb-2">
-                    <span className="font-bold text-[#14649B] bg-blue-50 px-2 py-0.5 rounded">
-                      {news.category}
-                    </span>
-                    <span>{news.date}</span>
-                  </div>
                   <h4 className="text-xs sm:text-sm font-bold text-slate-800 group-hover:text-[#14649B] transition-colors line-clamp-3 leading-snug">
                     {news.title}
                   </h4>
@@ -152,7 +141,7 @@ export const NewsAndTransparencySection: React.FC = () => {
                   </div>
                 </div>
                 <div className="pt-2 mt-2 border-t border-slate-100 group-hover:border-white/20 text-[10px] font-bold text-[#14649B] group-hover:text-white flex items-center justify-between">
-                  <span>Portal</span>
+                  <span>Acceder</span>
                   <span className="group-hover:translate-x-0.5 transition-transform">→</span>
                 </div>
               </a>

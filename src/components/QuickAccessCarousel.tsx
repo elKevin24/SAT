@@ -6,72 +6,62 @@ interface QuickAccessItem {
   title: string;
   desc: string;
   url: string;
-  category: string;
 }
 
 const QUICK_ITEMS: QuickAccessItem[] = [
   {
     id: 'solicitar-nit',
     title: 'Solicitar NIT',
-    desc: 'Inscripción digital por primera vez',
-    url: 'https://portal.sat.gob.gt/portal/rtu-digital/inscripcion-solicitud-de-nit/',
-    category: 'RTU Digital'
+    desc: 'Obtén tu Número de Identificación Tributaria por primera vez en línea.',
+    url: 'https://portal.sat.gob.gt/portal/rtu-digital/inscripcion-solicitud-de-nit/'
   },
   {
     id: 'cual-es-mi-nit',
-    title: '¿Cuál es mi NIT?',
-    desc: 'Consulta tu número de NIT con tu CUI/DPI',
-    url: 'https://portal.sat.gob.gt/portal/consulta-cui-nit/',
-    category: 'Consultas'
+    title: 'Consultar mi NIT',
+    desc: 'Recupera o verifica tu número de NIT ingresando tu Código Único de Identificación (CUI).',
+    url: 'https://portal.sat.gob.gt/portal/consulta-cui-nit/'
   },
   {
     id: 'imprimir-rtu',
-    title: 'Imprimir RTU',
-    desc: 'Descarga tu constancia de RTU actualizada',
-    url: 'https://portal.sat.gob.gt/portal/constancia-rtu/',
-    category: 'RTU Digital'
+    title: 'Imprimir Constancia RTU',
+    desc: 'Descarga tu constancia de inscripción o actualización en formato digital.',
+    url: 'https://portal.sat.gob.gt/portal/constancia-rtu/'
   },
   {
     id: 'fel',
-    title: 'FEL',
-    desc: 'Factura Electrónica en Línea y DTEs',
-    url: 'https://portal.sat.gob.gt/portal/factura-electronica-fel/',
-    category: 'Facturación'
+    title: 'Factura Electrónica FEL',
+    desc: 'Emite y valida Documentos Tributarios Electrónicos de forma gratuita.',
+    url: 'https://portal.sat.gob.gt/portal/factura-electronica-fel/'
   },
   {
     id: 'calendario-tributario',
     title: 'Calendario Tributario',
-    desc: 'Fechas de vencimiento y pagos',
-    url: 'https://portal.sat.gob.gt/portal/calendario-tributario/',
-    category: 'Obligaciones'
+    desc: 'Revisa las fechas límite para presentar y pagar tus obligaciones fiscales.',
+    url: 'https://portal.sat.gob.gt/portal/calendario-tributario/'
   },
   {
     id: 'omisos',
-    title: 'Omisos',
-    desc: 'Verifica declaraciones pendientes',
-    url: 'https://portal.sat.gob.gt/portal/consulta-de-omisos/',
-    category: 'Consultas'
+    title: 'Verificar Omisos',
+    desc: 'Comprueba si tienes declaraciones o pagos pendientes ante la SAT.',
+    url: 'https://portal.sat.gob.gt/portal/consulta-de-omisos/'
   },
   {
     id: 'consultar-vehiculos',
     title: 'Consultar Vehículos',
-    desc: 'Impuesto de Circulación e IPRT',
-    url: 'https://portal.sat.gob.gt/portal/consulta-de-vehiculos/',
-    category: 'Vehicular'
+    desc: 'Paga el Impuesto de Circulación y descarga tu calcomanía electrónica.',
+    url: 'https://portal.sat.gob.gt/portal/consulta-de-vehiculos/'
   },
   {
     id: 'solvencia-fiscal',
     title: 'Solvencia Fiscal',
-    desc: 'Genera tu certificación SOFI',
-    url: 'https://portal.sat.gob.gt/portal/solvencia-fiscal/',
-    category: 'Certificaciones'
+    desc: 'Genera tu constancia de solvencia SOFI libre de deudas tributarias.',
+    url: 'https://portal.sat.gob.gt/portal/solvencia-fiscal/'
   },
   {
     id: 'validar-documentos',
     title: 'Validar Documentos',
-    desc: 'Verificación de firmas y constancias con QR',
-    url: 'https://portal.sat.gob.gt/portal/verificador-de-documentos/',
-    category: 'Seguridad'
+    desc: 'Comprueba la autenticidad de resoluciones y firmas electrónicas emitidas por SAT.',
+    url: 'https://portal.sat.gob.gt/portal/verificador-de-documentos/'
   }
 ];
 
@@ -105,12 +95,9 @@ export const QuickAccessCarousel: React.FC<QuickAccessCarouselProps> = ({ onSele
               <h3 className="text-base font-extrabold text-[#19324B] tracking-tight">
                 Accesos Rápidos
               </h3>
-              <span className="hidden sm:inline text-[11px] text-slate-500 font-semibold bg-white px-2.5 py-0.5 rounded-full border border-[#DCDCDC]">
-                Procesos centrales SAT (BM)
-              </span>
             </div>
             <p className="text-xs text-slate-500 mt-0.5">
-              Herramientas transaccionales y de consulta más utilizadas por los contribuyentes.
+              Herramientas de consulta y servicios transaccionales más utilizados.
             </p>
           </div>
 
@@ -135,7 +122,7 @@ export const QuickAccessCarousel: React.FC<QuickAccessCarouselProps> = ({ onSele
           </div>
         </div>
 
-        {/* 7 Tarjetas con estilo anterior */}
+        {/* 7 Tarjetas con solo Título y Descripción con UX writing */}
         <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-3">
           {visibleItems.map((item) => (
             <a
@@ -146,16 +133,13 @@ export const QuickAccessCarousel: React.FC<QuickAccessCarouselProps> = ({ onSele
               onClick={() => {
                 if (onSelectQuickAction) onSelectQuickAction(item);
               }}
-              className="group bg-white rounded-[14px] border border-[#DCDCDC] hover:border-[#14649B] hover:bg-[#14649B] hover:shadow-[0_10px_20px_rgba(20,100,155,0.22)] p-3.5 flex flex-col justify-between transition-all duration-300 hover:-translate-y-0.5 text-left"
+              className="group bg-white rounded-[14px] border border-[#DCDCDC] hover:border-[#14649B] hover:bg-[#14649B] hover:shadow-[0_10px_20px_rgba(20,100,155,0.22)] p-4 flex flex-col justify-between transition-all duration-300 hover:-translate-y-0.5 text-left"
             >
               <div>
-                <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-slate-100 text-slate-600 group-hover:bg-white/20 group-hover:text-white transition-colors block w-fit mb-2">
-                  {item.category}
-                </span>
-                <div className="text-xs font-bold text-[#19324B] group-hover:text-white leading-snug transition-colors line-clamp-2">
+                <div className="text-xs font-bold text-[#19324B] group-hover:text-white leading-snug transition-colors mb-1.5">
                   {item.title}
                 </div>
-                <div className="text-[11px] text-slate-500 group-hover:text-white/80 transition-colors mt-1 line-clamp-2 leading-tight">
+                <div className="text-[11px] text-slate-600 group-hover:text-white/85 transition-colors line-clamp-3 leading-relaxed">
                   {item.desc}
                 </div>
               </div>

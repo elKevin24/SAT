@@ -151,11 +151,6 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
               {meta.desc}
             </p>
           </div>
-
-          <div className="text-right shrink-0 bg-white p-3 rounded-xl border border-[#DCDCDC]">
-            <div className="text-lg font-black text-[#14649B]">{filteredTramites.length}</div>
-            <div className="text-[10px] font-bold uppercase tracking-wider text-slate-400">Trámites Oficiales</div>
-          </div>
         </div>
 
         {/* Filter Toolbar */}
@@ -191,35 +186,26 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
           </div>
         </div>
 
-        {/* Results Grid con el estilo previo idéntico (hover fondo sólido + texto blanco) */}
+        {/* Results Grid: Solo Título y Descripción con UX writing */}
         {filteredTramites.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {filteredTramites.map((tramite) => (
               <div
                 key={tramite.id}
                 onClick={() => onSelectTramite(tramite)}
-                className={`p-4 sm:p-5 bg-white border border-[#DCDCDC] rounded-[14px] ${meta.hoverBorder} ${meta.hoverBg} ${meta.hoverShadow} transition-all duration-300 cursor-pointer flex flex-col justify-between group shadow-xs hover:-translate-y-0.5`}
+                className={`p-5 bg-white border border-[#DCDCDC] rounded-[14px] ${meta.hoverBorder} ${meta.hoverBg} ${meta.hoverShadow} transition-all duration-300 cursor-pointer flex flex-col justify-between group shadow-xs hover:-translate-y-0.5`}
               >
                 <div>
-                  <div className="flex items-center justify-between gap-2 mb-2.5">
-                    <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-slate-100 text-slate-700 group-hover:bg-white/20 group-hover:text-white transition-colors">
-                      {tramite.categoria}
-                    </span>
-                    <span className="text-[10px] text-slate-400 group-hover:text-white/80 transition-colors font-medium">
-                      {tramite.subcategoria}
-                    </span>
-                  </div>
-
                   <h3 className="text-sm sm:text-base font-bold text-[#19324B] group-hover:text-white transition-colors leading-snug mb-2">
                     {tramite.tramite}
                   </h3>
 
-                  <p className="text-xs text-slate-600 group-hover:text-white/90 transition-colors line-clamp-3 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-slate-600 group-hover:text-white/90 transition-colors line-clamp-3 leading-relaxed">
                     {tramite.descripcion}
                   </p>
                 </div>
 
-                <div className="pt-3 mt-3 border-t border-slate-100 group-hover:border-white/20 flex items-center justify-between text-xs font-bold text-[#14649B] group-hover:text-white transition-colors">
+                <div className="pt-3.5 mt-3.5 border-t border-slate-100 group-hover:border-white/20 flex items-center justify-between text-xs font-bold text-[#14649B] group-hover:text-white transition-colors">
                   <span>Ver requisitos y pasos</span>
                   <span className="transition-transform duration-200 group-hover:translate-x-0.5">→</span>
                 </div>
