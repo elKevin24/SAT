@@ -40,9 +40,6 @@ body {
   outline: var(--sat-foco-ancho) solid var(--sat-ui-foco);
   outline-offset: var(--sat-foco-offset);
 }
-  outline: 2px solid var(--sat-primary);
-  outline-offset: 2px;
-}
 
 /* Microanimación elegante para flechas indicadoras en tarjetas interactivas */
 @keyframes arrow-nudge {
@@ -63,4 +60,3 @@ body {
     animation: none !important;
   }
 }
-
