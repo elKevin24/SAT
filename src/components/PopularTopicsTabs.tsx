@@ -91,7 +91,7 @@ const TOPICS_BY_SEGMENT: Record<SegmentId, { label: string; primaryColor: string
       {
         id: 'ce-oea',
         title: 'Certificación de Empresa Segura (OEA)',
-        desc: 'Requisitos y pasos para acreditar a tu empresa como Operador Económico Autorizado y obtener paso prioritario en aduanas.',
+        desc: 'Requisitos y beneficios para certificar tu empresa como Operador Económico Autorizado y obtener paso prioritario en aduanas.',
         url: 'https://portal.sat.gob.gt/portal/oea/'
       },
       {
@@ -137,7 +137,7 @@ const TOPICS_BY_SEGMENT: Record<SegmentId, { label: string; primaryColor: string
       {
         id: 'prof-criterios',
         title: 'Criterios Legales e Interpretaciones de SAT',
-        desc: 'Revisa las resoluciones oficiales emitidas por las autoridades tributarias sobre la aplicación correcta de las leyes fiscales.',
+        desc: 'Consulta resoluciones y directrices técnicas oficiales aprobadas por el Directorio de SAT.',
         url: 'https://portal.sat.gob.gt/portal/criterios-tributarios/'
       }
     ]
@@ -192,19 +192,19 @@ export const PopularTopicsTabs: React.FC<PopularTopicsTabsProps> = ({
   const currentSegmentData = TOPICS_BY_SEGMENT[activeTab];
 
   return (
-    <section className="py-8 bg-white border-b border-[#DCDCDC]">
+    <section className="py-6 bg-white border-b border-[#DCDCDC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Title Header */}
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 mb-5">
           <div>
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-[#14649B]" />
-              <h3 className="text-xl font-extrabold text-[#19324B] tracking-tight">
+              <h3 className="text-lg sm:text-xl font-extrabold text-[#19324B] tracking-tight">
                 Temas Más Consultados
               </h3>
             </div>
-            <p className="text-xs text-slate-500 mt-1">
+            <p className="text-xs text-slate-500 mt-0.5">
               Encuentra los trámites más solicitados según tu perfil, explicados paso a paso.
             </p>
           </div>
@@ -217,7 +217,7 @@ export const PopularTopicsTabs: React.FC<PopularTopicsTabsProps> = ({
                 <button
                   key={segId}
                   onClick={() => setActiveTab(segId)}
-                  className={`px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all whitespace-nowrap ${
+                  className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all whitespace-nowrap ${
                     isActive 
                       ? 'bg-white text-[#14649B] shadow-xs' 
                       : 'text-slate-600 hover:text-slate-900 hover:bg-slate-200/60'
@@ -230,8 +230,8 @@ export const PopularTopicsTabs: React.FC<PopularTopicsTabsProps> = ({
           </div>
         </div>
 
-        {/* Topics Grid con solo Título y Descripción con UX writing */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {/* Topics Grid compacto y sin footer de acción redundante */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-3.5">
           {currentSegmentData.topics.map((topic) => {
             const isConsultas = topic.isPermanentConsultas;
 
@@ -247,21 +247,16 @@ export const PopularTopicsTabs: React.FC<PopularTopicsTabsProps> = ({
                     window.open(topic.url, '_blank');
                   }
                 }}
-                className={`p-5 rounded-[16px] border border-[#DCDCDC] ${currentSegmentData.hoverBorder} ${currentSegmentData.hoverBg} ${currentSegmentData.hoverShadow} transition-all duration-300 cursor-pointer flex flex-col justify-between group shadow-xs hover:-translate-y-0.5`}
+                className={`p-4 sm:p-5 rounded-[16px] border border-[#DCDCDC] ${currentSegmentData.hoverBorder} ${currentSegmentData.hoverBg} ${currentSegmentData.hoverShadow} transition-all duration-300 cursor-pointer flex flex-col justify-between group shadow-xs hover:-translate-y-0.5`}
               >
                 <div>
-                  <h4 className="text-sm sm:text-base font-bold text-[#19324B] group-hover:text-white transition-colors leading-tight mb-2">
+                  <h4 className="text-sm sm:text-base font-bold text-[#19324B] group-hover:text-white transition-colors leading-snug mb-1.5">
                     {topic.title}
                   </h4>
 
-                  <p className="text-xs sm:text-sm text-slate-600 group-hover:text-white/90 transition-colors leading-relaxed">
+                  <p className="text-xs text-slate-600 group-hover:text-white/90 transition-colors leading-relaxed">
                     {topic.desc}
                   </p>
-                </div>
-
-                <div className="pt-3.5 mt-3.5 border-t border-slate-100 group-hover:border-white/20 flex items-center justify-between text-xs font-bold text-[#14649B] group-hover:text-white transition-colors">
-                  <span>{isConsultas ? 'Abrir verificadores en línea' : 'Ver requisitos y pasos'}</span>
-                  <span className="transition-transform duration-200 group-hover:translate-x-0.5">→</span>
                 </div>
               </div>
             );

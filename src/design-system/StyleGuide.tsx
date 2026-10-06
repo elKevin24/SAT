@@ -227,6 +227,21 @@ const RESTRICCIONES = [
   'No utilizar piezas sueltas (isotipo o tipografía) por separado.',
 ];
 
+/* Colores hardcodeados fuera de la paleta oficial, detectados en los
+ * componentes actuales. Todos son acentos de segmento o estados hover. */
+const FUERA_DE_PALETA = [
+  { hex: '#0284C7', usos: 19, rol: 'Acento de segmento y estados hover', archivos: 6 },
+  { hex: '#C25E00', usos: 11, rol: 'Acento de segmento y estados hover', archivos: 3 },
+  { hex: '#4D8014', usos: 11, rol: 'Acento de segmento y estados hover', archivos: 3 },
+  { hex: '#11507C', usos: 7, rol: 'Variante oscura de azul no normativa', archivos: 6 },
+  { hex: '#E65100', usos: 3, rol: 'Naranja no normativa', archivos: 2 },
+  { hex: '#2D5A0C', usos: 2, rol: 'Verde oscuro no normativo', archivos: 2 },
+  { hex: '#D84A00', usos: 1, rol: 'Naranja no normativa', archivos: 1 },
+  { hex: '#8A3B00', usos: 1, rol: 'Marrron no normativo', archivos: 1 },
+  { hex: '#234709', usos: 1, rol: 'Verde muy oscuro no normativo', archivos: 1 },
+  { hex: '#0369A1', usos: 1, rol: 'Cian oscuro no normativo', archivos: 1 },
+];
+
 const USO_INCORRECTO = [
   {
     titulo: 'Elementos separados',
@@ -450,6 +465,7 @@ export default function StyleGuide() {
             ['restricciones', 'Restricciones'],
             ['contraste', 'Contraste'],
             ['interfaz', 'Tokens de interfaz'],
+            ['auditoria', 'Auditoria'],
             ['pendientes', 'Pendientes'],
           ].map(([id, txt]) => (
             <a
@@ -953,6 +969,58 @@ export default function StyleGuide() {
 
         {/* PENDIENTES */}
         <Section
+          id="auditoria"
+          titulo="Auditoria de cumplimiento"
+          pagina="—"
+          descripcion="Colores hardcodeados en los componentes actuales que no pertenecen a la paleta oficial del manual. El manual es explicito: debe prevalecer la paleta institucional. Estos acentos de segmento estan pendientes de sustitucion por tokens."
+        >
+          <div className="overflow-x-auto rounded-[16px] border border-[#DCDCDC] bg-white">
+            <table className="w-full text-sm">
+              <caption className="sr-only">Colores fuera de la paleta oficial</caption>
+              <thead>
+                <tr className="border-b border-[#DCDCDC] bg-[#F4F6F9] text-left">
+                  <th scope="col" className="px-4 py-3 font-black">
+                    Color
+                  </th>
+                  <th scope="col" className="px-4 py-3 font-black">
+                    Rol actual
+                  </th>
+                  <th scope="col" className="px-4 py-3 font-black">
+                    Usos
+                  </th>
+                  <th scope="col" className="px-4 py-3 font-black">
+                    Archivos
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {FUERA_DE_PALETA.map((f) => (
+                  <tr key={f.hex} className="border-b border-[#DCDCDC] last:border-b-0">
+                    <td className="px-4 py-3">
+                      <span className="flex items-center gap-2">
+                        <span
+                          className="h-6 w-6 shrink-0 rounded border border-[#DCDCDC]"
+                          style={{ backgroundColor: f.hex }}
+                        />
+                        <code className="font-mono text-xs">{f.hex}</code>
+                      </span>
+                    </td>
+                    <td className="px-4 py-3 text-[#475569]">{f.rol}</td>
+                    <td className="px-4 py-3">
+                      <span className="rounded-full bg-[#F37521] px-2 py-0.5 font-mono text-[11px] font-bold text-[#19324B]">
+                        {f.usos}
+                      </span>
+                    </td>
+                    <td className="px-4 py-3 font-mono text-[11px] text-[#475569]">{f.archivos}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </Section>
+
+        {/* PENDIENTES */}
+        <Section
           id="pendientes"
           titulo="Pendientes con Comunicacion Social Externa"
           pagina="—"
@@ -965,6 +1033,7 @@ export default function StyleGuide() {
               'Validar el peso Ultra. No es representable en una fuente variable comun; se aproxima con peso 800.',
               'Aprobar o rechazar los tokens de interfaz, que no tienen respaldo normativo.',
               'Confirmar la numeracion de la paleta usada en los degradados oficiales (p.25).',
+              'Sustituir los 10 colores fuera de paleta detectados en la auditoria por tokens oficiales o por los complementarios approved.',
             ].map((p, i) => (
               <li
                 key={p}

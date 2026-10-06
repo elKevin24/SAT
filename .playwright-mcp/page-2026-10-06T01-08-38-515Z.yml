@@ -1,0 +1,561 @@
+- generic [ref=f1e3]:
+  - banner [ref=f1e4]:
+    - generic [ref=f1e6]:
+      - generic [ref=f1e7]:
+        - paragraph [ref=f1e8]: Design System
+        - heading "Manual de Imagen SAT V.5" [level=1] [ref=f1e9]
+        - paragraph [ref=f1e10]:
+          - text: Catalogo vivo de tokens derivados del
+          - strong [ref=f1e11]: Manual de Imagen y Normas Graficas SAT V.5
+          - text: ", aprobado el 18/02/2026 segun Resolucion SAT-DSI-597-2016."
+      - link "Volver al portal" [ref=f1e12] [cursor=pointer]:
+        - /url: "#inicio"
+  - navigation [ref=f1e13]:
+    - generic [ref=f1e14]:
+      - link "Color" [ref=f1e15] [cursor=pointer]:
+        - /url: "#color"
+      - link "Complementarios" [ref=f1e16] [cursor=pointer]:
+        - /url: "#complementarios"
+      - link "Degradados" [ref=f1e17] [cursor=pointer]:
+        - /url: "#degradados"
+      - link "Tipografia" [ref=f1e18] [cursor=pointer]:
+        - /url: "#tipografia"
+      - link "Isologotipo" [ref=f1e19] [cursor=pointer]:
+        - /url: "#isologotipo"
+      - link "Eslogan" [ref=f1e20] [cursor=pointer]:
+        - /url: "#eslogan"
+      - link "Patron" [ref=f1e21] [cursor=pointer]:
+        - /url: "#patron"
+      - link "Tono y lenguaje" [ref=f1e22] [cursor=pointer]:
+        - /url: "#tono"
+      - link "Restricciones" [ref=f1e23] [cursor=pointer]:
+        - /url: "#restricciones"
+      - link "Contraste" [ref=f1e24] [cursor=pointer]:
+        - /url: "#contraste"
+      - link "Tokens de interfaz" [ref=f1e25] [cursor=pointer]:
+        - /url: "#interfaz"
+      - link "Pendientes" [ref=f1e26] [cursor=pointer]:
+        - /url: "#pendientes"
+  - main [ref=f1e27]:
+    - generic [ref=f1e28]:
+      - generic [ref=f1e29]:
+        - generic [ref=f1e30]:
+          - heading "Color institucional" [level=2] [ref=f1e31]
+          - generic [ref=f1e32]: manual p.23-24
+        - paragraph [ref=f1e33]: Los seis colores oficiales de SAT. Los valores HEX y CMYK fueron verificados contra el manual y son consistentes entre si. Este es el color 2, AZUL SAT, color principal de marca.
+      - list [ref=f1e34]:
+        - listitem [ref=f1e35]:
+          - generic [ref=f1e36]: "#19AFE1"
+          - generic [ref=f1e38]:
+            - generic [ref=f1e39]:
+              - generic [ref=f1e40]: Celeste institucional
+              - generic [ref=f1e41]: NORMATIVO
+            - code [ref=f1e42]: "--sat-celeste"
+            - generic [ref=f1e43]:
+              - term [ref=f1e44]: RGB
+              - definition [ref=f1e45]: 25 175 225
+              - term [ref=f1e46]: CMYK
+              - definition [ref=f1e47]: C89 M22 Y00 K12
+            - paragraph [ref=f1e48]: Color 1 de la paleta. Base de degradados 1+2 y 1+6.
+        - listitem [ref=f1e49]:
+          - generic [ref=f1e50]:
+            - generic [ref=f1e51]: "#14649B"
+            - generic [ref=f1e52]: PANTONE 647 C
+          - generic [ref=f1e53]:
+            - generic [ref=f1e54]:
+              - generic [ref=f1e55]: AZUL SAT
+              - generic [ref=f1e56]: NORMATIVO
+            - code [ref=f1e57]: "--sat-azul"
+            - generic [ref=f1e58]:
+              - term [ref=f1e59]: RGB
+              - definition [ref=f1e60]: 20 100 155
+              - term [ref=f1e61]: CMYK
+              - definition [ref=f1e62]: C87 M35 Y00 K39
+            - paragraph [ref=f1e63]: Color 2. Color principal de marca. Base de degradados 1+2 y 2+3.
+        - listitem [ref=f1e64]:
+          - generic [ref=f1e65]: "#19324B"
+          - generic [ref=f1e67]:
+            - generic [ref=f1e68]:
+              - generic [ref=f1e69]: Azul oscuro
+              - generic [ref=f1e70]: NORMATIVO
+            - code [ref=f1e71]: "--sat-azul-oscuro"
+            - generic [ref=f1e72]:
+              - term [ref=f1e73]: RGB
+              - definition [ref=f1e74]: 25 50 75
+              - term [ref=f1e75]: CMYK
+              - definition [ref=f1e76]: C67 M33 Y00 K71
+            - paragraph [ref=f1e77]: Color 3. Color de texto institucional. Base del degradado 2+3.
+        - listitem [ref=f1e78]:
+          - generic [ref=f1e79]: "#DCDCDC"
+          - generic [ref=f1e81]:
+            - generic [ref=f1e82]:
+              - generic [ref=f1e83]: Gris institucional
+              - generic [ref=f1e84]: NORMATIVO
+            - code [ref=f1e85]: "--sat-gris"
+            - generic [ref=f1e86]:
+              - term [ref=f1e87]: RGB
+              - definition [ref=f1e88]: 220 220 220
+              - term [ref=f1e89]: CMYK
+              - definition [ref=f1e90]: C00 M00 Y00 K14
+            - paragraph [ref=f1e91]: Color 4. Bordes y superficies neutras. Base del degradado 4+6.
+        - listitem [ref=f1e92]:
+          - generic [ref=f1e93]: "#000000"
+          - generic [ref=f1e95]:
+            - generic [ref=f1e96]:
+              - generic [ref=f1e97]: Negro
+              - generic [ref=f1e98]: NORMATIVO
+            - code [ref=f1e99]: "--sat-negro"
+            - generic [ref=f1e100]:
+              - term [ref=f1e101]: RGB
+              - definition [ref=f1e102]: 0 0 0
+              - term [ref=f1e103]: CMYK
+              - definition [ref=f1e104]: C00 M00 Y00 K100
+            - paragraph [ref=f1e105]: Color 5. Tipografía sobre fondos claros.
+        - listitem [ref=f1e106]:
+          - generic [ref=f1e107]: "#FFFFFF"
+          - generic [ref=f1e109]:
+            - generic [ref=f1e110]:
+              - generic [ref=f1e111]: Blanco
+              - generic [ref=f1e112]: NORMATIVO
+            - code [ref=f1e113]: "--sat-blanco"
+            - generic [ref=f1e114]:
+              - term [ref=f1e115]: RGB
+              - definition [ref=f1e116]: 255 255 255
+              - term [ref=f1e117]: CMYK
+              - definition [ref=f1e118]: C00 M00 Y00 K00
+            - paragraph [ref=f1e119]: Color 6. Fondo base y positivo del isologotipo.
+    - generic [ref=f1e120]:
+      - generic [ref=f1e121]:
+        - generic [ref=f1e122]:
+          - heading "Color complementario" [level=2] [ref=f1e123]
+          - generic [ref=f1e124]: manual p.26
+        - paragraph [ref=f1e125]: "Segun el manual, en el uso de estos colores debe prevalecer la paleta institucional: los complementarios aportan unicamente color y dinamismo. Para mensajes publicitarios el uso del color queda libre."
+      - list [ref=f1e126]:
+        - listitem [ref=f1e127]:
+          - generic [ref=f1e128]: "#D9336E"
+          - generic [ref=f1e130]:
+            - generic [ref=f1e131]:
+              - generic [ref=f1e132]: Magenta
+              - generic [ref=f1e133]: NORMATIVO
+            - code [ref=f1e134]: "--sat-comp-magenta"
+            - paragraph [ref=f1e135]: Aporta color y dinamismo. No debe competir con la paleta institucional.
+        - listitem [ref=f1e136]:
+          - generic [ref=f1e137]: "#824491"
+          - generic [ref=f1e139]:
+            - generic [ref=f1e140]:
+              - generic [ref=f1e141]: Morado
+              - generic [ref=f1e142]: NORMATIVO
+            - code [ref=f1e143]: "--sat-comp-morado"
+            - paragraph [ref=f1e144]: Aporta color y dinamismo. No debe competir con la paleta institucional.
+        - listitem [ref=f1e145]:
+          - generic [ref=f1e146]: "#8CC63F"
+          - generic [ref=f1e148]:
+            - generic [ref=f1e149]:
+              - generic [ref=f1e150]: Verde
+              - generic [ref=f1e151]: NORMATIVO
+            - code [ref=f1e152]: "--sat-comp-verde"
+            - paragraph [ref=f1e153]: Aporta color y dinamismo. No debe competir con la paleta institucional.
+        - listitem [ref=f1e154]:
+          - generic [ref=f1e155]: "#F37521"
+          - generic [ref=f1e157]:
+            - generic [ref=f1e158]:
+              - generic [ref=f1e159]: Naranja
+              - generic [ref=f1e160]: NORMATIVO
+            - code [ref=f1e161]: "--sat-comp-naranja"
+            - paragraph [ref=f1e162]: Aporta color y dinamismo. No debe competir con la paleta institucional.
+        - listitem [ref=f1e163]:
+          - generic [ref=f1e164]: "#FFB806"
+          - generic [ref=f1e166]:
+            - generic [ref=f1e167]:
+              - generic [ref=f1e168]: Ambar
+              - generic [ref=f1e169]: NORMATIVO
+            - code [ref=f1e170]: "--sat-comp-ambar"
+            - paragraph [ref=f1e171]: Aporta color y dinamismo. No debe competir con la paleta institucional.
+      - paragraph [ref=f1e172]:
+        - strong [ref=f1e173]: "Regla de uso:"
+        - text: estos colores no sustituyen a la paleta institucional en interfaz. Se reservan para acentos, indicadores y piezas graficas de comunicacion.
+    - generic [ref=f1e174]:
+      - generic [ref=f1e175]:
+        - generic [ref=f1e176]:
+          - heading "Degradados oficiales" [level=2] [ref=f1e177]
+          - generic [ref=f1e178]: manual p.25
+        - paragraph [ref=f1e179]: El manual define cuatro combinaciones recomendadas usando la numeracion 1=celeste, 2=azul SAT, 3=azul oscuro, 4=gris, 5=negro, 6=blanco. Se pueden aplicar capas de efecto para intensificar el color.
+      - list [ref=f1e180]:
+        - listitem [ref=f1e181]:
+          - generic [ref=f1e183]:
+            - generic [ref=f1e184]:
+              - generic [ref=f1e185]: Combinacion 1 + 2
+              - generic [ref=f1e186]: NORMATIVO
+            - code [ref=f1e187]: "--sat-degradado-1-2"
+        - listitem [ref=f1e188]:
+          - generic [ref=f1e190]:
+            - generic [ref=f1e191]:
+              - generic [ref=f1e192]: Combinacion 2 + 3
+              - generic [ref=f1e193]: NORMATIVO
+            - code [ref=f1e194]: "--sat-degradado-2-3"
+        - listitem [ref=f1e195]:
+          - generic [ref=f1e197]:
+            - generic [ref=f1e198]:
+              - generic [ref=f1e199]: Combinacion 1 + 6
+              - generic [ref=f1e200]: NORMATIVO
+            - code [ref=f1e201]: "--sat-degradado-1-6"
+        - listitem [ref=f1e202]:
+          - generic [ref=f1e204]:
+            - generic [ref=f1e205]:
+              - generic [ref=f1e206]: Combinacion 4 + 6
+              - generic [ref=f1e207]: NORMATIVO
+            - code [ref=f1e208]: "--sat-degradado-4-6"
+    - generic [ref=f1e209]:
+      - generic [ref=f1e210]:
+        - generic [ref=f1e211]:
+          - heading "Tipografia" [level=2] [ref=f1e212]
+          - generic [ref=f1e213]: manual p.43-45
+        - paragraph [ref=f1e214]: La tipografia oficial es Gotham, un tipo palo seco con varios grosores. Cada grosor tiene un uso especifico. Gotham es licencia comercial de Hoefler & Co y no puede servirse desde un CDN, por lo que se declara como primer valor y se usa Montserrat como sustituta geometrica.
+      - generic [ref=f1e215]:
+        - paragraph [ref=f1e216]: Familia en uso
+        - paragraph [ref=f1e217]: Supermanes Vector 123
+        - code [ref=f1e218]: "--sat-fuente: \"Gotham\", \"Montserrat\", sans-serif"
+      - list [ref=f1e219]:
+        - listitem [ref=f1e220]:
+          - generic [ref=f1e221]:
+            - generic [ref=f1e222]: Light
+            - code [ref=f1e223]: font-weight 300
+          - paragraph [ref=f1e224]: Contribución Conjunto
+          - generic [ref=f1e225]:
+            - generic [ref=f1e226]:
+              - term [ref=f1e227]: "Uso principal:"
+              - definition [ref=f1e228]: Palabras que no necesiten llamar la atención.
+            - generic [ref=f1e229]:
+              - term [ref=f1e230]: "Uso secundario:"
+              - definition [ref=f1e231]: Cuerpo de texto y subtitulares, cuando sean de gran tamaño.
+        - listitem [ref=f1e232]:
+          - generic [ref=f1e233]:
+            - generic [ref=f1e234]: Book
+            - code [ref=f1e235]: font-weight 400
+          - paragraph [ref=f1e236]: Contribución Conjunto
+          - generic [ref=f1e238]:
+            - term [ref=f1e239]: "Uso principal:"
+            - definition [ref=f1e240]: Cuerpo de texto.
+        - listitem [ref=f1e241]:
+          - generic [ref=f1e242]:
+            - generic [ref=f1e243]: Medium
+            - code [ref=f1e244]: font-weight 500
+          - paragraph [ref=f1e245]: Contribución Conjunto
+          - generic [ref=f1e247]:
+            - term [ref=f1e248]: "Uso principal:"
+            - definition [ref=f1e249]: Cuerpo de texto, principalmente cuando el tipo sea pequeño y se necesite mayor legibilidad.
+        - listitem [ref=f1e250]:
+          - generic [ref=f1e251]:
+            - generic [ref=f1e252]: Bold
+            - code [ref=f1e253]: font-weight 700
+          - paragraph [ref=f1e254]: Contribución Conjunto
+          - generic [ref=f1e255]:
+            - generic [ref=f1e256]:
+              - term [ref=f1e257]: "Uso principal:"
+              - definition [ref=f1e258]: En el cuerpo de texto para sobresaltar frases, oraciones o palabras, lograr crear énfasis.
+            - generic [ref=f1e259]:
+              - term [ref=f1e260]: "Uso secundario:"
+              - definition [ref=f1e261]: En subtitulares.
+        - listitem [ref=f1e262]:
+          - generic [ref=f1e263]:
+            - generic [ref=f1e264]: Black
+            - code [ref=f1e265]: font-weight 900
+          - paragraph [ref=f1e266]: Contribución Conjunto
+          - generic [ref=f1e268]:
+            - term [ref=f1e269]: "Uso principal:"
+            - definition [ref=f1e270]: En títulos y subtítulos, incluso frases, oraciones o palabras que deban sobresalir del cuerpo de texto.
+        - listitem [ref=f1e271]:
+          - generic [ref=f1e272]:
+            - generic [ref=f1e273]: Ultraaproximacion por licencia
+            - code [ref=f1e274]: font-weight 800
+          - paragraph [ref=f1e275]: Contribución Conjunto
+          - generic [ref=f1e277]:
+            - term [ref=f1e278]: "Uso principal:"
+            - definition [ref=f1e279]: En títulos. Por ser un tipo extra bold debe usarse en frases cortas o palabras que deban ser foco de atención.
+    - generic [ref=f1e280]:
+      - generic [ref=f1e281]:
+        - generic [ref=f1e282]:
+          - heading "Isologotipo" [level=2] [ref=f1e283]
+          - generic [ref=f1e284]: manual p.34-37
+        - paragraph [ref=f1e285]: "El isologotipo esta compuesto por tres elementos que forman un todo: el isotipo, la tipografia SAT y el nombre oficial. No deben separarse ni utilizar sus partes por separado."
+      - generic [ref=f1e286]:
+        - generic [ref=f1e287]:
+          - heading "Construccion y dimensiones" [level=3] [ref=f1e288]
+          - generic [ref=f1e289]:
+            - term [ref=f1e290]: Referencia
+            - definition [ref=f1e291]: 2.5 x 8
+            - term [ref=f1e292]: Proporcion
+            - definition [ref=f1e293]: 3.125:1
+            - term [ref=f1e294]: Tamano optimo
+            - definition [ref=f1e295]: 5.0 cm x 1.60 cm
+            - term [ref=f1e296]: Tamano minimo
+            - definition [ref=f1e297]: 4.0 cm x 1.25 cm
+            - term [ref=f1e298]: Posicion
+            - definition [ref=f1e299]: Esquina inferior derecha
+            - term [ref=f1e300]: Con otros logos
+            - definition [ref=f1e301]: SAT siempre al ultimo, ocupando entre el 6% y el 10% del area de diseno
+            - term [ref=f1e302]: Separacion
+            - definition [ref=f1e303]: Una referencia respecto al logo anterior
+        - generic [ref=f1e304]:
+          - heading "Zona de resguardo" [level=3] [ref=f1e305]
+          - paragraph [ref=f1e306]: El margen de respiro coincide con el ancho de una referencia de construccion. Ningun elemento puede invadir esta area.
+          - generic [ref=f1e308]:
+            - paragraph [ref=f1e309]: SAT
+            - paragraph [ref=f1e310]: S. de A. T.
+          - paragraph [ref=f1e311]: Marcador de posicion. El archivo vectorial oficial aun no esta disponible en el repositorio.
+    - generic [ref=f1e312]:
+      - generic [ref=f1e313]:
+        - generic [ref=f1e314]:
+          - heading "Eslogan" [level=2] [ref=f1e315]
+          - generic [ref=f1e316]: manual p.58-59
+        - paragraph [ref=f1e317]: El cintillo institucional lleva el eslogan con Gotham Black Italic en la primera palabra y Gotham Medium Italic en el resto, con un interletrado de -25 y efecto de superposicion por multiplicacion. El cintillo se completa con la abstraccion de la bandera.
+      - generic [ref=f1e318]:
+        - paragraph [ref=f1e320]: Contribuyendo juntos por Guatemala
+        - generic [ref=f1e321]:
+          - code [ref=f1e322]: "--sat-eslogan-tracking: -0.025em"
+          - paragraph [ref=f1e323]: El eslogan puede usarse sin cintillo, siempre acompanado de la abstraccion de la bandera.
+    - generic [ref=f1e324]:
+      - generic [ref=f1e325]:
+        - generic [ref=f1e326]:
+          - heading "Patron grafico" [level=2] [ref=f1e327]
+          - generic [ref=f1e328]: manual p.38-41
+        - paragraph [ref=f1e329]: "El patron genera lineas de tension con movimiento creciente, siempre hacia arriba y siempre hacia adelante. Las esquinas se redondean para brindar suavidad. Aunque su uso es libre, es preferible combinarlo con los tres elementos que lo conforman: servicio, transparencia e innovacion."
+      - generic [ref=f1e330]:
+        - generic [ref=f1e331]: Servicio
+        - generic [ref=f1e333]: Transparencia
+        - generic [ref=f1e335]: Innovacion
+    - generic [ref=f1e337]:
+      - generic [ref=f1e338]:
+        - generic [ref=f1e339]:
+          - heading "Tono y lenguaje" [level=2] [ref=f1e340]
+          - generic [ref=f1e341]: manual p.48-51
+        - paragraph [ref=f1e342]: El tono es la manera en que nos expresamos con quienes reciben nuestros mensajes. En la mayoria de nuestra comunicacion nos dirigiremos al contribuyente de TÚ, por ser un trato amigable y cercano. En casos especiales, donde la comunicacion deba ser formal e institucional, nos dirigiremos de usted.
+      - generic [ref=f1e343]:
+        - generic [ref=f1e344]:
+          - heading "Tono" [level=3] [ref=f1e345]
+          - list [ref=f1e346]:
+            - listitem [ref=f1e347]: Amigable
+            - listitem [ref=f1e348]: Propositivo
+            - listitem [ref=f1e349]: Cercano
+          - paragraph [ref=f1e350]:
+            - text: Dirigirse de
+            - strong [ref=f1e351]: TU
+            - text: al contribuyente.
+            - strong [ref=f1e352]: USTED
+            - text: solo en casos especiales de comunicacion formal e institucional.
+        - generic [ref=f1e353]:
+          - heading "Lenguaje" [level=3] [ref=f1e354]
+          - list [ref=f1e355]:
+            - listitem [ref=f1e356]: Accesible
+            - listitem [ref=f1e357]: Concreto
+            - listitem [ref=f1e358]: Directo
+          - paragraph [ref=f1e359]: Los temas tributarios deben ser entendibles a todo nivel, de manera sencilla, evitando el lenguaje tecnico y la sobresaturacion de informacion.
+    - generic [ref=f1e360]:
+      - generic [ref=f1e361]:
+        - generic [ref=f1e362]:
+          - heading "Restricciones y uso incorrecto" [level=2] [ref=f1e363]
+          - generic [ref=f1e364]: manual p.19-21
+        - paragraph [ref=f1e365]: Aplican al isologotipo y a todos los componentes de la identidad.
+      - generic [ref=f1e366]:
+        - generic [ref=f1e367]:
+          - heading "No permitido" [level=3] [ref=f1e368]
+          - list [ref=f1e369]:
+            - listitem [ref=f1e370]: No separar los elementos del isologotipo.
+            - listitem [ref=f1e372]: No deformar ni alterar su proporción.
+            - listitem [ref=f1e374]: No cambiar su color fuera de la paleta oficial.
+            - listitem [ref=f1e376]: No aplicar sombra, relieve ni otros efectos sobre la marca.
+            - listitem [ref=f1e378]: No recortar el isologotipo.
+            - listitem [ref=f1e380]: No utilizar piezas sueltas (isotipo o tipografía) por separado.
+        - generic [ref=f1e382]:
+          - heading "Casos frecuentes de uso incorrecto" [level=3] [ref=f1e383]
+          - list [ref=f1e384]:
+            - listitem [ref=f1e385]:
+              - paragraph [ref=f1e386]: Elementos separados
+              - paragraph [ref=f1e387]: El isologotipo esta indivisible.
+            - listitem [ref=f1e388]:
+              - paragraph [ref=f1e389]: Proporcion alterada
+              - paragraph [ref=f1e390]: La relacion debe permanecer 3.125:1.
+            - listitem [ref=f1e391]:
+              - paragraph [ref=f1e392]: Color fuera de norma
+              - paragraph [ref=f1e393]: Solo azul institucional o su positivo blanco.
+            - listitem [ref=f1e394]:
+              - paragraph [ref=f1e395]: Efectos sobre la marca
+              - paragraph [ref=f1e396]: Sin sombra, relieve, contorno ni degradado propio.
+    - generic [ref=f1e397]:
+      - generic [ref=f1e398]:
+        - generic [ref=f1e399]:
+          - heading "Contraste de color" [level=2] [ref=f1e400]
+          - generic [ref=f1e401]: manual p.—
+        - paragraph [ref=f1e402]: "Razones de contraste medidas con la formula de WCAG 2.1 sobre los valores reales de la paleta. El blanco NO alcanza AA sobre celeste, verde, ambar, naranja ni gris: sobre cualquiera de esos cinco fondos el texto debe ser azul oscuro. Por eso existen los tokens --sat-ui-texto-sobre-*."
+      - table [ref=f1e404]:
+        - caption [ref=f1e405]: Contraste de texto sobre cada color de la paleta
+        - rowgroup [ref=f1e406]:
+          - row [ref=f1e407]:
+            - columnheader "Fondo" [ref=f1e408]
+            - columnheader "Token de texto" [ref=f1e409]
+            - columnheader "Blanco" [ref=f1e410]
+            - columnheader "Azul oscuro" [ref=f1e411]
+        - rowgroup [ref=f1e412]:
+          - row [ref=f1e413]:
+            - cell [ref=f1e414]:
+              - code [ref=f1e417]: "#14649B"
+            - cell [ref=f1e418]:
+              - code [ref=f1e419]: "--sat-ui-texto-sobre-azul"
+            - cell "6.31 AA" [ref=f1e420]
+            - cell "2.08 FAIL" [ref=f1e421]
+          - row [ref=f1e422]:
+            - cell [ref=f1e423]:
+              - code [ref=f1e426]: "#19324B"
+            - cell [ref=f1e427]:
+              - code [ref=f1e428]: "--sat-ui-texto-sobre-azul-oscuro"
+            - cell "13.13 AA" [ref=f1e429]
+            - cell "1.00 FAIL" [ref=f1e430]
+          - row [ref=f1e431]:
+            - cell [ref=f1e432]:
+              - code [ref=f1e435]: "#19AFE1"
+            - cell [ref=f1e436]:
+              - code [ref=f1e437]: "--sat-ui-texto-sobre-celeste"
+            - cell "2.54 FAIL" [ref=f1e438]
+            - cell "5.17 AA" [ref=f1e439]
+          - row [ref=f1e440]:
+            - cell [ref=f1e441]:
+              - code [ref=f1e444]: "#8CC63F"
+            - cell [ref=f1e445]:
+              - code [ref=f1e446]: "--sat-ui-texto-sobre-verde"
+            - cell "2.05 FAIL" [ref=f1e447]
+            - cell "6.42 AA" [ref=f1e448]
+          - row [ref=f1e449]:
+            - cell [ref=f1e450]:
+              - code [ref=f1e453]: "#FFB806"
+            - cell [ref=f1e454]:
+              - code [ref=f1e455]: "--sat-ui-texto-sobre-ambar"
+            - cell "1.73 FAIL" [ref=f1e456]
+            - cell "7.57 AA" [ref=f1e457]
+          - row [ref=f1e458]:
+            - cell [ref=f1e459]:
+              - code [ref=f1e462]: "#F37521"
+            - cell [ref=f1e463]:
+              - code [ref=f1e464]: "--sat-ui-texto-sobre-naranja"
+            - cell "2.85 FAIL" [ref=f1e465]
+            - cell "4.61 AA" [ref=f1e466]
+          - row [ref=f1e467]:
+            - cell [ref=f1e468]:
+              - code [ref=f1e471]: "#DCDCDC"
+            - cell [ref=f1e472]:
+              - code [ref=f1e473]: "--sat-ui-texto-sobre-gris"
+            - cell "1.37 FAIL" [ref=f1e474]
+            - cell "9.58 AA" [ref=f1e475]
+          - row [ref=f1e476]:
+            - cell [ref=f1e477]:
+              - code [ref=f1e480]: "#D9336E"
+            - cell [ref=f1e481]:
+              - code [ref=f1e482]: — sin token
+            - cell "4.52 AA" [ref=f1e483]
+            - cell "2.91 FAIL" [ref=f1e484]
+          - row [ref=f1e485]:
+            - cell [ref=f1e486]:
+              - code [ref=f1e489]: "#824491"
+            - cell [ref=f1e490]:
+              - code [ref=f1e491]: — sin token
+            - cell "6.59 AA" [ref=f1e492]
+            - cell "1.99 FAIL" [ref=f1e493]
+    - generic [ref=f1e494]:
+      - generic [ref=f1e495]:
+        - generic [ref=f1e496]:
+          - heading "Tokens de interfaz" [level=2] [ref=f1e497]
+          - generic [ref=f1e498]: manual p.—
+        - paragraph [ref=f1e499]: El manual no define componentes de interfaz de usuario. Estos tokens son decisiones de proyecto para traducir la identidad a una aplicacion web. Requieren visto bueno de Comunicacion Social Externa.
+      - generic [ref=f1e500]:
+        - generic [ref=f1e501]:
+          - generic [ref=f1e502]:
+            - heading "Roles de color" [level=3] [ref=f1e503]
+            - generic [ref=f1e504]: DERIVADO
+          - list [ref=f1e505]:
+            - listitem [ref=f1e506]:
+              - generic [ref=f1e508]:
+                - code [ref=f1e509]: "--sat-ui-fondo"
+                - generic [ref=f1e510]: "#FFFFFF · Fondo base"
+            - listitem [ref=f1e511]:
+              - generic [ref=f1e513]:
+                - code [ref=f1e514]: "--sat-ui-fondo-tenue"
+                - generic [ref=f1e515]: "#F4F6F9 · Fondo de seccion"
+            - listitem [ref=f1e516]:
+              - generic [ref=f1e518]:
+                - code [ref=f1e519]: "--sat-ui-fondo-medio"
+                - generic [ref=f1e520]: "#E9EDF2 · Fondo hundido"
+            - listitem [ref=f1e521]:
+              - generic [ref=f1e523]:
+                - code [ref=f1e524]: "--sat-ui-borde"
+                - generic [ref=f1e525]: "#DCDCDC · Borde estandar"
+            - listitem [ref=f1e526]:
+              - generic [ref=f1e528]:
+                - code [ref=f1e529]: "--sat-ui-borde-fuerte"
+                - generic [ref=f1e530]: "#B9C3CD · Borde enfocado"
+            - listitem [ref=f1e531]:
+              - generic [ref=f1e533]:
+                - code [ref=f1e534]: "--sat-ui-texto"
+                - generic [ref=f1e535]: "#19324B · Texto principal"
+            - listitem [ref=f1e536]:
+              - generic [ref=f1e538]:
+                - code [ref=f1e539]: "--sat-ui-texto-suave"
+                - generic [ref=f1e540]: "#475569 · Texto secundario"
+            - listitem [ref=f1e541]:
+              - generic [ref=f1e543]:
+                - code [ref=f1e544]: "--sat-ui-texto-tenue"
+                - generic [ref=f1e545]: "#64748B · Texto terciario"
+            - listitem [ref=f1e546]:
+              - generic [ref=f1e548]:
+                - code [ref=f1e549]: "--sat-ui-foco"
+                - generic [ref=f1e550]: "#14649B · Anillo de foco"
+        - generic [ref=f1e551]:
+          - generic [ref=f1e552]:
+            - generic [ref=f1e553]:
+              - heading "Espaciado" [level=3] [ref=f1e554]
+              - generic [ref=f1e555]: DERIVADO
+            - paragraph [ref=f1e556]: Base 8px.
+            - generic [ref=f1e557]:
+              - generic [ref=f1e558]: "1"
+              - generic [ref=f1e561]: "2"
+              - generic [ref=f1e564]: "3"
+              - generic [ref=f1e567]: "4"
+              - generic [ref=f1e570]: "5"
+              - generic [ref=f1e573]: "6"
+              - generic [ref=f1e576]: "7"
+              - generic [ref=f1e579]: "8"
+              - generic [ref=f1e582]: "9"
+          - generic [ref=f1e585]:
+            - generic [ref=f1e586]:
+              - heading "Radios y elevacion" [level=3] [ref=f1e587]
+              - generic [ref=f1e588]: DERIVADO
+            - paragraph [ref=f1e589]: El manual exige redondear esquinas para dar suavidad al patron, pero no fija radios exactos.
+            - generic [ref=f1e590]:
+              - generic [ref=f1e591]: sm
+              - generic [ref=f1e594]: md
+              - generic [ref=f1e597]: lg
+    - generic [ref=f1e600]:
+      - generic [ref=f1e601]:
+        - generic [ref=f1e602]:
+          - heading "Pendientes con Comunicacion Social Externa" [level=2] [ref=f1e603]
+          - generic [ref=f1e604]: manual p.—
+        - paragraph [ref=f1e605]: Puntos que requieren confirmacion oficial antes de cierra el sistema de diseno.
+      - list [ref=f1e606]:
+        - listitem [ref=f1e607]:
+          - generic [ref=f1e608]: "1"
+          - generic [ref=f1e609]: Obtener el archivo vectorial oficial del isologotipo. El encabezado actual usa un marcador tipografico fabricado, lo cual no cumple el manual.
+        - listitem [ref=f1e610]:
+          - generic [ref=f1e611]: "2"
+          - generic [ref=f1e612]: Licenciar Gotham. Hasta entonces se usa Montserrat como sustituta geometrica.
+        - listitem [ref=f1e613]:
+          - generic [ref=f1e614]: "3"
+          - generic [ref=f1e615]: Validar el peso Ultra. No es representable en una fuente variable comun; se aproxima con peso 800.
+        - listitem [ref=f1e616]:
+          - generic [ref=f1e617]: "4"
+          - generic [ref=f1e618]: Aprobar o rechazar los tokens de interfaz, que no tienen respaldo normativo.
+        - listitem [ref=f1e619]:
+          - generic [ref=f1e620]: "5"
+          - generic [ref=f1e621]: Confirmar la numeracion de la paleta usada en los degradados oficiales (p.25).
+  - contentinfo [ref=f1e622]:
+    - paragraph [ref=f1e623]:
+      - text: Design System SAT · tokens en
+      - code [ref=f1e624]: src/design-system/tokens.css
+    - paragraph [ref=f1e625]: Documento de trabajo derivado del Manual de Imagen y Normas Graficas SAT V.5.

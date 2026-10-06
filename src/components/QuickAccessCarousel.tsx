@@ -84,11 +84,11 @@ export const QuickAccessCarousel: React.FC<QuickAccessCarouselProps> = ({ onSele
   const visibleItems = QUICK_ITEMS.slice(startIndex, startIndex + itemsPerPage);
 
   return (
-    <section className="py-6 bg-slate-50 border-b border-[#DCDCDC]">
+    <section className="py-5 bg-slate-50 border-b border-[#DCDCDC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Encabezado y controles */}
-        <div className="flex items-center justify-between mb-4">
+        <div className="flex items-center justify-between mb-3.5">
           <div>
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-[#14649B]" />
@@ -122,8 +122,8 @@ export const QuickAccessCarousel: React.FC<QuickAccessCarouselProps> = ({ onSele
           </div>
         </div>
 
-        {/* 7 Tarjetas con UX writing ciudadano */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-3">
+        {/* 7 Tarjetas compactas sin footer redundante */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-2.5 sm:gap-3">
           {visibleItems.map((item) => (
             <a
               key={item.id}
@@ -133,19 +133,15 @@ export const QuickAccessCarousel: React.FC<QuickAccessCarouselProps> = ({ onSele
               onClick={() => {
                 if (onSelectQuickAction) onSelectQuickAction(item);
               }}
-              className="group bg-white rounded-[14px] border border-[#DCDCDC] hover:border-[#14649B] hover:bg-[#14649B] hover:shadow-[0_10px_20px_rgba(20,100,155,0.22)] p-4 flex flex-col justify-between transition-all duration-300 hover:-translate-y-0.5 text-left"
+              className="group bg-white rounded-[14px] border border-[#DCDCDC] hover:border-[#14649B] hover:bg-[#14649B] hover:shadow-[0_10px_20px_rgba(20,100,155,0.22)] p-3.5 flex flex-col justify-between transition-all duration-300 hover:-translate-y-0.5 text-left"
             >
               <div>
-                <div className="text-xs font-bold text-[#19324B] group-hover:text-white leading-snug transition-colors mb-1.5">
+                <div className="text-xs font-bold text-[#19324B] group-hover:text-white leading-snug transition-colors mb-1">
                   {item.title}
                 </div>
                 <div className="text-[11px] text-slate-600 group-hover:text-white/85 transition-colors line-clamp-3 leading-relaxed">
                   {item.desc}
                 </div>
-              </div>
-              <div className="pt-2 mt-2 border-t border-slate-100 group-hover:border-white/20 text-[11px] font-bold text-[#14649B] group-hover:text-white transition-colors flex items-center justify-between">
-                <span>Ingresar</span>
-                <span className="group-hover:translate-x-1 transition-transform">→</span>
               </div>
             </a>
           ))}

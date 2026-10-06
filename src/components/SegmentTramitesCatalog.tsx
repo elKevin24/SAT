@@ -76,7 +76,7 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
   onSwitchSegment
 }) => {
   const [internalQuery, setInternalQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('Todas');
+  const [selectedCategory, setSelectedCategory] = useState<string>('Todas las categorías');
 
   const meta = SEGMENT_METADATA[segmentId];
 
@@ -107,11 +107,11 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
   }, [segmentTramites, selectedCategory, internalQuery]);
 
   return (
-    <div className="py-8 bg-white min-h-[70vh]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+    <div className="py-6 bg-white min-h-[70vh]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-5">
         
         {/* Navigation Breadcrumb */}
-        <div className="flex items-center justify-between flex-wrap gap-3 pb-4 border-b border-[#DCDCDC]">
+        <div className="flex items-center justify-between flex-wrap gap-3 pb-3 border-b border-[#DCDCDC]">
           <div className="flex items-center gap-2 text-xs font-semibold text-slate-500">
             <button 
               onClick={onBackToHome}
@@ -146,9 +146,9 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
         </div>
 
         {/* Hero Segment Header */}
-        <div className="p-6 rounded-[16px] bg-slate-50 border border-[#DCDCDC] flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div className="p-5 rounded-[16px] bg-slate-50 border border-[#DCDCDC] flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div>
-            <h2 className="text-xl sm:text-2xl font-black text-[#19324B] tracking-tight">
+            <h2 className="text-lg sm:text-xl font-black text-[#19324B] tracking-tight">
               {meta.title}
             </h2>
             <p className="text-xs sm:text-sm text-slate-600 mt-1 max-w-2xl leading-relaxed">
@@ -158,7 +158,7 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
         </div>
 
         {/* Filter Toolbar */}
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 p-3 bg-slate-50 rounded-[14px] border border-[#DCDCDC]">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 p-2.5 bg-slate-50 rounded-[14px] border border-[#DCDCDC]">
           
           {/* Category Tabs */}
           <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar">
@@ -190,34 +190,29 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
           </div>
         </div>
 
-        {/* Results Grid: Solo Título y Descripción en Lenguaje Claro */}
+        {/* Results Grid: Compacto y sin footer de acción redundante */}
         {filteredTramites.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-3.5">
             {filteredTramites.map((tramite) => (
               <div
                 key={tramite.id}
                 onClick={() => onSelectTramite(tramite)}
-                className={`p-5 bg-white border border-[#DCDCDC] rounded-[14px] ${meta.hoverBorder} ${meta.hoverBg} ${meta.hoverShadow} transition-all duration-300 cursor-pointer flex flex-col justify-between group shadow-xs hover:-translate-y-0.5`}
+                className={`p-4 sm:p-5 bg-white border border-[#DCDCDC] rounded-[14px] ${meta.hoverBorder} ${meta.hoverBg} ${meta.hoverShadow} transition-all duration-300 cursor-pointer flex flex-col justify-between group shadow-xs hover:-translate-y-0.5`}
               >
                 <div>
-                  <h3 className="text-sm sm:text-base font-bold text-[#19324B] group-hover:text-white transition-colors leading-snug mb-2">
+                  <h3 className="text-sm sm:text-base font-bold text-[#19324B] group-hover:text-white transition-colors leading-snug mb-1.5">
                     {tramite.tramite}
                   </h3>
 
-                  <p className="text-xs sm:text-sm text-slate-600 group-hover:text-white/90 transition-colors line-clamp-3 leading-relaxed">
+                  <p className="text-xs text-slate-600 group-hover:text-white/90 transition-colors line-clamp-3 leading-relaxed">
                     {tramite.descripcion}
                   </p>
-                </div>
-
-                <div className="pt-3.5 mt-3.5 border-t border-slate-100 group-hover:border-white/20 flex items-center justify-between text-xs font-bold text-[#14649B] group-hover:text-white transition-colors">
-                  <span>Ver requisitos y pasos</span>
-                  <span className="transition-transform duration-200 group-hover:translate-x-0.5">→</span>
                 </div>
               </div>
             ))}
           </div>
         ) : (
-          <div className="p-12 text-center bg-slate-50 rounded-[16px] border border-[#DCDCDC] text-slate-500">
+          <div className="p-10 text-center bg-slate-50 rounded-[16px] border border-[#DCDCDC] text-slate-500">
             <p className="text-sm font-semibold">No encontramos trámites que coincidan con tu búsqueda.</p>
             <button
               onClick={() => {

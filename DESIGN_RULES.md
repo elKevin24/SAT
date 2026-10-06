@@ -4,14 +4,14 @@ Este documento establece los principios de diseño, estilo, accesibilidad y **UX
 
 ---
 
-## 1. Regla de Tarjetas (Cards) sin Íconos y sin Números
-- **Cero íconos decorativos en tarjetas**: Las tarjetas de segmentos, trámites, accesos rápidos, rutas de procesos y temas populares **NO deben contener íconos gráficos**.
-- **Cero números o conteos administrativos en las tarjetas**: 
-  - Prohibido incluir conteos como `4 Grupos`, `350 Trámites`, `7 pasos`, etc.
-  - La tarjeta debe presentar exclusivamente:
-    1. **Título en lenguaje claro**.
-    2. **Descripción en lenguaje ciudadano (UX Writing)**.
-    3. **Enlace de acción directo (`→`)**.
+## 1. Regla de Tarjetas (Cards) Compactas sin Íconos, sin Números y sin Botones Redundantes
+- **Cero íconos decorativos en tarjetas**: Las tarjetas **NO deben contener íconos gráficos**.
+- **Cero números o conteos administrativos**: Eliminar etiquetas como `4 Grupos`, `350 Trámites`, `7 pasos`, etc.
+- **Sin textos de pie redundantes (ej. "Ver trámites")**: 
+  - Toda la tarjeta es un área clickeable uniforme.
+  - La tarjeta presenta exclusivamente: **Título en lenguaje claro** y **Descripción concisa con UX Writing**.
+- **Espaciado y gap compacto**:
+  - `gap-3` o `gap-3.5` entre tarjetas para evitar dispersión visual innecesaria y optimizar el espacio en pantalla.
 
 ---
 
@@ -33,12 +33,12 @@ En el ámbito fiscal y aduanero de la SAT, el ciudadano promedio suele confundir
 ### B. Sustitución de Jerga Burocrática por Lenguaje Ciudadano
 | Término Interno / Burocrático | Término Ciudadano Recomendado (UX Writing) |
 | :--- | :--- |
-| *Sujeto Pasivo / Contribuyente afecto* | *Persona o negocio inscrito con obligaciones* |
-| *Omisos tributarios* | *Declaraciones o pagos pendientes* |
+| *Sujeto Pasivo / Contribuyente afecto* | *Personas y Empresas con o sin negocio* |
+| *Omisos tributarios* | *Consultar pagos o declaraciones pendientes* |
 | *Régimen de Rentas del Trabajo* | *Impuestos para personas con empleo o salario* |
 | *Distintivos electrónicos del Registro Fiscal* | *Tarjeta de circulación y calcomanía vehicular* |
 | *Transacción de cambio de régimen* | *Paso de persona sin negocio a persona con negocio* |
-| *Auxiliares de la Función Pública Aduanera* | *Agentes de aduanas, transportistas y almacenes fiscales* |
+| *Auxiliares de la Función Pública Aduanera* | *Agentes de aduanas, transporte y logística* |
 | *Constancia de Adquisición de Insumos* | *Constancia de compra libre de impuestos para entidades exentas* |
 
 ### C. Redacción Orientada a la Acción y al Beneficio
@@ -61,7 +61,6 @@ En el ámbito fiscal y aduanero de la SAT, el ciudadano promedio suele confundir
   - Al pasar el cursor (`hover`), el fondo cambia al color institucional del segmento (`hover:bg-[#14649B]`, `hover:bg-[#0284C7]`, `hover:bg-[#4D8014]`, `hover:bg-[#C25E00]`).
   - Sombra suave `hover:shadow-[0_14px_30px_rgba(...)]` y elevación `hover:-translate-y-1`.
   - Transición automática de todos los textos interiores a blanco (`group-hover:text-white`).
-  - Flecha inferior de avance con micro-desplazamiento (`group-hover:translate-x-1` `→`).
 
 ---
 

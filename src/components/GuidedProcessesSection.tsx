@@ -26,9 +26,9 @@ export const GuidedProcessesSection: React.FC<GuidedProcessesSectionProps> = ({
 
   const stages = [
     { id: 'Todos', label: 'Todos los Procesos' },
-    { id: 'Empezar', label: 'Iniciar mi Trámite o Negocio' },
+    { id: 'Empezar', label: 'Iniciar Trámite o Negocio' },
     { id: 'Cumplir', label: 'Declarar y Facturar' },
-    { id: 'Cambiar', label: 'Actualizar mis Datos' },
+    { id: 'Cambiar', label: 'Actualizar Datos' },
     { id: 'Cesar/Cerrar', label: 'Cerrar o Dar de Baja' }
   ];
 
@@ -37,20 +37,20 @@ export const GuidedProcessesSection: React.FC<GuidedProcessesSectionProps> = ({
     : procesos.filter(p => p.etapa && p.etapa.toLowerCase().includes(activeStage.toLowerCase().split('/')[0]));
 
   return (
-    <section className="py-10 bg-slate-50 border-b border-[#DCDCDC]">
+    <section className="py-8 bg-slate-50 border-b border-[#DCDCDC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Encabezado y Filtros */}
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 mb-5">
           <div>
-            <span className="text-xs font-bold text-[#14649B] uppercase tracking-wider block mb-1">
+            <span className="text-xs font-bold text-[#14649B] uppercase tracking-wider block mb-0.5">
               Guías Paso a Paso para Ciudadanos
             </span>
-            <h3 className="text-xl sm:text-2xl font-extrabold text-[#19324B] tracking-tight">
+            <h3 className="text-lg sm:text-xl font-extrabold text-[#19324B] tracking-tight">
               Rutas Guiadas de Trámites y Cumplimiento
             </h3>
-            <p className="text-xs sm:text-sm text-slate-600 mt-0.5">
-              Aprende exactamente qué documentos necesitas, cómo solicitarlos y qué pasos seguir sin perderte entre leyes o tecnicismos.
+            <p className="text-xs text-slate-600 mt-0.5">
+              Instrucciones directas para completar tus gestiones de inicio a fin sin perderte entre leyes.
             </p>
           </div>
 
@@ -75,27 +75,22 @@ export const GuidedProcessesSection: React.FC<GuidedProcessesSectionProps> = ({
           </div>
         </div>
 
-        {/* Process Cards Grid: Solo Título y Descripción en Lenguaje Claro */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {/* Process Cards Grid compacto sin footer de acción redundante */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-3.5">
           {filtered.slice(0, 9).map((p) => (
             <div
               key={p.no}
               onClick={() => onSelectProceso(p)}
-              className="group bg-white rounded-[16px] border border-[#DCDCDC] hover:border-[#14649B] hover:bg-[#14649B] hover:shadow-[0_12px_24px_rgba(20,100,155,0.24)] p-5 shadow-xs hover:-translate-y-1 transition-all duration-300 cursor-pointer flex flex-col justify-between"
+              className="group bg-white rounded-[16px] border border-[#DCDCDC] hover:border-[#14649B] hover:bg-[#14649B] hover:shadow-[0_12px_24px_rgba(20,100,155,0.24)] p-4 sm:p-5 shadow-xs hover:-translate-y-0.5 transition-all duration-300 cursor-pointer flex flex-col justify-between"
             >
               <div>
-                <h4 className="text-sm sm:text-base font-bold text-[#19324B] group-hover:text-white transition-colors leading-snug mb-2">
+                <h4 className="text-sm sm:text-base font-bold text-[#19324B] group-hover:text-white transition-colors leading-snug mb-1.5">
                   {p.nombre}
                 </h4>
 
-                <p className="text-xs sm:text-sm text-slate-600 group-hover:text-white/90 transition-colors leading-relaxed mb-3">
+                <p className="text-xs text-slate-600 group-hover:text-white/90 transition-colors leading-relaxed">
                   Guía paso a paso para {p.paraQuien.toLowerCase()}. Te orienta con los requisitos previos y el acceso directo al sistema oficial de la SAT.
                 </p>
-              </div>
-
-              <div className="pt-3.5 mt-3.5 border-t border-slate-100 group-hover:border-white/20 flex items-center justify-between text-xs font-bold text-[#14649B] group-hover:text-white transition-colors">
-                <span>Ver guía completa</span>
-                <span className="transition-transform duration-200 group-hover:translate-x-0.5">→</span>
               </div>
             </div>
           ))}
