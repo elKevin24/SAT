@@ -1,15 +1,4 @@
 import React from 'react';
-import { 
-  FileText, 
-  ExternalLink, 
-  Search, 
-  BarChart3, 
-  ShieldAlert, 
-  BookOpen, 
-  ChevronRight,
-  Calendar,
-  Lock
-} from 'lucide-react';
 
 interface NewsItem {
   id: number;
@@ -54,41 +43,36 @@ const TRANSPARENCY_BUTTONS = [
   {
     title: 'Marco Legal',
     desc: 'Leyes y Decretos tributarios',
-    icon: BookOpen,
     url: 'https://portal.sat.gob.gt/portal/leyes-tributarias/'
   },
   {
     title: 'Transparencia',
     desc: 'Rendición de cuentas oficial',
-    icon: Search,
     url: 'https://portal.sat.gob.gt/portal/transparencia/'
   },
   {
     title: 'SATData+',
     desc: 'Portal estadístico y cifras',
-    icon: BarChart3,
     url: 'https://portal.sat.gob.gt/portal/satdata/'
   },
   {
     title: 'Información Pública',
     desc: 'Decreto 57-2008 de libre acceso',
-    icon: FileText,
     url: 'https://portal.sat.gob.gt/portal/informacion-publica/'
   },
   {
     title: 'El Poder Anticorrupción',
     desc: 'Denuncias y ética institucional',
-    icon: ShieldAlert,
     url: 'https://portal.sat.gob.gt/portal/anticorrupcion/'
   }
 ];
 
 export const NewsAndTransparencySection: React.FC = () => {
   return (
-    <div className="bg-slate-50 py-10 border-b border-slate-200">
+    <div className="bg-slate-50 py-10 border-b border-[#DCDCDC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
         
-        {/* 1. Sección Noticias y Anuncios (Slide 13) */}
+        {/* 1. Sección Noticias y Anuncios */}
         <div>
           <div className="flex items-center justify-between mb-5">
             <div>
@@ -103,10 +87,9 @@ export const NewsAndTransparencySection: React.FC = () => {
               href="https://portal.sat.gob.gt/portal/noticias/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs font-bold text-[#14649B] hover:underline flex items-center gap-1"
+              className="text-xs font-bold text-[#14649B] hover:underline"
             >
-              <span>Ver todo</span>
-              <ChevronRight className="w-3.5 h-3.5" />
+              Ver todo →
             </a>
           </div>
 
@@ -117,32 +100,30 @@ export const NewsAndTransparencySection: React.FC = () => {
                 href={news.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-4 bg-white rounded-xl border border-slate-200 hover:border-[#14649B] shadow-2xs hover:shadow-md transition-all flex flex-col justify-between group"
+                className="p-5 bg-white rounded-[16px] border border-[#DCDCDC] hover:border-[#14649B] shadow-xs hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>
                   <div className="flex items-center justify-between text-[11px] text-slate-400 mb-2">
-                    <span className="font-semibold text-[#14649B] bg-blue-50 px-2 py-0.5 rounded">
+                    <span className="font-bold text-[#14649B] bg-blue-50 px-2 py-0.5 rounded">
                       {news.category}
                     </span>
-                    <span className="flex items-center gap-1">
-                      <Calendar className="w-3 h-3" /> {news.date}
-                    </span>
+                    <span>{news.date}</span>
                   </div>
-                  <h4 className="text-xs font-bold text-slate-800 group-hover:text-[#14649B] transition-colors line-clamp-3 leading-snug">
+                  <h4 className="text-xs sm:text-sm font-bold text-slate-800 group-hover:text-[#14649B] transition-colors line-clamp-3 leading-snug">
                     {news.title}
                   </h4>
                 </div>
 
-                <div className="pt-3 mt-3 border-t border-slate-100 flex items-center justify-between text-[11px] font-semibold text-[#14649B]">
+                <div className="pt-3.5 mt-3.5 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#14649B]">
                   <span>Leer nota completa</span>
-                  <ExternalLink className="w-3 h-3" />
+                  <span className="group-hover:translate-x-1 transition-transform">→</span>
                 </div>
               </a>
             ))}
           </div>
         </div>
 
-        {/* 2. Sección Transparencia y Rendición de Cuentas (Slide 13) */}
+        {/* 2. Sección Transparencia y Rendición de Cuentas */}
         <div>
           <div className="mb-4">
             <h3 className="text-lg font-extrabold text-[#19324B] tracking-tight">
@@ -154,30 +135,28 @@ export const NewsAndTransparencySection: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
-            {TRANSPARENCY_BUTTONS.map((item, idx) => {
-              const Icon = item.icon;
-              return (
-                <a
-                  key={idx}
-                  href={item.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-3.5 bg-[#19324B] hover:bg-[#14649B] text-white rounded-xl shadow-xs hover:shadow-md transition-all flex items-center gap-3 group"
-                >
-                  <div className="w-9 h-9 rounded-lg bg-white/10 group-hover:bg-white group-hover:text-[#14649B] flex items-center justify-center shrink-0 transition-colors">
-                    <Icon className="w-4 h-4" />
+            {TRANSPARENCY_BUTTONS.map((item, idx) => (
+              <a
+                key={idx}
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-4 bg-white hover:bg-[#14649B] border border-[#DCDCDC] hover:border-[#14649B] text-[#19324B] hover:text-white rounded-[14px] shadow-xs hover:shadow-md hover:-translate-y-0.5 transition-all flex flex-col justify-between group"
+              >
+                <div>
+                  <div className="text-xs font-bold leading-tight mb-1">
+                    {item.title}
                   </div>
-                  <div>
-                    <div className="text-xs font-bold leading-tight">
-                      {item.title}
-                    </div>
-                    <div className="text-[10px] text-slate-300 line-clamp-1">
-                      {item.desc}
-                    </div>
+                  <div className="text-[11px] text-slate-500 group-hover:text-white/80 line-clamp-2 leading-tight">
+                    {item.desc}
                   </div>
-                </a>
-              );
-            })}
+                </div>
+                <div className="pt-2 mt-2 border-t border-slate-100 group-hover:border-white/20 text-[10px] font-bold text-[#14649B] group-hover:text-white flex items-center justify-between">
+                  <span>Portal</span>
+                  <span className="group-hover:translate-x-0.5 transition-transform">→</span>
+                </div>
+              </a>
+            ))}
           </div>
         </div>
 
