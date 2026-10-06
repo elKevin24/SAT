@@ -60,3 +60,24 @@ body {
   outline: 2px solid var(--sat-primary);
   outline-offset: 2px;
 }
+
+/* Microanimación elegante para flechas indicadoras en tarjetas interactivas */
+@keyframes arrow-nudge {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(3.5px);
+  }
+}
+
+.animate-arrow-nudge {
+  animation: arrow-nudge 1.8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-arrow-nudge {
+    animation: none !important;
+  }
+}
+

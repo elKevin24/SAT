@@ -838,28 +838,18 @@ export default function App() {
                     tabIndex={0}
                     onClick={() => handleSelectPillar(p.id)}
                     onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handleSelectPillar(p.id); } }}
-                    className={`p-5 sm:p-6 bg-white border border-[#DCDCDC] rounded-[16px] ${p.cardHoverBorder} ${p.cardHoverBg} ${p.cardHoverShadow} transition-all duration-300 cursor-pointer space-y-3.5 group shadow-xs hover:-translate-y-1 focus-visible:ring-2 focus-visible:ring-[#14649B]`}
+                    className={`p-5 sm:p-6 bg-white border border-[#DCDCDC] rounded-[16px] ${p.cardHoverBorder} ${p.cardHoverBg} ${p.cardHoverShadow} transition-all duration-300 cursor-pointer space-y-3 group shadow-xs hover:-translate-y-1 focus-visible:ring-2 focus-visible:ring-[#14649B] flex flex-col justify-between`}
                   >
-                    <div className="flex items-center justify-between gap-3">
-                      <div className="space-y-1">
-                        <span className="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-slate-100 text-slate-600 group-hover:bg-white/20 group-hover:text-white transition-colors">
-                          {p.badgeLabel}
-                        </span>
+                    <div className="space-y-3">
+                      <div className="flex items-center justify-between gap-3">
                         <h3 className={`text-base sm:text-lg font-bold text-[#19324B] ${p.titleHoverText} transition-colors`}>
                           {p.name}
                         </h3>
+                        <div className={`relative w-9 h-9 rounded-full flex items-center justify-center shrink-0 transition-all duration-300 ${p.circleClasses} shadow-xs group-hover:scale-110 group-hover:translate-x-1 group-hover:shadow-md group-hover:ring-4 group-hover:ring-white/25`}>
+                          <ChevronRight className="w-4 h-4 transition-transform duration-300 ease-out animate-arrow-nudge group-hover:translate-x-1" aria-hidden="true" />
+                        </div>
                       </div>
-                      <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-all duration-300 ${p.circleClasses} shadow-xs`}>
-                        <ChevronRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5" aria-hidden="true" />
-                      </div>
-                    </div>
-                    <div className="text-xs font-bold text-[#14649B] group-hover:text-white/90 transition-colors">
-                      {p.temasTotales}
-                    </div>
-                    <p className="text-xs sm:text-sm text-slate-600 group-hover:text-white/90 transition-colors leading-relaxed">{p.desc}</p>
-                    <div className={`text-xs font-bold pt-1 flex items-center gap-1.5 ${p.actionTextClass} transition-colors`}>
-                      <span>Explorar grupos</span>
-                      <span className="transition-transform duration-200 group-hover:translate-x-0.5" aria-hidden="true">→</span>
+                      <p className="text-xs sm:text-sm text-slate-600 group-hover:text-white/90 transition-colors leading-relaxed">{p.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -890,38 +880,25 @@ export default function App() {
                     tabIndex={0}
                     onClick={() => handleSelectCategoria(g.nombre)}
                     onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handleSelectCategoria(g.nombre); } }}
-                    className={`p-5 sm:p-6 bg-white border border-[#DCDCDC] rounded-[16px] ${currentPillarConfig.cardHoverBorder} ${currentPillarConfig.cardHoverBg} ${currentPillarConfig.cardHoverShadow} transition-all duration-300 cursor-pointer space-y-3.5 group shadow-xs hover:-translate-y-1 focus-visible:ring-2 focus-visible:ring-[#14649B]`}
+                    className={`p-5 sm:p-6 bg-white border border-[#DCDCDC] rounded-[16px] ${currentPillarConfig.cardHoverBorder} ${currentPillarConfig.cardHoverBg} ${currentPillarConfig.cardHoverShadow} transition-all duration-300 cursor-pointer space-y-3 group shadow-xs hover:-translate-y-1 focus-visible:ring-2 focus-visible:ring-[#14649B] flex flex-col justify-between`}
                   >
-                    <div className="flex items-center justify-between gap-3">
-                      <div className="flex items-center gap-2.5">
+                    <div className="space-y-3">
+                      <div className="flex items-center justify-between gap-3">
                         <h3 className="text-base sm:text-lg font-bold text-[#19324B] group-hover:text-white transition-colors">{g.nombre}</h3>
+                        <div className={`relative w-9 h-9 rounded-full flex items-center justify-center shrink-0 transition-all duration-300 ${currentPillarConfig.circleClasses} shadow-xs group-hover:scale-110 group-hover:translate-x-1 group-hover:shadow-md group-hover:ring-4 group-hover:ring-white/25`}>
+                          <ChevronRight className="w-4 h-4 transition-transform duration-300 ease-out animate-arrow-nudge group-hover:translate-x-1" aria-hidden="true" />
+                        </div>
                       </div>
-                      <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-all duration-300 ${currentPillarConfig.circleClasses} shadow-xs`}>
-                        <ChevronRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5" aria-hidden="true" />
+                      {g.desc && (
+                        <p className="text-xs sm:text-sm text-slate-600 group-hover:text-white/90 transition-colors leading-relaxed">{g.desc}</p>
+                      )}
+                      <div className="flex flex-wrap gap-1.5 pt-1">
+                        {g.subgrupos.map((sub, sIdx) => (
+                          <span key={sIdx} className="px-2 py-0.5 rounded-full text-[10px] font-medium bg-slate-100/90 text-slate-600 group-hover:bg-white/15 group-hover:text-white/90 transition-colors">
+                            {sub.nombre}
+                          </span>
+                        ))}
                       </div>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <span className="text-xs font-bold text-[#14649B] group-hover:text-white/95 transition-colors">
-                        {g.cantidadTemas} Temas clasificados
-                      </span>
-                      <span className="text-slate-300 group-hover:text-white/40">•</span>
-                      <span className="text-xs text-slate-500 group-hover:text-white/80 transition-colors">
-                        {g.subgrupos.length} {g.subgrupos.length === 1 ? 'Subgrupo' : 'Subgrupos'}
-                      </span>
-                    </div>
-                    {g.desc && (
-                      <p className="text-xs sm:text-sm text-slate-600 group-hover:text-white/90 transition-colors leading-relaxed">{g.desc}</p>
-                    )}
-                    <div className="flex flex-wrap gap-1.5 pt-1">
-                      {g.subgrupos.map((sub, sIdx) => (
-                        <span key={sIdx} className="px-2 py-0.5 rounded-full text-[10px] font-medium bg-slate-100/90 text-slate-600 group-hover:bg-white/15 group-hover:text-white/90 transition-colors">
-                          {sub.nombre} {sub.cantidadTemas ? `(${sub.cantidadTemas})` : ''}
-                        </span>
-                      ))}
-                    </div>
-                    <div className={`text-xs font-bold ${currentPillarConfig.actionTextClass} group-hover:text-white transition-colors pt-1 flex items-center gap-1.5`}>
-                      <span>Explorar subgrupos</span>
-                      <span className="transition-transform duration-200 group-hover:translate-x-0.5" aria-hidden="true">→</span>
                     </div>
                   </div>
                 ))}
@@ -985,8 +962,8 @@ export default function App() {
                               </span>
                             )}
                           </div>
-                          <div className="w-7 h-7 rounded-full flex items-center justify-center shrink-0 bg-[#14649B]/10 text-[#14649B] group-hover:bg-white group-hover:text-[#14649B] shadow-2xs transition-all duration-200">
-                            <ChevronRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5" aria-hidden="true" />
+                          <div className="relative w-8 h-8 rounded-full flex items-center justify-center shrink-0 bg-[#14649B]/10 text-[#14649B] group-hover:bg-white group-hover:text-[#14649B] shadow-2xs transition-all duration-300 group-hover:scale-110 group-hover:translate-x-1 group-hover:shadow-xs group-hover:ring-2 group-hover:ring-white/40">
+                            <ChevronRight className="w-4 h-4 transition-transform duration-300 ease-out animate-arrow-nudge group-hover:translate-x-0.5" aria-hidden="true" />
                           </div>
                         </div>
 
@@ -1021,17 +998,13 @@ export default function App() {
                         )}
                       </div>
 
-                      <div className="pt-2.5 mt-2.5 border-t border-slate-100 group-hover:border-white/20 space-y-1.5">
-                        {item.perfilDestinatario && (
+                      {item.perfilDestinatario && (
+                        <div className="pt-2.5 mt-2.5 border-t border-slate-100 group-hover:border-white/20">
                           <div className="text-[10px] sm:text-[11px] text-slate-500 group-hover:text-white/80 transition-colors line-clamp-1">
                             <strong className="font-semibold text-slate-700 group-hover:text-white">Usado por:</strong> {item.perfilDestinatario}
                           </div>
-                        )}
-                        <div className="text-xs font-bold text-[#14649B] group-hover:text-white transition-colors flex items-center gap-1">
-                          <span>Ver proceso</span>
-                          <span className="transition-transform duration-200 group-hover:translate-x-0.5" aria-hidden="true">→</span>
                         </div>
-                      </div>
+                      )}
                     </div>
                   ))}
                 </div>
@@ -1044,7 +1017,6 @@ export default function App() {
                     <h3 className="text-sm font-bold text-[#19324B] uppercase tracking-wider">
                       Subgrupos Oficiales
                     </h3>
-                    <span className="text-xs text-slate-500 font-mono">{subgruposInGrupo.length} Subgrupos</span>
                   </div>
 
                   <div className={`grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 ${!menuSidebarOpen ? 'max-w-4xl lg:max-w-5xl mx-auto' : ''}`}>
@@ -1055,25 +1027,18 @@ export default function App() {
                         tabIndex={0}
                         onClick={() => handleSelectSubcategoria(sub.nombre)}
                         onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handleSelectSubcategoria(sub.nombre); } }}
-                        className={`p-5 sm:p-6 bg-white border border-[#DCDCDC] rounded-[16px] ${currentPillarConfig.cardHoverBorder} ${currentPillarConfig.cardHoverBg} ${currentPillarConfig.cardHoverShadow} transition-all duration-300 cursor-pointer space-y-3.5 group shadow-xs hover:-translate-y-1 focus-visible:ring-2 focus-visible:ring-[#14649B]`}
+                        className={`p-5 sm:p-6 bg-white border border-[#DCDCDC] rounded-[16px] ${currentPillarConfig.cardHoverBorder} ${currentPillarConfig.cardHoverBg} ${currentPillarConfig.cardHoverShadow} transition-all duration-300 cursor-pointer space-y-3 group shadow-xs hover:-translate-y-1 focus-visible:ring-2 focus-visible:ring-[#14649B] flex flex-col justify-between`}
                       >
-                        <div className="flex items-center justify-between gap-3">
-                          <h3 className="text-base sm:text-lg font-bold text-[#19324B] group-hover:text-white transition-colors">{sub.nombre}</h3>
-                          <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-all duration-300 ${currentPillarConfig.circleClasses} shadow-xs`}>
-                            <ChevronRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5" aria-hidden="true" />
+                        <div className="space-y-3">
+                          <div className="flex items-center justify-between gap-3">
+                            <h3 className="text-base sm:text-lg font-bold text-[#19324B] group-hover:text-white transition-colors">{sub.nombre}</h3>
+                            <div className={`relative w-9 h-9 rounded-full flex items-center justify-center shrink-0 transition-all duration-300 ${currentPillarConfig.circleClasses} shadow-xs group-hover:scale-110 group-hover:translate-x-1 group-hover:shadow-md group-hover:ring-4 group-hover:ring-white/25`}>
+                              <ChevronRight className="w-4 h-4 transition-transform duration-300 ease-out animate-arrow-nudge group-hover:translate-x-1" aria-hidden="true" />
+                            </div>
                           </div>
-                        </div>
-                        {sub.cantidadTemas && (
-                          <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-bold bg-[#14649B]/10 text-[#14649B] group-hover:bg-white/20 group-hover:text-white transition-colors w-fit">
-                            <span>{sub.cantidadTemas} {sub.cantidadTemas === 1 ? 'Proceso oficial' : 'Procesos oficiales'}</span>
-                          </div>
-                        )}
-                        <p className="text-xs sm:text-sm text-slate-600 group-hover:text-white/90 transition-colors leading-relaxed">
-                          {sub.desc || `Trámites, normativas y requisitos vigentes correspondientes a ${sub.nombre}.`}
-                        </p>
-                        <div className={`text-xs font-bold ${currentPillarConfig.actionTextClass} group-hover:text-white transition-colors pt-1 flex items-center gap-1.5`}>
-                          <span>Ver trámites y requisitos</span>
-                          <span className="transition-transform duration-200 group-hover:translate-x-0.5" aria-hidden="true">→</span>
+                          <p className="text-xs sm:text-sm text-slate-600 group-hover:text-white/90 transition-colors leading-relaxed">
+                            {sub.desc || `Trámites, normativas y requisitos vigentes correspondientes a ${sub.nombre}.`}
+                          </p>
                         </div>
                       </div>
                     ))}
