@@ -669,20 +669,21 @@ export default function StyleGuide() {
                       <span>{cat.categoria}</span>
                     </div>
 
-                    <ul className="space-y-0.5 border-l border-[#DCDCDC] ml-3 pl-2">
+                    <ul className="space-y-0.5 ml-3 pl-2">
                       {cat.items.map((item) => {
                         const isActive = activeSection === item.id;
                         return (
                           <li key={item.id}>
                             <a
                               href={`#/estilo/${item.id}`}
+                              aria-current={isActive ? 'true' : undefined}
                               onClick={(e) => {
                                 e.preventDefault();
                                 handleNavClick(item.id);
                               }}
-                              className={`group flex items-center justify-between rounded-md px-2.5 py-1.5 text-xs font-medium transition ${
+                              className={`group flex items-center justify-between rounded-lg px-2.5 py-1.5 text-xs font-medium transition-colors ${
                                 isActive
-                                  ? 'bg-[#14649B]/10 text-[#14649B] font-bold border-l-2 border-[#14649B] -ml-[9px] pl-3'
+                                  ? 'bg-[#F4F6F9] text-[#19324B] font-bold'
                                   : 'text-[#475569] hover:bg-[#F4F6F9] hover:text-[#19324B]'
                               }`}
                             >
