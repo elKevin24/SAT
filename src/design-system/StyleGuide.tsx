@@ -237,7 +237,7 @@ const FUERA_DE_PALETA = [
   { hex: '#E65100', usos: 3, rol: 'Naranja no normativa', archivos: 2 },
   { hex: '#2D5A0C', usos: 2, rol: 'Verde oscuro no normativo', archivos: 2 },
   { hex: '#D84A00', usos: 1, rol: 'Naranja no normativa', archivos: 1 },
-  { hex: '#8A3B00', usos: 1, rol: 'Marrron no normativo', archivos: 1 },
+  { hex: '#8A3B00', usos: 1, rol: 'Marron no normativo', archivos: 1 },
   { hex: '#234709', usos: 1, rol: 'Verde muy oscuro no normativo', archivos: 1 },
   { hex: '#0369A1', usos: 1, rol: 'Cian oscuro no normativo', archivos: 1 },
 ];
@@ -415,14 +415,6 @@ function Section({
 /* --------------------------------- Vista -------------------------------- */
 
 export default function StyleGuide() {
-  const copiar = async (texto: string) => {
-    try {
-      await navigator.clipboard.writeText(texto);
-    } catch {
-      /* clipboard no disponible */
-    }
-  };
-
   return (
     <div className="min-h-dvh bg-[#F4F6F9] text-[#19324B]">
       {/* Cabecera */}
@@ -1033,7 +1025,7 @@ export default function StyleGuide() {
               'Validar el peso Ultra. No es representable en una fuente variable comun; se aproxima con peso 800.',
               'Aprobar o rechazar los tokens de interfaz, que no tienen respaldo normativo.',
               'Confirmar la numeracion de la paleta usada en los degradados oficiales (p.25).',
-              'Sustituir los 10 colores fuera de paleta detectados en la auditoria por tokens oficiales o por los complementarios approved.',
+              'Sustituir los 10 colores fuera de paleta detectados en la auditoria por tokens oficiales o por los complementarios aprobados.',
             ].map((p, i) => (
               <li
                 key={p}

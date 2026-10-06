@@ -12,6 +12,7 @@ import { DirectConsultasModal } from './components/DirectConsultasModal';
 import { GuidedProcessModal } from './components/GuidedProcessModal';
 import { TramiteDetailModal } from './components/TramiteDetailModal';
 import { SegmentTramitesCatalog } from './components/SegmentTramitesCatalog';
+import StyleGuide from './design-system/StyleGuide';
 
 // Import official extracted datasets
 import rawTramites from './data/allTramites.json';
@@ -40,7 +41,7 @@ const DEFAULT_ACCESSIBILITY: AccessibilitySettings = {
 };
 
 export default function App() {
-  const [currentView, setCurrentView] = useState<'home' | 'catalog'>('home');
+  const [currentView, setCurrentView] = useState<'home' | 'catalog' | 'styleguide'>('home');
   const [activeSegment, setActiveSegment] = useState<SegmentId>('contribuyentes');
 
   // Search query
@@ -55,6 +56,20 @@ export default function App() {
   // Accessibility State
   const [accSettings, setAccSettings] = useState<AccessibilitySettings>(DEFAULT_ACCESSIBILITY);
 
+  // Handle URL hash changes (e.g. #/estilo)
+  useEffect(() => {
+    const handleHash = () => {
+      if (window.location.hash === '#/estilo') {
+        setCurrentView('styleguide');
+      } else if (currentView === 'styleguide' && window.location.hash !== '#/estilo') {
+        setCurrentView('home');
+      }
+    };
+    handleHash();
+    window.addEventListener('hashchange', handleHash);
+    return () => window.removeEventListener('hashchange', handleHash);
+  }, [currentView]);
+
   const handleUpdateAccessibility = (updates: Partial<AccessibilitySettings>) => {
     setAccSettings(prev => ({ ...prev, ...updates }));
   };
@@ -63,7 +78,6 @@ export default function App() {
     setAccSettings(DEFAULT_ACCESSIBILITY);
   };
 
-  // Switch to catalog when a user selects a segment
   const handleSelectSegment = (segId: SegmentId) => {
     setActiveSegment(segId);
     setCurrentView('catalog');
@@ -71,12 +85,18 @@ export default function App() {
   };
 
   const handleGoHome = () => {
+    window.location.hash = '';
     setCurrentView('home');
     setSearchQuery('');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  // Build dynamic styles based on accessibility settings
+  const handleGoStyleGuide = () => {
+    window.location.hash = '#/estilo';
+    setCurrentView('styleguide');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   const getAccessibilityClasses = () => {
     const classes = [];
     if (accSettings.contrastMode === 'high') classes.push('contrast-125 saturate-150');
@@ -98,6 +118,7 @@ export default function App() {
       {/* 1. Official Institutional Header */}
       <Header
         onGoHome={handleGoHome}
+        onGoStyleGuide={handleGoStyleGuide}
         searchQuery={searchQuery}
         onSearchChange={setSearchQuery}
         onSelectTramite={(t) => setSelectedTramite(t)}
@@ -109,36 +130,38 @@ export default function App() {
 
       {/* Main Content Area */}
       <main className="flex-1">
-        {currentView === 'home' ? (
+        {currentView === 'home' && (
           <>
-            {/* 2. User Segments (4 Cards with Roll-over) */}
+            {/* 2. User Segments */}
             <UserSegmentCards
               selectedSegment={null}
               onSelectSegment={handleSelectSegment}
             />
 
-            {/* 3. Rotary Banner (Slide 10) */}
+            {/* 3. Rotary Banner */}
             <RotaryBanner />
 
-            {/* 4. Quick Access Carousel (Slide 11: 7 visible + 2 carousel) */}
+            {/* 4. Quick Access Carousel */}
             <QuickAccessCarousel />
 
-            {/* 5. Popular Topics Tabs with Permanent Consultas (Slide 12) */}
+            {/* 5. Popular Topics Tabs */}
             <PopularTopicsTabs
               onOpenConsultasModal={(segId) => setConsultasModalSegment(segId)}
             />
 
-            {/* 6. Guided Processes Section (49 Core Lifecycle Routes) */}
+            {/* 6. Guided Processes Section */}
             <GuidedProcessesSection
               procesos={rawProcesos as any}
               onSelectProceso={(p) => setSelectedProceso(p)}
             />
 
-            {/* 7. News & Transparency Section (Slide 13) */}
+            {/* 7. News & Transparency Section */}
             <NewsAndTransparencySection />
           </>
-        ) : (
-          /* Segment Trámites Catalog (when exploring a specific segment) */
+        )}
+
+        {currentView === 'catalog' && (
+          /* Segment Trámites Catalog */
           <SegmentTramitesCatalog
             segmentId={activeSegment}
             allTramites={rawTramites as any}
@@ -147,10 +170,28 @@ export default function App() {
             onSwitchSegment={(segId) => setActiveSegment(segId)}
           />
         )}
+
+        {currentView === 'styleguide' && (
+          /* Design System Style Guide View */
+          <div className="relative">
+            <div className="bg-[#19324B] text-white px-6 py-2.5 flex items-center justify-between border-b border-[#14649B]">
+              <span className="text-xs font-bold text-[#19AFE1]">
+                Vista de Auditoría de Tokens y Design System (Manual V5)
+              </span>
+              <button
+                onClick={handleGoHome}
+                className="px-3 py-1 bg-[#14649B] hover:bg-[#11507C] text-white text-xs font-bold rounded-lg transition-colors"
+              >
+                Volver al Portal
+              </button>
+            </div>
+            <StyleGuide />
+          </div>
+        )}
       </main>
 
-      {/* 8. Institutional Footer (Slide 14) */}
-      <InstitutionalFooter />
+      {/* 8. Institutional Footer */}
+      <InstitutionalFooter onOpenStyleGuide={handleGoStyleGuide} />
 
       {/* Modals & Overlays */}
       <UserWayAccessibilityModal

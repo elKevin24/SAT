@@ -13,11 +13,14 @@ import {
   Lock, 
   X, 
   Compass,
-  ArrowRight
+  ArrowRight,
+  Palette
 } from 'lucide-react';
+import { SatIsologotipo } from './SatIsologotipo';
 
 interface HeaderProps {
   onGoHome: () => void;
+  onGoStyleGuide?: () => void;
   searchQuery: string;
   onSearchChange: (q: string) => void;
   onSelectTramite: (tramite: any) => void;
@@ -29,6 +32,7 @@ interface HeaderProps {
 
 export const Header: React.FC<HeaderProps> = ({
   onGoHome,
+  onGoStyleGuide,
   searchQuery,
   onSearchChange,
   onSelectTramite,
@@ -41,7 +45,6 @@ export const Header: React.FC<HeaderProps> = ({
   const [isSearchFocused, setIsSearchFocused] = useState(false);
   const searchContainerRef = useRef<HTMLDivElement>(null);
 
-  // Close search suggestions on outside click
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (searchContainerRef.current && !searchContainerRef.current.contains(event.target as Node)) {
@@ -52,7 +55,6 @@ export const Header: React.FC<HeaderProps> = ({
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  // Filter trámites and procesos for instant suggestion popup
   const filteredTramites = searchQuery.trim().length > 1
     ? allTramites.filter(t => 
         (t.tramite && t.tramite.toLowerCase().includes(searchQuery.toLowerCase())) ||
@@ -69,8 +71,8 @@ export const Header: React.FC<HeaderProps> = ({
     : [];
 
   return (
-    <header className="sticky top-0 z-40 bg-white border-b border-slate-200 shadow-sm">
-      {/* 1. Barra de Navegación 1: Plataformas Oficiales SAT */}
+    <header className="sticky top-0 z-40 bg-white border-b border-[#DCDCDC] shadow-xs">
+      {/* 1. Barra de Navegación 1: Plataformas Oficiales SAT (Azul Oscuro Normativo #19324B) */}
       <div className="bg-[#19324B] text-white text-xs font-medium">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-10">
           
@@ -89,7 +91,7 @@ export const Header: React.FC<HeaderProps> = ({
             {/* Dropdown Formación Tributaria */}
             {showFormacionMenu && (
               <div 
-                className="absolute left-0 top-full mt-1 w-72 bg-white rounded-xl shadow-xl border border-slate-200 py-2 text-slate-800 z-50 animate-fadeIn"
+                className="absolute left-0 top-full mt-1 w-72 bg-white rounded-xl shadow-xl border border-[#DCDCDC] py-2 text-slate-800 z-50 animate-fadeIn"
                 onMouseLeave={() => setShowFormacionMenu(false)}
               >
                 <div className="px-3 py-1.5 border-b border-slate-100 text-[11px] font-bold text-slate-400 uppercase tracking-wider">
@@ -123,8 +125,19 @@ export const Header: React.FC<HeaderProps> = ({
             )}
           </div>
 
-          {/* Enlaces Rápidos a Plataformas Externas */}
+          {/* Enlaces Rápidos a Plataformas Externas y Guía de Estilo */}
           <div className="flex items-center gap-1 sm:gap-2">
+            {onGoStyleGuide && (
+              <button
+                onClick={onGoStyleGuide}
+                className="hidden md:flex items-center gap-1 px-2.5 py-1 rounded text-slate-200 hover:text-white hover:bg-white/10 transition-colors font-medium"
+                title="Ver Guía de Estilo y Tokens del Design System"
+              >
+                <Palette className="w-3.5 h-3.5 text-[#19AFE1]" />
+                <span>Design System</span>
+              </button>
+            )}
+
             <a
               href="https://declaraguate.sat.gob.gt/"
               target="_blank"
@@ -135,22 +148,23 @@ export const Header: React.FC<HeaderProps> = ({
               <span className="hidden sm:inline">Declaraguate</span>
             </a>
 
+            {/* Declaración de viajero con Naranja Normativo #F37521 y texto oscuro para accesibilidad WCAG */}
             <a
               href="https://portal.sat.gob.gt/portal/declaracion-jurada-regional-de-viajero/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1 px-2.5 py-1 rounded bg-[#E65100]/80 hover:bg-[#E65100] text-white transition-colors"
+              className="flex items-center gap-1 px-2.5 py-1 rounded bg-[#F37521] hover:bg-[#d96316] text-[#19324B] font-bold transition-colors"
             >
-              <Plane className="w-3.5 h-3.5 text-white" />
-              <span className="font-semibold">Declaración de Viajero</span>
+              <Plane className="w-3.5 h-3.5 text-[#19324B]" />
+              <span>Declaración de Viajero</span>
             </a>
 
-            {/* Acceso a Agencia Virtual */}
+            {/* Acceso a Agencia Virtual en Azul SAT Normativo #14649B */}
             <a
               href="https://farm3.sat.gob.gt/menu/login.jsf"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 px-3 py-1 rounded bg-[#0284C7] hover:bg-[#0369a1] text-white font-bold transition-all shadow-sm active:scale-95"
+              className="flex items-center gap-1.5 px-3 py-1 rounded bg-[#14649B] hover:bg-[#0f4e7a] text-white font-bold transition-all shadow-xs active:scale-95"
             >
               <Lock className="w-3.5 h-3.5" />
               <span>Accede a tu Agencia Virtual</span>
@@ -160,30 +174,17 @@ export const Header: React.FC<HeaderProps> = ({
         </div>
       </div>
 
-      {/* 2. Barra de Navegación 2: Logo Oficial + Buscador Inteligente + Accesibilidad */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      {/* 2. Barra Principal: Isologotipo Oficial + Buscador Inteligente + Accesibilidad */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5">
         <div className="flex items-center justify-between gap-4">
           
-          {/* Logo SAT (Home button) */}
+          {/* Isologotipo Oficial SAT como bloque indivisible normativo */}
           <button
             onClick={onGoHome}
-            className="flex items-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#14649B] rounded-lg p-1 group shrink-0"
+            className="flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-[#14649B] rounded-lg p-1 group shrink-0"
             aria-label="Ir al inicio del Portal SAT"
           >
-            <div className="flex items-center gap-2">
-              {/* Isotipo / Logotipo SAT */}
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#14649B] to-[#19324B] flex items-center justify-center text-white font-black text-xl tracking-tighter shadow-md group-hover:scale-105 transition-transform">
-                SAT
-              </div>
-              <div className="text-left hidden md:block">
-                <div className="text-sm font-extrabold text-[#19324B] tracking-tight leading-none group-hover:text-[#14649B] transition-colors">
-                  PORTAL TRIBUTARIO
-                </div>
-                <div className="text-[10px] text-slate-500 font-medium tracking-wider uppercase">
-                  Guatemala · Rediseño UX
-                </div>
-              </div>
-            </div>
+            <SatIsologotipo className="h-9 sm:h-10 w-auto" variant="azul" showSubtitle={true} />
           </button>
 
           {/* Buscador Central Predictivo */}
@@ -198,8 +199,8 @@ export const Header: React.FC<HeaderProps> = ({
                   setIsSearchFocused(true);
                 }}
                 onFocus={() => setIsSearchFocused(true)}
-                placeholder="Buscar trámites, requisitos, NIT, RTU, facturas, impuestos o leyes..."
-                className="w-full pl-10 pr-10 py-2.5 bg-slate-50 hover:bg-slate-100/80 focus:bg-white text-sm text-slate-900 rounded-full border border-slate-200 focus:border-[#14649B] focus:ring-2 focus:ring-[#14649B]/20 transition-all outline-none"
+                placeholder="Buscar trámites, NIT, RTU Digital, facturas FEL, impuestos o leyes..."
+                className="w-full pl-10 pr-10 py-2 bg-slate-50 hover:bg-slate-100/80 focus:bg-white text-xs sm:text-sm text-slate-900 rounded-full border border-[#DCDCDC] focus:border-[#14649B] focus:ring-2 focus:ring-[#14649B]/20 transition-all outline-none"
               />
               {searchQuery && (
                 <button
@@ -212,15 +213,13 @@ export const Header: React.FC<HeaderProps> = ({
               )}
             </div>
 
-            {/* Dropdown de Sugerencias Rápidas */}
+            {/* Dropdown de Sugerencias */}
             {isSearchFocused && searchQuery.trim().length > 1 && (
-              <div className="absolute left-0 right-0 top-full mt-2 bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden z-50 divide-y divide-slate-100 max-h-96 overflow-y-auto">
-                
-                {/* Trámites Encontrados */}
+              <div className="absolute left-0 right-0 top-full mt-2 bg-white rounded-2xl shadow-2xl border border-[#DCDCDC] overflow-hidden z-50 divide-y divide-slate-100 max-h-96 overflow-y-auto">
                 {filteredTramites.length > 0 && (
                   <div className="p-2">
                     <div className="px-3 py-1.5 text-[11px] font-bold text-[#14649B] uppercase tracking-wider">
-                      Trámites y Servicios Relacionados ({filteredTramites.length})
+                      Trámites y Servicios Encontrados ({filteredTramites.length})
                     </div>
                     {filteredTramites.map((t) => (
                       <button
@@ -239,19 +238,15 @@ export const Header: React.FC<HeaderProps> = ({
                             {t.descripcion}
                           </div>
                         </div>
-                        <span className="text-[10px] px-2 py-0.5 bg-slate-100 text-slate-600 rounded-full shrink-0 font-medium">
-                          {t.pillarName || 'SAT'}
-                        </span>
                       </button>
                     ))}
                   </div>
                 )}
 
-                {/* Procesos Core Guiados */}
                 {filteredProcesos.length > 0 && (
                   <div className="p-2 bg-slate-50/50">
-                    <div className="px-3 py-1.5 text-[11px] font-bold text-[#0284C7] uppercase tracking-wider flex items-center gap-1">
-                      <Compass className="w-3.5 h-3.5" /> Rutas Guiadas por Pasos
+                    <div className="px-3 py-1.5 text-[11px] font-bold text-[#14649B] uppercase tracking-wider flex items-center gap-1">
+                      <Compass className="w-3.5 h-3.5" /> Guías Paso a Paso
                     </div>
                     {filteredProcesos.map((p) => (
                       <button
@@ -260,25 +255,19 @@ export const Header: React.FC<HeaderProps> = ({
                           onSelectProceso(p);
                           setIsSearchFocused(false);
                         }}
-                        className="w-full text-left px-3 py-2 hover:bg-sky-50 rounded-xl transition-colors flex items-center justify-between group"
+                        className="w-full text-left px-3 py-2 hover:bg-blue-50 rounded-xl transition-colors flex items-center justify-between group"
                       >
                         <div>
-                          <div className="text-xs font-bold text-slate-800 group-hover:text-[#0284C7]">
+                          <div className="text-xs font-bold text-slate-800 group-hover:text-[#14649B]">
                             {p.nombre}
                           </div>
                           <div className="text-[11px] text-slate-500">
-                            {p.paraQuien} · <span className="font-semibold">{p.totalPasos} pasos</span>
+                            {p.paraQuien}
                           </div>
                         </div>
-                        <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-[#0284C7] shrink-0" />
+                        <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-[#14649B] shrink-0" />
                       </button>
                     ))}
-                  </div>
-                )}
-
-                {filteredTramites.length === 0 && filteredProcesos.length === 0 && (
-                  <div className="p-6 text-center text-xs text-slate-500">
-                    No se encontraron trámites ni procesos directos para "{searchQuery}".
                   </div>
                 )}
               </div>
@@ -289,7 +278,7 @@ export const Header: React.FC<HeaderProps> = ({
           <div className="shrink-0">
             <button
               onClick={onOpenAccessibility}
-              className="flex items-center gap-1.5 px-3 py-2 rounded-full border border-slate-200 bg-slate-50 hover:bg-blue-50/80 hover:border-[#14649B] text-slate-700 hover:text-[#14649B] transition-all text-xs font-semibold shadow-xs"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-[#DCDCDC] bg-slate-50 hover:bg-blue-50/80 hover:border-[#14649B] text-slate-700 hover:text-[#14649B] transition-all text-xs font-semibold shadow-2xs"
               title="Herramientas de Accesibilidad (UserWay)"
               aria-label="Abrir panel de accesibilidad"
             >
