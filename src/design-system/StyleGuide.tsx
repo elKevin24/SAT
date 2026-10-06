@@ -450,7 +450,7 @@ function SectionDoc({
   children: React.ReactNode;
 }) {
   return (
-    <section id={id} className="scroll-mt-20 py-8 border-b border-[#DCDCDC] last:border-b-0">
+    <section id={id} data-section-id={id} className="scroll-mt-20 py-8 border-b border-[#DCDCDC] last:border-b-0">
       <div className="mb-5">
         <div className="flex flex-wrap items-center gap-2.5">
           <h2 className="text-2xl font-black text-[#19324B] tracking-tight">{titulo}</h2>
@@ -481,7 +481,7 @@ export default function StyleGuide() {
   // Botón interactivo de demostración de copiado / acción
   const [interactiveCounter, setInteractiveCounter] = useState(0);
 
-  // Escuchar el hash de la URL o el scroll para actualizar la sección activa
+  // Escuchar el hash inicial y hashchange para navegar suavemente
   useEffect(() => {
     const handleHash = () => {
       const hash = window.location.hash;
@@ -500,6 +500,46 @@ export default function StyleGuide() {
     return () => window.removeEventListener('hashchange', handleHash);
   }, []);
 
+  // IntersectionObserver para actualizar el menú lateral mientras el usuario hace scroll en el contenido
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visibleEntries = entries.filter((e) => e.isIntersecting);
+        if (visibleEntries.length > 0) {
+          // El primero visible se convierte en el activo
+          const topVisible = visibleEntries[0];
+          const id = topVisible.target.getAttribute('id');
+          if (id) {
+            setActiveSection(id);
+          }
+        }
+      },
+      {
+        rootMargin: '-80px 0px -60% 0px',
+        threshold: 0.1,
+      }
+    );
+
+    const sections = document.querySelectorAll('section[data-section-id]');
+    sections.forEach((sec) => observer.observe(sec));
+
+    return () => {
+      sections.forEach((sec) => observer.unobserve(sec));
+    };
+  }, []);
+
+  // Bloquear scroll del fondo cuando el menú móvil está abierto
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileMenuOpen]);
+
   // Filtrado de ítems de navegación según búsqueda
   const filteredMenu = DOC_MENU.map((cat) => ({
     ...cat,
@@ -509,19 +549,28 @@ export default function StyleGuide() {
     ),
   })).filter((cat) => cat.items.length > 0);
 
+  const handleNavClick = (id: string) => {
+    setActiveSection(id);
+    setMobileMenuOpen(false);
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-white text-[#19324B] font-sans antialiased">
       {/* -----------------------------------------------------------------
-       * 1. TOP NAVBAR (Estilo Bootstrap 5 Docs Header)
+       * 1. TOP NAVBAR (Fija arriba z-40 estilo Bootstrap 5 Docs Header)
        * ----------------------------------------------------------------- */}
-      <header className="sticky top-0 z-40 w-full border-b border-[#DCDCDC] bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80">
-        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6">
-          {/* Logo & Marca */}
+      <header className="fixed top-0 inset-x-0 z-40 h-16 border-b border-[#DCDCDC] bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80">
+        <div className="mx-auto flex h-full max-w-7xl items-center justify-between px-4 sm:px-6">
+          {/* Logo & Marca & Toggle Móvil */}
           <div className="flex items-center gap-3">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="rounded-lg p-2 text-[#475569] hover:bg-[#F4F6F9] lg:hidden"
-              aria-label="Toggle navigation"
+              className="rounded-lg p-2 text-[#475569] hover:bg-[#F4F6F9] focus:outline-none focus:ring-2 focus:ring-[#14649B] lg:hidden"
+              aria-label="Abrir menú de navegación"
             >
               {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </button>
@@ -539,7 +588,7 @@ export default function StyleGuide() {
             </a>
           </div>
 
-          {/* Buscador Rápido Central / Derecho */}
+          {/* Buscador Rápido Central / Desktop */}
           <div className="hidden sm:flex items-center flex-1 max-w-xs mx-6">
             <div className="relative w-full">
               <Search className="absolute left-3 top-2.5 h-4 w-4 text-[#94A3B8]" />
@@ -575,17 +624,28 @@ export default function StyleGuide() {
       </header>
 
       {/* -----------------------------------------------------------------
-       * 2. CONTENEDOR PRINCIPAL: Sidebar Izquierda + Contenido Central
+       * 2. BACKDROP MÓVIL (Cierra el menú al tocar fuera en pantallas pequeñas)
        * ----------------------------------------------------------------- */}
-      <div className="mx-auto max-w-7xl px-4 sm:px-6">
-        <div className="flex min-h-[calc(100vh-4rem)]">
-          {/* SIDEBAR IZQUIERDA (Bootstrap 5 Docs Left Navigation) */}
+      {mobileMenuOpen && (
+        <div
+          onClick={() => setMobileMenuOpen(false)}
+          className="fixed inset-0 z-40 bg-black/50 backdrop-blur-xs transition-opacity lg:hidden"
+          aria-hidden="true"
+        />
+      )}
+
+      {/* -----------------------------------------------------------------
+       * 3. CONTENEDOR PRINCIPAL: Sidebar Fija + Contenido Central Desplazable
+       * ----------------------------------------------------------------- */}
+      <div className="mx-auto max-w-7xl pt-16 px-4 sm:px-6">
+        <div className="flex">
+          {/* SIDEBAR IZQUIERDA (Fija con sticky en desktop, offcanvas en móvil) */}
           <aside
-            className={`fixed inset-y-16 left-0 z-30 w-72 shrink-0 border-r border-[#DCDCDC] bg-white p-4 transition-transform duration-200 lg:static lg:block lg:translate-x-0 ${
-              mobileMenuOpen ? 'translate-x-0 shadow-xl' : '-translate-x-full'
-            } overflow-y-auto`}
+            className={`fixed inset-y-16 left-0 z-50 w-72 shrink-0 border-r border-[#DCDCDC] bg-white p-4 transition-transform duration-200 ease-in-out lg:sticky lg:top-16 lg:z-10 lg:h-[calc(100vh-4rem)] lg:translate-x-0 ${
+              mobileMenuOpen ? 'translate-x-0 shadow-2xl' : '-translate-x-full'
+            } overflow-y-auto no-scrollbar`}
           >
-            {/* Buscador móvil */}
+            {/* Buscador en pantalla móvil */}
             <div className="mb-4 sm:hidden">
               <div className="relative w-full">
                 <Search className="absolute left-3 top-2.5 h-4 w-4 text-[#94A3B8]" />
@@ -616,9 +676,9 @@ export default function StyleGuide() {
                           <li key={item.id}>
                             <a
                               href={`#/estilo/${item.id}`}
-                              onClick={() => {
-                                setActiveSection(item.id);
-                                setMobileMenuOpen(false);
+                              onClick={(e) => {
+                                e.preventDefault();
+                                handleNavClick(item.id);
                               }}
                               className={`group flex items-center justify-between rounded-md px-2.5 py-1.5 text-xs font-medium transition ${
                                 isActive
@@ -644,7 +704,7 @@ export default function StyleGuide() {
             </div>
           </aside>
 
-          {/* CONTENIDO CENTRAL */}
+          {/* CONTENIDO CENTRAL (Se desplaza libremente sin mover la barra lateral) */}
           <main className="min-w-0 flex-1 px-0 py-6 lg:px-8">
             {/* Banner Introductorio */}
             <div className="mb-8 rounded-2xl bg-gradient-to-r from-[#14649B] to-[#19324B] p-6 text-white shadow-sm">
