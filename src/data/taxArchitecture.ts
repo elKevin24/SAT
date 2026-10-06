@@ -86,9 +86,9 @@ export const PILLARS_CONFIG: PillarConfigItem[] = [
   { 
     id: 'comercio_exterior', 
     name: 'Operadores de Comercio Exterior', 
-    desc: 'Importadores, exportadores, OEA y auxiliares de la función pública aduanera.',
-    temasTotales: '2 Grupos · 98 Temas',
-    badgeLabel: '2 Grupos',
+    desc: 'Importadores, exportadores, transportistas, auxiliares aduaneros, agentes y normativa arancelaria.',
+    temasTotales: '8 Categorías · 150 Trámites',
+    badgeLabel: '8 Categorías',
     primaryColor: '#0284C7',
     cardHoverBorder: 'hover:border-[#0284C7]',
     cardHoverBg: 'hover:bg-[#0284C7]',
@@ -190,31 +190,27 @@ export const GRUPOS_CONFIG: GrupoInfo[] = [
   {
     no: 5,
     nombre: 'Importadores y Exportadores',
-    cantidadTemas: 48,
+    cantidadTemas: 80,
     pillar: 'comercio_exterior',
-    desc: 'Operaciones aduaneras de importación, exportación y certificación OEA.',
+    desc: 'Operaciones aduaneras de importación, exportación, certificación OEA y normativa arancelaria.',
     subgrupos: [
-      { nombre: 'Importadores', cantidadTemas: 45, desc: 'Padrón de importadores, aranceles DAI, DUCA y levante aduanero.' },
-      { nombre: 'OEA', cantidadTemas: 46, desc: 'Programa de Operador Económico Autorizado y certificación de seguridad en cadena logística.' },
-      { nombre: 'Exportadores', cantidadTemas: 44, desc: 'Régimen de exportación definitiva, devolución de crédito fiscal y trámites aduaneros.' }
+      { nombre: 'Importadores', cantidadTemas: 58, desc: 'Padrón de importadores, declaraciones DUCA, aranceles DAI, levante aduanero y nacionalización de vehículos.' },
+      { nombre: 'Exportadores', cantidadTemas: 21, desc: 'Padrón de exportadores, declaraciones aduaneras y devolución de crédito fiscal del IVA.' },
+      { nombre: 'OEA', cantidadTemas: 1, desc: 'Programa de Operador Económico Autorizado y certificación de seguridad en la cadena logística.' }
     ]
   },
   {
     no: 8,
-    nombre: 'Auxiliares de la Función Pública',
-    cantidadTemas: 50,
+    nombre: 'Auxiliares de la Función Pública Aduanera',
+    cantidadTemas: 70,
     pillar: 'comercio_exterior',
-    desc: 'Personas individuales o jurídicas autorizadas que colaboran en la gestión y custodia aduanera oficial.',
+    desc: 'Personas individuales o jurídicas autorizadas que colaboran en la gestión, transporte y custodia aduanera oficial.',
     subgrupos: [
-      { nombre: 'Courier', cantidadTemas: 48, desc: 'Empresas de entrega rápida y paquetería expresa internacional.' },
-      { nombre: 'Consolidadores y Desconsolidadores de Carga', cantidadTemas: 47, desc: 'Operadores logísticos de transporte multimodal y manifiestos de carga.' },
-      { nombre: 'Almacenes Fiscales', cantidadTemas: 45, desc: 'Recintos habilitados para depósito de mercancías bajo control aduanero.' },
-      { nombre: 'Almacenadoras', cantidadTemas: 45, desc: 'Almacenes generales de depósito y emisión de certificados de depósito y bonos de prenda.' },
-      { nombre: 'Depósitos Aduaneros', cantidadTemas: 45, desc: 'Depósitos aduaneros temporales y de almacenamiento autorizado.' },
-      { nombre: 'ZDEEP', cantidadTemas: 45, desc: 'Zonas de Desarrollo Económico Especial Público y régimen de incentivos aduaneros.' },
-      { nombre: 'Agentes Aduaneros', cantidadTemas: 50, desc: 'Autorización, refrendo y operaciones de despacho aduanal por agente habilitado.' },
-      { nombre: 'Transportistas', cantidadTemas: 48, desc: 'Registro de empresas de transporte terrestre, aéreo y marítimo internacional.' },
-      { nombre: 'Apoderado Especial Aduanero', cantidadTemas: 45, desc: 'Representación directa exclusiva para trámites aduaneros de personas jurídicas.' }
+      { nombre: 'Transportistas', cantidadTemas: 13, desc: 'Admisión temporal de equipo de carga (ATC), manifiestos CUSCAR y marchamo electrónico.' },
+      { nombre: 'Agentes Aduaneros', cantidadTemas: 7, desc: 'Acreditación oficial, componente ActiveX PKI/DUA y representación aduanera.' },
+      { nombre: 'Normativa y Aranceles', cantidadTemas: 46, desc: 'Sistema Arancelario Centroamericano (SAC), facilitación comercial, modernización y prevención de contrabando.' },
+      { nombre: 'Courier', cantidadTemas: 3, desc: 'Empresas de entrega rápida, paquetería expresa internacional y despacho simplificado.' },
+      { nombre: 'Almacenes Fiscales', cantidadTemas: 1, desc: 'Depósitos aduaneros temporales, almacenadoras y recintos bajo custodia fiscal.' }
     ]
   },
 

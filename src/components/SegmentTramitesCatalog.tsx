@@ -120,6 +120,9 @@ const CATEGORY_DESCRIPTIONS: Record<string, string> = {
   'Transportistas': 'Empresas de transporte terrestre, aéreo y marítimo internacional, tránsito aduanero y manifiestos de carga.',
   'Agentes Aduaneros': 'Auxiliares de la función pública autorizados para el despacho oficial y representación aduanera.',
   'Normativa y Aranceles': 'Criterios aduaneros oficiales, Sistema Arancelario Centroamericano (SAC) y facilitación de comercio.',
+  'OEA': 'Operador Económico Autorizado: certificación aduanera de seguridad en la cadena logística y facilitación de despacho.',
+  'Courier': 'Empresas de entrega rápida, paquetería expresa internacional y despacho aduanero simplificado.',
+  'Almacenes Fiscales': 'Depósitos aduaneros temporales, almacenadoras generales de depósito y recintos bajo custodia fiscal.',
   'Abogados y Notarios': 'Habilitación profesional ante la SAT, adquisición de Papel Sellado Especial para Protocolos y timbres fiscales, traspasos electrónicos y avisos notariales obligatorios.',
   'Peritos Contadores': 'Inscripción y actualización de contadores autorizados ante la SAT para llevar contabilidades formales.',
   'Auditores': 'Habilitación para dictámenes fiscales, auditorías tributarias y trámites de devolución de crédito fiscal.',
@@ -133,6 +136,40 @@ const CATEGORY_DESCRIPTIONS: Record<string, string> = {
 };
 
 const SUBCATEGORY_DESCRIPTIONS: Record<string, string> = {
+  // Comercio Exterior: Importadores
+  'Registro y Padrón de Importadores': 'Inscripción en el Padrón de Importadores de la SAT, requisitos previos por vía aérea o marítima y normativa aduanera aplicable.',
+  'Declaraciones Aduaneras y DUCAs': 'Transmisión y gestión de DUCA-F, DUCA-D, DUA-GT, FYDUCA, declaraciones con fianza aduanera y declaración de valor.',
+  'Importación y Nacionalización de Vehículos': 'Liquidación de tributos, tablas de valores IPRIMA e IVA de importación, alzas y comprobación de valor vehicular.',
+  'Placas y Distintivos de Distribuidor': 'Solicitud y reposición de placas de distribuidor, contraseñas de circulación, tarjetas y primer certificado de propiedad.',
+  'Despacho Aduanero, Levante y Selectivo': 'Gestión de análisis de riesgo, selectivo aduanero verde/rojo, despacho anticipado, estudios de tiempos y entrega de envíos parciales.',
+  'Mercancías en Abandono, Depósitos y Franquicias': 'Rescate de mercancías en abandono aduanero, restitución de depósitos SAT-8011, franquicias electrónicas y devoluciones DAI/IVA.',
+
+  // Comercio Exterior: Exportadores
+  'Padrón y Registro de Exportadores': 'Inscripción como exportador habitual en Agencia Virtual, actualización de datos, bajas y formulario oficial SAT-2125.',
+  'Devolución de Crédito Fiscal': 'Inscripción y gestiones en Régimen Especial y Optativo de devolución de IVA, solicitudes electrónicas y verificaciones.',
+  'Declaraciones Aduaneras y Embarques': 'Autorización de listas de embarque de exportación, declaraciones provisionales, complementarias y selectivo aduanero.',
+
+  // Comercio Exterior: Transportistas
+  'Registro de Equipos y Admisión Temporal (ATC)': 'Admisión temporal de equipo de carga terrestre internacional, ampliación de plazos, cierre de operaciones y devolución.',
+  'Manifiestos de Carga (CUSCAR) y Tránsito': 'Transmisión de manifiestos electrónicos, consulta de tránsitos aduaneros pendientes, asignación de rampas y cartas de ingreso.',
+  'Marchamo Electrónico y Control de Rutas': 'Monitoreo satelital en ruta fiscal mediante marchamo electrónico, inventario de áreas autorizadas y sanciones aduaneras.',
+
+  // Comercio Exterior: Agentes Aduaneros
+  'Habilitación y Registro de Auxiliares': 'Acreditación oficial, renovación de carné de Auxiliar de la Función Pública Aduanera y manual de usuario.',
+  'Sistemas Informáticos y Despacho Aduanero': 'Configuración de componente ActiveX PKI/DUA, expediente digital aduanero, videovigilancia y capacitaciones DUCA.',
+
+  // Comercio Exterior: Normativa y Aranceles
+  'Arancel Centroamericano (SAC) y Permisos': 'Consulta del Sistema Arancelario Centroamericano (SAC), arancel integrado, permisos no arancelarios y notas explicativas.',
+  'Acuerdos Comerciales y Facilitación': 'Tratados de libre comercio, normas de origen, valoración de mercancías y estrategia centroamericana de facilitación.',
+  'Prevención de Contrabando y Defraudación': 'Denuncias ante COCONAD, política nacional contra la defraudación y contrabando y operativos interinstitucionales.',
+  'Modernización e Infraestructura Aduanera': 'Proyectos de puestos fronterizos, Aduana Central (Complejo Lavarreda), tecnología RFID y equipos de inspección no intrusiva.',
+  'Consultas Técnicas, Recursos y Valoración': 'Consultas técnicas aduaneras por escrito, recursos de revocatoria aduanera, compensaciones y subastas públicas.',
+
+  // Comercio Exterior: Auxiliares especializados
+  'Certificación y Operaciones OEA': 'Proceso de habilitación como Operador Económico Autorizado, auditorías de seguridad en cadena logística e instructivos.',
+  'Envíos Rápidos y Paquetería': 'Normativa y procedimientos especiales para empresas de mensajería internacional courier y franquicias.',
+  'Depósitos y Almacenes Fiscales': 'Régimen de almacenamiento bajo control fiscal aduanero, cobro por permanencia y trazabilidad de mercancías.',
+
   // Abogados y Notarios (4 Subtemas Canónicos)
   'Habilitación y Registro Profesional': 'Inscripción y actualización en RTU como Abogado y Notario (CANG), registro de huella biométrica y activación en Agencia Virtual.',
   'Timbres Fiscales y Papel Sellado de Protocolo': 'Compra de Papel Sellado Especial para Protocolos (SAT-7130), timbres fiscales, razón electrónica en línea y retiro por procurador.',
@@ -243,6 +280,80 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
         ];
         const idxA = orderAN.indexOf(a);
         const idxB = orderAN.indexOf(b);
+        if (idxA !== -1 && idxB !== -1) return idxA - idxB;
+        if (idxA !== -1) return -1;
+        if (idxB !== -1) return 1;
+      }
+
+      // Regla canónica estricta para Importadores
+      if (selectedCategory === 'Importadores') {
+        const orderImp = [
+          'Registro y Padrón de Importadores',
+          'Declaraciones Aduaneras y DUCAs',
+          'Importación y Nacionalización de Vehículos',
+          'Placas y Distintivos de Distribuidor',
+          'Despacho Aduanero, Levante y Selectivo',
+          'Mercancías en Abandono, Depósitos y Franquicias'
+        ];
+        const idxA = orderImp.indexOf(a);
+        const idxB = orderImp.indexOf(b);
+        if (idxA !== -1 && idxB !== -1) return idxA - idxB;
+        if (idxA !== -1) return -1;
+        if (idxB !== -1) return 1;
+      }
+
+      // Regla canónica estricta para Exportadores
+      if (selectedCategory === 'Exportadores') {
+        const orderExp = [
+          'Padrón y Registro de Exportadores',
+          'Devolución de Crédito Fiscal',
+          'Declaraciones Aduaneras y Embarques'
+        ];
+        const idxA = orderExp.indexOf(a);
+        const idxB = orderExp.indexOf(b);
+        if (idxA !== -1 && idxB !== -1) return idxA - idxB;
+        if (idxA !== -1) return -1;
+        if (idxB !== -1) return 1;
+      }
+
+      // Regla canónica estricta para Transportistas
+      if (selectedCategory === 'Transportistas') {
+        const orderTransp = [
+          'Registro de Equipos y Admisión Temporal (ATC)',
+          'Manifiestos de Carga (CUSCAR) y Tránsito',
+          'Marchamo Electrónico y Control de Rutas'
+        ];
+        const idxA = orderTransp.indexOf(a);
+        const idxB = orderTransp.indexOf(b);
+        if (idxA !== -1 && idxB !== -1) return idxA - idxB;
+        if (idxA !== -1) return -1;
+        if (idxB !== -1) return 1;
+      }
+
+      // Regla canónica estricta para Agentes Aduaneros
+      if (selectedCategory === 'Agentes Aduaneros') {
+        const orderAg = [
+          'Habilitación y Registro de Auxiliares',
+          'Sistemas Informáticos y Despacho Aduanero'
+        ];
+        const idxA = orderAg.indexOf(a);
+        const idxB = orderAg.indexOf(b);
+        if (idxA !== -1 && idxB !== -1) return idxA - idxB;
+        if (idxA !== -1) return -1;
+        if (idxB !== -1) return 1;
+      }
+
+      // Regla canónica estricta para Normativa y Aranceles
+      if (selectedCategory === 'Normativa y Aranceles') {
+        const orderNorm = [
+          'Arancel Centroamericano (SAC) y Permisos',
+          'Acuerdos Comerciales y Facilitación',
+          'Prevención de Contrabando y Defraudación',
+          'Modernización e Infraestructura Aduanera',
+          'Consultas Técnicas, Recursos y Valoración'
+        ];
+        const idxA = orderNorm.indexOf(a);
+        const idxB = orderNorm.indexOf(b);
         if (idxA !== -1 && idxB !== -1) return idxA - idxB;
         if (idxA !== -1) return -1;
         if (idxB !== -1) return 1;
