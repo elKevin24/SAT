@@ -1,8 +1,8 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import { Search, ChevronDown, ChevronRight, Layers, LayoutGrid, CheckCircle2 } from 'lucide-react';
+import { Search, ChevronRight, ArrowLeft, Home } from 'lucide-react';
 import { SegmentId } from './UserSegmentCards';
 
-interface TramiteItem {
+export interface TramiteItem {
   id: string;
   pillar: string;
   pillarName: string;
@@ -30,42 +30,50 @@ interface SegmentTramitesCatalogProps {
   onSwitchSegment: (segId: SegmentId) => void;
 }
 
-const SEGMENT_METADATA: Record<SegmentId, { title: string; shortTitle: string; desc: string; color: string; hoverBg: string; hoverBorder: string; hoverShadow: string }> = {
+const SEGMENT_METADATA: Record<SegmentId, {
+  title: string;
+  shortTitle: string;
+  desc: string;
+  color: string;
+  hoverBg: string;
+  hoverBorder: string;
+  hoverShadow: string;
+}> = {
   contribuyentes: {
-    title: 'Catálogo de Trámites para Contribuyentes',
+    title: 'Contribuyentes',
     shortTitle: 'Contribuyentes',
-    desc: 'Trámites para personas individuales sin obligaciones, pequeños contribuyentes, negocios en régimen general y contribuyentes especiales.',
+    desc: 'Personas individuales, pequeños contribuyentes, régimen general y contribuyentes especiales.',
     color: '#14649B',
     hoverBg: 'hover:bg-[#14649B]',
     hoverBorder: 'hover:border-[#14649B]',
-    hoverShadow: 'hover:shadow-[0_12px_24px_rgba(20,100,155,0.24)]'
+    hoverShadow: 'hover:shadow-[0_12px_24px_rgba(20,100,155,0.22)]'
   },
   comercio_exterior: {
-    title: 'Catálogo de Trámites para Operadores de Comercio Exterior',
-    shortTitle: 'Operadores de Comercio Exterior',
-    desc: 'Gestiones para importadores, exportadores, empresas de transporte internacional, agentes de aduanas y normativa arancelaria.',
+    title: 'Operadores de Comercio Exterior',
+    shortTitle: 'Comercio Exterior',
+    desc: 'Importadores, exportadores, auxiliares aduaneros, transportistas y normativa arancelaria.',
     color: '#0284C7',
     hoverBg: 'hover:bg-[#0284C7]',
     hoverBorder: 'hover:border-[#0284C7]',
-    hoverShadow: 'hover:shadow-[0_12px_24px_rgba(2,132,199,0.24)]'
+    hoverShadow: 'hover:shadow-[0_12px_24px_rgba(2,132,199,0.22)]'
   },
   profesionales: {
-    title: 'Catálogo de Trámites para Profesionales',
+    title: 'Profesionales',
     shortTitle: 'Profesionales',
-    desc: 'Habilita tu registro como perito contador, auditor, abogado, notario o gestor tributario. Consulta los títulos y requisitos exigidos por la SAT.',
+    desc: 'Peritos contadores, auditores, abogados, notarios y gestores tributarios acreditados.',
     color: '#4D8014',
     hoverBg: 'hover:bg-[#4D8014]',
     hoverBorder: 'hover:border-[#4D8014]',
-    hoverShadow: 'hover:shadow-[0_12px_24px_rgba(77,128,20,0.24)]'
+    hoverShadow: 'hover:shadow-[0_12px_24px_rgba(77,128,20,0.22)]'
   },
   organismos_especiales: {
-    title: 'Catálogo de Trámites para Organismos Especiales',
+    title: 'Organismos Especiales',
     shortTitle: 'Organismos Especiales',
-    desc: 'Reconocimiento de exenciones tributarias para organizaciones sin fines de lucro, iglesias, universidades, municipalidades y entidades del Estado.',
+    desc: 'Entidades del Estado, universidades, centros educativos, iglesias y organizaciones exentas.',
     color: '#C25E00',
     hoverBg: 'hover:bg-[#C25E00]',
     hoverBorder: 'hover:border-[#C25E00]',
-    hoverShadow: 'hover:shadow-[0_12px_24px_rgba(194,94,0,0.24)]'
+    hoverShadow: 'hover:shadow-[0_12px_24px_rgba(194,94,0,0.22)]'
   }
 };
 
@@ -103,25 +111,42 @@ const CANONICAL_CATEGORY_ORDER: Record<string, string[]> = {
 };
 
 const CATEGORY_DESCRIPTIONS: Record<string, string> = {
-  'NIT sin Obligaciones': 'Personas individuales, estudiantes y graduados sin actividad económica que requieren NIT para actos civiles, cuentas bancarias, títulos y remesas (cero asalariados).',
-  'Pequeños Contribuyentes': 'Régimen simplificado de tributación del 5% definitivo (hasta Q150,000 anuales) y actividades agropecuarias especiales primarias y pecuarias.',
-  'Contribuyente General': 'Personas y empresas con obligaciones generales de IVA (12%) e ISR, asalariados, gestión vehicular como propietarios y trámites del RTU.',
-  'Contribuyentes Especiales': 'Medianos y grandes contribuyentes asignados a gerencias especiales con control y fiscalización tributaria intensiva.',
-  'Importadores': 'Padrón de importadores, declaraciones DUCA, aranceles DAI, levante aduanero y vehículos para importadores.',
+  'NIT sin Obligaciones': 'Personas individuales, estudiantes y graduados sin actividad económica que requieren NIT para trámites civiles, cuentas bancarias, títulos y remesas.',
+  'Pequeños Contribuyentes': 'Régimen simplificado con tarifa definitiva del 5% hasta Q150,000 anuales y actividades agropecuarias especiales.',
+  'Contribuyente General': 'Personas y empresas con obligaciones generales de IVA e ISR, facturación electrónica, asalariados y gestión vehicular.',
+  'Contribuyentes Especiales': 'Medianos y grandes contribuyentes sujetos a control diferenciado y gerencias de fiscalización tributaria intensiva.',
+  'Importadores': 'Padrón de importadores, declaraciones DUCA, aranceles DAI, levante aduanero y vehículos para importación.',
   'Exportadores': 'Padrón de exportadores, declaraciones aduaneras y solicitud de Devolución de Crédito Fiscal del IVA.',
   'Transportistas': 'Empresas de transporte terrestre, aéreo y marítimo internacional, tránsito aduanero y manifiestos de carga.',
-  'Agentes Aduaneros': 'Auxiliares de la función pública autorizados para el despacho aduanero oficial y representación de operadores.',
-  'Normativa y Aranceles': 'Criterios aduaneros oficiales, Sistema Arancelario Centroamericano (SAC), facilitación y combate al contrabando.',
+  'Agentes Aduaneros': 'Auxiliares de la función pública autorizados para el despacho oficial y representación aduanera.',
+  'Normativa y Aranceles': 'Criterios aduaneros oficiales, Sistema Arancelario Centroamericano (SAC) y facilitación de comercio.',
   'Abogados y Notarios': 'Habilitación de e-Traspaso vehicular, registro notarial y legalización de documentos tributarios.',
   'Peritos Contadores': 'Inscripción y actualización de contadores autorizados ante la SAT para llevar contabilidades formales.',
-  'Auditores': 'Habilitación para auditorías fiscales, dictámenes y trámites de devolución de crédito fiscal.',
-  'Gestores Tributarios': 'Acreditación de gestores y personas autorizadas para tramitar ante agencias tributarias.',
+  'Auditores': 'Habilitación para dictámenes fiscales, auditorías tributarias y trámites de devolución de crédito fiscal.',
+  'Gestores Tributarios': 'Acreditación de gestores y personas autorizadas para tramitar ante agencias de la SAT.',
   'Servicios Profesionales': 'Profesionales liberales independientes, emisión de facturas y pago de timbres profesionales.',
-  'Entidades del Estado': 'Ministerios, secretarías y dependencias públicas con retenciones tributarias y exenciones oficiales.',
-  'Constitucionales': 'Universidades, centros educativos y cuerpos diplomáticos exentos de tributos por mandato constitucional.',
+  'Entidades del Estado': 'Ministerios, dependencias públicas y secretarías con retenciones tributarias y exenciones oficiales.',
+  'Constitucionales': 'Universidades, centros educativos y misiones diplomáticas exentas de tributos por mandato constitucional.',
   'No Lucrativos': 'Asociaciones, fundaciones, cooperativas e iglesias con reconocimiento de exención de impuestos.',
   'Municipalidades': 'Gobiernos locales y empresas municipales con trámites tributarios y acreditaciones ante SAT.',
-  'Decreto': 'Entidades beneficiarias de incentivos fiscales y exenciones específicas por decreto legislativo.'
+  'Decreto': 'Entidades beneficiarias de incentivos fiscales y exenciones específicas normadas por decreto legislativo.'
+};
+
+const SUBCATEGORY_DESCRIPTIONS: Record<string, string> = {
+  'Inscripción de NIT': 'Solicitud de primer NIT para personas individuales sin actividad mercantil y actualización de datos de identificación.',
+  'Servicios en Línea y Solvencias': 'Habilitación de Agencia Virtual, solicitud de Solvencia Fiscal, cita previa y consulta de expedientes.',
+  'Títulos Universitarios': 'Registro de títulos a nivel medio y universitario para habilitación profesional y consulta con código QR.',
+  'Información Pública': 'Solicitud formal y consulta de información pública de oficio de la SAT conforme al Decreto 57-2008.',
+  'Pequeño Contribuyente': 'Inscripción en régimen de pequeño contribuyente, emisión de factura electrónica FEL y declaración mensual SAT-2046.',
+  'Primario': 'Régimen especial agropecuario para productores primarios de granos, hortalizas y frutas sin intermediarios.',
+  'Pecuario': 'Régimen especial agropecuario para actividades de ganadería, avicultura y crianza de animales.',
+  'RTU e Inscripción': 'Inscripción de sociedades mercantiles, actualización de datos, nombramientos de representantes y cese de actividades.',
+  'Obligaciones y Regímenes': 'Declaraciones juradas de IVA e ISR, retenciones, facturación FEL y autorizaciones de regímenes contables.',
+  'Registro Fiscal de Vehículos': 'Inscripción de vehículos, e-traspasos, calcomanías, pago de impuesto de circulación ISCV y placas.',
+  'Capacitación y Cultura Tributaria': 'Cursos virtuales por impuesto, herramientas electrónicas, biblioteca tributaria y formación ciudadana.',
+  'Devoluciones y Créditos Fiscales': 'Solicitud de devolución de crédito fiscal de IVA, devolución de ISR para asalariados y pagos indebidos.',
+  'Servicios al Contribuyente': 'Constancias del RTU, habilitación de libros contables, atención de citas y corrección de formularios.',
+  'Consultas y Verificadores': 'Verificadores públicos de solvencias, documentos con firma electrónica y consulta de omisos.'
 };
 
 export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
@@ -133,34 +158,40 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
   onSwitchSegment
 }) => {
   const [internalQuery, setInternalQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>(initialCategory || 'Todas las categorías');
-  const [selectedSubcategory, setSelectedSubcategory] = useState<string>('Todos los subtemas');
-  const [viewLayout, setViewLayout] = useState<'branched' | 'grid'>('branched');
-  const [collapsedBranches, setCollapsedBranches] = useState<Record<string, boolean>>({});
 
-  // Sync initialCategory if parent changes it
+  // Categoría seleccionada
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(
+    initialCategory && initialCategory !== 'Todas las categorías' ? initialCategory : null
+  );
+
+  // Subcategoría seleccionada
+  const [selectedSubcategory, setSelectedSubcategory] = useState<string | null>(null);
+
   useEffect(() => {
-    if (initialCategory) {
+    if (initialCategory && initialCategory !== 'Todas las categorías') {
       setSelectedCategory(initialCategory);
-      setSelectedSubcategory('Todos los subtemas');
+      setSelectedSubcategory(null);
+    } else {
+      setSelectedCategory(null);
+      setSelectedSubcategory(null);
     }
-  }, [initialCategory]);
+  }, [initialCategory, segmentId]);
 
   const meta = SEGMENT_METADATA[segmentId];
 
-  // Filter trámites for this segment
+  // Trámites del segmento actual
   const segmentTramites = useMemo(() => {
     return allTramites.filter(t => t.pillar === segmentId);
   }, [allTramites, segmentId]);
 
-  // Extract unique categories (Level 2) in this segment
-  const categories = useMemo(() => {
+  // Categorías disponibles dentro del segmento actual
+  const categoriesList = useMemo(() => {
     const set = new Set<string>();
     segmentTramites.forEach(t => {
       if (t.categoria) set.add(t.categoria);
     });
     const orderList = CANONICAL_CATEGORY_ORDER[segmentId] || [];
-    const sorted = Array.from(set).sort((a, b) => {
+    return Array.from(set).sort((a, b) => {
       const idxA = orderList.indexOf(a);
       const idxB = orderList.indexOf(b);
       if (idxA !== -1 && idxB !== -1) return idxA - idxB;
@@ -168,392 +199,327 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
       if (idxB !== -1) return 1;
       return a.localeCompare(b);
     });
-    return ['Todas las categorías', ...sorted];
   }, [segmentTramites, segmentId]);
 
-  // Extract unique subcategories (Level 3 - Branch nodes) for current category selection
-  const subcategories = useMemo(() => {
+  // Subcategorías disponibles dentro de la categoría seleccionada
+  const subcategoriesList = useMemo(() => {
+    if (!selectedCategory) return [];
+    const inCurrentCategory = segmentTramites.filter(t => t.categoria === selectedCategory);
     const set = new Set<string>();
-    const inCurrentCategory = selectedCategory === 'Todas las categorías'
-      ? segmentTramites
-      : segmentTramites.filter(t => t.categoria === selectedCategory);
-
     inCurrentCategory.forEach(t => {
       if (t.subcategoria) set.add(t.subcategoria);
     });
 
-    const sorted = Array.from(set).sort((a, b) => {
+    return Array.from(set).sort((a, b) => {
+      // Regla canónica estricta para NIT: Inscripción va estrictamente primero
+      if (selectedCategory === 'NIT sin Obligaciones') {
+        const orderNIT = [
+          'Inscripción de NIT',
+          'Servicios en Línea y Solvencias',
+          'Títulos Universitarios',
+          'Información Pública'
+        ];
+        const idxA = orderNIT.indexOf(a);
+        const idxB = orderNIT.indexOf(b);
+        if (idxA !== -1 && idxB !== -1) return idxA - idxB;
+        if (idxA !== -1) return -1;
+        if (idxB !== -1) return 1;
+      }
       const aIsInsc = a.toLowerCase().includes('inscripci');
       const bIsInsc = b.toLowerCase().includes('inscripci');
       if (aIsInsc && !bIsInsc) return -1;
       if (!aIsInsc && bIsInsc) return 1;
       return a.localeCompare(b);
     });
-
-    return ['Todos los subtemas', ...sorted];
   }, [segmentTramites, selectedCategory]);
 
-  // Apply filters and search
-  const filteredTramites = useMemo(() => {
-    return segmentTramites.filter(t => {
-      const matchCat = selectedCategory === 'Todas las categorías' || t.categoria === selectedCategory;
-      const matchSub = selectedSubcategory === 'Todos los subtemas' || t.subcategoria === selectedSubcategory;
-      const matchQ = !internalQuery.trim() || 
-        (t.tramite && t.tramite.toLowerCase().includes(internalQuery.toLowerCase())) ||
-        (t.descripcion && t.descripcion.toLowerCase().includes(internalQuery.toLowerCase())) ||
-        (t.subcategoria && t.subcategoria.toLowerCase().includes(internalQuery.toLowerCase())) ||
-        (t.categoria && t.categoria.toLowerCase().includes(internalQuery.toLowerCase()));
-      return matchCat && matchSub && matchQ;
-    });
+  // Trámites finales (filtrados por subcategoría o por búsqueda global si hay query)
+  const currentTramites = useMemo(() => {
+    if (internalQuery.trim()) {
+      const q = internalQuery.toLowerCase();
+      return segmentTramites.filter(t =>
+        (t.tramite && t.tramite.toLowerCase().includes(q)) ||
+        (t.descripcion && t.descripcion.toLowerCase().includes(q)) ||
+        (t.subcategoria && t.subcategoria.toLowerCase().includes(q)) ||
+        (t.categoria && t.categoria.toLowerCase().includes(q))
+      );
+    }
+
+    if (!selectedCategory || !selectedSubcategory) return [];
+
+    return segmentTramites.filter(
+      t => t.categoria === selectedCategory && t.subcategoria === selectedSubcategory
+    );
   }, [segmentTramites, selectedCategory, selectedSubcategory, internalQuery]);
 
-  // Group filtered results into Branch Nodes (Subcategorías / Situaciones de ciclo de vida)
-  const groupedBranches = useMemo(() => {
-    const map = new Map<string, TramiteItem[]>();
-    filteredTramites.forEach(t => {
-      const key = t.subcategoria || 'General';
-      if (!map.has(key)) map.set(key, []);
-      map.get(key)!.push(t);
-    });
+  // Navegación limpia de migas de pan
+  const handleResetToCategories = () => {
+    setSelectedCategory(null);
+    setSelectedSubcategory(null);
+    setInternalQuery('');
+  };
 
-    const entries = Array.from(map.entries()).sort(([nameA, itemsA], [nameB, itemsB]) => {
-      const aIsInsc = nameA.toLowerCase().includes('inscripci');
-      const bIsInsc = nameB.toLowerCase().includes('inscripci');
-      if (aIsInsc && !bIsInsc) return -1;
-      if (!aIsInsc && bIsInsc) return 1;
-      return itemsB.length - itemsA.length;
-    });
-
-    return entries.map(([subName, items]) => ({
-      name: subName,
-      count: items.length,
-      items
-    }));
-  }, [filteredTramites]);
-
-  const toggleBranch = (branchName: string) => {
-    setCollapsedBranches(prev => ({
-      ...prev,
-      [branchName]: !prev[branchName]
-    }));
+  const handleResetToSubcategories = () => {
+    setSelectedSubcategory(null);
+    setInternalQuery('');
   };
 
   return (
-    <div className="py-6 bg-white min-h-[70vh]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-5">
-        
-        {/* Navigation Breadcrumb */}
-        <div className="flex items-center justify-between flex-wrap gap-3 pb-3 border-b border-[#DCDCDC]">
-          <div className="flex items-center gap-2 text-xs font-semibold text-slate-500">
-            <button 
-              onClick={onBackToHome}
-              className="hover:text-[#14649B] transition-colors"
-            >
-              Inicio
-            </button>
-            <span>/</span>
-            <span className="text-slate-700">{meta.shortTitle}</span>
-            {selectedCategory !== 'Todas las categorías' && (
-              <>
-                <span>/</span>
-                <span className="text-[#19324B] font-bold">{selectedCategory}</span>
-              </>
-            )}
-            {selectedSubcategory !== 'Todos los subtemas' && (
-              <>
-                <span>/</span>
-                <span className="text-[#14649B] font-semibold">{selectedSubcategory}</span>
-              </>
-            )}
-          </div>
+    <div className="py-8 bg-white min-h-[75vh]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
 
-          {/* Quick switcher between segments */}
-          <div className="flex items-center gap-1.5 text-xs">
-            {(Object.keys(SEGMENT_METADATA) as SegmentId[]).map((segKey) => (
+        {/* -----------------------------------------------------------------
+         * MIGA DE PAN LIMPIA (Sin la palabra 'Nivel' ni números redundantes)
+         * ----------------------------------------------------------------- */}
+        <nav aria-label="Navegación de trámites" className="flex items-center flex-wrap gap-2 text-xs font-medium text-[#475569] pb-3 border-b border-[#DCDCDC]">
+          <button
+            onClick={onBackToHome}
+            className="flex items-center gap-1.5 hover:text-[#14649B] transition-colors"
+          >
+            <Home className="w-3.5 h-3.5" />
+            <span>Inicio</span>
+          </button>
+
+          <ChevronRight className="w-3 h-3 text-[#94A3B8]" />
+
+          <button
+            onClick={handleResetToCategories}
+            className={`font-bold transition-colors ${
+              !selectedCategory && !internalQuery ? 'text-[#14649B]' : 'hover:text-[#14649B]'
+            }`}
+          >
+            {meta.title}
+          </button>
+
+          {selectedCategory && (
+            <>
+              <ChevronRight className="w-3 h-3 text-[#94A3B8]" />
               <button
-                key={segKey}
-                onClick={() => {
-                  setSelectedCategory('Todas las categorías');
-                  setSelectedSubcategory('Todos los subtemas');
-                  setInternalQuery('');
-                  onSwitchSegment(segKey);
-                }}
-                className={`px-3 py-1 rounded-lg font-bold text-xs transition-all ${
-                  segKey === segmentId 
-                    ? 'bg-[#14649B] text-white shadow-2xs' 
-                    : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                onClick={handleResetToSubcategories}
+                className={`font-bold transition-colors ${
+                  !selectedSubcategory && !internalQuery ? 'text-[#14649B]' : 'hover:text-[#14649B]'
                 }`}
               >
-                {SEGMENT_METADATA[segKey].shortTitle}
+                {selectedCategory}
               </button>
-            ))}
-          </div>
-        </div>
+            </>
+          )}
 
-        {/* Hero Segment Header */}
-        <div className="p-5 rounded-[16px] bg-slate-50 border border-[#DCDCDC] flex flex-col md:flex-row md:items-center justify-between gap-4">
+          {selectedSubcategory && (
+            <>
+              <ChevronRight className="w-3 h-3 text-[#94A3B8]" />
+              <span className="font-bold text-[#14649B]">
+                {selectedSubcategory}
+              </span>
+            </>
+          )}
+        </nav>
+
+        {/* -----------------------------------------------------------------
+         * CABECERA DEL SEGMENTO CON BUSCADOR
+         * ----------------------------------------------------------------- */}
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div>
             <div className="flex items-center gap-2 mb-1">
-              <span className="text-[10px] font-black uppercase tracking-wider text-[#14649B] bg-white px-2 py-0.5 rounded-full border border-slate-200">
-                Pilar Oficial Nivel 1
-              </span>
-              <span className="text-[11px] font-semibold text-slate-500">
-                {segmentTramites.length} trámites oficiales disponibles
+              <span className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: meta.color }} />
+              <span className="text-xs font-bold uppercase tracking-wider text-[#64748B]">
+                {meta.shortTitle}
               </span>
             </div>
-            <h2 className="text-lg sm:text-xl font-black text-[#19324B] tracking-tight">
-              {meta.title}
-            </h2>
-            <p className="text-xs sm:text-sm text-slate-600 mt-1 max-w-2xl leading-relaxed">
-              {meta.desc}
+            <h1 className="text-2xl sm:text-3xl font-black text-[#19324B] tracking-tight">
+              {internalQuery
+                ? `Resultados para "${internalQuery}"`
+                : selectedSubcategory
+                  ? selectedSubcategory
+                  : selectedCategory
+                    ? selectedCategory
+                    : meta.title}
+            </h1>
+            <p className="text-xs sm:text-sm text-[#475569] mt-1 max-w-3xl leading-relaxed">
+              {internalQuery
+                ? `Trámites encontrados en ${meta.shortTitle}.`
+                : selectedSubcategory
+                  ? (SUBCATEGORY_DESCRIPTIONS[selectedSubcategory] || 'Selecciona el trámite para ver sus requisitos y pasos normados.')
+                  : selectedCategory
+                    ? (CATEGORY_DESCRIPTIONS[selectedCategory] || meta.desc)
+                    : meta.desc}
             </p>
           </div>
 
-          {/* Selector de modo de visualización */}
-          <div className="flex items-center gap-1 bg-white p-1 rounded-xl border border-[#DCDCDC] text-xs font-semibold shrink-0 self-start md:self-auto">
-            <button
-              onClick={() => setViewLayout('branched')}
-              className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all ${
-                viewLayout === 'branched'
-                  ? 'bg-[#14649B] text-white shadow-2xs font-bold'
-                  : 'text-slate-600 hover:text-slate-900'
-              }`}
-              title="Ver agrupado por ramas temáticas jerárquicas (estilo ATO)"
-            >
-              <Layers className="w-3.5 h-3.5" />
-              <span>Por Ramas Temáticas</span>
-            </button>
-            <button
-              onClick={() => setViewLayout('grid')}
-              className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all ${
-                viewLayout === 'grid'
-                  ? 'bg-[#14649B] text-white shadow-2xs font-bold'
-                  : 'text-slate-600 hover:text-slate-900'
-              }`}
-              title="Ver cuadrícula directa"
-            >
-              <LayoutGrid className="w-3.5 h-3.5" />
-              <span>Cuadrícula</span>
-            </button>
-          </div>
-        </div>
-
-        {/* Level 2: Selector de Categorías / Clasificaciones Oficiales */}
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 p-2.5 bg-slate-50 rounded-[14px] border border-[#DCDCDC]">
-          
-          <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar">
-            <span className="text-[10px] font-black uppercase tracking-wider text-slate-400 px-1 shrink-0">
-              Clasificación:
-            </span>
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => {
-                  setSelectedCategory(cat);
-                  setSelectedSubcategory('Todos los subtemas');
-                }}
-                className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all whitespace-nowrap ${
-                  selectedCategory === cat
-                    ? 'bg-white text-[#14649B] shadow-2xs border border-[#14649B]/30'
-                    : 'text-slate-600 hover:text-slate-900 hover:bg-slate-200/60'
-                }`}
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
-
-          {/* Search within segment */}
-          <div className="relative w-full md:w-72 shrink-0">
-            <Search className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
+          {/* Buscador reactivo dentro del segmento */}
+          <div className="relative w-full md:w-80 shrink-0">
+            <Search className="w-4 h-4 text-[#94A3B8] absolute left-3 top-1/2 -translate-y-1/2" />
             <input
               type="text"
               value={internalQuery}
               onChange={(e) => setInternalQuery(e.target.value)}
-              placeholder="Buscar trámite o palabra clave..."
-              className="w-full pl-9 pr-3 py-1.5 text-xs bg-white border border-[#DCDCDC] rounded-xl focus:border-[#14649B] focus:ring-1 focus:ring-[#14649B] outline-none"
+              placeholder="Buscar en este segmento..."
+              className="w-full pl-9 pr-3 py-2 text-xs bg-white border border-[#DCDCDC] rounded-xl focus:border-[#14649B] focus:ring-1 focus:ring-[#14649B] outline-none"
             />
           </div>
         </div>
 
-        {/* Level 3: Subnodos Temáticos Ramificados (Filtro de Segundo Nivel / Nodos Hijos) */}
-        {subcategories.length > 2 && (
-          <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-1">
-            <span className="text-[10px] font-black uppercase tracking-wider text-slate-400 px-1 shrink-0">
-              Subtemas:
-            </span>
-            {subcategories.map((sub) => {
-              const count = sub === 'Todos los subtemas'
-                ? filteredTramites.length
-                : segmentTramites.filter(t => 
-                    (selectedCategory === 'Todas las categorías' || t.categoria === selectedCategory) &&
-                    t.subcategoria === sub
-                  ).length;
-
-              return (
-                <button
-                  key={sub}
-                  onClick={() => setSelectedSubcategory(sub)}
-                  className={`px-2.5 py-1 rounded-lg text-xs font-medium transition-all whitespace-nowrap flex items-center gap-1.5 ${
-                    selectedSubcategory === sub
-                      ? 'bg-slate-800 text-white shadow-2xs font-bold'
-                      : 'bg-slate-100 text-slate-600 hover:bg-slate-200 hover:text-slate-800'
-                  }`}
-                >
-                  <span>{sub}</span>
-                  <span className={`px-1.5 py-0.2 rounded-full text-[10px] ${
-                    selectedSubcategory === sub ? 'bg-white/20 text-white' : 'bg-slate-200 text-slate-600'
-                  }`}>
-                    {count}
-                  </span>
-                </button>
-              );
-            })}
-          </div>
-        )}
-
-
-        {/* Banner contextual orientado al ciudadano para NIT sin Obligaciones */}
-        {selectedCategory === 'NIT sin Obligaciones' && !internalQuery && (
-          <div className="p-4 bg-sky-50/70 border border-sky-200 rounded-[14px]">
-            <h3 className="text-sm font-bold text-[#14649B] mb-1">
-              Número de Identificación Tributaria (NIT)
-            </h3>
-            <p className="text-xs text-slate-700 leading-relaxed">
-              Cómo solicitar un Número de Identificación Tributaria (NIT), actualizar sus datos, consultar su NIT y qué hacer si ha sido utilizado de forma indebida.
-            </p>
-          </div>
-        )}
-
-        {/* RENDER DE RESULTADOS */}
-        {filteredTramites.length > 0 ? (
-          viewLayout === 'branched' ? (
-            /* Vista 1: Ramas Temáticas Jerárquicas (Estilo ATO) */
-            <div className="space-y-6">
-              {groupedBranches.map((branch) => {
-                const isCollapsed = !!collapsedBranches[branch.name];
-
-                return (
-                  <div 
-                    key={branch.name}
-                    className="border border-[#DCDCDC] rounded-[16px] overflow-hidden bg-white shadow-2xs transition-all"
-                  >
-                    {/* Encabezado del Nodo Hijo Temático */}
-                    <div 
-                      onClick={() => toggleBranch(branch.name)}
-                      className="p-3.5 bg-slate-50 hover:bg-slate-100/80 cursor-pointer flex items-center justify-between gap-3 border-b border-slate-200 select-none transition-colors"
-                    >
-                      <div className="flex items-center gap-2.5">
-                        <button className="text-slate-400 hover:text-slate-600">
-                          {isCollapsed ? (
-                            <ChevronRight className="w-4 h-4 text-[#14649B]" />
-                          ) : (
-                            <ChevronDown className="w-4 h-4 text-[#14649B]" />
-                          )}
-                        </button>
-                        <span className="w-2 h-2 rounded-full bg-[#14649B]" />
-                        <h3 className="text-sm font-bold text-[#19324B]">
-                          {branch.name}
-                        </h3>
-                      </div>
-
-                      <div className="flex items-center gap-2">
-                        <span className="text-[11px] font-bold text-slate-600 bg-white border border-slate-200 px-2 py-0.5 rounded-full">
-                          {branch.count} {branch.count === 1 ? 'trámite' : 'trámites'}
-                        </span>
-                      </div>
-                    </div>
-
-                    {/* Hojas / Trámites del Nodo Hijo */}
-                    {!isCollapsed && (
-                      <div className="p-4 bg-white grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-3.5">
-                        {branch.items.map((tramite) => (
-                          <div
-                            key={tramite.id}
-                            role="button"
-                            tabIndex={0}
-                            onClick={() => onSelectTramite(tramite)}
-                            onKeyDown={(e) => {
-                              if (e.key === 'Enter' || e.key === ' ') {
-                                e.preventDefault();
-                                onSelectTramite(tramite);
-                              }
-                            }}
-                            aria-label={`Ver requisitos de ${tramite.tramite}`}
-                            className={`p-4 sm:p-5 bg-white border border-[#DCDCDC] rounded-[14px] ${meta.hoverBorder} ${meta.hoverBg} ${meta.hoverShadow} transition-all duration-300 cursor-pointer flex flex-col justify-between group shadow-xs hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#14649B] focus-visible:ring-offset-2`}
-                          >
-                            <div>
-                              <div className="flex items-center gap-1.5 mb-1.5">
-                                <span className="text-[10px] font-semibold text-slate-400 group-hover:text-white/80">
-                                  {tramite.categoria}
-                                </span>
-                              </div>
-                              <h4 className="text-sm font-bold text-[#19324B] group-hover:text-white transition-colors leading-snug mb-1.5">
-                                {tramite.tramite}
-                              </h4>
-
-                              <p className="text-xs text-slate-600 group-hover:text-white/90 transition-colors line-clamp-3 leading-relaxed">
-                                {tramite.descripcion}
-                              </p>
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                );
-              })}
+        {/* -----------------------------------------------------------------
+         * VISTA 1: BÚSQUEDA DIRECTA (Si el usuario escribió algo en el input)
+         * ----------------------------------------------------------------- */}
+        {internalQuery.trim() ? (
+          <div>
+            <div className="flex items-center justify-between pb-3 mb-4 border-b border-[#DCDCDC]">
+              <h2 className="text-sm font-bold text-[#19324B]">
+                Trámites coincidentes
+              </h2>
+              <button
+                onClick={() => setInternalQuery('')}
+                className="text-xs font-bold text-[#14649B] hover:underline"
+              >
+                Limpiar búsqueda
+              </button>
             </div>
-          ) : (
-            /* Vista 2: Cuadrícula Directa */
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-3.5">
-              {filteredTramites.map((tramite) => (
-                <div
-                  key={tramite.id}
-                  role="button"
-                  tabIndex={0}
-                  onClick={() => onSelectTramite(tramite)}
-                  onKeyDown={(e) => {
-                    if (e.key === 'Enter' || e.key === ' ') {
-                      e.preventDefault();
-                      onSelectTramite(tramite);
-                    }
-                  }}
-                  aria-label={`Ver requisitos de ${tramite.tramite}`}
-                  className={`p-4 sm:p-5 bg-white border border-[#DCDCDC] rounded-[14px] ${meta.hoverBorder} ${meta.hoverBg} ${meta.hoverShadow} transition-all duration-300 cursor-pointer flex flex-col justify-between group shadow-xs hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#14649B] focus-visible:ring-offset-2`}
-                >
-                  <div>
-                    <div className="flex items-center gap-1.5 mb-1.5">
-                      <span className="text-[10px] font-semibold text-slate-400 group-hover:text-white/80">
-                        {tramite.categoria} › {tramite.subcategoria}
-                      </span>
-                    </div>
-                    <h3 className="text-sm sm:text-base font-bold text-[#19324B] group-hover:text-white transition-colors leading-snug mb-1.5">
-                      {tramite.tramite}
-                    </h3>
 
-                    <p className="text-xs text-slate-600 group-hover:text-white/90 transition-colors line-clamp-3 leading-relaxed">
+            {currentTramites.length > 0 ? (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-3.5">
+                {currentTramites.map((tramite) => (
+                  <div
+                    key={tramite.id}
+                    onClick={() => onSelectTramite(tramite)}
+                    className={`group relative block rounded-2xl border border-[#CDE3F1] bg-[#F0F7FC] p-5 transition-all duration-200 hover:-translate-y-1 ${meta.hoverBg} ${meta.hoverShadow} cursor-pointer`}
+                  >
+                    <div className="flex items-start justify-between gap-3">
+                      <h3 className="text-base font-bold text-[#19324B] transition-colors group-hover:text-white leading-snug">
+                        {tramite.tramite}
+                      </h3>
+                      <ChevronRight className="h-5 w-5 shrink-0 text-[#94A3B8] transition-colors group-hover:text-white" />
+                    </div>
+                    <p className="mt-2 text-xs leading-relaxed text-[#475569] transition-colors group-hover:text-white/90">
                       {tramite.descripcion}
                     </p>
                   </div>
-                </div>
-              ))}
-            </div>
-          )
-        ) : (
-          <div className="p-10 text-center bg-slate-50 rounded-[16px] border border-[#DCDCDC] text-slate-500">
-            <p className="text-sm font-semibold">No encontramos trámites que coincidan con los filtros seleccionados.</p>
-            <button
-              onClick={() => {
-                setSelectedCategory('Todas las categorías');
-                setSelectedSubcategory('Todos los subtemas');
-                setInternalQuery('');
-              }}
-              className="mt-3 px-4 py-2 bg-[#14649B] text-white text-xs font-bold rounded-xl hover:bg-[#19324B] transition-colors"
-            >
-              Restablecer filtros
-            </button>
+                ))}
+              </div>
+            ) : (
+              <div className="rounded-2xl border border-[#DCDCDC] bg-[#F4F6F9] p-8 text-center">
+                <p className="text-sm font-bold text-[#19324B]">No se encontraron trámites</p>
+                <p className="text-xs text-[#475569] mt-1">
+                  Intenta buscar con otros términos como NIT, RTU, Vehículos o Facturas.
+                </p>
+              </div>
+            )}
           </div>
+        ) : (
+          /* -----------------------------------------------------------------
+           * NAVEGACIÓN EN TARJETAS (Fondo azul mínimo institucional #F0F7FC)
+           * ----------------------------------------------------------------- */
+          <>
+            {/* =============================================================
+             * VISTA DE CATEGORÍAS / CLASIFICACIONES (Sin títulos redundantes)
+             * ============================================================= */}
+            {!selectedCategory && (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-3.5">
+                {categoriesList.map((catName) => {
+                  const desc = CATEGORY_DESCRIPTIONS[catName] || 'Explora los trámites y obligaciones agrupadas en esta clasificación oficial.';
+
+                  return (
+                    <div
+                      key={catName}
+                      onClick={() => {
+                        setSelectedCategory(catName);
+                        setSelectedSubcategory(null);
+                      }}
+                      className={`group relative block rounded-2xl border border-[#CDE3F1] bg-[#F0F7FC] p-5 transition-all duration-200 hover:-translate-y-1 ${meta.hoverBg} ${meta.hoverShadow} cursor-pointer`}
+                    >
+                      <div className="flex items-start justify-between gap-3">
+                        <h3 className="text-lg font-bold text-[#19324B] transition-colors group-hover:text-white leading-snug">
+                          {catName}
+                        </h3>
+                        <ChevronRight className="h-5 w-5 shrink-0 text-[#94A3B8] transition-colors group-hover:text-white" />
+                      </div>
+                      <p className="mt-2 text-xs leading-relaxed text-[#475569] transition-colors group-hover:text-white/90">
+                        {desc}
+                      </p>
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+
+            {/* =============================================================
+             * VISTA DE SUBTEMAS (Sin subtítulos redundantes ni números)
+             * ============================================================= */}
+            {selectedCategory && !selectedSubcategory && (
+              <div>
+                <div className="flex items-center justify-end mb-3">
+                  <button
+                    onClick={handleResetToCategories}
+                    className="inline-flex items-center gap-1.5 text-xs font-bold text-[#14649B] hover:underline"
+                  >
+                    <ArrowLeft className="w-3.5 h-3.5" />
+                    <span>Volver a {meta.shortTitle}</span>
+                  </button>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-3.5">
+                  {subcategoriesList.map((subName) => {
+                    const desc = SUBCATEGORY_DESCRIPTIONS[subName] || 'Consulta los trámites específicos y requisitos correspondientes.';
+
+                    return (
+                      <div
+                        key={subName}
+                        onClick={() => setSelectedSubcategory(subName)}
+                        className={`group relative block rounded-2xl border border-[#CDE3F1] bg-[#F0F7FC] p-5 transition-all duration-200 hover:-translate-y-1 ${meta.hoverBg} ${meta.hoverShadow} cursor-pointer`}
+                      >
+                        <div className="flex items-start justify-between gap-3">
+                          <h3 className="text-lg font-bold text-[#19324B] transition-colors group-hover:text-white leading-snug">
+                            {subName}
+                          </h3>
+                          <ChevronRight className="h-5 w-5 shrink-0 text-[#94A3B8] transition-colors group-hover:text-white" />
+                        </div>
+                        <p className="mt-2 text-xs leading-relaxed text-[#475569] transition-colors group-hover:text-white/90">
+                          {desc}
+                        </p>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
+
+            {/* =============================================================
+             * VISTA DE TRÁMITES FINALES (Sin conteos redundantes)
+             * ============================================================= */}
+            {selectedCategory && selectedSubcategory && (
+              <div>
+                <div className="flex items-center justify-end mb-3">
+                  <button
+                    onClick={handleResetToSubcategories}
+                    className="inline-flex items-center gap-1.5 text-xs font-bold text-[#14649B] hover:underline"
+                  >
+                    <ArrowLeft className="w-3.5 h-3.5" />
+                    <span>Volver a {selectedCategory}</span>
+                  </button>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
+                  {currentTramites.map((tramite) => (
+                    <div
+                      key={tramite.id}
+                      onClick={() => onSelectTramite(tramite)}
+                      className={`group relative block rounded-2xl border border-[#CDE3F1] bg-[#F0F7FC] p-5 transition-all duration-200 hover:-translate-y-1 ${meta.hoverBg} ${meta.hoverShadow} cursor-pointer`}
+                    >
+                      <div className="flex items-start justify-between gap-3">
+                        <h3 className="text-base font-bold text-[#19324B] transition-colors group-hover:text-white leading-snug">
+                          {tramite.tramite}
+                        </h3>
+                        <ChevronRight className="h-5 w-5 shrink-0 text-[#94A3B8] transition-colors group-hover:text-white" />
+                      </div>
+                      <p className="mt-2 text-xs leading-relaxed text-[#475569] transition-colors group-hover:text-white/90">
+                        {tramite.descripcion}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </>
         )}
 
       </div>
