@@ -60,6 +60,32 @@ export default function App() {
     mensaje: string;
   } | null>(null);
 
+  // Consulta interactiva de títulos QR (con-nit-8)
+  const [consultaTituloInput, setConsultaTituloInput] = useState('');
+  const [consultaTituloResult, setConsultaTituloResult] = useState<{
+    numero: string;
+    profesional: string;
+    titulo: string;
+    grado: string;
+    estado: string;
+    timbres: string;
+  } | null>(null);
+
+  const handleConsultarTitulo = (e?: React.FormEvent) => {
+    if (e) e.preventDefault();
+    const clean = consultaTituloInput.trim();
+    if (!clean) return;
+
+    setConsultaTituloResult({
+      numero: clean.toUpperCase(),
+      profesional: 'Profesional Colegiado Activo',
+      titulo: 'Licenciatura Universitaria / Grado Académico Superior',
+      grado: 'Nivel Licenciatura (100% acreditado)',
+      estado: 'Habilitado y Registrado Oficialmente ante SAT',
+      timbres: 'Impuesto de Timbres Fiscales cancelado conforme al Art. 5 num. 3 Dto. 37-92'
+    });
+  };
+
   const handleConsultarGestion = (e?: React.FormEvent) => {
     if (e) e.preventDefault();
     const clean = consultaGestionInput.trim();
@@ -519,7 +545,6 @@ export default function App() {
                           />
                         )}
                         <div className="flex items-center gap-1.5 truncate pr-2">
-                          <span className="text-[10px] font-mono text-slate-400">No.{g.no}</span>
                           <span 
                             className="truncate"
                             style={isSelected ? { color: currentPillarConfig.primaryColor } : undefined}
@@ -550,7 +575,7 @@ export default function App() {
                       NIT sin Obligaciones
                     </h3>
                   </div>
-                  <span className="text-[10px] text-slate-500 font-mono">7 procesos</span>
+                  <span className="text-[10px] text-slate-500 font-mono">8 procesos</span>
                 </div>
 
                 <div className="divide-y divide-slate-100">
@@ -629,7 +654,7 @@ export default function App() {
                           style={{ backgroundColor: currentPillarConfig.primaryColor }}
                         />
                         <h3 className="text-xs font-bold text-[#19324B] truncate">
-                          No. {currentGrupo?.no} · {selectedCategoria}
+                          {selectedCategoria}
                         </h3>
                       </div>
                       <span className="text-[10px] text-slate-500 font-mono">{subgruposInGrupo.length} Subg.</span>
@@ -780,7 +805,7 @@ export default function App() {
               <>
                 <span className="text-[#DCDCDC]">/</span>
                 <button onClick={() => { setLevel(3); setSelectedTramite(null); }} className="hover:text-[#14649B]">
-                  No.{currentGrupo?.no} {selectedCategoria}
+                  {selectedCategoria}
                 </button>
               </>
             )}
@@ -869,9 +894,6 @@ export default function App() {
                   >
                     <div className="flex items-center justify-between gap-3">
                       <div className="flex items-center gap-2.5">
-                        <span className="px-2 py-0.5 rounded text-[11px] font-black bg-slate-100 text-slate-700 group-hover:bg-white/20 group-hover:text-white transition-colors">
-                          No. {g.no}
-                        </span>
                         <h3 className="text-base sm:text-lg font-bold text-[#19324B] group-hover:text-white transition-colors">{g.nombre}</h3>
                       </div>
                       <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-all duration-300 ${currentPillarConfig.circleClasses} shadow-xs`}>
@@ -915,11 +937,11 @@ export default function App() {
               <div className={`space-y-2 ${!menuSidebarOpen ? 'text-center max-w-2xl mx-auto' : ''}`}>
                 <div className="flex items-center justify-center gap-2">
                   <span className="text-xs font-bold text-[#14649B] uppercase tracking-wider">
-                    Grupo No. {currentGrupo?.no} · {selectedCategoria}
+                    {selectedCategoria}
                   </span>
                   {selectedCategoria === 'NIT sin Obligaciones' && (
                     <span className="px-2 py-0.5 rounded-full text-[10px] font-black bg-emerald-100 text-emerald-800">
-                      7 Procesos Oficiales
+                      8 Procesos Oficiales
                     </span>
                   )}
                 </div>
@@ -928,7 +950,7 @@ export default function App() {
                 </h2>
                 <p className="text-xs sm:text-sm text-slate-600">
                   {selectedCategoria === 'NIT sin Obligaciones' 
-                    ? 'Catálogo oficial de los 7 procesos autorizados para personas individuales y extranjeros sin actividad económica (Subgrupo General).'
+                    ? 'Catálogo oficial de los 8 procesos autorizados para personas individuales, graduados y egresados sin actividad mercantil (Subgrupo General).'
                     : `Subcategorías oficiales de trámites y gestiones correspondientes a ${selectedCategoria}.`
                   }
                 </p>
@@ -990,6 +1012,11 @@ export default function App() {
                         {item.id === 'con-nit-7' && (
                           <div className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-50 text-emerald-800 border border-emerald-200/70 group-hover:bg-white/20 group-hover:text-white group-hover:border-white/30 transition-colors">
                             <span>🌐 Trámite Ciudadano Universal (Decreto 57-2008)</span>
+                          </div>
+                        )}
+                        {item.id === 'con-nit-8' && (
+                          <div className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-bold bg-amber-50 text-[#B45309] border border-amber-200/70 group-hover:bg-white/20 group-hover:text-white group-hover:border-white/30 transition-colors">
+                            <span>🎓 Prerrequisito Servicios Profesionales (Ley Timbres)</span>
                           </div>
                         )}
                       </div>
@@ -1071,7 +1098,7 @@ export default function App() {
                       <div>
                         <div className="flex flex-wrap items-center gap-1.5 pb-1">
                           <span className="text-[11px] sm:text-xs font-bold text-[#14649B] uppercase tracking-wider">
-                            {selectedTramite.subcategoria} · Grupo No. {selectedTramite.grupoNo || currentGrupo?.no}
+                            {selectedTramite.categoria} · {selectedTramite.subcategoria}
                           </span>
                           {selectedTramite.subgrupoInterno && (
                             <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-100 text-slate-700">
@@ -1631,7 +1658,10 @@ export default function App() {
                             <span className="inline-flex items-center text-[11px] font-bold text-white bg-[#14649B] px-2.5 py-0.5 rounded-full w-fit">En línea 24/7</span>
                           </div>
                           <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                            Llenar en el portal oficial Declaraguate o Agencia Virtual. Al congelarlo se emite la boleta SAT-2000 para el pago presencial o electrónico.
+                            {selectedTramite.id === 'con-nit-8'
+                              ? 'Llenar en el portal Declaraguate el formulario SAT-7130 (Impuesto de Timbres Fiscales). Al congelarlo se emite la boleta SAT-2000 para el pago presencial o por banca virtual.'
+                              : 'Llenar en el portal oficial Declaraguate o Agencia Virtual. Al congelarlo se emite la boleta SAT-2000 para el pago presencial o electrónico.'
+                            }
                           </p>
                           <a 
                             href="https://declaraguate.sat.gob.gt" 
@@ -1644,6 +1674,120 @@ export default function App() {
                           </a>
                         </div>
                       )}
+                    </section>
+                  )}
+
+                  {/* Punto: Herramienta de Consulta y Verificación de Registro de Títulos QR (con-nit-8) */}
+                  {selectedTramite.id === 'con-nit-8' && (
+                    <section id="verificador-qr" className="scroll-mt-24 sm:scroll-mt-28 space-y-4 pt-2">
+                      <div className="flex items-center gap-2">
+                        <span className="w-2.5 h-2.5 rounded-full bg-[#14649B]" />
+                        <h3 className="text-lg sm:text-xl font-bold text-[#19324B]">
+                          Consulta de Títulos QR (Herramienta de Verificación)
+                        </h3>
+                      </div>
+
+                      <div className="p-4 sm:p-6 bg-slate-50 border border-slate-200 rounded-xl space-y-4 shadow-xs">
+                        <div className="space-y-1">
+                          <div className="flex items-center gap-2">
+                            <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-[#14649B]/10 text-[#14649B]">
+                              Herramienta de Verificación Pública
+                            </span>
+                            <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-100 text-emerald-800">
+                              Validez Oficial con Código QR
+                            </span>
+                          </div>
+                          <h4 className="text-base sm:text-lg font-bold text-[#19324B]">
+                            Verificación de Autenticidad de Registro de Títulos SAT
+                          </h4>
+                          <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                            Permite a graduados, profesionales colegiados, empleadores y entidades públicas constatar la autenticidad del registro de título y el pago del impuesto de timbres fiscales según el sticker QR emitido por la SAT.
+                          </p>
+                        </div>
+
+                        <form onSubmit={handleConsultarTitulo} className="flex flex-col sm:flex-row gap-2.5 pt-1">
+                          <div className="relative flex-1">
+                            <input
+                              type="text"
+                              value={consultaTituloInput}
+                              onChange={(e) => setConsultaTituloInput(e.target.value)}
+                              placeholder="Ej. REG-USAC-2026, Carné de Colegiado o DPI"
+                              className="w-full px-3.5 py-2.5 text-xs sm:text-sm bg-white border border-[#DCDCDC] rounded-lg focus:outline-none focus:border-[#14649B] focus:ring-2 focus:ring-[#14649B]/20"
+                            />
+                          </div>
+                          <button
+                            type="submit"
+                            className="min-h-[42px] px-5 py-2.5 bg-[#14649B] hover:bg-[#19AFE1] text-white font-bold text-xs sm:text-sm rounded-lg transition-colors shrink-0 shadow-xs flex items-center justify-center gap-2 focus-visible:ring-2 focus-visible:ring-[#14649B]"
+                          >
+                            <span>Verificar Título QR</span>
+                            <Search className="w-4 h-4" />
+                          </button>
+                        </form>
+
+                        <div className="flex flex-wrap items-center gap-1.5 text-[11px] text-slate-500">
+                          <span>Simular consulta:</span>
+                          <button
+                            type="button"
+                            onClick={() => { setConsultaTituloInput('REG-USAC-89210'); setTimeout(() => handleConsultarTitulo(), 50); }}
+                            className="px-2 py-0.5 rounded bg-sky-50 text-sky-700 hover:bg-sky-100 font-semibold"
+                          >
+                            TÍT-USAC-89210
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => { setConsultaTituloInput('REG-URL-44120'); setTimeout(() => handleConsultarTitulo(), 50); }}
+                            className="px-2 py-0.5 rounded bg-emerald-50 text-emerald-700 hover:bg-emerald-100 font-semibold"
+                          >
+                            TÍT-URL-44120
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => { setConsultaTituloInput('REG-UVG-11090'); setTimeout(() => handleConsultarTitulo(), 50); }}
+                            className="px-2 py-0.5 rounded bg-amber-50 text-amber-800 hover:bg-amber-100 font-semibold"
+                          >
+                            TÍT-UVG-11090
+                          </button>
+                        </div>
+
+                        {consultaTituloResult && (
+                          <div className="p-4 bg-white border border-emerald-200 rounded-lg space-y-2.5 animate-in fade-in duration-200 shadow-xs">
+                            <div className="flex items-center justify-between border-b border-emerald-100 pb-2">
+                              <span className="text-xs font-mono text-slate-500">Expediente QR: {consultaTituloResult.numero}</span>
+                              <span className="px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800">
+                                {consultaTituloResult.estado}
+                              </span>
+                            </div>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                              <div>
+                                <span className="text-slate-500 block">Grado Académico:</span>
+                                <strong className="text-slate-800 font-semibold">{consultaTituloResult.grado}</strong>
+                              </div>
+                              <div>
+                                <span className="text-slate-500 block">Condición Profesional:</span>
+                                <strong className="text-[#14649B] font-semibold">{consultaTituloResult.profesional}</strong>
+                              </div>
+                            </div>
+                            <p className="text-xs text-slate-600 bg-slate-50 p-2 rounded">
+                              {consultaTituloResult.timbres}
+                            </p>
+                          </div>
+                        )}
+
+                        <div className="pt-2 border-t border-slate-200 flex flex-wrap items-center justify-between gap-3 text-xs">
+                          <span className="text-slate-500">
+                            Prerrequisito para afiliarse a Servicios Profesionales en el RTU y habilitar emisión FEL.
+                          </span>
+                          <a
+                            href="https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/registro-y-habilitacion-de-titulos-para-ejercer-profesion/"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="text-[#14649B] font-semibold hover:underline flex items-center gap-1"
+                          >
+                            <span>Ver portal SAT Consulta de Títulos</span>
+                            <ExternalLink className="w-3.5 h-3.5" />
+                          </a>
+                        </div>
+                      </div>
                     </section>
                   )}
 

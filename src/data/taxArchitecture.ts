@@ -70,10 +70,10 @@ export interface TramiteItem {
 export const PILLARS_CONFIG: PillarConfigItem[] = [
   { 
     id: 'contribuyentes', 
-    name: '1. Contribuyentes', 
+    name: 'Contribuyentes', 
     desc: 'NIT sin Obligaciones, Pequeños Contribuyentes, Contribuyente General y Contribuyentes Especiales.',
-    temasTotales: '4 Grupos · 119 Temas',
-    badgeLabel: 'Grupos 1, 2, 3 y 4',
+    temasTotales: '4 Grupos · 120 Temas',
+    badgeLabel: '4 Grupos',
     primaryColor: '#14649B',
     cardHoverBorder: 'hover:border-[#14649B]',
     cardHoverBg: 'hover:bg-[#14649B]',
@@ -85,10 +85,10 @@ export const PILLARS_CONFIG: PillarConfigItem[] = [
   },
   { 
     id: 'comercio_exterior', 
-    name: '2. Operadores de Comercio Exterior', 
+    name: 'Operadores de Comercio Exterior', 
     desc: 'Importadores, exportadores, OEA y auxiliares de la función pública aduanera.',
     temasTotales: '2 Grupos · 98 Temas',
-    badgeLabel: 'Grupos 5 y 8',
+    badgeLabel: '2 Grupos',
     primaryColor: '#0284C7',
     cardHoverBorder: 'hover:border-[#0284C7]',
     cardHoverBg: 'hover:bg-[#0284C7]',
@@ -100,10 +100,10 @@ export const PILLARS_CONFIG: PillarConfigItem[] = [
   },
   { 
     id: 'profesionales', 
-    name: '3. Profesionales', 
+    name: 'Profesionales', 
     desc: 'Terceras personas: gestores tributarios, abogados y notarios, peritos contadores y auditores.',
     temasTotales: '1 Grupo · 62 Temas',
-    badgeLabel: 'Grupo 7',
+    badgeLabel: '1 Grupo',
     primaryColor: '#4D8014',
     cardHoverBorder: 'hover:border-[#4D8014]',
     cardHoverBg: 'hover:bg-[#4D8014]',
@@ -115,10 +115,10 @@ export const PILLARS_CONFIG: PillarConfigItem[] = [
   },
   { 
     id: 'entes_exentos', 
-    name: '4. Entes Exentos', 
+    name: 'Entes Exentos', 
     desc: 'Entidades exentas constitucionales, no lucrativas, por decreto, ZOLIC, municipalidades y entidades del Estado.',
     temasTotales: '2 Grupos · 75 Temas',
-    badgeLabel: 'Grupos 6 y 9',
+    badgeLabel: '2 Grupos',
     primaryColor: '#C25E00',
     cardHoverBorder: 'hover:border-[#C25E00]',
     cardHoverBg: 'hover:bg-[#C25E00]',
@@ -131,20 +131,21 @@ export const PILLARS_CONFIG: PillarConfigItem[] = [
 ];
 
 export const GRUPOS_CONFIG: GrupoInfo[] = [
-  // 1. Contribuyentes
+  // Contribuyentes
   {
     no: 1,
     nombre: 'NIT sin Obligaciones',
-    cantidadTemas: 7,
+    cantidadTemas: 8,
     pillar: 'contribuyentes',
-    desc: 'Personas individuales y extranjeros sin actividad económica que requieren NIT para actos civiles, cuentas, remesas y acceso a información pública (7 procesos oficiales).',
+    desc: 'Estudiantes, personas individuales y graduados sin actividad económica que requieren NIT para trámites bancarios, actos civiles, cobro de remesas, registro de títulos y acceso a información (8 procesos oficiales).',
     subgrupos: [
       { nombre: 'Inscripción y Actualización en RTU', cantidadTemas: 2, desc: 'Inscripción por primera vez y actualización o transición a con obligaciones.' },
       { nombre: 'Sistemas Web y Seguridad', cantidadTemas: 1, desc: 'Acceso a plataforma, solicitud y activación de usuario en Agencia Virtual.' },
       { nombre: 'Consultas y Verificadores', cantidadTemas: 1, desc: 'Seguimiento de trámites y consulta de estado de gestión de Agencia Virtual.' },
       { nombre: 'Certificaciones y Solvencias', cantidadTemas: 1, desc: 'Solvencias y emisión electrónica de Solvencia Fiscal (SOFI).' },
       { nombre: 'Citas y Agencias', cantidadTemas: 1, desc: 'Atención presencial y cita previa para trámites en agencias tributarias.' },
-      { nombre: 'Transparencia y Ciudadanía', cantidadTemas: 1, desc: 'Acceso a la información pública conforme al Decreto 57-2008 en español y lenguas mayas.' }
+      { nombre: 'Transparencia y Ciudadanía', cantidadTemas: 1, desc: 'Acceso a la información pública conforme al Decreto 57-2008 en español y lenguas mayas.' },
+      { nombre: 'Habilitación Profesional', cantidadTemas: 1, desc: 'Registro y habilitación de títulos universitarios y pago de timbres fiscales para ejercer profesión.' }
     ]
   },
   {
@@ -183,7 +184,7 @@ export const GRUPOS_CONFIG: GrupoInfo[] = [
     ]
   },
 
-  // 2. Operadores de Comercio Exterior
+  // Operadores de Comercio Exterior
   {
     no: 5,
     nombre: 'Importadores y Exportadores',
@@ -215,7 +216,7 @@ export const GRUPOS_CONFIG: GrupoInfo[] = [
     ]
   },
 
-  // 3. Profesionales
+  // Profesionales
   {
     no: 7,
     nombre: 'Terceras Personas',
@@ -231,7 +232,7 @@ export const GRUPOS_CONFIG: GrupoInfo[] = [
     ]
   },
 
-  // 4. Entes Exentos
+  // Entes Exentos
   {
     no: 6,
     nombre: 'Exentos',
@@ -262,11 +263,11 @@ export const GRUPOS_CONFIG: GrupoInfo[] = [
 ];
 
 export const TRAMITES_DATA: TramiteItem[] = [
-  // 1. Contribuyentes -> NIT sin Obligaciones (Grupo 1)
+  // Contribuyentes -> NIT sin Obligaciones (Grupo 1)
   {
     id: 'con-nit-1',
     pillar: 'contribuyentes',
-    pillarName: '1. Contribuyentes',
+    pillarName: 'Contribuyentes',
     categoria: 'NIT sin Obligaciones',
     subcategoria: 'Inscripción y Actualización en RTU',
     subgrupoInterno: 'General',
@@ -281,10 +282,10 @@ export const TRAMITES_DATA: TramiteItem[] = [
     url: 'https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1615485066841-639e67c5-51e3',
     formulario: 'Solicitud de NIT Digital / Portal Web SAT',
     baseLegal: 'Decreto 6-91 del Congreso de la República de Guatemala, Código Tributario y Ley Orgánica de la SAT.',
-    descripcion: 'Solicitud y requisitos para la obtención electrónica de NIT sin obligaciones tributarias por primera vez.',
-    perfilDestinatario: 'Personas Individuales (Nacionales y Extranjeros sin actividad económica)',
+    descripcion: 'Solicitud y requisitos para la obtención electrónica de NIT sin obligaciones tributarias por primera vez; utilizado frecuentemente por estudiantes, jóvenes en proceso de matrícula universitaria, beneficiarios de remesas familiares y personas individuales que lo requieren para realizar gestiones bancarias (apertura de cuentas de ahorro o monetarias, créditos), actos civiles y contratos sin realizar actividades económicas afectas.',
+    perfilDestinatario: 'Estudiantes, jóvenes y personas individuales (gestiones bancarias, remesas o actos civiles sin actividad mercantil)',
     origenClasificacion: 'Análisis de arquitectura transaccional',
-    impactoOImportancia: 'Trámite inicial obligatorio para actos civiles, apertura de cuentas bancarias y recepción de remesas.',
+    impactoOImportancia: 'Trámite inicial obligatorio para trámites bancarios, acreditación estudiantil, recepción de remesas y actos civiles no tributarios.',
     recomendacionUX: 'Desvincular del listado de empresas/sociedades mercantiles; crear landing o ficha específica para personas individuales.',
     puntosMenu: [
       { id: 'perfil', titulo: 'Perfil del solicitante y alcance' },
@@ -319,7 +320,7 @@ export const TRAMITES_DATA: TramiteItem[] = [
   {
     id: 'con-nit-2',
     pillar: 'contribuyentes',
-    pillarName: '1. Contribuyentes',
+    pillarName: 'Contribuyentes',
     categoria: 'NIT sin Obligaciones',
     subcategoria: 'Inscripción y Actualización en RTU',
     subgrupoInterno: 'General',
@@ -370,7 +371,7 @@ export const TRAMITES_DATA: TramiteItem[] = [
   {
     id: 'con-nit-3',
     pillar: 'contribuyentes',
-    pillarName: '1. Contribuyentes',
+    pillarName: 'Contribuyentes',
     categoria: 'NIT sin Obligaciones',
     subcategoria: 'Sistemas Web y Seguridad',
     subgrupoInterno: 'General',
@@ -424,7 +425,7 @@ export const TRAMITES_DATA: TramiteItem[] = [
   {
     id: 'con-nit-4',
     pillar: 'contribuyentes',
-    pillarName: '1. Contribuyentes',
+    pillarName: 'Contribuyentes',
     categoria: 'NIT sin Obligaciones',
     subcategoria: 'Consultas y Verificadores',
     subgrupoInterno: 'General',
@@ -472,7 +473,7 @@ export const TRAMITES_DATA: TramiteItem[] = [
   {
     id: 'con-nit-5',
     pillar: 'contribuyentes',
-    pillarName: '1. Contribuyentes',
+    pillarName: 'Contribuyentes',
     categoria: 'NIT sin Obligaciones',
     subcategoria: 'Certificaciones y Solvencias',
     subgrupoInterno: 'General',
@@ -519,7 +520,7 @@ export const TRAMITES_DATA: TramiteItem[] = [
   {
     id: 'con-nit-6',
     pillar: 'contribuyentes',
-    pillarName: '1. Contribuyentes',
+    pillarName: 'Contribuyentes',
     categoria: 'NIT sin Obligaciones',
     subcategoria: 'Citas y Agencias',
     subgrupoInterno: 'General',
@@ -567,7 +568,7 @@ export const TRAMITES_DATA: TramiteItem[] = [
   {
     id: 'con-nit-7',
     pillar: 'contribuyentes',
-    pillarName: '1. Contribuyentes',
+    pillarName: 'Contribuyentes',
     categoria: 'NIT sin Obligaciones',
     subcategoria: 'Transparencia y Ciudadanía',
     subgrupoInterno: 'General',
@@ -615,12 +616,67 @@ export const TRAMITES_DATA: TramiteItem[] = [
       'Trámite de naturaleza ciudadana no tributaria amparado en el Decreto 57-2008 del Congreso de la República.'
     ]
   },
+  {
+    id: 'con-nit-8',
+    pillar: 'contribuyentes',
+    pillarName: 'Contribuyentes',
+    categoria: 'NIT sin Obligaciones',
+    subcategoria: 'Habilitación Profesional',
+    subgrupoInterno: 'General',
+    tema: 'Habilitación Profesional',
+    subtema: 'Registro y Pago de Timbres',
+    nombreActual: 'Requisitos para el Registro y Habilitación de Títulos para Ejercer Profesión',
+    grupoNo: 1,
+    tipoSubtema: 'Registro y Pago de Timbres',
+    moduloRequisitos: 'Requisitos para el Registro y Habilitación de Títulos para Ejercer Profesión',
+    ubicacionPortalActual: 'Requisitos trámites agencias',
+    tramite: 'Registro y Habilitación de Títulos Universitarios',
+    url: 'https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/registro-y-habilitacion-de-titulos-para-ejercer-profesion/',
+    formulario: 'Declaraguate SAT-7130 / Pago de Impuesto de Timbres Fiscales',
+    baseLegal: 'Decreto Número 37-92, Ley del Impuesto de Timbres Fiscales y de Papel Sellado Especial para Protocolos (Artículo 5, numeral 3).',
+    descripcion: 'Requisitos, pasos, tarifas de timbres fiscales y documentos para registrar y habilitar títulos universitarios a nivel técnico, licenciatura, maestría o doctorado para ejercer la profesión.',
+    perfilDestinatario: 'Graduados universitarios y profesionales colegiados activos',
+    origenClasificacion: 'Análisis de arquitectura transaccional',
+    impactoOImportancia: 'Ley de Timbres Fiscales y de Papel Sellado Especial para Protocolos (Art. 5, numeral 3)',
+    recomendacionUX: 'Trámite operativo presencial/electrónico. Es el prerrequisito para afiliarse a Servicios Profesionales en el RTU y habilitar emisión FEL; debe enlazar con la Consulta de Títulos QR como herramienta de verificación.',
+    puntosMenu: [
+      { id: 'perfil', titulo: 'Perfil y prerrequisito profesional' },
+      { id: 'requisitos', titulo: 'Requisitos para registrar títulos' },
+      { id: 'pasos', titulo: 'Pasos de registro y habilitación' },
+      { id: 'formulario', titulo: 'Llenar Declaraguate SAT-7130' },
+      { id: 'verificador-qr', titulo: 'Consulta de Títulos QR (Herramienta)' },
+      { id: 'notas', titulo: 'Revisar tarifas legales y colegiación' },
+      { id: 'base-legal', titulo: 'Consultar Ley de Timbres Fiscales' },
+      { id: 'enlace', titulo: 'Ir al trámite oficial en portal SAT' }
+    ],
+    requisitos: [
+      'Documento Personal de Identificación (DPI) original y fotocopia legible del profesional.',
+      'Título universitario en original (nivel técnico, licenciatura, maestría o doctorado) con los sellos y firmas de la universidad respectiva.',
+      'Constancia de colegiado activo emitida por el colegio profesional correspondiente (vigente en el año en curso).',
+      'Formulario Declaraguate SAT-7130 congelado y boleta SAT-2000 pagada por concepto de Impuesto de Timbres Fiscales.',
+      'Para títulos extranjeros: Incorporación oficial aprobada por la Universidad de San Carlos de Guatemala (USAC) o reconocimiento según tratados internacionales.'
+    ],
+    pasos: [
+      'Ingresar al portal Declaraguate (declaraguate.sat.gob.gt) y llenar el formulario SAT-7130 (Impuesto de Timbres Fiscales).',
+      'Seleccionar el tipo de título a habilitar (Universitario nivel Licenciatura/Maestría/Doctorado: Q100.00; Nivel Técnico: Q25.00).',
+      'Validar, congelar el formulario y pagar la boleta SAT-2000 en banca en línea o ventanilla bancaria.',
+      'Agendar cita previa en la agencia tributaria SAT de su preferencia para la adhesión física del timbre o habilitación con sticker de seguridad y código QR.',
+      'Presentar el título universitario original, DPI y comprobante de pago.',
+      'El analista de SAT colocará el sticker de seguridad oficial con código QR y estampará el sello de registro en el reverso del título.',
+      'Una vez habilitado el título, el profesional queda facultado para actualizar su RTU a régimen afecto (Servicios Profesionales) y activar la emisión de facturas FEL.'
+    ],
+    notasImportantes: [
+      'Prerrequisito obligatorio de habilitación: Ningún graduado universitario puede emitir facturas por servicios profesionales ni colegiarse legalmente sin que su título cuente con el impuesto de timbres fiscales y el registro de la SAT.',
+      'Tarifas por ley: Títulos universitarios de licenciatura, maestría o doctorado tributan Q100.00; títulos técnicos universitarios tributan Q25.00 según el Art. 5 num. 3 del Decreto 37-92.',
+      'Verificación digital QR: La SAT incorpora un código QR seguro impreso en el sticker del título que permite a empleadores, clientes y entidades públicas verificar la autenticidad del registro en línea.'
+    ]
+  },
 
-  // 1. Contribuyentes -> Pequeños Contribuyentes (Grupo 2)
+  // Contribuyentes -> Pequeños Contribuyentes (Grupo 2)
   {
     id: 'con-peq-1',
     pillar: 'contribuyentes',
-    pillarName: '1. Contribuyentes',
+    pillarName: 'Contribuyentes',
     categoria: 'Pequeños Contribuyentes',
     subcategoria: 'Pequeño Contribuyente',
     grupoNo: 2,
@@ -649,7 +705,7 @@ export const TRAMITES_DATA: TramiteItem[] = [
   {
     id: 'con-peq-2',
     pillar: 'contribuyentes',
-    pillarName: '1. Contribuyentes',
+    pillarName: 'Contribuyentes',
     categoria: 'Pequeños Contribuyentes',
     subcategoria: 'Primario',
     grupoNo: 2,
@@ -675,7 +731,7 @@ export const TRAMITES_DATA: TramiteItem[] = [
   {
     id: 'con-peq-3',
     pillar: 'contribuyentes',
-    pillarName: '1. Contribuyentes',
+    pillarName: 'Contribuyentes',
     categoria: 'Pequeños Contribuyentes',
     subcategoria: 'Pecuario',
     grupoNo: 2,
@@ -699,11 +755,11 @@ export const TRAMITES_DATA: TramiteItem[] = [
     ]
   },
 
-  // 1. Contribuyentes -> Contribuyente General (Grupo 3)
+  // Contribuyentes -> Contribuyente General (Grupo 3)
   {
     id: 'con-gen-1',
     pillar: 'contribuyentes',
-    pillarName: '1. Contribuyentes',
+    pillarName: 'Contribuyentes',
     categoria: 'Contribuyente General',
     subcategoria: 'Contribuyente General',
     grupoNo: 3,
@@ -729,7 +785,7 @@ export const TRAMITES_DATA: TramiteItem[] = [
   {
     id: 'con-gen-2',
     pillar: 'contribuyentes',
-    pillarName: '1. Contribuyentes',
+    pillarName: 'Contribuyentes',
     categoria: 'Contribuyente General',
     subcategoria: 'Rep. Legales',
     grupoNo: 3,
@@ -753,11 +809,11 @@ export const TRAMITES_DATA: TramiteItem[] = [
     ]
   },
 
-  // 1. Contribuyentes -> Contribuyentes Especiales (Grupo 4)
+  // Contribuyentes -> Contribuyentes Especiales (Grupo 4)
   {
     id: 'con-esp-1',
     pillar: 'contribuyentes',
-    pillarName: '1. Contribuyentes',
+    pillarName: 'Contribuyentes',
     categoria: 'Contribuyentes Especiales',
     subcategoria: 'Medianos',
     grupoNo: 4,
@@ -782,7 +838,7 @@ export const TRAMITES_DATA: TramiteItem[] = [
   {
     id: 'con-esp-2',
     pillar: 'contribuyentes',
-    pillarName: '1. Contribuyentes',
+    pillarName: 'Contribuyentes',
     categoria: 'Contribuyentes Especiales',
     subcategoria: 'Grandes',
     grupoNo: 4,
@@ -806,11 +862,11 @@ export const TRAMITES_DATA: TramiteItem[] = [
     ]
   },
 
-  // 2. Operadores de Comercio Exterior -> Importadores y Exportadores (Grupo 5)
+  // Operadores de Comercio Exterior -> Importadores y Exportadores (Grupo 5)
   {
     id: 'com-imp-1',
     pillar: 'comercio_exterior',
-    pillarName: '2. Operadores de Comercio Exterior',
+    pillarName: 'Operadores de Comercio Exterior',
     categoria: 'Importadores y Exportadores',
     subcategoria: 'Importadores',
     grupoNo: 5,
@@ -838,7 +894,7 @@ export const TRAMITES_DATA: TramiteItem[] = [
   {
     id: 'com-oea-1',
     pillar: 'comercio_exterior',
-    pillarName: '2. Operadores de Comercio Exterior',
+    pillarName: 'Operadores de Comercio Exterior',
     categoria: 'Importadores y Exportadores',
     subcategoria: 'OEA',
     grupoNo: 5,
@@ -866,7 +922,7 @@ export const TRAMITES_DATA: TramiteItem[] = [
   {
     id: 'com-exp-1',
     pillar: 'comercio_exterior',
-    pillarName: '2. Operadores de Comercio Exterior',
+    pillarName: 'Operadores de Comercio Exterior',
     categoria: 'Importadores y Exportadores',
     subcategoria: 'Exportadores',
     grupoNo: 5,
@@ -890,11 +946,11 @@ export const TRAMITES_DATA: TramiteItem[] = [
     ]
   },
 
-  // 2. Operadores de Comercio Exterior -> Auxiliares de la Función Pública (Grupo 8)
+  // Operadores de Comercio Exterior -> Auxiliares de la Función Pública (Grupo 8)
   {
     id: 'com-aux-courier',
     pillar: 'comercio_exterior',
-    pillarName: '2. Operadores de Comercio Exterior',
+    pillarName: 'Operadores de Comercio Exterior',
     categoria: 'Auxiliares de la Función Pública',
     subcategoria: 'Courier',
     grupoNo: 8,
@@ -922,7 +978,7 @@ export const TRAMITES_DATA: TramiteItem[] = [
   {
     id: 'com-aux-agente',
     pillar: 'comercio_exterior',
-    pillarName: '2. Operadores de Comercio Exterior',
+    pillarName: 'Operadores de Comercio Exterior',
     categoria: 'Auxiliares de la Función Pública',
     subcategoria: 'Agentes Aduaneros',
     grupoNo: 8,
@@ -948,11 +1004,11 @@ export const TRAMITES_DATA: TramiteItem[] = [
     ]
   },
 
-  // 3. Profesionales -> Terceras Personas (Grupo 7)
+  // Profesionales -> Terceras Personas (Grupo 7)
   {
     id: 'prof-6',
     pillar: 'profesionales',
-    pillarName: '3. Profesionales',
+    pillarName: 'Profesionales',
     categoria: 'Terceras Personas',
     subcategoria: 'Abogados y Notarios',
     grupoNo: 7,
@@ -1022,7 +1078,7 @@ export const TRAMITES_DATA: TramiteItem[] = [
   {
     id: 'prof-1',
     pillar: 'profesionales',
-    pillarName: '3. Profesionales',
+    pillarName: 'Profesionales',
     categoria: 'Terceras Personas',
     subcategoria: 'Abogados y Notarios',
     grupoNo: 7,
@@ -1055,7 +1111,7 @@ export const TRAMITES_DATA: TramiteItem[] = [
   {
     id: 'prof-gestores',
     pillar: 'profesionales',
-    pillarName: '3. Profesionales',
+    pillarName: 'Profesionales',
     categoria: 'Terceras Personas',
     subcategoria: 'Gestores Tributarios',
     grupoNo: 7,
@@ -1083,7 +1139,7 @@ export const TRAMITES_DATA: TramiteItem[] = [
   {
     id: 'prof-peritos',
     pillar: 'profesionales',
-    pillarName: '3. Profesionales',
+    pillarName: 'Profesionales',
     categoria: 'Terceras Personas',
     subcategoria: 'Peritos Contadores',
     grupoNo: 7,
@@ -1111,7 +1167,7 @@ export const TRAMITES_DATA: TramiteItem[] = [
   {
     id: 'prof-auditores',
     pillar: 'profesionales',
-    pillarName: '3. Profesionales',
+    pillarName: 'Profesionales',
     categoria: 'Terceras Personas',
     subcategoria: 'Auditores',
     grupoNo: 7,
@@ -1137,11 +1193,11 @@ export const TRAMITES_DATA: TramiteItem[] = [
     ]
   },
 
-  // 4. Entes Exentos -> Exentos (Grupo 6)
+  // Entes Exentos -> Exentos (Grupo 6)
   {
     id: 'exe-const',
     pillar: 'entes_exentos',
-    pillarName: '4. Entes Exentos',
+    pillarName: 'Entes Exentos',
     categoria: 'Exentos',
     subcategoria: 'Constitucionales',
     grupoNo: 6,
@@ -1168,7 +1224,7 @@ export const TRAMITES_DATA: TramiteItem[] = [
   {
     id: 'exe-nolucr',
     pillar: 'entes_exentos',
-    pillarName: '4. Entes Exentos',
+    pillarName: 'Entes Exentos',
     categoria: 'Exentos',
     subcategoria: 'No Lucrativos',
     grupoNo: 6,
@@ -1196,7 +1252,7 @@ export const TRAMITES_DATA: TramiteItem[] = [
   {
     id: 'exe-zolic',
     pillar: 'entes_exentos',
-    pillarName: '4. Entes Exentos',
+    pillarName: 'Entes Exentos',
     categoria: 'Exentos',
     subcategoria: 'ZOLIC',
     grupoNo: 6,
@@ -1223,7 +1279,7 @@ export const TRAMITES_DATA: TramiteItem[] = [
   {
     id: 'exe-muni',
     pillar: 'entes_exentos',
-    pillarName: '4. Entes Exentos',
+    pillarName: 'Entes Exentos',
     categoria: 'Exentos',
     subcategoria: 'Municipalidades',
     grupoNo: 6,
@@ -1248,11 +1304,11 @@ export const TRAMITES_DATA: TramiteItem[] = [
     ]
   },
 
-  // 4. Entes Exentos -> Entidades del Estado (Grupo 9)
+  // Entes Exentos -> Entidades del Estado (Grupo 9)
   {
     id: 'est-oj',
     pillar: 'entes_exentos',
-    pillarName: '4. Entes Exentos',
+    pillarName: 'Entes Exentos',
     categoria: 'Entidades del Estado',
     subcategoria: 'Organismo Judicial',
     grupoNo: 9,
@@ -1278,7 +1334,7 @@ export const TRAMITES_DATA: TramiteItem[] = [
   {
     id: 'est-mp',
     pillar: 'entes_exentos',
-    pillarName: '4. Entes Exentos',
+    pillarName: 'Entes Exentos',
     categoria: 'Entidades del Estado',
     subcategoria: 'Ministerio Público',
     grupoNo: 9,
@@ -1302,7 +1358,7 @@ export const TRAMITES_DATA: TramiteItem[] = [
   {
     id: 'est-senabed',
     pillar: 'entes_exentos',
-    pillarName: '4. Entes Exentos',
+    pillarName: 'Entes Exentos',
     categoria: 'Entidades del Estado',
     subcategoria: 'SENABED / CONABED',
     grupoNo: 9,
@@ -1328,7 +1384,7 @@ export const TRAMITES_DATA: TramiteItem[] = [
   {
     id: 'est-pdh',
     pillar: 'entes_exentos',
-    pillarName: '4. Entes Exentos',
+    pillarName: 'Entes Exentos',
     categoria: 'Entidades del Estado',
     subcategoria: 'PDH',
     grupoNo: 9,
