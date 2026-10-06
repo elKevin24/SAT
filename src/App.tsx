@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Header } from './components/Header';
 import { UserSegmentCards, SegmentId } from './components/UserSegmentCards';
 import { RotaryBanner } from './components/RotaryBanner';
@@ -12,7 +12,6 @@ import { DirectConsultasModal } from './components/DirectConsultasModal';
 import { GuidedProcessModal } from './components/GuidedProcessModal';
 import { TramiteDetailModal } from './components/TramiteDetailModal';
 import { SegmentTramitesCatalog } from './components/SegmentTramitesCatalog';
-import StyleGuide from './design-system/StyleGuide';
 
 // Import official extracted datasets
 import rawTramites from './data/allTramites.json';
@@ -41,8 +40,9 @@ const DEFAULT_ACCESSIBILITY: AccessibilitySettings = {
 };
 
 export default function App() {
-  const [currentView, setCurrentView] = useState<'home' | 'catalog' | 'styleguide'>('home');
+  const [currentView, setCurrentView] = useState<'home' | 'catalog'>('home');
   const [activeSegment, setActiveSegment] = useState<SegmentId>('contribuyentes');
+  const [activeCategory, setActiveCategory] = useState<string>('Todas las categorías');
 
   // Search query
   const [searchQuery, setSearchQuery] = useState('');
@@ -56,19 +56,10 @@ export default function App() {
   // Accessibility State
   const [accSettings, setAccSettings] = useState<AccessibilitySettings>(DEFAULT_ACCESSIBILITY);
 
-  // Handle URL hash changes (e.g. #/estilo)
-  useEffect(() => {
-    const handleHash = () => {
-      if (window.location.hash === '#/estilo') {
-        setCurrentView('styleguide');
-      } else if (currentView === 'styleguide' && window.location.hash !== '#/estilo') {
-        setCurrentView('home');
-      }
-    };
-    handleHash();
-    window.addEventListener('hashchange', handleHash);
-    return () => window.removeEventListener('hashchange', handleHash);
-  }, [currentView]);
+  // Nota: el enrutado del styleguide vive en src/main.tsx (isStyleGuideHash).
+  // App solo fija el hash; main.tsx decide que vista montar. Duplicar la
+  // comparacion del hash aqui provocaba que el styleguide se desmontara al
+  // navegar entre sus secciones internas.
 
   const handleUpdateAccessibility = (updates: Partial<AccessibilitySettings>) => {
     setAccSettings(prev => ({ ...prev, ...updates }));
@@ -78,8 +69,9 @@ export default function App() {
     setAccSettings(DEFAULT_ACCESSIBILITY);
   };
 
-  const handleSelectSegment = (segId: SegmentId) => {
+  const handleSelectSegment = (segId: SegmentId, category?: string) => {
     setActiveSegment(segId);
+    setActiveCategory(category || 'Todas las categorías');
     setCurrentView('catalog');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -87,13 +79,13 @@ export default function App() {
   const handleGoHome = () => {
     window.location.hash = '';
     setCurrentView('home');
+    setActiveCategory('Todas las categorías');
     setSearchQuery('');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const handleGoStyleGuide = () => {
     window.location.hash = '#/estilo';
-    setCurrentView('styleguide');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -164,31 +156,18 @@ export default function App() {
           /* Segment Trámites Catalog */
           <SegmentTramitesCatalog
             segmentId={activeSegment}
+            initialCategory={activeCategory}
             allTramites={rawTramites as any}
             onSelectTramite={(t) => setSelectedTramite(t)}
             onBackToHome={handleGoHome}
-            onSwitchSegment={(segId) => setActiveSegment(segId)}
+            onSwitchSegment={(segId) => {
+              setActiveSegment(segId);
+              setActiveCategory('Todas las categorías');
+            }}
           />
         )}
 
-        {currentView === 'styleguide' && (
-          /* Design System Style Guide View */
-          <div className="relative">
-            <div className="bg-[#19324B] text-white px-6 py-2.5 flex items-center justify-between border-b border-[#14649B]">
-              <span className="text-xs font-bold text-[#19AFE1]">
-                Vista de Auditoría de Tokens y Design System (Manual V5)
-              </span>
-              <button
-                onClick={handleGoHome}
-                className="px-3 py-1 bg-[#14649B] hover:bg-[#11507C] text-white text-xs font-bold rounded-lg transition-colors"
-              >
-                Volver al Portal
-              </button>
-            </div>
-            <StyleGuide />
-          </div>
-        )}
-      </main>
+        </main>
 
       {/* 8. Institutional Footer */}
       <InstitutionalFooter onOpenStyleGuide={handleGoStyleGuide} />

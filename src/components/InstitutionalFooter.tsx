@@ -5,7 +5,8 @@ import {
   MapPin, 
   Clock, 
   ShieldAlert, 
-  Palette
+  Palette,
+  Layers
 } from 'lucide-react';
 
 interface InstitutionalFooterProps {
@@ -153,9 +154,17 @@ export const InstitutionalFooter: React.FC<InstitutionalFooterProps> = ({ onOpen
                 className="hover:text-white text-[#19AFE1] flex items-center gap-1 font-semibold transition-colors"
               >
                 <Palette className="w-3.5 h-3.5" />
-                <span>Guía de Estilo (Design System)</span>
+                <span>Design System</span>
               </button>
             )}
+
+            <a
+              href="#/diagrama"
+              className="hover:text-white text-[#19AFE1] flex items-center gap-1 font-semibold transition-colors"
+            >
+              <Layers className="w-3.5 h-3.5" />
+              <span>Diagrama de Árbol</span>
+            </a>
 
             <a href="https://portal.sat.gob.gt/portal/mapa-del-sitio/" target="_blank" rel="noopener noreferrer" className="hover:text-slate-200">
               Mapa de sitio

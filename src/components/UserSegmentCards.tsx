@@ -23,8 +23,8 @@ interface SegmentDef {
 const SEGMENTS: SegmentDef[] = [
   {
     id: 'contribuyentes',
-    name: 'Personas y Empresas (Contribuyentes)',
-    desc: 'Inscríbete en el Registro Tributario (RTU), emite facturas electrónicas gratuitas, presenta tus declaraciones y gestiona tus impuestos con y sin negocio.',
+    name: 'Contribuyentes',
+    desc: 'Trámites para personas y empresas con o sin negocio inscritas en el Registro Tributario Unificado (RTU).',
     primaryColor: '#14649B',
     cardHoverBorder: 'hover:border-[#14649B]',
     cardHoverBg: 'hover:bg-[#14649B]',
@@ -34,8 +34,8 @@ const SEGMENTS: SegmentDef[] = [
   },
   {
     id: 'comercio_exterior',
-    name: 'Comercio Exterior y Aduanas',
-    desc: 'Realiza gestiones para importar o exportar mercancías, consulta declaraciones aduaneras (DUCA) y certifícate como empresa de transporte o logística segura.',
+    name: 'Operadores de Comercio Exterior',
+    desc: 'Trámites aduaneros para importar y exportar mercancías, transporte internacional y auxiliares de la función pública.',
     primaryColor: '#0284C7',
     cardHoverBorder: 'hover:border-[#0284C7]',
     cardHoverBg: 'hover:bg-[#0284C7]',
@@ -45,8 +45,8 @@ const SEGMENTS: SegmentDef[] = [
   },
   {
     id: 'profesionales',
-    name: 'Profesionales y Contadores',
-    desc: 'Habilita tu registro de Perito Contador o Auditor, acredita gestiones como abogado o representante y registra tus títulos universitarios pagando timbres fiscales.',
+    name: 'Profesionales',
+    desc: 'Habilita tu registro como perito contador, auditor, abogado o notario ante la SAT. Requisitos y colegiación.',
     primaryColor: '#4D8014',
     cardHoverBorder: 'hover:border-[#4D8014]',
     cardHoverBg: 'hover:bg-[#4D8014]',
@@ -56,8 +56,8 @@ const SEGMENTS: SegmentDef[] = [
   },
   {
     id: 'organismos_especiales',
-    name: 'Entidades Exentas y Sector Público',
-    desc: 'Gestiona la constancia para comprar sin IVA si perteneces a una entidad sin fines de lucro, educativa, religiosa, municipalidad o institución del Estado.',
+    name: 'Organismos Especiales',
+    desc: 'Trámites para instituciones del Estado, municipalidades y entidades exentas de impuestos por ley.',
     primaryColor: '#C25E00',
     cardHoverBorder: 'hover:border-[#C25E00]',
     cardHoverBg: 'hover:bg-[#C25E00]',
@@ -67,6 +67,11 @@ const SEGMENTS: SegmentDef[] = [
   }
 ];
 
+interface UserSegmentCardsProps {
+  selectedSegment: SegmentId | null;
+  onSelectSegment: (segmentId: SegmentId) => void;
+}
+
 export const UserSegmentCards: React.FC<UserSegmentCardsProps> = ({
   selectedSegment,
   onSelectSegment
@@ -75,20 +80,20 @@ export const UserSegmentCards: React.FC<UserSegmentCardsProps> = ({
     <section className="py-6 bg-white border-b border-[#DCDCDC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Encabezado compacto */}
+        {/* Encabezado */}
         <div className="text-center max-w-2xl mx-auto mb-6 space-y-1">
           <span className="text-xs font-bold text-[#14649B] uppercase tracking-wider">
-            Portal Tributario y Aduanero
+            Segmentación por Tipo de Usuario
           </span>
           <h2 className="text-xl sm:text-2xl font-black text-[#19324B] tracking-tight">
-            ¿Qué deseas gestionar hoy?
+            ¿Qué tipo de trámite o perfil necesitas gestionar?
           </h2>
           <p className="text-xs sm:text-sm text-slate-600">
-            Selecciona tu perfil para encontrar requisitos claros, pasos guiados y sistemas oficiales en línea.
+            Selecciona tu grupo de interés para acceder a requisitos personalizados, guías normativas y sistemas directos.
           </p>
         </div>
 
-        {/* 4 Tarjetas compactas sin footer redundante y con gap reducido */}
+        {/* Las 4 Tarjetas con los nombres EXACTOS del mapa oficial y sus ramas Nivel 2 */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-3.5">
           {SEGMENTS.map((p) => {
             const isSelected = selectedSegment === p.id;
@@ -105,17 +110,17 @@ export const UserSegmentCards: React.FC<UserSegmentCardsProps> = ({
                     onSelectSegment(p.id);
                   }
                 }}
-                className={`p-5 bg-white border border-[#DCDCDC] rounded-[16px] ${p.cardHoverBorder} ${p.cardHoverBg} ${p.cardHoverShadow} transition-all duration-300 cursor-pointer group shadow-xs hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-[#14649B] flex flex-col justify-between ${
+                className={`p-5 bg-white border border-[#DCDCDC] rounded-[16px] ${p.cardHoverBorder} ${p.cardHoverBg} ${p.cardHoverShadow} transition-all duration-300 cursor-pointer group shadow-xs hover:-translate-y-1 focus-visible:ring-2 focus-visible:ring-[#14649B] flex flex-col justify-between ${
                   isSelected ? 'ring-2 ring-[#14649B]' : ''
                 }`}
               >
                 <div>
                   <div className="flex items-start justify-between gap-2.5 mb-2.5">
-                    <h3 className={`text-sm sm:text-base font-bold text-[#19324B] ${p.titleHoverText} transition-colors leading-snug`}>
+                    <h3 className={`text-base sm:text-lg font-bold text-[#19324B] ${p.titleHoverText} transition-colors leading-snug`}>
                       {p.name}
                     </h3>
                     <div className={`w-6 h-6 rounded-full flex items-center justify-center shrink-0 transition-all duration-300 ${p.circleClasses} shadow-xs mt-0.5`}>
-                      <ChevronRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5" aria-hidden="true" />
+                      <ChevronRight className="w-3.5 h-3.5" aria-hidden="true" />
                     </div>
                   </div>
 

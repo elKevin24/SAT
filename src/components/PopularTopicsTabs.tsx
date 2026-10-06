@@ -11,7 +11,7 @@ interface TopicItem {
 
 const TOPICS_BY_SEGMENT: Record<SegmentId, { label: string; primaryColor: string; hoverBg: string; hoverBorder: string; hoverShadow: string; topics: TopicItem[] }> = {
   contribuyentes: {
-    label: 'Personas y Empresas',
+    label: 'Contribuyentes',
     primaryColor: '#14649B',
     hoverBg: 'hover:bg-[#14649B]',
     hoverBorder: 'hover:border-[#14649B]',
@@ -26,8 +26,8 @@ const TOPICS_BY_SEGMENT: Record<SegmentId, { label: string; primaryColor: string
       },
       {
         id: 'con-rtu',
-        title: 'Registro Tributario Unificado (RTU Digital)',
-        desc: 'Inscríbete por primera vez o actualiza tus datos personales, dirección de vivienda o negocio de forma 100% digital sin hacer filas.',
+        title: 'Número de Identificación Tributaria (NIT)',
+        desc: 'Cómo solicitar un Número de Identificación Tributaria (NIT), actualizar sus datos, consultar su NIT y qué hacer si ha sido utilizado de forma indebida.',
         url: 'https://portal.sat.gob.gt/portal/rtu-digital/'
       },
       {
@@ -50,14 +50,14 @@ const TOPICS_BY_SEGMENT: Record<SegmentId, { label: string; primaryColor: string
       },
       {
         id: 'con-solvencia',
-        title: 'Certificado de Solvencia Fiscal (SOFI)',
+        title: 'Certificado de Solvencia Fiscal en Línea',
         desc: 'Descarga al instante la constancia digital que demuestra que no tienes deudas ni declaraciones pendientes con el Estado.',
         url: 'https://portal.sat.gob.gt/portal/solvencia-fiscal/'
       }
     ]
   },
   comercio_exterior: {
-    label: 'Comercio Exterior y Aduanas',
+    label: 'Operadores de Comercio Exterior',
     primaryColor: '#0284C7',
     hoverBg: 'hover:bg-[#0284C7]',
     hoverBorder: 'hover:border-[#0284C7]',
@@ -103,7 +103,7 @@ const TOPICS_BY_SEGMENT: Record<SegmentId, { label: string; primaryColor: string
     ]
   },
   profesionales: {
-    label: 'Profesionales y Contadores',
+    label: 'Profesionales',
     primaryColor: '#4D8014',
     hoverBg: 'hover:bg-[#4D8014]',
     hoverBorder: 'hover:border-[#4D8014]',
@@ -135,6 +135,12 @@ const TOPICS_BY_SEGMENT: Record<SegmentId, { label: string; primaryColor: string
         url: 'https://portal.sat.gob.gt/portal/gestores-tributarios/'
       },
       {
+        id: 'prof-etraspaso',
+        title: 'Traspaso Electrónico Notarial (e-Traspaso)',
+        desc: 'Autenticación digital de firmas y traspaso inmediato de vehículos en Agencia Virtual Notarial con firma electrónica avanzada.',
+        url: 'https://portal.sat.gob.gt/portal/traspaso-electronico-notarial/'
+      },
+      {
         id: 'prof-criterios',
         title: 'Criterios Legales e Interpretaciones de SAT',
         desc: 'Consulta resoluciones y directrices técnicas oficiales aprobadas por el Directorio de SAT.',
@@ -143,7 +149,7 @@ const TOPICS_BY_SEGMENT: Record<SegmentId, { label: string; primaryColor: string
     ]
   },
   organismos_especiales: {
-    label: 'Entidades Exentas y Estado',
+    label: 'Organismos Especiales',
     primaryColor: '#C25E00',
     hoverBg: 'hover:bg-[#C25E00]',
     hoverBorder: 'hover:border-[#C25E00]',
@@ -170,7 +176,7 @@ const TOPICS_BY_SEGMENT: Record<SegmentId, { label: string; primaryColor: string
       },
       {
         id: 'org-estado',
-        title: 'Gestiones para el Sector Público',
+        title: 'Sector Público y Municipalidades',
         desc: 'Trámites de retenciones de impuestos y rendición de cuentas para ministerios, secretarías y municipalidades de Guatemala.',
         url: 'https://portal.sat.gob.gt/portal/sector-publico/'
       }
@@ -209,7 +215,7 @@ export const PopularTopicsTabs: React.FC<PopularTopicsTabsProps> = ({
             </p>
           </div>
 
-          {/* Segment Tabs */}
+          {/* Segment Tabs con nombres exactos del mapa oficial */}
           <div className="flex items-center gap-1.5 p-1 bg-slate-100 rounded-xl overflow-x-auto no-scrollbar">
             {(Object.keys(TOPICS_BY_SEGMENT) as SegmentId[]).map((segId) => {
               const isActive = activeTab === segId;
@@ -217,7 +223,7 @@ export const PopularTopicsTabs: React.FC<PopularTopicsTabsProps> = ({
                 <button
                   key={segId}
                   onClick={() => setActiveTab(segId)}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all whitespace-nowrap ${
+                  className={`px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all whitespace-nowrap ${
                     isActive 
                       ? 'bg-white text-[#14649B] shadow-xs' 
                       : 'text-slate-600 hover:text-slate-900 hover:bg-slate-200/60'
@@ -230,7 +236,7 @@ export const PopularTopicsTabs: React.FC<PopularTopicsTabsProps> = ({
           </div>
         </div>
 
-        {/* Topics Grid compacto y sin footer de acción redundante */}
+        {/* Topics Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-3.5">
           {currentSegmentData.topics.map((topic) => {
             const isConsultas = topic.isPermanentConsultas;

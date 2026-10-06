@@ -5,7 +5,7 @@
     "audiencia": "Contribuyentes",
     "etapa": "Empezar",
     "paraQuien": "Persona individual que nunca ha tenido NIT",
-    "categorias": "NIT sin Obligaciones › Todos los grupos\r\nTrámites comunes › Todos los grupos",
+    "categorias": "NIT sin Obligaciones › Todos los grupos\r\nContribuyente General",
     "totalPasos": 7,
     "totalPaginas": 18,
     "rutaPasosResumen": [
@@ -22,14 +22,14 @@
         "numero": 1,
         "accion": "Verifica si ya tienes NIT",
         "pagina": "Consultar tu NIT con tu DPI (CUI)",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/consulta-cui-nit/"
       },
       {
         "numero": 2,
         "accion": "Elige tu caso",
         "pagina": "Obtener tu NIT por primera vez",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/rtu-digital/inscripcion-solicitud-de-nit/"
       },
       {
@@ -43,7 +43,7 @@
         "numero": 2,
         "accion": "Elige tu caso",
         "pagina": "Obtener NIT para tener un negocio (con obligaciones)",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/inscripcion-nit-con-obligaciones-tributarias/"
       },
       {
@@ -78,70 +78,70 @@
         "numero": 3,
         "accion": "Solicita tu NIT",
         "pagina": "Agendar cita para obtener tu NIT",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/citas-solicitud-de-NIT/"
       },
       {
         "numero": 3,
         "accion": "Solicita tu NIT",
         "pagina": "Ubicar agencias de la SAT",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/contacto/"
       },
       {
         "numero": 4,
         "accion": "Da seguimiento",
         "pagina": "Ver el estado de tu gestión de RTU Digital",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/estado-de-gestion-de-rtu-digital/"
       },
       {
         "numero": 5,
         "accion": "Activa tu cuenta en Agencia Virtual",
         "pagina": "Solicitar usuario de Agencia Virtual",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/solicitud-usuario-agencia-virtual/"
       },
       {
         "numero": 5,
         "accion": "Activa tu cuenta en Agencia Virtual",
         "pagina": "Activar tu usuario de Agencia Virtual",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/activacion-de-usuario-de-agencia-virtual/"
       },
       {
         "numero": 5,
         "accion": "Activa tu cuenta en Agencia Virtual",
         "pagina": "Ingresar a Agencia Virtual",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://farm3.sat.gob.gt/menu/login.jsf"
       },
       {
         "numero": 6,
         "accion": "Descarga tu constancia",
         "pagina": "Imprimir tu constancia de RTU",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/consulta-registro-tributario-unificado/"
       },
       {
         "numero": 7,
         "accion": "Si hay un error",
         "pagina": "Corregir tu NIT",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-correccion-de-nit/"
       },
       {
         "numero": 7,
         "accion": "Si hay un error",
         "pagina": "Unificar tu NIT si tienes más de uno",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/depuracion-nit-multiple/"
       },
       {
         "numero": 7,
         "accion": "Si hay un error",
         "pagina": "Actualizar tus datos de identificación por primera vez",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/primera-actualizacion-de-datos-de-identificacion/"
       }
     ]
@@ -204,63 +204,63 @@
         "numero": 2,
         "accion": "Inscribe tu negocio",
         "pagina": "Obtener NIT para tener un negocio (con obligaciones)",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/inscripcion-nit-con-obligaciones-tributarias/"
       },
       {
         "numero": 2,
         "accion": "Inscribe tu negocio",
         "pagina": "Consultar códigos de actividades económicas",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/actividades-economicas/"
       },
       {
         "numero": 2,
         "accion": "Inscribe tu negocio",
         "pagina": "Actualizar los datos de tu negocio o establecimiento",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/actualizacion-datos-del-establecimiento/"
       },
       {
         "numero": 2,
         "accion": "Inscribe tu negocio",
         "pagina": "Agregar o quitar impuestos a los que estás inscrito",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/actualizacion-afiliaciones/"
       },
       {
         "numero": 3,
         "accion": "Activa tu cuenta en Agencia Virtual",
         "pagina": "Solicitar usuario de Agencia Virtual",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/solicitud-usuario-agencia-virtual/"
       },
       {
         "numero": 3,
         "accion": "Activa tu cuenta en Agencia Virtual",
         "pagina": "Activar tu usuario de Agencia Virtual",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/activacion-de-usuario-de-agencia-virtual/"
       },
       {
         "numero": 4,
         "accion": "Nombra a tu contador (si aplica)",
         "pagina": "Nombrar o cambiar al contador de tu negocio",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/actualizacion-nombramiento-o-cambio-de-perito-contador/"
       },
       {
         "numero": 5,
         "accion": "Prepárate para facturar",
         "pagina": "Factura Electrónica en Línea (FEL)",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/efactura/"
       },
       {
         "numero": 5,
         "accion": "Prepárate para facturar",
         "pagina": "Curso: Factura Electrónica en Línea",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://sites.google.com/capacitacionessat.page/cultura-tributariad/cursos-virtuales-sat/factura-electr%C3%B3nica-en-l%C3%ADnea/31-factura-electr%C3%B3nica-en-l%C3%ADnea-fel"
       },
       {
@@ -281,7 +281,7 @@
         "numero": 6,
         "accion": "Habilita tus libros",
         "pagina": "Libro Electrónico Tributario (LET)",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/libro-electronico-tributario/"
       },
       {
@@ -295,14 +295,14 @@
         "numero": 7,
         "accion": "Conoce tus fechas para declarar",
         "pagina": "Consultar fechas de vencimiento (calendario tributario)",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/calendario-tributario/"
       },
       {
         "numero": 7,
         "accion": "Conoce tus fechas para declarar",
         "pagina": "Declarar y pagar en Declaraguate",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://declaraguate.sat.gob.gt/declaraguate-web/"
       }
     ]
@@ -357,21 +357,21 @@
         "numero": 3,
         "accion": "Nombra al contador",
         "pagina": "Nombrar o cambiar al contador de tu negocio",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/actualizacion-nombramiento-o-cambio-de-perito-contador/"
       },
       {
         "numero": 4,
         "accion": "Define impuestos y actividades",
         "pagina": "Consultar códigos de actividades económicas",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/actividades-economicas/"
       },
       {
         "numero": 4,
         "accion": "Define impuestos y actividades",
         "pagina": "Agregar o quitar impuestos a los que estás inscrito",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/actualizacion-afiliaciones/"
       },
       {
@@ -392,7 +392,7 @@
         "numero": 5,
         "accion": "Prepárate para facturar y llevar libros",
         "pagina": "Factura Electrónica en Línea (FEL)",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/efactura/"
       },
       {
@@ -406,14 +406,14 @@
         "numero": 6,
         "accion": "Activa la cuenta en Agencia Virtual",
         "pagina": "Solicitar usuario de Agencia Virtual",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/solicitud-usuario-agencia-virtual/"
       },
       {
         "numero": 6,
         "accion": "Activa la cuenta en Agencia Virtual",
         "pagina": "Activar tu usuario de Agencia Virtual",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/activacion-de-usuario-de-agencia-virtual/"
       }
     ]
@@ -613,7 +613,7 @@
     "audiencia": "Contribuyentes",
     "etapa": "Cumplir",
     "paraQuien": "Cualquier contribuyente con negocio",
-    "categorias": "Trámites comunes › Todos los grupos",
+    "categorias": "Contribuyente General",
     "totalPasos": 6,
     "totalPaginas": 17,
     "rutaPasosResumen": [
@@ -629,14 +629,14 @@
         "numero": 1,
         "accion": "Factura electrónica (FEL)",
         "pagina": "Factura Electrónica en Línea (FEL)",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/efactura/"
       },
       {
         "numero": 1,
         "accion": "Factura electrónica (FEL)",
         "pagina": "Curso: Factura Electrónica en Línea",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://sites.google.com/capacitacionessat.page/cultura-tributariad/cursos-virtuales-sat/factura-electr%C3%B3nica-en-l%C3%ADnea/31-factura-electr%C3%B3nica-en-l%C3%ADnea-fel"
       },
       {
@@ -648,28 +648,28 @@
       },
       {
         "numero": 2,
-        "accion": "Facturas impresas (si aún aplica)",
+        "accion": "Casos de contingencia y espectáculos (FEL obligatorio)",
         "pagina": "Autorizar facturas y otros documentos",
         "ubicacion": "Contribuyentes › Contribuyente General › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/autorizacion-de-documentos-y-formularios/"
       },
       {
         "numero": 2,
-        "accion": "Facturas impresas (si aún aplica)",
+        "accion": "Casos de contingencia y espectáculos (FEL obligatorio)",
         "pagina": "Autorizar facturas si las imprimes tú mismo",
         "ubicacion": "Contribuyentes › Contribuyente General › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/autorizacion-de-facturas-auto-impresores-en-agencia-virtual/"
       },
       {
         "numero": 2,
-        "accion": "Facturas impresas (si aún aplica)",
+        "accion": "Casos de contingencia y espectáculos (FEL obligatorio)",
         "pagina": "Autorizar facturas impresas por una imprenta",
         "ubicacion": "Contribuyentes › Contribuyente General › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/autorizacion-de-facturas-y-otros-documentos-de-imprentas-en-agencia-virtual/"
       },
       {
         "numero": 2,
-        "accion": "Facturas impresas (si aún aplica)",
+        "accion": "Casos de contingencia y espectáculos (FEL obligatorio)",
         "pagina": "Consultar imprentas autorizadas",
         "ubicacion": "Contribuyentes › Contribuyente General › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/imprentas-inscritas/"
@@ -727,21 +727,21 @@
         "numero": 5,
         "accion": "Anular o corregir documentos",
         "pagina": "Anular documentos en Agencia Virtual",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/aviso-anulacion-de-documentos-por-el-contribuyente-en-agencia-virtual/"
       },
       {
         "numero": 6,
         "accion": "Verificar una factura recibida",
         "pagina": "Verificar facturas y documentos (Verificador Integrado)",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/verificador-integrado/"
       },
       {
         "numero": 6,
         "accion": "Verificar una factura recibida",
         "pagina": "Denunciar a quien no da factura",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/contacto/denuncias-no-facturacion/"
       }
     ]
@@ -752,7 +752,7 @@
     "audiencia": "Contribuyentes",
     "etapa": "Cumplir",
     "paraQuien": "Contribuyentes inscritos en algún impuesto",
-    "categorias": "Trámites comunes › Todos los grupos",
+    "categorias": "Contribuyente General",
     "totalPasos": 7,
     "totalPaginas": 20,
     "rutaPasosResumen": [
@@ -769,7 +769,7 @@
         "numero": 1,
         "accion": "Revisa tus fechas",
         "pagina": "Consultar fechas de vencimiento (calendario tributario)",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/calendario-tributario/"
       },
       {
@@ -783,21 +783,21 @@
         "numero": 2,
         "accion": "Prepara tu declaración",
         "pagina": "Cómo llenar el formulario SAT-1411 (ISR anual)",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://sites.google.com/capacitacionessat.page/eventosenvivo/p%C3%A1gina-principal/llenado-del-formulario-sat-1411-declaraci%C3%B3n-anual-del-isr-r%C3%A9gimen-sobre-la"
       },
       {
         "numero": 2,
         "accion": "Prepara tu declaración",
         "pagina": "Curso: cómo usar Declaraguate",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://sites.google.com/capacitacionessat.page/cultura-tributariad/cursos-virtuales-sat/herramientas-electr%C3%B3nicas/19-declaraguate-uso-y-manejo"
       },
       {
         "numero": 2,
         "accion": "Prepara tu declaración",
         "pagina": "Planilla del IVA en FEL",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/planilla-iva-fel/"
       },
       {
@@ -811,14 +811,14 @@
         "numero": 3,
         "accion": "Declara",
         "pagina": "Declarar y pagar en Declaraguate",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://declaraguate.sat.gob.gt/declaraguate-web/"
       },
       {
         "numero": 3,
         "accion": "Declara",
         "pagina": "Presentar declaración sin movimiento (valor cero)",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/declaracion-valor-cero/"
       },
       {
@@ -832,70 +832,70 @@
         "numero": 4,
         "accion": "Paga",
         "pagina": "Formas de pago de impuestos",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/forma-de-pago/"
       },
       {
         "numero": 4,
         "accion": "Paga",
         "pagina": "Pagar timbres fiscales en línea (razón electrónica)",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/razon-electronica-timbres-fiscales/"
       },
       {
         "numero": 5,
         "accion": "Si no puedes pagar todo",
         "pagina": "Solicitar facilidades de pago (convenio)",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/solicitud-de-facilidad-de-pago/"
       },
       {
         "numero": 5,
         "accion": "Si no puedes pagar todo",
         "pagina": "Solicitar facilidades de pago en línea",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/facilidades-de-pago/"
       },
       {
         "numero": 5,
         "accion": "Si no puedes pagar todo",
         "pagina": "Consultar pagos de tu convenio",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/consulta-movimiento-convenio/"
       },
       {
         "numero": 5,
         "accion": "Si no puedes pagar todo",
         "pagina": "Historial de facilidades de pago",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/consulta-movimiento-convenio/bitacora-de-facilidades-de-pago/"
       },
       {
         "numero": 6,
         "accion": "Si te equivocaste",
         "pagina": "Corregir la casilla de declaración rectificativa",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-correccion-de-casilla-rectificativa/"
       },
       {
         "numero": 6,
         "accion": "Si te equivocaste",
         "pagina": "Corregir el período de una declaración o pago",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-correccion-de-periodo/"
       },
       {
         "numero": 6,
         "accion": "Si te equivocaste",
         "pagina": "Autoliquidación de impuestos",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/autoliquidacion/"
       },
       {
         "numero": 7,
         "accion": "Dudas",
         "pagina": "Preguntas frecuentes sobre declaraciones y pagos",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/preguntas-frecuentes/cumplimiento-tributario/#1528240031207-3ce9866a-9863"
       },
       {
@@ -913,7 +913,7 @@
     "audiencia": "Contribuyentes",
     "etapa": "Cumplir",
     "paraQuien": "Quien necesita demostrar que está al día",
-    "categorias": "Trámites comunes › Todos los grupos",
+    "categorias": "Contribuyente General",
     "totalPasos": 4,
     "totalPaginas": 7,
     "rutaPasosResumen": [
@@ -927,42 +927,42 @@
         "numero": 1,
         "accion": "Revisa los requisitos",
         "pagina": "Requisitos para la solvencia fiscal (SOFI)",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-sofi/"
       },
       {
         "numero": 2,
         "accion": "Solicítala",
         "pagina": "Obtener tu solvencia fiscal",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/solvencia-fiscal/"
       },
       {
         "numero": 3,
         "accion": "Si te la niegan",
         "pagina": "¿Por qué no tengo solvencia fiscal?",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/solvencia-fiscal/"
       },
       {
         "numero": 3,
         "accion": "Si te la niegan",
         "pagina": "Declarar y pagar en Declaraguate",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://declaraguate.sat.gob.gt/declaraguate-web/"
       },
       {
         "numero": 3,
         "accion": "Si te la niegan",
         "pagina": "Solicitar facilidades de pago en línea",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/facilidades-de-pago/"
       },
       {
         "numero": 3,
         "accion": "Si te la niegan",
         "pagina": "Confirmar tus datos cada año (ratificación anual)",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/ratificacion-o-confirmacion-anual-de-datos/"
       },
       {
@@ -1026,7 +1026,7 @@
     "audiencia": "Contribuyentes",
     "etapa": "Cambiar",
     "paraQuien": "Cualquier contribuyente",
-    "categorias": "Trámites comunes › Todos los grupos",
+    "categorias": "Contribuyente General",
     "totalPasos": 5,
     "totalPaginas": 12,
     "rutaPasosResumen": [
@@ -1041,49 +1041,49 @@
         "numero": 1,
         "accion": "Datos personales",
         "pagina": "Actualizar tus datos en línea",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/rtu-digital/actualizacion-de-datos/"
       },
       {
         "numero": 1,
         "accion": "Datos personales",
         "pagina": "Actualizar tus datos de identificación (nombre, DPI)",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/actualizacion-de-datos-de-identificacion/"
       },
       {
         "numero": 1,
         "accion": "Datos personales",
         "pagina": "Cambiar tu dirección fiscal",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/actualizacion-de-domicilio-fiscal/"
       },
       {
         "numero": 2,
         "accion": "Datos del negocio",
         "pagina": "Actualizar los datos de tu negocio o establecimiento",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/actualizacion-datos-del-establecimiento/"
       },
       {
         "numero": 2,
         "accion": "Datos del negocio",
         "pagina": "Cambiar la actividad económica de tu negocio",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/actualizacion-actividad-economica-principal-y-por-establecimiento/"
       },
       {
         "numero": 2,
         "accion": "Datos del negocio",
         "pagina": "Agregar o quitar impuestos a los que estás inscrito",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/actualizacion-afiliaciones/"
       },
       {
         "numero": 3,
         "accion": "Contador y representantes",
         "pagina": "Nombrar o cambiar al contador de tu negocio",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/actualizacion-nombramiento-o-cambio-de-perito-contador/"
       },
       {
@@ -1104,21 +1104,21 @@
         "numero": 4,
         "accion": "Confirmación anual",
         "pagina": "Confirmar tus datos cada año (ratificación anual)",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/ratificacion-o-confirmacion-anual-de-datos/"
       },
       {
         "numero": 5,
         "accion": "Verifica el cambio",
         "pagina": "Ver el estado de tu gestión de RTU Digital",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/estado-de-gestion-de-rtu-digital/"
       },
       {
         "numero": 5,
         "accion": "Verifica el cambio",
         "pagina": "Imprimir tu constancia de RTU",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/consulta-registro-tributario-unificado/"
       }
     ]
@@ -1331,7 +1331,7 @@
         "numero": 1,
         "accion": "Averigua tu régimen actual",
         "pagina": "Imprimir tu constancia de RTU",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/consulta-registro-tributario-unificado/"
       },
       {
@@ -1401,7 +1401,7 @@
         "numero": 4,
         "accion": "Ajusta tu facturación",
         "pagina": "Factura Electrónica en Línea (FEL)",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/efactura/"
       }
     ]
@@ -1427,98 +1427,98 @@
         "numero": 1,
         "accion": "Ponte al día antes de cerrar",
         "pagina": "Obtener tu solvencia fiscal",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/solvencia-fiscal/"
       },
       {
         "numero": 1,
         "accion": "Ponte al día antes de cerrar",
         "pagina": "¿Por qué no tengo solvencia fiscal?",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/solvencia-fiscal/"
       },
       {
         "numero": 1,
         "accion": "Ponte al día antes de cerrar",
         "pagina": "Presentar declaración sin movimiento (valor cero)",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/declaracion-valor-cero/"
       },
       {
         "numero": 2,
         "accion": "Elige: suspender o cerrar",
         "pagina": "Guía para cerrar tu negocio en Agencia Virtual",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/rtu-digital/cese-de-actividades/"
       },
       {
         "numero": 2,
         "accion": "Elige: suspender o cerrar",
         "pagina": "Suspender temporalmente tu negocio",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/cese-temporal-de-actividades/"
       },
       {
         "numero": 2,
         "accion": "Elige: suspender o cerrar",
         "pagina": "Cerrar tu negocio (persona individual)",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/cese-de-negocios-inscritos-con-actividad-persona-individual/"
       },
       {
         "numero": 2,
         "accion": "Elige: suspender o cerrar",
         "pagina": "Cerrar un negocio inactivo por varios años (persona individual)",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-actividad-comercial-servicios-tecnicos-servicios-profesionales/"
       },
       {
         "numero": 2,
         "accion": "Elige: suspender o cerrar",
         "pagina": "Cerrar un negocio que inscribieron a tu nombre sin autorización",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/cese-de-actividades-de-negocios-inscritos-sin-autorizacion-del-contribuyente/"
       },
       {
         "numero": 3,
         "accion": "Da de baja documentos y equipos",
         "pagina": "Anular documentos en Agencia Virtual",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/aviso-anulacion-de-documentos-por-el-contribuyente-en-agencia-virtual/"
       },
       {
         "numero": 3,
         "accion": "Da de baja documentos y equipos",
         "pagina": "Cancelar máquinas registradoras en Agencia Virtual",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/cancelacion-de-maquinas-registradoras-en-agencia-virtual/"
       },
       {
         "numero": 3,
         "accion": "Da de baja documentos y equipos",
         "pagina": "Agregar o quitar impuestos a los que estás inscrito",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/actualizacion-afiliaciones/"
       },
       {
         "numero": 4,
         "accion": "Verifica el cierre",
         "pagina": "Ver el estado de tu gestión de RTU Digital",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/estado-de-gestion-de-rtu-digital/"
       },
       {
         "numero": 4,
         "accion": "Verifica el cierre",
         "pagina": "Imprimir tu constancia de RTU",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/consulta-registro-tributario-unificado/"
       },
       {
         "numero": 5,
         "accion": "Si quieres volver a operar",
         "pagina": "Reactivar actividades suspendidas temporalmente",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/habilitacion-de-actividades-a-requerimiento-del-contribuyente/"
       }
     ]
@@ -1593,21 +1593,21 @@
         "numero": 3,
         "accion": "Da de baja documentos y equipos",
         "pagina": "Anular documentos en Agencia Virtual",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/aviso-anulacion-de-documentos-por-el-contribuyente-en-agencia-virtual/"
       },
       {
         "numero": 3,
         "accion": "Da de baja documentos y equipos",
         "pagina": "Cancelar máquinas registradoras en Agencia Virtual",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/cancelacion-de-maquinas-registradoras-en-agencia-virtual/"
       },
       {
         "numero": 4,
         "accion": "Vehículos de la empresa",
         "pagina": "Traspasar vehículos por fusión de empresas",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/traspaso-por-fusion-de-sociedades/"
       },
       {
@@ -1625,7 +1625,7 @@
     "audiencia": "Contribuyentes",
     "etapa": "Cerrar",
     "paraQuien": "Familiares, herederos y albaceas",
-    "categorias": "Trámites comunes › Todos los grupos",
+    "categorias": "Contribuyente General",
     "totalPasos": 4,
     "totalPaginas": 5,
     "rutaPasosResumen": [
@@ -1639,35 +1639,35 @@
         "numero": 1,
         "accion": "Avisa a la SAT",
         "pagina": "Avisar el fallecimiento de un contribuyente",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/actualizacion-aviso-de-fallecimiento/"
       },
       {
         "numero": 2,
         "accion": "Cierra su negocio",
         "pagina": "Cerrar el negocio de una persona fallecida",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/cese-de-negocios-inscritos-con-actividad-en-caso-de-fallecimiento-del-contribuyente/"
       },
       {
         "numero": 2,
         "accion": "Cierra su negocio",
         "pagina": "Cerrar un negocio inactivo de una persona fallecida",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/cese-por-prescripcion-persona-individual-en-caso-de-fallecimiento-del-contribuyente/"
       },
       {
         "numero": 3,
         "accion": "Traspasa sus vehículos",
         "pagina": "Traspasar un vehículo heredado",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/traspaso-por-proceso-sucesorio/"
       },
       {
         "numero": 4,
         "accion": "Herencias y devoluciones",
         "pagina": "Devolución del impuesto de herencias, legados y donaciones",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/devoulucion-impuesto-de-herencias-legados-y-donaciones/"
       }
     ]
@@ -1678,7 +1678,7 @@
     "audiencia": "Contribuyentes",
     "etapa": "Recuperar dinero",
     "paraQuien": "Quien pagó de más, por error o le retuvieron",
-    "categorias": "Trámites comunes › Todos los grupos",
+    "categorias": "Contribuyente General",
     "totalPasos": 5,
     "totalPaginas": 29,
     "rutaPasosResumen": [
@@ -1693,7 +1693,7 @@
         "numero": 1,
         "accion": "Pagaste de más o por error",
         "pagina": "Recuperar un pago hecho de más",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/devolucion-de-pagos-en-exceso/"
       },
       {
@@ -1707,28 +1707,28 @@
         "numero": 1,
         "accion": "Pagaste de más o por error",
         "pagina": "Recuperar un pago hecho por error",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/devolucion-de-pagos-indebidos/"
       },
       {
         "numero": 1,
         "accion": "Pagaste de más o por error",
         "pagina": "Recuperar un pago duplicado",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/devolucion-acreditamiento-o-compensacion-de-pagos-duplicados-varios-impuestos/"
       },
       {
         "numero": 1,
         "accion": "Pagaste de más o por error",
         "pagina": "Recuperar multas, recargos o intereses pagados",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/devolucion-acreditamiento-o-compensacion-de-multas-recargos-e-intereses/"
       },
       {
         "numero": 1,
         "accion": "Pagaste de más o por error",
         "pagina": "Recuperar el pago por habilitación de libros",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/devolucion-acreditamiento-o-compensacion-por-habilitacion-de-libros-contables/"
       },
       {
@@ -1805,7 +1805,7 @@
         "numero": 3,
         "accion": "IVA",
         "pagina": "Devolución de IVA por compraventa de inmuebles",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/devolucion-acreditamiento-o-compensacion-de-iva-compra-venta-de-bienes-inmuebles/"
       },
       {
@@ -1854,28 +1854,28 @@
         "numero": 5,
         "accion": "Otros impuestos",
         "pagina": "Devolución de timbres fiscales y papel sellado",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/devolucion-del-impuesto-de-timbres-fiscales-y-de-papel-sellado-especial-para-protocolos/"
       },
       {
         "numero": 5,
         "accion": "Otros impuestos",
         "pagina": "Devolución del impuesto de herencias, legados y donaciones",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/devoulucion-impuesto-de-herencias-legados-y-donaciones/"
       },
       {
         "numero": 5,
         "accion": "Otros impuestos",
         "pagina": "Solicitar devolución del impuesto de primera matrícula (IPRIMA)",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/devolucion-de-impuesto-de-primeras-placas-iprima-sat-4041-sat-4081/"
       },
       {
         "numero": 5,
         "accion": "Otros impuestos",
         "pagina": "Solicitar devolución o compensación de impuestos de vehículos",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/devolucion-acreditamiento-o-compensacion-de-vehiculos/"
       },
       {
@@ -1900,7 +1900,7 @@
     "audiencia": "Contribuyentes",
     "etapa": "Vehículos",
     "paraQuien": "Comprador de un vehículo en Guatemala",
-    "categorias": "Trámites comunes › Todos los grupos",
+    "categorias": "Contribuyente General",
     "totalPasos": 6,
     "totalPaginas": 15,
     "rutaPasosResumen": [
@@ -1916,84 +1916,84 @@
         "numero": 1,
         "accion": "Revisa el vehículo antes de comprar",
         "pagina": "Consultar los datos de un vehículo",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/impresion-calcomania/"
       },
       {
         "numero": 1,
         "accion": "Revisa el vehículo antes de comprar",
         "pagina": "Consultar multas de tránsito",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/multas/"
       },
       {
         "numero": 1,
         "accion": "Revisa el vehículo antes de comprar",
         "pagina": "Consultar morosos del impuesto de circulación",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/morosos-del-impuesto-de-circulacion-de-vehiculos/"
       },
       {
         "numero": 1,
         "accion": "Revisa el vehículo antes de comprar",
         "pagina": "Verificar documentos con el código único",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/codigo-unico-de-verificacion/"
       },
       {
         "numero": 2,
         "accion": "Conoce los impuestos",
         "pagina": "Consultar tablas de valores de vehículos",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/tablas-y-acuerdos-vehiculos/"
       },
       {
         "numero": 2,
         "accion": "Conoce los impuestos",
         "pagina": "IVA e IPRIMA de vehículos usados",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/iva-iprima/"
       },
       {
         "numero": 3,
         "accion": "Haz el traspaso",
         "pagina": "Traspasar un vehículo con certificado de propiedad",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/traspaso-con-certificado-de-propiedad-de-vehiculos/"
       },
       {
         "numero": 3,
         "accion": "Haz el traspaso",
         "pagina": "Traspasar un vehículo con escritura pública o factura",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/traspaso-con-escritura-publica-o-factura/"
       },
       {
         "numero": 3,
         "accion": "Haz el traspaso",
         "pagina": "Traspasar un vehículo con declaración jurada",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/traspaso-con-declaracion-jurada/"
       },
       {
         "numero": 3,
         "accion": "Haz el traspaso",
         "pagina": "Enviar documentos digitales del traspaso electrónico (TEV)",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-para-remitir-documentacion-electronica-o-digital-de-tev/"
       },
       {
         "numero": 3,
         "accion": "Haz el traspaso",
         "pagina": "Entregar documentos del traspaso electrónico en Agencia Virtual",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/entrega-de-documentos-de-traspaso-electronico-en-agencia-virtual/"
       },
       {
         "numero": 4,
         "accion": "Revisión física (si la piden)",
         "pagina": "Expertaje (revisión física) de vehículos",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/expertaje-a-vehiculos/"
       },
       {
@@ -2007,14 +2007,14 @@
         "numero": 5,
         "accion": "Recibe tus documentos",
         "pagina": "Actualizar el título y la tarjeta de circulación",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/actualizacion-de-distintivos/"
       },
       {
         "numero": 6,
         "accion": "Si no puedes ir en persona",
         "pagina": "Autorizar a otra persona para tus trámites de vehículos",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/tercera-persona-autorizada-en-el-registro-fiscal-de-vehiculos/"
       }
     ]
@@ -2025,7 +2025,7 @@
     "audiencia": "Contribuyentes",
     "etapa": "Vehículos",
     "paraQuien": "Propietario que vende su vehículo",
-    "categorias": "Trámites comunes › Todos los grupos",
+    "categorias": "Contribuyente General",
     "totalPasos": 3,
     "totalPaginas": 7,
     "rutaPasosResumen": [
@@ -2038,42 +2038,42 @@
         "numero": 1,
         "accion": "Ponte al día",
         "pagina": "Consultar morosos del impuesto de circulación",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/morosos-del-impuesto-de-circulacion-de-vehiculos/"
       },
       {
         "numero": 1,
         "accion": "Ponte al día",
         "pagina": "Consultar multas de tránsito",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/multas/"
       },
       {
         "numero": 2,
         "accion": "Formaliza la venta",
         "pagina": "Traspasar un vehículo con certificado de propiedad",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/traspaso-con-certificado-de-propiedad-de-vehiculos/"
       },
       {
         "numero": 2,
         "accion": "Formaliza la venta",
         "pagina": "Traspasar un vehículo con escritura pública o factura",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/traspaso-con-escritura-publica-o-factura/"
       },
       {
         "numero": 2,
         "accion": "Formaliza la venta",
         "pagina": "Hacer el traspaso electrónico de un vehículo",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/traspaso-electronico-de-vehiculos-por-notario-con-anexo-del-certificado-de-propiedad-emitido-via-declaraguate-en-agencia-virtual/"
       },
       {
         "numero": 3,
         "accion": "Avisa a la SAT",
         "pagina": "Avisar a la SAT que vendiste tu vehículo",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/aviso-de-transferencia-de-dominio/"
       },
       {
@@ -2091,7 +2091,7 @@
     "audiencia": "Contribuyentes",
     "etapa": "Vehículos",
     "paraQuien": "Quien trae un vehículo del extranjero",
-    "categorias": "Trámites comunes › Todos los grupos\r\nImportadores y Exportadores › Importadores  (Operadores de comercio exterior)",
+    "categorias": "Contribuyente General\r\nImportadores y Exportadores › Importadores  (Operadores de comercio exterior)",
     "totalPasos": 5,
     "totalPaginas": 14,
     "rutaPasosResumen": [
@@ -2155,7 +2155,7 @@
         "numero": 3,
         "accion": "Inscríbelo",
         "pagina": "Inscribir un vehículo",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/inscripcion-de-vehiculos-en-guatemala/"
       },
       {
@@ -2169,21 +2169,21 @@
         "numero": 3,
         "accion": "Inscríbelo",
         "pagina": "Inscribir un vehículo con declaración jurada",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/inscripcion-de-vehiculos-con-declaracion-jurada/"
       },
       {
         "numero": 3,
         "accion": "Inscríbelo",
         "pagina": "Inscribir un vehículo comprado en subasta",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/inscripcion-de-vehiculos-por-subasta/"
       },
       {
         "numero": 4,
         "accion": "Obtén placas y título",
         "pagina": "Obtener el primer título de propiedad",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/emision-de-primer-certificado-de-propiedad/"
       },
       {
@@ -2197,7 +2197,7 @@
         "numero": 5,
         "accion": "Si es solo de visita",
         "pagina": "Ingresar temporalmente un vehículo de turismo",
-        "ubicacion": "Operadores de comercio exterior › Trámites comunes › Todos los grupos",
+        "ubicacion": "Operadores de comercio exterior › Normativa y Aranceles",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/importacion-temporal-para-vehiculos-de-turismo/"
       }
     ]
@@ -2208,7 +2208,7 @@
     "audiencia": "Contribuyentes",
     "etapa": "Vehículos",
     "paraQuien": "Propietario con placas, título o tarjeta perdidos o dañados",
-    "categorias": "Trámites comunes › Todos los grupos",
+    "categorias": "Contribuyente General",
     "totalPasos": 4,
     "totalPaginas": 10,
     "rutaPasosResumen": [
@@ -2222,70 +2222,70 @@
         "numero": 1,
         "accion": "Si te robaron el vehículo",
         "pagina": "Avisar el robo de tu vehículo",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/aviso-robo-vehiculos/"
       },
       {
         "numero": 1,
         "accion": "Si te robaron el vehículo",
         "pagina": "Dar de baja un vehículo robado",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/inactivacion-de-vehiculos-por-robo-o-hurto/"
       },
       {
         "numero": 2,
         "accion": "Repón documentos",
         "pagina": "Reponer el título de propiedad",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/reposicion-de-certificado-de-propiedad-con-formulario-electronico-sat-8933/"
       },
       {
         "numero": 2,
         "accion": "Repón documentos",
         "pagina": "Reponer la tarjeta de circulación",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/reposicion-de-tarjeta-de-circulacion-con-formulario-electronico-sat-8933/"
       },
       {
         "numero": 3,
         "accion": "Repón o cambia placas",
         "pagina": "Reponer placas de circulación",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/reposicion-de-placas-de-circulacion-con-formulario-electronico-sat-8933/"
       },
       {
         "numero": 3,
         "accion": "Repón o cambia placas",
         "pagina": "Cambiar placas por renovación general",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/reposicion-de-placas-de-circulacion-por-cambio-generalizado-con-formulario-electronico-sat-8933/"
       },
       {
         "numero": 3,
         "accion": "Repón o cambia placas",
         "pagina": "Cambiar el tipo de uso de tus placas",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/cambio-de-uso-de-placas-de-circulacion/"
       },
       {
         "numero": 4,
         "accion": "Corrige datos",
         "pagina": "Corregir datos del vehículo",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/rectificaciones-varias/"
       },
       {
         "numero": 4,
         "accion": "Corrige datos",
         "pagina": "Corregir el NIT del propietario del vehículo",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/rectificacion-de-nit/"
       },
       {
         "numero": 4,
         "accion": "Corrige datos",
         "pagina": "Cambiar color, motor o asientos",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/inscripcion-de-vehiculos-con-cambio-de-motor-y-o-color/"
       }
     ]
@@ -2296,7 +2296,7 @@
     "audiencia": "Contribuyentes",
     "etapa": "Vehículos",
     "paraQuien": "Propietarios de vehículos",
-    "categorias": "Trámites comunes › Todos los grupos",
+    "categorias": "Contribuyente General",
     "totalPasos": 4,
     "totalPaginas": 6,
     "rutaPasosResumen": [
@@ -2310,42 +2310,42 @@
         "numero": 1,
         "accion": "Consulta cuánto pagas",
         "pagina": "Consultar tablas de valores de vehículos",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/tablas-y-acuerdos-vehiculos/"
       },
       {
         "numero": 1,
         "accion": "Consulta cuánto pagas",
         "pagina": "Tabla de valores del impuesto de circulación e IVA 2025",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/descarga/1899/legislacion-tributaria/82540/tabla-de-valores-iscv-2025.pdf"
       },
       {
         "numero": 2,
         "accion": "Revisa si debes años anteriores",
         "pagina": "Consultar morosos del impuesto de circulación",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/morosos-del-impuesto-de-circulacion-de-vehiculos/"
       },
       {
         "numero": 3,
         "accion": "Paga",
         "pagina": "Formas de pago de impuestos",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/forma-de-pago/"
       },
       {
         "numero": 4,
         "accion": "Si tienes convenio o error",
         "pagina": "Quitar la anotación por convenio de pago del impuesto de circulación",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-para-dejar-sin-efecto-anotacion-por-convenio-de-pago-iscv/"
       },
       {
         "numero": 4,
         "accion": "Si tienes convenio o error",
         "pagina": "Corregir el código del impuesto de circulación",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/rectificacion-de-codigo-del-impuesto-sobre-circulacion-de-vehiculos/"
       }
     ]
@@ -2356,7 +2356,7 @@
     "audiencia": "Contribuyentes",
     "etapa": "Vehículos",
     "paraQuien": "Propietarios y aseguradoras",
-    "categorias": "Trámites comunes › Todos los grupos",
+    "categorias": "Contribuyente General",
     "totalPasos": 2,
     "totalPaginas": 9,
     "rutaPasosResumen": [
@@ -2368,63 +2368,63 @@
         "numero": 1,
         "accion": "Dar de baja",
         "pagina": "Dar de baja un vehículo de forma definitiva",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/inactivacion-de-vehiculos-por-retiro-definitivo/"
       },
       {
         "numero": 1,
         "accion": "Dar de baja",
         "pagina": "Dar de baja un vehículo robado",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/inactivacion-de-vehiculos-por-robo-o-hurto/"
       },
       {
         "numero": 1,
         "accion": "Dar de baja",
         "pagina": "Dar de baja un vehículo por pérdida total (aseguradora)",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/inactivacion-de-vehiculos-por-retiro-definitivo-aseguradora/"
       },
       {
         "numero": 1,
         "accion": "Dar de baja",
         "pagina": "Dar de baja temporal un vehículo (aseguradora)",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/inactivacion-de-vehiculos-por-retiro-temporal-aseguradora/"
       },
       {
         "numero": 1,
         "accion": "Dar de baja",
         "pagina": "Dar de baja un vehículo por orden judicial",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/inactivacion-de-vehiculos-por-orden-judicial/"
       },
       {
         "numero": 2,
         "accion": "Reactivar",
         "pagina": "Reactivar un vehículo recuperado después de un robo",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/activacion-de-vehiculos-por-robo-o-hurto/"
       },
       {
         "numero": 2,
         "accion": "Reactivar",
         "pagina": "Reactivar un vehículo dado de baja",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/activacion-de-vehiculos-por-retiro-definitivo/"
       },
       {
         "numero": 2,
         "accion": "Reactivar",
         "pagina": "Reactivar un vehículo dado de baja por aseguradora",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/activacion-de-vehiculos-por-retiro-definitivo-aseguradora/"
       },
       {
         "numero": 2,
         "accion": "Reactivar",
         "pagina": "Reactivar un vehículo por orden judicial",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/activacion-de-vehiculos-por-orden-judicial/"
       }
     ]
@@ -2435,7 +2435,7 @@
     "audiencia": "Contribuyentes",
     "etapa": "Ayuda",
     "paraQuien": "Cualquier contribuyente",
-    "categorias": "Trámites comunes › Todos los grupos",
+    "categorias": "Contribuyente General",
     "totalPasos": 4,
     "totalPaginas": 7,
     "rutaPasosResumen": [
@@ -2449,49 +2449,49 @@
         "numero": 1,
         "accion": "Obtén tu usuario",
         "pagina": "Solicitar usuario de Agencia Virtual",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/solicitud-usuario-agencia-virtual/"
       },
       {
         "numero": 1,
         "accion": "Obtén tu usuario",
         "pagina": "Activar tu usuario de Agencia Virtual",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/activacion-de-usuario-de-agencia-virtual/"
       },
       {
         "numero": 2,
         "accion": "Ingresa",
         "pagina": "Ingresar a Agencia Virtual",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://farm3.sat.gob.gt/menu/login.jsf"
       },
       {
         "numero": 3,
         "accion": "Problemas de acceso",
         "pagina": "Recuperar tu contraseña de Agencia Virtual",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/recuperacion-contrasena/"
       },
       {
         "numero": 3,
         "accion": "Problemas de acceso",
         "pagina": "Cambiar tu contraseña de Agencia Virtual",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/cambio-de-contrasena-de-agencia-virtual-a-distancia/"
       },
       {
         "numero": 3,
         "accion": "Problemas de acceso",
         "pagina": "Cambiar tu correo de Agencia Virtual",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/cambio-de-correo-electronico-de-agencia-virtual-a-distancia/"
       },
       {
         "numero": 4,
         "accion": "Revisa tus gestiones",
         "pagina": "Ver el estado de tu gestión en Agencia Virtual",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/consulta-de-gestion-del-contribuyente/"
       }
     ]
@@ -2502,7 +2502,7 @@
     "audiencia": "Contribuyentes",
     "etapa": "Ayuda",
     "paraQuien": "Cualquier persona",
-    "categorias": "Trámites comunes › Todos los grupos",
+    "categorias": "Contribuyente General",
     "totalPasos": 5,
     "totalPaginas": 12,
     "rutaPasosResumen": [
@@ -2524,77 +2524,77 @@
         "numero": 1,
         "accion": "Resuelve dudas",
         "pagina": "Chatear con la SAT",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/soporte-chat/"
       },
       {
         "numero": 1,
         "accion": "Resuelve dudas",
         "pagina": "Hacer una consulta tributaria o aduanera",
-        "ubicacion": "Operadores de comercio exterior › Trámites comunes › Todos los grupos",
+        "ubicacion": "Operadores de comercio exterior › Normativa y Aranceles",
         "url": "https://portal.sat.gob.gt/portal/contacto/informacion-y-consultas/"
       },
       {
         "numero": 2,
         "accion": "Atención presencial",
         "pagina": "Agendar una cita",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/cita-controlada/"
       },
       {
         "numero": 2,
         "accion": "Atención presencial",
         "pagina": "Ver el estado de tu cita",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/consulta-estado-de-cita/"
       },
       {
         "numero": 2,
         "accion": "Atención presencial",
         "pagina": "Ubicar agencias de la SAT",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/contacto/"
       },
       {
         "numero": 3,
         "accion": "Quejas",
         "pagina": "Presentar una queja por mal servicio",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/contacto/quejas-por-mal-servicio-o-servicio-no-conforme/"
       },
       {
         "numero": 3,
         "accion": "Quejas",
         "pagina": "Ver el estado de tu queja",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/contacto/consulta-estado-de-queja/"
       },
       {
         "numero": 4,
         "accion": "Denuncias",
         "pagina": "Denunciar a quien no da factura",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/contacto/denuncias-no-facturacion/"
       },
       {
         "numero": 4,
         "accion": "Denuncias",
         "pagina": "Denunciar corrupción o falta de ética",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/contacto/denuncias-por-corrupcion/"
       },
       {
         "numero": 4,
         "accion": "Denuncias",
         "pagina": "Denunciar contrabando o defraudación aduanera",
-        "ubicacion": "Operadores de comercio exterior › Trámites comunes › Todos los grupos",
+        "ubicacion": "Operadores de comercio exterior › Normativa y Aranceles",
         "url": "https://portal.sat.gob.gt/portal/contacto/denuncias-defraudacion-y-contrabando/"
       },
       {
         "numero": 5,
         "accion": "Información pública",
         "pagina": "Solicitar información pública",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/solicitud-informacion-publica/"
       }
     ]
@@ -2826,7 +2826,7 @@
         "numero": 2,
         "accion": "Aprende lo básico",
         "pagina": "Curso: comercio exterior",
-        "ubicacion": "Operadores de comercio exterior › Trámites comunes › Todos los grupos",
+        "ubicacion": "Operadores de comercio exterior › Normativa y Aranceles",
         "url": "https://sites.google.com/capacitacionessat.page/cultura-tributariad/cursos-virtuales-sat/comercio-exterior"
       },
       {
@@ -2900,7 +2900,7 @@
     "audiencia": "Operadores de comercio exterior",
     "etapa": "Viajeros",
     "paraQuien": "Viajeros",
-    "categorias": "Trámites comunes › Todos los grupos",
+    "categorias": "Contribuyente General",
     "totalPasos": 3,
     "totalPaginas": 5,
     "rutaPasosResumen": [
@@ -2913,7 +2913,7 @@
         "numero": 1,
         "accion": "Antes de viajar",
         "pagina": "Curso: equipaje del viajero",
-        "ubicacion": "Operadores de comercio exterior › Trámites comunes › Todos los grupos",
+        "ubicacion": "Operadores de comercio exterior › Normativa y Aranceles",
         "url": "https://sites.google.com/capacitacionessat.page/cultura-tributariad/cursos-virtuales-sat/aduanas/13-aspectos-importantes-del-equipaje-de-viajero"
       },
       {
@@ -2927,14 +2927,14 @@
         "numero": 2,
         "accion": "Al llegar",
         "pagina": "Declaración jurada del viajero",
-        "ubicacion": "Operadores de comercio exterior › Trámites comunes › Todos los grupos",
+        "ubicacion": "Operadores de comercio exterior › Normativa y Aranceles",
         "url": "https://portal.sat.gob.gt/portal/declaracion-jurada-regional-de-viajero/"
       },
       {
         "numero": 3,
         "accion": "Si viajas en tu vehículo",
         "pagina": "Ingresar temporalmente un vehículo de turismo",
-        "ubicacion": "Operadores de comercio exterior › Trámites comunes › Todos los grupos",
+        "ubicacion": "Operadores de comercio exterior › Normativa y Aranceles",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/importacion-temporal-para-vehiculos-de-turismo/"
       },
       {
@@ -2982,7 +2982,7 @@
         "numero": 1,
         "accion": "Entiende la declaración",
         "pagina": "Curso: Factura y DUCA (FYDUCA)",
-        "ubicacion": "Operadores de comercio exterior › Trámites comunes › Todos los grupos",
+        "ubicacion": "Operadores de comercio exterior › Normativa y Aranceles",
         "url": "https://sites.google.com/capacitacionessat.page/cultura-tributariad/cursos-virtuales-sat/aduanas/26-factura-y-declaraci%C3%B3n-%C3%BAnica-centroamericana-fyduca"
       },
       {
@@ -3038,7 +3038,7 @@
         "numero": 4,
         "accion": "Pasa el selectivo",
         "pagina": "Historial del selectivo en aduanas",
-        "ubicacion": "Operadores de comercio exterior › Trámites comunes › Todos los grupos",
+        "ubicacion": "Operadores de comercio exterior › Normativa y Aranceles",
         "url": "https://portal.sat.gob.gt/portal/consultas-aduanas/#1507054761278-36cb86bc-8c2d:~:text=Monitoreo%20Hist%C3%B3rico%20de%20Selectivo%20en%20Aduanas"
       },
       {
@@ -3087,7 +3087,7 @@
         "numero": 6,
         "accion": "Herramientas técnicas",
         "pagina": "Monitoreo de sistemas en aduanas",
-        "ubicacion": "Operadores de comercio exterior › Trámites comunes › Todos los grupos",
+        "ubicacion": "Operadores de comercio exterior › Normativa y Aranceles",
         "url": "https://portal.sat.gob.gt/portal/consultas-aduanas/#1507054605628-6418edea-e908"
       }
     ]
@@ -3140,7 +3140,7 @@
         "numero": 2,
         "accion": "Revisa normas de clasificación y valor",
         "pagina": "Normas de clasificación y valoración",
-        "ubicacion": "Operadores de comercio exterior › Trámites comunes › Todos los grupos",
+        "ubicacion": "Operadores de comercio exterior › Normativa y Aranceles",
         "url": "https://portal.sat.gob.gt/portal/valoracion-y-clasificacion-de-las-mercancias/"
       },
       {
@@ -3161,7 +3161,7 @@
         "numero": 4,
         "accion": "Si tienes dudas",
         "pagina": "Hacer una consulta tributaria o aduanera",
-        "ubicacion": "Operadores de comercio exterior › Trámites comunes › Todos los grupos",
+        "ubicacion": "Operadores de comercio exterior › Normativa y Aranceles",
         "url": "https://portal.sat.gob.gt/portal/contacto/informacion-y-consultas/"
       }
     ]
@@ -3317,21 +3317,21 @@
         "numero": 1,
         "accion": "Conoce los programas",
         "pagina": "Acuerdo de Facilitación del Comercio (OMC)",
-        "ubicacion": "Operadores de comercio exterior › Trámites comunes › Todos los grupos",
+        "ubicacion": "Operadores de comercio exterior › Normativa y Aranceles",
         "url": "https://portal.sat.gob.gt/portal/facilitacion-de-comercio/"
       },
       {
         "numero": 1,
         "accion": "Conoce los programas",
         "pagina": "Estrategia centroamericana de facilitación de comercio",
-        "ubicacion": "Operadores de comercio exterior › Trámites comunes › Todos los grupos",
+        "ubicacion": "Operadores de comercio exterior › Normativa y Aranceles",
         "url": "https://portal.sat.gob.gt/portal/estrategia-centroamericana-de-facilitacion-de-comercio-y-competitividad/"
       },
       {
         "numero": 1,
         "accion": "Conoce los programas",
         "pagina": "Unión Aduanera",
-        "ubicacion": "Operadores de comercio exterior › Trámites comunes › Todos los grupos",
+        "ubicacion": "Operadores de comercio exterior › Normativa y Aranceles",
         "url": "https://portal.sat.gob.gt/portal/union-aduanera/"
       },
       {
@@ -3345,7 +3345,7 @@
         "numero": 3,
         "accion": "Agiliza tus despachos",
         "pagina": "Declaración anticipada",
-        "ubicacion": "Operadores de comercio exterior › Trámites comunes › Todos los grupos",
+        "ubicacion": "Operadores de comercio exterior › Normativa y Aranceles",
         "url": "https://portal.sat.gob.gt/portal/facilitacion-de-comercio/#1559325573466-1284efd5-2d1b"
       },
       {
@@ -3359,14 +3359,14 @@
         "numero": 3,
         "accion": "Agiliza tus despachos",
         "pagina": "Estudio de tiempos de despacho",
-        "ubicacion": "Operadores de comercio exterior › Trámites comunes › Todos los grupos",
+        "ubicacion": "Operadores de comercio exterior › Normativa y Aranceles",
         "url": "https://portal.sat.gob.gt/portal/estudio-de-tiempos-de-despacho/"
       },
       {
         "numero": 4,
         "accion": "Compromisos",
         "pagina": "Pacto de integridad",
-        "ubicacion": "Operadores de comercio exterior › Trámites comunes › Todos los grupos",
+        "ubicacion": "Operadores de comercio exterior › Normativa y Aranceles",
         "url": "https://portal.sat.gob.gt/portal/pacto-de-integridad/"
       }
     ]
@@ -3548,7 +3548,7 @@
     "audiencia": "Operadores de comercio exterior",
     "etapa": "Recuperar y resolver",
     "paraQuien": "Operadores con un expediente o sanción",
-    "categorias": "Trámites comunes › Todos los grupos",
+    "categorias": "Contribuyente General",
     "totalPasos": 5,
     "totalPaginas": 10,
     "rutaPasosResumen": [
@@ -3563,7 +3563,7 @@
         "numero": 1,
         "accion": "Consulta tu expediente",
         "pagina": "Consultar el estado de un expediente aduanero",
-        "ubicacion": "Operadores de comercio exterior › Trámites comunes › Todos los grupos",
+        "ubicacion": "Operadores de comercio exterior › Normativa y Aranceles",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/consulta-del-estado-o-actuaciones-de-expedientes-de-las-unidades-del-departamento-de-gestion-aduanera/"
       },
       {
@@ -3577,7 +3577,7 @@
         "numero": 2,
         "accion": "Conoce las sanciones y leyes",
         "pagina": "Leyes aduaneras",
-        "ubicacion": "Operadores de comercio exterior › Trámites comunes › Todos los grupos",
+        "ubicacion": "Operadores de comercio exterior › Normativa y Aranceles",
         "url": "https://portal.sat.gob.gt/portal/biblioteca-en-linea-sat/legislacion-aduanera/"
       },
       {
@@ -3598,21 +3598,21 @@
         "numero": 4,
         "accion": "Haz una consulta formal",
         "pagina": "Enviar una consulta tributaria o aduanera",
-        "ubicacion": "Operadores de comercio exterior › Trámites comunes › Todos los grupos",
+        "ubicacion": "Operadores de comercio exterior › Normativa y Aranceles",
         "url": "https://portal.sat.gob.gt/portal/contacto/ingreso-de-consulta-tributaria-y-aduanera/"
       },
       {
         "numero": 4,
         "accion": "Haz una consulta formal",
         "pagina": "Ampliar una consulta",
-        "ubicacion": "Operadores de comercio exterior › Trámites comunes › Todos los grupos",
+        "ubicacion": "Operadores de comercio exterior › Normativa y Aranceles",
         "url": "https://portal.sat.gob.gt/portal/contacto/ampliacion-de-la-consulta/"
       },
       {
         "numero": 4,
         "accion": "Haz una consulta formal",
         "pagina": "Ver el estado de tu consulta",
-        "ubicacion": "Operadores de comercio exterior › Trámites comunes › Todos los grupos",
+        "ubicacion": "Operadores de comercio exterior › Normativa y Aranceles",
         "url": "https://portal.sat.gob.gt/portal/contacto/revision-de-estado-de-consulta-tributaria-y-aduanera/"
       },
       {
@@ -3626,7 +3626,7 @@
         "numero": 5,
         "accion": "Mercancías en abandono",
         "pagina": "Subastas y donaciones aduaneras",
-        "ubicacion": "Operadores de comercio exterior › Trámites comunes › Todos los grupos",
+        "ubicacion": "Operadores de comercio exterior › Normativa y Aranceles",
         "url": "https://portal.sat.gob.gt/portal/subastas-y-donaciones-aduaneras/"
       }
     ]
@@ -3637,7 +3637,7 @@
     "audiencia": "Operadores de comercio exterior",
     "etapa": "Prevenir",
     "paraQuien": "Operadores y ciudadanía",
-    "categorias": "Trámites comunes › Todos los grupos",
+    "categorias": "Contribuyente General",
     "totalPasos": 3,
     "totalPaginas": 4,
     "rutaPasosResumen": [
@@ -3650,28 +3650,28 @@
         "numero": 1,
         "accion": "Infórmate",
         "pagina": "Política nacional contra el contrabando",
-        "ubicacion": "Operadores de comercio exterior › Trámites comunes › Todos los grupos",
+        "ubicacion": "Operadores de comercio exterior › Normativa y Aranceles",
         "url": "https://portal.sat.gob.gt/portal/noticias/politica-nacional-de-prevencion-y-combate-de-la-defraudacion-y-el-contrabando-aduaneros/"
       },
       {
         "numero": 1,
         "accion": "Infórmate",
         "pagina": "Curso: consecuencias de la defraudación y el contrabando",
-        "ubicacion": "Operadores de comercio exterior › Trámites comunes › Todos los grupos",
+        "ubicacion": "Operadores de comercio exterior › Normativa y Aranceles",
         "url": "https://sites.google.com/capacitacionessat.page/cultura-tributariad/cursos-virtuales-sat/aduanas/10-consecuencias-de-la-defraudaci%C3%B3n-y-contrabando-aduanero"
       },
       {
         "numero": 2,
         "accion": "Controles en carretera",
         "pagina": "Puestos de Control Interinstitucional (PCI)",
-        "ubicacion": "Operadores de comercio exterior › Trámites comunes › Todos los grupos",
+        "ubicacion": "Operadores de comercio exterior › Normativa y Aranceles",
         "url": "https://portal.sat.gob.gt/portal/puestos-de-control-interinstitucional-pci/"
       },
       {
         "numero": 3,
         "accion": "Denuncia",
         "pagina": "Denunciar contrabando o defraudación aduanera",
-        "ubicacion": "Operadores de comercio exterior › Trámites comunes › Todos los grupos",
+        "ubicacion": "Operadores de comercio exterior › Normativa y Aranceles",
         "url": "https://portal.sat.gob.gt/portal/contacto/denuncias-defraudacion-y-contrabando/"
       }
     ]
@@ -4059,7 +4059,7 @@
         "numero": 2,
         "accion": "Quedar como contador del negocio",
         "pagina": "Nombrar o cambiar al contador de tu negocio",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/actualizacion-nombramiento-o-cambio-de-perito-contador/"
       },
       {
@@ -4104,7 +4104,7 @@
         "numero": 1,
         "accion": "Revisa leyes y antecedentes",
         "pagina": "Leyes tributarias",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/biblioteca-en-linea-sat/legislacion-tributaria/"
       },
       {
@@ -4132,14 +4132,14 @@
         "numero": 1,
         "accion": "Revisa leyes y antecedentes",
         "pagina": "Preguntas frecuentes: temas jurídicos",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/preguntas-frecuentes/temas-juridicos/"
       },
       {
         "numero": 1,
         "accion": "Revisa leyes y antecedentes",
         "pagina": "Curso: criterios institucionales",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://sites.google.com/capacitacionessat.page/cultura-tributariad/cursos-virtuales-sat/criterios-institucionales_1"
       },
       {
@@ -4153,21 +4153,21 @@
         "numero": 2,
         "accion": "Presenta la consulta",
         "pagina": "Hacer una consulta tributaria o aduanera",
-        "ubicacion": "Operadores de comercio exterior › Trámites comunes › Todos los grupos",
+        "ubicacion": "Operadores de comercio exterior › Normativa y Aranceles",
         "url": "https://portal.sat.gob.gt/portal/contacto/informacion-y-consultas/"
       },
       {
         "numero": 3,
         "accion": "Amplía y da seguimiento",
         "pagina": "Ampliar una consulta",
-        "ubicacion": "Operadores de comercio exterior › Trámites comunes › Todos los grupos",
+        "ubicacion": "Operadores de comercio exterior › Normativa y Aranceles",
         "url": "https://portal.sat.gob.gt/portal/contacto/ampliacion-de-la-consulta/"
       },
       {
         "numero": 3,
         "accion": "Amplía y da seguimiento",
         "pagina": "Ver el estado de tu consulta",
-        "ubicacion": "Operadores de comercio exterior › Trámites comunes › Todos los grupos",
+        "ubicacion": "Operadores de comercio exterior › Normativa y Aranceles",
         "url": "https://portal.sat.gob.gt/portal/contacto/revision-de-estado-de-consulta-tributaria-y-aduanera/"
       }
     ]
@@ -4280,14 +4280,14 @@
         "numero": 3,
         "accion": "Factura y retén",
         "pagina": "Sistema de retenciones del IVA",
-        "ubicacion": "Organismos especiales › Trámites comunes › Todos los grupos",
+        "ubicacion": "Organismos especiales › Entidades del Estado",
         "url": "https://portal.sat.gob.gt/portal/sistemas-web/retencioneswebiva/"
       },
       {
         "numero": 3,
         "accion": "Factura y retén",
         "pagina": "Sistema de retenciones del ISR",
-        "ubicacion": "Organismos especiales › Trámites comunes › Todos los grupos",
+        "ubicacion": "Organismos especiales › Entidades del Estado",
         "url": "https://portal.sat.gob.gt/portal/sistemas-web/retencioneswebisr/"
       },
       {
@@ -4332,14 +4332,14 @@
         "numero": 2,
         "accion": "Orden judicial",
         "pagina": "Dar de baja un vehículo por orden judicial",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/inactivacion-de-vehiculos-por-orden-judicial/"
       },
       {
         "numero": 2,
         "accion": "Orden judicial",
         "pagina": "Reactivar un vehículo por orden judicial",
-        "ubicacion": "Contribuyentes › Trámites comunes › Todos los grupos",
+        "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/activacion-de-vehiculos-por-orden-judicial/"
       },
       {
@@ -4545,7 +4545,7 @@
         "numero": 2,
         "accion": "Operativos conjuntos",
         "pagina": "Puestos de Control Interinstitucional (PCI)",
-        "ubicacion": "Operadores de comercio exterior › Trámites comunes › Todos los grupos",
+        "ubicacion": "Operadores de comercio exterior › Normativa y Aranceles",
         "url": "https://portal.sat.gob.gt/portal/puestos-de-control-interinstitucional-pci/"
       },
       {

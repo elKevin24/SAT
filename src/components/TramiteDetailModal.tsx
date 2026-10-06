@@ -50,8 +50,10 @@ export const TramiteDetailModal: React.FC<TramiteDetailModalProps> = ({
 
   if (!tramite) return null;
 
+  const urlValido = typeof tramite.url === 'string' && /^https?:\/\/\S+$/i.test(tramite.url.trim());
+
   const handleCopyLink = () => {
-    if (tramite.url) {
+    if (urlValido) {
       navigator.clipboard.writeText(tramite.url);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
@@ -67,7 +69,7 @@ export const TramiteDetailModal: React.FC<TramiteDetailModalProps> = ({
     'Documento Personal de Identificación (DPI) vigente en original o copia legible.',
     'Estar activo y con datos actualizados en el Registro Tributario Unificado (RTU Digital).',
     'Contar con usuario activo y acceso validado en Agencia Virtual SAT.',
-    'No tener omisos pendientes de presentación en declaraciones tributarias.'
+    'No tener declaraciones ni pagos tributarios pendientes de presentar.'
   ];
 
   const requirementsList = (tramite.requisitos && tramite.requisitos.length > 0)
@@ -205,6 +207,7 @@ export const TramiteDetailModal: React.FC<TramiteDetailModalProps> = ({
         {/* Footer with actions */}
         <div className="bg-slate-50 px-6 py-3.5 border-t border-slate-200 flex flex-wrap items-center justify-between gap-2 shrink-0">
           <div className="flex items-center gap-2">
+            {urlValido && (
             <button
               onClick={handleCopyLink}
               className="px-3 py-1.5 rounded-lg border border-slate-300 bg-white hover:bg-slate-100 text-slate-700 text-xs font-semibold flex items-center gap-1.5 transition-colors"
@@ -212,6 +215,7 @@ export const TramiteDetailModal: React.FC<TramiteDetailModalProps> = ({
               {copied ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5" />}
               <span>{copied ? '¡Copiado!' : 'Copiar enlace'}</span>
             </button>
+            )}
             <button
               onClick={handlePrint}
               className="px-3 py-1.5 rounded-lg border border-slate-300 bg-white hover:bg-slate-100 text-slate-700 text-xs font-semibold flex items-center gap-1.5 transition-colors"
@@ -221,15 +225,21 @@ export const TramiteDetailModal: React.FC<TramiteDetailModalProps> = ({
             </button>
           </div>
 
-          <a
-            href={tramite.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-4 py-2 bg-[#14649B] hover:bg-[#11507C] text-white text-xs font-bold rounded-xl shadow-xs transition-all flex items-center gap-1.5"
-          >
-            <span>Realizar trámite en línea</span>
-            <ExternalLink className="w-3.5 h-3.5" />
-          </a>
+          {urlValido ? (
+            <a
+              href={tramite.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-2 bg-[#14649B] hover:bg-[#11507C] text-white text-xs font-bold rounded-xl shadow-xs transition-all flex items-center gap-1.5"
+            >
+              <span>Realizar trámite en línea</span>
+              <ExternalLink className="w-3.5 h-3.5" />
+            </a>
+          ) : (
+            <p className="px-4 py-2 bg-slate-100 text-slate-600 text-xs font-semibold rounded-xl border border-slate-200 flex items-center gap-1.5">
+              <span>Trámite disponible en sede de la SAT</span>
+            </p>
+          )}
         </div>
       </div>
     </div>

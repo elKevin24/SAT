@@ -105,7 +105,7 @@ export const NewsAndTransparencySection: React.FC = () => {
 
                 <div className="pt-3.5 mt-3.5 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#14649B]">
                   <span>Leer nota completa</span>
-                  <span className="group-hover:translate-x-1 transition-transform">→</span>
+                  <span>→</span>
                 </div>
               </a>
             ))}
@@ -142,7 +142,7 @@ export const NewsAndTransparencySection: React.FC = () => {
                 </div>
                 <div className="pt-2 mt-2 border-t border-slate-100 group-hover:border-white/20 text-[10px] font-bold text-[#14649B] group-hover:text-white flex items-center justify-between">
                   <span>Acceder</span>
-                  <span className="group-hover:translate-x-0.5 transition-transform">→</span>
+                  <span>→</span>
                 </div>
               </a>
             ))}

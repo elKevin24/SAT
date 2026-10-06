@@ -47,6 +47,12 @@ En el ámbito fiscal y aduanero de la SAT, el ciudadano promedio suele confundir
   1. *Qué es o para qué sirve*.
   2. *Qué beneficio obtiene o qué necesita para realizarlo*.
 
+### D. Patrón Modelo Oficial (Benchmark de UX Writing Ciudadano)
+> **Número de Identificación Tributaria (NIT)**  
+> *Cómo solicitar un Número de Identificación Tributaria (NIT), actualizar sus datos, consultar su NIT y qué hacer si ha sido utilizado de forma indebida.*
+>
+> *(Aplica acrónimo expandido en primera mención, verbos de acción directa y atención proactiva al problema ciudadano de uso indebido).*
+
 ---
 
 ## 3. Uso Mínimo y Restringido de Iconografía
@@ -68,6 +74,12 @@ En el ámbito fiscal y aduanero de la SAT, el ciudadano promedio suele confundir
 - Fondos neutros y claros (`#FFFFFF`, `#F8FAFC`).
 - Contraste tipográfico superior a 4.5:1 para texto normal.
 - Prevención de errores con validaciones claras y ayudas contextuales sin lenguaje sancionatorio.
+
+---
+
+## 6. Arquitectura del Viaje del Contribuyente (Taxpayer Journey)
+Para el detalle exhaustivo del ciclo de vida, la jerarquía de las 5 categorías oficiales y las 6 etapas cronológicas de navegación, consultar:
+- [TAXPAYER_JOURNEY.md](file:///mnt/datos/GitHub/SAT/TAXPAYER_JOURNEY.md)
 
 ---
 

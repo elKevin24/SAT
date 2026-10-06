@@ -135,17 +135,14 @@ export const GRUPOS_CONFIG: GrupoInfo[] = [
   {
     no: 1,
     nombre: 'NIT sin Obligaciones',
-    cantidadTemas: 8,
+    cantidadTemas: 10,
     pillar: 'contribuyentes',
-    desc: 'Estudiantes, personas individuales y graduados sin actividad económica que requieren NIT para trámites bancarios, actos civiles, cobro de remesas, registro de títulos y acceso a información (8 procesos oficiales).',
+    desc: 'Personas individuales, estudiantes y graduados sin actividad económica que requieren NIT para actos civiles, cuentas bancarias, cobro de remesas, registro de títulos y acceso a información pública (cero trabajadores asalariados).',
     subgrupos: [
-      { nombre: 'Inscripción y Actualización en RTU', cantidadTemas: 2, desc: 'Inscripción por primera vez y actualización o transición a con obligaciones.' },
-      { nombre: 'Sistemas Web y Seguridad', cantidadTemas: 1, desc: 'Acceso a plataforma, solicitud y activación de usuario en Agencia Virtual.' },
-      { nombre: 'Consultas y Verificadores', cantidadTemas: 1, desc: 'Seguimiento de trámites y consulta de estado de gestión de Agencia Virtual.' },
-      { nombre: 'Certificaciones y Solvencias', cantidadTemas: 1, desc: 'Solvencias y emisión electrónica de Solvencia Fiscal (SOFI).' },
-      { nombre: 'Citas y Agencias', cantidadTemas: 1, desc: 'Atención presencial y cita previa para trámites en agencias tributarias.' },
-      { nombre: 'Transparencia y Ciudadanía', cantidadTemas: 1, desc: 'Acceso a la información pública conforme al Decreto 57-2008 en español y lenguas mayas.' },
-      { nombre: 'Habilitación Profesional', cantidadTemas: 1, desc: 'Registro y habilitación de títulos universitarios y pago de timbres fiscales para ejercer profesión.' }
+      { nombre: 'Inscripción de NIT', cantidadTemas: 2, desc: 'Solicitud de primer NIT y actualización de datos de identificación personal.' },
+      { nombre: 'Títulos Universitarios', cantidadTemas: 2, desc: 'Registro y habilitación de títulos para ejercer y verificación digital mediante código QR.' },
+      { nombre: 'Información Pública', cantidadTemas: 2, desc: 'Solicitud formal y consulta de información pública de oficio de la SAT conforme al Decreto 57-2008.' },
+      { nombre: 'Servicios en Línea y Solvencias', cantidadTemas: 4, desc: 'Agencia Virtual, consulta de expedientes, Solvencia Fiscal en línea y cita previa.' }
     ]
   },
   {
@@ -163,12 +160,17 @@ export const GRUPOS_CONFIG: GrupoInfo[] = [
   {
     no: 3,
     nombre: 'Contribuyente General',
-    cantidadTemas: 37,
+    cantidadTemas: 295,
     pillar: 'contribuyentes',
-    desc: 'Contribuyentes inscritos en el Régimen General del IVA (12%) e ISR, y gestión de representantes legales.',
+    desc: 'Personas individuales y jurídicas con obligaciones tributarias generales, IVA (12%), regímenes de ISR, vehículos como propietarios, facturación y servicios del RTU.',
     subgrupos: [
-      { nombre: 'Contribuyente General', cantidadTemas: 37, desc: 'Régimen general del IVA e Impuesto Sobre la Renta (Opcional Simplificado o Sobre Utilidades).' },
-      { nombre: 'Rep. Legales', cantidadTemas: 36, desc: 'Inscripción, acreditación y poderes de mandatarios o representantes legales.' }
+      { nombre: 'RTU e Inscripción', cantidadTemas: 48, desc: 'Inscripción de sociedades, actualización de datos, nombramientos de representantes y cese de negocios.' },
+      { nombre: 'Obligaciones y Regímenes', cantidadTemas: 41, desc: 'Declaraciones de impuestos, regímenes tributarios, facturación electrónica FEL y autorizaciones.' },
+      { nombre: 'Registro Fiscal de Vehículos', cantidadTemas: 75, desc: 'Inscripción, traspasos, distintivos, impuesto de circulación ISCV, modificaciones y consultas vehiculares.' },
+      { nombre: 'Capacitación y Cultura Tributaria', cantidadTemas: 60, desc: 'Cursos por impuesto, herramientas electrónicas, calendario, biblioteca virtual y formación ciudadana.' },
+      { nombre: 'Devoluciones y Créditos Fiscales', cantidadTemas: 22, desc: 'Devolución de ISR asalariados/empresas, IVA crédito fiscal, pagos indebidos y en exceso.' },
+      { nombre: 'Servicios al Contribuyente', cantidadTemas: 33, desc: 'Constancias del RTU, libros contables, Agencia Virtual, citas presenciales y correcciones de formularios.' },
+      { nombre: 'Consultas y Verificadores', cantidadTemas: 16, desc: 'Verificadores públicos de documentos, solvencias, consultas tributarias y atención de quejas.' }
     ]
   },
   {
@@ -281,8 +283,7 @@ export const TRAMITES_DATA: TramiteItem[] = [
     tramite: 'Inscripción de NIT sin Obligaciones',
     url: 'https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1615485066841-639e67c5-51e3',
     formulario: 'Solicitud de NIT Digital / Portal Web SAT',
-    baseLegal: 'Decreto 6-91 del Congreso de la República de Guatemala, Código Tributario y Ley Orgánica de la SAT.',
-    descripcion: 'Solicitud y requisitos para la obtención electrónica de NIT sin obligaciones tributarias por primera vez; utilizado frecuentemente por estudiantes, jóvenes en proceso de matrícula universitaria, beneficiarios de remesas familiares y personas individuales que lo requieren para realizar gestiones bancarias (apertura de cuentas de ahorro o monetarias, créditos), actos civiles y contratos sin realizar actividades económicas afectas.',
+    descripcion: 'Solicitud y requisitos para la obtención electrónica de tu Número de Identificación Tributaria (NIT) sin obligaciones tributarias por primera vez; utilizado por estudiantes, jóvenes y personas individuales que lo requieren para realizar gestiones bancarias (apertura de cuentas de ahorro o monetarias), actos civiles y recepción de remesas familiares.',
     perfilDestinatario: 'Estudiantes, jóvenes y personas individuales (gestiones bancarias, remesas o actos civiles sin actividad mercantil)',
     origenClasificacion: 'Análisis de arquitectura transaccional',
     impactoOImportancia: 'Trámite inicial obligatorio para trámites bancarios, acreditación estudiantil, recepción de remesas y actos civiles no tributarios.',
@@ -479,16 +480,16 @@ export const TRAMITES_DATA: TramiteItem[] = [
     subgrupoInterno: 'General',
     tema: 'Certificaciones y Solvencias',
     subtema: 'Solvencias',
-    nombreActual: 'Solvencia Fiscal',
+    nombreActual: 'Solvencia Fiscal en Línea',
     grupoNo: 1,
     tipoSubtema: 'Solvencias',
     moduloRequisitos: 'Solvencia Fiscal',
     ubicacionPortalActual: 'Consultas / Solvencias',
-    tramite: 'Solicitud y Emisión de Solvencia Fiscal (SOFI)',
+    tramite: 'Solicitud y Emisión de Solvencia Fiscal en Línea',
     url: 'https://portal.sat.gob.gt/portal/solvencia-fiscal/',
-    formulario: 'Declaraguate SAT-8421 / Agencia Virtual (SOFI)',
+    formulario: 'Declaraguate SAT-8421 / Agencia Virtual',
     baseLegal: 'Artículo 57 "A" del Código Tributario, Decreto 6-91 del Congreso de la República.',
-    descripcion: 'Consulta, pago y descarga de la Solvencia Fiscal Electrónica para certificar ausencia de adeudos tributarios.',
+    descripcion: 'Consulta, pago y descarga del certificado electrónico que acredita la ausencia de adeudos tributarios ante la SAT para fines laborales o personales.',
     perfilDestinatario: 'Personas Individuales',
     origenClasificacion: 'Análisis de arquitectura transaccional',
     impactoOImportancia: 'Exigida comúnmente a personas sin obligaciones para postulaciones laborales, trámites consulares/visas y contratos civiles.',
