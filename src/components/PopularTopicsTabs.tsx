@@ -10,9 +10,13 @@ interface TopicItem {
   url: string;
 }
 
-const TOPICS_BY_SEGMENT: Record<SegmentId, { label: string; topics: TopicItem[] }> = {
+const TOPICS_BY_SEGMENT: Record<SegmentId, { label: string; primaryColor: string; hoverBg: string; hoverBorder: string; hoverShadow: string; topics: TopicItem[] }> = {
   contribuyentes: {
     label: 'Contribuyentes',
+    primaryColor: '#14649B',
+    hoverBg: 'hover:bg-[#14649B]',
+    hoverBorder: 'hover:border-[#14649B]',
+    hoverShadow: 'hover:shadow-[0_12px_24px_rgba(20,100,155,0.24)]',
     topics: [
       {
         id: 'con-consultas',
@@ -61,6 +65,10 @@ const TOPICS_BY_SEGMENT: Record<SegmentId, { label: string; topics: TopicItem[] 
   },
   comercio_exterior: {
     label: 'Operadores de Comercio Exterior',
+    primaryColor: '#0284C7',
+    hoverBg: 'hover:bg-[#0284C7]',
+    hoverBorder: 'hover:border-[#0284C7]',
+    hoverShadow: 'hover:shadow-[0_12px_24px_rgba(2,132,199,0.24)]',
     topics: [
       {
         id: 'ce-consultas',
@@ -109,6 +117,10 @@ const TOPICS_BY_SEGMENT: Record<SegmentId, { label: string; topics: TopicItem[] 
   },
   profesionales: {
     label: 'Profesionales',
+    primaryColor: '#4D8014',
+    hoverBg: 'hover:bg-[#4D8014]',
+    hoverBorder: 'hover:border-[#4D8014]',
+    hoverShadow: 'hover:shadow-[0_12px_24px_rgba(77,128,20,0.24)]',
     topics: [
       {
         id: 'prof-consultas',
@@ -150,6 +162,10 @@ const TOPICS_BY_SEGMENT: Record<SegmentId, { label: string; topics: TopicItem[] 
   },
   organismos_especiales: {
     label: 'Organismos Especiales',
+    primaryColor: '#C25E00',
+    hoverBg: 'hover:bg-[#C25E00]',
+    hoverBorder: 'hover:border-[#C25E00]',
+    hoverShadow: 'hover:shadow-[0_12px_24px_rgba(194,94,0,0.24)]',
     topics: [
       {
         id: 'org-consultas',
@@ -236,7 +252,7 @@ export const PopularTopicsTabs: React.FC<PopularTopicsTabsProps> = ({
           </div>
         </div>
 
-        {/* Topics Grid without icons */}
+        {/* Topics Grid con hover de fondo y texto en blanco */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {currentSegmentData.topics.map((topic) => {
             const isConsultas = topic.isPermanentConsultas;
@@ -253,42 +269,34 @@ export const PopularTopicsTabs: React.FC<PopularTopicsTabsProps> = ({
                     window.open(topic.url, '_blank');
                   }
                 }}
-                className={`p-5 rounded-[16px] border transition-all duration-200 cursor-pointer flex flex-col justify-between group ${
-                  isConsultas
-                    ? 'bg-blue-50/50 border-[#14649B]/30 hover:border-[#14649B] shadow-xs hover:shadow-md'
-                    : 'bg-white border-[#DCDCDC] hover:border-[#14649B] shadow-xs hover:shadow-md hover:-translate-y-0.5'
-                }`}
+                className={`p-5 rounded-[16px] border border-[#DCDCDC] ${currentSegmentData.hoverBorder} ${currentSegmentData.hoverBg} ${currentSegmentData.hoverShadow} transition-all duration-300 cursor-pointer flex flex-col justify-between group shadow-xs hover:-translate-y-0.5`}
               >
                 <div>
                   <div className="flex items-center justify-between mb-2.5">
                     <span 
-                      className={`text-[10px] font-bold px-2.5 py-0.5 rounded ${
-                        isConsultas 
-                          ? 'bg-[#14649B] text-white' 
-                          : 'bg-slate-100 text-slate-700'
-                      }`}
+                      className="text-[10px] font-bold px-2.5 py-0.5 rounded bg-slate-100 text-slate-700 group-hover:bg-white/20 group-hover:text-white transition-colors"
                     >
                       {topic.category}
                     </span>
                     {isConsultas && (
-                      <span className="text-[10px] font-bold text-[#14649B]">
+                      <span className="text-[10px] font-bold text-[#14649B] group-hover:text-white transition-colors">
                         Catálogo Directo
                       </span>
                     )}
                   </div>
 
-                  <h4 className="text-sm sm:text-base font-bold text-[#19324B] group-hover:text-[#14649B] transition-colors leading-tight mb-2">
+                  <h4 className="text-sm sm:text-base font-bold text-[#19324B] group-hover:text-white transition-colors leading-tight mb-2">
                     {topic.title}
                   </h4>
 
-                  <p className="text-xs text-slate-600 leading-relaxed">
+                  <p className="text-xs text-slate-600 group-hover:text-white/90 transition-colors leading-relaxed">
                     {topic.desc}
                   </p>
                 </div>
 
-                <div className="pt-3.5 mt-3.5 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#14649B]">
+                <div className="pt-3.5 mt-3.5 border-t border-slate-100 group-hover:border-white/20 flex items-center justify-between text-xs font-bold text-[#14649B] group-hover:text-white transition-colors">
                   <span>{isConsultas ? 'Abrir herramientas web' : 'Ver requisitos y detalles'}</span>
-                  <span className="group-hover:translate-x-1 transition-transform">→</span>
+                  <span className="transition-transform duration-200 group-hover:translate-x-0.5">→</span>
                 </div>
               </div>
             );

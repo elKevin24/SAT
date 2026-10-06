@@ -135,7 +135,7 @@ export const QuickAccessCarousel: React.FC<QuickAccessCarouselProps> = ({ onSele
           </div>
         </div>
 
-        {/* 7 Tarjetas Visibles sin íconos */}
+        {/* 7 Tarjetas con estilo anterior */}
         <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-3">
           {visibleItems.map((item) => (
             <a
@@ -146,20 +146,20 @@ export const QuickAccessCarousel: React.FC<QuickAccessCarouselProps> = ({ onSele
               onClick={() => {
                 if (onSelectQuickAction) onSelectQuickAction(item);
               }}
-              className="group bg-white rounded-[14px] border border-[#DCDCDC] hover:border-[#14649B] p-3.5 flex flex-col justify-between transition-all duration-200 hover:shadow-md hover:-translate-y-0.5 text-left"
+              className="group bg-white rounded-[14px] border border-[#DCDCDC] hover:border-[#14649B] hover:bg-[#14649B] hover:shadow-[0_10px_20px_rgba(20,100,155,0.22)] p-3.5 flex flex-col justify-between transition-all duration-300 hover:-translate-y-0.5 text-left"
             >
               <div>
-                <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-slate-100 text-slate-600 block w-fit mb-2">
+                <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-slate-100 text-slate-600 group-hover:bg-white/20 group-hover:text-white transition-colors block w-fit mb-2">
                   {item.category}
                 </span>
-                <div className="text-xs font-bold text-[#19324B] group-hover:text-[#14649B] leading-snug transition-colors line-clamp-2">
+                <div className="text-xs font-bold text-[#19324B] group-hover:text-white leading-snug transition-colors line-clamp-2">
                   {item.title}
                 </div>
-                <div className="text-[11px] text-slate-500 mt-1 line-clamp-2 leading-tight">
+                <div className="text-[11px] text-slate-500 group-hover:text-white/80 transition-colors mt-1 line-clamp-2 leading-tight">
                   {item.desc}
                 </div>
               </div>
-              <div className="pt-2 mt-2 border-t border-slate-100 text-[11px] font-bold text-[#14649B] flex items-center justify-between">
+              <div className="pt-2 mt-2 border-t border-slate-100 group-hover:border-white/20 text-[11px] font-bold text-[#14649B] group-hover:text-white transition-colors flex items-center justify-between">
                 <span>Acceder</span>
                 <span className="group-hover:translate-x-1 transition-transform">→</span>
               </div>

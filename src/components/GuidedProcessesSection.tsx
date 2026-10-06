@@ -69,43 +69,43 @@ export const GuidedProcessesSection: React.FC<GuidedProcessesSectionProps> = ({
           </div>
         </div>
 
-        {/* Process Cards Grid sin íconos con el estilo original */}
+        {/* Process Cards Grid con el estilo previo idéntico */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {filtered.slice(0, 9).map((p) => (
             <div
               key={p.no}
               onClick={() => onSelectProceso(p)}
-              className="group bg-white rounded-[16px] border border-[#DCDCDC] hover:border-[#14649B] p-5 shadow-xs hover:shadow-md hover:-translate-y-1 transition-all duration-300 cursor-pointer flex flex-col justify-between"
+              className="group bg-white rounded-[16px] border border-[#DCDCDC] hover:border-[#14649B] hover:bg-[#14649B] hover:shadow-[0_12px_24px_rgba(20,100,155,0.24)] p-5 shadow-xs hover:-translate-y-1 transition-all duration-300 cursor-pointer flex flex-col justify-between"
             >
               <div>
                 <div className="flex items-center justify-between gap-2 mb-2.5">
-                  <span className="text-[10px] font-bold px-2.5 py-0.5 rounded bg-slate-100 text-slate-700">
+                  <span className="text-[10px] font-bold px-2.5 py-0.5 rounded bg-slate-100 text-slate-700 group-hover:bg-white/20 group-hover:text-white transition-colors">
                     {p.etapa || 'Proceso Core'}
                   </span>
-                  <span className="text-[11px] font-bold text-slate-400">
+                  <span className="text-[11px] font-bold text-slate-400 group-hover:text-white/80 transition-colors">
                     {p.totalPasos} pasos
                   </span>
                 </div>
 
-                <h4 className="text-sm sm:text-base font-bold text-[#19324B] group-hover:text-[#14649B] transition-colors leading-snug mb-2">
+                <h4 className="text-sm sm:text-base font-bold text-[#19324B] group-hover:text-white transition-colors leading-snug mb-2">
                   {p.nombre}
                 </h4>
 
-                <p className="text-xs text-slate-600 leading-relaxed line-clamp-2 mb-3">
-                  <span className="font-semibold text-slate-800">Para:</span> {p.paraQuien}
+                <p className="text-xs text-slate-600 group-hover:text-white/90 transition-colors leading-relaxed line-clamp-2 mb-3">
+                  <span className="font-semibold text-slate-800 group-hover:text-white">Para:</span> {p.paraQuien}
                 </p>
 
                 {/* Micro preview de pasos en texto limpio */}
                 {p.rutaPasosResumen && p.rutaPasosResumen.length > 0 && (
-                  <div className="p-3 bg-slate-50 rounded-xl border border-slate-100 text-[11px] text-slate-600 space-y-1">
+                  <div className="p-3 bg-slate-50 group-hover:bg-white/10 rounded-xl border border-slate-100 group-hover:border-white/20 text-[11px] text-slate-600 group-hover:text-white/90 transition-colors space-y-1">
                     {p.rutaPasosResumen.slice(0, 2).map((paso, idx) => (
                       <div key={idx} className="flex items-center gap-2 truncate">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#14649B] shrink-0" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#14649B] group-hover:bg-white shrink-0" />
                         <span className="truncate">{paso}</span>
                       </div>
                     ))}
                     {p.rutaPasosResumen.length > 2 && (
-                      <div className="text-[10px] text-slate-400 font-medium pl-3.5">
+                      <div className="text-[10px] text-slate-400 group-hover:text-white/70 font-medium pl-3.5">
                         + {p.rutaPasosResumen.length - 2} pasos adicionales...
                       </div>
                     )}
@@ -113,9 +113,9 @@ export const GuidedProcessesSection: React.FC<GuidedProcessesSectionProps> = ({
                 )}
               </div>
 
-              <div className="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#14649B]">
+              <div className="pt-4 mt-4 border-t border-slate-100 group-hover:border-white/20 flex items-center justify-between text-xs font-bold text-[#14649B] group-hover:text-white transition-colors">
                 <span>Ver ruta paso a paso</span>
-                <span className="group-hover:translate-x-1 transition-transform">→</span>
+                <span className="transition-transform duration-200 group-hover:translate-x-0.5">→</span>
               </div>
             </div>
           ))}

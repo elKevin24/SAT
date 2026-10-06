@@ -1,4 +1,5 @@
 import React from 'react';
+import { ChevronRight } from 'lucide-react';
 
 export type SegmentId = 'contribuyentes' | 'comercio_exterior' | 'profesionales' | 'organismos_especiales';
 
@@ -9,22 +10,34 @@ interface UserSegmentCardsProps {
 
 interface SegmentDef {
   id: SegmentId;
-  title: string;
-  badge: string;
+  name: string;
+  badgeLabel: string;
   temasTotales: string;
   desc: string;
   primaryColor: string;
+  cardHoverBorder: string;
+  cardHoverBg: string;
+  cardHoverShadow: string;
+  titleHoverText: string;
+  actionTextClass: string;
+  circleClasses: string;
   items: string[];
 }
 
 const SEGMENTS: SegmentDef[] = [
   {
     id: 'contribuyentes',
-    title: 'Contribuyentes',
-    badge: '4 Regímenes',
+    name: 'Contribuyentes',
+    badgeLabel: '4 Grupos',
     temasTotales: '4 Grupos · 350 Trámites',
-    desc: 'Personas individuales y jurídicas inscritas en el RTU, emisión de facturas y cumplimiento tributario.',
+    desc: 'NIT sin Obligaciones, Pequeños Contribuyentes, Contribuyente General y Contribuyentes Especiales.',
     primaryColor: '#14649B',
+    cardHoverBorder: 'hover:border-[#14649B]',
+    cardHoverBg: 'hover:bg-[#14649B]',
+    cardHoverShadow: 'hover:shadow-[0_14px_30px_rgba(20,100,155,0.28)]',
+    titleHoverText: 'group-hover:text-white',
+    actionTextClass: 'text-[#14649B] group-hover:text-white',
+    circleClasses: 'bg-[#14649B]/10 text-[#14649B] group-hover:bg-white group-hover:text-[#14649B]',
     items: [
       'NIT sin obligaciones',
       'Pequeño Contribuyente',
@@ -34,11 +47,17 @@ const SEGMENTS: SegmentDef[] = [
   },
   {
     id: 'comercio_exterior',
-    title: 'Operadores de Comercio Exterior',
-    badge: 'Aduanas',
+    name: 'Operadores de Comercio Exterior',
+    badgeLabel: '2 Grupos',
     temasTotales: '3 Grupos · 184 Trámites',
-    desc: 'Servicios aduaneros, importaciones, exportaciones, operadores económicos autorizados y auxiliares.',
+    desc: 'Importadores, exportadores, OEA y auxiliares de la función pública aduanera.',
     primaryColor: '#0284C7',
+    cardHoverBorder: 'hover:border-[#0284C7]',
+    cardHoverBg: 'hover:bg-[#0284C7]',
+    cardHoverShadow: 'hover:shadow-[0_14px_30px_rgba(2,132,199,0.30)]',
+    titleHoverText: 'group-hover:text-white',
+    actionTextClass: 'text-[#0284C7] group-hover:text-white',
+    circleClasses: 'bg-[#0284C7]/15 text-[#0284C7] group-hover:bg-white group-hover:text-[#0284C7]',
     items: [
       'Auxiliares de la función pública',
       'Importadores registrados',
@@ -47,11 +66,17 @@ const SEGMENTS: SegmentDef[] = [
   },
   {
     id: 'profesionales',
-    title: 'Profesionales',
-    badge: 'Terceras Personas',
+    name: 'Profesionales',
+    badgeLabel: '1 Grupo',
     temasTotales: '3 Grupos · 91 Trámites',
-    desc: 'Gestión ante SAT para contadores, auditores, abogados, notarios y auxiliares tributarios.',
-    primaryColor: '#2D5A0C',
+    desc: 'Terceras personas: gestores tributarios, abogados y notarios, peritos contadores y auditores.',
+    primaryColor: '#4D8014',
+    cardHoverBorder: 'hover:border-[#4D8014]',
+    cardHoverBg: 'hover:bg-[#4D8014]',
+    cardHoverShadow: 'hover:shadow-[0_14px_30px_rgba(77,128,20,0.30)]',
+    titleHoverText: 'group-hover:text-white',
+    actionTextClass: 'text-[#2D5A0C] group-hover:text-white',
+    circleClasses: 'bg-[#4D8014]/15 text-[#2D5A0C] group-hover:bg-white group-hover:text-[#4D8014]',
     items: [
       'Gestores y Auxiliares Tributarios',
       'Abogados y Notarios',
@@ -60,11 +85,17 @@ const SEGMENTS: SegmentDef[] = [
   },
   {
     id: 'organismos_especiales',
-    title: 'Organismos Especiales',
-    badge: 'Sector Público y Exentos',
+    name: 'Organismos Especiales',
+    badgeLabel: '2 Grupos',
     temasTotales: '3 Grupos · 134 Trámites',
-    desc: 'Entidades exentas por ley, instituciones del Estado, municipalidades y misiones diplomáticas.',
+    desc: 'Entidades exentas constitucionales, no lucrativas, por decreto, ZOLIC, municipalidades y entidades del Estado.',
     primaryColor: '#C25E00',
+    cardHoverBorder: 'hover:border-[#C25E00]',
+    cardHoverBg: 'hover:bg-[#C25E00]',
+    cardHoverShadow: 'hover:shadow-[0_14px_30px_rgba(194,94,0,0.30)]',
+    titleHoverText: 'group-hover:text-white',
+    actionTextClass: 'text-[#8A3B00] group-hover:text-white',
+    circleClasses: 'bg-[#C25E00]/15 text-[#8A3B00] group-hover:bg-white group-hover:text-[#C25E00]',
     items: [
       'Entidades Exentas por Ley',
       'Entidades del Estado',
@@ -81,67 +112,76 @@ export const UserSegmentCards: React.FC<UserSegmentCardsProps> = ({
     <section className="py-8 bg-white border-b border-[#DCDCDC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Encabezado de la sección */}
+        {/* Encabezado */}
         <div className="text-center max-w-2xl mx-auto mb-8 space-y-1.5">
           <span className="text-xs font-bold text-[#14649B] uppercase tracking-wider">
-            Segmentación por Tipo de Usuario
+            Estructura Institucional SAT
           </span>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#19324B] tracking-tight">
-            ¿Qué tipo de trámite o perfil necesitas gestionar?
+          <h2 className="text-2xl sm:text-3xl font-black text-[#19324B] tracking-tight">
+            Seleccionar un Macrogrupo de Interés
           </h2>
           <p className="text-xs sm:text-sm text-slate-600">
-            Selecciona tu grupo de interés para acceder a requisitos personalizados, guías normativas y sistemas directos.
+            Categorización oficial de grupos tributarios, aduaneros, profesionales y entes exentos.
           </p>
         </div>
 
-        {/* 4 Tarjetas de Segmento sin íconos con el estilo institucional */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-          {SEGMENTS.map((seg) => {
-            const isSelected = selectedSegment === seg.id;
+        {/* Las 4 Tarjetas de Macrogrupos con el estilo previo idéntico */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+          {SEGMENTS.map((p) => {
+            const isSelected = selectedSegment === p.id;
 
             return (
               <div
-                key={seg.id}
-                onClick={() => onSelectSegment(seg.id)}
-                className={`group bg-white border border-[#DCDCDC] hover:border-[#14649B] rounded-[16px] p-5 transition-all duration-300 cursor-pointer flex flex-col justify-between shadow-xs hover:shadow-md hover:-translate-y-1 ${
-                  isSelected ? 'border-[#14649B] ring-2 ring-[#14649B]/20' : ''
+                key={p.id}
+                role="button"
+                tabIndex={0}
+                onClick={() => onSelectSegment(p.id)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    onSelectSegment(p.id);
+                  }
+                }}
+                className={`p-5 sm:p-6 bg-white border border-[#DCDCDC] rounded-[16px] ${p.cardHoverBorder} ${p.cardHoverBg} ${p.cardHoverShadow} transition-all duration-300 cursor-pointer space-y-3.5 group shadow-xs hover:-translate-y-1 focus-visible:ring-2 focus-visible:ring-[#14649B] flex flex-col justify-between ${
+                  isSelected ? 'ring-2 ring-[#14649B]' : ''
                 }`}
               >
                 <div>
-                  <div className="flex items-center justify-between gap-2 mb-3">
-                    <span className="px-2.5 py-0.5 rounded text-[10px] font-bold bg-slate-100 text-slate-700">
-                      {seg.badge}
+                  <div className="flex items-center justify-between gap-3 mb-2">
+                    <span className="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-slate-100 text-slate-600 group-hover:bg-white/20 group-hover:text-white transition-colors">
+                      {p.badgeLabel}
                     </span>
-                    <span className="text-[10px] font-semibold text-slate-400">
-                      {seg.temasTotales}
-                    </span>
+                    <div className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 transition-all duration-300 ${p.circleClasses} shadow-xs`}>
+                      <ChevronRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5" aria-hidden="true" />
+                    </div>
                   </div>
 
-                  <h3 className="text-base sm:text-lg font-bold text-[#19324B] group-hover:text-[#14649B] transition-colors mb-2 leading-tight">
-                    {seg.title}
+                  <h3 className={`text-base sm:text-lg font-bold text-[#19324B] ${p.titleHoverText} transition-colors mb-1 leading-tight`}>
+                    {p.name}
                   </h3>
 
-                  <p className="text-xs text-slate-600 leading-relaxed mb-4 line-clamp-2">
-                    {seg.desc}
+                  <div className="text-xs font-bold text-[#14649B] group-hover:text-white/90 transition-colors mb-2">
+                    {p.temasTotales}
+                  </div>
+
+                  <p className="text-xs text-slate-600 group-hover:text-white/90 transition-colors leading-relaxed mb-3">
+                    {p.desc}
                   </p>
 
                   {/* Bullet points con los subgrupos */}
-                  <div className="space-y-1.5 pt-3 border-t border-slate-100 text-xs text-slate-600">
-                    {seg.items.map((item, idx) => (
-                      <div key={idx} className="flex items-center gap-2 text-[11.5px]">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#14649B] shrink-0" />
+                  <div className="space-y-1 pt-2.5 border-t border-slate-100 group-hover:border-white/20 text-xs text-slate-600 group-hover:text-white/90 transition-colors">
+                    {p.items.map((item, idx) => (
+                      <div key={idx} className="flex items-center gap-1.5 text-[11px] truncate">
+                        <span className="w-1 h-1 rounded-full bg-[#14649B] group-hover:bg-white shrink-0" />
                         <span className="truncate">{item}</span>
                       </div>
                     ))}
                   </div>
                 </div>
 
-                {/* Footer de la tarjeta */}
-                <div className="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between">
-                  <span className="text-xs font-bold text-[#14649B] group-hover:underline flex items-center gap-1">
-                    <span>{isSelected ? 'Explorando catálogo' : 'Más información'}</span>
-                    <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
-                  </span>
+                <div className={`text-xs font-bold pt-2 flex items-center gap-1.5 ${p.actionTextClass} transition-colors border-t border-transparent group-hover:border-white/10`}>
+                  <span>Explorar grupos</span>
+                  <span className="transition-transform duration-200 group-hover:translate-x-0.5" aria-hidden="true">→</span>
                 </div>
               </div>
             );

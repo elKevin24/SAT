@@ -20,12 +20,15 @@ Este documento establece los principios de diseño, estilo y restricciones de in
 
 ---
 
-## 3. Estilo Estándar de las Tarjetas (SAT Design System)
-Las tarjetas deben respetar el estilo original consolidado:
-- **Estructura y bordes**: `border border-[#DCDCDC]` con fondo blanco `bg-white` y esquinas redondeadas `rounded-[16px]`.
-- **Sombra y hover**: Sombra sutil `shadow-xs`, elevación suave `hover:-translate-y-0.5` o `hover:-translate-y-1`, transición de borde a institucional (`hover:border-[#14649B]`).
-- **Encabezado interno**: Badge de estado/categoría en la parte superior izquierda, título en negrita institucional.
-- **Acción inferior**: Texto de acción directo (ej. `Explorar grupo`, `Ver requisitos`, `Más información`) con indicador de avance discreto (`→`).
+## 3. Estilo Estándar de las Tarjetas (SAT Design System Original)
+Las tarjetas deben respetar el estilo original interactivo consolidado en el repositorio:
+- **Estructura base**: Fondo blanco `bg-white`, borde sutil `border border-[#DCDCDC]`, esquinas redondeadas `rounded-[16px]` o `rounded-[14px]`.
+- **Efecto Hover Interactivo (Fondo Sólido + Tipografía Blanca)**:
+  - Al posar el cursor sobre la tarjeta (`hover`), el fondo cambia al color primario del segmento (`hover:bg-[#14649B]`, `hover:bg-[#0284C7]`, `hover:bg-[#4D8014]`, `hover:bg-[#C25E00]`).
+  - Sombra de elevación institucional `hover:shadow-[0_14px_30px_rgba(...)]` y ligero desplazamiento `hover:-translate-y-1`.
+  - Los textos interiores cambian automáticamente a blanco (`group-hover:text-white`, `group-hover:text-white/90`).
+  - Los badges cambian a semi-translúcido claro (`group-hover:bg-white/20 group-hover:text-white`).
+  - El indicador de acción inferior se ilumina en blanco con desplazamiento sutil (`group-hover:translate-x-1` `→`).
 
 ---
 
