@@ -377,7 +377,7 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
             </div>
 
             {currentTramites.length > 0 ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-3.5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-3.5">
                 {currentTramites.map((tramite) => (
                   <div
                     key={tramite.id}
@@ -414,7 +414,7 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
              * VISTA DE CATEGORÍAS / CLASIFICACIONES (Sin títulos redundantes)
              * ============================================================= */}
             {!selectedCategory && (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-3.5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-3.5">
                 {categoriesList.map((catName) => {
                   const desc = CATEGORY_DESCRIPTIONS[catName] || 'Explora los trámites y obligaciones agrupadas en esta clasificación oficial.';
 
@@ -428,7 +428,7 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
                       className={`group relative block rounded-2xl border border-[#CDE3F1] bg-[#F0F7FC] p-5 transition-all duration-200 hover:-translate-y-1 ${meta.hoverBg} ${meta.hoverShadow} cursor-pointer`}
                     >
                       <div className="flex items-start justify-between gap-3">
-                        <h3 className="text-lg font-bold text-[#19324B] transition-colors group-hover:text-white leading-snug">
+                        <h3 className="text-base font-bold text-[#19324B] transition-colors group-hover:text-white leading-snug">
                           {catName}
                         </h3>
                         <ChevronRight className="h-5 w-5 shrink-0 text-[#94A3B8] transition-colors group-hover:text-white" />
@@ -457,7 +457,7 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
                   </button>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-3.5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-3.5">
                   {subcategoriesList.map((subName) => {
                     const desc = SUBCATEGORY_DESCRIPTIONS[subName] || 'Consulta los trámites específicos y requisitos correspondientes.';
 
@@ -468,7 +468,7 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
                         className={`group relative block rounded-2xl border border-[#CDE3F1] bg-[#F0F7FC] p-5 transition-all duration-200 hover:-translate-y-1 ${meta.hoverBg} ${meta.hoverShadow} cursor-pointer`}
                       >
                         <div className="flex items-start justify-between gap-3">
-                          <h3 className="text-lg font-bold text-[#19324B] transition-colors group-hover:text-white leading-snug">
+                          <h3 className="text-base font-bold text-[#19324B] transition-colors group-hover:text-white leading-snug">
                             {subName}
                           </h3>
                           <ChevronRight className="h-5 w-5 shrink-0 text-[#94A3B8] transition-colors group-hover:text-white" />
@@ -498,7 +498,7 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
                   </button>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-3.5">
                   {currentTramites.map((tramite) => (
                     <div
                       key={tramite.id}
