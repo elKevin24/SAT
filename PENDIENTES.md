@@ -22,7 +22,20 @@ Este documento registra los puntos pendientes acordados para continuar con la ev
 
 ---
 
-## 3. Consistencia en la Búsqueda Global del Header (`Header.tsx`)
+## 3. Menú Lateral Vertical de Navegación Rápida (`Sidebar Nav`)
+- **Diagnóstico**: Al adentrarse en los niveles profundos de un segmento o clasificación (Nivel 2, Nivel 3 y Nivel 4), los usuarios necesitan poder saltar ágilmente entre categorías o volver a niveles previos sin depender únicamente de hacer clic reiterado en el botón "Atrás".
+- **Diseño y Requisitos UX**:
+  - Implementar un **menú lateral vertical colapsable/fijo** (estilo documentación moderna / Bootstrap Docs / Stripe Docs) que liste:
+    - Los 4 segmentos principales en la parte superior.
+    - Las categorías oficiales del segmento activo con indicador visual de estado seleccionado.
+    - Subcategorías del grupo actual en un sub-árbol vertical desplegable.
+  - Diseño minimalista, limpio, en modo claro con paleta institucional SAT (azul sutil `#F0F7FC`, bordes discretos `#E2E8F0` / `#CDE3F1`).
+  - Adaptabilidad responsive: barra lateral visible en pantallas de escritorio (`lg:block`), y menú drawer/offcanvas deslizable en móviles.
+  - No interferir con la cuadrícula de tarjetas de contenido principal de mínimo 4 columnas.
+
+---
+
+## 4. Consistencia en la Búsqueda Global del Header (`Header.tsx`)
 - **Diagnóstico**: El buscador del encabezado institucional debe estar sincronizado con la experiencia visual del catálogo.
 - **Acción a realizar**:
   - Presentar los resultados de búsqueda global en la misma cuadrícula uniforme de mínimo **4 columnas en desktop** (`lg:grid-cols-4`).
@@ -30,7 +43,7 @@ Este documento registra los puntos pendientes acordados para continuar con la ev
 
 ---
 
-## 4. Integración Contextual de «Cultura tributaria y capacitación» (Ayuda, Guías y Cursos en Contexto)
+## 5. Integración Contextual de «Cultura tributaria y capacitación» (Ayuda, Guías y Cursos en Contexto)
 - **Denominación Oficial de la SAT**: Toda la oferta formativa, cursos virtuales, diplomados, talleres, seminarios, guías interactivas y recursos de estudio se denomina formalmente **«Cultura tributaria y capacitación»** (o *Capacitación y orientación aduanera* en aduanas).
 - **Diagnóstico**: Tradicionalmente en portales gubernamentales, estos recursos se aíslan en silos genéricos distantes (ej. una sección global aislada de "Cultura Tributaria" o "Descargas"). Esto obliga al usuario a abandonar el trámite que está intentando resolver para buscar capacitación o ayuda en otro lugar.
 - **Regla y Mandato**:
@@ -47,7 +60,7 @@ Este documento registra los puntos pendientes acordados para continuar con la ev
 
 ---
 
-## 5. Auditoría y Saneamiento Canónico de Datos por Segmento
+## 6. Auditoría y Saneamiento Canónico de Datos por Segmento
 - **Abogados y Notarios** (`profesionales`): ✅ **Completado**. Reestructurado en 4 subtemas canónicos (*Habilitación*, *Timbres y Papel Sellado*, *e-Traspasos* y *Avisos Notariales*).
 - **Operadores de Comercio Exterior** (`comercio_exterior`): ✅ **Completado**. Reestructurado en 8 categorías oficiales (162 trámites canónicos):
   - *Importadores* (64 trámites en 6 subtemas: Padrón, DUCAs, Vehículos, Distribuidores, Despacho, Abandono/Franquicias).
@@ -76,7 +89,7 @@ Este documento registra los puntos pendientes acordados para continuar con la ev
 
 ---
 
-## 6. Gestión de Ramas y Cierre en Git Flow
+## 7. Gestión de Ramas y Cierre en Git Flow
 - **Rama activa**: `feature/portal-architecture-content`.
 - **Acción a realizar**:
   - Al completar las tareas pendientes o estabilizar este sprint, realizar el merge hacia la rama `develop` siguiendo el estándar de Git Flow del repositorio.
