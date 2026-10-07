@@ -48,6 +48,13 @@ Plan de acción derivado de la revisión técnica del portal (Vite + React 19 + 
 ---
 
 ### Fase 1: P0 — Teclado y Modales
+
+> **Orden de ejecución sugerido (decisión queda registrada aquí, no es bloqueante):**
+> 1. **1.4** primero — desbloquea la última deuda del gate axe 0b.6 (verificar `npm run test:a11y`).
+> 2. **1.2** — migrar los modales a `<dialog>` nativo de a uno.
+> 3. **1.1** — tarjetas clickeables a teclado.
+> 4. **1.3** — conectar RITA (hoy nunca se monta) ya con `aria-live`.
+
 - [ ] **1.1 Tarjetas activables solo con ratón (CRÍTICO 1)**:
   - *Ubicación*: `PopularTopicsTabs.tsx` y `GuidedProcessesSection.tsx`.
   - *Problema*: Elementos `<div onClick>` inoperables mediante navegación por teclado.
