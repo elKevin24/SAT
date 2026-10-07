@@ -310,6 +310,7 @@ headers_master = [
     "Canal",
     "Control de Auditoría",
     "¿Para qué sirve? (Descripción Operativa)",
+    "Base Legal / Fundamento Jurídico (En base a qué: CAUCA, RECAUCA, Leyes)",
     "Ruta de Procesos Asociada",
     "Estado Normativo",
     "URL Portal SAT"
@@ -366,10 +367,15 @@ for r_idx, item in enumerate(master_data, start=2):
         c_audit.font = font_bold
 
     ws_master.cell(row=r_idx, column=17, value=item.get('descripcion', ''))
-    ws_master.cell(row=r_idx, column=18, value=rutas_str).font = font_small
+    
+    # Base Legal (En base a qué)
+    c_base = ws_master.cell(row=r_idx, column=18, value=item.get('baseLegal', 'Código Tributario y Leyes Específicas'))
+    c_base.font = font_bold
+    
+    ws_master.cell(row=r_idx, column=19, value=rutas_str).font = font_small
     
     # Estado Normativo
-    c_brecha = ws_master.cell(row=r_idx, column=19, value="Brecha Propuesta" if item.get('esBrecha') else "Vigente")
+    c_brecha = ws_master.cell(row=r_idx, column=20, value="Brecha Propuesta" if item.get('esBrecha') else "Vigente")
     c_brecha.alignment = Alignment(horizontal='center', vertical='center')
     if item.get('esBrecha'):
         c_brecha.font = Font(name='Segoe UI', size=9, bold=True, color='C25E00')
@@ -377,26 +383,26 @@ for r_idx, item in enumerate(master_data, start=2):
 
     # URL Oficial SAT
     raw_url = str(item.get('url', '')).strip()
-    c_url = ws_master.cell(row=r_idx, column=20, value=raw_url)
+    c_url = ws_master.cell(row=r_idx, column=21, value=raw_url)
     if raw_url.startswith('http'):
         c_url.font = font_link
         c_url.hyperlink = raw_url
 
     fill_color = ZEBRA_FILL if r_idx % 2 == 0 else 'FFFFFF'
-    for c_idx in range(1, 21):
+    for c_idx in range(1, 22):
         cell = ws_master.cell(row=r_idx, column=c_idx)
-        if c_idx not in [3, 7, 9, 10, 11, 16, 18, 19, 20]: cell.font = font_body
-        if not ((c_idx in [16, 19]) and item.get('esBrecha')):
+        if c_idx not in [3, 7, 9, 10, 11, 16, 18, 19, 20, 21]: cell.font = font_body
+        if not ((c_idx in [16, 20]) and item.get('esBrecha')):
             cell.fill = PatternFill(start_color=fill_color, end_color=fill_color, fill_type='solid')
         cell.border = thin_border
     ws_master.row_dimensions[r_idx].height = 22
 
-master_widths = [8, 18, 24, 26, 26, 26, 28, 24, 38, 55, 24, 24, 24, 22, 14, 24, 48, 30, 16, 42]
+master_widths = [8, 18, 24, 26, 26, 26, 28, 24, 38, 55, 24, 24, 24, 22, 14, 24, 48, 50, 30, 16, 42]
 for idx, w in enumerate(master_widths, start=1):
     ws_master.column_dimensions[get_column_letter(idx)].width = w
 
 ws_master.freeze_panes = 'E2'
-ws_master.auto_filter.ref = f"A1:T{LAST_ROW}"
+ws_master.auto_filter.ref = f"A1:U{LAST_ROW}"
 
 # ==============================================================================
 # HOJA 3: COMERCIO EXTERIOR (202 FILAS NETAS SANEADAS)
@@ -420,6 +426,7 @@ headers_ce = [
     "Plataforma / Sistema",
     "Control de Auditoría",
     "¿Para qué sirve? (Descripción Operativa)",
+    "Base Legal / Fundamento Jurídico (En base a qué: CAUCA, RECAUCA, Leyes)",
     "Ruta de Proceso",
     "Estado Normativo",
     "URL Portal SAT"
@@ -472,35 +479,40 @@ for r_idx, item in enumerate(ce_data, start=2):
         c_audit.font = font_bold
 
     ws_ce.cell(row=r_idx, column=14, value=item.get('descripcion', ''))
-    ws_ce.cell(row=r_idx, column=15, value=rutas_str).font = font_small
     
-    c_brecha = ws_ce.cell(row=r_idx, column=16, value="Brecha Propuesta" if item.get('esBrecha') else "Vigente")
+    # Base Legal
+    c_base = ws_ce.cell(row=r_idx, column=15, value=item.get('baseLegal', 'CAUCA IV y RECAUCA IV'))
+    c_base.font = font_bold
+
+    ws_ce.cell(row=r_idx, column=16, value=rutas_str).font = font_small
+    
+    c_brecha = ws_ce.cell(row=r_idx, column=17, value="Brecha Propuesta" if item.get('esBrecha') else "Vigente")
     c_brecha.alignment = Alignment(horizontal='center', vertical='center')
     if item.get('esBrecha'):
         c_brecha.font = Font(name='Segoe UI', size=9, bold=True, color='C25E00')
         c_brecha.fill = PatternFill(start_color='FFEDD5', end_color='FFEDD5', fill_type='solid')
 
     raw_url = str(item.get('url', '')).strip()
-    c_url = ws_ce.cell(row=r_idx, column=17, value=raw_url)
+    c_url = ws_ce.cell(row=r_idx, column=18, value=raw_url)
     if raw_url.startswith('http'):
         c_url.font = font_link
         c_url.hyperlink = raw_url
 
     fill_color = ZEBRA_FILL if r_idx % 2 == 0 else 'FFFFFF'
-    for c_idx in range(1, 18):
+    for c_idx in range(1, 19):
         cell = ws_ce.cell(row=r_idx, column=c_idx)
-        if c_idx not in [2, 5, 7, 8, 9, 13, 15, 16, 17]: cell.font = font_body
-        if not ((c_idx in [13, 16]) and item.get('esBrecha')):
+        if c_idx not in [2, 5, 7, 8, 9, 13, 15, 16, 17, 18]: cell.font = font_body
+        if not ((c_idx in [13, 17]) and item.get('esBrecha')):
             cell.fill = PatternFill(start_color=fill_color, end_color=fill_color, fill_type='solid')
         cell.border = thin_border
     ws_ce.row_dimensions[r_idx].height = 22
 
-ce_widths = [8, 28, 28, 28, 28, 24, 38, 55, 24, 24, 24, 22, 24, 48, 30, 16, 42]
+ce_widths = [8, 28, 28, 28, 28, 24, 38, 55, 24, 24, 24, 22, 24, 48, 50, 30, 16, 42]
 for idx, w in enumerate(ce_widths, start=1):
     ws_ce.column_dimensions[get_column_letter(idx)].width = w
 
 ws_ce.freeze_panes = 'E2'
-ws_ce.auto_filter.ref = f"A1:Q{len(ce_data)+1}"
+ws_ce.auto_filter.ref = f"A1:R{len(ce_data)+1}"
 
 # ==============================================================================
 # HOJA 4: BRECHAS NORMATIVAS (LAS 24 BRECHAS DE COMERCIO EXTERIOR)
