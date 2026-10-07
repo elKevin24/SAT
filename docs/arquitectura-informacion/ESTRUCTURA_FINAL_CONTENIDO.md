@@ -28,13 +28,13 @@ La estructura resuelve de manera definitiva:
 
 ## 2. Los 4 Segmentos y los 9 Grupos Oficiales
 
-| No. | Segmento Oficial | Grupos Oficiales Integrados | Contenidos | Participación |
-| :---: | :--- | :--- | :---: | :---: |
-| **1** | **Contribuyentes** | NIT sin Obligaciones, Pequeños Contribuyentes, Contribuyente General, Contribuyentes Especiales | **413** | 52.7% |
-| **2** | **Operadores de Comercio Exterior** | Importadores, Exportadores, Transportistas, Agentes Aduaneros, Apoderados Especiales, Depósitos/Almacenes Fiscales, ZDEEP, Courier, OEA y Normativa | **246** | 31.4% |
-| **3** | **Profesionales** | Abogados y Notarios, Peritos Contadores, Auditores, Gestores Tributarios y Servicios Profesionales | **45** | 5.7% |
-| **4** | **Entes Exentos** | Entidades del Estado, Constitucionales, No Lucrativos, Municipalidades y Entidades por Decreto | **79** | 10.1% |
-| **TOTAL** | **4 Segmentos** | **Total Portal Web SAT** | **783** | **100.0%** |
+| No. | Segmento Oficial | Texto Orientador de Interfaz (Estándar ATO) | Grupos Oficiales Integrados | Contenidos | Participación |
+| :---: | :--- | :--- | :--- | :---: | :---: |
+| **1** | **Contribuyentes** | *Información y servicios tributarios para personas y empresas.* | NIT sin Obligaciones, Pequeños Contribuyentes, Contribuyente General, Contribuyentes Especiales | **413** | 52.7% |
+| **2** | **Operadores de Comercio Exterior** | *Servicios e información aduanera para la importación, exportación y logística.* | Importadores, Exportadores, Transportistas, Agentes Aduaneros, Apoderados Especiales, Depósitos/Almacenes Fiscales, ZDEEP, Courier, OEA y Normativa | **246** | 31.4% |
+| **3** | **Profesionales** | *Herramientas y servicios especializados para profesionales tributarios y auxiliares.* | Abogados y Notarios, Peritos Contadores, Auditores, Gestores Tributarios y Servicios Profesionales | **45** | 5.7% |
+| **4** | **Entes Exentos** | *Información y gestiones tributarias para entidades públicas y organizaciones no lucrativas.* | Entidades del Estado, Constitucionales, No Lucrativos, Municipalidades y Entidades por Decreto | **79** | 10.1% |
+| **TOTAL** | **4 Segmentos** | — | **Total Portal Web SAT** | **783** | **100.0%** |
 
 ---
 

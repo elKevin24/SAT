@@ -150,7 +150,7 @@ macro_rows = [
         1,
         "Operadores de Comercio Exterior",
         "Son todas las personas individuales o jurídicas que intervienen en el ingreso, permanencia, traslado y salida de mercancías del territorio aduanero nacional. Comprende tanto a los dueños de las mercancías (importadores y exportadores) como a los prestadores de servicios logísticos autorizados (auxiliares de la función pública, transportistas, depósitos) y empresas que operan bajo regímenes territoriales especiales.",
-        "Gestiona tus trámites aduaneros, consulta requisitos y haz seguimiento a tus operaciones según tu rol en la cadena logística.",
+        "Servicios e información aduanera para la importación, exportación y logística.",
         "Código Tributario (Dto. 6-91), CAUCA IV (Resolución 223-2008 COMIECO) y RECAUCA (Resolución 224-2008 COMIECO).",
         f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!C2:C{LAST_ROW}, "Operadores de Comercio Exterior")'
     ),
@@ -158,7 +158,7 @@ macro_rows = [
         2,
         "Contribuyentes",
         "Son las personas individuales, jurídicas, patrimonios o entes afectos al cumplimiento de obligaciones tributarias internas en el territorio guatemalteco. Abarca a ciudadanos sin actividad económica activa, asalariados en relación de dependencia, pequeños contribuyentes, contribuyentes del régimen general del IVA e ISR, propietarios de vehículos y grandes/medianos contribuyentes especiales calificados.",
-        "Cumple con tus obligaciones tributarias, emite tus facturas, actualiza tu RTU y gestiona tus trámites de vehículos e impuestos internos de forma ágil y 100% digital.",
+        "Información y servicios tributarios para personas y empresas.",
         "Constitución Política (Art. 135d), Código Tributario (Dto. 6-91), Ley del IVA (Dto. 27-92), Ley de Actualización Tributaria (Dto. 10-2012), Ley del ISCV (Dto. 70-94) y Ley de Simplificación Tributaria (Dto. 7-2019 / Dto. 31-2024).",
         f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!C2:C{LAST_ROW}, "Contribuyentes")'
     ),
@@ -166,7 +166,7 @@ macro_rows = [
         3,
         "Profesionales",
         "Son las personas individuales colegiadas activas o técnicos acreditados ante la SAT que ejercen liberalmente su profesión o actúan como auxiliares técnicos en materia tributaria, mercantil y notarial. Comprende a abogados y notarios (traspasos vehiculares electrónicos y fe pública), peritos contadores, contadores públicos y auditores (CPA) y gestores tributarios acreditados.",
-        "Accede a herramientas especializadas de fe pública, autorización de libros contables, presentación de dictámenes fiscales y gestión de trámites profesionales.",
+        "Herramientas y servicios especializados para profesionales tributarios y auxiliares.",
         "Código de Notariado (Dto. 314), Ley de Colegiación Profesional Obligatoria (Dto. 72-2001), Decreto 2450 (Normas de la Profesión Contable), Ley de Timbres Fiscales (Dto. 37-92) y Código Tributario (Art. 57 \"A\" y 112).",
         f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!C2:C{LAST_ROW}, "Profesionales")'
     ),
@@ -174,7 +174,7 @@ macro_rows = [
         4,
         "Entes Exentos",
         "Son las personas jurídicas, entidades del sector público, organismos diplomáticos y organizaciones de la sociedad civil que, por mandato constitucional o ley específica ordinaria, gozan de exención total o parcial de tributos y aranceles en el territorio nacional. Incluye centros educativos, universidades, comunidades religiosas, ONGs, fundaciones sin fines de lucro, municipalidades y ministerios de Estado.",
-        "Solicita y gestiona tus resoluciones de exención, emite constancias tributarias electrónicas y administra las obligaciones formales de tu entidad.",
+        "Información y gestiones tributarias para entidades públicas y organizaciones no lucrativas.",
         "Constitución Política (Arts. 37, 73, 88 y 257), Ley de ONGs (Dto. 02-2003), Ley del IVA (Dto. 27-92, Art. 8), Ley de Actualización Tributaria (Dto. 10-2012, Art. 11), Código Municipal (Dto. 12-2002) y Ley Orgánica del Presupuesto (Dto. 101-97).",
         f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!C2:C{LAST_ROW}, "Entes Exentos")'
     ),

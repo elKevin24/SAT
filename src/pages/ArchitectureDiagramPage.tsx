@@ -39,7 +39,7 @@ const PILLARS: PillarConfig[] = [
     primaryColor: '#14649B',
     borderColor: 'border-[#14649B]',
     bgLight: 'bg-[#14649B]/5',
-    description: 'Personas individuales, negocios, pequeñas y grandes empresas inscritas en el Registro Tributario Unificado (RTU).'
+    description: 'Información y servicios tributarios para personas y empresas.'
   },
   {
     id: 'comercio_exterior',
@@ -49,7 +49,7 @@ const PILLARS: PillarConfig[] = [
     primaryColor: '#0284C7',
     borderColor: 'border-[#0284C7]',
     bgLight: 'bg-[#0284C7]/5',
-    description: 'Importadores, exportadores, agentes aduaneros, transportistas y depósitos aduaneros.'
+    description: 'Servicios e información aduanera para la importación, exportación y logística.'
   },
   {
     id: 'profesionales',
@@ -59,17 +59,17 @@ const PILLARS: PillarConfig[] = [
     primaryColor: '#4D8014',
     borderColor: 'border-[#4D8014]',
     bgLight: 'bg-[#4D8014]/5',
-    description: 'Peritos contadores, auditores, abogados, notarios y gestores tributarios acreditados.'
+    description: 'Herramientas y servicios especializados para profesionales tributarios y auxiliares.'
   },
   {
     id: 'entes_exentos',
-    name: 'Organismos Especiales',
-    shortName: 'Organismos Especiales',
+    name: 'Entes Exentos',
+    shortName: 'Entes Exentos',
     badgeColor: 'bg-[#C25E00]',
     primaryColor: '#C25E00',
     borderColor: 'border-[#C25E00]',
     bgLight: 'bg-[#C25E00]/5',
-    description: 'Entidades exentas por ley, universidades, iglesias, municipalidades y Estado.'
+    description: 'Información y gestiones tributarias para entidades públicas y organizaciones no lucrativas.'
   }
 ];
 

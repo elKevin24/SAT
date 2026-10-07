@@ -71,7 +71,7 @@ export const PILLARS_CONFIG: PillarConfigItem[] = [
   { 
     id: 'contribuyentes', 
     name: 'Contribuyentes', 
-    desc: 'NIT sin Obligaciones, Pequeños Contribuyentes, Contribuyente General y Contribuyentes Especiales.',
+    desc: 'Información y servicios tributarios para personas y empresas.',
     temasTotales: '4 Grupos · 120 Temas',
     badgeLabel: '4 Grupos',
     primaryColor: '#14649B',
@@ -86,7 +86,7 @@ export const PILLARS_CONFIG: PillarConfigItem[] = [
   { 
     id: 'comercio_exterior', 
     name: 'Operadores de Comercio Exterior', 
-    desc: 'Importadores, exportadores, transportistas, auxiliares aduaneros, agentes y normativa arancelaria.',
+    desc: 'Servicios e información aduanera para la importación, exportación y logística.',
     temasTotales: '8 Categorías · 150 Trámites',
     badgeLabel: '8 Categorías',
     primaryColor: '#0284C7',
@@ -101,7 +101,7 @@ export const PILLARS_CONFIG: PillarConfigItem[] = [
   { 
     id: 'profesionales', 
     name: 'Profesionales', 
-    desc: 'Abogados y notarios, peritos contadores, auditores (CPA), gestores tributarios y servicios profesionales.',
+    desc: 'Herramientas y servicios especializados para profesionales tributarios y auxiliares.',
     temasTotales: '5 Categorías · 45 Trámites',
     badgeLabel: '5 Categorías',
     primaryColor: '#4D8014',
@@ -116,7 +116,7 @@ export const PILLARS_CONFIG: PillarConfigItem[] = [
   { 
     id: 'entes_exentos', 
     name: 'Entes Exentos', 
-    desc: 'Entidades constitucionales, educativas, no lucrativas, por decreto de fomento, municipalidades y entidades del Estado.',
+    desc: 'Información y gestiones tributarias para entidades públicas y organizaciones no lucrativas.',
     temasTotales: '5 Categorías · 79 Trámites',
     badgeLabel: '5 Categorías',
     primaryColor: '#C25E00',

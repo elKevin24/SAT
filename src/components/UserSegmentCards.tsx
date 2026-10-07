@@ -14,25 +14,25 @@ const SEGMENTS: SegmentDef[] = [
   {
     id: 'contribuyentes',
     name: 'Contribuyentes',
-    desc: 'Personas sin negocio (primer NIT), pequeños contribuyentes, régimen general (IVA e ISR) y contribuyentes especiales.',
+    desc: 'Información y servicios tributarios para personas y empresas.',
     tone: 'azul'
   },
   {
     id: 'comercio_exterior',
     name: 'Operadores de Comercio Exterior',
-    desc: 'Importadores, exportadores, auxiliares de la función pública (AFPA), agentes, transportistas y depósitos aduaneros.',
+    desc: 'Servicios e información aduanera para la importación, exportación y logística.',
     tone: 'celeste'
   },
   {
     id: 'profesionales',
     name: 'Profesionales',
-    desc: 'Peritos contadores, auditores, abogados, notarios y gestores tributarios acreditados ante la SAT.',
+    desc: 'Herramientas y servicios especializados para profesionales tributarios y auxiliares.',
     tone: 'verde'
   },
   {
     id: 'entes_exentos',
     name: 'Entes Exentos',
-    desc: 'Entidades del Estado, municipalidades, universidades, colegios, iglesias y organizaciones no lucrativas exentas por ley.',
+    desc: 'Información y gestiones tributarias para entidades públicas y organizaciones no lucrativas.',
     tone: 'naranja'
   }
 ];
