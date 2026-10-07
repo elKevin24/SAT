@@ -95,14 +95,18 @@ const CANONICAL_CATEGORY_ORDER: Record<string, string[]> = {
     'Contribuyentes Especiales'
   ],
   comercio_exterior: [
+    'Importadores y Exportadores (Compartido)',
     'Importadores',
     'Exportadores',
-    'Transportistas',
+    'Operador Económico Autorizado (OEA)',
     'Agentes Aduaneros',
-    'Normativa y Aranceles',
-    'OEA',
-    'Courier',
-    'Almacenes Fiscales'
+    'Apoderados Especiales Aduaneros',
+    'Empresas de Entrega Rápida o Courier',
+    'Consolidadores y Desconsolidadores de Carga',
+    'Transportistas Aduaneros',
+    'Depósitos Aduaneros',
+    'ZDEEP - Entidades Administradoras',
+    'ZDEEP - Empresas Usuarias'
   ],
   profesionales: [
     'Abogados y Notarios',
@@ -125,14 +129,18 @@ const CATEGORY_DESCRIPTIONS: Record<string, string> = {
   'Pequeños Contribuyentes': 'Régimen simplificado con tarifa definitiva del 5% hasta Q150,000 anuales y actividades agropecuarias especiales.',
   'Contribuyente General': 'Personas y empresas con obligaciones generales de IVA e ISR, facturación electrónica, asalariados y gestión vehicular.',
   'Contribuyentes Especiales': 'Medianos y grandes contribuyentes sujetos a control diferenciado y gerencias de fiscalización tributaria intensiva.',
-  'Importadores': 'Padrón de importadores, declaraciones DUCA, aranceles DAI, levante aduanero y vehículos para importación.',
-  'Exportadores': 'Padrón de exportadores, declaraciones aduaneras y solicitud de Devolución de Crédito Fiscal del IVA.',
-  'Transportistas': 'Empresas de transporte terrestre, aéreo y marítimo internacional, tránsito aduanero y manifiestos de carga.',
-  'Agentes Aduaneros': 'Auxiliares de la función pública autorizados para el despacho oficial y representación aduanera.',
-  'Normativa y Aranceles': 'Criterios aduaneros oficiales, Sistema Arancelario Centroamericano (SAC) y facilitación de comercio.',
-  'OEA': 'Operador Económico Autorizado: certificación aduanera de seguridad en la cadena logística y facilitación de despacho.',
-  'Courier': 'Empresas de entrega rápida, paquetería expresa internacional y despacho aduanero simplificado.',
-  'Almacenes Fiscales': 'Depósitos aduaneros temporales, almacenadoras generales de depósito y recintos bajo custodia fiscal.',
+  'Importadores y Exportadores (Compartido)': 'Gestiones tributarias y aduaneras comunes: RTU Digital, solvencia fiscal habilitante, declaraciones DUCA y aranceles.',
+  'Importadores': 'Padrón de importadores de la SAT, declaraciones DUCA-D, valoración aduanera, IPRIMA y rescate de mercancías en abandono.',
+  'Exportadores': 'Padrón de exportadores, declaraciones simplificadas y complementarias, listas de embarque y devolución de crédito fiscal del IVA.',
+  'Operador Económico Autorizado (OEA)': 'Certificación de seguridad en la cadena logística, carriles preferenciales de despacho y facilitación en contingencias.',
+  'Agentes Aduaneros': 'Auxiliares autorizados para el despacho oficial, acreditación de carné, firma electrónica y representación aduanera.',
+  'Apoderados Especiales Aduaneros': 'Representantes con mandato legal aduanero, requisitos de renovación, carné de identificación y seguros de caución.',
+  'Empresas de Entrega Rápida o Courier': 'Empresas de paquetería expresa internacional, manifiestos courier, despacho simplificado y franquicias no comerciales.',
+  'Consolidadores y Desconsolidadores de Carga': 'Transmisión de mensajes CUSCAR, desconsolidación de conocimientos de embarque (B/L, AWB) y justificación de bultos.',
+  'Transportistas Aduaneros': 'Empresas de transporte internacional, medios de carga, marchamo satelital RFID, declaraciones DUCA-T y régimen ATC.',
+  'Depósitos Aduaneros': 'Almacenes fiscales, almacenadoras generales de depósito (Decreto 1236) y depósitos aduaneros temporales (DAT).',
+  'ZDEEP - Entidades Administradoras': 'Habilitación de recintos perimetrales, garitas de control aduanero y administración de Zonas de Desarrollo Económico Especial Público.',
+  'ZDEEP - Empresas Usuarias': 'Empresas calificadas dentro de ZDEEP: ingreso y egreso de carga, materias primas, transformación y exenciones tributarias.',
   'Abogados y Notarios': 'Habilitación profesional ante la SAT, adquisición de Papel Sellado Especial para Protocolos y timbres fiscales, traspasos electrónicos y avisos notariales obligatorios.',
   'Peritos Contadores': 'Inscripción y actualización de contadores autorizados ante la SAT para llevar contabilidades formales.',
   'Auditores': 'Habilitación para dictámenes fiscales, auditorías tributarias y trámites de devolución de crédito fiscal.',
@@ -146,6 +154,12 @@ const CATEGORY_DESCRIPTIONS: Record<string, string> = {
 };
 
 const SUBCATEGORY_DESCRIPTIONS: Record<string, string> = {
+  // Áreas Funcionales Oficiales de Comercio Exterior
+  'Registro y acreditación': 'Trámites de inscripción, acreditación oficial, solvencia fiscal, carnés y entrega de pólizas de fianza.',
+  'Operaciones y trámites': 'Gestiones del día a día: transmisión de declaraciones DUCA, manifiestos de carga, pagos y permisos aduaneros.',
+  'Consultas y seguimiento': 'Trazabilidad de operaciones: selectivo en aduanas, rampa de revisión, retenciones, expedientes y control de inventarios.',
+  'Normativa y recursos': 'Marco legal aduanero, CAUCA, RECAUCA, guías técnicas de sistemas, manuales y capacitaciones oficiales.',
+
   // Comercio Exterior: Importadores
   'Registro y Padrón de Importadores': 'Inscripción en el Padrón de Importadores de la SAT, requisitos previos por vía aérea o marítima y normativa aduanera aplicable.',
   'Declaraciones Aduaneras y DUCAs': 'Transmisión y gestión de DUCA-F, DUCA-D, DUA-GT, FYDUCA, declaraciones con fianza aduanera y declaración de valor.',
