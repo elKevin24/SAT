@@ -8,6 +8,7 @@ Este directorio reúne los documentos normativos, taxonómicos y operativos que 
 
 | Documento | Alcance | Estado | Checkbox |
 | :--- | :--- | :---: | :---: |
+| [`ARQUITECTURA_INFORMACION_CENTRADA_EN_USUARIO.md`](./ARQUITECTURA_INFORMACION_CENTRADA_EN_USUARIO.md) | **Marco Maestro de IA-UX (8 capas)**: Modelo mental, tareas, procesos, contenido, relaciones y gobernanza | Completo / Vigente | [x] |
 | [`ESTRUCTURA_FINAL_CONTENIDO.md`](./ESTRUCTURA_FINAL_CONTENIDO.md) | Catálogo unificado de 783 trámites (L1 a L6+) | Completo / Vigente | [x] |
 | [`TAXONOMIA_Y_DIMENSIONES_PORTAL_SAT.md`](./TAXONOMIA_Y_DIMENSIONES_PORTAL_SAT.md) | Dimensiones ATO: 5 etapas del ciclo y 4 tipos de interacción | Completo / Vigente | [x] |
 | [`TAXPAYER_JOURNEY.md`](./TAXPAYER_JOURNEY.md) | 8 arquetipos y recorridos de vida del contribuyente | Documentado | [x] |
@@ -40,6 +41,7 @@ Este directorio reúne los documentos normativos, taxonómicos y operativos que 
 
 ## 📂 Archivos en esta Carpeta
 
+- [`ARQUITECTURA_INFORMACION_CENTRADA_EN_USUARIO.md`](./ARQUITECTURA_INFORMACION_CENTRADA_EN_USUARIO.md) — Marco maestro de IA: 8 capas, modelo mental, capa "Quiero...", arquitectura de procesos y grafo de contenidos.
 - [`ESTRUCTURA_FINAL_CONTENIDO.md`](./ESTRUCTURA_FINAL_CONTENIDO.md) — Definición exhaustiva de los 783 registros, macro-niveles y fuentes.
 - [`TAXONOMIA_Y_DIMENSIONES_PORTAL_SAT.md`](./TAXONOMIA_Y_DIMENSIONES_PORTAL_SAT.md) — Guía de las dos dimensiones transversales de interacción ciudadana.
 - [`TAXPAYER_JOURNEY.md`](./TAXPAYER_JOURNEY.md) — Arquetipos ciudadanos y flujos paso a paso.

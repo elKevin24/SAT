@@ -40,6 +40,7 @@ docs/
 - [ ] **Auditoría Automatizada**: Verificación con axe-core y lector de pantalla (NVDA).
 
 ### 2. Arquitectura de Información (`docs/arquitectura-informacion/`)
+- [x] **Marco Maestro de IA-UX (8 capas)**: Modelo mental, tareas, procesos, contenido, findability, relaciones y gobernanza ([Detalle](./arquitectura-informacion/ARQUITECTURA_INFORMACION_CENTRADA_EN_USUARIO.md)).
 - [x] **Universo 783 trámites**: Consolidación sin pérdida en formato jerárquico padre/hijo.
 - [x] **Separación de capas**: Desacoplamiento formal de Arquitectura vs. Navegación vs. Responsive.
 - [x] **Soporte Nivel 6+**: Extensibilidad para procedimientos específicos y variantes de detalle.

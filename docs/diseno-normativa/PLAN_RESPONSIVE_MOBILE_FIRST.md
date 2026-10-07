@@ -145,7 +145,29 @@ flowchart LR
 * **Fase 4: Tablas y Formularios:** Implementar vista responsiva para tablas arancelarias y datasets tributarios.
 * **Fase 5: Matriz de Certificación:** Ejecutar la suite de pruebas desde 320px hasta 1920px y pruebas de contenido extremo.
 
+### 16. Optimización del Espacio Disponible y Nuevas Tecnologías CSS Modernas
+Para garantizar que el diseño aproveche el 100% del espacio útil sin desbordamientos ni huecos residuales, se adoptan los estándares modernos de CSS:
+
+1. **Unidades de Viewport Dinámicas (`dvh`, `svh`, `lvh`)**:
+   - Modales, drawers y vistas de pantalla completa utilizan `height: 100dvh` (o `max-h-[90dvh]`) para evitar solapamientos con la barra de navegación dinámica de iOS Safari y Chrome Android.
+2. **Container Queries (`@container`)**:
+   - Los componentes de tarjeta (`ui/Card`), formularios y widgets adaptan su disposición según el ancho de su contenedor padre (`cqw`), permitiendo reutilización dentro de un sidebar estrecho o en el cuerpo principal sin depender exclusivamente de media queries de pantalla global.
+3. **Grids Auto-ajustables con Dimensiones Intrínsecas**:
+   - Reemplazo de columnas estáticas por patrones auto-responsivos:
+     ```css
+     grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+     ```
+     Esto garantiza que en pantallas intermedias o plegables el contenido expanda todo el espacio disponible sin dejar márgenes muertos.
+4. **Funciones Matemáticas Fluidas (`clamp()`, `min()`, `max()`)**:
+   - Escala tipográfica y espaciados dinámicos que se recalculan matemáticamente entre 320px y 1440px sin saltos bruscos (`font-size: clamp(1.125rem, 1rem + 0.8vw, 1.75rem)`).
+5. **Propiedades Lógicas de CSS**:
+   - Uso sistemático de `inline-size`, `inset-inline`, `padding-inline` y `margin-block` para garantizar robustez estructural y alineación fluida.
+6. **Pseudo-clase `:has()` y Transiciones Nativas**:
+   - Detección condicional de estados y apertura de paneles sin necesidad de JavaScript superfluo.
+
 ---
+
+
 
 ## 4. Jerarquía de Referencias Normativas Oficiales
 

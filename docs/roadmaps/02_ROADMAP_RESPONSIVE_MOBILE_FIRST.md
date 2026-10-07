@@ -25,6 +25,8 @@ $$\text{IA (Qué y cómo se organiza)} \neq \text{Navegación (Cómo se recorre)
   - *Acción*: Crear componentes estándar reutilizables (`Container`, `Grid`, márgenes globales) para evitar que cada sección defina márgenes dispares.
 - [ ] **1.3 Escala Tipográfica Fluida**:
   - *Acción*: Estandarizar títulos con funciones fluidas `clamp()` o tokens escalados para H1 (28px móvil $\to$ 40px desktop) sin riesgo de quiebre visual horizontal.
+- [ ] **1.4 Tecnologías Modernas de CSS y Optimización del Espacio Disponible**:
+  - *Acción*: Implementar unidades de viewport dinámicas (`100dvh` en modales/drawers), Container Queries (`@container`) en componentes reutilizables, grids fluidos con `repeat(auto-fit, minmax(min(100%, 280px), 1fr))` y propiedades lógicas (`padding-inline`, `margin-block`) para aprovechar el 100% del espacio de pantalla.
 
 ---
 
