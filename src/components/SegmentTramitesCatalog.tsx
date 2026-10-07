@@ -57,25 +57,25 @@ const SEGMENT_METADATA: Record<SegmentId, {
   contribuyentes: {
     title: 'Contribuyentes',
     shortTitle: 'Contribuyentes',
-    desc: 'Personas individuales, pequeños contribuyentes, régimen general y contribuyentes especiales.',
+    desc: 'Información y servicios tributarios para personas y empresas.',
     color: '#14649B'
   },
   comercio_exterior: {
     title: 'Operadores de Comercio Exterior',
     shortTitle: 'Comercio Exterior',
-    desc: 'Importadores, exportadores, auxiliares aduaneros, transportistas y normativa arancelaria.',
+    desc: 'Servicios e información aduanera para la importación, exportación y logística.',
     color: '#0284C7'
   },
   profesionales: {
     title: 'Profesionales',
     shortTitle: 'Profesionales',
-    desc: 'Peritos contadores, auditores, abogados, notarios y gestores tributarios acreditados.',
+    desc: 'Herramientas y servicios especializados para profesionales tributarios y auxiliares.',
     color: '#4D8014'
   },
   entes_exentos: {
     title: 'Entes Exentos',
     shortTitle: 'Entes Exentos',
-    desc: 'Entidades del Estado, municipalidades, universidades, centros educativos, iglesias y organizaciones no lucrativas.',
+    desc: 'Información y gestiones tributarias para entidades públicas y organizaciones no lucrativas.',
     color: '#C25E00'
   }
 };
