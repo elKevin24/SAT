@@ -86,159 +86,229 @@ header_border = Border(
 SHEET_MASTER_NAME = f"Matriz Maestra ({TOTAL_ROWS})"
 
 # ==============================================================================
-# HOJA 1: RESUMEN Y ARQUITECTURA (DASHBOARD CON 27 FÓRMULAS DINÁMICAS VIVAS)
+# HOJA 1: RESUMEN Y ARQUITECTURA (DASHBOARD CON FÓRMULAS DINÁMICAS VIVAS)
 # ==============================================================================
 ws_resumen = wb.create_sheet(title="Resumen Arquitectura")
 ws_resumen.views.sheetView[0].showGridLines = True
 
 # Banner Institucional Superior
-ws_resumen.merge_cells('B2:K3')
+ws_resumen.merge_cells('B2:H3')
 banner = ws_resumen['B2']
 banner.value = "SUPERINTENDENCIA DE ADMINISTRACIÓN TRIBUTARIA — SAT GUATEMALA"
 banner.font = font_title
 banner.fill = PatternFill(start_color=BLUE_HEADER, end_color=BLUE_HEADER, fill_type='solid')
 banner.alignment = Alignment(horizontal='center', vertical='center')
 
-ws_resumen.merge_cells('B4:K4')
+ws_resumen.merge_cells('B4:H4')
 sub_banner = ws_resumen['B4']
-sub_banner.value = "ARQUITECTURA DE INFORMACIÓN DEL PORTAL WEB — DASHBOARD EJECUTIVO DE CONTROL Y COBERTURA"
+sub_banner.value = "ARQUITECTURA DE INFORMACIÓN DEL PORTAL WEB — DEFINICIÓN DE SEGMENTOS, LEAD TEXT Y BASE JURÍDICA"
 sub_banner.font = font_subtitle
 sub_banner.fill = PatternFill(start_color=NAVY_HEADER, end_color=NAVY_HEADER, fill_type='solid')
 sub_banner.alignment = Alignment(horizontal='center', vertical='center')
 
 # Bloques KPI con fórmulas dinámicas vivas
 kpis = [
-    ("TOTAL CONTENIDOS", f"=COUNTA('{SHEET_MASTER_NAME}'!A2:A{LAST_ROW})", "Universo Oficial SAT", "B6", "C7", NAVY_HEADER),
-    ("CONTRIBUYENTES", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!C2:C{LAST_ROW}, "Contribuyentes")', "Régimen Interno", "D6", "E7", BLUE_HEADER),
-    ("COMERCIO EXTERIOR", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!C2:C{LAST_ROW}, "Operadores de Comercio Exterior")', "Aduanas, AFPA y Zonas", "F6", "G7", CYAN_ACCENT),
-    ("PROFESIONALES", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!C2:C{LAST_ROW}, "Profesionales")', "Notarios, Contadores, TEV", "H6", "I7", GREEN_ACCENT),
-    ("ENTES EXENTOS", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!C2:C{LAST_ROW}, "Entes Exentos")', "ONGs, Iglesias y Estado", "J6", "K7", PURPLE_ACCENT),
+    ("TOTAL CONTENIDOS", f"=COUNTA('{SHEET_MASTER_NAME}'!A2:A{LAST_ROW})", "Universo Oficial SAT", "B6", "B7", NAVY_HEADER),
+    ("CONTRIBUYENTES", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!C2:C{LAST_ROW}, "Contribuyentes")', "Régimen Interno", "C6", "C7", BLUE_HEADER),
+    ("COMERCIO EXTERIOR", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!C2:C{LAST_ROW}, "Operadores de Comercio Exterior")', "Aduanas, AFPA y Zonas", "D6", "E7", CYAN_ACCENT),
+    ("PROFESIONALES", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!C2:C{LAST_ROW}, "Profesionales")', "Notarios, CPA, TEV", "F6", "F7", GREEN_ACCENT),
+    ("ENTES EXENTOS", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!C2:C{LAST_ROW}, "Entes Exentos")', "ONGs, Iglesias, Estado", "G6", "H7", PURPLE_ACCENT),
 ]
 
 for label, formula, sub, top_left, bot_right, color in kpis:
     ws_resumen.merge_cells(f"{top_left}:{bot_right}")
     cell = ws_resumen[top_left]
     cell.value = formula
-    cell.font = Font(name='Segoe UI', size=14, bold=True, color='FFFFFF')
+    cell.font = Font(name='Segoe UI', size=13, bold=True, color='FFFFFF')
     cell.fill = PatternFill(start_color=color, end_color=color, fill_type='solid')
     cell.alignment = Alignment(horizontal='center', vertical='center', wrap_text=True)
 
-# Tabla 1: Segmentos
-ws_resumen['B9'] = "1. SEGMENTOS PRINCIPALES DEL PORTAL (NIVEL 1)"
-ws_resumen['B9'].font = font_bold
+# Tabla 1: Segmentos con Qué es, Lead text y Base jurídica
+ws_resumen['B9'] = "1. SEGMENTOS PRINCIPALES DEL PORTAL (NIVEL 1) — DEFINICIONES INSTITUCIONALES"
+ws_resumen['B9'].font = Font(name='Segoe UI', size=11, bold=True, color='1E293B')
 
-macro_headers = ["No.", "Segmento", "Alcance para el Ciudadano / Operador", "Total Contenidos", "% del Portal"]
+macro_headers = [
+    "No.",
+    "Segmento (Nivel 1)",
+    "Qué es: (Definición Operativa)",
+    "Lead text: (Texto Orientador de Interfaz)",
+    "Base jurídica: (Fundamento Legal Oficial: CAUCA, RECAUCA, Leyes)",
+    "Total Contenidos",
+    "% del Portal"
+]
+
 for col_idx, h in enumerate(macro_headers, start=2):
     c = ws_resumen.cell(row=10, column=col_idx, value=h)
     c.font = font_header
-    c.fill = PatternFill(start_color=BLUE_HEADER, end_color=BLUE_HEADER, fill_type='solid')
-    c.alignment = Alignment(horizontal='center', vertical='center')
+    c.fill = PatternFill(start_color=NAVY_HEADER, end_color=NAVY_HEADER, fill_type='solid')
+    c.alignment = Alignment(horizontal='center', vertical='center', wrap_text=True)
     c.border = header_border
+ws_resumen.row_dimensions[10].height = 28
 
 macro_rows = [
-    (1, "Contribuyentes", "Personas y empresas del régimen interno (Vehículos, FEL, RTU y declaraciones)", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!C2:C{LAST_ROW}, "Contribuyentes")'),
-    (2, "Operadores de Comercio Exterior", "Aduanas, importadores, exportadores, AFPA (Almacenes, DAT, AGD), Maquilas y ZDEEP", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!C2:C{LAST_ROW}, "Operadores de Comercio Exterior")'),
-    (3, "Profesionales", "Contadores, auditores, notarios (traspasos electrónicos TEV) y peritos", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!C2:C{LAST_ROW}, "Profesionales")'),
-    (4, "Entes Exentos", "Organizaciones no lucrativas, iglesias, colegios, misiones diplomáticas y Estado", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!C2:C{LAST_ROW}, "Entes Exentos")'),
+    (
+        1,
+        "Operadores de Comercio Exterior",
+        "Son todas las personas individuales o jurídicas que intervienen en el ingreso, permanencia, traslado y salida de mercancías del territorio aduanero nacional. Comprende tanto a los dueños de las mercancías (importadores y exportadores) como a los prestadores de servicios logísticos autorizados (auxiliares de la función pública, transportistas, depósitos) y empresas que operan bajo regímenes territoriales especiales.",
+        "Gestiona tus trámites aduaneros, consulta requisitos y haz seguimiento a tus operaciones según tu rol en la cadena logística.",
+        "Código Tributario (Dto. 6-91), CAUCA IV (Resolución 223-2008 COMIECO) y RECAUCA (Resolución 224-2008 COMIECO).",
+        f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!C2:C{LAST_ROW}, "Operadores de Comercio Exterior")'
+    ),
+    (
+        2,
+        "Contribuyentes",
+        "Son las personas individuales, jurídicas, patrimonios o entes afectos al cumplimiento de obligaciones tributarias internas en el territorio guatemalteco. Abarca a ciudadanos sin actividad económica activa, asalariados en relación de dependencia, pequeños contribuyentes, contribuyentes del régimen general del IVA e ISR, propietarios de vehículos y grandes/medianos contribuyentes especiales calificados.",
+        "Cumple con tus obligaciones tributarias, emite tus facturas, actualiza tu RTU y gestiona tus trámites de vehículos e impuestos internos de forma ágil y 100% digital.",
+        "Constitución Política (Art. 135d), Código Tributario (Dto. 6-91), Ley del IVA (Dto. 27-92), Ley de Actualización Tributaria (Dto. 10-2012), Ley del ISCV (Dto. 70-94) y Ley de Simplificación Tributaria (Dto. 7-2019 / Dto. 31-2024).",
+        f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!C2:C{LAST_ROW}, "Contribuyentes")'
+    ),
+    (
+        3,
+        "Profesionales",
+        "Son las personas individuales colegiadas activas o técnicos acreditados ante la SAT que ejercen liberalmente su profesión o actúan como auxiliares técnicos en materia tributaria, mercantil y notarial. Comprende a abogados y notarios (traspasos vehiculares electrónicos y fe pública), peritos contadores, contadores públicos y auditores (CPA) y gestores tributarios acreditados.",
+        "Accede a herramientas especializadas de fe pública, autorización de libros contables, presentación de dictámenes fiscales y gestión de trámites profesionales.",
+        "Código de Notariado (Dto. 314), Ley de Colegiación Profesional Obligatoria (Dto. 72-2001), Decreto 2450 (Normas de la Profesión Contable), Ley de Timbres Fiscales (Dto. 37-92) y Código Tributario (Art. 57 \"A\" y 112).",
+        f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!C2:C{LAST_ROW}, "Profesionales")'
+    ),
+    (
+        4,
+        "Entes Exentos",
+        "Son las personas jurídicas, entidades del sector público, organismos diplomáticos y organizaciones de la sociedad civil que, por mandato constitucional o ley específica ordinaria, gozan de exención total o parcial de tributos y aranceles en el territorio nacional. Incluye centros educativos, universidades, comunidades religiosas, ONGs, fundaciones sin fines de lucro, municipalidades y ministerios de Estado.",
+        "Solicita y gestiona tus resoluciones de exención, emite constancias tributarias electrónicas y administra las obligaciones formales de tu entidad.",
+        "Constitución Política (Arts. 37, 73, 88 y 257), Ley de ONGs (Dto. 02-2003), Ley del IVA (Dto. 27-92, Art. 8), Ley de Actualización Tributaria (Dto. 10-2012, Art. 11), Código Municipal (Dto. 12-2002) y Ley Orgánica del Presupuesto (Dto. 101-97).",
+        f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!C2:C{LAST_ROW}, "Entes Exentos")'
+    ),
 ]
 
-for r_idx, (mno, mnom, mdesc, mformula) in enumerate(macro_rows, start=11):
-    ws_resumen.cell(row=r_idx, column=2, value=mno).alignment = Alignment(horizontal='center')
+for r_idx, (mno, mnom, mqe, mlt, mbj, mformula) in enumerate(macro_rows, start=11):
+    ws_resumen.cell(row=r_idx, column=2, value=mno).alignment = Alignment(horizontal='center', vertical='center')
     ws_resumen.cell(row=r_idx, column=3, value=mnom).font = font_bold
-    ws_resumen.cell(row=r_idx, column=4, value=mdesc).font = font_small
-    c_tot = ws_resumen.cell(row=r_idx, column=5, value=mformula)
-    c_tot.alignment = Alignment(horizontal='right')
+    ws_resumen.cell(row=r_idx, column=3).alignment = Alignment(horizontal='left', vertical='center')
+    
+    c_qe = ws_resumen.cell(row=r_idx, column=4, value=mqe)
+    c_qe.font = font_body
+    c_qe.alignment = Alignment(horizontal='left', vertical='center', wrap_text=True)
+
+    c_lt = ws_resumen.cell(row=r_idx, column=5, value=mlt)
+    c_lt.font = Font(name='Segoe UI', size=9, italic=True, bold=True, color='0369A1')
+    c_lt.alignment = Alignment(horizontal='left', vertical='center', wrap_text=True)
+
+    c_bj = ws_resumen.cell(row=r_idx, column=6, value=mbj)
+    c_bj.font = Font(name='Segoe UI', size=9, bold=True, color='334155')
+    c_bj.alignment = Alignment(horizontal='left', vertical='center', wrap_text=True)
+
+    c_tot = ws_resumen.cell(row=r_idx, column=7, value=mformula)
+    c_tot.alignment = Alignment(horizontal='right', vertical='center')
     c_tot.font = font_bold
     
-    c_pct = ws_resumen.cell(row=r_idx, column=6, value=f"=E{r_idx}/COUNTA('{SHEET_MASTER_NAME}'!A2:A{LAST_ROW})")
-    c_pct.alignment = Alignment(horizontal='right')
+    c_pct = ws_resumen.cell(row=r_idx, column=8, value=f"=G{r_idx}/COUNTA('{SHEET_MASTER_NAME}'!A2:A{LAST_ROW})")
+    c_pct.alignment = Alignment(horizontal='right', vertical='center')
+    c_pct.font = font_bold
     c_pct.number_format = '0.0%'
     
     fill_color = ZEBRA_FILL if r_idx % 2 == 0 else 'FFFFFF'
-    for c_idx in range(2, 7):
+    for c_idx in range(2, 9):
         cell = ws_resumen.cell(row=r_idx, column=c_idx)
-        if c_idx not in [3, 4, 5]: cell.font = font_body
+        if c_idx not in [3, 4, 5, 6, 7, 8]: cell.font = font_body
         cell.fill = PatternFill(start_color=fill_color, end_color=fill_color, fill_type='solid')
         cell.border = thin_border
+    ws_resumen.row_dimensions[r_idx].height = 56
 
 # Fila totalizador Segmentos
 ws_resumen.cell(row=15, column=2, value="").border = thin_border
 ws_resumen.cell(row=15, column=3, value="TOTAL PORTAL WEB SAT").font = font_bold
-ws_resumen.cell(row=15, column=4, value="Universo total de fichas de contenido y servicios").font = font_small
-c_tt = ws_resumen.cell(row=15, column=5, value="=SUM(E11:E14)")
+ws_resumen.cell(row=15, column=4, value="Universo total de fichas y servicios").font = font_small
+ws_resumen.cell(row=15, column=5, value="").border = thin_border
+ws_resumen.cell(row=15, column=6, value="").border = thin_border
+c_tt = ws_resumen.cell(row=15, column=7, value="=SUM(G11:G14)")
 c_tt.font = font_bold
-c_tt.alignment = Alignment(horizontal='right')
-c_tp = ws_resumen.cell(row=15, column=6, value="=SUM(F11:F14)")
+c_tt.alignment = Alignment(horizontal='right', vertical='center')
+c_tp = ws_resumen.cell(row=15, column=8, value="=SUM(H11:H14)")
 c_tp.font = font_bold
-c_tp.alignment = Alignment(horizontal='right')
+c_tp.alignment = Alignment(horizontal='right', vertical='center')
 c_tp.number_format = '0.0%'
-for c_idx in range(2, 7):
+for c_idx in range(2, 9):
     ws_resumen.cell(row=15, column=c_idx).border = thin_border
     ws_resumen.cell(row=15, column=c_idx).fill = PatternFill(start_color='E2E8F0', end_color='E2E8F0', fill_type='solid')
+ws_resumen.row_dimensions[15].height = 24
 
 # Tabla 2: Ciclo de Vida ATO
-ws_resumen['H9'] = "2. CICLO DE VIDA ATO (AUSTRALIA) - SIN NÚMEROS VISIBLES"
-ws_resumen['H9'].font = font_bold
+ws_resumen['B17'] = "2. CICLO DE VIDA ATO (AUSTRALIA) - SIN NÚMEROS VISIBLES"
+ws_resumen['B17'].font = Font(name='Segoe UI', size=11, bold=True, color='1E293B')
 
-ato_headers = ["Etapa ATO", "Descripción Funcional", "Total", "%"]
-for col_idx, h in enumerate(ato_headers, start=8):
-    c = ws_resumen.cell(row=10, column=col_idx, value=h)
+ato_headers = ["Etapa ATO", "Descripción Funcional", "Total Contenidos", "%"]
+for col_idx, h in enumerate(ato_headers, start=2):
+    c = ws_resumen.cell(row=18, column=col_idx if col_idx < 4 else (col_idx + 3), value=h)
     c.font = font_header
     c.fill = PatternFill(start_color=NAVY_HEADER, end_color=NAVY_HEADER, fill_type='solid')
     c.alignment = Alignment(horizontal='center', vertical='center')
     c.border = header_border
+ws_resumen.merge_cells('C18:F18')
+ws_resumen.row_dimensions[18].height = 26
 
 ato_stages = [
-    ("Empezar y registrarse", "Primer NIT, RTU Digital, padrones de importación/exportación y habilitación", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!K2:K{LAST_ROW}, "Empezar y registrarse")'),
+    ("Empezar y registrarse", "Primer NIT, RTU Digital, padrones de importación/exportación y habilitación inicial", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!K2:K{LAST_ROW}, "Empezar y registrarse")'),
     ("Operación y declaraciones", "Facturación FEL, Declaraguate, DUCAs, retenciones, transferencias y pagos", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!K2:K{LAST_ROW}, "Operación y declaraciones")'),
     ("Consultas y herramientas", "Verificadores en tiempo real, solvencia, selectivo aduanero, rampa y SAC", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!K2:K{LAST_ROW}, "Consultas y herramientas")'),
-    ("Modificaciones y cierre", "Actualización de RTU, traspaso vehicular, prórrogas, cese y subastas", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!K2:K{LAST_ROW}, "Modificaciones y cierre")'),
-    ("Normativa y asistencia", "Marco legal aduanero y tributario, devoluciones, criterios y capacitaciones", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!K2:K{LAST_ROW}, "Normativa y asistencia")')
+    ("Modificaciones y cierre", "Actualización de RTU, traspaso vehicular, prórrogas, cese de actividades y subastas", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!K2:K{LAST_ROW}, "Modificaciones y cierre")'),
+    ("Normativa y asistencia", "Marco legal aduanero y tributario, devoluciones, criterios institucionales y cursos", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!K2:K{LAST_ROW}, "Normativa y asistencia")')
 ]
 
-for r_idx, (enom, edesc, eformula) in enumerate(ato_stages, start=11):
-    ws_resumen.cell(row=r_idx, column=8, value=enom).font = font_bold
-    ws_resumen.cell(row=r_idx, column=9, value=edesc).font = font_small
-    c_at = ws_resumen.cell(row=r_idx, column=10, value=eformula)
-    c_at.alignment = Alignment(horizontal='right')
+for r_idx, (enom, edesc, eformula) in enumerate(ato_stages, start=19):
+    ws_resumen.cell(row=r_idx, column=2, value=enom).font = font_bold
+    ws_resumen.cell(row=r_idx, column=2).alignment = Alignment(horizontal='left', vertical='center')
+    
+    ws_resumen.merge_cells(f"C{r_idx}:F{r_idx}")
+    c_ed = ws_resumen.cell(row=r_idx, column=3, value=edesc)
+    c_ed.font = font_small
+    c_ed.alignment = Alignment(horizontal='left', vertical='center')
+
+    c_at = ws_resumen.cell(row=r_idx, column=7, value=eformula)
+    c_at.alignment = Alignment(horizontal='right', vertical='center')
     c_at.font = font_bold
     
-    c_ap = ws_resumen.cell(row=r_idx, column=11, value=f"=J{r_idx}/COUNTA('{SHEET_MASTER_NAME}'!A2:A{LAST_ROW})")
-    c_ap.alignment = Alignment(horizontal='right')
+    c_ap = ws_resumen.cell(row=r_idx, column=8, value=f"=G{r_idx}/COUNTA('{SHEET_MASTER_NAME}'!A2:A{LAST_ROW})")
+    c_ap.alignment = Alignment(horizontal='right', vertical='center')
+    c_ap.font = font_bold
     c_ap.number_format = '0.0%'
     
     fill_color = ZEBRA_FILL if r_idx % 2 == 0 else 'FFFFFF'
-    for c_idx in range(8, 12):
+    for c_idx in range(2, 9):
         cell = ws_resumen.cell(row=r_idx, column=c_idx)
-        if c_idx not in [8, 9, 10]: cell.font = font_body
+        if c_idx not in [2, 3, 7, 8]: cell.font = font_body
         cell.fill = PatternFill(start_color=fill_color, end_color=fill_color, fill_type='solid')
         cell.border = thin_border
+    ws_resumen.row_dimensions[r_idx].height = 22
 
-# Fila totalizador ATO
-ws_resumen.cell(row=16, column=8, value="TOTAL POR CICLO ATO").font = font_bold
-ws_resumen.cell(row=16, column=9, value="100% de contenidos clasificados").font = font_small
-c_att = ws_resumen.cell(row=16, column=10, value="=SUM(J11:J15)")
+# Total ATO
+ws_resumen.cell(row=24, column=2, value="TOTAL POR CICLO ATO").font = font_bold
+ws_resumen.merge_cells('C24:F24')
+ws_resumen.cell(row=24, column=3, value="100% de contenidos clasificados según ciclo de vida").font = font_small
+c_att = ws_resumen.cell(row=24, column=7, value="=SUM(G19:G23)")
 c_att.font = font_bold
-c_att.alignment = Alignment(horizontal='right')
-c_atp = ws_resumen.cell(row=16, column=11, value="=SUM(K11:K15)")
+c_att.alignment = Alignment(horizontal='right', vertical='center')
+c_atp = ws_resumen.cell(row=24, column=8, value="=SUM(H19:H23)")
 c_atp.font = font_bold
-c_atp.alignment = Alignment(horizontal='right')
+c_atp.alignment = Alignment(horizontal='right', vertical='center')
 c_atp.number_format = '0.0%'
-for c_idx in range(8, 12):
-    ws_resumen.cell(row=16, column=c_idx).border = thin_border
-    ws_resumen.cell(row=16, column=c_idx).fill = PatternFill(start_color='E2E8F0', end_color='E2E8F0', fill_type='solid')
+for c_idx in range(2, 9):
+    ws_resumen.cell(row=24, column=c_idx).border = thin_border
+    ws_resumen.cell(row=24, column=c_idx).fill = PatternFill(start_color='E2E8F0', end_color='E2E8F0', fill_type='solid')
+ws_resumen.row_dimensions[24].height = 24
 
 # Tabla 3: Tipos de Interacción
-ws_resumen['B18'] = "3. TIPOS DE INTERACCIÓN (CÓMO RESUELVE EL CIUDADANO)"
-ws_resumen['B18'].font = font_bold
+ws_resumen['B26'] = "3. TIPOS DE INTERACCIÓN (CÓMO RESUELVE EL CIUDADANO)"
+ws_resumen['B26'].font = Font(name='Segoe UI', size=11, bold=True, color='1E293B')
 
-int_headers = ["Tipo de Interacción", "Modalidad Operativa", "Total", "%"]
+int_headers = ["Tipo de Interacción", "Modalidad Operativa", "Total Contenidos", "%"]
 for col_idx, h in enumerate(int_headers, start=2):
-    c = ws_resumen.cell(row=19, column=col_idx, value=h)
+    c = ws_resumen.cell(row=27, column=col_idx if col_idx < 4 else (col_idx + 3), value=h)
     c.font = font_header
     c.fill = PatternFill(start_color=CYAN_ACCENT, end_color=CYAN_ACCENT, fill_type='solid')
     c.alignment = Alignment(horizontal='center', vertical='center')
     c.border = header_border
+ws_resumen.merge_cells('C27:F27')
+ws_resumen.row_dimensions[27].height = 26
 
 interactions = [
     ("Guía Informativa / Texto", "Páginas explicativas, requisitos de trámites presenciales o mixtos", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!L2:L{LAST_ROW}, "Guía Informativa / Texto")'),
@@ -247,41 +317,51 @@ interactions = [
     ("Descarga de Documento / Software", "Descarga de formularios en PDF/Excel, software, manuales o legislación", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!L2:L{LAST_ROW}, "Descarga de Documento / Software")'),
 ]
 
-for r_idx, (inom, idesc, iformula) in enumerate(interactions, start=20):
+for r_idx, (inom, idesc, iformula) in enumerate(interactions, start=28):
     ws_resumen.cell(row=r_idx, column=2, value=inom).font = font_bold
-    ws_resumen.cell(row=r_idx, column=3, value=idesc).font = font_small
-    c_it = ws_resumen.cell(row=r_idx, column=4, value=iformula)
-    c_it.alignment = Alignment(horizontal='right')
+    ws_resumen.cell(row=r_idx, column=2).alignment = Alignment(horizontal='left', vertical='center')
+    
+    ws_resumen.merge_cells(f"C{r_idx}:F{r_idx}")
+    c_id = ws_resumen.cell(row=r_idx, column=3, value=idesc)
+    c_id.font = font_small
+    c_id.alignment = Alignment(horizontal='left', vertical='center')
+
+    c_it = ws_resumen.cell(row=r_idx, column=7, value=iformula)
+    c_it.alignment = Alignment(horizontal='right', vertical='center')
     c_it.font = font_bold
     
-    c_ip = ws_resumen.cell(row=r_idx, column=5, value=f"=D{r_idx}/COUNTA('{SHEET_MASTER_NAME}'!A2:A{LAST_ROW})")
-    c_ip.alignment = Alignment(horizontal='right')
+    c_ip = ws_resumen.cell(row=r_idx, column=8, value=f"=G{r_idx}/COUNTA('{SHEET_MASTER_NAME}'!A2:A{LAST_ROW})")
+    c_ip.alignment = Alignment(horizontal='right', vertical='center')
+    c_ip.font = font_bold
     c_ip.number_format = '0.0%'
     
     fill_color = ZEBRA_FILL if r_idx % 2 == 0 else 'FFFFFF'
-    for c_idx in range(2, 6):
+    for c_idx in range(2, 9):
         cell = ws_resumen.cell(row=r_idx, column=c_idx)
-        if c_idx not in [2, 3, 4]: cell.font = font_body
+        if c_idx not in [2, 3, 7, 8]: cell.font = font_body
         cell.fill = PatternFill(start_color=fill_color, end_color=fill_color, fill_type='solid')
         cell.border = thin_border
+    ws_resumen.row_dimensions[r_idx].height = 22
 
-# Fila totalizador Interacciones
-ws_resumen.cell(row=24, column=2, value="TOTAL INTERACCIONES").font = font_bold
-ws_resumen.cell(row=24, column=3, value="100% de contenidos catalogados").font = font_small
-c_itt = ws_resumen.cell(row=24, column=4, value="=SUM(D20:D23)")
+# Total Interacciones
+ws_resumen.cell(row=32, column=2, value="TOTAL INTERACCIONES").font = font_bold
+ws_resumen.merge_cells('C32:F32')
+ws_resumen.cell(row=32, column=3, value="100% de contenidos catalogados").font = font_small
+c_itt = ws_resumen.cell(row=32, column=7, value="=SUM(G28:G31)")
 c_itt.font = font_bold
-c_itt.alignment = Alignment(horizontal='right')
-c_itp = ws_resumen.cell(row=24, column=5, value="=SUM(E20:E23)")
+c_itt.alignment = Alignment(horizontal='right', vertical='center')
+c_itp = ws_resumen.cell(row=32, column=8, value="=SUM(H28:H31)")
 c_itp.font = font_bold
-c_itp.alignment = Alignment(horizontal='right')
+c_itp.alignment = Alignment(horizontal='right', vertical='center')
 c_itp.number_format = '0.0%'
-for c_idx in range(2, 6):
-    ws_resumen.cell(row=24, column=c_idx).border = thin_border
-    ws_resumen.cell(row=24, column=c_idx).fill = PatternFill(start_color='E2E8F0', end_color='E2E8F0', fill_type='solid')
+for c_idx in range(2, 9):
+    ws_resumen.cell(row=32, column=c_idx).border = thin_border
+    ws_resumen.cell(row=32, column=c_idx).fill = PatternFill(start_color='E2E8F0', end_color='E2E8F0', fill_type='solid')
+ws_resumen.row_dimensions[32].height = 24
 
 # Ajustar anchos en Resumen
 resumen_col_widths = {
-    1: 4, 2: 6, 3: 32, 4: 48, 5: 18, 6: 14, 7: 4, 8: 26, 9: 46, 10: 16, 11: 14
+    1: 4, 2: 6, 3: 32, 4: 55, 5: 50, 6: 55, 7: 18, 8: 14
 }
 for col_idx, width in resumen_col_widths.items():
     ws_resumen.column_dimensions[get_column_letter(col_idx)].width = width
