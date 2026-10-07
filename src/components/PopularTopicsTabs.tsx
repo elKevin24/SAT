@@ -223,6 +223,7 @@ export const PopularTopicsTabs: React.FC<PopularTopicsTabsProps> = ({
                 <button
                   key={segId}
                   onClick={() => setActiveTab(segId)}
+                  aria-pressed={isActive}
                   className={`px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all whitespace-nowrap ${
                     isActive 
                       ? 'bg-white text-[#14649B] shadow-xs' 
@@ -242,6 +243,8 @@ export const PopularTopicsTabs: React.FC<PopularTopicsTabsProps> = ({
             const isConsultas = topic.isPermanentConsultas;
 
             return (
+              // CRÍTICO 1 (ROADMAP-AUDITORIA.md, Fase 1): migrar a ui/Card con activación por teclado
+              // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
               <div
                 key={topic.id}
                 onClick={() => {

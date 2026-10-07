@@ -273,24 +273,8 @@ export const Header: React.FC<HeaderProps> = ({
               />
             </button>
 
-            {/* Botón de Accesibilidad UserWay */}
-            <div className="order-2 md:order-none ml-auto shrink-0">
-              <button
-                type="button"
-                onClick={onOpenAccessibility}
-                className="btn btn-sm inline-flex items-center gap-1.5 px-3 py-1.5 rounded-pill border border-sat-gris bg-sat-fondo-tenue text-sat-texto-suave hover:bg-sat-fondo-medio hover:text-sat-azul hover:border-sat-azul transition-colors fw-semibold"
-                title="Herramientas de Accesibilidad (UserWay)"
-                aria-label="Abrir panel de accesibilidad"
-              >
-                <span className="w-5 h-5 rounded-full bg-sat-azul text-sat-blanco flex align-items-center justify-center text-[10px] fw-bold">
-                  ♿
-                </span>
-                <span className="hidden lg:inline">Accesibilidad</span>
-              </button>
-            </div>
-
             {/* Buscador Central Predictivo */}
-            <div ref={searchContainerRef} className="input-group input-group-sm flex order-3 md:order-none w-full md:w-auto md:flex-1 min-w-0 max-w-2xl relative">
+            <div ref={searchContainerRef} className="input-group input-group-sm flex order-2 md:order-none w-full md:w-auto md:flex-1 min-w-0 max-w-2xl relative">
               <span className="input-group-text flex items-center bg-sat-fondo-tenue border border-sat-gris border-e-0 text-sat-texto-tenue pe-2">
                 <Search className="w-4 h-4" />
               </span>
@@ -303,6 +287,7 @@ export const Header: React.FC<HeaderProps> = ({
                 }}
                 onFocus={() => setIsSearchFocused(true)}
                 placeholder="Buscar trámites, NIT, RTU Digital, facturas FEL, impuestos o leyes..."
+                aria-label="Buscar trámites en el Portal SAT"
                 className="form-control flex-1 min-w-0 border border-sat-gris border-s-0 ps-2 pe-8 py-2 text-xs sm:text-sm text-sat-texto bg-sat-fondo-tenue hover:bg-sat-fondo-medio focus:bg-sat-blanco focus:shadow-[0_0_0_0.25rem_rgba(20,100,155,0.2)] transition-colors"
                 role="combobox"
                 aria-expanded={showSuggestions}
@@ -394,6 +379,22 @@ export const Header: React.FC<HeaderProps> = ({
                   </div>
                 </div>
               )}
+            </div>
+
+            {/* Botón de Accesibilidad UserWay */}
+            <div className="order-3 md:order-none ml-auto shrink-0">
+              <button
+                type="button"
+                onClick={onOpenAccessibility}
+                className="btn btn-sm inline-flex items-center gap-1.5 px-3 py-1.5 rounded-pill border border-sat-gris bg-sat-fondo-tenue text-sat-texto-suave hover:bg-sat-fondo-medio hover:text-sat-azul hover:border-sat-azul transition-colors fw-semibold"
+                title="Herramientas de Accesibilidad (UserWay)"
+                aria-label="Abrir panel de accesibilidad"
+              >
+                <span className="w-5 h-5 rounded-full bg-sat-azul text-sat-blanco flex align-items-center justify-center text-[10px] fw-bold">
+                  ♿
+                </span>
+                <span className="hidden lg:inline">Accesibilidad</span>
+              </button>
             </div>
           </div>
         </div>

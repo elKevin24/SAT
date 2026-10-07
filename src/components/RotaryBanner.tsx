@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { ExternalLink } from 'lucide-react';
 
 interface BannerItem {
@@ -40,9 +40,24 @@ const BANNERS: BannerItem[] = [
 export const RotaryBanner: React.FC = () => {
   const [currentIdx, setCurrentIdx] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+  const reduceMotionRef = useRef<boolean>(
+    typeof window !== 'undefined'
+      ? window.matchMedia('(prefers-reduced-motion: reduce)').matches
+      : false
+  );
 
   useEffect(() => {
-    if (isPaused) return;
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const applyPref = (e: MediaQueryListEvent) => {
+      reduceMotionRef.current = e.matches;
+    };
+    mediaQuery.addEventListener('change', applyPref);
+    return () => mediaQuery.removeEventListener('change', applyPref);
+  }, []);
+
+  // WCAG 2.2.2: no auto-avanzar si el usuario prefiere movimiento reducido
+  useEffect(() => {
+    if (isPaused || reduceMotionRef.current) return;
     const interval = setInterval(() => {
       setCurrentIdx((prev) => (prev + 1) % BANNERS.length);
     }, 6000);
@@ -57,24 +72,27 @@ export const RotaryBanner: React.FC = () => {
         <div
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
-          className="relative bg-slate-50 border border-[#DCDCDC] rounded-[16px] p-5 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-xs overflow-hidden"
+          onFocus={() => setIsPaused(true)}
+          onBlur={() => setIsPaused(false)}
+          className="relative bg-sat-fondo-tenue border border-sat-gris rounded-lg p-5 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sat-sm overflow-hidden"
           role="region"
           aria-label="Banner informativo rotativo"
+          aria-live={reduceMotionRef.current ? 'polite' : 'off'}
         >
           {/* Banner Text (Max 120 chars) */}
           <div className="flex-1 text-center sm:text-left">
             <div className="flex items-center justify-center sm:justify-start gap-2 mb-1.5">
-              <span className="text-[10px] font-bold text-[#14649B] uppercase tracking-wider bg-blue-100/70 px-2.5 py-0.5 rounded">
+              <span className="text-[10px] font-bold text-sat-azul uppercase tracking-wider bg-sat-azul/10 border border-sat-azul/15 px-2.5 py-0.5 rounded">
                 {current.tag}
               </span>
-              <span className="text-[11px] text-slate-400 font-medium">
+              <span className="text-[11px] text-sat-texto-tenue font-medium">
                 {currentIdx + 1} de {BANNERS.length}
               </span>
             </div>
-            <h4 className="text-base sm:text-lg font-bold text-[#19324B] leading-tight">
+            <h4 className="text-base sm:text-lg font-bold text-sat-texto leading-tight">
               {current.title}
             </h4>
-            <p className="text-xs sm:text-sm text-slate-600 mt-1 max-w-2xl">
+            <p className="text-xs sm:text-sm text-sat-texto-suave mt-1 max-w-2xl">
               {current.description}
             </p>
           </div>
@@ -85,7 +103,7 @@ export const RotaryBanner: React.FC = () => {
               href={current.ctaUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 bg-[#14649B] hover:bg-[#11507C] text-white text-xs font-bold rounded-xl shadow-xs transition-all flex items-center gap-1.5"
+              className="px-4 py-2 bg-sat-azul hover:bg-sat-azul-oscuro text-white text-xs font-bold rounded-sat-md shadow-sat-sm transition flex items-center gap-1.5"
             >
               <span>{current.ctaLabel}</span>
               <ExternalLink className="w-3.5 h-3.5" />
@@ -98,9 +116,10 @@ export const RotaryBanner: React.FC = () => {
                   key={i}
                   onClick={() => setCurrentIdx(i)}
                   className={`w-2 h-2 rounded-full transition-all ${
-                    i === currentIdx ? 'w-5 bg-[#14649B]' : 'bg-slate-300 hover:bg-slate-400'
+                    i === currentIdx ? 'w-5 bg-sat-azul' : 'bg-sat-gris hover:bg-sat-texto-tenue'
                   }`}
                   aria-label={`Ir al banner ${i + 1}`}
+                  aria-current={i === currentIdx}
                 />
               ))}
             </div>

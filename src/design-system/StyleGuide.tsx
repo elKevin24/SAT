@@ -7,9 +7,6 @@ import {
   Copy,
   ExternalLink,
   AlertCircle,
-  CheckCircle2,
-  AlertTriangle,
-  Info,
   Menu,
   X,
   Layers,
@@ -23,6 +20,15 @@ import {
   Loader2,
   Inbox
 } from 'lucide-react';
+
+/* Componentes vivos del sistema — single source of truth compartido con el portal */
+import { Button } from '../components/ui/Button';
+import { Card } from '../components/ui/Card';
+import { Badge } from '../components/ui/Badge';
+import { Alert } from '../components/ui/Alert';
+import { Modal } from '../components/ui/Modal';
+import { Breadcrumbs } from '../components/ui/Breadcrumbs';
+import { SatIsologotipo } from '../components/SatIsologotipo';
 
 /* -------------------------------------------------------------------------
  * Datos normativos transcritos del Manual de Imagen y Normas Graficas
@@ -330,10 +336,12 @@ const DOC_MENU: DocNavCategory[] = [
       { id: 'botones', titulo: 'Botones y Acciones' },
       { id: 'formularios', titulo: 'Formularios e Inputs' },
       { id: 'cards', titulo: 'Sistema de Tarjetas SAT' },
+      { id: 'breadcrumbs', titulo: 'Migas de Pan y Navegación' },
       { id: 'badges', titulo: 'Badges y Etiquetas' },
       { id: 'alertas', titulo: 'Alertas y Notificaciones' },
       { id: 'movimiento', titulo: 'Movimiento y Transiciones' },
       { id: 'carga', titulo: 'Estados de Carga y Vacíos' },
+      { id: 'modal', titulo: 'Modal y Diálogos' },
       { id: 'tablas', titulo: 'Tablas de Datos' },
     ],
   },
@@ -351,6 +359,7 @@ const DOC_MENU: DocNavCategory[] = [
     icono: Sliders,
     items: [
       { id: 'contraste', titulo: 'Contraste WCAG 2.2 AA' },
+      { id: 'responsive', titulo: 'Responsive & Mobile First' },
       { id: 'interfaz', titulo: 'Tokens de Interfaz Web' },
       { id: 'auditoria', titulo: 'Auditoría de Cumplimiento' },
       { id: 'pendientes', titulo: 'Pendientes Normativos' },
@@ -509,6 +518,9 @@ export default function StyleGuide() {
 
   // Botón interactivo de demostración de copiado / acción
   const [interactiveCounter, setInteractiveCounter] = useState(0);
+
+  // Demo del Modal vivo
+  const [modalOpen, setModalOpen] = useState(false);
 
   // Escuchar el hash inicial y hashchange para navegar suavemente
   useEffect(() => {
@@ -887,10 +899,11 @@ export default function StyleGuide() {
                       outlineOffset: '-10px',
                     }}
                   >
-                    <div className="text-center text-white">
-                      <p className="text-xl font-black">SAT</p>
-                      <p className="text-[9px] tracking-widest uppercase">Superintendencia de Administración Tributaria</p>
-                    </div>
+                    <SatIsologotipo
+                      className="w-56 max-w-[85%]"
+                      variant="blanco"
+                      showSubtitle={false}
+                    />
                   </div>
                 </div>
               </div>
@@ -959,63 +972,38 @@ export default function StyleGuide() {
                 {/* Visualizador en Vivo */}
                 <div className="rounded-xl border border-[#DCDCDC] bg-white p-6">
                   <h4 className="text-xs font-bold uppercase tracking-wider text-[#64748B] mb-4">
-                    Variantes de Botón
+                    Variantes de Botón <span className="font-mono text-[#94A3B8]">(componente &lt;Button /&gt;)</span>
                   </h4>
                   <div className="flex flex-wrap items-center gap-3">
-                    <button
-                      onClick={() => setInteractiveCounter(c => c + 1)}
-                      className="inline-flex items-center gap-2 rounded-xl bg-[#14649B] px-4 py-2.5 text-xs font-bold text-white shadow-sm transition hover:bg-[#19324B] active:scale-[0.98]"
-                    >
+                    <Button onClick={() => setInteractiveCounter(c => c + 1)}>
                       <Sparkles className="h-4 w-4" />
                       Botón Primario ({interactiveCounter})
-                    </button>
-
-                    <button
-                      className="inline-flex items-center gap-2 rounded-xl border border-[#DCDCDC] bg-white px-4 py-2.5 text-xs font-bold text-[#19324B] shadow-sm transition hover:bg-[#F4F6F9] active:scale-[0.98]"
-                    >
-                      Botón Secundario (Outline)
-                    </button>
-
-                    <button
-                      className="inline-flex items-center gap-2 rounded-xl bg-[#19AFE1] px-4 py-2.5 text-xs font-bold text-[#19324B] shadow-sm transition hover:opacity-90 active:scale-[0.98]"
-                    >
-                      Botón Acento Celeste
-                    </button>
-
-                    <button
-                      className="inline-flex items-center gap-2 rounded-xl bg-[#DC2626] px-4 py-2.5 text-xs font-bold text-white shadow-sm transition hover:bg-[#B91C1C] active:scale-[0.98]"
-                    >
-                      Acción Destructiva
-                    </button>
-
-                    <button
-                      disabled
-                      className="inline-flex items-center gap-2 rounded-xl border border-[#DCDCDC] bg-[#F4F6F9] px-4 py-2.5 text-xs font-bold text-[#94A3B8] cursor-not-allowed"
-                    >
-                      Deshabilitado
-                    </button>
+                    </Button>
+                    <Button variant="outline">Botón Secundario (Outline)</Button>
+                    <Button variant="accent">Botón Acento Celeste</Button>
+                    <Button variant="destructive">Acción Destructiva</Button>
+                    <Button disabled>Deshabilitado</Button>
+                    <Button variant="ghost">Ghost / Texto</Button>
                   </div>
 
                   <h4 className="text-xs font-bold uppercase tracking-wider text-[#64748B] mt-6 mb-3">
                     Tamaños Oficiales
                   </h4>
                   <div className="flex flex-wrap items-center gap-3">
-                    <button className="rounded-lg bg-[#14649B] px-3 py-1.5 text-[11px] font-bold text-white">
-                      Pequeño (sm)
-                    </button>
-                    <button className="rounded-xl bg-[#14649B] px-4 py-2.5 text-xs font-bold text-white">
-                      Mediano (md - Estándar)
-                    </button>
-                    <button className="rounded-xl bg-[#14649B] px-6 py-3 text-sm font-bold text-white">
-                      Grande (lg - CTA Principal)
-                    </button>
+                    <Button size="sm">Pequeño (sm)</Button>
+                    <Button size="md">Mediano (md - Estándar)</Button>
+                    <Button size="lg">Grande (lg - CTA Principal)</Button>
                   </div>
                 </div>
 
                 <CodeSnippet
-                  code={`<button className="inline-flex items-center gap-2 rounded-xl bg-[#14649B] px-4 py-2.5 text-xs font-bold text-white shadow-sm transition hover:bg-[#19324B]">
+                  code={`import { Button } from '../components/ui/Button';
+
+<Button>
   Solicitar NIT en Línea
-</button>`}
+</Button>
+<Button variant="outline" size="sm">Ver requisitos</Button>
+<Button variant="destructive" disabled>Eliminar</Button>`}
                 />
               </div>
             </SectionDoc>
@@ -1031,10 +1019,11 @@ export default function StyleGuide() {
                   <div className="grid gap-6 md:grid-cols-2">
                     {/* Input Texto Estándar */}
                     <div>
-                      <label className="block text-xs font-bold text-[#19324B] mb-1.5">
+                      <label htmlFor="sg-nit" className="block text-xs font-bold text-[#19324B] mb-1.5">
                         Número de Identificación Tributaria (NIT)
                       </label>
                       <input
+                        id="sg-nit"
                         type="text"
                         placeholder="Ej. 1234567-8"
                         className="w-full rounded-xl border border-[#DCDCDC] bg-white px-3.5 py-2.5 text-xs text-[#19324B] placeholder-[#94A3B8] focus:border-[#14649B] focus:outline-none focus:ring-1 focus:ring-[#14649B]"
@@ -1046,10 +1035,11 @@ export default function StyleGuide() {
 
                     {/* Input con Error */}
                     <div>
-                      <label className="block text-xs font-bold text-[#DC2626] mb-1.5">
+                      <label htmlFor="sg-email" className="block text-xs font-bold text-[#DC2626] mb-1.5">
                         Correo Electrónico Notificaciones
                       </label>
                       <input
+                        id="sg-email"
                         type="email"
                         defaultValue="correo_invalido@"
                         className="w-full rounded-xl border border-[#DC2626] bg-red-50/40 px-3.5 py-2.5 text-xs text-[#DC2626] focus:border-[#DC2626] focus:outline-none focus:ring-1 focus:ring-[#DC2626]"
@@ -1062,10 +1052,12 @@ export default function StyleGuide() {
 
                     {/* Select */}
                     <div>
-                      <label className="block text-xs font-bold text-[#19324B] mb-1.5">
+                      <label htmlFor="sg-personeria" className="block text-xs font-bold text-[#19324B] mb-1.5">
                         Tipo de Personería Jurídica
                       </label>
-                      <select className="w-full rounded-xl border border-[#DCDCDC] bg-white px-3.5 py-2.5 text-xs text-[#19324B] focus:border-[#14649B] focus:outline-none focus:ring-1 focus:ring-[#14649B]">
+                      <select
+                        id="sg-personeria"
+                        className="w-full rounded-xl border border-[#DCDCDC] bg-white px-3.5 py-2.5 text-xs text-[#19324B] focus:border-[#14649B] focus:outline-none focus:ring-1 focus:ring-[#14649B]">
                         <option>Persona Individual con Negocio</option>
                         <option>Persona Jurídica (Sociedad Anónima)</option>
                         <option>Organización No Gubernamental (ONG)</option>
@@ -1074,9 +1066,9 @@ export default function StyleGuide() {
 
                     {/* Checkbox y Radio */}
                     <div className="space-y-3">
-                      <label className="block text-xs font-bold text-[#19324B]">
+                      <p className="block text-xs font-bold text-[#19324B]">
                         Opciones de Notificación
-                      </label>
+                      </p>
                       <label className="flex items-center gap-2.5 text-xs text-[#475569] cursor-pointer">
                         <input
                           type="checkbox"
@@ -1119,31 +1111,16 @@ export default function StyleGuide() {
             >
               <div className="space-y-6">
                 <div className="grid gap-4 md:grid-cols-2">
-                  {/* Card Modelo Oficial SAT */}
-                  <div className="group relative block rounded-2xl border border-[#DCDCDC] bg-white p-5 transition-all duration-200 hover:-translate-y-1 hover:bg-[#14649B] hover:shadow-[0_14px_30px_rgba(20,100,155,0.18)] cursor-pointer">
-                    <div className="flex items-start justify-between gap-3">
-                      <h4 className="text-base font-bold text-[#19324B] transition-colors group-hover:text-white">
-                        Inscripción y Solicitud de NIT
-                      </h4>
-                      <ChevronRight className="h-5 w-5 shrink-0 text-[#94A3B8] transition-colors group-hover:text-white" />
-                    </div>
-                    <p className="mt-2 text-xs leading-relaxed text-[#475569] transition-colors group-hover:text-white/90">
-                      Obtén tu Número de Identificación Tributaria por primera vez en línea para emitir facturas, trabajar bajo relación de dependencia o iniciar actividades comerciales.
-                    </p>
-                  </div>
-
-                  {/* Card Modelo Vehículos */}
-                  <div className="group relative block rounded-2xl border border-[#DCDCDC] bg-white p-5 transition-all duration-200 hover:-translate-y-1 hover:bg-[#0284C7] hover:shadow-[0_14px_30px_rgba(2,132,199,0.18)] cursor-pointer">
-                    <div className="flex items-start justify-between gap-3">
-                      <h4 className="text-base font-bold text-[#19324B] transition-colors group-hover:text-white">
-                        Traspaso Electrónico de Vehículos
-                      </h4>
-                      <ChevronRight className="h-5 w-5 shrink-0 text-[#94A3B8] transition-colors group-hover:text-white" />
-                    </div>
-                    <p className="mt-2 text-xs leading-relaxed text-[#475569] transition-colors group-hover:text-white/90">
-                      Realiza el cambio de propietario de vehículos terrestres de forma inmediata con firma electrónica avanzada y validación notarial en línea.
-                    </p>
-                  </div>
+                  <Card
+                    tone="azul"
+                    title="Inscripción y Solicitud de NIT"
+                    description="Obtén tu Número de Identificación Tributaria por primera vez en línea para emitir facturas, trabajar bajo relación de dependencia o iniciar actividades comerciales."
+                  />
+                  <Card
+                    tone="celeste"
+                    title="Traspaso Electrónico de Vehículos"
+                    description="Realiza el cambio de propietario de vehículos terrestres de forma inmediata con firma electrónica avanzada y validación notarial en línea."
+                  />
                 </div>
 
                 <div className="rounded-xl border-l-4 border-[#14649B] bg-[#F4F6F9] p-4 text-xs text-[#475569]">
@@ -1151,13 +1128,143 @@ export default function StyleGuide() {
                 </div>
 
                 <CodeSnippet
-                  code={`<div className="group rounded-2xl border border-[#DCDCDC] bg-white p-5 transition-all hover:-translate-y-1 hover:bg-[#14649B] hover:shadow-lg cursor-pointer">
-  <div className="flex items-start justify-between gap-3">
-    <h4 className="text-base font-bold text-[#19324B] group-hover:text-white">Título en Lenguaje Claro</h4>
-    <ChevronRight className="h-5 w-5 text-[#94A3B8] group-hover:text-white" />
-  </div>
-  <p className="mt-2 text-xs text-[#475569] group-hover:text-white/90">Descripción orientada al beneficio ciudadano en 2 oraciones.</p>
-</div>`}
+                  code={`import { Card } from '../components/ui/Card';
+
+<Card
+  tone="azul"
+  title="Título en Lenguaje Claro"
+  description="Descripción orientada al beneficio ciudadano en 2 oraciones."
+  onClick={() => abrirTramite(id)}
+/>`}
+                />
+              </div>
+            </SectionDoc>
+
+            {/* MIGAS DE PAN (BREADCRUMBS) Y NAVEGACIÓN PROFUNDA */}
+            {/* MIGAS DE PAN (BREADCRUMBS) Y NAVEGACIÓN PROFUNDA */}
+            <SectionDoc
+              id="breadcrumbs"
+              titulo="Migas de Pan y Navegación Profunda (Breadcrumbs)"
+              descripcion="Mecanismo de orientación jerárquica adaptable. Representa la ubicación del usuario según profundidad y espacio disponible. Principio: profundidad conceptual ≠ cantidad de niveles mostrados simultáneamente."
+            >
+              <div className="space-y-6">
+                {/* 1. DEMOSTRACIÓN VIVA: RUTA ESTÁNDAR COMPLETA */}
+                <div className="rounded-xl border border-[#DCDCDC] bg-white p-6 space-y-3">
+                  <div className="flex items-center justify-between">
+                    <h4 className="text-xs font-bold uppercase tracking-wider text-[#64748B]">
+                      1. Ruta Estándar Completa (Desktop &ge; 1024px)
+                    </h4>
+                    <span className="text-[11px] font-mono text-[#0284C7] bg-[#0284C7]/10 px-2 py-0.5 rounded">
+                      5 Niveles Base
+                    </span>
+                  </div>
+                  <p className="text-xs text-sat-texto-suave">
+                    Muestra la jerarquía completa: Segmento &rsaquo; Área &rsaquo; Contexto &rsaquo; Tema &rsaquo; Contenido / Servicio.
+                  </p>
+                  <div className="bg-[#F8FAFC] border border-[#E2E8F0] p-3 rounded-lg">
+                    <Breadcrumbs
+                      items={[
+                        { label: 'Contribuyentes', onClick: () => alert('N1: Segmento') },
+                        { label: 'Empleo y salarios', onClick: () => alert('N2: Área') },
+                        { label: 'Trabajar en relación de dependencia', onClick: () => alert('N3: Contexto') },
+                        { label: 'ISR para empleados', onClick: () => alert('N4: Tema') },
+                        { label: 'Retenciones de ISR', isCurrent: true },
+                      ]}
+                    />
+                  </div>
+                </div>
+
+                {/* 2. DEMOSTRACIÓN VIVA: NAVEGACIÓN PROFUNDA (NIVEL 6+) */}
+                <div className="rounded-xl border border-[#DCDCDC] bg-white p-6 space-y-3">
+                  <div className="flex items-center justify-between">
+                    <h4 className="text-xs font-bold uppercase tracking-wider text-[#64748B]">
+                      2. Navegación Profunda (Nivel 6+ con Profundización Libre)
+                    </h4>
+                    <span className="text-[11px] font-mono text-[#4D8014] bg-[#4D8014]/10 px-2 py-0.5 rounded">
+                      Nivel 6+ Dinámico
+                    </span>
+                  </div>
+                  <p className="text-xs text-sat-texto-suave">
+                    En desktop se muestra la ruta completa o compacta según ancho disponible. En móvil, <strong>'Inicio' es el ancla raíz y no cuenta</strong> como nivel de contenido: la elipsis <strong>[…]</strong> oculta los niveles intermedios y muestra los 2 niveles clave.
+                  </p>
+                  <div className="bg-[#F8FAFC] border border-[#E2E8F0] p-3 rounded-lg">
+                    <Breadcrumbs
+                      maxMobileItems={2}
+                      items={[
+                        { label: 'Contribuyentes', onClick: () => alert('N1: Segmento') },
+                        { label: 'Empleo y salarios', onClick: () => alert('N2: Área') },
+                        { label: 'Trabajar en relación de dependencia', onClick: () => alert('N3: Contexto') },
+                        { label: 'ISR para empleados', onClick: () => alert('N4: Tema') },
+                        { label: 'Retenciones de ISR', onClick: () => alert('N5: Contenido / Servicio') },
+                        { label: 'Cálculo de la retención', onClick: () => alert('N6: Subcontenido / Procedimiento') },
+                        { label: 'Ejemplo de cálculo', isCurrent: true },
+                      ]}
+                    />
+                  </div>
+                </div>
+
+                {/* 3. VARIANTE ULTRA-COMPACTA PARA MÓVIL (BACK-ONLY) */}
+                <div className="rounded-xl border border-[#DCDCDC] bg-white p-6 space-y-3">
+                  <div className="flex items-center justify-between">
+                    <h4 className="text-xs font-bold uppercase tracking-wider text-[#64748B]">
+                      3. Variante Móvil Ultra-compacta (Retorno Inmediato)
+                    </h4>
+                    <span className="text-[11px] font-mono text-[#C25E00] bg-[#C25E00]/10 px-2 py-0.5 rounded">
+                      Móvil / Formularios
+                    </span>
+                  </div>
+                  <p className="text-xs text-sat-texto-suave">
+                    Para vistas transaccionales en móvil, permite retornar limpiamente al nivel padre inmediato.
+                  </p>
+                  <div className="bg-[#F8FAFC] border border-[#E2E8F0] p-3 rounded-lg">
+                    <Breadcrumbs
+                      mobileVariant="back-only"
+                      items={[
+                        { label: 'Contribuyentes', onClick: () => alert('N1') },
+                        { label: 'Empleo y salarios', onClick: () => alert('N2') },
+                        { label: 'Trabajar en relación de dependencia', onClick: () => alert('Volviendo al padre') },
+                        { label: 'Cálculo de la retención', isCurrent: true },
+                      ]}
+                    />
+                  </div>
+                </div>
+
+                {/* REGLAS NORMATIVAS Y ARQUITECTURA */}
+                <div className="grid gap-4 md:grid-cols-2">
+                  <div className="rounded-xl border-l-4 border-[#14649B] bg-[#F4F6F9] p-4 text-xs text-[#475569] space-y-2">
+                    <strong className="text-[#19324B] block text-sm">Roles Funcionales de Navegación:</strong>
+                    <ul className="list-disc pl-4 space-y-1">
+                      <li><strong>Breadcrumb:</strong> Ubicación jerárquica dinámica; se adapta a la profundidad y al espacio disponible (compactación elíptica en móvil).</li>
+                      <li><strong>Sidebar:</strong> Navegación contextual local (Nivel 4+). <em>Tener Nivel 7 u 8 no implica construir un Sidebar de 7 u 8 niveles.</em></li>
+                      <li><strong>Contenido Central:</strong> Página actual (Nivel 5+ Contenido / Servicio).</li>
+                      <li><strong>Enlaces Contextuales:</strong> Navegación transversal entre contenidos afines.</li>
+                    </ul>
+                  </div>
+
+                  <div className="rounded-xl border-l-4 border-[#4D8014] bg-[#F0FDF4] p-4 text-xs text-[#166534] space-y-2">
+                    <strong className="text-[#14532D] block text-sm">Taxonomía y Modelo de Datos:</strong>
+                    <ul className="list-disc pl-4 space-y-1">
+                      <li><strong>Nivel 5 Contenido / Servicio:</strong> El 67% son guías informativas; <code>tipo_interaccion</code> define si es Trámite en Línea, Consulta, Guía o Descarga.</li>
+                      <li><strong>Modelo Padre / Hijo:</strong> En base de datos usar <code>parent_id</code>, no campos estáticos <code>categoria1..categoria9</code>.</li>
+                      <li><strong>Cero números en títulos:</strong> Plain Language orientado al beneficio ciudadano.</li>
+                      <li><strong>W3C / WCAG 2.2 AA:</strong> Marcado semántico <code>&lt;nav&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;li&gt;</code> y <code>aria-current=&quot;page&quot;</code>.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <CodeSnippet
+                  code={`import { Breadcrumbs } from '../components/ui/Breadcrumbs';
+
+<Breadcrumbs
+  items={[
+    { label: 'Contribuyentes', onClick: () => irA('contribuyentes') },
+    { label: 'Empleo y salarios', onClick: () => irA('empleo') },
+    { label: 'Trabajar en relación de dependencia', onClick: () => irA('dependencia') },
+    { label: 'ISR para empleados', onClick: () => irA('isr-empleados') },
+    { label: 'Retenciones de ISR', isCurrent: true }
+  ]}
+  maxMobileItems={2} // En móvil: Inicio › […] › ISR para empleados › Retenciones de ISR
+/>`}
                 />
               </div>
             </SectionDoc>
@@ -1171,37 +1278,24 @@ export default function StyleGuide() {
               <div className="space-y-6">
                 <div className="rounded-xl border border-[#DCDCDC] bg-white p-6">
                   <h4 className="text-xs font-bold uppercase tracking-wider text-[#64748B] mb-3">
-                    Modalidades y Estados de Trámite
+                    Modalidades y Estados de Trámite <span className="font-mono text-[#94A3B8]">(&lt;Badge /&gt;)</span>
                   </h4>
                   <div className="flex flex-wrap items-center gap-2.5">
-                    <span className="inline-flex items-center gap-1.5 rounded-full bg-[#14649B]/10 px-2.5 py-1 text-xs font-bold text-[#14649B]">
-                      <span className="h-1.5 w-1.5 rounded-full bg-[#14649B]" />
-                      100% En Línea
-                    </span>
-
-                    <span className="inline-flex items-center gap-1.5 rounded-full bg-[#0284C7]/10 px-2.5 py-1 text-xs font-bold text-[#0284C7]">
-                      Agencia Virtual
-                    </span>
-
-                    <span className="inline-flex items-center gap-1.5 rounded-full bg-[#8CC63F]/20 px-2.5 py-1 text-xs font-bold text-[#4D8014]">
-                      Trámite Gratuito
-                    </span>
-
-                    <span className="inline-flex items-center gap-1.5 rounded-full bg-[#FFB806]/20 px-2.5 py-1 text-xs font-bold text-[#92400E]">
-                      Cita Previa Requerida
-                    </span>
-
-                    <span className="inline-flex items-center gap-1.5 rounded-full bg-[#DCDCDC] px-2.5 py-1 text-xs font-bold text-[#475569]">
-                      Presencial
-                    </span>
+                    <Badge tone="online">100% En Línea</Badge>
+                    <Badge tone="agencia">Agencia Virtual</Badge>
+                    <Badge tone="gratuito">Trámite Gratuito</Badge>
+                    <Badge tone="cita">Cita Previa Requerida</Badge>
+                    <Badge tone="presencial">Presencial</Badge>
+                    <Badge tone="neutral" dot={false}>Neutral sin punto</Badge>
                   </div>
                 </div>
 
                 <CodeSnippet
-                  code={`<span className="inline-flex items-center gap-1.5 rounded-full bg-[#14649B]/10 px-2.5 py-1 text-xs font-bold text-[#14649B]">
-  <span className="h-1.5 w-1.5 rounded-full bg-[#14649B]" />
-  100% En Línea
-</span>`}
+                  code={`import { Badge } from '../components/ui/Badge';
+
+<Badge tone="online">100% En Línea</Badge>
+<Badge tone="gratuito">Trámite Gratuito</Badge>
+<Badge tone="presencial">Presencial</Badge>`}
                 />
               </div>
             </SectionDoc>
@@ -1213,58 +1307,28 @@ export default function StyleGuide() {
               descripcion="Avisos contextuales organizados por severidad con íconos semánticos y contraste validado según pautas WCAG 2.2 AA."
             >
               <div className="space-y-4">
-                {/* Info */}
-                <div className="flex items-start gap-3 rounded-xl border border-[#14649B]/30 bg-[#14649B]/5 p-4 text-[#19324B]">
-                  <Info className="h-5 w-5 shrink-0 text-[#14649B] mt-0.5" />
-                  <div className="text-xs leading-relaxed">
-                    <p className="font-bold text-[#14649B]">Información Importante</p>
-                    <p className="mt-0.5 text-[#475569]">
-                      Los días inhábiles y asuetos bancarios trasladan el vencimiento de declaraciones al siguiente día hábil inmediato.
-                    </p>
-                  </div>
-                </div>
-
-                {/* Éxito */}
-                <div className="flex items-start gap-3 rounded-xl border border-[#8CC63F]/40 bg-[#8CC63F]/10 p-4 text-[#19324B]">
-                  <CheckCircle2 className="h-5 w-5 shrink-0 text-[#4D8014] mt-0.5" />
-                  <div className="text-xs leading-relaxed">
-                    <p className="font-bold text-[#4D8014]">Operación Exitosa</p>
-                    <p className="mt-0.5 text-[#475569]">
-                      Tu solicitud de Solvencia Fiscal fue aprobada. Puedes descargar la constancia digital con código QR.
-                    </p>
-                  </div>
-                </div>
-
-                {/* Advertencia */}
-                <div className="flex items-start gap-3 rounded-xl border border-[#FFB806]/40 bg-[#FFB806]/10 p-4 text-[#19324B]">
-                  <AlertTriangle className="h-5 w-5 shrink-0 text-[#D97706] mt-0.5" />
-                  <div className="text-xs leading-relaxed">
-                    <p className="font-bold text-[#92400E]">Próximo Vencimiento</p>
-                    <p className="mt-0.5 text-[#475569]">
-                      El plazo para presentar la declaración del Impuesto de Circulación vence en 5 días calendario.
-                    </p>
-                  </div>
-                </div>
-
-                {/* Error */}
-                <div className="flex items-start gap-3 rounded-xl border border-[#DC2626]/30 bg-red-50/60 p-4 text-[#19324B]">
-                  <AlertCircle className="h-5 w-5 shrink-0 text-[#DC2626] mt-0.5" />
-                  <div className="text-xs leading-relaxed">
-                    <p className="font-bold text-[#DC2626]">No se pudo procesar la solicitud</p>
-                    <p className="mt-0.5 text-[#475569]">
-                      Verifica que los datos ingresados coincidan exactamente con tu Documento Personal de Identificación (DPI).
-                    </p>
-                  </div>
-                </div>
+                <Alert tone="info" title="Información Importante">
+                  Los días inhábiles y asuetos bancarios trasladan el vencimiento de declaraciones al siguiente día hábil inmediato.
+                </Alert>
+                <Alert tone="success" title="Operación Exitosa">
+                  Tu solicitud de Solvencia Fiscal fue aprobada. Puedes descargar la constancia digital con código QR.
+                </Alert>
+                <Alert tone="warning" title="Próximo Vencimiento">
+                  El plazo para presentar la declaración del Impuesto de Circulación vence en 5 días calendario.
+                </Alert>
+                <Alert tone="error" title="No se pudo procesar la solicitud">
+                  Verifica que los datos ingresados coincidan exactamente con tu Documento Personal de Identificación (DPI).
+                </Alert>
 
                 <CodeSnippet
-                  code={`<div className="flex items-start gap-3 rounded-xl border border-[#14649B]/30 bg-[#14649B]/5 p-4">
-  <Info className="h-5 w-5 text-[#14649B]" />
-  <div className="text-xs">
-    <p className="font-bold text-[#14649B]">Título de Alerta</p>
-    <p className="text-[#475569]">Mensaje explicativo claro.</p>
-  </div>
-</div>`}
+                  code={`import { Alert } from '../components/ui/Alert';
+
+<Alert tone="info" title="Información Importante">
+  Los días inhábiles trasladan el vencimiento al siguiente día hábil.
+</Alert>
+<Alert tone="error" title="No se pudo procesar la solicitud">
+  Verifica que los datos coincidan con tu DPI.
+</Alert>`}
                 />
               </div>
             </SectionDoc>
@@ -1397,7 +1461,7 @@ export default function StyleGuide() {
                   </h4>
                   <div className="grid gap-4 md:grid-cols-2">
                     {[0, 1].map((i) => (
-                      <div key={i} className="rounded-2xl border border-[#DCDCDC] bg-white p-5">
+                      <div key={i} className="rounded-xl border border-[#DCDCDC] bg-white p-5">
                         <div className="flex items-start justify-between gap-3">
                           <div className="h-4 w-3/5 rounded bg-[#E9EDF2] animate-pulse" />
                           <div className="h-5 w-5 shrink-0 rounded bg-[#E9EDF2] animate-pulse" />
@@ -1438,7 +1502,7 @@ export default function StyleGuide() {
 
                 <CodeSnippet
                   code={`{/* Skeleton con la forma del contenido final */}
-<div className="rounded-2xl border border-[#DCDCDC] bg-white p-5">
+<div className="rounded-xl border border-[#DCDCDC] bg-white p-5">
   <div className="h-4 w-3/5 rounded bg-[#E9EDF2] animate-pulse" />
   <div className="mt-3 h-3 w-full rounded bg-[#F4F6F9] animate-pulse" />
   <div className="mt-4 h-8 w-32 rounded-lg bg-[#E9EDF2] animate-pulse" />
@@ -1447,6 +1511,66 @@ export default function StyleGuide() {
 {/* Spinner para operaciones cortas */}
 <Loader2 className="h-4 w-4 animate-spin text-[#14649B]" />`}
                 />
+              </div>
+            </SectionDoc>
+
+            {/* MODAL Y DIÁLOGOS */}
+            <SectionDoc
+              id="modal"
+              titulo="Modal y Diálogos"
+              descripcion="Diálogo accesible sobre una tarea enfocada: consultar una ficha de trámite o confirmar una acción. Cierra con Esc, clic en el backdrop o el botón X, y devuelve el foco al elemento previo. Usa la duración de panel y obedece prefers-reduced-motion."
+            >
+              <div className="space-y-6">
+                <div className="rounded-xl border border-[#DCDCDC] bg-white p-6">
+                  <h4 className="text-xs font-bold uppercase tracking-wider text-[#64748B] mb-3">
+                    Demostración en vivo <span className="font-mono text-[#94A3B8]">(&lt;Modal /&gt;)</span>
+                  </h4>
+                  <Button onClick={() => setModalOpen(true)}>
+                    Abrir modal de ejemplo
+                  </Button>
+                  <p className="mt-3 text-[11px] text-[#64748B]">
+                    Prueba cerrar con la tecla Esc, clic fuera del panel o el botón X. El foco regresa al botón al cerrar.
+                  </p>
+                </div>
+
+                <CodeSnippet
+                  code={`import { Modal } from '../components/ui/Modal';
+import { Button } from '../components/ui/Button';
+
+<Modal
+  open={modalOpen}
+  onClose={() => setModalOpen(false)}
+  title="Solicitar NIT por primera vez"
+  footer={
+    <>
+      <Button variant="outline" onClick={() => setModalOpen(false)}>Cancelar</Button>
+      <Button onClick={continuar}>Continuar</Button>
+    </>
+  }
+>
+  Confirma que tus datos del DPI coinciden con los del Registro Tributario.
+</Modal>`}
+                />
+
+                <Modal
+                  open={modalOpen}
+                  onClose={() => setModalOpen(false)}
+                  title="Confirmación de trámite"
+                  footer={
+                    <>
+                      <Button variant="outline" onClick={() => setModalOpen(false)}>
+                        Cancelar
+                      </Button>
+                      <Button onClick={() => setModalOpen(false)}>
+                        Continuar
+                      </Button>
+                    </>
+                  }
+                >
+                  Para continuar con la <strong className="text-sat-texto">inscripción y solicitud de NIT</strong>,
+                  confirma que tus datos del Documento Personal de Identificación (DPI) coinciden con el Registro
+                  Tributario Unificado (RTU).
+                </Modal>
               </div>
             </SectionDoc>
 
@@ -1697,6 +1821,185 @@ export default function StyleGuide() {
                     })}
                   </tbody>
                 </table>
+              </div>
+            </SectionDoc>
+
+            {/* RESPONSIVE DESIGN & MOBILE FIRST */}
+            <SectionDoc
+              id="responsive"
+              titulo="Responsive Design & Mobile First"
+              descripcion="Sistema normativo de adaptabilidad por viewport. Regla fundamental: diseñar primero para el espacio disponible más limitado y ampliar progresivamente la experiencia sin alterar la arquitectura de información."
+            >
+              <div className="space-y-6">
+                {/* REGLA DE ORO CALLOUT */}
+                <div className="rounded-xl border-l-4 border-[#14649B] bg-[#F4F6F9] p-4 text-xs text-[#475569] space-y-1">
+                  <strong className="text-[#19324B] block text-sm">
+                    Regla de Oro de la Capa de Presentación:
+                  </strong>
+                  <p>
+                    El diseño responsivo pertenece a la capa de presentación/interacción; <strong>NO modifica la Arquitectura de Información</strong>. El árbol taxonómico de 783 contenidos permanece idéntico en 360px y en 1920px.
+                  </p>
+                </div>
+
+                {/* BREAKPOINTS OFICIALES */}
+                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                  {[
+                    {
+                      rango: 'Mobile',
+                      ancho: '< 768px',
+                      color: '#0284C7',
+                      desc: '1 Columna, Drawer off-canvas, Breadcrumb con [...], botones a ancho completo (≥ 48px).'
+                    },
+                    {
+                      rango: 'Tablet',
+                      ancho: '768px – 1023px',
+                      color: '#4D8014',
+                      desc: '2 Columnas, menús colapsables contextuales, espaciado equilibrado.'
+                    },
+                    {
+                      rango: 'Desktop',
+                      ancho: '1024px – 1439px',
+                      color: '#14649B',
+                      desc: '3 a 4 Columnas, Sidebar vertical visible en pantalla, Breadcrumb expandido.'
+                    },
+                    {
+                      rango: 'Wide Desktop',
+                      ancho: '≥ 1440px',
+                      color: '#19324B',
+                      desc: 'Contenedor centrado max-w-7xl (1280px), márgenes laterales limpios, sin dispersión.'
+                    }
+                  ].map((bp) => (
+                    <div key={bp.rango} className="rounded-xl border border-[#DCDCDC] bg-white p-4 space-y-2">
+                      <div className="flex items-center justify-between">
+                        <span className="font-bold text-xs" style={{ color: bp.color }}>
+                          {bp.rango}
+                        </span>
+                        <code className="text-[11px] font-mono bg-slate-100 px-1.5 py-0.5 rounded text-slate-700">
+                          {bp.ancho}
+                        </code>
+                      </div>
+                      <p className="text-xs text-[#475569]">{bp.desc}</p>
+                    </div>
+                  ))}
+                </div>
+
+                {/* INVARIABLE VS VARIABLE */}
+                <div className="grid gap-4 md:grid-cols-2">
+                  <div className="rounded-xl border border-[#DCDCDC] bg-white p-4 space-y-2">
+                    <h4 className="text-xs font-bold uppercase tracking-wider text-[#166534] flex items-center gap-1.5">
+                      <span className="h-2 w-2 rounded-full bg-[#166534]" />
+                      Invariables (No cambian por viewport)
+                    </h4>
+                    <ul className="text-xs text-[#475569] space-y-1 list-disc pl-4">
+                      <li>Nomenclatura oficial y lenguaje claro (sin números).</li>
+                      <li>Catálogo completo de 783 contenidos y servicios.</li>
+                      <li>Jerarquía de información (L1 a L6+).</li>
+                      <li>Reglas de negocio, validaciones fiscales y aduaneras.</li>
+                      <li>Acciones transaccionales disponibles.</li>
+                    </ul>
+                  </div>
+
+                  <div className="rounded-xl border border-[#DCDCDC] bg-white p-4 space-y-2">
+                    <h4 className="text-xs font-bold uppercase tracking-wider text-[#0284C7] flex items-center gap-1.5">
+                      <span className="h-2 w-2 rounded-full bg-[#0284C7]" />
+                      Variables (Se adaptan al espacio)
+                    </h4>
+                    <ul className="text-xs text-[#475569] space-y-1 list-disc pl-4">
+                      <li>Distribución de columnas (1 col en mobile → 4 col en desktop).</li>
+                      <li>Sidebar vertical visible → Drawer off-canvas en móvil.</li>
+                      <li>Breadcrumb completo → Versión compacta con [...] elíptico.</li>
+                      <li>Tablas anchas → Scroll horizontal con sombra o tarjetas apiladas.</li>
+                      <li>Padding de contenedor (px-4 en móvil → px-8 en desktop).</li>
+                    </ul>
+                  </div>
+                </div>
+
+                {/* MATRIZ DE CERTIFICACIÓN POR VIEWPORT */}
+                <div className="overflow-x-auto rounded-xl border border-[#DCDCDC] bg-white">
+                  <table className="w-full text-left text-xs">
+                    <thead className="border-b border-[#DCDCDC] bg-[#F4F6F9]">
+                      <tr>
+                        <th className="py-2.5 px-3 font-bold text-[#19324B]">Viewport</th>
+                        <th className="py-2.5 px-3 font-bold text-[#19324B]">Categoría</th>
+                        <th className="py-2.5 px-3 font-bold text-[#19324B]">Dispositivo Típico</th>
+                        <th className="py-2.5 px-3 font-bold text-[#19324B]">Comportamiento Esperado</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-[#E9EDF2]">
+                      {[
+                        ['320 px', 'Mobile Ultra-pequeño', 'iPhone SE 1st gen', 'Sin scroll horizontal, botones full-width, textos legibles.'],
+                        ['360 px', 'Mobile Android Base', 'Samsung Galaxy A', 'Navegación fluida, formulario vertical, área táctil ≥ 48px.'],
+                        ['390 px', 'Mobile iOS Estándar', 'iPhone 13 / 14 / 15', 'Breadcrumb compacto con [...], drawer de sección fluido.'],
+                        ['768 px', 'Tablet Portrait', 'iPad estándar', 'Grid a 2 columnas equilibrado, cabecera de búsqueda cómoda.'],
+                        ['1024 px', 'Desktop / Laptop', 'Laptops 13" / iPad Pro', 'Sidebar lateral visible, Breadcrumb expandido, 3-4 columnas.'],
+                        ['1280 px', 'Desktop HD', 'Monitores estándar', 'Cuadrícula completa, modales centrados max-w-2xl.'],
+                        ['1440 px', 'Wide Desktop', 'Pantallas 2K', 'Contenedor max-w-7xl centrado sin estiramiento de elementos.'],
+                        ['1920 px', 'Full HD', 'Monitores 1080p corporativos', 'Márgenes neutros holgados, sin tipografía huérfana.']
+                      ].map(([vp, cat, disp, comp]) => (
+                        <tr key={vp} className="hover:bg-[#F8FAFC]">
+                          <td className="py-2 px-3 font-mono font-bold text-[#14649B]">{vp}</td>
+                          <td className="py-2 px-3 font-medium text-[#19324B]">{cat}</td>
+                          <td className="py-2 px-3 text-[#64748B]">{disp}</td>
+                          <td className="py-2 px-3 text-[#475569]">{comp}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+
+                {/* PRUEBAS DE RESILIENCIA ANTE CONTENIDO EXTREMO */}
+                <div className="rounded-xl border border-[#DCDCDC] bg-white p-4 space-y-2">
+                  <h4 className="text-xs font-bold uppercase tracking-wider text-[#64748B]">
+                    Resiliencia ante Contenido Extremo (Edge Cases)
+                  </h4>
+                  <div className="grid gap-2 sm:grid-cols-2 text-xs text-[#475569]">
+                    <div className="p-2.5 rounded bg-slate-50 border border-slate-200">
+                      <strong>Títulos Ultralargos (&gt; 120 caracteres):</strong> Truncamiento seguro o ajuste multilínea con salto natural sin romper la tarjeta.
+                    </div>
+                    <div className="p-2.5 rounded bg-slate-50 border border-slate-200">
+                      <strong>Profundidad en Nivel 8:</strong> El breadcrumb móvil colapsa bajo [...] sin importar la cantidad de ancestros.
+                    </div>
+                    <div className="p-2.5 rounded bg-slate-50 border border-slate-200">
+                      <strong>Zoom al 200%:</strong> Todos los textos y botones escalan sin desbordamiento horizontal ni solapamiento.
+                    </div>
+                    <div className="p-2.5 rounded bg-slate-50 border border-slate-200">
+                      <strong>Ergonomía Táctil:</strong> Cero dependencia de hover; todas las interacciones son accesibles por tap/clic directo.
+                    </div>
+                  </div>
+                </div>
+
+                {/* JERARQUÍA DE REFERENCIAS NORMATIVAS OFICIALES */}
+                <div className="rounded-xl border border-[#DCDCDC] bg-white p-5 space-y-3">
+                  <div className="flex items-center justify-between">
+                    <h4 className="text-xs font-bold uppercase tracking-wider text-[#19324B]">
+                      Jerarquía de Referencias Normativas Web
+                    </h4>
+                    <span className="text-[11px] font-mono text-[#14649B] bg-[#14649B]/10 px-2 py-0.5 rounded font-bold">
+                      Design System SAT = Autoridad
+                    </span>
+                  </div>
+                  <p className="text-xs text-[#475569]">
+                    Las referencias externas aportan buenas prácticas; el <strong>Design System SAT</strong> es la autoridad visual y de componentes del portal. Fluent 2 queda formalmente excluido.
+                  </p>
+                  <div className="grid gap-2.5 sm:grid-cols-2 md:grid-cols-4 text-xs">
+                    <div className="p-3 rounded-lg bg-[#F8FAFC] border border-[#CBD5E1]">
+                      <span className="font-bold text-[#14649B] block mb-0.5">GOV.UK Design System</span>
+                      <p className="text-[11px] text-[#475569]">Servicios públicos, formularios accesibles, layouts y lenguaje ciudadano.</p>
+                    </div>
+                    <div className="p-3 rounded-lg bg-[#F8FAFC] border border-[#CBD5E1]">
+                      <span className="font-bold text-[#059669] block mb-0.5">W3C WCAG 2.2 AA</span>
+                      <p className="text-[11px] text-[#475569]">Accesibilidad obligatoria: reflow, zoom 200%, touch targets ≥ 44px.</p>
+                    </div>
+                    <div className="p-3 rounded-lg bg-[#F8FAFC] border border-[#CBD5E1]">
+                      <span className="font-bold text-[#0284C7] block mb-0.5">MDN Web Docs</span>
+                      <p className="text-[11px] text-[#475569]">Estándar técnico web: media queries, viewports, CSS Grid fluido.</p>
+                    </div>
+                    <div className="p-3 rounded-lg bg-[#F8FAFC] border border-[#CBD5E1]">
+                      <span className="font-bold text-[#C25E00] block mb-0.5">web.dev</span>
+                      <p className="text-[11px] text-[#475569]">Rendimiento móvil, optimización de carga y Core Web Vitals (LCP/CLS).</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </SectionDoc>
 

@@ -27,7 +27,7 @@ export const InstitutionalFooter: React.FC<InstitutionalFooterProps> = ({ onOpen
           
           {/* Columna 1: Acerca de SAT */}
           <div>
-            <h4 className="text-sm font-extrabold uppercase tracking-wider text-[#19AFE1] mb-3">
+            <h4 className="text-sm font-extrabold uppercase tracking-wider text-sat-celeste mb-3">
               Acerca de SAT
             </h4>
             <ul className="space-y-2 text-slate-300">
@@ -44,8 +44,8 @@ export const InstitutionalFooter: React.FC<InstitutionalFooterProps> = ({ onOpen
                 {[
                   { name: 'Facebook', url: 'https://facebook.com/SATGuatemala', label: 'f' },
                   { name: 'X', url: 'https://x.com/SATGT', label: '𝕏' },
-                  { name: 'Instagram', url: 'https://instagram.com/satguatemala', label: '📸' },
-                  { name: 'TikTok', url: 'https://tiktok.com/@satgt', label: '🎵' },
+                  { name: 'Instagram', url: 'https://instagram.com/satguatemala', label: 'IG' },
+                  { name: 'TikTok', url: 'https://tiktok.com/@satgt', label: 'TK' },
                   { name: 'LinkedIn', url: 'https://linkedin.com/company/sat-guatemala', label: 'in' },
                 ].map((s, idx) => (
                   <a
@@ -65,23 +65,23 @@ export const InstitutionalFooter: React.FC<InstitutionalFooterProps> = ({ onOpen
 
           {/* Columna 2: Ubicaciones y Horarios */}
           <div>
-            <h4 className="text-sm font-extrabold uppercase tracking-wider text-[#19AFE1] mb-3">
+            <h4 className="text-sm font-extrabold uppercase tracking-wider text-sat-celeste mb-3">
               Ubicaciones y Horarios
             </h4>
             <ul className="space-y-2 text-slate-300">
               <li>
                 <a href="https://portal.sat.gob.gt/portal/ubicacion-agencias/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center gap-1.5">
-                  <MapPin className="w-3.5 h-3.5 text-[#19AFE1]" /> Agencias y Oficinas Tributarias
+                  <MapPin className="w-3.5 h-3.5 text-sat-celeste" /> Agencias y Oficinas Tributarias
                 </a>
               </li>
               <li>
                 <a href="https://portal.sat.gob.gt/portal/aduanas-ubicaciones/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center gap-1.5">
-                  <MapPin className="w-3.5 h-3.5 text-[#19AFE1]" /> Aduanas de la República
+                  <MapPin className="w-3.5 h-3.5 text-sat-celeste" /> Aduanas de la República
                 </a>
               </li>
               <li>
                 <a href="https://portal.sat.gob.gt/portal/oficinas-centrales/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center gap-1.5">
-                  <Clock className="w-3.5 h-3.5 text-[#19AFE1]" /> Oficinas Centrales
+                  <Clock className="w-3.5 h-3.5 text-sat-celeste" /> Oficinas Centrales
                 </a>
               </li>
             </ul>
@@ -89,7 +89,7 @@ export const InstitutionalFooter: React.FC<InstitutionalFooterProps> = ({ onOpen
 
           {/* Columna 3: Servicio no conforme & Denuncias */}
           <div>
-            <h4 className="text-sm font-extrabold uppercase tracking-wider text-[#19AFE1] mb-3">
+            <h4 className="text-sm font-extrabold uppercase tracking-wider text-sat-celeste mb-3">
               Atención de Quejas
             </h4>
             <ul className="space-y-2 text-slate-300 mb-3">
@@ -109,7 +109,7 @@ export const InstitutionalFooter: React.FC<InstitutionalFooterProps> = ({ onOpen
 
           {/* Columna 4: Consultas y Contact Center 1550 */}
           <div>
-            <h4 className="text-sm font-extrabold uppercase tracking-wider text-[#19AFE1] mb-3">
+            <h4 className="text-sm font-extrabold uppercase tracking-wider text-sat-celeste mb-3">
               Consultas y Contacto
             </h4>
             <ul className="space-y-2 text-slate-300 mb-3">
@@ -126,12 +126,12 @@ export const InstitutionalFooter: React.FC<InstitutionalFooterProps> = ({ onOpen
                 </div>
                 <div>
                   <div className="text-xs font-bold text-white">Contact Center SAT</div>
-                  <div className="text-sm font-extrabold text-[#19AFE1] tracking-wider">1550</div>
+                  <div className="text-sm font-extrabold text-sat-celeste tracking-wider">1550</div>
                 </div>
               </div>
               <div className="flex items-center gap-2 text-[11px] text-slate-300 pt-1 border-t border-white/10">
                 <a href="https://wa.me/50223297070" target="_blank" rel="noopener noreferrer" className="hover:text-[#8CC63F] font-bold">
-                  💬 WhatsApp
+                  WhatsApp
                 </a>
                 <span>·</span>
                 <span className="text-slate-400">Lunes a Viernes 08:00 a 16:30</span>
@@ -151,7 +151,7 @@ export const InstitutionalFooter: React.FC<InstitutionalFooterProps> = ({ onOpen
             {onOpenStyleGuide && (
               <button
                 onClick={onOpenStyleGuide}
-                className="hover:text-white text-[#19AFE1] flex items-center gap-1 font-semibold transition-colors"
+                className="hover:text-white text-sat-celeste flex items-center gap-1 font-semibold transition-colors"
               >
                 <Palette className="w-3.5 h-3.5" />
                 <span>Design System</span>
@@ -160,7 +160,7 @@ export const InstitutionalFooter: React.FC<InstitutionalFooterProps> = ({ onOpen
 
             <a
               href="#/diagrama"
-              className="hover:text-white text-[#19AFE1] flex items-center gap-1 font-semibold transition-colors"
+              className="hover:text-white text-sat-celeste flex items-center gap-1 font-semibold transition-colors"
             >
               <Layers className="w-3.5 h-3.5" />
               <span>Diagrama de Árbol</span>
@@ -173,11 +173,11 @@ export const InstitutionalFooter: React.FC<InstitutionalFooterProps> = ({ onOpen
             {/* Botón Volver Arriba en Naranja Normativo #F37521 */}
             <button
               onClick={scrollToTop}
-              className="w-8 h-8 rounded-full bg-[#F37521] hover:bg-[#d96316] text-[#19324B] flex items-center justify-center shadow-md transition-transform hover:-translate-y-1 active:scale-90 font-bold"
+              className="w-8 h-8 rounded-full bg-sat-comp-naranja hover:bg-[#d96316] text-sat-azul-oscuro flex items-center justify-center shadow-md transition-transform hover:-translate-y-1 active:scale-90 font-bold motion-reduce:hover:translate-y-0"
               title="Volver al inicio de la página"
               aria-label="Volver arriba"
             >
-              <ArrowUp className="w-4 h-4 text-[#19324B]" />
+              <ArrowUp className="w-4 h-4 text-sat-azul-oscuro" />
             </button>
           </div>
         </div>

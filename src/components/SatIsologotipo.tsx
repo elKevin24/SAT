@@ -17,9 +17,17 @@ export const SatIsologotipo: React.FC<SatIsologotipoProps> = ({
   variant = 'azul',
   showSubtitle = true
 }) => {
-  // Colores normativos según variante
-  const primaryColor = variant === 'blanco' ? '#FFFFFF' : '#14649B';
-  const subtitleColor = variant === 'blanco' ? '#FFFFFF' : '#14649B';
+  const isBlanco = variant === 'blanco';
+
+  const lettersFill = isBlanco ? '#FFFFFF' : variant === 'oscuro' ? '#19324B' : '#14649B';
+  const accentFill = isBlanco ? 'rgba(255,255,255,0.72)' : variant === 'oscuro' ? '#14649B' : '#19AFE1';
+  const subtitleFill = isBlanco ? '#FFFFFF' : '#19324B';
+  const emblemFill = isBlanco ? '#FFFFFF' : 'url(#satGradIsotipo)';
+  const docFill = isBlanco ? 'rgba(255,255,255,0.14)' : '#FFFFFF';
+  const docStroke = isBlanco ? 'rgba(255,255,255,0.4)' : '#BFDCEF';
+  const docLines = isBlanco ? 'rgba(255,255,255,0.38)' : '#A9C9E2';
+  const docFold = isBlanco ? 'rgba(255,255,255,0.2)' : '#DCEBFA';
+  const divider = isBlanco ? 'rgba(255,255,255,0.45)' : '#9BC7E8';
 
   return (
     <div className={`inline-flex flex-col select-none ${className}`} role="img" aria-label="Superintendencia de Administración Tributaria - SAT Guatemala">
@@ -30,47 +38,63 @@ export const SatIsologotipo: React.FC<SatIsologotipoProps> = ({
         className="w-full h-auto"
         preserveAspectRatio="xMidYMid meet"
       >
-        {/* ISOTIPO: Mano señalando hacia la derecha con la factura estilizada */}
-        <g fill={primaryColor}>
-          {/* Dedos y palma estilizada */}
-          <path d="M42 43 C42 40 44 38 48 38 L95 38 C98 38 100 40 100 43 C100 46 98 48 95 48 L48 48 C44 48 42 46 42 43 Z" />
-          <path d="M35 52 C35 49 37 47 41 47 L88 47 C91 47 93 49 93 52 C93 55 91 57 88 57 L41 57 C37 57 35 55 35 52 Z" />
-          <path d="M28 61 C28 58 30 56 34 56 L80 56 C83 56 85 58 85 61 C85 64 83 66 80 66 L34 66 C30 66 28 64 28 61 Z" />
-          
-          {/* Base curva inferior (pulgar/palma) */}
-          <path d="M22 69 C24 67 27 67 30 69 C38 75 50 78 65 78 C70 78 72 80 72 83 C72 86 70 88 65 88 C45 88 30 83 18 73 C16 71 18 69 22 69 Z" />
+        <defs>
+          <linearGradient id="satGradIsotipo" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stopColor="#19AFE1" />
+            <stop offset="100%" stopColor="#14649B" />
+          </linearGradient>
+        </defs>
 
-          {/* Dedo índice apuntando hacia arriba e inclinado hacia la derecha (Factura / Cumplimiento) */}
-          <path d="M55 48 C50 48 46 44 46 39 C46 28 54 18 66 12 C72 9 82 8 88 8 C92 8 95 10 93 14 L80 43 C78 47 75 48 70 48 L55 48 Z M80 18 C74 20 68 26 68 33 C68 35 70 37 72 37 L78 24 C79 21 80 19 80 18 Z" />
+        {/* ISOTIPO: Mano señalando a la derecha sosteniendo la factura estilizada */}
+        <g transform="rotate(-6 70 56)">
+          {/* Factura detrás de la mano */}
+          <g transform="rotate(-6 118 48)">
+            <rect x="92" y="24" width="36" height="54" rx="4" fill={docFill} stroke={docStroke} strokeWidth="1.2" />
+            <path d="M128 24 L116 24 L128 40 Z" fill={docFold} />
+            <rect x="100" y="34" width="20" height="2" rx="1" fill={docLines} />
+            <rect x="100" y="46" width="20" height="2" rx="1" fill={docLines} />
+            <rect x="100" y="58" width="20" height="2" rx="1" fill={docLines} />
+          </g>
+
+          {/* Mano (dedos + palma) como un solo bloque en gradiente institucional */}
+          <g fill={emblemFill}>
+            <rect x="20" y="24" width="46" height="60" rx="14" />
+            <rect x="40" y="26" width="72" height="16" rx="8" />
+            <rect x="38" y="42" width="46" height="14" rx="7" />
+            <rect x="40" y="57" width="34" height="13" rx="6.5" />
+            <rect x="42" y="71" width="22" height="12" rx="6" />
+            <rect x="24" y="76" width="18" height="10" rx="5" />
+          </g>
         </g>
 
-        {/* LOGOTIPO: Tipografía 'SAT' en cursiva con corte dinámico horizontal */}
-        <g fill={primaryColor}>
+        {/* LOGOTIPO: Tipografía 'SAT' en itálica con corte dinámico horizontal */}
+        <g fill={lettersFill}>
           {/* Letra S */}
-          <path d="M125 68 C115 68 106 63 108 52 C109 44 116 41 126 39 C136 37 141 35 142 31 C143 27 139 25 133 25 C124 25 117 28 113 32 L108 21 C114 16 125 13 135 13 C149 13 158 19 156 30 C154 39 146 42 136 44 C126 46 122 48 121 52 C120 56 124 58 131 58 C141 58 149 54 153 50 L158 61 C152 66 140 68 125 68 Z" />
-          
-          {/* Letra A (inclinada) */}
-          <path d="M174 15 L196 15 L218 66 L201 66 L196 53 L178 53 L172 66 L156 66 L174 15 Z M182 43 L193 43 L189 27 L182 43 Z" />
-
+          <path d="M132 66 C120 66 113 61 115 51 C116 44 123 40 132 38 C141 36 145 33 146 30 C147 26 143 24 138 24 C130 24 124 27 120 31 L115 22 C120 18 129 13 139 13 C152 13 159 18 158 28 C157 37 150 41 141 43 C133 45 127 47 127 51 C127 55 131 57 138 57 C147 57 152 55 156 51 L162 62 C155 65 145 66 132 66 Z" />
+          {/* Letra A (inclinada) con corte en la barra */}
+          <path d="M200 13 L226 13 L247 66 L227 66 L220 50 L190 50 L183 66 L163 66 L200 13 Z" />
           {/* Letra T */}
-          <path d="M216 26 L237 26 L220 66 L204 66 L221 26 L206 26 L210 15 L252 15 L247 26 L231 26 Z" />
+          <path d="M232 13 L280 13 L276 26 L236 26 Z" />
+          <path d="M251 24 L266 24 L260 67 L245 67 Z" />
         </g>
+
+        {/* Corte dinámico horizontal en la A */}
+        <path d="M188 46 L222 46 L214 30 L196 30 Z" fill={accentFill} />
 
         {/* Línea divisoria y Nombre oficial completo si showSubtitle está activo */}
         {showSubtitle && (
-          <g fill={subtitleColor}>
-            {/* Barra separadora horizontal */}
-            <rect x="25" y="74" width="270" height="2" rx="1" />
-            
-            {/* Texto: SUPERINTENDENCIA DE ADMINISTRACION TRIBUTARIA */}
+          <g>
+            <rect x="72" y="75" width="176" height="2" rx="1" fill={divider} />
+
             <text
               x="160"
               y="88"
               textAnchor="middle"
-              fontFamily="Gotham, Montserrat, -apple-system, sans-serif"
+              fontFamily="Montserrat, 'Gotham Bold', -apple-system, BlinkMacSystemFont, sans-serif"
               fontSize="9.5"
               fontWeight="700"
-              letterSpacing="0.08em"
+              letterSpacing="0.1em"
+              fill={subtitleFill}
             >
               SUPERINTENDENCIA DE ADMINISTRACION TRIBUTARIA
             </text>

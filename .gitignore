@@ -9,3 +9,7 @@ coverage/
 
 # Playwright MCP: volcados de depuracion de navegador
 .playwright-mcp/
+test-results/
+
+# Archivos temporales de bloqueo de Excel / Office
+~$*

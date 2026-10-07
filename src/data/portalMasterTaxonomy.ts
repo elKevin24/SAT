@@ -21,6 +21,14 @@ export type TipoInteraccionId =
   | 'guia_informativa'
   | 'descarga_recurso';
 
+export type TipologiaContenidoId =
+  | 'tramite_interactivo'
+  | 'guia_requisitos'
+  | 'consulta_buscador'
+  | 'normativa_criterio'
+  | 'recurso_descargable'
+  | 'aviso_operativo';
+
 export interface PortalMasterItem {
   id: string;
   pillar: string;
@@ -28,6 +36,15 @@ export interface PortalMasterItem {
   macroGrupo?: string;
   grupoNo?: number;
   grupoNombre?: string;
+  nivel1_segmento?: string;
+  nivel2_area?: string;
+  nivel3_subarea?: string;
+  nivel4_tema?: string;
+  nivel5_tramite?: string;
+  nivel5_contenido_servicio?: string;
+  familiaAduanera?: string;
+  subfamiliaAduanera?: string;
+  actorEspecifico?: string;
   categoria: string;
   subcategoria: string;
   tema?: string;
@@ -36,6 +53,17 @@ export interface PortalMasterItem {
   etapaAtoLabel?: string;
   tipoInteraccion?: TipoInteraccionId;
   tipoInteraccionLabel?: string;
+  tipologiaContenido?: TipologiaContenidoId;
+  tipologiaContenidoLabel?: string;
+  plataformaSistema?: string;
+  plataformaSistemaLabel?: string;
+  canalAtencion?: string;
+  rutasProceso?: {
+    procesoNo: number;
+    procesoNombre: string;
+    pasoNo: number;
+    pasoAccion: string;
+  }[];
   tramite: string;
   nombreActual?: string;
   descripcion: string;
@@ -56,35 +84,35 @@ export const ETAPAS_ATO_CONFIG: {
 }[] = [
   {
     id: 'empezar',
-    label: '1. Empezar y registrarse',
+    label: 'Empezar y registrarse',
     shortLabel: 'Empezar',
     desc: 'Obtención de NIT, inscripción en RTU, habilitación en padrones y autorizaciones iniciales.',
     badgeColor: '#14649B'
   },
   {
     id: 'operar',
-    label: '2. Operación y declaraciones',
+    label: 'Operación y declaraciones',
     shortLabel: 'Operación',
     desc: 'Emisión de facturas FEL, declaraciones mensuales de impuestos, DUCA y retenciones.',
     badgeColor: '#0284C7'
   },
   {
     id: 'consultar',
-    label: '3. Consultas y herramientas',
+    label: 'Consultas y herramientas',
     shortLabel: 'Consultas',
     desc: 'Verificadores públicos, solvencia fiscal, semáforo de rampa, CUI a NIT y arancel SAC.',
     badgeColor: '#059669'
   },
   {
     id: 'modificar_cerrar',
-    label: '4. Modificaciones y cierre',
+    label: 'Modificaciones y cierre',
     shortLabel: 'Cambios y Cierre',
     desc: 'Actualización de datos, traspaso de vehículos, cambio de régimen, suspensión y cese de negocio.',
     badgeColor: '#C25E00'
   },
   {
     id: 'normativa',
-    label: '5. Normativa y asistencia',
+    label: 'Normativa y asistencia',
     shortLabel: 'Normativa',
     desc: 'Marco legal, resoluciones, devolución de crédito fiscal, capacitaciones y atención ciudadana.',
     badgeColor: '#7C3AED'

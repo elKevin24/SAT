@@ -62,6 +62,7 @@ export const GuidedProcessesSection: React.FC<GuidedProcessesSectionProps> = ({
                 <button
                   key={stg.id}
                   onClick={() => setActiveStage(stg.id)}
+                  aria-pressed={isActive}
                   className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all whitespace-nowrap ${
                     isActive 
                       ? 'bg-[#14649B] text-white shadow-2xs' 
@@ -78,6 +79,8 @@ export const GuidedProcessesSection: React.FC<GuidedProcessesSectionProps> = ({
         {/* Process Cards Grid compacto sin footer de acción redundante */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-3.5">
           {filtered.slice(0, 9).map((p) => (
+            // CRÍTICO 1 (ROADMAP-AUDITORIA.md, Fase 1): migrar a ui/Card con activación por teclado
+            // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
             <div
               key={p.no}
               onClick={() => onSelectProceso(p)}

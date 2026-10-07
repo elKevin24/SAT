@@ -320,7 +320,7 @@ export const ArchitectureDiagramPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
           <div className="flex items-center gap-4">
             <a 
-              href="#" 
+              href="#/" 
               className="inline-flex items-center gap-1.5 text-xs font-bold text-[#14649B] hover:text-[#19324B] px-3 py-1.5 rounded-lg border border-[#DCDCDC] hover:bg-slate-50 transition-colors"
             >
               <ArrowLeft className="w-3.5 h-3.5" />
@@ -645,6 +645,8 @@ export const ArchitectureDiagramPage: React.FC = () => {
                           {/* Trámites hojas dentro del subtema */}
                           <div className="space-y-1.5">
                             {items.map(tr => (
+                              // Página de exploración (dev): CRÍTICO 1 (ROADMAP-AUDITORIA.md, Fase 1)
+                              // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
                               <div
                                 key={tr.id}
                                 onClick={() => setActiveModalTramite(tr)}
@@ -797,6 +799,8 @@ export const ArchitectureDiagramPage: React.FC = () => {
                         className="border border-[#DCDCDC] rounded-xl overflow-hidden bg-slate-50/50 transition-all"
                       >
                         {/* Category Row Header */}
+                        {/* Página de exploración (dev): CRÍTICO 1 (ROADMAP-AUDITORIA.md, Fase 1) */}
+                        {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions */}
                         <div 
                           onClick={() => toggleNode(cat.nodeId)}
                           className="p-3 bg-white hover:bg-slate-50 cursor-pointer flex items-center justify-between gap-3 select-none transition-colors"
@@ -855,9 +859,11 @@ export const ArchitectureDiagramPage: React.FC = () => {
                                 {/* Trámites Pills Grid (Nivel 4) */}
                                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 pt-1">
                                   {sub.tramites.map(tr => (
-                                    <div
-                                      key={tr.id}
-                                      onClick={() => setActiveModalTramite(tr)}
+                                  // Página de exploración (dev): CRÍTICO 1 (ROADMAP-AUDITORIA.md, Fase 1)
+                                  // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
+                                  <div
+                                    key={tr.id}
+                                    onClick={() => setActiveModalTramite(tr)}
                                       className="p-2.5 bg-slate-50/80 hover:bg-white border border-slate-200 hover:border-[#14649B] rounded-lg cursor-pointer transition-all hover:shadow-xs group flex flex-col justify-between text-left"
                                     >
                                       <div>

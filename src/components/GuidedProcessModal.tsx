@@ -68,7 +68,6 @@ export const GuidedProcessModal: React.FC<GuidedProcessModalProps> = ({
     >
       <div 
         className="bg-white rounded-2xl shadow-2xl max-w-3xl w-full overflow-hidden border border-slate-200 text-slate-800 flex flex-col max-h-[85vh]"
-        onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
         <div className="bg-[#14649B] text-white px-6 py-4 flex items-center justify-between shrink-0">

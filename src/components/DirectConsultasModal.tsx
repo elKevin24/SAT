@@ -98,7 +98,6 @@ export const DirectConsultasModal: React.FC<DirectConsultasModalProps> = ({
     >
       <div 
         className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full overflow-hidden border border-slate-200 text-slate-800"
-        onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
         <div className="bg-[#19324B] text-white px-6 py-4 flex items-center justify-between">
@@ -110,7 +109,7 @@ export const DirectConsultasModal: React.FC<DirectConsultasModalProps> = ({
               <h2 id="consultas-title" className="text-base font-bold leading-none">
                 Catálogo de Consultas y Verificadores Web
               </h2>
-              <span className="text-xs text-slate-300">Herramientas transaccionales oficiales</span>
+              <span className="text-xs text-slate-300">Verificadores de demostración con enlaces al portal oficial</span>
             </div>
           </div>
           <button 
@@ -136,6 +135,7 @@ export const DirectConsultasModal: React.FC<DirectConsultasModalProps> = ({
               <button
                 key={tab.id}
                 onClick={() => setActiveTool(tab.id as any)}
+                aria-pressed={isActive}
                 className={`py-2 px-2.5 rounded-lg flex items-center justify-center gap-1.5 transition-all ${
                   isActive 
                     ? 'bg-white text-[#14649B] shadow-xs' 
@@ -151,15 +151,30 @@ export const DirectConsultasModal: React.FC<DirectConsultasModalProps> = ({
 
         {/* Tool Content Area */}
         <div className="p-6 max-h-[70vh] overflow-y-auto">
+          {/* Aviso de demostración (datos simulados) */}
+          <div role="note" className="mb-4 rounded-lg border border-amber-300 bg-amber-50 px-3 py-2 text-xs text-amber-900">
+            <strong>Datos de demostración:</strong> estos verificadores ilustran la experiencia del portal oficial y
+            no consultan sistemas reales de la SAT. Para resultados oficiales usa el{' '}
+            <a
+              href="https://portal.sat.gob.gt"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-bold underline"
+            >
+              Portal SAT
+            </a>
+            .
+          </div>
           
           {/* Tool 1: Estado de Solicitud / Gestión */}
           {activeTool === 'gestion' && (
             <div className="space-y-4">
-              <div className="text-xs text-slate-600">
+              <label htmlFor="consultas-gestion" className="block text-xs text-slate-600">
                 Ingresa el número de solicitud o gestión recibido por correo para conocer el avance de tu trámite de Agencia Virtual o RTU:
-              </div>
+              </label>
               <form onSubmit={handleConsultarGestion} className="flex gap-2">
                 <input
+                  id="consultas-gestion"
                   type="text"
                   value={gestionQuery}
                   onChange={(e) => setGestionQuery(e.target.value)}
@@ -189,11 +204,12 @@ export const DirectConsultasModal: React.FC<DirectConsultasModalProps> = ({
           {/* Tool 2: Verificador QR de Títulos Universitarios */}
           {activeTool === 'titulo' && (
             <div className="space-y-4">
-              <div className="text-xs text-slate-600">
+              <label htmlFor="consultas-titulo" className="block text-xs text-slate-600">
                 Verifica la acreditación oficial del título universitario y el pago del Impuesto de Timbres Fiscales (Decreto 37-92):
-              </div>
+              </label>
               <form onSubmit={handleConsultarTitulo} className="flex gap-2">
                 <input
+                  id="consultas-titulo"
                   type="text"
                   value={tituloQuery}
                   onChange={(e) => setTituloQuery(e.target.value)}
@@ -234,11 +250,12 @@ export const DirectConsultasModal: React.FC<DirectConsultasModalProps> = ({
           {/* Tool 3: Consulta CUI / NIT */}
           {activeTool === 'nit' && (
             <div className="space-y-4">
-              <div className="text-xs text-slate-600">
+              <label htmlFor="consultas-nit" className="block text-xs text-slate-600">
                 Si no recuerdas tu NIT, ingresa tu Código Único de Identificación (CUI de 13 dígitos de tu DPI):
-              </div>
+              </label>
               <form onSubmit={handleConsultarNIT} className="flex gap-2">
                 <input
+                  id="consultas-nit"
                   type="text"
                   maxLength={13}
                   value={cuiQuery}

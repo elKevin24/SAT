@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { ChevronRight } from 'lucide-react';
+import React from 'react';
+import { Card, type CardTone } from './ui/Card';
 
 export type SegmentId = 'contribuyentes' | 'comercio_exterior' | 'profesionales' | 'entes_exentos';
 
@@ -7,11 +7,7 @@ interface SegmentDef {
   id: SegmentId;
   name: string;
   desc: string;
-  cardHoverBorder: string;
-  cardHoverBg: string;
-  cardHoverShadow: string;
-  titleHoverText: string;
-  circleClasses: string;
+  tone: CardTone;
 }
 
 const SEGMENTS: SegmentDef[] = [
@@ -19,41 +15,25 @@ const SEGMENTS: SegmentDef[] = [
     id: 'contribuyentes',
     name: 'Contribuyentes',
     desc: 'Personas sin negocio (primer NIT), pequeños contribuyentes, régimen general (IVA e ISR) y contribuyentes especiales.',
-    cardHoverBorder: 'hover:border-[#14649B]',
-    cardHoverBg: 'hover:bg-[#14649B]',
-    cardHoverShadow: 'hover:shadow-[0_12px_24px_rgba(20,100,155,0.22)]',
-    titleHoverText: 'group-hover:text-white',
-    circleClasses: 'bg-[#14649B]/10 text-[#14649B] group-hover:bg-white group-hover:text-[#14649B]'
+    tone: 'azul'
   },
   {
     id: 'comercio_exterior',
     name: 'Operadores de Comercio Exterior',
     desc: 'Importadores, exportadores, auxiliares de la función pública (AFPA), agentes, transportistas y depósitos aduaneros.',
-    cardHoverBorder: 'hover:border-[#0284C7]',
-    cardHoverBg: 'hover:bg-[#0284C7]',
-    cardHoverShadow: 'hover:shadow-[0_12px_24px_rgba(2,132,199,0.22)]',
-    titleHoverText: 'group-hover:text-white',
-    circleClasses: 'bg-[#0284C7]/15 text-[#0284C7] group-hover:bg-white group-hover:text-[#0284C7]'
+    tone: 'celeste'
   },
   {
     id: 'profesionales',
     name: 'Profesionales',
     desc: 'Peritos contadores, auditores, abogados, notarios y gestores tributarios acreditados ante la SAT.',
-    cardHoverBorder: 'hover:border-[#4D8014]',
-    cardHoverBg: 'hover:bg-[#4D8014]',
-    cardHoverShadow: 'hover:shadow-[0_12px_24px_rgba(77,128,20,0.22)]',
-    titleHoverText: 'group-hover:text-white',
-    circleClasses: 'bg-[#4D8014]/15 text-[#4D8014] group-hover:bg-white group-hover:text-[#4D8014]'
+    tone: 'verde'
   },
   {
     id: 'entes_exentos',
     name: 'Entes Exentos',
     desc: 'Entidades del Estado, municipalidades, universidades, colegios, iglesias y organizaciones no lucrativas exentas por ley.',
-    cardHoverBorder: 'hover:border-[#C25E00]',
-    cardHoverBg: 'hover:bg-[#C25E00]',
-    cardHoverShadow: 'hover:shadow-[0_12px_24px_rgba(194,94,0,0.22)]',
-    titleHoverText: 'group-hover:text-white',
-    circleClasses: 'bg-[#C25E00]/15 text-[#C25E00] group-hover:bg-white group-hover:text-[#C25E00]'
+    tone: 'naranja'
   }
 ];
 
@@ -82,42 +62,20 @@ export const UserSegmentCards: React.FC<UserSegmentCardsProps> = ({
           </p>
         </div>
 
-        {/* Las 4 Tarjetas: fondo azul mínimo institucional (#F0F7FC) con borde limpio */}
+        {/* Las 4 Tarjetas: Surface interactiva del design system con tono de segmento */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-3.5">
           {SEGMENTS.map((p) => {
             const isSelected = selectedSegment === p.id;
 
             return (
-              <div
+              <Card
                 key={p.id}
-                role="button"
-                tabIndex={0}
+                title={p.name}
+                description={p.desc}
+                tone={p.tone}
                 onClick={() => onSelectSegment(p.id)}
-                onKeyDown={(e) => {
-                  if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    onSelectSegment(p.id);
-                  }
-                }}
-                className={`p-5 bg-[#F0F7FC] border border-[#CDE3F1] rounded-[16px] ${p.cardHoverBorder} ${p.cardHoverBg} ${p.cardHoverShadow} transition-all duration-300 cursor-pointer group shadow-2xs hover:-translate-y-1 focus-visible:ring-2 focus-visible:ring-[#14649B] flex flex-col justify-between ${
-                  isSelected ? 'ring-2 ring-[#14649B]' : ''
-                }`}
-              >
-                <div>
-                  <div className="flex items-start justify-between gap-2.5 mb-2">
-                    <h3 className={`text-base font-bold text-[#19324B] ${p.titleHoverText} transition-colors leading-snug`}>
-                      {p.name}
-                    </h3>
-                    <div className={`w-6 h-6 rounded-full flex items-center justify-center shrink-0 transition-all duration-300 ${p.circleClasses} shadow-xs mt-0.5`}>
-                      <ChevronRight className="w-3.5 h-3.5" aria-hidden="true" />
-                    </div>
-                  </div>
-
-                  <p className="text-xs text-slate-600 group-hover:text-white/90 transition-colors leading-relaxed">
-                    {p.desc}
-                  </p>
-                </div>
-              </div>
+                selected={isSelected}
+              />
             );
           })}
         </div>

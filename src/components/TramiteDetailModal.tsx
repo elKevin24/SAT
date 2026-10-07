@@ -6,13 +6,12 @@ import {
   Copy, 
   Printer, 
   BookOpen, 
-  FileText, 
-  UserCheck, 
   Info, 
-  CheckSquare, 
-  Square,
+  UserCheck, 
+  ListChecks,
   ShieldCheck
 } from 'lucide-react';
+import { Button } from './ui/Button';
 
 interface TramiteItem {
   id: string;
@@ -91,17 +90,16 @@ export const TramiteDetailModal: React.FC<TramiteDetailModalProps> = ({
       aria-labelledby="tramite-title"
     >
       <div 
-        className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full overflow-hidden border border-slate-200 text-slate-800 flex flex-col max-h-[90vh]"
-        onClick={(e) => e.stopPropagation()}
+        className="bg-white rounded-sat-lg shadow-2xl max-w-2xl w-full overflow-hidden border border-sat-gris text-sat-texto flex flex-col max-h-[90vh]"
       >
         {/* Header */}
-        <div className="bg-[#14649B] text-white px-6 py-4 flex items-center justify-between shrink-0">
+        <div className="bg-sat-azul text-white px-6 py-4 flex items-center justify-between shrink-0">
           <div>
             <div className="flex items-center gap-2 mb-1">
-              <span className="text-[10px] font-bold uppercase tracking-wider bg-white/20 px-2.5 py-0.5 rounded-full text-sky-100">
+              <span className="text-[10px] font-bold uppercase tracking-wider bg-white/20 px-2.5 py-0.5 rounded-full text-white/90">
                 {tramite.pillarName || 'SAT Trámite Oficial'}
               </span>
-              <span className="text-xs text-sky-100">
+              <span className="text-xs text-white/80">
                 {tramite.categoria}
               </span>
             </div>
@@ -122,30 +120,30 @@ export const TramiteDetailModal: React.FC<TramiteDetailModalProps> = ({
         <div className="p-6 overflow-y-auto space-y-5 text-xs sm:text-sm">
           
           {/* Descripción General */}
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200">
-            <h3 className="font-bold text-slate-800 text-xs uppercase tracking-wider mb-1 flex items-center gap-1.5">
-              <Info className="w-4 h-4 text-[#14649B]" /> Propósito y Descripción
+          <div className="p-4 rounded-sat-md bg-sat-fondo-tenue border border-sat-gris">
+            <h3 className="font-bold text-sat-texto text-xs uppercase tracking-wider mb-1 flex items-center gap-1.5">
+              <Info className="w-4 h-4 text-sat-azul" /> Propósito y Descripción
             </h3>
-            <p className="text-slate-600 leading-relaxed text-xs sm:text-sm">
+            <p className="text-sat-texto-suave leading-relaxed text-xs sm:text-sm">
               {tramite.descripcion}
             </p>
           </div>
 
           {/* Perfil Destinatario y Ubicación */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
-            <div className="p-3.5 rounded-xl border border-slate-200 bg-white">
-              <span className="font-bold text-slate-500 block mb-0.5 flex items-center gap-1">
-                <UserCheck className="w-3.5 h-3.5 text-[#14649B]" /> ¿A quién va dirigido?
+            <div className="p-3.5 rounded-sat-md border border-sat-gris bg-white">
+              <span className="font-bold text-sat-texto-suave block mb-0.5 flex items-center gap-1">
+                <UserCheck className="w-3.5 h-3.5 text-sat-azul" /> ¿A quién va dirigido?
               </span>
-              <span className="font-semibold text-slate-800">
+              <span className="font-semibold text-sat-texto">
                 {tramite.perfilDestinatario || 'Contribuyentes y público en general'}
               </span>
             </div>
-            <div className="p-3.5 rounded-xl border border-slate-200 bg-white">
-              <span className="font-bold text-slate-500 block mb-0.5 flex items-center gap-1">
-                <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" /> Sección en el Portal
+            <div className="p-3.5 rounded-sat-md border border-sat-gris bg-white">
+              <span className="font-bold text-sat-texto-suave block mb-0.5 flex items-center gap-1">
+                <ShieldCheck className="w-3.5 h-3.5 text-[#216E39]" /> Sección en el Portal
               </span>
-              <span className="font-semibold text-slate-800">
+              <span className="font-semibold text-sat-texto">
                 {tramite.seccionActual || `${tramite.categoria} › ${tramite.subcategoria}`}
               </span>
             </div>
@@ -154,10 +152,10 @@ export const TramiteDetailModal: React.FC<TramiteDetailModalProps> = ({
           {/* Checklist de Requisitos Interactivo (Nielsen H6) */}
           <div>
             <div className="flex items-center justify-between mb-2">
-              <h3 className="font-bold text-slate-800 text-xs uppercase tracking-wider flex items-center gap-1.5">
-                <CheckSquare className="w-4 h-4 text-[#14649B]" /> Checklist de Requisitos Previos
+              <h3 className="font-bold text-sat-texto text-xs uppercase tracking-wider flex items-center gap-1.5">
+                <ListChecks className="w-4 h-4 text-sat-azul" /> Checklist de Requisitos Previos
               </h3>
-              <span className="text-[11px] text-slate-500">
+              <span className="text-[11px] text-sat-texto-suave">
                 Marca los que ya posees
               </span>
             </div>
@@ -166,27 +164,24 @@ export const TramiteDetailModal: React.FC<TramiteDetailModalProps> = ({
               {requirementsList.map((req, idx) => {
                 const isChecked = !!checkedReqs[idx];
                 return (
-                  <button
+                  <label
                     key={idx}
-                    type="button"
-                    onClick={() => toggleReq(idx)}
-                    className={`w-full text-left p-3 rounded-xl border flex items-start gap-2.5 transition-colors ${
+                    className={`flex w-full items-start gap-2.5 cursor-pointer p-3 rounded-sat-md border transition-colors ${
                       isChecked 
-                        ? 'bg-blue-50/60 border-blue-300 text-slate-800' 
-                        : 'bg-white border-slate-200 text-slate-600 hover:bg-slate-50'
+                        ? 'bg-sat-azul/5 border-sat-azul/40' 
+                        : 'bg-white border-sat-gris hover:bg-sat-fondo-tenue'
                     }`}
                   >
-                    <div className="mt-0.5 shrink-0 text-[#14649B]">
-                      {isChecked ? (
-                        <CheckSquare className="w-4 h-4 text-[#14649B]" />
-                      ) : (
-                        <Square className="w-4 h-4 text-slate-400" />
-                      )}
-                    </div>
-                    <span className={`text-xs ${isChecked ? 'font-semibold text-slate-900' : ''}`}>
+                    <input
+                      type="checkbox"
+                      checked={isChecked}
+                      onChange={() => toggleReq(idx)}
+                      className="mt-0.5 h-4 w-4 shrink-0 accent-[#14649B]"
+                    />
+                    <span className={`text-xs leading-relaxed ${isChecked ? 'font-semibold text-sat-texto' : 'text-sat-texto-suave'}`}>
                       {req}
                     </span>
-                  </button>
+                  </label>
                 );
               })}
             </div>
@@ -205,24 +200,27 @@ export const TramiteDetailModal: React.FC<TramiteDetailModalProps> = ({
         </div>
 
         {/* Footer with actions */}
-        <div className="bg-slate-50 px-6 py-3.5 border-t border-slate-200 flex flex-wrap items-center justify-between gap-2 shrink-0">
+        <div className="bg-sat-fondo-tenue px-6 py-3.5 border-t border-sat-gris flex flex-wrap items-center justify-between gap-2 shrink-0">
           <div className="flex items-center gap-2">
             {urlValido && (
-            <button
+            <Button
+              variant="outline"
+              size="sm"
               onClick={handleCopyLink}
-              className="px-3 py-1.5 rounded-lg border border-slate-300 bg-white hover:bg-slate-100 text-slate-700 text-xs font-semibold flex items-center gap-1.5 transition-colors"
+              aria-live="polite"
             >
-              {copied ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5" />}
+              {copied ? <Check className="w-3.5 h-3.5 text-[#216E39]" /> : <Copy className="w-3.5 h-3.5" />}
               <span>{copied ? '¡Copiado!' : 'Copiar enlace'}</span>
-            </button>
+            </Button>
             )}
-            <button
+            <Button
+              variant="outline"
+              size="sm"
               onClick={handlePrint}
-              className="px-3 py-1.5 rounded-lg border border-slate-300 bg-white hover:bg-slate-100 text-slate-700 text-xs font-semibold flex items-center gap-1.5 transition-colors"
             >
               <Printer className="w-3.5 h-3.5" />
               <span>Imprimir</span>
-            </button>
+            </Button>
           </div>
 
           {urlValido ? (
@@ -230,13 +228,13 @@ export const TramiteDetailModal: React.FC<TramiteDetailModalProps> = ({
               href={tramite.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 bg-[#14649B] hover:bg-[#11507C] text-white text-xs font-bold rounded-xl shadow-xs transition-all flex items-center gap-1.5"
+              className="px-4 py-2 bg-sat-azul hover:bg-sat-azul-oscuro text-white text-xs font-bold rounded-sat-md shadow-sat-sm transition-all flex items-center gap-1.5"
             >
               <span>Realizar trámite en línea</span>
               <ExternalLink className="w-3.5 h-3.5" />
             </a>
           ) : (
-            <p className="px-4 py-2 bg-slate-100 text-slate-600 text-xs font-semibold rounded-xl border border-slate-200 flex items-center gap-1.5">
+            <p className="px-4 py-2 bg-sat-fondo-medio text-sat-texto-suave text-xs font-semibold rounded-sat-md border border-sat-gris flex items-center gap-1.5">
               <span>Trámite disponible en sede de la SAT</span>
             </p>
           )}

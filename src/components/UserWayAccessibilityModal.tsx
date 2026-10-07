@@ -38,7 +38,6 @@ export const UserWayAccessibilityModal: React.FC<UserWayAccessibilityModalProps>
     >
       <div 
         className="bg-white rounded-2xl shadow-2xl max-w-lg w-full overflow-hidden border border-slate-200 text-slate-800"
-        onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
         <div className="bg-[#14649B] text-white px-6 py-4 flex items-center justify-between">
@@ -65,9 +64,9 @@ export const UserWayAccessibilityModal: React.FC<UserWayAccessibilityModalProps>
           
           {/* Contrast Mode */}
           <div>
-            <label className="font-semibold text-slate-700 block mb-2 flex items-center gap-2">
+            <p className="font-semibold text-slate-700 block mb-2 flex items-center gap-2">
               <Contrast className="w-4 h-4 text-[#14649B]" /> Contraste y Colores
-            </label>
+            </p>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
               {[
                 { id: 'normal', label: 'Estándar' },
@@ -92,9 +91,9 @@ export const UserWayAccessibilityModal: React.FC<UserWayAccessibilityModalProps>
 
           {/* Font Size */}
           <div>
-            <label className="font-semibold text-slate-700 block mb-2 flex items-center gap-2">
+            <p className="font-semibold text-slate-700 block mb-2 flex items-center gap-2">
               <Type className="w-4 h-4 text-[#14649B]" /> Tamaño de Fuente (Ajuste Rápido)
-            </label>
+            </p>
             <div className="flex items-center gap-3">
               <button
                 onClick={() => onUpdateSettings({ fontSizeStep: Math.max(-2, settings.fontSizeStep - 1) })}
@@ -118,7 +117,7 @@ export const UserWayAccessibilityModal: React.FC<UserWayAccessibilityModalProps>
 
           {/* Quick Toggles */}
           <div className="space-y-2 pt-2 border-t border-slate-100">
-            <label className="font-semibold text-slate-700 block mb-2">Perfiles y Opciones Específicas</label>
+            <p className="font-semibold text-slate-700 block mb-2">Perfiles y Opciones Específicas</p>
             
             <button
               onClick={() => onUpdateSettings({ dyslexiaFont: !settings.dyslexiaFont })}

@@ -191,7 +191,11 @@ export const VirtualAssistantModal: React.FC = () => {
             }}
             className="p-2.5 bg-white border-t border-slate-200 flex items-center gap-2"
           >
+            <label htmlFor="rita-message" className="sr-only">
+              Escribe tu consulta tributaria
+            </label>
             <input
+              id="rita-message"
               type="text"
               value={inputVal}
               onChange={(e) => setInputVal(e.target.value)}

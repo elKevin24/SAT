@@ -186,6 +186,9 @@ export default function App() {
       <div className="flex-1 flex flex-col">
         {currentView === 'home' && (
           <main id="main-content" tabIndex={-1} className="focus:outline-hidden">
+            {/* Título de página (accesible; el hero visual lo presenta cada sección) */}
+            <h1 className="sr-only">Portal de Trámites y Servicios de la SAT en línea</h1>
+
             {/* 2. User Segments (4 Macrogrupos Oficiales) */}
             <UserSegmentCards
               selectedSegment={null}

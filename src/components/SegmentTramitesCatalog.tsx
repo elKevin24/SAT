@@ -1,6 +1,10 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { Search, ChevronRight, ArrowLeft, Home, Filter, RotateCcw } from 'lucide-react';
 import { SegmentId } from './UserSegmentCards';
+import { Card, type CardTone } from './ui/Card';
+import { Breadcrumbs } from './ui/Breadcrumbs';
+import { SidebarNav, type SidebarCategory } from './ui/SidebarNav';
+import { Alert } from './ui/Alert';
 import {
   ETAPAS_ATO_CONFIG,
   TIPOS_INTERACCION_MASTER_CONFIG,
@@ -49,46 +53,38 @@ const SEGMENT_METADATA: Record<SegmentId, {
   shortTitle: string;
   desc: string;
   color: string;
-  hoverBg: string;
-  hoverBorder: string;
-  hoverShadow: string;
 }> = {
   contribuyentes: {
     title: 'Contribuyentes',
     shortTitle: 'Contribuyentes',
     desc: 'Personas individuales, pequeños contribuyentes, régimen general y contribuyentes especiales.',
-    color: '#14649B',
-    hoverBg: 'hover:bg-[#14649B]',
-    hoverBorder: 'hover:border-[#14649B]',
-    hoverShadow: 'hover:shadow-[0_12px_24px_rgba(20,100,155,0.22)]'
+    color: '#14649B'
   },
   comercio_exterior: {
     title: 'Operadores de Comercio Exterior',
     shortTitle: 'Comercio Exterior',
     desc: 'Importadores, exportadores, auxiliares aduaneros, transportistas y normativa arancelaria.',
-    color: '#0284C7',
-    hoverBg: 'hover:bg-[#0284C7]',
-    hoverBorder: 'hover:border-[#0284C7]',
-    hoverShadow: 'hover:shadow-[0_12px_24px_rgba(2,132,199,0.22)]'
+    color: '#0284C7'
   },
   profesionales: {
     title: 'Profesionales',
     shortTitle: 'Profesionales',
     desc: 'Peritos contadores, auditores, abogados, notarios y gestores tributarios acreditados.',
-    color: '#4D8014',
-    hoverBg: 'hover:bg-[#4D8014]',
-    hoverBorder: 'hover:border-[#4D8014]',
-    hoverShadow: 'hover:shadow-[0_12px_24px_rgba(77,128,20,0.22)]'
+    color: '#4D8014'
   },
   entes_exentos: {
     title: 'Entes Exentos',
     shortTitle: 'Entes Exentos',
     desc: 'Entidades del Estado, municipalidades, universidades, centros educativos, iglesias y organizaciones no lucrativas.',
-    color: '#C25E00',
-    hoverBg: 'hover:bg-[#C25E00]',
-    hoverBorder: 'hover:border-[#C25E00]',
-    hoverShadow: 'hover:shadow-[0_12px_24px_rgba(194,94,0,0.22)]'
+    color: '#C25E00'
   }
+};
+
+const SEGMENT_CARD_TONE: Record<SegmentId, CardTone> = {
+  contribuyentes: 'azul',
+  comercio_exterior: 'celeste',
+  profesionales: 'verde',
+  entes_exentos: 'naranja'
 };
 
 const CANONICAL_CATEGORY_ORDER: Record<string, string[]> = {
@@ -296,6 +292,7 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
   }, [segmentId, selectedCategory, selectedSubcategory, selectedEtapaAto, selectedTipoInteraccion]);
 
   const meta = SEGMENT_METADATA[segmentId];
+  const cardTone = SEGMENT_CARD_TONE[segmentId];
 
   // Trámites del segmento actual (leídos directamente de allTramites consolidado)
   const segmentTramites = useMemo(() => {
@@ -507,6 +504,24 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
     });
   }, [segmentTramites, selectedCategory]);
 
+  // Lista estructurada de categorías y subcategorías para el Sidebar contextual
+  const sidebarCategories = useMemo<SidebarCategory[]>(() => {
+    return categoriesList.map((catName) => {
+      const subs = Array.from(
+        new Set(
+          segmentTramites
+            .filter((t) => t.categoria === catName && t.subcategoria)
+            .map((t) => t.subcategoria)
+        )
+      ).sort();
+      return {
+        name: catName,
+        count: segmentTramites.filter((t) => t.categoria === catName).length,
+        subcategories: subs,
+      };
+    });
+  }, [categoriesList, segmentTramites]);
+
   // Trámites finales (filtrados por subcategoría, búsqueda, etapa ATO y tipo de interacción)
   const currentTramites = useMemo(() => {
     let list: TramiteItem[] = [];
@@ -605,69 +620,58 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
 
   // Renderizador unificado de tarjeta de trámite con diseño Plain Language y badges oficiales
   const renderTramiteCard = (tramite: TramiteItem) => {
+    const badges = (
+      <>
+        {tramite.tipoInteraccion && (
+          <span className={`inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider transition-colors group-hover:bg-white/20 group-hover:text-white ${
+            tramite.tipoInteraccion === 'servicio_transaccional'
+              ? 'bg-sat-azul/10 text-sat-azul border border-sat-azul/20'
+              : tramite.tipoInteraccion === 'consulta_datos'
+                ? 'bg-[#059669]/10 text-[#059669] border border-[#059669]/20'
+                : tramite.tipoInteraccion === 'descarga_recurso'
+                  ? 'bg-[#7C3AED]/10 text-[#7C3AED] border border-[#7C3AED]/20'
+                  : 'bg-sat-fondo-medio/70 text-sat-texto-suave border border-sat-gris/60'
+          }`}>
+            {tramite.tipoInteraccion === 'servicio_transaccional' && 'Trámite en Línea'}
+            {tramite.tipoInteraccion === 'consulta_datos' && 'Consulta BD'}
+            {tramite.tipoInteraccion === 'guia_informativa' && 'Guía'}
+            {tramite.tipoInteraccion === 'descarga_recurso' && 'Descarga'}
+          </span>
+        )}
+
+        {tramite.etapaAtoLabel && (
+          <span className="inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-medium bg-white/80 text-sat-texto-suave border border-sat-gris transition-colors group-hover:bg-white/20 group-hover:text-white group-hover:border-white/30">
+            {tramite.etapaAtoLabel.replace(/^\d+\.\s*/, '')}
+          </span>
+        )}
+
+        {tramite.esBrecha && (
+          <span className="inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-bold bg-[#C25E00]/10 text-[#C25E00] border border-[#C25E00]/30 transition-colors group-hover:bg-white group-hover:text-[#C25E00]">
+            Propuesta normativa SAT
+          </span>
+        )}
+      </>
+    );
+
     return (
-      <div
+      <Card
         key={tramite.id}
+        title={tramite.tramite}
+        description={tramite.descripcion}
+        tone={cardTone}
         onClick={() => onSelectTramite(tramite)}
-        className={`group relative flex flex-col justify-between rounded-2xl border border-[#CDE3F1] bg-[#F0F7FC] p-5 transition-all duration-200 hover:-translate-y-1 ${meta.hoverBg} ${meta.hoverShadow} cursor-pointer`}
-      >
-        <div>
-          {/* Fila de Badges: Formato de interacción + Etapa ATO + Propuesta de brecha */}
-          <div className="flex flex-wrap items-center gap-1.5 mb-2.5">
-            {tramite.tipoInteraccion && (
-              <span className={`inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider transition-colors group-hover:bg-white/20 group-hover:text-white ${
-                tramite.tipoInteraccion === 'servicio_transaccional'
-                  ? 'bg-[#14649B]/10 text-[#14649B] border border-[#14649B]/20'
-                  : tramite.tipoInteraccion === 'consulta_datos'
-                    ? 'bg-[#059669]/10 text-[#059669] border border-[#059669]/20'
-                    : tramite.tipoInteraccion === 'descarga_recurso'
-                      ? 'bg-[#7C3AED]/10 text-[#7C3AED] border border-[#7C3AED]/20'
-                      : 'bg-slate-200/70 text-slate-700 border border-slate-300/60'
-              }`}>
-                {tramite.tipoInteraccion === 'servicio_transaccional' && 'Trámite en Línea'}
-                {tramite.tipoInteraccion === 'consulta_datos' && 'Consulta BD'}
-                {tramite.tipoInteraccion === 'guia_informativa' && 'Guía'}
-                {tramite.tipoInteraccion === 'descarga_recurso' && 'Descarga'}
-              </span>
-            )}
-
-            {tramite.etapaAtoLabel && (
-              <span className="inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-medium bg-white/80 text-slate-600 border border-slate-200 transition-colors group-hover:bg-white/20 group-hover:text-white group-hover:border-white/30">
-                {tramite.etapaAtoLabel.replace(/^\d+\.\s*/, '')}
-              </span>
-            )}
-
-            {tramite.esBrecha && (
-              <span className="inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-bold bg-[#C25E00]/10 text-[#C25E00] border border-[#C25E00]/30 transition-colors group-hover:bg-white group-hover:text-[#C25E00]">
-                Propuesta normativa SAT
-              </span>
-            )}
-          </div>
-
-          {/* Título del trámite */}
-          <div className="flex items-start justify-between gap-3">
-            <h3 className="text-base font-bold text-[#19324B] transition-colors group-hover:text-white leading-snug">
-              {tramite.tramite}
-            </h3>
-            <ChevronRight className="h-5 w-5 shrink-0 text-[#94A3B8] transition-colors group-hover:text-white group-hover:translate-x-0.5" />
-          </div>
-
-          {/* Descripción en Plain Language */}
-          <p className="mt-2 text-xs leading-relaxed text-[#475569] transition-colors group-hover:text-white/90">
-            {tramite.descripcion}
-          </p>
-        </div>
-
-        {/* Pie de tarjeta con contexto de clasificación */}
-        <div className="mt-4 pt-3 border-t border-[#CDE3F1]/70 flex items-center justify-between text-[11px] text-[#64748B] transition-colors group-hover:text-white/80 group-hover:border-white/20">
-          <span className="truncate max-w-[200px]">
-            {tramite.categoria} {tramite.subcategoria ? `› ${tramite.subcategoria}` : ''}
-          </span>
-          <span className="font-bold flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
-            Ver detalle →
-          </span>
-        </div>
-      </div>
+        badges={badges}
+        footer={
+          <>
+            <span className="truncate">
+              {tramite.categoria} {tramite.subcategoria ? `› ${tramite.subcategoria}` : ''}
+            </span>
+            <span className="font-bold flex items-center gap-1">
+              Ver detalle →
+            </span>
+          </>
+        }
+      />
     );
   };
 
@@ -676,62 +680,55 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
 
         {/* -----------------------------------------------------------------
-         * MIGA DE PAN LIMPIA (Sin la palabra 'Nivel' ni números redundantes)
+         * MIGA DE PAN LIMPIA (Componente oficial Breadcrumbs SAT)
          * ----------------------------------------------------------------- */}
-        <nav aria-label="Navegación de trámites" className="flex items-center flex-wrap gap-2 text-xs font-medium text-[#475569] pb-3 border-b border-[#DCDCDC]">
-          <button
-            onClick={onBackToHome}
-            className="flex items-center gap-1.5 hover:text-[#14649B] transition-colors"
-          >
-            <Home className="w-3.5 h-3.5" />
-            <span>Inicio</span>
-          </button>
-
-          <ChevronRight className="w-3 h-3 text-[#94A3B8]" />
-
-          <button
-            onClick={handleResetToCategories}
-            className={`font-bold transition-colors ${
-              !selectedCategory && !internalQuery && !isAtoFilterActive ? 'text-[#14649B]' : 'hover:text-[#14649B]'
-            }`}
-          >
-            {meta.title}
-          </button>
-
-          {selectedCategory && (
-            <>
-              <ChevronRight className="w-3 h-3 text-[#94A3B8]" />
-              <button
-                onClick={handleResetToSubcategories}
-                className={`font-bold transition-colors ${
-                  !selectedSubcategory && !internalQuery && !isAtoFilterActive ? 'text-[#14649B]' : 'hover:text-[#14649B]'
-                }`}
-              >
-                {selectedCategory}
-              </button>
-            </>
-          )}
-
-          {selectedSubcategory && (
-            <>
-              <ChevronRight className="w-3 h-3 text-[#94A3B8]" />
-              <span className="font-bold text-[#14649B]">
-                {selectedSubcategory}
-              </span>
-            </>
-          )}
-
-          {isAtoFilterActive && (
-            <>
-              <ChevronRight className="w-3 h-3 text-[#94A3B8]" />
-              <span className="font-bold text-[#0284C7] bg-[#0284C7]/10 px-2 py-0.5 rounded">
-                {selectedEtapaAto !== 'todas' ? ETAPAS_ATO_CONFIG.find(e => e.id === selectedEtapaAto)?.shortLabel : ''}
-                {selectedEtapaAto !== 'todas' && selectedTipoInteraccion !== 'todos' ? ' · ' : ''}
-                {selectedTipoInteraccion !== 'todos' ? TIPOS_INTERACCION_MASTER_CONFIG[selectedTipoInteraccion]?.label : ''}
-              </span>
-            </>
-          )}
-        </nav>
+        <div className="pb-3 border-b border-[#DCDCDC]">
+          <Breadcrumbs
+            includeHome
+            onHomeClick={onBackToHome}
+            items={[
+              {
+                label: meta.title,
+                onClick: handleResetToCategories,
+                isCurrent: !selectedCategory && !internalQuery && !isAtoFilterActive,
+              },
+              ...(selectedCategory
+                ? [
+                    {
+                      label: selectedCategory,
+                      onClick: handleResetToSubcategories,
+                      isCurrent: !selectedSubcategory && !internalQuery && !isAtoFilterActive,
+                    },
+                  ]
+                : []),
+              ...(selectedSubcategory
+                ? [
+                    {
+                      label: selectedSubcategory,
+                      isCurrent: !isAtoFilterActive,
+                    },
+                  ]
+                : []),
+              ...(isAtoFilterActive
+                ? [
+                    {
+                      label: [
+                        selectedEtapaAto !== 'todas'
+                          ? ETAPAS_ATO_CONFIG.find((e) => e.id === selectedEtapaAto)?.shortLabel
+                          : '',
+                        selectedTipoInteraccion !== 'todos'
+                          ? TIPOS_INTERACCION_MASTER_CONFIG[selectedTipoInteraccion]?.label
+                          : '',
+                      ]
+                        .filter(Boolean)
+                        .join(' · '),
+                      isCurrent: true,
+                    },
+                  ]
+                : []),
+            ]}
+          />
+        </div>
 
         {/* -----------------------------------------------------------------
          * CABECERA DEL SEGMENTO CON BUSCADOR
@@ -772,7 +769,8 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
               value={internalQuery}
               onChange={(e) => setInternalQuery(e.target.value)}
               placeholder="Buscar en este segmento..."
-              className="w-full pl-9 pr-3 py-2 text-xs bg-white border border-[#DCDCDC] rounded-xl focus:border-[#14649B] focus:ring-1 focus:ring-[#14649B] outline-none"
+              aria-label={`Buscar trámites en ${meta.shortTitle}`}
+              className="w-full pl-9 pr-3 py-2 text-xs bg-white border border-sat-gris rounded-xl focus:border-sat-azul focus:ring-1 focus:ring-sat-azul outline-none"
             />
           </div>
         </div>
@@ -780,7 +778,7 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
         {/* -----------------------------------------------------------------
          * CICLO DE VIDA TRIBUTARIO Y ADUANERO (MODELO ATO - AUSTRALIA)
          * ----------------------------------------------------------------- */}
-        <div className="bg-[#F8FAFC] border border-[#E2E8F0] rounded-2xl p-3 sm:p-4 space-y-3 shadow-xs">
+        <div className="bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl p-3 sm:p-4 space-y-3 shadow-xs">
           {/* Pestañas de Ciclo de Vida (Etapas ATO) */}
           <div>
             <div className="flex items-center justify-between mb-2">
@@ -931,12 +929,9 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
                 {currentTramites.map(renderTramiteCard)}
               </div>
             ) : (
-              <div className="rounded-2xl border border-[#DCDCDC] bg-[#F4F6F9] p-8 text-center">
-                <p className="text-sm font-bold text-[#19324B]">No se encontraron trámites</p>
-                <p className="text-xs text-[#475569] mt-1">
-                  Intenta buscar con otros términos como NIT, RTU, Vehículos, DUCA o Facturas.
-                </p>
-              </div>
+              <Alert tone="info" title="No se encontraron trámites">
+                Intenta buscar con otros términos como NIT, RTU, Vehículos, DUCA o Facturas.
+              </Alert>
             )}
           </div>
         ) : isAtoFilterActive ? (
@@ -968,12 +963,9 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
                 {currentTramites.map(renderTramiteCard)}
               </div>
             ) : (
-              <div className="rounded-2xl border border-[#DCDCDC] bg-[#F4F6F9] p-8 text-center">
-                <p className="text-sm font-bold text-[#19324B]">No hay trámites con esta combinación de filtros</p>
-                <p className="text-xs text-[#475569] mt-1">
-                  Selecciona &quot;Todas las etapas&quot; o &quot;Todos los formatos&quot; para explorar el catálogo completo.
-                </p>
-              </div>
+              <Alert tone="info" title="No hay trámites con esta combinación de filtros">
+                Selecciona "Todas las etapas" o "Todos los formatos" para explorar el catálogo completo.
+              </Alert>
             )}
           </div>
         ) : (
@@ -990,87 +982,96 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
                   const desc = CATEGORY_DESCRIPTIONS[catName] || 'Explora los trámites y obligaciones agrupadas en esta clasificación oficial.';
 
                   return (
-                    <div
+                    <Card
                       key={catName}
+                      title={catName}
+                      description={desc}
+                      tone={cardTone}
                       onClick={() => {
                         setSelectedCategory(catName);
                         setSelectedSubcategory(null);
                       }}
-                      className={`group relative block rounded-2xl border border-[#CDE3F1] bg-[#F0F7FC] p-5 transition-all duration-200 hover:-translate-y-1 ${meta.hoverBg} ${meta.hoverShadow} cursor-pointer`}
-                    >
-                      <div className="flex items-start justify-between gap-3">
-                        <h3 className="text-base font-bold text-[#19324B] transition-colors group-hover:text-white leading-snug">
-                          {catName}
-                        </h3>
-                        <ChevronRight className="h-5 w-5 shrink-0 text-[#94A3B8] transition-colors group-hover:text-white" />
-                      </div>
-                      <p className="mt-2 text-xs leading-relaxed text-[#475569] transition-colors group-hover:text-white/90">
-                        {desc}
-                      </p>
-                    </div>
+                    />
                   );
                 })}
               </div>
             )}
 
             {/* =============================================================
-             * VISTA DE SUBTEMAS (Sin subtítulos redundantes ni números)
+             * VISTA PROFUNDA: SIDEBAR CONTEXTUAL + CONTENIDO (NIVEL 4+)
              * ============================================================= */}
-            {selectedCategory && !selectedSubcategory && (
-              <div>
-                <div className="flex items-center justify-end mb-3">
-                  <button
-                    onClick={handleResetToCategories}
-                    className="inline-flex items-center gap-1.5 text-xs font-bold text-[#14649B] hover:underline"
-                  >
-                    <ArrowLeft className="w-3.5 h-3.5" />
-                    <span>Volver a {meta.shortTitle}</span>
-                  </button>
-                </div>
+            {selectedCategory && (
+              <div className="flex flex-col lg:flex-row gap-6 items-start">
+                <SidebarNav
+                  segmentTitle={meta.title}
+                  segmentShortTitle={meta.shortTitle}
+                  segmentColor={meta.color}
+                  categories={sidebarCategories}
+                  selectedCategory={selectedCategory}
+                  selectedSubcategory={selectedSubcategory}
+                  onSelectCategory={(cat) => {
+                    setSelectedCategory(cat);
+                    setSelectedSubcategory(null);
+                  }}
+                  onSelectSubcategory={(cat, sub) => {
+                    setSelectedCategory(cat);
+                    setSelectedSubcategory(sub);
+                  }}
+                  onResetToSegment={handleResetToCategories}
+                />
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-3.5">
-                  {subcategoriesList.map((subName) => {
-                    const desc = SUBCATEGORY_DESCRIPTIONS[subName] || 'Consulta los trámites específicos y requisitos correspondientes.';
-
-                    return (
-                      <div
-                        key={subName}
-                        onClick={() => setSelectedSubcategory(subName)}
-                        className={`group relative block rounded-2xl border border-[#CDE3F1] bg-[#F0F7FC] p-5 transition-all duration-200 hover:-translate-y-1 ${meta.hoverBg} ${meta.hoverShadow} cursor-pointer`}
-                      >
-                        <div className="flex items-start justify-between gap-3">
-                          <h3 className="text-base font-bold text-[#19324B] transition-colors group-hover:text-white leading-snug">
-                            {subName}
-                          </h3>
-                          <ChevronRight className="h-5 w-5 shrink-0 text-[#94A3B8] transition-colors group-hover:text-white" />
-                        </div>
-                        <p className="mt-2 text-xs leading-relaxed text-[#475569] transition-colors group-hover:text-white/90">
-                          {desc}
-                        </p>
+                <div className="flex-1 min-w-0 w-full">
+                  {!selectedSubcategory ? (
+                    <div>
+                      <div className="flex items-center justify-between mb-3 pb-2 border-b border-[#E2E8F0]">
+                        <h2 className="text-xs font-bold uppercase tracking-wider text-[#64748B]">
+                          Subtemas de {selectedCategory} ({subcategoriesList.length})
+                        </h2>
+                        <button
+                          onClick={handleResetToCategories}
+                          className="inline-flex items-center gap-1.5 text-xs font-bold text-[#14649B] hover:underline"
+                        >
+                          <ArrowLeft className="w-3.5 h-3.5" />
+                          <span>Volver a {meta.shortTitle}</span>
+                        </button>
                       </div>
-                    );
-                  })}
-                </div>
-              </div>
-            )}
 
-            {/* =============================================================
-             * VISTA DE TRÁMITES FINALES (Sin conteos redundantes)
-             * ============================================================= */}
-            {selectedCategory && selectedSubcategory && (
-              <div>
-                <div className="flex items-center justify-end mb-3">
-                  <button
-                    onClick={handleResetToSubcategories}
-                    className="inline-flex items-center gap-1.5 text-xs font-bold text-[#14649B] hover:underline"
-                  >
-                    <ArrowLeft className="w-3.5 h-3.5" />
-                    <span>Volver a {selectedCategory}</span>
-                  </button>
-                </div>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-3.5">
+                        {subcategoriesList.map((subName) => {
+                          const desc = SUBCATEGORY_DESCRIPTIONS[subName] || 'Consulta los trámites específicos y requisitos correspondientes.';
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-3.5">
-                  {currentTramites.map(renderTramiteCard)}
+                          return (
+                            <Card
+                              key={subName}
+                              title={subName}
+                              description={desc}
+                              tone={cardTone}
+                              onClick={() => setSelectedSubcategory(subName)}
+                            />
+                          );
+                        })}
+                      </div>
+                    </div>
+                  ) : (
+                    <div>
+                      <div className="flex items-center justify-between mb-3 pb-2 border-b border-[#E2E8F0]">
+                        <h2 className="text-xs font-bold uppercase tracking-wider text-[#64748B]">
+                          Servicios y trámites ({currentTramites.length})
+                        </h2>
+                        <button
+                          onClick={handleResetToSubcategories}
+                          className="inline-flex items-center gap-1.5 text-xs font-bold text-[#14649B] hover:underline"
+                        >
+                          <ArrowLeft className="w-3.5 h-3.5" />
+                          <span>Volver a {selectedCategory}</span>
+                        </button>
+                      </div>
+
+                      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-3.5">
+                        {currentTramites.map(renderTramiteCard)}
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
             )}
