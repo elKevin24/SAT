@@ -17,7 +17,7 @@ import {
 } from 'lucide-react';
 import rawTramites from '../data/allTramites.json';
 
-export type PillarKey = 'contribuyentes' | 'comercio_exterior' | 'profesionales' | 'organismos_especiales';
+export type PillarKey = 'contribuyentes' | 'comercio_exterior' | 'profesionales' | 'entes_exentos';
 
 interface PillarConfig {
   id: PillarKey;
@@ -62,7 +62,7 @@ const PILLARS: PillarConfig[] = [
     description: 'Peritos contadores, auditores, abogados, notarios y gestores tributarios acreditados.'
   },
   {
-    id: 'organismos_especiales',
+    id: 'entes_exentos',
     name: 'Organismos Especiales',
     shortName: 'Organismos Especiales',
     badgeColor: 'bg-[#C25E00]',
@@ -97,7 +97,7 @@ const CANONICAL_ORDER: Record<PillarKey, string[]> = {
     'Gestores Tributarios',
     'Servicios Profesionales'
   ],
-  organismos_especiales: [
+  entes_exentos: [
     'Entidades del Estado',
     'Constitucionales',
     'No Lucrativos',

@@ -148,8 +148,8 @@ const TOPICS_BY_SEGMENT: Record<SegmentId, { label: string; primaryColor: string
       }
     ]
   },
-  organismos_especiales: {
-    label: 'Organismos Especiales',
+  entes_exentos: {
+    label: 'Entes Exentos',
     primaryColor: '#C25E00',
     hoverBg: 'hover:bg-[#C25E00]',
     hoverBorder: 'hover:border-[#C25E00]',

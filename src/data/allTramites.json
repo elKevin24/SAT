@@ -9399,7 +9399,7 @@
   },
   {
     "id": "profesionales-76",
-    "pillar": "organismos_especiales",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Terceras Personas",
     "categoria": "Decreto",
@@ -10658,8 +10658,8 @@
     "nota": "Clasificacion en el dataset: CAPACITACIÓN."
   },
   {
-    "id": "organismos_especiales-10",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-10",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Exentos",
     "categoria": "Constitucionales",
@@ -10676,8 +10676,8 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-15",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-15",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Exentos",
     "categoria": "Constitucionales",
@@ -10694,8 +10694,8 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-17",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-17",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Exentos",
     "categoria": "Constitucionales",
@@ -10712,8 +10712,8 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-11",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-11",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Exentos",
     "categoria": "Constitucionales",
@@ -10730,7 +10730,7 @@
     "nota": "Clasificacion en el dataset: CAPACITACIÓN."
   },
   {
-    "id": "organismos_especiales-20",
+    "id": "entes_exentos-20",
     "pillar": "contribuyentes",
     "pillarName": "Contribuyentes",
     "macroGrupo": "Exentos",
@@ -10748,8 +10748,8 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-8",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-8",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Exentos",
     "categoria": "Constitucionales",
@@ -10766,7 +10766,7 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-25",
+    "id": "entes_exentos-25",
     "pillar": "contribuyentes",
     "pillarName": "Contribuyentes",
     "macroGrupo": "Exentos",
@@ -10784,7 +10784,7 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-5",
+    "id": "entes_exentos-5",
     "pillar": "contribuyentes",
     "pillarName": "Contribuyentes",
     "macroGrupo": "Exentos",
@@ -10802,8 +10802,8 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-6",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-6",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Exentos",
     "categoria": "Constitucionales",
@@ -10820,8 +10820,8 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-7",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-7",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Exentos",
     "categoria": "Constitucionales",
@@ -10838,7 +10838,7 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-19",
+    "id": "entes_exentos-19",
     "pillar": "contribuyentes",
     "pillarName": "Contribuyentes",
     "macroGrupo": "Exentos",
@@ -10856,8 +10856,8 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-12",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-12",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Exentos",
     "categoria": "Constitucionales",
@@ -10874,8 +10874,8 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-13",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-13",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Exentos",
     "categoria": "Constitucionales",
@@ -10892,8 +10892,8 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-16",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-16",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Exentos",
     "categoria": "Constitucionales",
@@ -10910,8 +10910,8 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-21",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-21",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Exentos",
     "categoria": "Constitucionales",
@@ -10928,8 +10928,8 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-26",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-26",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Exentos",
     "categoria": "Constitucionales",
@@ -10946,8 +10946,8 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-22",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-22",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Exentos",
     "categoria": "Constitucionales",
@@ -10964,8 +10964,8 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-14",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-14",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Exentos",
     "categoria": "Constitucionales",
@@ -10982,8 +10982,8 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-18",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-18",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Exentos",
     "categoria": "Constitucionales",
@@ -11000,8 +11000,8 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-23",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-23",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Exentos",
     "categoria": "Constitucionales",
@@ -11018,8 +11018,8 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-24",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-24",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Exentos",
     "categoria": "Constitucionales",
@@ -11036,8 +11036,8 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-9",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-9",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Exentos",
     "categoria": "Constitucionales",
@@ -11054,8 +11054,8 @@
     "nota": "Clasificacion en el dataset: CAPACITACIÓN."
   },
   {
-    "id": "organismos_especiales-32",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-32",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Exentos",
     "categoria": "No Lucrativos",
@@ -11072,8 +11072,8 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-33",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-33",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Exentos",
     "categoria": "No Lucrativos",
@@ -11090,8 +11090,8 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-34",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-34",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Exentos",
     "categoria": "No Lucrativos",
@@ -11108,8 +11108,8 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-35",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-35",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Exentos",
     "categoria": "No Lucrativos",
@@ -11126,8 +11126,8 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-37",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-37",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Exentos",
     "categoria": "No Lucrativos",
@@ -11144,8 +11144,8 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-39",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-39",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Exentos",
     "categoria": "No Lucrativos",
@@ -11162,8 +11162,8 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-40",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-40",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Exentos",
     "categoria": "No Lucrativos",
@@ -11180,7 +11180,7 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-44",
+    "id": "entes_exentos-44",
     "pillar": "contribuyentes",
     "pillarName": "Contribuyentes",
     "macroGrupo": "Exentos",
@@ -11198,8 +11198,8 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-46",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-46",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Exentos",
     "categoria": "No Lucrativos",
@@ -11216,8 +11216,8 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-30",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-30",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Exentos",
     "categoria": "No Lucrativos",
@@ -11234,8 +11234,8 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-36",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-36",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Exentos",
     "categoria": "No Lucrativos",
@@ -11252,8 +11252,8 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-38",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-38",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Exentos",
     "categoria": "No Lucrativos",
@@ -11270,8 +11270,8 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-31",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-31",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Exentos",
     "categoria": "No Lucrativos",
@@ -11288,7 +11288,7 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-57",
+    "id": "entes_exentos-57",
     "pillar": "comercio_exterior",
     "pillarName": "Operadores de Comercio Exterior",
     "macroGrupo": "Exentos",
@@ -11306,8 +11306,8 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-66",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-66",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Exentos",
     "categoria": "Decreto",
@@ -11324,8 +11324,8 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-70",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-70",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Exentos",
     "categoria": "Decreto",
@@ -11342,8 +11342,8 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-71",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-71",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Exentos",
     "categoria": "Decreto",
@@ -11360,7 +11360,7 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-59",
+    "id": "entes_exentos-59",
     "pillar": "comercio_exterior",
     "pillarName": "Operadores de Comercio Exterior",
     "macroGrupo": "Exentos",
@@ -11378,7 +11378,7 @@
     "nota": "Clasificacion en el dataset: ADUANAS."
   },
   {
-    "id": "organismos_especiales-56",
+    "id": "entes_exentos-56",
     "pillar": "comercio_exterior",
     "pillarName": "Operadores de Comercio Exterior",
     "macroGrupo": "Exentos",
@@ -11396,7 +11396,7 @@
     "nota": "Clasificacion en el dataset: ADUANAS."
   },
   {
-    "id": "organismos_especiales-58",
+    "id": "entes_exentos-58",
     "pillar": "comercio_exterior",
     "pillarName": "Operadores de Comercio Exterior",
     "macroGrupo": "Exentos",
@@ -11414,7 +11414,7 @@
     "nota": "Clasificacion en el dataset: ADUANAS."
   },
   {
-    "id": "organismos_especiales-60",
+    "id": "entes_exentos-60",
     "pillar": "comercio_exterior",
     "pillarName": "Operadores de Comercio Exterior",
     "macroGrupo": "Exentos",
@@ -11432,8 +11432,8 @@
     "nota": "Clasificacion en el dataset: ADUANAS."
   },
   {
-    "id": "organismos_especiales-61",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-61",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Exentos",
     "categoria": "Decreto",
@@ -11450,8 +11450,8 @@
     "nota": "Clasificacion en el dataset: ADUANAS."
   },
   {
-    "id": "organismos_especiales-62",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-62",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Exentos",
     "categoria": "Decreto",
@@ -11468,8 +11468,8 @@
     "nota": "Clasificacion en el dataset: ADUANAS."
   },
   {
-    "id": "organismos_especiales-63",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-63",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Exentos",
     "categoria": "Decreto",
@@ -11486,8 +11486,8 @@
     "nota": "Clasificacion en el dataset: ADUANAS."
   },
   {
-    "id": "organismos_especiales-65",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-65",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Exentos",
     "categoria": "Decreto",
@@ -11504,8 +11504,8 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-67",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-67",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Exentos",
     "categoria": "Decreto",
@@ -11522,8 +11522,8 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-68",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-68",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Exentos",
     "categoria": "Decreto",
@@ -11540,8 +11540,8 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-69",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-69",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Exentos",
     "categoria": "Decreto",
@@ -11558,8 +11558,8 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-51",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-51",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Exentos",
     "categoria": "Decreto",
@@ -11576,8 +11576,8 @@
     "nota": "Clasificacion en el dataset: ADUANAS."
   },
   {
-    "id": "organismos_especiales-55",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-55",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Exentos",
     "categoria": "Decreto",
@@ -11594,8 +11594,8 @@
     "nota": "Clasificacion en el dataset: ADUANAS."
   },
   {
-    "id": "organismos_especiales-64",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-64",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Exentos",
     "categoria": "Decreto",
@@ -11612,8 +11612,8 @@
     "nota": "Clasificacion en el dataset: INSTITUCIONAL."
   },
   {
-    "id": "organismos_especiales-76",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-76",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Exentos",
     "categoria": "Decreto",
@@ -11630,8 +11630,8 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-80",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-80",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Exentos",
     "categoria": "Decreto",
@@ -11648,8 +11648,8 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-97",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-97",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Exentos",
     "categoria": "Municipalidades",
@@ -11666,8 +11666,8 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-91",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-91",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Exentos",
     "categoria": "Municipalidades",
@@ -11684,8 +11684,8 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-96",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-96",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Exentos",
     "categoria": "Municipalidades",
@@ -11702,8 +11702,8 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-98",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-98",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Exentos",
     "categoria": "Municipalidades",
@@ -11720,8 +11720,8 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-99",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-99",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Exentos",
     "categoria": "Municipalidades",
@@ -11738,7 +11738,7 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-86",
+    "id": "entes_exentos-86",
     "pillar": "comercio_exterior",
     "pillarName": "Operadores de Comercio Exterior",
     "macroGrupo": "Exentos",
@@ -11756,7 +11756,7 @@
     "nota": "Clasificacion en el dataset: ADUANAS."
   },
   {
-    "id": "organismos_especiales-83",
+    "id": "entes_exentos-83",
     "pillar": "comercio_exterior",
     "pillarName": "Operadores de Comercio Exterior",
     "macroGrupo": "Exentos",
@@ -11774,7 +11774,7 @@
     "nota": "Clasificacion en el dataset: INSTITUCIONAL."
   },
   {
-    "id": "organismos_especiales-82",
+    "id": "entes_exentos-82",
     "pillar": "comercio_exterior",
     "pillarName": "Operadores de Comercio Exterior",
     "macroGrupo": "Exentos",
@@ -11792,8 +11792,8 @@
     "nota": "Clasificacion en el dataset: CAPACITACIÓN."
   },
   {
-    "id": "organismos_especiales-113",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-113",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Entidades del Estado",
     "categoria": "Entidades del Estado",
@@ -11810,8 +11810,8 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-114",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-114",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Entidades del Estado",
     "categoria": "Entidades del Estado",
@@ -11828,8 +11828,8 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-112",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-112",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Entidades del Estado",
     "categoria": "Entidades del Estado",
@@ -11846,8 +11846,8 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-115",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-115",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Entidades del Estado",
     "categoria": "Entidades del Estado",
@@ -11864,8 +11864,8 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-106",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-106",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Entidades del Estado",
     "categoria": "Entidades del Estado",
@@ -11882,7 +11882,7 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-136",
+    "id": "entes_exentos-136",
     "pillar": "contribuyentes",
     "pillarName": "Contribuyentes",
     "macroGrupo": "Organismos Especiales",
@@ -11900,8 +11900,8 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-4",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-4",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Exentos",
     "categoria": "No Lucrativos",
@@ -11918,7 +11918,7 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-104",
+    "id": "entes_exentos-104",
     "pillar": "contribuyentes",
     "pillarName": "Contribuyentes",
     "macroGrupo": "Entidades del Estado",
@@ -11936,8 +11936,8 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-111",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-111",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Entidades del Estado",
     "categoria": "No Lucrativos",
@@ -11954,7 +11954,7 @@
     "nota": ""
   },
   {
-    "id": "organismos_especiales-119",
+    "id": "entes_exentos-119",
     "pillar": "contribuyentes",
     "pillarName": "Contribuyentes",
     "macroGrupo": "Organismos Especiales",
@@ -11972,8 +11972,8 @@
     "nota": "Clasificacion en el dataset: CAPACITACIÓN."
   },
   {
-    "id": "organismos_especiales-121",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-121",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Organismos Especiales",
     "categoria": "Entidades del Estado",
@@ -11990,8 +11990,8 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-125",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-125",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Organismos Especiales",
     "categoria": "Entidades del Estado",
@@ -12008,7 +12008,7 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-137",
+    "id": "entes_exentos-137",
     "pillar": "contribuyentes",
     "pillarName": "Contribuyentes",
     "macroGrupo": "Organismos Especiales",
@@ -12026,7 +12026,7 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-120",
+    "id": "entes_exentos-120",
     "pillar": "contribuyentes",
     "pillarName": "Contribuyentes",
     "macroGrupo": "Organismos Especiales",
@@ -12044,8 +12044,8 @@
     "nota": "Clasificacion en el dataset: CAPACITACIÓN."
   },
   {
-    "id": "organismos_especiales-133",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-133",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Organismos Especiales",
     "categoria": "Entidades del Estado",
@@ -12062,8 +12062,8 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-105",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-105",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Entidades del Estado",
     "categoria": "Entidades del Estado",
@@ -12080,8 +12080,8 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-128",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-128",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Organismos Especiales",
     "categoria": "Entidades del Estado",
@@ -12098,8 +12098,8 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-107",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-107",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Entidades del Estado",
     "categoria": "Entidades del Estado",
@@ -12116,8 +12116,8 @@
     "nota": "Clasificacion en el dataset: INSTITUCIONAL."
   },
   {
-    "id": "organismos_especiales-123",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-123",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Organismos Especiales",
     "categoria": "Entidades del Estado",
@@ -12134,8 +12134,8 @@
     "nota": "Clasificacion en el dataset: INSTITUCIONAL."
   },
   {
-    "id": "organismos_especiales-124",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-124",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Organismos Especiales",
     "categoria": "Entidades del Estado",
@@ -12152,8 +12152,8 @@
     "nota": "Clasificacion en el dataset: INSTITUCIONAL."
   },
   {
-    "id": "organismos_especiales-126",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-126",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Organismos Especiales",
     "categoria": "Entidades del Estado",
@@ -12170,8 +12170,8 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-127",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-127",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Organismos Especiales",
     "categoria": "Entidades del Estado",
@@ -12188,8 +12188,8 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-129",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-129",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Organismos Especiales",
     "categoria": "Entidades del Estado",
@@ -12206,8 +12206,8 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-130",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-130",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Organismos Especiales",
     "categoria": "Entidades del Estado",
@@ -12224,8 +12224,8 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-131",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-131",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Organismos Especiales",
     "categoria": "Entidades del Estado",
@@ -12242,8 +12242,8 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-132",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-132",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Organismos Especiales",
     "categoria": "Entidades del Estado",
@@ -12260,8 +12260,8 @@
     "nota": "Clasificacion en el dataset: INSTITUCIONAL."
   },
   {
-    "id": "organismos_especiales-108",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-108",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Entidades del Estado",
     "categoria": "Entidades del Estado",
@@ -12278,8 +12278,8 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-109",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-109",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Entidades del Estado",
     "categoria": "Entidades del Estado",
@@ -12296,8 +12296,8 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-110",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-110",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Entidades del Estado",
     "categoria": "Entidades del Estado",
@@ -12314,8 +12314,8 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-134",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-134",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Organismos Especiales",
     "categoria": "Entidades del Estado",
@@ -12332,8 +12332,8 @@
     "nota": "Clasificacion en el dataset: SERVICIOS TRIBUTARIOS."
   },
   {
-    "id": "organismos_especiales-103",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-103",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Entidades del Estado",
     "categoria": "Entidades del Estado",
@@ -12350,8 +12350,8 @@
     "nota": "Clasificacion en el dataset: CAPACITACIÓN."
   },
   {
-    "id": "organismos_especiales-116",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-116",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Organismos Especiales",
     "categoria": "Entidades del Estado",
@@ -12368,7 +12368,7 @@
     "nota": "Clasificacion en el dataset: CAPACITACIÓN."
   },
   {
-    "id": "organismos_especiales-117",
+    "id": "entes_exentos-117",
     "pillar": "contribuyentes",
     "pillarName": "Contribuyentes",
     "macroGrupo": "Organismos Especiales",
@@ -12386,7 +12386,7 @@
     "nota": "Clasificacion en el dataset: CAPACITACIÓN."
   },
   {
-    "id": "organismos_especiales-118",
+    "id": "entes_exentos-118",
     "pillar": "contribuyentes",
     "pillarName": "Contribuyentes",
     "macroGrupo": "Organismos Especiales",
@@ -12404,8 +12404,8 @@
     "nota": "Clasificacion en el dataset: CAPACITACIÓN."
   },
   {
-    "id": "organismos_especiales-122",
-    "pillar": "organismos_especiales",
+    "id": "entes_exentos-122",
+    "pillar": "entes_exentos",
     "pillarName": "Organismos Especiales",
     "macroGrupo": "Organismos Especiales",
     "categoria": "Entidades del Estado",

@@ -187,8 +187,27 @@
   --sat-foco-offset: 2px;
   --sat-foco-radio: var(--sat-radio-sm);
 
-  /* Movimiento [DERIVADO] */
-  --sat-transicion: 180ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* ------------------------------------------------------------------
+   * MOVIMIENTO  [DERIVADO]
+   * Escala de duracion y curvas para microinteracciones.
+   * Guia: microestados (hover/press) usan la rapida; lo estandar
+   * usa la base; paneles (drawer/modal) la lenta o la de panel.
+   * La preferencia del usuario se respeta globalmente via
+   * @media (prefers-reduced-motion: reduce) en index.css (WCAG 2.3.3).
+   * ------------------------------------------------------------------ */
+  --sat-duracion-rapida: 120ms;
+  --sat-duracion-base: 200ms;
+  --sat-duracion-lenta: 300ms;
+  --sat-duracion-panel: 360ms;
+
+  --sat-ease-estandar: cubic-bezier(0.4, 0, 0.2, 1);
+  --sat-ease-entrada: cubic-bezier(0.4, 0, 1, 1);
+  --sat-ease-salida: cubic-bezier(0, 0, 0.2, 1);
+  --sat-ease-suave: cubic-bezier(0.16, 1, 0.3, 1);
+  --sat-ease-pulso: cubic-bezier(0.68, -0.6, 0.32, 1.6);
+
+  /* Alias legacy */
+  --sat-transicion: var(--sat-duracion-base) var(--sat-ease-estandar);
 
   /* Safe Area Insets */
   --safe-top: env(safe-area-inset-top, 0px);

@@ -1,6 +1,13 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import { Search, ChevronRight, ArrowLeft, Home } from 'lucide-react';
+import { Search, ChevronRight, ArrowLeft, Home, Filter, RotateCcw } from 'lucide-react';
 import { SegmentId } from './UserSegmentCards';
+import {
+  PORTAL_MASTER_DATA,
+  ETAPAS_ATO_CONFIG,
+  TIPOS_INTERACCION_MASTER_CONFIG,
+  EtapaAtoId,
+  TipoInteraccionId
+} from '../data/portalMasterTaxonomy';
 
 export interface TramiteItem {
   id: string;
@@ -19,11 +26,19 @@ export interface TramiteItem {
   url: string;
   nota?: string;
   baseLegal?: string;
+  etapaAto?: EtapaAtoId;
+  etapaAtoLabel?: string;
+  tipoInteraccion?: TipoInteraccionId;
+  tipoInteraccionLabel?: string;
+  esBrecha?: boolean;
 }
 
 interface SegmentTramitesCatalogProps {
   segmentId: SegmentId;
   initialCategory?: string;
+  initialSubcategory?: string | null;
+  initialEtapaAto?: EtapaAtoId | 'todas';
+  initialTipoInteraccion?: TipoInteraccionId | 'todos';
   allTramites: TramiteItem[];
   onSelectTramite: (tramite: TramiteItem) => void;
   onBackToHome: () => void;
@@ -66,10 +81,10 @@ const SEGMENT_METADATA: Record<SegmentId, {
     hoverBorder: 'hover:border-[#4D8014]',
     hoverShadow: 'hover:shadow-[0_12px_24px_rgba(77,128,20,0.22)]'
   },
-  organismos_especiales: {
-    title: 'Organismos Especiales',
-    shortTitle: 'Organismos Especiales',
-    desc: 'Entidades del Estado, universidades, centros educativos, iglesias y organizaciones exentas.',
+  entes_exentos: {
+    title: 'Entes Exentos',
+    shortTitle: 'Entes Exentos',
+    desc: 'Entidades del Estado, municipalidades, universidades, centros educativos, iglesias y organizaciones no lucrativas.',
     color: '#C25E00',
     hoverBg: 'hover:bg-[#C25E00]',
     hoverBorder: 'hover:border-[#C25E00]',
@@ -101,7 +116,7 @@ const CANONICAL_CATEGORY_ORDER: Record<string, string[]> = {
     'Gestores Tributarios',
     'Servicios Profesionales'
   ],
-  organismos_especiales: [
+  entes_exentos: [
     'Entidades del Estado',
     'Constitucionales',
     'No Lucrativos',
@@ -231,6 +246,9 @@ const SUBCATEGORY_DESCRIPTIONS: Record<string, string> = {
 export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
   segmentId,
   initialCategory,
+  initialSubcategory,
+  initialEtapaAto = 'todas',
+  initialTipoInteraccion = 'todos',
   allTramites,
   onSelectTramite,
   onBackToHome,
@@ -244,24 +262,75 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
   );
 
   // Subcategoría seleccionada
-  const [selectedSubcategory, setSelectedSubcategory] = useState<string | null>(null);
+  const [selectedSubcategory, setSelectedSubcategory] = useState<string | null>(initialSubcategory || null);
+
+  // Filtros de arquitectura ATO (Australian Taxation Office)
+  const [selectedEtapaAto, setSelectedEtapaAto] = useState<EtapaAtoId | 'todas'>(initialEtapaAto || 'todas');
+  const [selectedTipoInteraccion, setSelectedTipoInteraccion] = useState<TipoInteraccionId | 'todos'>(initialTipoInteraccion || 'todos');
 
   useEffect(() => {
     if (initialCategory && initialCategory !== 'Todas las categorías') {
       setSelectedCategory(initialCategory);
-      setSelectedSubcategory(null);
     } else {
       setSelectedCategory(null);
-      setSelectedSubcategory(null);
     }
-  }, [initialCategory, segmentId]);
+    if (initialSubcategory !== undefined) {
+      setSelectedSubcategory(initialSubcategory || null);
+    }
+    if (initialEtapaAto) setSelectedEtapaAto(initialEtapaAto);
+    if (initialTipoInteraccion) setSelectedTipoInteraccion(initialTipoInteraccion);
+  }, [initialCategory, initialSubcategory, initialEtapaAto, initialTipoInteraccion, segmentId]);
+
+  // Sincronización con window.location.hash para Deep Linking en GitHub Pages
+  useEffect(() => {
+    const params = new URLSearchParams();
+    params.set('segmento', segmentId);
+    if (selectedCategory) params.set('categoria', selectedCategory);
+    if (selectedSubcategory) params.set('subcategoria', selectedSubcategory);
+    if (selectedEtapaAto !== 'todas') params.set('etapa', selectedEtapaAto);
+    if (selectedTipoInteraccion !== 'todos') params.set('tipo', selectedTipoInteraccion);
+
+    const targetHash = '#/catalogo?' + params.toString();
+    if (window.location.hash !== targetHash) {
+      window.history.replaceState(null, '', targetHash);
+    }
+  }, [segmentId, selectedCategory, selectedSubcategory, selectedEtapaAto, selectedTipoInteraccion]);
 
   const meta = SEGMENT_METADATA[segmentId];
 
-  // Trámites del segmento actual
+  // Mapa de enriquecimiento con taxonomía maestra ATO
+  const masterLookup = useMemo(() => {
+    const map = new Map<string, typeof PORTAL_MASTER_DATA[0]>();
+    PORTAL_MASTER_DATA.forEach(item => {
+      map.set(item.id, item);
+      if (item.tramite) map.set(item.tramite.toLowerCase().trim(), item);
+      if (item.tramiteOriginal) map.set(item.tramiteOriginal.toLowerCase().trim(), item);
+    });
+    return map;
+  }, []);
+
+  // Trámites del segmento actual enriquecidos con taxonomía ATO
   const segmentTramites = useMemo(() => {
-    return allTramites.filter(t => t.pillar === segmentId);
-  }, [allTramites, segmentId]);
+    const base = allTramites.filter(t => t.pillar === segmentId);
+    return base.map(t => {
+      const match = masterLookup.get(t.id) ||
+                    (t.tramite ? masterLookup.get(t.tramite.toLowerCase().trim()) : null) ||
+                    (t.nombreActual ? masterLookup.get(t.nombreActual.toLowerCase().trim()) : null);
+      if (match) {
+        return {
+          ...t,
+          etapaAto: match.etapaAto,
+          etapaAtoLabel: match.etapaAtoLabel,
+          tipoInteraccion: match.tipoInteraccion,
+          tipoInteraccionLabel: match.tipoInteraccionLabel,
+          esBrecha: match.esBrecha,
+          tramite: match.tramite || t.tramite,
+          descripcion: match.descripcion || t.descripcion
+        };
+      }
+      return t;
+    });
+  }, [allTramites, segmentId, masterLookup]);
 
   // Categorías disponibles dentro del segmento actual
   const categoriesList = useMemo(() => {
@@ -468,35 +537,168 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
     });
   }, [segmentTramites, selectedCategory]);
 
-  // Trámites finales (filtrados por subcategoría o por búsqueda global si hay query)
+  // Trámites finales (filtrados por subcategoría, búsqueda, etapa ATO y tipo de interacción)
   const currentTramites = useMemo(() => {
+    let list: TramiteItem[] = [];
+
     if (internalQuery.trim()) {
       const q = internalQuery.toLowerCase();
-      return segmentTramites.filter(t =>
+      list = segmentTramites.filter(t =>
         (t.tramite && t.tramite.toLowerCase().includes(q)) ||
         (t.descripcion && t.descripcion.toLowerCase().includes(q)) ||
         (t.subcategoria && t.subcategoria.toLowerCase().includes(q)) ||
         (t.categoria && t.categoria.toLowerCase().includes(q))
       );
+    } else if (selectedCategory && selectedSubcategory) {
+      list = segmentTramites.filter(
+        t => t.categoria === selectedCategory && t.subcategoria === selectedSubcategory
+      );
+    } else if (selectedCategory) {
+      // Si seleccionó una etapa ATO o tipo de interacción, muestra los trámites de la categoría
+      if (selectedEtapaAto !== 'todas' || selectedTipoInteraccion !== 'todos') {
+        list = segmentTramites.filter(t => t.categoria === selectedCategory);
+      } else {
+        return [];
+      }
+    } else {
+      // Si seleccionó una etapa ATO o tipo de interacción a nivel de segmento completo
+      if (selectedEtapaAto !== 'todas' || selectedTipoInteraccion !== 'todos') {
+        list = segmentTramites;
+      } else {
+        return [];
+      }
     }
 
-    if (!selectedCategory || !selectedSubcategory) return [];
+    // Filtrar por etapa ATO
+    if (selectedEtapaAto !== 'todas') {
+      list = list.filter(t => t.etapaAto === selectedEtapaAto);
+    }
 
-    return segmentTramites.filter(
-      t => t.categoria === selectedCategory && t.subcategoria === selectedSubcategory
-    );
-  }, [segmentTramites, selectedCategory, selectedSubcategory, internalQuery]);
+    // Filtrar por tipo de interacción
+    if (selectedTipoInteraccion !== 'todos') {
+      list = list.filter(t => t.tipoInteraccion === selectedTipoInteraccion);
+    }
+
+    return list;
+  }, [segmentTramites, selectedCategory, selectedSubcategory, internalQuery, selectedEtapaAto, selectedTipoInteraccion]);
+
+  // Ámbito actual para calcular conteos reactivos de las pestañas ATO
+  const scopePool = useMemo(() => {
+    if (selectedCategory && selectedSubcategory) {
+      return segmentTramites.filter(t => t.categoria === selectedCategory && t.subcategoria === selectedSubcategory);
+    }
+    if (selectedCategory) {
+      return segmentTramites.filter(t => t.categoria === selectedCategory);
+    }
+    return segmentTramites;
+  }, [segmentTramites, selectedCategory, selectedSubcategory]);
+
+  const etapaCounts = useMemo(() => {
+    const counts: Record<string, number> = { todas: scopePool.length };
+    ETAPAS_ATO_CONFIG.forEach(e => {
+      counts[e.id] = scopePool.filter(t => t.etapaAto === e.id).length;
+    });
+    return counts;
+  }, [scopePool]);
+
+  const tipoCounts = useMemo(() => {
+    const counts: Record<string, number> = { todos: scopePool.length };
+    (Object.keys(TIPOS_INTERACCION_MASTER_CONFIG) as TipoInteraccionId[]).forEach(k => {
+      counts[k] = scopePool.filter(t => t.tipoInteraccion === k).length;
+    });
+    return counts;
+  }, [scopePool]);
+
+  const isAtoFilterActive = selectedEtapaAto !== 'todas' || selectedTipoInteraccion !== 'todos';
 
   // Navegación limpia de migas de pan
   const handleResetToCategories = () => {
     setSelectedCategory(null);
     setSelectedSubcategory(null);
+    setSelectedEtapaAto('todas');
+    setSelectedTipoInteraccion('todos');
     setInternalQuery('');
   };
 
   const handleResetToSubcategories = () => {
     setSelectedSubcategory(null);
+    setSelectedEtapaAto('todas');
+    setSelectedTipoInteraccion('todos');
     setInternalQuery('');
+  };
+
+  const handleResetFilters = () => {
+    setSelectedEtapaAto('todas');
+    setSelectedTipoInteraccion('todos');
+    setInternalQuery('');
+  };
+
+  // Renderizador unificado de tarjeta de trámite con diseño Plain Language y badges oficiales
+  const renderTramiteCard = (tramite: TramiteItem) => {
+    return (
+      <div
+        key={tramite.id}
+        onClick={() => onSelectTramite(tramite)}
+        className={`group relative flex flex-col justify-between rounded-2xl border border-[#CDE3F1] bg-[#F0F7FC] p-5 transition-all duration-200 hover:-translate-y-1 ${meta.hoverBg} ${meta.hoverShadow} cursor-pointer`}
+      >
+        <div>
+          {/* Fila de Badges: Formato de interacción + Etapa ATO + Propuesta de brecha */}
+          <div className="flex flex-wrap items-center gap-1.5 mb-2.5">
+            {tramite.tipoInteraccion && (
+              <span className={`inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider transition-colors group-hover:bg-white/20 group-hover:text-white ${
+                tramite.tipoInteraccion === 'servicio_transaccional'
+                  ? 'bg-[#14649B]/10 text-[#14649B] border border-[#14649B]/20'
+                  : tramite.tipoInteraccion === 'consulta_datos'
+                    ? 'bg-[#059669]/10 text-[#059669] border border-[#059669]/20'
+                    : tramite.tipoInteraccion === 'descarga_recurso'
+                      ? 'bg-[#7C3AED]/10 text-[#7C3AED] border border-[#7C3AED]/20'
+                      : 'bg-slate-200/70 text-slate-700 border border-slate-300/60'
+              }`}>
+                {tramite.tipoInteraccion === 'servicio_transaccional' && 'Trámite en Línea'}
+                {tramite.tipoInteraccion === 'consulta_datos' && 'Consulta BD'}
+                {tramite.tipoInteraccion === 'guia_informativa' && 'Guía'}
+                {tramite.tipoInteraccion === 'descarga_recurso' && 'Descarga'}
+              </span>
+            )}
+
+            {tramite.etapaAtoLabel && (
+              <span className="inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-medium bg-white/80 text-slate-600 border border-slate-200 transition-colors group-hover:bg-white/20 group-hover:text-white group-hover:border-white/30">
+                {tramite.etapaAtoLabel.replace(/^\d+\.\s*/, '')}
+              </span>
+            )}
+
+            {tramite.esBrecha && (
+              <span className="inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-bold bg-[#C25E00]/10 text-[#C25E00] border border-[#C25E00]/30 transition-colors group-hover:bg-white group-hover:text-[#C25E00]">
+                Propuesta normativa SAT
+              </span>
+            )}
+          </div>
+
+          {/* Título del trámite */}
+          <div className="flex items-start justify-between gap-3">
+            <h3 className="text-base font-bold text-[#19324B] transition-colors group-hover:text-white leading-snug">
+              {tramite.tramite}
+            </h3>
+            <ChevronRight className="h-5 w-5 shrink-0 text-[#94A3B8] transition-colors group-hover:text-white group-hover:translate-x-0.5" />
+          </div>
+
+          {/* Descripción en Plain Language */}
+          <p className="mt-2 text-xs leading-relaxed text-[#475569] transition-colors group-hover:text-white/90">
+            {tramite.descripcion}
+          </p>
+        </div>
+
+        {/* Pie de tarjeta con contexto de clasificación */}
+        <div className="mt-4 pt-3 border-t border-[#CDE3F1]/70 flex items-center justify-between text-[11px] text-[#64748B] transition-colors group-hover:text-white/80 group-hover:border-white/20">
+          <span className="truncate max-w-[200px]">
+            {tramite.categoria} {tramite.subcategoria ? `› ${tramite.subcategoria}` : ''}
+          </span>
+          <span className="font-bold flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
+            Ver detalle →
+          </span>
+        </div>
+      </div>
+    );
   };
 
   return (
@@ -520,7 +722,7 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
           <button
             onClick={handleResetToCategories}
             className={`font-bold transition-colors ${
-              !selectedCategory && !internalQuery ? 'text-[#14649B]' : 'hover:text-[#14649B]'
+              !selectedCategory && !internalQuery && !isAtoFilterActive ? 'text-[#14649B]' : 'hover:text-[#14649B]'
             }`}
           >
             {meta.title}
@@ -532,7 +734,7 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
               <button
                 onClick={handleResetToSubcategories}
                 className={`font-bold transition-colors ${
-                  !selectedSubcategory && !internalQuery ? 'text-[#14649B]' : 'hover:text-[#14649B]'
+                  !selectedSubcategory && !internalQuery && !isAtoFilterActive ? 'text-[#14649B]' : 'hover:text-[#14649B]'
                 }`}
               >
                 {selectedCategory}
@@ -545,6 +747,17 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
               <ChevronRight className="w-3 h-3 text-[#94A3B8]" />
               <span className="font-bold text-[#14649B]">
                 {selectedSubcategory}
+              </span>
+            </>
+          )}
+
+          {isAtoFilterActive && (
+            <>
+              <ChevronRight className="w-3 h-3 text-[#94A3B8]" />
+              <span className="font-bold text-[#0284C7] bg-[#0284C7]/10 px-2 py-0.5 rounded">
+                {selectedEtapaAto !== 'todas' ? ETAPAS_ATO_CONFIG.find(e => e.id === selectedEtapaAto)?.shortLabel : ''}
+                {selectedEtapaAto !== 'todas' && selectedTipoInteraccion !== 'todos' ? ' · ' : ''}
+                {selectedTipoInteraccion !== 'todos' ? TIPOS_INTERACCION_MASTER_CONFIG[selectedTipoInteraccion]?.label : ''}
               </span>
             </>
           )}
@@ -595,13 +808,145 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
         </div>
 
         {/* -----------------------------------------------------------------
+         * CICLO DE VIDA TRIBUTARIO Y ADUANERO (MODELO ATO - AUSTRALIA)
+         * ----------------------------------------------------------------- */}
+        <div className="bg-[#F8FAFC] border border-[#E2E8F0] rounded-2xl p-3 sm:p-4 space-y-3 shadow-xs">
+          {/* Pestañas de Ciclo de Vida (Etapas ATO) */}
+          <div>
+            <div className="flex items-center justify-between mb-2">
+              <span className="text-[11px] font-bold uppercase tracking-wider text-[#64748B]">
+                Ciclo de Vida (Modelo ATO)
+              </span>
+              {selectedEtapaAto !== 'todas' && (
+                <button
+                  type="button"
+                  onClick={() => setSelectedEtapaAto('todas')}
+                  className="text-[11px] font-semibold text-[#14649B] hover:underline"
+                >
+                  Ver todas las etapas
+                </button>
+              )}
+            </div>
+
+            <div className="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-thin">
+              {/* Tab Todas las etapas */}
+              <button
+                type="button"
+                onClick={() => setSelectedEtapaAto('todas')}
+                className={`shrink-0 px-3 py-1.5 rounded-xl text-xs font-bold transition-all ${
+                  selectedEtapaAto === 'todas'
+                    ? 'bg-[#19324B] text-white shadow-xs'
+                    : 'bg-white border border-[#CBD5E1] text-[#475569] hover:bg-[#F1F5F9] hover:text-[#19324B]'
+                }`}
+              >
+                Todas las etapas
+                <span className={`ml-1.5 px-1.5 py-0.5 rounded-full text-[10px] ${
+                  selectedEtapaAto === 'todas' ? 'bg-white/20 text-white' : 'bg-slate-100 text-slate-600'
+                }`}>
+                  {etapaCounts.todas || 0}
+                </span>
+              </button>
+
+              {/* 5 Tabs de Etapas ATO */}
+              {ETAPAS_ATO_CONFIG.map((etapa) => {
+                const count = etapaCounts[etapa.id] || 0;
+                const isSelected = selectedEtapaAto === etapa.id;
+
+                return (
+                  <button
+                    key={etapa.id}
+                    type="button"
+                    onClick={() => setSelectedEtapaAto(isSelected ? 'todas' : etapa.id)}
+                    title={etapa.desc}
+                    className={`shrink-0 px-3 py-1.5 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 ${
+                      isSelected
+                        ? 'text-white shadow-xs'
+                        : 'bg-white border border-[#CBD5E1] text-[#475569] hover:bg-[#F1F5F9] hover:text-[#19324B]'
+                    }`}
+                    style={isSelected ? { backgroundColor: etapa.badgeColor } : undefined}
+                  >
+                    <span>{etapa.label}</span>
+                    <span className={`px-1.5 py-0.2 rounded-full text-[10px] ${
+                      isSelected ? 'bg-white/25 text-white' : 'bg-slate-100 text-slate-600'
+                    }`}>
+                      {count}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Filtros de Tipo de Interacción (Chips) */}
+          <div className="pt-2 border-t border-[#E2E8F0] flex flex-wrap items-center gap-1.5">
+            <span className="text-[11px] font-bold text-[#64748B] flex items-center gap-1 mr-1">
+              <Filter className="w-3 h-3 text-[#94A3B8]" />
+              Formato:
+            </span>
+
+            {/* Chip Todos */}
+            <button
+              type="button"
+              onClick={() => setSelectedTipoInteraccion('todos')}
+              className={`px-2.5 py-1 rounded-lg text-xs font-semibold transition-all ${
+                selectedTipoInteraccion === 'todos'
+                  ? 'bg-[#14649B] text-white shadow-xs'
+                  : 'bg-white border border-[#CBD5E1] text-[#475569] hover:bg-[#F1F5F9]'
+              }`}
+            >
+              Todos ({tipoCounts.todos || 0})
+            </button>
+
+            {/* Chips por formato */}
+            {(Object.entries(TIPOS_INTERACCION_MASTER_CONFIG) as [TipoInteraccionId, typeof TIPOS_INTERACCION_MASTER_CONFIG[TipoInteraccionId]][]).map(
+              ([tipoId, tipoCfg]) => {
+                const count = tipoCounts[tipoId] || 0;
+                const isSelected = selectedTipoInteraccion === tipoId;
+
+                return (
+                  <button
+                    key={tipoId}
+                    type="button"
+                    onClick={() => setSelectedTipoInteraccion(isSelected ? 'todos' : tipoId)}
+                    title={tipoCfg.desc}
+                    className={`px-2.5 py-1 rounded-lg text-xs font-semibold transition-all flex items-center gap-1.5 ${
+                      isSelected
+                        ? 'bg-[#14649B] text-white shadow-xs'
+                        : 'bg-white border border-[#CBD5E1] text-[#475569] hover:bg-[#F1F5F9]'
+                    }`}
+                  >
+                    <span>{tipoCfg.label}</span>
+                    <span className={`px-1.5 py-0.2 rounded-full text-[10px] ${
+                      isSelected ? 'bg-white/20 text-white' : 'bg-slate-100 text-slate-600'
+                    }`}>
+                      {count}
+                    </span>
+                  </button>
+                );
+              }
+            )}
+
+            {isAtoFilterActive && (
+              <button
+                type="button"
+                onClick={handleResetFilters}
+                className="ml-auto inline-flex items-center gap-1 text-[11px] font-bold text-[#C25E00] hover:underline"
+              >
+                <RotateCcw className="w-3 h-3" />
+                Limpiar filtros
+              </button>
+            )}
+          </div>
+        </div>
+
+        {/* -----------------------------------------------------------------
          * VISTA 1: BÚSQUEDA DIRECTA (Si el usuario escribió algo en el input)
          * ----------------------------------------------------------------- */}
         {internalQuery.trim() ? (
           <div>
             <div className="flex items-center justify-between pb-3 mb-4 border-b border-[#DCDCDC]">
               <h2 className="text-sm font-bold text-[#19324B]">
-                Trámites coincidentes
+                Trámites coincidentes ({currentTramites.length})
               </h2>
               <button
                 onClick={() => setInternalQuery('')}
@@ -613,36 +958,57 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
 
             {currentTramites.length > 0 ? (
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-3.5">
-                {currentTramites.map((tramite) => (
-                  <div
-                    key={tramite.id}
-                    onClick={() => onSelectTramite(tramite)}
-                    className={`group relative block rounded-2xl border border-[#CDE3F1] bg-[#F0F7FC] p-5 transition-all duration-200 hover:-translate-y-1 ${meta.hoverBg} ${meta.hoverShadow} cursor-pointer`}
-                  >
-                    <div className="flex items-start justify-between gap-3">
-                      <h3 className="text-base font-bold text-[#19324B] transition-colors group-hover:text-white leading-snug">
-                        {tramite.tramite}
-                      </h3>
-                      <ChevronRight className="h-5 w-5 shrink-0 text-[#94A3B8] transition-colors group-hover:text-white" />
-                    </div>
-                    <p className="mt-2 text-xs leading-relaxed text-[#475569] transition-colors group-hover:text-white/90">
-                      {tramite.descripcion}
-                    </p>
-                  </div>
-                ))}
+                {currentTramites.map(renderTramiteCard)}
               </div>
             ) : (
               <div className="rounded-2xl border border-[#DCDCDC] bg-[#F4F6F9] p-8 text-center">
                 <p className="text-sm font-bold text-[#19324B]">No se encontraron trámites</p>
                 <p className="text-xs text-[#475569] mt-1">
-                  Intenta buscar con otros términos como NIT, RTU, Vehículos o Facturas.
+                  Intenta buscar con otros términos como NIT, RTU, Vehículos, DUCA o Facturas.
+                </p>
+              </div>
+            )}
+          </div>
+        ) : isAtoFilterActive ? (
+          /* -----------------------------------------------------------------
+           * VISTA 2: FILTRO ACTIVO DE CICLO DE VIDA ATO / FORMATO
+           * ----------------------------------------------------------------- */
+          <div>
+            <div className="flex items-center justify-between pb-3 mb-4 border-b border-[#DCDCDC]">
+              <div>
+                <h2 className="text-sm font-bold text-[#19324B]">
+                  Trámites filtrados por ciclo de vida ({currentTramites.length})
+                </h2>
+                <p className="text-xs text-[#64748B] mt-0.5">
+                  {selectedEtapaAto !== 'todas' && `Etapa: ${ETAPAS_ATO_CONFIG.find(e => e.id === selectedEtapaAto)?.label}. `}
+                  {selectedTipoInteraccion !== 'todos' && `Formato: ${TIPOS_INTERACCION_MASTER_CONFIG[selectedTipoInteraccion]?.label}.`}
+                </p>
+              </div>
+              <button
+                onClick={handleResetFilters}
+                className="inline-flex items-center gap-1 text-xs font-bold text-[#14649B] hover:underline"
+              >
+                <RotateCcw className="w-3.5 h-3.5" />
+                <span>Restablecer filtros</span>
+              </button>
+            </div>
+
+            {currentTramites.length > 0 ? (
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-3.5">
+                {currentTramites.map(renderTramiteCard)}
+              </div>
+            ) : (
+              <div className="rounded-2xl border border-[#DCDCDC] bg-[#F4F6F9] p-8 text-center">
+                <p className="text-sm font-bold text-[#19324B]">No hay trámites con esta combinación de filtros</p>
+                <p className="text-xs text-[#475569] mt-1">
+                  Selecciona &quot;Todas las etapas&quot; o &quot;Todos los formatos&quot; para explorar el catálogo completo.
                 </p>
               </div>
             )}
           </div>
         ) : (
           /* -----------------------------------------------------------------
-           * NAVEGACIÓN EN TARJETAS (Fondo azul mínimo institucional #F0F7FC)
+           * NAVEGACIÓN JERÁRQUICA EN TARJETAS (LEY DE MILLER)
            * ----------------------------------------------------------------- */
           <>
             {/* =============================================================
@@ -734,23 +1100,7 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-3.5">
-                  {currentTramites.map((tramite) => (
-                    <div
-                      key={tramite.id}
-                      onClick={() => onSelectTramite(tramite)}
-                      className={`group relative block rounded-2xl border border-[#CDE3F1] bg-[#F0F7FC] p-5 transition-all duration-200 hover:-translate-y-1 ${meta.hoverBg} ${meta.hoverShadow} cursor-pointer`}
-                    >
-                      <div className="flex items-start justify-between gap-3">
-                        <h3 className="text-base font-bold text-[#19324B] transition-colors group-hover:text-white leading-snug">
-                          {tramite.tramite}
-                        </h3>
-                        <ChevronRight className="h-5 w-5 shrink-0 text-[#94A3B8] transition-colors group-hover:text-white" />
-                      </div>
-                      <p className="mt-2 text-xs leading-relaxed text-[#475569] transition-colors group-hover:text-white/90">
-                        {tramite.descripcion}
-                      </p>
-                    </div>
-                  ))}
+                  {currentTramites.map(renderTramiteCard)}
                 </div>
               </div>
             )}

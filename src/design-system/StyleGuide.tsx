@@ -19,7 +19,9 @@ import {
   FileText,
   Sliders,
   CheckSquare,
-  Sparkles
+  Sparkles,
+  Loader2,
+  Inbox
 } from 'lucide-react';
 
 /* -------------------------------------------------------------------------
@@ -268,6 +270,31 @@ const FUERA_DE_PALETA = [
 ];
 
 /* -------------------------------------------------------------------------
+ * Movimiento y carga [DERIVADO] — tokens declarados en tokens.css
+ * ------------------------------------------------------------------------- */
+
+const MOVIMIENTO = [
+  { token: '--sat-duracion-rapida', valor: '120ms', uso: 'Microestados: hover, press, cambio de color.' },
+  { token: '--sat-duracion-base', valor: '200ms', uso: 'Estándar de UI: sombras, translate, bordes.' },
+  { token: '--sat-duracion-lenta', valor: '300ms', uso: 'Apariciones y cambios de layout visibles.' },
+  { token: '--sat-duracion-panel', valor: '360ms', uso: 'Paneles: drawer lateral y modales.' },
+];
+
+const EASINGS = [
+  { token: '--sat-ease-estandar', valor: 'cubic-bezier(0.4, 0, 0.2, 1)', uso: 'Curva por defecto de la interfaz.' },
+  { token: '--sat-ease-entrada', valor: 'cubic-bezier(0.4, 0, 1, 1)', uso: 'Entrada rápida desde fuera de pantalla.' },
+  { token: '--sat-ease-salida', valor: 'cubic-bezier(0, 0, 0.2, 1)', uso: 'Salida suave hacia fuera de pantalla.' },
+  { token: '--sat-ease-suave', valor: 'cubic-bezier(0.16, 1, 0.3, 1)', uso: 'Panel que se desliza y se asienta (drawer).' },
+  { token: '--sat-ease-pulso', valor: 'cubic-bezier(0.68, -0.6, 0.32, 1.6)', uso: 'Rebote sutil: check de confirmación.' },
+];
+
+const ESTADOS_CARGA = [
+  { token: 'skeleton', nombre: 'Skeleton', uso: 'Contenido estructural conocido (cards, listas, tablas).' },
+  { token: 'spinner', nombre: 'Spinner', uso: 'Operación corta e indeterminada (< 3s): guardar, copiar.' },
+  { token: 'vacio', nombre: 'Estado vacío', uso: 'Sin resultados de búsqueda o sin datos que mostrar.' },
+];
+
+/* -------------------------------------------------------------------------
  * Categorías y Menú de Navegación estilo Bootstrap 5 Docs
  * ------------------------------------------------------------------------- */
 
@@ -305,6 +332,8 @@ const DOC_MENU: DocNavCategory[] = [
       { id: 'cards', titulo: 'Sistema de Tarjetas SAT' },
       { id: 'badges', titulo: 'Badges y Etiquetas' },
       { id: 'alertas', titulo: 'Alertas y Notificaciones' },
+      { id: 'movimiento', titulo: 'Movimiento y Transiciones' },
+      { id: 'carga', titulo: 'Estados de Carga y Vacíos' },
       { id: 'tablas', titulo: 'Tablas de Datos' },
     ],
   },
@@ -1236,6 +1265,187 @@ export default function StyleGuide() {
     <p className="text-[#475569]">Mensaje explicativo claro.</p>
   </div>
 </div>`}
+                />
+              </div>
+            </SectionDoc>
+
+            {/* MOVIMIENTO Y TRANSICIONES */}
+            <SectionDoc
+              id="movimiento"
+              titulo="Movimiento y Transiciones"
+              descripcion="Escala de duración y curvas para microinteracciones. Regla: hover y press en la duración rápida, lo estándar en la base, paneles (drawer/modal) en la duración de panel. Toda animación obedece la preferencia del sistema 'reducir movimiento'."
+            >
+              <div className="space-y-6">
+                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                  {MOVIMIENTO.map((m) => (
+                    <div key={m.token} className="rounded-xl border border-[#DCDCDC] bg-white p-3.5">
+                      <div className="flex items-center justify-between gap-2">
+                        <code className="font-mono text-[11px] font-bold text-[#14649B]">{m.token}</code>
+                        <span className="rounded bg-[#E9EDF2] px-1.5 py-0.5 font-mono text-[11px] font-bold text-[#19324B]">
+                          {m.valor}
+                        </span>
+                      </div>
+                      <p className="mt-1.5 text-xs leading-relaxed text-[#475569]">{m.uso}</p>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="rounded-xl border border-[#DCDCDC] bg-white p-6">
+                  <h4 className="text-xs font-bold uppercase tracking-wider text-[#64748B] mb-4">
+                    Prueba viva (interactúa: hover / press)
+                  </h4>
+                  <div className="flex flex-wrap items-center gap-3">
+                    <button
+                      className="inline-flex items-center gap-2 rounded-xl bg-[#14649B] px-4 py-2.5 text-xs font-bold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-[#19324B] hover:shadow-[0_14px_30px_rgba(20,100,155,0.18)] active:scale-[0.98]"
+                      style={{ transitionDuration: 'var(--sat-duracion-rapida)', transitionTimingFunction: 'var(--sat-ease-estandar)' }}
+                    >
+                      Hover + Press (rápida)
+                    </button>
+                    <button
+                      className="rounded-xl border border-[#DCDCDC] bg-white px-4 py-2.5 text-xs font-bold text-[#19324B] transition hover:bg-[#F4F6F9]"
+                      style={{ transitionDuration: 'var(--sat-duracion-base)' }}
+                    >
+                      Transición estándar (base)
+                    </button>
+                    <button
+                      className="rounded-xl border border-[#DCDCDC] bg-white px-4 py-2.5 text-xs font-bold text-[#14649B] transition hover:translate-x-1 hover:border-[#14649B]"
+                      style={{ transitionDuration: 'var(--sat-duracion-lenta)', transitionTimingFunction: 'var(--sat-ease-suave)' }}
+                    >
+                      Deslizamiento suave (lenta)
+                    </button>
+                  </div>
+                  <div className="mt-6 flex justify-start">
+                    <div
+                      className="h-16 w-64 overflow-hidden rounded-xl border border-[#DCDCDC] bg-white shadow-sm transition hover:-translate-y-1 hover:border-[#14649B] hover:shadow-lg"
+                      style={{ transitionDuration: 'var(--sat-duracion-panel)', transitionTimingFunction: 'var(--sat-ease-suave)' }}
+                    >
+                      <div className="flex h-full items-center px-4">
+                        <span className="text-xs text-[#475569]">
+                          Duración de panel: pase el cursor sobre esta tarjeta
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="rounded-xl border border-[#DCDCDC] bg-white p-6">
+                  <h4 className="text-xs font-bold uppercase tracking-wider text-[#64748B] mb-4">
+                    Curvas de Movimiento (Easing)
+                  </h4>
+                  <div className="space-y-2.5">
+                    {EASINGS.map((e) => (
+                      <div key={e.token} className="rounded-lg bg-[#F4F6F9] p-3">
+                        <div className="flex flex-wrap items-center justify-between gap-2">
+                          <code className="font-mono text-xs font-bold text-[#14649B]">{e.token}</code>
+                          <code className="font-mono text-[11px] text-[#64748B]">{e.valor}</code>
+                        </div>
+                        <p className="mt-1 text-[11px] text-[#475569]">{e.uso}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="rounded-xl border-l-4 border-[#14649B] bg-[#F4F6F9] p-4 text-xs text-[#475569]">
+                  <strong className="text-[#19324B]">Regla de Accesibilidad (WCAG 2.3.3):</strong> el portal declara
+                  globalmente <code className="font-mono text-[#14649B]">@media (prefers-reduced-motion: reduce)</code>{' '}
+                  en <code className="font-mono">src/index.css</code>, que anula duraciones de transición y animación.
+                  Nunca se bloquea el contenido detrás de una animación.
+                </div>
+
+                <CodeSnippet
+                  code={`/* index.css — política global de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Uso en componentes: token de duración + curva */
+<button
+  className="transition hover:-translate-y-0.5 active:scale-[0.98]"
+  style={{ transitionDuration: 'var(--sat-duracion-rapida)',
+           transitionTimingFunction: 'var(--sat-ease-estandar)' }}
+/>`}
+                />
+              </div>
+            </SectionDoc>
+
+            {/* ESTADOS DE CARGA Y VACÍOS */}
+            <SectionDoc
+              id="carga"
+              titulo="Estados de Carga y Vacíos"
+              descripcion="Mientras el contenido aún no llega, se muestran placeholders con la forma final del contenido (skeleton) u operaciones cortas con spinner. Nunca una pantalla en blanco. Los skeleton usan animate-pulse, que se desactiva automáticamente con movimiento reducido."
+            >
+              <div className="space-y-6">
+                <div className="grid gap-4 sm:grid-cols-3">
+                  {ESTADOS_CARGA.map((s) => (
+                    <div key={s.token} className="rounded-xl border border-[#DCDCDC] bg-white p-3.5">
+                      <div className="flex items-center justify-between">
+                        <span className="text-sm font-black text-[#19324B]">{s.nombre}</span>
+                        <code className="font-mono text-[10px] font-bold text-[#14649B]">{s.token}</code>
+                      </div>
+                      <p className="mt-1.5 text-xs leading-relaxed text-[#475569]">{s.uso}</p>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="rounded-xl border border-[#DCDCDC] bg-white p-6">
+                  <h4 className="text-xs font-bold uppercase tracking-wider text-[#64748B] mb-4">
+                    Skeleton (carga de tarjetas)
+                  </h4>
+                  <div className="grid gap-4 md:grid-cols-2">
+                    {[0, 1].map((i) => (
+                      <div key={i} className="rounded-2xl border border-[#DCDCDC] bg-white p-5">
+                        <div className="flex items-start justify-between gap-3">
+                          <div className="h-4 w-3/5 rounded bg-[#E9EDF2] animate-pulse" />
+                          <div className="h-5 w-5 shrink-0 rounded bg-[#E9EDF2] animate-pulse" />
+                        </div>
+                        <div className="mt-3 space-y-2">
+                          <div className="h-3 w-full rounded bg-[#F4F6F9] animate-pulse" />
+                          <div className="h-3 w-4/5 rounded bg-[#F4F6F9] animate-pulse" />
+                        </div>
+                        <div className="mt-4 h-8 w-32 rounded-lg bg-[#E9EDF2] animate-pulse" />
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="mt-6 flex flex-wrap items-center gap-6">
+                    <div className="flex items-center gap-2 text-xs text-[#475569]">
+                      <Loader2 className="h-4 w-4 animate-spin text-[#14649B]" />
+                      Operación corta (spinner)
+                    </div>
+                    <div className="flex items-center gap-2 text-xs text-[#475569]">
+                      <div className="h-4 w-4 rounded-full border-2 border-[#DCDCDC] border-t-[#14649B] animate-spin" />
+                      Variante circular sin ícono
+                    </div>
+                  </div>
+                </div>
+
+                <div className="rounded-xl border border-dashed border-[#DCDCDC] bg-white p-8 text-center">
+                  <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-[#F4F6F9]">
+                    <Inbox className="h-6 w-6 text-[#94A3B8]" />
+                  </div>
+                  <p className="mt-3 text-sm font-black text-[#19324B]">No encontramos resultados</p>
+                  <p className="mt-1 text-xs text-[#64748B]">
+                    Revisa la ortografía o prueba con otro término de búsqueda.
+                  </p>
+                  <button className="mt-4 rounded-xl border border-[#DCDCDC] bg-white px-4 py-2 text-xs font-bold text-[#14649B] transition hover:bg-[#F4F6F9]">
+                    Limpiar búsqueda
+                  </button>
+                </div>
+
+                <CodeSnippet
+                  code={`{/* Skeleton con la forma del contenido final */}
+<div className="rounded-2xl border border-[#DCDCDC] bg-white p-5">
+  <div className="h-4 w-3/5 rounded bg-[#E9EDF2] animate-pulse" />
+  <div className="mt-3 h-3 w-full rounded bg-[#F4F6F9] animate-pulse" />
+  <div className="mt-4 h-8 w-32 rounded-lg bg-[#E9EDF2] animate-pulse" />
+</div>
+
+{/* Spinner para operaciones cortas */}
+<Loader2 className="h-4 w-4 animate-spin text-[#14649B]" />`}
                 />
               </div>
             </SectionDoc>

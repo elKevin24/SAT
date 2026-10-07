@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ChevronRight } from 'lucide-react';
 
-export type SegmentId = 'contribuyentes' | 'comercio_exterior' | 'profesionales' | 'organismos_especiales';
+export type SegmentId = 'contribuyentes' | 'comercio_exterior' | 'profesionales' | 'entes_exentos';
 
 interface SegmentDef {
   id: SegmentId;
@@ -18,7 +18,7 @@ const SEGMENTS: SegmentDef[] = [
   {
     id: 'contribuyentes',
     name: 'Contribuyentes',
-    desc: 'Personas individuales, pequeños contribuyentes, régimen general y contribuyentes especiales.',
+    desc: 'Personas sin negocio (primer NIT), pequeños contribuyentes, régimen general (IVA e ISR) y contribuyentes especiales.',
     cardHoverBorder: 'hover:border-[#14649B]',
     cardHoverBg: 'hover:bg-[#14649B]',
     cardHoverShadow: 'hover:shadow-[0_12px_24px_rgba(20,100,155,0.22)]',
@@ -28,7 +28,7 @@ const SEGMENTS: SegmentDef[] = [
   {
     id: 'comercio_exterior',
     name: 'Operadores de Comercio Exterior',
-    desc: 'Gestiones para importadores, exportadores, transportistas, agentes de aduanas y normativa arancelaria.',
+    desc: 'Importadores, exportadores, auxiliares de la función pública (AFPA), agentes, transportistas y depósitos aduaneros.',
     cardHoverBorder: 'hover:border-[#0284C7]',
     cardHoverBg: 'hover:bg-[#0284C7]',
     cardHoverShadow: 'hover:shadow-[0_12px_24px_rgba(2,132,199,0.22)]',
@@ -38,7 +38,7 @@ const SEGMENTS: SegmentDef[] = [
   {
     id: 'profesionales',
     name: 'Profesionales',
-    desc: 'Habilita tu registro como perito contador, auditor, abogado, notario o gestor tributario autorizado.',
+    desc: 'Peritos contadores, auditores, abogados, notarios y gestores tributarios acreditados ante la SAT.',
     cardHoverBorder: 'hover:border-[#4D8014]',
     cardHoverBg: 'hover:bg-[#4D8014]',
     cardHoverShadow: 'hover:shadow-[0_12px_24px_rgba(77,128,20,0.22)]',
@@ -46,9 +46,9 @@ const SEGMENTS: SegmentDef[] = [
     circleClasses: 'bg-[#4D8014]/15 text-[#4D8014] group-hover:bg-white group-hover:text-[#4D8014]'
   },
   {
-    id: 'organismos_especiales',
-    name: 'Organismos Especiales',
-    desc: 'Reconocimiento de exenciones para entidades del Estado, iglesias, universidades y organizaciones no lucrativas.',
+    id: 'entes_exentos',
+    name: 'Entes Exentos',
+    desc: 'Entidades del Estado, municipalidades, universidades, colegios, iglesias y organizaciones no lucrativas exentas por ley.',
     cardHoverBorder: 'hover:border-[#C25E00]',
     cardHoverBg: 'hover:bg-[#C25E00]',
     cardHoverShadow: 'hover:shadow-[0_12px_24px_rgba(194,94,0,0.22)]',
@@ -72,13 +72,13 @@ export const UserSegmentCards: React.FC<UserSegmentCardsProps> = ({
 
         <div className="space-y-1">
           <span className="text-xs font-bold text-[#14649B] uppercase tracking-wider">
-            Segmentación por Tipo de Usuario
+            Arquitectura por Grupos de Interés
           </span>
           <h2 id="segmentation-heading" className="text-xl sm:text-2xl font-black text-[#19324B] tracking-tight">
-            ¿Qué tipo de trámite o perfil necesitas gestionar?
+            Selecciona tu ámbito de gestión tributaria o aduanera
           </h2>
           <p className="text-xs sm:text-sm text-slate-600">
-            Selecciona tu grupo de interés para acceder a requisitos personalizados, guías normativas y trámites en línea.
+            Accede a los requisitos oficiales, trámites en línea, verificadores en base de datos y normativa aplicable a tu personería.
           </p>
         </div>
 

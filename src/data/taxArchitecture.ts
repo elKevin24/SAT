@@ -235,7 +235,7 @@ export const GRUPOS_CONFIG: GrupoInfo[] = [
     no: 6,
     nombre: 'Exentos',
     cantidadTemas: 53,
-    pillar: 'organismos_especiales',
+    pillar: 'entes_exentos',
     desc: 'Entidades exentas constitucionales, no lucrativas, por decreto de fomento y corporaciones municipales.',
     subgrupos: [
       { nombre: 'Constitucionales', cantidadTemas: 18, desc: 'Centros educativos, universidades privadas y entidades de la Iglesia Católica.' },
@@ -248,7 +248,7 @@ export const GRUPOS_CONFIG: GrupoInfo[] = [
     no: 9,
     nombre: 'Entidades del Estado',
     cantidadTemas: 26,
-    pillar: 'organismos_especiales',
+    pillar: 'entes_exentos',
     desc: 'Ministerios, dependencias del Estado, Organismo Judicial, Ministerio Público y SENABED.',
     subgrupos: [
       { nombre: 'Entidades del Estado', cantidadTemas: 26, desc: 'Acreditación en RTU estatal, gestión vehicular oficial, exenciones y órdenes de autoridad judicial.' }
