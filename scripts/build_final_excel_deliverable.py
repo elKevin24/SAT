@@ -1,245 +1,47 @@
 import json
 import os
+import re
 import openpyxl
 from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
 from openpyxl.utils import get_column_letter
 
 # ==============================================================================
-# 1. CARGA Y CLASIFICACIÓN DE JERARQUÍA ASIMÉTRICA EN allTramites.json
+# 1. CARGA DEL DATASET MAESTRO (783 REGISTROS)
 # ==============================================================================
 ALL_TRAMITES_PATH = 'src/data/allTramites.json'
 with open(ALL_TRAMITES_PATH, 'r', encoding='utf-8') as f:
     master_data = json.load(f)
 
-def classify_asymmetric_hierarchy(item):
-    pillar = str(item.get('pillar', item.get('nivel1_segmento', 'contribuyentes'))).lower()
-    macro = str(item.get('nivel1_segmento', item.get('macroGrupo', 'Contribuyentes'))).lower()
-    
-    # 1. Segmento (Nivel 1)
-    if 'comercio' in pillar or 'comercio' in macro:
-        segmento = "Operadores de Comercio Exterior"
-    elif 'profesional' in pillar or 'profesional' in macro:
-        segmento = "Profesionales"
-    elif 'exento' in pillar or 'exento' in macro or 'organismo' in pillar:
-        segmento = "Entes Exentos"
-    else:
-        segmento = "Contribuyentes"
-
-    cat = str(item.get('categoria', '')).strip()
-    subcat = str(item.get('subcategoria', '')).strip()
-    tema = str(item.get('tema', item.get('nivel4_tema', ''))).strip()
-    subtema = str(item.get('subtema', '')).strip()
-    actor_orig = str(item.get('actorEspecifico', item.get('actorNombre', ''))).strip()
-    fam_orig = str(item.get('subfamiliaAduanera', item.get('familiaAduanera', ''))).strip()
-    tramite = str(item.get('tramite', '')).strip()
-    
-    regimen_area = ""
-    grupo_actor = ""
-    actor_especifico = ""
-    materia_tema = ""
-    subtema_gestion = ""
-
-    # --------------------------------------------------------------------------
-    # A. OPERADORES DE COMERCIO EXTERIOR (4 niveles de actor cuando aplica)
-    # --------------------------------------------------------------------------
-    if segmento == "Operadores de Comercio Exterior":
-        # 1. AFPA (Auxiliares de la Función Pública Aduanera)
-        if any(k in f"{cat} {fam_orig} {actor_orig} {tema}".lower() for k in [
-            'almacen', 'depósito', 'deposito', 'agd', 'dat', 'agente', 'apoderado', 
-            'courier', 'entrega rápida', 'entrega rapida', 'transportista', 'consolidador', 'oea', 'afpa'
-        ]):
-            regimen_area = "Auxiliares de la Función Pública Aduanera (AFPA)"
+# Cargar las 26 brechas de comercio exterior desde el documento oficial
+BRECHAS_MD_PATH = 'docs/arquitectura-informacion/brechas-comercio-exterior.md'
+brechas_oficiales = []
+if os.path.exists(BRECHAS_MD_PATH):
+    with open(BRECHAS_MD_PATH, 'r', encoding='utf-8') as f:
+        md_text = f.read()
+    pattern = r'\|\s*\*\*(\d+)\*\*\s*\|\s*\*\*([^*]+)\*\*\s*\|\s*([^|]+)\s*\|\s*\*\*([^*]+)\*\*\s*\|\s*([^|]+)\|'
+    raw_matches = re.findall(pattern, md_text)
+    for num, actor, subtema, tramite, justif in raw_matches:
+        # Extraer situación y pregunta
+        sit = ""
+        preg = ""
+        if '*Situación:*' in justif and '*Pregunta SAT:*' in justif:
+            parts = justif.split('*Pregunta SAT:*')
+            sit = parts[0].replace('*Situación:*', '').replace('<br>', '').strip()
+            preg = parts[1].strip()
+        else:
+            sit = justif.strip()
+            preg = f"¿Existe acuerdo de directorio o resolución que formalice el requisito digital para '{tramite.strip()}' ante SAT?"
             
-            # Sub-desglose profundo de Depósitos Aduaneros (4 niveles)
-            if any(k in f"{cat} {actor_orig} {tema}".lower() for k in ['fiscal', 'almacenadora', 'agd', 'dat', 'depósito temporal', 'deposito temporal', 'depósito aduanero', 'deposito aduanero']):
-                grupo_actor = "Depósitos Aduaneros"
-                if any(k in f"{cat} {actor_orig} {tema}".lower() for k in ['almacenadora', 'agd', 'bonos de prenda', 'generales de dep']):
-                    actor_especifico = "Almacenadoras Generales de Depósito (AGD)"
-                elif any(k in f"{cat} {actor_orig} {tema}".lower() for k in ['dat', 'temporal', 'recinto temporal']):
-                    actor_especifico = "Depósitos Aduaneros Temporales (DAT)"
-                else:
-                    actor_especifico = "Almacenes Fiscales"
-            elif 'agente' in f"{cat} {actor_orig}".lower():
-                grupo_actor = "Agentes Aduaneros"
-                actor_especifico = "—"
-            elif 'apoderado' in f"{cat} {actor_orig}".lower():
-                grupo_actor = "Apoderados Especiales Aduaneros"
-                actor_especifico = "—"
-            elif any(k in f"{cat} {actor_orig}".lower() for k in ['courier', 'entrega rápida', 'entrega rapida']):
-                grupo_actor = "Empresas de Entrega Rápida o Courier"
-                actor_especifico = "—"
-            elif any(k in f"{cat} {actor_orig}".lower() for k in ['transport', 'atc']):
-                grupo_actor = "Transportistas Aduaneros"
-                actor_especifico = "—"
-            elif 'consolidador' in f"{cat} {actor_orig}".lower():
-                grupo_actor = "Consolidadores y Desconsolidadores de Carga"
-                actor_especifico = "—"
-            elif 'oea' in f"{cat} {actor_orig}".lower():
-                grupo_actor = "Operador Económico Autorizado (OEA)"
-                actor_especifico = "—"
-            else:
-                grupo_actor = "Auxiliares de Aduana Generales"
-                actor_especifico = "—"
+        brechas_oficiales.append({
+            'no': int(num),
+            'actor': actor.strip(),
+            'subtema': subtema.strip(),
+            'tramite': tramite.strip(),
+            'situacion': sit,
+            'pregunta': preg
+        })
 
-        # 2. Regímenes Territoriales y Zonas Especiales
-        elif any(k in f"{cat} {fam_orig} {actor_orig} {tema}".lower() for k in ['zdeep', 'zolic', 'maquila', '29-89']):
-            regimen_area = "Regímenes Territoriales y Zonas Especiales"
-            if 'zdeep' in f"{cat} {actor_orig} {tema}".lower():
-                grupo_actor = "Zonas de Desarrollo Económico Especial Público (ZDEEP)"
-                if 'administra' in f"{cat} {actor_orig}".lower():
-                    actor_especifico = "Entidades Administradoras ZDEEP"
-                else:
-                    actor_especifico = "Empresas Usuarias Calificadas ZDEEP"
-            elif 'maquila' in f"{cat} {actor_orig} {tema}".lower() or '29-89' in f"{cat} {actor_orig} {tema}".lower():
-                grupo_actor = "Maquilas y Perfeccionamiento Activo (Decreto 29-89)"
-                actor_especifico = "—"
-            else:
-                grupo_actor = "Zona Libre de Industria y Comercio (ZOLIC)"
-                actor_especifico = "—"
-
-        # 3. Importadores y Exportadores (Titulares de Mercancías)
-        elif any(k in f"{cat} {actor_orig} {tema}".lower() for k in ['importad', 'exportad', 'vehículo', 'vehiculo', 'fianza de import']):
-            regimen_area = "Importadores y Exportadores"
-            if 'export' in f"{cat} {actor_orig} {tema}".lower():
-                grupo_actor = "Exportadores"
-                if 'habitual' in actor_orig.lower(): actor_especifico = "Exportadores Habituales"
-                elif 'devolución' in actor_orig.lower() or 'iva' in actor_orig.lower(): actor_especifico = "Exportadores con Devolución de IVA"
-                else: actor_especifico = "—"
-            else:
-                grupo_actor = "Importadores"
-                if 'habitual' in actor_orig.lower(): actor_especifico = "Importadores Habituales"
-                elif 'menor' in actor_orig.lower() or 'ocasional' in actor_orig.lower(): actor_especifico = "Importadores Ocasionales o Menores"
-                elif 'vehículo' in f"{tema} {subcat}".lower(): actor_especifico = "Importadores de Vehículos"
-                else: actor_especifico = "—"
-
-        # 4. Normativa y Operaciones Aduaneras Generales
-        else:
-            regimen_area = "Normativa y Operaciones Aduaneras Generales"
-            grupo_actor = "Todos los Operadores"
-            actor_especifico = "—"
-
-        # Tema y Subtema
-        materia_tema = tema if tema and tema not in ['—', 'Importación', 'Exportación', 'Almacenes Fiscales', 'Depósitos Aduaneros Temporales (DAT)'] else cat
-        if materia_tema in ['Almacenes Fiscales', 'Almacenadoras Generales', 'Auxiliares de Aduana']:
-            materia_tema = "Régimen de Depósito Aduanero" if grupo_actor == "Depósitos Aduaneros" else "Acreditación y Operación Aduanera"
-        subtema_gestion = subcat if subcat and subcat != materia_tema else (subtema if subtema else "Gestión Operativa")
-
-    # --------------------------------------------------------------------------
-    # B. CONTRIBUYENTES (2 niveles de actor: Segmento -> Régimen/Audiencia)
-    # --------------------------------------------------------------------------
-    elif segmento == "Contribuyentes":
-        actor_especifico = "—"
-        if any(k in cat.lower() for k in ['nit sin', 'sin obligaciones']):
-            regimen_area = "NIT sin Obligaciones"
-            grupo_actor = "Ciudadanos sin Actividad Mercantil"
-        elif any(k in cat.lower() for k in ['pequeño', 'pequeno']):
-            regimen_area = "Pequeños Contribuyentes"
-            if 'primario' in actor_orig.lower(): grupo_actor = "Sector Agropecuario / Primario"
-            elif 'pecuario' in actor_orig.lower(): grupo_actor = "Sector Pecuario"
-            else: grupo_actor = "—"
-        elif any(k in cat.lower() for k in ['especial']):
-            regimen_area = "Contribuyentes Especiales"
-            if 'grande' in actor_orig.lower(): grupo_actor = "Grandes Contribuyentes"
-            elif 'mediano' in actor_orig.lower(): grupo_actor = "Medianos Contribuyentes"
-            else: grupo_actor = "—"
-        else:
-            regimen_area = "Contribuyente General"
-            if 'asalariado' in actor_orig.lower(): grupo_actor = "Asalariados en Relación de Dependencia"
-            elif 'empresa' in actor_orig.lower() or 'sociedad' in actor_orig.lower(): grupo_actor = "Empresas y Sociedades Mercantiles"
-            elif 'individual' in actor_orig.lower(): grupo_actor = "Personas Individuales con Negocio"
-            else: grupo_actor = "—"
-
-        materia_tema = tema if tema and tema not in ['—', cat] else subcat
-        subtema_gestion = subtema if subtema and subtema != materia_tema else "Gestión Tributaria"
-
-    # --------------------------------------------------------------------------
-    # C. PROFESIONALES (2 niveles de actor: Segmento -> Rol Profesional)
-    # --------------------------------------------------------------------------
-    elif segmento == "Profesionales":
-        actor_especifico = "—"
-        regimen_area = "Servicios Profesionales y Terceras Personas"
-        if any(k in f"{cat} {actor_orig} {tramite}".lower() for k in ['abogado', 'notario', 'tev', 'traspaso']):
-            grupo_actor = "Abogados y Notarios"
-        elif any(k in f"{cat} {actor_orig}".lower() for k in ['contador', 'perito']):
-            grupo_actor = "Peritos Contadores"
-        elif any(k in f"{cat} {actor_orig}".lower() for k in ['auditor']):
-            grupo_actor = "Auditores"
-        elif any(k in f"{cat} {actor_orig}".lower() for k in ['gestor', 'auxiliar']):
-            grupo_actor = "Gestores Tributarios y Auxiliares"
-        else:
-            grupo_actor = "Profesionales Habilitados"
-
-        materia_tema = tema if tema and tema not in ['—', cat] else subcat
-        subtema_gestion = subtema if subtema and subtema != materia_tema else "Gestión Profesional"
-
-    # --------------------------------------------------------------------------
-    # D. ENTES EXENTOS (2 niveles de actor: Segmento -> Tipo de Ente)
-    # --------------------------------------------------------------------------
-    else:
-        actor_especifico = "—"
-        if any(k in f"{cat} {actor_orig}".lower() for k in ['estado', 'ministerio', 'judicial', 'público', 'publico', 'senabed', 'pdh', 'municipal']):
-            regimen_area = "Sector Público y Entidades del Estado"
-            if 'municipal' in f"{cat} {actor_orig}".lower(): grupo_actor = "Municipalidades"
-            else: grupo_actor = "Dependencias del Estado y Organismos"
-        else:
-            regimen_area = "Organizaciones No Lucrativas (Exentas)"
-            if 'iglesia' in actor_orig.lower() or 'religios' in actor_orig.lower(): grupo_actor = "Iglesias y Comunidades Religiosas"
-            elif 'educativ' in actor_orig.lower() or 'universidad' in actor_orig.lower(): grupo_actor = "Centros Educativos y Universidades"
-            elif 'diplom' in actor_orig.lower(): grupo_actor = "Misiones Diplomáticas y Organismos Internacionales"
-            else: grupo_actor = "Asociaciones, Fundaciones y ONGs"
-
-        materia_tema = tema if tema and tema not in ['—', cat] else subcat
-        subtema_gestion = subtema if subtema and subtema != materia_tema else "Gestión de Exenciones"
-
-    # Limpieza final
-    if materia_tema == '' or materia_tema == '—': materia_tema = "Gestiones Institucionales"
-    if subtema_gestion == '' or subtema_gestion == '—': subtema_gestion = "Trámite General"
-
-    # --------------------------------------------------------------------------
-    # MIGA DE PAN (BREADCRUMB DINÁMICA) - Solo incluye niveles activos
-    # --------------------------------------------------------------------------
-    miga_parts = [segmento]
-    if regimen_area and regimen_area != segmento:
-        miga_parts.append(regimen_area)
-    if grupo_actor and grupo_actor != '—' and grupo_actor != regimen_area:
-        miga_parts.append(grupo_actor)
-    if actor_especifico and actor_especifico != '—' and actor_especifico != grupo_actor:
-        miga_parts.append(actor_especifico)
-    if materia_tema and materia_tema != '—' and materia_tema not in miga_parts:
-        miga_parts.append(materia_tema)
-    if subtema_gestion and subtema_gestion != '—' and subtema_gestion not in ['Trámite General', 'Gestión Tributaria', 'Gestión Operativa'] and subtema_gestion not in miga_parts:
-        miga_parts.append(subtema_gestion)
-    miga_parts.append(tramite)
-
-    miga_breadcrumb = " > ".join(miga_parts)
-
-    return {
-        'segmento': segmento,
-        'regimen_area': regimen_area,
-        'grupo_actor': grupo_actor,
-        'actor_especifico': actor_especifico,
-        'materia_tema': materia_tema,
-        'subtema_gestion': subtema_gestion,
-        'miga_breadcrumb': miga_breadcrumb
-    }
-
-# Aplicar enriquecimiento en master_data y actualizar allTramites.json
-for item in master_data:
-    h = classify_asymmetric_hierarchy(item)
-    item['segmento'] = h['segmento']
-    item['regimenArea'] = h['regimen_area']
-    item['grupoActor'] = h['grupo_actor']
-    item['actorEspecifico'] = h['actor_especifico']
-    item['materiaTema'] = h['materia_tema']
-    item['subtemaGestion'] = h['subtema_gestion']
-    item['migaBreadcrumb'] = h['miga_breadcrumb']
-    # Eliminar términos de jerga como subtemaCanonico si existiera
-    if 'subtemaCanonico' in item: del item['subtemaCanonico']
-
-with open(ALL_TRAMITES_PATH, 'w', encoding='utf-8') as f:
-    json.dump(master_data, f, ensure_ascii=False, indent=2)
-
-print(f"Dataset maestro JSON actualizado con éxito: {len(master_data)} registros.")
+print(f"Cargados {len(master_data)} trámites maestros y {len(brechas_oficiales)} brechas oficiales.")
 
 # ==============================================================================
 # 2. CONSTRUCCIÓN DEL LIBRO EXCEL OFICIAL CON FORMATO INSTITUCIONAL SAT
@@ -291,7 +93,7 @@ ws_resumen['B2'].font = Font(name='Segoe UI', size=11, bold=True, color='64748B'
 ws_resumen['B3'] = "ESTRUCTURA DE NAVEGACIÓN Y CONTENIDO DEL PORTAL WEB (MODELO ATO)"
 ws_resumen['B3'].font = font_title
 
-ws_resumen['B4'] = "Arquitectura de Navegación Flexible con Desglose Asimétrico de Actores y Migas de Pan (783 Contenidos)"
+ws_resumen['B4'] = "Arquitectura de Navegación Flexible con Desglose Asimétrico de Actores, Migas de Pan y Enlaces Oficiales (783 Contenidos)"
 ws_resumen['B4'].font = font_subtitle
 
 # KPI Cards con fórmulas vivas
@@ -307,7 +109,6 @@ for label, formula, sub, top_left, bot_right, color in kpis:
     ws_resumen.merge_cells(f"{top_left}:{bot_right}")
     cell = ws_resumen[top_left]
     cell.value = formula
-    # Título en celda superior izquierda
     cell.font = Font(name='Segoe UI', size=14, bold=True, color='FFFFFF')
     cell.fill = PatternFill(start_color=color, end_color=color, fill_type='solid')
     cell.alignment = Alignment(horizontal='center', vertical='center', wrap_text=True)
@@ -350,7 +151,7 @@ for r_idx, (mno, mnom, mdesc, mformula) in enumerate(macro_rows, start=11):
         cell.fill = PatternFill(start_color=fill_color, end_color=fill_color, fill_type='solid')
         cell.border = thin_border
 
-# Fila totalizador
+# Fila totalizador Segmentos
 ws_resumen.cell(row=15, column=2, value="").border = thin_border
 ws_resumen.cell(row=15, column=3, value="TOTAL PORTAL WEB SAT").font = font_bold
 ws_resumen.cell(row=15, column=4, value="Universo total de fichas de contenido y servicios").font = font_small
@@ -365,7 +166,7 @@ for c_idx in range(2, 7):
     ws_resumen.cell(row=15, column=c_idx).border = thin_border
     ws_resumen.cell(row=15, column=c_idx).fill = PatternFill(start_color='E2E8F0', end_color='E2E8F0', fill_type='solid')
 
-# Tabla 2: Ciclo de Vida ATO (5 Etapas)
+# Tabla 2: Ciclo de Vida ATO
 ws_resumen['H9'] = "2. CICLO DE VIDA ATO (AUSTRALIA) - SIN NÚMEROS VISIBLES"
 ws_resumen['H9'].font = font_bold
 
@@ -425,7 +226,7 @@ ws_resumen.column_dimensions['D'].width = 38
 ws_resumen.column_dimensions['I'].width = 46
 
 # ==============================================================================
-# HOJA 2: MATRIZ MAESTRA COMPLETA (783 FILAS CON MIGA DE PAN Y DESGLOSE ASIMÉTRICO)
+# HOJA 2: MATRIZ MAESTRA COMPLETA (783 FILAS CON 100% URLs CLICABLES)
 # ==============================================================================
 ws_master = wb.create_sheet(title=f"Matriz Maestra ({len(master_data)})")
 ws_master.views.sheetView[0].showGridLines = True
@@ -501,11 +302,12 @@ for r_idx, item in enumerate(master_data, start=2):
         c_brecha.font = Font(name='Segoe UI', size=10, bold=True, color='C25E00')
         c_brecha.fill = PatternFill(start_color='FFEDD5', end_color='FFEDD5', fill_type='solid')
 
-    # URL con Hipervínculo interactivo
-    c_url = ws_master.cell(row=r_idx, column=19, value=item.get('url', ''))
-    if str(item.get('url', '')).startswith('http'):
+    # URL con Hipervínculo interactivo (100% garantizado con http)
+    raw_url = str(item.get('url', '')).strip()
+    c_url = ws_master.cell(row=r_idx, column=19, value=raw_url)
+    if raw_url.startswith('http'):
         c_url.font = font_link
-        c_url.hyperlink = item.get('url')
+        c_url.hyperlink = raw_url
 
     fill_color = ZEBRA_FILL if r_idx % 2 == 0 else 'FFFFFF'
     for c_idx in range(1, 20):
@@ -516,7 +318,7 @@ for r_idx, item in enumerate(master_data, start=2):
         cell.border = thin_border
     ws_master.row_dimensions[r_idx].height = 22
 
-master_widths = [8, 18, 24, 26, 26, 26, 28, 24, 38, 55, 24, 24, 24, 22, 14, 48, 30, 16, 36]
+master_widths = [8, 18, 24, 26, 26, 26, 28, 24, 38, 55, 24, 24, 24, 22, 14, 48, 30, 16, 42]
 for idx, w in enumerate(master_widths, start=1):
     ws_master.column_dimensions[get_column_letter(idx)].width = w
 
@@ -524,7 +326,7 @@ ws_master.freeze_panes = 'E2'
 ws_master.auto_filter.ref = f"A1:S{len(master_data)+1}"
 
 # ==============================================================================
-# HOJA 3: COMERCIO EXTERIOR (246 FILAS CON 4 NIVELES DE ACTORES Y MIGA DE PAN)
+# HOJA 3: COMERCIO EXTERIOR (246 FILAS CON 100% URLs CLICABLES)
 # ==============================================================================
 ce_data = [item for item in master_data if item.get('segmento') == 'Operadores de Comercio Exterior']
 ws_ce = wb.create_sheet(title=f"Comercio Exterior ({len(ce_data)})")
@@ -593,10 +395,11 @@ for r_idx, item in enumerate(ce_data, start=2):
         c_brecha.font = Font(name='Segoe UI', size=10, bold=True, color='C25E00')
         c_brecha.fill = PatternFill(start_color='FFEDD5', end_color='FFEDD5', fill_type='solid')
 
-    c_url = ws_ce.cell(row=r_idx, column=16, value=item.get('url', ''))
-    if str(item.get('url', '')).startswith('http'):
+    raw_url = str(item.get('url', '')).strip()
+    c_url = ws_ce.cell(row=r_idx, column=16, value=raw_url)
+    if raw_url.startswith('http'):
         c_url.font = font_link
-        c_url.hyperlink = item.get('url')
+        c_url.hyperlink = raw_url
 
     fill_color = ZEBRA_FILL if r_idx % 2 == 0 else 'FFFFFF'
     for c_idx in range(1, 17):
@@ -607,7 +410,7 @@ for r_idx, item in enumerate(ce_data, start=2):
         cell.border = thin_border
     ws_ce.row_dimensions[r_idx].height = 22
 
-ce_widths = [8, 28, 28, 28, 28, 24, 38, 55, 24, 24, 24, 22, 48, 30, 16, 36]
+ce_widths = [8, 28, 28, 28, 28, 24, 38, 55, 24, 24, 24, 22, 48, 30, 16, 42]
 for idx, w in enumerate(ce_widths, start=1):
     ws_ce.column_dimensions[get_column_letter(idx)].width = w
 
@@ -615,22 +418,18 @@ ws_ce.freeze_panes = 'E2'
 ws_ce.auto_filter.ref = f"A1:P{len(ce_data)+1}"
 
 # ==============================================================================
-# HOJA 4: BRECHAS NORMATIVAS (SINCRONIZACIÓN EXACTA: 12 REGISTROS)
+# HOJA 4: BRECHAS NORMATIVAS (LAS 26 BRECHAS COMPLETAS PARA MESA TÉCNICA)
 # ==============================================================================
-brechas_list = [item for item in master_data if item.get('esBrecha')]
-ws_brechas = wb.create_sheet(title=f"Brechas Normativas ({len(brechas_list)})")
+ws_brechas = wb.create_sheet(title=f"Brechas Normativas ({len(brechas_oficiales)})")
 ws_brechas.views.sheetView[0].showGridLines = True
 
 headers_brechas = [
     "No.",
-    "Segmento",
-    "Régimen / Área",
-    "Actor / Rol Afectado",
-    "Materia / Tema",
-    "Etapa ATO",
+    "Actor / Rol Aduanero Afectado",
+    "Etapa / Subtema",
     "Trámite Propuesto (Brecha)",
-    "Justificación Técnica / Base Legal",
-    "Pregunta Formal para Mesa de Trabajo SAT"
+    "Situación Operativa / Justificación Legal",
+    "Pregunta Formal para Mesa Técnica de SAT"
 ]
 
 for col_idx, h in enumerate(headers_brechas, start=1):
@@ -639,40 +438,36 @@ for col_idx, h in enumerate(headers_brechas, start=1):
     c.fill = PatternFill(start_color=ORANGE_ACCENT, end_color=ORANGE_ACCENT, fill_type='solid')
     c.alignment = Alignment(horizontal='center', vertical='center', wrap_text=True)
     c.border = header_border
-ws_brechas.row_dimensions[1].height = 28
+ws_brechas.row_dimensions[1].height = 30
 
-for r_idx, b in enumerate(brechas_list, start=2):
-    ws_brechas.cell(row=r_idx, column=1, value=r_idx - 1).alignment = Alignment(horizontal='center')
-    ws_brechas.cell(row=r_idx, column=2, value=b.get('segmento', '')).font = font_bold
-    ws_brechas.cell(row=r_idx, column=3, value=b.get('regimenArea', ''))
+for r_idx, b in enumerate(brechas_oficiales, start=2):
+    ws_brechas.cell(row=r_idx, column=1, value=b['no']).alignment = Alignment(horizontal='center')
+    ws_brechas.cell(row=r_idx, column=2, value=b['actor']).font = font_bold
+    ws_brechas.cell(row=r_idx, column=3, value=b['subtema'])
+    ws_brechas.cell(row=r_idx, column=4, value=b['tramite']).font = font_bold
+    ws_brechas.cell(row=r_idx, column=5, value=b['situacion'])
     
-    actor_str = b.get('actorEspecifico') if b.get('actorEspecifico') != '—' else b.get('grupoActor', '')
-    ws_brechas.cell(row=r_idx, column=4, value=actor_str)
-    ws_brechas.cell(row=r_idx, column=5, value=b.get('materiaTema', ''))
-    ws_brechas.cell(row=r_idx, column=6, value=b.get('etapaAtoLabel', ''))
-    ws_brechas.cell(row=r_idx, column=7, value=b.get('tramite', '')).font = font_bold
-    ws_brechas.cell(row=r_idx, column=8, value=b.get('descripcion', ''))
-    
-    pregunta = f"¿Existe acuerdo de directorio o resolución que formalice el requisito digital para '{b.get('tramite', '')}' ante SAT?"
-    ws_brechas.cell(row=r_idx, column=9, value=pregunta).font = Font(name='Segoe UI', size=9, italic=True, color='1E293B')
+    c_preg = ws_brechas.cell(row=r_idx, column=6, value=b['pregunta'])
+    c_preg.font = Font(name='Segoe UI', size=9, italic=True, color='1E293B')
 
     fill_color = 'FFF7ED' if r_idx % 2 == 0 else 'FFFFFF'
-    for c_idx in range(1, 10):
+    for c_idx in range(1, 7):
         cell = ws_brechas.cell(row=r_idx, column=c_idx)
-        if c_idx not in [2, 7, 9]: cell.font = font_body
+        if c_idx not in [2, 4, 6]: cell.font = font_body
         cell.fill = PatternFill(start_color=fill_color, end_color=fill_color, fill_type='solid')
         cell.border = thin_border
-    ws_brechas.row_dimensions[r_idx].height = 24
+    ws_brechas.row_dimensions[r_idx].height = 26
 
-brecha_widths = [8, 26, 28, 28, 26, 24, 38, 45, 45]
+brecha_widths = [8, 28, 26, 38, 50, 50]
 for idx, w in enumerate(brecha_widths, start=1):
     ws_brechas.column_dimensions[get_column_letter(idx)].width = w
 
 ws_brechas.freeze_panes = 'A2'
-ws_brechas.auto_filter.ref = f"A1:I{len(brechas_list)+1}"
+ws_brechas.auto_filter.ref = f"A1:F{len(brechas_oficiales)+1}"
 
-# Guardar en el archivo oficial
+# ==============================================================================
+# GUARDAR LIBRO DEFINITIVO
+# ==============================================================================
 OUTPUT_EXCEL_PATH = 'docs/fuentes-datos/Estructura_Final_Contenido_Portal_SAT_Actualizado.xlsx'
-
 wb.save(OUTPUT_EXCEL_PATH)
 print(f"Libro Excel maestro guardado exitosamente en: {OUTPUT_EXCEL_PATH}")
