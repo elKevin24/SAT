@@ -2,7 +2,6 @@ import React, { useState, useMemo, useEffect } from 'react';
 import { Search, ChevronRight, ArrowLeft, Home, Filter, RotateCcw } from 'lucide-react';
 import { SegmentId } from './UserSegmentCards';
 import {
-  PORTAL_MASTER_DATA,
   ETAPAS_ATO_CONFIG,
   TIPOS_INTERACCION_MASTER_CONFIG,
   EtapaAtoId,
@@ -298,39 +297,10 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
 
   const meta = SEGMENT_METADATA[segmentId];
 
-  // Mapa de enriquecimiento con taxonomía maestra ATO
-  const masterLookup = useMemo(() => {
-    const map = new Map<string, typeof PORTAL_MASTER_DATA[0]>();
-    PORTAL_MASTER_DATA.forEach(item => {
-      map.set(item.id, item);
-      if (item.tramite) map.set(item.tramite.toLowerCase().trim(), item);
-      if (item.tramiteOriginal) map.set(item.tramiteOriginal.toLowerCase().trim(), item);
-    });
-    return map;
-  }, []);
-
-  // Trámites del segmento actual enriquecidos con taxonomía ATO
+  // Trámites del segmento actual (leídos directamente de allTramites consolidado)
   const segmentTramites = useMemo(() => {
-    const base = allTramites.filter(t => t.pillar === segmentId);
-    return base.map(t => {
-      const match = masterLookup.get(t.id) ||
-                    (t.tramite ? masterLookup.get(t.tramite.toLowerCase().trim()) : null) ||
-                    (t.nombreActual ? masterLookup.get(t.nombreActual.toLowerCase().trim()) : null);
-      if (match) {
-        return {
-          ...t,
-          etapaAto: match.etapaAto,
-          etapaAtoLabel: match.etapaAtoLabel,
-          tipoInteraccion: match.tipoInteraccion,
-          tipoInteraccionLabel: match.tipoInteraccionLabel,
-          esBrecha: match.esBrecha,
-          tramite: match.tramite || t.tramite,
-          descripcion: match.descripcion || t.descripcion
-        };
-      }
-      return t;
-    });
-  }, [allTramites, segmentId, masterLookup]);
+    return allTramites.filter(t => t.pillar === segmentId);
+  }, [allTramites, segmentId]);
 
   // Categorías disponibles dentro del segmento actual
   const categoriesList = useMemo(() => {
