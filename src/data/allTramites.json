@@ -170,7 +170,7 @@
     "etapaAto": "consultar",
     "etapaAtoLabel": "Consultas y herramientas",
     "tipoInteraccion": "consulta_datos",
-    "tipoInteraccionLabel": "Consulta a Base de Datos",
+    "tipoInteraccionLabel": "Consulta en Base de Datos",
     "esBrecha": false,
     "rutasProceso": [
       {
@@ -621,7 +621,7 @@
     "etapaAto": "consultar",
     "etapaAtoLabel": "Consultas y herramientas",
     "tipoInteraccion": "consulta_datos",
-    "tipoInteraccionLabel": "Consulta a Base de Datos",
+    "tipoInteraccionLabel": "Consulta en Base de Datos",
     "esBrecha": false,
     "rutasProceso": [
       {
@@ -739,7 +739,7 @@
     "etapaAto": "consultar",
     "etapaAtoLabel": "Consultas y herramientas",
     "tipoInteraccion": "consulta_datos",
-    "tipoInteraccionLabel": "Consulta a Base de Datos",
+    "tipoInteraccionLabel": "Consulta en Base de Datos",
     "esBrecha": false,
     "rutasProceso": [
       {
@@ -792,7 +792,7 @@
     "etapaAto": "consultar",
     "etapaAtoLabel": "Consultas y herramientas",
     "tipoInteraccion": "consulta_datos",
-    "tipoInteraccionLabel": "Consulta a Base de Datos",
+    "tipoInteraccionLabel": "Consulta en Base de Datos",
     "esBrecha": false,
     "subfamiliaAduanera": "Sector Primario y Artesanal",
     "actorEspecifico": "—",
@@ -1049,7 +1049,7 @@
     "etapaAto": "consultar",
     "etapaAtoLabel": "Consultas y herramientas",
     "tipoInteraccion": "consulta_datos",
-    "tipoInteraccionLabel": "Consulta a Base de Datos",
+    "tipoInteraccionLabel": "Consulta en Base de Datos",
     "esBrecha": false,
     "subfamiliaAduanera": "Régimen de Pequeño Contribuyente",
     "actorEspecifico": "—",
@@ -2318,7 +2318,7 @@
     "etapaAto": "consultar",
     "etapaAtoLabel": "Consultas y herramientas",
     "tipoInteraccion": "consulta_datos",
-    "tipoInteraccionLabel": "Consulta a Base de Datos",
+    "tipoInteraccionLabel": "Consulta en Base de Datos",
     "esBrecha": false,
     "subfamiliaAduanera": "Atención y Cultura Tributaria",
     "actorEspecifico": "—",
@@ -2581,7 +2581,7 @@
     "etapaAto": "consultar",
     "etapaAtoLabel": "Consultas y herramientas",
     "tipoInteraccion": "consulta_datos",
-    "tipoInteraccionLabel": "Consulta a Base de Datos",
+    "tipoInteraccionLabel": "Consulta en Base de Datos",
     "esBrecha": false,
     "rutasProceso": [
       {
@@ -3643,7 +3643,7 @@
     "etapaAto": "consultar",
     "etapaAtoLabel": "Consultas y herramientas",
     "tipoInteraccion": "consulta_datos",
-    "tipoInteraccionLabel": "Consulta a Base de Datos",
+    "tipoInteraccionLabel": "Consulta en Base de Datos",
     "esBrecha": false,
     "rutasProceso": [
       {
@@ -5220,7 +5220,7 @@
     "etapaAto": "modificar_cerrar",
     "etapaAtoLabel": "Modificaciones y cierre",
     "tipoInteraccion": "consulta_datos",
-    "tipoInteraccionLabel": "Consulta a Base de Datos",
+    "tipoInteraccionLabel": "Consulta en Base de Datos",
     "esBrecha": false,
     "subfamiliaAduanera": "Gerencia de Contribuyentes Especiales",
     "actorEspecifico": "—",
@@ -5612,7 +5612,7 @@
     "etapaAto": "consultar",
     "etapaAtoLabel": "Consultas y herramientas",
     "tipoInteraccion": "consulta_datos",
-    "tipoInteraccionLabel": "Consulta a Base de Datos",
+    "tipoInteraccionLabel": "Consulta en Base de Datos",
     "esBrecha": false,
     "rutasProceso": [
       {
@@ -5665,7 +5665,7 @@
     "etapaAto": "consultar",
     "etapaAtoLabel": "Consultas y herramientas",
     "tipoInteraccion": "consulta_datos",
-    "tipoInteraccionLabel": "Consulta a Base de Datos",
+    "tipoInteraccionLabel": "Consulta en Base de Datos",
     "esBrecha": false,
     "rutasProceso": [
       {
@@ -5763,7 +5763,7 @@
     "etapaAto": "consultar",
     "etapaAtoLabel": "Consultas y herramientas",
     "tipoInteraccion": "consulta_datos",
-    "tipoInteraccionLabel": "Consulta a Base de Datos",
+    "tipoInteraccionLabel": "Consulta en Base de Datos",
     "esBrecha": false,
     "subfamiliaAduanera": "Gerencia de Contribuyentes Especiales",
     "actorEspecifico": "—",
@@ -6787,7 +6787,7 @@
     "etapaAto": "consultar",
     "etapaAtoLabel": "Consultas y herramientas",
     "tipoInteraccion": "consulta_datos",
-    "tipoInteraccionLabel": "Consulta a Base de Datos",
+    "tipoInteraccionLabel": "Consulta en Base de Datos",
     "esBrecha": false,
     "rutasProceso": [
       {
@@ -7897,7 +7897,7 @@
     "etapaAto": "consultar",
     "etapaAtoLabel": "Consultas y herramientas",
     "tipoInteraccion": "consulta_datos",
-    "tipoInteraccionLabel": "Consulta a Base de Datos",
+    "tipoInteraccionLabel": "Consulta en Base de Datos",
     "esBrecha": false,
     "rutasProceso": [
       {
@@ -8080,7 +8080,7 @@
     "etapaAto": "consultar",
     "etapaAtoLabel": "Consultas y herramientas",
     "tipoInteraccion": "consulta_datos",
-    "tipoInteraccionLabel": "Consulta a Base de Datos",
+    "tipoInteraccionLabel": "Consulta en Base de Datos",
     "esBrecha": false,
     "rutasProceso": [
       {
@@ -9113,7 +9113,7 @@
     "etapaAto": "consultar",
     "etapaAtoLabel": "Consultas y herramientas",
     "tipoInteraccion": "consulta_datos",
-    "tipoInteraccionLabel": "Consulta a Base de Datos",
+    "tipoInteraccionLabel": "Consulta en Base de Datos",
     "esBrecha": false,
     "rutasProceso": [
       {
@@ -9231,7 +9231,7 @@
     "etapaAto": "empezar",
     "etapaAtoLabel": "Empezar y registrarse",
     "tipoInteraccion": "consulta_datos",
-    "tipoInteraccionLabel": "Consulta a Base de Datos",
+    "tipoInteraccionLabel": "Consulta en Base de Datos",
     "esBrecha": false,
     "rutasProceso": [
       {
@@ -9671,7 +9671,7 @@
     "etapaAto": "consultar",
     "etapaAtoLabel": "Consultas y herramientas",
     "tipoInteraccion": "consulta_datos",
-    "tipoInteraccionLabel": "Consulta a Base de Datos",
+    "tipoInteraccionLabel": "Consulta en Base de Datos",
     "esBrecha": false,
     "rutasProceso": [
       {
@@ -9724,7 +9724,7 @@
     "etapaAto": "consultar",
     "etapaAtoLabel": "Consultas y herramientas",
     "tipoInteraccion": "consulta_datos",
-    "tipoInteraccionLabel": "Consulta a Base de Datos",
+    "tipoInteraccionLabel": "Consulta en Base de Datos",
     "esBrecha": false,
     "rutasProceso": [
       {
@@ -9889,7 +9889,7 @@
     "etapaAto": "consultar",
     "etapaAtoLabel": "Consultas y herramientas",
     "tipoInteraccion": "consulta_datos",
-    "tipoInteraccionLabel": "Consulta a Base de Datos",
+    "tipoInteraccionLabel": "Consulta en Base de Datos",
     "esBrecha": false,
     "rutasProceso": [
       {
@@ -9954,7 +9954,7 @@
     "etapaAto": "consultar",
     "etapaAtoLabel": "Consultas y herramientas",
     "tipoInteraccion": "consulta_datos",
-    "tipoInteraccionLabel": "Consulta a Base de Datos",
+    "tipoInteraccionLabel": "Consulta en Base de Datos",
     "esBrecha": false,
     "rutasProceso": [
       {
@@ -12114,7 +12114,7 @@
     "etapaAto": "consultar",
     "etapaAtoLabel": "Consultas y herramientas",
     "tipoInteraccion": "consulta_datos",
-    "tipoInteraccionLabel": "Consulta a Base de Datos",
+    "tipoInteraccionLabel": "Consulta en Base de Datos",
     "esBrecha": false,
     "rutasProceso": [
       {
@@ -15300,7 +15300,7 @@
     "etapaAto": "normativa",
     "etapaAtoLabel": "Normativa y asistencia",
     "tipoInteraccion": "descarga_recurso",
-    "tipoInteraccionLabel": "Descarga / Software",
+    "tipoInteraccionLabel": "Descarga de Documento / Software",
     "esBrecha": false,
     "subfamiliaAduanera": "Registro Tributario",
     "actorEspecifico": "—",
@@ -18001,7 +18001,7 @@
     "etapaAto": "consultar",
     "etapaAtoLabel": "Consultas y herramientas",
     "tipoInteraccion": "consulta_datos",
-    "tipoInteraccionLabel": "Consulta a Base de Datos",
+    "tipoInteraccionLabel": "Consulta en Base de Datos",
     "esBrecha": false,
     "subfamiliaAduanera": "Cumplimiento y Cobranza",
     "actorEspecifico": "—",
@@ -19253,7 +19253,7 @@
     "etapaAto": "consultar",
     "etapaAtoLabel": "Consultas y herramientas",
     "tipoInteraccion": "consulta_datos",
-    "tipoInteraccionLabel": "Consulta a Base de Datos",
+    "tipoInteraccionLabel": "Consulta en Base de Datos",
     "esBrecha": false,
     "subfamiliaAduanera": "Profesionales Habilitados",
     "actorEspecifico": "—",
@@ -20098,7 +20098,7 @@
     "etapaAto": "modificar_cerrar",
     "etapaAtoLabel": "Modificaciones y cierre",
     "tipoInteraccion": "consulta_datos",
-    "tipoInteraccionLabel": "Consulta a Base de Datos",
+    "tipoInteraccionLabel": "Consulta en Base de Datos",
     "esBrecha": false,
     "subfamiliaAduanera": "Profesionales Habilitados",
     "actorEspecifico": "—",
@@ -20258,7 +20258,7 @@
     "etapaAto": "consultar",
     "etapaAtoLabel": "Consultas y herramientas",
     "tipoInteraccion": "consulta_datos",
-    "tipoInteraccionLabel": "Consulta a Base de Datos",
+    "tipoInteraccionLabel": "Consulta en Base de Datos",
     "esBrecha": false,
     "subfamiliaAduanera": "Profesionales Habilitados",
     "actorEspecifico": "—",
@@ -20553,7 +20553,7 @@
     "etapaAto": "consultar",
     "etapaAtoLabel": "Consultas y herramientas",
     "tipoInteraccion": "consulta_datos",
-    "tipoInteraccionLabel": "Consulta a Base de Datos",
+    "tipoInteraccionLabel": "Consulta en Base de Datos",
     "esBrecha": false,
     "subfamiliaAduanera": "Profesionales Habilitados",
     "actorEspecifico": "—",
@@ -20793,7 +20793,7 @@
     "etapaAto": "consultar",
     "etapaAtoLabel": "Consultas y herramientas",
     "tipoInteraccion": "consulta_datos",
-    "tipoInteraccionLabel": "Consulta a Base de Datos",
+    "tipoInteraccionLabel": "Consulta en Base de Datos",
     "esBrecha": false,
     "subfamiliaAduanera": "Cumplimiento y Cobranza",
     "actorEspecifico": "—",
@@ -21283,7 +21283,7 @@
     "etapaAto": "consultar",
     "etapaAtoLabel": "Consultas y herramientas",
     "tipoInteraccion": "consulta_datos",
-    "tipoInteraccionLabel": "Consulta a Base de Datos",
+    "tipoInteraccionLabel": "Consulta en Base de Datos",
     "esBrecha": false,
     "subfamiliaAduanera": "Atención y Cultura Tributaria",
     "actorEspecifico": "—",
@@ -21418,7 +21418,7 @@
     "etapaAto": "consultar",
     "etapaAtoLabel": "Consultas y herramientas",
     "tipoInteraccion": "consulta_datos",
-    "tipoInteraccionLabel": "Consulta a Base de Datos",
+    "tipoInteraccionLabel": "Consulta en Base de Datos",
     "esBrecha": false,
     "subfamiliaAduanera": "Profesionales Habilitados",
     "actorEspecifico": "—",
@@ -21503,7 +21503,7 @@
     "etapaAto": "consultar",
     "etapaAtoLabel": "Consultas y herramientas",
     "tipoInteraccion": "consulta_datos",
-    "tipoInteraccionLabel": "Consulta a Base de Datos",
+    "tipoInteraccionLabel": "Consulta en Base de Datos",
     "esBrecha": false,
     "subfamiliaAduanera": "Profesionales Habilitados",
     "actorEspecifico": "—",
@@ -21583,7 +21583,7 @@
     "etapaAto": "consultar",
     "etapaAtoLabel": "Consultas y herramientas",
     "tipoInteraccion": "consulta_datos",
-    "tipoInteraccionLabel": "Consulta a Base de Datos",
+    "tipoInteraccionLabel": "Consulta en Base de Datos",
     "esBrecha": false,
     "subfamiliaAduanera": "Profesionales Habilitados",
     "actorEspecifico": "—",
@@ -21623,7 +21623,7 @@
     "etapaAto": "consultar",
     "etapaAtoLabel": "Consultas y herramientas",
     "tipoInteraccion": "consulta_datos",
-    "tipoInteraccionLabel": "Consulta a Base de Datos",
+    "tipoInteraccionLabel": "Consulta en Base de Datos",
     "esBrecha": false,
     "subfamiliaAduanera": "Profesionales Habilitados",
     "actorEspecifico": "—",
@@ -21708,7 +21708,7 @@
     "etapaAto": "consultar",
     "etapaAtoLabel": "Consultas y herramientas",
     "tipoInteraccion": "consulta_datos",
-    "tipoInteraccionLabel": "Consulta a Base de Datos",
+    "tipoInteraccionLabel": "Consulta en Base de Datos",
     "esBrecha": false,
     "subfamiliaAduanera": "Atención y Cultura Tributaria",
     "actorEspecifico": "—",
@@ -21798,7 +21798,7 @@
     "etapaAto": "operar",
     "etapaAtoLabel": "Operación y declaraciones",
     "tipoInteraccion": "descarga_recurso",
-    "tipoInteraccionLabel": "Descarga / Software",
+    "tipoInteraccionLabel": "Descarga de Documento / Software",
     "esBrecha": false,
     "subfamiliaAduanera": "Registro Tributario",
     "actorEspecifico": "—",
@@ -22448,7 +22448,7 @@
     "etapaAto": "consultar",
     "etapaAtoLabel": "Consultas y herramientas",
     "tipoInteraccion": "consulta_datos",
-    "tipoInteraccionLabel": "Consulta a Base de Datos",
+    "tipoInteraccionLabel": "Consulta en Base de Datos",
     "esBrecha": false,
     "subfamiliaAduanera": "Cumplimiento y Cobranza",
     "actorEspecifico": "—",
@@ -22573,7 +22573,7 @@
     "etapaAto": "consultar",
     "etapaAtoLabel": "Consultas y herramientas",
     "tipoInteraccion": "consulta_datos",
-    "tipoInteraccionLabel": "Consulta a Base de Datos",
+    "tipoInteraccionLabel": "Consulta en Base de Datos",
     "esBrecha": false,
     "subfamiliaAduanera": "Atención y Cultura Tributaria",
     "actorEspecifico": "—",
@@ -24968,7 +24968,7 @@
     "etapaAto": "consultar",
     "etapaAtoLabel": "Consultas y herramientas",
     "tipoInteraccion": "consulta_datos",
-    "tipoInteraccionLabel": "Consulta a Base de Datos",
+    "tipoInteraccionLabel": "Consulta en Base de Datos",
     "esBrecha": false,
     "subfamiliaAduanera": "Sector Público",
     "actorEspecifico": "—",
@@ -25048,7 +25048,7 @@
     "etapaAto": "consultar",
     "etapaAtoLabel": "Consultas y herramientas",
     "tipoInteraccion": "consulta_datos",
-    "tipoInteraccionLabel": "Consulta a Base de Datos",
+    "tipoInteraccionLabel": "Consulta en Base de Datos",
     "esBrecha": false,
     "subfamiliaAduanera": "Sector Público",
     "actorEspecifico": "—",
@@ -25328,7 +25328,7 @@
     "etapaAto": "consultar",
     "etapaAtoLabel": "Consultas y herramientas",
     "tipoInteraccion": "consulta_datos",
-    "tipoInteraccionLabel": "Consulta a Base de Datos",
+    "tipoInteraccionLabel": "Consulta en Base de Datos",
     "esBrecha": false,
     "subfamiliaAduanera": "Sector Público",
     "actorEspecifico": "—",
@@ -25368,7 +25368,7 @@
     "etapaAto": "consultar",
     "etapaAtoLabel": "Consultas y herramientas",
     "tipoInteraccion": "consulta_datos",
-    "tipoInteraccionLabel": "Consulta a Base de Datos",
+    "tipoInteraccionLabel": "Consulta en Base de Datos",
     "esBrecha": false,
     "subfamiliaAduanera": "Sector Público",
     "actorEspecifico": "—",

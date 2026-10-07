@@ -5,6 +5,7 @@ from openpyxl.utils import get_column_letter
 
 # Cargar dataset maestro
 all_t = json.load(open('src/data/allTramites.json', encoding='utf-8'))
+TOTAL_PORTAL = len(all_t)
 
 wb = openpyxl.Workbook()
 wb.remove(wb.active)
@@ -24,7 +25,6 @@ font_title = Font(name='Segoe UI', size=15, bold=True, color='FFFFFF')
 font_subtitle = Font(name='Segoe UI', size=10, italic=True, color='FFFFFF')
 font_header = Font(name='Segoe UI', size=10, bold=True, color='FFFFFF')
 font_card_title = Font(name='Segoe UI', size=11, bold=True, color='FFFFFF')
-font_label = Font(name='Segoe UI', size=9, bold=True, color='1E293B')
 font_body = Font(name='Segoe UI', size=9, color='0F172A')
 font_lead = Font(name='Segoe UI', size=9, italic=True, bold=True, color='0369A1')
 font_legal = Font(name='Segoe UI', size=9, bold=True, color='334155')
@@ -50,6 +50,7 @@ header_border = Border(
 # ==============================================================================
 SEGMENTOS_DATA = [
     {
+        'no': 1,
         'segmento': 'Operadores de Comercio Exterior',
         'color': CYAN_ACCENT,
         'que_es': 'Son todas las personas individuales o jurídicas que intervienen en el ingreso, permanencia, traslado y salida de mercancías del territorio aduanero nacional. Comprende tanto a los dueños de las mercancías (importadores y exportadores) como a los prestadores de servicios logísticos autorizados (auxiliares de la función pública, transportistas, depósitos) y empresas que operan bajo regímenes territoriales especiales.',
@@ -57,6 +58,7 @@ SEGMENTOS_DATA = [
         'base_juridica': 'Código Tributario (Dto. 6-91), CAUCA IV (Resolución 223-2008 COMIECO) y RECAUCA (Resolución 224-2008 COMIECO).'
     },
     {
+        'no': 2,
         'segmento': 'Contribuyentes',
         'color': BLUE_HEADER,
         'que_es': 'Son las personas individuales, jurídicas, patrimonios o entes afectos al cumplimiento de obligaciones tributarias internas en el territorio guatemalteco. Abarca a ciudadanos sin actividad económica activa, asalariados en relación de dependencia, pequeños contribuyentes, contribuyentes del régimen general del IVA e ISR, propietarios de vehículos y grandes/medianos contribuyentes especiales calificados.',
@@ -64,6 +66,7 @@ SEGMENTOS_DATA = [
         'base_juridica': 'Constitución Política (Art. 135d), Código Tributario (Dto. 6-91), Ley del IVA (Dto. 27-92), Ley de Actualización Tributaria (Dto. 10-2012), Ley del ISCV (Dto. 70-94) y Ley de Simplificación Tributaria (Dto. 7-2019 / Dto. 31-2024).'
     },
     {
+        'no': 3,
         'segmento': 'Profesionales',
         'color': GREEN_ACCENT,
         'que_es': 'Son las personas individuales colegiadas activas o técnicos acreditados ante la SAT que ejercen liberalmente su profesión o actúan como auxiliares técnicos en materia tributaria, mercantil y notarial. Comprende a abogados y notarios (traspasos vehiculares electrónicos y fe pública), peritos contadores, contadores públicos y auditores (CPA) y gestores tributarios acreditados.',
@@ -71,6 +74,7 @@ SEGMENTOS_DATA = [
         'base_juridica': 'Código de Notariado (Dto. 314), Ley de Colegiación Profesional Obligatoria (Dto. 72-2001), Decreto 2450 (Normas de la Profesión Contable), Ley de Timbres Fiscales (Dto. 37-92) y Código Tributario (Art. 57 "A" y 112).'
     },
     {
+        'no': 4,
         'segmento': 'Entes Exentos',
         'color': PURPLE_ACCENT,
         'que_es': 'Son las personas jurídicas, entidades del sector público, organismos diplomáticos y organizaciones de la sociedad civil que, por mandato constitucional o ley específica ordinaria, gozan de exención total o parcial de tributos y aranceles en el territorio nacional. Incluye centros educativos, universidades, comunidades religiosas, ONGs, fundaciones sin fines de lucro, municipalidades y ministerios de Estado.',
@@ -390,17 +394,32 @@ for node in MAPA_DATA:
 for seg_item in SEGMENTOS_DATA:
     s_nom = seg_item['segmento']
     seg_item['conteo_tramites'] = sum(1 for t in all_t if (t.get('segmento') == s_nom or t.get('pillarName') == s_nom))
-    seg_item['pct'] = seg_item['conteo_tramites'] / len(all_t)
+    seg_item['pct'] = seg_item['conteo_tramites'] / TOTAL_PORTAL
 
-TOTAL_PORTAL = len(all_t)
+# Conteos ATO
+ato_stages = [
+    ("Empezar y registrarse", "Primer NIT, RTU Digital, padrones de importación/exportación y habilitación inicial", sum(1 for t in all_t if t.get('etapaAtoLabel') == 'Empezar y registrarse')),
+    ("Operación y declaraciones", "Facturación FEL, Declaraguate, DUCAs, retenciones, transferencias y pagos", sum(1 for t in all_t if t.get('etapaAtoLabel') == 'Operación y declaraciones')),
+    ("Consultas y herramientas", "Verificadores en tiempo real, solvencia, selectivo aduanero, rampa y SAC", sum(1 for t in all_t if t.get('etapaAtoLabel') == 'Consultas y herramientas')),
+    ("Modificaciones y cierre", "Actualización de RTU, traspaso vehicular, prórrogas, cese de actividades y subastas", sum(1 for t in all_t if t.get('etapaAtoLabel') == 'Modificaciones y cierre')),
+    ("Normativa y asistencia", "Marco legal aduanero y tributario, devoluciones, criterios institucionales y cursos", sum(1 for t in all_t if t.get('etapaAtoLabel') == 'Normativa y asistencia'))
+]
+
+# Conteos Interacciones
+interactions = [
+    ("Guía Informativa / Texto", "Páginas explicativas, requisitos de trámites presenciales o mixtos", sum(1 for t in all_t if t.get('tipoInteraccionLabel') == 'Guía Informativa / Texto')),
+    ("Trámite / Aplicativo en Línea", "Servicios digitales transaccionales (Agencia Virtual, Declaraguate, TEV, FEL)", sum(1 for t in all_t if t.get('tipoInteraccionLabel') == 'Trámite / Aplicativo en Línea')),
+    ("Consulta en Base de Datos", "Herramientas de verificación sin autenticación previa (RTU público, solvencias)", sum(1 for t in all_t if t.get('tipoInteraccionLabel') == 'Consulta en Base de Datos')),
+    ("Descarga de Documento / Software", "Descarga de formularios en PDF/Excel, software, manuales o legislación", sum(1 for t in all_t if t.get('tipoInteraccionLabel') == 'Descarga de Documento / Software')),
+]
 
 # ==============================================================================
-# HOJA 1: RESUMEN DE ARQUITECTURA (CON EL FORMATO SOLICITADO: QUE ES, LEAD TEXT, BASE JURIDICA)
+# HOJA 1: RESUMEN ARQUITECTURA (IDÉNTICA AL LIBRO MAESTRO: QUE ES, LEAD TEXT, BASE JURIDICA + ATO + INTERACCIONES)
 # ==============================================================================
 ws_resumen = wb.create_sheet(title="Resumen Arquitectura")
 ws_resumen.views.sheetView[0].showGridLines = True
 
-# Banner
+# Banner Institucional Superior
 ws_resumen.merge_cells('B2:H3')
 banner = ws_resumen['B2']
 banner.value = "SUPERINTENDENCIA DE ADMINISTRACIÓN TRIBUTARIA — SAT GUATEMALA"
@@ -409,101 +428,229 @@ banner.fill = PatternFill(start_color=BLUE_HEADER, end_color=BLUE_HEADER, fill_t
 banner.alignment = Alignment(horizontal='center', vertical='center')
 
 ws_resumen.merge_cells('B4:H4')
-sub = ws_resumen['B4']
-sub.value = "RESUMEN EJECUTIVO DE ARQUITECTURA DE INFORMACIÓN — DEFINICIÓN DE SEGMENTOS, LEAD TEXT Y BASE JURÍDICA"
-sub.font = font_subtitle
-sub.fill = PatternFill(start_color=NAVY_HEADER, end_color=NAVY_HEADER, fill_type='solid')
-sub.alignment = Alignment(horizontal='center', vertical='center')
+sub_banner = ws_resumen['B4']
+sub_banner.value = "ARQUITECTURA DE INFORMACIÓN DEL PORTAL WEB — DEFINICIÓN DE SEGMENTOS, LEAD TEXT, ATO Y BASE JURÍDICA"
+sub_banner.font = font_subtitle
+sub_banner.fill = PatternFill(start_color=NAVY_HEADER, end_color=NAVY_HEADER, fill_type='solid')
+sub_banner.alignment = Alignment(horizontal='center', vertical='center')
 
-# Tarjetas KPI superiores
+# Bloques KPI superiores
 kpis = [
-    ("TOTAL DEL PORTAL", f"{TOTAL_PORTAL} Trámites", "Universo Oficial SAT", "B6", "B7", NAVY_HEADER),
+    ("TOTAL CONTENIDOS", f"{TOTAL_PORTAL} Trámites", "Universo Oficial SAT", "B6", "B7", NAVY_HEADER),
     ("CONTRIBUYENTES", f"{SEGMENTOS_DATA[1]['conteo_tramites']} Trámites", "Régimen Interno", "C6", "C7", BLUE_HEADER),
-    ("COMERCIO EXTERIOR", f"{SEGMENTOS_DATA[0]['conteo_tramites']} Trámites", "Aduanas, AFPA y Zonas", "D6", "D7", CYAN_ACCENT),
-    ("PROFESIONALES", f"{SEGMENTOS_DATA[2]['conteo_tramites']} Trámites", "Notarios, CPA, TEV", "E6", "E7", GREEN_ACCENT),
-    ("ENTES EXENTOS", f"{SEGMENTOS_DATA[3]['conteo_tramites']} Trámites", "ONGs, Iglesias, Estado", "F6", "G7", PURPLE_ACCENT),
+    ("COMERCIO EXTERIOR", f"{SEGMENTOS_DATA[0]['conteo_tramites']} Trámites", "Aduanas, AFPA y Zonas", "D6", "E7", CYAN_ACCENT),
+    ("PROFESIONALES", f"{SEGMENTOS_DATA[2]['conteo_tramites']} Trámites", "Notarios, CPA, TEV", "F6", "F7", GREEN_ACCENT),
+    ("ENTES EXENTOS", f"{SEGMENTOS_DATA[3]['conteo_tramites']} Trámites", "ONGs, Iglesias, Estado", "G6", "H7", PURPLE_ACCENT),
 ]
 
 for label, val, sub_txt, top_l, bot_r, color in kpis:
     ws_resumen.merge_cells(f"{top_l}:{bot_r}")
     cell = ws_resumen[top_l]
     cell.value = f"{label}\n{val}"
-    cell.font = Font(name='Segoe UI', size=11, bold=True, color='FFFFFF')
+    cell.font = Font(name='Segoe UI', size=12, bold=True, color='FFFFFF')
     cell.fill = PatternFill(start_color=color, end_color=color, fill_type='solid')
     cell.alignment = Alignment(horizontal='center', vertical='center', wrap_text=True)
 
-# Título de Sección
-ws_resumen['B9'] = "1. RESUMEN ESTRUCTURAL POR SEGMENTO (NIVEL 1) — DEFINICIONES INSTITUCIONALES"
+# ------------------------------------------------------------------------------
+# SECCIÓN 1: SEGMENTOS PRINCIPALES DEL PORTAL (NIVEL 1)
+# ------------------------------------------------------------------------------
+ws_resumen['B9'] = "1. SEGMENTOS PRINCIPALES DEL PORTAL (NIVEL 1) — DEFINICIONES INSTITUCIONALES"
 ws_resumen['B9'].font = Font(name='Segoe UI', size=11, bold=True, color='1E293B')
 
-current_row = 11
+macro_headers = [
+    "No.",
+    "Segmento (Nivel 1)",
+    "Qué es: (Definición Operativa)",
+    "Lead text: (Texto Orientador de Interfaz)",
+    "Base jurídica: (Fundamento Legal Oficial: CAUCA, RECAUCA, Leyes)",
+    "Total Contenidos",
+    "% del Portal"
+]
 
-for s in SEGMENTOS_DATA:
-    # Encabezado del Segmento con métricas
-    ws_resumen.merge_cells(f"B{current_row}:G{current_row}")
-    c_title = ws_resumen[f"B{current_row}"]
-    c_title.value = f"  {s['segmento'].upper()}  ({s['conteo_tramites']} Trámites — {s['pct']:.1%} del Portal)"
-    c_title.font = font_card_title
-    c_title.fill = PatternFill(start_color=s['color'], end_color=s['color'], fill_type='solid')
-    c_title.alignment = Alignment(horizontal='left', vertical='center')
-    ws_resumen.row_dimensions[current_row].height = 26
+for col_idx, h in enumerate(macro_headers, start=2):
+    c = ws_resumen.cell(row=10, column=col_idx, value=h)
+    c.font = font_header
+    c.fill = PatternFill(start_color=NAVY_HEADER, end_color=NAVY_HEADER, fill_type='solid')
+    c.alignment = Alignment(horizontal='center', vertical='center', wrap_text=True)
+    c.border = header_border
+ws_resumen.row_dimensions[10].height = 28
+
+for r_idx, s in enumerate(SEGMENTOS_DATA, start=11):
+    ws_resumen.cell(row=r_idx, column=2, value=s['no']).alignment = Alignment(horizontal='center', vertical='center')
+    ws_resumen.cell(row=r_idx, column=3, value=s['segmento']).font = font_bold
+    ws_resumen.cell(row=r_idx, column=3).alignment = Alignment(horizontal='left', vertical='center')
     
-    # Fila Qué es:
-    ws_resumen.cell(row=current_row+1, column=2, value="Qué es:").font = font_label
-    ws_resumen.cell(row=current_row+1, column=2).fill = PatternFill(start_color=BG_LABEL, end_color=BG_LABEL, fill_type='solid')
-    ws_resumen.cell(row=current_row+1, column=2).alignment = Alignment(horizontal='center', vertical='center')
-    ws_resumen.cell(row=current_row+1, column=2).border = thin_border
-    
-    ws_resumen.merge_cells(f"C{current_row+1}:G{current_row+1}")
-    c_qe = ws_resumen[f"C{current_row+1}"]
-    c_qe.value = s['que_es']
+    c_qe = ws_resumen.cell(row=r_idx, column=4, value=s['que_es'])
     c_qe.font = font_body
     c_qe.alignment = Alignment(horizontal='left', vertical='center', wrap_text=True)
-    for col_c in range(3, 8):
-        ws_resumen.cell(row=current_row+1, column=col_c).border = thin_border
-    ws_resumen.row_dimensions[current_row+1].height = 44
 
-    # Fila Lead text:
-    ws_resumen.cell(row=current_row+2, column=2, value="Lead text:").font = font_label
-    ws_resumen.cell(row=current_row+2, column=2).fill = PatternFill(start_color=BG_LABEL, end_color=BG_LABEL, fill_type='solid')
-    ws_resumen.cell(row=current_row+2, column=2).alignment = Alignment(horizontal='center', vertical='center')
-    ws_resumen.cell(row=current_row+2, column=2).border = thin_border
-    
-    ws_resumen.merge_cells(f"C{current_row+2}:G{current_row+2}")
-    c_lt = ws_resumen[f"C{current_row+2}"]
-    c_lt.value = s['lead_text']
+    c_lt = ws_resumen.cell(row=r_idx, column=5, value=s['lead_text'])
     c_lt.font = font_lead
     c_lt.alignment = Alignment(horizontal='left', vertical='center', wrap_text=True)
-    for col_c in range(3, 8):
-        ws_resumen.cell(row=current_row+2, column=col_c).border = thin_border
-    ws_resumen.row_dimensions[current_row+2].height = 28
 
-    # Fila Base jurídica:
-    ws_resumen.cell(row=current_row+3, column=2, value="Base jurídica:").font = font_label
-    ws_resumen.cell(row=current_row+3, column=2).fill = PatternFill(start_color=BG_LABEL, end_color=BG_LABEL, fill_type='solid')
-    ws_resumen.cell(row=current_row+3, column=2).alignment = Alignment(horizontal='center', vertical='center')
-    ws_resumen.cell(row=current_row+3, column=2).border = thin_border
-    
-    ws_resumen.merge_cells(f"C{current_row+3}:G{current_row+3}")
-    c_bj = ws_resumen[f"C{current_row+3}"]
-    c_bj.value = s['base_juridica']
+    c_bj = ws_resumen.cell(row=r_idx, column=6, value=s['base_juridica'])
     c_bj.font = font_legal
     c_bj.alignment = Alignment(horizontal='left', vertical='center', wrap_text=True)
-    for col_c in range(3, 8):
-        ws_resumen.cell(row=current_row+3, column=col_c).border = thin_border
-    ws_resumen.row_dimensions[current_row+3].height = 32
 
-    current_row += 5
+    c_tot = ws_resumen.cell(row=r_idx, column=7, value=s['conteo_tramites'])
+    c_tot.alignment = Alignment(horizontal='right', vertical='center')
+    c_tot.font = font_bold
+    
+    c_pct = ws_resumen.cell(row=r_idx, column=8, value=f"=G{r_idx}/$G$15")
+    c_pct.alignment = Alignment(horizontal='right', vertical='center')
+    c_pct.font = font_bold
+    c_pct.number_format = '0.0%'
+    
+    fill_color = ZEBRA_FILL if r_idx % 2 == 0 else 'FFFFFF'
+    for c_idx in range(2, 9):
+        cell = ws_resumen.cell(row=r_idx, column=c_idx)
+        if c_idx not in [3, 4, 5, 6, 7, 8]: cell.font = font_body
+        cell.fill = PatternFill(start_color=fill_color, end_color=fill_color, fill_type='solid')
+        cell.border = thin_border
+    ws_resumen.row_dimensions[r_idx].height = 56
 
-# Ajustar anchos en Resumen
-ws_resumen.column_dimensions['A'].width = 3
-ws_resumen.column_dimensions['B'].width = 16
-ws_resumen.column_dimensions['C'].width = 36
-ws_resumen.column_dimensions['D'].width = 36
-ws_resumen.column_dimensions['E'].width = 36
-ws_resumen.column_dimensions['F'].width = 24
-ws_resumen.column_dimensions['G'].width = 24
-ws_resumen.column_dimensions['H'].width = 4
+# Fila totalizador Segmentos
+ws_resumen.cell(row=15, column=2, value="").border = thin_border
+ws_resumen.cell(row=15, column=3, value="TOTAL PORTAL WEB SAT").font = font_bold
+ws_resumen.cell(row=15, column=4, value="Universo total de fichas y servicios").font = font_small
+ws_resumen.cell(row=15, column=5, value="").border = thin_border
+ws_resumen.cell(row=15, column=6, value="").border = thin_border
+c_tt = ws_resumen.cell(row=15, column=7, value="=SUM(G11:G14)")
+c_tt.font = font_bold
+c_tt.alignment = Alignment(horizontal='right', vertical='center')
+c_tp = ws_resumen.cell(row=15, column=8, value="=SUM(H11:H14)")
+c_tp.font = font_bold
+c_tp.alignment = Alignment(horizontal='right', vertical='center')
+c_tp.number_format = '0.0%'
+for c_idx in range(2, 9):
+    ws_resumen.cell(row=15, column=c_idx).border = thin_border
+    ws_resumen.cell(row=15, column=c_idx).fill = PatternFill(start_color='E2E8F0', end_color='E2E8F0', fill_type='solid')
+ws_resumen.row_dimensions[15].height = 24
+
+# ------------------------------------------------------------------------------
+# SECCIÓN 2: METODOLOGÍA CICLO DE VIDA ATO (AUSTRALIA)
+# ------------------------------------------------------------------------------
+ws_resumen['B17'] = "2. METODOLOGÍA CICLO DE VIDA ATO (AUSTRALIA) - SIN NÚMEROS VISIBLES"
+ws_resumen['B17'].font = Font(name='Segoe UI', size=11, bold=True, color='1E293B')
+
+ato_headers = ["Etapa ATO", "Descripción Funcional", "Total Contenidos", "% del Portal"]
+for col_idx, h in enumerate(ato_headers, start=2):
+    target_c = col_idx if col_idx < 4 else (col_idx + 3)
+    c = ws_resumen.cell(row=18, column=target_c, value=h)
+    c.font = font_header
+    c.fill = PatternFill(start_color=NAVY_HEADER, end_color=NAVY_HEADER, fill_type='solid')
+    c.alignment = Alignment(horizontal='center', vertical='center')
+    c.border = header_border
+ws_resumen.merge_cells('C18:F18')
+ws_resumen.row_dimensions[18].height = 26
+
+for r_idx, (enom, edesc, ecount) in enumerate(ato_stages, start=19):
+    ws_resumen.cell(row=r_idx, column=2, value=enom).font = font_bold
+    ws_resumen.cell(row=r_idx, column=2).alignment = Alignment(horizontal='left', vertical='center')
+    
+    ws_resumen.merge_cells(f"C{r_idx}:F{r_idx}")
+    c_ed = ws_resumen.cell(row=r_idx, column=3, value=edesc)
+    c_ed.font = font_small
+    c_ed.alignment = Alignment(horizontal='left', vertical='center')
+
+    c_at = ws_resumen.cell(row=r_idx, column=7, value=ecount)
+    c_at.alignment = Alignment(horizontal='right', vertical='center')
+    c_at.font = font_bold
+    
+    c_ap = ws_resumen.cell(row=r_idx, column=8, value=f"=G{r_idx}/$G$24")
+    c_ap.alignment = Alignment(horizontal='right', vertical='center')
+    c_ap.font = font_bold
+    c_ap.number_format = '0.0%'
+    
+    fill_color = ZEBRA_FILL if r_idx % 2 == 0 else 'FFFFFF'
+    for c_idx in range(2, 9):
+        cell = ws_resumen.cell(row=r_idx, column=c_idx)
+        if c_idx not in [2, 3, 7, 8]: cell.font = font_body
+        cell.fill = PatternFill(start_color=fill_color, end_color=fill_color, fill_type='solid')
+        cell.border = thin_border
+    ws_resumen.row_dimensions[r_idx].height = 22
+
+# Fila totalizador ATO
+ws_resumen.cell(row=24, column=2, value="TOTAL POR CICLO ATO").font = font_bold
+ws_resumen.merge_cells('C24:F24')
+ws_resumen.cell(row=24, column=3, value="100% de contenidos clasificados según ciclo de vida del contribuyente").font = font_small
+c_att = ws_resumen.cell(row=24, column=7, value="=SUM(G19:G23)")
+c_att.font = font_bold
+c_att.alignment = Alignment(horizontal='right', vertical='center')
+c_atp = ws_resumen.cell(row=24, column=8, value="=SUM(H19:H23)")
+c_atp.font = font_bold
+c_atp.alignment = Alignment(horizontal='right', vertical='center')
+c_atp.number_format = '0.0%'
+for c_idx in range(2, 9):
+    ws_resumen.cell(row=24, column=c_idx).border = thin_border
+    ws_resumen.cell(row=24, column=c_idx).fill = PatternFill(start_color='E2E8F0', end_color='E2E8F0', fill_type='solid')
+ws_resumen.row_dimensions[24].height = 24
+
+# ------------------------------------------------------------------------------
+# SECCIÓN 3: TIPOS DE INTERACCIÓN (CÓMO RESUELVE EL CIUDADANO)
+# ------------------------------------------------------------------------------
+ws_resumen['B26'] = "3. TIPOS DE INTERACCIÓN (CÓMO RESUELVE EL CIUDADANO)"
+ws_resumen['B26'].font = Font(name='Segoe UI', size=11, bold=True, color='1E293B')
+
+int_headers = ["Tipo de Interacción", "Modalidad Operativa", "Total Contenidos", "% del Portal"]
+for col_idx, h in enumerate(int_headers, start=2):
+    target_c = col_idx if col_idx < 4 else (col_idx + 3)
+    c = ws_resumen.cell(row=27, column=target_c, value=h)
+    c.font = font_header
+    c.fill = PatternFill(start_color=CYAN_ACCENT, end_color=CYAN_ACCENT, fill_type='solid')
+    c.alignment = Alignment(horizontal='center', vertical='center')
+    c.border = header_border
+ws_resumen.merge_cells('C27:F27')
+ws_resumen.row_dimensions[27].height = 26
+
+for r_idx, (inom, idesc, icount) in enumerate(interactions, start=28):
+    ws_resumen.cell(row=r_idx, column=2, value=inom).font = font_bold
+    ws_resumen.cell(row=r_idx, column=2).alignment = Alignment(horizontal='left', vertical='center')
+    
+    ws_resumen.merge_cells(f"C{r_idx}:F{r_idx}")
+    c_id = ws_resumen.cell(row=r_idx, column=3, value=idesc)
+    c_id.font = font_small
+    c_id.alignment = Alignment(horizontal='left', vertical='center')
+
+    c_it = ws_resumen.cell(row=r_idx, column=7, value=icount)
+    c_it.alignment = Alignment(horizontal='right', vertical='center')
+    c_it.font = font_bold
+    
+    c_ip = ws_resumen.cell(row=r_idx, column=8, value=f"=G{r_idx}/$G$32")
+    c_ip.alignment = Alignment(horizontal='right', vertical='center')
+    c_ip.font = font_bold
+    c_ip.number_format = '0.0%'
+    
+    fill_color = ZEBRA_FILL if r_idx % 2 == 0 else 'FFFFFF'
+    for c_idx in range(2, 9):
+        cell = ws_resumen.cell(row=r_idx, column=c_idx)
+        if c_idx not in [2, 3, 7, 8]: cell.font = font_body
+        cell.fill = PatternFill(start_color=fill_color, end_color=fill_color, fill_type='solid')
+        cell.border = thin_border
+    ws_resumen.row_dimensions[r_idx].height = 22
+
+# Fila totalizador Interacciones
+ws_resumen.cell(row=32, column=2, value="TOTAL INTERACCIONES").font = font_bold
+ws_resumen.merge_cells('C32:F32')
+ws_resumen.cell(row=32, column=3, value="100% de contenidos catalogados según interacción digital").font = font_small
+c_itt = ws_resumen.cell(row=32, column=7, value="=SUM(G28:G31)")
+c_itt.font = font_bold
+c_itt.alignment = Alignment(horizontal='right', vertical='center')
+c_itp = ws_resumen.cell(row=32, column=8, value="=SUM(H28:H31)")
+c_itp.font = font_bold
+c_itp.alignment = Alignment(horizontal='right', vertical='center')
+c_itp.number_format = '0.0%'
+for c_idx in range(2, 9):
+    ws_resumen.cell(row=32, column=c_idx).border = thin_border
+    ws_resumen.cell(row=32, column=c_idx).fill = PatternFill(start_color='E2E8F0', end_color='E2E8F0', fill_type='solid')
+ws_resumen.row_dimensions[32].height = 24
+
+# Anchos de columna idénticos
+resumen_col_widths = {
+    1: 4, 2: 6, 3: 32, 4: 55, 5: 50, 6: 55, 7: 18, 8: 14
+}
+for col_idx, width in resumen_col_widths.items():
+    ws_resumen.column_dimensions[get_column_letter(col_idx)].width = width
 
 # ==============================================================================
 # HOJA 2: MAPA DE NAVEGACIÓN (TAXONOMÍA PURA N1 A N4)
@@ -544,14 +691,14 @@ for col_idx, h in enumerate(headers_mapa, start=2):
 ws_mapa.row_dimensions[6].height = 28
 
 for r_idx, node in enumerate(MAPA_DATA, start=7):
-    ws_mapa.cell(row=r_idx, column=2, value=r_idx - 6).alignment = Alignment(horizontal='center')
+    ws_mapa.cell(row=r_idx, column=2, value=r_idx - 6).alignment = Alignment(horizontal='center', vertical='center')
     ws_mapa.cell(row=r_idx, column=3, value=node['segmento']).font = font_bold
     ws_mapa.cell(row=r_idx, column=4, value=node['categoria']).font = font_bold
     ws_mapa.cell(row=r_idx, column=5, value=node['grupo'])
     ws_mapa.cell(row=r_idx, column=6, value=node['tema'])
     
     c_cnt = ws_mapa.cell(row=r_idx, column=7, value=node['conteo_tramites'])
-    c_cnt.alignment = Alignment(horizontal='right')
+    c_cnt.alignment = Alignment(horizontal='right', vertical='center')
     c_cnt.font = font_bold
     
     miga = f"{node['segmento']} > {node['categoria']} > {node['tema']}"
@@ -573,7 +720,7 @@ ws_mapa.cell(row=total_row, column=5, value="").border = thin_border
 ws_mapa.cell(row=total_row, column=6, value="").border = thin_border
 c_tot = ws_mapa.cell(row=total_row, column=7, value=f"=SUM(G7:G{total_row-1})")
 c_tot.font = font_bold
-c_tot.alignment = Alignment(horizontal='right')
+c_tot.alignment = Alignment(horizontal='right', vertical='center')
 ws_mapa.cell(row=total_row, column=8, value=f"{TOTAL_PORTAL} Trámites Oficiales Integrados").font = font_bold
 for c_idx in range(2, 9):
     ws_mapa.cell(row=total_row, column=c_idx).border = thin_border
@@ -624,7 +771,7 @@ for col_idx, h in enumerate(headers_fichas, start=1):
 ws_fichas.row_dimensions[6].height = 28
 
 for r_idx, node in enumerate(MAPA_DATA, start=7):
-    ws_fichas.cell(row=r_idx, column=1, value=r_idx - 6).alignment = Alignment(horizontal='center')
+    ws_fichas.cell(row=r_idx, column=1, value=r_idx - 6).alignment = Alignment(horizontal='center', vertical='center')
     ws_fichas.cell(row=r_idx, column=2, value=node['segmento']).font = font_bold
     ws_fichas.cell(row=r_idx, column=3, value=node['categoria']).font = font_bold
     ws_fichas.cell(row=r_idx, column=4, value=node['tema'])
@@ -644,7 +791,7 @@ for r_idx, node in enumerate(MAPA_DATA, start=7):
     c_bj.alignment = Alignment(horizontal='left', vertical='center', wrap_text=True)
 
     c_cnt = ws_fichas.cell(row=r_idx, column=8, value=node['conteo_tramites'])
-    c_cnt.alignment = Alignment(horizontal='right')
+    c_cnt.alignment = Alignment(horizontal='right', vertical='center')
     c_cnt.font = font_bold
 
     fill_color = ZEBRA_FILL if r_idx % 2 == 0 else 'FFFFFF'
@@ -665,4 +812,4 @@ ws_fichas.auto_filter.ref = f"A6:H{len(MAPA_DATA)+6}"
 OUTPUT_MAPA_PATH = 'docs/fuentes-datos/Mapa_de_Navegacion_y_Descripciones_Portal_SAT.xlsx'
 wb.save(OUTPUT_MAPA_PATH)
 print(f"Libro exclusivo del mapa guardado en: {OUTPUT_MAPA_PATH}")
-print(f"Hojas: Resumen Arquitectura, Mapa de Navegación, Fichas por Rol y Categoría ({len(MAPA_DATA)} fichas)")
+print(f"Hojas: Resumen Arquitectura (con Segmentos, ATO e Interacciones), Mapa de Navegación, Fichas por Rol y Categoría ({len(MAPA_DATA)} fichas)")
