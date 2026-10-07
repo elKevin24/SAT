@@ -11,6 +11,7 @@ import { UserWayAccessibilityModal } from './components/UserWayAccessibilityModa
 import { DirectConsultasModal } from './components/DirectConsultasModal';
 import { GuidedProcessModal } from './components/GuidedProcessModal';
 import { TramiteDetailModal } from './components/TramiteDetailModal';
+import { VirtualAssistantModal } from './components/VirtualAssistantModal';
 import { SegmentTramitesCatalog, TramiteItem } from './components/SegmentTramitesCatalog';
 import { EtapaAtoId, TipoInteraccionId } from './data/portalMasterTaxonomy';
 
@@ -263,6 +264,8 @@ export default function App() {
         tramite={selectedTramite}
         onClose={() => setSelectedTramite(null)}
       />
+
+      <VirtualAssistantModal />
     </div>
   );
 }

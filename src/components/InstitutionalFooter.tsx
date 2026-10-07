@@ -27,9 +27,9 @@ export const InstitutionalFooter: React.FC<InstitutionalFooterProps> = ({ onOpen
           
           {/* Columna 1: Acerca de SAT */}
           <div>
-            <h4 className="text-sm font-extrabold uppercase tracking-wider text-sat-celeste mb-3">
+            <h2 className="text-sm font-extrabold uppercase tracking-wider text-sat-celeste mb-3">
               Acerca de SAT
-            </h4>
+            </h2>
             <ul className="space-y-2 text-slate-300">
               <li><a href="https://portal.sat.gob.gt/portal/que-es-sat/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">¿Qué es SAT?</a></li>
               <li><a href="https://portal.sat.gob.gt/portal/altos-funcionarios/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Altos funcionarios</a></li>
@@ -65,9 +65,9 @@ export const InstitutionalFooter: React.FC<InstitutionalFooterProps> = ({ onOpen
 
           {/* Columna 2: Ubicaciones y Horarios */}
           <div>
-            <h4 className="text-sm font-extrabold uppercase tracking-wider text-sat-celeste mb-3">
+            <h2 className="text-sm font-extrabold uppercase tracking-wider text-sat-celeste mb-3">
               Ubicaciones y Horarios
-            </h4>
+            </h2>
             <ul className="space-y-2 text-slate-300">
               <li>
                 <a href="https://portal.sat.gob.gt/portal/ubicacion-agencias/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center gap-1.5">
@@ -89,17 +89,17 @@ export const InstitutionalFooter: React.FC<InstitutionalFooterProps> = ({ onOpen
 
           {/* Columna 3: Servicio no conforme & Denuncias */}
           <div>
-            <h4 className="text-sm font-extrabold uppercase tracking-wider text-sat-celeste mb-3">
+            <h2 className="text-sm font-extrabold uppercase tracking-wider text-sat-celeste mb-3">
               Atención de Quejas
-            </h4>
+            </h2>
             <ul className="space-y-2 text-slate-300 mb-3">
               <li><a href="https://portal.sat.gob.gt/portal/servicio-no-conforme/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Registrar queja o servicio no conforme</a></li>
               <li><a href="https://portal.sat.gob.gt/portal/consultar-estado-queja/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Consultar estado de queja</a></li>
             </ul>
 
-            <h5 className="text-xs font-bold text-[#FFB806] uppercase tracking-wider mb-1.5 flex items-center gap-1">
+            <h3 className="text-xs font-bold text-[#FFB806] uppercase tracking-wider mb-1.5 flex items-center gap-1">
               <ShieldAlert className="w-3.5 h-3.5" /> Portal de Denuncias
-            </h5>
+            </h3>
             <ul className="space-y-1 text-slate-300 text-[11px]">
               <li><a href="https://portal.sat.gob.gt/portal/denuncias-tributarias/" target="_blank" rel="noopener noreferrer" className="hover:text-white block py-1">Denuncias Tributarias</a></li>
               <li><a href="https://portal.sat.gob.gt/portal/denuncias-corrupcion/" target="_blank" rel="noopener noreferrer" className="hover:text-white block py-1">Denuncias de Corrupción</a></li>
@@ -109,9 +109,9 @@ export const InstitutionalFooter: React.FC<InstitutionalFooterProps> = ({ onOpen
 
           {/* Columna 4: Consultas y Contact Center 1550 */}
           <div>
-            <h4 className="text-sm font-extrabold uppercase tracking-wider text-sat-celeste mb-3">
+            <h2 className="text-sm font-extrabold uppercase tracking-wider text-sat-celeste mb-3">
               Consultas y Contacto
-            </h4>
+            </h2>
             <ul className="space-y-2 text-slate-300 mb-3">
               <li><a href="https://portal.sat.gob.gt/portal/preguntas-frecuentes/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Preguntas frecuentes</a></li>
               <li><a href="https://portal.sat.gob.gt/portal/consultas-legales/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Consultas Legales</a></li>

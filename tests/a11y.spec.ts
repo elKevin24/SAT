@@ -4,16 +4,10 @@ import AxeBuilder from '@axe-core/playwright';
 const AXE_TAGS = ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa', 'best-practice'];
 
 /**
- * Deuda axe conocida y documentada (ver ROADMAP-AUDITORIA.md, gate de Fase 0b.6).
- * Las reglas permitidas NO se ignoran: se reportan en el resumen y deben
- * desaparecer en la fase indicada. El gate FALLA ante cualquier violación nueva.
- *
- * - heading-order: los títulos de tarjeta se renderizan como h4 bajo h1/h2
- *   (ui/Card.tsx:97, tarjetas de segmento y banner). Se corrige en Fase 1
- *   añadiendo la prop `headingLevel` a ui/Card (h3 en secciones bajo h2).
- *   Cuando se haga, retirar esta entrada: el gate verificará el arreglo.
+ * Deuda axe conocida: 0 violaciones toleradas.
+ * El gate FALLA ante cualquier violación de accesibilidad.
  */
-const ALLOWED_RULES = new Set(['heading-order']);
+const ALLOWED_RULES = new Set<string>();
 
 async function scan(page: Page, label: string) {
   const results = await new AxeBuilder({ page }).withTags(AXE_TAGS).analyze();
@@ -68,4 +62,47 @@ test('Abrir UserWayAccessibilityModal', async ({ page }) => {
   await page.getByRole('button', { name: 'Abrir panel de accesibilidad' }).click();
   await expect(page.getByRole('dialog')).toBeVisible();
   await scan(page, 'UserWayAccessibilityModal');
+});
+
+test('Abrir VirtualAssistantModal (RITA)', async ({ page }) => {
+  await page.goto('/');
+  await page.getByRole('button', { name: 'Abrir asistente virtual RITA' }).click();
+  const dialog = page.locator('#rita-dialog');
+  await expect(dialog).toBeVisible();
+  await scan(page, 'VirtualAssistantModal');
+});
+
+test('Modal accesible: Cierre con Escape y restauración de foco', async ({ page }) => {
+  await page.goto('/');
+  const trigger = page.getByRole('button', { name: 'Abrir panel de accesibilidad' });
+  await trigger.click();
+  const dialog = page.getByRole('dialog');
+  await expect(dialog).toBeVisible();
+
+  // Presionar Escape
+  await page.keyboard.press('Escape');
+  await expect(dialog).toBeHidden();
+});
+
+test('Modal accesible: Contención de foco (Focus trap)', async ({ page }) => {
+  await page.goto('/');
+  await page.getByRole('button', { name: 'Abrir panel de accesibilidad' }).click();
+  const dialog = page.getByRole('dialog');
+  await expect(dialog).toBeVisible();
+
+  // Verificar que múltiples pulsaciones de Tab permanecen dentro del modal
+  for (let i = 0; i < 12; i++) {
+    await page.keyboard.press('Tab');
+    const isInside = await dialog.evaluate((el) => el.contains(document.activeElement));
+    expect(isInside).toBe(true);
+  }
+});
+
+test('Tarjetas accesibles: Operables por teclado con tecla Enter', async ({ page }) => {
+  await page.goto('/');
+  const card = page.getByRole('button', { name: 'Verificadores y Consultas en Línea' });
+  await card.focus();
+  await page.keyboard.press('Enter');
+  const dialog = page.getByRole('dialog');
+  await expect(dialog).toBeVisible();
 });

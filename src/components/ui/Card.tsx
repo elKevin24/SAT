@@ -13,6 +13,7 @@ import type { HTMLAttributes, KeyboardEvent } from 'react';
  * y `selected` (anillo de selección del tono para estados activos).
  */
 export type CardTone = 'azul' | 'celeste' | 'verde' | 'naranja' | 'morado';
+export type HeadingLevel = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 
 export interface CardProps extends HTMLAttributes<HTMLDivElement> {
   title: string;
@@ -22,6 +23,7 @@ export interface CardProps extends HTMLAttributes<HTMLDivElement> {
   badges?: ReactNode;
   footer?: ReactNode;
   selected?: boolean;
+  headingLevel?: HeadingLevel;
 }
 
 const TONE_CLASSES: Record<CardTone, { hoverBg: string; hoverShadow: string; ring: string }> = {
@@ -60,6 +62,7 @@ export function Card({
   badges,
   footer,
   selected,
+  headingLevel: HeadingTag = 'h3',
   className = '',
   ...rest
 }: CardProps) {
@@ -84,7 +87,7 @@ export function Card({
       className={[
         'group rounded-xl border border-sat-gris bg-white p-5',
         'cursor-pointer transition hover:-translate-y-1 motion-reduce:hover:translate-y-0',
-        'motion-reduce:transition-none',
+        'motion-reduce:transition-none focus-visible:ring-2 focus-visible:ring-sat-azul focus-visible:outline-hidden',
         toneClasses.hoverBg,
         toneClasses.hoverShadow,
         selected ? `ring-2 ${toneClasses.ring}` : '',
@@ -94,9 +97,9 @@ export function Card({
     >
       {badges && <div className="mb-2.5 flex flex-wrap items-center gap-1.5">{badges}</div>}
       <div className="flex items-start justify-between gap-3">
-        <h4 className="text-base font-bold text-sat-texto transition-colors group-hover:text-white">
+        <HeadingTag className="text-base font-bold text-sat-texto transition-colors group-hover:text-white">
           {title}
-        </h4>
+        </HeadingTag>
         <ChevronRight className="h-5 w-5 shrink-0 text-[#94A3B8] transition-colors group-hover:text-white" />
       </div>
       {description && (

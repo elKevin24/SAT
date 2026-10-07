@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Card } from './ui/Card';
 
 interface ProcesoGuiado {
   no: number;
@@ -79,23 +80,14 @@ export const GuidedProcessesSection: React.FC<GuidedProcessesSectionProps> = ({
         {/* Process Cards Grid compacto sin footer de acción redundante */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-3.5">
           {filtered.slice(0, 9).map((p) => (
-            // CRÍTICO 1 (ROADMAP-AUDITORIA.md, Fase 1): migrar a ui/Card con activación por teclado
-            // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
-            <div
+            <Card
               key={p.no}
+              title={p.nombre}
+              description={`Guía paso a paso para ${p.paraQuien.toLowerCase()}. Te orienta con los requisitos previos y el acceso directo al sistema oficial de la SAT.`}
+              tone="azul"
+              headingLevel="h4"
               onClick={() => onSelectProceso(p)}
-              className="group bg-white rounded-[16px] border border-[#DCDCDC] hover:border-[#14649B] hover:bg-[#14649B] hover:shadow-[0_12px_24px_rgba(20,100,155,0.24)] p-4 sm:p-5 shadow-xs hover:-translate-y-0.5 transition-all duration-300 cursor-pointer flex flex-col justify-between"
-            >
-              <div>
-                <h4 className="text-sm sm:text-base font-bold text-[#19324B] group-hover:text-white transition-colors leading-snug mb-1.5">
-                  {p.nombre}
-                </h4>
-
-                <p className="text-xs text-slate-600 group-hover:text-white/90 transition-colors leading-relaxed">
-                  Guía paso a paso para {p.paraQuien.toLowerCase()}. Te orienta con los requisitos previos y el acceso directo al sistema oficial de la SAT.
-                </p>
-              </div>
-            </div>
+            />
           ))}
         </div>
 

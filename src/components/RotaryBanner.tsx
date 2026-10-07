@@ -89,9 +89,9 @@ export const RotaryBanner: React.FC = () => {
                 {currentIdx + 1} de {BANNERS.length}
               </span>
             </div>
-            <h4 className="text-base sm:text-lg font-bold text-sat-texto leading-tight">
+            <h3 className="text-base sm:text-lg font-bold text-sat-texto leading-tight">
               {current.title}
-            </h4>
+            </h3>
             <p className="text-xs sm:text-sm text-sat-texto-suave mt-1 max-w-2xl">
               {current.description}
             </p>

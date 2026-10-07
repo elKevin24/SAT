@@ -16,6 +16,7 @@ import {
   Sparkles
 } from 'lucide-react';
 import { SegmentId } from './UserSegmentCards';
+import { Modal } from './ui/Modal';
 
 interface DirectConsultasModalProps {
   isOpen: boolean;
@@ -90,15 +91,14 @@ export const DirectConsultasModal: React.FC<DirectConsultasModalProps> = ({
   };
 
   return (
-    <div 
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fadeIn"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="consultas-title"
+    <Modal
+      open={isOpen}
+      onClose={onClose}
+      ariaLabelledBy="consultas-title"
+      maxWidth="max-w-2xl"
+      hideHeader
+      panelClassName="p-0 overflow-hidden rounded-2xl border border-slate-200 text-slate-800"
     >
-      <div 
-        className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full overflow-hidden border border-slate-200 text-slate-800"
-      >
         {/* Header */}
         <div className="bg-[#19324B] text-white px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2.5">
@@ -347,7 +347,6 @@ export const DirectConsultasModal: React.FC<DirectConsultasModalProps> = ({
             Cerrar
           </button>
         </div>
-      </div>
-    </div>
+    </Modal>
   );
 };

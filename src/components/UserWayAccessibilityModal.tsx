@@ -1,5 +1,6 @@
 import React from 'react';
 import { X, Eye, Type, Contrast, ZoomIn, ZoomOut, Pause, Volume2, HelpCircle, RotateCcw, Check } from 'lucide-react';
+import { Modal } from './ui/Modal';
 
 interface AccessibilitySettings {
   contrastMode: 'normal' | 'high' | 'dark' | 'inverted';
@@ -27,18 +28,15 @@ export const UserWayAccessibilityModal: React.FC<UserWayAccessibilityModalProps>
   onUpdateSettings,
   onReset,
 }) => {
-  if (!isOpen) return null;
-
   return (
-    <div 
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fadeIn"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="accessibility-title"
+    <Modal
+      open={isOpen}
+      onClose={onClose}
+      ariaLabelledBy="accessibility-title"
+      maxWidth="max-w-lg"
+      hideHeader
+      panelClassName="p-0 overflow-hidden rounded-2xl border border-slate-200 text-slate-800"
     >
-      <div 
-        className="bg-white rounded-2xl shadow-2xl max-w-lg w-full overflow-hidden border border-slate-200 text-slate-800"
-      >
         {/* Header */}
         <div className="bg-[#14649B] text-white px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
@@ -176,7 +174,6 @@ export const UserWayAccessibilityModal: React.FC<UserWayAccessibilityModalProps>
             Guardar y Cerrar
           </button>
         </div>
-      </div>
-    </div>
+    </Modal>
   );
 };

@@ -8,7 +8,7 @@ Este directorio centraliza las hojas de ruta (**Roadmaps**) y planes de ejecuci�
 
 | Roadmap | Área de Trabajo | Estado General | Progreso Estimado | Archivo de Detalle |
 | :--- | :--- | :---: | :---: | :--- |
-| **01** | **Auditoría UX / UI & Accesibilidad WCAG 2.2** | En ejecución | 50% | [`01_ROADMAP_AUDITORIA_UX_A11Y.md`](./01_ROADMAP_AUDITORIA_UX_A11Y.md) |
+| **01** | **Auditoría UX / UI & Accesibilidad WCAG 2.2** | En ejecución | 80% | [`01_ROADMAP_AUDITORIA_UX_A11Y.md`](./01_ROADMAP_AUDITORIA_UX_A11Y.md) |
 | **02** | **Responsive Design & Mobile First** | En ejecución | 40% | [`02_ROADMAP_RESPONSIVE_MOBILE_FIRST.md`](./02_ROADMAP_RESPONSIVE_MOBILE_FIRST.md) |
 | **03** | **Backlog de Evolución del Portal** | En ejecución | 35% | [`03_ROADMAP_BACKLOG_PORTAL.md`](./03_ROADMAP_BACKLOG_PORTAL.md) |
 
@@ -22,10 +22,12 @@ Este directorio centraliza las hojas de ruta (**Roadmaps**) y planes de ejecuci�
 - [x] **0b.2**: Encabezado `h1` descriptivo accesible en la portada (`App.tsx`).
 - [x] **0b.3**: Etiquetas `<label>` explícitas en inputs de consultas y chat RITA.
 - [x] **0b.4**: Atributos `aria-pressed` / `aria-selected` en tabs y botones de filtro.
-- [ ] **0b.5**: Configurar `eslint-plugin-jsx-a11y` en CI para evitar regresiones de accesibilidad.
-- [ ] **1.1**: Migrar tarjetas de accesos rápidos y procesos con `<div onClick>` a componentes semánticos operables por teclado.
-- [ ] **1.2**: Migración completa de los 5 modales (`TramiteDetailModal`, `DirectConsultasModal`, `GuidedProcessModal`, `UserWayAccessibilityModal`, `VirtualAssistantModal`) al componente accesible con trampa de foco y `Esc`.
-- [ ] **1.3**: Región `aria-live` o `role="log"` en chat RITA para anunciar nuevos mensajes a lectores de pantalla.
+- [x] **0b.5**: Configurar `eslint-plugin-jsx-a11y` en CI para evitar regresiones de accesibilidad.
+- [x] **0b.6**: Gate axe-core en CI (`tests/a11y.spec.ts`) para certificar cumplimiento automático.
+- [x] **1.4**: Jerarquía de encabezados (`heading-order`) corregida en `ui/Card`, banner y footer; gate en 0 violaciones.
+- [x] **1.2**: Migración completa de los 5 modales (`TramiteDetailModal`, `DirectConsultasModal`, `GuidedProcessModal`, `UserWayAccessibilityModal`, `VirtualAssistantModal`) al componente accesible con trampa de foco, `Esc` y scroll lock.
+- [x] **1.3**: Región `aria-live` y `role="log"` en chat RITA montado para anunciar nuevos mensajes a lectores de pantalla.
+- [x] **1.1**: Migrar tarjetas de accesos rápidos y procesos con `<div onClick>` a componentes semánticos operables por teclado.
 - [ ] **2.1**: Barrido de tokens pendientes (`slate-*`, `rounded-[16px]` a tokens oficiales `sat-*`).
 - [ ] **2.2**: Corrección del patrón combobox ARIA en el buscador global del `Header.tsx`.
 - [ ] **2.3**: Indicadores de carga (`aria-busy`) y mensajes de error con reintento en consultas directas.

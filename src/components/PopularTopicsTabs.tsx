@@ -1,5 +1,13 @@
 import React, { useState } from 'react';
 import { SegmentId } from './UserSegmentCards';
+import { Card, CardTone } from './ui/Card';
+
+const SEGMENT_TONES: Record<SegmentId, CardTone> = {
+  contribuyentes: 'azul',
+  comercio_exterior: 'naranja',
+  profesionales: 'verde',
+  entes_exentos: 'morado',
+};
 
 interface TopicItem {
   id: string;
@@ -243,10 +251,12 @@ export const PopularTopicsTabs: React.FC<PopularTopicsTabsProps> = ({
             const isConsultas = topic.isPermanentConsultas;
 
             return (
-              // CRÍTICO 1 (ROADMAP-AUDITORIA.md, Fase 1): migrar a ui/Card con activación por teclado
-              // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
-              <div
+              <Card
                 key={topic.id}
+                title={topic.title}
+                description={topic.desc}
+                tone={SEGMENT_TONES[activeTab]}
+                headingLevel="h4"
                 onClick={() => {
                   if (isConsultas) {
                     onOpenConsultasModal(activeTab);
@@ -256,18 +266,7 @@ export const PopularTopicsTabs: React.FC<PopularTopicsTabsProps> = ({
                     window.open(topic.url, '_blank');
                   }
                 }}
-                className={`p-4 sm:p-5 rounded-[16px] border border-[#DCDCDC] ${currentSegmentData.hoverBorder} ${currentSegmentData.hoverBg} ${currentSegmentData.hoverShadow} transition-all duration-300 cursor-pointer flex flex-col justify-between group shadow-xs hover:-translate-y-0.5`}
-              >
-                <div>
-                  <h4 className="text-sm sm:text-base font-bold text-[#19324B] group-hover:text-white transition-colors leading-snug mb-1.5">
-                    {topic.title}
-                  </h4>
-
-                  <p className="text-xs text-slate-600 group-hover:text-white/90 transition-colors leading-relaxed">
-                    {topic.desc}
-                  </p>
-                </div>
-              </div>
+              />
             );
           })}
         </div>

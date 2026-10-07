@@ -75,6 +75,7 @@ export const UserSegmentCards: React.FC<UserSegmentCardsProps> = ({
                 tone={p.tone}
                 onClick={() => onSelectSegment(p.id)}
                 selected={isSelected}
+                headingLevel="h3"
               />
             );
           })}

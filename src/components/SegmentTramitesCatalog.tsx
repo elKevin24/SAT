@@ -659,6 +659,7 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
         title={tramite.tramite}
         description={tramite.descripcion}
         tone={cardTone}
+        headingLevel="h3"
         onClick={() => onSelectTramite(tramite)}
         badges={badges}
         footer={
@@ -987,6 +988,7 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
                       title={catName}
                       description={desc}
                       tone={cardTone}
+                      headingLevel="h2"
                       onClick={() => {
                         setSelectedCategory(catName);
                         setSelectedSubcategory(null);
@@ -1046,6 +1048,7 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
                               title={subName}
                               description={desc}
                               tone={cardTone}
+                              headingLevel="h3"
                               onClick={() => setSelectedSubcategory(subName)}
                             />
                           );

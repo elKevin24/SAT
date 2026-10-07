@@ -12,6 +12,7 @@ import {
   ShieldCheck
 } from 'lucide-react';
 import { Button } from './ui/Button';
+import { Modal } from './ui/Modal';
 
 interface TramiteItem {
   id: string;
@@ -83,15 +84,14 @@ export const TramiteDetailModal: React.FC<TramiteDetailModalProps> = ({
   };
 
   return (
-    <div 
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fadeIn"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="tramite-title"
+    <Modal
+      open={!!tramite}
+      onClose={onClose}
+      ariaLabelledBy="tramite-title"
+      maxWidth="max-w-2xl"
+      hideHeader
+      panelClassName="p-0 overflow-hidden rounded-sat-lg border border-sat-gris text-sat-texto flex flex-col max-h-[90vh]"
     >
-      <div 
-        className="bg-white rounded-sat-lg shadow-2xl max-w-2xl w-full overflow-hidden border border-sat-gris text-sat-texto flex flex-col max-h-[90vh]"
-      >
         {/* Header */}
         <div className="bg-sat-azul text-white px-6 py-4 flex items-center justify-between shrink-0">
           <div>
@@ -239,7 +239,6 @@ export const TramiteDetailModal: React.FC<TramiteDetailModalProps> = ({
             </p>
           )}
         </div>
-      </div>
-    </div>
+    </Modal>
   );
 };

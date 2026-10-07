@@ -43,33 +43,30 @@ Plan de acción derivado de la revisión técnica del portal (Vite + React 19 + 
 - [x] **0b.6 Gate axe-core en CI (verificación)**:
   - *Acción*: `@playwright/test` + `@axe-core/playwright` (`playwright.config.ts`, `tests/a11y.spec.ts`, script `npm run test:a11y`). Escanea Home, Catálogo y los 4 modales con tags `wcag2a/aa`, `wcag21a/aa`, `wcag22aa`, `best-practice`.
   - *Arreglado al montar el gate* (contraste, WCAG 1.4.3 / tamaño de objetivo WCAG 2.5.8): puntitos del bobina (ahora zona táctil 24px con punto interior), contador "1 de 3" (`text-sat-azul`), tarjeta Contact Center del footer (sin `bg-white/5`, el token celeste cumple AA sobre navy), horario `text-slate-400`→`text-slate-300`, enlaces de Denuncias con `py-1` (objetivo ≥24px), chips de cabecera de modales (`bg-black/25 border border-white/20 text-white` — el translúcido blanco/20 no alcanzaba 4.5:1), chips de ubicación de pasos (`text-slate-500`→`text-slate-600`), botones de expandir/contraer de `SidebarNav` (`p-1`→`p-2 -m-1`, objetivo 24px).
-  - *Deuda permitida (gate falla ante cualquier violación NUEVA)*: **`heading-order`** — títulos de `ui/Card` y tarjetas de segmento en `h4` bajo `h1`/`h2` (skipped level). Se corrige en Fase 1 con prop `headingLevel` de `ui/Card` (ver 1.4). Al corregirla, retirar la entrada de `ALLOWED_RULES` en `tests/a11y.spec.ts`.
+  - *Deuda resuelta*: **`heading-order`** resuelta en Fase 1.4 (`ui/Card` con `headingLevel`, `RotaryBanner` con `h3`, `InstitutionalFooter` con `h2`/`h3`). `ALLOWED_RULES` vacío en `tests/a11y.spec.ts`.
 
 ---
 
 ### Fase 1: P0 — Teclado y Modales
 
 > **Orden de ejecución sugerido (decisión queda registrada aquí, no es bloqueante):**
-> 1. **1.4** primero — desbloquea la última deuda del gate axe 0b.6 (verificar `npm run test:a11y`).
+> 1. ~~**1.4** primero~~ *(Completado: deuda axe en 0)*.
 > 2. **1.2** — migrar los modales a `<dialog>` nativo de a uno.
 > 3. **1.1** — tarjetas clickeables a teclado.
 > 4. **1.3** — conectar RITA (hoy nunca se monta) ya con `aria-live`.
 
-- [ ] **1.1 Tarjetas activables solo con ratón (CRÍTICO 1)**:
+- [x] **1.1 Tarjetas activables solo con ratón (CRÍTICO 1)**:
   - *Ubicación*: `PopularTopicsTabs.tsx` y `GuidedProcessesSection.tsx`.
-  - *Problema*: Elementos `<div onClick>` inoperables mediante navegación por teclado.
-  - *Acción*: Migrar a `ui/Card` semántico o `<button>` con soporte para teclas `Enter` y `Espacio`, y foco visible.
-- [ ] **1.2 Migración de los 5 Diálogos a Patrón Accesible (CRÍTICO 2)**:
+  - *Acción*: Migradas a `ui/Card` semántico con soporte nativo de teclado (`Enter` y `Espacio`), `role="button"`, `tabIndex={0}` y anillo de foco visible (`focus-visible:ring-sat-azul`).
+- [x] **1.2 Migración de los 5 Diálogos a Patrón Accesible (CRÍTICO 2)**:
   - *Ubicación*: `TramiteDetailModal`, `DirectConsultasModal`, `GuidedProcessModal`, `UserWayAccessibilityModal`, `VirtualAssistantModal`.
-  - *Problema*: Falta de contención de foco (focus trap), cierre consistente con `Esc` y restauración de foco al cerrar.
-  - *Acción*: Migrar integralmente al componente `src/components/ui/Modal.tsx` o implementar `<dialog>` nativo con trampa de foco y bloqueo de scroll de fondo.
-- [ ] **1.3 Notificaciones dinámicas en Asistente Virtual RITA**:
-  - *Ubicación*: `VirtualAssistantModal.tsx`.
-  - *Acción*: Agregar región `aria-live="polite"` o `role="log"` para notificar la llegada de nuevos mensajes a usuarios de lectores de pantalla.
-  - *Nota*: Hoy RITA **no está montada** (no se importa en `App.tsx`) — conectarla como parte de la migración a `<dialog>`.
-- [ ] **1.4 Jerarquía de encabezados (`heading-order`)**:
-  - *Ubicación*: `src/components/ui/Card.tsx:97`, segmentos y banner.
-  - *Acción*: Añadir prop `headingLevel` a `ui/Card` (p. ej. `h3` en secciones bajo `h2`). Retirar `heading-order` de `ALLOWED_RULES` en `tests/a11y.spec.ts` y verificar con `npm run test:a11y`.
+  - *Acción*: Migrados al componente unificado `src/components/ui/Modal.tsx` y hook `useDialogA11y` con contención de foco (`Tab`/`Shift+Tab`), cierre consistente con `Esc`, scroll lock de fondo y restauración de foco al elemento de activación.
+- [x] **1.3 Notificaciones dinámicas en Asistente Virtual RITA**:
+  - *Ubicación*: `VirtualAssistantModal.tsx` y `App.tsx`.
+  - *Acción*: RITA montada en `App.tsx`; lista de mensajes dotada de `role="log"`, `aria-live="polite"`, `aria-atomic="false"` y atributos dialog accesibles con trampa de foco (`useDialogA11y`).
+- [x] **1.4 Jerarquía de encabezados (`heading-order`)**:
+  - *Ubicación*: `src/components/ui/Card.tsx`, `UserSegmentCards.tsx`, `RotaryBanner.tsx`, `SegmentTramitesCatalog.tsx`, `InstitutionalFooter.tsx`.
+  - *Acción*: Prop `headingLevel` añadida a `ui/Card` (`h2` en categorías, `h3` en subtemas/trámites y segmentos). `RotaryBanner` ajustado a `h3` y columnas de footer a `h2`/`h3`. Retirado `heading-order` de `ALLOWED_RULES` en `tests/a11y.spec.ts`. Suite axe-core pasando con 0 violaciones.
 
 ---
 

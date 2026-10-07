@@ -10,6 +10,7 @@ import {
   HelpCircle,
   Phone
 } from 'lucide-react';
+import { useDialogA11y } from './ui/Modal';
 
 interface Message {
   sender: 'bot' | 'user';
@@ -20,6 +21,13 @@ interface Message {
 export const VirtualAssistantModal: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [inputVal, setInputVal] = useState('');
+
+  const { panelRef } = useDialogA11y({
+    isOpen,
+    onClose: () => setIsOpen(false),
+    lockScroll: false,
+  });
+
   const [messages, setMessages] = useState<Message[]>([
     {
       sender: 'bot',
@@ -100,9 +108,13 @@ export const VirtualAssistantModal: React.FC = () => {
 
   return (
     <>
-      {/* Botón Flotante Asistente Virtual (Slide 5) */}
+      {/* Botón Flotante Asistente Virtual */}
       <button
-        onClick={() => setIsOpen(true)}
+        type="button"
+        onClick={() => setIsOpen((prev) => !prev)}
+        aria-expanded={isOpen}
+        aria-controls="rita-dialog"
+        aria-haspopup="dialog"
         className="fixed bottom-5 right-5 z-40 p-3.5 bg-gradient-to-r from-[#14649B] to-[#0284C7] text-white rounded-full shadow-2xl hover:shadow-cyan-500/30 hover:scale-105 active:scale-95 transition-all flex items-center gap-2 group border-2 border-white"
         aria-label="Abrir asistente virtual RITA"
       >
@@ -116,9 +128,13 @@ export const VirtualAssistantModal: React.FC = () => {
       {/* Modal / Ventana de Chat */}
       {isOpen && (
         <div 
-          className="fixed bottom-20 right-4 sm:right-6 z-50 w-[92vw] sm:w-96 bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden flex flex-col max-h-[550px] animate-fadeIn"
+          ref={panelRef}
+          id="rita-dialog"
+          tabIndex={-1}
+          className="fixed bottom-20 right-4 sm:right-6 z-50 w-[92vw] sm:w-96 bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden flex flex-col max-h-[550px] animate-fadeIn outline-none"
           role="dialog"
           aria-modal="true"
+          aria-labelledby="rita-title"
         >
           {/* Header */}
           <div className="bg-[#19324B] text-white px-4 py-3 flex items-center justify-between">
@@ -127,13 +143,14 @@ export const VirtualAssistantModal: React.FC = () => {
                 <Bot className="w-5 h-5" />
               </div>
               <div>
-                <h3 className="text-xs font-bold leading-tight flex items-center gap-1">
+                <h3 id="rita-title" className="text-xs font-bold leading-tight flex items-center gap-1">
                   RITA · Asistente Virtual <Sparkles className="w-3 h-3 text-sky-300" />
                 </h3>
                 <span className="text-[10px] text-emerald-400 font-medium">● En línea · SAT Guatemala</span>
               </div>
             </div>
             <button
+              type="button"
               onClick={() => setIsOpen(false)}
               className="p-1 rounded-lg text-white/80 hover:text-white hover:bg-white/10"
               aria-label="Cerrar chat"
@@ -142,8 +159,15 @@ export const VirtualAssistantModal: React.FC = () => {
             </button>
           </div>
 
-          {/* Message List */}
-          <div className="p-4 overflow-y-auto flex-1 space-y-3 bg-slate-50 text-xs">
+          {/* Message List con región live accesible (WCAG 4.1.3 / Best practice) */}
+          <div 
+            role="log"
+            aria-live="polite"
+            aria-atomic="false"
+            aria-relevant="additions text"
+            aria-label="Historial de mensajes de RITA"
+            className="p-4 overflow-y-auto flex-1 space-y-3 bg-slate-50 text-xs"
+          >
             {messages.map((msg, i) => (
               <div
                 key={i}

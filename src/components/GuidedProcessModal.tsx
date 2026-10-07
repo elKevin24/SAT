@@ -11,6 +11,7 @@ import {
   HelpCircle,
   Sparkles
 } from 'lucide-react';
+import { Modal } from './ui/Modal';
 
 interface PasoItem {
   numero: number;
@@ -60,15 +61,14 @@ export const GuidedProcessModal: React.FC<GuidedProcessModalProps> = ({
   );
 
   return (
-    <div 
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fadeIn"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="proceso-title"
+    <Modal
+      open={!!proceso}
+      onClose={onClose}
+      ariaLabelledBy="proceso-title"
+      maxWidth="max-w-3xl"
+      hideHeader
+      panelClassName="p-0 overflow-hidden rounded-2xl border border-slate-200 text-slate-800 flex flex-col max-h-[85vh]"
     >
-      <div 
-        className="bg-white rounded-2xl shadow-2xl max-w-3xl w-full overflow-hidden border border-slate-200 text-slate-800 flex flex-col max-h-[85vh]"
-      >
         {/* Header */}
         <div className="bg-[#14649B] text-white px-6 py-4 flex items-center justify-between shrink-0">
           <div className="flex items-center gap-3">
@@ -195,7 +195,6 @@ export const GuidedProcessModal: React.FC<GuidedProcessModalProps> = ({
             Entendido
           </button>
         </div>
-      </div>
-    </div>
+    </Modal>
   );
 };
