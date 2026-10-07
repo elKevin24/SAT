@@ -37,8 +37,13 @@ Plan de acción derivado de la revisión técnica del portal (Vite + React 19 + 
 - [x] **0b.4 Tabs/filtros con estado ARIA (ALTO 5)**:
   - *Ubicación*: `PopularTopicsTabs.tsx`, `GuidedProcessesSection.tsx`, `DirectConsultasModal.tsx`.
   - *Acción*: Botones de filtro y pestañas con atributo `aria-pressed={isActive}`.
-- [ ] **0b.5 Herramienta de Lint de Accesibilidad en CI**:
-  - *Acción*: Configurar `eslint-plugin-jsx-a11y` con ESLint flat config para detección automática en `npm run lint`.
+- [x] **0b.5 Herramienta de Lint de Accesibilidad en CI**:
+  - *Acción*: `eslint` 9 flat config (`eslint.config.js`) + `@babel/eslint-parser` (typescript-eslint incompatible con `typescript@7.0.2`) + `eslint-plugin-jsx-a11y`. `npm run lint` = `tsc --noEmit && eslint src --max-warnings=0`.
+  - *Resuelto al integrarlo*: backdrops con `onClick` muerto (4 modales), anchor `href="#"`→`#/` en página de diagrama, fix TS pre-existente en `Breadcrumbs.tsx` (`useRef<HTMLLIElement>`). Quedan con `eslint-disable` + referencia a ROADMAP: `<div onClick>` de tema Fase 1 (ver 1.1).
+- [x] **0b.6 Gate axe-core en CI (verificación)**:
+  - *Acción*: `@playwright/test` + `@axe-core/playwright` (`playwright.config.ts`, `tests/a11y.spec.ts`, script `npm run test:a11y`). Escanea Home, Catálogo y los 4 modales con tags `wcag2a/aa`, `wcag21a/aa`, `wcag22aa`, `best-practice`.
+  - *Arreglado al montar el gate* (contraste, WCAG 1.4.3 / tamaño de objetivo WCAG 2.5.8): puntitos del bobina (ahora zona táctil 24px con punto interior), contador "1 de 3" (`text-sat-azul`), tarjeta Contact Center del footer (sin `bg-white/5`, el token celeste cumple AA sobre navy), horario `text-slate-400`→`text-slate-300`, enlaces de Denuncias con `py-1` (objetivo ≥24px), chip "Etapa:" (`text-sky-100`→`text-white`), chips de ubicación de pasos (`text-slate-500`→`text-slate-600`).
+  - *Deuda permitida (gate falla ante cualquier violación NUEVA)*: **`heading-order`** — títulos de `ui/Card` y tarjetas de segmento en `h4` bajo `h1`/`h2` (skipped level). Se corrige en Fase 1 con prop `headingLevel` de `ui/Card` (ver 1.4). Al corregirla, retirar la entrada de `ALLOWED_RULES` en `tests/a11y.spec.ts`.
 
 ---
 
@@ -54,6 +59,10 @@ Plan de acción derivado de la revisión técnica del portal (Vite + React 19 + 
 - [ ] **1.3 Notificaciones dinámicas en Asistente Virtual RITA**:
   - *Ubicación*: `VirtualAssistantModal.tsx`.
   - *Acción*: Agregar región `aria-live="polite"` o `role="log"` para notificar la llegada de nuevos mensajes a usuarios de lectores de pantalla.
+  - *Nota*: Hoy RITA **no está montada** (no se importa en `App.tsx`) — conectarla como parte de la migración a `<dialog>`.
+- [ ] **1.4 Jerarquía de encabezados (`heading-order`)**:
+  - *Ubicación*: `src/components/ui/Card.tsx:97`, segmentos y banner.
+  - *Acción*: Añadir prop `headingLevel` a `ui/Card` (p. ej. `h3` en secciones bajo `h2`). Retirar `heading-order` de `ALLOWED_RULES` en `tests/a11y.spec.ts` y verificar con `npm run test:a11y`.
 
 ---
 
@@ -87,7 +96,7 @@ Plan de acción derivado de la revisión técnica del portal (Vite + React 19 + 
 
 ### Fase 4: Auditoría y Verificación de Cumplimiento
 - [x] **4.1 Verificación de compilación limpia**: `npm run build` pasando sin errores de TypeScript.
-- [ ] **4.2 Auditoría automatizada**: Ejecución de axe-core en páginas principales y modales.
+- [x] **4.2 Auditoría automatizada**: Gate axe-core implementado en Fase 0b.6 (`npm run test:a11y`): Home, Catálogo y 4 modales, con deuda conocida permitida y bloqueo de violaciones nuevas.
 - [ ] **4.3 Prueba de teclado completa**: Navegación de punta a punta con `Tab`, `Shift+Tab`, `Enter`, `Espacio` y `Esc`.
 - [ ] **4.4 Prueba con lector de pantalla**: Verificación con NVDA en Windows.
 - [ ] **4.5 Prueba de reflow**: Comprobación a 320px de ancho y zoom del 200% (WCAG 1.4.10 / 1.4.4).

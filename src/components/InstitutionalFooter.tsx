@@ -101,9 +101,9 @@ export const InstitutionalFooter: React.FC<InstitutionalFooterProps> = ({ onOpen
               <ShieldAlert className="w-3.5 h-3.5" /> Portal de Denuncias
             </h5>
             <ul className="space-y-1 text-slate-300 text-[11px]">
-              <li><a href="https://portal.sat.gob.gt/portal/denuncias-tributarias/" target="_blank" rel="noopener noreferrer" className="hover:text-white">Denuncias Tributarias</a></li>
-              <li><a href="https://portal.sat.gob.gt/portal/denuncias-corrupcion/" target="_blank" rel="noopener noreferrer" className="hover:text-white">Denuncias de Corrupción</a></li>
-              <li><a href="https://portal.sat.gob.gt/portal/denuncias-comercio-ilicito/" target="_blank" rel="noopener noreferrer" className="hover:text-white">Denuncias de Contrabando</a></li>
+              <li><a href="https://portal.sat.gob.gt/portal/denuncias-tributarias/" target="_blank" rel="noopener noreferrer" className="hover:text-white block py-1">Denuncias Tributarias</a></li>
+              <li><a href="https://portal.sat.gob.gt/portal/denuncias-corrupcion/" target="_blank" rel="noopener noreferrer" className="hover:text-white block py-1">Denuncias de Corrupción</a></li>
+              <li><a href="https://portal.sat.gob.gt/portal/denuncias-comercio-ilicito/" target="_blank" rel="noopener noreferrer" className="hover:text-white block py-1">Denuncias de Contrabando</a></li>
             </ul>
           </div>
 
@@ -118,8 +118,8 @@ export const InstitutionalFooter: React.FC<InstitutionalFooterProps> = ({ onOpen
               <li><a href="https://portal.sat.gob.gt/portal/informacion-publica/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Información Pública (Decreto 57-2008)</a></li>
             </ul>
 
-            {/* Tarjeta de Contact Center 1550 */}
-            <div className="p-3 bg-white/5 rounded-xl border border-white/10 space-y-1.5">
+            {/* Tarjeta de Contact Center 1550 (sin overlay: celeste token cumple AA sobre el navy) */}
+            <div className="p-3 rounded-xl border border-white/10 space-y-1.5">
               <div className="flex items-center gap-2">
                 <div className="w-8 h-8 rounded-lg bg-[#14649B] flex items-center justify-center text-white">
                   <Phone className="w-4 h-4" />
@@ -134,7 +134,7 @@ export const InstitutionalFooter: React.FC<InstitutionalFooterProps> = ({ onOpen
                   WhatsApp
                 </a>
                 <span>·</span>
-                <span className="text-slate-400">Lunes a Viernes 08:00 a 16:30</span>
+                <span className="text-slate-300">Lunes a Viernes 08:00 a 16:30</span>
               </div>
             </div>
           </div>

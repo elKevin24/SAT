@@ -85,7 +85,7 @@ export const RotaryBanner: React.FC = () => {
               <span className="text-[10px] font-bold text-sat-azul uppercase tracking-wider bg-sat-azul/10 border border-sat-azul/15 px-2.5 py-0.5 rounded">
                 {current.tag}
               </span>
-              <span className="text-[11px] text-sat-texto-tenue font-medium">
+              <span className="text-[11px] text-sat-azul font-medium">
                 {currentIdx + 1} de {BANNERS.length}
               </span>
             </div>
@@ -109,18 +109,24 @@ export const RotaryBanner: React.FC = () => {
               <ExternalLink className="w-3.5 h-3.5" />
             </a>
 
-            {/* Dots navigation */}
+            {/* Dots navigation (WCAG 2.5.8: zona táctil de 24px con punto visual interior) */}
             <div className="flex items-center gap-1.5">
               {BANNERS.map((_, i) => (
                 <button
                   key={i}
                   onClick={() => setCurrentIdx(i)}
-                  className={`w-2 h-2 rounded-full transition-all ${
-                    i === currentIdx ? 'w-5 bg-sat-azul' : 'bg-sat-gris hover:bg-sat-texto-tenue'
-                  }`}
+                  className="group w-6 h-6 flex items-center justify-center rounded-full transition-colors"
                   aria-label={`Ir al banner ${i + 1}`}
                   aria-current={i === currentIdx}
-                />
+                >
+                  <span
+                    className={`h-2 rounded-full transition-all ${
+                      i === currentIdx
+                        ? 'w-5 bg-sat-azul'
+                        : 'w-2 bg-sat-gris group-hover:bg-sat-texto-tenue'
+                    }`}
+                  />
+                </button>
               ))}
             </div>
           </div>

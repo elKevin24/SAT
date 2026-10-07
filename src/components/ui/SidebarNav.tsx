@@ -137,7 +137,7 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
                   <button
                     type="button"
                     onClick={(e) => toggleCategoryExpand(cat.name, e)}
-                    className="p-1 rounded hover:bg-black/10 transition-colors focus:outline-none"
+                    className="p-2 -m-1 rounded hover:bg-black/10 transition-colors focus:outline-none"
                     aria-label={isExpanded ? `Contraer ${cat.name}` : `Expandir ${cat.name}`}
                   >
                     {isExpanded ? (

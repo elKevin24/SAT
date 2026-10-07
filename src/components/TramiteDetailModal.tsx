@@ -96,7 +96,7 @@ export const TramiteDetailModal: React.FC<TramiteDetailModalProps> = ({
         <div className="bg-sat-azul text-white px-6 py-4 flex items-center justify-between shrink-0">
           <div>
             <div className="flex items-center gap-2 mb-1">
-              <span className="text-[10px] font-bold uppercase tracking-wider bg-white/20 px-2.5 py-0.5 rounded-full text-white/90">
+              <span className="text-[10px] font-bold uppercase tracking-wider bg-black/25 border border-white/20 px-2.5 py-0.5 rounded-full text-white">
                 {tramite.pillarName || 'SAT Trámite Oficial'}
               </span>
               <span className="text-xs text-white/80">

@@ -77,7 +77,7 @@ export const GuidedProcessModal: React.FC<GuidedProcessModalProps> = ({
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <span className="text-[10px] font-bold uppercase tracking-wider bg-white/20 px-2 py-0.5 rounded text-sky-100">
+                <span className="text-[10px] font-bold uppercase tracking-wider bg-black/25 border border-white/20 px-2 py-0.5 rounded text-white">
                   Etapa: {proceso.etapa || 'Proceso Core'}
                 </span>
                 <span className="text-xs text-sky-100">Audiencia: {proceso.audiencia}</span>
@@ -151,7 +151,7 @@ export const GuidedProcessModal: React.FC<GuidedProcessModalProps> = ({
                           {paso.accion || `Paso ${paso.numero}`}
                         </div>
                         {paso.ubicacion && (
-                          <span className="text-[10px] text-slate-500 font-medium bg-slate-100 px-2 py-0.5 rounded self-start sm:self-auto">
+                          <span className="text-[10px] text-slate-600 font-medium bg-slate-100 px-2 py-0.5 rounded self-start sm:self-auto">
                             {paso.ubicacion}
                           </span>
                         )}
