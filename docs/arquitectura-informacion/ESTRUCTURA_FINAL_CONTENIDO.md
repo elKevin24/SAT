@@ -36,6 +36,16 @@ La estructura resuelve de manera definitiva:
 | **4** | **Entes Exentos** | *Información y gestiones tributarias para entidades públicas y organizaciones no lucrativas.* | Entidades del Estado, Constitucionales, No Lucrativos, Municipalidades y Entidades por Decreto | **79** | 11.7% |
 | **TOTAL** | **4 Segmentos** | — | **Total Portal Web SAT Saneado** | **676** | **100.0%** |
 
+### Desglose de Contribuyentes (Nivel 2 — 4 Regímenes Oficiales)
+
+| No. | Régimen Oficial | Texto Orientador de Interfaz (Estándar ATO) | Trámites Saneados | Participación en Contribuyentes |
+| :---: | :--- | :--- | :---: | :---: |
+| **1** | **NIT sin Obligaciones** | *Gestiones y servicios de identificación tributaria para personas sin actividad comercial.* | **10** | 2.9% |
+| **2** | **Pequeños Contribuyentes** | *Información y obligaciones para pequeños negocios y régimen simplificado.* | **22** | 6.4% |
+| **3** | **Contribuyente General** | *Servicios tributarios para el régimen general, personas con actividad mercantil y empresas.* | **298** | 86.6% |
+| **4** | **Contribuyentes Especiales** | *Servicios y gestiones tributarias para empresas con atención diferenciada.* | **14** | 4.1% |
+| **—** | **Total Contribuyentes** | — | **344** | **100.0%** |
+
 ---
 
 ## 3. Arquitectura de Información (IA) — Cómo está organizada la información

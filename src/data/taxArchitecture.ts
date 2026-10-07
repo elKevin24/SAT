@@ -137,7 +137,7 @@ export const GRUPOS_CONFIG: GrupoInfo[] = [
     nombre: 'NIT sin Obligaciones',
     cantidadTemas: 10,
     pillar: 'contribuyentes',
-    desc: 'Personas individuales, estudiantes y graduados sin actividad económica que requieren NIT para actos civiles, cuentas bancarias, cobro de remesas, registro de títulos y acceso a información pública (cero trabajadores asalariados).',
+    desc: 'Gestiones y servicios de identificación tributaria para personas sin actividad comercial.',
     subgrupos: [
       { nombre: 'Inscripción de NIT', cantidadTemas: 2, desc: 'Solicitud de primer NIT y actualización de datos de identificación personal.' },
       { nombre: 'Títulos Universitarios', cantidadTemas: 2, desc: 'Registro y habilitación de títulos para ejercer y verificación digital mediante código QR.' },
@@ -148,41 +148,41 @@ export const GRUPOS_CONFIG: GrupoInfo[] = [
   {
     no: 2,
     nombre: 'Pequeños Contribuyentes',
-    cantidadTemas: 39,
+    cantidadTemas: 22,
     pillar: 'contribuyentes',
-    desc: 'Régimen simplificado de tributación del 5% y actividades agropecuarias especiales primarias y pecuarias.',
+    desc: 'Información y obligaciones para pequeños negocios y régimen simplificado.',
     subgrupos: [
-      { nombre: 'Pequeño Contribuyente', cantidadTemas: 39, desc: 'Facturación mensual máxima de Q150,000 anuales con tarifa del 5% definitiva.' },
-      { nombre: 'Primario', cantidadTemas: 39, desc: 'Régimen especial agropecuario para productores primarios de granos y vegetales.' },
-      { nombre: 'Pecuario', cantidadTemas: 39, desc: 'Régimen especial agropecuario para actividades de ganadería, avicultura y crianza.' }
+      { nombre: 'Pequeño Contribuyente', cantidadTemas: 18, desc: 'Facturación mensual en régimen simplificado del 5% definitivo de IVA.' },
+      { nombre: 'Primario', cantidadTemas: 2, desc: 'Régimen especial agropecuario para productores primarios de granos y vegetales.' },
+      { nombre: 'Pecuario', cantidadTemas: 2, desc: 'Régimen especial agropecuario para actividades de ganadería, avicultura y crianza.' }
     ]
   },
   {
     no: 3,
     nombre: 'Contribuyente General',
-    cantidadTemas: 295,
+    cantidadTemas: 298,
     pillar: 'contribuyentes',
-    desc: 'Personas individuales y jurídicas con obligaciones tributarias generales, IVA (12%), regímenes de ISR, vehículos como propietarios, facturación y servicios del RTU.',
+    desc: 'Servicios tributarios para el régimen general, personas con actividad mercantil y empresas.',
     subgrupos: [
-      { nombre: 'RTU e Inscripción', cantidadTemas: 48, desc: 'Inscripción de sociedades, actualización de datos, nombramientos de representantes y cese de negocios.' },
-      { nombre: 'Obligaciones y Regímenes', cantidadTemas: 41, desc: 'Declaraciones de impuestos, regímenes tributarios, facturación electrónica FEL y autorizaciones.' },
-      { nombre: 'Registro Fiscal de Vehículos', cantidadTemas: 75, desc: 'Inscripción, traspasos, distintivos, impuesto de circulación ISCV, modificaciones y consultas vehiculares.' },
-      { nombre: 'Capacitación y Cultura Tributaria', cantidadTemas: 60, desc: 'Cursos por impuesto, herramientas electrónicas, calendario, biblioteca virtual y formación ciudadana.' },
-      { nombre: 'Devoluciones y Créditos Fiscales', cantidadTemas: 22, desc: 'Devolución de ISR asalariados/empresas, IVA crédito fiscal, pagos indebidos y en exceso.' },
-      { nombre: 'Servicios al Contribuyente', cantidadTemas: 33, desc: 'Constancias del RTU, libros contables, Agencia Virtual, citas presenciales y correcciones de formularios.' },
-      { nombre: 'Consultas y Verificadores', cantidadTemas: 16, desc: 'Verificadores públicos de documentos, solvencias, consultas tributarias y atención de quejas.' }
+      { nombre: 'RTU e Inscripción', cantidadTemas: 68, desc: 'Inscripción de sociedades, actualización de datos, nombramientos de representantes y cese de negocios.' },
+      { nombre: 'Obligaciones y Regímenes', cantidadTemas: 70, desc: 'Declaraciones de impuestos, regímenes tributarios, facturación electrónica FEL y autorizaciones.' },
+      { nombre: 'Registro Fiscal de Vehículos', cantidadTemas: 60, desc: 'Inscripción, traspasos, distintivos, impuesto de circulación ISCV, modificaciones y consultas vehiculares.' },
+      { nombre: 'Servicios al Contribuyente', cantidadTemas: 44, desc: 'Constancias del RTU, libros contables, Agencia Virtual, citas presenciales y correcciones de formularios.' },
+      { nombre: 'Empresas y Sociedades', cantidadTemas: 31, desc: 'Personas jurídicas, sociedades anónimas, sucursales y contratos asociativos.' },
+      { nombre: 'Facturación Electrónica', cantidadTemas: 13, desc: 'Régimen FEL, habilitación como emisor gratuito y consulta de documentos tributarios.' },
+      { nombre: 'Solvencia y Convenios', cantidadTemas: 9, desc: 'Solvencias SOFI inmediatas, facilidades de pago en cuotas y consulta de morosos.' },
+      { nombre: 'Asalariados', cantidadTemas: 3, desc: 'Planilla electrónica del IVA en FEL y devolución de retenciones de ISR en relación de dependencia.' }
     ]
   },
   {
     no: 4,
     nombre: 'Contribuyentes Especiales',
-    cantidadTemas: 36,
+    cantidadTemas: 14,
     pillar: 'contribuyentes',
-    desc: 'Gerencias de Medianos y Grandes Contribuyentes Especiales con control tributario diferenciado.',
+    desc: 'Servicios y gestiones tributarias para empresas con atención diferenciada.',
     subgrupos: [
-      { nombre: 'Medianos', cantidadTemas: 32, desc: 'Gerencia de Medianos Contribuyentes Especiales y fiscalización preventiva.' },
-      { nombre: 'Grandes', cantidadTemas: 32, desc: 'Gerencia de Grandes Contribuyentes Especiales, precios de transferencia y auditorías.' },
-      { nombre: 'Rep. Legales', cantidadTemas: 36, desc: 'Representación legal y apoderados ante gerencias de contribuyentes especiales.' }
+      { nombre: 'Medianos', cantidadTemas: 7, desc: 'Gerencia de Medianos Contribuyentes Especiales y fiscalización preventiva.' },
+      { nombre: 'Grandes', cantidadTemas: 7, desc: 'Gerencia de Grandes Contribuyentes Especiales, precios de transferencia y auditorías.' }
     ]
   },
 

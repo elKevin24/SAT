@@ -45,6 +45,17 @@ NIVEL 1: SEGMENTOS (4 Grandes Audiencias Nacionales)
   └── Entes Exentos
 ```
 
+### Desglose Oficial: Contribuyentes (Nivel 2 — 4 Regímenes Oficiales)
+
+El segmento de **Contribuyentes** (344 trámites saneados) organiza la interacción ciudadana y empresarial en 4 regímenes oficiales, cada uno con su texto orientador de interfaz de una sola línea (benchmark ATO):
+
+| No. | Régimen Oficial (Nivel 2) | Trámites | Texto Orientador de Interfaz (Estándar ATO) | Fundamento Técnico y Legal |
+| :---: | :--- | :---: | :--- | :--- |
+| **1** | **NIT sin Obligaciones** | 10 | *Gestiones y servicios de identificación tributaria para personas sin actividad comercial.* | Código Tributario (Art. 120). Identificación civil para actos notariales, bancarios y civiles sin actividad mercantil. |
+| **2** | **Pequeños Contribuyentes** | 22 | *Información y obligaciones para pequeños negocios y régimen simplificado.* | Ley del IVA (Arts. 45-50) y Dto. 7-2019. Monotributo mensual 5% definitivo y regímenes del sector agropecuario primario. |
+| **3** | **Contribuyente General** | 298 | *Servicios tributarios para el régimen general, personas con actividad mercantil y empresas.* | Ley del IVA (12%) y LAT (Dto. 10-2012). Declaraciones periódicas, RTU Digital, Registro Fiscal de Vehículos y sociedades. |
+| **4** | **Contribuyentes Especiales** | 14 | *Servicios y gestiones tributarias para empresas con atención diferenciada.* | Ley Orgánica de la SAT (Dto. 1-98) y Resoluciones de Directorio. Grandes y medianos contribuyentes con gerencias especializadas. |
+
 ### Desglose Especial: Operadores de Comercio Exterior (Aduanas)
 
 Dado el alto volumen técnico y normativo (246 trámites), Comercio Exterior despliega sus niveles completos:

@@ -171,25 +171,25 @@ export const GRUPOS_OFICIALES_MASTER: {
     no: 1,
     nombre: 'NIT sin Obligaciones',
     macrogrupo: 'contribuyentes',
-    desc: 'Personas individuales sin actividad económica mercantil (estudiantes, remesas, actos civiles y títulos).'
+    desc: 'Gestiones y servicios de identificación tributaria para personas sin actividad comercial.'
   },
   {
     no: 2,
     nombre: 'Pequeños Contribuyentes',
     macrogrupo: 'contribuyentes',
-    desc: 'Personas y negocios con ventas anuales hasta Q150,000 (tarifa fija 5% de IVA o régimen agropecuario).'
+    desc: 'Información y obligaciones para pequeños negocios y régimen simplificado.'
   },
   {
     no: 3,
     nombre: 'Contribuyente General',
     macrogrupo: 'contribuyentes',
-    desc: 'Personas y empresas en régimen general del IVA (12%) e ISR, asalariados y gestión vehicular de propietarios.'
+    desc: 'Servicios tributarios para el régimen general, personas con actividad mercantil y empresas.'
   },
   {
     no: 4,
     nombre: 'Contribuyentes Especiales',
     macrogrupo: 'contribuyentes',
-    desc: 'Medianas y grandes empresas con alta recaudación bajo control gerencial diferenciado.'
+    desc: 'Servicios y gestiones tributarias para empresas con atención diferenciada.'
   },
   {
     no: 5,

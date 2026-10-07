@@ -108,7 +108,7 @@ NODOS_MAPA = [
         'categoria': 'NIT sin Obligaciones',
         'alcance': 'Inscripción de primer NIT, actualización de datos de residencia y solvencia fiscal para personas sin actividad mercantil.',
         'que_es': 'Categoría destinada a personas individuales (estudiantes, asalariados no afectos, personas que compran bienes o abren cuentas bancarias) que requieren un Número de Identificación Tributaria únicamente para actos civiles, contractuales o notariales sin realizar actividades mercantiles ni prestación de servicios técnicos afectos.',
-        'lead_text': 'Inscribe tu primer NIT en línea, actualiza tus datos de residencia y obtén tu solvencia fiscal sin acudir a una agencia.',
+        'lead_text': 'Gestiones y servicios de identificación tributaria para personas sin actividad comercial.',
         'base_juridica': 'Código Tributario (Decreto 6-91, Arts. 112 y 120), Ley de Actualización Tributaria (Decreto 10-2012) y Acuerdo de Directorio SAT 08-2020.',
     },
     {
@@ -117,7 +117,7 @@ NODOS_MAPA = [
         'categoria': 'Pequeños Contribuyentes',
         'alcance': 'Régimen del 5% definitivo, facturación FEL, régimen electrónico y regímenes especiales del sector primario y agropecuario.',
         'que_es': 'Régimen simplificado para personas individuales o jurídicas cuyas ventas de bienes o prestación de servicios no superan el monto de Q150,000 en el año calendario, tributando bajo una tarifa definitiva del 5% sobre ingresos brutos mensuales sin derecho a crédito fiscal, incluyendo productores agropecuarios (ICT).',
-        'lead_text': 'Emite tus facturas FEL de pequeño contribuyente, declara el 5% mensual en Declaraguate y consulta tus libros digitales.',
+        'lead_text': 'Información y obligaciones para pequeños negocios y régimen simplificado.',
         'base_juridica': 'Ley del IVA (Decreto 27-92, Arts. 45 al 50), Decreto 7-2019 (Régimen Electrónico) y Decreto 31-2024 (Sector Primario y Agropecuario).',
     },
     {
@@ -198,7 +198,7 @@ NODOS_MAPA = [
         'categoria': 'Contribuyentes Especiales',
         'alcance': 'Atención en gerencias diferenciadas, presentación de estados financieros auditados y precios de transferencia.',
         'que_es': 'Empresas calificadas por resolución de la SAT como grandes o medianos contribuyentes especiales sujetas a esquemas intensivos de fiscalización, atención diferenciada y cumplimiento de precios de transferencia.',
-        'lead_text': 'Gestiona tus obligaciones en gerencias especializadas, presenta estados financieros auditados y reporta precios de transferencia.',
+        'lead_text': 'Servicios y gestiones tributarias para empresas con atención diferenciada.',
         'base_juridica': 'Ley Orgánica de la SAT (Decreto 1-98, Art. 3) y Resoluciones de Directorio de Calificación de Contribuyentes Especiales.',
     },
 
