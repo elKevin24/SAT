@@ -23,22 +23,28 @@ export type TipoInteraccionId =
 
 export interface PortalMasterItem {
   id: string;
-  macrogrupo: MacrogrupoId;
-  macrogrupoNombre: string;
-  grupoNo: GrupoOficialNo;
-  grupoCodigo: string;
-  grupoNombre: string;
-  actorNombre: string;
-  subtemaLabel: string;
-  etapaAto: EtapaAtoId;
-  etapaAtoLabel: string;
-  tipoInteraccion: TipoInteraccionId;
-  tipoInteraccionLabel: string;
+  pillar: string;
+  pillarName: string;
+  macroGrupo?: string;
+  grupoNo?: number;
+  grupoNombre?: string;
+  categoria: string;
+  subcategoria: string;
+  tema?: string;
+  subtema?: string;
+  etapaAto?: EtapaAtoId;
+  etapaAtoLabel?: string;
+  tipoInteraccion?: TipoInteraccionId;
+  tipoInteraccionLabel?: string;
   tramite: string;
-  tramiteOriginal: string;
+  nombreActual?: string;
   descripcion: string;
   url: string;
-  esBrecha: boolean;
+  esBrecha?: boolean;
+  perfilDestinatario?: string;
+  impactoOImportancia?: string;
+  seccionActual?: string;
+  nota?: string;
 }
 
 export const ETAPAS_ATO_CONFIG: {
@@ -189,7 +195,7 @@ export const GRUPOS_OFICIALES_MASTER: {
   }
 ];
 
-export const PORTAL_MASTER_DATA: PortalMasterItem[] = rawMasterData as PortalMasterItem[];
+export const PORTAL_MASTER_DATA: PortalMasterItem[] = rawMasterData as unknown as PortalMasterItem[];
 
 /**
  * Filtro flexible de trámites para el portal
@@ -202,7 +208,7 @@ export function queryPortalItems(params: {
   search?: string;
 }): PortalMasterItem[] {
   return PORTAL_MASTER_DATA.filter(item => {
-    if (params.macrogrupo && item.macrogrupo !== params.macrogrupo) return false;
+    if (params.macrogrupo && item.pillar !== params.macrogrupo) return false;
     if (params.grupoNo && item.grupoNo !== params.grupoNo) return false;
     if (params.etapaAto && item.etapaAto !== params.etapaAto) return false;
     if (params.tipoInteraccion && item.tipoInteraccion !== params.tipoInteraccion) return false;
@@ -210,8 +216,8 @@ export function queryPortalItems(params: {
       const q = params.search.toLowerCase();
       const match = item.tramite.toLowerCase().includes(q) ||
                     item.descripcion.toLowerCase().includes(q) ||
-                    item.actorNombre.toLowerCase().includes(q) ||
-                    item.grupoNombre.toLowerCase().includes(q);
+                    item.categoria.toLowerCase().includes(q) ||
+                    (item.grupoNombre && item.grupoNombre.toLowerCase().includes(q));
       if (!match) return false;
     }
     return true;
