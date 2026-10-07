@@ -5,13 +5,13 @@
 > **Fecha de Emisión:** Octubre 2026  
 > **Alineación:** Estructura Institucional SAT Guatemala, Modelo de Ciclo de Vida ATO (Australian Taxation Office) & Plain Language  
 > **Archivo Excel Fuente:** [`docs/Estructura_Final_Contenido_Portal_SAT.xlsx`](file:///c:/Users/busqu/Documents/GitHub/SAT/docs/Estructura_Final_Contenido_Portal_SAT.xlsx)  
-> **Base de Datos Única (Single Source of Truth):** [`src/data/allTramites.json`](file:///c:/Users/busqu/Documents/GitHub/SAT/src/data/allTramites.json) (783 registros)
+> **Base de Datos Única (Single Source of Truth):** [`src/data/allTramites.json`](file:///c:/Users/busqu/Documents/GitHub/SAT/src/data/allTramites.json) (676 registros saneados y canónicos)
 
 ---
 
 ## 1. Resumen Ejecutivo
 
-El presente documento consolida la totalidad de **783 contenidos y servicios** del portal de la Superintendencia de Administración Tributaria (SAT).
+El presente documento consolida la totalidad de **676 contenidos y servicios** del portal de la Superintendencia de Administración Tributaria (SAT).
 
 La estructura resuelve de manera definitiva:
 1. **La jerarquía natural de 4 Segmentos y 9 Grupos Oficiales** establecida en el instrumento institucional *Detalle de Contenido para Grupos de Interés*.
@@ -30,11 +30,11 @@ La estructura resuelve de manera definitiva:
 
 | No. | Segmento Oficial | Texto Orientador de Interfaz (Estándar ATO) | Grupos Oficiales Integrados | Contenidos | Participación |
 | :---: | :--- | :--- | :--- | :---: | :---: |
-| **1** | **Contribuyentes** | *Información y servicios tributarios para personas y empresas.* | NIT sin Obligaciones, Pequeños Contribuyentes, Contribuyente General, Contribuyentes Especiales | **413** | 52.7% |
-| **2** | **Operadores de Comercio Exterior** | *Servicios e información aduanera para la importación, exportación y logística.* | Importadores, Exportadores, Transportistas, Agentes Aduaneros, Apoderados Especiales, Depósitos/Almacenes Fiscales, ZDEEP, Courier, OEA y Normativa | **246** | 31.4% |
-| **3** | **Profesionales** | *Herramientas y servicios especializados para profesionales tributarios y auxiliares.* | Abogados y Notarios, Peritos Contadores, Auditores, Gestores Tributarios y Servicios Profesionales | **45** | 5.7% |
-| **4** | **Entes Exentos** | *Información y gestiones tributarias para entidades públicas y organizaciones no lucrativas.* | Entidades del Estado, Constitucionales, No Lucrativos, Municipalidades y Entidades por Decreto | **79** | 10.1% |
-| **TOTAL** | **4 Segmentos** | — | **Total Portal Web SAT** | **783** | **100.0%** |
+| **1** | **Contribuyentes** | *Información y servicios tributarios para personas y empresas.* | NIT sin Obligaciones, Pequeños Contribuyentes, Contribuyente General, Contribuyentes Especiales | **344** | 50.9% |
+| **2** | **Operadores de Comercio Exterior** | *Servicios e información aduanera para la importación, exportación y logística.* | Importadores, Exportadores, Transportistas, Agentes Aduaneros, Apoderados Especiales, Depósitos/Almacenes Fiscales, ZDEEP, Courier, OEA y Normativa | **204** | 30.2% |
+| **3** | **Profesionales** | *Herramientas y servicios especializados para profesionales tributarios y auxiliares.* | Abogados y Notarios, Peritos Contadores, Auditores, Gestores Tributarios y Servicios Profesionales | **49** | 7.2% |
+| **4** | **Entes Exentos** | *Información y gestiones tributarias para entidades públicas y organizaciones no lucrativas.* | Entidades del Estado, Constitucionales, No Lucrativos, Municipalidades y Entidades por Decreto | **79** | 11.7% |
+| **TOTAL** | **4 Segmentos** | — | **Total Portal Web SAT Saneado** | **676** | **100.0%** |
 
 ---
 

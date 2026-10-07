@@ -3,7 +3,7 @@
 > **Superintendencia de Administración Tributaria (SAT Guatemala)**  
 > **Arquitectura de Información para el Nuevo Portal Web Institucional**  
 > **Inspiración Metodológica:** Australian Taxation Office (ATO) & GOV.UK Design System  
-> **Versión:** 3.0 (Definitiva, 783 Trámites Consolidados)  
+> **Versión:** 4.0 (Definitiva y Saneada, 676 Trámites Consolidados)  
 > **Fecha de Actualización:** Octubre 2026  
 > **Repositorio:** [`docs/TAXONOMIA_Y_DIMENSIONES_PORTAL_SAT.md`](file:///c:/Users/busqu/Documents/GitHub/SAT/docs/TAXONOMIA_Y_DIMENSIONES_PORTAL_SAT.md)  
 > **Dataset Maestro (Single Source of Truth):** [`src/data/allTramites.json`](file:///c:/Users/busqu/Documents/GitHub/SAT/src/data/allTramites.json)  
@@ -13,7 +13,7 @@
 
 ## 1. Fundamento de la Arquitectura Multidimensional
 
-Un portal público de alta densidad (783 trámites, servicios, guías y normativas) no puede estructurarse como un árbol estático de carpetas. Si se entierra el contenido en menús profundos, los usuarios no encuentran lo que buscan y saturan las agencias tributarias y aduaneras.
+Un portal público de alta densidad (676 trámites, servicios, guías y normativas canónicas) no puede estructurarse como un árbol estático de carpetas. Si se entierra el contenido en menús profundos, los usuarios no encuentran lo que buscan y saturan las agencias tributarias y aduaneras.
 
 Para resolver esto, el nuevo portal de la SAT opera bajo una **arquitectura de 4 dimensiones interconectadas**:
 
