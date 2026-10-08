@@ -13,7 +13,6 @@ export const OFFICIAL_CATEGORY_ORDER: Record<PillarType, string[]> = {
     'Contribuyentes Especiales',
   ],
   comercio_exterior: [
-    'Importadores y Exportadores',
     'Importadores',
     'Exportadores',
     'Operador Económico Autorizado (OEA)',
@@ -56,7 +55,6 @@ const GENERIC_LIFECYCLE_CATEGORIES = new Set([
   'Depósitos Aduaneros',
   'ZDEEP - Entidades Administradoras',
   'ZDEEP - Empresas Usuarias',
-  'Importadores y Exportadores',
   'Exportadores',
   'Agentes Aduaneros',
   'Empresas de Entrega Rápida o Courier',
