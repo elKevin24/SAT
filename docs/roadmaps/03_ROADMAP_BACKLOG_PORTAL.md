@@ -65,3 +65,24 @@ Este documento registra los puntos pendientes acordados para continuar con la ev
   - Distintivo visual neutral `Propuesta normativa SAT` activo en el catálogo.
 - [ ] **6.3 Validación formal con Mesa Técnica SAT**:
   - Presentar la matriz de preguntas a la Intendencia de Aduanas para formalizar requisitos normativos, resoluciones y flujos definitivos.
+
+---
+
+### 7. Definición y Validación de Nivel 2 para Profesionales y Entes Exentos
+- [ ] **7.1 Macro Grupo: Profesionales (Nivel 2)**:
+  - [ ] **Peritos Contadores y Auditores**: *"Inscripción, habilitación y gestiones para el ejercicio contable y auditoría de contribuyentes."*
+  - [ ] **Abogados y Notarios**: *"Servicios tributarios para la formalización legal, traspasos notariales y representación jurídica."*
+  - [ ] **Servicios Profesionales Independientes**: *"Obligaciones, emisión de facturas y retenciones para profesionales colegiados y consultores."*
+- [ ] **7.2 Macro Grupo: Entes Exentos (Nivel 2)**:
+  - [ ] **Sector Público y Entidades del Estado**: *"Gestiones tributarias, retenciones oficiales y registros para dependencias y municipalidades."*
+  - [ ] **Organizaciones No Gubernamentales y Asociaciones No Lucrativas**: *"Acreditación de exención, solvencias y obligaciones formales para entidades de beneficio social."*
+  - [ ] **Centros Educativos, Religiosos y Organismos Internacionales**: *"Gestiones y constancias de exención tributaria amparadas por mandato constitucional y convenios."*
+
+---
+
+### 8. Generación de Base de Datos Dual del Portal (NoSQL y SQL Dump)
+- [ ] **8.1 Colección NoSQL Documental (`sat_portal_nosql.json`)**:
+  - Catálogo íntegro estructurado por documentos con arrays embebidos de perfiles (`aplica_a`), categorías temáticas normalizadas y metadatos operativos.
+- [ ] **8.2 Script Relacional Normalizado (`sat_portal_dump.sql`)**:
+  - DDL con tablas maestras (`macro_grupos`, `regimenes_nivel_2`, `categorias_nivel_3`, `tramites`), tabla relacional muchos-a-muchos (`tramite_regimen`), datos iniciales (`INSERT INTO`) y vista optimizada `vw_tramites_portal`.
+
