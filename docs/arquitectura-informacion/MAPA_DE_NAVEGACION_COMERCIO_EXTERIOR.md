@@ -23,7 +23,7 @@ El modelo anterior presentaba una fragmentación plana en 12 categorías artific
 1. **Unificación Jurídica:** Se consolidan las 12 categorías en **6 ramas canónicas** naturales por rol del operador.
 2. **Compactación Asimétrica:** Eliminación de niveles espejo intermedios; las migas de pan reflejan exactamente la ruta jerárquica de búsqueda.
 3. **Lenguaje Ciudadano:** Títulos comprensibles con verbos de acción y eliminación de acrónimos en primera mención.
-4. **Agrupación de Miller:** Subcategorías y temas limitados a bloques de $5 \pm 2$ opciones para reducir la carga cognitiva.
+4. **Agrupación de Miller:** Subcategorías y temas estructurados en fragmentos cognitivos de $7 \pm 2$ opciones (memoria de trabajo: 5 a 9 elementos) para reducir la carga cognitiva.
 
 ---
 

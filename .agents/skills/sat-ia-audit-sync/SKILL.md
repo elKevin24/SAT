@@ -21,9 +21,10 @@ Esta skill documenta el procedimiento estándar, principios metodológicos y her
 * **Modelo de Navegación:** Mecanismos visuales que permiten al usuario recorrer la arquitectura (Breadcrumbs, Sidebar, Menú Principal, Enlaces transversales).
 * **Regla de Desacoplamiento:** *Que un contenido resida en el nivel 5 o 6 de la IA no exige renderizar 5 o 6 niveles simultáneos en la interfaz.* El Sidebar se acota al hub temático local y el Breadcrumb aplica elipsis compacta `[…]` en pantallas móviles.
 
-### B. Regla de Densidad Cognitiva (Miller $5 \pm 2$)
+### B. Capacidad de Memoria de Trabajo (Ley de Miller: $7 \pm 2$)
+* Conforme a la Ley de Miller (1956), la persona promedio puede retener entre 5 y 9 elementos ($7 \pm 2$) en su memoria de trabajo simultáneamente.
 * Ninguna categoría debe presentar listas planas abrumadoras de 12 o 15 opciones inconexas.
-* Los elementos se agrupan en bloques manejables de 3 a 7 subcategorías orientadas a tareas u operadores afines.
+* Los elementos se agrupan en fragmentos cognitivos (*chunks*) de $7 \pm 2$ opciones orientadas a tareas u operadores afines.
 
 ### C. Compactación Asimétrica de Niveles
 * **Problema Común ("Efecto Espejo"):** Estructuras donde Nivel 4 repite literalmente el nombre de Nivel 5 (ej. *«ZDEEP > ZDEEP»* o *«DAT > DAT»*), obligando al usuario a realizar clics redundantes.
