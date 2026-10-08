@@ -2,11 +2,13 @@ import React from 'react';
 import {createRoot} from 'react-dom/client';
 import App from './App.tsx';
 import StyleGuide from './design-system/StyleGuide.tsx';
-import { ArchitectureDiagramPage } from './pages/ArchitectureDiagramPage.tsx';
+import { PortalFlowPage } from './pages/PortalFlowPage.tsx';
 import './index.css';
 
 const STYLEGUIDE_PREFIX = '#/estilo';
 const DIAGRAM_PREFIX = '#/diagrama';
+const MAPA_PREFIX = '#/mapa';
+const FLUJO_PREFIX = '#/flujo';
 const ARBOL_PREFIX = '#/arbol';
 
 export const isStyleGuideHash = (hash: string): boolean =>
@@ -14,12 +16,14 @@ export const isStyleGuideHash = (hash: string): boolean =>
 
 export const isDiagramHash = (hash: string): boolean =>
   hash === DIAGRAM_PREFIX || hash.startsWith(`${DIAGRAM_PREFIX}/`) ||
+  hash === MAPA_PREFIX || hash.startsWith(`${MAPA_PREFIX}/`) ||
+  hash === FLUJO_PREFIX || hash.startsWith(`${FLUJO_PREFIX}/`) ||
   hash === ARBOL_PREFIX || hash.startsWith(`${ARBOL_PREFIX}/`);
 
 function resolveView(): React.ReactElement {
   const hash = window.location.hash;
   if (isStyleGuideHash(hash)) return <StyleGuide />;
-  if (isDiagramHash(hash)) return <ArchitectureDiagramPage />;
+  if (isDiagramHash(hash)) return <PortalFlowPage />;
   return <App />;
 }
 

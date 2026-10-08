@@ -66,17 +66,26 @@ export const UserSegmentCards: React.FC<UserSegmentCardsProps> = ({
               Accede a los requisitos oficiales, trámites en línea, verificadores en base de datos y normativa aplicable a tu personería.
             </p>
           </div>
-          {onOpenFlowDiagram && (
-            <button
-              type="button"
-              onClick={onOpenFlowDiagram}
-              className="self-start sm:self-center shrink-0 inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-bold text-[#14649B] bg-[#14649B]/10 hover:bg-[#14649B]/20 border border-[#14649B]/20 transition-all shadow-xs focus:ring-2 focus:ring-[#14649B] focus:outline-hidden"
-              aria-label="Abrir diagrama de flujo interactivo del portal en tarjetas conectadas"
+          <div className="flex items-center gap-2 self-start sm:self-center shrink-0 flex-wrap">
+            <a
+              href="#/mapa"
+              className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-bold text-white bg-sky-700 hover:bg-sky-800 transition-all shadow-xs focus:ring-2 focus:ring-sky-600 focus:outline-hidden"
+              aria-label="Ver mapa jerárquico oficial en página completa"
             >
-              <Layers className="w-4 h-4 text-[#14649B]" />
-              <span>Ver diagrama de flujo (React Flow)</span>
-            </button>
-          )}
+              <Layers className="w-4 h-4 text-white" />
+              <span>Ver Mapa Completo (Página Dedicada)</span>
+            </a>
+            {onOpenFlowDiagram && (
+              <button
+                type="button"
+                onClick={onOpenFlowDiagram}
+                className="inline-flex items-center gap-2 px-3 py-2 rounded-xl text-xs font-bold text-[#14649B] bg-[#14649B]/10 hover:bg-[#14649B]/20 border border-[#14649B]/20 transition-all shadow-xs focus:ring-2 focus:ring-[#14649B] focus:outline-hidden"
+                aria-label="Abrir diagrama de flujo interactivo del portal en tarjetas conectadas"
+              >
+                <span>Modal Flotante</span>
+              </button>
+            )}
+          </div>
         </div>
 
         {/* Las 4 Tarjetas: Surface interactiva del design system con tono de segmento */}

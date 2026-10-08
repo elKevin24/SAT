@@ -210,12 +210,12 @@ export const Header: React.FC<HeaderProps> = ({
               )}
 
               <a
-                href="#/diagrama"
+                href="#/mapa"
                 className="btn btn-sm inline-flex items-center gap-1 px-2.5 py-1.5 border-0 shadow-none text-sat-blanco hover:bg-white/15 hover:text-sat-blanco focus:bg-white/15 active:bg-white/20"
-                title="Ver Diagrama de Arquitectura de Información y Árbol de Contenidos"
+                title="Ver Mapa Jerárquico Oficial del Portal en Página Completa"
               >
                 <Layers className="w-3.5 h-3.5 me-1 text-sat-celeste" />
-                <span>Diagrama de Árbol</span>
+                <span>Mapa del Portal</span>
               </a>
 
               <a

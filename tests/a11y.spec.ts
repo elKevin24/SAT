@@ -80,6 +80,12 @@ test('Abrir PortalFlowModal (React Flow)', async ({ page }) => {
   await scan(page, 'PortalFlowModal');
 });
 
+test('Página completa: Mapa Jerárquico Oficial (PortalFlowPage en #/mapa)', async ({ page }) => {
+  await page.goto('/#/mapa');
+  await expect(page.locator('h1:has-text("Mapa Jerárquico Oficial")')).toBeVisible();
+  await scan(page, 'PortalFlowPage');
+});
+
 test('Modal accesible: Cierre con Escape y restauración de foco', async ({ page }) => {
   await page.goto('/');
   const trigger = page.getByRole('button', { name: 'Abrir panel de accesibilidad' });
