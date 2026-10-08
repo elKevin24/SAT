@@ -81,8 +81,9 @@ Este documento registra los puntos pendientes acordados para continuar con la ev
 ---
 
 ### 8. Generación de Base de Datos Dual del Portal (NoSQL y SQL Dump)
-- [ ] **8.1 Colección NoSQL Documental (`sat_portal_nosql.json`)**:
+- [x] **8.1 Colección NoSQL Documental (`sat_portal_nosql.json`)**:
   - Catálogo íntegro estructurado por documentos con arrays embebidos de perfiles (`aplica_a`), categorías temáticas normalizadas y metadatos operativos.
-- [ ] **8.2 Script Relacional Normalizado (`sat_portal_dump.sql`)**:
-  - DDL con tablas maestras (`macro_grupos`, `regimenes_nivel_2`, `categorias_nivel_3`, `tramites`), tabla relacional muchos-a-muchos (`tramite_regimen`), datos iniciales (`INSERT INTO`) y vista optimizada `vw_tramites_portal`.
+- [x] **8.2 Script Relacional Normalizado (`sat_portal_dump.sql` y `sat_portal.db`)**:
+  - DDL con tablas maestras (`macro_grupos`, `regimenes_nivel_2`, `categorias_nivel_3`, `tramites`), tabla relacional muchos-a-muchos (`tramite_regimen`), datos iniciales (`INSERT INTO`), base SQLite activa y vista optimizada `vw_tramites_portal`.
+
 
