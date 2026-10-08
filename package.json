@@ -49,5 +49,22 @@
     "tailwindcss": "^4.3.3",
     "tsx": "^4.21.0",
     "typescript": "^7.0.2"
-  }
+  },
+  "description": "Prototipo y arquitectura técnica del nuevo Portal Web de la Superintendencia de Administración Tributaria (SAT) Guatemala, desarrollado con **React 19**, **TypeScript**, **Tailwind CSS v4** y **Vite**.",
+  "main": "eslint.config.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elKevin24/SAT.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elKevin24/SAT/issues"
+  },
+  "homepage": "https://github.com/elKevin24/SAT#readme"
 }
