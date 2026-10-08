@@ -87,7 +87,7 @@ export const PILLARS_CONFIG: PillarConfigItem[] = [
     id: 'comercio_exterior', 
     name: 'Operadores de Comercio Exterior', 
     desc: 'Servicios e información aduanera para la importación, exportación y logística.',
-    temasTotales: '8 Categorías · 204 Trámites',
+    temasTotales: '12 Categorías · 246 Trámites',
     badgeLabel: '8 Categorías',
     primaryColor: '#0284C7',
     cardHoverBorder: 'hover:border-[#0284C7]',

@@ -19,11 +19,12 @@ export const OFFICIAL_CATEGORY_ORDER: Record<PillarType, string[]> = {
     'Agentes Aduaneros',
     'Apoderados Especiales Aduaneros',
     'Empresas de Entrega Rápida o Courier',
-    'Consolidadores y Desconsolidadores de Carga',
     'Transportistas Aduaneros',
     'Depósitos Aduaneros',
     'ZDEEP - Entidades Administradoras',
     'ZDEEP - Empresas Usuarias',
+    'Maquilas y Perfeccionamiento Activo',
+    'Normativa y Aranceles',
   ],
   profesionales: [
     'Abogados y Notarios',
@@ -59,7 +60,6 @@ const GENERIC_LIFECYCLE_CATEGORIES = new Set([
   'Agentes Aduaneros',
   'Empresas de Entrega Rápida o Courier',
   'Importadores',
-  'Consolidadores y Desconsolidadores de Carga',
   'Transportistas Aduaneros',
 ]);
 
