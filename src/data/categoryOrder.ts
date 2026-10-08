@@ -16,15 +16,9 @@ export const OFFICIAL_CATEGORY_ORDER: Record<PillarType, string[]> = {
     'Importadores',
     'Exportadores',
     'Operador Económico Autorizado (OEA)',
-    'Agentes Aduaneros',
-    'Apoderados Especiales Aduaneros',
-    'Empresas de Entrega Rápida o Courier',
-    'Transportistas Aduaneros',
-    'Depósitos Aduaneros',
-    'ZDEEP - Entidades Administradoras',
-    'ZDEEP - Empresas Usuarias',
-    'Maquilas y Perfeccionamiento Activo',
-    'Normativa y Aranceles',
+    'Auxiliares de la Función Pública Aduanera (AFPA)',
+    'Regímenes Territoriales y Zonas Especiales',
+    'Normativa y Operaciones Aduaneras Generales',
   ],
   profesionales: [
     'Abogados y Notarios',
@@ -42,7 +36,7 @@ export const OFFICIAL_CATEGORY_ORDER: Record<PillarType, string[]> = {
   ],
 };
 
-/** Ciclo de vida homogeneizado para las categorías aduaneras (subcategorías genéricas). */
+/** Ciclo de vida homogeneizado para categorías genéricas. */
 const GENERIC_LIFECYCLE_ORDER = [
   'Registro y acreditación',
   'Operaciones y trámites',
@@ -51,17 +45,7 @@ const GENERIC_LIFECYCLE_ORDER = [
 ];
 
 /** Categorías cuyas subcategorías son exactamente las 4 genéricas del ciclo de vida. */
-const GENERIC_LIFECYCLE_CATEGORIES = new Set([
-  'Apoderados Especiales Aduaneros',
-  'Depósitos Aduaneros',
-  'ZDEEP - Entidades Administradoras',
-  'ZDEEP - Empresas Usuarias',
-  'Exportadores',
-  'Agentes Aduaneros',
-  'Empresas de Entrega Rápida o Courier',
-  'Importadores',
-  'Transportistas Aduaneros',
-]);
+const GENERIC_LIFECYCLE_CATEGORIES = new Set<string>();
 
 const SPECIFIC_SUBCATEGORY_ORDER: Record<string, string[]> = {
   'NIT sin Obligaciones': [
@@ -97,6 +81,39 @@ const SPECIFIC_SUBCATEGORY_ORDER: Record<string, string[]> = {
     'Actualización de Actividad y RTU',
     'Consultas Jurídico Tributarias',
     'Sistemas de Retención en la Fuente',
+  ],
+  'Importadores': [
+    'Registro y Padrón de Importadores',
+    'Declaraciones Aduaneras y DUCAs',
+    'Despacho Aduanero, Levante y Selectivo',
+    'Importación y Nacionalización de Vehículos',
+    'Mercancías en Abandono, Depósitos y Franquicias',
+  ],
+  'Exportadores': [
+    'Padrón y Registro de Exportadores',
+    'Declaraciones Aduaneras y Embarques',
+    'Devolución de Crédito Fiscal',
+  ],
+  'Operador Económico Autorizado (OEA)': [
+    'Programa OEA',
+  ],
+  'Auxiliares de la Función Pública Aduanera (AFPA)': [
+    'Agentes Aduaneros',
+    'Apoderados Especiales Aduaneros',
+    'Depósitos Aduaneros',
+    'Empresas de Entrega Rápida o Courier',
+    'Transportistas Aduaneros',
+  ],
+  'Regímenes Territoriales y Zonas Especiales': [
+    'Maquilas (Decreto 29-89)',
+    'Zonas de Desarrollo Económico Especial Público (ZDEEP)',
+  ],
+  'Normativa y Operaciones Aduaneras Generales': [
+    'Arancel Centroamericano (SAC) y Permisos',
+    'Acuerdos Comerciales y Facilitación',
+    'Prevención de Contrabando y Defraudación',
+    'Consultas Técnicas, Recursos y Valoración',
+    'Modernización e Infraestructura Aduanera',
   ],
 };
 

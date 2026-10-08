@@ -13,3 +13,8 @@ test-results/
 
 # Archivos temporales de bloqueo de Excel / Office
 ~$*
+
+# Python
+__pycache__/
+*.py[cod]
+

@@ -1,223 +1,166 @@
 # Estructura Final de Contenido y Taxonomía del Portal SAT
 
 > **Documento Oficial de Arquitectura de Información**  
-> **Versión:** 3.1 (Definitiva y Saneada)  
+> **Versión:** 4.0 (Definitiva y Sincronizada con Producción)  
 > **Fecha de Emisión:** Octubre 2026  
 > **Alineación:** Estructura Institucional SAT Guatemala, Modelo de Ciclo de Vida ATO (Australian Taxation Office) & Plain Language  
-> **Archivo Excel Fuente:** [`docs/Estructura_Final_Contenido_Portal_SAT.xlsx`](file:///c:/Users/busqu/Documents/GitHub/SAT/docs/Estructura_Final_Contenido_Portal_SAT.xlsx)  
-> **Base de Datos Única (Single Source of Truth):** [`src/data/allTramites.json`](file:///c:/Users/busqu/Documents/GitHub/SAT/src/data/allTramites.json) (718 registros saneados y oficiales)
+> **Base de Datos Única (Single Source of Truth):** [`src/data/allTramites.json`](file:///c:/Users/busqu/Documents/GitHub/SAT/src/data/allTramites.json) (718 registros consolidados)  
+> **Libros Excel Entregables (Vivos):**  
+> * [`docs/fuentes-datos/Estructura_Final_Contenido_Portal_SAT_Actualizado.xlsx`](file:///c:/Users/busqu/Documents/GitHub/SAT/docs/fuentes-datos/Estructura_Final_Contenido_Portal_SAT_Actualizado.xlsx)  
+> * [`docs/fuentes-datos/Mapa_de_Navegacion_y_Descripciones_Portal_SAT.xlsx`](file:///c:/Users/busqu/Documents/GitHub/SAT/docs/fuentes-datos/Mapa_de_Navegacion_y_Descripciones_Portal_SAT.xlsx)  
+> **Fuentes Históricas de Referencia (Congeladas):**  
+> * [`docs/fuentes-datos/Detalle de Contenido para Grupos de Interes.xlsx`](file:///c:/Users/busqu/Documents/GitHub/SAT/docs/fuentes-datos/Detalle%20de%20Contenido%20para%20Grupos%20de%20Interes.xlsx)  
+> * [`docs/fuentes-datos/Arbol_de_Navegacion_Portal_v5.xlsx`](file:///c:/Users/busqu/Documents/GitHub/SAT/docs/fuentes-datos/Arbol_de_Navegacion_Portal_v5.xlsx)
 
 ---
 
 ## 1. Resumen Ejecutivo
 
-El presente documento consolida la totalidad de **676 contenidos y servicios** del portal de la Superintendencia de Administración Tributaria (SAT).
+El presente documento consolida la totalidad de **718 contenidos, trámites y servicios** del portal de la Superintendencia de Administración Tributaria (SAT).
 
 La estructura resuelve de manera definitiva:
-1. **La jerarquía natural de 4 Segmentos y 9 Grupos Oficiales** establecida en el instrumento institucional *Detalle de Contenido para Grupos de Interés*.
-2. **La eliminación de jerga técnica interna y prefijos numéricos**: Se erradica el uso de términos abstractos como *"oficial"* y prefijos como *"1. Empezar..."* en textos visibles para el ciudadano.
-3. **El modelo simétrico de 5 Niveles ATO + Nivel 6+ de profundización libre**: Estructura de referencia escalable soportada por un modelo de base de datos relacional Padre/Hijo (`parent_id`), sin esquemas rígidos de columnas fijas (`categoria1` a `categoria9`).
+1. **La jerarquía de 4 Macro-Segmentos y Taxonomía Oficial**:
+   * **Contribuyentes:** 344 trámites en 4 regímenes y servicios tributarios.
+   * **Operadores de Comercio Exterior:** 246 trámites consolidados en **6 ramas canónicas** maestras.
+   * **Entes Exentos:** 79 trámites para entidades estatales, descentralizadas y no lucrativas.
+   * **Profesionales:** 49 trámites para auxiliares tributarios y profesionales colegiados.
+2. **La eliminación de jerga técnica interna y prefijos numéricos**: Se erradica el uso de términos abstractos como *"oficial"* y prefijos ordinales en textos visibles para el ciudadano.
+3. **El modelo asimétrico de profundidad balanceada**: Estructura que respeta la complejidad inherente de cada área (2-3 niveles para regímenes tributarios simples; 3-4 niveles organizados para la función pública aduanera y zonas especiales) sin redundancias artificiales.
 4. **La separación formal entre Arquitectura de Información y Mecanismos de Navegación**:
-   * **Arquitectura:** L1 Segmento, L2 Área, L3 Contexto, L4 Tema, L5 Contenido / Servicio, L6+ Profundización libre.
-   * **Navegación:** Breadcrumb (ubicación dinámica adaptable), Sidebar (contexto local Nivel 4+, sin forzar réplica de 7 u 8 niveles), Contenido (página actual) y Enlaces Contextuales (navegación transversal).
-5. **La no discriminación hacia trámites en Nivel 5:** Denominado **Contenido / Servicio**, dado que 528 de los 783 registros (67.4%) corresponden a guías informativas. La tipología de interacción determina la modalidad operativa.
-6. **La integración de 307 rutas de procesos administrativos** vinculadas desde `Ruta de procesos.xlsx`.
-7. **La documentación de 26 brechas operativas y normativas (`[Propuesta normativa SAT]`)**, identificadas para ser normadas por la mesa técnica institucional.
+   * **Arquitectura:** L1 Segmento, L2 Categoría / Rama, L3 Subcategoría / Actor, L4 Tema, L5 Contenido / Servicio.
+   * **Navegación:** Breadcrumb dinámico adaptable (con elipsis en móvil), Sidebar sticky para contexto local y Enlaces Contextuales transversales.
+5. **Calidad de Datos en Lenguaje Ciudadano**: Redacción orientada a tareas con verbos imperativos directos y erradicación de siglas opacas.
+6. **Documentación de 12 brechas normativas (`[Propuesta brecha]`)**, identificadas para ser normadas por la mesa técnica aduanera.
 
 ---
 
-## 2. Los 4 Segmentos y los 9 Grupos Oficiales
+## 2. Los 4 Segmentos del Portal SAT
 
-| No. | Segmento Oficial | Texto Orientador de Interfaz (Estándar ATO) | Grupos Oficiales Integrados | Contenidos | Participación |
+| No. | Segmento Oficial | Texto Orientador de Interfaz (Estándar ATO) | Categorías / Ramas | Trámites | Participación |
 | :---: | :--- | :--- | :--- | :---: | :---: |
 | **1** | **Contribuyentes** | *Información y servicios tributarios para personas y empresas.* | NIT sin Obligaciones, Pequeños Contribuyentes, Contribuyente General, Contribuyentes Especiales | **344** | 47.9% |
-| **2** | **Operadores de Comercio Exterior** | *Servicios e información aduanera para la importación, exportación y logística.* | Importadores, Exportadores, Transportistas, Agentes Aduaneros, Apoderados Especiales, Depósitos/Almacenes Fiscales, ZDEEP, Courier, OEA y Normativa | **246** | 34.3% |
-| **3** | **Profesionales** | *Herramientas y servicios especializados para profesionales tributarios y auxiliares.* | Abogados y Notarios, Peritos Contadores, Auditores, Gestores Tributarios y Servicios Profesionales | **77** | 10.7% |
-| **4** | **Entes Exentos** | *Información y gestiones tributarias para entidades públicas y organizaciones no lucrativas.* | Entidades del Estado, Constitucionales, No Lucrativos, Municipalidades y Entidades por Decreto | **51** | 7.1% |
-| **TOTAL** | **4 Segmentos** | — | **Total Portal Web SAT Saneado** | **718** | **100.0%** |
-
-### Desglose de Contribuyentes (Nivel 2 — 4 Regímenes Oficiales)
-
-| No. | Régimen Oficial | Texto Orientador de Interfaz (Estándar ATO) | Trámites Saneados | Participación en Contribuyentes |
-| :---: | :--- | :--- | :---: | :---: |
-| **1** | **NIT sin Obligaciones** | *Gestiones y servicios de identificación tributaria para personas sin actividad comercial.* | **10** | 2.9% |
-| **2** | **Pequeños Contribuyentes** | *Información y obligaciones para pequeños negocios y régimen simplificado.* | **22** | 6.4% |
-| **3** | **Contribuyente General** | *Servicios tributarios para el régimen general, personas con actividad mercantil y empresas.* | **298** | 86.6% |
-| **4** | **Contribuyentes Especiales** | *Servicios y gestiones tributarias para empresas con atención diferenciada.* | **14** | 4.1% |
-| **—** | **Total Contribuyentes** | — | **344** | **100.0%** |
+| **2** | **Operadores de Comercio Exterior** | *Servicios e información aduanera para la importación, exportación y logística.* | 6 Ramas Canónicas (Importadores, Exportadores, OEA, AFPA, Regímenes Territoriales, Normativa General) | **246** | 34.3% |
+| **3** | **Entes Exentos** | *Información y gestiones tributarias para entidades públicas y organizaciones no lucrativas.* | Entidades del Estado, Constitucionales, No Lucrativos, Municipalidades, Decreto | **79** | 11.0% |
+| **4** | **Profesionales** | *Herramientas y servicios especializados para profesionales tributarios y auxiliares.* | Abogados y Notarios, Peritos Contadores, Auditores, Gestores Tributarios, Servicios Profesionales | **49** | 6.8% |
+| **TOTAL** | **4 Segmentos** | — | **Total Portal Web SAT Consolidado** | **718** | **100.0%** |
 
 ---
 
-## 3. Arquitectura de Información (IA) — Cómo está organizada la información
+## 3. Desglose Oficial: Operadores de Comercio Exterior (246 Trámites)
 
-La **Arquitectura de Información (IA)** define la estructura lógica, la taxonomía y la clasificación ontológica de los contenidos del portal. Es un árbol relacional independiente de cualquier interfaz de usuario y puede alcanzar 6, 7, 8 o más niveles según la complejidad de la materia.
-
-### A. Jerarquía de Información de Referencia (5 Niveles Base y Nivel 6+ Libre)
+Tras la auditoría universal de arquitectura de información y la erradicación de niveles redundantes, el segmento de Comercio Exterior se estructura en **6 ramas canónicas**:
 
 ```
-ARQUITECTURA DE INFORMACIÓN (Define el árbol)
+OPERADORES DE COMERCIO EXTERIOR (246 Trámites)
 │
-├── Nivel 1 — Segmento / Audiencia (Macro-audiencia nacional)
-│   └── Contribuyentes
+├── 1. Importadores (55 trámites)
+│   ├── Registro y Padrón de Importadores (9)
+│   ├── Declaraciones Aduaneras y DUCAs (10)
+│   ├── Despacho Aduanero, Levante y Selectivo (17)
+│   ├── Importación y Nacionalización de Vehículos (10)
+│   └── Mercancías en Abandono, Depósitos y Franquicias (9)
 │
-├── Nivel 2 — Área / Dominio (Gran ámbito fiscal o aduanero)
-│   └── Empleo y salarios
+├── 2. Exportadores (21 trámites)
+│   ├── Padrón y Registro de Exportadores (7)
+│   ├── Declaraciones Aduaneras y Embarques (4)
+│   └── Devolución de Crédito Fiscal (10)
 │
-├── Nivel 3 — Contexto / Subárea (Situación o régimen del usuario)
-│   └── Trabajar en relación de dependencia
+├── 3. Operador Económico Autorizado - OEA (2 trámites)
+│   └── Programa OEA (2)
 │
-├── Nivel 4 — Tema / Hub (Agrupador temático o sección)
-│   └── ISR para empleados
+├── 4. Auxiliares de la Función Pública Aduanera - AFPA (76 trámites)
+│   ├── Agentes Aduaneros (7)
+│   ├── Apoderados Especiales Aduaneros (16)
+│   ├── Depósitos Aduaneros (36)
+│   │   ├── Depósitos Aduaneros Temporales - DAT (18)
+│   │   ├── Almacenadoras Generales de Depósito - AGD (16)
+│   │   └── Almacenes Fiscales (2)
+│   ├── Empresas de Entrega Rápida o Courier (3)
+│   └── Transportistas Aduaneros (14)
 │
-├── Nivel 5 — Contenido / Servicio (Unidad funcional o ficha concreta)
-│   ├── Retenciones de ISR
-│   ├── Deducciones permitidas
-│   ├── Declaración jurada anual
-│   └── Constancia de retención
+├── 5. Regímenes Territoriales y Zonas Especiales (42 trámites)
+│   ├── Maquilas (Decreto 29-89) (12)
+│   └── Zonas de Desarrollo Económico Especial Público - ZDEEP (30)
+│       ├── Empresas Usuarias de ZDEEP (15)
+│       └── Entidades Administradoras de ZDEEP (15)
 │
-└── Nivel 6+ — Profundización libre (Subcontenido, Procedimiento, Detalle)
-    └── Retenciones de ISR (L5)
-        └── Cálculo de la retención (L6)
-            └── Casos especiales (L7)
-                └── Ejemplo de cálculo y tablas (L8)
+└── 6. Normativa y Operaciones Aduaneras Generales (50 trámites)
+    ├── Arancel Centroamericano (SAC) y Permisos (7)
+    ├── Acuerdos Comerciales y Facilitación (8)
+    ├── Prevención de Contrabando y Defraudación (3)
+    ├── Consultas Técnicas, Recursos y Valoración (14)
+    └── Modernización e Infraestructura Aduanera (18)
 ```
-
-> **Regla de Neutralidad en Nivel 5:** Se denomina **Contenido / Servicio** (no "Trámite / Contenido") porque 528 de los 783 registros (67.4%) son guías informativas. La tipología de interacción (`tipo_interaccion`) define si se trata de un *Trámite en Línea*, *Consulta a Base de Datos*, *Guía Informativa* o *Descarga / Software*.
-
-### B. Persistencia en Base de Datos: Modelo Relacional Padre/Hijo (`parent_id`)
-Para soportar profundidad ilimitada sin rigidez de esquema:
-* Se descartan tablas con columnas fijas (`categoria1` a `categoria9`).
-* Se utiliza un modelo recursivo donde cada nodo posee `id`, `parent_id` (nullable), `nombre`, `slug`, `nivel` y `orden`.
-* Una rama simple puede tener 4 niveles mientras que una rama compleja (como retenciones o aduanas) puede tener 8 niveles en la misma tabla sin modificar la base de datos.
 
 ---
 
-## 4. Modelo de Navegación del Portal — Cómo el usuario recorre la arquitectura
+## 4. Desglose Oficial: Contribuyentes (344 Trámites)
 
-La **Navegación** es el conjunto de mecanismos interactivos que permiten al usuario moverse por la Arquitectura de Información. 
-
-```
-ARQUITECTURA DE INFORMACIÓN
-       ↓
-Organiza la información (el árbol)
-       ↓
-L1 → L2 → L3 → L4 → L5 → L6 → L7 → L8+
-       ↓
-       ↓ se representa y recorre mediante
-       ↓
-MODELO DE NAVEGACIÓN
-       ↓
-Permite recorrer el árbol (la interacción)
-       ↓
-Breadcrumb + Sidebar + Menú Principal + Enlaces Contextuales + Búsqueda
-```
-
-### A. Principio Rector: Desacoplamiento entre Profundidad y Presentación
-> **Regla de Oro:** *Que un contenido se ubique en el Nivel 8 de la Arquitectura de Información NO significa que la interfaz deba renderizar ocho niveles de navegación simultáneos.*
-
-#### Ejemplo de Desacoplamiento (Página en Nivel 8):
-* **En la Arquitectura (IA - 8 Niveles):**
-  `Contribuyentes (L1) › Empleo y salarios (L2) › Relación de dependencia (L3) › ISR (L4) › Retenciones (L5) › Cálculo (L6) › Casos especiales (L7) › Ejemplo (L8)`
-* **En la Navegación Visual en Pantalla:**
-  * **Breadcrumb:** `Inicio › … › Retenciones › Ejemplo` *(ubica jerárquicamente de forma compacta)*.
-  * **Sidebar:** Despliega el hub local de ISR *(solo 4 ítems: Retenciones, Deducciones, Declaraciones, Constancias; NO replica 8 niveles)*.
-  * **Contenido Central:** Muestra la página concreta: *Ejemplo de cálculo y tablas*.
-  * **Enlaces Contextuales:** Conexión transversal: *«Ver tabla de deducciones generales»*.
-
----
-
-### B. Componentes del Sistema de Navegación y sus Roles
-
-| Componente | Rol en el Portal | Alcance en la Arquitectura | Comportamiento Responsive |
-| :--- | :--- | :--- | :--- |
-| **Menú Principal (Header)** | Orientación macro y cambio de audiencia | Niveles 1 y 2 | En desktop barra fija superior; en móvil menú tipo hamburguesa colapsable. |
-| **Breadcrumb (Miga de Pan)** | Ubicación jerárquica del usuario | Dinámico (toda la ruta activa) | **Adaptable al espacio:** Desktop muestra la ruta completa o compacta; móvil usa compactación elíptica `[…]` (máx. 2–3 niveles visibles; `'Inicio'` no cuenta contra el límite). |
-| **Sidebar (Menú Vertical)** | Navegación contextual del área de trabajo | Nivel 4 en adelante (local) | Despliega el hub local activo. **Tener Nivel 8 no obliga a un Sidebar de 8 niveles.** En móvil se convierte en Drawer / Accordion independiente. |
-| **Contenido Central** | Resolución de la tarea o consulta | Nivel 5+ (página activa) | Renderiza la ficha concreta: requisitos, pasos, formulario o tablas. |
-| **Enlaces Contextuales** | Navegación transversal y descubrimiento | Conexión horizontal libre | Saltos directos entre temas relacionados sin forzar subida/bajada por el árbol. |
-| **Búsqueda Global** | Acceso directo indexado | Todos los niveles (L1 a L8+) | Búsqueda predictiva con filtros por segmento y tipología. |
-
----
-
-### C. Especificación Responsive del Breadcrumb
-
-#### Desktop ($\ge$ 1024px):
-Muestra la ruta completa o balanceada según el ancho disponible:
-`Inicio → Contribuyentes → Empleo y salarios → Trabajar en relación de dependencia → ISR para empleados → Retenciones`
-
-#### Mobile (< 1024px):
-1. **'Inicio' es el ancla raíz y NO computa como nivel de contenido.**
-2. La jerarquía de contenidos se compacta mostrando máximo 2 o 3 elementos clave con elipsis intermedia `[…]`:
-   `Inicio → […] → ISR para empleados → Retenciones`
-3. Al pulsar `[…]`, se despliega un micro-menú interactivo con los niveles intermedios colapsados:
-   * *Contribuyentes*
-   * *Empleo y salarios*
-   * *Trabajar en relación de dependencia*
-4. **Variante Ultra-compacta (Formularios y flujos transaccionales):**
-   `‹ Trabajar en relación de dependencia`
+| No. | Categoría / Régimen | Trámites | Descripción Funcional |
+| :---: | :--- | :---: | :--- |
+| **1** | **Contribuyente General** | **298** | RTU Digital, declaraciones en Declaraguate, Registro Fiscal de Vehículos, personas jurídicas y libros contables. |
+| **2** | **Pequeños Contribuyentes** | **22** | Facturación electrónica 5% definitivo, régimen agropecuario primario y pecuario. |
+| **3** | **Contribuyentes Especiales** | **14** | Gerencias de Medianos y Grandes Contribuyentes, precios de transferencia y auditorías preventivas. |
+| **4** | **NIT sin Obligaciones** | **10** | Inscripción civil para apertura de cuentas, pasaporte, titulación universitaria e información pública. |
 
 ---
 
 ## 5. Matriz de Ciclo de Vida (Modelo ATO - Australia)
 
-Cada contenido o servicio se clasifica en una de las 5 etapas vitales, **sin prefijos numéricos visibles**:
+Cada contenido y servicio se clasifica en una de las 5 etapas del ciclo de vida del contribuyente, sin prefijos numéricos en la interfaz:
 
-| Etapa ATO | Denominación Visible | Fichas | % Total | Alcance Funcional |
+| Etapa ATO | Denominación Visible | Trámites | % Total | Alcance Operativo |
 | :--- | :--- | :---: | :---: | :--- |
-| `empezar` | **Empezar y registrarse** | **98** | 12.5% | Obtención de primer NIT, inscripción en RTU Digital, habilitación de padrones y autorizaciones iniciales. |
-| `operar` | **Operación y declaraciones** | **282** | 36.0% | Facturación FEL, presentación y pago en Declaraguate, transmisión DUCA, retenciones y libros contables. |
-| `consultar` | **Consultas y herramientas** | **135** | 17.2% | Verificadores públicos en tiempo real, solvencia fiscal, semáforo de rampa aduanera, arancel SAC y estado de cuentas. |
-| `modificar_cerrar` | **Modificaciones y cierre** | **143** | 18.3% | Actualización de datos RTU, traspaso de vehículos, cambio de régimen contable, suspensión temporal y cese definitivo. |
-| `normativa` | **Normativa y asistencia** | **125** | 16.0% | Marco legal aduanero y tributario, devolución de crédito fiscal, capacitaciones, recursos administrativos y criterios SAT. |
+| `empezar` | **Empezar y registrarse** | **98** | 13.6% | Inscripción en RTU, habilitación de padrones y autorizaciones iniciales de operación. |
+| `operar` | **Operación y declaraciones** | **282** | 39.3% | Emisión de facturas FEL, declaraciones tributarias periódicas, DUCAs y gestión diaria. |
+| `consultar` | **Consultas y herramientas** | **135** | 18.8% | Verificadores públicos en tiempo real, solvencia fiscal, rampa aduanera y arancel SAC. |
+| `modificar_cerrar` | **Modificaciones y cierre** | **143** | 19.9% | Actualización de RTU, traspaso de vehículos, cambios de régimen, suspensión y cese. |
+| `normativa` | **Normativa y asistencia** | **60** | 8.4% | Marco legal aduanero y tributario, recursos administrativos y criterios institucionales. |
 
 ---
 
-## 6. Clasificación por Tipología de Interacción (Nivel 5)
+## 6. Clasificación por Tipología de Interacción
 
-La naturaleza técnica y funcional del contenido o servicio se determina por su tipo de interacción:
-
-| Tipo de Interacción | Etiqueta en Portal | Fichas | % Total | Descripción Funcional |
+| Tipo de Interacción | Etiqueta en Portal | Trámites | % Total | Descripción |
 | :--- | :--- | :---: | :---: | :--- |
-| `servicio_transaccional` | **Trámite en Línea** | **162** | 20.7% | Formularios web transaccionales, Declaraguate, DUCAs y solicitudes autenticadas en Agencia Virtual. |
-| `consulta_datos` | **Consulta a Base de Datos** | **84** | 10.7% | Búsqueda en tiempo real sin expediente (verificador DTE, rampa aduanera, autenticidad de solvencias). |
-| `guia_informativa` | **Guía Informativa** | **528** | 67.4% | Fichas en Lenguaje Ciudadano con requisitos normados, pasos secuenciales y base legal. |
-| `descarga_recurso` | **Descarga / Software** | **9** | 1.2% | Componentes criptográficos (ActiveX PKI/DUA), instaladores locales y plantillas descargables. |
+| `servicio_transaccional` | **Trámite en Línea** | **162** | 22.6% | Aplicativos web, Declaraguate, DUCAs y gestiones con firma digital en Agencia Virtual. |
+| `consulta_datos` | **Consulta a Base de Datos** | **84** | 11.7% | Búsquedas directas en bases de datos SAT (rampa aduanera, DTE, solvencia SOFI). |
+| `guia_informativa` | **Guía Informativa** | **463** | 64.5% | Fichas en Lenguaje Ciudadano con requisitos, base legal y pasos para realizar el trámite. |
+| `descarga_recurso` | **Descarga / Software** | **9** | 1.2% | Componentes criptográficos (ActiveX PKI), instaladores y plantillas oficiales. |
 
 ---
 
-## 7. Inventario de Entregables del Repositorio
+## 7. Registro de Brechas Normativas (12 Trámites Identificados)
 
-| Entregable | Ruta | Propósito |
-| :--- | :--- | :--- |
-| **Libro Excel Maestro** | [`docs/Estructura_Final_Contenido_Portal_SAT.xlsx`](file:///c:/Users/busqu/Documents/GitHub/SAT/docs/Estructura_Final_Contenido_Portal_SAT.xlsx) | Archivo formal con 4 hojas: Resumen Ejecutivo, Matriz Maestra (783 filas), Comercio Exterior (246 filas) y Brechas Normativas (26 filas). |
-| **Dataset Maestro JSON** | [`src/data/allTramites.json`](file:///c:/Users/busqu/Documents/GitHub/SAT/src/data/allTramites.json) | Base de datos única con 783 registros, 5 niveles poblados y 307 rutas de procesos enlazadas. |
-| **Tipos TypeScript** | [`src/data/portalMasterTaxonomy.ts`](file:///c:/Users/busqu/Documents/GitHub/SAT/src/data/portalMasterTaxonomy.ts) | Definiciones tipadas estrictas de los 4 Segmentos, Etapas ATO, Tipologías y Rutas de Proceso. |
-| **Componente Breadcrumbs** | [`src/components/ui/Breadcrumbs.tsx`](file:///c:/Users/busqu/Documents/GitHub/SAT/src/components/ui/Breadcrumbs.tsx) | Componente UI accesible (WCAG 2.2 AA) con soporte responsive y compactación elíptica `[…]` sin computar Inicio en el límite. |
-| **Reglas de Diseño UI/UX** | [`DESIGN_RULES.md`](file:///c:/Users/busqu/Documents/GitHub/SAT/DESIGN_RULES.md) | Principios de diseño, UX Writing sin números, tarjetas limpias y reglas de navegación profunda. |
-| **Guía de Estilos Viva** | [`src/design-system/StyleGuide.tsx`](file:///c:/Users/busqu/Documents/GitHub/SAT/src/design-system/StyleGuide.tsx) | Documentación interactiva de tokens, tarjetas, breadcrumbs y accesibilidad. |
-| **Informe de Brechas** | [`docs/brechas-comercio-exterior.md`](file:///c:/Users/busqu/Documents/GitHub/SAT/docs/brechas-comercio-exterior.md) | Análisis de las 26 brechas operativas detectadas para validación con la Intendencia de Aduanas. |
+En el marco de la auditoría técnica se aislaron **12 trámites aduaneros de alta necesidad operativa** que actualmente no poseen ficha pública en línea, documentados con su respectiva pregunta para la Mesa Técnica de Aduanas:
+
+| No. | Categoría / Rama | Actor / Subcategoría | Trámite Identificado como Brecha |
+| :---: | :--- | :--- | :--- |
+| 1 | Auxiliares de la Función Pública (AFPA) | Apoderados Especiales Aduaneros | Autorización inicial y registro de mandato de apoderado especial |
+| 2 | Auxiliares de la Función Pública (AFPA) | Depósitos Aduaneros (AGD) | Registro y emisión de títulos de crédito (Certificados de depósito y bonos de prenda) |
+| 3 | Auxiliares de la Función Pública (AFPA) | Depósitos Aduaneros (AGD) | Reporte de saldos y existencias afianzadas ante SAT |
+| 4 | Auxiliares de la Función Pública (AFPA) | Depósitos Aduaneros (DAT) | Control de descarga, ingreso de bultos y actas de recepción DAT |
+| 5 | Auxiliares de la Función Pública (AFPA) | Depósitos Aduaneros (DAT) | Requisitos para habilitación y delimitación de recintos aduaneros temporales (DAT) |
+| 6 | Regímenes Territoriales y Zonas Especiales | Maquilas (Decreto 29-89) | Descargo Periódico de Cuentas Corrientes y Cuadre Insumo-Producto |
+| 7 | Regímenes Territoriales y Zonas Especiales | Zonas Especiales (ZDEEP) | Control, descargo y reporte periódico de inventarios de transformación |
+| 8 | Regímenes Territoriales y Zonas Especiales | Zonas Especiales (ZDEEP) | Procedimiento aduanero de traslado de mercancías hacia y desde ZDEEP |
+| 9 | Regímenes Territoriales y Zonas Especiales | Zonas Especiales (ZDEEP) | Registro de empresas usuarias calificadas en ZDEEP ante SAT |
+| 10 | Regímenes Territoriales y Zonas Especiales | Zonas Especiales (ZDEEP) | Procedimiento de control para ingreso y egreso de carga en garita ZDEEP |
+| 11 | Regímenes Territoriales y Zonas Especiales | Zonas Especiales (ZDEEP) | Registro y control de garitas aduaneras e infraestructura perimetral |
+| 12 | Regímenes Territoriales y Zonas Especiales | Zonas Especiales (ZDEEP) | Requisitos para habilitación y delimitación perimetral del polígono ZDEEP |
 
 ---
 
-## 8. Jerarquía de Referencias Normativas Internacionales
-
-El portal web de la SAT adopta una gobernanza clara entre estándares de diseño y mejores prácticas web públicas:
+## 8. Gobernanza y Sincronización de Archivos
 
 ```
-DESIGN SYSTEM SAT GUATEMALA
-           ↓
-    AUTORIDAD PRINCIPAL
-(Manual de Imagen V.5, tokens institucionales y componentes del portal)
-           ↓
-   REFERENCIAS EXTERNAS
-(Estándares y mejores prácticas públicas adoptadas)
-           ↓
-├── GOV.UK Design System (Servicios públicos, formularios accesibles, tablas adaptativas y lenguaje ciudadano)
-├── MDN Web Docs (Estándares técnicos web: viewports, CSS grid, media queries y layouts fluidos)
-├── W3C WCAG 2.2 AA (Accesibilidad obligatoria: reflow, zoom 200%, áreas táctiles ≥ 44px, contraste)
-├── web.dev (Rendimiento móvil, optimización de carga y Core Web Vitals)
-└── Material Design Responsive Layouts (Referencia conceptual abstracta para breakpoints y grids)
+src/data/allTramites.json (Single Source of Truth - 718 registros)
+            │
+            ├──► docs/fuentes-datos/Estructura_Final_Contenido_Portal_SAT_Actualizado.xlsx
+            │    (Libro Maestro Excel con 4 hojas y fórmulas automáticas)
+            │
+            ├──► docs/fuentes-datos/Mapa_de_Navegacion_y_Descripciones_Portal_SAT.xlsx
+            │    (Taxonomía y fichas redactadas en Lenguaje Ciudadano)
+            │
+            └──► Catálogo Web React (SegmentTramitesCatalog, PortalFlow, Tests Playwright)
 ```
-
-> **Principio de Autoridad:** *Las referencias externas aportan buenas prácticas; el **Design System SAT** es la autoridad visual y de componentes del portal.*  
-> **Exclusión Formal:** *Microsoft Fluent 2 queda fuera de la bibliografía de referencia para asegurar un enfoque 100% nativo de portal web público.*

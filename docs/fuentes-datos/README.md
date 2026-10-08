@@ -1,41 +1,60 @@
 # Fuentes de Datos y Matrices Excel — Portal SAT
 
-Este directorio contiene las hojas de cálculo y matrices maestras utilizadas para el inventario, análisis y extracción de los trámites y procesos de la SAT.
+Este directorio centraliza las fuentes de datos del proyecto, organizadas bajo una arquitectura de gobernanza documental estricta que distingue entre **insumos históricos de referencia** y **entregables vivos de producción**.
 
 ---
 
-## 📊 Inventario de Libros Excel
+## 🏛️ Gobernanza y Arquitectura de Archivos de Datos
 
-| Archivo Excel | Descripción | Rol en el Proyecto | Checkbox |
-| :--- | :--- | :---: | :---: |
-| Archivo Excel | Descripción | Rol en el Proyecto | Checkbox |
-| :--- | :--- | :---: | :---: |
-| `Estructura_Final_Contenido_Portal_SAT_Actualizado.xlsx` | **Libro Maestro Definitivo (739 filas)** con navegación asimétrica, desglose de actores multinivel (AFPA, ZDEEP), migas de pan dinámicas, dimensiones ATO y Control de Auditoría | Fuente Oficial de Producción | [x] |
-| `Arbol_de_Navegacion_Portal_v5.xlsx` | Matriz de navegación por segmento (pestaña Comercio Exterior purgada a 202 filas netas estructuradas) | Insumo Base / Trabajo | [x] |
-| `Detalle de Contenido para Grupos de Interes.xlsx` | Fichas detalladas y requisitos por grupo de interés | Insumo Base | [x] |
-| `Ruta de procesos.xlsx` | Matriz de procesos guiados y etapas tributarias | Insumo Base | [x] |
+```
+docs/fuentes-datos/
+├── [FUENTES HISTÓRICAS / INALTERABLES]
+│   ├── Detalle de Contenido para Grupos de Interes.xlsx   # Línea base institucional histórica
+│   ├── Arbol_de_Navegacion_Portal_v5.xlsx                 # Matriz de trabajo inicial v5
+│   └── Ruta de procesos.xlsx                              # Levantamiento inicial de procesos guiados
+│
+└── [ENTREGABLES OFICIALES VIVOS / SINCRONIZADOS]
+    ├── Estructura_Final_Contenido_Portal_SAT_Actualizado.xlsx  # Libro Maestro Definitivo (718 filas)
+    └── Mapa_de_Navegacion_y_Descripciones_Portal_SAT.xlsx      # Taxonomía y Plain Language (718 filas)
+```
+
+### 1. Documentos Clásicos / Fuentes Históricas (No se modifican)
+*Son la memoria técnica y el insumo de partida del proyecto. Se mantienen congelados para trazabilidad y auditoría forense:*
+* **`Detalle de Contenido para Grupos de Interes.xlsx`**: Matriz original de grupos de interés y requerimientos primarios.
+* **`Arbol_de_Navegacion_Portal_v5.xlsx`**: Estructura de árbol de navegación en su versión inicial previa a la normalización canónica.
+* **`Ruta de procesos.xlsx`**: Relevamiento tabular de los procesos guiados tributarios originales.
+
+### 2. Documentos Oficiales Vivos / Entregables Sincronizados (Se actualizan con el código y JSON)
+*Reflejan el estado de verdad (Single Source of Truth) del portal en producción y se sincronizan biunívocamente con `src/data/allTramites.json`:*
+* **`Estructura_Final_Contenido_Portal_SAT_Actualizado.xlsx`**:
+  - **718 registros consolidados** (344 Contribuyentes, 246 Comercio Exterior, 79 Entes Exentos, 49 Profesionales).
+  - Hoja `Resumen Arquitectura` con métricas y fórmulas directas.
+  - Hoja `Matriz Maestra (718)` con la taxonomía multinivel, migas de pan y dimensiones ATO completas.
+  - Hoja `Comercio Exterior (246)` con las 6 ramas oficiales y compactación N4/N5 saneada.
+  - Hoja `Brechas Normativas (12)` con las 12 brechas operativas pendientes de mesa técnica.
+* **`Mapa_de_Navegacion_y_Descripciones_Portal_SAT.xlsx`**:
+  - Hoja `Resumen Arquitectura` con métricas globales.
+  - Hoja `Mapa de Navegación` con la jerarquía completa antes/después por pilar.
+  - Hoja `Fichas por Rol y Categoría` con títulos y descripciones redactados en Lenguaje Ciudadano (Plain Language) bajo verbos imperativos directos.
 
 ---
 
-## 📋 Lista de Control de Integridad y Sincronización
+## 📊 Matriz Comparativa de Archivos
 
-### Integridad de Datos y Taxonomía Institucional
-- [x] Consolidación sin pérdida: 739 registros únicos verificados y 0 duplicados en `ID Trámite`.
-- [x] Desglose asimétrico de actores: Soporte nativo para 2 niveles en ramas simples (ej. Contribuyentes) y hasta 4 niveles de actor en ramas profundas (AFPA $\rightarrow$ Depósitos $\rightarrow$ Almacenes Fiscales / AGD / DAT; Regímenes Especiales $\rightarrow$ ZDEEP $\rightarrow$ Administradoras / Usuarias).
-- [x] Miga de Pan dinámicamente calculada (`Ruta de Navegación`) para el 100% de los trámites.
-- [x] Erradicación de términos ajenos como *"oficial"* y sustitución por *Materia / Tema* y *Subtema / Tipo de Gestión*.
-- [x] Asignación de dimensiones ATO (5 etapas de ciclo de vida + 5 tipos de interacción) para el 100% de los trámites.
-- [x] Hoja de Resumen Arquitectura equipada con 27 fórmulas dinámicas nativas (`=COUNTA`, `=COUNTIF`, `=SUM`).
-- [x] Sincronización exacta de la hoja `Brechas Normativas (24)` con sus preguntas para la mesa técnica SAT.
-- [x] Validación de URLs y enlaces oficiales de destino SAT para el 100% de los trámites (0 enlaces de borrador).
-- [x] Columna formal de `Control de Auditoría` (`APROBADO` vs. `PENDIENTE (Propuesta brecha)`).
-- [x] Redacción en Lenguaje Ciudadano (Plain Language) con verbos imperativos directos para el 100% de los trámites de Comercio Exterior.
+| Archivo | Tipo de Gobernanza | Total Filas | Sincronizado con JSON | Estado |
+| :--- | :---: | :---: | :---: | :---: |
+| `Estructura_Final_Contenido_Portal_SAT_Actualizado.xlsx` | **Entregable Oficial Vivo** | **718** | **Sí (`src/data/allTramites.json`)** | **Vigente** |
+| `Mapa_de_Navegacion_y_Descripciones_Portal_SAT.xlsx` | **Entregable Oficial Vivo** | **718** | **Sí (`src/data/allTramites.json`)** | **Vigente** |
+| `Detalle de Contenido para Grupos de Interes.xlsx` | Fuente Histórica / Insumo Base | N/A | No (Inalterable por diseño) | Congelado |
+| `Arbol_de_Navegacion_Portal_v5.xlsx` | Fuente Histórica / Insumo Base | N/A | No (Inalterable por diseño) | Congelado |
+| `Ruta de procesos.xlsx` | Fuente Histórica / Insumo Base | N/A | No (Inalterable por diseño) | Congelado |
 
 ---
 
-## 📂 Archivos en esta Carpeta
-
-- `Estructura_Final_Contenido_Portal_SAT_Actualizado.xlsx`
-- `Arbol_de_Navegacion_Portal_v5.xlsx`
-- `Detalle de Contenido para Grupos de Interes.xlsx`
-- `Ruta de procesos.xlsx`
+## 📋 Lista de Control de Calidad e Integridad de Datos
+- [x] **0 Duplicados**: 718 registros únicos verificados en `ID Trámite`.
+- [x] **Sincronización Total**: `allTramites.json` $\leftrightarrow$ `Estructura_Final_Contenido_Portal_SAT_Actualizado.xlsx` $\leftrightarrow$ `Mapa_de_Navegacion_y_Descripciones_Portal_SAT.xlsx`.
+- [x] **Ramas Canónicas de Comercio Exterior**: 246 trámites clasificados con exactitud en las 6 ramas maestras (Importadores, Exportadores, OEA, AFPA, Regímenes Territoriales, Normativa General).
+- [x] **Calidad Textual**: Lenguaje Ciudadano libre de abreviaturas crípticas en títulos y descripciones con verbos de acción.
+- [x] **12 Brechas Normativas**: Documentadas con su justificación técnica y pregunta clave para mesa de trabajo.
+- [x] **100% URLs Válidas**: Direcciones web oficiales de destino SAT para todos los trámites.
