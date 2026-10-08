@@ -26,7 +26,7 @@
   {
     "_id": "profesionales-70",
     "codigo": "SAT-TR-0002",
-    "titulo": "Inscripción y Actualización de Abogado y Notario en RTU",
+    "titulo": "Inscripción y Actualización de Abogado y Notario en el Registro Tributario Unificado (RTU)",
     "macro_grupo": {
       "id": "profesionales",
       "nombre": "Profesionales"
@@ -98,7 +98,7 @@
   {
     "_id": "profesionales-56",
     "codigo": "SAT-TR-0005",
-    "titulo": "Remisión de Documentación Electrónica de TEV",
+    "titulo": "Remisión de Documentación Electrónica de Traspaso Electrónico de Vehículos (TEV)",
     "macro_grupo": {
       "id": "profesionales",
       "nombre": "Profesionales"
@@ -242,7 +242,7 @@
   {
     "_id": "profesionales-78",
     "codigo": "SAT-TR-0011",
-    "titulo": "Sistema Retenciones Web -ICT-",
+    "titulo": "Sistema Retenciones Web (ICT)",
     "macro_grupo": {
       "id": "profesionales",
       "nombre": "Profesionales"
@@ -698,7 +698,7 @@
   {
     "_id": "profesionales-41",
     "codigo": "SAT-TR-0030",
-    "titulo": "Requisitos para Tercera Persona Autorizada en Gestiones de RTU",
+    "titulo": "Requisitos para Tercera Persona Autorizada en Gestiones del Registro Tributario Unificado (RTU)",
     "macro_grupo": {
       "id": "profesionales",
       "nombre": "Profesionales"
@@ -818,7 +818,7 @@
   {
     "_id": "profesionales-16",
     "codigo": "SAT-TR-0035",
-    "titulo": "Consultar constancias de retención de IVA e ISR recibidas",
+    "titulo": "Consultar constancias de retención del Impuesto al Valor Agregado (IVA) e Impuesto Sobre la Renta (ISR) recibidas",
     "macro_grupo": {
       "id": "profesionales",
       "nombre": "Profesionales"
@@ -866,7 +866,7 @@
   {
     "_id": "profesionales-18",
     "codigo": "SAT-TR-0037",
-    "titulo": "Planilla del IVA en FEL",
+    "titulo": "Planilla del Impuesto al Valor Agregado (IVA) en Factura Electrónica en Línea (FEL)",
     "macro_grupo": {
       "id": "profesionales",
       "nombre": "Profesionales"
@@ -1082,7 +1082,7 @@
   {
     "_id": "profesionales-46",
     "codigo": "SAT-TR-0046",
-    "titulo": "Sistema de retenciones del IVA",
+    "titulo": "Sistema de retenciones del Impuesto al Valor Agregado (IVA)",
     "macro_grupo": {
       "id": "profesionales",
       "nombre": "Profesionales"
@@ -1346,7 +1346,7 @@
   {
     "_id": "entes_exentos-21",
     "codigo": "SAT-TR-0057",
-    "titulo": "Requisitos para la Actualización RTU",
+    "titulo": "Requisitos para la Actualización en el Registro Tributario Unificado (RTU)",
     "macro_grupo": {
       "id": "entes-exentos",
       "nombre": "Entes Exentos"
@@ -1538,7 +1538,7 @@
   {
     "_id": "entes_exentos-32",
     "codigo": "SAT-TR-0065",
-    "titulo": "Inscribir una ONG registrada antes del 3 de agosto de 2022",
+    "titulo": "Inscribir una Organización No Gubernamental (ONG) registrada antes del 3 de agosto de 2022",
     "macro_grupo": {
       "id": "entes-exentos",
       "nombre": "Entes Exentos"
@@ -1562,7 +1562,7 @@
   {
     "_id": "entes_exentos-33",
     "codigo": "SAT-TR-0066",
-    "titulo": "Inscribir una ONG registrada desde el 3 de agosto de 2022",
+    "titulo": "Inscribir una Organización No Gubernamental (ONG) registrada desde el 3 de agosto de 2022",
     "macro_grupo": {
       "id": "entes-exentos",
       "nombre": "Entes Exentos"
@@ -1706,7 +1706,7 @@
   {
     "_id": "entes_exentos-46",
     "codigo": "SAT-TR-0072",
-    "titulo": "Requisitos para la Inscripción RTU",
+    "titulo": "Requisitos para la Inscripción en el Registro Tributario Unificado (RTU)",
     "macro_grupo": {
       "id": "entes-exentos",
       "nombre": "Entes Exentos"
@@ -1778,7 +1778,7 @@
   {
     "_id": "entes_exentos-38",
     "codigo": "SAT-TR-0075",
-    "titulo": "Actualizar los datos de una OPF",
+    "titulo": "Actualizar los datos de una Organización de Padres de Familia (OPF)",
     "macro_grupo": {
       "id": "entes-exentos",
       "nombre": "Entes Exentos"
@@ -2210,7 +2210,7 @@
   {
     "_id": "entes_exentos-91",
     "codigo": "SAT-TR-0093",
-    "titulo": "Emitir constancias de exención de IVA (CIVA)",
+    "titulo": "Emitir constancias de exención del Impuesto al Valor Agregado (CIVA)",
     "macro_grupo": {
       "id": "entes-exentos",
       "nombre": "Entes Exentos"
@@ -2378,7 +2378,7 @@
   {
     "_id": "entes_exentos-115",
     "codigo": "SAT-TR-0100",
-    "titulo": "Traspasar un vehículo a SENABED / CONABED",
+    "titulo": "Traspasar un vehículo a entidades de extinción de dominio (SENABED / CONABED)",
     "macro_grupo": {
       "id": "entes-exentos",
       "nombre": "Entes Exentos"
@@ -2426,7 +2426,7 @@
   {
     "_id": "entes_exentos-4",
     "codigo": "SAT-TR-0102",
-    "titulo": "Habilitarte para emitir constancias de exención de IVA (CIVA)",
+    "titulo": "Habilitarte para emitir constancias de exención del Impuesto al Valor Agregado (CIVA)",
     "macro_grupo": {
       "id": "entes-exentos",
       "nombre": "Entes Exentos"
@@ -2450,7 +2450,7 @@
   {
     "_id": "entes_exentos-111",
     "codigo": "SAT-TR-0103",
-    "titulo": "Emisión Constancias de Exención de IVA -CIVA-",
+    "titulo": "Emisión Constancias de Exención del Impuesto al Valor Agregado (CIVA)",
     "macro_grupo": {
       "id": "entes-exentos",
       "nombre": "Entes Exentos"
@@ -2738,7 +2738,7 @@
   {
     "_id": "entes_exentos-130",
     "codigo": "SAT-TR-0115",
-    "titulo": "Sistema de retenciones del ISR",
+    "titulo": "Sistema de retenciones del Impuesto Sobre la Renta (ISR)",
     "macro_grupo": {
       "id": "entes-exentos",
       "nombre": "Entes Exentos"
@@ -2762,7 +2762,7 @@
   {
     "_id": "entes_exentos-131",
     "codigo": "SAT-TR-0116",
-    "titulo": "Sistema de retenciones del IVA",
+    "titulo": "Sistema de retenciones del Impuesto al Valor Agregado (IVA)",
     "macro_grupo": {
       "id": "entes-exentos",
       "nombre": "Entes Exentos"
@@ -2906,7 +2906,7 @@
   {
     "_id": "entes_exentos-103",
     "codigo": "SAT-TR-0122",
-    "titulo": "Curso: FEL para entidades del Estado",
+    "titulo": "Curso: Factura Electrónica en Línea (FEL) para entidades del Estado",
     "macro_grupo": {
       "id": "entes-exentos",
       "nombre": "Entes Exentos"
@@ -3002,7 +3002,7 @@
   {
     "_id": "comercio_exterior-02",
     "codigo": "SAT-TR-0126",
-    "titulo": "Auxiliares de la función pública aduanera (Carné, componente ActiveX PKI/DUA)",
+    "titulo": "Auxiliares de la función pública aduanera (Carné, firma electrónica PKI y Declaración Aduanera DUA)",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -3050,7 +3050,7 @@
   {
     "_id": "comercio_exterior-04",
     "codigo": "SAT-TR-0128",
-    "titulo": "Solvencia fiscal (Requisito para renovación AFPA)",
+    "titulo": "Solvencia fiscal (Requisito para renovación de Auxiliares de la Función Pública Aduanera (AFPA))",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -3074,7 +3074,7 @@
   {
     "_id": "comercio_exterior-05",
     "codigo": "SAT-TR-0129",
-    "titulo": "[Propuesta brecha] Autorización inicial y registro de mandato de apoderado especial",
+    "titulo": "[Propuesta normativa SAT] Autorización inicial y registro de mandato de apoderado especial",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -3098,7 +3098,7 @@
   {
     "_id": "comercio_exterior-06",
     "codigo": "SAT-TR-0130",
-    "titulo": "Declaración de mercancías (DUCA y Aduana sin papeles)",
+    "titulo": "Declaración de mercancías (Declaración Única Centroamericana - DUCA y Aduana sin papeles)",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -3386,7 +3386,7 @@
   {
     "_id": "comercio_exterior-18",
     "codigo": "SAT-TR-0142",
-    "titulo": "Auxiliares de la función pública aduanera (Carné, componente ActiveX PKI/DUA)",
+    "titulo": "Auxiliares de la función pública aduanera (Carné, firma electrónica PKI y Declaración Aduanera DUA)",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -3434,7 +3434,7 @@
   {
     "_id": "comercio_exterior-20",
     "codigo": "SAT-TR-0144",
-    "titulo": "Solvencia fiscal (Requisito indispensable de renovación AFPA)",
+    "titulo": "Solvencia fiscal (Requisito indispensable de renovación de Auxiliares de la Función Pública Aduanera (AFPA))",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -3458,7 +3458,7 @@
   {
     "_id": "comercio_exterior-21",
     "codigo": "SAT-TR-0145",
-    "titulo": "[Propuesta brecha] Requisitos para habilitación y ampliación de recintos de depósito fiscal",
+    "titulo": "[Propuesta normativa SAT] Requisitos para habilitación y ampliación de recintos de depósito fiscal",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -3506,7 +3506,7 @@
   {
     "_id": "comercio_exterior-23",
     "codigo": "SAT-TR-0147",
-    "titulo": "Declaración de mercancías (DUCA, tránsitos y aduana sin papeles)",
+    "titulo": "Declaración de mercancías (Declaración Única Centroamericana - DUCA, tránsitos y aduana sin papeles)",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -3554,7 +3554,7 @@
   {
     "_id": "comercio_exterior-25",
     "codigo": "SAT-TR-0149",
-    "titulo": "[Propuesta brecha] Transmisión y control de inventarios bajo régimen de depósito aduanero",
+    "titulo": "[Propuesta normativa SAT] Transmisión y control de inventarios bajo régimen de depósito aduanero",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -3650,7 +3650,7 @@
   {
     "_id": "comercio_exterior-29",
     "codigo": "SAT-TR-0153",
-    "titulo": "Legislación aduanera (RECAUCA Art. 119 y normativa de depósitos)",
+    "titulo": "Legislación aduanera (Reglamento Aduanero RECAUCA, Art. 119 y normativa de depósitos)",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -3770,7 +3770,7 @@
   {
     "_id": "comercio_exterior-34",
     "codigo": "SAT-TR-0158",
-    "titulo": "Auxiliares de la función pública aduanera (Carné, componente ActiveX PKI/DUA)",
+    "titulo": "Auxiliares de la función pública aduanera (Carné, firma electrónica PKI y Declaración Aduanera DUA)",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -3818,7 +3818,7 @@
   {
     "_id": "comercio_exterior-36",
     "codigo": "SAT-TR-0160",
-    "titulo": "Solvencia fiscal (Requisito indispensable de renovación AFPA)",
+    "titulo": "Solvencia fiscal (Requisito indispensable de renovación de Auxiliares de la Función Pública Aduanera (AFPA))",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -3842,7 +3842,7 @@
   {
     "_id": "comercio_exterior-37",
     "codigo": "SAT-TR-0161",
-    "titulo": "[Propuesta brecha] Registro y emisión de títulos de crédito (Certificados de depósito y bonos de prenda)",
+    "titulo": "[Propuesta normativa SAT] Registro y emisión de títulos de crédito (Certificados de depósito y bonos de prenda)",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -3890,7 +3890,7 @@
   {
     "_id": "comercio_exterior-39",
     "codigo": "SAT-TR-0163",
-    "titulo": "Declaración de mercancías (DUCA y aduana sin papeles)",
+    "titulo": "Declaración de mercancías (Declaración Única Centroamericana - DUCA y Aduana sin papeles)",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -3938,7 +3938,7 @@
   {
     "_id": "comercio_exterior-41",
     "codigo": "SAT-TR-0165",
-    "titulo": "[Propuesta brecha] Reporte de saldos y existencias afianzadas ante SAT",
+    "titulo": "[Propuesta normativa SAT] Reporte de saldos y existencias afianzadas ante SAT",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -4034,7 +4034,7 @@
   {
     "_id": "comercio_exterior-45",
     "codigo": "SAT-TR-0169",
-    "titulo": "Legislación aduanera y financiera (Decreto 1236 y RECAUCA)",
+    "titulo": "Legislación aduanera y financiera (Decreto 1236 y Reglamento Aduanero RECAUCA)",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -4154,7 +4154,7 @@
   {
     "_id": "comercio_exterior-50",
     "codigo": "SAT-TR-0174",
-    "titulo": "Auxiliares de la función pública aduanera (Carné, componente ActiveX PKI/DUA)",
+    "titulo": "Auxiliares de la función pública aduanera (Carné, firma electrónica PKI y Declaración Aduanera DUA)",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -4202,7 +4202,7 @@
   {
     "_id": "comercio_exterior-52",
     "codigo": "SAT-TR-0176",
-    "titulo": "Solvencia fiscal (Requisito para renovación AFPA)",
+    "titulo": "Solvencia fiscal (Requisito para renovación de Auxiliares de la Función Pública Aduanera (AFPA))",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -4226,7 +4226,7 @@
   {
     "_id": "comercio_exterior-53",
     "codigo": "SAT-TR-0177",
-    "titulo": "[Propuesta brecha] Requisitos para habilitación y delimitación de recintos aduaneros temporales (DAT)",
+    "titulo": "[Propuesta normativa SAT] Requisitos para habilitación y delimitación de recintos aduaneros temporales (DAT)",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -4298,7 +4298,7 @@
   {
     "_id": "comercio_exterior-56",
     "codigo": "SAT-TR-0180",
-    "titulo": "Declaración de mercancías (DUCA y aduana sin papeles)",
+    "titulo": "Declaración de mercancías (Declaración Única Centroamericana - DUCA y Aduana sin papeles)",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -4322,7 +4322,7 @@
   {
     "_id": "comercio_exterior-57",
     "codigo": "SAT-TR-0181",
-    "titulo": "[Propuesta brecha] Control de descarga, ingreso de bultos y actas de recepción DAT",
+    "titulo": "[Propuesta normativa SAT] Control de descarga, ingreso de bultos y actas de recepción en Depósito Aduanero Temporal (DAT)",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -4466,7 +4466,7 @@
   {
     "_id": "comercio_exterior-63",
     "codigo": "SAT-TR-0187",
-    "titulo": "Legislación aduanera (RECAUCA Art. 119 - Disposiciones sobre depósitos)",
+    "titulo": "Legislación aduanera (Reglamento Aduanero RECAUCA, Art. 119 - Disposiciones sobre depósitos)",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -4562,7 +4562,7 @@
   {
     "_id": "comercio_exterior-67",
     "codigo": "SAT-TR-0191",
-    "titulo": "[Propuesta brecha] Requisitos para habilitación y delimitación perimetral del polígono ZDEEP",
+    "titulo": "[Propuesta normativa SAT] Requisitos para habilitación y delimitación perimetral del polígono de Zona de Desarrollo Económico Especial Público (ZDEEP)",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -4586,7 +4586,7 @@
   {
     "_id": "comercio_exterior-68",
     "codigo": "SAT-TR-0192",
-    "titulo": "[Propuesta brecha] Registro y control de garitas aduaneras e infraestructura perimetral",
+    "titulo": "[Propuesta normativa SAT] Registro y control de garitas aduaneras e infraestructura perimetral",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -4658,7 +4658,7 @@
   {
     "_id": "comercio_exterior-71",
     "codigo": "SAT-TR-0195",
-    "titulo": "[Propuesta brecha] Procedimiento de control para ingreso y egreso de carga en garita ZDEEP",
+    "titulo": "[Propuesta normativa SAT] Procedimiento de control para ingreso y egreso de carga en garita de Zona de Desarrollo Económico Especial Público (ZDEEP)",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -4826,7 +4826,7 @@
   {
     "_id": "comercio_exterior-78",
     "codigo": "SAT-TR-0202",
-    "titulo": "Legislación aduanera y régimen especial ZDEEP (Decreto 22-73 y reformas)",
+    "titulo": "Legislación aduanera y régimen especial de Zona de Desarrollo Económico Especial Público (ZDEEP) (Decreto 22-73 y reformas)",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -4922,7 +4922,7 @@
   {
     "_id": "comercio_exterior-82",
     "codigo": "SAT-TR-0206",
-    "titulo": "[Propuesta brecha] Registro de empresas usuarias calificadas en ZDEEP ante SAT",
+    "titulo": "[Propuesta normativa SAT] Registro de empresas usuarias calificadas en Zona de Desarrollo Económico Especial Público (ZDEEP) ante SAT",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -4994,7 +4994,7 @@
   {
     "_id": "comercio_exterior-85",
     "codigo": "SAT-TR-0209",
-    "titulo": "Declaración de mercancías (DUCA, tránsitos aduaneros y aduana sin papeles)",
+    "titulo": "Declaración de mercancías (Declaración Única Centroamericana - DUCA, tránsitos aduaneros y aduana sin papeles)",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -5018,7 +5018,7 @@
   {
     "_id": "comercio_exterior-86",
     "codigo": "SAT-TR-0210",
-    "titulo": "[Propuesta brecha] Procedimiento aduanero de traslado de mercancías hacia y desde ZDEEP",
+    "titulo": "[Propuesta normativa SAT] Procedimiento aduanero de traslado de mercancías hacia y desde Zona de Desarrollo Económico Especial Público (ZDEEP)",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -5042,7 +5042,7 @@
   {
     "_id": "comercio_exterior-87",
     "codigo": "SAT-TR-0211",
-    "titulo": "[Propuesta brecha] Control, descargo y reporte periódico de inventarios de transformación",
+    "titulo": "[Propuesta normativa SAT] Control, descargo y reporte periódico de inventarios de transformación",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -5186,7 +5186,7 @@
   {
     "_id": "comercio_exterior-93",
     "codigo": "SAT-TR-0217",
-    "titulo": "Legislación aduanera y tributaria (Exenciones y marco legal ZDEEP)",
+    "titulo": "Legislación aduanera y tributaria (Exenciones y marco legal de Zona de Desarrollo Económico Especial Público (ZDEEP))",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -5282,7 +5282,7 @@
   {
     "_id": "comercio_exterior-97",
     "codigo": "SAT-TR-0221",
-    "titulo": "Actualización de datos en RTU Digital y régimen de comercio exterior",
+    "titulo": "Actualización de datos en el Registro Tributario Unificado (RTU) Digital y régimen de comercio exterior",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -5330,7 +5330,7 @@
   {
     "_id": "comercio_exterior-99",
     "codigo": "SAT-TR-0223",
-    "titulo": "[Propuesta brecha] Registro y acreditación de operadores de comercio exterior habituales",
+    "titulo": "[Propuesta normativa SAT] Registro y acreditación de operadores de comercio exterior habituales",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -5378,7 +5378,7 @@
   {
     "_id": "comercio_exterior-101",
     "codigo": "SAT-TR-0225",
-    "titulo": "Declaración de mercancías (DUCA y Aduana sin papeles)",
+    "titulo": "Declaración de mercancías (Declaración Única Centroamericana - DUCA y Aduana sin papeles)",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -5450,7 +5450,7 @@
   {
     "_id": "comercio_exterior-104",
     "codigo": "SAT-TR-0228",
-    "titulo": "[Propuesta brecha] Rectificación y anulación electrónica de declaraciones aduaneras",
+    "titulo": "[Propuesta normativa SAT] Rectificación y anulación electrónica de declaraciones aduaneras",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -5474,7 +5474,7 @@
   {
     "_id": "comercio_exterior-105",
     "codigo": "SAT-TR-0229",
-    "titulo": "Arancel Integrado (SAC y gravámenes aplicables)",
+    "titulo": "Arancel Integrado (Sistema Arancelario Centroamericano - SAC y gravámenes aplicables)",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -5762,7 +5762,7 @@
   {
     "_id": "comercio_exterior-117",
     "codigo": "SAT-TR-0241",
-    "titulo": "[Propuesta brecha] Vinculación digital de código exportador SAT - VUPE / SEADEX",
+    "titulo": "[Propuesta normativa SAT] Vinculación digital de código exportador SAT ante la Ventanilla Única para las Exportaciones (VUPE / SEADEX)",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -5930,7 +5930,7 @@
   {
     "_id": "comercio_exterior-124",
     "codigo": "SAT-TR-0248",
-    "titulo": "Consultas Pago DUCA-F país Destino",
+    "titulo": "Consultas de Pago de Declaración Única Centroamericana (DUCA-F) país Destino",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -6050,7 +6050,7 @@
   {
     "_id": "comercio_exterior-129",
     "codigo": "SAT-TR-0253",
-    "titulo": "Auxiliares de la función pública aduanera (Carné, componente ActiveX PKI/DUA)",
+    "titulo": "Auxiliares de la función pública aduanera (Carné, firma electrónica PKI y Declaración Aduanera DUA)",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -6098,7 +6098,7 @@
   {
     "_id": "comercio_exterior-131",
     "codigo": "SAT-TR-0255",
-    "titulo": "Solvencia fiscal (Requisito habilitante para renovación AFPA)",
+    "titulo": "Solvencia fiscal (Requisito habilitante para renovación de Auxiliares de la Función Pública Aduanera (AFPA))",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -6122,7 +6122,7 @@
   {
     "_id": "comercio_exterior-132",
     "codigo": "SAT-TR-0256",
-    "titulo": "[Propuesta brecha] Acreditación, sustitución y registro de dependientes y asistentes aduaneros",
+    "titulo": "[Propuesta normativa SAT] Acreditación, sustitución y registro de dependientes y asistentes aduaneros",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -6146,7 +6146,7 @@
   {
     "_id": "comercio_exterior-133",
     "codigo": "SAT-TR-0257",
-    "titulo": "Declaración de mercancías (DUCA y Aduana sin papeles)",
+    "titulo": "Declaración de mercancías (Declaración Única Centroamericana - DUCA y Aduana sin papeles)",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -6218,7 +6218,7 @@
   {
     "_id": "comercio_exterior-136",
     "codigo": "SAT-TR-0260",
-    "titulo": "Procesos generales de importación de mercancías (Programa MIAD)",
+    "titulo": "Procesos generales de importación de mercancías (Programa de Mesa de Información y Atención al Despacho - MIAD)",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -6242,7 +6242,7 @@
   {
     "_id": "comercio_exterior-137",
     "codigo": "SAT-TR-0261",
-    "titulo": "[Propuesta brecha] Rectificación y anulación de declaraciones aduaneras gestionadas por Agente Aduanero",
+    "titulo": "[Propuesta normativa SAT] Rectificación y anulación de declaraciones aduaneras gestionadas por Agente Aduanero",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -6386,7 +6386,7 @@
   {
     "_id": "comercio_exterior-143",
     "codigo": "SAT-TR-0267",
-    "titulo": "Legislación Aduanera (CAUCA IV, RECAUCA IV y Ley Nacional de Aduanas)",
+    "titulo": "Legislación Aduanera (Código Aduanero CAUCA IV, Reglamento RECAUCA IV y Ley Nacional de Aduanas)",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -6434,7 +6434,7 @@
   {
     "_id": "comercio_exterior-145",
     "codigo": "SAT-TR-0269",
-    "titulo": "Recepción de seguro de caución y fianza de operación Courier (RECAUCA Art. 576)",
+    "titulo": "Recepción de seguro de caución y fianza de operación Courier (Reglamento Aduanero RECAUCA, Art. 576)",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -6482,7 +6482,7 @@
   {
     "_id": "comercio_exterior-147",
     "codigo": "SAT-TR-0271",
-    "titulo": "[Propuesta brecha] Autorización e inscripción inicial de empresas de entrega rápida / courier",
+    "titulo": "[Propuesta normativa SAT] Autorización e inscripción inicial de empresas de entrega rápida / courier",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -6506,7 +6506,7 @@
   {
     "_id": "comercio_exterior-148",
     "codigo": "SAT-TR-0272",
-    "titulo": "[Propuesta brecha] Registro y habilitación de instalaciones de depósito desconsolidador de courier",
+    "titulo": "[Propuesta normativa SAT] Registro y habilitación de instalaciones de depósito desconsolidador de courier",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -6602,7 +6602,7 @@
   {
     "_id": "comercio_exterior-152",
     "codigo": "SAT-TR-0276",
-    "titulo": "[Propuesta brecha] Procedimiento de desaduanamiento y cambio de modalidad a régimen general para paquetería",
+    "titulo": "[Propuesta normativa SAT] Procedimiento de desaduanamiento y cambio de modalidad a régimen general para paquetería",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -6674,7 +6674,7 @@
   {
     "_id": "comercio_exterior-155",
     "codigo": "SAT-TR-0279",
-    "titulo": "Régimen especial aduanero de Envíos de Entrega Rápida o Courier (RECAUCA Arts. 574 al 596)",
+    "titulo": "Régimen especial aduanero de Envíos de Entrega Rápida o Courier (Reglamento Aduanero RECAUCA, Arts. 574 al 596)",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -6770,7 +6770,7 @@
   {
     "_id": "comercio_exterior-159",
     "codigo": "SAT-TR-0283",
-    "titulo": "[Propuesta brecha] Actualización e inactivación en el padrón de importadores en Agencia Virtual",
+    "titulo": "[Propuesta normativa SAT] Actualización e inactivación en el padrón de importadores en Agencia Virtual",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -6794,7 +6794,7 @@
   {
     "_id": "comercio_exterior-160",
     "codigo": "SAT-TR-0284",
-    "titulo": "Declaración de mercancías (DUCA-D de importación y DUA sin papeles)",
+    "titulo": "Declaración de mercancías (Declaración Única Centroamericana DUCA-D e importación DUA sin papeles)",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -6914,7 +6914,7 @@
   {
     "_id": "comercio_exterior-165",
     "codigo": "SAT-TR-0289",
-    "titulo": "Devolución, Compensación o Acreditamiento de DAI e IVA (Formulario SAT-8560)",
+    "titulo": "Devolución, Compensación o Acreditamiento de Derechos Arancelarios a la Importación (DAI) e Impuesto al Valor Agregado (IVA) (Formulario SAT-8560)",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -7034,7 +7034,7 @@
   {
     "_id": "comercio_exterior-170",
     "codigo": "SAT-TR-0294",
-    "titulo": "Procesos generales de importación de mercancías (Programa MIAD)",
+    "titulo": "Procesos generales de importación de mercancías (Programa de Mesa de Información y Atención al Despacho - MIAD)",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -7058,7 +7058,7 @@
   {
     "_id": "comercio_exterior-171",
     "codigo": "SAT-TR-0295",
-    "titulo": "Criterios y metodología de valoración aduanera (Acuerdo OMC)",
+    "titulo": "Criterios y metodología de valoración aduanera (Acuerdo de Valoración de la Organización Mundial del Comercio - OMC)",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -7082,7 +7082,7 @@
   {
     "_id": "comercio_exterior-172",
     "codigo": "SAT-TR-0296",
-    "titulo": "Solvencia fiscal y tributaria calificada OEA",
+    "titulo": "Solvencia fiscal y tributaria calificada de Operador Económico Autorizado (OEA)",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -7226,7 +7226,7 @@
   {
     "_id": "comercio_exterior-178",
     "codigo": "SAT-TR-0302",
-    "titulo": "Solvencia fiscal (Requisito habilitante para renovación AFPA)",
+    "titulo": "Solvencia fiscal (Requisito habilitante para renovación de Auxiliares de la Función Pública Aduanera (AFPA))",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -7250,7 +7250,7 @@
   {
     "_id": "comercio_exterior-179",
     "codigo": "SAT-TR-0303",
-    "titulo": "[Propuesta brecha] Autorización e inscripción inicial de personería de Consolidador / Desconsolidador",
+    "titulo": "[Propuesta normativa SAT] Autorización e inscripción inicial de personería de Consolidador / Desconsolidador",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -7298,7 +7298,7 @@
   {
     "_id": "comercio_exterior-181",
     "codigo": "SAT-TR-0305",
-    "titulo": "Desconsolidación de conocimientos de embarque y guías aéreas hijas (B/L / AWB)",
+    "titulo": "Desconsolidación de conocimientos de embarque y guías aéreas hijas (Conocimiento de Embarque B/L y Guía Aérea AWB)",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -7322,7 +7322,7 @@
   {
     "_id": "comercio_exterior-182",
     "codigo": "SAT-TR-0306",
-    "titulo": "[Propuesta brecha] Registro de justificación de sobrantes, faltantes y daños en bultos desconsolidados",
+    "titulo": "[Propuesta normativa SAT] Registro de justificación de sobrantes, faltantes y daños en bultos desconsolidados",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -7394,7 +7394,7 @@
   {
     "_id": "comercio_exterior-185",
     "codigo": "SAT-TR-0309",
-    "titulo": "Régimen legal de Empresas Consolidadoras y Desconsolidadoras de Carga (RECAUCA Arts. 102 al 109)",
+    "titulo": "Régimen legal de Empresas Consolidadoras y Desconsolidadoras de Carga (Reglamento Aduanero RECAUCA, Arts. 102 al 109)",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -7418,7 +7418,7 @@
   {
     "_id": "comercio_exterior-186",
     "codigo": "SAT-TR-0310",
-    "titulo": "Especificaciones técnicas y estructura de mensajes EDIFACT / CUSCAR",
+    "titulo": "Especificaciones técnicas y estructura de mensajes estándar de aduanas (EDIFACT / CUSCAR)",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -7538,7 +7538,7 @@
   {
     "_id": "comercio_exterior-191",
     "codigo": "SAT-TR-0315",
-    "titulo": "Registro de Admisión Temporal de Equipo de Carga (ATC Terrestre)",
+    "titulo": "Registro de Admisión Temporal de Equipo de Carga (Admisión Temporal de Contenedores - ATC Terrestre)",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -7658,7 +7658,7 @@
   {
     "_id": "comercio_exterior-196",
     "codigo": "SAT-TR-0320",
-    "titulo": "Gestión y colocación de Marchamo Electrónico (Dispositivo RFID / Precinto satelital)",
+    "titulo": "Gestión y colocación de Marchamo Electrónico (Marchamo Electrónico RFID / Precinto satelital)",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -7682,7 +7682,7 @@
   {
     "_id": "comercio_exterior-197",
     "codigo": "SAT-TR-0321",
-    "titulo": "Declaración Única Centroamericana para el Tránsito Aduanero Internacional (DUCA-T)",
+    "titulo": "Declaración Única Centroamericana para el Tránsito Aduanero Internacional (Declaración Única Centroamericana de Tránsito - DUCA-T)",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -7706,7 +7706,7 @@
   {
     "_id": "comercio_exterior-198",
     "codigo": "SAT-TR-0322",
-    "titulo": "Consulta de Tránsito Pendiente (DUCA-T en ruta aduanera)",
+    "titulo": "Consulta de Tránsito Pendiente (Declaración Única Centroamericana de Tránsito - DUCA-T en ruta aduanera)",
     "macro_grupo": {
       "id": "comercio-exterior",
       "nombre": "Operadores de Comercio Exterior"
@@ -7970,7 +7970,7 @@
   {
     "_id": "contribuyentes-5",
     "codigo": "SAT-TR-0333",
-    "titulo": "Requisitos para la Inscripción RTU",
+    "titulo": "Requisitos para la Inscripción en el Registro Tributario Unificado (RTU)",
     "macro_grupo": {
       "id": "contribuyentes",
       "nombre": "Contribuyentes"
@@ -7994,7 +7994,7 @@
   {
     "_id": "contribuyentes-6",
     "codigo": "SAT-TR-0334",
-    "titulo": "Requisitos para la Actualización RTU",
+    "titulo": "Requisitos para la Actualización en el Registro Tributario Unificado (RTU)",
     "macro_grupo": {
       "id": "contribuyentes",
       "nombre": "Contribuyentes"
@@ -8258,7 +8258,7 @@
   {
     "_id": "contribuyentes-17",
     "codigo": "SAT-TR-0345",
-    "titulo": "Constancias de Retención del IVA e ISR recibidos",
+    "titulo": "Constancias de Retención del Impuesto al Valor Agregado (IVA) e Impuesto Sobre la Renta (ISR) recibidos",
     "macro_grupo": {
       "id": "contribuyentes",
       "nombre": "Contribuyentes"
@@ -8749,16 +8749,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -8785,16 +8785,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -8821,16 +8821,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -8857,16 +8857,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -8893,16 +8893,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -9038,7 +9038,7 @@
   {
     "_id": "contribuyentes-42",
     "codigo": "SAT-TR-0375",
-    "titulo": "Emisión Constancias de Adquisición de Insumos y Servicios -CAIS-",
+    "titulo": "Emisión de Constancias de Adquisición de Insumos y Servicios (CAIS)",
     "macro_grupo": {
       "id": "contribuyentes",
       "nombre": "Contribuyentes"
@@ -9062,7 +9062,7 @@
   {
     "_id": "contribuyentes-43",
     "codigo": "SAT-TR-0376",
-    "titulo": "Emisión Constancias de Exención de IVA -CIVA-",
+    "titulo": "Emisión Constancias de Exención del Impuesto al Valor Agregado (CIVA)",
     "macro_grupo": {
       "id": "contribuyentes",
       "nombre": "Contribuyentes"
@@ -9097,16 +9097,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -9157,16 +9157,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -9193,16 +9193,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -9397,16 +9397,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -9433,16 +9433,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -9493,16 +9493,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -9553,16 +9553,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -9578,7 +9578,7 @@
   {
     "_id": "contribuyentes-4",
     "codigo": "SAT-TR-0394",
-    "titulo": "Devolución de ISR Asalariados (Retenciones en exceso o pago indebido) SAT-117 o 1431",
+    "titulo": "Devolución del Impuesto Sobre la Renta (ISR) Asalariados (Retenciones en exceso o pago indebido) SAT-117 o 1431",
     "macro_grupo": {
       "id": "contribuyentes",
       "nombre": "Contribuyentes"
@@ -9602,7 +9602,7 @@
   {
     "_id": "contribuyentes-48",
     "codigo": "SAT-TR-0395",
-    "titulo": "Formulario Electrónico SAT-2350 (versión vigente) Solicitud de Devolución de Pagos en Exceso del ISR Anual",
+    "titulo": "Formulario Electrónico SAT-2350 (versión vigente) Solicitud de Devolución de Pagos en Exceso del Impuesto Sobre la Renta (ISR) Anual",
     "macro_grupo": {
       "id": "contribuyentes",
       "nombre": "Contribuyentes"
@@ -9626,7 +9626,7 @@
   {
     "_id": "contribuyentes-49",
     "codigo": "SAT-TR-0396",
-    "titulo": "Devolución o Compensación de ISR Opcional Mensual, SAT-1311",
+    "titulo": "Devolución o Compensación del Impuesto Sobre la Renta (ISR) Opcional Mensual, SAT-1311",
     "macro_grupo": {
       "id": "contribuyentes",
       "nombre": "Contribuyentes"
@@ -9650,7 +9650,7 @@
   {
     "_id": "contribuyentes-50",
     "codigo": "SAT-TR-0397",
-    "titulo": "Devolución o Compensación de Retenciones de ISR Retenido a Personas Residentes y no Residentes con Establecimiento Prmanente SAT-1331",
+    "titulo": "Devolución o Compensación de Retenciones del Impuesto Sobre la Renta (ISR) Retenido a Personas Residentes y no Residentes con Establecimiento Prmanente SAT-1331",
     "macro_grupo": {
       "id": "contribuyentes",
       "nombre": "Contribuyentes"
@@ -9674,7 +9674,7 @@
   {
     "_id": "contribuyentes-51",
     "codigo": "SAT-TR-0398",
-    "titulo": "Devolución o Compensación de Retenciones de ISR Retenido a Personas Residentes y no Residentes sin Establecimiento Permanente SAT-1352",
+    "titulo": "Devolución o Compensación de Retenciones del Impuesto Sobre la Renta (ISR) Retenido a Personas Residentes y no Residentes sin Establecimiento Permanente SAT-1352",
     "macro_grupo": {
       "id": "contribuyentes",
       "nombre": "Contribuyentes"
@@ -9698,7 +9698,7 @@
   {
     "_id": "contribuyentes-52",
     "codigo": "SAT-TR-0399",
-    "titulo": "Devolución de Retenciones de ISR por Repartición de Utilidades o Dividendos",
+    "titulo": "Devolución de Retenciones del Impuesto Sobre la Renta (ISR) por Repartición de Utilidades o Dividendos",
     "macro_grupo": {
       "id": "contribuyentes",
       "nombre": "Contribuyentes"
@@ -9722,7 +9722,7 @@
   {
     "_id": "contribuyentes-53",
     "codigo": "SAT-TR-0400",
-    "titulo": "Devolución o Compensación de ISR Trimestral, SAT-1361",
+    "titulo": "Devolución o Compensación del Impuesto Sobre la Renta (ISR) Trimestral, SAT-1361",
     "macro_grupo": {
       "id": "contribuyentes",
       "nombre": "Contribuyentes"
@@ -9746,7 +9746,7 @@
   {
     "_id": "contribuyentes-54",
     "codigo": "SAT-TR-0401",
-    "titulo": "Devolución o Compensación de IVA Facturas Especiales, SAT-2085",
+    "titulo": "Devolución o Compensación del Impuesto al Valor Agregado (IVA) Facturas Especiales, SAT-2085",
     "macro_grupo": {
       "id": "contribuyentes",
       "nombre": "Contribuyentes"
@@ -9794,7 +9794,7 @@
   {
     "_id": "contribuyentes-56",
     "codigo": "SAT-TR-0403",
-    "titulo": "Acreditamiento en Cuenta de Remanente de Retenciones de IVA",
+    "titulo": "Acreditamiento en Cuenta de Remanente de Retenciones del Impuesto al Valor Agregado (IVA)",
     "macro_grupo": {
       "id": "contribuyentes",
       "nombre": "Contribuyentes"
@@ -10394,7 +10394,7 @@
   {
     "_id": "contribuyentes-104",
     "codigo": "SAT-TR-0428",
-    "titulo": "Régimen General del IVA",
+    "titulo": "Régimen General del Impuesto al Valor Agregado (IVA)",
     "macro_grupo": {
       "id": "contribuyentes",
       "nombre": "Contribuyentes"
@@ -10418,7 +10418,7 @@
   {
     "_id": "contribuyentes-105",
     "codigo": "SAT-TR-0429",
-    "titulo": "Principales errores e inconsistencias detectadas en la declaración mensual del IVA, régimen general",
+    "titulo": "Principales errores e inconsistencias detectadas en la declaración mensual del Impuesto al Valor Agregado (IVA), régimen general",
     "macro_grupo": {
       "id": "contribuyentes",
       "nombre": "Contribuyentes"
@@ -10442,7 +10442,7 @@
   {
     "_id": "contribuyentes-106",
     "codigo": "SAT-TR-0430",
-    "titulo": "Régimen general del IVA (Principales obligaciones tributarias)",
+    "titulo": "Régimen general del Impuesto al Valor Agregado (IVA) (Principales obligaciones tributarias)",
     "macro_grupo": {
       "id": "contribuyentes",
       "nombre": "Contribuyentes"
@@ -10490,7 +10490,7 @@
   {
     "_id": "contribuyentes-113",
     "codigo": "SAT-TR-0432",
-    "titulo": "Solicitud de Inscripción como Agente de Retención del IVA",
+    "titulo": "Solicitud de Inscripción como Agente de Retención del Impuesto al Valor Agregado (IVA)",
     "macro_grupo": {
       "id": "contribuyentes",
       "nombre": "Contribuyentes"
@@ -10538,7 +10538,7 @@
   {
     "_id": "contribuyentes-122",
     "codigo": "SAT-TR-0434",
-    "titulo": "Llenado del formulario de declaración anual del ISR, para contribuyentes que desarrollan actividades de transporte aéreo internacional",
+    "titulo": "Llenado del formulario de declaración anual del Impuesto Sobre la Renta (ISR), para contribuyentes que desarrollan actividades de transporte aéreo internacional",
     "macro_grupo": {
       "id": "contribuyentes",
       "nombre": "Contribuyentes"
@@ -10682,7 +10682,7 @@
   {
     "_id": "contribuyentes-117",
     "codigo": "SAT-TR-0440",
-    "titulo": "Agentes de Retención IVA",
+    "titulo": "Agentes de Retención del Impuesto al Valor Agregado (IVA)",
     "macro_grupo": {
       "id": "contribuyentes",
       "nombre": "Contribuyentes"
@@ -10706,7 +10706,7 @@
   {
     "_id": "contribuyentes-118",
     "codigo": "SAT-TR-0441",
-    "titulo": "Sistema Retenciones Web -ISR-",
+    "titulo": "Sistema Retenciones Web (ISR)",
     "macro_grupo": {
       "id": "contribuyentes",
       "nombre": "Contribuyentes"
@@ -10754,7 +10754,7 @@
   {
     "_id": "contribuyentes-109",
     "codigo": "SAT-TR-0443",
-    "titulo": "Agentes de retención del ISR",
+    "titulo": "Agentes de retención del Impuesto Sobre la Renta (ISR)",
     "macro_grupo": {
       "id": "contribuyentes",
       "nombre": "Contribuyentes"
@@ -10861,16 +10861,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -10897,16 +10897,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -10933,16 +10933,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -11017,12 +11017,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "nit-sin-obligaciones",
-        "nombre": "NIT sin Obligaciones"
-      },
-      {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "nit-sin-obligaciones",
+        "nombre": "NIT sin Obligaciones"
       }
     ],
     "categoria_tematica": {
@@ -11049,12 +11049,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "nit-sin-obligaciones",
-        "nombre": "NIT sin Obligaciones"
-      },
-      {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "nit-sin-obligaciones",
+        "nombre": "NIT sin Obligaciones"
       }
     ],
     "categoria_tematica": {
@@ -11081,12 +11081,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "nit-sin-obligaciones",
-        "nombre": "NIT sin Obligaciones"
-      },
-      {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "nit-sin-obligaciones",
+        "nombre": "NIT sin Obligaciones"
       }
     ],
     "categoria_tematica": {
@@ -11113,12 +11113,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "nit-sin-obligaciones",
-        "nombre": "NIT sin Obligaciones"
-      },
-      {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "nit-sin-obligaciones",
+        "nombre": "NIT sin Obligaciones"
       }
     ],
     "categoria_tematica": {
@@ -11145,12 +11145,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "nit-sin-obligaciones",
-        "nombre": "NIT sin Obligaciones"
-      },
-      {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "nit-sin-obligaciones",
+        "nombre": "NIT sin Obligaciones"
       }
     ],
     "categoria_tematica": {
@@ -11177,12 +11177,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "nit-sin-obligaciones",
-        "nombre": "NIT sin Obligaciones"
-      },
-      {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "nit-sin-obligaciones",
+        "nombre": "NIT sin Obligaciones"
       }
     ],
     "categoria_tematica": {
@@ -11233,12 +11233,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "nit-sin-obligaciones",
-        "nombre": "NIT sin Obligaciones"
-      },
-      {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "nit-sin-obligaciones",
+        "nombre": "NIT sin Obligaciones"
       }
     ],
     "categoria_tematica": {
@@ -11265,16 +11265,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -11301,16 +11301,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -11381,16 +11381,16 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
-      },
-      {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
       },
       {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       }
     ],
     "categoria_tematica": {
@@ -11406,7 +11406,7 @@
   {
     "_id": "contribuyentes-219",
     "codigo": "SAT-TR-0465",
-    "titulo": "Planilla IVA- FEL",
+    "titulo": "Planilla del Impuesto al Valor Agregado en Factura Electrónica en Línea (IVA-FEL)",
     "macro_grupo": {
       "id": "contribuyentes",
       "nombre": "Contribuyentes"
@@ -11454,7 +11454,7 @@
   {
     "_id": "contribuyentes-221",
     "codigo": "SAT-TR-0467",
-    "titulo": "Taller: Llenado del formulario SAT 1411 Declaración anual del ISR, Régimen sobre las Utilidades",
+    "titulo": "Taller: Llenado del formulario SAT 1411 Declaración anual del Impuesto Sobre la Renta (ISR), Régimen sobre las Utilidades",
     "macro_grupo": {
       "id": "contribuyentes",
       "nombre": "Contribuyentes"
@@ -11509,16 +11509,16 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
-      },
-      {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
       },
       {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       }
     ],
     "categoria_tematica": {
@@ -11665,12 +11665,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "nit-sin-obligaciones",
-        "nombre": "NIT sin Obligaciones"
-      },
-      {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "nit-sin-obligaciones",
+        "nombre": "NIT sin Obligaciones"
       }
     ],
     "categoria_tematica": {
@@ -11697,16 +11697,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -11733,16 +11733,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -11769,16 +11769,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -11805,16 +11805,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -11841,16 +11841,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -11877,16 +11877,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -11913,16 +11913,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -11949,16 +11949,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -12057,16 +12057,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -12117,16 +12117,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -12153,16 +12153,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -12189,16 +12189,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -12225,16 +12225,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -12261,16 +12261,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -12297,16 +12297,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -12405,12 +12405,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "nit-sin-obligaciones",
-        "nombre": "NIT sin Obligaciones"
-      },
-      {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "nit-sin-obligaciones",
+        "nombre": "NIT sin Obligaciones"
       }
     ],
     "categoria_tematica": {
@@ -12437,12 +12437,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "nit-sin-obligaciones",
-        "nombre": "NIT sin Obligaciones"
-      },
-      {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "nit-sin-obligaciones",
+        "nombre": "NIT sin Obligaciones"
       }
     ],
     "categoria_tematica": {
@@ -12469,12 +12469,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "nit-sin-obligaciones",
-        "nombre": "NIT sin Obligaciones"
-      },
-      {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "nit-sin-obligaciones",
+        "nombre": "NIT sin Obligaciones"
       }
     ],
     "categoria_tematica": {
@@ -12501,16 +12501,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -12537,16 +12537,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -12597,16 +12597,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -12622,7 +12622,7 @@
   {
     "_id": "contribuyentes-138",
     "codigo": "SAT-TR-0505",
-    "titulo": "Consulta CUI / NIT",
+    "titulo": "Consulta de Código Único de Identificación (CUI) / NIT",
     "macro_grupo": {
       "id": "contribuyentes",
       "nombre": "Contribuyentes"
@@ -12646,7 +12646,7 @@
   {
     "_id": "contribuyentes-139",
     "codigo": "SAT-TR-0506",
-    "titulo": "Estado de Gestión de RTU Digital",
+    "titulo": "Estado de Gestión del Registro Tributario Unificado (RTU) Digital",
     "macro_grupo": {
       "id": "contribuyentes",
       "nombre": "Contribuyentes"
@@ -12657,16 +12657,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -12693,16 +12693,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -12718,7 +12718,7 @@
   {
     "_id": "contribuyentes-267",
     "codigo": "SAT-TR-0508",
-    "titulo": "Impresión de RTU",
+    "titulo": "Impresión del Registro Tributario Unificado (RTU)",
     "macro_grupo": {
       "id": "contribuyentes",
       "nombre": "Contribuyentes"
@@ -12729,16 +12729,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -12765,16 +12765,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -12897,16 +12897,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -13029,12 +13029,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "nit-sin-obligaciones",
-        "nombre": "NIT sin Obligaciones"
-      },
-      {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "nit-sin-obligaciones",
+        "nombre": "NIT sin Obligaciones"
       }
     ],
     "categoria_tematica": {
@@ -13061,12 +13061,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "nit-sin-obligaciones",
-        "nombre": "NIT sin Obligaciones"
-      },
-      {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "nit-sin-obligaciones",
+        "nombre": "NIT sin Obligaciones"
       }
     ],
     "categoria_tematica": {
@@ -13082,7 +13082,7 @@
   {
     "_id": "contribuyentes-207",
     "codigo": "SAT-TR-0521",
-    "titulo": "Devolución o Compensación de IVA Compra-Venta de Bienes Inmuebles, SAT-2799",
+    "titulo": "Devolución o Compensación del Impuesto al Valor Agregado (IVA) Compra-Venta de Bienes Inmuebles, SAT-2799",
     "macro_grupo": {
       "id": "contribuyentes",
       "nombre": "Contribuyentes"
@@ -13165,16 +13165,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -13297,16 +13297,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -13333,16 +13333,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -13369,16 +13369,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -13405,16 +13405,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -13441,16 +13441,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -13477,16 +13477,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -13513,16 +13513,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -13549,16 +13549,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -13585,16 +13585,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -13621,16 +13621,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -13657,12 +13657,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "nit-sin-obligaciones",
-        "nombre": "NIT sin Obligaciones"
-      },
-      {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "nit-sin-obligaciones",
+        "nombre": "NIT sin Obligaciones"
       }
     ],
     "categoria_tematica": {
@@ -13689,12 +13689,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "nit-sin-obligaciones",
-        "nombre": "NIT sin Obligaciones"
-      },
-      {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "nit-sin-obligaciones",
+        "nombre": "NIT sin Obligaciones"
       }
     ],
     "categoria_tematica": {
@@ -13745,12 +13745,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "nit-sin-obligaciones",
-        "nombre": "NIT sin Obligaciones"
-      },
-      {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "nit-sin-obligaciones",
+        "nombre": "NIT sin Obligaciones"
       }
     ],
     "categoria_tematica": {
@@ -13777,12 +13777,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "nit-sin-obligaciones",
-        "nombre": "NIT sin Obligaciones"
-      },
-      {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "nit-sin-obligaciones",
+        "nombre": "NIT sin Obligaciones"
       }
     ],
     "categoria_tematica": {
@@ -13809,16 +13809,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -13941,16 +13941,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -13977,16 +13977,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -14013,16 +14013,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -14049,16 +14049,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -14109,16 +14109,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -14145,16 +14145,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -14194,7 +14194,7 @@
   {
     "_id": "contribuyentes-282",
     "codigo": "SAT-TR-0557",
-    "titulo": "Sistema Retenciones Web -IVA-",
+    "titulo": "Sistema Retenciones Web (IVA)",
     "macro_grupo": {
       "id": "contribuyentes",
       "nombre": "Contribuyentes"
@@ -14229,16 +14229,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -14265,16 +14265,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -14301,16 +14301,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -14337,16 +14337,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -14373,16 +14373,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -14433,16 +14433,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -14469,16 +14469,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -14505,16 +14505,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -14541,12 +14541,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "nit-sin-obligaciones",
-        "nombre": "NIT sin Obligaciones"
-      },
-      {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "nit-sin-obligaciones",
+        "nombre": "NIT sin Obligaciones"
       }
     ],
     "categoria_tematica": {
@@ -14573,12 +14573,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "nit-sin-obligaciones",
-        "nombre": "NIT sin Obligaciones"
-      },
-      {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "nit-sin-obligaciones",
+        "nombre": "NIT sin Obligaciones"
       }
     ],
     "categoria_tematica": {
@@ -14677,12 +14677,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "nit-sin-obligaciones",
-        "nombre": "NIT sin Obligaciones"
-      },
-      {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "nit-sin-obligaciones",
+        "nombre": "NIT sin Obligaciones"
       }
     ],
     "categoria_tematica": {
@@ -14733,12 +14733,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "nit-sin-obligaciones",
-        "nombre": "NIT sin Obligaciones"
-      },
-      {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "nit-sin-obligaciones",
+        "nombre": "NIT sin Obligaciones"
       }
     ],
     "categoria_tematica": {
@@ -14813,12 +14813,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "nit-sin-obligaciones",
-        "nombre": "NIT sin Obligaciones"
-      },
-      {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "nit-sin-obligaciones",
+        "nombre": "NIT sin Obligaciones"
       }
     ],
     "categoria_tematica": {
@@ -14858,7 +14858,7 @@
   {
     "_id": "contribuyentes-302",
     "codigo": "SAT-TR-0579",
-    "titulo": "Acuerdo de Directorio 26-2024 que aprueba la Tabla de IVA enajenación",
+    "titulo": "Acuerdo de Directorio 26-2024 que aprueba la Tabla del Impuesto al Valor Agregado (IVA) para enajenación de vehículos",
     "macro_grupo": {
       "id": "contribuyentes",
       "nombre": "Contribuyentes"
@@ -14869,12 +14869,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "nit-sin-obligaciones",
-        "nombre": "NIT sin Obligaciones"
-      },
-      {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "nit-sin-obligaciones",
+        "nombre": "NIT sin Obligaciones"
       }
     ],
     "categoria_tematica": {
@@ -14890,7 +14890,7 @@
   {
     "_id": "contribuyentes-303",
     "codigo": "SAT-TR-0580",
-    "titulo": "Acuerdo de Directorio 25-2024 que aprueba la Tabla ISCV",
+    "titulo": "Acuerdo de Directorio 25-2024 que aprueba la Tabla del Impuesto sobre Circulación de Vehículos (ISCV)",
     "macro_grupo": {
       "id": "contribuyentes",
       "nombre": "Contribuyentes"
@@ -14901,12 +14901,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "nit-sin-obligaciones",
-        "nombre": "NIT sin Obligaciones"
-      },
-      {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "nit-sin-obligaciones",
+        "nombre": "NIT sin Obligaciones"
       }
     ],
     "categoria_tematica": {
@@ -14922,7 +14922,7 @@
   {
     "_id": "contribuyentes-306",
     "codigo": "SAT-TR-0581",
-    "titulo": "IVA-IPRIMA para Vehículos Usados",
+    "titulo": "Impuesto al Valor Agregado e Impuesto a la Primera Matrícula (IVA-IPRIMA) para Vehículos Usados",
     "macro_grupo": {
       "id": "contribuyentes",
       "nombre": "Contribuyentes"
@@ -14933,12 +14933,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "nit-sin-obligaciones",
-        "nombre": "NIT sin Obligaciones"
-      },
-      {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "nit-sin-obligaciones",
+        "nombre": "NIT sin Obligaciones"
       }
     ],
     "categoria_tematica": {
@@ -14954,7 +14954,7 @@
   {
     "_id": "contribuyentes-307",
     "codigo": "SAT-TR-0582",
-    "titulo": "Requisitos para dejar sin efecto anotación por Convenio de Pago ISCV",
+    "titulo": "Requisitos para dejar sin efecto anotación por Convenio de Pago del Impuesto sobre Circulación de Vehículos (ISCV)",
     "macro_grupo": {
       "id": "contribuyentes",
       "nombre": "Contribuyentes"
@@ -14965,12 +14965,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "nit-sin-obligaciones",
-        "nombre": "NIT sin Obligaciones"
-      },
-      {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "nit-sin-obligaciones",
+        "nombre": "NIT sin Obligaciones"
       }
     ],
     "categoria_tematica": {
@@ -14986,7 +14986,7 @@
   {
     "_id": "contribuyentes-308",
     "codigo": "SAT-TR-0583",
-    "titulo": "Tabla de Valores ISCV e IVA Enajenación 2025",
+    "titulo": "Tabla de Valores del Impuesto sobre Circulación de Vehículos (ISCV) e Impuesto al Valor Agregado (IVA) Enajenación 2025",
     "macro_grupo": {
       "id": "contribuyentes",
       "nombre": "Contribuyentes"
@@ -14997,12 +14997,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "nit-sin-obligaciones",
-        "nombre": "NIT sin Obligaciones"
-      },
-      {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "nit-sin-obligaciones",
+        "nombre": "NIT sin Obligaciones"
       }
     ],
     "categoria_tematica": {
@@ -15029,12 +15029,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "nit-sin-obligaciones",
-        "nombre": "NIT sin Obligaciones"
-      },
-      {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "nit-sin-obligaciones",
+        "nombre": "NIT sin Obligaciones"
       }
     ],
     "categoria_tematica": {
@@ -15061,12 +15061,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "nit-sin-obligaciones",
-        "nombre": "NIT sin Obligaciones"
-      },
-      {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "nit-sin-obligaciones",
+        "nombre": "NIT sin Obligaciones"
       }
     ],
     "categoria_tematica": {
@@ -15082,7 +15082,7 @@
   {
     "_id": "contribuyentes-319",
     "codigo": "SAT-TR-0586",
-    "titulo": "Uso Comercial no Inscrito IVA: Propietarios de Vehículos con placas de uso Empresarial\r\nNo Inscritos como Contribuyentes de IVA y de otros Impuestos",
+    "titulo": "Uso Comercial no Inscrito en IVA: Propietarios de Vehículos con placas de uso Empresarial no Inscritos en el Impuesto al Valor Agregado (IVA)",
     "macro_grupo": {
       "id": "contribuyentes",
       "nombre": "Contribuyentes"
@@ -15093,12 +15093,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "nit-sin-obligaciones",
-        "nombre": "NIT sin Obligaciones"
-      },
-      {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "nit-sin-obligaciones",
+        "nombre": "NIT sin Obligaciones"
       }
     ],
     "categoria_tematica": {
@@ -15125,12 +15125,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "nit-sin-obligaciones",
-        "nombre": "NIT sin Obligaciones"
-      },
-      {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "nit-sin-obligaciones",
+        "nombre": "NIT sin Obligaciones"
       }
     ],
     "categoria_tematica": {
@@ -15181,12 +15181,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "nit-sin-obligaciones",
-        "nombre": "NIT sin Obligaciones"
-      },
-      {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "nit-sin-obligaciones",
+        "nombre": "NIT sin Obligaciones"
       }
     ],
     "categoria_tematica": {
@@ -15333,12 +15333,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "nit-sin-obligaciones",
-        "nombre": "NIT sin Obligaciones"
-      },
-      {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "nit-sin-obligaciones",
+        "nombre": "NIT sin Obligaciones"
       }
     ],
     "categoria_tematica": {
@@ -15365,12 +15365,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "nit-sin-obligaciones",
-        "nombre": "NIT sin Obligaciones"
-      },
-      {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "nit-sin-obligaciones",
+        "nombre": "NIT sin Obligaciones"
       }
     ],
     "categoria_tematica": {
@@ -15397,12 +15397,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "nit-sin-obligaciones",
-        "nombre": "NIT sin Obligaciones"
-      },
-      {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "nit-sin-obligaciones",
+        "nombre": "NIT sin Obligaciones"
       }
     ],
     "categoria_tematica": {
@@ -15429,12 +15429,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "nit-sin-obligaciones",
-        "nombre": "NIT sin Obligaciones"
-      },
-      {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "nit-sin-obligaciones",
+        "nombre": "NIT sin Obligaciones"
       }
     ],
     "categoria_tematica": {
@@ -15461,12 +15461,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "nit-sin-obligaciones",
-        "nombre": "NIT sin Obligaciones"
-      },
-      {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "nit-sin-obligaciones",
+        "nombre": "NIT sin Obligaciones"
       }
     ],
     "categoria_tematica": {
@@ -15493,12 +15493,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "nit-sin-obligaciones",
-        "nombre": "NIT sin Obligaciones"
-      },
-      {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "nit-sin-obligaciones",
+        "nombre": "NIT sin Obligaciones"
       }
     ],
     "categoria_tematica": {
@@ -15525,12 +15525,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "nit-sin-obligaciones",
-        "nombre": "NIT sin Obligaciones"
-      },
-      {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "nit-sin-obligaciones",
+        "nombre": "NIT sin Obligaciones"
       }
     ],
     "categoria_tematica": {
@@ -15546,7 +15546,7 @@
   {
     "_id": "contribuyentes-340",
     "codigo": "SAT-TR-0602",
-    "titulo": "Requisitos para remitir documentación electrónica o digital de TEV",
+    "titulo": "Requisitos para remitir documentación electrónica o digital de Traspaso Electrónico de Vehículos (TEV)",
     "macro_grupo": {
       "id": "contribuyentes",
       "nombre": "Contribuyentes"
@@ -15557,12 +15557,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "nit-sin-obligaciones",
-        "nombre": "NIT sin Obligaciones"
-      },
-      {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "nit-sin-obligaciones",
+        "nombre": "NIT sin Obligaciones"
       }
     ],
     "categoria_tematica": {
@@ -15589,12 +15589,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "nit-sin-obligaciones",
-        "nombre": "NIT sin Obligaciones"
-      },
-      {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "nit-sin-obligaciones",
+        "nombre": "NIT sin Obligaciones"
       }
     ],
     "categoria_tematica": {
@@ -15621,12 +15621,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "nit-sin-obligaciones",
-        "nombre": "NIT sin Obligaciones"
-      },
-      {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "nit-sin-obligaciones",
+        "nombre": "NIT sin Obligaciones"
       }
     ],
     "categoria_tematica": {
@@ -15653,12 +15653,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "nit-sin-obligaciones",
-        "nombre": "NIT sin Obligaciones"
-      },
-      {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "nit-sin-obligaciones",
+        "nombre": "NIT sin Obligaciones"
       }
     ],
     "categoria_tematica": {
@@ -15685,12 +15685,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "nit-sin-obligaciones",
-        "nombre": "NIT sin Obligaciones"
-      },
-      {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "nit-sin-obligaciones",
+        "nombre": "NIT sin Obligaciones"
       }
     ],
     "categoria_tematica": {
@@ -15717,12 +15717,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "nit-sin-obligaciones",
-        "nombre": "NIT sin Obligaciones"
-      },
-      {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "nit-sin-obligaciones",
+        "nombre": "NIT sin Obligaciones"
       }
     ],
     "categoria_tematica": {
@@ -15749,12 +15749,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "nit-sin-obligaciones",
-        "nombre": "NIT sin Obligaciones"
-      },
-      {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "nit-sin-obligaciones",
+        "nombre": "NIT sin Obligaciones"
       }
     ],
     "categoria_tematica": {
@@ -15781,12 +15781,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "nit-sin-obligaciones",
-        "nombre": "NIT sin Obligaciones"
-      },
-      {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "nit-sin-obligaciones",
+        "nombre": "NIT sin Obligaciones"
       }
     ],
     "categoria_tematica": {
@@ -15813,12 +15813,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "nit-sin-obligaciones",
-        "nombre": "NIT sin Obligaciones"
-      },
-      {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "nit-sin-obligaciones",
+        "nombre": "NIT sin Obligaciones"
       }
     ],
     "categoria_tematica": {
@@ -15845,12 +15845,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "nit-sin-obligaciones",
-        "nombre": "NIT sin Obligaciones"
-      },
-      {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "nit-sin-obligaciones",
+        "nombre": "NIT sin Obligaciones"
       }
     ],
     "categoria_tematica": {
@@ -15877,12 +15877,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "nit-sin-obligaciones",
-        "nombre": "NIT sin Obligaciones"
-      },
-      {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "nit-sin-obligaciones",
+        "nombre": "NIT sin Obligaciones"
       }
     ],
     "categoria_tematica": {
@@ -15909,12 +15909,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "nit-sin-obligaciones",
-        "nombre": "NIT sin Obligaciones"
-      },
-      {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "nit-sin-obligaciones",
+        "nombre": "NIT sin Obligaciones"
       }
     ],
     "categoria_tematica": {
@@ -15941,12 +15941,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "nit-sin-obligaciones",
-        "nombre": "NIT sin Obligaciones"
-      },
-      {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "nit-sin-obligaciones",
+        "nombre": "NIT sin Obligaciones"
       }
     ],
     "categoria_tematica": {
@@ -15973,12 +15973,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "nit-sin-obligaciones",
-        "nombre": "NIT sin Obligaciones"
-      },
-      {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "nit-sin-obligaciones",
+        "nombre": "NIT sin Obligaciones"
       }
     ],
     "categoria_tematica": {
@@ -16005,16 +16005,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -16041,16 +16041,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -16077,16 +16077,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -16113,16 +16113,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -16138,16 +16138,12 @@
   {
     "_id": "contribuyentes-155",
     "codigo": "SAT-TR-0620",
-    "titulo": "Sistema de Libros Electrónicos Tributarios -LET-",
+    "titulo": "Sistema de Libros Electrónicos Tributarios (LET)",
     "macro_grupo": {
       "id": "contribuyentes",
       "nombre": "Contribuyentes"
     },
     "regimenes_aplicables": [
-      {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
-      },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
@@ -16155,6 +16151,10 @@
       {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       }
     ],
     "categoria_tematica": {
@@ -16177,16 +16177,16 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
-      },
-      {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
       },
       {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       }
     ],
     "categoria_tematica": {
@@ -16209,16 +16209,16 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
-      },
-      {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
       },
       {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       }
     ],
     "categoria_tematica": {
@@ -16241,16 +16241,16 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
-      },
-      {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
       },
       {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       }
     ],
     "categoria_tematica": {
@@ -16273,16 +16273,16 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
-      },
-      {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
       },
       {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       }
     ],
     "categoria_tematica": {
@@ -16305,16 +16305,16 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
-      },
-      {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
       },
       {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       }
     ],
     "categoria_tematica": {
@@ -16337,16 +16337,16 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
-      },
-      {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
       },
       {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       }
     ],
     "categoria_tematica": {
@@ -16369,16 +16369,16 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
-      },
-      {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
       },
       {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       }
     ],
     "categoria_tematica": {
@@ -16401,16 +16401,16 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
-      },
-      {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
       },
       {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       }
     ],
     "categoria_tematica": {
@@ -16433,16 +16433,16 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
-      },
-      {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
       },
       {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       }
     ],
     "categoria_tematica": {
@@ -16602,7 +16602,7 @@
   {
     "_id": "contribuyentes-171",
     "codigo": "SAT-TR-0636",
-    "titulo": "Generalidades del IVA",
+    "titulo": "Generalidades del Impuesto al Valor Agregado (IVA)",
     "macro_grupo": {
       "id": "contribuyentes",
       "nombre": "Contribuyentes"
@@ -16770,7 +16770,7 @@
   {
     "_id": "contribuyentes-178",
     "codigo": "SAT-TR-0643",
-    "titulo": "Regímenes Especiales del IVA",
+    "titulo": "Regímenes Especiales del Impuesto al Valor Agregado (IVA)",
     "macro_grupo": {
       "id": "contribuyentes",
       "nombre": "Contribuyentes"
@@ -16877,16 +16877,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -16902,7 +16902,7 @@
   {
     "_id": "contribuyentes-183",
     "codigo": "SAT-TR-0648",
-    "titulo": "Gestiones ante la SAT de las Organizaciones de Padres de Familia -OPF-",
+    "titulo": "Gestiones ante la SAT de las Organizaciones de Padres de Familia (OPF)",
     "macro_grupo": {
       "id": "contribuyentes",
       "nombre": "Contribuyentes"
@@ -16913,16 +16913,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -17165,16 +17165,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -17190,7 +17190,7 @@
   {
     "_id": "contribuyentes-194",
     "codigo": "SAT-TR-0659",
-    "titulo": "Núcleos de Apoyo Contable y Fiscal -NAF-",
+    "titulo": "Núcleos de Apoyo Contable y Fiscal (NAF)",
     "macro_grupo": {
       "id": "contribuyentes",
       "nombre": "Contribuyentes"
@@ -17201,16 +17201,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -17250,16 +17250,12 @@
   {
     "_id": "contribuyentes-217",
     "codigo": "SAT-TR-0661",
-    "titulo": "Factura Electrónica en Línea -FEL-",
+    "titulo": "Factura Electrónica en Línea (FEL)",
     "macro_grupo": {
       "id": "contribuyentes",
       "nombre": "Contribuyentes"
     },
     "regimenes_aplicables": [
-      {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
-      },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
@@ -17267,6 +17263,10 @@
       {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       }
     ],
     "categoria_tematica": {
@@ -17365,12 +17365,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "nit-sin-obligaciones",
-        "nombre": "NIT sin Obligaciones"
-      },
-      {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "nit-sin-obligaciones",
+        "nombre": "NIT sin Obligaciones"
       }
     ],
     "categoria_tematica": {
@@ -17386,7 +17386,7 @@
   {
     "_id": "contribuyentes-veh-iprima-tabla-valores",
     "codigo": "SAT-TR-0666",
-    "titulo": "Acuerdo que aprueba la tabla de IPRIMA de vehículos usados",
+    "titulo": "Acuerdo que aprueba la tabla del Impuesto a la Primera Matrícula (IPRIMA) de vehículos usados",
     "macro_grupo": {
       "id": "contribuyentes",
       "nombre": "Contribuyentes"
@@ -17397,12 +17397,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "nit-sin-obligaciones",
-        "nombre": "NIT sin Obligaciones"
-      },
-      {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "nit-sin-obligaciones",
+        "nombre": "NIT sin Obligaciones"
       }
     ],
     "categoria_tematica": {
@@ -17429,12 +17429,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "nit-sin-obligaciones",
-        "nombre": "NIT sin Obligaciones"
-      },
-      {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "nit-sin-obligaciones",
+        "nombre": "NIT sin Obligaciones"
       }
     ],
     "categoria_tematica": {
@@ -17461,12 +17461,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "nit-sin-obligaciones",
-        "nombre": "NIT sin Obligaciones"
-      },
-      {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "nit-sin-obligaciones",
+        "nombre": "NIT sin Obligaciones"
       }
     ],
     "categoria_tematica": {
@@ -17493,12 +17493,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "nit-sin-obligaciones",
-        "nombre": "NIT sin Obligaciones"
-      },
-      {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "nit-sin-obligaciones",
+        "nombre": "NIT sin Obligaciones"
       }
     ],
     "categoria_tematica": {
@@ -17525,12 +17525,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "nit-sin-obligaciones",
-        "nombre": "NIT sin Obligaciones"
-      },
-      {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "nit-sin-obligaciones",
+        "nombre": "NIT sin Obligaciones"
       }
     ],
     "categoria_tematica": {
@@ -17557,12 +17557,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "nit-sin-obligaciones",
-        "nombre": "NIT sin Obligaciones"
-      },
-      {
         "id": "contribuyente-general",
         "nombre": "Contribuyente General"
+      },
+      {
+        "id": "nit-sin-obligaciones",
+        "nombre": "NIT sin Obligaciones"
       }
     ],
     "categoria_tematica": {
@@ -17589,16 +17589,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -17625,16 +17625,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -17698,7 +17698,7 @@
   {
     "_id": "contribuyentes-rtu-tercera-persona",
     "codigo": "SAT-TR-0676",
-    "titulo": "Autorizar a otra persona para gestiones del RTU",
+    "titulo": "Autorizar a otra persona para gestiones del Registro Tributario Unificado (RTU)",
     "macro_grupo": {
       "id": "contribuyentes",
       "nombre": "Contribuyentes"
@@ -17709,16 +17709,16 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
+      },
+      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
         "id": "contribuyentes-especiales",
         "nombre": "Contribuyentes Especiales"
-      },
-      {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
