@@ -214,44 +214,75 @@ export const GRUPOS_CONFIG: GrupoInfo[] = [
     ]
   },
 
-  // Profesionales
+  // Profesionales (Nivel 2 — 3 Segmentos Oficiales)
   {
     no: 7,
-    nombre: 'Profesionales y Terceras Personas',
-    cantidadTemas: 45,
+    nombre: 'Peritos Contadores y Auditores',
+    cantidadTemas: 15,
     pillar: 'profesionales',
-    desc: 'Habilitación y gestiones para abogados y notarios, peritos contadores, auditores (CPA), gestores tributarios y servicios profesionales.',
+    desc: 'Inscripción, habilitación y gestiones para el ejercicio contable, auditoría y dictámenes fiscales.',
     subgrupos: [
-      { nombre: 'Abogados y Notarios', cantidadTemas: 17, desc: 'Papel Sellado de Protocolos, timbres fiscales, traspasos electrónicos (TEV) y avisos notariales obligatorios.' },
       { nombre: 'Peritos Contadores', cantidadTemas: 11, desc: 'Inscripción en RTU, habilitación en Agencia Virtual, Libro Electrónico Tributario (LET) y retenciones.' },
-      { nombre: 'Gestores Tributarios', cantidadTemas: 8, desc: 'Acreditación oficial, requisitos de carné, renovación de gafetes y verificación en línea.' },
-      { nombre: 'Servicios Profesionales', cantidadTemas: 5, desc: 'Facturación de honorarios, retenciones en la fuente, consultas jurídicas y actualización.' },
       { nombre: 'Auditores', cantidadTemas: 4, desc: 'Habilitación de Contadores Públicos y Auditores (CPA) y dictámenes de crédito fiscal.' }
     ]
   },
-
-  // Entes Exentos
   {
-    no: 6,
-    nombre: 'Exentos',
-    cantidadTemas: 53,
-    pillar: 'entes_exentos',
-    desc: 'Entidades exentas constitucionales, no lucrativas, por decreto de fomento y corporaciones municipales.',
+    no: 8,
+    nombre: 'Abogados y Notarios',
+    cantidadTemas: 20,
+    pillar: 'profesionales',
+    desc: 'Servicios tributarios para formalización legal, traspasos notariales y representación jurídica.',
     subgrupos: [
-      { nombre: 'Constitucionales', cantidadTemas: 18, desc: 'Centros educativos, universidades privadas y entidades de la Iglesia Católica.' },
-      { nombre: 'Decreto', cantidadTemas: 16, desc: 'Entidades y proyectos beneficiarios de leyes especiales de fomento y cooperativas.' },
-      { nombre: 'No Lucrativos', cantidadTemas: 14, desc: 'Fundaciones, asociaciones benéficas, ONGs, OPF y sindicatos.' },
-      { nombre: 'Municipalidades', cantidadTemas: 5, desc: 'Gobiernos locales, exenciones del IVA (CIVA) y patrimonio municipal.' }
+      { nombre: 'Papel Sellado y Protocolo', cantidadTemas: 8, desc: 'Adquisición de Papel Sellado Especial para Protocolos, timbres fiscales y razón electrónica.' },
+      { nombre: 'Traspasos Electrónicos (TEV)', cantidadTemas: 6, desc: 'Habilitación notarial para Traspaso Electrónico de Vehículos y avisos de legalización.' },
+      { nombre: 'Gestiones Notariales y RTU', cantidadTemas: 6, desc: 'Inscripción, ratificación anual y plazos de obligaciones notariales ante la SAT.' }
     ]
   },
   {
     no: 9,
-    nombre: 'Entidades del Estado',
-    cantidadTemas: 26,
-    pillar: 'entes_exentos',
-    desc: 'Ministerios, dependencias del Estado, Organismo Judicial, Ministerio Público y SENABED.',
+    nombre: 'Gestores Tributarios y Servicios Profesionales',
+    cantidadTemas: 14,
+    pillar: 'profesionales',
+    desc: 'Acreditación de gestores tributarios autorizados y obligaciones de profesionales independientes.',
     subgrupos: [
-      { nombre: 'Entidades del Estado', cantidadTemas: 26, desc: 'Acreditación en RTU estatal, gestión vehicular oficial, exenciones y órdenes de autoridad judicial.' }
+      { nombre: 'Gestores Tributarios', cantidadTemas: 8, desc: 'Acreditación oficial, requisitos de carné, renovación de gafetes y verificación en línea.' },
+      { nombre: 'Servicios Profesionales', cantidadTemas: 6, desc: 'Facturación de honorarios, retenciones en la fuente, consultas vinculantes y regularización.' }
+    ]
+  },
+
+  // Entes Exentos (Nivel 2 — 3 Segmentos Oficiales)
+  {
+    no: 10,
+    nombre: 'Sector Público y Entidades del Estado',
+    cantidadTemas: 31,
+    pillar: 'entes_exentos',
+    desc: 'Gestiones tributarias, retenciones oficiales y registros de dependencias estatales y municipalidades.',
+    subgrupos: [
+      { nombre: 'Entidades del Estado', cantidadTemas: 26, desc: 'Acreditación en RTU estatal, gestión vehicular oficial, exenciones y órdenes de autoridad judicial.' },
+      { nombre: 'Municipalidades', cantidadTemas: 5, desc: 'Gobiernos locales, exenciones del IVA (CIVA), vehículos oficiales y patrimonio municipal.' }
+    ]
+  },
+  {
+    no: 11,
+    nombre: 'Organizaciones No Gubernamentales y Asociaciones No Lucrativas',
+    cantidadTemas: 30,
+    pillar: 'entes_exentos',
+    desc: 'Acreditación de exención, solvencias y obligaciones formales para beneficio social y comunitario.',
+    subgrupos: [
+      { nombre: 'No Lucrativos', cantidadTemas: 14, desc: 'Fundaciones, asociaciones benéficas, ONGs, OPF y organizaciones sindicales.' },
+      { nombre: 'Decreto y Cooperativas', cantidadTemas: 16, desc: 'Cooperativas, comités cívicos, partidos políticos y proyectos con leyes de fomento.' }
+    ]
+  },
+  {
+    no: 12,
+    nombre: 'Centros Educativos, Religiosos y Organismos Internacionales',
+    cantidadTemas: 18,
+    pillar: 'entes_exentos',
+    desc: 'Gestiones y constancias amparadas por mandato constitucional y convenios internacionales.',
+    subgrupos: [
+      { nombre: 'Centros Educativos y Universidades', cantidadTemas: 7, desc: 'Inscripción y actualización de colegios, escuelas y universidades privadas.' },
+      { nombre: 'Entidades Religiosas', cantidadTemas: 5, desc: 'Inscripción y acreditación de personerías de la Iglesia Católica y entidades conexas.' },
+      { nombre: 'Organismos y Misiones Diplomáticas', cantidadTemas: 6, desc: 'Embajadas, organismos internacionales, diplomáticos y federaciones deportivas (CDAG).' }
     ]
   }
 ];

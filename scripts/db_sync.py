@@ -257,7 +257,7 @@ def build_database():
             }
 
         t_id = t.get("id") or f"sat-tr-{idx:04d}"
-        raw_titulo = t.get("nombreActual") or t.get("tramite") or f"Trámite {idx}"
+        raw_titulo = t.get("tramite") or t.get("nombreActual") or f"Trámite {idx}"
         titulo = clean_title(raw_titulo)
 
         mg_id = determine_macro_grupo_id(t)
