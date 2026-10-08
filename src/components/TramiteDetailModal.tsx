@@ -17,28 +17,7 @@ import {
 } from 'lucide-react';
 import { Button } from './ui/Button';
 import { Modal } from './ui/Modal';
-
-interface TramiteItem {
-  id: string;
-  pillar: string;
-  pillarName: string;
-  categoria: string;
-  subcategoria: string;
-  tema?: string;
-  subtema?: string;
-  nombreActual?: string;
-  tramite: string;
-  descripcion: string;
-  perfilDestinatario?: string;
-  impactoOImportancia?: string;
-  seccionActual?: string;
-  url: string;
-  nota?: string;
-  baseLegal?: string;
-  formulario?: string;
-  requisitos?: string[];
-  pasos?: string[];
-}
+import type { TramiteItem } from '../data/schema';
 
 interface TramiteDetailModalProps {
   tramite: TramiteItem | null;

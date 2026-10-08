@@ -18,17 +18,18 @@ import {
   Menu as MenuIcon
 } from 'lucide-react';
 import { SatIsologotipo } from './SatIsologotipo';
+import type { TramiteItem, ProcesoGuiado } from '../data/schema';
 
 interface HeaderProps {
   onGoHome: () => void;
   onGoStyleGuide?: () => void;
   searchQuery: string;
   onSearchChange: (q: string) => void;
-  onSelectTramite: (tramite: any) => void;
-  onSelectProceso: (proceso: any) => void;
+  onSelectTramite: (tramite: TramiteItem) => void;
+  onSelectProceso: (proceso: ProcesoGuiado) => void;
   onOpenAccessibility: () => void;
-  allTramites: any[];
-  allProcesos: any[];
+  allTramites: TramiteItem[];
+  allProcesos: ProcesoGuiado[];
 }
 
 const FORMACION_ITEMS = [

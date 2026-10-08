@@ -12,27 +12,7 @@ import {
   Sparkles
 } from 'lucide-react';
 import { Modal } from './ui/Modal';
-
-interface PasoItem {
-  numero: number;
-  accion: string;
-  pagina: string;
-  ubicacion: string;
-  url: string;
-}
-
-interface ProcesoGuiado {
-  no: number;
-  nombre: string;
-  audiencia: string;
-  etapa: string;
-  paraQuien: string;
-  categorias: string;
-  totalPasos: number;
-  totalPaginas: number;
-  rutaPasosResumen: string[];
-  pasos: PasoItem[];
-}
+import type { ProcesoGuiado, ProcesoPaso as PasoItem } from '../data/schema';
 
 interface GuidedProcessModalProps {
   proceso: ProcesoGuiado | null;
@@ -57,7 +37,7 @@ export const GuidedProcessModal: React.FC<GuidedProcessModalProps> = ({
   };
 
   const progressPercent = Math.round(
-    (Object.values(completedSteps).filter(Boolean).length / Math.max(1, proceso.totalPasos)) * 100
+    (Object.values(completedSteps).filter(Boolean).length / Math.max(1, proceso.totalPasos ?? (proceso.pasos?.length ?? 1))) * 100
   );
 
   return (
@@ -115,11 +95,11 @@ export const GuidedProcessModal: React.FC<GuidedProcessModalProps> = ({
         {/* Steps List */}
         <div className="p-6 overflow-y-auto space-y-4">
           <div className="text-xs font-bold text-slate-500 uppercase tracking-wider">
-            Ruta oficial de {proceso.totalPasos} pasos recomendados por la SAT:
+            Ruta oficial de {proceso.totalPasos ?? proceso.pasos?.length ?? 0} pasos recomendados por la SAT:
           </div>
 
           <div className="space-y-3">
-            {proceso.pasos.map((paso, idx) => {
+            {(proceso.pasos ?? []).map((paso, idx) => {
               const isDone = !!completedSteps[paso.numero];
 
               return (

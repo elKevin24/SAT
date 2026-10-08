@@ -238,10 +238,19 @@ const NodeLevel4Component = ({ data }: NodeProps) => {
 // Nivel 5 — Trámite / Servicio (con Característica ATO visible)
 const NodeLevel5TramiteComponent = ({ data }: NodeProps) => {
   const atoStyle = ATO_FEATURE_META[data.etapaAto as string] || ATO_FEATURE_META.empezar;
+  const handleInspect = () => {
+    if (typeof data.onInspect === 'function') data.onInspect();
+  };
   return (
     <div
-      onClick={() => {
-        if (typeof data.onInspect === 'function') data.onInspect();
+      role="button"
+      tabIndex={0}
+      onClick={handleInspect}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          handleInspect();
+        }
       }}
       className="w-80 bg-white border border-slate-300 rounded-xl p-3.5 shadow-xs space-y-2 hover:border-sky-500 hover:shadow-md transition-all cursor-pointer group"
     >
@@ -797,7 +806,7 @@ export const PortalFlowPage: React.FC = () => {
           <div className="h-6 w-px bg-white/20 hidden sm:block" />
 
           <div className="flex items-center gap-2">
-            <SatIsologotipo variant="dark" />
+            <SatIsologotipo variant="oscuro" />
             <div className="hidden md:block">
               <span className="text-[10px] text-sat-celeste font-bold uppercase tracking-wider block leading-none">
                 República de Guatemala

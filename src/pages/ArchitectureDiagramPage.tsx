@@ -16,6 +16,7 @@ import {
   CheckCircle2
 } from 'lucide-react';
 import rawTramites from '../data/allTramites.json';
+import { OFFICIAL_CATEGORY_ORDER as OFFICIAL_ORDER } from '../data/categoryOrder';
 
 export type PillarKey = 'contribuyentes' | 'comercio_exterior' | 'profesionales' | 'entes_exentos';
 
@@ -72,40 +73,6 @@ const PILLARS: PillarConfig[] = [
     description: 'Información y gestiones tributarias para entidades públicas y organizaciones no lucrativas.'
   }
 ];
-
-const OFFICIAL_ORDER: Record<PillarKey, string[]> = {
-  contribuyentes: [
-    'NIT sin Obligaciones',
-    'Pequeños Contribuyentes',
-    'Contribuyente General',
-    'Contribuyentes Especiales'
-  ],
-  comercio_exterior: [
-    'Importadores',
-    'Exportadores',
-    'Transportistas',
-    'Agentes Aduaneros',
-    'Normativa y Aranceles',
-    'OEA',
-    'Courier',
-    'Almacenes Fiscales'
-  ],
-  profesionales: [
-    'Abogados y Notarios',
-    'Peritos Contadores',
-    'Auditores',
-    'Gestores Tributarios',
-    'Servicios Profesionales'
-  ],
-  entes_exentos: [
-    'Entidades del Estado',
-    'Constitucionales',
-    'No Lucrativos',
-    'Municipalidades',
-    'Decreto',
-    'ZOLIC'
-  ]
-};
 
 const OFFICIAL_SUBCATEGORY_PRIORITY: Record<string, string[]> = {
   'NIT sin Obligaciones': [

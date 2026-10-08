@@ -1,4 +1,7 @@
 import rawMasterData from './allTramites.json';
+import type { EtapaAtoId, TipoInteraccionId, TipologiaContenidoId } from './schema';
+
+export type { EtapaAtoId, TipoInteraccionId, TipologiaContenidoId } from './schema';
 
 export type MacrogrupoId = 
   | 'contribuyentes'
@@ -7,27 +10,6 @@ export type MacrogrupoId =
   | 'entes_exentos';
 
 export type GrupoOficialNo = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9;
-
-export type EtapaAtoId = 
-  | 'empezar'
-  | 'operar'
-  | 'consultar'
-  | 'modificar_cerrar'
-  | 'normativa';
-
-export type TipoInteraccionId = 
-  | 'servicio_transaccional'
-  | 'consulta_datos'
-  | 'guia_informativa'
-  | 'descarga_recurso';
-
-export type TipologiaContenidoId =
-  | 'tramite_interactivo'
-  | 'guia_requisitos'
-  | 'consulta_buscador'
-  | 'normativa_criterio'
-  | 'recurso_descargable'
-  | 'aviso_operativo';
 
 export interface PortalMasterItem {
   id: string;

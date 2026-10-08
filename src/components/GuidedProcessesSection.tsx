@@ -1,18 +1,6 @@
 import React, { useState } from 'react';
 import { Card } from './ui/Card';
-
-interface ProcesoGuiado {
-  no: number;
-  nombre: string;
-  audiencia: string;
-  etapa: string;
-  paraQuien: string;
-  categorias: string;
-  totalPasos: number;
-  totalPaginas: number;
-  rutaPasosResumen: string[];
-  pasos: any[];
-}
+import type { ProcesoGuiado } from '../data/schema';
 
 interface GuidedProcessesSectionProps {
   procesos: ProcesoGuiado[];
@@ -83,7 +71,7 @@ export const GuidedProcessesSection: React.FC<GuidedProcessesSectionProps> = ({
             <Card
               key={p.no}
               title={p.nombre}
-              description={`Guía paso a paso para ${p.paraQuien.toLowerCase()}. Te orienta con los requisitos previos y el acceso directo al sistema oficial de la SAT.`}
+              description={`Guía paso a paso para ${(p.paraQuien ?? 'ti').toLowerCase()}. Te orienta con los requisitos previos y el acceso directo al sistema oficial de la SAT.`}
               tone="azul"
               headingLevel="h4"
               onClick={() => onSelectProceso(p)}

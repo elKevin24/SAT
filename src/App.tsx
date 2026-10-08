@@ -12,12 +12,17 @@ import { GuidedProcessModal } from './components/GuidedProcessModal';
 import { TramiteDetailModal } from './components/TramiteDetailModal';
 import { VirtualAssistantModal } from './components/VirtualAssistantModal';
 import { PortalFlowModal } from './components/PortalFlowModal';
-import { SegmentTramitesCatalog, TramiteItem } from './components/SegmentTramitesCatalog';
-import { EtapaAtoId, TipoInteraccionId } from './data/portalMasterTaxonomy';
+import { SegmentTramitesCatalog } from './components/SegmentTramitesCatalog';
+import { EtapaAtoId, TipoInteraccionId, TramiteItem, ProcesoGuiado } from './data/schema';
+import { buildTaxonomy, resolveCategoria, categoriaId } from './data/taxonomy';
 
 // Import official extracted datasets
 import rawTramites from './data/allTramites.json';
 import rawProcesos from './data/allProcesos.json';
+
+const allTramites = rawTramites as TramiteItem[];
+const allProcesos = rawProcesos as ProcesoGuiado[];
+const TAXONOMY = buildTaxonomy(allTramites);
 
 interface AccessibilitySettings {
   contrastMode: 'normal' | 'high' | 'dark' | 'inverted';
@@ -54,7 +59,7 @@ export default function App() {
 
   // Selected modals
   const [selectedTramite, setSelectedTramite] = useState<TramiteItem | null>(null);
-  const [selectedProceso, setSelectedProceso] = useState<any | null>(null);
+  const [selectedProceso, setSelectedProceso] = useState<ProcesoGuiado | null>(null);
   const [consultasModalSegment, setConsultasModalSegment] = useState<SegmentId | null>(null);
   const [accessibilityModalOpen, setAccessibilityModalOpen] = useState(false);
   const [isFlowModalOpen, setIsFlowModalOpen] = useState(false);
@@ -74,13 +79,15 @@ export default function App() {
           const params = new URLSearchParams(hash.substring(queryIndex + 1));
 
           const seg = params.get('segmento') as SegmentId | null;
+          let resolvedSeg: SegmentId | null = null;
           if (seg && ['contribuyentes', 'comercio_exterior', 'profesionales', 'entes_exentos'].includes(seg)) {
+            resolvedSeg = seg;
             setActiveSegment(seg);
           }
 
           const cat = params.get('categoria');
           if (cat) {
-            setActiveCategory(cat);
+            setActiveCategory(resolveCategoria(TAXONOMY, resolvedSeg ?? 'contribuyentes', cat) ?? cat);
           } else {
             setActiveCategory('Todas las categorías');
           }
@@ -131,7 +138,7 @@ export default function App() {
     const params = new URLSearchParams();
     params.set('segmento', segId);
     if (category && category !== 'Todas las categorías') {
-      params.set('categoria', category);
+      params.set('categoria', categoriaId(segId, category));
     }
     window.location.hash = '#/catalogo?' + params.toString();
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -177,11 +184,11 @@ export default function App() {
         onGoStyleGuide={handleGoStyleGuide}
         searchQuery={searchQuery}
         onSearchChange={setSearchQuery}
-        onSelectTramite={(t) => setSelectedTramite(t as unknown as TramiteItem)}
+        onSelectTramite={(t) => setSelectedTramite(t)}
         onSelectProceso={(p) => setSelectedProceso(p)}
         onOpenAccessibility={() => setAccessibilityModalOpen(true)}
-        allTramites={rawTramites}
-        allProcesos={rawProcesos}
+        allTramites={allTramites}
+        allProcesos={allProcesos}
       />
 
       {/* Main Content Area */}
@@ -208,7 +215,7 @@ export default function App() {
 
             {/* 6. Guided Processes Section */}
             <GuidedProcessesSection
-              procesos={rawProcesos as any}
+              procesos={allProcesos}
               onSelectProceso={(p) => setSelectedProceso(p)}
             />
 
@@ -225,8 +232,8 @@ export default function App() {
               initialSubcategory={activeSubcategory}
               initialEtapaAto={activeEtapaAto}
               initialTipoInteraccion={activeTipoInteraccion}
-              allTramites={rawTramites as any}
-              onSelectTramite={(t) => setSelectedTramite(t as unknown as TramiteItem)}
+              allTramites={allTramites}
+              onSelectTramite={(t) => setSelectedTramite(t)}
               onBackToHome={handleGoHome}
               onSwitchSegment={(segId) => {
                 handleSelectSegment(segId);

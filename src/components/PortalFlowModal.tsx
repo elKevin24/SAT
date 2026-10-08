@@ -156,10 +156,19 @@ const NodeLevel4Component = ({ data }: NodeProps) => {
 
 const NodeLevel5TramiteComponent = ({ data }: NodeProps) => {
   const atoStyle = ATO_FEATURE_META[data.etapaAto as string] || ATO_FEATURE_META.empezar;
+  const handleInspect = () => {
+    if (typeof data.onInspect === 'function') data.onInspect();
+  };
   return (
     <div
-      onClick={() => {
-        if (typeof data.onInspect === 'function') data.onInspect();
+      role="button"
+      tabIndex={0}
+      onClick={handleInspect}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          handleInspect();
+        }
       }}
       className="w-80 bg-white border border-slate-300 rounded-xl p-3.5 shadow-xs space-y-2 hover:border-sky-500 hover:shadow-md transition-all cursor-pointer group"
     >

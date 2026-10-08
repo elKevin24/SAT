@@ -11,30 +11,11 @@ import {
   EtapaAtoId,
   TipoInteraccionId
 } from '../data/portalMasterTaxonomy';
+import type { TramiteItem } from '../data/schema';
+import { OFFICIAL_CATEGORY_ORDER, subcategoryOrderFor, compareByCategoryOrder } from '../data/categoryOrder';
+import { categoriaId, subcategoriaId } from '../data/taxonomy';
 
-export interface TramiteItem {
-  id: string;
-  pillar: string;
-  pillarName: string;
-  categoria: string;
-  subcategoria: string;
-  tema?: string;
-  subtema?: string;
-  nombreActual?: string;
-  tramite: string;
-  descripcion: string;
-  perfilDestinatario?: string;
-  impactoOImportancia?: string;
-  seccionActual?: string;
-  url: string;
-  nota?: string;
-  baseLegal?: string;
-  etapaAto?: EtapaAtoId;
-  etapaAtoLabel?: string;
-  tipoInteraccion?: TipoInteraccionId;
-  tipoInteraccionLabel?: string;
-  esBrecha?: boolean;
-}
+export type { TramiteItem } from '../data/schema';
 
 interface SegmentTramitesCatalogProps {
   segmentId: SegmentId;
@@ -85,43 +66,6 @@ const SEGMENT_CARD_TONE: Record<SegmentId, CardTone> = {
   comercio_exterior: 'celeste',
   profesionales: 'verde',
   entes_exentos: 'naranja'
-};
-
-const OFFICIAL_CATEGORY_ORDER: Record<string, string[]> = {
-  contribuyentes: [
-    'NIT sin Obligaciones',
-    'Pequeños Contribuyentes',
-    'Contribuyente General',
-    'Contribuyentes Especiales'
-  ],
-  comercio_exterior: [
-    'Importadores y Exportadores',
-    'Importadores',
-    'Exportadores',
-    'Operador Económico Autorizado (OEA)',
-    'Agentes Aduaneros',
-    'Apoderados Especiales Aduaneros',
-    'Empresas de Entrega Rápida o Courier',
-    'Consolidadores y Desconsolidadores de Carga',
-    'Transportistas Aduaneros',
-    'Depósitos Aduaneros',
-    'ZDEEP - Entidades Administradoras',
-    'ZDEEP - Empresas Usuarias'
-  ],
-  profesionales: [
-    'Abogados y Notarios',
-    'Peritos Contadores',
-    'Auditores',
-    'Gestores Tributarios',
-    'Servicios Profesionales'
-  ],
-  entes_exentos: [
-    'Entidades del Estado',
-    'Constitucionales',
-    'No Lucrativos',
-    'Municipalidades',
-    'Decreto'
-  ]
 };
 
 const CATEGORY_DESCRIPTIONS: Record<string, string> = {
@@ -294,8 +238,10 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
   useEffect(() => {
     const params = new URLSearchParams();
     params.set('segmento', segmentId);
-    if (selectedCategory) params.set('categoria', selectedCategory);
-    if (selectedSubcategory) params.set('subcategoria', selectedSubcategory);
+    if (selectedCategory) params.set('categoria', categoriaId(segmentId, selectedCategory));
+    if (selectedCategory && selectedSubcategory) {
+      params.set('subcategoria', subcategoriaId(categoriaId(segmentId, selectedCategory), selectedSubcategory));
+    }
     if (selectedEtapaAto !== 'todas') params.set('etapa', selectedEtapaAto);
     if (selectedTipoInteraccion !== 'todos') params.set('tipo', selectedTipoInteraccion);
 
@@ -331,7 +277,7 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
   }, [segmentTramites, segmentId]);
 
   // Subcategorías disponibles dentro de la categoría seleccionada
-  const subcategoriesList = useMemo(() => {
+const subcategoriesList = useMemo(() => {
     if (!selectedCategory) return [];
     const inCurrentCategory = segmentTramites.filter(t => t.categoria === selectedCategory);
     const set = new Set<string>();
@@ -339,183 +285,8 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
       if (t.subcategoria) set.add(t.subcategoria);
     });
 
-    return Array.from(set).sort((a, b) => {
-      // Regla oficial estricta para NIT: Inscripción va estrictamente primero
-      if (selectedCategory === 'NIT sin Obligaciones') {
-        const orderNIT = [
-          'Inscripción de NIT',
-          'Servicios en Línea y Solvencias',
-          'Títulos Universitarios',
-          'Información Pública'
-        ];
-        const idxA = orderNIT.indexOf(a);
-        const idxB = orderNIT.indexOf(b);
-        if (idxA !== -1 && idxB !== -1) return idxA - idxB;
-        if (idxA !== -1) return -1;
-        if (idxB !== -1) return 1;
-      }
-
-      // Regla oficial estricta para Abogados y Notarios
-      if (selectedCategory === 'Abogados y Notarios') {
-        const orderAN = [
-          'Habilitación y Registro Profesional',
-          'Timbres Fiscales y Papel Sellado de Protocolo',
-          'Traspaso Electrónico Vehicular (e-Traspaso)',
-          'Avisos Notariales ante la SAT'
-        ];
-        const idxA = orderAN.indexOf(a);
-        const idxB = orderAN.indexOf(b);
-        if (idxA !== -1 && idxB !== -1) return idxA - idxB;
-        if (idxA !== -1) return -1;
-        if (idxB !== -1) return 1;
-      }
-
-      // Regla oficial estricta para Importadores
-      if (selectedCategory === 'Importadores') {
-        const orderImp = [
-          'Registro y Padrón de Importadores',
-          'Declaraciones Aduaneras y DUCAs',
-          'Importación y Nacionalización de Vehículos',
-          'Placas y Distintivos de Distribuidor',
-          'Despacho Aduanero, Levante y Selectivo',
-          'Mercancías en Abandono, Depósitos y Franquicias'
-        ];
-        const idxA = orderImp.indexOf(a);
-        const idxB = orderImp.indexOf(b);
-        if (idxA !== -1 && idxB !== -1) return idxA - idxB;
-        if (idxA !== -1) return -1;
-        if (idxB !== -1) return 1;
-      }
-
-      // Regla oficial estricta para Exportadores
-      if (selectedCategory === 'Exportadores') {
-        const orderExp = [
-          'Padrón y Registro de Exportadores',
-          'Devolución de Crédito Fiscal',
-          'Declaraciones Aduaneras y Embarques'
-        ];
-        const idxA = orderExp.indexOf(a);
-        const idxB = orderExp.indexOf(b);
-        if (idxA !== -1 && idxB !== -1) return idxA - idxB;
-        if (idxA !== -1) return -1;
-        if (idxB !== -1) return 1;
-      }
-
-      // Regla oficial estricta para Transportistas
-      if (selectedCategory === 'Transportistas') {
-        const orderTransp = [
-          'Registro de Equipos y Admisión Temporal (ATC)',
-          'Manifiestos de Carga (CUSCAR) y Tránsito',
-          'Marchamo Electrónico y Control de Rutas'
-        ];
-        const idxA = orderTransp.indexOf(a);
-        const idxB = orderTransp.indexOf(b);
-        if (idxA !== -1 && idxB !== -1) return idxA - idxB;
-        if (idxA !== -1) return -1;
-        if (idxB !== -1) return 1;
-      }
-
-      // Regla oficial estricta para Agentes Aduaneros
-      if (selectedCategory === 'Agentes Aduaneros') {
-        const orderAg = [
-          'Habilitación y Registro de Auxiliares',
-          'Sistemas Informáticos y Despacho Aduanero'
-        ];
-        const idxA = orderAg.indexOf(a);
-        const idxB = orderAg.indexOf(b);
-        if (idxA !== -1 && idxB !== -1) return idxA - idxB;
-        if (idxA !== -1) return -1;
-        if (idxB !== -1) return 1;
-      }
-
-      // Regla oficial estricta para Normativa y Aranceles
-      if (selectedCategory === 'Normativa y Aranceles') {
-        const orderNorm = [
-          'Arancel Centroamericano (SAC) y Permisos',
-          'Acuerdos Comerciales y Facilitación',
-          'Prevención de Contrabando y Defraudación',
-          'Modernización e Infraestructura Aduanera',
-          'Consultas Técnicas, Recursos y Valoración'
-        ];
-        const idxA = orderNorm.indexOf(a);
-        const idxB = orderNorm.indexOf(b);
-        if (idxA !== -1 && idxB !== -1) return idxA - idxB;
-        if (idxA !== -1) return -1;
-        if (idxB !== -1) return 1;
-      }
-
-      // Regla oficial para Peritos Contadores
-      if (selectedCategory === 'Peritos Contadores') {
-        const orderPer = [
-          'Habilitación y Registro de Perito Contador',
-          'Consultas, Retenciones y Libros Contables'
-        ];
-        const idxA = orderPer.indexOf(a);
-        const idxB = orderPer.indexOf(b);
-        if (idxA !== -1 && idxB !== -1) return idxA - idxB;
-        if (idxA !== -1) return -1;
-        if (idxB !== -1) return 1;
-      }
-
-      // Regla oficial para Auditores
-      if (selectedCategory === 'Auditores') {
-        const orderAud = [
-          'Habilitación y Registro de Auditor (CPA)',
-          'Dictámenes de Crédito Fiscal y Auditoría'
-        ];
-        const idxA = orderAud.indexOf(a);
-        const idxB = orderAud.indexOf(b);
-        if (idxA !== -1 && idxB !== -1) return idxA - idxB;
-        if (idxA !== -1) return -1;
-        if (idxB !== -1) return 1;
-      }
-
-      // Regla oficial para Gestores Tributarios
-      if (selectedCategory === 'Gestores Tributarios') {
-        const orderGes = [
-          'Acreditación y Carné Oficial de Gestor',
-          'Renovación y Gestión de Gafetes'
-        ];
-        const idxA = orderGes.indexOf(a);
-        const idxB = orderGes.indexOf(b);
-        if (idxA !== -1 && idxB !== -1) return idxA - idxB;
-        if (idxA !== -1) return -1;
-        if (idxB !== -1) return 1;
-      }
-
-      // Regla oficial para Servicios Profesionales
-      if (selectedCategory === 'Servicios Profesionales') {
-        const orderSP = [
-          'Facturación por Honorarios y Formularios',
-          'Actualización de Actividad y RTU',
-          'Consultas Jurídico Tributarias',
-          'Sistemas de Retención en la Fuente'
-        ];
-        const idxA = orderSP.indexOf(a);
-        const idxB = orderSP.indexOf(b);
-        if (idxA !== -1 && idxB !== -1) return idxA - idxB;
-        if (idxA !== -1) return -1;
-        if (idxB !== -1) return 1;
-      }
-
-      // Regla oficial para Pequeños Contribuyentes
-      if (selectedCategory === 'Pequeños Contribuyentes') {
-        const orderPC = [
-          'Régimen de Pequeño Contribuyente',
-          'Régimen Agropecuario y Productores'
-        ];
-        const idxA = orderPC.indexOf(a);
-        const idxB = orderPC.indexOf(b);
-        if (idxA !== -1 && idxB !== -1) return idxA - idxB;
-        if (idxA !== -1) return -1;
-        if (idxB !== -1) return 1;
-      }
-      const aIsInsc = a.toLowerCase().includes('inscripci');
-      const bIsInsc = b.toLowerCase().includes('inscripci');
-      if (aIsInsc && !bIsInsc) return -1;
-      if (!aIsInsc && bIsInsc) return 1;
-      return a.localeCompare(b);
-    });
+    const orderList = subcategoryOrderFor(selectedCategory);
+    return Array.from(set).sort((a, b) => compareByCategoryOrder(orderList, a, b));
   }, [segmentTramites, selectedCategory]);
 
   // Lista estructurada de categorías y subcategorías para el Sidebar contextual
