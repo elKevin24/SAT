@@ -5,7 +5,7 @@ from openpyxl.utils import get_column_letter
 
 # Cargar dataset maestro
 all_t = json.load(open('src/data/allTramites.json', encoding='utf-8'))
-TOTAL_PORTAL = len(all_t) # 739
+TOTAL_PORTAL = len(all_t)  # 716
 
 wb = openpyxl.Workbook()
 wb.remove(wb.active)
@@ -92,15 +92,15 @@ SEGMENTOS_DATA = [
 
 # Conteos por segmento
 for s in SEGMENTOS_DATA:
-    s['conteo_tramites'] = sum(1 for t in all_t if t.get('segmento') == s['segmento'])
+    s['conteo_tramites'] = sum(1 for t in all_t if (t.get('segmento') == s['segmento'] or t.get('pillarName') == s['segmento']))
     s['pct'] = s['conteo_tramites'] / TOTAL_PORTAL
 
 # ==============================================================================
-# 2. DEFINICIÓN EXACTA Y CANÓNICA DE LOS 33 NODOS DE NAVEGACIÓN (100% COBERTURA)
+# 2. DEFINICIÓN EXACTA Y CANÓNICA DE LOS 27 NODOS DE NAVEGACIÓN (100% COBERTURA)
 # ==============================================================================
 NODOS_MAPA = [
     # --------------------------------------------------------------------------
-    # CONTRIBUYENTES (11 NODOS = 413 TRÁMITES)
+    # CONTRIBUYENTES (11 NODOS = 344 TRÁMITES)
     # --------------------------------------------------------------------------
     {
         'segmento': 'Contribuyentes',
@@ -203,29 +203,20 @@ NODOS_MAPA = [
     },
 
     # --------------------------------------------------------------------------
-    # OPERADORES DE COMERCIO EXTERIOR (12 NODOS = 202 TRÁMITES)
+    # OPERADORES DE COMERCIO EXTERIOR (6 RAMAS CANÓNICAS = 246 TRÁMITES)
     # --------------------------------------------------------------------------
     {
         'segmento': 'Operadores de Comercio Exterior',
-        'regimen': '1. Importadores y Exportadores',
-        'categoria': 'Importadores y Exportadores (Compartido)',
-        'alcance': 'Arancel Integrado Centroamericano (SAC), pagos aduaneros por BancaSAT, DUCAs comunes y solvencia aduanera.',
-        'que_es': 'Operadores comerciales que realizan indistintamente gestiones transversales de entrada y salida de mercancías, consultas arancelarias y pagos tributarios aduaneros en las aduanas de la República.',
-        'lead_text': 'Consulta el Arancel Integrado Centroamericano (SAC), realiza pagos por BancaSAT y tramita solvencias aduaneras unificadas.',
-        'base_juridica': 'Convenio sobre el Régimen Arancelario y Aduanero Centroamericano, CAUCA IV (Resolución 223-2008 COMIECO) y RECAUCA IV (Resolución 224-2008 COMIECO).',
-    },
-    {
-        'segmento': 'Operadores de Comercio Exterior',
-        'regimen': '1. Importadores y Exportadores',
+        'regimen': 'Operaciones Aduaneras y Logística',
         'categoria': 'Importadores',
-        'alcance': 'Inscripción en padrón de importadores, liquidación de DUCA-D, valoración aduanera y rescate de mercancías.',
+        'alcance': 'Inscripción en padrón de importadores, liquidación de DUCA-D, valoración aduanera, despacho y rescate de mercancías.',
         'que_es': 'Personas individuales o jurídicas autorizadas en el padrón aduanero de la SAT para introducir legalmente mercancías extranjeras al territorio aduanero nacional para su consumo, uso o transformación.',
         'lead_text': 'Inscríbete en el padrón de importadores, liquida tus declaraciones aduaneras DUCA-D, consulta aranceles y rescata mercancías en aduana.',
-        'base_juridica': 'CAUCA IV (Arts. 21 y 77), RECAUCA IV (Arts. 317 al 330) y Acuerdo Relativo a la Aplicación del Artículo VII del GATT (Valoración OMC).',
+        'base_juridica': 'CAUCA IV (Arts. 21 y 77), RECAUCA IV (Arts. 317 al 330) y Acuerdo de Valoración de la OMC.',
     },
     {
         'segmento': 'Operadores de Comercio Exterior',
-        'regimen': '1. Importadores y Exportadores',
+        'regimen': 'Operaciones Aduaneras y Logística',
         'categoria': 'Exportadores',
         'alcance': 'Registro de exportadores VUPE, autorización de embarques y devolución de crédito fiscal del IVA para exportadores.',
         'que_es': 'Personas individuales o jurídicas inscritas en el Registro de Exportadores de la SAT que despachan mercancías de origen nacional o nacionalizadas hacia mercados del exterior.',
@@ -234,7 +225,7 @@ NODOS_MAPA = [
     },
     {
         'segmento': 'Operadores de Comercio Exterior',
-        'regimen': '1. Importadores y Exportadores',
+        'regimen': 'Operaciones Aduaneras y Logística',
         'categoria': 'Operador Económico Autorizado (OEA)',
         'alcance': 'Certificación en seguridad de la cadena de suministro, carril exprés aduanero y reducción de selectivo rojo.',
         'que_es': 'Operadores de la cadena logística internacional certificados por la Intendencia de Aduanas por mantener rigurosos estándares de seguridad y confiabilidad en sus operaciones transfronterizas.',
@@ -243,128 +234,83 @@ NODOS_MAPA = [
     },
     {
         'segmento': 'Operadores de Comercio Exterior',
-        'regimen': '2. Auxiliares de la Función Pública Aduanera (AFPA)',
-        'categoria': 'Depósitos Aduaneros',
-        'alcance': 'Almacenes Fiscales, Almacenes Generales de Depósito (AGD) y Depósitos Aduaneros Temporales (DAT).',
-        'que_es': 'Recintos públicos o privados autorizados para custodiar mercancías con suspensión de tributos aduaneros, emisión de certificados de depósito y bonos de prenda (AGD) y actas de recepción DAT.',
-        'lead_text': 'Controla inventarios de custodia, gestiona actas de recepción, emite certificados de depósito (AGD) y tramita prórrogas de permanencia.',
-        'base_juridica': 'Decreto 1236 (Ley de Almacenes Generales de Depósito), CAUCA IV y RECAUCA IV (Arts. 119 al 129 - Régimen de Depósito Aduanero).',
+        'regimen': 'Operaciones Aduaneras y Logística',
+        'categoria': 'Auxiliares de la Función Pública Aduanera (AFPA)',
+        'alcance': 'Agentes aduaneros, apoderados especiales, depósitos aduaneros (DAT, AGD, fiscales), empresas de courier y transportistas aduaneros.',
+        'que_es': 'Personas naturales o jurídicas autorizadas por la SAT para actuar en nombre propio o de terceros ante el Servicio Aduanero en el desaduanamiento, transporte, custodia o desconsolidación de mercancías.',
+        'lead_text': 'Gestiona carnés oficiales, pólizas de garantía operativa, marchamos electrónicos y despachos logísticos autorizados.',
+        'base_juridica': 'CAUCA IV (Arts. 18 al 28), RECAUCA IV (Arts. 74 al 136) y Ley Nacional de Aduanas.',
     },
     {
         'segmento': 'Operadores de Comercio Exterior',
-        'regimen': '2. Auxiliares de la Función Pública Aduanera (AFPA)',
-        'categoria': 'Agentes Aduaneros',
-        'alcance': 'Habilitación de carné oficial, constitución de pólizas de caución y transmisión de DUCAs con firma electrónica.',
-        'que_es': 'Profesionales auxiliares de la función pública aduanera autorizados para actuar por cuenta de terceros en los trámites y operaciones de desaduanamiento ante la SAT.',
-        'lead_text': 'Gestiona tu carné y habilitación oficial, presenta pólizas de seguro de caución y transmite declaraciones con firma electrónica.',
-        'base_juridica': 'CAUCA IV (Arts. 22 al 28), RECAUCA IV (Arts. 74 al 85) y Ley Nacional de Aduanas.',
+        'regimen': 'Operaciones Aduaneras y Logística',
+        'categoria': 'Regímenes Territoriales y Zonas Especiales',
+        'alcance': 'Maquilas (Decreto 29-89) y Zonas de Desarrollo Económico Especial Público (ZDEEP) para entidades administradoras y usuarias.',
+        'que_es': 'Empresas y polígonos industriales delimitados que operan bajo regímenes aduaneros liberatorios o de fomento económico con suspensión y exención arancelaria y fiscal.',
+        'lead_text': 'Administra polígonos ZDEEP, ingresa insumos con suspensión de aranceles y liquida cuentas corrientes bajo el Decreto 29-89.',
+        'base_juridica': 'Decreto 29-89 (Ley de Maquilas), Decreto 22-73 (Ley Orgánica de ZOLIC reformada) y Resoluciones SAT-ZDEEP.',
     },
     {
         'segmento': 'Operadores de Comercio Exterior',
-        'regimen': '2. Auxiliares de la Función Pública Aduanera (AFPA)',
-        'categoria': 'Apoderados Especiales Aduaneros',
-        'alcance': 'Representación exclusiva de personas jurídicas en despachos aduaneros propios, carné y renovación de fianza.',
-        'que_es': 'Personas individuales mandatarias designadas exclusivamente por una persona jurídica para representarla formalmente en sus despachos aduaneros propios.',
-        'lead_text': 'Registra tu mandato legal, actualiza tu carné de apoderado y tramita declaraciones DUCA corporativas.',
-        'base_juridica': 'CAUCA IV (Art. 21), RECAUCA IV (Arts. 86 al 90) y Código de Notariado.',
-    },
-    {
-        'segmento': 'Operadores de Comercio Exterior',
-        'regimen': '2. Auxiliares de la Función Pública Aduanera (AFPA)',
-        'categoria': 'Transportistas Aduaneros',
-        'alcance': 'Registro de unidades y conductores, transmisión de DUCA-T y colocación de marchamo electrónico RFID.',
-        'que_es': 'Empresas y conductores autorizados para realizar el traslado de mercancías bajo control aduanero dentro del territorio nacional o en tránsito internacional centroamericano.',
-        'lead_text': 'Registra medios de transporte, activa marchamos electrónicos RFID y transmite declaraciones de tránsito DUCA-T.',
-        'base_juridica': 'CAUCA IV (Arts. 18 al 20), RECAUCA IV (Tránsito Aduanero Internacional Terrestre) y Reglamentos de Transporte Centroamericano.',
-    },
-    {
-        'segmento': 'Operadores de Comercio Exterior',
-        'regimen': '2. Auxiliares de la Función Pública Aduanera (AFPA)',
-        'categoria': 'Empresas de Entrega Rápida o Courier',
-        'alcance': 'Despacho simplificado de paquetería urgente, manifiestos courier y recintos desconsolidadores de encomiendas.',
-        'que_es': 'Empresas de mensajería y paquetería urgente autorizadas para transportar y desaduanar envíos postales exprés y encomiendas internacionales no comerciales.',
-        'lead_text': 'Transmite manifiestos courier, aplica franquicias simplificadas y habilita recintos desconsolidadores de paquetería.',
-        'base_juridica': 'CAUCA IV y RECAUCA IV (Arts. 574 al 596 - Régimen de Envíos de Entrega Rápida o Courier).',
-    },
-    {
-        'segmento': 'Operadores de Comercio Exterior',
-        'regimen': '2. Auxiliares de la Función Pública Aduanera (AFPA)',
-        'categoria': 'Consolidadores y Desconsolidadores de Carga',
-        'alcance': 'Transmisión de manifiesto electrónico CUSCAR, desconsolidación de conocimientos de embarque y guías hijas.',
-        'que_es': 'Operadores logísticos autorizados para agrupar o separar mercancías pertenecientes a distintos consignatarios bajo un solo documento matriz de transporte.',
-        'lead_text': 'Transmite manifiestos CUSCAR, emite guías hijas y reporta inconsistencias o averías de carga ante la aduana.',
-        'base_juridica': 'CAUCA IV y RECAUCA IV (Arts. 102 al 109 - Auxiliares Consolidador y Desconsolidador de Carga).',
-    },
-    {
-        'segmento': 'Operadores de Comercio Exterior',
-        'regimen': '3. Regímenes Territoriales y Zonas Especiales',
-        'categoria': 'ZDEEP - Entidades Administradoras',
-        'alcance': 'Habilitación de polígonos industriales ZDEEP, supervisión perimetral, garitas de control y recintos aduaneros.',
-        'que_es': 'Personas jurídicas públicas o privadas autorizadas por ZOLIC y SAT para desarrollar, operar y vigilar la infraestructura de polígonos industriales y logísticos ZDEEP.',
-        'lead_text': 'Delimita polígonos aduaneros, administra garitas de control y supervisa el perímetro de seguridad de la zona especial.',
-        'base_juridica': 'Decreto 22-73 (Ley Orgánica de ZOLIC reformada), CAUCA IV, RECAUCA IV y Resoluciones Conjuntas SAT-ZOLIC.',
-    },
-    {
-        'segmento': 'Operadores de Comercio Exterior',
-        'regimen': '3. Regímenes Territoriales y Zonas Especiales',
-        'categoria': 'ZDEEP - Empresas Usuarias',
-        'alcance': 'Ingreso de insumos con suspensión arancelaria, descargos de transformación y exenciones tributarias de fomento.',
-        'que_es': 'Empresas industriales, comerciales o de servicios instaladas y operando dentro de los recintos calificados como ZDEEP para producir o transformar con beneficios fiscales.',
-        'lead_text': 'Ingresa materias primas con suspensión de DAI e IVA, realiza descargos de producción y goza de exenciones tributarias.',
-        'base_juridica': 'Decreto 22-73 (Régimen Fiscal ZDEEP), Ley de Actualización Tributaria (Decreto 10-2012) y CAUCA/RECAUCA IV.',
+        'regimen': 'Operaciones Aduaneras y Logística',
+        'categoria': 'Normativa y Operaciones Aduaneras Generales',
+        'alcance': 'Arancel Centroamericano (SAC), permisos no arancelarios, acuerdos comerciales, prevención del contrabando y modernización aduanera.',
+        'que_es': 'Servicios transversales de consulta técnica arancelaria, resoluciones anticipadas, facilitación comercial y herramientas de control del despacho aduanero general.',
+        'lead_text': 'Consulta el Sistema Arancelario Centroamericano (SAC), tramita resoluciones anticipadas y reporta incidentes de contrabando.',
+        'base_juridica': 'Convenio sobre el Régimen Arancelario y Aduanero Centroamericano, Acuerdos Comerciales de la OMC y CAUCA/RECAUCA IV.',
     },
 
     # --------------------------------------------------------------------------
-    # PROFESIONALES (5 NODOS = 45 TRÁMITES)
+    # PROFESIONALES (5 CATEGORÍAS = 47 TRÁMITES)
     # --------------------------------------------------------------------------
     {
         'segmento': 'Profesionales',
-        'regimen': 'Servicios Profesionales y Terceras Personas',
+        'regimen': 'Servicios Profesionales y Auxiliares',
         'categoria': 'Abogados y Notarios',
-        'alcance': 'Compra de papel sellado de protocolo (SAT-7130), timbres fiscales y traspasos electrónicos vehiculares (TEV).',
-        'que_es': 'Profesionales del derecho colegiados activos autorizados para ejercer la fe pública notarial, redactar instrumentos públicos y autorizar traspasos electrónicos de vehículos ante la SAT.',
-        'lead_text': 'Compra papel sellado especial para protocolos, adquiere timbres fiscales, realiza traspasos vehiculares electrónicos (TEV) y presenta avisos notariales.',
-        'base_juridica': 'Código de Notariado (Decreto 314), Ley de Timbres Fiscales y de Papel Sellado Especial para Protocolos (Decreto 37-92) y Código Tributario.',
+        'alcance': 'Compra de papel sellado de protocolo (SAT-7130), timbres fiscales, razón electrónica, avisos notariales y traspasos vehiculares electrónicos (TEV).',
+        'que_es': 'Profesionales del derecho colegiados activos autorizados para ejercer la fe pública notarial, autorizar traspasos electrónicos de vehículos y emitir razones tributarias ante la SAT.',
+        'lead_text': 'Compra papel sellado para protocolos, emite razones electrónicas de timbres fiscales, autoriza traspasos vehiculares (TEV) y presenta avisos notariales.',
+        'base_juridica': 'Código de Notariado (Decreto 314), Ley de Timbres Fiscales (Decreto 37-92), Ley del ISCV (Decreto 70-94) y Acuerdo de Directorio SAT 08-2020.',
     },
     {
         'segmento': 'Profesionales',
-        'regimen': 'Servicios Profesionales y Terceras Personas',
+        'regimen': 'Servicios Profesionales y Auxiliares',
         'categoria': 'Peritos Contadores',
-        'alcance': 'Inscripción en el Registro de Contadores, autorización de libros contables digitales y firma de balances.',
-        'que_es': 'Técnicos y profesionales contables inscritos y autorizados ante la SAT para llevar y firmar registros contables de contribuyentes, certificar estados financieros y realizar gestiones tributarias.',
-        'lead_text': 'Inscríbete y actualiza tus datos en el Registro de Contadores, autoriza libros contables computarizados y asocia contribuyentes a tu perfil.',
-        'base_juridica': 'Decreto 2450 (Normas que Regulan el Ejercicio de la Profesión de Contador), Código de Comercio (Decreto 2-70) y Código Tributario (Arts. 112 y 120).',
+        'alcance': 'Inscripción y actualización en el Registro de Contadores, autorización del LET, Factura Electrónica FEL, retenciones y declaraciones.',
+        'que_es': 'Técnicos y profesionales contables inscritos ante la SAT facultados para llevar y certificar registros contables, libros tributarios electrónicos y declaraciones juradas de contribuyentes.',
+        'lead_text': 'Inscríbete en el Registro de Contadores, habilita el Libro Electrónico Tributario (LET), administra facturación FEL y concilia retenciones tributarias.',
+        'base_juridica': 'Decreto 2450 (Normas de la Profesión Contable), Código de Comercio (Decreto 2-70, Arts. 368 al 381) y Código Tributario (Arts. 112 y 120).',
     },
     {
         'segmento': 'Profesionales',
-        'regimen': 'Servicios Profesionales y Terceras Personas',
-        'categoria': 'Gestores Tributarios',
-        'alcance': 'Acreditación oficial ante SAT, renovación de gafetes, registro biométrico y representación presencial autorizada.',
-        'que_es': 'Personas individuales autorizadas y acreditadas formalmente ante la SAT para representar a terceros en la tramitación presencial de gestiones administrativas tributarias y aduaneras.',
-        'lead_text': 'Tramita y renueva tu carné oficial de gestor tributario, registra tus datos biométricos y gestiona expedientes autorizados en agencias tributarias.',
-        'base_juridica': 'Acuerdos de Directorio de la SAT sobre Regulación y Acreditación de Gestores Tributarios y Código Tributario.',
-    },
-    {
-        'segmento': 'Profesionales',
-        'regimen': 'Servicios Profesionales y Terceras Personas',
-        'categoria': 'Servicios Profesionales',
-        'alcance': 'Facturación FEL por honorarios profesionales, retenciones de ISR y actualización de constancia de colegiado activo.',
-        'que_es': 'Profesionales liberales e independientes que prestan servicios técnicos, científicos, jurídicos o de consultoría por honorarios profesionales.',
-        'lead_text': 'Emite facturas electrónicas FEL por honorarios, liquida retenciones de ISR, actualiza tu colegiado activo y consulta tu solvencia fiscal.',
-        'base_juridica': 'Ley de Actualización Tributaria (Decreto 10-2012, Libro I) y Ley del IVA (Decreto 27-92).',
-    },
-    {
-        'segmento': 'Profesionales',
-        'regimen': 'Servicios Profesionales y Terceras Personas',
+        'regimen': 'Servicios Profesionales y Auxiliares',
         'categoria': 'Auditores',
-        'alcance': 'Dictámenes de crédito fiscal para exportadores, dictámenes de estados financieros e informes tributarios.',
-        'que_es': 'Contadores Públicos y Auditores (CPA) colegiados activos y firmas de auditoría facultados para emitir dictámenes sobre estados financieros, devolución de crédito fiscal e informes de precios de transferencia.',
-        'lead_text': 'Emite dictámenes de crédito fiscal para exportadores, dictámenes de estados financieros para licitaciones y presenta informes tributarios requeridos por SAT.',
-        'base_juridica': 'Ley de Colegiación Profesional Obligatoria (Decreto 72-2001), Ley del IVA (Decreto 27-92, Art. 23 bis) y Ley de Actualización Tributaria (Decreto 10-2012).',
+        'alcance': 'Inscripción de CPA, actualización registral de colegiado y emisión de dictámenes de crédito fiscal para exportadores.',
+        'que_es': 'Contadores Públicos y Auditores (CPA) colegiados activos autorizados para emitir dictámenes periciales de devolución de crédito fiscal, auditorías tributarias y certificar estados financieros.',
+        'lead_text': 'Inscribe tu firma de CPA, acredita tu colegiado activo y emite dictámenes vinculantes para la devolución de crédito fiscal bajo el régimen optativo.',
+        'base_juridica': 'Ley de Colegiación Profesional Obligatoria (Decreto 72-2001), Ley del IVA (Decreto 27-92, Art. 25 bis) y Acuerdo de Directorio SAT 07-2007.',
+    },
+    {
+        'segmento': 'Profesionales',
+        'regimen': 'Servicios Profesionales y Auxiliares',
+        'categoria': 'Gestores Tributarios',
+        'alcance': 'Acreditación oficial, expedición y renovación anual de gafetes, reposición de credencial y padrón activo de gestores y auxiliares.',
+        'que_es': 'Personas individuales acreditadas formalmente ante la SAT para representar a terceros en la tramitación presencial de gestiones administrativas tributarias y aduaneras.',
+        'lead_text': 'Tramita y renueva tu gafete oficial de gestor tributario, consulta el padrón activo institucional y gestiona expedientes autorizados en agencias.',
+        'base_juridica': 'Código Tributario (Decreto 6-91, Art. 22 - Representación) y Normativa Institucional de Acreditación de Gestores de la SAT.',
+    },
+    {
+        'segmento': 'Profesionales',
+        'regimen': 'Servicios Profesionales y Auxiliares',
+        'categoria': 'Servicios Profesionales',
+        'alcance': 'Facturación FEL por honorarios, catálogo general de Declaraguate, consultas jurídico-tributarias vinculantes y retenciones hospitalarias.',
+        'que_es': 'Profesionales liberales e independientes que prestan servicios técnicos, científicos, jurídicos o de salud por honorarios, sujetos a regímenes de retención y actualización registral.',
+        'lead_text': 'Genera formularios oficiales en Declaraguate, actualiza tu actividad profesional en el RTU, presenta consultas técnicas vinculantes y gestiona retenciones.',
+        'base_juridica': 'Ley de Actualización Tributaria (Decreto 10-2012, Libro I) y Código Tributario (Decreto 6-91, Arts. 102 al 105).',
     },
 
     # --------------------------------------------------------------------------
-    # ENTES EXENTOS (5 NODOS = 79 TRÁMITES)
+    # ENTES EXENTOS (5 CATEGORÍAS = 79 TRÁMITES)
     # --------------------------------------------------------------------------
     {
         'segmento': 'Entes Exentos',
@@ -417,7 +363,7 @@ NODOS_MAPA = [
 for node in NODOS_MAPA:
     seg = node['segmento']
     cat = node['categoria']
-    cnt = sum(1 for t in all_t if t.get('segmento') == seg and t.get('categoria') == cat)
+    cnt = sum(1 for t in all_t if (t.get('segmento') == seg or t.get('pillarName') == seg) and t.get('categoria') == cat)
     node['conteo_tramites'] = cnt
 
 # Conteos ATO
@@ -438,7 +384,7 @@ interactions = [
 ]
 
 # ==============================================================================
-# HOJA 1: RESUMEN ARQUITECTURA (IDÉNTICA AL LIBRO MAESTRO)
+# HOJA 1: RESUMEN ARQUITECTURA
 # ==============================================================================
 ws_resumen = wb.create_sheet(title="Resumen Arquitectura")
 ws_resumen.views.sheetView[0].showGridLines = True
@@ -453,31 +399,28 @@ banner.alignment = Alignment(horizontal='center', vertical='center')
 
 ws_resumen.merge_cells('B4:H4')
 sub_banner = ws_resumen['B4']
-sub_banner.value = "ARQUITECTURA DE INFORMACIÓN DEL PORTAL WEB — DEFINICIÓN DE SEGMENTOS, LEAD TEXT, ATO Y BASE JURÍDICA"
+sub_banner.value = "ARQUITECTURA DE INFORMACIÓN DEL PORTAL WEB — DEFINICIÓN DE SEGMENTOS, LEAD TEXT Y BASE JURÍDICA"
 sub_banner.font = font_subtitle
 sub_banner.fill = PatternFill(start_color=NAVY_HEADER, end_color=NAVY_HEADER, fill_type='solid')
 sub_banner.alignment = Alignment(horizontal='center', vertical='center')
 
-# Bloques KPI superiores
+# Bloques KPI
 kpis = [
-    ("TOTAL CONTENIDOS", f"{TOTAL_PORTAL} Trámites", "Universo Oficial SAT", "B6", "B7", NAVY_HEADER),
-    ("CONTRIBUYENTES", f"{SEGMENTOS_DATA[1]['conteo_tramites']} Trámites", "Régimen Interno", "C6", "C7", BLUE_HEADER),
-    ("COMERCIO EXTERIOR", f"{SEGMENTOS_DATA[0]['conteo_tramites']} Trámites", "Aduanas, AFPA y Zonas", "D6", "E7", CYAN_ACCENT),
-    ("PROFESIONALES", f"{SEGMENTOS_DATA[2]['conteo_tramites']} Trámites", "Notarios, CPA, TEV", "F6", "F7", GREEN_ACCENT),
-    ("ENTES EXENTOS", f"{SEGMENTOS_DATA[3]['conteo_tramites']} Trámites", "ONGs, Iglesias, Estado", "G6", "H7", PURPLE_ACCENT),
+    (f"TOTAL CONTENIDOS\n{TOTAL_PORTAL} Trámites", "Universo Oficial SAT", "B6", "B7", NAVY_HEADER),
+    (f"CONTRIBUYENTES\n{SEGMENTOS_DATA[1]['conteo_tramites']} Trámites", "Régimen Interno", "C6", "C7", BLUE_HEADER),
+    (f"COMERCIO EXTERIOR\n{SEGMENTOS_DATA[0]['conteo_tramites']} Trámites", "Aduanas, AFPA y Zonas", "D6", "E7", CYAN_ACCENT),
+    (f"PROFESIONALES\n{SEGMENTOS_DATA[2]['conteo_tramites']} Trámites", "Notarios, CPA, Gestores", "F6", "F7", GREEN_ACCENT),
+    (f"ENTES EXENTOS\n{SEGMENTOS_DATA[3]['conteo_tramites']} Trámites", "ONGs, Iglesias, Estado", "G6", "H7", PURPLE_ACCENT),
 ]
 
-for label, val, sub_txt, top_l, bot_r, color in kpis:
-    ws_resumen.merge_cells(f"{top_l}:{bot_r}")
-    cell = ws_resumen[top_l]
-    cell.value = f"{label}\n{val}"
-    cell.font = Font(name='Segoe UI', size=12, bold=True, color='FFFFFF')
+for label, sub, top_left, bot_right, color in kpis:
+    ws_resumen.merge_cells(f"{top_left}:{bot_right}")
+    cell = ws_resumen[top_left]
+    cell.value = label
+    cell.font = Font(name='Segoe UI', size=11, bold=True, color='FFFFFF')
     cell.fill = PatternFill(start_color=color, end_color=color, fill_type='solid')
     cell.alignment = Alignment(horizontal='center', vertical='center', wrap_text=True)
 
-# ------------------------------------------------------------------------------
-# SECCIÓN 1: SEGMENTOS PRINCIPALES DEL PORTAL (NIVEL 1)
-# ------------------------------------------------------------------------------
 ws_resumen['B9'] = "1. SEGMENTOS PRINCIPALES DEL PORTAL (NIVEL 1) — DEFINICIONES INSTITUCIONALES"
 ws_resumen['B9'].font = Font(name='Segoe UI', size=11, bold=True, color='1E293B')
 
@@ -551,9 +494,7 @@ for c_idx in range(2, 9):
     ws_resumen.cell(row=15, column=c_idx).fill = PatternFill(start_color='E2E8F0', end_color='E2E8F0', fill_type='solid')
 ws_resumen.row_dimensions[15].height = 24
 
-# ------------------------------------------------------------------------------
-# SECCIÓN 2: METODOLOGÍA CICLO DE VIDA ATO (AUSTRALIA)
-# ------------------------------------------------------------------------------
+# Sección ATO
 ws_resumen['B17'] = "2. METODOLOGÍA CICLO DE VIDA ATO (AUSTRALIA) - SIN NÚMEROS VISIBLES"
 ws_resumen['B17'].font = Font(name='Segoe UI', size=11, bold=True, color='1E293B')
 
@@ -577,14 +518,14 @@ for r_idx, (enom, edesc, ecount) in enumerate(ato_stages, start=19):
     c_ed.font = font_small
     c_ed.alignment = Alignment(horizontal='left', vertical='center')
 
-    c_at = ws_resumen.cell(row=r_idx, column=7, value=ecount)
-    c_at.alignment = Alignment(horizontal='right', vertical='center')
-    c_at.font = font_bold
+    c_et = ws_resumen.cell(row=r_idx, column=7, value=ecount)
+    c_et.alignment = Alignment(horizontal='right', vertical='center')
+    c_et.font = font_bold
     
-    c_ap = ws_resumen.cell(row=r_idx, column=8, value=f"=G{r_idx}/$G$24")
-    c_ap.alignment = Alignment(horizontal='right', vertical='center')
-    c_ap.font = font_bold
-    c_ap.number_format = '0.0%'
+    c_ep = ws_resumen.cell(row=r_idx, column=8, value=f"=G{r_idx}/$G$24")
+    c_ep.alignment = Alignment(horizontal='right', vertical='center')
+    c_ep.font = font_bold
+    c_ep.number_format = '0.0%'
     
     fill_color = ZEBRA_FILL if r_idx % 2 == 0 else 'FFFFFF'
     for c_idx in range(2, 9):
@@ -597,31 +538,29 @@ for r_idx, (enom, edesc, ecount) in enumerate(ato_stages, start=19):
 # Fila totalizador ATO
 ws_resumen.cell(row=24, column=2, value="TOTAL POR CICLO ATO").font = font_bold
 ws_resumen.merge_cells('C24:F24')
-ws_resumen.cell(row=24, column=3, value="100% de contenidos clasificados según ciclo de vida del contribuyente").font = font_small
-c_att = ws_resumen.cell(row=24, column=7, value="=SUM(G19:G23)")
-c_att.font = font_bold
-c_att.alignment = Alignment(horizontal='right', vertical='center')
-c_atp = ws_resumen.cell(row=24, column=8, value="=SUM(H19:H23)")
-c_atp.font = font_bold
-c_atp.alignment = Alignment(horizontal='right', vertical='center')
-c_atp.number_format = '0.0%'
+ws_resumen.cell(row=24, column=3, value="100% de contenidos clasificados según ciclo de vida").font = font_small
+c_ett = ws_resumen.cell(row=24, column=7, value="=SUM(G19:G23)")
+c_ett.font = font_bold
+c_ett.alignment = Alignment(horizontal='right', vertical='center')
+c_etp = ws_resumen.cell(row=24, column=8, value="=SUM(H19:H23)")
+c_etp.font = font_bold
+c_etp.alignment = Alignment(horizontal='right', vertical='center')
+c_etp.number_format = '0.0%'
 for c_idx in range(2, 9):
     ws_resumen.cell(row=24, column=c_idx).border = thin_border
     ws_resumen.cell(row=24, column=c_idx).fill = PatternFill(start_color='E2E8F0', end_color='E2E8F0', fill_type='solid')
 ws_resumen.row_dimensions[24].height = 24
 
-# ------------------------------------------------------------------------------
-# SECCIÓN 3: TIPOS DE INTERACCIÓN (CÓMO RESUELVE EL CIUDADANO)
-# ------------------------------------------------------------------------------
+# Sección Interacciones
 ws_resumen['B26'] = "3. TIPOS DE INTERACCIÓN (CÓMO RESUELVE EL CIUDADANO)"
 ws_resumen['B26'].font = Font(name='Segoe UI', size=11, bold=True, color='1E293B')
 
-int_headers = ["Tipo de Interacción", "Modalidad Operativa", "Total Contenidos", "% del Portal"]
-for col_idx, h in enumerate(int_headers, start=2):
+inter_headers = ["Tipo de Interacción", "Descripción Técnica", "Total Contenidos", "% del Portal"]
+for col_idx, h in enumerate(inter_headers, start=2):
     target_c = col_idx if col_idx < 4 else (col_idx + 3)
     c = ws_resumen.cell(row=27, column=target_c, value=h)
     c.font = font_header
-    c.fill = PatternFill(start_color=CYAN_ACCENT, end_color=CYAN_ACCENT, fill_type='solid')
+    c.fill = PatternFill(start_color=NAVY_HEADER, end_color=NAVY_HEADER, fill_type='solid')
     c.alignment = Alignment(horizontal='center', vertical='center')
     c.border = header_border
 ws_resumen.merge_cells('C27:F27')
@@ -670,15 +609,12 @@ for c_idx in range(2, 9):
 ws_resumen.row_dimensions[32].height = 24
 
 # Anchos de columna en Resumen
-resumen_col_widths = {
-    1: 4, 2: 6, 3: 32, 4: 55, 5: 50, 6: 55, 7: 18, 8: 14
-}
+resumen_col_widths = {1: 4, 2: 6, 3: 32, 4: 55, 5: 50, 6: 55, 7: 18, 8: 14}
 for col_idx, width in resumen_col_widths.items():
     ws_resumen.column_dimensions[get_column_letter(col_idx)].width = width
 
-
 # ==============================================================================
-# HOJA 2: MAPA DE NAVEGACIÓN (ÁRBOL COMPLETO Y CANÓNICO CON 100% COBERTURA: 739)
+# HOJA 2: MAPA DE NAVEGACIÓN (27 NODOS CANÓNICOS + SUBTOTAles DINÁMICOS)
 # ==============================================================================
 ws_mapa = wb.create_sheet(title="Mapa de Navegación")
 ws_mapa.views.sheetView[0].showGridLines = True
@@ -717,19 +653,23 @@ for col_idx, h in enumerate(headers_mapa, start=2):
     c.border = header_border
 ws_mapa.row_dimensions[6].height = 28
 
-# Agrupar los nodos por segmento para insertar subtotales limpios
 segmentos_orden = [
-    ('Contribuyentes', 413, BLUE_HEADER),
-    ('Operadores de Comercio Exterior', 202, CYAN_ACCENT),
-    ('Profesionales', 45, GREEN_ACCENT),
-    ('Entes Exentos', 79, PURPLE_ACCENT)
+    ('Contribuyentes', BLUE_HEADER),
+    ('Operadores de Comercio Exterior', CYAN_ACCENT),
+    ('Profesionales', GREEN_ACCENT),
+    ('Entes Exentos', PURPLE_ACCENT)
 ]
 
 current_row = 7
 node_no = 1
 subtotal_rows = []
+seg_ranges = []
 
-for seg_name, seg_total, seg_color in segmentos_orden:
+# Calcular primero fila final para usarla en fórmulas
+total_data_rows = len(NODOS_MAPA) + len(segmentos_orden)  # 27 nodos + 4 subtotales
+final_row = 7 + total_data_rows
+
+for seg_name, seg_color in segmentos_orden:
     seg_nodes = [n for n in NODOS_MAPA if n['segmento'] == seg_name]
     start_seg_row = current_row
     
@@ -745,10 +685,6 @@ for seg_name, seg_total, seg_color in segmentos_orden:
         c_cnt.alignment = Alignment(horizontal='right', vertical='center')
         c_cnt.font = font_bold
 
-        # % del Segmento (se actualizará con la fórmula al subtotal)
-        # Por ahora temporal, se fija abajo
-        
-        # Miga de Pan
         miga = f"{node['segmento']} > {node['regimen']} > {node['categoria']}"
         ws_mapa.cell(row=current_row, column=10, value=miga).font = font_small
 
@@ -756,7 +692,7 @@ for seg_name, seg_total, seg_color in segmentos_orden:
         for c_idx in range(2, 11):
             cell = ws_mapa.cell(row=current_row, column=c_idx)
             if c_idx not in [3, 4, 7]: cell.font = font_body
-            if c_idx == 6 or c_idx == 10: cell.font = font_small
+            if c_idx in [6, 10]: cell.font = font_small
             cell.fill = PatternFill(start_color=fill_color, end_color=fill_color, fill_type='solid')
             cell.border = thin_border
         ws_mapa.row_dimensions[current_row].height = 24
@@ -767,6 +703,7 @@ for seg_name, seg_total, seg_color in segmentos_orden:
     end_seg_row = current_row - 1
     subtotal_row = current_row
     subtotal_rows.append(subtotal_row)
+    seg_ranges.append((start_seg_row, end_seg_row, subtotal_row))
 
     # Fila de Subtotal del Segmento
     ws_mapa.cell(row=subtotal_row, column=2, value="").border = subtotal_border
@@ -783,7 +720,7 @@ for seg_name, seg_total, seg_color in segmentos_orden:
     c_sub_pct_seg.font = font_bold
     c_sub_pct_seg.alignment = Alignment(horizontal='right', vertical='center')
 
-    c_sub_pct_port = ws_mapa.cell(row=subtotal_row, column=9, value=f"=G{subtotal_row}/$G$44") # G44 es total final
+    c_sub_pct_port = ws_mapa.cell(row=subtotal_row, column=9, value=f"=G{subtotal_row}/$G${final_row}")
     c_sub_pct_port.font = font_bold
     c_sub_pct_port.alignment = Alignment(horizontal='right', vertical='center')
     c_sub_pct_port.number_format = '0.0%'
@@ -796,27 +733,25 @@ for seg_name, seg_total, seg_color in segmentos_orden:
         cell.fill = PatternFill(start_color=BG_SUBTOTAL, end_color=BG_SUBTOTAL, fill_type='solid')
     ws_mapa.row_dimensions[subtotal_row].height = 24
 
-    # Ahora asignar fórmulas de porcentaje a las filas del segmento
-    for r in range(start_seg_row, end_seg_row + 1):
-        # % del Segmento
-        c_ps = ws_mapa.cell(row=r, column=8, value=f"=G{r}/$G${subtotal_row}")
+    current_row += 1
+
+# Asignar porcentajes relativos en cada nodo
+for start_r, end_r, sub_r in seg_ranges:
+    for r in range(start_r, end_r + 1):
+        c_ps = ws_mapa.cell(row=r, column=8, value=f"=G{r}/$G${sub_r}")
         c_ps.alignment = Alignment(horizontal='right', vertical='center')
         c_ps.font = font_small
         c_ps.number_format = '0.0%'
         
-        # % del Portal
-        c_pp = ws_mapa.cell(row=r, column=9, value=f"=G{r}/$G$44")
+        c_pp = ws_mapa.cell(row=r, column=9, value=f"=G{r}/$G${final_row}")
         c_pp.alignment = Alignment(horizontal='right', vertical='center')
         c_pp.font = font_small
         c_pp.number_format = '0.0%'
 
-    current_row += 1
-
 # Fila TOTAL GENERAL DEL PORTAL
-final_row = current_row # Fila 45
 ws_mapa.cell(row=final_row, column=2, value="").border = header_border
 ws_mapa.cell(row=final_row, column=3, value="TOTAL PORTAL WEB SAT").font = font_bold
-ws_mapa.cell(row=final_row, column=4, value="4 Segmentos y 33 Categorías").font = font_small
+ws_mapa.cell(row=final_row, column=4, value=f"4 Segmentos y {len(NODOS_MAPA)} Categorías").font = font_small
 ws_mapa.cell(row=final_row, column=5, value="").border = header_border
 ws_mapa.cell(row=final_row, column=6, value="Universo Total de Fichas Oficiales").font = font_bold
 
@@ -844,7 +779,7 @@ for col_idx, width in mapa_widths.items():
 ws_mapa.freeze_panes = 'F7'
 
 # ==============================================================================
-# HOJA 3: FICHAS POR ROL Y CATEGORÍA (DEFINICIONES, LEAD TEXT Y BASE JURÍDICA: 33 FICHAS)
+# HOJA 3: FICHAS POR ROL Y CATEGORÍA (27 FICHAS CANÓNICAS)
 # ==============================================================================
 ws_fichas = wb.create_sheet(title="Fichas por Rol y Categoría")
 ws_fichas.views.sheetView[0].showGridLines = True
@@ -858,7 +793,7 @@ banner_f.alignment = Alignment(horizontal='center', vertical='center')
 
 ws_fichas.merge_cells('A4:H4')
 sub_f = ws_fichas['A4']
-sub_f.value = "MATRIZ COMPLETA DE LAS 33 CATEGORÍAS DEL PORTAL CON SUS TEXTOS ORIENTADORES Y MARCO NORMATIVO OFICIAL"
+sub_f.value = f"MATRIZ COMPLETA DE LAS {len(NODOS_MAPA)} CATEGORÍAS DEL PORTAL CON SUS TEXTOS ORIENTADORES Y MARCO NORMATIVO OFICIAL"
 sub_f.font = font_subtitle
 sub_f.fill = PatternFill(start_color=NAVY_HEADER, end_color=NAVY_HEADER, fill_type='solid')
 sub_f.alignment = Alignment(horizontal='center', vertical='center')
@@ -888,16 +823,13 @@ for r_idx, node in enumerate(NODOS_MAPA, start=7):
     ws_fichas.cell(row=r_idx, column=3, value=node['regimen']).font = font_bold
     ws_fichas.cell(row=r_idx, column=4, value=node['categoria'])
     
-    # Qué es:
     c_qe = ws_fichas.cell(row=r_idx, column=5, value=node['que_es'])
     c_qe.alignment = Alignment(horizontal='left', vertical='center', wrap_text=True)
     
-    # Lead text:
     c_lt = ws_fichas.cell(row=r_idx, column=6, value=node['lead_text'])
     c_lt.font = font_lead
     c_lt.alignment = Alignment(horizontal='left', vertical='center', wrap_text=True)
 
-    # Base jurídica:
     c_bj = ws_fichas.cell(row=r_idx, column=7, value=node['base_juridica'])
     c_bj.font = font_legal
     c_bj.alignment = Alignment(horizontal='left', vertical='center', wrap_text=True)
@@ -914,7 +846,6 @@ for r_idx, node in enumerate(NODOS_MAPA, start=7):
         cell.border = thin_border
     ws_fichas.row_dimensions[r_idx].height = 54
 
-# Fila totalizador en Fichas
 tot_fichas_row = len(NODOS_MAPA) + 7
 ws_fichas.cell(row=tot_fichas_row, column=1, value="").border = header_border
 ws_fichas.cell(row=tot_fichas_row, column=2, value="TOTAL PORTAL WEB SAT").font = font_bold

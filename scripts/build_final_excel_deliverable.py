@@ -415,11 +415,13 @@ def populate_unified_sheet(ws, dataset):
 
         nav_levels = miga_parts[:-1] if len(miga_parts) > 1 else miga_parts
 
-        n1 = nav_levels[0] if len(nav_levels) > 0 else (item.get('segmento') or '—')
-        n2 = nav_levels[1] if len(nav_levels) > 1 else '—'
-        n3 = nav_levels[2] if len(nav_levels) > 2 else '—'
-        n4 = nav_levels[3] if len(nav_levels) > 3 else '—'
-        n5 = nav_levels[4] if len(nav_levels) > 4 else '—'
+        n1 = item.get('nivel1_segmento') or item.get('segmento') or (nav_levels[0] if len(nav_levels) > 0 else '—')
+        n2 = item.get('nivel2_area') or item.get('categoria') or (nav_levels[1] if len(nav_levels) > 1 else '—')
+        n3 = item.get('nivel3_subarea') or item.get('subcategoria') or (nav_levels[2] if len(nav_levels) > 2 else '—')
+        n4 = item.get('nivel4_tema') or item.get('tema') or (nav_levels[3] if len(nav_levels) > 3 else '—')
+        n5 = item.get('nivel5_tramite') or item.get('subtema') or (nav_levels[4] if len(nav_levels) > 4 else '—')
+        if not n4 or str(n4).strip() == '': n4 = '—'
+        if not n5 or str(n5).strip() == '': n5 = '—'
 
         # Col 1: No.
         ws.cell(row=r_idx, column=1, value=r_idx - 1).alignment = Alignment(horizontal='center')

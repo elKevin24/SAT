@@ -59,10 +59,10 @@ const SPECIFIC_SUBCATEGORY_ORDER: Record<string, string[]> = {
     'Régimen Agropecuario y Productores',
   ],
   'Abogados y Notarios': [
-    'Habilitación y Registro Profesional',
+    'Habilitación y Registro Notarial',
     'Timbres Fiscales y Papel Sellado de Protocolo',
     'Traspaso Electrónico Vehicular (e-Traspaso)',
-    'Avisos Notariales ante la SAT',
+    'Avisos Notariales y Fe Pública',
   ],
   'Peritos Contadores': [
     'Habilitación y Registro de Perito Contador',
@@ -80,7 +80,7 @@ const SPECIFIC_SUBCATEGORY_ORDER: Record<string, string[]> = {
     'Facturación por Honorarios y Formularios',
     'Actualización de Actividad y RTU',
     'Consultas Jurídico Tributarias',
-    'Sistemas de Retención en la Fuente',
+    'Sistemas de Retención y Cumplimiento',
   ],
   'Importadores': [
     'Registro y Padrón de Importadores',
