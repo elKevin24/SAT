@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Header } from './components/Header';
 import { UserSegmentCards, SegmentId } from './components/UserSegmentCards';
 import { RotaryBanner } from './components/RotaryBanner';
-import { QuickAccessCarousel } from './components/QuickAccessCarousel';
 import { PopularTopicsTabs } from './components/PopularTopicsTabs';
 import { GuidedProcessesSection } from './components/GuidedProcessesSection';
 import { NewsAndTransparencySection } from './components/NewsAndTransparencySection';
@@ -199,10 +198,7 @@ export default function App() {
             {/* 3. Rotary Banner */}
             <RotaryBanner />
 
-            {/* 4. Quick Access Carousel */}
-            <QuickAccessCarousel />
-
-            {/* 5. Popular Topics Tabs */}
+            {/* 4. Popular Topics Tabs */}
             <PopularTopicsTabs
               onOpenConsultasModal={(segId) => setConsultasModalSegment(segId)}
             />

@@ -7,11 +7,12 @@ Este documento registra los puntos pendientes acordados para continuar con la ev
 ## 📋 Lista de Control de Tareas (Checklist)
 
 ### 1. Limpieza de Secciones Redundantes en la Portada (`Home`)
-- [ ] **1.1 Diagnóstico de redundancia visual**:
-  - En la página de inicio (`App.tsx`) actualmente conviven las 4 tarjetas de segmentos principales (`UserSegmentCards`) con el carrusel de accesos rápidos (`QuickAccessCarousel`) y las pestañas de temas populares (`PopularTopicsTabs`), lo cual repite enlaces a los mismos trámites (NIT, FEL, Vehículos, Solvencias).
-- [ ] **1.2 Acciones de consolidación**:
-  - [ ] Evaluar el retiro o consolidación de los bloques secundarios repetitivos.
-  - [ ] Dejar una portada limpia y minimalista donde el camino primario de exploración ciudadana sea la navegación directa por los 4 segmentos en tarjetas.
+- [x] **1.1 Diagnóstico de redundancia visual**:
+  - En la página de inicio (`App.tsx`) convivían las 4 tarjetas de segmentos principales (`UserSegmentCards`) con el carrusel de accesos rápidos (`QuickAccessCarousel`) y las pestañas de temas populares (`PopularTopicsTabs`), lo cual repetía enlaces a los mismos trámites (NIT, FEL, Vehículos, Solvencias).
+- [x] **1.2 Acciones de consolidación**:
+  - [x] Retiro del carrusel secundario repetitivo (`QuickAccessCarousel`).
+  - [x] Portada limpia y minimalista donde el camino primario de exploración ciudadana es la navegación directa por los 4 segmentos en tarjetas (`UserSegmentCards`).
+
 
 ---
 
