@@ -9,8 +9,10 @@ Este directorio centraliza las hojas de ruta (**Roadmaps**) y planes de ejecuci�
 | Roadmap | Área de Trabajo | Estado General | Progreso Estimado | Archivo de Detalle |
 | :--- | :--- | :---: | :---: | :--- |
 | **01** | **Auditoría UX / UI & Accesibilidad WCAG 2.2** | En ejecución | 80% | [`01_ROADMAP_AUDITORIA_UX_A11Y.md`](./01_ROADMAP_AUDITORIA_UX_A11Y.md) |
-| **02** | **Responsive Design & Mobile First** | En ejecución | 40% | [`02_ROADMAP_RESPONSIVE_MOBILE_FIRST.md`](./02_ROADMAP_RESPONSIVE_MOBILE_FIRST.md) |
-| **03** | **Backlog de Evolución del Portal** | En ejecución | 35% | [`03_ROADMAP_BACKLOG_PORTAL.md`](./03_ROADMAP_BACKLOG_PORTAL.md) |
+| **02** | **Responsive Design & Mobile First** | En ejecución | 50% | [`02_ROADMAP_RESPONSIVE_MOBILE_FIRST.md`](./02_ROADMAP_RESPONSIVE_MOBILE_FIRST.md) |
+| **03** | **Backlog de Evolución del Portal** | En ejecución | 45% | [`03_ROADMAP_BACKLOG_PORTAL.md`](./03_ROADMAP_BACKLOG_PORTAL.md) |
+| **Doc** | **Sugerencias de Continuidad y UX** | Publicado | 100% | [`docs/arquitectura-informacion/SUGERENCIAS_DE_CONTINUIDAD_Y_UX.md`](../arquitectura-informacion/SUGERENCIAS_DE_CONTINUIDAD_Y_UX.md) |
+
 
 ---
 
