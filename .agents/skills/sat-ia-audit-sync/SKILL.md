@@ -10,7 +10,7 @@ description: >-
 
 # Skill: Auditoría y Sincronización de Arquitectura de Información (SAT IA-Audit-Sync)
 
-Esta skill documenta el procedimiento estándar, principios metodológicos y herramientas técnicas aplicadas en la reestructuración integral de la Arquitectura de Información del **Portal Web SAT Guatemala**, con especial énfasis en la optimización de los **Operadores de Comercio Exterior** (246 trámites consolidados en 6 ramas canónicas) y el universo total de **718 trámites**.
+Esta skill documenta el procedimiento estándar, principios metodológicos y herramientas técnicas aplicadas en la reestructuración integral de la Arquitectura de Información del **Portal Web SAT Guatemala**, con especial énfasis en la optimización de los **Operadores de Comercio Exterior** (246 trámites en 6 ramas canónicas), el saneamiento de **Profesionales** (47 trámites netos en 5 roles) y el universo total de **716 trámites consolidados**.
 
 ---
 
@@ -121,6 +121,7 @@ Actualizar la documentación técnica para reflejar los cambios:
 * `docs/arquitectura-informacion/ESTRUCTURA_FINAL_CONTENIDO.md`
 * `docs/arquitectura-informacion/TAXONOMIA_Y_DIMENSIONES_PORTAL_SAT.md`
 * `docs/arquitectura-informacion/MAPA_DE_NAVEGACION_COMERCIO_EXTERIOR.md`
+* `docs/arquitectura-informacion/MAPA_DE_NAVEGACION_PROFESIONALES.md`
 * `docs/arquitectura-informacion/brechas-comercio-exterior.md`
 * `docs/fuentes-datos/README.md`
 * `docs/README.md`
@@ -130,8 +131,9 @@ Actualizar la documentación técnica para reflejar los cambios:
 ## 4. Checklist Rápido de Calidad (DoD - Definition of Done)
 
 - [ ] **0 Duplicados** en IDs de trámites a lo largo de todo el catálogo.
-- [ ] **718 registros consolidados** (344 Contribuyentes, 246 Comercio Exterior, 79 Entes Exentos, 49 Profesionales).
+- [ ] **716 registros consolidados** (344 Contribuyentes, 246 Comercio Exterior, 79 Entes Exentos, 47 Profesionales).
 - [ ] **6 ramas canónicas** en Comercio Exterior, sin categorías huérfanas.
+- [ ] **5 categorías saneadas** en Profesionales sin subcategorías genéricas.
 - [ ] **Fuentes históricas intactas** (`Detalle de Contenido...`, `Arbol_de_Navegacion...`, `Ruta de procesos...`).
 - [ ] **Libros Excel vivos recalculados** y sincronizados con `allTramites.json`.
 - [ ] **`npm run build`** finalizado con 0 errores de tipado o compilación.

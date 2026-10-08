@@ -9,7 +9,7 @@ Este directorio centraliza la documentación técnica, arquitectónica, normativ
 ```text
 docs/
 ├── roadmaps/                 # Hojas de ruta, auditorías técnicas y backlog
-├── arquitectura-informacion/ # Taxonomía, catálogo de 718 trámites, 6 ramas canónicas y mapa de navegación
+├── arquitectura-informacion/ # Taxonomía, catálogo de 716 trámites, mapas de navegación y dimensiones ATO
 ├── diseno-normativa/         # Design System SAT, reglas UI/UX y manuales de marca
 └── fuentes-datos/            # Insumos históricos (congelados) y libros Excel maestros vivos (sincronizados)
 ```
@@ -21,7 +21,7 @@ docs/
 | Carpeta | Descripción | Gobernanza | Índice |
 | :--- | :--- | :---: | :--- |
 | [`roadmaps/`](./roadmaps/README.md) | **Hojas de Ruta**: Auditoría UX/UI, Accesibilidad WCAG 2.2, Mobile First y Backlog. | Activo | [`roadmaps/README.md`](./roadmaps/README.md) |
-| [`arquitectura-informacion/`](./arquitectura-informacion/README.md) | **Arquitectura de Información**: Estructura de 718 trámites (L1 a L6+), 6 ramas de Aduanas y dimensiones ATO. | Activo | [`arquitectura-informacion/README.md`](./arquitectura-informacion/README.md) |
+| [`arquitectura-informacion/`](./arquitectura-informacion/README.md) | **Arquitectura de Información**: Estructura de 716 trámites (L1 a L6+), mapas estructurados y dimensiones ATO. | Activo | [`arquitectura-informacion/README.md`](./arquitectura-informacion/README.md) |
 | [`diseno-normativa/`](./diseno-normativa/README.md) | **Diseño y Normativa**: Reglas UI/UX, Design System SAT, especificación responsive y manuales gráficos. | Activo | [`diseno-normativa/README.md`](./diseno-normativa/README.md) |
 | [`fuentes-datos/`](./fuentes-datos/README.md) | **Fuentes de Datos**: Fuentes históricas (congeladas) vs. Entregables vivos (sincronizados con el JSON). | Activo | [`fuentes-datos/README.md`](./fuentes-datos/README.md) |
 
@@ -36,7 +36,7 @@ El repositorio establece una frontera formal entre dos categorías de documentos
    - [`Arbol_de_Navegacion_Portal_v5.xlsx`](./fuentes-datos/Arbol_de_Navegacion_Portal_v5.xlsx): Árbol de navegación original antes de la optimización canónica.
    - [`Ruta de procesos.xlsx`](./fuentes-datos/Ruta%20de%20procesos.xlsx): Matriz de procesos guiados base.
 2. **Entregables Oficiales Vivos (Sincronizados con `src/data/allTramites.json`):**
-   - [`Estructura_Final_Contenido_Portal_SAT_Actualizado.xlsx`](./fuentes-datos/Estructura_Final_Contenido_Portal_SAT_Actualizado.xlsx): Libro maestro de 718 trámites con fórmulas de resumen, migas de pan y desglose por pilar.
+   - [`Estructura_Final_Contenido_Portal_SAT_Actualizado.xlsx`](./fuentes-datos/Estructura_Final_Contenido_Portal_SAT_Actualizado.xlsx): Libro maestro de 716 trámites con fórmulas de resumen, migas de pan y desglose por pilar.
    - [`Mapa_de_Navegacion_y_Descripciones_Portal_SAT.xlsx`](./fuentes-datos/Mapa_de_Navegacion_y_Descripciones_Portal_SAT.xlsx): Jerarquías y fichas en Lenguaje Ciudadano.
    - [`src/data/allTramites.json`](../src/data/allTramites.json): Base de datos única (Single Source of Truth) en producción.
 
@@ -54,20 +54,21 @@ El repositorio establece una frontera formal entre dos categorías de documentos
 
 ### 2. Arquitectura de Información (`docs/arquitectura-informacion/`)
 - [x] **Marco Maestro de IA-UX (8 capas)**: Modelo mental, tareas, procesos, contenido, findability, relaciones y gobernanza ([Detalle](./arquitectura-informacion/ARQUITECTURA_INFORMACION_CENTRADA_EN_USUARIO.md)).
-- [x] **Universo 718 Trámites Saneados**: Consolidación sin pérdida (344 Contribuyentes, 246 Comercio Exterior, 79 Entes Exentos, 49 Profesionales).
+- [x] **Universo 716 Trámites Consolidados**: Saneamiento sin pérdida (344 Contribuyentes, 246 Comercio Exterior, 79 Entes Exentos, 47 Profesionales).
 - [x] **Consolidación Canónica de Comercio Exterior**: 6 ramas maestras optimizadas sin duplicidad de niveles (Importadores, Exportadores, OEA, AFPA, Regímenes Territoriales, Normativa General).
+- [x] **Consolidación de Profesionales**: 47 trámites netos, 2 duplicados fusionados, 0 subcategorías genéricas residuales y migas normalizadas.
 - [x] **Separación de Capas**: Desacoplamiento formal de Arquitectura vs. Navegación vs. Responsive.
 - [x] **Dimensiones ATO**: Clasificación bidimensional (5 etapas del ciclo + 4 tipos de interacción).
 - [ ] **Mesa Técnica de Aduanas**: Sesión con Intendencia para validar las 12 brechas operativas.
 
 ### 3. Sistema de Diseño y Normativa (`docs/diseno-normativa/`)
 - [x] **Manual de Identidad SAT**: Integración y respeto a la paleta oficial y normas gráficas institucionales.
-- [x] **Jerarquía de Referencias**: Design System SAT (visual) $\to$ GOV.UK (público) $\to$ WCAG 2.2 AA (técnico). Fluent 2 descartado.
+- [x] **Jerarquía de Referencias**: Design System SAT (visual) $\to$ GOV.UK (público) $\to$ W3C WCAG 2.2 AA (técnico). Fluent 2 descartado.
 - [x] **Navegación Adaptativa Dual**: Breadcrumbs con elipsis interactiva en móvil y Sidebar sticky en desktop.
 - [x] **Touch Targets**: Tamaño táctil mínimo $\ge 44 \times 44$px en elementos de navegación.
 
 ### 4. Integridad de Datos (`docs/fuentes-datos/`)
-- [x] **Matriz Definitiva**: `Estructura_Final_Contenido_Portal_SAT_Actualizado.xlsx` con 718 filas sincronizadas.
+- [x] **Matriz Definitiva**: `Estructura_Final_Contenido_Portal_SAT_Actualizado.xlsx` con 716 filas sincronizadas.
 - [x] **Mapa de Navegación Excel**: `Mapa_de_Navegacion_y_Descripciones_Portal_SAT.xlsx` con fichas en Lenguaje Ciudadano.
 - [x] **Extracción JSON**: Sincronización exacta con `src/data/allTramites.json`.
 - [x] **Preservación Histórica**: Fuentes clásicas intactas para auditoría institucional.
