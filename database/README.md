@@ -1,40 +1,55 @@
 # Bases de Datos Oficiales del Portal SAT Guatemala
 
-Este directorio contiene las bases de datos del catálogo maestro del Portal SAT (676 trámites oficiales), exportadas bajo dos paradigmas complementarios:
+Este directorio contiene las bases de datos del catálogo maestro del Portal SAT, exportadas bajo dos paradigmas complementarios:
 
-1. **NoSQL Documental (`sat_portal_nosql.json`)**: Ideal para frontend, APIs REST/GraphQL, Node.js, MongoDB, Elasticsearch y Firebase.
+1. **NoSQL Documental (`sat_portal_nosql.json`)**: 683 contenidos únicos desacoplados con matriz de audiencias, ideal para frontend, Headless CMS, APIs REST/GraphQL, MongoDB, Elasticsearch y Firebase.
 2. **SQL Dump Relacional (`sat_portal_dump.sql`)**: Estándar corporativo normalizado en 3ª Forma Normal (3NF) con claves foráneas, tablas pivote e índices para PostgreSQL, MySQL y MariaDB.
 
 ---
 
 ## 1. Archivo NoSQL Documental: `sat_portal_nosql.json`
 
-### Estructura de cada documento:
-Cada trámite existe **una sola vez** como un documento autónomo que contiene sus audiencias (`regimenes_aplicables`) y su área temática:
+### Estructura de cada documento (683 contenidos únicos):
+Cada trámite, guía o servicio existe **una sola vez** como un documento autónomo. Las ramas o categorías donde se publica se definen en el array polijerárquico `audiencias`:
 
 ```json
 {
-  "_id": "contribuyentes-rtu-01",
-  "codigo": "SAT-TR-0042",
+  "id": "cnt-contribuyentes-54",
+  "codigo": "SAT-CNT-0042",
+  "idOriginal": "contribuyentes-54",
   "titulo": "Actualización de Datos en el Registro Tributario Unificado (RTU)",
-  "macro_grupo": {
-    "id": "contribuyentes",
-    "nombre": "Contribuyentes"
-  },
-  "regimenes_aplicables": [
-    { "id": "nit-sin-obligaciones", "nombre": "NIT sin Obligaciones" },
-    { "id": "pequenos-contribuyentes", "nombre": "Pequeños Contribuyentes" },
-    { "id": "contribuyente-general", "nombre": "Contribuyente General" }
+  "nombreActual": "Actualización de Datos en el Registro Tributario Unificado (RTU)",
+  "descripcion": "Requisitos y pasos para actualizar tu información personal, domicilio fiscal y actividad económica en el RTU Digital.",
+  "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/",
+  "tipoInteraccion": "servicio_transaccional",
+  "tipoInteraccionLabel": "Trámite / Aplicativo en Línea",
+  "tipologiaContenido": "guia_requisitos",
+  "tipologiaContenidoLabel": "Guía Informativa / Texto",
+  "plataformaSistema": "portal_web",
+  "plataformaSistemaLabel": "Portal Web SAT",
+  "canalAtencion": "Digital / Web",
+  "etapaAto": "modificar_cerrar",
+  "etapaAtoLabel": "Modificaciones y cierre",
+  "baseLegal": "Código Tributario y Leyes Aplicables",
+  "esBrecha": false,
+  "esTransversal": false,
+  "totalAudiencias": 1,
+  "audiencias": [
+    {
+      "tramiteId": "contribuyentes-54",
+      "segmentoId": "contribuyentes",
+      "segmentoNombre": "Contribuyentes",
+      "categoria": "NIT sin Obligaciones",
+      "subcategoria": "Registro Tributario Unificado (RTU)",
+      "tema": "Constancias y gestiones del RTU",
+      "subtema": "Requisitos de persona/empresa",
+      "actorEspecifico": "—",
+      "migaBreadcrumb": "Contribuyentes > NIT sin Obligaciones > Registro Tributario Unificado (RTU) > Actualización de Datos en el RTU"
+    }
   ],
-  "categoria_tematica": {
-    "id": "registro-tributario-unificado-rtu-digital-y-agencia-virtual",
-    "nombre": "Registro Tributario Unificado (RTU) Digital y Agencia Virtual"
-  },
-  "etapa_ciclo_vida": "Operación y Cumplimiento",
-  "canal_atencion": "En Línea",
-  "descripcion": "...",
-  "base_legal": "Código Tributario (Decreto 6-91)",
-  "url_oficial": "https://portal.sat.gob.gt"
+  "segmentosAplicables": ["contribuyentes"],
+  "categoriasAplicables": ["NIT sin Obligaciones"],
+  "perfilDestinatario": "Ciudadanos y empresas"
 }
 ```
 

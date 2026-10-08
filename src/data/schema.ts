@@ -87,6 +87,45 @@ export interface ProcesoGuiado {
   pasos?: ProcesoPaso[];
 }
 
+export interface ContenidoAudiencia {
+  tramiteId?: string;
+  segmentoId: string;
+  segmentoNombre: string;
+  categoria: string;
+  subcategoria: string;
+  tema?: string;
+  subtema?: string;
+  actorEspecifico?: string;
+  migaBreadcrumb: string;
+}
+
+export interface ContenidoUnicoItem {
+  id: string;
+  codigo: string;
+  idOriginal: string;
+  titulo: string;
+  nombreActual?: string;
+  descripcion: string;
+  url: string;
+  tipoInteraccion?: TipoInteraccionId;
+  tipoInteraccionLabel?: string;
+  tipologiaContenido?: TipologiaContenidoId;
+  tipologiaContenidoLabel?: string;
+  plataformaSistema?: string;
+  plataformaSistemaLabel?: string;
+  canalAtencion?: string;
+  etapaAto?: EtapaAtoId;
+  etapaAtoLabel?: string;
+  baseLegal?: string;
+  esBrecha?: boolean;
+  esTransversal: boolean;
+  totalAudiencias: number;
+  audiencias: ContenidoAudiencia[];
+  segmentosAplicables: string[];
+  categoriasAplicables: string[];
+  perfilDestinatario?: string;
+}
+
 export function slugify(value: string): string {
   return value
     .normalize('NFD')
@@ -208,4 +247,73 @@ export function assertProcesos(raw: unknown): ProcesoGuiado[] {
   const errors = collectProcesoErrors(raw);
   if (errors.length > 0) throw formatErrors('allProcesos.json', errors);
   return raw as ProcesoGuiado[];
+}
+
+export function collectContenidoUnicoErrors(data: unknown): string[] {
+  if (!Array.isArray(data)) return ['catalogoContenidosUnicos: se esperaba un arreglo'];
+  const errors: string[] = [];
+  const seenIds = new Set<string>();
+  const seenCodigos = new Set<string>();
+
+  data.forEach((item, index) => {
+    const where = `catalogoContenidosUnicos[${index}]`;
+    if (typeof item !== 'object' || item === null) {
+      errors.push(`${where}: no es un objeto`);
+      return;
+    }
+    const c = item as Record<string, unknown>;
+
+    if (!isNonEmptyString(c.id)) errors.push(`${where}.id: ausente`);
+    else {
+      if (seenIds.has(c.id)) errors.push(`${where}.id: duplicado "${c.id}"`);
+      seenIds.add(c.id);
+    }
+
+    if (!isNonEmptyString(c.codigo)) errors.push(`${where}.codigo: ausente`);
+    else {
+      if (seenCodigos.has(c.codigo)) errors.push(`${where}.codigo: duplicado "${c.codigo}"`);
+      seenCodigos.add(c.codigo);
+    }
+
+    if (!isNonEmptyString(c.titulo)) errors.push(`${where}.titulo: ausente`);
+    if (!isNonEmptyString(c.descripcion)) errors.push(`${where}.descripcion: ausente`);
+    if (!isHttpUrl(c.url)) errors.push(`${where}.url: inválida (${String(c.url)})`);
+
+    if (typeof c.esTransversal !== 'boolean') errors.push(`${where}.esTransversal: se esperaba booleano`);
+    if (typeof c.totalAudiencias !== 'number' || c.totalAudiencias < 1) {
+      errors.push(`${where}.totalAudiencias: se esperaba entero ≥ 1`);
+    }
+
+    if (!Array.isArray(c.audiencias) || c.audiencias.length === 0) {
+      errors.push(`${where}.audiencias: se esperaba un arreglo no vacío`);
+    } else {
+      c.audiencias.forEach((aud, audIdx) => {
+        const audWhere = `${where}.audiencias[${audIdx}]`;
+        if (typeof aud !== 'object' || aud === null) {
+          errors.push(`${audWhere}: no es un objeto`);
+          return;
+        }
+        const a = aud as Record<string, unknown>;
+        if (!isNonEmptyString(a.segmentoId)) errors.push(`${audWhere}.segmentoId: ausente`);
+        if (!isNonEmptyString(a.categoria)) errors.push(`${audWhere}.categoria: ausente`);
+        if (!isNonEmptyString(a.subcategoria)) errors.push(`${audWhere}.subcategoria: ausente`);
+        if (!isNonEmptyString(a.migaBreadcrumb)) errors.push(`${audWhere}.migaBreadcrumb: ausente`);
+      });
+    }
+
+    if (!Array.isArray(c.segmentosAplicables) || c.segmentosAplicables.length === 0) {
+      errors.push(`${where}.segmentosAplicables: se esperaba un arreglo no vacío`);
+    }
+    if (!Array.isArray(c.categoriasAplicables) || c.categoriasAplicables.length === 0) {
+      errors.push(`${where}.categoriasAplicables: se esperaba un arreglo no vacío`);
+    }
+  });
+
+  return errors;
+}
+
+export function assertContenidosUnicos(raw: unknown): ContenidoUnicoItem[] {
+  const errors = collectContenidoUnicoErrors(raw);
+  if (errors.length > 0) throw formatErrors('catalogoContenidosUnicos.json', errors);
+  return raw as ContenidoUnicoItem[];
 }

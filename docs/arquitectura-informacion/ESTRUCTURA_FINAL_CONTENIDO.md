@@ -124,13 +124,35 @@ OPERADORES DE COMERCIO EXTERIOR (246 Trámites)
 ## 5. Gobernanza y Sincronización de Archivos
 
 ```
-src/data/allTramites.json (Single Source of Truth - 716 registros)
+src/data/allTramites.json (Single Source of Truth - 716 nodos de navegación)
             │
             ├──► docs/fuentes-datos/Estructura_Final_Contenido_Portal_SAT_Actualizado.xlsx
-            │    (Libro Maestro Excel con 4 hojas y fórmulas automáticas vivas)
+            │    (Libro Maestro Excel con 5 hojas: Resumen, Matriz 716, Comercio Exterior 246, Profesionales 47, Brechas 12)
             │
             ├──► docs/fuentes-datos/Mapa_de_Navegacion_y_Descripciones_Portal_SAT.xlsx
             │    (Taxonomía y fichas redactadas en Lenguaje Ciudadano)
             │
+            ├──► src/data/catalogoContenidosUnicos.json & database/sat_portal_nosql.json
+            │    (Catálogo NoSQL de 683 contenidos únicos desacoplados con matriz de audiencias transversales)
+            │
             └──► Catálogo Web React (SegmentTramitesCatalog, PortalFlow, Tests Playwright)
 ```
+
+---
+
+## 6. Catálogo NoSQL de Contenidos Únicos (Content Hub Desacoplado)
+
+Para superar el modelo jerárquico rígido de "silos" donde el contenido queda atrapado exclusivamente dentro de un grupo, se implementó la arquitectura de **Catálogo Único de Contenido** (`src/data/catalogoContenidosUnicos.json` y `database/sat_portal_nosql.json`):
+
+1. **683 Contenidos Únicos**:
+   - Cada servicio, guía o trámite web existe como una única entidad canónica identificada por un código único (`SAT-CNT-0001` a `SAT-CNT-0683`).
+   - Contiene sus atributos intrínsecos: `titulo`, `nombreActual`, `descripcion`, `url`, `tipoInteraccion`, `tipologiaContenido`, `plataformaSistema`, `canalAtencion`, `etapaAto`, `baseLegal` y `esBrecha`.
+
+2. **Matriz de Audiencias Polijerárquica (`audiencias[]`)**:
+   - Cada contenido mantiene un array de audiencias donde se proyecta dentro del portal.
+   - Cada audiencia incluye: `tramiteId` (nodo de navegación), `segmentoId`, `segmentoNombre`, `categoria`, `subcategoria`, `tema`, `subtema`, `actorEspecifico` y `migaBreadcrumb`.
+   - Se proveen arreglos optimizados de búsqueda: `segmentosAplicables[]` y `categoriasAplicables[]`.
+
+3. **Mapeo Biunívoco y Contenido Transversal**:
+   - **18 contenidos transversales** son compartidos por múltiples ramas (p. ej. *Procedimientos administrativos de aduanas*, *Consulta de contribuyentes morosos*, *DUCA y Aduana sin papeles*).
+   - La suma exacta de audiencias de los 683 contenidos únicos equivale a los **716 nodos del árbol de navegación** ($\sum \text{totalAudiencias} = 716$), garantizando 0 pérdida de información y 0 duplicación redundante de contenido.

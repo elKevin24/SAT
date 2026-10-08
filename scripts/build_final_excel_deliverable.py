@@ -503,13 +503,18 @@ def populate_unified_sheet(ws, dataset):
 ws_master = wb.create_sheet(title=SHEET_MASTER_NAME)
 populate_unified_sheet(ws_master, master_data)
 
-# HOJA 3: COMERCIO EXTERIOR (204)
+# HOJA 3: COMERCIO EXTERIOR (246)
 ce_data = [item for item in master_data if item.get('segmento') == 'Operadores de Comercio Exterior']
 ws_ce = wb.create_sheet(title=f"Comercio Exterior ({len(ce_data)})")
 populate_unified_sheet(ws_ce, ce_data)
 
+# HOJA 4: PROFESIONALES (47)
+prof_data = [item for item in master_data if item.get('segmento') == 'Profesionales' or item.get('pillar') == 'profesionales']
+ws_prof = wb.create_sheet(title=f"Profesionales ({len(prof_data)})")
+populate_unified_sheet(ws_prof, prof_data)
+
 # ==============================================================================
-# HOJA 4: BRECHAS NORMATIVAS (LAS 24 BRECHAS DE COMERCIO EXTERIOR)
+# HOJA 5: BRECHAS NORMATIVAS (LAS 12 BRECHAS DE COMERCIO EXTERIOR)
 # ==============================================================================
 ce_brechas = [item for item in ce_data if item.get('esBrecha')]
 
@@ -572,4 +577,4 @@ ws_brechas.auto_filter.ref = f"A1:F{len(ce_brechas)+1}"
 OUTPUT_EXCEL_PATH = 'docs/fuentes-datos/Estructura_Final_Contenido_Portal_SAT_Actualizado.xlsx'
 wb.save(OUTPUT_EXCEL_PATH)
 print(f"Libro Excel maestro guardado exitosamente en: {OUTPUT_EXCEL_PATH}")
-print(f"Hojas: Resumen Arquitectura, {SHEET_MASTER_NAME}, Comercio Exterior ({len(ce_data)}), Brechas Normativas ({len(ce_brechas)})")
+print(f"Hojas: {', '.join(wb.sheetnames)}")

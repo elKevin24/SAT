@@ -111,10 +111,11 @@ npm run build
 npx playwright test
 ```
 *Criterio de Aceptación:*
-* **18 de 18 tests aprobados (100%)**.
+* **19 de 19 tests aprobados (100%)**.
 * 0 violaciones WCAG 2.2 AA detectadas por axe-core en modales, páginas y flujos.
 * `order categorías: cada nombre oficial existe en el dataset` $\to$ APROBADO.
 * `order subcategorías: nombres oficiales existen y cubren categorías` $\to$ APROBADO.
+* `catalogoContenidosUnicos: 683 contenidos únicos desacoplados y suma exacta de 716 audiencias` $\to$ APROBADO.
 
 ### Paso 6: Actualización Documental en Markdown
 Actualizar la documentación técnica para reflejar los cambios:
@@ -125,6 +126,7 @@ Actualizar la documentación técnica para reflejar los cambios:
 * `docs/arquitectura-informacion/brechas-comercio-exterior.md`
 * `docs/fuentes-datos/README.md`
 * `docs/README.md`
+* `database/README.md`
 
 ---
 
@@ -132,9 +134,10 @@ Actualizar la documentación técnica para reflejar los cambios:
 
 - [ ] **0 Duplicados** en IDs de trámites a lo largo de todo el catálogo.
 - [ ] **716 registros consolidados** (344 Contribuyentes, 246 Comercio Exterior, 79 Entes Exentos, 47 Profesionales).
+- [ ] **683 contenidos únicos NoSQL** generados con matriz de audiencias transversales y suma exacta de 716 proyecciones.
 - [ ] **6 ramas canónicas** en Comercio Exterior, sin categorías huérfanas.
 - [ ] **5 categorías saneadas** en Profesionales sin subcategorías genéricas.
 - [ ] **Fuentes históricas intactas** (`Detalle de Contenido...`, `Arbol_de_Navegacion...`, `Ruta de procesos...`).
 - [ ] **Libros Excel vivos recalculados** y sincronizados con `allTramites.json`.
 - [ ] **`npm run build`** finalizado con 0 errores de tipado o compilación.
-- [ ] **`npx playwright test`** pasando al 100% (18/18 pruebas).
+- [ ] **`npx playwright test`** pasando al 100% (19/19 pruebas).

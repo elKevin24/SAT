@@ -31,6 +31,7 @@ docs/fuentes-datos/
   - Hoja `Resumen Arquitectura` con métricas y fórmulas directas.
   - Hoja `Matriz Maestra (716)` con la taxonomía multinivel, migas de pan y dimensiones ATO completas.
   - Hoja `Comercio Exterior (246)` con las 6 ramas oficiales y compactación N4/N5 saneada.
+  - Hoja `Profesionales (47)` con las 5 categorías de actor profesional (Abogados, Peritos Contadores, Auditores, Gestores, Servicios Generales).
   - Hoja `Brechas Normativas (12)` con las 12 brechas operativas pendientes de mesa técnica.
 * **`Mapa_de_Navegacion_y_Descripciones_Portal_SAT.xlsx`**:
   - Hoja `Resumen Arquitectura` con métricas globales sincronizadas.

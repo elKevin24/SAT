@@ -1,6 +1,14 @@
 import { test, expect } from '@playwright/test';
 import { readFileSync } from 'node:fs';
-import { assertTramites, assertProcesos, PILLARS, TramiteItem, ProcesoGuiado } from '../src/data/schema';
+import {
+  assertTramites,
+  assertProcesos,
+  assertContenidosUnicos,
+  PILLARS,
+  TramiteItem,
+  ProcesoGuiado,
+  ContenidoUnicoItem,
+} from '../src/data/schema';
 import { buildTaxonomy, categoriaId, subcategoriaId, resolveCategoria } from '../src/data/taxonomy';
 import { OFFICIAL_CATEGORY_ORDER, OFFICIAL_SUBCATEGORY_ORDER, subcategoryOrderFor } from '../src/data/categoryOrder';
 
@@ -12,10 +20,12 @@ function loadJson(file: string): unknown {
 
 let tramites: TramiteItem[];
 let procesos: ProcesoGuiado[];
+let contenidosUnicos: ContenidoUnicoItem[];
 
 test.beforeAll(() => {
   tramites = assertTramites(loadJson('allTramites.json'));
   procesos = assertProcesos(loadJson('allProcesos.json'));
+  contenidosUnicos = assertContenidosUnicos(loadJson('catalogoContenidosUnicos.json'));
 });
 
 const enrichedTramites = () =>
@@ -119,5 +129,36 @@ test('allProcesos: numeración, pasos y URLs válidas', () => {
       const maxStep = Math.max(...p.pasos!.map((s) => s.numero));
       expect(maxStep).toBe(p.totalPasos);
     }
+  });
+});
+
+test('catalogoContenidosUnicos: 683 contenidos únicos desacoplados y suma exacta de 716 audiencias', () => {
+  expect(contenidosUnicos.length).toBe(683);
+
+  const ids = new Set(contenidosUnicos.map((c) => c.id));
+  expect(ids.size).toBe(683);
+
+  const codigos = new Set(contenidosUnicos.map((c) => c.codigo));
+  expect(codigos.size).toBe(683);
+
+  // La suma de todas las audiencias debe mapear exactamente a los 716 nodos del árbol de navegación
+  const sumaAudiencias = contenidosUnicos.reduce((acc, c) => acc + c.totalAudiencias, 0);
+  expect(sumaAudiencias).toBe(716);
+
+  // Exactamente 18 contenidos son transversales (compartidos entre múltiples ramas)
+  const transversales = contenidosUnicos.filter((c) => c.esTransversal);
+  expect(transversales.length).toBe(18);
+
+  transversales.forEach((c) => {
+    expect(c.totalAudiencias).toBeGreaterThan(1);
+    expect(c.audiencias.length).toBe(c.totalAudiencias);
+    expect(c.segmentosAplicables.length).toBeGreaterThanOrEqual(1);
+  });
+
+  contenidosUnicos.forEach((c) => {
+    expect(c.titulo).toBeTruthy();
+    expect(c.descripcion).toBeTruthy();
+    expect(c.url).toMatch(/^https?:\/\//);
+    expect(c.audiencias.length).toBe(c.totalAudiencias);
   });
 });
