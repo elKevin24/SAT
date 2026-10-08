@@ -11,6 +11,7 @@ import { DirectConsultasModal } from './components/DirectConsultasModal';
 import { GuidedProcessModal } from './components/GuidedProcessModal';
 import { TramiteDetailModal } from './components/TramiteDetailModal';
 import { VirtualAssistantModal } from './components/VirtualAssistantModal';
+import { PortalFlowModal } from './components/PortalFlowModal';
 import { SegmentTramitesCatalog, TramiteItem } from './components/SegmentTramitesCatalog';
 import { EtapaAtoId, TipoInteraccionId } from './data/portalMasterTaxonomy';
 
@@ -56,6 +57,7 @@ export default function App() {
   const [selectedProceso, setSelectedProceso] = useState<any | null>(null);
   const [consultasModalSegment, setConsultasModalSegment] = useState<SegmentId | null>(null);
   const [accessibilityModalOpen, setAccessibilityModalOpen] = useState(false);
+  const [isFlowModalOpen, setIsFlowModalOpen] = useState(false);
 
   // Accessibility State
   const [accSettings, setAccSettings] = useState<AccessibilitySettings>(DEFAULT_ACCESSIBILITY);
@@ -193,6 +195,7 @@ export default function App() {
             <UserSegmentCards
               selectedSegment={null}
               onSelectSegment={handleSelectSegment}
+              onOpenFlowDiagram={() => setIsFlowModalOpen(true)}
             />
 
             {/* 3. Rotary Banner */}
@@ -262,6 +265,12 @@ export default function App() {
       />
 
       <VirtualAssistantModal />
+
+      <PortalFlowModal
+        isOpen={isFlowModalOpen}
+        onClose={() => setIsFlowModalOpen(false)}
+        initialSegment={activeSegment}
+      />
     </div>
   );
 }

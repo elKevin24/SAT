@@ -72,6 +72,14 @@ test('Abrir VirtualAssistantModal (RITA)', async ({ page }) => {
   await scan(page, 'VirtualAssistantModal');
 });
 
+test('Abrir PortalFlowModal (React Flow)', async ({ page }) => {
+  await page.goto('/');
+  await page.getByRole('button', { name: 'Abrir diagrama de flujo interactivo del portal en tarjetas conectadas' }).click();
+  const dialog = page.getByRole('dialog');
+  await expect(dialog).toBeVisible();
+  await scan(page, 'PortalFlowModal');
+});
+
 test('Modal accesible: Cierre con Escape y restauración de foco', async ({ page }) => {
   await page.goto('/');
   const trigger = page.getByRole('button', { name: 'Abrir panel de accesibilidad' });
