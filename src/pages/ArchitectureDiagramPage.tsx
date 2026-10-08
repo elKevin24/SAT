@@ -73,7 +73,7 @@ const PILLARS: PillarConfig[] = [
   }
 ];
 
-const CANONICAL_ORDER: Record<PillarKey, string[]> = {
+const OFFICIAL_ORDER: Record<PillarKey, string[]> = {
   contribuyentes: [
     'NIT sin Obligaciones',
     'Pequeños Contribuyentes',
@@ -107,7 +107,7 @@ const CANONICAL_ORDER: Record<PillarKey, string[]> = {
   ]
 };
 
-const CANONICAL_SUBCATEGORY_PRIORITY: Record<string, string[]> = {
+const OFFICIAL_SUBCATEGORY_PRIORITY: Record<string, string[]> = {
   'NIT sin Obligaciones': [
     'Inscripción de NIT',
     'Servicios en Línea y Solvencias',
@@ -187,7 +187,7 @@ const CANONICAL_SUBCATEGORY_PRIORITY: Record<string, string[]> = {
 };
 
 const sortSubcategories = (catName: string, entries: [string, any[]][]) => {
-  const priorityList = CANONICAL_SUBCATEGORY_PRIORITY[catName] || [];
+  const priorityList = OFFICIAL_SUBCATEGORY_PRIORITY[catName] || [];
   return [...entries].sort(([subA, itemsA], [subB, itemsB]) => {
     // 1. Inscripción siempre tiene prioridad absoluta de primer lugar
     const aIsInsc = subA.toLowerCase().includes('inscripci');
@@ -195,7 +195,7 @@ const sortSubcategories = (catName: string, entries: [string, any[]][]) => {
     if (aIsInsc && !bIsInsc) return -1;
     if (!aIsInsc && bIsInsc) return 1;
 
-    // 2. Orden canónico por lista
+    // 2. Orden oficial por lista
     const idxA = priorityList.indexOf(subA);
     const idxB = priorityList.indexOf(subB);
     if (idxA !== -1 && idxB !== -1) return idxA - idxB;
@@ -270,7 +270,7 @@ export const ArchitectureDiagramPage: React.FC = () => {
         categoriesMap[cat].push(t);
       });
 
-      const orderList = CANONICAL_ORDER[pillar.id] || [];
+      const orderList = OFFICIAL_ORDER[pillar.id] || [];
       const sortedCatEntries = Object.entries(categoriesMap).sort(([catA], [catB]) => {
         const idxA = orderList.indexOf(catA);
         const idxB = orderList.indexOf(catB);
@@ -428,7 +428,7 @@ export const ArchitectureDiagramPage: React.FC = () => {
                     key={p.id}
                     onClick={() => {
                       setSelectedPillar(p.id);
-                      const defaultBranch = CANONICAL_ORDER[p.id]?.[0] || 'General';
+                      const defaultBranch = OFFICIAL_ORDER[p.id]?.[0] || 'General';
                       setSelectedDiagramBranch(defaultBranch);
                     }}
                     className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all whitespace-nowrap flex items-center gap-1.5 ${
@@ -510,7 +510,7 @@ export const ArchitectureDiagramPage: React.FC = () => {
               {PILLARS.map(p => {
                 const count = (rawTramites as any[]).filter(t => t.pillar === p.id).length;
                 const isPillarSelected = selectedPillar === p.id || selectedPillar === 'all';
-                const branches = CANONICAL_ORDER[p.id] || [];
+                const branches = OFFICIAL_ORDER[p.id] || [];
 
                 return (
                   <div 
@@ -718,7 +718,7 @@ export const ArchitectureDiagramPage: React.FC = () => {
                         <div className="flex flex-wrap gap-1">
                           {Array.from(new Set(cats))
                             .sort((a, b) => {
-                              const list = CANONICAL_ORDER[p.id] || [];
+                              const list = OFFICIAL_ORDER[p.id] || [];
                               const ia = list.indexOf(a);
                               const ib = list.indexOf(b);
                               if (ia !== -1 && ib !== -1) return ia - ib;

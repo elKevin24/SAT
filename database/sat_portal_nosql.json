@@ -5294,8 +5294,8 @@
       }
     ],
     "categoria_tematica": {
-      "id": "importaciones-exportaciones-y-declaraciones-aduaneras",
-      "nombre": "Importaciones, Exportaciones y Declaraciones Aduaneras"
+      "id": "importadores-y-exportadores",
+      "nombre": "Importadores y Exportadores"
     },
     "etapa_ciclo_vida": "Empezar y registrarse",
     "canal_atencion": "Trámite / Aplicativo en Línea",
@@ -5318,8 +5318,8 @@
       }
     ],
     "categoria_tematica": {
-      "id": "importaciones-exportaciones-y-declaraciones-aduaneras",
-      "nombre": "Importaciones, Exportaciones y Declaraciones Aduaneras"
+      "id": "importadores-y-exportadores",
+      "nombre": "Importadores y Exportadores"
     },
     "etapa_ciclo_vida": "Empezar y registrarse",
     "canal_atencion": "Trámite / Aplicativo en Línea",
@@ -5342,8 +5342,8 @@
       }
     ],
     "categoria_tematica": {
-      "id": "importaciones-exportaciones-y-declaraciones-aduaneras",
-      "nombre": "Importaciones, Exportaciones y Declaraciones Aduaneras"
+      "id": "importadores-y-exportadores",
+      "nombre": "Importadores y Exportadores"
     },
     "etapa_ciclo_vida": "Empezar y registrarse",
     "canal_atencion": "Trámite / Aplicativo en Línea",
@@ -5366,8 +5366,8 @@
       }
     ],
     "categoria_tematica": {
-      "id": "importaciones-exportaciones-y-declaraciones-aduaneras",
-      "nombre": "Importaciones, Exportaciones y Declaraciones Aduaneras"
+      "id": "importadores-y-exportadores",
+      "nombre": "Importadores y Exportadores"
     },
     "etapa_ciclo_vida": "Operación y declaraciones",
     "canal_atencion": "Trámite / Aplicativo en Línea",
@@ -5390,8 +5390,8 @@
       }
     ],
     "categoria_tematica": {
-      "id": "importaciones-exportaciones-y-declaraciones-aduaneras",
-      "nombre": "Importaciones, Exportaciones y Declaraciones Aduaneras"
+      "id": "importadores-y-exportadores",
+      "nombre": "Importadores y Exportadores"
     },
     "etapa_ciclo_vida": "Operación y declaraciones",
     "canal_atencion": "Trámite / Aplicativo en Línea",
@@ -5414,8 +5414,8 @@
       }
     ],
     "categoria_tematica": {
-      "id": "importaciones-exportaciones-y-declaraciones-aduaneras",
-      "nombre": "Importaciones, Exportaciones y Declaraciones Aduaneras"
+      "id": "importadores-y-exportadores",
+      "nombre": "Importadores y Exportadores"
     },
     "etapa_ciclo_vida": "Operación y declaraciones",
     "canal_atencion": "Trámite / Aplicativo en Línea",
@@ -5438,8 +5438,8 @@
       }
     ],
     "categoria_tematica": {
-      "id": "importaciones-exportaciones-y-declaraciones-aduaneras",
-      "nombre": "Importaciones, Exportaciones y Declaraciones Aduaneras"
+      "id": "importadores-y-exportadores",
+      "nombre": "Importadores y Exportadores"
     },
     "etapa_ciclo_vida": "Operación y declaraciones",
     "canal_atencion": "Trámite / Aplicativo en Línea",
@@ -5462,8 +5462,8 @@
       }
     ],
     "categoria_tematica": {
-      "id": "importaciones-exportaciones-y-declaraciones-aduaneras",
-      "nombre": "Importaciones, Exportaciones y Declaraciones Aduaneras"
+      "id": "importadores-y-exportadores",
+      "nombre": "Importadores y Exportadores"
     },
     "etapa_ciclo_vida": "Operación y declaraciones",
     "canal_atencion": "Trámite / Aplicativo en Línea",
@@ -5486,8 +5486,8 @@
       }
     ],
     "categoria_tematica": {
-      "id": "importaciones-exportaciones-y-declaraciones-aduaneras",
-      "nombre": "Importaciones, Exportaciones y Declaraciones Aduaneras"
+      "id": "importadores-y-exportadores",
+      "nombre": "Importadores y Exportadores"
     },
     "etapa_ciclo_vida": "Consultas y herramientas",
     "canal_atencion": "Trámite / Aplicativo en Línea",
@@ -5510,8 +5510,8 @@
       }
     ],
     "categoria_tematica": {
-      "id": "importaciones-exportaciones-y-declaraciones-aduaneras",
-      "nombre": "Importaciones, Exportaciones y Declaraciones Aduaneras"
+      "id": "importadores-y-exportadores",
+      "nombre": "Importadores y Exportadores"
     },
     "etapa_ciclo_vida": "Consultas y herramientas",
     "canal_atencion": "Consulta en Base de Datos",
@@ -5534,8 +5534,8 @@
       }
     ],
     "categoria_tematica": {
-      "id": "importaciones-exportaciones-y-declaraciones-aduaneras",
-      "nombre": "Importaciones, Exportaciones y Declaraciones Aduaneras"
+      "id": "importadores-y-exportadores",
+      "nombre": "Importadores y Exportadores"
     },
     "etapa_ciclo_vida": "Consultas y herramientas",
     "canal_atencion": "Consulta en Base de Datos",
@@ -5558,8 +5558,8 @@
       }
     ],
     "categoria_tematica": {
-      "id": "importaciones-exportaciones-y-declaraciones-aduaneras",
-      "nombre": "Importaciones, Exportaciones y Declaraciones Aduaneras"
+      "id": "importadores-y-exportadores",
+      "nombre": "Importadores y Exportadores"
     },
     "etapa_ciclo_vida": "Consultas y herramientas",
     "canal_atencion": "Consulta en Base de Datos",
@@ -5582,8 +5582,8 @@
       }
     ],
     "categoria_tematica": {
-      "id": "importaciones-exportaciones-y-declaraciones-aduaneras",
-      "nombre": "Importaciones, Exportaciones y Declaraciones Aduaneras"
+      "id": "importadores-y-exportadores",
+      "nombre": "Importadores y Exportadores"
     },
     "etapa_ciclo_vida": "Normativa y asistencia",
     "canal_atencion": "Guía Informativa / Texto",
@@ -5606,8 +5606,8 @@
       }
     ],
     "categoria_tematica": {
-      "id": "importaciones-exportaciones-y-declaraciones-aduaneras",
-      "nombre": "Importaciones, Exportaciones y Declaraciones Aduaneras"
+      "id": "importadores-y-exportadores",
+      "nombre": "Importadores y Exportadores"
     },
     "etapa_ciclo_vida": "Normativa y asistencia",
     "canal_atencion": "Guía Informativa / Texto",
@@ -5630,8 +5630,8 @@
       }
     ],
     "categoria_tematica": {
-      "id": "importaciones-exportaciones-y-declaraciones-aduaneras",
-      "nombre": "Importaciones, Exportaciones y Declaraciones Aduaneras"
+      "id": "importadores-y-exportadores",
+      "nombre": "Importadores y Exportadores"
     },
     "etapa_ciclo_vida": "Normativa y asistencia",
     "canal_atencion": "Guía Informativa / Texto",
@@ -5654,8 +5654,8 @@
       }
     ],
     "categoria_tematica": {
-      "id": "importaciones-exportaciones-y-declaraciones-aduaneras",
-      "nombre": "Importaciones, Exportaciones y Declaraciones Aduaneras"
+      "id": "importadores-y-exportadores",
+      "nombre": "Importadores y Exportadores"
     },
     "etapa_ciclo_vida": "Normativa y asistencia",
     "canal_atencion": "Trámite / Aplicativo en Línea",
@@ -7934,8 +7934,8 @@
       }
     ],
     "categoria_tematica": {
-      "id": "importaciones-exportaciones-y-declaraciones-aduaneras",
-      "nombre": "Importaciones, Exportaciones y Declaraciones Aduaneras"
+      "id": "importadores-y-exportadores",
+      "nombre": "Importadores y Exportadores"
     },
     "etapa_ciclo_vida": "Modificaciones y cierre",
     "canal_atencion": "Guía Informativa / Texto",
@@ -7958,8 +7958,8 @@
       }
     ],
     "categoria_tematica": {
-      "id": "importaciones-exportaciones-y-declaraciones-aduaneras",
-      "nombre": "Importaciones, Exportaciones y Declaraciones Aduaneras"
+      "id": "importadores-y-exportadores",
+      "nombre": "Importadores y Exportadores"
     },
     "etapa_ciclo_vida": "Operación y declaraciones",
     "canal_atencion": "Guía Informativa / Texto",
@@ -8745,20 +8745,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -8781,20 +8781,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -8817,20 +8817,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -8853,20 +8853,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -8889,20 +8889,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -9093,20 +9093,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -9153,20 +9153,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -9189,20 +9189,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -9393,20 +9393,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -9429,20 +9429,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -9489,20 +9489,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -9549,20 +9549,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -10857,20 +10857,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -10893,20 +10893,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -10929,20 +10929,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -11017,12 +11017,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -11049,12 +11049,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -11081,12 +11081,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -11113,12 +11113,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -11145,12 +11145,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -11177,12 +11177,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -11233,12 +11233,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -11261,20 +11261,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -11297,20 +11297,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -11385,12 +11385,12 @@
         "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "pequenos-contribuyentes",
         "nombre": "Pequeños Contribuyentes"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -11513,12 +11513,12 @@
         "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "pequenos-contribuyentes",
         "nombre": "Pequeños Contribuyentes"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -11665,12 +11665,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -11693,20 +11693,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -11729,20 +11729,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -11765,20 +11765,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -11801,20 +11801,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -11837,20 +11837,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -11873,20 +11873,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -11909,20 +11909,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -11945,20 +11945,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -12053,20 +12053,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -12113,20 +12113,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -12149,20 +12149,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -12185,20 +12185,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -12221,20 +12221,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -12257,20 +12257,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -12293,20 +12293,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -12405,12 +12405,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -12437,12 +12437,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -12469,12 +12469,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -12497,20 +12497,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -12533,20 +12533,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -12593,20 +12593,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -12653,20 +12653,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -12689,20 +12689,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -12725,20 +12725,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -12761,20 +12761,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -12893,20 +12893,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -13029,12 +13029,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -13061,12 +13061,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -13161,20 +13161,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -13293,20 +13293,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -13329,20 +13329,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -13365,20 +13365,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -13401,20 +13401,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -13437,20 +13437,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -13473,20 +13473,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -13509,20 +13509,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -13545,20 +13545,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -13581,20 +13581,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -13617,20 +13617,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -13657,12 +13657,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -13689,12 +13689,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -13745,12 +13745,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -13777,12 +13777,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -13805,20 +13805,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -13937,20 +13937,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -13973,20 +13973,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -14009,20 +14009,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -14045,20 +14045,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -14105,20 +14105,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -14141,20 +14141,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -14225,20 +14225,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -14261,20 +14261,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -14297,20 +14297,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -14333,20 +14333,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -14369,20 +14369,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -14429,20 +14429,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -14465,20 +14465,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -14501,20 +14501,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -14541,12 +14541,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -14573,12 +14573,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -14677,12 +14677,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -14733,12 +14733,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -14813,12 +14813,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -14869,12 +14869,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -14901,12 +14901,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -14933,12 +14933,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -14965,12 +14965,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -14997,12 +14997,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -15029,12 +15029,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -15061,12 +15061,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -15093,12 +15093,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -15125,12 +15125,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -15181,12 +15181,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -15333,12 +15333,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -15365,12 +15365,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -15397,12 +15397,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -15429,12 +15429,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -15461,12 +15461,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -15493,12 +15493,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -15525,12 +15525,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -15557,12 +15557,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -15589,12 +15589,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -15621,12 +15621,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -15653,12 +15653,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -15685,12 +15685,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -15717,12 +15717,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -15749,12 +15749,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -15781,12 +15781,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -15813,12 +15813,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -15845,12 +15845,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -15877,12 +15877,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -15909,12 +15909,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -15941,12 +15941,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -15973,12 +15973,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -16001,20 +16001,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -16037,20 +16037,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -16073,20 +16073,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -16109,20 +16109,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -16149,12 +16149,12 @@
         "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "pequenos-contribuyentes",
         "nombre": "Pequeños Contribuyentes"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -16181,12 +16181,12 @@
         "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "pequenos-contribuyentes",
         "nombre": "Pequeños Contribuyentes"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -16213,12 +16213,12 @@
         "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "pequenos-contribuyentes",
         "nombre": "Pequeños Contribuyentes"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -16245,12 +16245,12 @@
         "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "pequenos-contribuyentes",
         "nombre": "Pequeños Contribuyentes"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -16277,12 +16277,12 @@
         "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "pequenos-contribuyentes",
         "nombre": "Pequeños Contribuyentes"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -16309,12 +16309,12 @@
         "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "pequenos-contribuyentes",
         "nombre": "Pequeños Contribuyentes"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -16341,12 +16341,12 @@
         "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "pequenos-contribuyentes",
         "nombre": "Pequeños Contribuyentes"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -16373,12 +16373,12 @@
         "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "pequenos-contribuyentes",
         "nombre": "Pequeños Contribuyentes"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -16405,12 +16405,12 @@
         "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "pequenos-contribuyentes",
         "nombre": "Pequeños Contribuyentes"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -16437,12 +16437,12 @@
         "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "pequenos-contribuyentes",
         "nombre": "Pequeños Contribuyentes"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -16873,20 +16873,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -16909,20 +16909,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -17161,20 +17161,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -17197,20 +17197,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -17261,12 +17261,12 @@
         "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "pequenos-contribuyentes",
         "nombre": "Pequeños Contribuyentes"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -17365,12 +17365,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -17397,12 +17397,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -17429,12 +17429,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -17461,12 +17461,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -17493,12 +17493,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -17525,12 +17525,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -17557,12 +17557,12 @@
         "nombre": "Pequeños Contribuyentes"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
-      },
-      {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
+      },
+      {
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -17585,20 +17585,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -17621,20 +17621,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {
@@ -17705,20 +17705,20 @@
     },
     "regimenes_aplicables": [
       {
-        "id": "pequenos-contribuyentes",
-        "nombre": "Pequeños Contribuyentes"
+        "id": "contribuyentes-especiales",
+        "nombre": "Contribuyentes Especiales"
       },
       {
-        "id": "contribuyente-general",
-        "nombre": "Contribuyente General"
+        "id": "pequenos-contribuyentes",
+        "nombre": "Pequeños Contribuyentes"
       },
       {
         "id": "nit-sin-obligaciones",
         "nombre": "NIT sin Obligaciones"
       },
       {
-        "id": "contribuyentes-especiales",
-        "nombre": "Contribuyentes Especiales"
+        "id": "contribuyente-general",
+        "nombre": "Contribuyente General"
       }
     ],
     "categoria_tematica": {

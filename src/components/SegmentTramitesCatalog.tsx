@@ -87,7 +87,7 @@ const SEGMENT_CARD_TONE: Record<SegmentId, CardTone> = {
   entes_exentos: 'naranja'
 };
 
-const CANONICAL_CATEGORY_ORDER: Record<string, string[]> = {
+const OFFICIAL_CATEGORY_ORDER: Record<string, string[]> = {
   contribuyentes: [
     'NIT sin Obligaciones',
     'Pequeños Contribuyentes',
@@ -95,7 +95,7 @@ const CANONICAL_CATEGORY_ORDER: Record<string, string[]> = {
     'Contribuyentes Especiales'
   ],
   comercio_exterior: [
-    'Importadores y Exportadores (Compartido)',
+    'Importadores y Exportadores',
     'Importadores',
     'Exportadores',
     'Operador Económico Autorizado (OEA)',
@@ -129,7 +129,7 @@ const CATEGORY_DESCRIPTIONS: Record<string, string> = {
   'Pequeños Contribuyentes': 'Régimen simplificado con tarifa definitiva del 5% hasta Q150,000 anuales y actividades agropecuarias especiales.',
   'Contribuyente General': 'Personas y empresas con obligaciones generales de IVA e ISR, facturación electrónica, asalariados y gestión vehicular.',
   'Contribuyentes Especiales': 'Medianos y grandes contribuyentes sujetos a control diferenciado y gerencias de fiscalización tributaria intensiva.',
-  'Importadores y Exportadores (Compartido)': 'Gestiones tributarias y aduaneras comunes: RTU Digital, solvencia fiscal habilitante, declaraciones DUCA y aranceles.',
+  'Importadores y Exportadores': 'Gestiones tributarias y aduaneras comunes: RTU Digital, solvencia fiscal habilitante, declaraciones DUCA y aranceles.',
   'Importadores': 'Padrón de importadores de la SAT, declaraciones DUCA-D, valoración aduanera, IPRIMA y rescate de mercancías en abandono.',
   'Exportadores': 'Padrón de exportadores, declaraciones simplificadas y complementarias, listas de embarque y devolución de crédito fiscal del IVA.',
   'Operador Económico Autorizado (OEA)': 'Certificación de seguridad en la cadena logística, carriles preferenciales de despacho y facilitación en contingencias.',
@@ -319,7 +319,7 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
     segmentTramites.forEach(t => {
       if (t.categoria) set.add(t.categoria);
     });
-    const orderList = CANONICAL_CATEGORY_ORDER[segmentId] || [];
+    const orderList = OFFICIAL_CATEGORY_ORDER[segmentId] || [];
     return Array.from(set).sort((a, b) => {
       const idxA = orderList.indexOf(a);
       const idxB = orderList.indexOf(b);
@@ -340,7 +340,7 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
     });
 
     return Array.from(set).sort((a, b) => {
-      // Regla canónica estricta para NIT: Inscripción va estrictamente primero
+      // Regla oficial estricta para NIT: Inscripción va estrictamente primero
       if (selectedCategory === 'NIT sin Obligaciones') {
         const orderNIT = [
           'Inscripción de NIT',

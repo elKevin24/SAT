@@ -16,12 +16,13 @@ Este documento registra los puntos pendientes acordados para continuar con la ev
 ---
 
 ### 2. Optimización de la Ficha de Detalle de Requisitos (Modal de Ficha de Servicio)
-- [ ] **2.1 Estructura en Lenguaje Ciudadano**:
-  - Al abrir un trámite específico (`selectedTramite`), estructurar los requisitos en pasos secuenciales cronológicos numerados (*"Paso 1: Solicita en línea"*, *"Paso 2: Confirma tu correo"*, *"Paso 3: Descarga tu constancia"*).
-- [ ] **2.2 Llamado a la Acción (CTA) destacado**:
-  - Botón principal visible y accesible (*"Iniciar Trámite en Agencia Virtual"*, *"Llenar Formulario en Declaraguate"*).
-- [ ] **2.3 Base Legal secundaria**:
-  - Mantener la fundamentación normativa dentro de un acordeón o sección secundaria colapsable para evitar la sobrecarga cognitiva del contribuyente.
+- [x] **2.1 Estructura en Lenguaje Ciudadano**:
+  - Al abrir un trámite específico (`selectedTramite`), requisitos estructurados en 3 pasos secuenciales cronológicos numerados (*"Paso 1: Reúne los Requisitos Previos"*, *"Paso 2: Inicia la Gestión en el Sistema Oficial"*, *"Paso 3: Descarga tu Constancia o Resolución"*).
+- [x] **2.2 Llamado a la Acción (CTA) destacado**:
+  - Botón principal visible y accesible con identificación del canal (*"Iniciar Trámite Ahora"* con indicación de Agencia Virtual, Declaraguate o sede).
+- [x] **2.3 Base Legal secundaria**:
+  - Fundamentación normativa y marco legal colocados dentro de un acordeón colapsable accesible (`aria-expanded`) para evitar la sobrecarga cognitiva del contribuyente.
+
 
 ---
 
