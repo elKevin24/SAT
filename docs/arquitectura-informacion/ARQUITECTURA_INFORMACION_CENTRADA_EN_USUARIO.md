@@ -91,11 +91,11 @@ El contribuyente llega al portal bajo un problema práctico, una obligación leg
 
 Para ordenar los 783 trámites sin duplicar información ni generar silos:
 
-$$\text{Contenido Oficial} = \mathbf{1}\text{ Ubicación Primaria (Canónica)} + \mathbf{N}\text{ Puntos de Acceso Relacionales}$$
+$$\text{Contenido Oficial} = \mathbf{1}\text{ Ubicación Primaria (oficial)} + \mathbf{N}\text{ Puntos de Acceso Relacionales}$$
 
-1. **Ubicación Primaria (Canónica)**:
+1. **Ubicación Primaria (oficial)**:
    - Todo trámite reside en un único nodo del árbol jerárquico (L1 Segmento $\to$ L2 Área $\to$ L3 Contexto $\to$ L4 Tema $\to$ L5 Contenido $\to$ L6+ Procedimiento).
-   - Define su URL canónica y su jerarquía en las migas de pan (*Breadcrumbs*).
+   - Define su URL oficial y su jerarquía en las migas de pan (*Breadcrumbs*).
 2. **Relaciones Secundarias (Puntos de Acceso Transversales)**:
    - Servicios de uso universal (como *Agencia Virtual*, *RTU Digital*, *Factura Electrónica FEL*, *Solvencia Fiscal*) **NO se duplican**.
    - Se indexan como recursos contextuales referenciados en múltiples categorías mediante enlaces transversales y etiquetas (*tags*).

@@ -5,7 +5,7 @@
 > **Fecha de Emisión:** Octubre 2026  
 > **Alineación:** Estructura Institucional SAT Guatemala, Modelo de Ciclo de Vida ATO (Australian Taxation Office) & Plain Language  
 > **Archivo Excel Fuente:** [`docs/Estructura_Final_Contenido_Portal_SAT.xlsx`](file:///c:/Users/busqu/Documents/GitHub/SAT/docs/Estructura_Final_Contenido_Portal_SAT.xlsx)  
-> **Base de Datos Única (Single Source of Truth):** [`src/data/allTramites.json`](file:///c:/Users/busqu/Documents/GitHub/SAT/src/data/allTramites.json) (676 registros saneados y canónicos)
+> **Base de Datos Única (Single Source of Truth):** [`src/data/allTramites.json`](file:///c:/Users/busqu/Documents/GitHub/SAT/src/data/allTramites.json) (676 registros saneados y oficiales)
 
 ---
 
@@ -15,7 +15,7 @@ El presente documento consolida la totalidad de **676 contenidos y servicios** d
 
 La estructura resuelve de manera definitiva:
 1. **La jerarquía natural de 4 Segmentos y 9 Grupos Oficiales** establecida en el instrumento institucional *Detalle de Contenido para Grupos de Interés*.
-2. **La eliminación de jerga técnica interna y prefijos numéricos**: Se erradica el uso de términos abstractos como *"canónico"* y prefijos como *"1. Empezar..."* en textos visibles para el ciudadano.
+2. **La eliminación de jerga técnica interna y prefijos numéricos**: Se erradica el uso de términos abstractos como *"oficial"* y prefijos como *"1. Empezar..."* en textos visibles para el ciudadano.
 3. **El modelo simétrico de 5 Niveles ATO + Nivel 6+ de profundización libre**: Estructura de referencia escalable soportada por un modelo de base de datos relacional Padre/Hijo (`parent_id`), sin esquemas rígidos de columnas fijas (`categoria1` a `categoria9`).
 4. **La separación formal entre Arquitectura de Información y Mecanismos de Navegación**:
    * **Arquitectura:** L1 Segmento, L2 Área, L3 Contexto, L4 Tema, L5 Contenido / Servicio, L6+ Profundización libre.

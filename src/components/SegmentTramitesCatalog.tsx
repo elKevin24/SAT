@@ -194,7 +194,7 @@ const SUBCATEGORY_DESCRIPTIONS: Record<string, string> = {
   'Envíos Rápidos y Paquetería': 'Normativa y procedimientos especiales para empresas de mensajería internacional courier y franquicias.',
   'Depósitos y Almacenes Fiscales': 'Régimen de almacenamiento bajo control fiscal aduanero, cobro por permanencia y trazabilidad de mercancías.',
 
-  // Abogados y Notarios (4 Subtemas Canónicos)
+  // Abogados y Notarios (4 Subtemas oficiales)
   'Habilitación y Registro Profesional': 'Inscripción y actualización en RTU como Abogado y Notario (CANG), registro de huella biométrica y activación en Agencia Virtual.',
   'Timbres Fiscales y Papel Sellado de Protocolo': 'Compra de Papel Sellado Especial para Protocolos (SAT-7130), timbres fiscales, razón electrónica en línea y retiro por procurador.',
   'Traspaso Electrónico Vehicular (e-Traspaso)': 'Habilitación en sistema TEV con firma electrónica avanzada, formalización notarial de compraventa y envío de expedientes digitales.',
@@ -355,7 +355,7 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
         if (idxB !== -1) return 1;
       }
 
-      // Regla canónica estricta para Abogados y Notarios
+      // Regla oficial estricta para Abogados y Notarios
       if (selectedCategory === 'Abogados y Notarios') {
         const orderAN = [
           'Habilitación y Registro Profesional',
@@ -370,7 +370,7 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
         if (idxB !== -1) return 1;
       }
 
-      // Regla canónica estricta para Importadores
+      // Regla oficial estricta para Importadores
       if (selectedCategory === 'Importadores') {
         const orderImp = [
           'Registro y Padrón de Importadores',
@@ -387,7 +387,7 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
         if (idxB !== -1) return 1;
       }
 
-      // Regla canónica estricta para Exportadores
+      // Regla oficial estricta para Exportadores
       if (selectedCategory === 'Exportadores') {
         const orderExp = [
           'Padrón y Registro de Exportadores',
@@ -401,7 +401,7 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
         if (idxB !== -1) return 1;
       }
 
-      // Regla canónica estricta para Transportistas
+      // Regla oficial estricta para Transportistas
       if (selectedCategory === 'Transportistas') {
         const orderTransp = [
           'Registro de Equipos y Admisión Temporal (ATC)',
@@ -415,7 +415,7 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
         if (idxB !== -1) return 1;
       }
 
-      // Regla canónica estricta para Agentes Aduaneros
+      // Regla oficial estricta para Agentes Aduaneros
       if (selectedCategory === 'Agentes Aduaneros') {
         const orderAg = [
           'Habilitación y Registro de Auxiliares',
@@ -428,7 +428,7 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
         if (idxB !== -1) return 1;
       }
 
-      // Regla canónica estricta para Normativa y Aranceles
+      // Regla oficial estricta para Normativa y Aranceles
       if (selectedCategory === 'Normativa y Aranceles') {
         const orderNorm = [
           'Arancel Centroamericano (SAC) y Permisos',
@@ -444,7 +444,7 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
         if (idxB !== -1) return 1;
       }
 
-      // Regla canónica para Peritos Contadores
+      // Regla oficial para Peritos Contadores
       if (selectedCategory === 'Peritos Contadores') {
         const orderPer = [
           'Habilitación y Registro de Perito Contador',
@@ -457,7 +457,7 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
         if (idxB !== -1) return 1;
       }
 
-      // Regla canónica para Auditores
+      // Regla oficial para Auditores
       if (selectedCategory === 'Auditores') {
         const orderAud = [
           'Habilitación y Registro de Auditor (CPA)',
@@ -470,7 +470,7 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
         if (idxB !== -1) return 1;
       }
 
-      // Regla canónica para Gestores Tributarios
+      // Regla oficial para Gestores Tributarios
       if (selectedCategory === 'Gestores Tributarios') {
         const orderGes = [
           'Acreditación y Carné Oficial de Gestor',
@@ -483,7 +483,7 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
         if (idxB !== -1) return 1;
       }
 
-      // Regla canónica para Servicios Profesionales
+      // Regla oficial para Servicios Profesionales
       if (selectedCategory === 'Servicios Profesionales') {
         const orderSP = [
           'Facturación por Honorarios y Formularios',
@@ -498,7 +498,7 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
         if (idxB !== -1) return 1;
       }
 
-      // Regla canónica para Pequeños Contribuyentes
+      // Regla oficial para Pequeños Contribuyentes
       if (selectedCategory === 'Pequeños Contribuyentes') {
         const orderPC = [
           'Régimen de Pequeño Contribuyente',

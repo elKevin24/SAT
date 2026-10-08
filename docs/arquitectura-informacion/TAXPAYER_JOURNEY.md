@@ -11,7 +11,7 @@ Este documento define la lógica oficial del **Viaje del Usuario (Taxpayer & Use
 > **Erradicación de "Trámites comunes" y Jerga Administrativa:** 
 > La categoría "Trámites comunes" provino de una agregación artificial en una versión intermedia del árbol de navegación. Conforme al archivo oficial de diseño **`Detalle de Contenido para Grupos de Interes.xlsx`**, **NO EXISTE** una categoría "Trámites comunes".
 > Los trámites vehiculares, de RTU y declaraciones pertenecen legítimamente a los grupos tributarios donde opera el contribuyente (`Contribuyente General`, `Pequeños Contribuyentes`, `Contribuyentes Especiales` y `NIT sin Obligaciones`).
-> Asimismo, se erradican los números en nombres visibles y términos abstractos como *"canónico"*, priorizando el **Lenguaje Ciudadano**.
+> Asimismo, se erradican los números en nombres visibles y términos abstractos como *"oficial"*, priorizando el **Lenguaje Ciudadano**.
 
 ```
 [Empezar y registrarse] ➔ [Operación y declaraciones] ➔ [Consultas y herramientas] ➔ [Modificaciones y cierre] ➔ [Normativa y asistencia]

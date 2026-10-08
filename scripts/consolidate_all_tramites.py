@@ -12,7 +12,7 @@ def clean(t):
     t = re.sub(r'\s+', ' ', t).strip()
     return t
 
-# 1. Mapeo a los 9 Grupos Oficiales Canónicos
+# 1. Mapeo a los 9 Grupos Oficiales oficiales
 def get_grupo_oficial(item):
     cat = clean(item.get('categoria', ''))
     pillar = clean(item.get('pillar', ''))

@@ -13,7 +13,7 @@
 
 ## 1. Fundamento de la Arquitectura Multidimensional
 
-Un portal público de alta densidad (676 trámites, servicios, guías y normativas canónicas) no puede estructurarse como un árbol estático de carpetas. Si se entierra el contenido en menús profundos, los usuarios no encuentran lo que buscan y saturan las agencias tributarias y aduaneras.
+Un portal público de alta densidad (676 trámites, servicios, guías y normativas oficiales) no puede estructurarse como un árbol estático de carpetas. Si se entierra el contenido en menús profundos, los usuarios no encuentran lo que buscan y saturan las agencias tributarias y aduaneras.
 
 Para resolver esto, el nuevo portal de la SAT opera bajo una **arquitectura de 4 dimensiones interconectadas**:
 

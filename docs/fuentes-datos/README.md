@@ -23,7 +23,7 @@ Este directorio contiene las hojas de cálculo y matrices maestras utilizadas pa
 - [x] Consolidación sin pérdida: 739 registros únicos verificados y 0 duplicados en `ID Trámite`.
 - [x] Desglose asimétrico de actores: Soporte nativo para 2 niveles en ramas simples (ej. Contribuyentes) y hasta 4 niveles de actor en ramas profundas (AFPA $\rightarrow$ Depósitos $\rightarrow$ Almacenes Fiscales / AGD / DAT; Regímenes Especiales $\rightarrow$ ZDEEP $\rightarrow$ Administradoras / Usuarias).
 - [x] Miga de Pan dinámicamente calculada (`Ruta de Navegación`) para el 100% de los trámites.
-- [x] Erradicación de términos ajenos como *"canónico"* y sustitución por *Materia / Tema* y *Subtema / Tipo de Gestión*.
+- [x] Erradicación de términos ajenos como *"oficial"* y sustitución por *Materia / Tema* y *Subtema / Tipo de Gestión*.
 - [x] Asignación de dimensiones ATO (5 etapas de ciclo de vida + 5 tipos de interacción) para el 100% de los trámites.
 - [x] Hoja de Resumen Arquitectura equipada con 27 fórmulas dinámicas nativas (`=COUNTA`, `=COUNTIF`, `=SUM`).
 - [x] Sincronización exacta de la hoja `Brechas Normativas (24)` con sus preguntas para la mesa técnica SAT.

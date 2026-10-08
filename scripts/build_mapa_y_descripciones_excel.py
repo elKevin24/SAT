@@ -706,7 +706,7 @@ headers_mapa = [
     "Trámites",
     "% Segmento",
     "% Portal",
-    "Ruta Canónica de Navegación (Miga de Pan)"
+    "Ruta oficial de Navegación (Miga de Pan)"
 ]
 
 for col_idx, h in enumerate(headers_mapa, start=2):

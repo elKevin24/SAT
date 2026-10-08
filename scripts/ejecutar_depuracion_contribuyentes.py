@@ -287,7 +287,7 @@ print(f"\nIDs duplicados en todo el nuevo dataset: {len(dupes)}")
 if dupes:
     print(f"ALERTA: Existen IDs duplicados: {dupes}")
 else:
-    print("VERIFICACIÓN EXITOSA: 100% de los IDs son únicos y canónicos.")
+    print("VERIFICACIÓN EXITOSA: 100% de los IDs son únicos y oficiales.")
 
 # Guardar en archivo definitivo src/data/allTramites.json
 with open('src/data/allTramites.json', 'w', encoding='utf-8') as f:

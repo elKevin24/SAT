@@ -891,7 +891,7 @@ export const FICHAS_CATALOGO_DATA: FichaTramite[] = [
     ]
   },
   // =========================================================================
-  // GESTIÓN VEHICULAR UNIFICADA (Depuración de micro-trámites en ficha canónica)
+  // GESTIÓN VEHICULAR UNIFICADA (Depuración de micro-trámites en ficha oficial)
   // =========================================================================
   {
     id: 'tram-veh-01',
@@ -904,7 +904,7 @@ export const FICHAS_CATALOGO_DATA: FichaTramite[] = [
     categoriaInterna: 'Trámites Vehiculares Consolidados',
     macroproceso: 'vehicular',
     audienciasIds: ['persona_individual', 'pequeno_contribuyente', 'regimen_general', 'importadores'],
-    reglaOptimizacionTexto: 'Ficha Canónica Unificada: Consolida calcomanía anual, reposición de placas y traspasos',
+    reglaOptimizacionTexto: 'Ficha oficial Unificada: Consolida calcomanía anual, reposición de placas y traspasos',
     reglaTipo: 'general',
     resumenEjecutivo: 'Realiza en un solo lugar todas las gestiones de tu vehículo: paga el impuesto de circulación anual (ISCV), transfiere la propiedad en línea o tramita reposiciones de placas y títulos.',
     costo: 'Calcomanía según valor de tabla oficial / Traspaso Q120.00 / Reposición distintivo Q60.00',
@@ -1278,7 +1278,7 @@ Operadores de Comercio Exterior\t5\tImportadores y Exportadores\tBeneficios Trib
 Operadores de Comercio Exterior\t8\tAuxiliares de la Función Pública\tAcreditación y Registro\tInscripción, Registro y Habilitación\tInscribir y Renovar Auxiliares de la Función Pública Aduanera\t45/50 Universal Grupo 8: Consumido exactamente igual por los 9 subgrupos
 Operadores de Comercio Exterior\t8\tAuxiliares de la Función Pública\tControl y Tránsito de Carga\tDespacho y Operaciones Aduaneras\tTransmitir Manifiesto de Carga y Marchamo Electrónico (MIAD)\tCompartida Grupo 8: Aplicable a empresas que movilizan carga en territorio aduanero
 Operadores de Comercio Exterior\t8\tAuxiliares de la Función Pública\tLicencias Especializadas\tInscripción, Registro y Habilitación\tObtener Licencia de Agente Aduanero\tExclusiva Agente Aduanero (1 de las 5 variaciones técnicas del Grupo 8)
-Contribuyentes Generales\t1\tRegistro Fiscal de Vehículos\tTrámites Vehiculares Consolidados\tGestión Vehicular Unificada\tGestionar Distintivos, Calcomanía y Traspaso de Vehículos\tFicha Canónica Unificada: Consolida calcomanía anual, reposición y traspasos
+Contribuyentes Generales\t1\tRegistro Fiscal de Vehículos\tTrámites Vehiculares Consolidados\tGestión Vehicular Unificada\tGestionar Distintivos, Calcomanía y Traspaso de Vehículos\tFicha oficial Unificada: Consolida calcomanía anual, reposición y traspasos
 Profesionales\t3\tServicios Profesionales\tEspecies Fiscales y Notariado\tDeclaración, Liquidación y Pago\tComprar Especies Fiscales y Papel de Protocolo\tExclusiva Notarios Habilitados y Patentados Autorizados con entrega presencial
 Contribuyentes Generales\t1\tSistema de Facturación\tComprobantes Fiscales Digitales\tFacturación FEL\tHabilitar y Emitir Factura Electrónica en Línea (FEL)\tUniversal de Facturación: Aplica a todo emisor de comprobantes tributarios
 Contribuyentes Generales\t1\tDeclaraciones Periódicas\tObligaciones Mensuales del IVA\tDeclaración, Liquidación y Pago\tPresentar Declaración y Pago del Impuesto al Valor Agregado (IVA)\tUniversal de Declaración: Obligación mensual para todos los contribuyentes inscritos en IVA
