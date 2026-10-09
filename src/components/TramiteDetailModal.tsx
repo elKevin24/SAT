@@ -92,7 +92,7 @@ export const TramiteDetailModal: React.FC<TramiteDetailModalProps> = ({
         <div className="space-y-1">
           <div className="flex flex-wrap items-center gap-2">
             <span className="text-[10px] font-bold uppercase tracking-wider bg-black/25 border border-white/20 px-2.5 py-0.5 rounded-full text-white">
-              {tramite.pillarName || 'SAT Trámite Oficial'}
+              {tramite.pillarName || 'SAT Gestión Oficial'}
             </span>
             <span className="text-xs text-white/90 font-medium">
               Área temática: {tramite.categoria}
@@ -105,7 +105,7 @@ export const TramiteDetailModal: React.FC<TramiteDetailModalProps> = ({
         <button 
           onClick={onClose}
           className="p-1 rounded-lg text-white/80 hover:text-white hover:bg-white/10 transition-colors shrink-0 focus:outline-hidden focus:ring-2 focus:ring-white"
-          aria-label="Cerrar ficha de trámite"
+          aria-label="Cerrar ficha de gestión"
         >
           <X className="w-5 h-5" />
         </button>

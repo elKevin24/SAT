@@ -1,0 +1,172 @@
+[
+  {
+    "_id": {
+      "$oid": "6ac845f3ee70794d89b6396a"
+    },
+    "codigo": "FAM-01",
+    "slug": "fel",
+    "nombre": "Factura Electrónica en Línea (FEL)",
+    "descripcion": "Ecosistema integral de emisión, certificación y consulta de documentos tributarios electrónicos.",
+    "destacadas": [],
+    "herramientas": [],
+    "faq_ids": [],
+    "meta_seo": {
+      "title": "Factura Electrónica en Línea (FEL) | SAT Guatemala",
+      "description": "Ecosistema integral de emisión, certificación y consulta de documentos tributarios electrónicos."
+    },
+    "estado": "BORRADOR"
+  },
+  {
+    "_id": {
+      "$oid": "6ac845f3ee70794d89b6396b"
+    },
+    "codigo": "FAM-02",
+    "slug": "vehiculos",
+    "nombre": "Registro Fiscal de Vehículos (RFV)",
+    "descripcion": "Traspasos, primeras placas, reposición de distintivos y pago del impuesto sobre circulación.",
+    "destacadas": [],
+    "herramientas": [],
+    "faq_ids": [],
+    "meta_seo": {
+      "title": "Registro Fiscal de Vehículos (RFV) | SAT Guatemala",
+      "description": "Traspasos, primeras placas, reposición de distintivos y pago del impuesto sobre circulación."
+    },
+    "estado": "BORRADOR"
+  },
+  {
+    "_id": {
+      "$oid": "6ac845f3ee70794d89b6396c"
+    },
+    "codigo": "FAM-03",
+    "slug": "rtu-digital",
+    "nombre": "Registro Tributario Unificado (RTU) Digital",
+    "descripcion": "Inscripción de NIT, actualización de datos y ratificación domiciliaria de contribuyentes.",
+    "destacadas": [],
+    "herramientas": [],
+    "faq_ids": [],
+    "meta_seo": {
+      "title": "Registro Tributario Unificado (RTU) Digital | SAT Guatemala",
+      "description": "Inscripción de NIT, actualización de datos y ratificación domiciliaria de contribuyentes."
+    },
+    "estado": "BORRADOR"
+  },
+  {
+    "_id": {
+      "$oid": "6ac845f3ee70794d89b6396d"
+    },
+    "codigo": "FAM-04",
+    "slug": "ducas",
+    "nombre": "Declaraciones Aduaneras (DUCAs)",
+    "descripcion": "Transmisión y liquidación electrónica de declaraciones aduaneras centroamericanas y mundiales.",
+    "destacadas": [],
+    "herramientas": [],
+    "faq_ids": [],
+    "meta_seo": {
+      "title": "Declaraciones Aduaneras (DUCAs) | SAT Guatemala",
+      "description": "Transmisión y liquidación electrónica de declaraciones aduaneras centroamericanas y mundiales."
+    },
+    "estado": "BORRADOR"
+  },
+  {
+    "_id": {
+      "$oid": "6ac845f3ee70794d89b6396e"
+    },
+    "codigo": "FAM-05",
+    "slug": "solvencia-fiscal",
+    "nombre": "Solvencias y Convenios de Pago",
+    "descripcion": "Acreditación de solvencia fiscal y facilidades de pago para regularización tributaria.",
+    "destacadas": [],
+    "herramientas": [],
+    "faq_ids": [],
+    "meta_seo": {
+      "title": "Solvencias y Convenios de Pago | SAT Guatemala",
+      "description": "Acreditación de solvencia fiscal y facilidades de pago para regularización tributaria."
+    },
+    "estado": "BORRADOR"
+  },
+  {
+    "_id": {
+      "$oid": "6ac845f3ee70794d89b6396f"
+    },
+    "codigo": "FAM-06",
+    "slug": "maquilas-29-89",
+    "nombre": "Regímenes Especiales y Maquilas (Dto. 29-89)",
+    "descripcion": "Fomento a la exportación, cuentas corrientes de insumos y garantías aduaneras.",
+    "destacadas": [],
+    "herramientas": [],
+    "faq_ids": [],
+    "meta_seo": {
+      "title": "Regímenes Especiales y Maquilas (Dto. 29-89) | SAT Guatemala",
+      "description": "Fomento a la exportación, cuentas corrientes de insumos y garantías aduaneras."
+    },
+    "estado": "BORRADOR"
+  },
+  {
+    "_id": {
+      "$oid": "6ac845f3ee70794d89b63970"
+    },
+    "codigo": "FAM-07",
+    "slug": "zdeep",
+    "nombre": "Zonas de Desarrollo Económico Especial Público (ZDEEP)",
+    "descripcion": "Habilitación de polígonos, garitas aduaneras y régimen para empresas usuarias y administradoras.",
+    "destacadas": [],
+    "herramientas": [],
+    "faq_ids": [],
+    "meta_seo": {
+      "title": "Zonas de Desarrollo Económico Especial Público (ZDEEP) | SAT Guatemala",
+      "description": "Habilitación de polígonos, garitas aduaneras y régimen para empresas usuarias y administradoras."
+    },
+    "estado": "BORRADOR"
+  },
+  {
+    "_id": {
+      "$oid": "6ac845f3ee70794d89b63971"
+    },
+    "codigo": "FAM-08",
+    "slug": "afpa",
+    "nombre": "Auxiliares de la Función Pública Aduanera (AFPA)",
+    "descripcion": "Acreditación, carnés, fianzas y régimen de auxiliares en el sistema aduanero.",
+    "destacadas": [],
+    "herramientas": [],
+    "faq_ids": [],
+    "meta_seo": {
+      "title": "Auxiliares de la Función Pública Aduanera (AFPA) | SAT Guatemala",
+      "description": "Acreditación, carnés, fianzas y régimen de auxiliares en el sistema aduanero."
+    },
+    "estado": "BORRADOR"
+  },
+  {
+    "_id": {
+      "$oid": "6ac845f3ee70794d89b63972"
+    },
+    "codigo": "FAM-09",
+    "slug": "agencia-virtual",
+    "nombre": "Agencia Virtual y Servicios Remotos",
+    "descripcion": "Activación, biometría y herramientas autenticadas de autogestión ciudadana.",
+    "destacadas": [],
+    "herramientas": [],
+    "faq_ids": [],
+    "meta_seo": {
+      "title": "Agencia Virtual y Servicios Remotos | SAT Guatemala",
+      "description": "Activación, biometría y herramientas autenticadas de autogestión ciudadana."
+    },
+    "estado": "BORRADOR"
+  },
+  {
+    "_id": {
+      "$oid": "6ac845f3ee70794d89b63973"
+    },
+    "codigo": "FAM-10",
+    "slug": "exenciones",
+    "nombre": "Franquicias y Exenciones Tributarias",
+    "descripcion": "Acreditación de exenciones diplomáticas, constitucionales y compras para entidades del Estado.",
+    "destacadas": [],
+    "herramientas": [],
+    "faq_ids": [],
+    "meta_seo": {
+      "title": "Franquicias y Exenciones Tributarias | SAT Guatemala",
+      "description": "Acreditación de exenciones diplomáticas, constitucionales y compras para entidades del Estado."
+    },
+    "estado": "BORRADOR"
+  }
+]

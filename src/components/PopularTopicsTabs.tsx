@@ -28,7 +28,7 @@ const TOPICS_BY_SEGMENT: Record<SegmentId, { label: string; primaryColor: string
       {
         id: 'con-consultas',
         title: 'Verificadores y Consultas en Línea',
-        desc: 'Consulta si tienes declaraciones pendientes, verifica tu número de NIT, revisa el estado de tu trámite en Agencia Virtual y genera tu solvencia fiscal.',
+        desc: 'Consulta si tienes declaraciones pendientes, verifica tu número de NIT, revisa el estado de tu gestión en Agencia Virtual y genera tu solvencia fiscal.',
         isPermanentConsultas: true,
         url: 'https://portal.sat.gob.gt/portal/consultas/'
       },
@@ -185,7 +185,7 @@ const TOPICS_BY_SEGMENT: Record<SegmentId, { label: string; primaryColor: string
       {
         id: 'org-estado',
         title: 'Sector Público y Municipalidades',
-        desc: 'Trámites de retenciones de impuestos y rendición de cuentas para ministerios, secretarías y municipalidades de Guatemala.',
+        desc: 'Gestiones de retenciones de impuestos y rendición de cuentas para ministerios, secretarías y municipalidades de Guatemala.',
         url: 'https://portal.sat.gob.gt/portal/sector-publico/'
       }
     ]
@@ -206,25 +206,25 @@ export const PopularTopicsTabs: React.FC<PopularTopicsTabsProps> = ({
   const currentSegmentData = TOPICS_BY_SEGMENT[activeTab];
 
   return (
-    <section className="py-6 bg-white border-b border-[#DCDCDC]">
+    <section className="py-6 sm:py-8 bg-sat-blanco border-b border-sat-gris">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Title Header */}
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 mb-5">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 mb-4 sm:mb-6">
           <div>
             <div className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-[#14649B]" />
-              <h3 className="text-lg sm:text-xl font-extrabold text-[#19324B] tracking-tight">
+              <span className="w-2.5 h-2.5 rounded-full bg-sat-azul" />
+              <h3 className="text-lg sm:text-xl font-extrabold text-sat-azul-oscuro tracking-tight">
                 Temas Más Consultados
               </h3>
             </div>
-            <p className="text-xs text-slate-500 mt-0.5">
-              Encuentra los trámites más solicitados según tu perfil, explicados paso a paso.
+            <p className="text-xs sm:text-sm text-sat-texto-suave mt-0.5">
+              Encuentra las gestiones más solicitadas según tu perfil, explicadas paso a paso.
             </p>
           </div>
 
           {/* Segment Tabs con nombres exactos del mapa oficial */}
-          <div className="flex items-center gap-1.5 p-1 bg-slate-100 rounded-xl overflow-x-auto no-scrollbar">
+          <div className="flex items-center gap-1.5 p-1 bg-sat-fondo-tenue border border-sat-gris rounded-sat-md overflow-x-auto no-scrollbar">
             {(Object.keys(TOPICS_BY_SEGMENT) as SegmentId[]).map((segId) => {
               const isActive = activeTab === segId;
               return (
@@ -232,10 +232,10 @@ export const PopularTopicsTabs: React.FC<PopularTopicsTabsProps> = ({
                   key={segId}
                   onClick={() => setActiveTab(segId)}
                   aria-pressed={isActive}
-                  className={`px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all whitespace-nowrap ${
+                  className={`px-3 py-1.5 rounded-sat-sm text-xs font-bold transition-all whitespace-nowrap focus:outline-none focus-visible:ring-2 focus-visible:ring-sat-azul ${
                     isActive 
-                      ? 'bg-white text-[#14649B] shadow-xs' 
-                      : 'text-slate-600 hover:text-slate-900 hover:bg-slate-200/60'
+                      ? 'bg-sat-blanco text-sat-azul shadow-sat-sm' 
+                      : 'text-sat-texto-suave hover:text-sat-azul hover:bg-sat-fondo-medio'
                   }`}
                 >
                   {TOPICS_BY_SEGMENT[segId].label}
@@ -246,7 +246,7 @@ export const PopularTopicsTabs: React.FC<PopularTopicsTabsProps> = ({
         </div>
 
         {/* Topics Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-3.5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
           {currentSegmentData.topics.map((topic) => {
             const isConsultas = topic.isPermanentConsultas;
 

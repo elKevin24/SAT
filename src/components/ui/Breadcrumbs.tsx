@@ -116,12 +116,12 @@ export const Breadcrumbs: React.FC<BreadcrumbsProps> = ({
   return (
     <nav
       aria-label="Miga de pan"
-      className={`text-xs font-medium text-sat-texto-suave py-2 ${className}`}
+      className={`text-xs font-medium text-sat-texto-suave py-0.5 ${className}`}
     >
       {/* ==============================================================
           1. VISTA DESKTOP (>= 1024px) — Ruta completa
           ============================================================== */}
-      <ol className="hidden lg:flex items-center flex-wrap gap-1.5 list-none m-0 p-0">
+      <ol className="hidden lg:flex items-center flex-wrap gap-1 sm:gap-1.5 list-none m-0 p-0">
         {fullList.map((item, index) => {
           const isLast = index === total - 1 || item.isCurrent;
           const isHome = index === 0 && includeHome;
@@ -166,7 +166,7 @@ export const Breadcrumbs: React.FC<BreadcrumbsProps> = ({
       {/* ==============================================================
           2. VISTA MÓVIL (< 1024px) — Compactación inteligente con [...]
           ============================================================== */}
-      <ol className="flex lg:hidden items-center flex-wrap gap-1.5 list-none m-0 p-0">
+      <ol className="flex lg:hidden items-center flex-wrap gap-1 sm:gap-1.5 list-none m-0 p-0">
         {/* Ancla raíz ('Inicio' o primer nivel) — NO cuenta contra el límite móvil */}
         {rootAnchor && (
           <li className="inline-flex items-center gap-1">

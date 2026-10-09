@@ -21,8 +21,8 @@ const TONE_CLASSES: Record<AlertTone, { wrap: string; icon: string; title: strin
   },
   success: {
     wrap: 'border-sat-comp-verde/40 bg-sat-comp-verde/10',
-    icon: 'text-(--sat-segmento-empresas)',
-    title: 'text-(--sat-segmento-empresas)',
+    icon: 'text-[#216e39]',
+    title: 'text-[#216e39]',
   },
   warning: {
     wrap: 'border-sat-comp-ambar/40 bg-sat-comp-ambar/10',

@@ -1,0 +1,3031 @@
+[
+  {
+    "_id": "proc-01",
+    "numero": 1,
+    "nombre": "Obtener mi primer NIT",
+    "audiencia": "Contribuyentes",
+    "etapa": "Empezar",
+    "para_quien": "Persona individual que nunca ha tenido NIT",
+    "pasos": [
+      {
+        "orden": 1,
+        "titulo": "Activa tu cuenta en Agencia Virtual",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63b1b"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bc0"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bde"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bee"
+          }
+        ]
+      },
+      {
+        "orden": 2,
+        "titulo": "Solicita tu NIT",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63b23"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b8a"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bf5"
+          }
+        ]
+      },
+      {
+        "orden": 3,
+        "titulo": "Elige tu caso",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63b8b"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b8c"
+          }
+        ]
+      },
+      {
+        "orden": 4,
+        "titulo": "Si hay un error",
+        "opcional": true,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63b97"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b98"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bdd"
+          }
+        ]
+      },
+      {
+        "orden": 5,
+        "titulo": "Verifica si ya tienes NIT",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63bc4"
+          }
+        ]
+      },
+      {
+        "orden": 6,
+        "titulo": "Da seguimiento",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63bc5"
+          }
+        ]
+      },
+      {
+        "orden": 7,
+        "titulo": "Descarga tu constancia",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63bc7"
+          }
+        ]
+      }
+    ],
+    "estado": "VIGENTE",
+    "version": 1
+  },
+  {
+    "_id": "proc-02",
+    "numero": 2,
+    "nombre": "Abrir mi negocio (persona individual)",
+    "audiencia": "Contribuyentes",
+    "etapa": "Empezar",
+    "para_quien": "Emprendedor o profesional independiente",
+    "pasos": [
+      {
+        "orden": 1,
+        "titulo": "Prepárate para facturar",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63b26"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b9b"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63c5d"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63d08"
+          }
+        ]
+      },
+      {
+        "orden": 2,
+        "titulo": "Habilita tus libros",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63b33"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b41"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63ba0"
+          }
+        ]
+      },
+      {
+        "orden": 3,
+        "titulo": "Conoce los regímenes y elige el tuyo",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63b35"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b74"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b76"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b77"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b7a"
+          }
+        ]
+      },
+      {
+        "orden": 4,
+        "titulo": "Inscribe tu negocio",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63b8b"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bc6"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bdb"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63be0"
+          }
+        ]
+      },
+      {
+        "orden": 5,
+        "titulo": "Conoce tus fechas para declarar",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63baf"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bb0"
+          }
+        ]
+      },
+      {
+        "orden": 6,
+        "titulo": "Activa tu cuenta en Agencia Virtual",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63bc0"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bee"
+          }
+        ]
+      },
+      {
+        "orden": 7,
+        "titulo": "Nombra a tu contador (si aplica",
+        "opcional": true,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63be4"
+          }
+        ]
+      }
+    ],
+    "estado": "VIGENTE",
+    "version": 1
+  },
+  {
+    "_id": "proc-03",
+    "numero": 3,
+    "nombre": "Constituir una empresa o sociedad",
+    "audiencia": "Contribuyentes",
+    "etapa": "Empezar",
+    "para_quien": "Socios, representantes legales y contadores",
+    "pasos": [
+      {
+        "orden": 1,
+        "titulo": "Inscribe la empresa",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63b3d"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b3f"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b40"
+          }
+        ]
+      },
+      {
+        "orden": 2,
+        "titulo": "Prepárate para facturar y llevar libros",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63b41"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b9b"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63d08"
+          }
+        ]
+      },
+      {
+        "orden": 3,
+        "titulo": "Registra al representante legal",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63b6d"
+          }
+        ]
+      },
+      {
+        "orden": 4,
+        "titulo": "Define impuestos y actividades",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63b75"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b76"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bc6"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63be0"
+          }
+        ]
+      },
+      {
+        "orden": 5,
+        "titulo": "Activa la cuenta en Agencia Virtual",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63bc0"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bee"
+          }
+        ]
+      },
+      {
+        "orden": 6,
+        "titulo": "Nombra al contador",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63be4"
+          }
+        ]
+      }
+    ],
+    "estado": "VIGENTE",
+    "version": 1
+  },
+  {
+    "_id": "proc-04",
+    "numero": 4,
+    "nombre": "Inscribir una entidad sin fines de lucro u otra organización",
+    "audiencia": "Organismos especiales",
+    "etapa": "Empezar",
+    "para_quien": "Asociaciones, ONG, cooperativas, iglesias, comités, condominios, etc.",
+    "pasos": [
+      {
+        "orden": 1,
+        "titulo": "Organizaciones sociales, deportivas y políticas",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63b38"
+          }
+        ]
+      },
+      {
+        "orden": 2,
+        "titulo": "Bienes y negocios compartidos",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63b39"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b3a"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b3b"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b3c"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b3e"
+          }
+        ]
+      },
+      {
+        "orden": 3,
+        "titulo": "Registra al representante legal",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63b6d"
+          }
+        ]
+      }
+    ],
+    "estado": "VIGENTE",
+    "version": 1
+  },
+  {
+    "_id": "proc-05",
+    "numero": 5,
+    "nombre": "Emitir facturas",
+    "audiencia": "Contribuyentes",
+    "etapa": "Cumplir",
+    "para_quien": "Cualquier contribuyente con negocio",
+    "pasos": [
+      {
+        "orden": 1,
+        "titulo": "Casos especiales",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63b26"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b42"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b43"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b51"
+          }
+        ]
+      },
+      {
+        "orden": 2,
+        "titulo": "Máquinas registradoras y sistemas",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63b44"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b4e"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b4f"
+          }
+        ]
+      },
+      {
+        "orden": 3,
+        "titulo": "Facturas impresas (si aún aplica",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63b46"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b47"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b48"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b4a"
+          }
+        ]
+      },
+      {
+        "orden": 4,
+        "titulo": "Verificar una factura recibida",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63b99"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b9a"
+          }
+        ]
+      },
+      {
+        "orden": 5,
+        "titulo": "Factura electrónica (FEL",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63b9b"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63c5d"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63d08"
+          }
+        ]
+      },
+      {
+        "orden": 6,
+        "titulo": "Anular o corregir documentos",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63ba4"
+          }
+        ]
+      }
+    ],
+    "estado": "VIGENTE",
+    "version": 1
+  },
+  {
+    "_id": "proc-06",
+    "numero": 6,
+    "nombre": "Declarar y pagar mis impuestos",
+    "audiencia": "Contribuyentes",
+    "etapa": "Cumplir",
+    "para_quien": "Contribuyentes inscritos en algún impuesto",
+    "pasos": [
+      {
+        "orden": 1,
+        "titulo": "Paga",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63ac1"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bb2"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bb3"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bb4"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bb5"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bb6"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63ccf"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63cff"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63d0b"
+          }
+        ]
+      },
+      {
+        "orden": 2,
+        "titulo": "Prepara tu declaración",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63b25"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b9c"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b9e"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63c5c"
+          }
+        ]
+      },
+      {
+        "orden": 3,
+        "titulo": "Dudas",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63b78"
+          }
+        ]
+      },
+      {
+        "orden": 4,
+        "titulo": "Declara",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63b25"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b7f"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b9c"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b9e"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bb0"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bb1"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63c5c"
+          }
+        ]
+      },
+      {
+        "orden": 5,
+        "titulo": "Revisa tus fechas",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63baf"
+          }
+        ]
+      },
+      {
+        "orden": 6,
+        "titulo": "Si no puedes pagar todo",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63bb2"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bb4"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bb5"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bb6"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63ccf"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63cff"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63d0b"
+          }
+        ]
+      },
+      {
+        "orden": 7,
+        "titulo": "Si te equivocaste",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63bbb"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bbc"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bf6"
+          }
+        ]
+      }
+    ],
+    "estado": "VIGENTE",
+    "version": 1
+  },
+  {
+    "_id": "proc-07",
+    "numero": 7,
+    "nombre": "Obtener mi solvencia fiscal",
+    "audiencia": "Contribuyentes",
+    "etapa": "Cumplir",
+    "para_quien": "Quien necesita demostrar que está al día",
+    "pasos": [
+      {
+        "orden": 1,
+        "titulo": "Si te la niegan",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63b1d"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bb0"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bb6"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bb9"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63be3"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63cce"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63cd7"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63d09"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63d12"
+          }
+        ]
+      },
+      {
+        "orden": 2,
+        "titulo": "Solicítala",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63bb7"
+          }
+        ]
+      },
+      {
+        "orden": 3,
+        "titulo": "Revisa los requisitos",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63bb8"
+          }
+        ]
+      }
+    ],
+    "estado": "VIGENTE",
+    "version": 1
+  },
+  {
+    "_id": "proc-08",
+    "numero": 8,
+    "nombre": "Soy asalariado: ISR de mi salario",
+    "audiencia": "Contribuyentes",
+    "etapa": "Cumplir",
+    "para_quien": "Empleados en relación de dependencia",
+    "pasos": [
+      {
+        "orden": 1,
+        "titulo": "Revisa tus retenciones",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63b25"
+          }
+        ]
+      },
+      {
+        "orden": 2,
+        "titulo": "Pide devolución si te retuvieron de más",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63b55"
+          }
+        ]
+      }
+    ],
+    "estado": "VIGENTE",
+    "version": 1
+  },
+  {
+    "_id": "proc-09",
+    "numero": 9,
+    "nombre": "Actualizar mis datos",
+    "audiencia": "Contribuyentes",
+    "etapa": "Cambiar",
+    "para_quien": "Cualquier contribuyente",
+    "pasos": [
+      {
+        "orden": 1,
+        "titulo": "Contador y representantes",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63b6d"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63be4"
+          }
+        ]
+      },
+      {
+        "orden": 2,
+        "titulo": "Verifica el cambio",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63bc5"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bc7"
+          }
+        ]
+      },
+      {
+        "orden": 3,
+        "titulo": "Datos del negocio",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63bdb"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63be0"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63be1"
+          }
+        ]
+      },
+      {
+        "orden": 4,
+        "titulo": "Datos personales",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63bdc"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bdf"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63be2"
+          }
+        ]
+      },
+      {
+        "orden": 5,
+        "titulo": "Confirmación anual",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63be3"
+          }
+        ]
+      }
+    ],
+    "estado": "VIGENTE",
+    "version": 1
+  },
+  {
+    "_id": "proc-10",
+    "numero": 10,
+    "nombre": "Actualizar datos de una empresa o entidad",
+    "audiencia": "Contribuyentes",
+    "etapa": "Cambiar",
+    "para_quien": "Representantes legales y contadores",
+    "pasos": [
+      {
+        "orden": 1,
+        "titulo": "Bienes compartidos",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63b61"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b62"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b63"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b66"
+          }
+        ]
+      },
+      {
+        "orden": 2,
+        "titulo": "Empresas",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63b65"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b67"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b68"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b69"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b6a"
+          }
+        ]
+      },
+      {
+        "orden": 3,
+        "titulo": "Representante legal",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63b6c"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b6d"
+          }
+        ]
+      }
+    ],
+    "estado": "VIGENTE",
+    "version": 1
+  },
+  {
+    "_id": "proc-11",
+    "numero": 11,
+    "nombre": "Cambiar de régimen",
+    "audiencia": "Contribuyentes",
+    "etapa": "Cambiar",
+    "para_quien": "Negocios que crecen o cambian de tamaño",
+    "pasos": [
+      {
+        "orden": 1,
+        "titulo": "Averigua tu régimen actual",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63b27"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bc7"
+          }
+        ]
+      },
+      {
+        "orden": 2,
+        "titulo": "Haz el cambio",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63b2a"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b2b"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b2c"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b54"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b6b"
+          }
+        ]
+      },
+      {
+        "orden": 3,
+        "titulo": "Compara regímenes",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63b35"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b74"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b76"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b77"
+          }
+        ]
+      },
+      {
+        "orden": 4,
+        "titulo": "Ajusta tu facturación",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63b9b"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63d08"
+          }
+        ]
+      }
+    ],
+    "estado": "VIGENTE",
+    "version": 1
+  },
+  {
+    "_id": "proc-12",
+    "numero": 12,
+    "nombre": "Suspender o cerrar mi negocio (persona individual)",
+    "audiencia": "Contribuyentes",
+    "etapa": "Cerrar",
+    "para_quien": "Persona individual con negocio inscrito",
+    "pasos": [
+      {
+        "orden": 1,
+        "titulo": "Ponte al día antes de cerrar",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63b1d"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bb1"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bb7"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bb9"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63cce"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63cd7"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63d09"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63d12"
+          }
+        ]
+      },
+      {
+        "orden": 2,
+        "titulo": "Si quieres volver a operar",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63b8d"
+          }
+        ]
+      },
+      {
+        "orden": 3,
+        "titulo": "Da de baja documentos y equipos",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63ba4"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63be0"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63c00"
+          }
+        ]
+      },
+      {
+        "orden": 4,
+        "titulo": "Verifica el cierre",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63bc5"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bc7"
+          }
+        ]
+      },
+      {
+        "orden": 5,
+        "titulo": "Elige: suspender o cerrar",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63bf8"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bf9"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bfa"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bfb"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bfc"
+          }
+        ]
+      }
+    ],
+    "estado": "VIGENTE",
+    "version": 1
+  },
+  {
+    "_id": "proc-13",
+    "numero": 13,
+    "nombre": "Cerrar una empresa o entidad",
+    "audiencia": "Contribuyentes",
+    "etapa": "Cerrar",
+    "para_quien": "Representantes legales y contadores",
+    "pasos": [
+      {
+        "orden": 1,
+        "titulo": "Cancela representantes",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63b6d"
+          }
+        ]
+      },
+      {
+        "orden": 2,
+        "titulo": "Entidades y bienes compartidos",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63b6e"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b70"
+          }
+        ]
+      },
+      {
+        "orden": 3,
+        "titulo": "Empresas",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63b6f"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b71"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b72"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b73"
+          }
+        ]
+      },
+      {
+        "orden": 4,
+        "titulo": "Da de baja documentos y equipos",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63ba4"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63c00"
+          }
+        ]
+      },
+      {
+        "orden": 5,
+        "titulo": "Vehículos de la empresa",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63c2e"
+          }
+        ]
+      }
+    ],
+    "estado": "VIGENTE",
+    "version": 1
+  },
+  {
+    "_id": "proc-14",
+    "numero": 14,
+    "nombre": "Fallecimiento de un contribuyente",
+    "audiencia": "Contribuyentes",
+    "etapa": "Cerrar",
+    "para_quien": "Familiares, herederos y albaceas",
+    "pasos": [
+      {
+        "orden": 1,
+        "titulo": "Herencias y devoluciones",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63bd5"
+          }
+        ]
+      },
+      {
+        "orden": 2,
+        "titulo": "Avisa a la SAT",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63bfd"
+          }
+        ]
+      },
+      {
+        "orden": 3,
+        "titulo": "Cierra su negocio",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63bfe"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bff"
+          }
+        ]
+      },
+      {
+        "orden": 4,
+        "titulo": "Traspasa sus vehículos",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63c2c"
+          }
+        ]
+      }
+    ],
+    "estado": "VIGENTE",
+    "version": 1
+  },
+  {
+    "_id": "proc-15",
+    "numero": 15,
+    "nombre": "Pedir una devolución de impuestos",
+    "audiencia": "Contribuyentes",
+    "etapa": "Recuperar dinero",
+    "para_quien": "Quien pagó de más, por error o le retuvieron",
+    "pasos": [
+      {
+        "orden": 1,
+        "titulo": "Otros impuestos",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63b16"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b5f"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b60"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b82"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bd5"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63be5"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63be6"
+          }
+        ]
+      },
+      {
+        "orden": 2,
+        "titulo": "ISR",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63b29"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b55"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b56"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b57"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b58"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b59"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b5a"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b5b"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bd6"
+          }
+        ]
+      },
+      {
+        "orden": 3,
+        "titulo": "Pagaste de más o por error",
+        "opcional": true,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63b56"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b89"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bd6"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bd7"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bd8"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bd9"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bda"
+          }
+        ]
+      },
+      {
+        "orden": 4,
+        "titulo": "IVA",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63b5c"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b5d"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b5e"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bd4"
+          }
+        ]
+      }
+    ],
+    "estado": "VIGENTE",
+    "version": 1
+  },
+  {
+    "_id": "proc-16",
+    "numero": 16,
+    "nombre": "Comprar un vehículo usado",
+    "audiencia": "Contribuyentes",
+    "etapa": "Vehículos",
+    "para_quien": "Comprador de un vehículo en Guatemala",
+    "pasos": [
+      {
+        "orden": 1,
+        "titulo": "Si no puedes ir en persona",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63ba5"
+          }
+        ]
+      },
+      {
+        "orden": 2,
+        "titulo": "Haz el traspaso",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63ba6"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bbf"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63c23"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63c24"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63c25"
+          }
+        ]
+      },
+      {
+        "orden": 3,
+        "titulo": "Revisa el vehículo antes de comprar",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63bce"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bcf"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bd1"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bd2"
+          }
+        ]
+      },
+      {
+        "orden": 4,
+        "titulo": "Revisión física (si la piden",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63bd0"
+          }
+        ]
+      },
+      {
+        "orden": 5,
+        "titulo": "Conoce los impuestos",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63bd3"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63c0f"
+          }
+        ]
+      },
+      {
+        "orden": 6,
+        "titulo": "Recibe tus documentos",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63be9"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63c02"
+          }
+        ]
+      }
+    ],
+    "estado": "VIGENTE",
+    "version": 1
+  },
+  {
+    "_id": "proc-17",
+    "numero": 17,
+    "nombre": "Vender mi vehículo",
+    "audiencia": "Contribuyentes",
+    "etapa": "Vehículos",
+    "para_quien": "Propietario que vende su vehículo",
+    "pasos": [
+      {
+        "orden": 1,
+        "titulo": "Formaliza la venta",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63ba6"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63c25"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63c67"
+          }
+        ]
+      },
+      {
+        "orden": 2,
+        "titulo": "Ponte al día",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63bcf"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bd2"
+          }
+        ]
+      },
+      {
+        "orden": 3,
+        "titulo": "Avisa a la SAT",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63c22"
+          }
+        ]
+      }
+    ],
+    "estado": "VIGENTE",
+    "version": 1
+  },
+  {
+    "_id": "proc-18",
+    "numero": 18,
+    "nombre": "Importar e inscribir un vehículo",
+    "audiencia": "Contribuyentes",
+    "etapa": "Vehículos",
+    "para_quien": "Quien trae un vehículo del extranjero",
+    "pasos": [
+      {
+        "orden": 1,
+        "titulo": "Inscríbelo",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63b90"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b91"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b93"
+          }
+        ]
+      },
+      {
+        "orden": 2,
+        "titulo": "Obtén placas y título",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63c02"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63c2f"
+          }
+        ]
+      }
+    ],
+    "estado": "VIGENTE",
+    "version": 1
+  },
+  {
+    "_id": "proc-19",
+    "numero": 19,
+    "nombre": "Reponer placas o documentos del vehículo",
+    "audiencia": "Contribuyentes",
+    "etapa": "Vehículos",
+    "para_quien": "Propietario con placas, título o tarjeta perdidos o dañados",
+    "pasos": [
+      {
+        "orden": 1,
+        "titulo": "Corrige datos",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63b92"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63c04"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63c05"
+          }
+        ]
+      },
+      {
+        "orden": 2,
+        "titulo": "Si te robaron el vehículo",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63c07"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63c0c"
+          }
+        ]
+      },
+      {
+        "orden": 3,
+        "titulo": "Repón o cambia placas",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63c12"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63c13"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63c15"
+          }
+        ]
+      },
+      {
+        "orden": 4,
+        "titulo": "Repón documentos",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63c30"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63c31"
+          }
+        ]
+      }
+    ],
+    "estado": "VIGENTE",
+    "version": 1
+  },
+  {
+    "_id": "proc-20",
+    "numero": 20,
+    "nombre": "Pagar el impuesto de circulación",
+    "audiencia": "Contribuyentes",
+    "etapa": "Vehículos",
+    "para_quien": "Propietarios de vehículos",
+    "pasos": [
+      {
+        "orden": 1,
+        "titulo": "Paga",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63bb3"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bd3"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63c11"
+          }
+        ]
+      },
+      {
+        "orden": 2,
+        "titulo": "Revisa si debes años anteriores",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63bd2"
+          }
+        ]
+      },
+      {
+        "orden": 3,
+        "titulo": "Consulta cuánto pagas",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63bd3"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63c11"
+          }
+        ]
+      },
+      {
+        "orden": 4,
+        "titulo": "Si tienes convenio o error",
+        "opcional": true,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63c06"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63c10"
+          }
+        ]
+      }
+    ],
+    "estado": "VIGENTE",
+    "version": 1
+  },
+  {
+    "_id": "proc-21",
+    "numero": 21,
+    "nombre": "Dar de baja o reactivar un vehículo",
+    "audiencia": "Contribuyentes",
+    "etapa": "Vehículos",
+    "para_quien": "Propietarios y aseguradoras",
+    "pasos": [
+      {
+        "orden": 1,
+        "titulo": "Dar de baja",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63c08"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63c09"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63c0a"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63c0b"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63c0c"
+          }
+        ]
+      },
+      {
+        "orden": 2,
+        "titulo": "Reactivar",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63c16"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63c17"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63c18"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63c19"
+          }
+        ]
+      }
+    ],
+    "estado": "VIGENTE",
+    "version": 1
+  },
+  {
+    "_id": "proc-22",
+    "numero": 22,
+    "nombre": "Usar Agencia Virtual",
+    "audiencia": "Contribuyentes",
+    "etapa": "Ayuda",
+    "para_quien": "Cualquier contribuyente",
+    "pasos": [
+      {
+        "orden": 1,
+        "titulo": "Ingresa",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63b1b"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bde"
+          }
+        ]
+      },
+      {
+        "orden": 2,
+        "titulo": "Revisa tus gestiones",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63b1c"
+          }
+        ]
+      },
+      {
+        "orden": 3,
+        "titulo": "Obtén tu usuario",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63bc0"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bee"
+          }
+        ]
+      },
+      {
+        "orden": 4,
+        "titulo": "Problemas de acceso",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63bef"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bf0"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bf1"
+          }
+        ]
+      }
+    ],
+    "estado": "VIGENTE",
+    "version": 1
+  },
+  {
+    "_id": "proc-23",
+    "numero": 23,
+    "nombre": "Pedir ayuda, quejarme o denunciar",
+    "audiencia": "Contribuyentes",
+    "etapa": "Ayuda",
+    "para_quien": "Cualquier persona",
+    "pasos": [
+      {
+        "orden": 1,
+        "titulo": "Atención presencial",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63b1e"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bc1"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bf5"
+          }
+        ]
+      },
+      {
+        "orden": 2,
+        "titulo": "Información pública",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63b21"
+          }
+        ]
+      },
+      {
+        "orden": 3,
+        "titulo": "Denuncias",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63b99"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bec"
+          }
+        ]
+      },
+      {
+        "orden": 4,
+        "titulo": "Quejas",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63bc2"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bed"
+          }
+        ]
+      },
+      {
+        "orden": 5,
+        "titulo": "Resuelve dudas",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63beb"
+          }
+        ]
+      }
+    ],
+    "estado": "VIGENTE",
+    "version": 1
+  },
+  {
+    "_id": "proc-24",
+    "numero": 24,
+    "nombre": "Comprar en el extranjero (envíos y compras por internet)",
+    "audiencia": "Operadores de comercio exterior",
+    "etapa": "Empezar",
+    "para_quien": "Personas que compran en línea fuera del país",
+    "pasos": [
+      {
+        "orden": 1,
+        "titulo": "Sigue tu mercancía",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63c7c"
+          }
+        ]
+      },
+      {
+        "orden": 2,
+        "titulo": "Revisa impuestos y permisos",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63d14"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63d16"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63d18"
+          }
+        ]
+      }
+    ],
+    "estado": "VIGENTE",
+    "version": 1
+  },
+  {
+    "_id": "proc-25",
+    "numero": 25,
+    "nombre": "Importar mercancías por primera vez",
+    "audiencia": "Operadores de comercio exterior",
+    "etapa": "Empezar",
+    "para_quien": "Nuevos importadores",
+    "pasos": [
+      {
+        "orden": 1,
+        "titulo": "Da seguimiento",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63c7c"
+          }
+        ]
+      },
+      {
+        "orden": 2,
+        "titulo": "Aprende lo básico",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63cb9"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63ce1"
+          }
+        ]
+      },
+      {
+        "orden": 3,
+        "titulo": "Clasifica tu mercancía",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63d14"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63d16"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63d18"
+          }
+        ]
+      }
+    ],
+    "estado": "VIGENTE",
+    "version": 1
+  },
+  {
+    "_id": "proc-26",
+    "numero": 26,
+    "nombre": "Exportar por primera vez",
+    "audiencia": "Operadores de comercio exterior",
+    "etapa": "Empezar",
+    "para_quien": "Nuevos exportadores",
+    "pasos": [
+      {
+        "orden": 1,
+        "titulo": "Declara tu exportación",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63cc6"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63cd2"
+          }
+        ]
+      },
+      {
+        "orden": 2,
+        "titulo": "Evita sanciones",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63ced"
+          }
+        ]
+      }
+    ],
+    "estado": "VIGENTE",
+    "version": 1
+  },
+  {
+    "_id": "proc-27",
+    "numero": 27,
+    "nombre": "Viajar: lo que puedo traer al país",
+    "audiencia": "Operadores de comercio exterior",
+    "etapa": "Viajeros",
+    "para_quien": "Viajeros",
+    "pasos": [
+      {
+        "orden": 1,
+        "titulo": "Al llegar",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63c88"
+          }
+        ]
+      },
+      {
+        "orden": 2,
+        "titulo": "Antes de viajar",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63cc9"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63ce2"
+          }
+        ]
+      }
+    ],
+    "estado": "VIGENTE",
+    "version": 1
+  },
+  {
+    "_id": "proc-28",
+    "numero": 28,
+    "nombre": "Declarar mercancías (DUA / DUCA)",
+    "audiencia": "Operadores de comercio exterior",
+    "etapa": "Operar",
+    "para_quien": "Importadores, exportadores y agentes aduaneros",
+    "pasos": [
+      {
+        "orden": 1,
+        "titulo": "Consulta el estado",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63c7c"
+          }
+        ]
+      },
+      {
+        "orden": 2,
+        "titulo": "Entiende la declaración",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63c83"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63cb8"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63cb9"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63ce5"
+          }
+        ]
+      },
+      {
+        "orden": 3,
+        "titulo": "Elige el tipo de declaración",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63c89"
+          }
+        ]
+      },
+      {
+        "orden": 4,
+        "titulo": "Herramientas técnicas",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63cbb"
+          }
+        ]
+      }
+    ],
+    "estado": "VIGENTE",
+    "version": 1
+  },
+  {
+    "_id": "proc-29",
+    "numero": 29,
+    "nombre": "Clasificar mercancías y obtener permisos",
+    "audiencia": "Operadores de comercio exterior",
+    "etapa": "Operar",
+    "para_quien": "Importadores, exportadores y agentes aduaneros",
+    "pasos": [
+      {
+        "orden": 1,
+        "titulo": "Verifica permisos no arancelarios",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63d14"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63d16"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63d18"
+          }
+        ]
+      },
+      {
+        "orden": 2,
+        "titulo": "Busca la partida arancelaria",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63d16"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63d18"
+          }
+        ]
+      }
+    ],
+    "estado": "VIGENTE",
+    "version": 1
+  },
+  {
+    "_id": "proc-30",
+    "numero": 30,
+    "nombre": "Transportar carga y hacer tránsitos",
+    "audiencia": "Operadores de comercio exterior",
+    "etapa": "Operar",
+    "para_quien": "Transportistas, navieras, depósitos y agentes",
+    "pasos": [
+      {
+        "orden": 1,
+        "titulo": "Costos y contingencias",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63cd9"
+          }
+        ]
+      },
+      {
+        "orden": 2,
+        "titulo": "Ingresa a zona primaria",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63ce4"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63cea"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63cee"
+          }
+        ]
+      },
+      {
+        "orden": 3,
+        "titulo": "Equipo de carga temporal (ATC",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63ce6"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63ce7"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63ce9"
+          }
+        ]
+      },
+      {
+        "orden": 4,
+        "titulo": "Transmite el manifiesto",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63ceb"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63cec"
+          }
+        ]
+      },
+      {
+        "orden": 5,
+        "titulo": "Asegura la carga en tránsito",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63cef"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63cf1"
+          }
+        ]
+      }
+    ],
+    "estado": "VIGENTE",
+    "version": 1
+  },
+  {
+    "_id": "proc-31",
+    "numero": 31,
+    "nombre": "Ser Operador Económico Autorizado y usar facilitación",
+    "audiencia": "Operadores de comercio exterior",
+    "etapa": "Operar",
+    "para_quien": "Empresas con operaciones frecuentes",
+    "pasos": [
+      {
+        "orden": 1,
+        "titulo": "Conoce los programas",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63cc1"
+          }
+        ]
+      },
+      {
+        "orden": 2,
+        "titulo": "Agiliza tus despachos",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63cc7"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63d02"
+          }
+        ]
+      },
+      {
+        "orden": 3,
+        "titulo": "Certifícate como OEA",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63d44"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63d45"
+          }
+        ]
+      }
+    ],
+    "estado": "VIGENTE",
+    "version": 1
+  },
+  {
+    "_id": "proc-32",
+    "numero": 32,
+    "nombre": "Usar franquicias y exenciones aduaneras",
+    "audiencia": "Operadores de comercio exterior",
+    "etapa": "Operar",
+    "para_quien": "Beneficiarios de franquicias",
+    "pasos": [
+      {
+        "orden": 1,
+        "titulo": "Controla productos importados",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63c79"
+          }
+        ]
+      },
+      {
+        "orden": 2,
+        "titulo": "Solicita la franquicia",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63cc9"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63ce2"
+          }
+        ]
+      }
+    ],
+    "estado": "VIGENTE",
+    "version": 1
+  },
+  {
+    "_id": "proc-33",
+    "numero": 33,
+    "nombre": "Recuperar el IVA como exportador",
+    "audiencia": "Operadores de comercio exterior",
+    "etapa": "Recuperar y resolver",
+    "para_quien": "Exportadores con crédito fiscal",
+    "pasos": [
+      {
+        "orden": 1,
+        "titulo": "Paso de inicio",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": []
+      }
+    ],
+    "estado": "VIGENTE",
+    "version": 1
+  },
+  {
+    "_id": "proc-34",
+    "numero": 34,
+    "nombre": "Recuperar depósitos o impuestos aduaneros",
+    "audiencia": "Operadores de comercio exterior",
+    "etapa": "Recuperar y resolver",
+    "para_quien": "Importadores y operadores",
+    "pasos": [
+      {
+        "orden": 1,
+        "titulo": "Equipo de carga temporal",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63ce8"
+          }
+        ]
+      }
+    ],
+    "estado": "VIGENTE",
+    "version": 1
+  },
+  {
+    "_id": "proc-35",
+    "numero": 35,
+    "nombre": "Impugnar o consultar una resolución aduanera",
+    "audiencia": "Operadores de comercio exterior",
+    "etapa": "Recuperar y resolver",
+    "para_quien": "Operadores con un expediente o sanción",
+    "pasos": [
+      {
+        "orden": 1,
+        "titulo": "Consulta tu expediente",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63cba"
+          }
+        ]
+      },
+      {
+        "orden": 2,
+        "titulo": "Conoce las sanciones y leyes",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63cc3"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63cd1"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63cdc"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63ced"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63cf3"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63d04"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63d0d"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63d1a"
+          }
+        ]
+      }
+    ],
+    "estado": "VIGENTE",
+    "version": 1
+  },
+  {
+    "_id": "proc-36",
+    "numero": 36,
+    "nombre": "Prevenir y denunciar el contrabando",
+    "audiencia": "Operadores de comercio exterior",
+    "etapa": "Prevenir",
+    "para_quien": "Operadores y ciudadanía",
+    "pasos": [
+      {
+        "orden": 1,
+        "titulo": "Controles en carretera",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63d0f"
+          }
+        ]
+      }
+    ],
+    "estado": "VIGENTE",
+    "version": 1
+  },
+  {
+    "_id": "proc-37",
+    "numero": 37,
+    "nombre": "Registrarme como contador o auditor",
+    "audiencia": "Profesionales",
+    "etapa": "Registrarse",
+    "para_quien": "Contadores, peritos y auditores",
+    "pasos": [
+      {
+        "orden": 1,
+        "titulo": "Paso de inicio",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": []
+      }
+    ],
+    "estado": "VIGENTE",
+    "version": 1
+  },
+  {
+    "_id": "proc-38",
+    "numero": 38,
+    "nombre": "Registrarme como notario y hacer traspasos",
+    "audiencia": "Profesionales",
+    "etapa": "Registrarse",
+    "para_quien": "Abogados y notarios",
+    "pasos": [
+      {
+        "orden": 1,
+        "titulo": "Haz traspasos y avisos",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63c67"
+          }
+        ]
+      }
+    ],
+    "estado": "VIGENTE",
+    "version": 1
+  },
+  {
+    "_id": "proc-39",
+    "numero": 39,
+    "nombre": "Ser gestor tributario",
+    "audiencia": "Profesionales",
+    "etapa": "Registrarse",
+    "para_quien": "Personas que hacen trámites por otros",
+    "pasos": [
+      {
+        "orden": 1,
+        "titulo": "Paso de inicio",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": []
+      }
+    ],
+    "estado": "VIGENTE",
+    "version": 1
+  },
+  {
+    "_id": "proc-40",
+    "numero": 40,
+    "nombre": "Ser auxiliar de la función pública aduanera",
+    "audiencia": "Operadores de comercio exterior",
+    "etapa": "Registrarse",
+    "para_quien": "Agentes aduaneros, depósitos, transportistas",
+    "pasos": [
+      {
+        "orden": 1,
+        "titulo": "Conoce los requisitos",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63c86"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63cab"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63cbc"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63cbd"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63cca"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63cd5"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63cdf"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63cf2"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63cf9"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63cfa"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63d07"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63d11"
+          }
+        ]
+      },
+      {
+        "orden": 2,
+        "titulo": "Opera en los sistemas",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63caa"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63cbb"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63cc8"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63cd6"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63cdb"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63cf7"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63cf8"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63cfc"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63d01"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63d03"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63d06"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63d0e"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63d10"
+          }
+        ]
+      },
+      {
+        "orden": 3,
+        "titulo": "Prepárate",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63cb9"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63cc6"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63cd2"
+          }
+        ]
+      }
+    ],
+    "estado": "VIGENTE",
+    "version": 1
+  },
+  {
+    "_id": "proc-41",
+    "numero": 41,
+    "nombre": "Operar como imprenta autorizada",
+    "audiencia": "Contribuyentes",
+    "etapa": "Registrarse",
+    "para_quien": "Imprentas que emiten documentos tributarios",
+    "pasos": [
+      {
+        "orden": 1,
+        "titulo": "Reporta tus servicios",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63b46"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b52"
+          }
+        ]
+      },
+      {
+        "orden": 2,
+        "titulo": "Mantén tu estado",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63b49"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b4a"
+          }
+        ]
+      },
+      {
+        "orden": 3,
+        "titulo": "Regístrate",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63b4b"
+          }
+        ]
+      },
+      {
+        "orden": 4,
+        "titulo": "Anula resoluciones",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63b50"
+          }
+        ]
+      }
+    ],
+    "estado": "VIGENTE",
+    "version": 1
+  },
+  {
+    "_id": "proc-42",
+    "numero": 42,
+    "nombre": "Hacer trámites en nombre de un cliente",
+    "audiencia": "Profesionales",
+    "etapa": "Operar",
+    "para_quien": "Contadores, gestores, notarios y abogados",
+    "pasos": [
+      {
+        "orden": 1,
+        "titulo": "Requisitos por trámite",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63b53"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b7c"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b81"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b8e"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b96"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bba"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bbd"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bc8"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bc9"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bca"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bcb"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bcc"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63be8"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63c1d"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63c1e"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63c1f"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63c20"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63c21"
+          }
+        ]
+      },
+      {
+        "orden": 2,
+        "titulo": "Obtén la autorización",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63ba5"
+          }
+        ]
+      },
+      {
+        "orden": 3,
+        "titulo": "Quedar como contador del negocio",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63be4"
+          }
+        ]
+      }
+    ],
+    "estado": "VIGENTE",
+    "version": 1
+  },
+  {
+    "_id": "proc-43",
+    "numero": 43,
+    "nombre": "Presentar una consulta legal o tributaria",
+    "audiencia": "Profesionales",
+    "etapa": "Operar",
+    "para_quien": "Abogados, contadores y asesores",
+    "pasos": [
+      {
+        "orden": 1,
+        "titulo": "Revisa leyes y antecedentes",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63c42"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63c54"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63c59"
+          }
+        ]
+      }
+    ],
+    "estado": "VIGENTE",
+    "version": 1
+  },
+  {
+    "_id": "proc-44",
+    "numero": 44,
+    "nombre": "Registrar y actualizar una municipalidad",
+    "audiencia": "Organismos especiales",
+    "etapa": "Entidades públicas",
+    "para_quien": "Municipalidades",
+    "pasos": [
+      {
+        "orden": 1,
+        "titulo": "Mantén sus datos",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63b6d"
+          }
+        ]
+      }
+    ],
+    "estado": "VIGENTE",
+    "version": 1
+  },
+  {
+    "_id": "proc-45",
+    "numero": 45,
+    "nombre": "Registrar y operar una entidad del Estado",
+    "audiencia": "Organismos especiales",
+    "etapa": "Entidades públicas",
+    "para_quien": "Ministerios, secretarías y entidades autónomas",
+    "pasos": [
+      {
+        "orden": 1,
+        "titulo": "Factura y retén",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63b83"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b84"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63bf7"
+          }
+        ]
+      }
+    ],
+    "estado": "VIGENTE",
+    "version": 1
+  },
+  {
+    "_id": "proc-46",
+    "numero": 46,
+    "nombre": "Activar o dar de baja vehículos por orden de autoridad",
+    "audiencia": "Organismos especiales",
+    "etapa": "Autoridades",
+    "para_quien": "Ministerio Público y Organismo Judicial",
+    "pasos": [
+      {
+        "orden": 1,
+        "titulo": "Orden judicial",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63c0a"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63c18"
+          }
+        ]
+      }
+    ],
+    "estado": "VIGENTE",
+    "version": 1
+  },
+  {
+    "_id": "proc-47",
+    "numero": 47,
+    "nombre": "Trámites de misiones diplomáticas y organismos internacionales",
+    "audiencia": "Organismos especiales",
+    "etapa": "Internacional",
+    "para_quien": "Embajadas, consulados y organismos de cooperación",
+    "pasos": [
+      {
+        "orden": 1,
+        "titulo": "Franquicias",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63cc9"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63ce2"
+          }
+        ]
+      }
+    ],
+    "estado": "VIGENTE",
+    "version": 1
+  },
+  {
+    "_id": "proc-48",
+    "numero": 48,
+    "nombre": "Entidades exentas: inscribirse y emitir constancias",
+    "audiencia": "Organismos especiales",
+    "etapa": "Entidades públicas",
+    "para_quien": "ONG, asociaciones, cooperativas, iglesias, universidades",
+    "pasos": [
+      {
+        "orden": 1,
+        "titulo": "Emite constancias",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63b42"
+          },
+          {
+            "$oid": "6ac845f3ee70794d89b63b43"
+          }
+        ]
+      }
+    ],
+    "estado": "VIGENTE",
+    "version": 1
+  },
+  {
+    "_id": "proc-49",
+    "numero": 49,
+    "nombre": "Coordinación y convenios con la SAT",
+    "audiencia": "Organismos especiales",
+    "etapa": "Coordinación",
+    "para_quien": "Instituciones públicas aliadas",
+    "pasos": [
+      {
+        "orden": 1,
+        "titulo": "Operativos conjuntos",
+        "opcional": false,
+        "es_gestion_interna": true,
+        "gestiones_ids": [
+          {
+            "$oid": "6ac845f3ee70794d89b63d0f"
+          }
+        ]
+      }
+    ],
+    "estado": "VIGENTE",
+    "version": 1
+  }
+]

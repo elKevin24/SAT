@@ -132,152 +132,153 @@ export const Header: React.FC<HeaderProps> = ({
 
   return (
     <header className="sticky top-0 z-40 bg-sat-blanco border-b border-sat-gris shadow-sat-sm">
-      {/* 1. Barra de Navegación 1: Plataformas Oficiales SAT (Azul Oscuro Normativo) */}
+      {/* 1. Barra de Navegación 1: Plataformas Oficiales SAT (Azul Oscuro Normativo - Esbelta y Compacta) */}
       <nav
-        className="navbar navbar-expand-lg bg-sat-azul-oscuro text-sat-blanco text-xs font-medium py-1.5"
+        className="bg-sat-azul-oscuro text-sat-blanco text-xs font-medium h-8 relative z-50"
         aria-label="Plataformas oficiales"
       >
-        <div className="container-fluid flex items-center px-3 sm:px-4 lg:px-6">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-between">
           <button
             type="button"
-            className="navbar-toggler border-0 shadow-none focus:outline-none focus-visible:ring-2 focus-visible:ring-sat-celeste p-1 text-sat-blanco me-2 lg:hidden"
+            className="p-1 text-sat-blanco lg:hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-sat-celeste"
             onClick={() => setIsNavOpen(!isNavOpen)}
             aria-controls="sat-navbar-main"
             aria-expanded={isNavOpen}
             aria-label="Alternar navegación"
           >
-            <MenuIcon className="w-5 h-5" />
+            <MenuIcon className="w-4 h-4" />
           </button>
 
           <div
             id="sat-navbar-main"
-            className={`${isNavOpen ? 'block' : 'hidden'} lg:flex flex-col lg:flex-row w-full lg:flex-1 items-stretch lg:items-center lg:gap-3`}
+            className={`${isNavOpen ? 'flex' : 'hidden'} lg:flex flex-col lg:flex-row w-full lg:flex-1 h-full items-stretch lg:items-center justify-between gap-2 lg:gap-0 bg-sat-azul-oscuro lg:bg-transparent absolute lg:static top-full left-0 p-3 lg:p-0 shadow-lg lg:shadow-none`}
           >
-            {/* Menú de Formación Tributaria */}
-            <div className="dropdown relative" ref={dropdownRef}>
-              <button
-                type="button"
-                onClick={() => setShowFormacionMenu(!showFormacionMenu)}
-                className="btn btn-sm dropdown-toggle inline-flex items-center gap-1.5 px-2.5 py-1.5 text-sat-blanco border-0 shadow-none hover:bg-white/15 focus:bg-white/15 focus:shadow-none active:bg-white/20"
-                aria-expanded={showFormacionMenu}
-              >
-                <GraduationCap className="w-4 h-4 text-sat-celeste" />
-                <span>Formación Tributaria</span>
-                <ChevronDown className={`w-3.5 h-3.5 transition-transform ${showFormacionMenu ? 'rotate-180' : ''}`} />
-              </button>
+            {/* Lado izquierdo: Formación Tributaria + Accesos complementarios */}
+            <div className="flex items-center h-full gap-1">
+              <div className="dropdown relative h-full flex items-center" ref={dropdownRef}>
+                <button
+                  type="button"
+                  onClick={() => setShowFormacionMenu(!showFormacionMenu)}
+                  className="inline-flex items-center gap-1.5 px-2.5 h-full text-sat-blanco rounded-sat-sm hover:bg-white/10 focus:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-sat-celeste transition-colors text-xs font-semibold"
+                  aria-expanded={showFormacionMenu}
+                >
+                  <GraduationCap className="w-3.5 h-3.5 text-sat-celeste" />
+                  <span>Formación Tributaria</span>
+                  <ChevronDown className={`w-3 h-3 transition-transform ${showFormacionMenu ? 'rotate-180' : ''}`} />
+                </button>
 
-              {/* Dropdown Formación Tributaria */}
-              {showFormacionMenu && (
-                <div className="dropdown-menu show absolute left-0 mt-1 w-72 max-w-[calc(100vw-2rem)] bg-sat-blanco text-sat-texto border border-sat-gris rounded-sat-lg shadow-sat-lg p-2 z-50 animate-fadeIn">
-                  <h6 className="dropdown-header px-3 py-1.5 mb-1 text-[11px] uppercase tracking-wider font-bold text-sat-texto-tenue border-b border-sat-gris">
-                    Cultura y Aprendizaje Fiscal
-                  </h6>
-                  {FORMACION_ITEMS.map((item) => (
-                    <a
-                      key={item.url}
-                      href={item.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="dropdown-item flex align-items-start gap-3 px-3 py-2 rounded-sat-sm text-sat-texto hover:bg-sat-fondo-tenue hover:text-sat-azul focus:bg-sat-fondo-tenue focus:text-sat-azul transition-colors"
-                    >
-                      <item.icon className="w-4 h-4 text-sat-azul mt-0.5 shrink-0" />
-                      <span className="block">
-                        <span className="flex align-items-center gap-1 text-xs font-semibold">
-                          {item.title}
-                          <ExternalLink className="w-3 h-3 opacity-40" />
+                {/* Dropdown Formación Tributaria */}
+                {showFormacionMenu && (
+                  <div className="dropdown-menu show absolute left-0 top-full mt-1 w-72 max-w-[calc(100vw-2rem)] bg-sat-blanco text-sat-texto border border-sat-gris rounded-sat-lg shadow-sat-lg p-2 z-50 animate-fadeIn">
+                    <h6 className="dropdown-header px-3 py-1.5 mb-1 text-[11px] uppercase tracking-wider font-bold text-sat-texto-tenue border-b border-sat-gris">
+                      Cultura y Aprendizaje Fiscal
+                    </h6>
+                    {FORMACION_ITEMS.map((item) => (
+                      <a
+                        key={item.url}
+                        href={item.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="dropdown-item flex items-start gap-3 px-3 py-2 rounded-sat-sm text-sat-texto hover:bg-sat-fondo-tenue hover:text-sat-azul focus:bg-sat-fondo-tenue focus:text-sat-azul transition-colors"
+                      >
+                        <item.icon className="w-4 h-4 text-sat-azul mt-0.5 shrink-0" />
+                        <span className="block">
+                          <span className="flex items-center gap-1 text-xs font-semibold">
+                            {item.title}
+                            <ExternalLink className="w-3 h-3 opacity-40" />
+                          </span>
+                          <span className="block text-[11px] text-sat-texto-tenue leading-tight">
+                            {item.desc}
+                          </span>
                         </span>
-                        <span className="block text-[11px] text-sat-texto-tenue leading-tight">
-                          {item.desc}
-                        </span>
-                      </span>
-                    </a>
-                  ))}
-                </div>
-              )}
-            </div>
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </div>
 
-            {/* Enlaces Rápidos a Plataformas Externas y Guía de Estilo */}
-            <div className="btn-group flex flex-wrap items-center gap-y-1">
               {onGoStyleGuide && (
                 <button
                   type="button"
                   onClick={onGoStyleGuide}
-                  className="btn btn-sm inline-flex items-center gap-1 px-2.5 py-1.5 border-0 shadow-none text-sat-blanco hover:bg-white/15 hover:text-sat-blanco focus:bg-white/15 active:bg-white/20"
+                  className="inline-flex items-center gap-1 px-2 h-full text-sat-blanco/75 hover:text-sat-blanco hover:bg-white/10 rounded-sat-sm text-[11px] transition-colors"
                   title="Ver Guía de Estilo y Tokens del Design System"
                 >
-                  <Palette className="w-3.5 h-3.5 me-1 text-sat-celeste" />
-                  <span>Design System</span>
+                  <Palette className="w-3 h-3 text-sat-celeste" />
+                  <span className="hidden xl:inline">Design System</span>
                 </button>
               )}
 
               <a
                 href="#/mapa"
-                className="btn btn-sm inline-flex items-center gap-1 px-2.5 py-1.5 border-0 shadow-none text-sat-blanco hover:bg-white/15 hover:text-sat-blanco focus:bg-white/15 active:bg-white/20"
+                className="inline-flex items-center gap-1 px-2 h-full text-sat-blanco/75 hover:text-sat-blanco hover:bg-white/10 rounded-sat-sm text-[11px] transition-colors"
                 title="Ver Mapa Jerárquico Oficial del Portal en Página Completa"
               >
-                <Layers className="w-3.5 h-3.5 me-1 text-sat-celeste" />
-                <span>Mapa del Portal</span>
+                <Layers className="w-3 h-3 text-sat-celeste" />
+                <span className="hidden xl:inline">Mapa del Portal</span>
               </a>
+            </div>
 
+            {/* Lado derecho: Pestañas contiguas idénticas al diseño oficial del PDF */}
+            <div className="flex items-center h-full">
               <a
                 href="https://declaraguate.sat.gob.gt/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-sm inline-flex items-center px-2.5 py-1.5 border-0 shadow-none text-sat-blanco hover:bg-white/15 hover:text-sat-blanco active:bg-white/20"
+                className="inline-flex items-center px-2.5 sm:px-3 h-full text-sat-blanco hover:bg-white/10 text-xs font-semibold transition-colors"
               >
-                <FileText className="w-3.5 h-3.5 me-1 text-sat-celeste" />
                 <span>Declaraguate</span>
               </a>
 
-              {/* Declaración de viajero con Naranja Normativo y texto oscuro para accesibilidad WCAG */}
+              {/* Declaración de viajero con Naranja Normativo */}
               <a
                 href="https://portal.sat.gob.gt/portal/declaracion-jurada-regional-de-viajero/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-sm inline-flex items-center px-2.5 py-1.5 border-0 shadow-none bg-sat-comp-naranja text-sat-azul-oscuro fw-bold hover:bg-[#d96316] hover:text-sat-azul-oscuro active:bg-[#c25712]"
+                className="inline-flex items-center gap-1 px-2.5 sm:px-3 h-full bg-sat-comp-naranja text-sat-azul-oscuro font-bold hover:bg-[#d96316] text-xs transition-colors"
               >
-                <Plane className="w-3.5 h-3.5 me-1" />
+                <Plane className="w-3 h-3" />
                 <span>Declaración de Viajero</span>
               </a>
 
-              {/* Acceso a Agencia Virtual en Azul SAT Normativo */}
+              {/* Acceso a Agencia Virtual en Celeste Normativo */}
               <a
                 href="https://farm3.sat.gob.gt/menu/login.jsf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-sm inline-flex items-center px-3 py-1.5 border-0 shadow-sm bg-sat-azul text-sat-blanco fw-bold hover:bg-[#0f4e7a] hover:text-sat-blanco active:bg-[#0b3f63]"
+                className="inline-flex items-center gap-1 px-3 sm:px-3.5 h-full bg-sat-celeste text-sat-azul-oscuro font-bold hover:bg-[#12a0ce] text-xs transition-colors"
               >
-                <Lock className="w-3.5 h-3.5 me-1" />
-                <span>Accede a tu Agencia Virtual</span>
-                <ExternalLink className="w-3 h-3 ms-1 opacity-80" />
+                <Lock className="w-3 h-3" />
+                <span>Agencia Virtual</span>
+                <ExternalLink className="w-2.5 h-2.5 opacity-80" />
               </a>
             </div>
           </div>
         </div>
       </nav>
 
-      {/* 2. Barra Principal: Isologotipo Oficial + Buscador Inteligente + Accesibilidad */}
-      <nav className="navbar py-2" aria-label="Buscador y accesibilidad">
-        <div className="container-fluid flex flex-wrap items-center gap-2 sm:gap-3 px-3 sm:px-4 lg:px-6">
-          <div className="flex items-center gap-2 sm:gap-3 flex-1 min-w-0 flex-wrap md:flex-nowrap">
-            {/* Isologotipo Oficial SAT como bloque indivisible normativo */}
-            <button
-              type="button"
-              onClick={onGoHome}
-              className="btn p-1 shrink-0 border-0 shadow-none group rounded-sat-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-sat-azul"
-              aria-label="Ir al inicio del Portal SAT"
-            >
-              <SatIsologotipo
-                className="max-w-[148px] sm:max-w-[210px] lg:max-w-none w-auto"
-                variant="azul"
-                showSubtitle={true}
-              />
-            </button>
+      {/* 2. Barra Principal: Isologotipo Oficial + Buscador Inteligente + Accesibilidad (Esbelta y Proporcionada) */}
+      <nav className="bg-sat-blanco py-1 sm:py-1.5 border-b border-sat-gris" aria-label="Buscador y accesibilidad">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-3 sm:gap-4">
+          {/* Isologotipo Oficial SAT escalado a altura compacta */}
+          <button
+            type="button"
+            onClick={onGoHome}
+            className="p-0.5 shrink-0 border-0 shadow-none group rounded-sat-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-sat-azul"
+            aria-label="Ir al inicio del Portal SAT"
+          >
+            <SatIsologotipo
+              className="h-8 w-auto"
+              variant="azul"
+              showSubtitle={true}
+            />
+          </button>
 
-            {/* Buscador Central Predictivo */}
-            <div ref={searchContainerRef} className="input-group input-group-sm flex order-2 md:order-none w-full md:w-auto md:flex-1 min-w-0 max-w-2xl relative">
-              <span className="input-group-text flex items-center bg-sat-fondo-tenue border border-sat-gris border-e-0 text-sat-texto-tenue pe-2">
-                <Search className="w-4 h-4" />
+          {/* Buscador Central Predictivo distribuido armónicamente */}
+          <div ref={searchContainerRef} className="flex-1 max-w-xl lg:max-w-2xl relative min-w-0">
+            <div className="relative flex items-center">
+              <span className="absolute left-3 text-sat-texto-tenue pointer-events-none flex items-center">
+                <Search className="w-3.5 h-3.5" />
               </span>
               <input
                 type="text"
@@ -287,9 +288,9 @@ export const Header: React.FC<HeaderProps> = ({
                   setIsSearchFocused(true);
                 }}
                 onFocus={() => setIsSearchFocused(true)}
-                placeholder="Buscar trámites, NIT, RTU Digital, facturas FEL, impuestos o leyes..."
-                aria-label="Buscar trámites en el Portal SAT"
-                className="form-control flex-1 min-w-0 border border-sat-gris border-s-0 ps-2 pe-8 py-2 text-xs sm:text-sm text-sat-texto bg-sat-fondo-tenue hover:bg-sat-fondo-medio focus:bg-sat-blanco focus:shadow-[0_0_0_0.25rem_rgba(20,100,155,0.2)] transition-colors"
+                placeholder="Buscar gestiones, NIT, RTU Digital, facturas FEL..."
+                aria-label="Buscar gestiones en el Portal SAT"
+                className="w-full pl-8 sm:pl-9 pr-7 py-1 text-xs sm:text-sm text-sat-texto bg-sat-fondo-tenue hover:bg-sat-fondo-medio focus:bg-sat-blanco border border-sat-gris rounded-full focus:outline-none focus:ring-2 focus:ring-sat-azul/30 focus:border-sat-azul transition-all h-8"
                 role="combobox"
                 aria-expanded={showSuggestions}
                 aria-controls="sat-search-suggestions"
@@ -299,104 +300,101 @@ export const Header: React.FC<HeaderProps> = ({
                 <button
                   type="button"
                   onClick={() => onSearchChange('')}
-                  className="btn btn-sm position-absolute end-0 top-50 translate-middle-y me-1 px-2 border-0 shadow-none text-sat-texto-tenue hover:bg-sat-fondo-medio rounded-circle"
+                  className="absolute right-2 p-1 text-sat-texto-tenue hover:text-sat-texto hover:bg-sat-fondo-medio rounded-full transition-colors"
                   aria-label="Borrar búsqueda"
                 >
-                  <X className="w-3.5 h-3.5" />
+                  <X className="w-3 h-3" />
                 </button>
               )}
+            </div>
 
-              {/* Dropdown de Sugerencias */}
-              {showSuggestions && hasResults && (
-                <div
-                  id="sat-search-suggestions"
-                  role="listbox"
-                  className="dropdown-menu show absolute left-0 right-0 top-full mt-2 p-0 bg-sat-blanco rounded-sat-lg shadow-sat-lg border border-sat-gris overflow-hidden z-50 max-h-96 overflow-y-auto"
-                >
-                  {filteredTramites.length > 0 && (
-                    <div className="p-2">
-                      <h6 className="dropdown-header px-3 py-1.5 text-[11px] uppercase tracking-wider fw-bold text-sat-azul">
-                        Trámites y Servicios Encontrados ({filteredTramites.length})
+            {/* Dropdown de Sugerencias */}
+            {showSuggestions && hasResults && (
+              <div
+                id="sat-search-suggestions"
+                role="listbox"
+                className="dropdown-menu show absolute left-0 right-0 top-full mt-1.5 p-0 bg-sat-blanco rounded-sat-lg shadow-sat-lg border border-sat-gris overflow-hidden z-50 max-h-96 overflow-y-auto"
+              >
+                {filteredTramites.length > 0 && (
+                  <div className="p-2">
+                    <h6 className="dropdown-header px-3 py-1.5 text-[11px] uppercase tracking-wider font-bold text-sat-azul">
+                      Gestiones y Servicios Encontrados ({filteredTramites.length})
+                    </h6>
+                    {filteredTramites.map((t) => (
+                      <button
+                        type="button"
+                        key={t.id}
+                        role="option"
+                        aria-selected="false"
+                        onClick={() => {
+                          onSelectTramite(t);
+                          setIsSearchFocused(false);
+                        }}
+                        className="dropdown-item w-full text-start px-3 py-2 rounded-sat-sm text-sat-texto hover:bg-sat-fondo-tenue hover:text-sat-azul focus:bg-sat-fondo-tenue focus:text-sat-azul transition-colors"
+                      >
+                        <span className="block text-xs font-bold">{t.tramite}</span>
+                        <span className="block text-[11px] text-sat-texto-tenue line-clamp-1">
+                          {t.descripcion}
+                        </span>
+                      </button>
+                    ))}
+                  </div>
+                )}
+
+                {filteredProcesos.length > 0 && (
+                  <>
+                    <hr className="dropdown-divider m-0 border-sat-gris" />
+                    <div className="p-2 bg-sat-fondo-tenue">
+                      <h6 className="dropdown-header px-3 py-1.5 flex items-center gap-1 text-[11px] uppercase tracking-wider font-bold text-sat-azul">
+                        <Compass className="w-3.5 h-3.5" /> Guías Paso a Paso
                       </h6>
-                      {filteredTramites.map((t) => (
+                      {filteredProcesos.map((p) => (
                         <button
                           type="button"
-                          key={t.id}
+                          key={p.no}
                           role="option"
                           aria-selected="false"
                           onClick={() => {
-                            onSelectTramite(t);
+                            onSelectProceso(p);
                             setIsSearchFocused(false);
                           }}
                           className="dropdown-item w-full text-start px-3 py-2 rounded-sat-sm text-sat-texto hover:bg-sat-fondo-tenue hover:text-sat-azul focus:bg-sat-fondo-tenue focus:text-sat-azul transition-colors"
                         >
-                          <span className="block text-xs fw-bold">{t.tramite}</span>
-                          <span className="block text-[11px] text-sat-texto-tenue line-clamp-1">
-                            {t.descripcion}
+                          <span className="flex items-center justify-between gap-2">
+                            <span>
+                              <span className="block text-xs font-bold">{p.nombre}</span>
+                              <span className="block text-[11px] text-sat-texto-tenue">{p.paraQuien}</span>
+                            </span>
+                            <ArrowRight className="w-4 h-4 text-sat-texto-tenue shrink-0" />
                           </span>
                         </button>
                       ))}
                     </div>
-                  )}
+                  </>
+                )}
+              </div>
+            )}
 
-                  {filteredProcesos.length > 0 && (
-                    <>
-                      <hr className="dropdown-divider m-0 border-sat-gris" />
-                      <div className="p-2 bg-sat-fondo-tenue">
-                        <h6 className="dropdown-header px-3 py-1.5 flex align-items-center gap-1 text-[11px] uppercase tracking-wider fw-bold text-sat-azul">
-                          <Compass className="w-3.5 h-3.5" /> Guías Paso a Paso
-                        </h6>
-                        {filteredProcesos.map((p) => (
-                          <button
-                            type="button"
-                            key={p.no}
-                            role="option"
-                            aria-selected="false"
-                            onClick={() => {
-                              onSelectProceso(p);
-                              setIsSearchFocused(false);
-                            }}
-                            className="dropdown-item w-full text-start px-3 py-2 rounded-sat-sm text-sat-texto hover:bg-sat-fondo-tenue hover:text-sat-azul focus:bg-sat-fondo-tenue focus:text-sat-azul transition-colors"
-                          >
-                            <span className="flex align-items-center justify-between gap-2">
-                              <span>
-                                <span className="block text-xs fw-bold">{p.nombre}</span>
-                                <span className="block text-[11px] text-sat-texto-tenue">{p.paraQuien}</span>
-                              </span>
-                              <ArrowRight className="w-4 h-4 text-sat-texto-tenue shrink-0" />
-                            </span>
-                          </button>
-                        ))}
-                      </div>
-                    </>
-                  )}
+            {showSuggestions && !hasResults && (
+              <div className="dropdown-menu show absolute left-0 right-0 top-full mt-1.5 p-0 bg-sat-blanco rounded-sat-lg shadow-sat-lg border border-sat-gris z-50">
+                <div className="px-3 py-3 text-xs text-sat-texto-tenue text-center">
+                  Sin resultados para <span className="font-bold text-sat-texto">"{searchQuery}"</span>
                 </div>
-              )}
+              </div>
+            )}
+          </div>
 
-              {showSuggestions && !hasResults && (
-                <div className="dropdown-menu show absolute left-0 right-0 top-full mt-2 p-0 bg-sat-blanco rounded-sat-lg shadow-sat-lg border border-sat-gris z-50">
-                  <div className="px-3 py-3 text-xs text-sat-texto-tenue text-center">
-                    Sin resultados para <span className="fw-bold text-sat-texto">"{searchQuery}"</span>
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {/* Botón de Accesibilidad UserWay */}
-            <div className="order-3 md:order-none ml-auto shrink-0">
-              <button
-                type="button"
-                onClick={onOpenAccessibility}
-                className="btn btn-sm inline-flex items-center gap-1.5 px-3 py-1.5 rounded-pill border border-sat-gris bg-sat-fondo-tenue text-sat-texto-suave hover:bg-sat-fondo-medio hover:text-sat-azul hover:border-sat-azul transition-colors fw-semibold"
-                title="Herramientas de Accesibilidad (UserWay)"
-                aria-label="Abrir panel de accesibilidad"
-              >
-                <span className="w-5 h-5 rounded-full bg-sat-azul text-sat-blanco flex align-items-center justify-center text-[10px] fw-bold">
-                  ♿
-                </span>
-                <span className="hidden lg:inline">Accesibilidad</span>
-              </button>
-            </div>
+          {/* Botón de Accesibilidad UserWay (Bloque ícono azul normativo como en el PDF oficial) */}
+          <div className="shrink-0">
+            <button
+              type="button"
+              onClick={onOpenAccessibility}
+              className="w-8 h-8 rounded-sat-sm bg-sat-celeste text-sat-blanco hover:bg-sky-500 transition-colors flex items-center justify-center shadow-xs focus:outline-none focus-visible:ring-2 focus-visible:ring-sat-azul"
+              title="Herramientas de Accesibilidad (UserWay)"
+              aria-label="Abrir panel de accesibilidad"
+            >
+              <span className="text-sm font-bold leading-none select-none">♿</span>
+            </button>
           </div>
         </div>
       </nav>

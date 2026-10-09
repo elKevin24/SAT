@@ -26,6 +26,11 @@ export function useDialogA11y({
 
     restoreRef.current = document.activeElement as HTMLElement | null;
 
+    const rootEl = document.getElementById('root');
+    if (rootEl) {
+      rootEl.setAttribute('aria-hidden', 'true');
+    }
+
     let previousOverflow = '';
     if (lockScroll) {
       previousOverflow = document.body.style.overflow;
@@ -91,6 +96,9 @@ export function useDialogA11y({
     return () => {
       cancelAnimationFrame(focusTimer);
       window.removeEventListener('keydown', handleKeyDown);
+      if (rootEl) {
+        rootEl.removeAttribute('aria-hidden');
+      }
       if (lockScroll) {
         document.body.style.overflow = previousOverflow;
       }

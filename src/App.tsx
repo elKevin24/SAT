@@ -13,6 +13,8 @@ import { TramiteDetailModal } from './components/TramiteDetailModal';
 import { VirtualAssistantModal } from './components/VirtualAssistantModal';
 import { PortalFlowModal } from './components/PortalFlowModal';
 import { SegmentTramitesCatalog } from './components/SegmentTramitesCatalog';
+import { QuickAccessCarousel } from './components/QuickAccessCarousel';
+import { SolicitarNitPage } from './pages/SolicitarNitPage';
 import { EtapaAtoId, TipoInteraccionId, TramiteItem, ProcesoGuiado } from './data/schema';
 import { buildTaxonomy, resolveCategoria, categoriaId } from './data/taxonomy';
 
@@ -47,7 +49,7 @@ const DEFAULT_ACCESSIBILITY: AccessibilitySettings = {
 };
 
 export default function App() {
-  const [currentView, setCurrentView] = useState<'home' | 'catalog'>('home');
+  const [currentView, setCurrentView] = useState<'home' | 'catalog' | 'solicitar-nit'>('home');
   const [activeSegment, setActiveSegment] = useState<SegmentId>('contribuyentes');
   const [activeCategory, setActiveCategory] = useState<string>('Todas las categorías');
   const [activeSubcategory, setActiveSubcategory] = useState<string | null>(null);
@@ -109,6 +111,9 @@ export default function App() {
             setActiveTipoInteraccion('todos');
           }
         }
+      } else if (hash.startsWith('#/solicitar-nit') || hash.startsWith('#/primer-nit') || hash.startsWith('#/quiero-ser-contribuyente')) {
+        setCurrentView('solicitar-nit');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       } else if (!hash || hash === '#' || hash === '#/') {
         setCurrentView('home');
       }
@@ -205,10 +210,26 @@ export default function App() {
               onOpenFlowDiagram={() => setIsFlowModalOpen(true)}
             />
 
-            {/* 3. Rotary Banner */}
+            {/* 3. Rotary Banner (Lámina 10 del PDF Oficial: 3 simultáneos, máx 120 caracteres) */}
             <RotaryBanner />
 
-            {/* 4. Popular Topics Tabs */}
+            {/* 4. Accesos Rápidos (Lámina 11 del PDF Oficial: 7 visibles + 2 en carrusel) */}
+            <QuickAccessCarousel
+              onSelectQuickAction={(item) => {
+                if (item.id === 'cual-es-mi-nit' || item.id === 'consultar-vehiculos' || item.id === 'omisos') {
+                  setConsultasModalSegment('contribuyentes');
+                } else if (item.id === 'solvencia-fiscal') {
+                  const solvencia = allTramites.find(t => t.id === 'SAT-GES-0154' || t.tramite.toLowerCase().includes('solvencia fiscal'));
+                  if (solvencia) setSelectedTramite(solvencia);
+                } else if (item.id === 'solicitar-nit') {
+                  window.location.hash = '#/solicitar-nit';
+                } else if (item.id === 'fel') {
+                  handleSelectSegment('contribuyentes', 'Facturación Electrónica en Línea (FEL)');
+                }
+              }}
+            />
+
+            {/* 5. Temas Más Consultados (Lámina 12 del PDF Oficial: opción 1 fija a Consultas) */}
             <PopularTopicsTabs
               onOpenConsultasModal={(segId) => setConsultasModalSegment(segId)}
             />
@@ -237,6 +258,19 @@ export default function App() {
               onBackToHome={handleGoHome}
               onSwitchSegment={(segId) => {
                 handleSelectSegment(segId);
+              }}
+            />
+          </main>
+        )}
+
+        {currentView === 'solicitar-nit' && (
+          <main id="main-content" tabIndex={-1} className="focus:outline-hidden">
+            <SolicitarNitPage
+              onBackToHome={handleGoHome}
+              onOpenConsultasNIT={() => setConsultasModalSegment('contribuyentes')}
+              onOpenProcesoGuiado={() => {
+                const procNit = allProcesos.find(p => p.no === 1);
+                if (procNit) setSelectedProceso(procNit);
               }}
             />
           </main>

@@ -20,8 +20,8 @@ En portales de administración pública tributaria y aduanera, el término restr
 * Un **trámite** formalmente exige expediente bilateral, liquidación o resolución administrativa.
 * Una **gestión** engloba con exactitud trámites transaccionales, consultas públicas de bases de datos, herramientas de cálculo, descargas criptográficas y guías orientativas ciudadanas.
 * **Estándar de nomenclatura institucional:**
-  * Prefijo de código: `SAT-GES-####` (ej. `SAT-GES-0015`).
-  * ID canónico NoSQL: `ges-[segmento]-[slug]` (ej. `ges-trib-rtu-digital`, `ges-ce-declaracion-duca`).
+  * Prefijo de código institucional: `SAT-GES-####` (ej. `SAT-GES-0015`).
+  * ID canónico NoSQL: `[slug-limpio-inmutable]` sin prefijos de actor o segmento (ej. `rtu-inscripcion-digital`, `declaracion-mercancias-duca`, `solvencia-fiscal-solicitud`), garantizando que el ID no cambie si la gestión se comparte o reasigna entre actores.
   * Nombre de colección en MongoDB: `gestiones`.
 
 ### B. El Principio de Navegación Contextual (Web of Services)
@@ -141,7 +141,7 @@ Un trámite se define **una única vez** en `gestiones`. Los actores a los que a
 
 ```json
 {
-  "_id": "ges-trib-rtu-digital",
+  "_id": "rtu-inscripcion-digital",
   "codigo": "SAT-GES-0015",
   "titulo": "Inscripción en el Registro Tributario Unificado (RTU) Digital",
   "descripcion": "Trámite 100% digital para personas individuales y jurídicas para obtener su Número de Identificación Tributaria (NIT) y registrar sus obligaciones fiscales.",
@@ -150,37 +150,28 @@ Un trámite se define **una única vez** en `gestiones`. Los actores a los que a
   
   "etapa_ato": "Empezar y registrarse",
   "tipo_interaccion": "servicio_transaccional",
-  "familia_tematica": "Registro Tributario Unificado (RTU) Digital",
+  "familias_ids": ["rtu-digital", "agencia-virtual"],
   
-  "actores_aplicables": [
+  "actores_ids": [
     "nit-sin-obligaciones",
     "pequenos-contribuyentes",
     "contribuyente-general",
-    "profesionales-independientes"
+    "profesionales-independientes",
+    "importadores"
   ],
   
-  "relaciones_proceso": [
-    {
-      "gestion_id": "ges-trib-agencia-virtual",
-      "tipo_relacion": "prerrequisito",
-      "titulo": "Solicitud y Activación de Agencia Virtual",
-      "descripcion_corta": "Requisito previo obligatorio para autenticación biométrica o por correo."
-    },
-    {
-      "gestion_id": "ges-trib-fel-habilitacion",
-      "tipo_relacion": "siguiente_paso",
-      "titulo": "Habilitación como Emisor de Factura Electrónica en Línea (FEL)",
-      "descripcion_corta": "Paso posterior obligatorio para quienes tengan actividad mercantil."
-    },
-    {
-      "gestion_id": "ges-trib-constancia-rtu",
-      "tipo_relacion": "herramienta_apoyo",
-      "titulo": "Verificador y Consulta Pública de Constancia de RTU",
-      "descripcion_corta": "Consulta en tiempo real del estado activo y domicilio fiscal."
-    }
-  ],
+  "relaciones_proceso": {
+    "prerrequisitos_ids": ["solicitud-agencia-virtual"]
+  },
   
-  "control_auditoria": "APROBADO"
+  "auditoria": {
+    "estado": "publicado",
+    "version": 1,
+    "vigente_desde": "2026-01-01T00:00:00Z",
+    "vigente_hasta": null,
+    "actualizado_por": "mesa_tecnica_sat",
+    "fecha_revision": "2026-10-08T18:00:00Z"
+  }
 }
 ```
 
@@ -193,23 +184,23 @@ Un trámite se define **una única vez** en `gestiones`. Los actores a los que a
 // 1. Identificadores únicos
 db.gestiones.createIndex({ "codigo": 1 }, { unique: true });
 
-// 2. Consultas por actor y ciclo de vida ATO
-db.gestiones.createIndex({ "actores_aplicables": 1, "etapa_ato": 1 });
+// 2. Consultas por actor y ciclo de vida ATO (Multikey Index)
+db.gestiones.createIndex({ "actores_ids": 1, "etapa_ato": 1 });
 
-// 3. Consultas automáticas de Familia Temática
-db.gestiones.createIndex({ "familia_tematica": 1 });
+// 3. Consultas por Familia Temática (Multikey Index)
+db.gestiones.createIndex({ "familias_ids": 1 });
 
-// 4. Búsqueda de texto completo
+// 4. Relaciones inversas (Para calcular siguientes pasos)
+db.gestiones.createIndex({ "relaciones_proceso.prerrequisitos_ids": 1 });
+
+// 5. Búsqueda de texto completo
 db.gestiones.createIndex({ "titulo": "text", "descripcion": "text" });
 ```
 
-### B. Consulta de Relaciones de Proceso (Proyección Directa)
-No requiere `$lookup`. Al consultar la gestión principal, el frontend recibe directamente los datos necesarios para renderizar las tarjetas de prerrequisito y siguiente paso:
+### B. Consulta de Relaciones Inversas ("Siguientes Pasos")
 ```javascript
-db.gestiones.findOne(
-  { "_id": "ges-trib-rtu-digital" },
-  { "relaciones_proceso": 1 }
-);
+// Para saber qué gestiones tienen como prerrequisito a la actual:
+db.gestiones.find({ "relaciones_proceso.prerrequisitos_ids": "rtu-inscripcion-digital" });
 ```
 
 ### C. Consulta Automática de Familia Temática
@@ -217,8 +208,8 @@ Para poblar el bloque *"Más servicios de esta temática"* excluyendo la gestió
 ```javascript
 db.gestiones.find(
   {
-    "familia_tematica": "Factura Electrónica en Línea (FEL)",
-    "_id": { "$ne": "ges-trib-fel-habilitacion" }
+    "familias_ids": "fel",
+    "_id": { "$ne": "fel-habilitacion-emisor" }
   },
   { "codigo": 1, "titulo": 1, "tipo_interaccion": 1, "url_oficial": 1 }
 ).limit(4);

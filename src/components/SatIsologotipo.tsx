@@ -35,7 +35,7 @@ export const SatIsologotipo: React.FC<SatIsologotipoProps> = ({
         viewBox="0 0 320 102.4"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="w-full h-auto"
+        className="h-full w-auto max-h-full"
         preserveAspectRatio="xMidYMid meet"
       >
         <defs>

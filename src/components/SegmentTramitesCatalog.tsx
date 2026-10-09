@@ -69,7 +69,7 @@ const SEGMENT_CARD_TONE: Record<SegmentId, CardTone> = {
 };
 
 const CATEGORY_DESCRIPTIONS: Record<string, string> = {
-  'NIT sin Obligaciones': 'Personas individuales, estudiantes y graduados sin actividad económica que requieren NIT para trámites civiles, cuentas bancarias, títulos y remesas.',
+  'NIT sin Obligaciones': 'Personas individuales, estudiantes y graduados sin actividad económica que requieren NIT para gestiones civiles, cuentas bancarias, títulos y remesas.',
   'Pequeños Contribuyentes': 'Régimen simplificado con tarifa definitiva del 5% hasta Q150,000 anuales y actividades agropecuarias especiales.',
   'Contribuyente General': 'Personas y empresas con obligaciones generales de IVA e ISR, facturación electrónica, asalariados y gestión vehicular.',
   'Contribuyentes Especiales': 'Medianos y grandes contribuyentes sujetos a control diferenciado y gerencias de fiscalización tributaria intensiva.',
@@ -87,20 +87,20 @@ const CATEGORY_DESCRIPTIONS: Record<string, string> = {
   'ZDEEP - Empresas Usuarias': 'Empresas calificadas dentro de ZDEEP: ingreso y egreso de carga, materias primas, transformación y exenciones tributarias.',
   'Abogados y Notarios': 'Habilitación profesional ante la SAT, adquisición de Papel Sellado Especial para Protocolos y timbres fiscales, traspasos electrónicos y avisos notariales obligatorios.',
   'Peritos Contadores': 'Inscripción y actualización de contadores autorizados ante la SAT para llevar contabilidades formales.',
-  'Auditores': 'Habilitación para dictámenes fiscales, auditorías tributarias y trámites de devolución de crédito fiscal.',
+  'Auditores': 'Habilitación para dictámenes fiscales, auditorías tributarias y gestiones de devolución de crédito fiscal.',
   'Gestores Tributarios': 'Acreditación de gestores y personas autorizadas para tramitar ante agencias de la SAT.',
   'Servicios Profesionales': 'Profesionales liberales independientes, emisión de facturas y pago de timbres profesionales.',
   'Entidades del Estado': 'Ministerios, dependencias públicas y secretarías con retenciones tributarias y exenciones oficiales.',
   'Constitucionales': 'Universidades, centros educativos y misiones diplomáticas exentas de tributos por mandato constitucional.',
   'No Lucrativos': 'Asociaciones, fundaciones, cooperativas e iglesias con reconocimiento de exención de impuestos.',
-  'Municipalidades': 'Gobiernos locales y empresas municipales con trámites tributarios y acreditaciones ante SAT.',
+  'Municipalidades': 'Gobiernos locales y empresas municipales con gestiones tributarias y acreditaciones ante SAT.',
   'Decreto': 'Entidades beneficiarias de incentivos fiscales y exenciones específicas normadas por decreto legislativo.'
 };
 
 const SUBCATEGORY_DESCRIPTIONS: Record<string, string> = {
   // Áreas Funcionales Oficiales de Comercio Exterior
-  'Registro y acreditación': 'Trámites de inscripción, acreditación oficial, solvencia fiscal, carnés y entrega de pólizas de fianza.',
-  'Operaciones y trámites': 'Gestiones del día a día: transmisión de declaraciones DUCA, manifiestos de carga, pagos y permisos aduaneros.',
+  'Registro y acreditación': 'Gestiones de inscripción, acreditación oficial, solvencia fiscal, carnés y entrega de pólizas de fianza.',
+  'Operaciones y gestiones': 'Gestiones del día a día: transmisión de declaraciones DUCA, manifiestos de carga, pagos y permisos aduaneros.',
   'Consultas y seguimiento': 'Trazabilidad de operaciones: selectivo en aduanas, rampa de revisión, retenciones, expedientes y control de inventarios.',
   'Normativa y recursos': 'Marco legal aduanero, CAUCA, RECAUCA, guías técnicas de sistemas, manuales y capacitaciones oficiales.',
 
@@ -403,7 +403,7 @@ const subcategoriesList = useMemo(() => {
     setInternalQuery('');
   };
 
-  // Renderizador unificado de tarjeta de trámite con diseño Plain Language y badges oficiales
+  // Renderizador unificado de tarjeta de gestión con diseño Plain Language y badges oficiales
   const renderTramiteCard = (tramite: TramiteItem) => {
     const badges = (
       <>
@@ -417,7 +417,7 @@ const subcategoriesList = useMemo(() => {
                   ? 'bg-[#7C3AED]/10 text-[#7C3AED] border border-[#7C3AED]/20'
                   : 'bg-sat-fondo-medio/70 text-sat-texto-suave border border-sat-gris/60'
           }`}>
-            {tramite.tipoInteraccion === 'servicio_transaccional' && 'Trámite en Línea'}
+            {tramite.tipoInteraccion === 'servicio_transaccional' && 'Gestión en Línea'}
             {tramite.tipoInteraccion === 'consulta_datos' && 'Consulta BD'}
             {tramite.tipoInteraccion === 'guia_informativa' && 'Guía'}
             {tramite.tipoInteraccion === 'descarga_recurso' && 'Descarga'}
@@ -462,13 +462,13 @@ const subcategoriesList = useMemo(() => {
   };
 
   return (
-    <div className="py-8 bg-white min-h-[75vh]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+    <div className="pt-2.5 sm:pt-3.5 pb-8 bg-white min-h-[75vh]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4 sm:space-y-5">
 
         {/* -----------------------------------------------------------------
          * MIGA DE PAN LIMPIA (Componente oficial Breadcrumbs SAT)
          * ----------------------------------------------------------------- */}
-        <div className="pb-3 border-b border-[#DCDCDC]">
+        <div className="pb-2 sm:pb-2.5 border-b border-sat-gris">
           <Breadcrumbs
             includeHome
             onHomeClick={onBackToHome}
@@ -519,7 +519,7 @@ const subcategoriesList = useMemo(() => {
         {/* -----------------------------------------------------------------
          * CABECERA DEL SEGMENTO CON BUSCADOR
          * ----------------------------------------------------------------- */}
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 sm:gap-4">
           <div>
             <div className="flex items-center gap-2 mb-1">
               <span className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: meta.color }} />
@@ -538,9 +538,9 @@ const subcategoriesList = useMemo(() => {
             </h1>
             <p className="text-xs sm:text-sm text-[#475569] mt-1 max-w-3xl leading-relaxed">
               {internalQuery
-                ? `Trámites encontrados en ${meta.shortTitle}.`
+                ? `Gestiones encontradas en ${meta.shortTitle}.`
                 : selectedSubcategory
-                  ? (SUBCATEGORY_DESCRIPTIONS[selectedSubcategory] || 'Selecciona el trámite para ver sus requisitos y pasos normados.')
+                  ? (SUBCATEGORY_DESCRIPTIONS[selectedSubcategory] || 'Selecciona la gestión para ver sus requisitos y pasos normados.')
                   : selectedCategory
                     ? (CATEGORY_DESCRIPTIONS[selectedCategory] || meta.desc)
                     : meta.desc}
@@ -555,7 +555,7 @@ const subcategoriesList = useMemo(() => {
               value={internalQuery}
               onChange={(e) => setInternalQuery(e.target.value)}
               placeholder="Buscar en este segmento..."
-              aria-label={`Buscar trámites en ${meta.shortTitle}`}
+              aria-label={`Buscar gestiones en ${meta.shortTitle}`}
               className="w-full pl-9 pr-3 py-2 text-xs bg-white border border-sat-gris rounded-xl focus:border-sat-azul focus:ring-1 focus:ring-sat-azul outline-none"
             />
           </div>
@@ -700,7 +700,7 @@ const subcategoriesList = useMemo(() => {
           <div>
             <div className="flex items-center justify-between pb-3 mb-4 border-b border-[#DCDCDC]">
               <h2 className="text-sm font-bold text-[#19324B]">
-                Trámites coincidentes ({currentTramites.length})
+                Gestiones coincidentes ({currentTramites.length})
               </h2>
               <button
                 onClick={() => setInternalQuery('')}
@@ -715,7 +715,7 @@ const subcategoriesList = useMemo(() => {
                 {currentTramites.map(renderTramiteCard)}
               </div>
             ) : (
-              <Alert tone="info" title="No se encontraron trámites">
+              <Alert tone="info" title="No se encontraron gestiones">
                 Intenta buscar con otros términos como NIT, RTU, Vehículos, DUCA o Facturas.
               </Alert>
             )}
@@ -728,7 +728,7 @@ const subcategoriesList = useMemo(() => {
             <div className="flex items-center justify-between pb-3 mb-4 border-b border-[#DCDCDC]">
               <div>
                 <h2 className="text-sm font-bold text-[#19324B]">
-                  Trámites filtrados por ciclo de vida ({currentTramites.length})
+                  Gestiones filtradas por ciclo de vida ({currentTramites.length})
                 </h2>
                 <p className="text-xs text-[#64748B] mt-0.5">
                   {selectedEtapaAto !== 'todas' && `Etapa: ${ETAPAS_ATO_CONFIG.find(e => e.id === selectedEtapaAto)?.label}. `}
@@ -749,7 +749,7 @@ const subcategoriesList = useMemo(() => {
                 {currentTramites.map(renderTramiteCard)}
               </div>
             ) : (
-              <Alert tone="info" title="No hay trámites con esta combinación de filtros">
+              <Alert tone="info" title="No hay gestiones con esta combinación de filtros">
                 Selecciona "Todas las etapas" o "Todos los formatos" para explorar el catálogo completo.
               </Alert>
             )}
@@ -765,7 +765,7 @@ const subcategoriesList = useMemo(() => {
             {!selectedCategory && (
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-3.5">
                 {categoriesList.map((catName) => {
-                  const desc = CATEGORY_DESCRIPTIONS[catName] || 'Explora los trámites y obligaciones agrupadas en esta clasificación oficial.';
+                  const desc = CATEGORY_DESCRIPTIONS[catName] || 'Explora las gestiones y obligaciones agrupadas en esta clasificación oficial.';
 
                   return (
                     <Card
@@ -825,7 +825,7 @@ const subcategoriesList = useMemo(() => {
 
                       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-3.5">
                         {subcategoriesList.map((subName) => {
-                          const desc = SUBCATEGORY_DESCRIPTIONS[subName] || 'Consulta los trámites específicos y requisitos correspondientes.';
+                          const desc = SUBCATEGORY_DESCRIPTIONS[subName] || 'Consulta las gestiones específicas y requisitos correspondientes.';
 
                           return (
                             <Card
@@ -844,7 +844,7 @@ const subcategoriesList = useMemo(() => {
                     <div>
                       <div className="flex items-center justify-between mb-3 pb-2 border-b border-[#E2E8F0]">
                         <h2 className="text-xs font-bold uppercase tracking-wider text-[#64748B]">
-                          Servicios y trámites ({currentTramites.length})
+                          Servicios y gestiones ({currentTramites.length})
                         </h2>
                         <button
                           onClick={handleResetToSubcategories}

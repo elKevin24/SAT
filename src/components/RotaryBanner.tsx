@@ -67,7 +67,7 @@ export const RotaryBanner: React.FC = () => {
   const current = BANNERS[currentIdx];
 
   return (
-    <div className="py-4 bg-white">
+    <div className="py-2.5 sm:py-3 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
           onMouseEnter={() => setIsPaused(true)}

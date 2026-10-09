@@ -11,9 +11,9 @@ interface QuickAccessItem {
 const QUICK_ITEMS: QuickAccessItem[] = [
   {
     id: 'solicitar-nit',
-    title: 'Solicitar NIT por primera vez',
-    desc: 'Obtén tu Número de Identificación Tributaria para trámites de trabajo, bancos o abrir tu negocio.',
-    url: 'https://portal.sat.gob.gt/portal/rtu-digital/inscripcion-solicitud-de-nit/'
+    title: 'Solicitar NIT',
+    desc: 'Obtén tu Número de Identificación Tributaria para empleo, bancos o abrir tu negocio.',
+    url: '#/solicitar-nit'
   },
   {
     id: 'cual-es-mi-nit',
@@ -84,29 +84,29 @@ export const QuickAccessCarousel: React.FC<QuickAccessCarouselProps> = ({ onSele
   const visibleItems = QUICK_ITEMS.slice(startIndex, startIndex + itemsPerPage);
 
   return (
-    <section className="py-5 bg-slate-50 border-b border-[#DCDCDC]">
+    <section className="py-6 bg-sat-fondo-tenue border-b border-sat-gris">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Encabezado y controles */}
-        <div className="flex items-center justify-between mb-3.5">
+        <div className="flex items-center justify-between mb-4">
           <div>
             <div className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-[#14649B]" />
-              <h3 className="text-base font-extrabold text-[#19324B] tracking-tight">
+              <span className="w-2.5 h-2.5 rounded-full bg-sat-azul" />
+              <h3 className="text-base sm:text-lg font-extrabold text-sat-azul-oscuro tracking-tight">
                 Accesos Rápidos y Consultas Clave
               </h3>
             </div>
-            <p className="text-xs text-slate-500 mt-0.5">
-              Servicios en línea y verificadores más utilizados para resolver tus trámites frecuentes.
+            <p className="text-xs text-sat-texto-suave mt-0.5">
+              Servicios en línea y verificadores más utilizados para resolver tus gestiones frecuentes.
             </p>
           </div>
 
           {/* Flechas de carrusel */}
-          <div className="flex items-center gap-1.5">
+          <div className="flex items-center gap-2">
             <button
               onClick={handlePrev}
               disabled={startIndex === 0}
-              className="p-1.5 rounded-lg border border-[#DCDCDC] bg-white text-slate-700 hover:bg-slate-100 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+              className="p-2 rounded-sat-sm border border-sat-gris bg-sat-blanco text-sat-texto-suave hover:bg-sat-fondo-medio disabled:opacity-30 disabled:cursor-not-allowed transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-sat-azul"
               aria-label="Ver accesos anteriores"
             >
               <ChevronLeft className="w-4 h-4" />
@@ -114,7 +114,7 @@ export const QuickAccessCarousel: React.FC<QuickAccessCarouselProps> = ({ onSele
             <button
               onClick={handleNext}
               disabled={startIndex + itemsPerPage >= QUICK_ITEMS.length}
-              className="p-1.5 rounded-lg border border-[#DCDCDC] bg-white text-slate-700 hover:bg-slate-100 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+              className="p-2 rounded-sat-sm border border-sat-gris bg-sat-blanco text-sat-texto-suave hover:bg-sat-fondo-medio disabled:opacity-30 disabled:cursor-not-allowed transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-sat-azul"
               aria-label="Ver más accesos"
             >
               <ChevronRight className="w-4 h-4" />
@@ -123,28 +123,31 @@ export const QuickAccessCarousel: React.FC<QuickAccessCarouselProps> = ({ onSele
         </div>
 
         {/* 7 Tarjetas compactas sin footer redundante */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-2.5 sm:gap-3">
-          {visibleItems.map((item) => (
-            <a
-              key={item.id}
-              href={item.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => {
-                if (onSelectQuickAction) onSelectQuickAction(item);
-              }}
-              className="group bg-white rounded-[14px] border border-[#DCDCDC] hover:border-[#14649B] hover:bg-[#14649B] hover:shadow-[0_10px_20px_rgba(20,100,155,0.22)] p-3.5 flex flex-col justify-between transition-all duration-300 hover:-translate-y-0.5 text-left"
-            >
-              <div>
-                <div className="text-xs font-bold text-[#19324B] group-hover:text-white leading-snug transition-colors mb-1">
-                  {item.title}
+        <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-3 sm:gap-4">
+          {visibleItems.map((item) => {
+            const isInternal = item.url.startsWith('#');
+            return (
+              <a
+                key={item.id}
+                href={item.url}
+                target={isInternal ? undefined : "_blank"}
+                rel={isInternal ? undefined : "noopener noreferrer"}
+                onClick={() => {
+                  if (onSelectQuickAction) onSelectQuickAction(item);
+                }}
+                className="group bg-sat-blanco rounded-sat-lg border border-sat-gris hover:border-sat-azul hover:bg-sat-azul hover:shadow-sat-md p-3.5 sm:p-4 flex flex-col justify-between transition-all duration-200 hover:-translate-y-0.5 text-left cursor-pointer min-h-[110px]"
+              >
+                <div>
+                  <div className="text-xs font-bold text-sat-azul-oscuro group-hover:text-white leading-snug transition-colors mb-1">
+                    {item.title}
+                  </div>
+                  <div className="text-[11px] text-sat-texto-suave group-hover:text-white/90 transition-colors line-clamp-3 leading-relaxed">
+                    {item.desc}
+                  </div>
                 </div>
-                <div className="text-[11px] text-slate-600 group-hover:text-white/85 transition-colors line-clamp-3 leading-relaxed">
-                  {item.desc}
-                </div>
-              </div>
-            </a>
-          ))}
+              </a>
+            );
+          })}
         </div>
 
       </div>
