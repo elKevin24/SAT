@@ -25,7 +25,7 @@ export const SolicitarNitPage: React.FC<SolicitarNitPageProps> = ({
           <Breadcrumbs
             items={[
               { label: 'Gestiones', onClick: onBackToHome },
-              { label: 'Solicitar mi primer NIT', isCurrent: true }
+              { label: 'Solicitar NIT', isCurrent: true }
             ]}
             onHomeClick={onBackToHome}
           />
@@ -41,14 +41,14 @@ export const SolicitarNitPage: React.FC<SolicitarNitPageProps> = ({
           </button>
         </div>
 
-        {/* 2. Hero Principal con Tokens Normativos SAT */}
-        <header className="bg-sat-blanco rounded-sat-lg border border-sat-gris p-5 sm:p-7 shadow-sat-sm relative overflow-hidden">
+        {/* 2. Hero Principal con Tokens Normativos SAT (12px radius) */}
+        <header className="bg-sat-blanco rounded-xl border border-sat-gris p-5 sm:p-7 shadow-sat-sm relative overflow-hidden">
           <div className="max-w-3xl space-y-2.5 sm:space-y-3 relative z-10">
             <h1 className="text-2xl sm:text-4xl font-black text-sat-azul-oscuro tracking-tight leading-tight">
-              Solicitar mi primer NIT
+              Solicitar NIT
             </h1>
             <p className="text-sm sm:text-base text-sat-texto-suave leading-relaxed">
-              Guía oficial para obtener tu Número de Identificación Tributaria (NIT) en línea. Necesario para tu primer empleo, apertura de cuentas bancarias, facturar o abrir tu negocio.
+              Guía oficial para gestionar la inscripción de tu Número de Identificación Tributaria (NIT) en línea. Documento único para tu actividad laboral, apertura de cuentas bancarias, facturar o registrar tu negocio.
             </p>
           </div>
         </header>
@@ -119,7 +119,7 @@ export const SolicitarNitPage: React.FC<SolicitarNitPageProps> = ({
 
         {/* 4. Herramientas de Apoyo con Botones Oficiales */}
         <section aria-labelledby="apoyo-heading" className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="bg-sat-blanco rounded-sat-lg border border-sat-gris p-6 space-y-3">
+          <div className="bg-sat-blanco rounded-xl border border-sat-gris p-6 space-y-3">
             <h3 id="apoyo-heading" className="text-base font-bold text-sat-azul-oscuro flex items-center gap-2">
               <Search className="w-4 h-4 text-sat-azul" />
               <span>¿Ya tienes NIT y no lo recuerdas?</span>
@@ -138,13 +138,13 @@ export const SolicitarNitPage: React.FC<SolicitarNitPageProps> = ({
             )}
           </div>
 
-          <div className="bg-sat-blanco rounded-sat-lg border border-sat-gris p-6 space-y-3">
+          <div className="bg-sat-blanco rounded-xl border border-sat-gris p-6 space-y-3">
             <h3 className="text-base font-bold text-sat-azul-oscuro flex items-center gap-2">
               <ShieldCheck className="w-4 h-4 text-sat-azul" />
               <span>Recorrido Guiado Paso a Paso</span>
             </h3>
             <p className="text-xs text-sat-texto-suave leading-relaxed">
-              Explora la guía oficial para obtener tu primer NIT con cada una de sus etapas detalladas para no cometer omisos.
+              Explora la guía oficial para gestionar tu Número de Identificación Tributaria (NIT) con cada una de sus etapas detalladas para no cometer omisos.
             </p>
             {onOpenProcesoGuiado && (
               <Button
