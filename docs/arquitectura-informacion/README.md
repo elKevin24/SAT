@@ -13,6 +13,7 @@ Este directorio reúne los documentos normativos, taxonómicos y operativos que 
 | [`TAXONOMIA_Y_DIMENSIONES_PORTAL_SAT.md`](./TAXONOMIA_Y_DIMENSIONES_PORTAL_SAT.md) | Dimensiones ATO: 5 etapas del ciclo y 4 tipos de interacción | Completo / Vigente | [x] |
 | [`MAPA_DE_NAVEGACION_COMERCIO_EXTERIOR.md`](./MAPA_DE_NAVEGACION_COMERCIO_EXTERIOR.md) | Comparativo antes/después y consolidación de las 6 ramas aduaneras | Completo / Vigente | [x] |
 | [`MAPA_DE_NAVEGACION_PROFESIONALES.md`](./MAPA_DE_NAVEGACION_PROFESIONALES.md) | Comparativo antes/después y saneamiento de 47 trámites de Profesionales | Completo / Vigente | [x] |
+| [`MODELO_RELACIONES_CONTENIDO.md`](./MODELO_RELACIONES_CONTENIDO.md) | Relaciones de proceso (prerrequisitos/siguientes pasos), familias temáticas y polijerarquía NoSQL | Completo / Vigente | [x] |
 | [`brechas-comercio-exterior.md`](./brechas-comercio-exterior.md) | 12 trámites operativos aduaneros con brecha y preguntas técnicas | Documentado | [x] |
 | [`TAXPAYER_JOURNEY.md`](./TAXPAYER_JOURNEY.md) | Arquetipos y recorridos de vida del contribuyente | Documentado | [x] |
 | [`auditoria-contenido.md`](./auditoria-contenido.md) | Auditoría de consistencia de campos descriptivos | Documentado | [x] |
@@ -48,6 +49,7 @@ Este directorio reúne los documentos normativos, taxonómicos y operativos que 
 - [`TAXONOMIA_Y_DIMENSIONES_PORTAL_SAT.md`](./TAXONOMIA_Y_DIMENSIONES_PORTAL_SAT.md) — Cuatro dimensiones transversales de interacción (Actor, ATO, Tipología, Plataforma).
 - [`MAPA_DE_NAVEGACION_COMERCIO_EXTERIOR.md`](./MAPA_DE_NAVEGACION_COMERCIO_EXTERIOR.md) — Mapa comparativo estructurado antes vs. después de las 6 ramas de comercio exterior.
 - [`MAPA_DE_NAVEGACION_PROFESIONALES.md`](./MAPA_DE_NAVEGACION_PROFESIONALES.md) — Mapa comparativo antes vs. después de las 5 categorías de profesionales.
+- [`MODELO_RELACIONES_CONTENIDO.md`](./MODELO_RELACIONES_CONTENIDO.md) — Modelo de relaciones de proceso (prerrequisitos/siguiente paso), familias temáticas y polijerarquía en MongoDB.
 - [`brechas-comercio-exterior.md`](./brechas-comercio-exterior.md) — Matriz de las 12 brechas normativas con sus preguntas para la Mesa Técnica de Aduanas.
 - [`TAXPAYER_JOURNEY.md`](./TAXPAYER_JOURNEY.md) — Arquetipos ciudadanos y flujos paso a paso.
 - [`auditoria-contenido.md`](./auditoria-contenido.md) — Informe de saneamiento de campos descriptivos.

@@ -127,7 +127,7 @@ OPERADORES DE COMERCIO EXTERIOR (246 Trámites)
 src/data/allTramites.json (Single Source of Truth - 716 nodos de navegación)
             │
             ├──► docs/fuentes-datos/Estructura_Final_Contenido_Portal_SAT_Actualizado.xlsx
-            │    (Libro Maestro Excel con 5 hojas: Resumen, Matriz 716, Comercio Exterior 246, Profesionales 47, Brechas 12)
+            │    (Libro Maestro Excel con 7 hojas: Resumen, Matriz 716, Contribuyentes 344, Comercio Exterior 246, Profesionales 47, Entes Exentos 79, Brechas 12)
             │
             ├──► docs/fuentes-datos/Mapa_de_Navegacion_y_Descripciones_Portal_SAT.xlsx
             │    (Taxonomía y fichas redactadas en Lenguaje Ciudadano)

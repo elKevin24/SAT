@@ -416,10 +416,10 @@ def populate_unified_sheet(ws, dataset):
         nav_levels = miga_parts[:-1] if len(miga_parts) > 1 else miga_parts
 
         n1 = item.get('nivel1_segmento') or item.get('segmento') or (nav_levels[0] if len(nav_levels) > 0 else '—')
-        n2 = item.get('nivel2_area') or item.get('categoria') or (nav_levels[1] if len(nav_levels) > 1 else '—')
-        n3 = item.get('nivel3_subarea') or item.get('subcategoria') or (nav_levels[2] if len(nav_levels) > 2 else '—')
-        n4 = item.get('nivel4_tema') or item.get('tema') or (nav_levels[3] if len(nav_levels) > 3 else '—')
-        n5 = item.get('nivel5_tramite') or item.get('subtema') or (nav_levels[4] if len(nav_levels) > 4 else '—')
+        n2 = item.get('nivel2_area') or item.get('nivel2_categoria') or item.get('nivel2_rama') or item.get('nivel2_rol') or item.get('regimenArea') or item.get('categoria') or (nav_levels[1] if len(nav_levels) > 1 else '—')
+        n3 = item.get('nivel3_subarea') or item.get('nivel3_subcategoria') or item.get('nivel3_actor') or item.get('grupoActor') or item.get('subcategoria') or (nav_levels[2] if len(nav_levels) > 2 else '—')
+        n4 = item.get('nivel4_tema') or item.get('materiaTema') or item.get('tema') or (nav_levels[3] if len(nav_levels) > 3 else '—')
+        n5 = item.get('nivel5_tramite') or item.get('subtemaGestion') or item.get('subtema') or (nav_levels[4] if len(nav_levels) > 4 else '—')
         if not n4 or str(n4).strip() == '': n4 = '—'
         if not n5 or str(n5).strip() == '': n5 = '—'
 
@@ -501,19 +501,29 @@ def populate_unified_sheet(ws, dataset):
     ws.freeze_panes = 'E2'
     ws.auto_filter.ref = f"A1:T{len(dataset)+1}"
 
-# HOJA 2: MATRIZ MAESTRA (676)
+# HOJA 2: MATRIZ MAESTRA (716)
 ws_master = wb.create_sheet(title=SHEET_MASTER_NAME)
 populate_unified_sheet(ws_master, master_data)
 
-# HOJA 3: COMERCIO EXTERIOR (246)
-ce_data = [item for item in master_data if item.get('segmento') == 'Operadores de Comercio Exterior']
+# HOJA 3: CONTRIBUYENTES (344)
+contrib_data = [item for item in master_data if item.get('segmento') == 'Contribuyentes' or item.get('pillar') == 'contribuyentes']
+ws_contrib = wb.create_sheet(title=f"Contribuyentes ({len(contrib_data)})")
+populate_unified_sheet(ws_contrib, contrib_data)
+
+# HOJA 4: COMERCIO EXTERIOR (246)
+ce_data = [item for item in master_data if item.get('segmento') == 'Operadores de Comercio Exterior' or item.get('pillar') == 'comercio_exterior']
 ws_ce = wb.create_sheet(title=f"Comercio Exterior ({len(ce_data)})")
 populate_unified_sheet(ws_ce, ce_data)
 
-# HOJA 4: PROFESIONALES (47)
+# HOJA 5: PROFESIONALES (47)
 prof_data = [item for item in master_data if item.get('segmento') == 'Profesionales' or item.get('pillar') == 'profesionales']
 ws_prof = wb.create_sheet(title=f"Profesionales ({len(prof_data)})")
 populate_unified_sheet(ws_prof, prof_data)
+
+# HOJA 6: ENTES EXENTOS (79)
+exentos_data = [item for item in master_data if item.get('segmento') == 'Entes Exentos' or item.get('pillar') == 'entes_exentos']
+ws_exentos = wb.create_sheet(title=f"Entes Exentos ({len(exentos_data)})")
+populate_unified_sheet(ws_exentos, exentos_data)
 
 # ==============================================================================
 # HOJA 5: BRECHAS NORMATIVAS (LAS 12 BRECHAS DE COMERCIO EXTERIOR)
