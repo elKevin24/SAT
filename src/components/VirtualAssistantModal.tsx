@@ -31,9 +31,9 @@ export const VirtualAssistantModal: React.FC = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       sender: 'bot',
-      text: '¡Hola! Soy RITA, tu asistente virtual de SAT Guatemala. ¿En qué trámite o consulta tributaria te puedo orientar hoy?',
+      text: '¡Hola! Soy RITA, tu asistente virtual de SAT Guatemala. ¿En qué gestión o consulta tributaria te puedo orientar hoy?',
       options: [
-        { label: '¿Cómo solicitar mi primer NIT?', action: 'primer_nit' },
+        { label: '¿Cómo solicitar mi NIT?', action: 'solicitar_nit' },
         { label: 'Imprimir o actualizar mi RTU', action: 'rtu' },
         { label: 'Facturación Electrónica FEL', action: 'fel' },
         { label: 'Consultar estado de mi gestión', action: 'gestion' }
@@ -55,12 +55,12 @@ export const VirtualAssistantModal: React.FC = () => {
       let botReply: Message;
       const lower = text.toLowerCase();
 
-      if (lower.includes('nit') || lower.includes('primer')) {
+      if (lower.includes('nit') || lower.includes('solicitar')) {
         botReply = {
           sender: 'bot',
-          text: 'Para solicitar tu NIT por primera vez sin negocio (o con negocio), necesitas tu DPI o partida de nacimiento si eres menor, y un correo electrónico válido. Puedes realizarlo 100% digital desde la sección de RTU Digital.',
+          text: 'Para solicitar tu Número de Identificación Tributaria (NIT) sin negocio o con negocio, necesitas tu DPI o certificado de nacimiento si eres menor de edad, y un correo electrónico válido. Puedes gestionarlo 100% digital desde la sección de RTU Digital.',
           options: [
-            { label: 'Abrir trámite de Solicitud de NIT', action: 'open_nit' },
+            { label: 'Abrir gestión de Solicitud de NIT', action: 'open_nit' },
             { label: '¿Cuál es mi NIT con CUI?', action: 'cui_nit' }
           ]
         };

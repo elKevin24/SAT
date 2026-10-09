@@ -139,7 +139,7 @@ export const GRUPOS_CONFIG: GrupoInfo[] = [
     pillar: 'contribuyentes',
     desc: 'Gestiones y servicios de identificación tributaria para personas sin actividad comercial.',
     subgrupos: [
-      { nombre: 'Inscripción de NIT', cantidadTemas: 2, desc: 'Solicitud de primer NIT y actualización de datos de identificación personal.' },
+      { nombre: 'Inscripción de NIT', cantidadTemas: 2, desc: 'Solicitud de Número de Identificación Tributaria (NIT) y actualización de datos de identificación personal.' },
       { nombre: 'Títulos Universitarios', cantidadTemas: 2, desc: 'Registro y habilitación de títulos para ejercer y verificación digital mediante código QR.' },
       { nombre: 'Información Pública', cantidadTemas: 2, desc: 'Solicitud formal y consulta de información pública de oficio de la SAT conforme al Decreto 57-2008.' },
       { nombre: 'Servicios en Línea y Solvencias', cantidadTemas: 4, desc: 'Agencia Virtual, consulta de expedientes, Solvencia Fiscal en línea y cita previa.' }

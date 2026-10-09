@@ -180,7 +180,7 @@ const SUBCATEGORY_DESCRIPTIONS: Record<string, string> = {
   'Gestión institucional y RTU estatal': 'Acreditación de dependencias de ministerios, entes descentralizados y nombramientos de representantes públicos.',
 
   // NIT sin Obligaciones
-  'Inscripción de NIT': 'Solicitud de primer NIT para personas individuales sin actividad mercantil y actualización de datos de identificación.',
+  'Inscripción de NIT': 'Solicitud de inscripción al Número de Identificación Tributaria (NIT) para personas individuales sin actividad mercantil y actualización de datos de identificación.',
   'Servicios en Línea y Solvencias': 'Habilitación de Agencia Virtual, solicitud de Solvencia Fiscal, cita previa y consulta de expedientes.',
   'Títulos Universitarios': 'Registro de títulos a nivel medio y universitario para habilitación profesional y consulta con código QR.',
   'Información Pública': 'Solicitud formal y consulta de información pública de oficio de la SAT conforme al Decreto 57-2008.',

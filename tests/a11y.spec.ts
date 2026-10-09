@@ -34,9 +34,9 @@ test('Catálogo', async ({ page }) => {
   await scan(page, 'catalogo');
 });
 
-test('Página Solicitar mi primer NIT (#/solicitar-nit)', async ({ page }) => {
+test('Página Solicitar NIT (#/solicitar-nit)', async ({ page }) => {
   await page.goto('/#/solicitar-nit');
-  await expect(page.getByRole('heading', { name: /Solicitar mi primer NIT/i })).toBeVisible();
+  await expect(page.getByRole('heading', { name: /^Solicitar NIT$/i })).toBeVisible();
   await scan(page, 'SolicitarNitPage');
 });
 

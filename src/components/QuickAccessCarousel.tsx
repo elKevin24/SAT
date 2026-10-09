@@ -135,7 +135,7 @@ export const QuickAccessCarousel: React.FC<QuickAccessCarouselProps> = ({ onSele
                 onClick={() => {
                   if (onSelectQuickAction) onSelectQuickAction(item);
                 }}
-                className="group bg-sat-blanco rounded-sat-lg border border-sat-gris hover:border-sat-azul hover:bg-sat-azul hover:shadow-sat-md p-3.5 sm:p-4 flex flex-col justify-between transition-all duration-200 hover:-translate-y-0.5 text-left cursor-pointer min-h-[110px]"
+                className="group bg-sat-blanco rounded-xl border border-sat-gris hover:border-sat-azul hover:bg-sat-azul hover:shadow-sat-md p-3.5 sm:p-4 flex flex-col justify-between transition-all duration-200 hover:-translate-y-0.5 text-left cursor-pointer min-h-[110px]"
               >
                 <div>
                   <div className="text-xs font-bold text-sat-azul-oscuro group-hover:text-white leading-snug transition-colors mb-1">
