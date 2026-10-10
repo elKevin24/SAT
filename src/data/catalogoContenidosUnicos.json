@@ -21985,29 +21985,29 @@
     ]
   },
   {
-    "id": "cnt-comercio_exterior-143",
+    "id": "cnt-comercio_exterior-83",
     "codigo": "SAT-CNT-0418",
-    "idOriginal": "comercio_exterior-143",
-    "titulo": "Consulta del Estado de Expedientes en Gestión Aduanera",
-    "nombreActual": "Consultar el estado de un expediente aduanero",
-    "descripcion": "Servicio web para consultar el avance, estado procesal y unidad responsable de expedientes administrativos en la Intendencia de Aduanas.",
-    "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/consulta-del-estado-o-actuaciones-de-expedientes-de-las-unidades-del-departamento-de-gestion-aduanera/",
-    "tipoInteraccion": "consulta_datos",
-    "tipoInteraccionLabel": "Buscador / Consulta en Línea",
+    "idOriginal": "comercio_exterior-83",
+    "titulo": "Inscripción y Habilitación de Auxiliares de la Función Pública Aduanera",
+    "nombreActual": "1. Auxiliares de la función pública aduanera",
+    "descripcion": "Guía normativa y procedimental para la inscripción, autorización inicial de operaciones y registro en el padrón aduanero de la SAT.",
+    "url": "https://portal.sat.gob.gt/portal/auxiliares-de-la-funcion-publica/",
+    "tipoInteraccion": "guia_informativa",
+    "tipoInteraccionLabel": "Guía Informativa / Texto",
     "tipologiaContenido": "guia_informativa",
     "tipologiaContenidoLabel": "Guía Informativa / Texto",
     "plataformaSistema": "portal_web",
     "plataformaSistemaLabel": "Portal Web SAT",
     "canalAtencion": "Digital / Web",
-    "etapaAto": "consultar",
-    "etapaAtoLabel": "Consultas y herramientas",
+    "etapaAto": "empezar",
+    "etapaAtoLabel": "Empezar y registrarse",
     "baseLegal": "CAUCA IV (Arts. 22 al 28), RECAUCA IV (Auxiliares de la Función Pública) y Ley Nacional de Aduanas.",
     "esBrecha": false,
     "esTransversal": false,
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "comercio_exterior-143",
+        "tramiteId": "comercio_exterior-83",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
         "orden_n1": 2,
@@ -22020,7 +22020,7 @@
         "tema": "",
         "subtema": "",
         "actorEspecifico": "—",
-        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Agentes Aduaneros > Consulta del Estado de Expedientes en Gestión Aduanera"
+        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Agentes Aduaneros > Inscripción y Habilitación de Auxiliares de la Función Pública Aduanera"
       }
     ],
     "segmentosAplicables": [
@@ -22029,19 +22029,74 @@
     "categoriasAplicables": [
       "Auxiliares de la Función Pública Aduanera (AFPA)"
     ],
-    "perfilDestinatario": "Agentes Aduaneros, Apoderados y Operadores",
+    "perfilDestinatario": "Aspirantes a Agentes Aduaneros, Transportistas y Depositarios",
     "rutasProceso": [
       {
-        "procesoNo": 35,
-        "procesoNombre": "Impugnar o consultar una resolución aduanera",
+        "procesoNo": 40,
+        "procesoNombre": "Ser auxiliar de la función pública aduanera",
         "pasoNo": 1,
-        "pasoAccion": "Consulta tu expediente"
+        "pasoAccion": "Conoce los requisitos"
+      }
+    ]
+  },
+  {
+    "id": "cnt-comercio_exterior-84",
+    "codigo": "SAT-CNT-0419",
+    "idOriginal": "comercio_exterior-84",
+    "titulo": "Renovación Anual de Operación de Auxiliares Aduaneros",
+    "nombreActual": "2. Requisitos para la Renovación de Operación de Auxiliares de la Función Publica",
+    "descripcion": "Gestión en línea de prórroga y renovación anual de la fianza y autorización para operar como auxiliar aduanero conforme al CAUCA y RECAUCA.",
+    "url": "https://portal.sat.gob.gt/portal/requisitos-de-aduanas/",
+    "tipoInteraccion": "servicio_transaccional",
+    "tipoInteraccionLabel": "Trámite / Aplicativo en Línea",
+    "tipologiaContenido": "tramite_transaccional",
+    "tipologiaContenidoLabel": "Trámite / Aplicativo en Línea",
+    "plataformaSistema": "portal_web",
+    "plataformaSistemaLabel": "Portal Web SAT",
+    "canalAtencion": "Digital / Web",
+    "etapaAto": "modificar_cerrar",
+    "etapaAtoLabel": "Modificaciones y cierre",
+    "baseLegal": "CAUCA IV (Arts. 22 al 28), RECAUCA IV (Auxiliares de la Función Pública) y Ley Nacional de Aduanas.",
+    "esBrecha": false,
+    "esTransversal": false,
+    "totalAudiencias": 1,
+    "audiencias": [
+      {
+        "tramiteId": "comercio_exterior-84",
+        "segmentoId": "comercio_exterior",
+        "segmentoNombre": "Operadores de Comercio Exterior",
+        "orden_n1": 2,
+        "orden_n2": 4,
+        "orden_n3": 1,
+        "orden_n4": 2,
+        "orden_n5": 1,
+        "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
+        "subcategoria": "Agentes Aduaneros",
+        "tema": "",
+        "subtema": "",
+        "actorEspecifico": "—",
+        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Agentes Aduaneros > Renovación Anual de Operación de Auxiliares Aduaneros"
+      }
+    ],
+    "segmentosAplicables": [
+      "comercio_exterior"
+    ],
+    "categoriasAplicables": [
+      "Auxiliares de la Función Pública Aduanera (AFPA)"
+    ],
+    "perfilDestinatario": "Agentes Aduaneros, Transportistas, Depositarios y Courier",
+    "rutasProceso": [
+      {
+        "procesoNo": 40,
+        "procesoNombre": "Ser auxiliar de la función pública aduanera",
+        "pasoNo": 1,
+        "pasoAccion": "Conoce los requisitos"
       }
     ]
   },
   {
     "id": "cnt-comercio_exterior-82",
-    "codigo": "SAT-CNT-0419",
+    "codigo": "SAT-CNT-0420",
     "idOriginal": "comercio_exterior-82",
     "titulo": "Acreditación y Carné de Identificación para AFPA",
     "nombreActual": "Auxiliares de la Función Pública Aduanera",
@@ -22068,7 +22123,7 @@
         "orden_n1": 2,
         "orden_n2": 4,
         "orden_n3": 1,
-        "orden_n4": 2,
+        "orden_n4": 3,
         "orden_n5": 1,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Agentes Aduaneros",
@@ -22096,7 +22151,7 @@
   },
   {
     "id": "cnt-comercio_exterior-97",
-    "codigo": "SAT-CNT-0420",
+    "codigo": "SAT-CNT-0421",
     "idOriginal": "comercio_exterior-97",
     "titulo": "Instalador y Soporte de Firma Digital ActiveX PKI/DUA",
     "nombreActual": "Componente ActiveX PKI/DUA",
@@ -22123,7 +22178,7 @@
         "orden_n1": 2,
         "orden_n2": 4,
         "orden_n3": 1,
-        "orden_n4": 3,
+        "orden_n4": 4,
         "orden_n5": 1,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Agentes Aduaneros",
@@ -22156,42 +22211,42 @@
     ]
   },
   {
-    "id": "cnt-comercio_exterior-83",
-    "codigo": "SAT-CNT-0421",
-    "idOriginal": "comercio_exterior-83",
-    "titulo": "Inscripción y Habilitación de Auxiliares de la Función Pública Aduanera",
-    "nombreActual": "1. Auxiliares de la función pública aduanera",
-    "descripcion": "Guía normativa y procedimental para la inscripción, autorización inicial de operaciones y registro en el padrón aduanero de la SAT.",
-    "url": "https://portal.sat.gob.gt/portal/auxiliares-de-la-funcion-publica/",
-    "tipoInteraccion": "guia_informativa",
-    "tipoInteraccionLabel": "Guía Informativa / Texto",
+    "id": "cnt-comercio_exterior-143",
+    "codigo": "SAT-CNT-0422",
+    "idOriginal": "comercio_exterior-143",
+    "titulo": "Consulta del Estado de Expedientes en Gestión Aduanera",
+    "nombreActual": "Consultar el estado de un expediente aduanero",
+    "descripcion": "Servicio web para consultar el avance, estado procesal y unidad responsable de expedientes administrativos en la Intendencia de Aduanas.",
+    "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/consulta-del-estado-o-actuaciones-de-expedientes-de-las-unidades-del-departamento-de-gestion-aduanera/",
+    "tipoInteraccion": "consulta_datos",
+    "tipoInteraccionLabel": "Buscador / Consulta en Línea",
     "tipologiaContenido": "guia_informativa",
     "tipologiaContenidoLabel": "Guía Informativa / Texto",
     "plataformaSistema": "portal_web",
     "plataformaSistemaLabel": "Portal Web SAT",
     "canalAtencion": "Digital / Web",
-    "etapaAto": "empezar",
-    "etapaAtoLabel": "Empezar y registrarse",
+    "etapaAto": "consultar",
+    "etapaAtoLabel": "Consultas y herramientas",
     "baseLegal": "CAUCA IV (Arts. 22 al 28), RECAUCA IV (Auxiliares de la Función Pública) y Ley Nacional de Aduanas.",
     "esBrecha": false,
     "esTransversal": false,
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "comercio_exterior-83",
+        "tramiteId": "comercio_exterior-143",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
         "orden_n1": 2,
         "orden_n2": 4,
         "orden_n3": 1,
-        "orden_n4": 4,
+        "orden_n4": 5,
         "orden_n5": 1,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Agentes Aduaneros",
         "tema": "",
         "subtema": "",
         "actorEspecifico": "—",
-        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Agentes Aduaneros > Inscripción y Habilitación de Auxiliares de la Función Pública Aduanera"
+        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Agentes Aduaneros > Consulta del Estado de Expedientes en Gestión Aduanera"
       }
     ],
     "segmentosAplicables": [
@@ -22200,68 +22255,13 @@
     "categoriasAplicables": [
       "Auxiliares de la Función Pública Aduanera (AFPA)"
     ],
-    "perfilDestinatario": "Aspirantes a Agentes Aduaneros, Transportistas y Depositarios",
+    "perfilDestinatario": "Agentes Aduaneros, Apoderados y Operadores",
     "rutasProceso": [
       {
-        "procesoNo": 40,
-        "procesoNombre": "Ser auxiliar de la función pública aduanera",
+        "procesoNo": 35,
+        "procesoNombre": "Impugnar o consultar una resolución aduanera",
         "pasoNo": 1,
-        "pasoAccion": "Conoce los requisitos"
-      }
-    ]
-  },
-  {
-    "id": "cnt-comercio_exterior-84",
-    "codigo": "SAT-CNT-0422",
-    "idOriginal": "comercio_exterior-84",
-    "titulo": "Renovación Anual de Operación de Auxiliares Aduaneros",
-    "nombreActual": "2. Requisitos para la Renovación de Operación de Auxiliares de la Función Publica",
-    "descripcion": "Gestión en línea de prórroga y renovación anual de la fianza y autorización para operar como auxiliar aduanero conforme al CAUCA y RECAUCA.",
-    "url": "https://portal.sat.gob.gt/portal/requisitos-de-aduanas/",
-    "tipoInteraccion": "servicio_transaccional",
-    "tipoInteraccionLabel": "Trámite / Aplicativo en Línea",
-    "tipologiaContenido": "tramite_transaccional",
-    "tipologiaContenidoLabel": "Trámite / Aplicativo en Línea",
-    "plataformaSistema": "portal_web",
-    "plataformaSistemaLabel": "Portal Web SAT",
-    "canalAtencion": "Digital / Web",
-    "etapaAto": "modificar_cerrar",
-    "etapaAtoLabel": "Modificaciones y cierre",
-    "baseLegal": "CAUCA IV (Arts. 22 al 28), RECAUCA IV (Auxiliares de la Función Pública) y Ley Nacional de Aduanas.",
-    "esBrecha": false,
-    "esTransversal": false,
-    "totalAudiencias": 1,
-    "audiencias": [
-      {
-        "tramiteId": "comercio_exterior-84",
-        "segmentoId": "comercio_exterior",
-        "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
-        "orden_n2": 4,
-        "orden_n3": 1,
-        "orden_n4": 4,
-        "orden_n5": 2,
-        "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
-        "subcategoria": "Agentes Aduaneros",
-        "tema": "",
-        "subtema": "",
-        "actorEspecifico": "—",
-        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Agentes Aduaneros > Renovación Anual de Operación de Auxiliares Aduaneros"
-      }
-    ],
-    "segmentosAplicables": [
-      "comercio_exterior"
-    ],
-    "categoriasAplicables": [
-      "Auxiliares de la Función Pública Aduanera (AFPA)"
-    ],
-    "perfilDestinatario": "Agentes Aduaneros, Transportistas, Depositarios y Courier",
-    "rutasProceso": [
-      {
-        "procesoNo": 40,
-        "procesoNombre": "Ser auxiliar de la función pública aduanera",
-        "pasoNo": 1,
-        "pasoAccion": "Conoce los requisitos"
+        "pasoAccion": "Consulta tu expediente"
       }
     ]
   },
@@ -22294,7 +22294,7 @@
         "orden_n1": 2,
         "orden_n2": 4,
         "orden_n3": 1,
-        "orden_n4": 5,
+        "orden_n4": 6,
         "orden_n5": 1,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Agentes Aduaneros",
@@ -22341,7 +22341,7 @@
         "orden_n1": 2,
         "orden_n2": 4,
         "orden_n3": 1,
-        "orden_n4": 6,
+        "orden_n4": 7,
         "orden_n5": 1,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Agentes Aduaneros",
