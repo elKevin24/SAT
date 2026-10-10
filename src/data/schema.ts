@@ -49,10 +49,15 @@ export interface TramiteItem {
   subfamiliaAduanera?: string;
   actorEspecifico?: string;
   nivel1_segmento?: string;
+  orden_n1?: number;
   nivel2_area?: string;
+  orden_n2?: number;
   nivel3_subarea?: string;
+  orden_n3?: number;
   nivel4_tema?: string;
+  orden_n4?: number;
   nivel5_tramite?: string;
+  orden_n5?: number;
   segmento?: string;
   regimenArea?: string;
   grupoActor?: string;

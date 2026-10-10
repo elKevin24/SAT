@@ -152,7 +152,7 @@ macro_rows = [
         "Son todas las personas individuales o jurídicas que intervienen en el ingreso, permanencia, traslado y salida de mercancías del territorio aduanero nacional. Comprende tanto a los dueños de las mercancías (importadores y exportadores) como a los prestadores de servicios logísticos autorizados (auxiliares de la función pública, transportistas, depósitos) y empresas que operan bajo regímenes territoriales especiales.",
         "Servicios e información aduanera para la importación, exportación y logística.",
         "Código Tributario (Dto. 6-91), CAUCA IV (Resolución 223-2008 COMIECO) y RECAUCA (Resolución 224-2008 COMIECO).",
-        f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!C2:C{LAST_ROW}, "Operadores de Comercio Exterior")'
+        f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!D2:D{LAST_ROW}, "Operadores de Comercio Exterior")'
     ),
     (
         2,
@@ -160,7 +160,7 @@ macro_rows = [
         "Son las personas individuales, jurídicas, patrimonios o entes afectos al cumplimiento de obligaciones tributarias internas en el territorio guatemalteco. Abarca a ciudadanos sin actividad económica activa, asalariados en relación de dependencia, pequeños contribuyentes, contribuyentes del régimen general del IVA e ISR, propietarios de vehículos y grandes/medianos contribuyentes especiales calificados.",
         "Información y servicios tributarios para personas y empresas.",
         "Constitución Política (Art. 135d), Código Tributario (Dto. 6-91), Ley del IVA (Dto. 27-92), Ley de Actualización Tributaria (Dto. 10-2012), Ley del ISCV (Dto. 70-94) y Ley de Simplificación Tributaria (Dto. 7-2019 / Dto. 31-2024).",
-        f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!C2:C{LAST_ROW}, "Contribuyentes")'
+        f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!D2:D{LAST_ROW}, "Contribuyentes")'
     ),
     (
         3,
@@ -168,7 +168,7 @@ macro_rows = [
         "Son las personas individuales colegiadas activas o técnicos acreditados ante la SAT que ejercen liberalmente su profesión o actúan como auxiliares técnicos en materia tributaria, mercantil y notarial. Comprende a abogados y notarios (traspasos vehiculares electrónicos y fe pública), peritos contadores, contadores públicos y auditores (CPA) y gestores tributarios acreditados.",
         "Herramientas y servicios especializados para profesionales tributarios y auxiliares.",
         "Código de Notariado (Dto. 314), Ley de Colegiación Profesional Obligatoria (Dto. 72-2001), Decreto 2450 (Normas de la Profesión Contable), Ley de Timbres Fiscales (Dto. 37-92) y Código Tributario (Art. 57 \"A\" y 112).",
-        f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!C2:C{LAST_ROW}, "Profesionales")'
+        f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!D2:D{LAST_ROW}, "Profesionales")'
     ),
     (
         4,
@@ -176,7 +176,7 @@ macro_rows = [
         "Son las personas jurídicas, entidades del sector público, organismos diplomáticos y organizaciones de la sociedad civil que, por mandato constitucional o ley específica ordinaria, gozan de exención total o parcial de tributos y aranceles en el territorio nacional. Incluye centros educativos, universidades, comunidades religiosas, ONGs, fundaciones sin fines de lucro, municipalidades y ministerios de Estado.",
         "Información y gestiones tributarias para entidades públicas y organizaciones no lucrativas.",
         "Constitución Política (Arts. 37, 73, 88 y 257), Ley de ONGs (Dto. 02-2003), Ley del IVA (Dto. 27-92, Art. 8), Ley de Actualización Tributaria (Dto. 10-2012, Art. 11), Código Municipal (Dto. 12-2002) y Ley Orgánica del Presupuesto (Dto. 101-97).",
-        f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!C2:C{LAST_ROW}, "Entes Exentos")'
+        f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!D2:D{LAST_ROW}, "Entes Exentos")'
     ),
 ]
 
@@ -247,11 +247,11 @@ ws_resumen.merge_cells('C18:F18')
 ws_resumen.row_dimensions[18].height = 26
 
 ato_stages = [
-    ("Empezar y registrarse", "Primer NIT, RTU Digital, padrones de importación/exportación y habilitación inicial", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!J2:J{LAST_ROW}, "Empezar y registrarse")'),
-    ("Operación y declaraciones", "Facturación FEL, Declaraguate, DUCAs, retenciones, transferencias y pagos", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!J2:J{LAST_ROW}, "Operación y declaraciones")'),
-    ("Consultas y herramientas", "Verificadores en tiempo real, solvencia, selectivo aduanero, rampa y SAC", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!J2:J{LAST_ROW}, "Consultas y herramientas")'),
-    ("Modificaciones y cierre", "Actualización de RTU, traspaso vehicular, prórrogas, cese de actividades y subastas", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!J2:J{LAST_ROW}, "Modificaciones y cierre")'),
-    ("Normativa y asistencia", "Marco legal aduanero y tributario, devoluciones, criterios institucionales y cursos", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!J2:J{LAST_ROW}, "Normativa y asistencia")')
+    ("Empezar y registrarse", "Primer NIT, RTU Digital, padrones de importación/exportación y habilitación inicial", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!O2:O{LAST_ROW}, "Empezar y registrarse")'),
+    ("Operación y declaraciones", "Facturación FEL, Declaraguate, DUCAs, retenciones, transferencias y pagos", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!O2:O{LAST_ROW}, "Operación y declaraciones")'),
+    ("Consultas y herramientas", "Verificadores en tiempo real, solvencia, selectivo aduanero, rampa y SAC", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!O2:O{LAST_ROW}, "Consultas y herramientas")'),
+    ("Modificaciones y cierre", "Actualización de RTU, traspaso vehicular, prórrogas, cese de actividades y subastas", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!O2:O{LAST_ROW}, "Modificaciones y cierre")'),
+    ("Normativa y asistencia", "Marco legal aduanero y tributario, devoluciones, criterios institucionales y cursos", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!O2:O{LAST_ROW}, "Normativa y asistencia")')
 ]
 
 for r_idx, (enom, edesc, eformula) in enumerate(ato_stages, start=19):
@@ -311,10 +311,10 @@ ws_resumen.merge_cells('C27:F27')
 ws_resumen.row_dimensions[27].height = 26
 
 interactions = [
-    ("Guía Informativa / Texto", "Páginas explicativas, requisitos de trámites presenciales o mixtos", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!K2:K{LAST_ROW}, "Guía Informativa / Texto")'),
-    ("Trámite / Aplicativo en Línea", "Servicios digitales transaccionales (Agencia Virtual, Declaraguate, TEV, FEL)", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!K2:K{LAST_ROW}, "Trámite / Aplicativo en Línea")'),
-    ("Consulta en Base de Datos", "Herramientas de verificación sin autenticación previa (RTU público, solvencias)", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!K2:K{LAST_ROW}, "Consulta en Base de Datos")'),
-    ("Descarga de Documento / Software", "Descarga de formularios en PDF/Excel, software, manuales o legislación", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!K2:K{LAST_ROW}, "Descarga de Documento / Software")'),
+    ("Guía Informativa / Texto", "Páginas explicativas, requisitos de trámites presenciales o mixtos", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!P2:P{LAST_ROW}, "Guía Informativa / Texto")'),
+    ("Trámite / Aplicativo en Línea", "Servicios digitales transaccionales (Agencia Virtual, Declaraguate, TEV, FEL)", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!P2:P{LAST_ROW}, "Trámite / Aplicativo en Línea")'),
+    ("Consulta en Base de Datos", "Herramientas de verificación sin autenticación previa (RTU público, solvencias)", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!P2:P{LAST_ROW}, "Consulta en Base de Datos")'),
+    ("Descarga de Documento / Software", "Descarga de formularios en PDF/Excel, software, manuales o legislación", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!P2:P{LAST_ROW}, "Descarga de Documento / Software")'),
 ]
 
 for r_idx, (inom, idesc, iformula) in enumerate(interactions, start=28):
@@ -373,10 +373,15 @@ for col_idx, width in resumen_col_widths.items():
 headers_unified = [
     "No.",
     "ID Trámite",
+    "Orden N1",
     "Nivel 1",
+    "Orden N2",
     "Nivel 2",
+    "Orden N3",
     "Nivel 3",
+    "Orden N4",
     "Nivel 4",
+    "Orden N5",
     "Nivel 5",
     "Nombre del Trámite / Servicio (Lenguaje Claro)",
     "Ruta de Navegación (Miga de Pan)",
@@ -393,7 +398,7 @@ headers_unified = [
     "URL Portal SAT"
 ]
 
-unified_widths = [8, 18, 24, 28, 28, 28, 28, 38, 55, 24, 24, 24, 20, 16, 24, 48, 50, 28, 16, 42]
+unified_widths = [8, 18, 10, 24, 10, 28, 10, 28, 10, 28, 10, 28, 38, 55, 24, 24, 24, 20, 16, 24, 48, 50, 28, 16, 42]
 
 def populate_unified_sheet(ws, dataset):
     ws.views.sheetView[0].showGridLines = True
@@ -423,74 +428,100 @@ def populate_unified_sheet(ws, dataset):
         if not n4 or str(n4).strip() == '': n4 = '—'
         if not n5 or str(n5).strip() == '': n5 = '—'
 
+        ord_n1 = item.get('orden_n1', 1)
+        ord_n2 = item.get('orden_n2', 1)
+        ord_n3 = item.get('orden_n3', 1)
+        ord_n4 = item.get('orden_n4', 1)
+        ord_n5 = item.get('orden_n5', 1)
+
         # Col 1: No.
         ws.cell(row=r_idx, column=1, value=r_idx - 1).alignment = Alignment(horizontal='center')
         # Col 2: ID Trámite
         ws.cell(row=r_idx, column=2, value=item.get('id', '')).alignment = Alignment(horizontal='center')
-        # Col 3: Nivel 1
-        ws.cell(row=r_idx, column=3, value=n1).font = font_bold
-        # Col 4: Nivel 2
-        ws.cell(row=r_idx, column=4, value=n2)
-        # Col 5: Nivel 3
-        ws.cell(row=r_idx, column=5, value=n3)
-        # Col 6: Nivel 4
-        ws.cell(row=r_idx, column=6, value=n4)
-        # Col 7: Nivel 5
-        ws.cell(row=r_idx, column=7, value=n5)
-        # Col 8: Nombre del Trámite / Servicio (Lenguaje Claro)
-        ws.cell(row=r_idx, column=8, value=item.get('tramite', '')).font = font_bold
-        # Col 9: Ruta de Navegación (Miga de Pan)
-        c_miga = ws.cell(row=r_idx, column=9, value=miga_raw)
+        # Col 3: Orden N1
+        c_o1 = ws.cell(row=r_idx, column=3, value=ord_n1)
+        c_o1.alignment = Alignment(horizontal='center')
+        c_o1.font = font_bold
+        # Col 4: Nivel 1
+        ws.cell(row=r_idx, column=4, value=n1).font = font_bold
+        # Col 5: Orden N2
+        c_o2 = ws.cell(row=r_idx, column=5, value=ord_n2)
+        c_o2.alignment = Alignment(horizontal='center')
+        c_o2.font = font_bold
+        # Col 6: Nivel 2
+        ws.cell(row=r_idx, column=6, value=n2)
+        # Col 7: Orden N3
+        c_o3 = ws.cell(row=r_idx, column=7, value=ord_n3)
+        c_o3.alignment = Alignment(horizontal='center')
+        c_o3.font = font_bold
+        # Col 8: Nivel 3
+        ws.cell(row=r_idx, column=8, value=n3)
+        # Col 9: Orden N4
+        c_o4 = ws.cell(row=r_idx, column=9, value=ord_n4)
+        c_o4.alignment = Alignment(horizontal='center')
+        c_o4.font = font_bold
+        # Col 10: Nivel 4
+        ws.cell(row=r_idx, column=10, value=n4)
+        # Col 11: Orden N5
+        c_o5 = ws.cell(row=r_idx, column=11, value=ord_n5)
+        c_o5.alignment = Alignment(horizontal='center')
+        c_o5.font = font_bold
+        # Col 12: Nivel 5
+        ws.cell(row=r_idx, column=12, value=n5)
+        # Col 13: Nombre del Trámite / Servicio (Lenguaje Claro)
+        ws.cell(row=r_idx, column=13, value=item.get('tramite', '')).font = font_bold
+        # Col 14: Ruta de Navegación (Miga de Pan)
+        c_miga = ws.cell(row=r_idx, column=14, value=miga_raw)
         c_miga.font = font_small
-        # Col 10: Etapa ATO
-        c_etapa = ws.cell(row=r_idx, column=10, value=item.get('etapaAtoLabel', ''))
+        # Col 15: Etapa ATO
+        c_etapa = ws.cell(row=r_idx, column=15, value=item.get('etapaAtoLabel', ''))
         c_etapa.font = font_bold
         if 'Empezar' in str(c_etapa.value): c_etapa.font = Font(name='Segoe UI', size=10, bold=True, color=NAVY_HEADER)
         elif 'Operaci' in str(c_etapa.value): c_etapa.font = Font(name='Segoe UI', size=10, bold=True, color=CYAN_ACCENT)
         elif 'Consulta' in str(c_etapa.value): c_etapa.font = Font(name='Segoe UI', size=10, bold=True, color=GREEN_ACCENT)
         elif 'Modifica' in str(c_etapa.value): c_etapa.font = Font(name='Segoe UI', size=10, bold=True, color=ORANGE_ACCENT)
         elif 'Normat' in str(c_etapa.value): c_etapa.font = Font(name='Segoe UI', size=10, bold=True, color=PURPLE_ACCENT)
-        # Col 11: Tipo de Interacción
-        ws.cell(row=r_idx, column=11, value=item.get('tipoInteraccionLabel', ''))
-        # Col 12: Tipología de Contenido
-        ws.cell(row=r_idx, column=12, value=item.get('tipologiaContenidoLabel', 'Guía Informativa / Texto'))
-        # Col 13: Plataforma
-        ws.cell(row=r_idx, column=13, value=item.get('plataformaSistemaLabel', item.get('plataformaSistema', 'Portal Web SAT')))
-        # Col 14: Canal
-        ws.cell(row=r_idx, column=14, value=item.get('canalAtencion', 'Digital / Web')).alignment = Alignment(horizontal='center')
-        # Col 15: Control de Auditoría
-        c_audit = ws.cell(row=r_idx, column=15, value=item.get('controlAuditoria', 'APROBADO'))
+        # Col 16: Tipo de Interacción
+        ws.cell(row=r_idx, column=16, value=item.get('tipoInteraccionLabel', ''))
+        # Col 17: Tipología de Contenido
+        ws.cell(row=r_idx, column=17, value=item.get('tipologiaContenidoLabel', 'Guía Informativa / Texto'))
+        # Col 18: Plataforma
+        ws.cell(row=r_idx, column=18, value=item.get('plataformaSistemaLabel', item.get('plataformaSistema', 'Portal Web SAT')))
+        # Col 19: Canal
+        ws.cell(row=r_idx, column=19, value=item.get('canalAtencion', 'Digital / Web')).alignment = Alignment(horizontal='center')
+        # Col 20: Control de Auditoría
+        c_audit = ws.cell(row=r_idx, column=20, value=item.get('controlAuditoria', 'APROBADO'))
         c_audit.alignment = Alignment(horizontal='center', vertical='center')
         if item.get('esBrecha'):
             c_audit.font = Font(name='Segoe UI', size=9, bold=True, color='C25E00')
             c_audit.fill = PatternFill(start_color='FFEDD5', end_color='FFEDD5', fill_type='solid')
         else:
             c_audit.font = font_bold
-        # Col 16: Descripción Operativa
-        ws.cell(row=r_idx, column=16, value=item.get('descripcion', ''))
-        # Col 17: Base Legal
-        c_base = ws.cell(row=r_idx, column=17, value=item.get('baseLegal', 'CAUCA IV y RECAUCA IV' if item.get('segmento') == 'Operadores de Comercio Exterior' else 'Código Tributario y Leyes Específicas'))
+        # Col 21: Descripción Operativa
+        ws.cell(row=r_idx, column=21, value=item.get('descripcion', ''))
+        # Col 22: Base Legal
+        c_base = ws.cell(row=r_idx, column=22, value=item.get('baseLegal', 'CAUCA IV y RECAUCA IV' if item.get('segmento') == 'Operadores de Comercio Exterior' else 'Código Tributario y Leyes Específicas'))
         c_base.font = font_bold
-        # Col 18: Ruta de Proceso
-        ws.cell(row=r_idx, column=18, value=rutas_str).font = font_small
-        # Col 19: Estado Normativo
-        c_brecha = ws.cell(row=r_idx, column=19, value="Brecha Propuesta" if item.get('esBrecha') else "Vigente")
+        # Col 23: Ruta de Proceso
+        ws.cell(row=r_idx, column=23, value=rutas_str).font = font_small
+        # Col 24: Estado Normativo
+        c_brecha = ws.cell(row=r_idx, column=24, value="Brecha Propuesta" if item.get('esBrecha') else "Vigente")
         c_brecha.alignment = Alignment(horizontal='center', vertical='center')
         if item.get('esBrecha'):
             c_brecha.font = Font(name='Segoe UI', size=9, bold=True, color='C25E00')
             c_brecha.fill = PatternFill(start_color='FFEDD5', end_color='FFEDD5', fill_type='solid')
-        # Col 20: URL Oficial
+        # Col 25: URL Oficial
         raw_url = str(item.get('url', '')).strip()
-        c_url = ws.cell(row=r_idx, column=20, value=raw_url)
+        c_url = ws.cell(row=r_idx, column=25, value=raw_url)
         if raw_url.startswith('http'):
             c_url.font = font_link
             c_url.hyperlink = raw_url
 
         fill_color = ZEBRA_FILL if r_idx % 2 == 0 else 'FFFFFF'
-        for c_idx in range(1, 21):
+        for c_idx in range(1, 26):
             cell = ws.cell(row=r_idx, column=c_idx)
-            if c_idx not in [3, 8, 9, 10, 15, 17, 18, 19, 20]: cell.font = font_body
-            if not ((c_idx in [15, 19]) and item.get('esBrecha')):
+            if c_idx not in [3, 4, 5, 7, 9, 11, 13, 14, 15, 20, 22, 23, 24, 25]: cell.font = font_body
+            if not ((c_idx in [20, 24]) and item.get('esBrecha')):
                 cell.fill = PatternFill(start_color=fill_color, end_color=fill_color, fill_type='solid')
             cell.border = thin_border
         ws.row_dimensions[r_idx].height = 22
@@ -499,7 +530,7 @@ def populate_unified_sheet(ws, dataset):
         ws.column_dimensions[get_column_letter(idx)].width = w
 
     ws.freeze_panes = 'E2'
-    ws.auto_filter.ref = f"A1:T{len(dataset)+1}"
+    ws.auto_filter.ref = f"A1:Y{len(dataset)+1}"
 
 # HOJA 2: MATRIZ MAESTRA (716)
 ws_master = wb.create_sheet(title=SHEET_MASTER_NAME)
@@ -587,6 +618,13 @@ ws_brechas.auto_filter.ref = f"A1:F{len(ce_brechas)+1}"
 # GUARDAR LIBRO DEFINITIVO
 # ==============================================================================
 OUTPUT_EXCEL_PATH = 'docs/fuentes-datos/Estructura_Final_Contenido_Portal_SAT_Actualizado.xlsx'
-wb.save(OUTPUT_EXCEL_PATH)
-print(f"Libro Excel maestro guardado exitosamente en: {OUTPUT_EXCEL_PATH}")
+try:
+    wb.save(OUTPUT_EXCEL_PATH)
+    print(f"Libro Excel maestro guardado exitosamente en: {OUTPUT_EXCEL_PATH}")
+except PermissionError:
+    fallback_path = 'docs/fuentes-datos/Estructura_Final_Contenido_Portal_SAT_Actualizado_v25col.xlsx'
+    wb.save(fallback_path)
+    print(f"[AVISO] El archivo '{OUTPUT_EXCEL_PATH}' está actualmente abierto en Excel.")
+    print(f"Se ha guardado la versión actualizada con 25 columnas en: {fallback_path}")
+
 print(f"Hojas: {', '.join(wb.sheetnames)}")
