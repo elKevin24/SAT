@@ -29687,10 +29687,10 @@
     "perfilDestinatario": "Normativa y Aranceles"
   },
   {
-    "id": "cnt-profesionales-70",
+    "id": "cnt-SAT-GES-0558",
     "codigo": "SAT-GES-0558",
-    "idOriginal": "profesionales-70",
-    "titulo": "Inscripción y actualización de Abogado y Notario en el Registro Tributario Unificado (RTU)",
+    "idOriginal": "SAT-GES-0558",
+    "titulo": "Inscripción y actualización de Abogados y Notarios en el RTU",
     "nombreActual": "Inscripción y Actualización de Abogado y Notario en el Registro Tributario Unificado (RTU)",
     "descripcion": "Registra tu calidad profesional como Abogado y Notario en el RTU Digital presentando constancia de colegiado activo del CANG para habilitar gestiones notariales ante la SAT.",
     "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/",
@@ -29709,20 +29709,20 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "profesionales-70",
+        "tramiteId": "SAT-GES-0558",
         "segmentoId": "profesionales",
         "segmentoNombre": "Profesionales",
         "orden_n1": 3,
         "orden_n2": 1,
         "orden_n3": 1,
-        "orden_n4": 1,
-        "orden_n5": 1,
+        "orden_n4": null,
+        "orden_n5": null,
         "categoria": "Abogados y Notarios",
         "subcategoria": "Habilitación y Registro Notarial",
         "tema": "Registro Tributario Unificado (RTU)",
         "subtema": "Inscripción y Calidad de Notario",
         "actorEspecifico": "—",
-        "migaBreadcrumb": "Profesionales > Abogados y Notarios > Habilitación y Registro Notarial > Inscripción y actualización de Abogado y Notario en el Registro Tributario Unificado (RTU)"
+        "migaBreadcrumb": "Profesionales > Abogados y Notarios > Habilitación y Registro Notarial > Inscripción y actualización de Abogados y Notarios en el RTU"
       }
     ],
     "segmentosAplicables": [
@@ -29734,10 +29734,10 @@
     "perfilDestinatario": "Abogados y Notarios"
   },
   {
-    "id": "cnt-profesionales-77",
+    "id": "cnt-SAT-GES-0559",
     "codigo": "SAT-GES-0559",
-    "idOriginal": "profesionales-77",
-    "titulo": "Ratificación anual de datos de Abogado y Notario en el Registro Tributario Unificado (RTU) Digital",
+    "idOriginal": "SAT-GES-0559",
+    "titulo": "Ratificación anual de datos de Abogados y Notarios",
     "nombreActual": "Registro Tributario Unificado (RTU) Digital: gestiones de tu registro en línea",
     "descripcion": "Ratifica anualmente tus datos de bufete, domicilio fiscal y colegiado activo en el RTU Digital para conservar la habilitación en e-traspasos y compra de timbres.",
     "url": "https://portal.sat.gob.gt/portal/rtu-digital/",
@@ -29756,20 +29756,20 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "profesionales-77",
+        "tramiteId": "SAT-GES-0559",
         "segmentoId": "profesionales",
         "segmentoNombre": "Profesionales",
         "orden_n1": 3,
         "orden_n2": 1,
         "orden_n3": 1,
-        "orden_n4": 1,
-        "orden_n5": 2,
+        "orden_n4": null,
+        "orden_n5": null,
         "categoria": "Abogados y Notarios",
         "subcategoria": "Habilitación y Registro Notarial",
         "tema": "Registro Tributario Unificado (RTU)",
         "subtema": "Ratificación Anual de Notarios",
         "actorEspecifico": "—",
-        "migaBreadcrumb": "Profesionales > Abogados y Notarios > Habilitación y Registro Notarial > Ratificación anual de datos de Abogado y Notario en el Registro Tributario Unificado (RTU) Digital"
+        "migaBreadcrumb": "Profesionales > Abogados y Notarios > Habilitación y Registro Notarial > Ratificación anual de datos de Abogados y Notarios"
       }
     ],
     "segmentosAplicables": [
@@ -29781,9 +29781,9 @@
     "perfilDestinatario": "Abogados y Notarios"
   },
   {
-    "id": "cnt-profesionales-67",
+    "id": "cnt-SAT-GES-0560",
     "codigo": "SAT-GES-0560",
-    "idOriginal": "profesionales-67",
+    "idOriginal": "SAT-GES-0560",
     "titulo": "Activación de calidad de Abogado y Notario en Agencia Virtual",
     "nombreActual": "Activación de Calidad de Abogado y Notario en Agencia Virtual",
     "descripcion": "Activa tu perfil especializado de Abogado y Notario en la Agencia Virtual para habilitar los módulos de e-traspaso vehicular, razón electrónica y avisos notariales.",
@@ -29803,14 +29803,14 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "profesionales-67",
+        "tramiteId": "SAT-GES-0560",
         "segmentoId": "profesionales",
         "segmentoNombre": "Profesionales",
         "orden_n1": 3,
         "orden_n2": 1,
         "orden_n3": 1,
-        "orden_n4": 2,
-        "orden_n5": 1,
+        "orden_n4": null,
+        "orden_n5": null,
         "categoria": "Abogados y Notarios",
         "subcategoria": "Habilitación y Registro Notarial",
         "tema": "Agencia Virtual Profesional",
@@ -29828,10 +29828,10 @@
     "perfilDestinatario": "Abogados y Notarios"
   },
   {
-    "id": "cnt-profesionales-68",
+    "id": "cnt-SAT-GES-0561",
     "codigo": "SAT-GES-0561",
-    "idOriginal": "profesionales-68",
-    "titulo": "Registro y confirmación de huella dactilar biométrica",
+    "idOriginal": "SAT-GES-0561",
+    "titulo": "Registro y confirmación de huella dactilar biométrica notarial",
     "nombreActual": "Confirmación de Huella Dactilar en el Registro de Abogados y Notarios",
     "descripcion": "Registra tu impresión dactilar biométrica en agencias tributarias como mecanismo de autenticación de máxima seguridad para autorizar traspasos y contratos vehiculares.",
     "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/",
@@ -29850,20 +29850,20 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "profesionales-68",
+        "tramiteId": "SAT-GES-0561",
         "segmentoId": "profesionales",
         "segmentoNombre": "Profesionales",
         "orden_n1": 3,
         "orden_n2": 1,
         "orden_n3": 1,
-        "orden_n4": 3,
-        "orden_n5": 1,
+        "orden_n4": null,
+        "orden_n5": null,
         "categoria": "Abogados y Notarios",
         "subcategoria": "Habilitación y Registro Notarial",
         "tema": "Seguridad Biométrica Notarial",
         "subtema": "Registro de Huella Dactilar",
         "actorEspecifico": "—",
-        "migaBreadcrumb": "Profesionales > Abogados y Notarios > Habilitación y Registro Notarial > Registro y confirmación de huella dactilar biométrica"
+        "migaBreadcrumb": "Profesionales > Abogados y Notarios > Habilitación y Registro Notarial > Registro y confirmación de huella dactilar biométrica notarial"
       }
     ],
     "segmentosAplicables": [
@@ -29875,9 +29875,9 @@
     "perfilDestinatario": "Abogados y Notarios"
   },
   {
-    "id": "cnt-profesionales-38",
+    "id": "cnt-SAT-GES-0562",
     "codigo": "SAT-GES-0562",
-    "idOriginal": "profesionales-38",
+    "idOriginal": "SAT-GES-0562",
     "titulo": "Acreditación de procurador o tercero para retiro de especies fiscales",
     "nombreActual": "Retiro de Especies Fiscales por Tercero Autorizado",
     "descripcion": "Autoriza a un procurador o tercero mediante carta notarial y boleta SAT-2000 para retirar papel sellado especial de protocolos o timbres fiscales en agencias tributarias.",
@@ -29897,14 +29897,14 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "profesionales-38",
+        "tramiteId": "SAT-GES-0562",
         "segmentoId": "profesionales",
         "segmentoNombre": "Profesionales",
         "orden_n1": 3,
         "orden_n2": 1,
         "orden_n3": 2,
-        "orden_n4": 1,
-        "orden_n5": 1,
+        "orden_n4": null,
+        "orden_n5": null,
         "categoria": "Abogados y Notarios",
         "subcategoria": "Timbres Fiscales y Papel Sellado de Protocolo",
         "tema": "Retiro y Gestión de Especies Fiscales",
@@ -29922,10 +29922,10 @@
     "perfilDestinatario": "Abogados y Notarios"
   },
   {
-    "id": "cnt-profesionales-66",
+    "id": "cnt-SAT-GES-0563",
     "codigo": "SAT-GES-0563",
-    "idOriginal": "profesionales-66",
-    "titulo": "Adquisición de Papel Sellado Especial para Protocolos y Timbres Fiscales (Formulario SAT-7130)",
+    "idOriginal": "SAT-GES-0563",
+    "titulo": "Adquisición de Papel Sellado Especial para Protocolos y Timbres Fiscales",
     "nombreActual": "Venta de Especies Fiscales a Notarios y Patentados",
     "descripcion": "Genera tu formulario SAT-7130 en Declaraguate para adquirir hojas de papel sellado especial para protocolos (lotes de 50) y timbres fiscales para el ejercicio notarial.",
     "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/",
@@ -29944,20 +29944,20 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "profesionales-66",
+        "tramiteId": "SAT-GES-0563",
         "segmentoId": "profesionales",
         "segmentoNombre": "Profesionales",
         "orden_n1": 3,
         "orden_n2": 1,
         "orden_n3": 2,
-        "orden_n4": 2,
-        "orden_n5": 1,
+        "orden_n4": null,
+        "orden_n5": null,
         "categoria": "Abogados y Notarios",
         "subcategoria": "Timbres Fiscales y Papel Sellado de Protocolo",
         "tema": "Compra de Especies Fiscales",
         "subtema": "Formulario SAT-7130 Declaraguate",
         "actorEspecifico": "—",
-        "migaBreadcrumb": "Profesionales > Abogados y Notarios > Timbres Fiscales y Papel Sellado de Protocolo > Adquisición de Papel Sellado Especial para Protocolos y Timbres Fiscales (Formulario SAT-7130)"
+        "migaBreadcrumb": "Profesionales > Abogados y Notarios > Timbres Fiscales y Papel Sellado de Protocolo > Adquisición de Papel Sellado Especial para Protocolos y Timbres Fiscales"
       }
     ],
     "segmentosAplicables": [
@@ -29969,9 +29969,9 @@
     "perfilDestinatario": "Abogados y Notarios"
   },
   {
-    "id": "cnt-profesionales-21",
+    "id": "cnt-SAT-GES-0564",
     "codigo": "SAT-GES-0564",
-    "idOriginal": "profesionales-21",
+    "idOriginal": "SAT-GES-0564",
     "titulo": "Pago del Impuesto de Timbres Fiscales en línea con razón electrónica",
     "nombreActual": "Razón Electrónica de Pago de Timbres Fiscales",
     "descripcion": "Liquida el Impuesto de Timbres Fiscales mediante Declaraguate y genera la razón electrónica con código QR para adherir a testimonios de escrituras públicas.",
@@ -29991,14 +29991,14 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "profesionales-21",
+        "tramiteId": "SAT-GES-0564",
         "segmentoId": "profesionales",
         "segmentoNombre": "Profesionales",
         "orden_n1": 3,
         "orden_n2": 1,
         "orden_n3": 2,
-        "orden_n4": 3,
-        "orden_n5": 1,
+        "orden_n4": null,
+        "orden_n5": null,
         "categoria": "Abogados y Notarios",
         "subcategoria": "Timbres Fiscales y Papel Sellado de Protocolo",
         "tema": "Razón Electrónica de Timbres",
@@ -30024,9 +30024,9 @@
     ]
   },
   {
-    "id": "cnt-profesionales-timbres-devolucion-papel-sellado",
+    "id": "cnt-SAT-GES-0565",
     "codigo": "SAT-GES-0565",
-    "idOriginal": "profesionales-timbres-devolucion-papel-sellado",
+    "idOriginal": "SAT-GES-0565",
     "titulo": "Devolución y canje de timbres fiscales y papel sellado inutilizado",
     "nombreActual": "Devolución del Impuesto de Timbres Fiscales y de Papel Sellado Especial para Protocolos, SAT-7130",
     "descripcion": "Solicita la reposición física o reintegro dinerario por hojas de papel de protocolo o timbres fiscales inutilizados, deteriorados o con errores de impresión.",
@@ -30046,14 +30046,14 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "profesionales-timbres-devolucion-papel-sellado",
+        "tramiteId": "SAT-GES-0565",
         "segmentoId": "profesionales",
         "segmentoNombre": "Profesionales",
         "orden_n1": 3,
         "orden_n2": 1,
         "orden_n3": 2,
-        "orden_n4": 4,
-        "orden_n5": 1,
+        "orden_n4": null,
+        "orden_n5": null,
         "categoria": "Abogados y Notarios",
         "subcategoria": "Timbres Fiscales y Papel Sellado de Protocolo",
         "tema": "Devolución y Canje de Especies",
@@ -30079,9 +30079,9 @@
     ]
   },
   {
-    "id": "cnt-profesionales-capacitacion-timbres-notarios",
+    "id": "cnt-SAT-GES-0566",
     "codigo": "SAT-GES-0566",
-    "idOriginal": "profesionales-capacitacion-timbres-notarios",
+    "idOriginal": "SAT-GES-0566",
     "titulo": "Capacitación sobre emisión de razón electrónica de timbres notariales",
     "nombreActual": "Razón Electrónica de pago del Impuesto de Timbres Fiscales, tarifas especiales",
     "descripcion": "Accede al curso virtual interactivo sobre cálculo de tarifas, emisión de boletas y generación de razones electrónicas de timbres fiscales para el ejercicio notarial.",
@@ -30101,14 +30101,14 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "profesionales-capacitacion-timbres-notarios",
+        "tramiteId": "SAT-GES-0566",
         "segmentoId": "profesionales",
         "segmentoNombre": "Profesionales",
         "orden_n1": 3,
         "orden_n2": 1,
         "orden_n3": 2,
-        "orden_n4": 5,
-        "orden_n5": 1,
+        "orden_n4": null,
+        "orden_n5": null,
         "categoria": "Abogados y Notarios",
         "subcategoria": "Timbres Fiscales y Papel Sellado de Protocolo",
         "tema": "Capacitación Especializada Notarial",
@@ -30126,9 +30126,9 @@
     "perfilDestinatario": "Varias categorías de contribuyentes"
   },
   {
-    "id": "cnt-profesionales-71",
+    "id": "cnt-SAT-GES-0567",
     "codigo": "SAT-GES-0567",
-    "idOriginal": "profesionales-71",
+    "idOriginal": "SAT-GES-0567",
     "titulo": "Autorización notarial de tercera persona en el Registro Fiscal de Vehículos",
     "nombreActual": "Tercera Persona Autorizada en el Registro Fiscal de Vehículos",
     "descripcion": "Elabora el acta notarial de legalización de firmas para facultar a un tercero o mandatario a realizar trámites y gestiones presenciales ante el Registro Fiscal de Vehículos.",
@@ -30148,14 +30148,14 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "profesionales-71",
+        "tramiteId": "SAT-GES-0567",
         "segmentoId": "profesionales",
         "segmentoNombre": "Profesionales",
         "orden_n1": 3,
         "orden_n2": 1,
         "orden_n3": 3,
-        "orden_n4": 1,
-        "orden_n5": 1,
+        "orden_n4": null,
+        "orden_n5": null,
         "categoria": "Abogados y Notarios",
         "subcategoria": "Traspaso Electrónico Vehicular (e-Traspaso)",
         "tema": "Mandatos y Autorizaciones Vehiculares",
@@ -30173,9 +30173,9 @@
     "perfilDestinatario": "Abogados y Notarios"
   },
   {
-    "id": "cnt-profesionales-32",
+    "id": "cnt-SAT-GES-0568",
     "codigo": "SAT-GES-0568",
-    "idOriginal": "profesionales-32",
+    "idOriginal": "SAT-GES-0568",
     "titulo": "Formalización notarial de traspaso electrónico de vehículos en línea",
     "nombreActual": "Traspaso Electrónico de Vehículos por Notario vía Agencia Virtual",
     "descripcion": "Formaliza y autoriza electrónicamente la transferencia de dominio vehicular desde Agencia Virtual, validando el consentimiento de comprador y vendedor sin acudir a agencias.",
@@ -30195,14 +30195,14 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "profesionales-32",
+        "tramiteId": "SAT-GES-0568",
         "segmentoId": "profesionales",
         "segmentoNombre": "Profesionales",
         "orden_n1": 3,
         "orden_n2": 1,
         "orden_n3": 3,
-        "orden_n4": 2,
-        "orden_n5": 1,
+        "orden_n4": null,
+        "orden_n5": null,
         "categoria": "Abogados y Notarios",
         "subcategoria": "Traspaso Electrónico Vehicular (e-Traspaso)",
         "tema": "Compraventa y Enajenación Vehicular",
@@ -30220,9 +30220,9 @@
     "perfilDestinatario": "Abogados y Notarios"
   },
   {
-    "id": "cnt-profesionales-56",
+    "id": "cnt-SAT-GES-0569",
     "codigo": "SAT-GES-0569",
-    "idOriginal": "profesionales-56",
+    "idOriginal": "SAT-GES-0569",
     "titulo": "Carga y remisión de expedientes digitales de traspaso con firma avanzada",
     "nombreActual": "Remisión de Documentación Electrónica de Traspaso Electrónico de Vehículos (TEV)",
     "descripcion": "Carga los testimonios y documentos digitalizados del traspaso vehicular firmados con Firma Electrónica Avanzada (FEA) para completar la validación jurídica registral.",
@@ -30242,14 +30242,14 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "profesionales-56",
+        "tramiteId": "SAT-GES-0569",
         "segmentoId": "profesionales",
         "segmentoNombre": "Profesionales",
         "orden_n1": 3,
         "orden_n2": 1,
         "orden_n3": 3,
-        "orden_n4": 3,
-        "orden_n5": 1,
+        "orden_n4": null,
+        "orden_n5": null,
         "categoria": "Abogados y Notarios",
         "subcategoria": "Traspaso Electrónico Vehicular (e-Traspaso)",
         "tema": "Expedientes Digitales TEV",
@@ -30267,9 +30267,9 @@
     "perfilDestinatario": "Abogados y Notarios"
   },
   {
-    "id": "cnt-profesionales-74",
+    "id": "cnt-SAT-GES-0570",
     "codigo": "SAT-GES-0570",
-    "idOriginal": "profesionales-74",
+    "idOriginal": "SAT-GES-0570",
     "titulo": "Habilitación de Notario para Traspaso Electrónico de Vehículos (TEV)",
     "nombreActual": "Registro en la Modalidad de Traspaso Electrónico por Notario",
     "descripcion": "Suscribe el convenio de adhesión y habilita tu usuario notarial para operar el sistema TEV con firma electrónica avanzada y validación biométrica.",
@@ -30289,14 +30289,14 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "profesionales-74",
+        "tramiteId": "SAT-GES-0570",
         "segmentoId": "profesionales",
         "segmentoNombre": "Profesionales",
         "orden_n1": 3,
         "orden_n2": 1,
         "orden_n3": 3,
-        "orden_n4": 4,
-        "orden_n5": 1,
+        "orden_n4": null,
+        "orden_n5": null,
         "categoria": "Abogados y Notarios",
         "subcategoria": "Traspaso Electrónico Vehicular (e-Traspaso)",
         "tema": "Habilitación de Notarios en TEV",
@@ -30314,13 +30314,13 @@
     "perfilDestinatario": "Abogados y Notarios"
   },
   {
-    "id": "cnt-profesionales-33",
+    "id": "cnt-SAT-GES-0571",
     "codigo": "SAT-GES-0571",
-    "idOriginal": "profesionales-33",
+    "idOriginal": "SAT-GES-0571",
     "titulo": "Consulta de avisos notariales y estado de legalizaciones registradas",
     "nombreActual": "Consulta de Avisos Notariales Registrados",
     "descripcion": "Consulta en tiempo real el estado, recepción y aprobación de los avisos de transferencia vehicular y legalización de firmas transmitidos a través de la Agencia Virtual.",
-    "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/aviso-de-legalizacion-de-firmas-en-certificado-de-propiedad-de-vehiculos/",
+    "url": "https://portal.sat.gob.gt/portal/requisitos-de-vehiculos/",
     "tipoInteraccion": "consulta_datos",
     "tipoInteraccionLabel": "Consulta en Base de Datos",
     "tipologiaContenido": "consulta_buscador",
@@ -30336,14 +30336,14 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "profesionales-33",
+        "tramiteId": "SAT-GES-0571",
         "segmentoId": "profesionales",
         "segmentoNombre": "Profesionales",
         "orden_n1": 3,
         "orden_n2": 1,
         "orden_n3": 4,
-        "orden_n4": 1,
-        "orden_n5": 1,
+        "orden_n4": null,
+        "orden_n5": null,
         "categoria": "Abogados y Notarios",
         "subcategoria": "Avisos Notariales y Fe Pública",
         "tema": "Control de Avisos Electrónicos",
@@ -30361,13 +30361,13 @@
     "perfilDestinatario": "Abogados y Notarios"
   },
   {
-    "id": "cnt-profesionales-34",
+    "id": "cnt-SAT-GES-0572",
     "codigo": "SAT-GES-0572",
-    "idOriginal": "profesionales-34",
+    "idOriginal": "SAT-GES-0572",
     "titulo": "Calendario y plazos de obligaciones notariales ante la SAT",
     "nombreActual": "Requisitos y Plazos de Trámites Notariales",
     "descripcion": "Revisa el calendario oficial de plazos legales para la remisión de avisos notariales de traspaso y testimonios especiales afectos, evitando multas e inhabilitaciones.",
-    "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-notarios/",
+    "url": "https://portal.sat.gob.gt/portal/calendario-tributario/",
     "tipoInteraccion": "guia_informativa",
     "tipoInteraccionLabel": "Guía Informativa / Texto",
     "tipologiaContenido": "guia_requisitos",
@@ -30383,14 +30383,14 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "profesionales-34",
+        "tramiteId": "SAT-GES-0572",
         "segmentoId": "profesionales",
         "segmentoNombre": "Profesionales",
         "orden_n1": 3,
         "orden_n2": 1,
         "orden_n3": 4,
-        "orden_n4": 2,
-        "orden_n5": 1,
+        "orden_n4": null,
+        "orden_n5": null,
         "categoria": "Abogados y Notarios",
         "subcategoria": "Avisos Notariales y Fe Pública",
         "tema": "Plazos y Calendario de Obligaciones",
@@ -30408,13 +30408,13 @@
     "perfilDestinatario": "Abogados y Notarios"
   },
   {
-    "id": "cnt-profesionales-72",
+    "id": "cnt-SAT-GES-0573",
     "codigo": "SAT-GES-0573",
-    "idOriginal": "profesionales-72",
+    "idOriginal": "SAT-GES-0573",
     "titulo": "Aviso notarial de legalización de firmas en título de propiedad vehicular",
     "nombreActual": "Aviso de Legalización de Firmas en Certificado de Propiedad",
     "descripcion": "Transmite electrónicamente a la SAT el aviso de legalización de firmas efectuado en el certificado de propiedad de vehículos dentro del plazo de 15 días hábiles.",
-    "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-notarios/",
+    "url": "https://portal.sat.gob.gt/portal/requisitos-de-vehiculos/",
     "tipoInteraccion": "servicio_transaccional",
     "tipoInteraccionLabel": "Trámite / Aplicativo en Línea",
     "tipologiaContenido": "tramite_interactivo",
@@ -30430,14 +30430,14 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "profesionales-72",
+        "tramiteId": "SAT-GES-0573",
         "segmentoId": "profesionales",
         "segmentoNombre": "Profesionales",
         "orden_n1": 3,
         "orden_n2": 1,
         "orden_n3": 4,
-        "orden_n4": 3,
-        "orden_n5": 1,
+        "orden_n4": null,
+        "orden_n5": null,
         "categoria": "Abogados y Notarios",
         "subcategoria": "Avisos Notariales y Fe Pública",
         "tema": "Avisos de Vehículos Terrestres",
@@ -30455,13 +30455,13 @@
     "perfilDestinatario": "Abogados y Notarios"
   },
   {
-    "id": "cnt-profesionales-73",
+    "id": "cnt-SAT-GES-0574",
     "codigo": "SAT-GES-0574",
-    "idOriginal": "profesionales-73",
+    "idOriginal": "SAT-GES-0574",
     "titulo": "Aviso notarial de transferencia de dominio de vehículos terrestres",
     "nombreActual": "Aviso de Transferencia de Dominio de Vehículos",
     "descripcion": "Notifica a la administración tributaria la enajenación formal de automotores autorizada en escritura pública para actualizar el registro del vendedor y comprador.",
-    "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-notarios/",
+    "url": "https://portal.sat.gob.gt/portal/requisitos-de-vehiculos/",
     "tipoInteraccion": "servicio_transaccional",
     "tipoInteraccionLabel": "Trámite / Aplicativo en Línea",
     "tipologiaContenido": "tramite_interactivo",
@@ -30477,14 +30477,14 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "profesionales-73",
+        "tramiteId": "SAT-GES-0574",
         "segmentoId": "profesionales",
         "segmentoNombre": "Profesionales",
         "orden_n1": 3,
         "orden_n2": 1,
         "orden_n3": 4,
-        "orden_n4": 3,
-        "orden_n5": 2,
+        "orden_n4": null,
+        "orden_n5": null,
         "categoria": "Abogados y Notarios",
         "subcategoria": "Avisos Notariales y Fe Pública",
         "tema": "Avisos de Vehículos Terrestres",
@@ -30502,9 +30502,9 @@
     "perfilDestinatario": "Abogados y Notarios"
   },
   {
-    "id": "cnt-profesionales-75",
+    "id": "cnt-SAT-GES-0575",
     "codigo": "SAT-GES-0575",
-    "idOriginal": "profesionales-75",
+    "idOriginal": "SAT-GES-0575",
     "titulo": "Atención preferencial y requisitos en ventanillas notariales",
     "nombreActual": "Requisitos Gestiones Notariales en Agencias",
     "descripcion": "Conoce los requisitos de acreditación (carné CANG activo y sello) para acceder a ventanillas preferenciales de atención notarial en agencias tributarias del país.",
@@ -30524,14 +30524,14 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "profesionales-75",
+        "tramiteId": "SAT-GES-0575",
         "segmentoId": "profesionales",
         "segmentoNombre": "Profesionales",
         "orden_n1": 3,
         "orden_n2": 1,
         "orden_n3": 4,
-        "orden_n4": 4,
-        "orden_n5": 1,
+        "orden_n4": null,
+        "orden_n5": null,
         "categoria": "Abogados y Notarios",
         "subcategoria": "Avisos Notariales y Fe Pública",
         "tema": "Atención Preferencial Notarial",
@@ -30549,9 +30549,9 @@
     "perfilDestinatario": "Abogados y Notarios"
   },
   {
-    "id": "cnt-profesionales-82",
+    "id": "cnt-SAT-GES-0576",
     "codigo": "SAT-GES-0576",
-    "idOriginal": "profesionales-82",
+    "idOriginal": "SAT-GES-0576",
     "titulo": "Inscripción y habilitación como Perito Contador ante la SAT",
     "nombreActual": "Inscribirte como perito contador",
     "descripcion": "Inscribe tu título oficial de Perito Contador ante la SAT presentando título registrado en Contraloría General de Cuentas para quedar facultado para firmar contabilidades.",
@@ -30571,14 +30571,14 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "profesionales-82",
+        "tramiteId": "SAT-GES-0576",
         "segmentoId": "profesionales",
         "segmentoNombre": "Profesionales",
         "orden_n1": 3,
         "orden_n2": 2,
         "orden_n3": 1,
-        "orden_n4": 1,
-        "orden_n5": 1,
+        "orden_n4": null,
+        "orden_n5": null,
         "categoria": "Peritos Contadores",
         "subcategoria": "Habilitación y Registro de Perito Contador",
         "tema": "Registro de Contadores ante SAT",
@@ -30596,9 +30596,9 @@
     "perfilDestinatario": "Peritos Contadores"
   },
   {
-    "id": "cnt-profesionales-80",
+    "id": "cnt-SAT-GES-0577",
     "codigo": "SAT-GES-0577",
-    "idOriginal": "profesionales-80",
+    "idOriginal": "SAT-GES-0577",
     "titulo": "Actualización de datos de Perito Contador en Agencia Virtual",
     "nombreActual": "Actualizar tus datos como perito contador",
     "descripcion": "Actualiza periódicamente tu información de contacto, domicilio fiscal y estado en el Registro de Contadores para mantener vigente tu firma técnica autorizada.",
@@ -30618,14 +30618,14 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "profesionales-80",
+        "tramiteId": "SAT-GES-0577",
         "segmentoId": "profesionales",
         "segmentoNombre": "Profesionales",
         "orden_n1": 3,
         "orden_n2": 2,
         "orden_n3": 1,
-        "orden_n4": 1,
-        "orden_n5": 2,
+        "orden_n4": null,
+        "orden_n5": null,
         "categoria": "Peritos Contadores",
         "subcategoria": "Habilitación y Registro de Perito Contador",
         "tema": "Registro de Contadores ante SAT",
@@ -30643,9 +30643,9 @@
     "perfilDestinatario": "Peritos Contadores"
   },
   {
-    "id": "cnt-profesionales-81",
+    "id": "cnt-SAT-GES-0578",
     "codigo": "SAT-GES-0578",
-    "idOriginal": "profesionales-81",
+    "idOriginal": "SAT-GES-0578",
     "titulo": "Cancelación y baja como Contador en Agencia Virtual",
     "nombreActual": "Darte de baja como contador en Agencia Virtual",
     "descripcion": "Presenta el aviso formal de baja en el Registro de Contadores o desvinculación de las contabilidades que tengas asignadas para cesar tu responsabilidad técnica.",
@@ -30665,14 +30665,14 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "profesionales-81",
+        "tramiteId": "SAT-GES-0578",
         "segmentoId": "profesionales",
         "segmentoNombre": "Profesionales",
         "orden_n1": 3,
         "orden_n2": 2,
         "orden_n3": 1,
-        "orden_n4": 2,
-        "orden_n5": 1,
+        "orden_n4": null,
+        "orden_n5": null,
         "categoria": "Peritos Contadores",
         "subcategoria": "Habilitación y Registro de Perito Contador",
         "tema": "Cese y Desvinculación Contable",
@@ -30690,9 +30690,9 @@
     "perfilDestinatario": "Peritos Contadores"
   },
   {
-    "id": "cnt-profesionales-83",
+    "id": "cnt-SAT-GES-0579",
     "codigo": "SAT-GES-0579",
-    "idOriginal": "profesionales-83",
+    "idOriginal": "SAT-GES-0579",
     "titulo": "Registro y habilitación de Contador en Agencia Virtual",
     "nombreActual": "Registrarte como contador en Agencia Virtual",
     "descripcion": "Habilita tu usuario y rol de Perito Contador en la Agencia Virtual para aceptar asignaciones de clientes y administrar libros contables digitales.",
@@ -30712,14 +30712,14 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "profesionales-83",
+        "tramiteId": "SAT-GES-0579",
         "segmentoId": "profesionales",
         "segmentoNombre": "Profesionales",
         "orden_n1": 3,
         "orden_n2": 2,
         "orden_n3": 1,
-        "orden_n4": 3,
-        "orden_n5": 1,
+        "orden_n4": null,
+        "orden_n5": null,
         "categoria": "Peritos Contadores",
         "subcategoria": "Habilitación y Registro de Perito Contador",
         "tema": "Agencia Virtual Profesional",
@@ -30737,10 +30737,10 @@
     "perfilDestinatario": "Peritos Contadores"
   },
   {
-    "id": "cnt-profesionales-16",
+    "id": "cnt-SAT-GES-0580",
     "codigo": "SAT-GES-0580",
-    "idOriginal": "profesionales-16",
-    "titulo": "Consulta en línea de constancias de retención del Impuesto al Valor Agregado (IVA) e Impuesto Sobre la Renta (ISR)",
+    "idOriginal": "SAT-GES-0580",
+    "titulo": "Consulta en línea de constancias de retención del IVA e ISR",
     "nombreActual": "Consultar constancias de retención del Impuesto al Valor Agregado (IVA) e Impuesto Sobre la Renta (ISR) recibidas",
     "descripcion": "Consulta y concilia en tiempo real las constancias de retención de IVA e ISR emitidas a favor de tus clientes para aplicarlas en las declaraciones mensuales.",
     "url": "https://portal.sat.gob.gt/portal/retenciones-del-iva-consulta-de-constancias-de-retencion-del-iva-recibidas/",
@@ -30759,20 +30759,20 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "profesionales-16",
+        "tramiteId": "SAT-GES-0580",
         "segmentoId": "profesionales",
         "segmentoNombre": "Profesionales",
         "orden_n1": 3,
         "orden_n2": 2,
         "orden_n3": 2,
-        "orden_n4": 1,
-        "orden_n5": 1,
+        "orden_n4": null,
+        "orden_n5": null,
         "categoria": "Peritos Contadores",
         "subcategoria": "Consultas, Retenciones y Libros Contables",
         "tema": "Retenciones Tributarias",
         "subtema": "Consulta de Constancias IVA e ISR",
         "actorEspecifico": "—",
-        "migaBreadcrumb": "Profesionales > Peritos Contadores > Consultas, Retenciones y Libros Contables > Consulta en línea de constancias de retención del Impuesto al Valor Agregado (IVA) e Impuesto Sobre la Renta (ISR)"
+        "migaBreadcrumb": "Profesionales > Peritos Contadores > Consultas, Retenciones y Libros Contables > Consulta en línea de constancias de retención del IVA e ISR"
       }
     ],
     "segmentosAplicables": [
@@ -30784,9 +30784,9 @@
     "perfilDestinatario": "Peritos Contadores"
   },
   {
-    "id": "cnt-profesionales-17",
+    "id": "cnt-SAT-GES-0581",
     "codigo": "SAT-GES-0581",
-    "idOriginal": "profesionales-17",
+    "idOriginal": "SAT-GES-0581",
     "titulo": "Guía y administración del régimen de Factura Electrónica en Línea (FEL)",
     "nombreActual": "Factura Electrónica en Línea (FEL)",
     "descripcion": "Administra la emisión masiva, anulación y reporte de Documentos Tributarios Electrónicos (DTE) de tus clientes mediante la Agencia Virtual o certificador.",
@@ -30806,14 +30806,14 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "profesionales-17",
+        "tramiteId": "SAT-GES-0581",
         "segmentoId": "profesionales",
         "segmentoNombre": "Profesionales",
         "orden_n1": 3,
         "orden_n2": 2,
         "orden_n3": 2,
-        "orden_n4": 2,
-        "orden_n5": 1,
+        "orden_n4": null,
+        "orden_n5": null,
         "categoria": "Peritos Contadores",
         "subcategoria": "Consultas, Retenciones y Libros Contables",
         "tema": "Facturación Electrónica en Línea (FEL)",
@@ -30831,9 +30831,9 @@
     "perfilDestinatario": "Peritos Contadores"
   },
   {
-    "id": "cnt-profesionales-18",
+    "id": "cnt-SAT-GES-0582",
     "codigo": "SAT-GES-0582",
-    "idOriginal": "profesionales-18",
+    "idOriginal": "SAT-GES-0582",
     "titulo": "Presentación de Planilla del Impuesto al Valor Agregado (IVA) en Factura Electrónica en Línea (FEL)",
     "nombreActual": "Planilla del Impuesto al Valor Agregado (IVA) en Factura Electrónica en Línea (FEL)",
     "descripcion": "Carga y transmite la planilla anual del IVA con facturas electrónicas para trabajadores asalariados de tus clientes para acreditar crédito fiscal contra el ISR.",
@@ -30853,14 +30853,14 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "profesionales-18",
+        "tramiteId": "SAT-GES-0582",
         "segmentoId": "profesionales",
         "segmentoNombre": "Profesionales",
         "orden_n1": 3,
         "orden_n2": 2,
         "orden_n3": 2,
-        "orden_n4": 3,
-        "orden_n5": 1,
+        "orden_n4": null,
+        "orden_n5": null,
         "categoria": "Peritos Contadores",
         "subcategoria": "Consultas, Retenciones y Libros Contables",
         "tema": "Crédito Fiscal del IVA",
@@ -30878,9 +30878,9 @@
     "perfilDestinatario": "Peritos Contadores"
   },
   {
-    "id": "cnt-profesionales-19",
+    "id": "cnt-SAT-GES-0583",
     "codigo": "SAT-GES-0583",
-    "idOriginal": "profesionales-19",
+    "idOriginal": "SAT-GES-0583",
     "titulo": "Habilitación y administración del Libro Electrónico Tributario (LET)",
     "nombreActual": "Libro Electrónico Tributario (LET)",
     "descripcion": "Habilita y genera el Libro Electrónico Tributario (LET) para llevar el registro digital mensual de compras y ventas de pequeños contribuyentes y régimen general.",
@@ -30900,14 +30900,14 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "profesionales-19",
+        "tramiteId": "SAT-GES-0583",
         "segmentoId": "profesionales",
         "segmentoNombre": "Profesionales",
         "orden_n1": 3,
         "orden_n2": 2,
         "orden_n3": 2,
-        "orden_n4": 4,
-        "orden_n5": 1,
+        "orden_n4": null,
+        "orden_n5": null,
         "categoria": "Peritos Contadores",
         "subcategoria": "Consultas, Retenciones y Libros Contables",
         "tema": "Libros Contables Electrónicos",
@@ -30925,9 +30925,9 @@
     "perfilDestinatario": "Peritos Contadores"
   },
   {
-    "id": "cnt-profesionales-42",
+    "id": "cnt-SAT-GES-0584",
     "codigo": "SAT-GES-0584",
-    "idOriginal": "profesionales-42",
+    "idOriginal": "SAT-GES-0584",
     "titulo": "Solicitud de devolución, retención o compensación de créditos tributarios",
     "nombreActual": "Requisitos para la Gestión de Devolución de Pagos Indebidos",
     "descripcion": "Prepara y radica la solicitud formal para la devolución de pagos indebidos o compensación de saldos acreedores de impuestos internos conforme al Código Tributario.",
@@ -30947,14 +30947,14 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "profesionales-42",
+        "tramiteId": "SAT-GES-0584",
         "segmentoId": "profesionales",
         "segmentoNombre": "Profesionales",
         "orden_n1": 3,
         "orden_n2": 2,
         "orden_n3": 2,
-        "orden_n4": 5,
-        "orden_n5": 1,
+        "orden_n4": null,
+        "orden_n5": null,
         "categoria": "Peritos Contadores",
         "subcategoria": "Consultas, Retenciones y Libros Contables",
         "tema": "Gestión de Créditos y Pagos Indebidos",
@@ -30972,9 +30972,9 @@
     "perfilDestinatario": "Peritos Contadores"
   },
   {
-    "id": "cnt-profesionales-44",
+    "id": "cnt-SAT-GES-0585",
     "codigo": "SAT-GES-0585",
-    "idOriginal": "profesionales-44",
+    "idOriginal": "SAT-GES-0585",
     "titulo": "Procedimiento y rectificación para autoliquidación de impuestos",
     "nombreActual": "Autoliquidación de impuestos",
     "descripcion": "Aplica el procedimiento oficial para rectificar declaraciones juradas con error en Declaraguate, liquidando intereses resarcitorios y regularizando inconsistencias.",
@@ -30994,14 +30994,14 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "profesionales-44",
+        "tramiteId": "SAT-GES-0585",
         "segmentoId": "profesionales",
         "segmentoNombre": "Profesionales",
         "orden_n1": 3,
         "orden_n2": 2,
         "orden_n3": 2,
-        "orden_n4": 6,
-        "orden_n5": 1,
+        "orden_n4": null,
+        "orden_n5": null,
         "categoria": "Peritos Contadores",
         "subcategoria": "Consultas, Retenciones y Libros Contables",
         "tema": "Rectificaciones y Correcciones",
@@ -31019,9 +31019,9 @@
     "perfilDestinatario": "Peritos Contadores"
   },
   {
-    "id": "cnt-profesionales-46",
+    "id": "cnt-SAT-GES-0586",
     "codigo": "SAT-GES-0586",
-    "idOriginal": "profesionales-46",
+    "idOriginal": "SAT-GES-0586",
     "titulo": "Operación y emisión en el Sistema de Retenciones del Impuesto al Valor Agregado (IVA)",
     "nombreActual": "Sistema de retenciones del Impuesto al Valor Agregado (IVA)",
     "descripcion": "Opera el aplicativo Retenciones Web IVA para emitir constancias oficiales de retención y generar el archivo de carga para Declaraguate como agente de retención.",
@@ -31041,14 +31041,14 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "profesionales-46",
+        "tramiteId": "SAT-GES-0586",
         "segmentoId": "profesionales",
         "segmentoNombre": "Profesionales",
         "orden_n1": 3,
         "orden_n2": 2,
         "orden_n3": 2,
-        "orden_n4": 7,
-        "orden_n5": 1,
+        "orden_n4": null,
+        "orden_n5": null,
         "categoria": "Peritos Contadores",
         "subcategoria": "Consultas, Retenciones y Libros Contables",
         "tema": "Retenciones de IVA en Línea",
@@ -31066,9 +31066,9 @@
     "perfilDestinatario": "Peritos Contadores"
   },
   {
-    "id": "cnt-profesionales-91",
+    "id": "cnt-SAT-GES-0587",
     "codigo": "SAT-GES-0587",
-    "idOriginal": "profesionales-91",
+    "idOriginal": "SAT-GES-0587",
     "titulo": "Inscripción y habilitación como Contador Público y Auditor (CPA)",
     "nombreActual": "Inscribirte como auditor",
     "descripcion": "Inscribe tu título profesional de Contador Público y Auditor (CPA) con constancia de colegiado activo del Colegio de CPA o Economistas para emitir informes técnicos.",
@@ -31088,14 +31088,14 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "profesionales-91",
+        "tramiteId": "SAT-GES-0587",
         "segmentoId": "profesionales",
         "segmentoNombre": "Profesionales",
         "orden_n1": 3,
         "orden_n2": 3,
         "orden_n3": 1,
-        "orden_n4": 1,
-        "orden_n5": 1,
+        "orden_n4": null,
+        "orden_n5": null,
         "categoria": "Auditores",
         "subcategoria": "Habilitación y Registro de Auditor (CPA)",
         "tema": "Registro de Auditores ante SAT",
@@ -31113,9 +31113,9 @@
     "perfilDestinatario": "Auditores"
   },
   {
-    "id": "cnt-profesionales-90",
+    "id": "cnt-SAT-GES-0588",
     "codigo": "SAT-GES-0588",
-    "idOriginal": "profesionales-90",
+    "idOriginal": "SAT-GES-0588",
     "titulo": "Actualización de datos de Contador Público y Auditor (CPA)",
     "nombreActual": "Actualizar tus datos como auditor",
     "descripcion": "Actualiza tu número de colegiado activo, constancia de vigencia gremial y datos de contacto en el Registro de CPA de la SAT.",
@@ -31135,14 +31135,14 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "profesionales-90",
+        "tramiteId": "SAT-GES-0588",
         "segmentoId": "profesionales",
         "segmentoNombre": "Profesionales",
         "orden_n1": 3,
         "orden_n2": 3,
         "orden_n3": 1,
-        "orden_n4": 1,
-        "orden_n5": 2,
+        "orden_n4": null,
+        "orden_n5": null,
         "categoria": "Auditores",
         "subcategoria": "Habilitación y Registro de Auditor (CPA)",
         "tema": "Registro de Auditores ante SAT",
@@ -31160,9 +31160,9 @@
     "perfilDestinatario": "Auditores"
   },
   {
-    "id": "cnt-profesionales-89",
+    "id": "cnt-SAT-GES-0589",
     "codigo": "SAT-GES-0589",
-    "idOriginal": "profesionales-89",
+    "idOriginal": "SAT-GES-0589",
     "titulo": "Inscripción de Contador autorizado para emitir dictámenes de devolución de crédito fiscal",
     "nombreActual": "Inscribirte como contador para emitir dictámenes de devolución",
     "descripcion": "Registra tu habilitación como Contador Público y Auditor ante la SAT para emitir dictámenes profesionales en solicitudes de devolución de crédito fiscal a exportadores.",
@@ -31182,14 +31182,14 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "profesionales-89",
+        "tramiteId": "SAT-GES-0589",
         "segmentoId": "profesionales",
         "segmentoNombre": "Profesionales",
         "orden_n1": 3,
         "orden_n2": 3,
         "orden_n3": 2,
-        "orden_n4": 1,
-        "orden_n5": 1,
+        "orden_n4": null,
+        "orden_n5": null,
         "categoria": "Auditores",
         "subcategoria": "Dictámenes de Crédito Fiscal y Auditoría",
         "tema": "Dictámenes de Crédito Fiscal",
@@ -31207,9 +31207,9 @@
     "perfilDestinatario": "Auditores"
   },
   {
-    "id": "cnt-profesionales-88",
+    "id": "cnt-SAT-GES-0590",
     "codigo": "SAT-GES-0590",
-    "idOriginal": "profesionales-88",
+    "idOriginal": "SAT-GES-0590",
     "titulo": "Actualización de datos de Contador que emite dictámenes de devolución",
     "nombreActual": "Actualizar tus datos como contador que emite dictámenes de devolución",
     "descripcion": "Actualiza anualmente tu fianza y datos profesionales en el Registro de CPA Emisores de Dictámenes para continuar emitiendo dictámenes bajo el régimen optativo.",
@@ -31229,14 +31229,14 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "profesionales-88",
+        "tramiteId": "SAT-GES-0590",
         "segmentoId": "profesionales",
         "segmentoNombre": "Profesionales",
         "orden_n1": 3,
         "orden_n2": 3,
         "orden_n3": 2,
-        "orden_n4": 1,
-        "orden_n5": 2,
+        "orden_n4": null,
+        "orden_n5": null,
         "categoria": "Auditores",
         "subcategoria": "Dictámenes de Crédito Fiscal y Auditoría",
         "tema": "Dictámenes de Crédito Fiscal",
@@ -31254,9 +31254,9 @@
     "perfilDestinatario": "Auditores"
   },
   {
-    "id": "cnt-profesionales-54",
+    "id": "cnt-SAT-GES-0591",
     "codigo": "SAT-GES-0591",
-    "idOriginal": "profesionales-54",
+    "idOriginal": "SAT-GES-0591",
     "titulo": "Acreditación integral, carné y renovación de Gestor Tributario y Auxiliares",
     "nombreActual": "Requisitos para las gestiones de Gestores Tributarios",
     "descripcion": "Solicita la acreditación oficial, evaluación y expedición del carné institucional ante la SAT para actuar formalmente como gestor de trámites de terceros.",
@@ -31276,14 +31276,14 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "profesionales-54",
+        "tramiteId": "SAT-GES-0591",
         "segmentoId": "profesionales",
         "segmentoNombre": "Profesionales",
         "orden_n1": 3,
         "orden_n2": 4,
         "orden_n3": 1,
-        "orden_n4": 1,
-        "orden_n5": 1,
+        "orden_n4": null,
+        "orden_n5": null,
         "categoria": "Gestores Tributarios",
         "subcategoria": "Acreditación y Carné Oficial de Gestor",
         "tema": "Acreditación y Requisitos Institucionales",
@@ -31301,9 +31301,9 @@
     "perfilDestinatario": "Gestores Tributarios"
   },
   {
-    "id": "cnt-profesionales-30",
+    "id": "cnt-SAT-GES-0592",
     "codigo": "SAT-GES-0592",
-    "idOriginal": "profesionales-30",
+    "idOriginal": "SAT-GES-0592",
     "titulo": "Marco de actuación y alcance de los Gestores Tributarios acreditados",
     "nombreActual": "Qué es un gestor tributario",
     "descripcion": "Conoce las gestiones autorizadas, límites de representación legal y responsabilidades de los gestores tributarios y auxiliares acreditados ante la SAT.",
@@ -31323,14 +31323,14 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "profesionales-30",
+        "tramiteId": "SAT-GES-0592",
         "segmentoId": "profesionales",
         "segmentoNombre": "Profesionales",
         "orden_n1": 3,
         "orden_n2": 4,
         "orden_n3": 1,
-        "orden_n4": 2,
-        "orden_n5": 1,
+        "orden_n4": null,
+        "orden_n5": null,
         "categoria": "Gestores Tributarios",
         "subcategoria": "Acreditación y Carné Oficial de Gestor",
         "tema": "Marco Legal y Alcance de Gestión",
@@ -31348,9 +31348,9 @@
     "perfilDestinatario": "Gestores Tributarios"
   },
   {
-    "id": "cnt-profesionales-41",
+    "id": "cnt-SAT-GES-0593",
     "codigo": "SAT-GES-0593",
-    "idOriginal": "profesionales-41",
+    "idOriginal": "SAT-GES-0593",
     "titulo": "Acreditación de tercera persona autorizada para gestiones en el Registro Tributario Unificado (RTU)",
     "nombreActual": "Requisitos para Tercera Persona Autorizada en Gestiones del Registro Tributario Unificado (RTU)",
     "descripcion": "Cumple los requisitos y presenta la carta poder o acta notarial para que una tercera persona autorizada ingrese trámites registrales del RTU en agencias.",
@@ -31370,14 +31370,14 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "profesionales-41",
+        "tramiteId": "SAT-GES-0593",
         "segmentoId": "profesionales",
         "segmentoNombre": "Profesionales",
         "orden_n1": 3,
         "orden_n2": 4,
         "orden_n3": 1,
-        "orden_n4": 3,
-        "orden_n5": 1,
+        "orden_n4": null,
+        "orden_n5": null,
         "categoria": "Gestores Tributarios",
         "subcategoria": "Acreditación y Carné Oficial de Gestor",
         "tema": "Representación en RTU",
@@ -31395,9 +31395,9 @@
     "perfilDestinatario": "Gestores Tributarios"
   },
   {
-    "id": "cnt-profesionales-61",
+    "id": "cnt-SAT-GES-0594",
     "codigo": "SAT-GES-0594",
-    "idOriginal": "profesionales-61",
+    "idOriginal": "SAT-GES-0594",
     "titulo": "Requisitos de acreditación inicial para Gestor Tributario o Auxiliar",
     "nombreActual": "Requisitos para ser gestor tributario o auxiliar",
     "descripcion": "Consulta los requisitos documentales (antecedentes, colegiado/estudios, solvencia) y fecha de evaluación técnica para acreditarte por primera vez ante la SAT.",
@@ -31417,14 +31417,14 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "profesionales-61",
+        "tramiteId": "SAT-GES-0594",
         "segmentoId": "profesionales",
         "segmentoNombre": "Profesionales",
         "orden_n1": 3,
         "orden_n2": 4,
         "orden_n3": 1,
-        "orden_n4": 4,
-        "orden_n5": 1,
+        "orden_n4": null,
+        "orden_n5": null,
         "categoria": "Gestores Tributarios",
         "subcategoria": "Acreditación y Carné Oficial de Gestor",
         "tema": "Requisitos de Ingreso al Padrón",
@@ -31442,13 +31442,13 @@
     "perfilDestinatario": "Gestores Tributarios"
   },
   {
-    "id": "cnt-profesionales-59",
+    "id": "cnt-SAT-GES-0595",
     "codigo": "SAT-GES-0595",
-    "idOriginal": "profesionales-59",
+    "idOriginal": "SAT-GES-0595",
     "titulo": "Habilitación e inhabilitación temporal o definitiva de Gestor Tributario o Auxiliar",
     "nombreActual": "Habilitar o inhabilitar a un gestor tributario",
     "descripcion": "Consulta las causales legales, sanciones y resoluciones de suspensión o inhabilitación temporal o definitiva en el ejercicio de gestiones ante oficinas tributarias.",
-    "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/habilitacion-e-inhabilitacion-temporal-o-permanente-de-gestor-tributario-y-o-auxiliar-de-gestor-tributario/",
+    "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-para-las-solicitudes-de-gestor-tributario-o-auxiliar-de-gestor-tributario/",
     "tipoInteraccion": "guia_informativa",
     "tipoInteraccionLabel": "Guía Informativa / Texto",
     "tipologiaContenido": "guia_requisitos",
@@ -31464,14 +31464,14 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "profesionales-59",
+        "tramiteId": "SAT-GES-0595",
         "segmentoId": "profesionales",
         "segmentoNombre": "Profesionales",
         "orden_n1": 3,
         "orden_n2": 4,
         "orden_n3": 2,
-        "orden_n4": 1,
-        "orden_n5": 1,
+        "orden_n4": null,
+        "orden_n5": null,
         "categoria": "Gestores Tributarios",
         "subcategoria": "Renovación y Gestión de Gafetes",
         "tema": "Control y Régimen Disciplinario",
@@ -31489,9 +31489,9 @@
     "perfilDestinatario": "Gestores Tributarios"
   },
   {
-    "id": "cnt-profesionales-58",
+    "id": "cnt-SAT-GES-0596",
     "codigo": "SAT-GES-0596",
-    "idOriginal": "profesionales-58",
+    "idOriginal": "SAT-GES-0596",
     "titulo": "Consulta en línea del padrón de Gestores Tributarios y Auxiliares activos",
     "nombreActual": "Consultar los datos de un gestor tributario",
     "descripcion": "Verifica en tiempo real si un gestor o auxiliar tributario cuenta con carné vigente y habilitación activa para realizar trámites ante las dependencias de la SAT.",
@@ -31511,14 +31511,14 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "profesionales-58",
+        "tramiteId": "SAT-GES-0596",
         "segmentoId": "profesionales",
         "segmentoNombre": "Profesionales",
         "orden_n1": 3,
         "orden_n2": 4,
         "orden_n3": 2,
-        "orden_n4": 2,
-        "orden_n5": 1,
+        "orden_n4": null,
+        "orden_n5": null,
         "categoria": "Gestores Tributarios",
         "subcategoria": "Renovación y Gestión de Gafetes",
         "tema": "Verificación de Acreditación",
@@ -31536,9 +31536,9 @@
     "perfilDestinatario": "Gestores Tributarios"
   },
   {
-    "id": "cnt-profesionales-57",
+    "id": "cnt-SAT-GES-0597",
     "codigo": "SAT-GES-0597",
-    "idOriginal": "profesionales-57",
+    "idOriginal": "SAT-GES-0597",
     "titulo": "Actualización de datos y renovación de gafete para Gestor Tributario",
     "nombreActual": "Actualizar tus datos y renovar tu gafete de gestor",
     "descripcion": "Presenta la solicitud anual de actualización de antecedentes penales, policiacos y solvencia fiscal para renovar la vigencia del gafete oficial de gestor.",
@@ -31558,14 +31558,14 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "profesionales-57",
+        "tramiteId": "SAT-GES-0597",
         "segmentoId": "profesionales",
         "segmentoNombre": "Profesionales",
         "orden_n1": 3,
         "orden_n2": 4,
         "orden_n3": 2,
-        "orden_n4": 3,
-        "orden_n5": 1,
+        "orden_n4": null,
+        "orden_n5": null,
         "categoria": "Gestores Tributarios",
         "subcategoria": "Renovación y Gestión de Gafetes",
         "tema": "Vigencia de Credencial",
@@ -31583,13 +31583,13 @@
     "perfilDestinatario": "Gestores Tributarios"
   },
   {
-    "id": "cnt-profesionales-60",
+    "id": "cnt-SAT-GES-0598",
     "codigo": "SAT-GES-0598",
-    "idOriginal": "profesionales-60",
+    "idOriginal": "SAT-GES-0598",
     "titulo": "Reposición de gafete de identificación para Gestor Tributario",
     "nombreActual": "Reponer tu gafete de gestor tributario",
     "descripcion": "Gestiona la reposición del gafete oficial por motivo de extravío, robo o deterioro físico adjuntando la denuncia respectiva y recibo de pago de reposición.",
-    "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/reposicion-del-gafete-de-gestor-tributario-y-o-auxiliares-de-gestor-tributario-por-extravio-robo-hurto-o-deterioro/",
+    "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-para-las-solicitudes-de-gestor-tributario-o-auxiliar-de-gestor-tributario/",
     "tipoInteraccion": "guia_informativa",
     "tipoInteraccionLabel": "Guía Informativa / Texto",
     "tipologiaContenido": "guia_requisitos",
@@ -31605,14 +31605,14 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "profesionales-60",
+        "tramiteId": "SAT-GES-0598",
         "segmentoId": "profesionales",
         "segmentoNombre": "Profesionales",
         "orden_n1": 3,
         "orden_n2": 4,
         "orden_n3": 2,
-        "orden_n4": 4,
-        "orden_n5": 1,
+        "orden_n4": null,
+        "orden_n5": null,
         "categoria": "Gestores Tributarios",
         "subcategoria": "Renovación y Gestión de Gafetes",
         "tema": "Reposición de Credencial",
@@ -31630,9 +31630,9 @@
     "perfilDestinatario": "Gestores Tributarios"
   },
   {
-    "id": "cnt-profesionales-20",
+    "id": "cnt-SAT-GES-0599",
     "codigo": "SAT-GES-0599",
-    "idOriginal": "profesionales-20",
+    "idOriginal": "SAT-GES-0599",
     "titulo": "Catálogo general de formularios tributarios electrónicos en Declaraguate",
     "nombreActual": "Ver todos los formularios",
     "descripcion": "Consulta y genera todos los formularios electrónicos para la liquidación mensual, trimestral y anual de impuestos por honorarios y servicios técnicos.",
@@ -31652,14 +31652,14 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "profesionales-20",
+        "tramiteId": "SAT-GES-0599",
         "segmentoId": "profesionales",
         "segmentoNombre": "Profesionales",
         "orden_n1": 3,
         "orden_n2": 5,
         "orden_n3": 1,
-        "orden_n4": 1,
-        "orden_n5": 1,
+        "orden_n4": null,
+        "orden_n5": null,
         "categoria": "Servicios Profesionales",
         "subcategoria": "Facturación por Honorarios y Formularios",
         "tema": "Formularios Tributarios Oficiales",
@@ -31677,9 +31677,9 @@
     "perfilDestinatario": "Servicios Profesionales"
   },
   {
-    "id": "cnt-profesionales-29",
+    "id": "cnt-SAT-GES-0600",
     "codigo": "SAT-GES-0600",
-    "idOriginal": "profesionales-29",
+    "idOriginal": "SAT-GES-0600",
     "titulo": "Actualización de datos registrales de Servicios Profesionales en Agencia Virtual",
     "nombreActual": "Actualizar tus datos en Agencia Virtual",
     "descripcion": "Modifica o ratifica en el RTU Digital tus actividades económicas profesionales, régimen de afiliación (IVA/ISR) y datos de domicilio fiscal o clínica/oficina.",
@@ -31699,14 +31699,14 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "profesionales-29",
+        "tramiteId": "SAT-GES-0600",
         "segmentoId": "profesionales",
         "segmentoNombre": "Profesionales",
         "orden_n1": 3,
         "orden_n2": 5,
         "orden_n3": 2,
-        "orden_n4": 1,
-        "orden_n5": 1,
+        "orden_n4": null,
+        "orden_n5": null,
         "categoria": "Servicios Profesionales",
         "subcategoria": "Actualización de Actividad y RTU",
         "tema": "Registro Tributario Unificado (RTU)",
@@ -31724,9 +31724,9 @@
     "perfilDestinatario": "Servicios Profesionales"
   },
   {
-    "id": "cnt-profesionales-4",
+    "id": "cnt-SAT-GES-0601",
     "codigo": "SAT-GES-0601",
-    "idOriginal": "profesionales-4",
+    "idOriginal": "SAT-GES-0601",
     "titulo": "Presentación de consultas técnico-tributarias vinculantes ante Asuntos Jurídicos",
     "nombreActual": "Hacer una consulta legal",
     "descripcion": "Presenta consultas técnico-jurídicas formales sobre la aplicación de normas tributarias ante la Intendencia de Asuntos Jurídicos para obtener criterio vinculante.",
@@ -31746,14 +31746,14 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "profesionales-4",
+        "tramiteId": "SAT-GES-0601",
         "segmentoId": "profesionales",
         "segmentoNombre": "Profesionales",
         "orden_n1": 3,
         "orden_n2": 5,
         "orden_n3": 3,
-        "orden_n4": 1,
-        "orden_n5": 1,
+        "orden_n4": null,
+        "orden_n5": null,
         "categoria": "Servicios Profesionales",
         "subcategoria": "Consultas Jurídico Tributarias",
         "tema": "Consultas Técnicas Vinculantes",
@@ -31771,9 +31771,9 @@
     "perfilDestinatario": "Servicios Profesionales"
   },
   {
-    "id": "cnt-profesionales-objeciones-asuntos-juridicos",
+    "id": "cnt-SAT-GES-0602",
     "codigo": "SAT-GES-0602",
-    "idOriginal": "profesionales-objeciones-asuntos-juridicos",
+    "idOriginal": "SAT-GES-0602",
     "titulo": "Recepción de propuestas y observaciones técnicas a criterios de Asuntos Jurídicos",
     "nombreActual": "Opinar sobre procedimientos de Asuntos Jurídicos",
     "descripcion": "Envía observaciones técnicas, sugerencias o cuestionamientos fundamentados a los proyectos de criterios institucionales publicados por la Intendencia de Asuntos Jurídicos.",
@@ -31793,14 +31793,14 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "profesionales-objeciones-asuntos-juridicos",
+        "tramiteId": "SAT-GES-0602",
         "segmentoId": "profesionales",
         "segmentoNombre": "Profesionales",
         "orden_n1": 3,
         "orden_n2": 5,
         "orden_n3": 3,
-        "orden_n4": 2,
-        "orden_n5": 1,
+        "orden_n4": null,
+        "orden_n5": null,
         "categoria": "Servicios Profesionales",
         "subcategoria": "Consultas Jurídico Tributarias",
         "tema": "Criterios y Doctrina Tributaria",
@@ -31818,9 +31818,9 @@
     "perfilDestinatario": "Abogados y Notarios"
   },
   {
-    "id": "cnt-profesionales-78",
+    "id": "cnt-SAT-GES-0603",
     "codigo": "SAT-GES-0603",
-    "idOriginal": "profesionales-78",
+    "idOriginal": "SAT-GES-0603",
     "titulo": "Documentación y herramientas del Programa de Cumplimiento Tributario Voluntario",
     "nombreActual": "Sistema Retenciones Web (ICT)",
     "descripcion": "Accede a las guías metodológicas y herramientas de autoevaluación fiscal del Programa de Cumplimiento Voluntario de la SAT para mitigar riesgos de auditoría.",
@@ -31840,14 +31840,14 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "profesionales-78",
+        "tramiteId": "SAT-GES-0603",
         "segmentoId": "profesionales",
         "segmentoNombre": "Profesionales",
         "orden_n1": 3,
         "orden_n2": 5,
         "orden_n3": 4,
-        "orden_n4": 1,
-        "orden_n5": 1,
+        "orden_n4": null,
+        "orden_n5": null,
         "categoria": "Servicios Profesionales",
         "subcategoria": "Sistemas de Retención y Cumplimiento",
         "tema": "Cumplimiento Voluntario",
@@ -31865,9 +31865,9 @@
     "perfilDestinatario": "Abogados y Notarios"
   },
   {
-    "id": "cnt-profesionales-45",
+    "id": "cnt-SAT-GES-0604",
     "codigo": "SAT-GES-0604",
-    "idOriginal": "profesionales-45",
+    "idOriginal": "SAT-GES-0604",
     "titulo": "Sistema de retenciones para servicios médicos y hospitalarios (Asiste Web)",
     "nombreActual": "Retenciones de hospitales (Asiste Hospitales Web)",
     "descripcion": "Opera el aplicativo Asiste Hospitales Web para gestionar y conciliar retenciones del ISR aplicables a servicios prestados por médicos en clínicas y sanatorios.",
@@ -31887,14 +31887,14 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "profesionales-45",
+        "tramiteId": "SAT-GES-0604",
         "segmentoId": "profesionales",
         "segmentoNombre": "Profesionales",
         "orden_n1": 3,
         "orden_n2": 5,
         "orden_n3": 4,
-        "orden_n4": 2,
-        "orden_n5": 1,
+        "orden_n4": null,
+        "orden_n5": null,
         "categoria": "Servicios Profesionales",
         "subcategoria": "Sistemas de Retención y Cumplimiento",
         "tema": "Retenciones Sector Salud",
