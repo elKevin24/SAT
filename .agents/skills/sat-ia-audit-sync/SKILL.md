@@ -151,24 +151,33 @@ python scripts/apply_comercio_exterior_audit.py
 * Sanear títulos con acrónimos crípticos.
 * Etiquetar correctamente las 12 brechas normativas (`esBrecha: true`).
 
-### Paso 3: Sincronización de Libros Excel Entregables
+### Paso 3: Protocolo Mandatorio de Validación y Búsqueda Activa de URLs
+*Antes de publicar cualquier lote de datos o actualizar entregables:*
+1. **Auditoría HTTP Masiva:** Ejecutar prueba automatizada de red (`HEAD`/`GET`) sobre cada URL del lote.
+2. **Detección de Fricciones:** Identificar cualquier código `404 Not Found`, enlace roto o redirección pasiva a la raíz (`https://portal.sat.gob.gt/`).
+3. **Protocolo de Rescate en el Portal:** Para cada URL con error o genérica, ejecutar búsqueda activa en el portal oficial (`site:portal.sat.gob.gt "[nombre del trámite / servicio]"`).
+4. **Verificación de Enlace Activo:** Confirmar que la ruta canónica encontrada devuelva `HTTP 200 OK` y corresponda a la ficha de requisitos, procedimiento o aplicativo en línea del trámite.
+5. **Inyección Canónica:** Sustituir la URL rota por la URL activa verificada en `allTramites.json`.
+
+### Paso 4: Sincronización de Libros Excel Entregables
 Reconstruir los libros Excel vivos utilizando `openpyxl`:
 ```powershell
 python scripts/build_final_excel_deliverable.py
 python scripts/build_mapa_y_descripciones_excel.py
 ```
 *Verificar que:*
+* Se emita la matriz oficial de **25 columnas (Opción A)** con `Orden Contenido` y códigos `SAT-GES-####`.
 * Las fórmulas `=COUNTA`, `=COUNTIF`, `=SUM` de la hoja `Resumen Arquitectura` operen sin errores `#REF!` o `#VALUE!`.
-* El conteo total de filas coincida exactamente con la longitud del JSON (718 registros).
+* El conteo total de filas coincida exactamente con la longitud del JSON.
 * Las fuentes clásicas en `docs/fuentes-datos/` no hayan sufrido alteración.
 
-### Paso 4: Actualización del Contrato de Datos (`src/data/categoryOrder.ts`)
+### Paso 5: Actualización del Contrato de Datos (`src/data/categoryOrder.ts`)
 Actualizar las constantes que rigen la unión entre UI y datos:
 1. `OFFICIAL_CATEGORY_ORDER.comercio_exterior`: Contener exactamente las 6 ramas oficiales.
 2. `SPECIFIC_SUBCATEGORY_ORDER`: Mapear las subcategorías oficiales para cada una de las 6 ramas.
 3. Asegurar que no queden referencias a las 12 categorías planas obsoletas.
 
-### Paso 5: Verificación Automatizada (Build y Tests)
+### Paso 6: Verificación Automatizada (Build y Tests)
 Ejecutar la suite completa de pruebas:
 ```powershell
 # 1. Compilación de producción
@@ -178,13 +187,13 @@ npm run build
 npx playwright test
 ```
 *Criterio de Aceptación:*
-* **19 de 19 tests aprobados (100%)**.
+* **20 de 20 tests aprobados (100%)**.
 * 0 violaciones WCAG 2.2 AA detectadas por axe-core en modales, páginas y flujos.
 * `order categorías: cada nombre oficial existe en el dataset` $\to$ APROBADO.
 * `order subcategorías: nombres oficiales existen y cubren categorías` $\to$ APROBADO.
-* `catalogoContenidosUnicos: 683 contenidos únicos desacoplados y suma exacta de 716 audiencias` $\to$ APROBADO.
+* `catalogoContenidosUnicos: 683 contenidos únicos desacoplados y suma exacta de audiencias` $\to$ APROBADO.
 
-### Paso 6: Actualización Documental en Markdown
+### Paso 7: Actualización Documental en Markdown
 Actualizar la documentación técnica para reflejar los cambios:
 * `docs/arquitectura-informacion/ESTRUCTURA_FINAL_CONTENIDO.md`
 * `docs/arquitectura-informacion/TAXONOMIA_Y_DIMENSIONES_PORTAL_SAT.md`
@@ -199,12 +208,12 @@ Actualizar la documentación técnica para reflejar los cambios:
 
 ## 4. Checklist Rápido de Calidad (DoD - Definition of Done)
 
-- [ ] **0 Duplicados** en IDs de trámites a lo largo de todo el catálogo.
-- [ ] **716 registros consolidados** (344 Contribuyentes, 246 Comercio Exterior, 79 Entes Exentos, 47 Profesionales).
-- [ ] **683 contenidos únicos NoSQL** generados con matriz de audiencias transversales y suma exacta de 716 proyecciones.
-- [ ] **6 ramas canónicas** en Comercio Exterior, sin categorías huérfanas.
-- [ ] **5 categorías saneadas** en Profesionales sin subcategorías genéricas.
+- [ ] **100% URLs Validadas (`HTTP 200 OK`)**: Cero errores 404 y cero URLs genéricas al Home.
+- [ ] **Códigos Canónicos `SAT-GES-####`**: Clave universal inyectada en Columna 2 y JSON, cero IDs viejos en producción.
+- [ ] **Gobernanza del Orden**: Cero números quemados en títulos de trámites y columnas `Orden N1..N5` + `Orden Contenido` activas.
+- [ ] **Ley de Miller ($7 \pm 2$) y Sub-densidad**: Cero carpetas con 1 o 2 trámites y cero listas planas mayores a 9 elementos.
+- [ ] **0 Duplicados**: Filas redundantes fusionadas formalmente.
 - [ ] **Fuentes históricas intactas** (`Detalle de Contenido...`, `Arbol_de_Navegacion...`, `Ruta de procesos...`).
 - [ ] **Libros Excel vivos recalculados** y sincronizados con `allTramites.json`.
 - [ ] **`npm run build`** finalizado con 0 errores de tipado o compilación.
-- [ ] **`npx playwright test`** pasando al 100% (19/19 pruebas).
+- [ ] **`npx playwright test`** pasando al 100% (20/20 pruebas en verde).
