@@ -28,6 +28,8 @@ docs/fuentes-datos/
 *Reflejan el estado de verdad (Single Source of Truth) del portal en producción y se sincronizan biunívocamente con `src/data/allTramites.json`:*
 * **`Estructura_Final_Contenido_Portal_SAT_Actualizado.xlsx`**:
   - **716 registros consolidados** (344 Contribuyentes, 246 Comercio Exterior, 79 Entes Exentos, 47 Profesionales).
+  - **Matriz de 25 Columnas Oficiales (Opción A):** Incorpora columnas explícitas de `Orden N1` a `Orden N5` intercaladas con `Nivel 1` a `Nivel 5`.
+  - **Identificador Canónico (Columna 2):** Gobernado por el estándar institucional inmutable **`SAT-GES-####`** (Gestiones Únicas), preservando los IDs de origen en trazabilidad forense (`codigos_legacy`).
   - Hoja `Resumen Arquitectura` con métricas y fórmulas directas.
   - Hoja `Matriz Maestra (716)` con la taxonomía multinivel, migas de pan y dimensiones ATO completas.
   - Hoja `Comercio Exterior (246)` con las 6 ramas oficiales y compactación N4/N5 saneada.

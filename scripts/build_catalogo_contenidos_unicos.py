@@ -41,9 +41,9 @@ for title_key, items in grupos_contenido.items():
         if it.get('rutasProceso') and not rep.get('rutasProceso'):
             rep = it
 
-    # Generar ID canónico único y código
+    # Generar ID canónico único y código oficial de gestión
     canonical_id = f"cnt-{rep.get('id')}"
-    codigo_str = f"SAT-CNT-{codigo_idx:04d}"
+    codigo_str = f"SAT-GES-{codigo_idx:04d}"
     codigo_idx += 1
 
     # Construir lista consolidada de audiencias (cada nodo de árbol donde se publica el contenido)

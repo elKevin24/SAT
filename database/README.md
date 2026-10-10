@@ -7,18 +7,21 @@ Este directorio contiene las bases de datos del catálogo maestro del Portal SAT
 
 ---
 
-## 1. Archivo NoSQL Documental: `sat_portal_nosql.json`
+## 1. Archivo NoSQL Documental: `database/gestiones.json` y `sat_portal_nosql.json`
 
-### Estructura de cada documento (683 contenidos únicos):
-Cada trámite, guía o servicio existe **una sola vez** como un documento autónomo. Las ramas o categorías donde se publica se definen en el array polijerárquico `audiencias`:
+### Estructura de cada documento (683 gestiones canónicas únicas):
+Cada trámite, guía o servicio existe **una sola vez** como una gestión autónoma. Las ramas o categorías donde se publica se definen en el array polijerárquico `ubicaciones` / `audiencias`:
+
+* **Código Oficial Inmutable:** `SAT-GES-####` (de `SAT-GES-0001` a `SAT-GES-0683`). Es el código canónico universal de la SAT que no cambia con el tiempo ni depende del segmento o árbol.
+* **Slug Semántico:** Identificador limpio para URLs amigables (ej. `actualizacion-datos-rtu-digital`).
+* **Códigos Legacy:** Array con los IDs antiguos de hojas Excel (`["contribuyentes-54"]`) preservados para trazabilidad histórica.
 
 ```json
 {
-  "id": "cnt-contribuyentes-54",
-  "codigo": "SAT-CNT-0042",
-  "idOriginal": "contribuyentes-54",
+  "_id": "actualizacion-datos-rtu-digital",
+  "codigo": "SAT-GES-0042",
+  "slug": "actualizacion-datos-rtu-digital",
   "titulo": "Actualización de Datos en el Registro Tributario Unificado (RTU)",
-  "nombreActual": "Actualización de Datos en el Registro Tributario Unificado (RTU)",
   "descripcion": "Requisitos y pasos para actualizar tu información personal, domicilio fiscal y actividad económica en el RTU Digital.",
   "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/",
   "tipoInteraccion": "servicio_transaccional",
@@ -34,6 +37,7 @@ Cada trámite, guía o servicio existe **una sola vez** como un documento autón
   "esBrecha": false,
   "esTransversal": false,
   "totalAudiencias": 1,
+  "codigos_legacy": ["contribuyentes-54"],
   "audiencias": [
     {
       "tramiteId": "contribuyentes-54",
@@ -55,7 +59,7 @@ Cada trámite, guía o servicio existe **una sola vez** como un documento autón
 
 ### Importación en MongoDB:
 ```bash
-mongoimport --db sat_portal --collection tramites --file database/sat_portal_nosql.json --jsonArray
+mongoimport --db sat_portal --collection gestiones --file database/gestiones.json --jsonArray
 ```
 
 ---

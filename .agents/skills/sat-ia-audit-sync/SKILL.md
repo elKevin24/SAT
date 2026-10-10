@@ -45,8 +45,13 @@ Cada trámite u objeto de contenido posee 4 dimensiones ortogonales:
 ### F. Gobernanza Documental Estricta
 * **Fuentes Históricas / Clásicas (Inalterables):** Se preservan intactas como testimonio de auditoría inicial (`Detalle de Contenido para Grupos de Interes.xlsx`, `Arbol_de_Navegacion_Portal_v5.xlsx`, `Ruta de procesos.xlsx`).
 * **Entregables Vivos / Oficiales (Sincronizados):** Se recalculan y mantienen en sincronía biunívoca con `src/data/allTramites.json`:
-  * `Estructura_Final_Contenido_Portal_SAT_Actualizado.xlsx` (Libro maestro con fórmulas dinámicas de resumen).
+  * `Estructura_Final_Contenido_Portal_SAT_Actualizado.xlsx` (Libro maestro con fórmulas dinámicas de resumen y matriz de 25 columnas).
   * `Mapa_de_Navegacion_y_Descripciones_Portal_SAT.xlsx` (Mapa antes/después y fichas en lenguaje ciudadano).
+
+### G. Estándar de Identificación Inmutable (`SAT-GES-####`)
+* Cada trámite, servicio o guía se gobierna por el código canónico universal **`SAT-GES-####`** (del `SAT-GES-0001` al `SAT-GES-0683`).
+* Se erradican los prefijos atados a hojas o segmentos (`contribuyentes-`, `comercio_exterior-`, `profesionales-`, `entes_exentos-`), trasladándolos al atributo de auditoría forense `codigos_legacy` / `idOriginal`.
+* El código **no se altera ante reestructuraciones de menú, cambios de nombre o asignación a múltiples audiencias (polijerarquía)**.
 
 ---
 

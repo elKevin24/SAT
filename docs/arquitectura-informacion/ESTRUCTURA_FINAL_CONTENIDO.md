@@ -140,18 +140,19 @@ src/data/allTramites.json (Single Source of Truth - 716 nodos de navegación)
 
 ---
 
-## 6. Catálogo NoSQL de Contenidos Únicos (Content Hub Desacoplado)
+## 6. Catálogo NoSQL de Gestiones y Contenidos Únicos (Content Hub Desacoplado)
 
-Para superar el modelo jerárquico rígido de "silos" donde el contenido queda atrapado exclusivamente dentro de un grupo, se implementó la arquitectura de **Catálogo Único de Contenido** (`src/data/catalogoContenidosUnicos.json` y `database/sat_portal_nosql.json`):
+Para superar el modelo jerárquico rígido de "silos" donde el contenido queda atrapado exclusivamente dentro de un grupo, se implementó la arquitectura de **Catálogo Único de Gestiones** (`database/gestiones.json`, `src/data/catalogoContenidosUnicos.json` y `database/sat_portal_nosql.json`):
 
-1. **683 Contenidos Únicos**:
-   - Cada servicio, guía o trámite web existe como una única entidad canónica identificada por un código único (`SAT-CNT-0001` a `SAT-CNT-0683`).
-   - Contiene sus atributos intrínsecos: `titulo`, `nombreActual`, `descripcion`, `url`, `tipoInteraccion`, `tipologiaContenido`, `plataformaSistema`, `canalAtencion`, `etapaAto`, `baseLegal` y `esBrecha`.
+1. **683 Gestiones Canónicas Únicas**:
+   - Cada servicio, trámite, guía o herramienta existe como una única entidad canónica identificada por un código institucional inmutable (**`SAT-GES-0001` a `SAT-GES-0683`**).
+   - **Inmutabilidad Garantizada:** Este código no cambia con el tiempo, no cambia si el trámite cambia de nombre comercial y no depende de la audiencia ni del árbol de navegación.
+   - Contiene sus atributos intrínsecos: `slug` semántico, `titulo`, `descripcion`, `url`, `tipoInteraccion`, `tipologiaContenido`, `plataformaSistema`, `canalAtencion`, `etapaAto`, `baseLegal`, `esBrecha` y `codigos_legacy` (trazabilidad de fuentes históricas).
 
-2. **Matriz de Audiencias Polijerárquica (`audiencias[]`)**:
-   - Cada contenido mantiene un array de audiencias donde se proyecta dentro del portal.
+2. **Matriz de Audiencias Polijerárquica (`audiencias[]` / `ubicaciones[]`)**:
+   - Cada gestión mantiene un array de audiencias o nodos donde se proyecta dentro del portal.
    - Cada audiencia incluye: `tramiteId` (nodo de navegación), `segmentoId`, `segmentoNombre`, `categoria`, `subcategoria`, `tema`, `subtema`, `actorEspecifico` y `migaBreadcrumb`.
-   - Se proveen arreglos optimizados de búsqueda: `segmentosAplicables[]` y `categoriasAplicables[]`.
+   - Se proveen arreglos optimizados de búsqueda: `segmentosAplicables[]`, `categoriasAplicables[]` y `familias_ids[]`.
 
 3. **Mapeo Biunívoco y Contenido Transversal**:
    - **18 contenidos transversales** son compartidos por múltiples ramas (p. ej. *Procedimientos administrativos de aduanas*, *Consulta de contribuyentes morosos*, *DUCA y Aduana sin papeles*).

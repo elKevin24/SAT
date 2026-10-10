@@ -45,22 +45,23 @@ Catálogo controlado de áreas temáticas. Cumple la regla de **cero acrónimos 
 
 ---
 
-## 4. Tabla: `tramites` (Entidad Central)
+## 4. Tabla: `tramites` / `gestiones` (Entidad Central)
 
-Contiene el inventario oficial de **676 trámites únicos**. Cada trámite existe exactamente una vez en esta tabla.
+Contiene el inventario oficial de **gestiones únicas** del Portal SAT. Cada gestión (trámite, guía, consulta o descarga) existe exactamente una vez en esta tabla.
 
 | Campo | Tipo | Nulo | Clave | Descripción |
 | :--- | :--- | :---: | :---: | :--- |
-| `id` | VARCHAR(100) | NO | PK | Identificador maestro único (ej. `contribuyentes-42`). |
-| `codigo` | VARCHAR(20) | NO | UK | Código institucional secuencial (`SAT-TR-0001` a `SAT-TR-0676`). |
-| `titulo` | VARCHAR(350) | NO | - | Título oficial del trámite en lenguaje ciudadano. |
+| `id` | VARCHAR(100) | NO | PK | Slug semántico neutral o identificador canónico inmutable (ej. `solvencia-fiscal-solicitud`). |
+| `codigo` | VARCHAR(20) | NO | UK | Código institucional inmutable (`SAT-GES-0001` a `SAT-GES-0683`). No cambia si el trámite cambia de categoría o nombre. |
+| `titulo` | VARCHAR(350) | NO | - | Título oficial de la gestión en lenguaje ciudadano. |
 | `categoria_id` | VARCHAR(100) | NO | FK | Referencia a `categorias_nivel_3(id)`. |
 | `macro_grupo_id` | VARCHAR(50) | NO | FK | Referencia a `macro_grupos(id)`. |
 | `etapa_ciclo_vida` | VARCHAR(100) | SÍ | - | Etapa del ciclo de vida del contribuyente (Inscripción, Operación, Cierre). |
 | `canal_atencion` | VARCHAR(50) | SÍ | - | Canal de prestación: En Línea, Presencial o Mixto. |
-| `descripcion` | TEXT | NO | - | Descripción funcional del trámite. |
+| `descripcion` | TEXT | NO | - | Descripción funcional y operativa de la gestión. |
 | `base_legal` | TEXT | NO | - | Fundamento jurídico oficial en el Código Tributario y leyes conexas. |
 | `url_oficial` | VARCHAR(500) | SÍ | - | Enlace directo al servicio en portal SAT, Declaraguate o Agencia Virtual. |
+| `codigos_legacy` | TEXT / JSON | SÍ | - | Array de IDs heredados de fuentes históricas (ej. `["comercio_exterior-17"]`). |
 
 ---
 
