@@ -21985,10 +21985,10 @@
     ]
   },
   {
-    "id": "cnt-comercio_exterior-83",
+    "id": "cnt-SAT-GES-0418",
     "codigo": "SAT-GES-0418",
-    "idOriginal": "comercio_exterior-83",
-    "titulo": "Inscripción y Habilitación de Auxiliares de la Función Pública Aduanera",
+    "idOriginal": "SAT-GES-0418",
+    "titulo": "Inscripción y Habilitación de Auxiliares de la Función Pública (Agente Aduanero)",
     "nombreActual": "1. Auxiliares de la función pública aduanera",
     "descripcion": "Guía normativa y procedimental para la inscripción, autorización inicial de operaciones y registro en el padrón aduanero de la SAT.",
     "url": "https://portal.sat.gob.gt/portal/auxiliares-de-la-funcion-publica/",
@@ -22007,20 +22007,20 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "comercio_exterior-83",
+        "tramiteId": "SAT-GES-0418",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 1,
-        "orden_n4": 1,
+        "orden_n4": null,
         "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Agentes Aduaneros",
         "tema": "",
         "subtema": "",
         "actorEspecifico": "—",
-        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Agentes Aduaneros > Inscripción y Habilitación de Auxiliares de la Función Pública Aduanera"
+        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Agentes Aduaneros > Inscripción y Habilitación de Auxiliares de la Función Pública (Agente Aduanero)"
       }
     ],
     "segmentosAplicables": [
@@ -22040,10 +22040,10 @@
     ]
   },
   {
-    "id": "cnt-comercio_exterior-84",
+    "id": "cnt-SAT-GES-0419",
     "codigo": "SAT-GES-0419",
-    "idOriginal": "comercio_exterior-84",
-    "titulo": "Renovación Anual de Operación de Auxiliares Aduaneros",
+    "idOriginal": "SAT-GES-0419",
+    "titulo": "Renovación Anual de Operación de Auxiliares de la Función Pública y Garantía de Operación",
     "nombreActual": "2. Requisitos para la Renovación de Operación de Auxiliares de la Función Publica",
     "descripcion": "Gestión en línea de prórroga y renovación anual de la fianza y autorización para operar como auxiliar aduanero conforme al CAUCA y RECAUCA.",
     "url": "https://portal.sat.gob.gt/portal/requisitos-de-aduanas/",
@@ -22062,20 +22062,20 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "comercio_exterior-84",
+        "tramiteId": "SAT-GES-0419",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 1,
-        "orden_n4": 2,
+        "orden_n4": null,
         "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Agentes Aduaneros",
         "tema": "",
         "subtema": "",
         "actorEspecifico": "—",
-        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Agentes Aduaneros > Renovación Anual de Operación de Auxiliares Aduaneros"
+        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Agentes Aduaneros > Renovación Anual de Operación de Auxiliares de la Función Pública y Garantía de Operación"
       }
     ],
     "segmentosAplicables": [
@@ -22095,10 +22095,10 @@
     ]
   },
   {
-    "id": "cnt-comercio_exterior-82",
+    "id": "cnt-SAT-GES-0420",
     "codigo": "SAT-GES-0420",
-    "idOriginal": "comercio_exterior-82",
-    "titulo": "Acreditación y Carné de Identificación para AFPA",
+    "idOriginal": "SAT-GES-0420",
+    "titulo": "Acreditación y Carné de Identificación para Agente Aduanero y Personal Subalterno",
     "nombreActual": "Auxiliares de la Función Pública Aduanera",
     "descripcion": "Requisitos, directrices de emisión de carné de identificación oficial y manual para registro, consulta y actualización de auxiliares aduaneros.",
     "url": "https://portal.sat.gob.gt/portal/procedimientos-aduanas/#1555105635499-a4507e58-10e9",
@@ -22117,20 +22117,20 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "comercio_exterior-82",
+        "tramiteId": "SAT-GES-0420",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 1,
-        "orden_n4": 3,
+        "orden_n4": null,
         "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Agentes Aduaneros",
         "tema": "",
         "subtema": "",
         "actorEspecifico": "—",
-        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Agentes Aduaneros > Acreditación y Carné de Identificación para AFPA"
+        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Agentes Aduaneros > Acreditación y Carné de Identificación para Agente Aduanero y Personal Subalterno"
       }
     ],
     "segmentosAplicables": [
@@ -22150,10 +22150,10 @@
     ]
   },
   {
-    "id": "cnt-comercio_exterior-97",
+    "id": "cnt-SAT-GES-0421",
     "codigo": "SAT-GES-0421",
-    "idOriginal": "comercio_exterior-97",
-    "titulo": "Instalador y Soporte de Firma Digital ActiveX PKI/DUA",
+    "idOriginal": "SAT-GES-0421",
+    "titulo": "Instalador y Soporte de Firma Digital ActiveX PKI / DUA",
     "nombreActual": "Componente ActiveX PKI/DUA",
     "descripcion": "Descarga oficial y soporte técnico del componente ActiveX PKI necesario para firmar digitalmente y transmitir la declaración aduanera (DUCA).",
     "url": "https://portal.sat.gob.gt/portal/componente-activex-pki-dua/",
@@ -22172,20 +22172,20 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "comercio_exterior-97",
+        "tramiteId": "SAT-GES-0421",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 1,
-        "orden_n4": 4,
+        "orden_n4": null,
         "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Agentes Aduaneros",
         "tema": "",
         "subtema": "",
         "actorEspecifico": "—",
-        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Agentes Aduaneros > Instalador y Soporte de Firma Digital ActiveX PKI/DUA"
+        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Agentes Aduaneros > Instalador y Soporte de Firma Digital ActiveX PKI / DUA"
       }
     ],
     "segmentosAplicables": [
@@ -22211,9 +22211,9 @@
     ]
   },
   {
-    "id": "cnt-comercio_exterior-143",
+    "id": "cnt-SAT-GES-0422",
     "codigo": "SAT-GES-0422",
-    "idOriginal": "comercio_exterior-143",
+    "idOriginal": "SAT-GES-0422",
     "titulo": "Consulta del Estado de Expedientes en Gestión Aduanera",
     "nombreActual": "Consultar el estado de un expediente aduanero",
     "descripcion": "Servicio web para consultar el avance, estado procesal y unidad responsable de expedientes administrativos en la Intendencia de Aduanas.",
@@ -22233,13 +22233,13 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "comercio_exterior-143",
+        "tramiteId": "SAT-GES-0422",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 1,
-        "orden_n4": 5,
+        "orden_n4": null,
         "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Agentes Aduaneros",
@@ -22266,10 +22266,10 @@
     ]
   },
   {
-    "id": "cnt-comercio_exterior-100",
+    "id": "cnt-SAT-GES-0423",
     "codigo": "SAT-GES-0423",
-    "idOriginal": "comercio_exterior-100",
-    "titulo": "Especificaciones de Videovigilancia y CCTV en Recintos Aduaneros",
+    "idOriginal": "SAT-GES-0423",
+    "titulo": "Especificaciones de Videovigilancia y CCTV para Recintos y Operadores Aduaneros",
     "nombreActual": "Videovigilancia Pedro de Alvarado – La Hachadura",
     "descripcion": "Guía técnica y normativa para la interconexión y visualización remota de cámaras de seguridad en puestos fronterizos y depósitos fiscales.",
     "url": "https://portal.sat.gob.gt/portal/programa-miad/sistemas-de-video-vigilancia-cctv/",
@@ -22288,20 +22288,20 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "comercio_exterior-100",
+        "tramiteId": "SAT-GES-0423",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 1,
-        "orden_n4": 6,
+        "orden_n4": null,
         "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Agentes Aduaneros",
         "tema": "",
         "subtema": "",
         "actorEspecifico": "—",
-        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Agentes Aduaneros > Especificaciones de Videovigilancia y CCTV en Recintos Aduaneros"
+        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Agentes Aduaneros > Especificaciones de Videovigilancia y CCTV para Recintos y Operadores Aduaneros"
       }
     ],
     "segmentosAplicables": [
@@ -22313,9 +22313,9 @@
     "perfilDestinatario": "Agentes, Transportistas y Operadores de Recinto"
   },
   {
-    "id": "cnt-comercio_exterior-95",
+    "id": "cnt-SAT-GES-0424",
     "codigo": "SAT-GES-0424",
-    "idOriginal": "comercio_exterior-95",
+    "idOriginal": "SAT-GES-0424",
     "titulo": "Curso Virtual: Generalidades de la Declaración Única Centroamericana (DUCA)",
     "nombreActual": "Curso: generalidades de la DUCA",
     "descripcion": "Capacitación oficial interactiva sobre llenado, transmisión y soporte legal de la DUCA (modalidades D, F y T) para el despacho de mercancías.",
@@ -22335,13 +22335,13 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "comercio_exterior-95",
+        "tramiteId": "SAT-GES-0424",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 1,
-        "orden_n4": 7,
+        "orden_n4": null,
         "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Agentes Aduaneros",
@@ -22380,10 +22380,10 @@
     ]
   },
   {
-    "id": "cnt-comercio_exterior-apod-consultas-de-aduanas-rampa-de-",
+    "id": "cnt-SAT-GES-0425",
     "codigo": "SAT-GES-0425",
-    "idOriginal": "comercio_exterior-apod-consultas-de-aduanas-rampa-de-",
-    "titulo": "Consultas de aduanas (Rampa de revisión, revisores, retención/liberación, arancel)",
+    "idOriginal": "SAT-GES-0425",
+    "titulo": "Consultas de aduanas (Rampa de revisión, selectivo y estados)",
     "nombreActual": "Consultas de aduanas (Rampa de revisión, revisores, retención/liberación, arancel)",
     "descripcion": "Consultar en tiempo real el estatus de rampa de revisión, revisores asignados, retención y levante de mercancías para despachos aduaneros.",
     "url": "https://portal.sat.gob.gt/portal/consultas-aduanas/",
@@ -22402,20 +22402,20 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "comercio_exterior-apod-consultas-de-aduanas-rampa-de-",
+        "tramiteId": "SAT-GES-0425",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 2,
-        "orden_n4": 1,
-        "orden_n5": 1,
+        "orden_n4": 2,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Apoderados Especiales Aduaneros",
         "tema": "",
         "subtema": "",
         "actorEspecifico": "—",
-        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Apoderados Especiales Aduaneros > Consultas de aduanas (Rampa de revisión, revisores, retención/liberación, arancel)"
+        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Apoderados Especiales Aduaneros > Operaciones de Despacho y Consultas > Consultas de aduanas (Rampa de revisión, selectivo y estados)"
       }
     ],
     "segmentosAplicables": [
@@ -22449,30 +22449,30 @@
     "totalAudiencias": 5,
     "audiencias": [
       {
-        "tramiteId": "comercio_exterior-apod-requisitos-para-consulta-de-ex",
+        "tramiteId": "SAT-GES-0426",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 2,
-        "orden_n4": 1,
-        "orden_n5": 2,
+        "orden_n4": 2,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Apoderados Especiales Aduaneros",
         "tema": "",
         "subtema": "",
         "actorEspecifico": "—",
-        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Apoderados Especiales Aduaneros > Requisitos para consulta de expedientes de gestión aduanera"
+        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Apoderados Especiales Aduaneros > Operaciones de Despacho y Consultas > Requisitos para consulta de expedientes de gestión aduanera"
       },
       {
-        "tramiteId": "comercio_exterior-agd-requisitos-para-consulta-de-ex",
+        "tramiteId": "SAT-GES-0426-agd",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 3,
-        "orden_n4": 1,
-        "orden_n5": 14,
+        "orden_n4": 2,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Depósitos Aduaneros",
         "tema": "Almacenes Generales de Depósito (AGD)",
@@ -22481,14 +22481,14 @@
         "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Depósitos Aduaneros > Almacenes Generales de Depósito (AGD) > Requisitos para consulta de expedientes de gestión aduanera"
       },
       {
-        "tramiteId": "comercio_exterior-dat-requisitos-para-consulta-de-ex",
+        "tramiteId": "SAT-GES-0426-dat",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 3,
         "orden_n4": 3,
-        "orden_n5": 14,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Depósitos Aduaneros",
         "tema": "Depósitos Aduaneros Temporales (DAT)",
@@ -22539,10 +22539,10 @@
     "perfilDestinatario": ""
   },
   {
-    "id": "cnt-comercio_exterior-apod-uni-n-aduanera-procedimientos-",
+    "id": "cnt-SAT-GES-0427",
     "codigo": "SAT-GES-0427",
-    "idOriginal": "comercio_exterior-apod-uni-n-aduanera-procedimientos-",
-    "titulo": "Unión aduanera (Procedimientos y resoluciones)",
+    "idOriginal": "SAT-GES-0427",
+    "titulo": "Unión aduanera (Procedimientos y resoluciones de facilitación)",
     "nombreActual": "Unión aduanera (Procedimientos y resoluciones)",
     "descripcion": "Consultar resoluciones, directrices operativas y procedimientos de paso ágil en puestos fronterizos integrados de la Unión Aduanera.",
     "url": "https://portal.sat.gob.gt/portal/union-aduanera/",
@@ -22561,20 +22561,20 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "comercio_exterior-apod-uni-n-aduanera-procedimientos-",
+        "tramiteId": "SAT-GES-0427",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 2,
-        "orden_n4": 1,
-        "orden_n5": 3,
+        "orden_n4": 3,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Apoderados Especiales Aduaneros",
         "tema": "",
         "subtema": "",
         "actorEspecifico": "—",
-        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Apoderados Especiales Aduaneros > Unión aduanera (Procedimientos y resoluciones)"
+        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Apoderados Especiales Aduaneros > Procedimientos, Normativa y Capacitación > Unión aduanera (Procedimientos y resoluciones de facilitación)"
       }
     ],
     "segmentosAplicables": [
@@ -22594,9 +22594,9 @@
     ]
   },
   {
-    "id": "cnt-comercio_exterior-apod-capacitaciones-para-auxiliares",
+    "id": "cnt-SAT-GES-0428",
     "codigo": "SAT-GES-0428",
-    "idOriginal": "comercio_exterior-apod-capacitaciones-para-auxiliares",
+    "idOriginal": "SAT-GES-0428",
     "titulo": "Capacitaciones para auxiliares de la función pública",
     "nombreActual": "Capacitaciones para auxiliares de la función pública",
     "descripcion": "Inscripción y acceso a programas de capacitación técnica oficial sobre procedimientos aduaneros para auxiliares y apoderados.",
@@ -22616,30 +22616,30 @@
     "totalAudiencias": 3,
     "audiencias": [
       {
-        "tramiteId": "comercio_exterior-apod-capacitaciones-para-auxiliares",
+        "tramiteId": "SAT-GES-0428",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 2,
-        "orden_n4": 1,
-        "orden_n5": 4,
+        "orden_n4": 3,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Apoderados Especiales Aduaneros",
         "tema": "",
         "subtema": "",
         "actorEspecifico": "—",
-        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Apoderados Especiales Aduaneros > Capacitaciones para auxiliares de la función pública"
+        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Apoderados Especiales Aduaneros > Procedimientos, Normativa y Capacitación > Capacitaciones para auxiliares de la función pública"
       },
       {
-        "tramiteId": "comercio_exterior-agd-capacitaciones-para-auxiliares",
+        "tramiteId": "SAT-GES-0428-agd",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 3,
-        "orden_n4": 1,
-        "orden_n5": 2,
+        "orden_n4": 2,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Depósitos Aduaneros",
         "tema": "Almacenes Generales de Depósito (AGD)",
@@ -22648,14 +22648,14 @@
         "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Depósitos Aduaneros > Almacenes Generales de Depósito (AGD) > Capacitaciones para auxiliares de la función pública"
       },
       {
-        "tramiteId": "comercio_exterior-dat-capacitaciones-para-auxiliares",
+        "tramiteId": "SAT-GES-0428-dat",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 3,
         "orden_n4": 3,
-        "orden_n5": 2,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Depósitos Aduaneros",
         "tema": "Depósitos Aduaneros Temporales (DAT)",
@@ -22673,10 +22673,10 @@
     "perfilDestinatario": ""
   },
   {
-    "id": "cnt-comercio_exterior-apod-legislaci-n-aduanera-bibliotec",
+    "id": "cnt-SAT-GES-0429",
     "codigo": "SAT-GES-0429",
-    "idOriginal": "comercio_exterior-apod-legislaci-n-aduanera-bibliotec",
-    "titulo": "Legislación aduanera (Biblioteca en línea SAT)",
+    "idOriginal": "SAT-GES-0429",
+    "titulo": "Legislación aduanera (Biblioteca en línea, CAUCA y RECAUCA)",
     "nombreActual": "Legislación aduanera (Biblioteca en línea SAT)",
     "descripcion": "Compendio digital de leyes, reglamentos (CAUCA, RECAUCA, Ley de Aduanas) y resoluciones administrativas aplicables a apoderados especiales.",
     "url": "https://portal.sat.gob.gt/portal/biblioteca-en-linea-sat/legislacion-aduanera/",
@@ -22695,20 +22695,20 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "comercio_exterior-apod-legislaci-n-aduanera-bibliotec",
+        "tramiteId": "SAT-GES-0429",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 2,
-        "orden_n4": 1,
-        "orden_n5": 5,
+        "orden_n4": 3,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Apoderados Especiales Aduaneros",
         "tema": "",
         "subtema": "",
         "actorEspecifico": "—",
-        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Apoderados Especiales Aduaneros > Legislación aduanera (Biblioteca en línea SAT)"
+        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Apoderados Especiales Aduaneros > Procedimientos, Normativa y Capacitación > Legislación aduanera (Biblioteca en línea, CAUCA y RECAUCA)"
       }
     ],
     "segmentosAplicables": [
@@ -22728,9 +22728,9 @@
     ]
   },
   {
-    "id": "cnt-comercio_exterior-dat-preguntas-frecuentes-sobre-tem",
+    "id": "cnt-SAT-GES-0430-dat",
     "codigo": "SAT-GES-0430",
-    "idOriginal": "comercio_exterior-dat-preguntas-frecuentes-sobre-tem",
+    "idOriginal": "SAT-GES-0430-dat",
     "titulo": "Preguntas frecuentes sobre temas aduaneros",
     "nombreActual": "Preguntas frecuentes sobre temas aduaneros",
     "descripcion": "Respuestas a consultas frecuentes sobre manejo de carga, plazos de permanencia temporal y levante de mercancías en recintos.",
@@ -22750,30 +22750,30 @@
     "totalAudiencias": 4,
     "audiencias": [
       {
-        "tramiteId": "comercio_exterior-apod-preguntas-frecuentes-sobre-tem",
+        "tramiteId": "SAT-GES-0430",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 2,
-        "orden_n4": 1,
-        "orden_n5": 6,
+        "orden_n4": 3,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Apoderados Especiales Aduaneros",
         "tema": "",
         "subtema": "",
         "actorEspecifico": "—",
-        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Apoderados Especiales Aduaneros > Preguntas frecuentes sobre temas aduaneros"
+        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Apoderados Especiales Aduaneros > Procedimientos, Normativa y Capacitación > Preguntas frecuentes sobre temas aduaneros"
       },
       {
-        "tramiteId": "comercio_exterior-agd-preguntas-frecuentes-sobre-tem",
+        "tramiteId": "SAT-GES-0430-agd",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 3,
-        "orden_n4": 1,
-        "orden_n5": 7,
+        "orden_n4": 2,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Depósitos Aduaneros",
         "tema": "Almacenes Generales de Depósito (AGD)",
@@ -22782,14 +22782,14 @@
         "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Depósitos Aduaneros > Almacenes Generales de Depósito (AGD) > Preguntas frecuentes sobre temas aduaneros"
       },
       {
-        "tramiteId": "comercio_exterior-dat-preguntas-frecuentes-sobre-tem",
+        "tramiteId": "SAT-GES-0430-dat",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 3,
         "orden_n4": 3,
-        "orden_n5": 8,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Depósitos Aduaneros",
         "tema": "Depósitos Aduaneros Temporales (DAT)",
@@ -22846,30 +22846,30 @@
     "totalAudiencias": 5,
     "audiencias": [
       {
-        "tramiteId": "comercio_exterior-apod-procedimientos-administrativos",
+        "tramiteId": "SAT-GES-0431",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 2,
-        "orden_n4": 1,
-        "orden_n5": 7,
+        "orden_n4": 3,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Apoderados Especiales Aduaneros",
         "tema": "",
         "subtema": "",
         "actorEspecifico": "—",
-        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Apoderados Especiales Aduaneros > Procedimientos administrativos de aduanas (Sanciones y recursos)"
+        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Apoderados Especiales Aduaneros > Procedimientos, Normativa y Capacitación > Procedimientos administrativos de aduanas (Sanciones y recursos)"
       },
       {
-        "tramiteId": "comercio_exterior-agd-procedimientos-administrativos",
+        "tramiteId": "SAT-GES-0431-agd",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 3,
-        "orden_n4": 1,
-        "orden_n5": 8,
+        "orden_n4": 2,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Depósitos Aduaneros",
         "tema": "Almacenes Generales de Depósito (AGD)",
@@ -22878,14 +22878,14 @@
         "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Depósitos Aduaneros > Almacenes Generales de Depósito (AGD) > Procedimientos administrativos de aduanas (Sanciones y recursos)"
       },
       {
-        "tramiteId": "comercio_exterior-dat-procedimientos-administrativos",
+        "tramiteId": "SAT-GES-0431-dat",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 3,
         "orden_n4": 3,
-        "orden_n5": 9,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Depósitos Aduaneros",
         "tema": "Depósitos Aduaneros Temporales (DAT)",
@@ -22936,9 +22936,9 @@
     "perfilDestinatario": ""
   },
   {
-    "id": "cnt-comercio_exterior-apod-procedimientos-instructivos-ma",
+    "id": "cnt-SAT-GES-0432",
     "codigo": "SAT-GES-0432",
-    "idOriginal": "comercio_exterior-apod-procedimientos-instructivos-ma",
+    "idOriginal": "SAT-GES-0432",
     "titulo": "Procedimientos, instructivos, manuales y guías para gestiones aduaneras",
     "nombreActual": "Procedimientos, instructivos, manuales y guías para gestiones aduaneras",
     "descripcion": "Manuales operativos y guías técnicas para el despacho de mercancías, llenado de formatos y gestión de apoderados.",
@@ -22958,20 +22958,20 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "comercio_exterior-apod-procedimientos-instructivos-ma",
+        "tramiteId": "SAT-GES-0432",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 2,
-        "orden_n4": 1,
-        "orden_n5": 8,
+        "orden_n4": 3,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Apoderados Especiales Aduaneros",
         "tema": "",
         "subtema": "",
         "actorEspecifico": "—",
-        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Apoderados Especiales Aduaneros > Procedimientos, instructivos, manuales y guías para gestiones aduaneras"
+        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Apoderados Especiales Aduaneros > Procedimientos, Normativa y Capacitación > Procedimientos, instructivos, manuales y guías para gestiones aduaneras"
       }
     ],
     "segmentosAplicables": [
@@ -22997,9 +22997,9 @@
     ]
   },
   {
-    "id": "cnt-comercio_exterior-apod-declaraci-n-anticipada",
+    "id": "cnt-SAT-GES-0433",
     "codigo": "SAT-GES-0433",
-    "idOriginal": "comercio_exterior-apod-declaraci-n-anticipada",
+    "idOriginal": "SAT-GES-0433",
     "titulo": "Declaración anticipada",
     "nombreActual": "Declaración anticipada",
     "descripcion": "Transmitir y registrar la declaración aduanera antes del arribo del medio de transporte para agilizar el despacho y levante de mercancías.",
@@ -23019,20 +23019,20 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "comercio_exterior-apod-declaraci-n-anticipada",
+        "tramiteId": "SAT-GES-0433",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 2,
-        "orden_n4": 1,
-        "orden_n5": 9,
+        "orden_n4": 2,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Apoderados Especiales Aduaneros",
         "tema": "",
         "subtema": "",
         "actorEspecifico": "—",
-        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Apoderados Especiales Aduaneros > Declaración anticipada"
+        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Apoderados Especiales Aduaneros > Operaciones de Despacho y Consultas > Declaración anticipada"
       }
     ],
     "segmentosAplicables": [
@@ -23052,9 +23052,9 @@
     ]
   },
   {
-    "id": "cnt-comercio_exterior-apod-declaraci-n-de-mercanc-as-duca",
+    "id": "cnt-SAT-GES-0434",
     "codigo": "SAT-GES-0434",
-    "idOriginal": "comercio_exterior-apod-declaraci-n-de-mercanc-as-duca",
+    "idOriginal": "SAT-GES-0434",
     "titulo": "Declaración de mercancías (DUCA y Aduana sin papeles)",
     "nombreActual": "Declaración de mercancías (DUCA y Aduana sin papeles)",
     "descripcion": "Directrices técnicas y soporte normativo para la elaboración, firma electrónica y transmisión de la Declaración Única Centroamericana (DUCA).",
@@ -23074,30 +23074,30 @@
     "totalAudiencias": 3,
     "audiencias": [
       {
-        "tramiteId": "comercio_exterior-apod-declaraci-n-de-mercanc-as-duca",
+        "tramiteId": "SAT-GES-0434",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 2,
-        "orden_n4": 1,
-        "orden_n5": 10,
+        "orden_n4": 2,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Apoderados Especiales Aduaneros",
         "tema": "",
         "subtema": "",
         "actorEspecifico": "—",
-        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Apoderados Especiales Aduaneros > Declaración de mercancías (DUCA y Aduana sin papeles)"
+        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Apoderados Especiales Aduaneros > Operaciones de Despacho y Consultas > Declaración de mercancías (DUCA y Aduana sin papeles)"
       },
       {
-        "tramiteId": "comercio_exterior-agd-declaraci-n-de-mercanc-as-duca",
+        "tramiteId": "SAT-GES-0434-agd",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 3,
-        "orden_n4": 1,
-        "orden_n5": 5,
+        "orden_n4": 2,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Depósitos Aduaneros",
         "tema": "Almacenes Generales de Depósito (AGD)",
@@ -23106,14 +23106,14 @@
         "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Depósitos Aduaneros > Almacenes Generales de Depósito (AGD) > Declaración de mercancías (DUCA y aduana sin papeles)"
       },
       {
-        "tramiteId": "comercio_exterior-dat-declaraci-n-de-mercanc-as-duca",
+        "tramiteId": "SAT-GES-0434-dat",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 3,
         "orden_n4": 3,
-        "orden_n5": 5,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Depósitos Aduaneros",
         "tema": "Depósitos Aduaneros Temporales (DAT)",
@@ -23139,9 +23139,9 @@
     ]
   },
   {
-    "id": "cnt-comercio_exterior-apod-sistema-de-franquicias-electr-",
+    "id": "cnt-SAT-GES-0435",
     "codigo": "SAT-GES-0435",
-    "idOriginal": "comercio_exterior-apod-sistema-de-franquicias-electr-",
+    "idOriginal": "SAT-GES-0435",
     "titulo": "Sistema de franquicias electrónicas",
     "nombreActual": "Sistema de franquicias electrónicas",
     "descripcion": "Plataforma web para gestionar, registrar y consultar la aplicación de franquicias y exenciones arancelarias autorizadas.",
@@ -23161,20 +23161,20 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "comercio_exterior-apod-sistema-de-franquicias-electr-",
+        "tramiteId": "SAT-GES-0435",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 2,
-        "orden_n4": 1,
-        "orden_n5": 11,
+        "orden_n4": 2,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Apoderados Especiales Aduaneros",
         "tema": "",
         "subtema": "",
         "actorEspecifico": "—",
-        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Apoderados Especiales Aduaneros > Sistema de franquicias electrónicas"
+        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Apoderados Especiales Aduaneros > Operaciones de Despacho y Consultas > Sistema de franquicias electrónicas"
       }
     ],
     "segmentosAplicables": [
@@ -23206,10 +23206,10 @@
     ]
   },
   {
-    "id": "cnt-comercio_exterior-apod-autorizaci-n-inicial-y-registr",
+    "id": "cnt-SAT-GES-0436",
     "codigo": "SAT-GES-0436",
-    "idOriginal": "comercio_exterior-apod-autorizaci-n-inicial-y-registr",
-    "titulo": "Autorización inicial y registro de mandato de apoderado especial",
+    "idOriginal": "SAT-GES-0436",
+    "titulo": "Autorización inicial y registro de mandato para apoderados especiales",
     "nombreActual": "[Propuesta brecha] Autorización inicial y registro de mandato de apoderado especial",
     "descripcion": "Procedimiento normativo propuesto para registrar mandatos especiales aduaneros, habilitar firma autorizada y emitir acreditación ante SAT.",
     "url": "https://portal.sat.gob.gt/portal/requisitos-de-aduanas/",
@@ -23228,20 +23228,20 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "comercio_exterior-apod-autorizaci-n-inicial-y-registr",
+        "tramiteId": "SAT-GES-0436",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 2,
         "orden_n4": 1,
-        "orden_n5": 12,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Apoderados Especiales Aduaneros",
         "tema": "",
         "subtema": "",
         "actorEspecifico": "—",
-        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Apoderados Especiales Aduaneros > [Propuesta brecha] Autorización inicial y registro de mandato de apoderado especial"
+        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Apoderados Especiales Aduaneros > Acreditación, Garantías y Habilitación > Autorización inicial y registro de mandato para apoderados especiales"
       }
     ],
     "segmentosAplicables": [
@@ -23261,9 +23261,9 @@
     ]
   },
   {
-    "id": "cnt-comercio_exterior-apod-auxiliares-de-la-funci-n-p-bli",
+    "id": "cnt-SAT-GES-0437",
     "codigo": "SAT-GES-0437",
-    "idOriginal": "comercio_exterior-apod-auxiliares-de-la-funci-n-p-bli",
+    "idOriginal": "SAT-GES-0437",
     "titulo": "Auxiliares de la función pública aduanera (Carné, componente ActiveX PKI/DUA)",
     "nombreActual": "Auxiliares de la función pública aduanera (Carné, componente ActiveX PKI/DUA)",
     "descripcion": "Directrices para la obtención del carné de identificación oficial y soporte para la instalación de firma digital ActiveX PKI para DUCA.",
@@ -23283,30 +23283,30 @@
     "totalAudiencias": 3,
     "audiencias": [
       {
-        "tramiteId": "comercio_exterior-apod-auxiliares-de-la-funci-n-p-bli",
+        "tramiteId": "SAT-GES-0437",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 2,
         "orden_n4": 1,
-        "orden_n5": 13,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Apoderados Especiales Aduaneros",
         "tema": "",
         "subtema": "",
         "actorEspecifico": "—",
-        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Apoderados Especiales Aduaneros > Auxiliares de la función pública aduanera (Carné, componente ActiveX PKI/DUA)"
+        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Apoderados Especiales Aduaneros > Acreditación, Garantías y Habilitación > Auxiliares de la función pública aduanera (Carné, componente ActiveX PKI/DUA)"
       },
       {
-        "tramiteId": "comercio_exterior-agd-auxiliares-de-la-funci-n-p-bli",
+        "tramiteId": "SAT-GES-0437-agd",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 3,
-        "orden_n4": 1,
-        "orden_n5": 1,
+        "orden_n4": 2,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Depósitos Aduaneros",
         "tema": "Almacenes Generales de Depósito (AGD)",
@@ -23315,14 +23315,14 @@
         "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Depósitos Aduaneros > Almacenes Generales de Depósito (AGD) > Auxiliares de la función pública aduanera (Carné, componente ActiveX PKI/DUA)"
       },
       {
-        "tramiteId": "comercio_exterior-dat-auxiliares-de-la-funci-n-p-bli",
+        "tramiteId": "SAT-GES-0437-dat",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 3,
         "orden_n4": 3,
-        "orden_n5": 1,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Depósitos Aduaneros",
         "tema": "Depósitos Aduaneros Temporales (DAT)",
@@ -23340,10 +23340,10 @@
     "perfilDestinatario": ""
   },
   {
-    "id": "cnt-comercio_exterior-apod-recepci-n-de-seguro-de-cauci-n",
+    "id": "cnt-SAT-GES-0438",
     "codigo": "SAT-GES-0438",
-    "idOriginal": "comercio_exterior-apod-recepci-n-de-seguro-de-cauci-n",
-    "titulo": "Recepción de seguro de caución importación y admisión temporal",
+    "idOriginal": "SAT-GES-0438",
+    "titulo": "Recepción de seguro de caución importaciones y cauciones aduaneras",
     "nombreActual": "Recepción de seguro de caución importación y admisión temporal",
     "descripcion": "Requisitos y entrega de pólizas de seguro de caución para garantizar obligaciones aduaneras en importaciones y admisiones temporales.",
     "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/recepcion-de-seguro-de-caucion-importacion-y-admision-temporal/",
@@ -23362,20 +23362,20 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "comercio_exterior-apod-recepci-n-de-seguro-de-cauci-n",
+        "tramiteId": "SAT-GES-0438",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 2,
         "orden_n4": 1,
-        "orden_n5": 14,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Apoderados Especiales Aduaneros",
         "tema": "",
         "subtema": "",
         "actorEspecifico": "—",
-        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Apoderados Especiales Aduaneros > Recepción de seguro de caución importación y admisión temporal"
+        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Apoderados Especiales Aduaneros > Acreditación, Garantías y Habilitación > Recepción de seguro de caución importaciones y cauciones aduaneras"
       }
     ],
     "segmentosAplicables": [
@@ -23387,9 +23387,9 @@
     "perfilDestinatario": ""
   },
   {
-    "id": "cnt-comercio_exterior-apod-requisitos-para-la-renovaci-n-",
+    "id": "cnt-SAT-GES-0439",
     "codigo": "SAT-GES-0439",
-    "idOriginal": "comercio_exterior-apod-requisitos-para-la-renovaci-n-",
+    "idOriginal": "SAT-GES-0439",
     "titulo": "Requisitos para la renovación de operación de auxiliares de la función pública",
     "nombreActual": "Requisitos para la renovación de operación de auxiliares de la función pública",
     "descripcion": "Requisitos y gestión de prórroga anual de autorización y actualización de fianza para operar como apoderado especial aduanero.",
@@ -23409,30 +23409,30 @@
     "totalAudiencias": 3,
     "audiencias": [
       {
-        "tramiteId": "comercio_exterior-apod-requisitos-para-la-renovaci-n-",
+        "tramiteId": "SAT-GES-0439",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 2,
         "orden_n4": 1,
-        "orden_n5": 15,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Apoderados Especiales Aduaneros",
         "tema": "",
         "subtema": "",
         "actorEspecifico": "—",
-        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Apoderados Especiales Aduaneros > Requisitos para la renovación de operación de auxiliares de la función pública"
+        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Apoderados Especiales Aduaneros > Acreditación, Garantías y Habilitación > Requisitos para la renovación de operación de auxiliares de la función pública"
       },
       {
-        "tramiteId": "comercio_exterior-agd-requisitos-para-la-renovaci-n-",
+        "tramiteId": "SAT-GES-0439-agd",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 3,
-        "orden_n4": 1,
-        "orden_n5": 15,
+        "orden_n4": 2,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Depósitos Aduaneros",
         "tema": "Almacenes Generales de Depósito (AGD)",
@@ -23441,14 +23441,14 @@
         "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Depósitos Aduaneros > Almacenes Generales de Depósito (AGD) > Requisitos para la renovación de operación de auxiliares de la función pública"
       },
       {
-        "tramiteId": "comercio_exterior-dat-requisitos-para-la-renovaci-n-",
+        "tramiteId": "SAT-GES-0439-dat",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 3,
         "orden_n4": 3,
-        "orden_n5": 16,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Depósitos Aduaneros",
         "tema": "Depósitos Aduaneros Temporales (DAT)",
@@ -23466,9 +23466,9 @@
     "perfilDestinatario": ""
   },
   {
-    "id": "cnt-comercio_exterior-apod-solvencia-fiscal-requisito-par",
+    "id": "cnt-SAT-GES-0440",
     "codigo": "SAT-GES-0440",
-    "idOriginal": "comercio_exterior-apod-solvencia-fiscal-requisito-par",
+    "idOriginal": "SAT-GES-0440",
     "titulo": "Solvencia fiscal (Requisito para renovación AFPA)",
     "nombreActual": "Solvencia fiscal (Requisito para renovación AFPA)",
     "descripcion": "Generación y verificación de la solvencia fiscal electrónica, requisito obligatorio para la renovación de operación ante la SAT.",
@@ -23488,30 +23488,30 @@
     "totalAudiencias": 2,
     "audiencias": [
       {
-        "tramiteId": "comercio_exterior-apod-solvencia-fiscal-requisito-par",
+        "tramiteId": "SAT-GES-0440",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 2,
         "orden_n4": 1,
-        "orden_n5": 16,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Apoderados Especiales Aduaneros",
         "tema": "",
         "subtema": "",
         "actorEspecifico": "—",
-        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Apoderados Especiales Aduaneros > Solvencia fiscal (Requisito para renovación AFPA)"
+        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Apoderados Especiales Aduaneros > Acreditación, Garantías y Habilitación > Solvencia fiscal (Requisito para renovación AFPA)"
       },
       {
-        "tramiteId": "comercio_exterior-dat-solvencia-fiscal-requisito-par",
+        "tramiteId": "SAT-GES-0440-dat",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 3,
         "orden_n4": 3,
-        "orden_n5": 18,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Depósitos Aduaneros",
         "tema": "Depósitos Aduaneros Temporales (DAT)",
@@ -23543,9 +23543,9 @@
     ]
   },
   {
-    "id": "cnt-comercio_exterior-agd-consulta-facilidades-de-pago-y",
+    "id": "cnt-SAT-GES-0441",
     "codigo": "SAT-GES-0441",
-    "idOriginal": "comercio_exterior-agd-consulta-facilidades-de-pago-y",
+    "idOriginal": "SAT-GES-0441",
     "titulo": "Consulta facilidades de pago y convenios",
     "nombreActual": "Consulta facilidades de pago y convenios",
     "descripcion": "Consultar cuotas, estados de cuenta y facilidades de pago formalizadas ante SAT para obligaciones tributarias aduaneras.",
@@ -23565,14 +23565,14 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "comercio_exterior-agd-consulta-facilidades-de-pago-y",
+        "tramiteId": "SAT-GES-0441",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 3,
-        "orden_n4": 1,
-        "orden_n5": 3,
+        "orden_n4": 2,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Depósitos Aduaneros",
         "tema": "Almacenes Generales de Depósito (AGD)",
@@ -23598,9 +23598,9 @@
     ]
   },
   {
-    "id": "cnt-comercio_exterior-agd-consultas-de-aduanas-retenci-n",
+    "id": "cnt-SAT-GES-0442",
     "codigo": "SAT-GES-0442",
-    "idOriginal": "comercio_exterior-agd-consultas-de-aduanas-retenci-n",
+    "idOriginal": "SAT-GES-0442",
     "titulo": "Consultas de aduanas (Retención y liberación de mercancías, arancel integrado)",
     "nombreActual": "Consultas de aduanas (Retención y liberación de mercancías, arancel integrado)",
     "descripcion": "Verificar en tiempo real estatus de retención, órdenes de liberación y clasificación en el Sistema Arancelario Centroamericano (SAC).",
@@ -23620,14 +23620,14 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "comercio_exterior-agd-consultas-de-aduanas-retenci-n",
+        "tramiteId": "SAT-GES-0442",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 3,
-        "orden_n4": 1,
-        "orden_n5": 4,
+        "orden_n4": 2,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Depósitos Aduaneros",
         "tema": "Almacenes Generales de Depósito (AGD)",
@@ -23645,9 +23645,9 @@
     "perfilDestinatario": ""
   },
   {
-    "id": "cnt-comercio_exterior-agd-legislaci-n-aduanera-y-financi",
+    "id": "cnt-SAT-GES-0443",
     "codigo": "SAT-GES-0443",
-    "idOriginal": "comercio_exterior-agd-legislaci-n-aduanera-y-financi",
+    "idOriginal": "SAT-GES-0443",
     "titulo": "Legislación aduanera y financiera (Decreto 1236 y RECAUCA)",
     "nombreActual": "Legislación aduanera y financiera (Decreto 1236 y RECAUCA)",
     "descripcion": "Compendio legal del Decreto 1236, CAUCA y RECAUCA aplicable al régimen de depósito aduanero y emisión de títulos de crédito afianzados.",
@@ -23667,14 +23667,14 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "comercio_exterior-agd-legislaci-n-aduanera-y-financi",
+        "tramiteId": "SAT-GES-0443",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 3,
-        "orden_n4": 1,
-        "orden_n5": 6,
+        "orden_n4": 2,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Depósitos Aduaneros",
         "tema": "Almacenes Generales de Depósito (AGD)",
@@ -23722,14 +23722,14 @@
     "totalAudiencias": 4,
     "audiencias": [
       {
-        "tramiteId": "comercio_exterior-agd-procedimientos-instructivos-y-",
+        "tramiteId": "SAT-GES-0444-agd",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 3,
-        "orden_n4": 1,
-        "orden_n5": 9,
+        "orden_n4": 2,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Depósitos Aduaneros",
         "tema": "Almacenes Generales de Depósito (AGD)",
@@ -23738,14 +23738,14 @@
         "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Depósitos Aduaneros > Almacenes Generales de Depósito (AGD) > Procedimientos, instructivos y guías para gestiones aduaneras"
       },
       {
-        "tramiteId": "comercio_exterior-dat-procedimientos-instructivos-y-",
+        "tramiteId": "SAT-GES-0444-dat",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 3,
         "orden_n4": 3,
-        "orden_n5": 10,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Depósitos Aduaneros",
         "tema": "Depósitos Aduaneros Temporales (DAT)",
@@ -23810,9 +23810,9 @@
     ]
   },
   {
-    "id": "cnt-comercio_exterior-dat-programa-de-modernizaci-n-inte",
+    "id": "cnt-SAT-GES-0445-dat",
     "codigo": "SAT-GES-0445",
-    "idOriginal": "comercio_exterior-dat-programa-de-modernizaci-n-inte",
+    "idOriginal": "SAT-GES-0445-dat",
     "titulo": "Programa de modernización integral aduanera (MIAD)",
     "nombreActual": "Programa de modernización integral aduanera (MIAD)",
     "descripcion": "Especificaciones técnicas de cámaras CCTV, básculas y lectores OCR requeridos bajo el Programa de Modernización Integral Aduanera.",
@@ -23832,14 +23832,14 @@
     "totalAudiencias": 3,
     "audiencias": [
       {
-        "tramiteId": "comercio_exterior-agd-programa-de-modernizaci-n-inte",
+        "tramiteId": "SAT-GES-0445-agd",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 3,
-        "orden_n4": 1,
-        "orden_n5": 10,
+        "orden_n4": 2,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Depósitos Aduaneros",
         "tema": "Almacenes Generales de Depósito (AGD)",
@@ -23848,14 +23848,14 @@
         "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Depósitos Aduaneros > Almacenes Generales de Depósito (AGD) > Programa de modernización integral aduanera (MIAD)"
       },
       {
-        "tramiteId": "comercio_exterior-dat-programa-de-modernizaci-n-inte",
+        "tramiteId": "SAT-GES-0445-dat",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 3,
         "orden_n4": 3,
-        "orden_n5": 11,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Depósitos Aduaneros",
         "tema": "Depósitos Aduaneros Temporales (DAT)",
@@ -23890,9 +23890,9 @@
     "perfilDestinatario": ""
   },
   {
-    "id": "cnt-comercio_exterior-dat-recepci-n-de-seguro-de-cauci-n",
+    "id": "cnt-SAT-GES-0446-dat",
     "codigo": "SAT-GES-0446",
-    "idOriginal": "comercio_exterior-dat-recepci-n-de-seguro-de-cauci-n",
+    "idOriginal": "SAT-GES-0446-dat",
     "titulo": "Recepción de seguro de caución y pólizas de garantía operativa",
     "nombreActual": "Recepción de seguro de caución y pólizas de garantía operativa",
     "descripcion": "Recepción y registro de pólizas de seguro de caución para garantizar la operación fiscal y custodia de mercancías en DAT.",
@@ -23912,14 +23912,14 @@
     "totalAudiencias": 2,
     "audiencias": [
       {
-        "tramiteId": "comercio_exterior-agd-recepci-n-de-seguro-de-cauci-n",
+        "tramiteId": "SAT-GES-0446-agd",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 3,
-        "orden_n4": 1,
-        "orden_n5": 11,
+        "orden_n4": 2,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Depósitos Aduaneros",
         "tema": "Almacenes Generales de Depósito (AGD)",
@@ -23928,14 +23928,14 @@
         "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Depósitos Aduaneros > Almacenes Generales de Depósito (AGD) > Recepción de seguro de caución y pólizas de garantía operativa"
       },
       {
-        "tramiteId": "comercio_exterior-dat-recepci-n-de-seguro-de-cauci-n",
+        "tramiteId": "SAT-GES-0446-dat",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 3,
         "orden_n4": 3,
-        "orden_n5": 12,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Depósitos Aduaneros",
         "tema": "Depósitos Aduaneros Temporales (DAT)",
@@ -23953,9 +23953,9 @@
     "perfilDestinatario": ""
   },
   {
-    "id": "cnt-comercio_exterior-agd-registro-y-emisi-n-de-t-tulos-",
+    "id": "cnt-SAT-GES-0447",
     "codigo": "SAT-GES-0447",
-    "idOriginal": "comercio_exterior-agd-registro-y-emisi-n-de-t-tulos-",
+    "idOriginal": "SAT-GES-0447",
     "titulo": "Registro y emisión de títulos de crédito (Certificados de depósito y bonos de prenda)",
     "nombreActual": "[Propuesta brecha] Registro y emisión de títulos de crédito (Certificados de depósito y bonos de prenda)",
     "descripcion": "Mecanismo propuesto para registrar y validar digitalmente ante SAT la emisión de certificados de depósito y bonos de prenda afianzados.",
@@ -23975,20 +23975,20 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "comercio_exterior-agd-registro-y-emisi-n-de-t-tulos-",
+        "tramiteId": "SAT-GES-0447",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 3,
-        "orden_n4": 1,
-        "orden_n5": 12,
+        "orden_n4": 2,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Depósitos Aduaneros",
         "tema": "Almacenes Generales de Depósito (AGD)",
         "subtema": "",
         "actorEspecifico": "Almacenadoras Generales de Depósito (AGD)",
-        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Depósitos Aduaneros > Almacenes Generales de Depósito (AGD) > [Propuesta brecha] Registro y emisión de títulos de crédito (Certificados de depósito y bonos de prenda)"
+        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Depósitos Aduaneros > Almacenes Generales de Depósito (AGD) > Registro y emisión de títulos de crédito (Certificados de depósito y bonos de prenda)"
       }
     ],
     "segmentosAplicables": [
@@ -24008,9 +24008,9 @@
     ]
   },
   {
-    "id": "cnt-comercio_exterior-agd-reporte-de-saldos-y-existencia",
+    "id": "cnt-SAT-GES-0448",
     "codigo": "SAT-GES-0448",
-    "idOriginal": "comercio_exterior-agd-reporte-de-saldos-y-existencia",
+    "idOriginal": "SAT-GES-0448",
     "titulo": "Reporte de saldos y existencias afianzadas ante SAT",
     "nombreActual": "[Propuesta brecha] Reporte de saldos y existencias afianzadas ante SAT",
     "descripcion": "Transmisión electrónica periódica de existencias y saldos de mercancías bajo custodia fiscal requerida por la intendencia aduanera.",
@@ -24030,20 +24030,20 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "comercio_exterior-agd-reporte-de-saldos-y-existencia",
+        "tramiteId": "SAT-GES-0448",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 3,
-        "orden_n4": 1,
-        "orden_n5": 13,
+        "orden_n4": 2,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Depósitos Aduaneros",
         "tema": "Almacenes Generales de Depósito (AGD)",
         "subtema": "",
         "actorEspecifico": "Almacenadoras Generales de Depósito (AGD)",
-        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Depósitos Aduaneros > Almacenes Generales de Depósito (AGD) > [Propuesta brecha] Reporte de saldos y existencias afianzadas ante SAT"
+        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Depósitos Aduaneros > Almacenes Generales de Depósito (AGD) > Reporte de saldos y existencias afianzadas ante SAT"
       }
     ],
     "segmentosAplicables": [
@@ -24063,9 +24063,9 @@
     ]
   },
   {
-    "id": "cnt-comercio_exterior-agd-solvencia-fiscal-requisito-ind",
+    "id": "cnt-SAT-GES-0449",
     "codigo": "SAT-GES-0449",
-    "idOriginal": "comercio_exterior-agd-solvencia-fiscal-requisito-ind",
+    "idOriginal": "SAT-GES-0449",
     "titulo": "Solvencia fiscal (Requisito indispensable de renovación AFPA)",
     "nombreActual": "Solvencia fiscal (Requisito indispensable de renovación AFPA)",
     "descripcion": "Obtención en línea de la solvencia fiscal requerida para la prórroga y continuidad de la habilitación operativa ante la SAT.",
@@ -24085,14 +24085,14 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "comercio_exterior-agd-solvencia-fiscal-requisito-ind",
+        "tramiteId": "SAT-GES-0449",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 3,
-        "orden_n4": 1,
-        "orden_n5": 16,
+        "orden_n4": 2,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Depósitos Aduaneros",
         "tema": "Almacenes Generales de Depósito (AGD)",
@@ -24124,13 +24124,13 @@
     ]
   },
   {
-    "id": "cnt-comercio_exterior-af-abandono",
+    "id": "cnt-SAT-GES-0450",
     "codigo": "SAT-GES-0450",
-    "idOriginal": "comercio_exterior-af-abandono",
+    "idOriginal": "SAT-GES-0450",
     "titulo": "Declaración de Abandono y Subasta Aduanera de Mercancías",
     "nombreActual": "Procedimiento de Declaración de Abandono y Notificación de Subasta Aduanera",
     "descripcion": "Procedimiento normado para emitir el acta de abandono tácito tras vencer el plazo legal de permanencia y trasladar el expediente a la SAT para subasta pública o destrucción.",
-    "url": "https://portal.sat.gob.gt/portal/subastas-aduaneras/",
+    "url": "https://portal.sat.gob.gt/portal/subastas-y-donaciones-aduaneras/",
     "tipoInteraccion": "guia_informativa",
     "tipoInteraccionLabel": "Guía Informativa / Texto",
     "tipologiaContenido": "guia_informativa",
@@ -24146,20 +24146,20 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "comercio_exterior-af-abandono",
+        "tramiteId": "SAT-GES-0450",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 3,
-        "orden_n4": 2,
-        "orden_n5": 1,
+        "orden_n4": 1,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Depósitos Aduaneros",
         "tema": "Almacenes Fiscales",
         "subtema": "",
         "actorEspecifico": "Almacenes Fiscales",
-        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Depósitos Aduaneros > Almacenes Fiscales > Procedimiento de Declaración de Abandono y Notificación de Subasta Aduanera"
+        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Depósitos Aduaneros > Almacenes Fiscales > Declaración de Abandono y Subasta Aduanera de Mercancías"
       }
     ],
     "segmentosAplicables": [
@@ -24171,9 +24171,9 @@
     "perfilDestinatario": "Depositarios Aduaneros y Almacenes Fiscales"
   },
   {
-    "id": "cnt-comercio_exterior-92",
+    "id": "cnt-SAT-GES-0451",
     "codigo": "SAT-GES-0451",
-    "idOriginal": "comercio_exterior-92",
+    "idOriginal": "SAT-GES-0451",
     "titulo": "Sistema de Cobro por Permanencia de Mercancías (SCP)",
     "nombreActual": "Cobro por permanencia de mercancías",
     "descripcion": "Aplicativo web oficial para consultar y liquidar las tarifas por días de permanencia de mercancías bajo control aduanero en almacén fiscal antes del levante.",
@@ -24193,20 +24193,20 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "comercio_exterior-92",
+        "tramiteId": "SAT-GES-0451",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 3,
-        "orden_n4": 2,
-        "orden_n5": 2,
+        "orden_n4": 1,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Depósitos Aduaneros",
         "tema": "Almacenes Fiscales",
         "subtema": "",
         "actorEspecifico": "Almacenes Fiscales",
-        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Depósitos Aduaneros > Almacenes Fiscales > Cobro por permanencia de mercancías"
+        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Depósitos Aduaneros > Almacenes Fiscales > Sistema de Cobro por Permanencia de Mercancías (SCP)"
       }
     ],
     "segmentosAplicables": [
@@ -24226,9 +24226,9 @@
     ]
   },
   {
-    "id": "cnt-comercio_exterior-dat-consultas-de-aduanas-asignaci-",
+    "id": "cnt-SAT-GES-0452",
     "codigo": "SAT-GES-0452",
-    "idOriginal": "comercio_exterior-dat-consultas-de-aduanas-asignaci-",
+    "idOriginal": "SAT-GES-0452",
     "titulo": "Consultas de aduanas (Asignación a rampa de revisión, revisores, retención y liberación)",
     "nombreActual": "Consultas de aduanas (Asignación a rampa de revisión, revisores, retención y liberación)",
     "descripcion": "Consulta en línea de asignación a rampa de revisión física, técnicos asignados, retenciones y órdenes de levante de mercancías.",
@@ -24248,14 +24248,14 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "comercio_exterior-dat-consultas-de-aduanas-asignaci-",
+        "tramiteId": "SAT-GES-0452",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 3,
         "orden_n4": 3,
-        "orden_n5": 3,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Depósitos Aduaneros",
         "tema": "Depósitos Aduaneros Temporales (DAT)",
@@ -24273,9 +24273,9 @@
     "perfilDestinatario": ""
   },
   {
-    "id": "cnt-comercio_exterior-dat-control-de-descarga-ingreso-de",
+    "id": "cnt-SAT-GES-0453",
     "codigo": "SAT-GES-0453",
-    "idOriginal": "comercio_exterior-dat-control-de-descarga-ingreso-de",
+    "idOriginal": "SAT-GES-0453",
     "titulo": "Control de descarga, ingreso de bultos y actas de recepción DAT",
     "nombreActual": "[Propuesta brecha] Control de descarga, ingreso de bultos y actas de recepción DAT",
     "descripcion": "Procedimiento propuesto para registrar digitalmente actas de recepción, inconsistencias y control de descarga de bultos en recintos DAT.",
@@ -24295,20 +24295,20 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "comercio_exterior-dat-control-de-descarga-ingreso-de",
+        "tramiteId": "SAT-GES-0453",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 3,
         "orden_n4": 3,
-        "orden_n5": 4,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Depósitos Aduaneros",
         "tema": "Depósitos Aduaneros Temporales (DAT)",
         "subtema": "",
         "actorEspecifico": "Depósitos Aduaneros Temporales (DAT)",
-        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Depósitos Aduaneros > Depósitos Aduaneros Temporales (DAT) > [Propuesta brecha] Control de descarga, ingreso de bultos y actas de recepción DAT"
+        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Depósitos Aduaneros > Depósitos Aduaneros Temporales (DAT) > Control de descarga, ingreso de bultos y actas de recepción DAT"
       }
     ],
     "segmentosAplicables": [
@@ -24328,9 +24328,9 @@
     ]
   },
   {
-    "id": "cnt-comercio_exterior-dat-legislaci-n-aduanera-recauca-a",
+    "id": "cnt-SAT-GES-0454",
     "codigo": "SAT-GES-0454",
-    "idOriginal": "comercio_exterior-dat-legislaci-n-aduanera-recauca-a",
+    "idOriginal": "SAT-GES-0454",
     "titulo": "Legislación aduanera (RECAUCA Art. 119 - Disposiciones sobre depósitos)",
     "nombreActual": "Legislación aduanera (RECAUCA Art. 119 - Disposiciones sobre depósitos)",
     "descripcion": "Marco normativo del CAUCA y RECAUCA (Art. 119) sobre operación, obligaciones y plazos legales en depósitos temporales.",
@@ -24350,14 +24350,14 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "comercio_exterior-dat-legislaci-n-aduanera-recauca-a",
+        "tramiteId": "SAT-GES-0454",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 3,
         "orden_n4": 3,
-        "orden_n5": 6,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Depósitos Aduaneros",
         "tema": "Depósitos Aduaneros Temporales (DAT)",
@@ -24383,9 +24383,9 @@
     ]
   },
   {
-    "id": "cnt-comercio_exterior-dat-monitoreo-de-sistemas-inform-t",
+    "id": "cnt-SAT-GES-0455",
     "codigo": "SAT-GES-0455",
-    "idOriginal": "comercio_exterior-dat-monitoreo-de-sistemas-inform-t",
+    "idOriginal": "SAT-GES-0455",
     "titulo": "Monitoreo de sistemas informáticos de aduanas",
     "nombreActual": "Monitoreo de sistemas informáticos de aduanas",
     "descripcion": "Monitoreo de disponibilidad y operatividad en tiempo real de los sistemas informáticos aduaneros para recintos temporales.",
@@ -24405,14 +24405,14 @@
     "totalAudiencias": 2,
     "audiencias": [
       {
-        "tramiteId": "comercio_exterior-dat-monitoreo-de-sistemas-inform-t",
+        "tramiteId": "SAT-GES-0455",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 3,
         "orden_n4": 3,
-        "orden_n5": 7,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Depósitos Aduaneros",
         "tema": "Depósitos Aduaneros Temporales (DAT)",
@@ -24447,9 +24447,9 @@
     "perfilDestinatario": ""
   },
   {
-    "id": "cnt-comercio_exterior-dat-registro-de-admisi-n-temporal-",
+    "id": "cnt-SAT-GES-0456",
     "codigo": "SAT-GES-0456",
-    "idOriginal": "comercio_exterior-dat-registro-de-admisi-n-temporal-",
+    "idOriginal": "SAT-GES-0456",
     "titulo": "Registro de admisión temporal de contenedores terrestres y su ampliación",
     "nombreActual": "Registro de admisión temporal de contenedores terrestres y su ampliación",
     "descripcion": "Control y registro de ingreso y ampliación de plazo para la admisión temporal de contenedores y chasises terrestres.",
@@ -24469,14 +24469,14 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "comercio_exterior-dat-registro-de-admisi-n-temporal-",
+        "tramiteId": "SAT-GES-0456",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 3,
         "orden_n4": 3,
-        "orden_n5": 13,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Depósitos Aduaneros",
         "tema": "Depósitos Aduaneros Temporales (DAT)",
@@ -24494,9 +24494,9 @@
     "perfilDestinatario": ""
   },
   {
-    "id": "cnt-comercio_exterior-dat-requisitos-para-habilitaci-n-y",
+    "id": "cnt-SAT-GES-0457",
     "codigo": "SAT-GES-0457",
-    "idOriginal": "comercio_exterior-dat-requisitos-para-habilitaci-n-y",
+    "idOriginal": "SAT-GES-0457",
     "titulo": "Requisitos para habilitación y delimitación de recintos aduaneros temporales (DAT)",
     "nombreActual": "[Propuesta brecha] Requisitos para habilitación y delimitación de recintos aduaneros temporales (DAT)",
     "descripcion": "Requisitos normativos propuestos para delimitar perímetros, equipamiento y habilitación inicial de recintos aduaneros temporales.",
@@ -24516,20 +24516,20 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "comercio_exterior-dat-requisitos-para-habilitaci-n-y",
+        "tramiteId": "SAT-GES-0457",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 3,
         "orden_n4": 3,
-        "orden_n5": 15,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Depósitos Aduaneros",
         "tema": "Depósitos Aduaneros Temporales (DAT)",
         "subtema": "",
         "actorEspecifico": "Depósitos Aduaneros Temporales (DAT)",
-        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Depósitos Aduaneros > Depósitos Aduaneros Temporales (DAT) > [Propuesta brecha] Requisitos para habilitación y delimitación de recintos aduaneros temporales (DAT)"
+        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Depósitos Aduaneros > Depósitos Aduaneros Temporales (DAT) > Requisitos para habilitación y delimitación de recintos aduaneros temporales (DAT)"
       }
     ],
     "segmentosAplicables": [
@@ -24549,9 +24549,9 @@
     ]
   },
   {
-    "id": "cnt-comercio_exterior-dat-sistema-de-cobro-por-permanenc",
+    "id": "cnt-SAT-GES-0458",
     "codigo": "SAT-GES-0458",
-    "idOriginal": "comercio_exterior-dat-sistema-de-cobro-por-permanenc",
+    "idOriginal": "SAT-GES-0458",
     "titulo": "Sistema de cobro por permanencia en el país",
     "nombreActual": "Sistema de cobro por permanencia en el país",
     "descripcion": "Plataforma para calcular y gestionar el cobro por días de permanencia de contenedores y medios de transporte en el país.",
@@ -24571,14 +24571,14 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "comercio_exterior-dat-sistema-de-cobro-por-permanenc",
+        "tramiteId": "SAT-GES-0458",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 3,
         "orden_n4": 3,
-        "orden_n5": 17,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Depósitos Aduaneros",
         "tema": "Depósitos Aduaneros Temporales (DAT)",
@@ -24596,9 +24596,9 @@
     "perfilDestinatario": ""
   },
   {
-    "id": "cnt-comercio_exterior-88",
+    "id": "cnt-SAT-GES-0459",
     "codigo": "SAT-GES-0459",
-    "idOriginal": "comercio_exterior-88",
+    "idOriginal": "SAT-GES-0459",
     "titulo": "Guía y Despacho Simplificado para Importación Courier",
     "nombreActual": "Conceptos generales de importación",
     "descripcion": "Procedimiento para la clasificación, aforo y desaduanamiento expedito de envíos de entrega rápida en terminales de carga aérea.",
@@ -24618,20 +24618,20 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "comercio_exterior-88",
+        "tramiteId": "SAT-GES-0459",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 4,
-        "orden_n4": 1,
-        "orden_n5": 1,
+        "orden_n4": null,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Empresas de Entrega Rápida o Courier",
         "tema": "",
         "subtema": "",
         "actorEspecifico": "—",
-        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Empresas de Entrega Rápida o Courier > Conceptos generales de importación"
+        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Empresas de Entrega Rápida o Courier > Guía y Despacho Simplificado para Importación Courier"
       }
     ],
     "segmentosAplicables": [
@@ -24651,9 +24651,9 @@
     ]
   },
   {
-    "id": "cnt-comercio_exterior-87",
+    "id": "cnt-SAT-GES-0460",
     "codigo": "SAT-GES-0460",
-    "idOriginal": "comercio_exterior-87",
+    "idOriginal": "SAT-GES-0460",
     "titulo": "Sistema de Franquicias Electrónicas Aduaneras",
     "nombreActual": "Sistema de franquicias electrónicas",
     "descripcion": "Aplicativo web para gestionar el beneficio arancelario de franquicias para encomiendas no comerciales y envíos diplomáticos.",
@@ -24673,20 +24673,20 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "comercio_exterior-87",
+        "tramiteId": "SAT-GES-0460",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 4,
-        "orden_n4": 2,
-        "orden_n5": 1,
+        "orden_n4": null,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Empresas de Entrega Rápida o Courier",
         "tema": "",
         "subtema": "",
         "actorEspecifico": "—",
-        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Empresas de Entrega Rápida o Courier > Sistema de franquicias electrónicas"
+        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Empresas de Entrega Rápida o Courier > Sistema de Franquicias Electrónicas Aduaneras"
       }
     ],
     "segmentosAplicables": [
@@ -24718,9 +24718,9 @@
     ]
   },
   {
-    "id": "cnt-comercio_exterior-89",
+    "id": "cnt-SAT-GES-0461",
     "codigo": "SAT-GES-0461",
-    "idOriginal": "comercio_exterior-89",
+    "idOriginal": "SAT-GES-0461",
     "titulo": "Registro y Recepción de Póliza de Fianza / Seguro de Caución Courier",
     "nombreActual": "Entregar seguro de caución para importación",
     "descripcion": "Recepción y validación de la fianza de operación anual exigida por el Art. 576 del RECAUCA para garantizar obligaciones aduaneras.",
@@ -24740,20 +24740,20 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "comercio_exterior-89",
+        "tramiteId": "SAT-GES-0461",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 4,
-        "orden_n4": 3,
-        "orden_n5": 1,
+        "orden_n4": null,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Empresas de Entrega Rápida o Courier",
         "tema": "",
         "subtema": "",
         "actorEspecifico": "—",
-        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Empresas de Entrega Rápida o Courier > Entregar seguro de caución para importación"
+        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Empresas de Entrega Rápida o Courier > Registro y Recepción de Póliza de Fianza / Seguro de Caución Courier"
       }
     ],
     "segmentosAplicables": [
@@ -24765,9 +24765,9 @@
     "perfilDestinatario": "Empresas de Entrega Rápida o Courier"
   },
   {
-    "id": "cnt-comercio_exterior-108",
+    "id": "cnt-SAT-GES-0462",
     "codigo": "SAT-GES-0462",
-    "idOriginal": "comercio_exterior-108",
+    "idOriginal": "SAT-GES-0462",
     "titulo": "Autorización de Cartas de Ingreso a Zona Primaria Aduanera",
     "nombreActual": "Autorizar cartas de ingreso a zona primaria",
     "descripcion": "Procedimiento y requisitos para autorizar el ingreso temporal de unidades de transporte de carga y conductores a áreas primarias portuarias y terrestres.",
@@ -24787,20 +24787,20 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "comercio_exterior-108",
+        "tramiteId": "SAT-GES-0462",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 5,
         "orden_n4": 1,
-        "orden_n5": 1,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Transportistas Aduaneros",
         "tema": "Despacho y Operaciones en Recintos",
         "subtema": "",
         "actorEspecifico": "—",
-        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Transportistas Aduaneros > Despacho y Operaciones en Recintos > Autorizar cartas de ingreso a zona primaria"
+        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Transportistas Aduaneros > Despacho y Operaciones en Recintos > Autorización de Cartas de Ingreso a Zona Primaria Aduanera"
       }
     ],
     "segmentosAplicables": [
@@ -24820,9 +24820,9 @@
     ]
   },
   {
-    "id": "cnt-comercio_exterior-107",
+    "id": "cnt-SAT-GES-0463",
     "codigo": "SAT-GES-0463",
-    "idOriginal": "comercio_exterior-107",
+    "idOriginal": "SAT-GES-0463",
     "titulo": "Consulta de Asignación de Revisores Aduaneros",
     "nombreActual": "Asignación de revisores",
     "descripcion": "Herramienta de transparencia que consulta el técnico aduanero asignado por sistema aleatorio para la verificación de carga.",
@@ -24842,20 +24842,20 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "comercio_exterior-107",
+        "tramiteId": "SAT-GES-0463",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 5,
         "orden_n4": 1,
-        "orden_n5": 2,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Transportistas Aduaneros",
         "tema": "Despacho y Operaciones en Recintos",
         "subtema": "",
         "actorEspecifico": "—",
-        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Transportistas Aduaneros > Despacho y Operaciones en Recintos > Asignación de revisores"
+        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Transportistas Aduaneros > Despacho y Operaciones en Recintos > Consulta de Asignación de Revisores Aduaneros"
       }
     ],
     "segmentosAplicables": [
@@ -24875,9 +24875,9 @@
     ]
   },
   {
-    "id": "cnt-comercio_exterior-106",
+    "id": "cnt-SAT-GES-0464",
     "codigo": "SAT-GES-0464",
-    "idOriginal": "comercio_exterior-106",
+    "idOriginal": "SAT-GES-0464",
     "titulo": "Consulta de Asignación de Rampa en Puertos y Depósitos",
     "nombreActual": "Asignación de rampa",
     "descripcion": "Buscador en línea que asigna el muelle, andén o rampa de inspección para la descarga y revisión no intrusiva de contenedores.",
@@ -24897,20 +24897,20 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "comercio_exterior-106",
+        "tramiteId": "SAT-GES-0464",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 5,
         "orden_n4": 1,
-        "orden_n5": 3,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Transportistas Aduaneros",
         "tema": "Despacho y Operaciones en Recintos",
         "subtema": "",
         "actorEspecifico": "—",
-        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Transportistas Aduaneros > Despacho y Operaciones en Recintos > Asignación de rampa"
+        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Transportistas Aduaneros > Despacho y Operaciones en Recintos > Consulta de Asignación de Rampa en Puertos y Depósitos"
       }
     ],
     "segmentosAplicables": [
@@ -24930,9 +24930,9 @@
     ]
   },
   {
-    "id": "cnt-comercio_exterior-137",
+    "id": "cnt-SAT-GES-0465",
     "codigo": "SAT-GES-0465",
-    "idOriginal": "comercio_exterior-137",
+    "idOriginal": "SAT-GES-0465",
     "titulo": "Procedimiento Administrativo Sancionatorio y Recursos de Impugnación",
     "nombreActual": "Procedimientos Administrativo de Aduanas",
     "descripcion": "Pautas procesales y plazos legales para evacuar audiencias e interponer recursos administrativos en materia aduanera.",
@@ -24952,20 +24952,20 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "comercio_exterior-137",
+        "tramiteId": "SAT-GES-0465",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 5,
         "orden_n4": 2,
-        "orden_n5": 1,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Transportistas Aduaneros",
         "tema": "Infracciones y Defensa Aduanera",
         "subtema": "",
         "actorEspecifico": "—",
-        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Transportistas Aduaneros > Infracciones y Defensa Aduanera > Procedimientos Administrativo de Aduanas"
+        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Transportistas Aduaneros > Infracciones y Defensa Aduanera > Procedimiento Administrativo Sancionatorio y Recursos de Impugnación"
       }
     ],
     "segmentosAplicables": [
@@ -24985,9 +24985,9 @@
     ]
   },
   {
-    "id": "cnt-comercio_exterior-5",
+    "id": "cnt-SAT-GES-0466",
     "codigo": "SAT-GES-0466",
-    "idOriginal": "comercio_exterior-5",
+    "idOriginal": "SAT-GES-0466",
     "titulo": "Régimen de Infracciones y Sanciones en Tránsito Aduanero",
     "nombreActual": "Sanciones en importación, exportación o tránsito",
     "descripcion": "Compendio de sanciones, multas pecuniarias y causales de inhabilitación por incumplimientos en operaciones aduaneras y tránsitos.",
@@ -25007,20 +25007,20 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "comercio_exterior-5",
+        "tramiteId": "SAT-GES-0466",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 5,
         "orden_n4": 2,
-        "orden_n5": 2,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Transportistas Aduaneros",
         "tema": "Infracciones y Defensa Aduanera",
         "subtema": "",
         "actorEspecifico": "—",
-        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Transportistas Aduaneros > Infracciones y Defensa Aduanera > Sanciones en importación, exportación o tránsito"
+        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Transportistas Aduaneros > Infracciones y Defensa Aduanera > Régimen de Infracciones y Sanciones en Tránsito Aduanero"
       }
     ],
     "segmentosAplicables": [
@@ -25046,9 +25046,9 @@
     ]
   },
   {
-    "id": "cnt-comercio_exterior-102",
+    "id": "cnt-SAT-GES-0467",
     "codigo": "SAT-GES-0467",
-    "idOriginal": "comercio_exterior-102",
+    "idOriginal": "SAT-GES-0467",
     "titulo": "Ampliación de Plazo de Equipo de Carga en Admisión Temporal (ATC)",
     "nombreActual": "Ampliar el plazo del equipo de carga (ATC)",
     "descripcion": "Gestión electrónica para prorrogar el tiempo de permanencia autorizada para remolques, contenedores y cabezales con placa extranjera.",
@@ -25068,20 +25068,20 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "comercio_exterior-102",
+        "tramiteId": "SAT-GES-0467",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 5,
         "orden_n4": 3,
-        "orden_n5": 1,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Transportistas Aduaneros",
         "tema": "Equipo de Carga y Contenedores — Régimen ATC",
         "subtema": "",
         "actorEspecifico": "—",
-        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Transportistas Aduaneros > Equipo de Carga y Contenedores — Régimen ATC > Ampliar el plazo del equipo de carga (ATC)"
+        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Transportistas Aduaneros > Equipo de Carga y Contenedores — Régimen ATC > Ampliación de Plazo de Equipo de Carga en Admisión Temporal (ATC)"
       }
     ],
     "segmentosAplicables": [
@@ -25101,9 +25101,9 @@
     ]
   },
   {
-    "id": "cnt-comercio_exterior-103",
+    "id": "cnt-SAT-GES-0468",
     "codigo": "SAT-GES-0468",
-    "idOriginal": "comercio_exterior-103",
+    "idOriginal": "SAT-GES-0468",
     "titulo": "Culminación de Admisión Temporal de Equipo de Carga (ATC)",
     "nombreActual": "Finalizar la admisión temporal de equipo de carga",
     "descripcion": "Procedimiento para registrar el descargo formal y la salida del territorio aduanero de contenedores y remolques extranjeros.",
@@ -25123,20 +25123,20 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "comercio_exterior-103",
+        "tramiteId": "SAT-GES-0468",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 5,
         "orden_n4": 3,
-        "orden_n5": 2,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Transportistas Aduaneros",
         "tema": "Equipo de Carga y Contenedores — Régimen ATC",
         "subtema": "",
         "actorEspecifico": "—",
-        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Transportistas Aduaneros > Equipo de Carga y Contenedores — Régimen ATC > Finalizar la admisión temporal de equipo de carga"
+        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Transportistas Aduaneros > Equipo de Carga y Contenedores — Régimen ATC > Culminación de Admisión Temporal de Equipo de Carga (ATC)"
       }
     ],
     "segmentosAplicables": [
@@ -25156,9 +25156,9 @@
     ]
   },
   {
-    "id": "cnt-comercio_exterior-101",
+    "id": "cnt-SAT-GES-0469",
     "codigo": "SAT-GES-0469",
-    "idOriginal": "comercio_exterior-101",
+    "idOriginal": "SAT-GES-0469",
     "titulo": "Devolución de Garantía / Depósito de Admisión Temporal (ATC)",
     "nombreActual": "Devolución de impuestos por admisión temporal de equipo de carga",
     "descripcion": "Gestión de reintegro o descargo de la fianza rendida por la internación temporal de unidades de transporte una vez reexportadas.",
@@ -25178,20 +25178,20 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "comercio_exterior-101",
+        "tramiteId": "SAT-GES-0469",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 5,
         "orden_n4": 3,
-        "orden_n5": 3,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Transportistas Aduaneros",
         "tema": "Equipo de Carga y Contenedores — Régimen ATC",
         "subtema": "",
         "actorEspecifico": "—",
-        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Transportistas Aduaneros > Equipo de Carga y Contenedores — Régimen ATC > Devolución de impuestos por admisión temporal de equipo de carga"
+        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Transportistas Aduaneros > Equipo de Carga y Contenedores — Régimen ATC > Devolución de Garantía / Depósito de Admisión Temporal (ATC)"
       }
     ],
     "segmentosAplicables": [
@@ -25211,9 +25211,9 @@
     ]
   },
   {
-    "id": "cnt-comercio_exterior-104",
+    "id": "cnt-SAT-GES-0470",
     "codigo": "SAT-GES-0470",
-    "idOriginal": "comercio_exterior-104",
+    "idOriginal": "SAT-GES-0470",
     "titulo": "Registro y Habilitación de Equipo de Carga Terrestre (ATC)",
     "nombreActual": "Registrar equipo de carga terrestre (ATC)",
     "descripcion": "Registro oficial de cabezales y plataformas de transporte internacional previo a su arribo a puestos fronterizos.",
@@ -25233,20 +25233,20 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "comercio_exterior-104",
+        "tramiteId": "SAT-GES-0470",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 5,
         "orden_n4": 3,
-        "orden_n5": 4,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Transportistas Aduaneros",
         "tema": "Equipo de Carga y Contenedores — Régimen ATC",
         "subtema": "",
         "actorEspecifico": "—",
-        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Transportistas Aduaneros > Equipo de Carga y Contenedores — Régimen ATC > Registrar equipo de carga terrestre (ATC)"
+        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Transportistas Aduaneros > Equipo de Carga y Contenedores — Régimen ATC > Registro y Habilitación de Equipo de Carga Terrestre (ATC)"
       }
     ],
     "segmentosAplicables": [
@@ -25266,9 +25266,9 @@
     ]
   },
   {
-    "id": "cnt-comercio_exterior-110",
+    "id": "cnt-SAT-GES-0471",
     "codigo": "SAT-GES-0471",
-    "idOriginal": "comercio_exterior-110",
+    "idOriginal": "SAT-GES-0471",
     "titulo": "Consulta y Verificación de Documentos del Manifiesto de Carga",
     "nombreActual": "Documentos del manifiesto de carga",
     "descripcion": "Consulta en línea de documentos de transporte asociados al manifiesto (Carta de Porte, Guía Aérea, BL) transmitido por el transportista.",
@@ -25288,20 +25288,20 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "comercio_exterior-110",
+        "tramiteId": "SAT-GES-0471",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 5,
         "orden_n4": 4,
-        "orden_n5": 1,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Transportistas Aduaneros",
         "tema": "Manifiestos de Carga y CUSCAR",
         "subtema": "",
         "actorEspecifico": "—",
-        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Transportistas Aduaneros > Manifiestos de Carga y CUSCAR > Documentos del manifiesto de carga"
+        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Transportistas Aduaneros > Manifiestos de Carga y CUSCAR > Consulta y Verificación de Documentos del Manifiesto de Carga"
       }
     ],
     "segmentosAplicables": [
@@ -25321,9 +25321,9 @@
     ]
   },
   {
-    "id": "cnt-comercio_exterior-112",
+    "id": "cnt-SAT-GES-0472",
     "codigo": "SAT-GES-0472",
-    "idOriginal": "comercio_exterior-112",
+    "idOriginal": "SAT-GES-0472",
     "titulo": "Transmisión Electrónica de Mensaje de Carga Aduanera (CUSCAR)",
     "nombreActual": "Mensaje de carga aduanera (CUSCAR)",
     "descripcion": "Manual de especificaciones y transmisión electrónica EDI del manifiesto de carga bajo el estándar CUSCAR hacia el sistema de aduanas.",
@@ -25343,20 +25343,20 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "comercio_exterior-112",
+        "tramiteId": "SAT-GES-0472",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 5,
         "orden_n4": 4,
-        "orden_n5": 2,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Transportistas Aduaneros",
         "tema": "Manifiestos de Carga y CUSCAR",
         "subtema": "",
         "actorEspecifico": "—",
-        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Transportistas Aduaneros > Manifiestos de Carga y CUSCAR > Mensaje de carga aduanera (CUSCAR)"
+        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Transportistas Aduaneros > Manifiestos de Carga y CUSCAR > Transmisión Electrónica de Mensaje de Carga Aduanera (CUSCAR)"
       }
     ],
     "segmentosAplicables": [
@@ -25376,9 +25376,9 @@
     ]
   },
   {
-    "id": "cnt-comercio_exterior-111",
+    "id": "cnt-SAT-GES-0473",
     "codigo": "SAT-GES-0473",
-    "idOriginal": "comercio_exterior-111",
+    "idOriginal": "SAT-GES-0473",
     "titulo": "Especificaciones y Uso del Marchamo Electrónico Aduanero",
     "nombreActual": "Marchamo electrónico",
     "descripcion": "Guía técnica y normativa para la colocación, monitoreo satelital GPS y desinstalación del precinto electrónico en unidades de carga.",
@@ -25398,20 +25398,20 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "comercio_exterior-111",
+        "tramiteId": "SAT-GES-0473",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 5,
         "orden_n4": 5,
-        "orden_n5": 1,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Transportistas Aduaneros",
         "tema": "Monitoreo en Ruta y Marchamo Electrónico",
         "subtema": "",
         "actorEspecifico": "—",
-        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Transportistas Aduaneros > Monitoreo en Ruta y Marchamo Electrónico > Marchamo electrónico"
+        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Transportistas Aduaneros > Monitoreo en Ruta y Marchamo Electrónico > Especificaciones y Uso del Marchamo Electrónico Aduanero"
       }
     ],
     "segmentosAplicables": [
@@ -25431,9 +25431,9 @@
     ]
   },
   {
-    "id": "cnt-entes_exentos-82",
+    "id": "cnt-SAT-GES-0474",
     "codigo": "SAT-GES-0474",
-    "idOriginal": "entes_exentos-82",
+    "idOriginal": "SAT-GES-0474",
     "titulo": "Preguntas Frecuentes sobre Marchamo Electrónico y Corredores Fiscales",
     "nombreActual": "Preguntas Frecuentes sobre el Marchamo Electrónico",
     "descripcion": "Respuestas oficiales sobre funcionamiento del marchamo satelital, incidencias técnicas en ruta y puestos de control interinstitucional.",
@@ -25453,20 +25453,20 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "entes_exentos-82",
+        "tramiteId": "SAT-GES-0474",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 5,
         "orden_n4": 5,
-        "orden_n5": 2,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Transportistas Aduaneros",
         "tema": "Monitoreo en Ruta y Marchamo Electrónico",
         "subtema": "",
         "actorEspecifico": "—",
-        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Transportistas Aduaneros > Monitoreo en Ruta y Marchamo Electrónico > Preguntas Frecuentes sobre el Marchamo Electrónico"
+        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Transportistas Aduaneros > Monitoreo en Ruta y Marchamo Electrónico > Preguntas Frecuentes sobre Marchamo Electrónico y Corredores Fiscales"
       }
     ],
     "segmentosAplicables": [
@@ -25478,9 +25478,9 @@
     "perfilDestinatario": "Transportistas, Gestores y Usuarios de Comercio"
   },
   {
-    "id": "cnt-comercio_exterior-109",
+    "id": "cnt-SAT-GES-0475",
     "codigo": "SAT-GES-0475",
-    "idOriginal": "comercio_exterior-109",
+    "idOriginal": "SAT-GES-0475",
     "titulo": "Consulta de Tránsitos Aduaneros Pendientes en Ruta",
     "nombreActual": "Consultar tránsitos pendientes",
     "descripcion": "Monitoreo de declaraciones de tránsito interno e internacional en curso, mostrando aduana de partida, destino y tiempo restante.",
@@ -25500,20 +25500,20 @@
     "totalAudiencias": 1,
     "audiencias": [
       {
-        "tramiteId": "comercio_exterior-109",
+        "tramiteId": "SAT-GES-0475",
         "segmentoId": "comercio_exterior",
         "segmentoNombre": "Operadores de Comercio Exterior",
-        "orden_n1": 2,
+        "orden_n1": 1,
         "orden_n2": 4,
         "orden_n3": 5,
         "orden_n4": 5,
-        "orden_n5": 3,
+        "orden_n5": null,
         "categoria": "Auxiliares de la Función Pública Aduanera (AFPA)",
         "subcategoria": "Transportistas Aduaneros",
         "tema": "Monitoreo en Ruta y Marchamo Electrónico",
         "subtema": "",
         "actorEspecifico": "—",
-        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Transportistas Aduaneros > Monitoreo en Ruta y Marchamo Electrónico > Consultar tránsitos pendientes"
+        "migaBreadcrumb": "Operadores de Comercio Exterior > Auxiliares de la Función Pública Aduanera (AFPA) > Transportistas Aduaneros > Monitoreo en Ruta y Marchamo Electrónico > Consulta de Tránsitos Aduaneros Pendientes en Ruta"
       }
     ],
     "segmentosAplicables": [

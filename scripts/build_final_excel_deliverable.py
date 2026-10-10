@@ -247,11 +247,11 @@ ws_resumen.merge_cells('C18:F18')
 ws_resumen.row_dimensions[18].height = 26
 
 ato_stages = [
-    ("Empezar y registrarse", "Primer NIT, RTU Digital, padrones de importación/exportación y habilitación inicial", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!O2:O{LAST_ROW}, "Empezar y registrarse")'),
-    ("Operación y declaraciones", "Facturación FEL, Declaraguate, DUCAs, retenciones, transferencias y pagos", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!O2:O{LAST_ROW}, "Operación y declaraciones")'),
-    ("Consultas y herramientas", "Verificadores en tiempo real, solvencia, selectivo aduanero, rampa y SAC", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!O2:O{LAST_ROW}, "Consultas y herramientas")'),
-    ("Modificaciones y cierre", "Actualización de RTU, traspaso vehicular, prórrogas, cese de actividades y subastas", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!O2:O{LAST_ROW}, "Modificaciones y cierre")'),
-    ("Normativa y asistencia", "Marco legal aduanero y tributario, devoluciones, criterios institucionales y cursos", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!O2:O{LAST_ROW}, "Normativa y asistencia")')
+    ("Empezar y registrarse", "Primer NIT, RTU Digital, padrones de importación/exportación y habilitación inicial", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!P2:P{LAST_ROW}, "Empezar y registrarse")'),
+    ("Operación y declaraciones", "Facturación FEL, Declaraguate, DUCAs, retenciones, transferencias y pagos", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!P2:P{LAST_ROW}, "Operación y declaraciones")'),
+    ("Consultas y herramientas", "Verificadores en tiempo real, solvencia, selectivo aduanero, rampa y SAC", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!P2:P{LAST_ROW}, "Consultas y herramientas")'),
+    ("Modificaciones y cierre", "Actualización de RTU, traspaso vehicular, prórrogas, cese de actividades y subastas", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!P2:P{LAST_ROW}, "Modificaciones y cierre")'),
+    ("Normativa y asistencia", "Marco legal aduanero y tributario, devoluciones, criterios institucionales y cursos", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!P2:P{LAST_ROW}, "Normativa y asistencia")')
 ]
 
 for r_idx, (enom, edesc, eformula) in enumerate(ato_stages, start=19):
@@ -311,10 +311,10 @@ ws_resumen.merge_cells('C27:F27')
 ws_resumen.row_dimensions[27].height = 26
 
 interactions = [
-    ("Guía Informativa / Texto", "Páginas explicativas, requisitos de trámites presenciales o mixtos", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!P2:P{LAST_ROW}, "Guía Informativa / Texto")'),
-    ("Trámite / Aplicativo en Línea", "Servicios digitales transaccionales (Agencia Virtual, Declaraguate, TEV, FEL)", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!P2:P{LAST_ROW}, "Trámite / Aplicativo en Línea")'),
-    ("Consulta en Base de Datos", "Herramientas de verificación sin autenticación previa (RTU público, solvencias)", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!P2:P{LAST_ROW}, "Consulta en Base de Datos")'),
-    ("Descarga de Documento / Software", "Descarga de formularios en PDF/Excel, software, manuales o legislación", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!P2:P{LAST_ROW}, "Descarga de Documento / Software")'),
+    ("Guía Informativa / Texto", "Páginas explicativas, requisitos de trámites presenciales o mixtos", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!Q2:Q{LAST_ROW}, "Guía Informativa / Texto")'),
+    ("Trámite / Aplicativo en Línea", "Servicios digitales transaccionales (Agencia Virtual, Declaraguate, TEV, FEL)", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!Q2:Q{LAST_ROW}, "Trámite / Aplicativo en Línea")'),
+    ("Consulta en Base de Datos", "Herramientas de verificación sin autenticación previa (RTU público, solvencias)", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!Q2:Q{LAST_ROW}, "Consulta en Base de Datos")'),
+    ("Descarga de Documento / Software", "Descarga de formularios en PDF/Excel, software, manuales o legislación", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!Q2:Q{LAST_ROW}, "Descarga de Documento / Software")'),
 ]
 
 for r_idx, (inom, idesc, iformula) in enumerate(interactions, start=28):
@@ -383,6 +383,7 @@ headers_unified = [
     "Nivel 4",
     "Orden N5",
     "Nivel 5",
+    "Orden Contenido",
     "Nombre del Trámite / Servicio (Lenguaje Claro)",
     "Ruta de Navegación (Miga de Pan)",
     "Etapa Ciclo de Vida ATO",
@@ -398,7 +399,7 @@ headers_unified = [
     "URL Portal SAT"
 ]
 
-unified_widths = [8, 18, 10, 24, 10, 28, 10, 28, 10, 28, 10, 28, 38, 55, 24, 24, 24, 20, 16, 24, 48, 50, 28, 16, 42]
+unified_widths = [8, 18, 10, 24, 10, 28, 10, 28, 10, 28, 10, 28, 12, 38, 55, 24, 24, 24, 20, 16, 24, 48, 50, 28, 16, 42]
 
 def populate_unified_sheet(ws, dataset):
     ws.views.sheetView[0].showGridLines = True
@@ -436,8 +437,9 @@ def populate_unified_sheet(ws, dataset):
 
         # Col 1: No.
         ws.cell(row=r_idx, column=1, value=r_idx - 1).alignment = Alignment(horizontal='center')
-        # Col 2: ID Trámite
-        ws.cell(row=r_idx, column=2, value=item.get('id', '')).alignment = Alignment(horizontal='center')
+        # Col 2: ID Trámite (Código Institucional SAT-GES-####)
+        val_id = item.get('codigo') or item.get('id', '')
+        ws.cell(row=r_idx, column=2, value=val_id).alignment = Alignment(horizontal='center')
         # Col 3: Orden N1
         c_o1 = ws.cell(row=r_idx, column=3, value=ord_n1)
         c_o1.alignment = Alignment(horizontal='center')
@@ -457,7 +459,8 @@ def populate_unified_sheet(ws, dataset):
         # Col 8: Nivel 3
         ws.cell(row=r_idx, column=8, value=n3)
         # Col 9: Orden N4
-        c_o4 = ws.cell(row=r_idx, column=9, value=ord_n4)
+        val_o4 = '—' if (n4 == '—' or ord_n4 is None or ord_n4 == '—') else ord_n4
+        c_o4 = ws.cell(row=r_idx, column=9, value=val_o4)
         c_o4.alignment = Alignment(horizontal='center')
         c_o4.font = font_bold
         # Col 10: Nivel 4
@@ -469,60 +472,65 @@ def populate_unified_sheet(ws, dataset):
         c_o5.font = font_bold
         # Col 12: Nivel 5
         ws.cell(row=r_idx, column=12, value=n5)
-        # Col 13: Nombre del Trámite / Servicio (Lenguaje Claro)
-        ws.cell(row=r_idx, column=13, value=item.get('tramite', '')).font = font_bold
-        # Col 14: Ruta de Navegación (Miga de Pan)
-        c_miga = ws.cell(row=r_idx, column=14, value=miga_raw)
+        # Col 13: Orden Contenido
+        val_oc = item.get('orden_contenido') or 1
+        c_oc = ws.cell(row=r_idx, column=13, value=val_oc)
+        c_oc.alignment = Alignment(horizontal='center')
+        c_oc.font = font_bold
+        # Col 14: Nombre del Trámite / Servicio (Lenguaje Claro)
+        ws.cell(row=r_idx, column=14, value=item.get('tramite', '')).font = font_bold
+        # Col 15: Ruta de Navegación (Miga de Pan)
+        c_miga = ws.cell(row=r_idx, column=15, value=miga_raw)
         c_miga.font = font_small
-        # Col 15: Etapa ATO
-        c_etapa = ws.cell(row=r_idx, column=15, value=item.get('etapaAtoLabel', ''))
+        # Col 16: Etapa ATO
+        c_etapa = ws.cell(row=r_idx, column=16, value=item.get('etapaAtoLabel', ''))
         c_etapa.font = font_bold
         if 'Empezar' in str(c_etapa.value): c_etapa.font = Font(name='Segoe UI', size=10, bold=True, color=NAVY_HEADER)
         elif 'Operaci' in str(c_etapa.value): c_etapa.font = Font(name='Segoe UI', size=10, bold=True, color=CYAN_ACCENT)
         elif 'Consulta' in str(c_etapa.value): c_etapa.font = Font(name='Segoe UI', size=10, bold=True, color=GREEN_ACCENT)
         elif 'Modifica' in str(c_etapa.value): c_etapa.font = Font(name='Segoe UI', size=10, bold=True, color=ORANGE_ACCENT)
         elif 'Normat' in str(c_etapa.value): c_etapa.font = Font(name='Segoe UI', size=10, bold=True, color=PURPLE_ACCENT)
-        # Col 16: Tipo de Interacción
-        ws.cell(row=r_idx, column=16, value=item.get('tipoInteraccionLabel', ''))
-        # Col 17: Tipología de Contenido
-        ws.cell(row=r_idx, column=17, value=item.get('tipologiaContenidoLabel', 'Guía Informativa / Texto'))
-        # Col 18: Plataforma
-        ws.cell(row=r_idx, column=18, value=item.get('plataformaSistemaLabel', item.get('plataformaSistema', 'Portal Web SAT')))
-        # Col 19: Canal
-        ws.cell(row=r_idx, column=19, value=item.get('canalAtencion', 'Digital / Web')).alignment = Alignment(horizontal='center')
-        # Col 20: Control de Auditoría
-        c_audit = ws.cell(row=r_idx, column=20, value=item.get('controlAuditoria', 'APROBADO'))
+        # Col 17: Tipo de Interacción
+        ws.cell(row=r_idx, column=17, value=item.get('tipoInteraccionLabel', ''))
+        # Col 18: Tipología de Contenido
+        ws.cell(row=r_idx, column=18, value=item.get('tipologiaContenidoLabel', 'Guía Informativa / Texto'))
+        # Col 19: Plataforma
+        ws.cell(row=r_idx, column=19, value=item.get('plataformaSistemaLabel', item.get('plataformaSistema', 'Portal Web SAT')))
+        # Col 20: Canal
+        ws.cell(row=r_idx, column=20, value=item.get('canalAtencion', 'Digital / Web')).alignment = Alignment(horizontal='center')
+        # Col 21: Control de Auditoría
+        c_audit = ws.cell(row=r_idx, column=21, value=item.get('controlAuditoria', 'APROBADO'))
         c_audit.alignment = Alignment(horizontal='center', vertical='center')
         if item.get('esBrecha'):
             c_audit.font = Font(name='Segoe UI', size=9, bold=True, color='C25E00')
             c_audit.fill = PatternFill(start_color='FFEDD5', end_color='FFEDD5', fill_type='solid')
         else:
             c_audit.font = font_bold
-        # Col 21: Descripción Operativa
-        ws.cell(row=r_idx, column=21, value=item.get('descripcion', ''))
-        # Col 22: Base Legal
-        c_base = ws.cell(row=r_idx, column=22, value=item.get('baseLegal', 'CAUCA IV y RECAUCA IV' if item.get('segmento') == 'Operadores de Comercio Exterior' else 'Código Tributario y Leyes Específicas'))
+        # Col 22: Descripción Operativa
+        ws.cell(row=r_idx, column=22, value=item.get('descripcion', ''))
+        # Col 23: Base Legal
+        c_base = ws.cell(row=r_idx, column=23, value=item.get('baseLegal', 'CAUCA IV y RECAUCA IV' if item.get('segmento') == 'Operadores de Comercio Exterior' else 'Código Tributario y Leyes Específicas'))
         c_base.font = font_bold
-        # Col 23: Ruta de Proceso
-        ws.cell(row=r_idx, column=23, value=rutas_str).font = font_small
-        # Col 24: Estado Normativo
-        c_brecha = ws.cell(row=r_idx, column=24, value="Brecha Propuesta" if item.get('esBrecha') else "Vigente")
+        # Col 24: Ruta de Proceso
+        ws.cell(row=r_idx, column=24, value=rutas_str).font = font_small
+        # Col 25: Estado Normativo
+        c_brecha = ws.cell(row=r_idx, column=25, value="Brecha Propuesta" if item.get('esBrecha') else "Vigente")
         c_brecha.alignment = Alignment(horizontal='center', vertical='center')
         if item.get('esBrecha'):
             c_brecha.font = Font(name='Segoe UI', size=9, bold=True, color='C25E00')
             c_brecha.fill = PatternFill(start_color='FFEDD5', end_color='FFEDD5', fill_type='solid')
-        # Col 25: URL Oficial
+        # Col 26: URL Oficial
         raw_url = str(item.get('url', '')).strip()
-        c_url = ws.cell(row=r_idx, column=25, value=raw_url)
+        c_url = ws.cell(row=r_idx, column=26, value=raw_url)
         if raw_url.startswith('http'):
             c_url.font = font_link
             c_url.hyperlink = raw_url
 
         fill_color = ZEBRA_FILL if r_idx % 2 == 0 else 'FFFFFF'
-        for c_idx in range(1, 26):
+        for c_idx in range(1, 27):
             cell = ws.cell(row=r_idx, column=c_idx)
-            if c_idx not in [3, 4, 5, 7, 9, 11, 13, 14, 15, 20, 22, 23, 24, 25]: cell.font = font_body
-            if not ((c_idx in [20, 24]) and item.get('esBrecha')):
+            if c_idx not in [3, 4, 5, 7, 9, 11, 13, 14, 15, 16, 21, 23, 24, 25, 26]: cell.font = font_body
+            if not ((c_idx in [21, 25]) and item.get('esBrecha')):
                 cell.fill = PatternFill(start_color=fill_color, end_color=fill_color, fill_type='solid')
             cell.border = thin_border
         ws.row_dimensions[r_idx].height = 22
@@ -531,7 +539,7 @@ def populate_unified_sheet(ws, dataset):
         ws.column_dimensions[get_column_letter(idx)].width = w
 
     ws.freeze_panes = 'E2'
-    ws.auto_filter.ref = f"A1:Y{len(dataset)+1}"
+    ws.auto_filter.ref = f"A1:Z{len(dataset)+1}"
 
 # HOJA 2: MATRIZ MAESTRA (716)
 ws_master = wb.create_sheet(title=SHEET_MASTER_NAME)
@@ -619,13 +627,13 @@ ws_brechas.auto_filter.ref = f"A1:F{len(ce_brechas)+1}"
 # GUARDAR LIBRO DEFINITIVO
 # ==============================================================================
 OUTPUT_EXCEL_PATH = 'docs/fuentes-datos/Estructura_Final_Contenido_Portal_SAT_Actualizado.xlsx'
-try:
-    wb.save(OUTPUT_EXCEL_PATH)
-    print(f"Libro Excel maestro guardado exitosamente en: {OUTPUT_EXCEL_PATH}")
-except PermissionError:
-    fallback_path = 'docs/fuentes-datos/Estructura_Final_Contenido_Portal_SAT_Actualizado_v25col.xlsx'
-    wb.save(fallback_path)
-    print(f"[AVISO] El archivo '{OUTPUT_EXCEL_PATH}' está actualmente abierto en Excel.")
-    print(f"Se ha guardado la versión actualizada con 25 columnas en: {fallback_path}")
+OUTPUT_EXCEL_25COL = 'docs/fuentes-datos/Estructura_Final_Contenido_Portal_SAT_Actualizado_v25col.xlsx'
+
+for out_path in [OUTPUT_EXCEL_PATH, OUTPUT_EXCEL_25COL]:
+    try:
+        wb.save(out_path)
+        print(f"Libro Excel maestro guardado exitosamente en: {out_path}")
+    except PermissionError:
+        print(f"[AVISO] El archivo '{out_path}' está abierto o bloqueado por otra aplicación.")
 
 print(f"Hojas: {', '.join(wb.sheetnames)}")

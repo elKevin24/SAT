@@ -58,6 +58,8 @@ export interface TramiteItem {
   orden_n4?: number;
   nivel5_tramite?: string;
   orden_n5?: number;
+  orden_contenido?: number | null;
+  codigo?: string;
   segmento?: string;
   regimenArea?: string;
   grupoActor?: string;
