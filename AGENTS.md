@@ -26,3 +26,12 @@
 ## 4. Convenciones de Código
 - Mantener tipado estricto en TypeScript en todo momento.
 - No romper esquemas ni alterar contratos de datos en `src/data/` sin actualizar los componentes correspondientes.
+
+---
+
+## 5. Reglas de Arquitectura de Información y Datos
+- **Capacidad de Miller ($7 \pm 2$):** Diseñar contenedores entre 5 y 9 opciones. Nodos con $\le 7$ trámites terminales (ej. Agentes Aduaneros) van en lista directa bajo N3. Listas $> 9$ deben modularse.
+- **Regla de Umbral de Densidad ($A, A_1, A_2$):** Sub-densidad ($\le 2$ hojas terminales) $\to$ se compacta al nivel superior. Alta densidad ($\ge 10$ trámites con complejidad) $\to$ se preserva la jerarquía profunda (N4/N5).
+- **Código Institucional Inmutable:** Usar siempre **`SAT-GES-####`** como identificador canónico universal (agnóstico al árbol, segmento y nombre). Los IDs de hojas se preservan como `codigos_legacy`.
+- **Gobernanza del Orden:** Prohibido quemar números en títulos visibles. El orden se rige estrictamente por `orden_n1..orden_n5` siguiendo el ciclo ATO (1. Empezar $\to$ 2. Operar $\to$ 3. Consultar $\to$ 4. Modificar $\to$ 5. Normativa).
+- **Matriz Canónica de 25 Columnas:** Mantener en sincronía la estructura de 25 columnas (Opción A) en todos los entregables vivos.

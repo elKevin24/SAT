@@ -21,37 +21,91 @@ Esta skill documenta el procedimiento estándar, principios metodológicos y her
 * **Modelo de Navegación:** Mecanismos visuales que permiten al usuario recorrer la arquitectura (Breadcrumbs, Sidebar, Menú Principal, Enlaces transversales).
 * **Regla de Desacoplamiento:** *Que un contenido resida en el nivel 5 o 6 de la IA no exige renderizar 5 o 6 niveles simultáneos en la interfaz.* El Sidebar se acota al hub temático local y el Breadcrumb aplica elipsis compacta `[…]` en pantallas móviles.
 
-### B. Capacidad de Memoria de Trabajo (Ley de Miller: $7 \pm 2$)
-* Conforme a la Ley de Miller (1956), la persona promedio puede retener entre 5 y 9 elementos ($7 \pm 2$) en su memoria de trabajo simultáneamente.
-* Ninguna categoría debe presentar listas planas abrumadoras de 12 o 15 opciones inconexas.
-* Los elementos se agrupan en fragmentos cognitivos (*chunks*) de $7 \pm 2$ opciones orientadas a tareas u operadores afines.
+### B. Capacidad de Memoria de Trabajo (Ley de Miller: $7 \pm 2$) y Rango Óptimo
+* Conforme a la Ley de Miller (1956), la mente humana procesa con eficacia entre 5 y 9 fragmentos de información ($7 \pm 2$) en su memoria de trabajo simultáneamente.
+* **Rango Óptimo (5 a 9 elementos):** Cuando un nodo agrupa entre 5 y 9 trámites directos (ej. *Agentes Aduaneros* con exactamente 7 trámites), se exponen en **secuencia directa bajo el nodo contenedor**, eliminando carpetas intermedias artificiales.
+* **Sobrecarga Cognitiva (> 9 elementos):** Listas planas de 12 a 18 trámites (ej. *Apoderados Especiales* con 16 o *DAT* con 18) saturan al ciudadano y **exigen partición modular** en sub-bloques temáticos o de ciclo de vida ATO.
 
-### C. Compactación Asimétrica de Niveles
-* **Problema Común ("Efecto Espejo"):** Estructuras donde Nivel 4 repite literalmente el nombre de Nivel 5 (ej. *«ZDEEP > ZDEEP»* o *«DAT > DAT»*), obligando al usuario a realizar clics redundantes.
-* **Solución:** Supresión de niveles intermediarios ficticios. La profundidad se adapta asimétricamente a la necesidad real: ramas simples (2-3 niveles) conviven naturalmente con ramas complejas (4 niveles de actor aduanero).
+### C. Regla de Umbral de Densidad y Ramificación (Notación $A, A_1, A_2$)
+La profundidad del árbol nunca es simétrica ni obligada; se rige por la densidad real de cada subrama:
 
-### D. Taxonomía Multidimensional ATO (Australian Taxation Office)
+#### 1. Condición de Compactación / Sub-densidad ($A \to A_1, A_2$ con hojas $\le 2$)
+```
+        A
+      /   \
+    A1     A2       Si A1 y A2 contienen solo 1 o 2 trámites sueltos y ahí terminan:
+    |      |        -> Se eliminan los niveles intermedios A1 y A2 (sobre-andamiaje).
+   [T1]   [T2]      -> T1 y T2 cuelgan directamente de A.
+```
+* **Diagnóstico:** Crear un nivel intermedio para 1 o 2 trámites terminales genera **nodos pasarela (*pass-through nodes*)** y pantallas vacías con un solo botón.
+* **Acción:** **SÍ se compacta**. Los trámites se elevan al nivel superior. Ejemplos: *Empresas Courier* (3 trámites netos pasan a N3 directo; se suprimen las 3 carpetas de 1 trámite) y *OEA* (2 trámites pasan a N2 directo).
+
+#### 2. Condición de Retención de Jerarquía Profunda ($A \to A_1$ con masa crítica $\ge 10$)
+```
+        A
+        |
+       A1 (>= 10 trámites con subestructura rica)
+     /    \
+   A1.1   A1.2 ...  -> NO se compacta. Se preserva la jerarquía profunda (N4 / N5).
+```
+* **Diagnóstico:** Compactar a la fuerza un subárbol con $\ge 10$ trámites provocaría **colapso de contexto (*context collapse*)**, listas heterogéneas caóticas y pérdida de especificación regulatoria.
+* **Acción:** **SE PRESERVA LA PROFUNDIDAD**. Ejemplos: *Depósitos Aduaneros Temporales (DAT - 18)*, *Almacenes Generales de Depósito (AGD - 16)* y *ZDEEP (30)*.
+
+#### 3. Asimetría Rama por Rama (Nodos Monocatenarios)
+```
+          A
+        /   \
+      A1     A2
+      |     / | \
+    A1.1  A2.1 A2.2 A2.3
+```
+* **Rama Monocatenaria ($A_1 \to A_{1.1}$):** Un nodo con un único hijo no clasifica nada (clasificar exige elegir entre $\ge 2$ opciones) $\to$ **Se compacta**.
+* **Rama Ramificada ($A_2 \to A_{2.1}, A_{2.2}, A_{2.3}$):** Bifurcación funcional genuina $\to$ **Se preserva la jerarquía**.
+* **Principio Rector:** La compactación se evalúa **rama por rama**, nunca imponiendo la misma profundidad a ramas hermanas.
+
+### D. Gobernanza del Orden y Desacoplamiento Numérico
+* **Prohibición de Números Quemados en Títulos:** Queda terminantemente prohibido incluir prefijos numéricos en los textos de `Nivel 1..5` o `Nombre del Trámite` (ej. PROHIBIDO: `"1. Transmisión de Declaración"`; CORRECTO: `"Transmisión de la Declaración de Mercancías"`).
+* **Control Exclusivo por Columnas de Orden (`orden_n1` a `orden_n5`):** La posición y secuencia la gobiernan exclusivamente los campos numéricos de la matriz de 25 columnas.
+* **Criterio de Secuencia Universal por Ciclo ATO:**
+  1. `Empezar y registrarse` (altas, padrones, requisitos iniciales, carnés).
+  2. `Operación y declaraciones` (rutina operativa, transmisión DUCA, pagos, sistemas).
+  3. `Consultas y herramientas` (verificadores, consulta de expedientes, selectivo).
+  4. `Modificaciones y cierre` (renovación anual de fianza, traspasos, ceses).
+  5. `Normativa y asistencia` (capacitaciones, cursos virtuales, marco legal).
+* **Indexación en Ramas Compactadas:** Cuando una rama se compacta a N3 (como Agentes Aduaneros o Courier):
+  - `orden_n4` toma la posición ordinal **1 a 7** del trámite terminal.
+  - `nivel4_tema`, `nivel5_tramite` y `orden_n5` quedan en blanco / guion (**`—`**).
+
+### E. Estándar de Identificación Inmutable (`SAT-GES-####`)
+* **Código Universal Único:** Todo trámite, guía, consulta o descarga se gobierna por el código canónico **`SAT-GES-####`** (del `SAT-GES-0001` al `SAT-GES-0683`).
+* **Inmutabilidad Absoluta:**
+  1. No cambia ante reestructuraciones de menú o cambios de nivel.
+  2. No cambia ante reformas de nombres o títulos comerciales.
+  3. No se duplica ante proyecciones multi-audiencia (polijerarquía).
+* **Slug Semántico:** Identificador limpio en kebab-case para URLs amigables (`portal.sat.gob.gt/gestion/[slug]`).
+* **Trazabilidad Forense (`codigos_legacy`):** Los códigos de origen de hojas clásicas (`["comercio_exterior-128", "profesionales-15"]`) se archivan en `codigos_legacy` para auditoría, pero no operan como identificador primario.
+
+### F. Matriz Oficial de 25 Columnas (Opción A - Intercalada)
+Estructura canónica de los entregables Excel y datasets:
+1. `No.` | 2. `ID Trámite / Código Oficial (SAT-GES-####)` | 3. **`Orden N1`** | 4. **`Nivel 1`** | 5. **`Orden N2`** | 6. **`Nivel 2`** | 7. **`Orden N3`** | 8. **`Nivel 3`** | 9. **`Orden N4`** | 10. **`Nivel 4`** | 11. **`Orden N5`** | 12. **`Nivel 5`** | 13. `Nombre del Trámite / Servicio (Lenguaje Claro)` | 14. `Ruta de Navegación (Miga de Pan)` | 15. `Etapa Ciclo de Vida ATO` | 16. `Tipo de Interacción` | 17. `Tipología de Contenido` | 18. `Plataforma / Sistema` | 19. `Canal` | 20. `Control de Auditoría` | 21. `¿Para qué sirve? (Descripción Operativa)` | 22. `Base Legal / Fundamento Jurídico` | 23. `Ruta de Procesos Asociada` | 24. `Estado Normativo` | 25. `URL Portal SAT`
+
+### G. Taxonomía Multidimensional ATO (Australian Taxation Office)
 Cada trámite u objeto de contenido posee 4 dimensiones ortogonales:
 1. **Dimensión 1 (Perfil / Actor):** Audiencia primaria (Contribuyentes, Comercio Exterior, Entes Exentos, Profesionales) y rol específico.
-2. **Dimensión 2 (Ciclo de Vida ATO):** `empezar` (altas y padrones), `operar` (rutina y declaraciones), `consultar` (verificadores en tiempo real), `modificar_cerrar` (cambios, traspasos y ceses), `normativa` (marco legal y recursos). **Sin prefijos numéricos en la interfaz.**
-3. **Dimensión 3 (Tipología de Interacción):** `servicio_transaccional` (trámite en línea), `consulta_datos` (búsqueda de base de datos), `guia_informativa` (ficha de requisitos y pasos), `descarga_recurso` (software/formularios).
-4. **Dimensión 4 (Plataforma Técnica):** Agencia Virtual, Declaraguate, Sistemas Aduaneros (SAQD/DUCA), Portales Públicos.
+2. **Dimensión 2 (Ciclo de Vida ATO):** `empezar`, `operar`, `consultar`, `modificar_cerrar`, `normativa`. Sin prefijos numéricos en la interfaz.
+3. **Dimensión 3 (Tipología de Interacción):** `servicio_transaccional`, `consulta_datos`, `guia_informativa`, `descarga_recurso`.
+4. **Dimensión 4 (Plataforma Técnica):** Agencia Virtual, Declaraguate, Sistemas Aduaneros, Portales Públicos.
 
-### E. Plain Language (Lenguaje Ciudadano)
+### H. Plain Language (Lenguaje Ciudadano)
 * Títulos orientados a la acción con verbos infinitivos o sustantivos directos claros.
-* Supresión de acrónimos burocráticos internos en títulos visibles (ej. de *"MIAD"* a *"Aduana sin Papeles y modernización"*).
-* Descripciones redactadas bajo la estructura: *[Verbo de acción] + [Objeto del trámite] + [Finalidad o beneficio ciudadano]*.
+* Cero acrónimos huérfanos o siglas opacas en títulos visibles.
+* Descripciones operativas bajo la fórmula: *[Verbo de acción] + [Objeto del trámite] + [Finalidad o beneficio ciudadano]*.
 
-### F. Gobernanza Documental Estricta
+### I. Gobernanza Documental Estricta
 * **Fuentes Históricas / Clásicas (Inalterables):** Se preservan intactas como testimonio de auditoría inicial (`Detalle de Contenido para Grupos de Interes.xlsx`, `Arbol_de_Navegacion_Portal_v5.xlsx`, `Ruta de procesos.xlsx`).
 * **Entregables Vivos / Oficiales (Sincronizados):** Se recalculan y mantienen en sincronía biunívoca con `src/data/allTramites.json`:
   * `Estructura_Final_Contenido_Portal_SAT_Actualizado.xlsx` (Libro maestro con fórmulas dinámicas de resumen y matriz de 25 columnas).
   * `Mapa_de_Navegacion_y_Descripciones_Portal_SAT.xlsx` (Mapa antes/después y fichas en lenguaje ciudadano).
-
-### G. Estándar de Identificación Inmutable (`SAT-GES-####`)
-* Cada trámite, servicio o guía se gobierna por el código canónico universal **`SAT-GES-####`** (del `SAT-GES-0001` al `SAT-GES-0683`).
-* Se erradican los prefijos atados a hojas o segmentos (`contribuyentes-`, `comercio_exterior-`, `profesionales-`, `entes_exentos-`), trasladándolos al atributo de auditoría forense `codigos_legacy` / `idOriginal`.
-* El código **no se altera ante reestructuraciones de menú, cambios de nombre o asignación a múltiples audiencias (polijerarquía)**.
 
 ---
 

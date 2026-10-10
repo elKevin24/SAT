@@ -73,3 +73,31 @@ La arquitectura documental del repositorio opera bajo una regla estricta:
 
 * **Fuentes Históricas (Congeladas):** `Detalle de Contenido para Grupos de Interes.xlsx` y `Arbol_de_Navegacion_Portal_v5.xlsx` se mantienen como el registro inalterable de auditoría institucional.
 * **Entregables Vivos (Sincronizados):** `Estructura_Final_Contenido_Portal_SAT_Actualizado.xlsx` y `Mapa_de_Navegacion_y_Descripciones_Portal_SAT.xlsx` reflejan exactamente los 716 registros consolidados de `src/data/allTramites.json`.
+
+---
+
+## 5. Reglas de Densidad, Miller ($7 \pm 2$), Orden y Código Inmutable
+
+### 5.1 Capacidad Cognitiva de Miller ($7 \pm 2$) y Rango Óptimo
+* **Rango Óptimo (5 a 9 elementos):** Cuando un nodo agrupa entre 5 y 9 trámites directos (ej. *Agentes Aduaneros* con 7 trámites), se presentan en **secuencia directa bajo N3**, eliminando carpetas intermedias artificiales.
+* **Sobrecarga (> 9 elementos):** Listas planas de más de 9 elementos (ej. *Apoderados Especiales* con 16) sobrecargan la memoria de trabajo y **exigen partición modular** en sub-bloques de ciclo de vida ATO o materia funcional.
+
+### 5.2 Regla de Umbral de Densidad y Ramificación (Notación $A, A_1, A_2$)
+1. **Sub-densidad ($A \to A_1, A_2$ con hojas $\le 2$):**  
+   Si $A_1$ y $A_2$ contienen solo 1 o 2 trámites terminales y ahí terminan, **se compacta**. Los trámites se exponen directamente en $A$. Evita *pass-through nodes* (ej. *Courier* con 3 trámites pasa a N3 directo).
+2. **Alta densidad ($A \to A_1$ con $\ge 10$ trámites):**  
+   Si $A_1$ agrupa $\ge 10$ trámites con complejidad operativa, **se preserva la jerarquía profunda** (N4 / N5). Evita *context collapse* (ej. *DAT* y *ZDEEP*).
+3. **Asimetría rama por rama:**  
+   Un nodo monocatenario ($A_1 \to A_{1.1}$) se compacta, mientras una rama hermana ramificada ($A_2 \to A_{2.1}, A_{2.2}, A_{2.3}$) retiene su profundidad.
+
+### 5.3 Gobernanza del Orden (Columnas `Orden N1..N5` vs Títulos)
+* **Prohibido quemar prefijos numéricos en títulos:** Ni en categorías ni en nombres de trámites (ej. NO `1. Declaración`, SINO `Declaración de Mercancías`).
+* **Control exclusivo por campos numéricos:** `orden_n1`, `orden_n2`, `orden_n3`, `orden_n4`, `orden_n5` en la matriz de 25 columnas y JSON.
+* **Secuencia universal por ciclo ATO:** 1. `Empezar y registrarse` $\to$ 2. `Operación y declaraciones` $\to$ 3. `Consultas y herramientas` $\to$ 4. `Modificaciones y cierre` $\to$ 5. `Normativa y asistencia`.
+* **Indexación en ramas compactadas:** Cuando no hay N4 ni N5 (ej. Agentes Aduaneros), `orden_n4` toma el índice 1..7 y `orden_n5` queda como `—`.
+
+### 5.4 Identificador Institucional Inmutable (`SAT-GES-####`)
+* Todo trámite, servicio o guía se gobierna por el código canónico **`SAT-GES-####`** (del `SAT-GES-0001` al `SAT-GES-0683`).
+* No cambia si el trámite cambia de categoría, de nombre comercial o si se comparte entre múltiples audiencias (polijerarquía).
+* Los códigos de hojas clásicas (`comercio_exterior-X`, `profesionales-Y`) se archivan en `codigos_legacy` para auditoría forense.
+
