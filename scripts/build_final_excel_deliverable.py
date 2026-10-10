@@ -627,13 +627,11 @@ ws_brechas.auto_filter.ref = f"A1:F{len(ce_brechas)+1}"
 # GUARDAR LIBRO DEFINITIVO
 # ==============================================================================
 OUTPUT_EXCEL_PATH = 'docs/fuentes-datos/Estructura_Final_Contenido_Portal_SAT_Actualizado.xlsx'
-OUTPUT_EXCEL_25COL = 'docs/fuentes-datos/Estructura_Final_Contenido_Portal_SAT_Actualizado_v25col.xlsx'
 
-for out_path in [OUTPUT_EXCEL_PATH, OUTPUT_EXCEL_25COL]:
-    try:
-        wb.save(out_path)
-        print(f"Libro Excel maestro guardado exitosamente en: {out_path}")
-    except PermissionError:
-        print(f"[AVISO] El archivo '{out_path}' está abierto o bloqueado por otra aplicación.")
+try:
+    wb.save(OUTPUT_EXCEL_PATH)
+    print(f"Libro Excel maestro guardado exitosamente en: {OUTPUT_EXCEL_PATH}")
+except PermissionError:
+    print(f"[AVISO] El archivo '{OUTPUT_EXCEL_PATH}' está abierto o bloqueado por otra aplicación.")
 
 print(f"Hojas: {', '.join(wb.sheetnames)}")

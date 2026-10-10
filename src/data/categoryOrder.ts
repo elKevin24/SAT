@@ -115,6 +115,29 @@ const SPECIFIC_SUBCATEGORY_ORDER: Record<string, string[]> = {
     'Consultas Técnicas, Recursos y Valoración',
     'Modernización e Infraestructura Aduanera',
   ],
+  'Entidades del Estado': [
+    'Registro Institucional y RTU Estatal',
+    'Facturación FEL, Retenciones y Operaciones',
+    'Parque Vehicular Oficial y de Autoridad',
+    'Control Interno, Solvencias y Normativa',
+  ],
+  'Constitucionales': [
+    'Centros Educativos y Universidades (Arts. 73 y 88)',
+    'Iglesias y Deporte Federado (Arts. 37 y 92)',
+    'Vehículos, Solvencias y Asistencia Institucional',
+  ],
+  'No Lucrativos': [
+    'Inscripción y RTU de Organizaciones No Lucrativas',
+    'Exenciones CIVA, Actualización y Cierre de Operaciones',
+  ],
+  'Municipalidades': [
+    'Gestión Tributaria y Patrimonio Municipal',
+  ],
+  'Decreto': [
+    'Misiones Diplomáticas y Organismos Internacionales',
+    'Cooperativas, Partidos Políticos y Exenciones Especiales',
+    'Donaciones Oficiales y Despacho Aduanero',
+  ],
 };
 
 export const OFFICIAL_SUBCATEGORY_ORDER: Record<string, string[]> = Object.keys(
