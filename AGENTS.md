@@ -35,3 +35,4 @@
 - **Código Institucional Inmutable:** Usar siempre **`SAT-GES-####`** como identificador canónico universal (agnóstico al árbol, segmento y nombre). Los IDs de hojas se preservan como `codigos_legacy`.
 - **Gobernanza del Orden:** Prohibido quemar números en títulos visibles. El orden se rige estrictamente por `orden_n1..orden_n5` siguiendo el ciclo ATO (1. Empezar $\to$ 2. Operar $\to$ 3. Consultar $\to$ 4. Modificar $\to$ 5. Normativa).
 - **Matriz Canónica de 25 Columnas:** Mantener en sincronía la estructura de 25 columnas (Opción A) en todos los entregables vivos.
+- **Validación Activa de URLs (Zero Enlaces Rotos):** Verificar que cada trámite tenga una URL funcional en el portal (`HTTP 200 OK`). Enlaces caídos (`404`) o genéricos al Home (`/`) deben rastrearse e investigarse en el portal (`site:portal.sat.gob.gt`) para recuperar su ruta canónica activa.

@@ -107,6 +107,14 @@ Cada trámite u objeto de contenido posee 4 dimensiones ortogonales:
   * `Estructura_Final_Contenido_Portal_SAT_Actualizado.xlsx` (Libro maestro con fórmulas dinámicas de resumen y matriz de 25 columnas).
   * `Mapa_de_Navegacion_y_Descripciones_Portal_SAT.xlsx` (Mapa antes/después y fichas en lenguaje ciudadano).
 
+### J. Regla de Validación Activa y Búsqueda de URLs (Zero Enlaces Rotos)
+* **Verificación HTTP Mandatoria:** Toda URL asociada a un trámite o servicio debe ser verificada activamente contra el servidor del Portal SAT (garantizar `HTTP 200 OK`).
+* **Protocolo de Rescate para Enlaces Caídos o Genéricos:**
+  1. Si una URL retorna `404 Not Found` o apunta a la raíz genérica (`https://portal.sat.gob.gt/`), es obligatorio investigar en el portal oficial mediante búsqueda directa (`site:portal.sat.gob.gt "[tema del trámite]"`).
+  2. Localizar la ruta canónica activa reestructurada por la SAT (ej. secciones `/requisitos-tramites-aduanas/`, `/devolucion-credito-fiscal/`, `/programa-miad/`).
+  3. Comprobar que la URL rescatada responda `HTTP 200` antes de inyectarla en el dataset y en el libro Excel maestro.
+  4. Queda terminantemente prohibido publicar enlaces caídos o URLs genéricas que no resuelvan el trámite específico.
+
 ---
 
 ## 2. Taxonomía Canónica de Comercio Exterior (Referencia Estable)
