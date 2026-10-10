@@ -109,10 +109,10 @@ sub_banner.alignment = Alignment(horizontal='center', vertical='center')
 # Bloques KPI con fórmulas dinámicas vivas
 kpis = [
     ("TOTAL CONTENIDOS", f"=COUNTA('{SHEET_MASTER_NAME}'!A2:A{LAST_ROW})", "Universo Oficial SAT", "B6", "B7", NAVY_HEADER),
-    ("CONTRIBUYENTES", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!C2:C{LAST_ROW}, "Contribuyentes")', "Régimen Interno", "C6", "C7", BLUE_HEADER),
-    ("COMERCIO EXTERIOR", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!C2:C{LAST_ROW}, "Operadores de Comercio Exterior")', "Aduanas, AFPA y Zonas", "D6", "E7", CYAN_ACCENT),
-    ("PROFESIONALES", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!C2:C{LAST_ROW}, "Profesionales")', "Notarios, CPA, TEV", "F6", "F7", GREEN_ACCENT),
-    ("ENTES EXENTOS", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!C2:C{LAST_ROW}, "Entes Exentos")', "ONGs, Iglesias, Estado", "G6", "H7", PURPLE_ACCENT),
+    ("CONTRIBUYENTES", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!D2:D{LAST_ROW}, "Contribuyentes")', "Régimen Interno", "C6", "C7", BLUE_HEADER),
+    ("COMERCIO EXTERIOR", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!D2:D{LAST_ROW}, "Operadores de Comercio Exterior")', "Aduanas, AFPA y Zonas", "D6", "E7", CYAN_ACCENT),
+    ("PROFESIONALES", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!D2:D{LAST_ROW}, "Profesionales")', "Notarios, CPA, TEV", "F6", "F7", GREEN_ACCENT),
+    ("ENTES EXENTOS", f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!D2:D{LAST_ROW}, "Entes Exentos")', "ONGs, Iglesias, Estado", "G6", "H7", PURPLE_ACCENT),
 ]
 
 for label, formula, sub, top_left, bot_right, color in kpis:
@@ -463,7 +463,8 @@ def populate_unified_sheet(ws, dataset):
         # Col 10: Nivel 4
         ws.cell(row=r_idx, column=10, value=n4)
         # Col 11: Orden N5
-        c_o5 = ws.cell(row=r_idx, column=11, value=ord_n5)
+        val_o5 = '—' if (n5 == '—' or ord_n5 is None or ord_n5 == '—') else ord_n5
+        c_o5 = ws.cell(row=r_idx, column=11, value=val_o5)
         c_o5.alignment = Alignment(horizontal='center')
         c_o5.font = font_bold
         # Col 12: Nivel 5

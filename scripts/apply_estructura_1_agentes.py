@@ -10,7 +10,7 @@ def apply_estructura_1():
     estructura_1_agentes = {
         'comercio_exterior-83': {
             'orden_n4': 1,
-            'orden_n5': 1,
+            'orden_n5': None,
             'nivel4_tema': '—',
             'materiaTema': '—',
             'nivel5_tramite': '—',
@@ -28,7 +28,7 @@ def apply_estructura_1():
         },
         'comercio_exterior-84': {
             'orden_n4': 2,
-            'orden_n5': 1,
+            'orden_n5': None,
             'nivel4_tema': '—',
             'materiaTema': '—',
             'nivel5_tramite': '—',
@@ -46,7 +46,7 @@ def apply_estructura_1():
         },
         'comercio_exterior-82': {
             'orden_n4': 3,
-            'orden_n5': 1,
+            'orden_n5': None,
             'nivel4_tema': '—',
             'materiaTema': '—',
             'nivel5_tramite': '—',
@@ -64,7 +64,7 @@ def apply_estructura_1():
         },
         'comercio_exterior-97': {
             'orden_n4': 4,
-            'orden_n5': 1,
+            'orden_n5': None,
             'nivel4_tema': '—',
             'materiaTema': '—',
             'nivel5_tramite': '—',
@@ -82,7 +82,7 @@ def apply_estructura_1():
         },
         'comercio_exterior-143': {
             'orden_n4': 5,
-            'orden_n5': 1,
+            'orden_n5': None,
             'nivel4_tema': '—',
             'materiaTema': '—',
             'nivel5_tramite': '—',
@@ -100,7 +100,7 @@ def apply_estructura_1():
         },
         'comercio_exterior-100': {
             'orden_n4': 6,
-            'orden_n5': 1,
+            'orden_n5': None,
             'nivel4_tema': '—',
             'materiaTema': '—',
             'nivel5_tramite': '—',
@@ -118,7 +118,7 @@ def apply_estructura_1():
         },
         'comercio_exterior-95': {
             'orden_n4': 7,
-            'orden_n5': 1,
+            'orden_n5': None,
             'nivel4_tema': '—',
             'materiaTema': '—',
             'nivel5_tramite': '—',
@@ -149,11 +149,11 @@ def apply_estructura_1():
 
     # Ordenar dataset para que respete rigurosamente (orden_n1, orden_n2, orden_n3, orden_n4, orden_n5)
     data.sort(key=lambda x: (
-        x.get('orden_n1', 1),
-        x.get('orden_n2', 1),
-        x.get('orden_n3', 1),
-        x.get('orden_n4', 1),
-        x.get('orden_n5', 1)
+        x.get('orden_n1') or 0,
+        x.get('orden_n2') or 0,
+        x.get('orden_n3') or 0,
+        x.get('orden_n4') or 0,
+        x.get('orden_n5') or 0
     ))
 
     # Guardar allTramites.json
