@@ -139,7 +139,7 @@ const TOPICS_BY_SEGMENT: Record<SegmentId, { label: string; primaryColor: string
       {
         id: 'prof-gestores',
         title: 'Acreditación de Gestores Tributarios',
-        desc: 'Registra tus poderes y autorizaciones notariales para gestionar trámites presenciales en nombre de tus clientes.',
+        desc: 'Registra tus poderes y autorizaciones notariales para realizar gestiones presenciales en nombre de tus clientes.',
         url: 'https://portal.sat.gob.gt/portal/gestores-tributarios/'
       },
       {

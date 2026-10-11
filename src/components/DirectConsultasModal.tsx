@@ -56,7 +56,7 @@ export const DirectConsultasModal: React.FC<DirectConsultasModalProps> = ({
       });
     } else {
       setGestionResult({
-        estado: 'Aprobada / En Trámite',
+        estado: 'Aprobada / En Gestión',
         color: 'text-emerald-600 bg-emerald-50 border-emerald-200',
         mensaje: 'La solicitud de Agencia Virtual o RTU fue procesada exitosamente. Revisa tu correo registrado para confirmar.'
       });
@@ -170,7 +170,7 @@ export const DirectConsultasModal: React.FC<DirectConsultasModalProps> = ({
           {activeTool === 'gestion' && (
             <div className="space-y-4">
               <label htmlFor="consultas-gestion" className="block text-xs text-slate-600">
-                Ingresa el número de solicitud o gestión recibido por correo para conocer el avance de tu trámite de Agencia Virtual o RTU:
+                Ingresa el número de solicitud o gestión recibido por correo para conocer el avance de tu gestión de Agencia Virtual o RTU:
               </label>
               <form onSubmit={handleConsultarGestion} className="flex gap-2">
                 <input
@@ -178,7 +178,7 @@ export const DirectConsultasModal: React.FC<DirectConsultasModalProps> = ({
                   type="text"
                   value={gestionQuery}
                   onChange={(e) => setGestionQuery(e.target.value)}
-                  placeholder="Ej. SOL-2026-98124 o número de trámite"
+                  placeholder="Ej. SOL-2026-98124 o número de gestión"
                   className="flex-1 px-3.5 py-2 text-sm border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#14649B]/20 focus:border-[#14649B] outline-none"
                 />
                 <button

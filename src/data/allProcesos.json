@@ -1,7 +1,7 @@
 [
   {
     "no": 1,
-    "nombre": "Obtener mi primer NIT",
+    "nombre": "Solicitar Número de Identificación Tributaria (NIT)",
     "audiencia": "Contribuyentes",
     "etapa": "Empezar",
     "paraQuien": "Persona individual que nunca ha tenido NIT",

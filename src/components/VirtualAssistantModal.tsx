@@ -83,7 +83,7 @@ export const VirtualAssistantModal: React.FC = () => {
       } else {
         botReply = {
           sender: 'bot',
-          text: `Entendido. Para "${text}", te recomiendo explorar el catálogo de trámites según tu tipo de contribuyente o comunicarte al Contact Center 1550 para asistencia personalizada.`,
+          text: `Entendido. Para "${text}", te recomiendo explorar el catálogo de gestiones según tu tipo de contribuyente o comunicarte al Contact Center 1550 para asistencia personalizada.`,
           options: [
             { label: 'Llamar al 1550', action: 'call_1550' }
           ]

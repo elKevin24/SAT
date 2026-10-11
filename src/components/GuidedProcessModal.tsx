@@ -138,7 +138,7 @@ export const GuidedProcessModal: React.FC<GuidedProcessModalProps> = ({
                       </div>
 
                       <div className="text-xs text-slate-600 mt-1 font-medium">
-                        Trámite o página sugerida: <span className="text-slate-800">{paso.pagina}</span>
+                        Gestión o página sugerida: <span className="text-slate-800">{paso.pagina}</span>
                       </div>
 
                       {/* Direct access button */}
@@ -150,7 +150,7 @@ export const GuidedProcessModal: React.FC<GuidedProcessModalProps> = ({
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-1 text-xs font-bold text-[#14649B] hover:underline"
                           >
-                            <span>Ir al trámite en línea</span>
+                            <span>Ir a la gestión en línea</span>
                             <ExternalLink className="w-3 h-3" />
                           </a>
                         </div>

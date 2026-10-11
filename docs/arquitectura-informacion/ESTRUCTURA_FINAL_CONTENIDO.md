@@ -4,7 +4,7 @@
 > **Versión:** 4.1 (Definitiva y Sincronizada con Producción)  
 > **Fecha de Emisión:** Octubre 2026  
 > **Alineación:** Estructura Institucional SAT Guatemala, Modelo de Ciclo de Vida ATO (Australian Taxation Office) & Plain Language  
-> **Base de Datos Única (Single Source of Truth):** [`src/data/allTramites.json`](file:///c:/Users/busqu/Documents/GitHub/SAT/src/data/allTramites.json) (716 registros consolidados)  
+> **Base de Datos Única (Single Source of Truth):** [`src/data/allTramites.json`](file:///c:/Users/busqu/Documents/GitHub/SAT/src/data/allTramites.json) (715 registros consolidados)  
 > **Libros Excel Entregables (Vivos):**  
 > * [`docs/fuentes-datos/Estructura_Final_Contenido_Portal_SAT_Actualizado.xlsx`](file:///c:/Users/busqu/Documents/GitHub/SAT/docs/fuentes-datos/Estructura_Final_Contenido_Portal_SAT_Actualizado.xlsx)  
 > * [`docs/fuentes-datos/Mapa_de_Navegacion_y_Descripciones_Portal_SAT.xlsx`](file:///c:/Users/busqu/Documents/GitHub/SAT/docs/fuentes-datos/Mapa_de_Navegacion_y_Descripciones_Portal_SAT.xlsx)  
@@ -16,12 +16,12 @@
 
 ## 1. Resumen Ejecutivo
 
-El presente documento consolida la totalidad de **716 contenidos, trámites y servicios** del portal de la Superintendencia de Administración Tributaria (SAT).
+El presente documento consolida la totalidad de **715 contenidos, trámites y servicios** del portal de la Superintendencia de Administración Tributaria (SAT).
 
 La estructura resuelve de manera definitiva:
 1. **La jerarquía de 4 Macro-Segmentos y Taxonomía Oficial**:
    * **Contribuyentes:** 344 trámites en 4 regímenes y servicios tributarios.
-   * **Operadores de Comercio Exterior:** 246 trámites consolidados en **6 ramas canónicas** maestras.
+   * **Operadores de Comercio Exterior:** 245 trámites consolidados en **6 ramas canónicas** maestras.
    * **Entes Exentos:** 79 trámites para entidades estatales, descentralizadas y no lucrativas.
    * **Profesionales:** 47 trámites netos para auxiliares tributarios y profesionales colegiados (2 duplicados fusionados).
 2. **La eliminación de jerga técnica interna y prefijos numéricos**: Se erradica el uso de términos abstractos como *"oficial"* y prefijos ordinales en textos visibles para el ciudadano.
@@ -38,11 +38,11 @@ La estructura resuelve de manera definitiva:
 
 | No. | Segmento Oficial | Texto Orientador de Interfaz (Estándar ATO) | Categorías / Ramas | Trámites | Participación |
 | :---: | :--- | :--- | :--- | :---: | :---: |
-| **1** | **Contribuyentes** | *Información y servicios tributarios para personas y empresas.* | NIT sin Obligaciones, Pequeños Contribuyentes, Contribuyente General, Contribuyentes Especiales | **344** | 48.0% |
-| **2** | **Operadores de Comercio Exterior** | *Servicios e información aduanera para la importación, exportación y logística.* | 6 Ramas Canónicas (Importadores, Exportadores, OEA, AFPA, Regímenes Territoriales, Normativa General) | **246** | 34.4% |
+| **1** | **Contribuyentes** | *Información y servicios tributarios para personas y empresas.* | NIT sin Obligaciones, Pequeños Contribuyentes, Contribuyente General, Contribuyentes Especiales | **344** | 48.1% |
+| **2** | **Operadores de Comercio Exterior** | *Servicios e información aduanera para la importación, exportación y logística.* | 6 Ramas Canónicas (Importadores, Exportadores, OEA, AFPA, Regímenes Territoriales, Normativa General) | **245** | 34.3% |
 | **3** | **Entes Exentos** | *Información y gestiones tributarias para entidades públicas y organizaciones no lucrativas.* | Entidades del Estado, Constitucionales, No Lucrativos, Municipalidades, Decreto | **79** | 11.0% |
 | **4** | **Profesionales** | *Herramientas y servicios especializados para profesionales tributarios y auxiliares.* | Abogados y Notarios, Peritos Contadores, Auditores, Gestores Tributarios, Servicios Profesionales | **47** | 6.6% |
-| **TOTAL** | **4 Segmentos** | — | **Total Portal Web SAT Consolidado** | **716** | **100.0%** |
+| **TOTAL** | **4 Segmentos** | — | **Total Portal Web SAT Consolidado** | **715** | **100.0%** |
 
 ---
 
@@ -80,15 +80,15 @@ PROFESIONALES (47 Trámites)
 
 ---
 
-## 4. Desglose Oficial: Operadores de Comercio Exterior (246 Trámites)
+## 4. Desglose Oficial: Operadores de Comercio Exterior (245 Trámites)
 
 ```
-OPERADORES DE COMERCIO EXTERIOR (246 Trámites)
+OPERADORES DE COMERCIO EXTERIOR (245 Trámites)
 │
-├── 1. Importadores (55 trámites)
+├── 1. Importadores (54 trámites)
 │   ├── Registro y Padrón de Importadores (9)
 │   ├── Declaraciones Aduaneras y DUCAs (10)
-│   ├── Despacho Aduanero, Levante y Selectivo (17)
+│   ├── Despacho Aduanero, Levante y Selectivo (16)
 │   ├── Importación y Nacionalización de Vehículos (10)
 │   └── Mercancías en Abandono, Depósitos y Franquicias (9)
 │
@@ -125,10 +125,10 @@ OPERADORES DE COMERCIO EXTERIOR (246 Trámites)
 ## 5. Gobernanza y Sincronización de Archivos
 
 ```
-src/data/allTramites.json (Single Source of Truth - 716 nodos de navegación)
+src/data/allTramites.json (Single Source of Truth - 715 nodos de navegación)
             │
             ├──► docs/fuentes-datos/Estructura_Final_Contenido_Portal_SAT_Actualizado.xlsx
-            │    (Libro Maestro Excel con 7 hojas: Resumen, Matriz 716, Contribuyentes 344, Comercio Exterior 246, Profesionales 47, Entes Exentos 79, Brechas 12)
+            │    (Libro Maestro Excel con 7 hojas: Resumen, Matriz 715, Contribuyentes 344, Comercio Exterior 245, Profesionales 47, Entes Exentos 79, Brechas 12)
             │
             ├──► docs/fuentes-datos/Mapa_de_Navegacion_y_Descripciones_Portal_SAT.xlsx
             │    (Taxonomía y fichas redactadas en Lenguaje Ciudadano)
@@ -156,5 +156,5 @@ Para superar el modelo jerárquico rígido de "silos" donde el contenido queda a
    - Se proveen arreglos optimizados de búsqueda: `segmentosAplicables[]`, `categoriasAplicables[]` y `familias_ids[]`.
 
 3. **Mapeo Biunívoco y Contenido Transversal**:
-   - **18 contenidos transversales** son compartidos por múltiples ramas (p. ej. *Procedimientos administrativos de aduanas*, *Consulta de contribuyentes morosos*, *DUCA y Aduana sin papeles*).
-   - La suma exacta de audiencias de los 683 contenidos únicos equivale a los **716 nodos del árbol de navegación** ($\sum \text{totalAudiencias} = 716$), garantizando 0 pérdida de información y 0 duplicación redundante de contenido.
+   - **17 contenidos transversales** son compartidos por múltiples ramas (p. ej. *Procedimientos administrativos de aduanas*, *Consulta de contribuyentes morosos*, *DUCA y Aduana sin papeles*).
+   - La suma exacta de audiencias de los 683 contenidos únicos equivale a los **715 nodos del árbol de navegación** ($\sum \text{totalAudiencias} = 715$), garantizando 0 pérdida de información y 0 duplicación redundante de contenido.

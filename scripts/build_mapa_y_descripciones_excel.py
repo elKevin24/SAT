@@ -871,7 +871,7 @@ ws_fichas.freeze_panes = 'E7'
 ws_fichas.auto_filter.ref = f"A6:H{len(NODOS_MAPA)+6}"
 
 # Guardar libro definitivo
-OUTPUT_MAPA_PATH = 'docs/fuentes-datos/Mapa_de_Navegacion_y_Descripciones_Portal_SAT.xlsx'
+OUTPUT_MAPA_PATH = 'docs/fuentes-datos/02_archivos_producto_entregables/Mapa_de_Navegacion_y_Descripciones_Portal_SAT.xlsx'
 wb.save(OUTPUT_MAPA_PATH)
 print(f"Libro exclusivo del mapa guardado en: {OUTPUT_MAPA_PATH}")
 print(f"Hojas: Resumen Arquitectura, Mapa de Navegación ({len(NODOS_MAPA)} nodos + 4 subtotales), Fichas por Rol y Categoría ({len(NODOS_MAPA)} fichas)")

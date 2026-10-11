@@ -372,7 +372,7 @@ for col_idx, width in resumen_col_widths.items():
 # ==============================================================================
 headers_unified = [
     "No.",
-    "ID Trámite",
+    "ID Gestión",
     "Orden N1",
     "Nivel 1",
     "Orden N2",
@@ -384,9 +384,9 @@ headers_unified = [
     "Orden N5",
     "Nivel 5",
     "Orden Contenido",
-    "Nombre del Trámite / Servicio (Lenguaje Claro)",
+    "Nombre de la Gestión / Servicio (Lenguaje Claro)",
     "Ruta de Navegación (Miga de Pan)",
-    "Etapa Ciclo de Vida ATO",
+    "Etapa del Ciclo de Vida",
     "Tipo de Interacción",
     "Tipología de Contenido",
     "Plataforma / Sistema",
@@ -423,17 +423,33 @@ def populate_unified_sheet(ws, dataset):
 
         n1 = item.get('nivel1_segmento') or item.get('segmento') or (nav_levels[0] if len(nav_levels) > 0 else '—')
         n2 = item.get('nivel2_area') or item.get('nivel2_categoria') or item.get('nivel2_rama') or item.get('nivel2_rol') or item.get('regimenArea') or item.get('categoria') or (nav_levels[1] if len(nav_levels) > 1 else '—')
-        n3 = item.get('nivel3_subarea') or item.get('nivel3_subcategoria') or item.get('nivel3_actor') or item.get('grupoActor') or item.get('subcategoria') or (nav_levels[2] if len(nav_levels) > 2 else '—')
-        n4 = item.get('nivel4_tema') or item.get('materiaTema') or item.get('tema') or (nav_levels[3] if len(nav_levels) > 3 else '—')
-        n5 = item.get('nivel5_tramite') or item.get('subtemaGestion') or item.get('subtema') or (nav_levels[4] if len(nav_levels) > 4 else '—')
-        if not n4 or str(n4).strip() == '': n4 = '—'
-        if not n5 or str(n5).strip() == '': n5 = '—'
+        # Si la miga solo tiene 2 niveles de navegación (compactación directa en N2: sin N3, N4 ni N5, ej. OEA)
+        item_n3 = item.get('nivel3_subarea') or item.get('nivel3_subcategoria') or item.get('nivel3_actor') or item.get('grupoActor') or item.get('subcategoria')
+        item_n4 = item.get('nivel4_tema') or item.get('materiaTema') or item.get('tema')
+        item_n5 = item.get('nivel5_tramite') or item.get('subtemaGestion') or item.get('subtema')
+
+        if len(nav_levels) <= 2 or item_n3 in ['', '—']:
+            n3 = '—'
+            n4 = '—'
+            n5 = '—'
+        else:
+            n3 = item_n3 or (nav_levels[2] if len(nav_levels) > 2 else '—')
+            if len(nav_levels) <= 3 and (not item_n4 or item_n4 in ['', '—']):
+                n4 = '—'
+                n5 = '—'
+            else:
+                n4 = item_n4 or (nav_levels[3] if len(nav_levels) > 3 else '—')
+                n5 = item_n5 or (nav_levels[4] if len(nav_levels) > 4 else '—')
+
+        if not n3 or str(n3).strip() in ['', '—']: n3 = '—'
+        if not n4 or str(n4).strip() in ['', '—']: n4 = '—'
+        if not n5 or str(n5).strip() in ['', '—']: n5 = '—'
 
         ord_n1 = item.get('orden_n1', 1)
         ord_n2 = item.get('orden_n2', 1)
-        ord_n3 = item.get('orden_n3', 1)
-        ord_n4 = item.get('orden_n4', 1)
-        ord_n5 = item.get('orden_n5', 1)
+        ord_n3 = item.get('orden_n3', 1) if n3 != '—' else '—'
+        ord_n4 = item.get('orden_n4', 1) if n4 != '—' else '—'
+        ord_n5 = item.get('orden_n5', 1) if n5 != '—' else '—'
 
         # Col 1: No.
         ws.cell(row=r_idx, column=1, value=r_idx - 1).alignment = Alignment(horizontal='center')
@@ -624,14 +640,16 @@ ws_brechas.freeze_panes = 'A2'
 ws_brechas.auto_filter.ref = f"A1:F{len(ce_brechas)+1}"
 
 # ==============================================================================
-# GUARDAR LIBRO DEFINITIVO
+# GUARDAR LIBRO DEFINITIVO EN ENTREGABLES
 # ==============================================================================
-OUTPUT_EXCEL_PATH = 'docs/fuentes-datos/Estructura_Final_Contenido_Portal_SAT_Actualizado.xlsx'
+OUTPUT_ENTREGABLES_PATH = 'docs/fuentes-datos/02_archivos_producto_entregables/Estructura_Final_Contenido_Portal_SAT_Actualizado.xlsx'
 
 try:
-    wb.save(OUTPUT_EXCEL_PATH)
-    print(f"Libro Excel maestro guardado exitosamente en: {OUTPUT_EXCEL_PATH}")
+    wb.save(OUTPUT_ENTREGABLES_PATH)
+    print(f"Libro guardado en entregables: {OUTPUT_ENTREGABLES_PATH}")
 except PermissionError:
-    print(f"[AVISO] El archivo '{OUTPUT_EXCEL_PATH}' está abierto o bloqueado por otra aplicación.")
+    print(f"[AVISO] El archivo '{OUTPUT_ENTREGABLES_PATH}' está abierto o bloqueado por otra aplicación.")
+except Exception as e:
+    print(f"[AVISO entregables] {e}")
 
 print(f"Hojas: {', '.join(wb.sheetnames)}")

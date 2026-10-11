@@ -9,7 +9,7 @@ Este directorio reúne los documentos normativos, taxonómicos y operativos que 
 | Documento | Alcance | Estado | Checkbox |
 | :--- | :--- | :---: | :--- |
 | [`ARQUITECTURA_INFORMACION_CENTRADA_EN_USUARIO.md`](./ARQUITECTURA_INFORMACION_CENTRADA_EN_USUARIO.md) | **Marco Maestro de IA-UX (8 capas)**: Modelo mental, tareas, procesos, contenido, relaciones y gobernanza | Completo / Vigente | [x] |
-| [`ESTRUCTURA_FINAL_CONTENIDO.md`](./ESTRUCTURA_FINAL_CONTENIDO.md) | Catálogo unificado de 716 trámites y taxonomía multinivel | Completo / Vigente | [x] |
+| [`ESTRUCTURA_FINAL_CONTENIDO.md`](./ESTRUCTURA_FINAL_CONTENIDO.md) | Catálogo unificado de 715 trámites y taxonomía multinivel | Completo / Vigente | [x] |
 | [`TAXONOMIA_Y_DIMENSIONES_PORTAL_SAT.md`](./TAXONOMIA_Y_DIMENSIONES_PORTAL_SAT.md) | Dimensiones ATO: 5 etapas del ciclo y 4 tipos de interacción | Completo / Vigente | [x] |
 | [`MAPA_DE_NAVEGACION_COMERCIO_EXTERIOR.md`](./MAPA_DE_NAVEGACION_COMERCIO_EXTERIOR.md) | Comparativo antes/después y consolidación de las 6 ramas aduaneras | Completo / Vigente | [x] |
 | [`MAPA_DE_NAVEGACION_PROFESIONALES.md`](./MAPA_DE_NAVEGACION_PROFESIONALES.md) | Comparativo antes/después y saneamiento de 47 trámites de Profesionales | Completo / Vigente | [x] |
@@ -22,8 +22,8 @@ Este directorio reúne los documentos normativos, taxonómicos y operativos que 
 
 ## 📋 Lista de Control de Entregables y Sincronización
 
-### Jerarquía y Taxonomía (716 Trámites Consolidados)
-- [x] Unificación del universo de **716 trámites oficiales** sin pérdidas (344 Contribuyentes, 246 Comercio Exterior, 79 Entes Exentos, 47 Profesionales).
+### Jerarquía y Taxonomía (715 Trámites Consolidados)
+- [x] Unificación del universo de **715 trámites oficiales** sin pérdidas (344 Contribuyentes, 245 Comercio Exterior, 79 Entes Exentos, 47 Profesionales).
 - [x] Consolidación canónica de Comercio Exterior en **6 ramas maestras** (Importadores, Exportadores, OEA, AFPA, Regímenes Territoriales, Normativa General).
 - [x] Saneamiento integral de **Profesionales**: 47 trámites netos, 2 duplicados fusionados, 0 subcategorías genéricas residuales y migas homogéneas de 4 niveles.
 - [x] Eliminación de niveles redundantes N4/N5 ("ZDEEP > ZDEEP", "DAT > DAT") y compactación asimétrica.
@@ -45,7 +45,7 @@ Este directorio reúne los documentos normativos, taxonómicos y operativos que 
 ## 📂 Archivos en esta Carpeta
 
 - [`ARQUITECTURA_INFORMACION_CENTRADA_EN_USUARIO.md`](./ARQUITECTURA_INFORMACION_CENTRADA_EN_USUARIO.md) — Marco maestro de IA: 8 capas, modelo mental, arquitectura de procesos y grafo de contenidos.
-- [`ESTRUCTURA_FINAL_CONTENIDO.md`](./ESTRUCTURA_FINAL_CONTENIDO.md) — Definición exhaustiva de los 716 registros, macro-niveles y gobernanza de entregables.
+- [`ESTRUCTURA_FINAL_CONTENIDO.md`](./ESTRUCTURA_FINAL_CONTENIDO.md) — Definición exhaustiva de los 715 registros, macro-niveles y gobernanza de entregables.
 - [`TAXONOMIA_Y_DIMENSIONES_PORTAL_SAT.md`](./TAXONOMIA_Y_DIMENSIONES_PORTAL_SAT.md) — Cuatro dimensiones transversales de interacción (Actor, ATO, Tipología, Plataforma).
 - [`MAPA_DE_NAVEGACION_COMERCIO_EXTERIOR.md`](./MAPA_DE_NAVEGACION_COMERCIO_EXTERIOR.md) — Mapa comparativo estructurado antes vs. después de las 6 ramas de comercio exterior.
 - [`MAPA_DE_NAVEGACION_PROFESIONALES.md`](./MAPA_DE_NAVEGACION_PROFESIONALES.md) — Mapa comparativo antes vs. después de las 5 categorías de profesionales.

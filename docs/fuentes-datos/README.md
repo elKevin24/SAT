@@ -11,8 +11,9 @@ docs/fuentes-datos/
 │   └── README.md                                          # Memoria técnica histórica
 │
 └── 02_archivos_producto_entregables/  # ENTREGABLES DEFINITIVOS (VIVOS / RESULTADOS DE PRODUCCIÓN)
-    ├── Estructura_Final_Contenido_Portal_SAT_Actualizado.xlsx  # Libro Maestro Definitivo (716 filas, 25 cols)
-    ├── Mapa_de_Navegacion_y_Descripciones_Portal_SAT.xlsx      # Taxonomía y Plain Language (716 filas)
+    ├── Estructura_Final_Contenido_Portal_SAT_Actualizado.xlsx  # Libro Maestro Definitivo (715 filas, 25 cols)
+    ├── Catalogo_Contenidos_Unicos_Portal_SAT.xlsx              # Catálogo Canónico Raíz (683 contenidos únicos)
+    ├── Mapa_de_Navegacion_y_Descripciones_Portal_SAT.xlsx      # Taxonomía y Plain Language (27 fichas de rol)
     └── README.md                                          # Especificación de entregables
 ```
 
@@ -20,10 +21,11 @@ docs/fuentes-datos/
 
 ## 📊 Matriz Comparativa de Archivos
 
-| Directorio | Archivo | Tipo de Gobernanza | Total Filas | Estado |
+| Directorio | Archivo | Tipo de Gobernanza | Total Registros | Estado |
 | :--- | :--- | :---: | :---: | :---: |
-| `02_archivos_producto_entregables/` | **`Estructura_Final_Contenido_Portal_SAT_Actualizado.xlsx`** | **Entregable Oficial Vivo** | **716** | **Vigente (Producción)** |
-| `02_archivos_producto_entregables/` | **`Mapa_de_Navegacion_y_Descripciones_Portal_SAT.xlsx`** | **Entregable Oficial Vivo** | **716** | **Vigente (Producción)** |
+| `02_archivos_producto_entregables/` | **`Estructura_Final_Contenido_Portal_SAT_Actualizado.xlsx`** | **Entregable Oficial Vivo** | **715** | **Vigente (Producción)** |
+| `02_archivos_producto_entregables/` | **`Catalogo_Contenidos_Unicos_Portal_SAT.xlsx`** | **Entregable Oficial Vivo** | **683** | **Vigente (Producción)** |
+| `02_archivos_producto_entregables/` | **`Mapa_de_Navegacion_y_Descripciones_Portal_SAT.xlsx`** | **Entregable Oficial Vivo** | **27 fichas** | **Vigente (Producción)** |
 | `01_archivos_inicio_historicos/` | `Detalle de Contenido para Grupos de Interes.xlsx` | Insumo de Inicio / Histórico | N/A | Congelado |
 | `01_archivos_inicio_historicos/` | `Arbol_de_Navegacion_Portal_v5.xlsx` | Insumo de Inicio / Histórico | N/A | Congelado |
 | `01_archivos_inicio_historicos/` | `Ruta de procesos.xlsx` | Insumo de Inicio / Histórico | N/A | Congelado |

@@ -126,7 +126,7 @@ const NodeLevel1Component = ({ data }: NodeProps) => (
     <div className="flex items-center justify-between">
       <span className="text-[11px] font-black text-slate-700 uppercase tracking-wider">Nivel 1</span>
       <span className="text-xs font-black px-2 py-0.5 rounded-full bg-slate-100 text-slate-800">
-        {data.total as number} Trámites
+        {data.total as number} Gestiones
       </span>
     </div>
     <p className="text-base font-black text-slate-900 mt-1">{data.name as string}</p>
@@ -154,7 +154,7 @@ const NodeLevel2Component = ({ data }: NodeProps) => {
       <div className="flex items-center justify-between">
         <span className="text-[11px] font-black uppercase tracking-wider text-slate-700">Nivel 2</span>
         <span className="text-[11px] font-black px-2 py-0.5 rounded bg-slate-100 text-slate-800">
-          {data.count as number} trámites
+          {data.count as number} gestiones
         </span>
       </div>
       <p className="text-xs font-bold text-slate-900 mt-1 leading-snug">{data.name as string}</p>
@@ -186,7 +186,7 @@ const NodeLevel3Component = ({ data }: NodeProps) => {
       <div className="flex items-center justify-between">
         <span className="text-[11px] font-black uppercase tracking-wider text-slate-700">Nivel 3</span>
         <span className="text-[11px] font-black px-2 py-0.5 rounded bg-slate-100 text-slate-800">
-          {data.count as number} trámites
+          {data.count as number} gestiones
         </span>
       </div>
       <p className="text-xs font-bold text-slate-900 mt-1 leading-snug">{data.name as string}</p>
@@ -218,7 +218,7 @@ const NodeLevel4Component = ({ data }: NodeProps) => {
       <div className="flex items-center justify-between">
         <span className="text-[11px] font-black uppercase tracking-wider text-slate-700">Nivel 4</span>
         <span className="text-[11px] font-black px-2 py-0.5 rounded bg-slate-100 text-slate-800">
-          {data.count as number} trámites
+          {data.count as number} gestiones
         </span>
       </div>
       <p className="text-xs font-bold text-slate-900 mt-1 leading-snug">{data.name as string}</p>
@@ -235,7 +235,7 @@ const NodeLevel4Component = ({ data }: NodeProps) => {
   );
 };
 
-// Nivel 5 — Trámite / Servicio (con Característica ATO visible)
+// Nivel 5 — Gestión / Servicio
 const NodeLevel5TramiteComponent = ({ data }: NodeProps) => {
   const atoStyle = ATO_FEATURE_META[data.etapaAto as string] || ATO_FEATURE_META.empezar;
   const handleInspect = () => {
@@ -256,7 +256,7 @@ const NodeLevel5TramiteComponent = ({ data }: NodeProps) => {
     >
       <Handle type="target" position={Position.Left} className="w-2.5 h-2.5 !bg-slate-600" />
       <div className="flex items-center justify-between text-[11px]">
-        <span className="font-black text-slate-700 uppercase tracking-wider">Nivel 5 — Trámite</span>
+        <span className="font-black text-slate-700 uppercase tracking-wider">Nivel 5 — Gestión</span>
         <span className="text-slate-600 font-mono text-xs">{data.codigo as string}</span>
       </div>
       <p className="text-xs font-bold text-slate-900 leading-snug group-hover:text-sky-800 transition-colors">
@@ -823,7 +823,7 @@ export const PortalFlowPage: React.FC = () => {
             Regla de Colapso Taxonómico Activa (≤ 2 colapsa)
           </span>
           <span className="text-[11px] font-black px-2.5 py-1 rounded-full bg-sky-500/20 text-sky-300 border border-sky-500/30">
-            676 Trámites Verificados
+            683 Gestiones Canónicas Verificadas
           </span>
         </div>
       </header>
@@ -868,7 +868,7 @@ export const PortalFlowPage: React.FC = () => {
               value={filtroCaracteristica}
               onChange={(e) => setFiltroCaracteristica(e.target.value)}
               className="text-xs font-semibold bg-slate-50 border border-slate-300 rounded-lg px-2.5 py-1 text-slate-800 focus:ring-2 focus:ring-sky-500 focus:outline-hidden"
-              aria-label="Filtrar trámites por característica transversal de ciclo de vida"
+              aria-label="Filtrar gestiones por característica transversal de ciclo de vida"
             >
               <option value="todos">Todas las características (atributo transversal)</option>
               <option value="empezar">🌱 Empezar y registrarse</option>
@@ -888,7 +888,7 @@ export const PortalFlowPage: React.FC = () => {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="text-xs pl-8 pr-3 py-1 bg-slate-50 border border-slate-300 rounded-lg text-slate-800 focus:ring-2 focus:ring-sky-500 focus:outline-hidden w-44"
-              aria-label="Buscar trámites en el tema seleccionado"
+              aria-label="Buscar gestiones en el tema seleccionado"
             />
           </div>
         </div>
@@ -938,12 +938,12 @@ export const PortalFlowPage: React.FC = () => {
 
         {/* 4. DRAWER LATERAL: INSPECTOR DE FICHA (NIVEL 5 + PROFUNDIZACIÓN L6-L8) */}
         {selectedTramite && (
-          <aside aria-label="Ficha de trámite e inspección procedural" className="absolute top-0 right-0 w-full sm:w-[480px] h-full bg-white border-l border-slate-200 shadow-2xl flex flex-col z-20 animate-in slide-in-from-right duration-200">
+          <aside aria-label="Ficha de gestión e inspección procedural" className="absolute top-0 right-0 w-full sm:w-[480px] h-full bg-white border-l border-slate-200 shadow-2xl flex flex-col z-20 animate-in slide-in-from-right duration-200">
             {/* Header del Inspector */}
             <div className="px-5 py-4 border-b border-slate-200 bg-slate-50 flex items-center justify-between">
               <div>
                 <span className="text-[10px] font-black uppercase tracking-wider text-slate-600">
-                  Ficha de Trámite — Profundización
+                  Ficha de Gestión — Profundización
                 </span>
                 <h2 className="text-sm font-black text-slate-900 leading-tight">
                   Anatomía del Procedimiento
@@ -952,7 +952,7 @@ export const PortalFlowPage: React.FC = () => {
               <button
                 onClick={() => setSelectedTramite(null)}
                 className="p-1.5 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-200 transition-colors"
-                aria-label="Cerrar inspector de trámite"
+                aria-label="Cerrar inspector de gestión"
               >
                 <X className="w-5 h-5" />
               </button>
