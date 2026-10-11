@@ -125,7 +125,7 @@ Distribución de los **246 trámites aduaneros** en **6 ramas maestras**:
 | :--- | :---: | :--- |
 | **1. Importadores** | **55** | `Registro y Padrón de Importadores` (9), `Declaraciones Aduaneras y DUCAs` (10), `Despacho Aduanero, Levante y Selectivo` (17), `Importación y Nacionalización de Vehículos` (10), `Mercancías en Abandono, Depósitos y Franquicias` (9). |
 | **2. Exportadores** | **21** | `Padrón y Registro de Exportadores` (7), `Declaraciones Aduaneras y Embarques` (4), `Devolución de Crédito Fiscal` (10). |
-| **3. Operador Económico Autorizado (OEA)** | **2** | `Programa OEA` (2). |
+| **3. Operador Económico Autorizado (OEA)** | **2** | Compactado directo en N2 (2 gestiones terminales directas, sin N3 pasarela). |
 | **4. Auxiliares de la Función Pública Aduanera (AFPA)** | **76** | `Agentes Aduaneros` (7), `Apoderados Especiales Aduaneros` (16), `Depósitos Aduaneros` (36: DAT 18, AGD 16, Fiscales 2), `Empresas de Entrega Rápida o Courier` (3), `Transportistas Aduaneros` (14). |
 | **5. Regímenes Territoriales y Zonas Especiales** | **42** | `Maquilas (Decreto 29-89)` (12), `Zonas de Desarrollo Económico Especial Público (ZDEEP)` (30: Usuarias 15, Administradoras 15). |
 | **6. Normativa y Operaciones Aduaneras Generales** | **50** | `Arancel Centroamericano (SAC) y Permisos` (7), `Acuerdos Comerciales y Facilitación` (8), `Prevención de Contrabando y Defraudación` (3), `Consultas Técnicas, Recursos y Valoración` (14), `Modernización e Infraestructura Aduanera` (18). |

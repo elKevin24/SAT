@@ -97,9 +97,9 @@ OPERADORES DE COMERCIO EXTERIOR (245 Trámites)
 │   ├── Declaraciones Aduaneras y Embarques (4)
 │   └── Devolución de Crédito Fiscal (10)
 │
-├── 3. Operador Económico Autorizado - OEA (2 trámites compactados directamente en N3)
-│   ├── Habilitación y Certificación del OEA (SAT-GES-0417)
-│   └── Directorio y Catálogo de Beneficios OEA (SAT-GES-0416)
+├── 3. Operador Económico Autorizado - OEA (2 gestiones compactadas directamente en N2)
+│   ├── Habilitación y Certificación del Operador Económico Autorizado (OEA) (SAT-GES-0417)
+│   └── Directorio y Catálogo de Beneficios de Actores Certificados como Operador Económico Autorizado (OEA) (SAT-GES-0416)
 │
 ├── 4. Auxiliares de la Función Pública Aduanera - AFPA (76 trámites)
 │   ├── Agentes Aduaneros (7)

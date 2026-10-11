@@ -62,12 +62,12 @@ El modelo anterior presentaba una fragmentación plana en 12 categorías artific
 
 ---
 
-### Rama 3: Operador Económico Autorizado — OEA (2 trámites compactados)
+### Rama 3: Operador Económico Autorizado — OEA (2 gestiones compactadas directamente en N2)
 * **Antes:** Categoría con subcategorías vacías y redundancia de etiquetas ("Programa OEA" como paso intermedio forzado).
-* **Después (Regla de Umbral de Densidad aplicada):** Compactación directa al nivel superior sin niveles intermedios ni pantallas pasarela ($A \to$ Lista directa de 2 trámites terminales):
-  1. `SAT-GES-0417`: *Habilitación y Certificación del Operador Económico Autorizado (OEA)* (Etapa: Empezar)
-  2. `SAT-GES-0416`: *Directorio y Catálogo de Beneficios de Actores Certificados OEA* (Etapa: Consultar)
-* **Miga de pan limpia (3 niveles directos):** `Operadores de Comercio Exterior > Operador Económico Autorizado (OEA) > [Trámite]`. Cero clics redundantes.
+* **Después (Regla de Umbral de Densidad aplicada):** Compactación directa en N2 sin niveles intermedios ni pantallas pasarela ($A \to$ Lista directa de 2 gestiones terminales):
+  1. `SAT-GES-0417`: *Habilitación y Certificación del Operador Económico Autorizado (OEA)* (Etapa: Empezar y registrarse)
+  2. `SAT-GES-0416`: *Directorio y Catálogo de Beneficios de Actores Certificados como Operador Económico Autorizado (OEA)* (Etapa: Consultas y herramientas)
+* **Miga de pan limpia:** `Operadores de Comercio Exterior > Operador Económico Autorizado (OEA) > [Gestión]`. Cero clics redundantes.
 
 ---
 
