@@ -132,7 +132,7 @@ test('allProcesos: numeración, pasos y URLs válidas', () => {
   });
 });
 
-test('catalogoContenidosUnicos: 683 contenidos únicos desacoplados y suma exacta de 716 audiencias', () => {
+test('catalogoContenidosUnicos: 683 contenidos únicos desacoplados y suma exacta de 715 audiencias', () => {
   expect(contenidosUnicos.length).toBe(683);
 
   const ids = new Set(contenidosUnicos.map((c) => c.id));
@@ -141,17 +141,20 @@ test('catalogoContenidosUnicos: 683 contenidos únicos desacoplados y suma exact
   const codigos = new Set(contenidosUnicos.map((c) => c.codigo));
   expect(codigos.size).toBe(683);
 
-  // La suma de todas las audiencias debe mapear exactamente a los 716 nodos del árbol de navegación
+  // La suma de todas las audiencias/trámites debe mapear exactamente a los 715 nodos del árbol de navegación
   const sumaAudiencias = contenidosUnicos.reduce((acc, c) => acc + c.totalAudiencias, 0);
-  expect(sumaAudiencias).toBe(716);
+  expect(sumaAudiencias).toBe(715);
 
-  // Exactamente 18 contenidos son transversales (compartidos entre múltiples ramas)
+  const sumaTramiteIds = contenidosUnicos.reduce((acc, c) => acc + c.tramiteIds.length, 0);
+  expect(sumaTramiteIds).toBe(715);
+
+  // Exactamente 17 contenidos son transversales (compartidos entre múltiples ramas tras depurar duplicado)
   const transversales = contenidosUnicos.filter((c) => c.esTransversal);
-  expect(transversales.length).toBe(18);
+  expect(transversales.length).toBe(17);
 
   transversales.forEach((c) => {
     expect(c.totalAudiencias).toBeGreaterThan(1);
-    expect(c.audiencias.length).toBe(c.totalAudiencias);
+    expect(c.tramiteIds.length).toBe(c.totalAudiencias);
     expect(c.segmentosAplicables.length).toBeGreaterThanOrEqual(1);
   });
 
@@ -159,6 +162,6 @@ test('catalogoContenidosUnicos: 683 contenidos únicos desacoplados y suma exact
     expect(c.titulo).toBeTruthy();
     expect(c.descripcion).toBeTruthy();
     expect(c.url).toMatch(/^https?:\/\//);
-    expect(c.audiencias.length).toBe(c.totalAudiencias);
+    expect(c.tramiteIds.length).toBe(c.totalAudiencias);
   });
 });

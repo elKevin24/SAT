@@ -40,10 +40,10 @@ Este documento registra los puntos pendientes acordados para continuar con la ev
 ---
 
 ### 4. Consistencia en la Búsqueda Global del Header (`Header.tsx`)
-- [ ] **4.1 Rejilla de resultados unificada**:
-  - El buscador del encabezado institucional debe presentar los resultados en una cuadrícula uniforme de mínimo 4 columnas en desktop (`lg:grid-cols-4`).
-- [ ] **4.2 Estilo visual institucional**:
-  - Aplicar el fondo neutro con borde sutil para mantener coherencia total con las tarjetas del catálogo.
+- [x] **4.1 Rejilla de resultados unificada**:
+  - El buscador del encabezado institucional presenta los resultados en una cuadrícula uniforme de 4 columnas en desktop (`lg:grid-cols-4`).
+- [x] **4.2 Estilo visual institucional**:
+  - Fondo neutro con borde sutil, código canónico inmutable `SAT-GES-####` visible y coherencia con el diseño del catálogo.
 
 ---
 

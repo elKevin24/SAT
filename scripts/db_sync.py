@@ -675,9 +675,9 @@ def verify_database():
     # 4. Conteo de trámites únicos
     cur.execute("SELECT COUNT(*) FROM tramites;")
     tr_count = cur.fetchone()[0]
-    print(f"[OK] Trámites únicos almacenados: {tr_count} (Esperados: 676)")
-    if tr_count != 676:
-        print(f"[ADVERTENCIA] El conteo no coincide con los 676 trámites oficiales.")
+    print(f"[OK] Trámites únicos almacenados: {tr_count} (Esperados: 715)")
+    if tr_count != 715:
+        print(f"[ADVERTENCIA] El conteo no coincide con los 715 trámites oficiales.")
 
     # 5. Conteo de relaciones N:M
     cur.execute("SELECT COUNT(*) FROM tramite_regimen;")

@@ -91,11 +91,14 @@ export const TramiteDetailModal: React.FC<TramiteDetailModalProps> = ({
       <div className="bg-sat-azul text-white px-6 py-4 flex items-center justify-between shrink-0">
         <div className="space-y-1">
           <div className="flex flex-wrap items-center gap-2">
-            <span className="text-[10px] font-bold uppercase tracking-wider bg-black/25 border border-white/20 px-2.5 py-0.5 rounded-full text-white">
+            <span className="font-mono text-[11px] font-bold tracking-wider bg-white text-sat-azul px-2 py-0.5 rounded shadow-xs">
+              {tramite.id}
+            </span>
+            <span className="text-[10px] font-bold uppercase tracking-wider bg-sat-azul-oscuro text-white border border-white/20 px-2 py-0.5 rounded">
               {tramite.pillarName || 'SAT Gestión Oficial'}
             </span>
             <span className="text-xs text-white/90 font-medium">
-              Área temática: {tramite.categoria}
+              {tramite.categoria} {tramite.subcategoria ? `› ${tramite.subcategoria}` : ''}
             </span>
           </div>
           <h2 id="tramite-title" className="text-base sm:text-lg font-bold leading-tight">
@@ -104,7 +107,7 @@ export const TramiteDetailModal: React.FC<TramiteDetailModalProps> = ({
         </div>
         <button 
           onClick={onClose}
-          className="p-1 rounded-lg text-white/80 hover:text-white hover:bg-white/10 transition-colors shrink-0 focus:outline-hidden focus:ring-2 focus:ring-white"
+          className="min-h-[44px] min-w-[44px] flex items-center justify-center rounded-lg text-white/80 hover:text-white hover:bg-white/10 transition-colors shrink-0 focus:outline-hidden focus:ring-2 focus:ring-white"
           aria-label="Cerrar ficha de gestión"
         >
           <X className="w-5 h-5" />
@@ -112,7 +115,7 @@ export const TramiteDetailModal: React.FC<TramiteDetailModalProps> = ({
       </div>
 
       {/* Cuerpo de la Ficha en Pasos Cronológicos (Lenguaje Ciudadano) */}
-      <div className="p-6 overflow-y-auto space-y-6 text-xs sm:text-sm">
+      <div className="p-4 sm:p-6 overflow-y-auto space-y-5 sm:space-y-6 text-xs sm:text-sm">
         
         {/* Resumen del Trámite */}
         <div className="p-4 rounded-sat-md bg-sat-fondo-tenue border border-sat-gris space-y-2">
@@ -162,7 +165,7 @@ export const TramiteDetailModal: React.FC<TramiteDetailModalProps> = ({
                 return (
                   <label
                     key={idx}
-                    className={`flex w-full items-start gap-2.5 cursor-pointer p-2.5 rounded-sat-md border transition-colors ${
+                    className={`flex w-full items-start gap-2.5 cursor-pointer p-2.5 min-h-[44px] rounded-sat-md border transition-colors ${
                       isChecked 
                         ? 'bg-sat-azul/5 border-sat-azul/40' 
                         : 'bg-sat-fondo-tenue/50 border-sat-gris hover:bg-sat-fondo-tenue'

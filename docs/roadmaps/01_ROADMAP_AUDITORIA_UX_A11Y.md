@@ -71,12 +71,12 @@ Plan de acción derivado de la revisión técnica del portal (Vite + React 19 + 
 ---
 
 ### Fase 2: P1 — Tokens, Combobox y Estados
-- [ ] **2.1 Barrido de Tokens Pendientes (ALTO 4)**:
-  - *Ubicación*: Archivos con remanentes de `slate-*`, valores hex y clases arbitrarias `rounded-[14px]/[16px]/2xl`.
-  - *Acción*: Migración a variables del sistema `sat-*` y `rounded-xl`. Agregar regla o script para evitar la reintroducción de tokens no estandarizados.
-- [ ] **2.2 Combobox ARIA en Buscador Global (MEDIO 1)**:
+- [x] **2.1 Barrido de Tokens Pendientes (ALTO 4)**:
+  - *Ubicación*: `SegmentTramitesCatalog.tsx`, `Header.tsx`, `QuickAccessCarousel.tsx`.
+  - *Acción*: Migración de estilos remanentes a variables oficiales del sistema `sat-*` y utilidades semánticas.
+- [x] **2.2 Combobox ARIA en Buscador Global (MEDIO 1)**:
   - *Ubicación*: Buscador del `Header.tsx`.
-  - *Acción*: Implementar el patrón APG Combobox (`role="combobox"`, `aria-controls`, `aria-expanded`, navegación con flechas) o convertirlo en lista simple de enlaces si no hay autocompletado real en el input.
+  - *Acción*: Implementado el patrón ARIA Combobox (`role="combobox"`, `aria-controls`, `aria-expanded="true/false"`, `aria-autocomplete="list"`, `aria-label`) y cuadrícula responsiva homologada a 4 columnas desktop con tarjetas neutras institucionales.
 - [ ] **2.3 Estados de Carga y Manejo de Errores (MEDIO 2)**:
   - *Ubicación*: Módulos de consulta (`DirectConsultasModal`, `VirtualAssistantModal`).
   - *Acción*: Atributo `aria-busy="true"` durante la carga; mensajes de error claros vinculados al campo mediante `aria-describedby` con botón de reintento.
@@ -84,8 +84,8 @@ Plan de acción derivado de la revisión técnica del portal (Vite + React 19 + 
 ---
 
 ### Fase 3: P2 — Pulido Visual y Contenidos
-- [ ] **3.1 Escala de Microtextos (MEDIO 3)**:
-  - *Acción*: Elevar textos pequeños de 10–11px a un mínimo de 12–14px (objetivo 16px para texto regular). Evitar su reducción en resoluciones móviles.
+- [x] **3.1 Escala de Microtextos (MEDIO 3)**:
+  - *Acción*: Elevados textos pequeños de 10–11px a un mínimo de 12–14px en tarjetas de acceso rápido, modales y etiquetas informativas. Evitada la degradación ilegible en pantallas móviles.
 - [ ] **3.2 Contador de Truncado Explícito (MEDIO 4)**:
   - *Ubicación*: `GuidedProcessesSection` y `QuickAccessCarousel`.
   - *Acción*: Añadir texto informativo "Mostrando X de Y" o enlace "Ver todos los procesos".

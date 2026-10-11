@@ -11,7 +11,6 @@ import { DirectConsultasModal } from './components/DirectConsultasModal';
 import { GuidedProcessModal } from './components/GuidedProcessModal';
 import { TramiteDetailModal } from './components/TramiteDetailModal';
 import { VirtualAssistantModal } from './components/VirtualAssistantModal';
-import { PortalFlowModal } from './components/PortalFlowModal';
 import { SegmentTramitesCatalog } from './components/SegmentTramitesCatalog';
 import { QuickAccessCarousel } from './components/QuickAccessCarousel';
 import { SolicitarNitPage } from './pages/SolicitarNitPage';
@@ -64,7 +63,6 @@ export default function App() {
   const [selectedProceso, setSelectedProceso] = useState<ProcesoGuiado | null>(null);
   const [consultasModalSegment, setConsultasModalSegment] = useState<SegmentId | null>(null);
   const [accessibilityModalOpen, setAccessibilityModalOpen] = useState(false);
-  const [isFlowModalOpen, setIsFlowModalOpen] = useState(false);
 
   // Accessibility State
   const [accSettings, setAccSettings] = useState<AccessibilitySettings>(DEFAULT_ACCESSIBILITY);
@@ -207,7 +205,6 @@ export default function App() {
             <UserSegmentCards
               selectedSegment={null}
               onSelectSegment={handleSelectSegment}
-              onOpenFlowDiagram={() => setIsFlowModalOpen(true)}
             />
 
             {/* 3. Rotary Banner (Lámina 10 del PDF Oficial: 3 simultáneos, máx 120 caracteres) */}
@@ -306,12 +303,6 @@ export default function App() {
       />
 
       <VirtualAssistantModal />
-
-      <PortalFlowModal
-        isOpen={isFlowModalOpen}
-        onClose={() => setIsFlowModalOpen(false)}
-        initialSegment={activeSegment}
-      />
     </div>
   );
 }

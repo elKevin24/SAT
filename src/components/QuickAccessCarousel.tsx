@@ -101,12 +101,12 @@ export const QuickAccessCarousel: React.FC<QuickAccessCarouselProps> = ({ onSele
             </p>
           </div>
 
-          {/* Flechas de carrusel */}
+          {/* Flechas de carrusel con hitbox accesible >= 44px */}
           <div className="flex items-center gap-2">
             <button
               onClick={handlePrev}
               disabled={startIndex === 0}
-              className="p-2 rounded-sat-sm border border-sat-gris bg-sat-blanco text-sat-texto-suave hover:bg-sat-fondo-medio disabled:opacity-30 disabled:cursor-not-allowed transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-sat-azul"
+              className="min-h-[44px] min-w-[44px] flex items-center justify-center p-2 rounded-sat-sm border border-sat-gris bg-sat-blanco text-sat-texto-suave hover:bg-sat-fondo-medio disabled:opacity-30 disabled:cursor-not-allowed transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-sat-azul"
               aria-label="Ver accesos anteriores"
             >
               <ChevronLeft className="w-4 h-4" />
@@ -114,7 +114,7 @@ export const QuickAccessCarousel: React.FC<QuickAccessCarouselProps> = ({ onSele
             <button
               onClick={handleNext}
               disabled={startIndex + itemsPerPage >= QUICK_ITEMS.length}
-              className="p-2 rounded-sat-sm border border-sat-gris bg-sat-blanco text-sat-texto-suave hover:bg-sat-fondo-medio disabled:opacity-30 disabled:cursor-not-allowed transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-sat-azul"
+              className="min-h-[44px] min-w-[44px] flex items-center justify-center p-2 rounded-sat-sm border border-sat-gris bg-sat-blanco text-sat-texto-suave hover:bg-sat-fondo-medio disabled:opacity-30 disabled:cursor-not-allowed transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-sat-azul"
               aria-label="Ver más accesos"
             >
               <ChevronRight className="w-4 h-4" />
@@ -135,13 +135,13 @@ export const QuickAccessCarousel: React.FC<QuickAccessCarouselProps> = ({ onSele
                 onClick={() => {
                   if (onSelectQuickAction) onSelectQuickAction(item);
                 }}
-                className="group bg-sat-blanco rounded-xl border border-sat-gris hover:border-sat-azul hover:bg-sat-azul hover:shadow-sat-md p-3.5 sm:p-4 flex flex-col justify-between transition-all duration-200 hover:-translate-y-0.5 text-left cursor-pointer min-h-[110px]"
+                className="group bg-sat-fondo-tenue rounded-sat-md border-0 sm:hover:bg-sat-azul sm:hover:shadow-sat-md active:bg-sat-azul-oscuro p-3.5 sm:p-4 flex flex-col justify-between transition-all duration-200 sm:hover:-translate-y-0.5 active:translate-y-0 text-left cursor-pointer min-h-[110px] focus:outline-none focus-visible:ring-2 focus-visible:ring-sat-azul"
               >
                 <div>
-                  <div className="text-xs font-bold text-sat-azul-oscuro group-hover:text-white leading-snug transition-colors mb-1">
+                  <div className="text-xs font-bold text-sat-azul sm:text-sat-azul-oscuro sm:group-hover:text-white group-active:text-white leading-snug transition-colors mb-1">
                     {item.title}
                   </div>
-                  <div className="text-[11px] text-sat-texto-suave group-hover:text-white/90 transition-colors line-clamp-3 leading-relaxed">
+                  <div className="text-xs text-sat-texto-suave sm:group-hover:text-white/90 group-active:text-white/90 transition-colors line-clamp-3 leading-relaxed">
                     {item.desc}
                   </div>
                 </div>

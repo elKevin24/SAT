@@ -210,11 +210,11 @@ export const PopularTopicsTabs: React.FC<PopularTopicsTabsProps> = ({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Title Header */}
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 mb-4 sm:mb-6">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 mb-5 sm:mb-6">
           <div>
             <div className="flex items-center gap-2">
               <span className="w-2.5 h-2.5 rounded-full bg-sat-azul" />
-              <h3 className="text-lg sm:text-xl font-extrabold text-sat-azul-oscuro tracking-tight">
+              <h3 className="text-lg sm:text-xl font-black text-sat-azul-oscuro tracking-tight">
                 Temas Más Consultados
               </h3>
             </div>
@@ -224,7 +224,7 @@ export const PopularTopicsTabs: React.FC<PopularTopicsTabsProps> = ({
           </div>
 
           {/* Segment Tabs con nombres exactos del mapa oficial */}
-          <div className="flex items-center gap-1.5 p-1 bg-sat-fondo-tenue border border-sat-gris rounded-sat-md overflow-x-auto no-scrollbar">
+          <div className="flex items-center gap-1 p-1 bg-sat-fondo-tenue border border-sat-gris rounded-sat-md overflow-x-auto no-scrollbar">
             {(Object.keys(TOPICS_BY_SEGMENT) as SegmentId[]).map((segId) => {
               const isActive = activeTab === segId;
               return (
@@ -234,7 +234,7 @@ export const PopularTopicsTabs: React.FC<PopularTopicsTabsProps> = ({
                   aria-pressed={isActive}
                   className={`px-3 py-1.5 rounded-sat-sm text-xs font-bold transition-all whitespace-nowrap focus:outline-none focus-visible:ring-2 focus-visible:ring-sat-azul ${
                     isActive 
-                      ? 'bg-sat-blanco text-sat-azul shadow-sat-sm' 
+                      ? 'bg-sat-azul-oscuro text-white shadow-sat-sm' 
                       : 'text-sat-texto-suave hover:text-sat-azul hover:bg-sat-fondo-medio'
                   }`}
                 >

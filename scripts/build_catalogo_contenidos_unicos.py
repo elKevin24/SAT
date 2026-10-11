@@ -47,34 +47,10 @@ for title_key, items in grupos_contenido.items():
     codigo_idx += 1
 
     # Construir lista consolidada de audiencias (cada nodo de árbol donde se publica el contenido)
-    audiencias = []
-    for it in items:
-        seg_id = it.get('pillar', '')
-        seg_nom = it.get('segmento') or it.get('pillarName', '')
-        cat = it.get('categoria', '')
-        subcat = it.get('subcategoria', '')
-        miga = it.get('migaBreadcrumb', '')
-        
-        audiencias.append({
-            'tramiteId': it.get('id'),
-            'segmentoId': seg_id,
-            'segmentoNombre': seg_nom,
-            'orden_n1': it.get('orden_n1', 1),
-            'orden_n2': it.get('orden_n2', 1),
-            'orden_n3': it.get('orden_n3', 1),
-            'orden_n4': it.get('orden_n4', 1),
-            'orden_n5': it.get('orden_n5', 1),
-            'categoria': cat,
-            'subcategoria': subcat,
-            'tema': it.get('tema') or '',
-            'subtema': it.get('subtema') or '',
-            'actorEspecifico': it.get('actorEspecifico') or '—',
-            'migaBreadcrumb': miga
-        })
-
-    # Segmentos y categorías aplicables
-    segmentos_set = sorted(list(set(a['segmentoId'] for a in audiencias)))
-    categorias_set = sorted(list(set(a['categoria'] for a in audiencias)))
+    tramite_ids = [it.get('id') for it in items]
+    ubicaciones = [{'tramiteId': it.get('id'), 'segmentoId': it.get('pillar', '')} for it in items]
+    segmentos_set = sorted(list(set(it.get('pillar', '') for it in items if it.get('pillar'))))
+    categorias_set = sorted(list(set(it.get('categoria', '') for it in items if it.get('categoria'))))
 
     # Rutas de proceso combinadas
     rutas_combinadas = []
@@ -105,9 +81,10 @@ for title_key, items in grupos_contenido.items():
         'etapaAtoLabel': rep.get('etapaAtoLabel', 'Operación y declaraciones'),
         'baseLegal': rep.get('baseLegal', 'Código Tributario y Leyes Aplicables'),
         'esBrecha': bool(rep.get('esBrecha', False)),
-        'esTransversal': len(audiencias) > 1,
-        'totalAudiencias': len(audiencias),
-        'audiencias': audiencias,
+        'esTransversal': len(items) > 1,
+        'totalAudiencias': len(items),
+        'tramiteIds': tramite_ids,
+        'ubicaciones': ubicaciones,
         'segmentosAplicables': segmentos_set,
         'categoriasAplicables': categorias_set,
         'perfilDestinatario': rep.get('perfilDestinatario', '')

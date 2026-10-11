@@ -94,16 +94,28 @@ export interface ProcesoGuiado {
   pasos?: ProcesoPaso[];
 }
 
+export interface ContenidoUbicacion {
+  tramiteId: string;
+  segmentoId: string;
+}
+
 export interface ContenidoAudiencia {
   tramiteId?: string;
   segmentoId: string;
-  segmentoNombre: string;
-  categoria: string;
-  subcategoria: string;
+  segmentoNombre?: string;
+  categoria?: string;
+  subcategoria?: string;
   tema?: string;
   subtema?: string;
   actorEspecifico?: string;
-  migaBreadcrumb: string;
+  migaBreadcrumb?: string;
+}
+
+export interface ProcesoRutaReferencia {
+  procesoNo: number;
+  procesoNombre?: string;
+  pasoNo: number;
+  pasoAccion?: string;
 }
 
 export interface ContenidoUnicoItem {
@@ -127,10 +139,13 @@ export interface ContenidoUnicoItem {
   esBrecha?: boolean;
   esTransversal: boolean;
   totalAudiencias: number;
-  audiencias: ContenidoAudiencia[];
+  tramiteIds: string[];
+  ubicaciones?: ContenidoUbicacion[];
+  audiencias?: ContenidoAudiencia[];
   segmentosAplicables: string[];
-  categoriasAplicables: string[];
+  categoriasAplicables?: string[];
   perfilDestinatario?: string;
+  rutasProceso?: ProcesoRutaReferencia[];
 }
 
 export function slugify(value: string): string {
@@ -291,28 +306,14 @@ export function collectContenidoUnicoErrors(data: unknown): string[] {
       errors.push(`${where}.totalAudiencias: se esperaba entero ≥ 1`);
     }
 
-    if (!Array.isArray(c.audiencias) || c.audiencias.length === 0) {
-      errors.push(`${where}.audiencias: se esperaba un arreglo no vacío`);
-    } else {
-      c.audiencias.forEach((aud, audIdx) => {
-        const audWhere = `${where}.audiencias[${audIdx}]`;
-        if (typeof aud !== 'object' || aud === null) {
-          errors.push(`${audWhere}: no es un objeto`);
-          return;
-        }
-        const a = aud as Record<string, unknown>;
-        if (!isNonEmptyString(a.segmentoId)) errors.push(`${audWhere}.segmentoId: ausente`);
-        if (!isNonEmptyString(a.categoria)) errors.push(`${audWhere}.categoria: ausente`);
-        if (!isNonEmptyString(a.subcategoria)) errors.push(`${audWhere}.subcategoria: ausente`);
-        if (!isNonEmptyString(a.migaBreadcrumb)) errors.push(`${audWhere}.migaBreadcrumb: ausente`);
-      });
+    if (!Array.isArray(c.tramiteIds) || c.tramiteIds.length === 0) {
+      errors.push(`${where}.tramiteIds: se esperaba un arreglo no vacío de IDs de trámite`);
+    } else if (c.tramiteIds.length !== c.totalAudiencias) {
+      errors.push(`${where}.tramiteIds: la longitud (${c.tramiteIds.length}) no coincide con totalAudiencias (${c.totalAudiencias})`);
     }
 
     if (!Array.isArray(c.segmentosAplicables) || c.segmentosAplicables.length === 0) {
       errors.push(`${where}.segmentosAplicables: se esperaba un arreglo no vacío`);
-    }
-    if (!Array.isArray(c.categoriasAplicables) || c.categoriasAplicables.length === 0) {
-      errors.push(`${where}.categoriasAplicables: se esperaba un arreglo no vacío`);
     }
   });
 

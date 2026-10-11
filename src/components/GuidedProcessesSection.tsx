@@ -30,12 +30,15 @@ export const GuidedProcessesSection: React.FC<GuidedProcessesSectionProps> = ({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Encabezado y Filtros */}
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 mb-4 sm:mb-6">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 mb-5 sm:mb-6">
           <div>
-            <span className="text-xs font-bold text-sat-azul uppercase tracking-wider block mb-0.5">
-              Guías Paso a Paso para Ciudadanos
-            </span>
-            <h3 className="text-lg sm:text-xl font-extrabold text-sat-azul-oscuro tracking-tight">
+            <div className="flex items-center gap-2 mb-1">
+              <span className="w-2 h-2 rounded-full bg-sat-azul" />
+              <span className="text-[11px] font-black text-sat-azul uppercase tracking-wider block">
+                Guías Paso a Paso para Ciudadanos
+              </span>
+            </div>
+            <h3 className="text-lg sm:text-xl font-black text-sat-azul-oscuro tracking-tight">
               Rutas Guiadas de Gestiones y Cumplimiento
             </h3>
             <p className="text-xs sm:text-sm text-sat-texto-suave mt-0.5">
@@ -44,7 +47,7 @@ export const GuidedProcessesSection: React.FC<GuidedProcessesSectionProps> = ({
           </div>
 
           {/* Filtros de etapas en lenguaje claro */}
-          <div className="flex items-center gap-1.5 p-1 bg-sat-blanco rounded-sat-md border border-sat-gris overflow-x-auto no-scrollbar">
+          <div className="flex items-center gap-1 p-1 bg-white rounded-sat-md border border-sat-gris shadow-xs overflow-x-auto no-scrollbar">
             {stages.map((stg) => {
               const isActive = activeStage === stg.id;
               return (
@@ -54,7 +57,7 @@ export const GuidedProcessesSection: React.FC<GuidedProcessesSectionProps> = ({
                   aria-pressed={isActive}
                   className={`px-3 py-1.5 rounded-sat-sm text-xs font-bold transition-all whitespace-nowrap focus:outline-none focus-visible:ring-2 focus-visible:ring-sat-azul ${
                     isActive 
-                      ? 'bg-sat-azul text-white shadow-sat-sm' 
+                      ? 'bg-sat-azul-oscuro text-white shadow-sat-sm' 
                       : 'text-sat-texto-suave hover:text-sat-azul hover:bg-sat-fondo-medio'
                   }`}
                 >

@@ -84,11 +84,15 @@ La arquitectura documental del repositorio opera bajo una regla estricta:
 
 ### 5.2 Regla de Umbral de Densidad y Ramificación (Notación $A, A_1, A_2$)
 1. **Sub-densidad ($A \to A_1, A_2$ con hojas $\le 2$):**  
-   Si $A_1$ y $A_2$ contienen solo 1 o 2 trámites terminales y ahí terminan, **se compacta**. Los trámites se exponen directamente en $A$. Evita *pass-through nodes* (ej. *Courier* con 3 trámites pasa a N3 directo).
+   Si una categoría o rama secundaria contiene solo 1 o 2 trámites terminales y ahí terminan, **se compacta obligatoriamente al nivel superior**. Los trámites terminales se exponen directamente en el contenedor padre ($A$), eliminando pantallas intermedias pasarela (*pass-through screens*) y clics redundantes.
+   * *Caso Canónico OEA:* La categoría *Operador Económico Autorizado (OEA)* agrupa únicamente 2 trámites (`SAT-GES-0417` y `SAT-GES-0416`). Crear una subcategoría intermedia artificial *«Programa OEA»* violaba este principio forzando una pantalla con 1 sola tarjeta. Se compactó para que al hacer clic en OEA, ambos trámites se desplieguen de forma inmediata con miga de 3 niveles: `Operadores de Comercio Exterior > Operador Económico Autorizado (OEA) > [Trámite]`.
+   * *Caso Courier:* Pasa a lista directa en N3 sin niveles $N_4/N_5$ intermedios.
 2. **Alta densidad ($A \to A_1$ con $\ge 10$ trámites):**  
-   Si $A_1$ agrupa $\ge 10$ trámites con complejidad operativa, **se preserva la jerarquía profunda** (N4 / N5). Evita *context collapse* (ej. *DAT* y *ZDEEP*).
+   Si $A_1$ agrupa $\ge 10$ trámites con alta complejidad operativa y distintos ciclos de vida, **se preserva la jerarquía profunda** ($N_4 / N_5$) para evitar la sobrecarga cognitiva y el colapso de contexto (*context collapse*) (ej. *Depósitos Aduaneros Temporales - DAT* con 18 y *ZDEEP* con 30).
 3. **Asimetría rama por rama:**  
-   Un nodo monocatenario ($A_1 \to A_{1.1}$) se compacta, mientras una rama hermana ramificada ($A_2 \to A_{2.1}, A_{2.2}, A_{2.3}$) retiene su profundidad.
+   Un nodo monocatenario ($A_1 \to A_{1.1}$) se compacta automáticamente, mientras una rama hermana ramificada ($A_2 \to A_{2.1}, A_{2.2}, A_{2.3}$) retiene su estructura profunda según su volumen.
+4. **Desacoplamiento del Catálogo de Contenidos Únicos:**  
+   El catálogo de entidades (`catalogoContenidosUnicos.json` / `gestiones.json`) registra únicamente atributos intrínsecos de la gestión (`codigo`, `titulo`, `url`, `descripcion`, `tipoInteraccion`, `baseLegal`). Las subcategorías, categorías y migas de pan pertenecen exclusivamente al Árbol de Navegación (`allTramites.json`), evitando doble mantenimiento y acoplamiento estructural.
 
 ### 5.3 Gobernanza del Orden (Columnas `Orden N1..N5` vs Títulos)
 * **Prohibido quemar prefijos numéricos en títulos:** Ni en categorías ni en nombres de trámites (ej. NO `1. Declaración`, SINO `Declaración de Mercancías`).

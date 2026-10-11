@@ -78,14 +78,6 @@ test('Abrir VirtualAssistantModal (RITA)', async ({ page }) => {
   await scan(page, 'VirtualAssistantModal');
 });
 
-test('Abrir PortalFlowModal (React Flow)', async ({ page }) => {
-  await page.goto('/');
-  await page.getByRole('button', { name: 'Abrir diagrama de flujo interactivo del portal en tarjetas conectadas' }).click();
-  const dialog = page.getByRole('dialog');
-  await expect(dialog).toBeVisible();
-  await scan(page, 'PortalFlowModal');
-});
-
 test('Página completa: Mapa Jerárquico Oficial (PortalFlowPage en #/mapa)', async ({ page }) => {
   await page.goto('/#/mapa');
   await expect(page.locator('h1:has-text("Mapa Jerárquico Oficial")')).toBeVisible();

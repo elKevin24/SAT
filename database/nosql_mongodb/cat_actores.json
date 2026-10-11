@@ -1,0 +1,244 @@
+[
+  {
+    "_id": {
+      "$oid": "6ac845f3ee70794d89b63954"
+    },
+    "codigo": "ACT-0001",
+    "slug": "nit-sin-obligaciones",
+    "nombre": "NIT sin Obligaciones",
+    "segmento_id": "contribuyentes",
+    "base_legal": "Código Tributario, Decreto 6-91, Art. 120.",
+    "estado": "VIGENTE"
+  },
+  {
+    "_id": {
+      "$oid": "6ac845f3ee70794d89b63955"
+    },
+    "codigo": "ACT-0002",
+    "slug": "pequenos-contribuyentes",
+    "nombre": "Pequeños Contribuyentes",
+    "segmento_id": "contribuyentes",
+    "base_legal": "Ley del IVA (Decreto 27-92, Arts. 45 al 50) y Decreto 7-2019.",
+    "estado": "VIGENTE"
+  },
+  {
+    "_id": {
+      "$oid": "6ac845f3ee70794d89b63956"
+    },
+    "codigo": "ACT-0003",
+    "slug": "regimen-general",
+    "nombre": "Régimen General (Personas y Empresas)",
+    "segmento_id": "contribuyentes",
+    "base_legal": "Ley de Actualización Tributaria (Decreto 10-2012) y Ley del IVA.",
+    "estado": "VIGENTE"
+  },
+  {
+    "_id": {
+      "$oid": "6ac845f3ee70794d89b63957"
+    },
+    "codigo": "ACT-0004",
+    "slug": "contribuyentes-especiales",
+    "nombre": "Contribuyentes Especiales",
+    "segmento_id": "contribuyentes",
+    "base_legal": "Ley Orgánica de la SAT y Acuerdos de Directorio para Gerencia de Grandes Contribuyentes.",
+    "estado": "VIGENTE"
+  },
+  {
+    "_id": {
+      "$oid": "6ac845f3ee70794d89b63958"
+    },
+    "codigo": "ACT-0005",
+    "slug": "importadores",
+    "nombre": "Importadores",
+    "segmento_id": "comercio-exterior",
+    "base_legal": "CAUCA IV, RECAUCA IV y Ley Nacional de Aduanas.",
+    "estado": "VIGENTE"
+  },
+  {
+    "_id": {
+      "$oid": "6ac845f3ee70794d89b63959"
+    },
+    "codigo": "ACT-0006",
+    "slug": "exportadores",
+    "nombre": "Exportadores",
+    "segmento_id": "comercio-exterior",
+    "base_legal": "CAUCA IV, Ley del IVA (Devolución de Crédito Fiscal) y Dto. 29-89.",
+    "estado": "VIGENTE"
+  },
+  {
+    "_id": {
+      "$oid": "6ac845f3ee70794d89b6395a"
+    },
+    "codigo": "ACT-0007",
+    "slug": "oea",
+    "nombre": "Operador Económico Autorizado (OEA)",
+    "segmento_id": "comercio-exterior",
+    "base_legal": "Marco Normativo SAFE (OMA) y Resolución de Directorio SAT.",
+    "estado": "VIGENTE"
+  },
+  {
+    "_id": {
+      "$oid": "6ac845f3ee70794d89b6395b"
+    },
+    "codigo": "ACT-0008",
+    "slug": "agentes-aduaneros",
+    "nombre": "Agentes Aduaneros",
+    "segmento_id": "comercio-exterior",
+    "base_legal": "CAUCA IV Arts. 22 al 28 y RECAUCA IV.",
+    "estado": "VIGENTE"
+  },
+  {
+    "_id": {
+      "$oid": "6ac845f3ee70794d89b6395c"
+    },
+    "codigo": "ACT-0009",
+    "slug": "apoderados-especiales",
+    "nombre": "Apoderados Especiales Aduaneros",
+    "segmento_id": "comercio-exterior",
+    "base_legal": "CAUCA IV y RECAUCA IV Arts. 86 al 90.",
+    "estado": "VIGENTE"
+  },
+  {
+    "_id": {
+      "$oid": "6ac845f3ee70794d89b6395d"
+    },
+    "codigo": "ACT-0010",
+    "slug": "depositos-aduaneros",
+    "nombre": "Depósitos Aduaneros Temporales y Almacenes Fiscales",
+    "segmento_id": "comercio-exterior",
+    "base_legal": "CAUCA IV Arts. 119 al 129 y Dto. 1236.",
+    "estado": "VIGENTE"
+  },
+  {
+    "_id": {
+      "$oid": "6ac845f3ee70794d89b6395e"
+    },
+    "codigo": "ACT-0011",
+    "slug": "transportistas-aduaneros",
+    "nombre": "Transportistas Aduaneros",
+    "segmento_id": "comercio-exterior",
+    "base_legal": "CAUCA IV Arts. 18 al 28 y RECAUCA IV (Tránsito Terrestre).",
+    "estado": "VIGENTE"
+  },
+  {
+    "_id": {
+      "$oid": "6ac845f3ee70794d89b6395f"
+    },
+    "codigo": "ACT-0012",
+    "slug": "courier",
+    "nombre": "Empresas de Entrega Rápida o Courier",
+    "segmento_id": "comercio-exterior",
+    "base_legal": "CAUCA IV y RECAUCA IV Arts. 574 al 596.",
+    "estado": "VIGENTE"
+  },
+  {
+    "_id": {
+      "$oid": "6ac845f3ee70794d89b63960"
+    },
+    "codigo": "ACT-0013",
+    "slug": "zdeep",
+    "nombre": "Zonas de Desarrollo Económico Especial Público (ZDEEP)",
+    "segmento_id": "comercio-exterior",
+    "base_legal": "Decreto 22-73 del Congreso de la República y reformas.",
+    "estado": "VIGENTE"
+  },
+  {
+    "_id": {
+      "$oid": "6ac845f3ee70794d89b63961"
+    },
+    "codigo": "ACT-0014",
+    "slug": "maquilas-29-89",
+    "nombre": "Empresas Calificadas bajo Decreto 29-89",
+    "segmento_id": "comercio-exterior",
+    "base_legal": "Decreto 29-89 (Ley de Fomento y Desarrollo de la Actividad Exportadora y de Maquila).",
+    "estado": "VIGENTE"
+  },
+  {
+    "_id": {
+      "$oid": "6ac845f3ee70794d89b63962"
+    },
+    "codigo": "ACT-0015",
+    "slug": "normativa-aduanera-general",
+    "nombre": "Operadores Generales de Comercio Exterior",
+    "segmento_id": "comercio-exterior",
+    "base_legal": "Código Aduanero Uniforme Centroamericano (CAUCA IV).",
+    "estado": "VIGENTE"
+  },
+  {
+    "_id": {
+      "$oid": "6ac845f3ee70794d89b63963"
+    },
+    "codigo": "ACT-0016",
+    "slug": "abogados-notarios",
+    "nombre": "Abogados y Notarios",
+    "segmento_id": "profesionales",
+    "base_legal": "Código de Notariado (Decreto 314) y Decreto 37-92 (Timbres Fiscales).",
+    "estado": "VIGENTE"
+  },
+  {
+    "_id": {
+      "$oid": "6ac845f3ee70794d89b63964"
+    },
+    "codigo": "ACT-0017",
+    "slug": "peritos-contadores",
+    "nombre": "Peritos Contadores",
+    "segmento_id": "profesionales",
+    "base_legal": "Código Tributario Art. 120 y Acuerdo de Directorio SAT 08-2020.",
+    "estado": "VIGENTE"
+  },
+  {
+    "_id": {
+      "$oid": "6ac845f3ee70794d89b63965"
+    },
+    "codigo": "ACT-0018",
+    "slug": "auditores",
+    "nombre": "Auditores y Contadores Públicos",
+    "segmento_id": "profesionales",
+    "base_legal": "Ley de Colegiación Profesional Obligatoria y Código de Comercio.",
+    "estado": "VIGENTE"
+  },
+  {
+    "_id": {
+      "$oid": "6ac845f3ee70794d89b63966"
+    },
+    "codigo": "ACT-0019",
+    "slug": "gestores-tributarios",
+    "nombre": "Gestores Tributarios y Mandatarios",
+    "segmento_id": "profesionales",
+    "base_legal": "Código Tributario y Ley del Organismo Judicial.",
+    "estado": "VIGENTE"
+  },
+  {
+    "_id": {
+      "$oid": "6ac845f3ee70794d89b63967"
+    },
+    "codigo": "ACT-0020",
+    "slug": "servicios-profesionales",
+    "nombre": "Servicios Profesionales Independientes",
+    "segmento_id": "profesionales",
+    "base_legal": "Ley de Actualización Tributaria (Decreto 10-2012, Libro I).",
+    "estado": "VIGENTE"
+  },
+  {
+    "_id": {
+      "$oid": "6ac845f3ee70794d89b63968"
+    },
+    "codigo": "ACT-0021",
+    "slug": "sector-publico",
+    "nombre": "Sector Público y Entidades del Estado",
+    "segmento_id": "entes-exentos",
+    "base_legal": "Constitución Política de la República de Guatemala y Ley Orgánica del Presupuesto.",
+    "estado": "VIGENTE"
+  },
+  {
+    "_id": {
+      "$oid": "6ac845f3ee70794d89b63969"
+    },
+    "codigo": "ACT-0022",
+    "slug": "no-lucrativos",
+    "nombre": "Organizaciones No Lucrativas y Exentas",
+    "segmento_id": "entes-exentos",
+    "base_legal": "Código Tributario y Decretos específicos de exención.",
+    "estado": "VIGENTE"
+  }
+]

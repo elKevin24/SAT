@@ -114,10 +114,11 @@ export const Header: React.FC<HeaderProps> = ({
 
   const filteredTramites = searchQuery.trim().length > 1
     ? allTramites.filter(t =>
+        (t.id && t.id.toLowerCase().includes(searchQuery.toLowerCase())) ||
         (t.tramite && t.tramite.toLowerCase().includes(searchQuery.toLowerCase())) ||
         (t.descripcion && t.descripcion.toLowerCase().includes(searchQuery.toLowerCase())) ||
         (t.categoria && t.categoria.toLowerCase().includes(searchQuery.toLowerCase()))
-      ).slice(0, 5)
+      ).slice(0, 8)
     : [];
 
   const filteredProcesos = searchQuery.trim().length > 1
@@ -278,7 +279,7 @@ export const Header: React.FC<HeaderProps> = ({
           <div ref={searchContainerRef} className="flex-1 max-w-xl lg:max-w-2xl relative min-w-0">
             <div className="relative flex items-center">
               <span className="absolute left-3 text-sat-texto-tenue pointer-events-none flex items-center">
-                <Search className="w-3.5 h-3.5" />
+                <Search className="w-3.5 h-3.5 text-sat-azul" />
               </span>
               <input
                 type="text"
@@ -288,9 +289,9 @@ export const Header: React.FC<HeaderProps> = ({
                   setIsSearchFocused(true);
                 }}
                 onFocus={() => setIsSearchFocused(true)}
-                placeholder="Buscar gestiones, NIT, RTU Digital, facturas FEL..."
+                placeholder="Buscar gestiones por nombre, NIT, RTU, FEL o código SAT-GES..."
                 aria-label="Buscar gestiones en el Portal SAT"
-                className="w-full pl-8 sm:pl-9 pr-7 py-1 text-xs sm:text-sm text-sat-texto bg-sat-fondo-tenue hover:bg-sat-fondo-medio focus:bg-sat-blanco border border-sat-gris rounded-full focus:outline-none focus:ring-2 focus:ring-sat-azul/30 focus:border-sat-azul transition-all h-8"
+                className="w-full pl-8 sm:pl-9 pr-7 py-1 text-xs sm:text-sm font-medium text-sat-azul-oscuro bg-sat-fondo-tenue/80 hover:bg-sat-fondo-medio focus:bg-white border border-sat-gris focus:border-sat-azul focus:ring-2 focus:ring-sat-azul/20 rounded-sat-md focus:outline-none transition-all h-8.5 shadow-inner"
                 role="combobox"
                 aria-expanded={showSuggestions}
                 aria-controls="sat-search-suggestions"
@@ -300,7 +301,7 @@ export const Header: React.FC<HeaderProps> = ({
                 <button
                   type="button"
                   onClick={() => onSearchChange('')}
-                  className="absolute right-2 p-1 text-sat-texto-tenue hover:text-sat-texto hover:bg-sat-fondo-medio rounded-full transition-colors"
+                  className="absolute right-2 p-1 text-sat-texto-tenue hover:text-sat-azul-oscuro hover:bg-sat-fondo-medio rounded-full transition-colors"
                   aria-label="Borrar búsqueda"
                 >
                   <X className="w-3 h-3" />
@@ -308,46 +309,69 @@ export const Header: React.FC<HeaderProps> = ({
               )}
             </div>
 
-            {/* Dropdown de Sugerencias */}
+            {/* Dropdown de Sugerencias con cuadrícula de 4 columnas en desktop */}
             {showSuggestions && hasResults && (
               <div
                 id="sat-search-suggestions"
                 role="listbox"
-                className="dropdown-menu show absolute left-0 right-0 top-full mt-1.5 p-0 bg-sat-blanco rounded-sat-lg shadow-sat-lg border border-sat-gris overflow-hidden z-50 max-h-96 overflow-y-auto"
+                aria-label="Resultados de búsqueda"
+                className="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-[calc(100vw-2rem)] sm:w-[620px] md:w-[740px] lg:w-[960px] max-w-[96vw] p-3 sm:p-4 bg-sat-blanco rounded-sat-lg shadow-sat-lg border border-sat-gris overflow-hidden z-50 max-h-[80vh] overflow-y-auto"
               >
                 {filteredTramites.length > 0 && (
-                  <div className="p-2">
-                    <h6 className="dropdown-header px-3 py-1.5 text-[11px] uppercase tracking-wider font-bold text-sat-azul">
-                      Gestiones y Servicios Encontrados ({filteredTramites.length})
-                    </h6>
-                    {filteredTramites.map((t) => (
-                      <button
-                        type="button"
-                        key={t.id}
-                        role="option"
-                        aria-selected="false"
-                        onClick={() => {
-                          onSelectTramite(t);
-                          setIsSearchFocused(false);
-                        }}
-                        className="dropdown-item w-full text-start px-3 py-2 rounded-sat-sm text-sat-texto hover:bg-sat-fondo-tenue hover:text-sat-azul focus:bg-sat-fondo-tenue focus:text-sat-azul transition-colors"
-                      >
-                        <span className="block text-xs font-bold">{t.tramite}</span>
-                        <span className="block text-[11px] text-sat-texto-tenue line-clamp-1">
-                          {t.descripcion}
-                        </span>
-                      </button>
-                    ))}
+                  <div className="mb-3">
+                    <div className="flex items-center justify-between pb-2 mb-2 border-b border-sat-gris">
+                      <h6 className="text-[11px] uppercase tracking-wider font-bold text-sat-azul">
+                        Gestiones y Servicios Encontrados ({filteredTramites.length})
+                      </h6>
+                      <span className="text-[11px] text-sat-texto-tenue hidden sm:inline">
+                        Presiona para consultar requisitos y paso a paso
+                      </span>
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5">
+                      {filteredTramites.map((t) => (
+                        <button
+                          type="button"
+                          key={t.id}
+                          role="option"
+                          aria-selected="false"
+                          onClick={() => {
+                            onSelectTramite(t);
+                            setIsSearchFocused(false);
+                          }}
+                          className="w-full text-start p-2.5 rounded-sat-md border border-sat-gris hover:border-sat-azul hover:bg-sat-fondo-tenue focus:bg-sat-fondo-tenue focus:border-sat-azul focus:outline-none transition-all flex flex-col justify-between group"
+                        >
+                          <div>
+                            <div className="flex items-center justify-between gap-1 mb-1">
+                              <span className="font-mono text-[10px] font-bold text-sat-azul bg-sat-azul/10 px-1.5 py-0.2 rounded-sm">
+                                {t.id}
+                              </span>
+                              <span className="text-[10px] text-sat-texto-tenue truncate">
+                                {t.pillarName || t.categoria}
+                              </span>
+                            </div>
+                            <span className="block text-xs font-bold text-sat-texto group-hover:text-sat-azul line-clamp-2 leading-snug">
+                              {t.tramite}
+                            </span>
+                            <span className="block text-[11px] text-sat-texto-suave line-clamp-2 mt-1 leading-relaxed">
+                              {t.descripcion}
+                            </span>
+                          </div>
+                          <span className="text-[10px] font-semibold text-sat-azul flex items-center gap-1 mt-2 pt-1 border-t border-sat-gris/50">
+                            Ver gestión →
+                          </span>
+                        </button>
+                      ))}
+                    </div>
                   </div>
                 )}
 
                 {filteredProcesos.length > 0 && (
-                  <>
-                    <hr className="dropdown-divider m-0 border-sat-gris" />
-                    <div className="p-2 bg-sat-fondo-tenue">
-                      <h6 className="dropdown-header px-3 py-1.5 flex items-center gap-1 text-[11px] uppercase tracking-wider font-bold text-sat-azul">
-                        <Compass className="w-3.5 h-3.5" /> Guías Paso a Paso
-                      </h6>
+                  <div className="pt-2 border-t border-sat-gris bg-sat-fondo-tenue -mx-3 -mb-3 sm:-mx-4 sm:-mb-4 p-3 sm:p-3.5">
+                    <h6 className="flex items-center gap-1.5 text-[11px] uppercase tracking-wider font-bold text-sat-azul mb-2">
+                      <Compass className="w-3.5 h-3.5 text-sat-azul" /> Rutas de Procesos Guiados ({filteredProcesos.length})
+                    </h6>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
                       {filteredProcesos.map((p) => (
                         <button
                           type="button"
@@ -358,19 +382,17 @@ export const Header: React.FC<HeaderProps> = ({
                             onSelectProceso(p);
                             setIsSearchFocused(false);
                           }}
-                          className="dropdown-item w-full text-start px-3 py-2 rounded-sat-sm text-sat-texto hover:bg-sat-fondo-tenue hover:text-sat-azul focus:bg-sat-fondo-tenue focus:text-sat-azul transition-colors"
+                          className="w-full text-start p-2 rounded-sat-sm bg-white border border-sat-gris hover:border-sat-azul text-sat-texto transition-colors flex items-center justify-between gap-2"
                         >
-                          <span className="flex items-center justify-between gap-2">
-                            <span>
-                              <span className="block text-xs font-bold">{p.nombre}</span>
-                              <span className="block text-[11px] text-sat-texto-tenue">{p.paraQuien}</span>
-                            </span>
-                            <ArrowRight className="w-4 h-4 text-sat-texto-tenue shrink-0" />
-                          </span>
+                          <div>
+                            <span className="block text-xs font-bold text-sat-texto">{p.nombre}</span>
+                            <span className="block text-[11px] text-sat-texto-tenue line-clamp-1">{p.paraQuien}</span>
+                          </div>
+                          <ArrowRight className="w-3.5 h-3.5 text-sat-azul shrink-0" />
                         </button>
                       ))}
                     </div>
-                  </>
+                  </div>
                 )}
               </div>
             )}

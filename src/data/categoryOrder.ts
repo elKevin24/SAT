@@ -4,7 +4,7 @@
  * Validado por tests/data-contract.spec.ts para detectar deriva de nombres.
  */
 
-import { PillarType } from './schema';
+import { PillarType, TramiteItem } from './schema';
 
 export const OFFICIAL_CATEGORY_ORDER: Record<PillarType, string[]> = {
   contribuyentes: [
@@ -95,7 +95,7 @@ const SPECIFIC_SUBCATEGORY_ORDER: Record<string, string[]> = {
     'Devolución de Crédito Fiscal',
   ],
   'Operador Económico Autorizado (OEA)': [
-    'Programa OEA',
+    'Operador Económico Autorizado (OEA)',
   ],
   'Auxiliares de la Función Pública Aduanera (AFPA)': [
     'Agentes Aduaneros',
@@ -175,4 +175,52 @@ export function compareByCategoryOrder(list: string[], a: string, b: string): nu
   if (aIsInsc && !bIsInsc) return -1;
   if (!aIsInsc && bIsInsc) return 1;
   return a.localeCompare(b);
+}
+
+const ATO_CYCLE_ORDER: Record<string, number> = {
+  empezar: 1,
+  operar: 2,
+  consultar: 3,
+  modificar_cerrar: 4,
+  normativa: 5,
+};
+
+/**
+ * Comparador canónico determinista para trámites del catálogo.
+ * Sigue la regla de gobernanza institucional:
+ * 1. Columnas numéricas de la matriz de 25 columnas: orden_n1 a orden_n5.
+ * 2. Índice relativo dentro del contenedor final (orden_contenido).
+ * 3. Ciclo de vida ATO (1. Empezar -> 2. Operar -> 3. Consultar -> 4. Modificar -> 5. Normativa).
+ * 4. Desempate alfabético por título.
+ */
+export function compareCanonicalTramiteOrder(a: TramiteItem, b: TramiteItem): number {
+  const o1A = a.orden_n1 ?? 999;
+  const o1B = b.orden_n1 ?? 999;
+  if (o1A !== o1B) return o1A - o1B;
+
+  const o2A = a.orden_n2 ?? 999;
+  const o2B = b.orden_n2 ?? 999;
+  if (o2A !== o2B) return o2A - o2B;
+
+  const o3A = a.orden_n3 ?? 999;
+  const o3B = b.orden_n3 ?? 999;
+  if (o3A !== o3B) return o3A - o3B;
+
+  const o4A = a.orden_n4 ?? 999;
+  const o4B = b.orden_n4 ?? 999;
+  if (o4A !== o4B) return o4A - o4B;
+
+  const o5A = a.orden_n5 ?? 999;
+  const o5B = b.orden_n5 ?? 999;
+  if (o5A !== o5B) return o5A - o5B;
+
+  const ocA = a.orden_contenido ?? 999;
+  const ocB = b.orden_contenido ?? 999;
+  if (ocA !== ocB) return ocA - ocB;
+
+  const atoA = a.etapaAto ? (ATO_CYCLE_ORDER[a.etapaAto] ?? 99) : 99;
+  const atoB = b.etapaAto ? (ATO_CYCLE_ORDER[b.etapaAto] ?? 99) : 99;
+  if (atoA !== atoB) return atoA - atoB;
+
+  return (a.tramite || '').localeCompare(b.tramite || '');
 }

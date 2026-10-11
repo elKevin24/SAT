@@ -39,8 +39,9 @@ for t in data:
         cat_final, subcat_final, tema_final = None, None, ''
         
         if 'OEA' in b:
+            # Regla de Umbral de Densidad: Sub-densidad (2 trámites) se compacta al nivel superior
             cat_final = 'Operador Económico Autorizado (OEA)'
-            subcat_final = 'Programa OEA'
+            subcat_final = 'Operador Económico Autorizado (OEA)'
         elif 'Regímenes' in b or 'Zonas Especiales' in b or 'Regmenes' in b:
             cat_final = 'Regímenes Territoriales y Zonas Especiales'
             if 'maq-' in tid or '29-89' in sc or '29-89' in n3:
