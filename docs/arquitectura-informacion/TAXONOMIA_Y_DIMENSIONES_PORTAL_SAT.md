@@ -83,9 +83,9 @@ La arquitectura documental del repositorio opera bajo una regla estricta:
 * **Sobrecarga (> 9 elementos):** Listas planas de más de 9 elementos (ej. *Apoderados Especiales* con 16) sobrecargan la memoria de trabajo y **exigen partición modular** en sub-bloques de ciclo de vida ATO o materia funcional.
 
 ### 5.2 Regla de Umbral de Densidad y Ramificación (Notación $A, A_1, A_2$)
-1. **Sub-densidad ($A \to A_1, A_2$ con hojas $\le 2$):**  
-   Si una categoría o rama secundaria contiene solo 1 o 2 trámites terminales y ahí terminan, **se compacta obligatoriamente al nivel superior**. Los trámites terminales se exponen directamente en el contenedor padre ($A$), eliminando pantallas intermedias pasarela (*pass-through screens*) y clics redundantes.
-   * *Caso Canónico OEA:* La categoría *Operador Económico Autorizado (OEA)* agrupa únicamente 2 trámites (`SAT-GES-0417` y `SAT-GES-0416`). Crear una subcategoría intermedia artificial *«Programa OEA»* violaba este principio forzando una pantalla con 1 sola tarjeta. Se compactó para que al hacer clic en OEA, ambos trámites se desplieguen de forma inmediata con miga de 3 niveles: `Operadores de Comercio Exterior > Operador Económico Autorizado (OEA) > [Trámite]`.
+1. **Sub-densidad ($A \to A_1, A_2$ con hojas $\le 3$):**  
+   Si una categoría o rama secundaria contiene solo 1, 2 o 3 gestiones terminales y ahí terminan, **se compacta obligatoriamente al nivel superior**. Las gestiones terminales se exponen directamente en el contenedor padre ($A$), eliminando pantallas intermedias pasarela (*pass-through screens*) y clics redundantes.
+   * *Caso Canónico OEA:* La categoría *Operador Económico Autorizado (OEA)* agrupa únicamente 2 gestiones (`SAT-GES-0417` y `SAT-GES-0416`). Crear una subcategoría intermedia artificial *«Programa OEA»* violaba este principio forzando una pantalla con 1 sola tarjeta. Se compactó para que al hacer clic en OEA, ambas gestiones se desplieguen de forma inmediata con miga limpia: `Operadores de Comercio Exterior > Operador Económico Autorizado (OEA) > [Gestión]`.
    * *Caso Courier:* Pasa a lista directa en N3 sin niveles $N_4/N_5$ intermedios.
 2. **Alta densidad ($A \to A_1$ con $\ge 10$ trámites):**  
    Si $A_1$ agrupa $\ge 10$ trámites con alta complejidad operativa y distintos ciclos de vida, **se preserva la jerarquía profunda** ($N_4 / N_5$) para evitar la sobrecarga cognitiva y el colapso de contexto (*context collapse*) (ej. *Depósitos Aduaneros Temporales - DAT* con 18 y *ZDEEP* con 30).

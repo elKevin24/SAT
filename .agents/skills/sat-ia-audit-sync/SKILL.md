@@ -29,16 +29,16 @@ Esta skill documenta el procedimiento estándar, principios metodológicos y her
 ### C. Regla de Umbral de Densidad y Ramificación (Notación $A, A_1, A_2$)
 La profundidad del árbol nunca es simétrica ni obligada; se rige por la densidad real de cada subrama:
 
-#### 1. Condición de Compactación / Sub-densidad ($A \to A_1, A_2$ con hojas $\le 2$)
+#### 1. Condición de Compactación / Sub-densidad ($A \to A_1, A_2$ con hojas $\le 3$)
 ```
         A
       /   \
-    A1     A2       Si A1 y A2 contienen solo 1 o 2 trámites sueltos y ahí terminan:
+    A1     A2       Si A1 y A2 contienen solo 1, 2 o 3 gestiones sueltas y ahí terminan:
     |      |        -> Se eliminan los niveles intermedios A1 y A2 (sobre-andamiaje).
-   [T1]   [T2]      -> T1 y T2 cuelgan directamente de A.
+   [G1]   [G2]      -> G1 y G2 cuelgan directamente de A.
 ```
-* **Diagnóstico:** Crear un nivel intermedio para 1 o 2 trámites terminales genera **nodos pasarela (*pass-through nodes*)** y pantallas vacías con un solo botón.
-* **Acción:** **SÍ se compacta**. Los trámites se elevan al nivel superior. Ejemplos: *Empresas Courier* (3 trámites netos pasan a N3 directo; se suprimen las 3 carpetas de 1 trámite) y *OEA* (2 trámites pasan a N2 directo).
+* **Diagnóstico:** Crear un nivel intermedio para $\le 3$ gestiones terminales genera **nodos pasarela (*pass-through nodes*)** y pantallas vacías con escasos botones.
+* **Acción:** **SÍ se compacta**. Las gestiones se elevan al nivel superior. Ejemplos: *Empresas Courier* (3 gestiones netas pasan a N3 directo; se suprimen las carpetas de 1 gestión) y *OEA* (2 gestiones pasan a N2 directo).
 
 #### 2. Condición de Retención de Jerarquía Profunda ($A \to A_1$ con masa crítica $\ge 10$)
 ```
