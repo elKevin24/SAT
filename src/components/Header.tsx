@@ -171,7 +171,7 @@ export const Header: React.FC<HeaderProps> = ({
                 {/* Dropdown Formación Tributaria */}
                 {showFormacionMenu && (
                   <div className="dropdown-menu show absolute left-0 top-full mt-1 w-72 max-w-[calc(100vw-2rem)] bg-sat-blanco text-sat-texto border border-sat-gris rounded-sat-lg shadow-sat-lg p-2 z-50 animate-fadeIn">
-                    <h6 className="dropdown-header px-3 py-1.5 mb-1 text-[11px] uppercase tracking-wider font-bold text-sat-texto-tenue border-b border-sat-gris">
+                    <h6 className="dropdown-header px-3 py-1.5 mb-1 text-[11px] uppercase tracking-wider font-bold text-sat-texto-suave border-b border-sat-gris">
                       Cultura y Aprendizaje Fiscal
                     </h6>
                     {FORMACION_ITEMS.map((item) => (
@@ -188,7 +188,7 @@ export const Header: React.FC<HeaderProps> = ({
                             {item.title}
                             <ExternalLink className="w-3 h-3 opacity-40" />
                           </span>
-                          <span className="block text-[11px] text-sat-texto-tenue leading-tight">
+                          <span className="block text-[11px] text-sat-texto-suave leading-tight">
                             {item.desc}
                           </span>
                         </span>
@@ -278,7 +278,7 @@ export const Header: React.FC<HeaderProps> = ({
           {/* Buscador Central Predictivo distribuido armónicamente */}
           <div ref={searchContainerRef} className="flex-1 max-w-xl lg:max-w-2xl relative min-w-0">
             <div className="relative flex items-center">
-              <span className="absolute left-3 text-sat-texto-tenue pointer-events-none flex items-center">
+              <span className="absolute left-3 pointer-events-none flex items-center">
                 <Search className="w-3.5 h-3.5 text-sat-azul" />
               </span>
               <input
@@ -301,7 +301,7 @@ export const Header: React.FC<HeaderProps> = ({
                 <button
                   type="button"
                   onClick={() => onSearchChange('')}
-                  className="absolute right-2 p-1 text-sat-texto-tenue hover:text-sat-azul-oscuro hover:bg-sat-fondo-medio rounded-full transition-colors"
+                  className="absolute right-2 p-1 text-sat-texto-suave hover:text-sat-azul-oscuro hover:bg-sat-fondo-medio rounded-full transition-colors"
                   aria-label="Borrar búsqueda"
                 >
                   <X className="w-3 h-3" />
@@ -323,7 +323,7 @@ export const Header: React.FC<HeaderProps> = ({
                       <h6 className="text-[11px] uppercase tracking-wider font-bold text-sat-azul">
                         Gestiones y Servicios Encontrados ({filteredTramites.length})
                       </h6>
-                      <span className="text-[11px] text-sat-texto-tenue hidden sm:inline">
+                      <span className="text-[11px] text-sat-texto-suave hidden sm:inline">
                         Presiona para consultar requisitos y paso a paso
                       </span>
                     </div>
@@ -346,7 +346,7 @@ export const Header: React.FC<HeaderProps> = ({
                               <span className="font-mono text-[10px] font-bold text-sat-azul bg-sat-azul/10 px-1.5 py-0.2 rounded-sm">
                                 {t.id}
                               </span>
-                              <span className="text-[10px] text-sat-texto-tenue truncate">
+                              <span className="text-[10px] text-sat-texto-suave truncate">
                                 {t.pillarName || t.categoria}
                               </span>
                             </div>
@@ -386,7 +386,7 @@ export const Header: React.FC<HeaderProps> = ({
                         >
                           <div>
                             <span className="block text-xs font-bold text-sat-texto">{p.nombre}</span>
-                            <span className="block text-[11px] text-sat-texto-tenue line-clamp-1">{p.paraQuien}</span>
+                            <span className="block text-[11px] text-sat-texto-suave line-clamp-1">{p.paraQuien}</span>
                           </div>
                           <ArrowRight className="w-3.5 h-3.5 text-sat-azul shrink-0" />
                         </button>
@@ -399,7 +399,7 @@ export const Header: React.FC<HeaderProps> = ({
 
             {showSuggestions && !hasResults && (
               <div className="dropdown-menu show absolute left-0 right-0 top-full mt-1.5 p-0 bg-sat-blanco rounded-sat-lg shadow-sat-lg border border-sat-gris z-50">
-                <div className="px-3 py-3 text-xs text-sat-texto-tenue text-center">
+                <div className="px-3 py-3 text-xs text-sat-texto-suave text-center">
                   Sin resultados para <span className="font-bold text-sat-texto">"{searchQuery}"</span>
                 </div>
               </div>

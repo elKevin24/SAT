@@ -115,7 +115,7 @@ export const NewsAndTransparencySection: React.FC = () => {
                     <span className="text-[10px] font-bold uppercase tracking-wider text-sat-azul bg-sat-azul/10 px-2 py-0.5 rounded">
                       {news.category}
                     </span>
-                    <span className="text-[10px] font-mono text-sat-texto-tenue">
+                    <span className="text-[10px] font-mono text-sat-texto-suave">
                       {news.date}
                     </span>
                   </div>

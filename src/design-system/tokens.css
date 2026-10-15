@@ -66,6 +66,9 @@
 
   --sat-ui-texto: var(--sat-azul-oscuro);
   --sat-ui-texto-suave: #475569;
+  /* [DEPRECADO] Texto terciario retirado: sobre --sat-ui-fondo-tenue no alcanza
+   * AA (4.4:1). Usar --sat-ui-texto-suave (7.0:1 sobre fondo tenue). Se conserva
+   * la definicion por compatibilidad; no usar en componentes nuevos. */
   --sat-ui-texto-tenue: #64748b;
   --sat-ui-texto-acento: var(--sat-azul);
 
@@ -259,6 +262,8 @@
   --color-sat-fondo-medio: var(--sat-ui-fondo-medio);
   --color-sat-texto: var(--sat-ui-texto);
   --color-sat-texto-suave: var(--sat-ui-texto-suave);
+  /* [DEPRECADO] Usar --color-sat-texto-suave. Se mantiene la utilidad para no
+   * romper referencias heredadas. */
   --color-sat-texto-tenue: var(--sat-ui-texto-tenue);
 
   --font-sans: var(--sat-fuente);

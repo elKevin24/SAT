@@ -204,7 +204,7 @@ export function Modal({
                   type="button"
                   onClick={onClose}
                   aria-label="Cerrar"
-                  className="rounded-lg p-1.5 text-sat-texto-tenue transition hover:bg-sat-fondo-tenue hover:text-sat-texto"
+                  className="rounded-lg p-1.5 text-sat-texto-suave transition hover:bg-sat-fondo-tenue hover:text-sat-texto"
                 >
                   <X className="h-5 w-5" />
                 </button>

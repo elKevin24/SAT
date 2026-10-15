@@ -26,6 +26,8 @@
   --sat-fondo-medio: #e9edf2;
   --sat-texto-principal: #19324b;
   --sat-texto-suave: #475569;
+  /* [DEPRECADO] Texto terciario retirado: sobre --sat-fondo-tenue no alcanza AA
+   * (4.4:1). Usar --sat-texto-suave (7.0:1 sobre fondo tenue). */
   --sat-texto-tenue: #64748b;
 
   /* 4. Tipografía y Radios */
@@ -151,7 +153,7 @@ body {
   align-items: center;
   gap: 8px;
   font-size: 12px;
-  color: var(--sat-texto-tenue);
+  color: var(--sat-texto-suave);
   margin-bottom: 12px;
 }
 

@@ -123,7 +123,7 @@ export const RotaryBanner: React.FC = () => {
                     className={`h-1.5 rounded-full transition-all ${
                       i === currentIdx
                         ? 'w-5 bg-sat-azul'
-                        : 'w-2 bg-sat-gris group-hover:bg-sat-texto-tenue'
+                        : 'w-2 bg-sat-gris group-hover:bg-sat-texto-suave'
                     }`}
                   />
                 </button>
