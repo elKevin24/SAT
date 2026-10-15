@@ -95,7 +95,7 @@ const SPECIFIC_SUBCATEGORY_ORDER: Record<string, string[]> = {
     'Devolución de Crédito Fiscal',
   ],
   'Operador Económico Autorizado (OEA)': [
-    'Operador Económico Autorizado (OEA)',
+    '—',
   ],
   'Auxiliares de la Función Pública Aduanera (AFPA)': [
     'Agentes Aduaneros',

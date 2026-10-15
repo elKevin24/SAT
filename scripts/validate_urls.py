@@ -1,5 +1,5 @@
 import re, sys, pathlib, requests
-
+sys.stdout.reconfigure(encoding='utf-8')
 def extract_urls(text):
     # Regex to capture http/https URLs up to whitespace or closing punctuation
     url_regex = re.compile(r"https?://[^\s)\]>'\"`]+")
