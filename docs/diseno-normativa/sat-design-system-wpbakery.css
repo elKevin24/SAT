@@ -1,266 +1,201 @@
 /*
  * ============================================================================
  * SAT GUATEMALA — DESIGN SYSTEM EN WORDPRESS (WPBakery Page Builder)
- * Archivo: sat-design-system-wpbakery.css
- * Fuente normativa: Manual de Imagen y Normas Gráficas SAT V.5
+ * Archivo: sat-design-system-wpbakery.css (Versión Optimizada para Cuadrícula)
  * ============================================================================
- * Instrucciones:
- * 1. Pega este CSS en: WordPress Admin -> Apariencia -> Personalizar -> CSS Adicional,
- *    o en el tema hijo (style.css), o en Ajustes de WPBakery -> Custom CSS.
- * 2. Asigna las clases en las opciones de fila/columna o en los elementos HTML de WPBakery.
+ * Incluye:
+ * - Altura uniforme automática (Equal Height / 100% height).
+ * - Cuadrícula centrada responsiva (.sat-cards-grid).
+ * - Cero bordes perimetrales (100% borderless).
+ * - Hover sólido institucional y transición de textos a blanco.
  * ============================================================================
  */
 
 /* ----------------------------------------------------------------------------
- * 1. DESIGN TOKENS (Variables CSS)
+ * 1. DESIGN TOKENS
  * ---------------------------------------------------------------------------- */
 :root {
-  /* Paleta Institucional [NORMATIVO p.23-24] */
   --sat-celeste: #19afe1;
   --sat-azul: #14649b;
   --sat-azul-oscuro: #19324b;
   --sat-gris: #dcdcdc;
-  --sat-negro: #000000;
   --sat-blanco: #ffffff;
 
-  /* Colores de Segmento Oficiales */
   --sat-seg-personas: #0284c7;
   --sat-seg-empresas: #4d8014;
   --sat-seg-aduanas: #c25e00;
   --sat-seg-auxiliares: #6366f1;
 
-  /* Superficies y Neutros */
-  --sat-ui-fondo: #ffffff;
   --sat-ui-fondo-tenue: #f4f6f9;
-  --sat-ui-fondo-medio: #e9edf2;
-  --sat-ui-borde: #dcdcdc;
-
-  /* Tipografía y Contrastes */
   --sat-ui-texto: #19324b;
   --sat-ui-texto-suave: #475569;
-  --sat-ui-texto-tenue: #64748b;
-  --sat-ui-foco: #14649b;
-
   --sat-font-family: "Gotham", "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --sat-radius: 12px;
-  --sat-radius-sm: 8px;
 }
 
 /* ----------------------------------------------------------------------------
- * 2. RESET Y TIPOGRAFÍA BASE
+ * 2. CONTENEDOR / CUADRÍCULA CENTRADA (4 COLUMNAS POR DEFECTO)
  * ---------------------------------------------------------------------------- */
-body, .vc_row, .wpb_text_column {
-  font-family: var(--sat-font-family);
-  color: var(--sat-ui-texto);
+.sat-cards-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important; /* 4 columnas por defecto */
+  gap: 16px !important;
+  width: 100% !important;
+  max-width: 1240px !important;
+  margin: 0 auto !important; /* Centrado en pantalla */
+  padding: 10px 0 !important;
+  box-sizing: border-box !important;
+  align-items: stretch !important; /* Misma altura garantizada */
+}
+
+/* Tablet (hasta 1024px): 2 columnas */
+@media (max-width: 1024px) {
+  .sat-cards-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 14px !important;
+  }
+}
+
+/* Móvil (hasta 640px): 1 columna apilada */
+@media (max-width: 640px) {
+  .sat-cards-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+}
+
+/* En WPBakery cuando se usan columnas normales (vc_column): */
+.vc_row.vc_row-flex .vc_column_container {
+  display: flex !important;
+}
+
+.vc_row.vc_row-flex .vc_column-inner {
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100% !important;
+}
+
+.vc_row.vc_row-flex .wpb_wrapper {
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 1 auto !important;
+  width: 100% !important;
 }
 
 /* ----------------------------------------------------------------------------
- * 3. COMPONENTE CARD SAT (100% BORDERLESS CONFORME AL DESIGN SYSTEM)
+ * 3. COMPONENTE CARD (MISMA ALTURA Y CONTENIDO EQUILIBRADO)
  * ---------------------------------------------------------------------------- */
 .sat-card {
-  display: block;
-  position: relative;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  width: 100% !important;
+  height: 100% !important; /* Misma altura en todas las columnas */
+  min-height: 140px !important;
   text-decoration: none !important;
-  border: 0 !important; /* REGLA ESTRICTA: Sin bordes perimetrales */
-  outline: none;
-  border-radius: var(--sat-radius);
-  background-color: var(--sat-ui-fondo-tenue);
-  padding: 20px 22px;
-  margin-bottom: 16px;
-  box-sizing: border-box;
-  cursor: pointer;
-  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
-  user-select: none;
-  -webkit-tap-highlight-color: transparent;
+  background-color: var(--sat-ui-fondo-tenue) !important;
+  border: none !important; /* REGLA INMUTABLE: Cero bordes */
+  border-radius: var(--sat-radius) !important;
+  padding: 22px 24px !important;
+  box-sizing: border-box !important;
+  cursor: pointer !important;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s ease-out, box-shadow 0.4s ease-out !important;
+  user-select: none !important;
+  font-family: var(--sat-font-family) !important;
 }
 
-/* Encabezado interno de la Card */
-.sat-card-header {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 12px;
+/* Centrado o elevación sutil en hover */
+.sat-card:hover {
+  transform: translateY(-3px) !important;
+}
+
+.sat-card:active {
+  transform: translateY(0) !important;
+}
+
+/* ----------------------------------------------------------------------------
+ * 4. VARIANTES DE TONO SEGÚN SEGMENTO
+ * ---------------------------------------------------------------------------- */
+/* Profesionales (Verde Oficial) */
+.sat-card--profesionales:hover,
+.sat-card--verde:hover {
+  background-color: var(--sat-seg-empresas) !important; /* #4D8014 */
+  box-shadow: 0 12px 24px rgba(77, 128, 20, 0.22) !important;
+}
+.sat-card--profesionales:active,
+.sat-card--verde:active {
+  background-color: #365e0e !important;
+}
+
+/* Contribuyentes General (Azul SAT Oficial) */
+.sat-card--azul:hover {
+  background-color: var(--sat-azul) !important; /* #14649B */
+  box-shadow: 0 12px 24px rgba(20, 100, 155, 0.22) !important;
+}
+.sat-card--azul:active {
+  background-color: var(--sat-azul-oscuro) !important;
+}
+
+/* Personas (Celeste Oficial) */
+.sat-card--celeste:hover {
+  background-color: var(--sat-seg-personas) !important; /* #0284C7 */
+  box-shadow: 0 12px 24px rgba(2, 132, 199, 0.22) !important;
+}
+
+/* Aduanas (Naranja Oficial) */
+.sat-card--naranja:hover {
+  background-color: var(--sat-seg-aduanas) !important; /* #C25E00 */
+  box-shadow: 0 12px 24px rgba(194, 94, 0, 0.22) !important;
+}
+
+/* ----------------------------------------------------------------------------
+ * 5. CABECERA, TÍTULO, CHEVRON Y DESCRIPCIÓN
+ * ---------------------------------------------------------------------------- */
+.sat-card-head {
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: space-between !important;
+  gap: 12px !important;
+  width: 100% !important;
 }
 
 .sat-card-title {
   margin: 0 !important;
+  padding: 0 !important;
   font-size: 16px !important;
-  line-height: 1.35 !important;
   font-weight: 700 !important;
+  line-height: 1.35 !important;
   color: var(--sat-ui-texto) !important;
-  transition: color 0.2s ease;
+  transition: color 0.2s ease !important;
 }
 
 .sat-card-chevron {
-  flex-shrink: 0;
-  width: 20px;
-  height: 20px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: #94A3B8;
-  transition: color 0.2s ease;
+  flex-shrink: 0 !important;
+  width: 20px !important;
+  height: 20px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #94A3B8 !important;
+  transition: color 0.2s ease !important;
 }
 
-.sat-card-chevron svg {
-  width: 18px;
-  height: 18px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 2.2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-/* Descripción de la Card */
 .sat-card-desc {
   margin: 8px 0 0 0 !important;
+  padding: 0 !important;
   font-size: 13px !important;
-  line-height: 1.5 !important;
+  line-height: 1.55 !important;
   color: var(--sat-ui-texto-suave) !important;
-  transition: color 0.2s ease;
+  flex-grow: 1 !important; /* Empuja el espacio vertical para emparejar */
+  transition: color 0.2s ease !important;
 }
 
-/* Footer opcional de la Card */
-.sat-card-footer {
-  margin-top: 16px;
-  padding-top: 12px;
-  border-top: 1px solid rgba(220, 220, 220, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 11px;
-  font-weight: 500;
-  color: var(--sat-ui-texto-suave);
-  transition: color 0.2s ease, border-color 0.2s ease;
-}
-
-/* ----------------------------------------------------------------------------
- * 4. VARIANTES DE TONO SEGÚN SEGMENTO (HOVER SÓLIDO Y ACTIVE)
- * ---------------------------------------------------------------------------- */
-
-/* Tono Azul Institucional */
-.sat-card--azul:hover {
-  background-color: var(--sat-azul) !important;
-  box-shadow: 0 12px 24px rgba(20, 100, 155, 0.24);
-  transform: translateY(-3px);
-}
-.sat-card--azul:active {
-  background-color: var(--sat-azul-oscuro) !important;
-  transform: translateY(0);
-}
-
-/* Tono Celeste (Personas) */
-.sat-card--celeste:hover {
-  background-color: var(--sat-seg-personas) !important;
-  box-shadow: 0 12px 24px rgba(2, 132, 199, 0.24);
-  transform: translateY(-3px);
-}
-.sat-card--celeste:active {
-  background-color: #0369a1 !important;
-  transform: translateY(0);
-}
-
-/* Tono Verde (Empresas) */
-.sat-card--verde:hover {
-  background-color: var(--sat-seg-empresas) !important;
-  box-shadow: 0 12px 24px rgba(77, 128, 20, 0.24);
-  transform: translateY(-3px);
-}
-.sat-card--verde:active {
-  background-color: #365e0e !important;
-  transform: translateY(0);
-}
-
-/* Tono Naranja (Aduanas / Comercio Exterior) */
-.sat-card--naranja:hover {
-  background-color: var(--sat-seg-aduanas) !important;
-  box-shadow: 0 12px 24px rgba(194, 94, 0, 0.24);
-  transform: translateY(-3px);
-}
-.sat-card--naranja:active {
-  background-color: #9a4900 !important;
-  transform: translateY(0);
-}
-
-/* Tono Morado (Auxiliares / Entes Exentos) */
-.sat-card--morado:hover {
-  background-color: var(--sat-seg-auxiliares) !important;
-  box-shadow: 0 12px 24px rgba(99, 102, 241, 0.24);
-  transform: translateY(-3px);
-}
-.sat-card--morado:active {
-  background-color: #4338ca !important;
-  transform: translateY(0);
-}
-
-/* Transición a texto blanco en hover/active de cualquier variante */
+/* Cambio a blanco en hover */
 .sat-card:hover .sat-card-title,
 .sat-card:hover .sat-card-chevron,
-.sat-card:active .sat-card-title,
-.sat-card:active .sat-card-chevron {
-  color: #ffffff !important;
-}
-
 .sat-card:hover .sat-card-desc,
+.sat-card:active .sat-card-title,
+.sat-card:active .sat-card-chevron,
 .sat-card:active .sat-card-desc {
-  color: rgba(255, 255, 255, 0.92) !important;
-}
-
-.sat-card:hover .sat-card-footer,
-.sat-card:active .sat-card-footer {
-  color: rgba(255, 255, 255, 0.88) !important;
-  border-top-color: rgba(255, 255, 255, 0.2) !important;
-}
-
-/* Foco accesible por teclado */
-.sat-card:focus-visible {
-  outline: 2px solid var(--sat-azul) !important;
-  outline-offset: 2px;
-}
-
-/* ----------------------------------------------------------------------------
- * 5. COMPONENTES COMPLEMENTARIOS (BOTONES, ALERTAS, BREADCRUMBS)
- * ---------------------------------------------------------------------------- */
-/* Botón Primario */
-.sat-btn-primary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  background-color: var(--sat-azul) !important;
   color: #ffffff !important;
-  font-weight: 700;
-  font-size: 14px;
-  padding: 10px 20px;
-  border-radius: var(--sat-radius-sm);
-  border: none;
-  text-decoration: none !important;
-  cursor: pointer;
-  transition: background-color 0.15s ease, transform 0.15s ease;
-}
-.sat-btn-primary:hover {
-  background-color: var(--sat-azul-oscuro) !important;
-  color: #ffffff !important;
-  transform: translateY(-1px);
-}
-
-/* Alertas Informativas */
-.sat-alert {
-  padding: 14px 16px;
-  border-radius: var(--sat-radius-sm);
-  background-color: #f0f9ff;
-  border-left: 4px solid var(--sat-azul);
-  color: var(--sat-ui-texto);
-  font-size: 13px;
-  line-height: 1.5;
-  margin-bottom: 16px;
-}
-
-/* Reducción de movimiento */
-@media (prefers-reduced-motion: reduce) {
-  .sat-card, .sat-btn-primary {
-    transition: none !important;
-    transform: none !important;
-  }
 }

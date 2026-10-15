@@ -105,7 +105,7 @@ export function Card({
       className={[
         // Sin bordes perimetrales (borderless canónico del design system)
         'group rounded-xl border-0 p-5',
-        'cursor-pointer transition-all duration-200 select-none',
+        'cursor-pointer transition-all duration-400 ease-out select-none',
         'motion-reduce:transition-none focus-visible:ring-2 focus-visible:ring-sat-azul focus-visible:outline-hidden',
         // Fondo base y variantes interactivas
         toneClasses.bgBase,

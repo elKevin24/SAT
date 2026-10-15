@@ -749,7 +749,7 @@ export default function StyleGuide() {
           {/* CONTENIDO CENTRAL (Se desplaza libremente sin mover la barra lateral) */}
           <main className="min-w-0 flex-1 px-0 py-6 lg:px-8">
             {/* Banner Introductorio */}
-            <div className="mb-8 rounded-2xl bg-gradient-to-r from-[#14649B] to-[#19324B] p-6 text-white shadow-sm">
+            <div className="mb-8 rounded-2xl bg-sat-azul-oscuro p-6 text-white shadow-sm border border-sat-azul">
               <div className="flex flex-wrap items-center justify-between gap-4">
                 <div>
                   <span className="inline-flex items-center gap-1.5 rounded-full bg-white/20 px-2.5 py-0.5 text-xs font-semibold backdrop-blur">
