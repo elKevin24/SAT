@@ -21,4 +21,6 @@ __pycache__/
 # Herramientas y reportes locales
 .kiro/
 reports/
+url_report.txt
+url_report.tsv
 

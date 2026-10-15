@@ -232,7 +232,8 @@ headers_catalogo = [
     "Total Audiencias / Nodos",
     "Segmentos Aplicables",
     "¿Es Brecha Normativa?",
-    "URL Portal SAT"
+    "URL Portal SAT",
+    "Familia Temática"
 ]
 
 for col_idx, h in enumerate(headers_catalogo, start=1):
@@ -293,6 +294,9 @@ for r_idx, item in enumerate(catalogo, start=2):
         c_url.font = font_link
         c_url.hyperlink = url_val
 
+    # Familia Temática
+    ws_catalogo.cell(row=r_idx, column=19, value=item.get('familiaTematica', 'Normativa y Gestiones Generales'))
+
     # Color de fila alternado (Zebra) o highlight para transversales
     if item.get('esTransversal'):
         fill_color = HIGHLIGHT_FILL
@@ -301,7 +305,7 @@ for r_idx, item in enumerate(catalogo, start=2):
     else:
         fill_color = 'FFFFFF'
 
-    for c_i in range(1, 19):
+    for c_i in range(1, 20):
         cell = ws_catalogo.cell(row=r_idx, column=c_i)
         if cell.font == font_body or cell.font is None:
             cell.font = font_body
@@ -310,12 +314,12 @@ for r_idx, item in enumerate(catalogo, start=2):
     
     ws_catalogo.row_dimensions[r_idx].height = 24
 
-catalogo_widths = [6, 22, 22, 40, 36, 50, 24, 24, 24, 24, 16, 28, 42, 16, 16, 26, 16, 50]
+catalogo_widths = [6, 22, 22, 40, 36, 50, 24, 24, 24, 24, 16, 28, 42, 16, 16, 26, 16, 50, 36]
 for idx, w in enumerate(catalogo_widths, start=1):
     ws_catalogo.column_dimensions[get_column_letter(idx)].width = w
 
 ws_catalogo.freeze_panes = 'C2'
-ws_catalogo.auto_filter.ref = f"A1:R{LAST_ROW}"
+ws_catalogo.auto_filter.ref = f"A1:S{LAST_ROW}"
 
 # ==============================================================================
 # HOJA 3: CONTENIDOS TRANSVERSALES (17 REGISTROS POLIJERÁRQUICOS)
@@ -469,6 +473,80 @@ for idx, w in enumerate(nodos_widths, start=1):
 
 ws_nodos.freeze_panes = 'D2'
 ws_nodos.auto_filter.ref = f"A1:L{TOTAL_NODOS_ROW}"
+
+# ==============================================================================
+# HOJA 5: FAMILIAS TEMÁTICAS (10 HUBS CANÓNICOS ENTERPRISE)
+# ==============================================================================
+ws_fams = wb.create_sheet(title="Familias Temáticas (10)")
+ws_fams.views.sheetView[0].showGridLines = True
+
+fam_headers = [
+    "No.",
+    "Código Canónico Oficial",
+    "Identificador Técnico (Slug)",
+    "Nombre Oficial de la Familia Temática",
+    "Descripción del Ecosistema de Servicios",
+    "Total Gestiones Canónicas Únicas",
+    "% del Catálogo"
+]
+
+for col_idx, h in enumerate(fam_headers, start=1):
+    c = ws_fams.cell(row=1, column=col_idx, value=h)
+    c.font = font_header
+    c.fill = PatternFill(start_color=BLUE_HEADER, end_color=BLUE_HEADER, fill_type='solid')
+    c.alignment = Alignment(horizontal='center', vertical='center', wrap_text=True)
+    c.border = header_border
+ws_fams.row_dimensions[1].height = 30
+
+familias_catalogo = [
+    ("FAM-01", "fel", "Factura Electrónica en Línea (FEL)", "Ecosistema integral de emisión, certificación, anulación y consulta de documentos tributarios electrónicos."),
+    ("FAM-02", "vehiculos", "Registro Fiscal de Vehículos (RFV)", "Traspasos electrónicos, primeras placas, reposición de distintivos y pago del impuesto sobre circulación (ISCV)."),
+    ("FAM-03", "rtu-digital", "Registro Tributario Unificado (RTU) Digital", "Inscripción de primer NIT, actualización periódica de datos y ratificación domiciliaria de contribuyentes."),
+    ("FAM-04", "ducas", "Declaraciones Aduaneras (DUCAs)", "Transmisión, despacho y liquidación electrónica de declaraciones aduaneras (DUCA-F, DUCA-D, DUCA-T)."),
+    ("FAM-05", "solvencia-fiscal", "Solvencias y Convenios de Pago", "Acreditación de solvencia fiscal en línea, constancias de no deuda y convenios de facilidades de pago."),
+    ("FAM-06", "maquilas-29-89", "Regímenes Especiales y Maquilas (Dto. 29-89)", "Fomento a la exportación, cuentas corrientes de insumos, garantías y descargos de maquila."),
+    ("FAM-07", "zdeep", "Zonas de Desarrollo Económico Especial Público (ZDEEP)", "Habilitación de polígonos, garitas aduaneras y régimen para empresas usuarias y administradoras de ZDEEP."),
+    ("FAM-08", "afpa", "Auxiliares de la Función Pública Aduanera (AFPA)", "Acreditación, carnés oficiales, garantías y régimen aduanero para agentes, apoderados, transportistas y couriers."),
+    ("FAM-09", "agencia-virtual", "Agencia Virtual y Servicios Remotos", "Activación, biometría, reseteo de claves y herramientas autenticadas de autogestión ciudadana."),
+    ("FAM-10", "exenciones", "Franquicias y Exenciones Tributarias", "Acreditación de exenciones diplomáticas, constancias de exención del IVA (CIVA) y donaciones oficiales.")
+]
+
+for idx, (cod, slug, nombre, desc) in enumerate(familias_catalogo, start=2):
+    ws_fams.cell(row=idx, column=1, value=idx - 1).alignment = Alignment(horizontal='center')
+    
+    c_cod = ws_fams.cell(row=idx, column=2, value=cod)
+    c_cod.font = font_bold
+    c_cod.alignment = Alignment(horizontal='center')
+    
+    c_slug = ws_fams.cell(row=idx, column=3, value=slug)
+    c_slug.alignment = Alignment(horizontal='center')
+    
+    c_nom = ws_fams.cell(row=idx, column=4, value=nombre)
+    c_nom.font = font_bold
+    
+    ws_fams.cell(row=idx, column=5, value=desc)
+    
+    c_cnt = ws_fams.cell(row=idx, column=6, value=f'=COUNTIF(\'{SHEET_DATA_NAME}\'!S2:S{LAST_ROW}, "*{cod}*")')
+    c_cnt.font = font_bold
+    c_cnt.alignment = Alignment(horizontal='center')
+    
+    c_pct = ws_fams.cell(row=idx, column=7, value=f'=F{idx}/683')
+    c_pct.number_format = '0.0%'
+    c_pct.alignment = Alignment(horizontal='center')
+    
+    fill = ZEBRA_FILL if idx % 2 == 0 else 'FFFFFF'
+    for c_i in range(1, 8):
+        cell = ws_fams.cell(row=idx, column=c_i)
+        if cell.font is None: cell.font = font_body
+        cell.fill = PatternFill(start_color=fill, end_color=fill, fill_type='solid')
+        cell.border = thin_border
+    ws_fams.row_dimensions[idx].height = 24
+
+fam_widths = [6, 16, 20, 38, 55, 20, 16]
+for idx, w in enumerate(fam_widths, start=1):
+    ws_fams.column_dimensions[get_column_letter(idx)].width = w
+
+ws_fams.freeze_panes = 'C2'
 
 # ==============================================================================
 # GUARDAR LIBRO EXCEL EN ENTREGABLES

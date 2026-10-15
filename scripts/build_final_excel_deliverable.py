@@ -396,10 +396,11 @@ headers_unified = [
     "Base Legal / Fundamento Jurídico (En base a qué: CAUCA, RECAUCA, Leyes)",
     "Ruta de Procesos Asociada",
     "Estado Normativo",
-    "URL Portal SAT"
+    "URL Portal SAT",
+    "Familia Temática"
 ]
 
-unified_widths = [8, 18, 10, 24, 10, 28, 10, 28, 10, 28, 10, 28, 12, 38, 55, 24, 24, 24, 20, 16, 24, 48, 50, 28, 16, 42]
+unified_widths = [8, 18, 10, 24, 10, 28, 10, 28, 10, 28, 10, 28, 12, 38, 55, 24, 24, 24, 20, 16, 24, 48, 50, 28, 16, 42, 34]
 
 def populate_unified_sheet(ws, dataset):
     ws.views.sheetView[0].showGridLines = True
@@ -542,8 +543,12 @@ def populate_unified_sheet(ws, dataset):
             c_url.font = font_link
             c_url.hyperlink = raw_url
 
+        # Col 27: Familia Temática
+        fam_val = item.get('familiaTematica', 'Normativa y Gestiones Generales')
+        ws.cell(row=r_idx, column=27, value=fam_val)
+
         fill_color = ZEBRA_FILL if r_idx % 2 == 0 else 'FFFFFF'
-        for c_idx in range(1, 27):
+        for c_idx in range(1, 28):
             cell = ws.cell(row=r_idx, column=c_idx)
             if c_idx not in [3, 4, 5, 7, 9, 11, 13, 14, 15, 16, 21, 23, 24, 25, 26]: cell.font = font_body
             if not ((c_idx in [21, 25]) and item.get('esBrecha')):
@@ -555,7 +560,7 @@ def populate_unified_sheet(ws, dataset):
         ws.column_dimensions[get_column_letter(idx)].width = w
 
     ws.freeze_panes = 'E2'
-    ws.auto_filter.ref = f"A1:Z{len(dataset)+1}"
+    ws.auto_filter.ref = f"A1:AA{len(dataset)+1}"
 
 # HOJA 2: MATRIZ MAESTRA (716)
 ws_master = wb.create_sheet(title=SHEET_MASTER_NAME)
@@ -638,6 +643,80 @@ for idx, w in enumerate(brecha_widths, start=1):
 
 ws_brechas.freeze_panes = 'A2'
 ws_brechas.auto_filter.ref = f"A1:F{len(ce_brechas)+1}"
+
+# ==============================================================================
+# HOJA 8: FAMILIAS TEMÁTICAS (10 HUBS CANÓNICOS ENTERPRISE)
+# ==============================================================================
+ws_fams = wb.create_sheet(title="Familias Temáticas (10)")
+ws_fams.views.sheetView[0].showGridLines = True
+
+fam_headers = [
+    "No.",
+    "Código Canónico",
+    "Identificador Técnico (Slug)",
+    "Nombre Oficial de la Familia Temática",
+    "Descripción del Ecosistema de Servicios",
+    "Total Gestiones en Matriz Maestra",
+    "% de la Matriz"
+]
+
+for col_idx, h in enumerate(fam_headers, start=1):
+    c = ws_fams.cell(row=1, column=col_idx, value=h)
+    c.font = font_header
+    c.fill = PatternFill(start_color=BLUE_HEADER, end_color=BLUE_HEADER, fill_type='solid')
+    c.alignment = Alignment(horizontal='center', vertical='center', wrap_text=True)
+    c.border = header_border
+ws_fams.row_dimensions[1].height = 30
+
+familias_catalogo = [
+    ("FAM-01", "fel", "Factura Electrónica en Línea (FEL)", "Ecosistema integral de emisión, certificación, anulación y consulta de documentos tributarios electrónicos."),
+    ("FAM-02", "vehiculos", "Registro Fiscal de Vehículos (RFV)", "Traspasos electrónicos, primeras placas, reposición de distintivos y pago del impuesto sobre circulación (ISCV)."),
+    ("FAM-03", "rtu-digital", "Registro Tributario Unificado (RTU) Digital", "Inscripción de primer NIT, actualización periódica de datos y ratificación domiciliaria de contribuyentes."),
+    ("FAM-04", "ducas", "Declaraciones Aduaneras (DUCAs)", "Transmisión, despacho y liquidación electrónica de declaraciones aduaneras (DUCA-F, DUCA-D, DUCA-T)."),
+    ("FAM-05", "solvencia-fiscal", "Solvencias y Convenios de Pago", "Acreditación de solvencia fiscal en línea, constancias de no deuda y convenios de facilidades de pago."),
+    ("FAM-06", "maquilas-29-89", "Regímenes Especiales y Maquilas (Dto. 29-89)", "Fomento a la exportación, cuentas corrientes de insumos, garantías y descargos de maquila."),
+    ("FAM-07", "zdeep", "Zonas de Desarrollo Económico Especial Público (ZDEEP)", "Habilitación de polígonos, garitas aduaneras y régimen para empresas usuarias y administradoras de ZDEEP."),
+    ("FAM-08", "afpa", "Auxiliares de la Función Pública Aduanera (AFPA)", "Acreditación, carnés oficiales, garantías y régimen aduanero para agentes, apoderados, transportistas y couriers."),
+    ("FAM-09", "agencia-virtual", "Agencia Virtual y Servicios Remotos", "Activación, biometría, reseteo de claves y herramientas autenticadas de autogestión ciudadana."),
+    ("FAM-10", "exenciones", "Franquicias y Exenciones Tributarias", "Acreditación de exenciones diplomáticas, constancias de exención del IVA (CIVA) y donaciones oficiales.")
+]
+
+for idx, (cod, slug, nombre, desc) in enumerate(familias_catalogo, start=2):
+    ws_fams.cell(row=idx, column=1, value=idx - 1).alignment = Alignment(horizontal='center')
+    
+    c_cod = ws_fams.cell(row=idx, column=2, value=cod)
+    c_cod.font = font_bold
+    c_cod.alignment = Alignment(horizontal='center')
+    
+    c_slug = ws_fams.cell(row=idx, column=3, value=slug)
+    c_slug.alignment = Alignment(horizontal='center')
+    
+    c_nom = ws_fams.cell(row=idx, column=4, value=nombre)
+    c_nom.font = font_bold
+    
+    ws_fams.cell(row=idx, column=5, value=desc)
+    
+    c_cnt = ws_fams.cell(row=idx, column=6, value=f'=COUNTIF(\'{SHEET_MASTER_NAME}\'!AA2:AA{LAST_ROW}, "*{cod}*")')
+    c_cnt.font = font_bold
+    c_cnt.alignment = Alignment(horizontal='center')
+    
+    c_pct = ws_fams.cell(row=idx, column=7, value=f'=F{idx}/{TOTAL_ROWS}')
+    c_pct.number_format = '0.0%'
+    c_pct.alignment = Alignment(horizontal='center')
+    
+    fill = ZEBRA_FILL if idx % 2 == 0 else 'FFFFFF'
+    for c_i in range(1, 8):
+        cell = ws_fams.cell(row=idx, column=c_i)
+        if cell.font is None: cell.font = font_body
+        cell.fill = PatternFill(start_color=fill, end_color=fill, fill_type='solid')
+        cell.border = thin_border
+    ws_fams.row_dimensions[idx].height = 24
+
+fam_widths = [6, 16, 20, 38, 55, 20, 16]
+for idx, w in enumerate(fam_widths, start=1):
+    ws_fams.column_dimensions[get_column_letter(idx)].width = w
+
+ws_fams.freeze_panes = 'C2'
 
 # ==============================================================================
 # GUARDAR LIBRO DEFINITIVO EN ENTREGABLES

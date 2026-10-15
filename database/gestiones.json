@@ -216,10 +216,10 @@
     ],
     "familias_ids": [
       {
-        "$oid": "6ac845f3ee70794d89b6396c"
+        "$oid": "6ac845f3ee70794d89b6396b"
       },
       {
-        "$oid": "6ac845f3ee70794d89b6396b"
+        "$oid": "6ac845f3ee70794d89b6396c"
       },
       {
         "$oid": "6ac845f3ee70794d89b63972"
@@ -536,10 +536,10 @@
     ],
     "familias_ids": [
       {
-        "$oid": "6ac845f3ee70794d89b6396c"
+        "$oid": "6ac845f3ee70794d89b6396b"
       },
       {
-        "$oid": "6ac845f3ee70794d89b6396b"
+        "$oid": "6ac845f3ee70794d89b6396c"
       }
     ],
     "estado": "VIGENTE",
@@ -720,10 +720,10 @@
     ],
     "familias_ids": [
       {
-        "$oid": "6ac845f3ee70794d89b6396c"
+        "$oid": "6ac845f3ee70794d89b6396b"
       },
       {
-        "$oid": "6ac845f3ee70794d89b6396b"
+        "$oid": "6ac845f3ee70794d89b6396c"
       },
       {
         "$oid": "6ac845f3ee70794d89b63972"
@@ -978,10 +978,10 @@
     ],
     "familias_ids": [
       {
-        "$oid": "6ac845f3ee70794d89b6396e"
+        "$oid": "6ac845f3ee70794d89b6396b"
       },
       {
-        "$oid": "6ac845f3ee70794d89b6396b"
+        "$oid": "6ac845f3ee70794d89b6396e"
       }
     ],
     "estado": "VIGENTE",
@@ -2177,10 +2177,10 @@
     ],
     "familias_ids": [
       {
-        "$oid": "6ac845f3ee70794d89b6396c"
+        "$oid": "6ac845f3ee70794d89b6396a"
       },
       {
-        "$oid": "6ac845f3ee70794d89b6396a"
+        "$oid": "6ac845f3ee70794d89b6396c"
       },
       {
         "$oid": "6ac845f3ee70794d89b63972"
@@ -2791,11 +2791,7 @@
         "$oid": "6ac845f3ee70794d89b63964"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b63971"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -2856,13 +2852,13 @@
     ],
     "familias_ids": [
       {
+        "$oid": "6ac845f3ee70794d89b6396c"
+      },
+      {
         "$oid": "6ac845f3ee70794d89b6396d"
       },
       {
         "$oid": "6ac845f3ee70794d89b63973"
-      },
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
       }
     ],
     "estado": "VIGENTE",
@@ -2988,13 +2984,10 @@
     ],
     "familias_ids": [
       {
-        "$oid": "6ac845f3ee70794d89b6396d"
+        "$oid": "6ac845f3ee70794d89b6396c"
       },
       {
         "$oid": "6ac845f3ee70794d89b63973"
-      },
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
       }
     ],
     "estado": "VIGENTE",
@@ -3120,13 +3113,13 @@
     ],
     "familias_ids": [
       {
+        "$oid": "6ac845f3ee70794d89b6396c"
+      },
+      {
         "$oid": "6ac845f3ee70794d89b6396d"
       },
       {
         "$oid": "6ac845f3ee70794d89b63973"
-      },
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
       }
     ],
     "estado": "VIGENTE",
@@ -3316,11 +3309,7 @@
         "$oid": "6ac845f3ee70794d89b63969"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -3953,13 +3942,13 @@
     ],
     "familias_ids": [
       {
+        "$oid": "6ac845f3ee70794d89b6396c"
+      },
+      {
         "$oid": "6ac845f3ee70794d89b6396d"
       },
       {
         "$oid": "6ac845f3ee70794d89b63973"
-      },
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
       }
     ],
     "estado": "VIGENTE",
@@ -4967,10 +4956,10 @@
     ],
     "familias_ids": [
       {
-        "$oid": "6ac845f3ee70794d89b6396d"
+        "$oid": "6ac845f3ee70794d89b6396c"
       },
       {
-        "$oid": "6ac845f3ee70794d89b6396c"
+        "$oid": "6ac845f3ee70794d89b6396d"
       }
     ],
     "estado": "VIGENTE",
@@ -5033,10 +5022,10 @@
     ],
     "familias_ids": [
       {
-        "$oid": "6ac845f3ee70794d89b6396d"
+        "$oid": "6ac845f3ee70794d89b6396c"
       },
       {
-        "$oid": "6ac845f3ee70794d89b6396c"
+        "$oid": "6ac845f3ee70794d89b6396d"
       }
     ],
     "estado": "VIGENTE",
@@ -5226,11 +5215,7 @@
         "$oid": "6ac845f3ee70794d89b63968"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -5353,9 +5338,6 @@
       }
     ],
     "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      },
       {
         "$oid": "6ac845f3ee70794d89b63973"
       }
@@ -5808,7 +5790,11 @@
         "$oid": "6ac845f3ee70794d89b63969"
       }
     ],
-    "familias_ids": [],
+    "familias_ids": [
+      {
+        "$oid": "6ac845f3ee70794d89b63973"
+      }
+    ],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -5938,10 +5924,10 @@
     ],
     "familias_ids": [
       {
-        "$oid": "6ac845f3ee70794d89b6396c"
+        "$oid": "6ac845f3ee70794d89b6396b"
       },
       {
-        "$oid": "6ac845f3ee70794d89b6396b"
+        "$oid": "6ac845f3ee70794d89b6396c"
       }
     ],
     "estado": "VIGENTE",
@@ -6007,10 +5993,10 @@
     ],
     "familias_ids": [
       {
-        "$oid": "6ac845f3ee70794d89b6396c"
+        "$oid": "6ac845f3ee70794d89b6396b"
       },
       {
-        "$oid": "6ac845f3ee70794d89b6396b"
+        "$oid": "6ac845f3ee70794d89b6396c"
       }
     ],
     "estado": "VIGENTE",
@@ -6076,10 +6062,10 @@
     ],
     "familias_ids": [
       {
-        "$oid": "6ac845f3ee70794d89b6396c"
+        "$oid": "6ac845f3ee70794d89b6396b"
       },
       {
-        "$oid": "6ac845f3ee70794d89b6396b"
+        "$oid": "6ac845f3ee70794d89b6396c"
       }
     ],
     "estado": "VIGENTE",
@@ -6410,6 +6396,9 @@
       },
       {
         "$oid": "6ac845f3ee70794d89b63972"
+      },
+      {
+        "$oid": "6ac845f3ee70794d89b63973"
       }
     ],
     "estado": "VIGENTE",
@@ -6472,10 +6461,10 @@
     ],
     "familias_ids": [
       {
-        "$oid": "6ac845f3ee70794d89b6396c"
+        "$oid": "6ac845f3ee70794d89b6396a"
       },
       {
-        "$oid": "6ac845f3ee70794d89b6396a"
+        "$oid": "6ac845f3ee70794d89b6396c"
       },
       {
         "$oid": "6ac845f3ee70794d89b63972"
@@ -6547,10 +6536,10 @@
     ],
     "familias_ids": [
       {
-        "$oid": "6ac845f3ee70794d89b6396d"
+        "$oid": "6ac845f3ee70794d89b6396a"
       },
       {
-        "$oid": "6ac845f3ee70794d89b6396a"
+        "$oid": "6ac845f3ee70794d89b6396d"
       }
     ],
     "estado": "VIGENTE",
@@ -6874,11 +6863,7 @@
         "$oid": "6ac845f3ee70794d89b63968"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -7265,11 +7250,7 @@
         "$oid": "6ac845f3ee70794d89b63968"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b63971"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -7331,11 +7312,7 @@
         "$oid": "6ac845f3ee70794d89b63968"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b63971"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -7397,11 +7374,7 @@
         "$oid": "6ac845f3ee70794d89b63968"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -7729,10 +7702,10 @@
     ],
     "familias_ids": [
       {
-        "$oid": "6ac845f3ee70794d89b6396c"
+        "$oid": "6ac845f3ee70794d89b6396a"
       },
       {
-        "$oid": "6ac845f3ee70794d89b6396a"
+        "$oid": "6ac845f3ee70794d89b6396c"
       }
     ],
     "estado": "VIGENTE",
@@ -7805,9 +7778,6 @@
       },
       {
         "$oid": "6ac845f3ee70794d89b63973"
-      },
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
       }
     ],
     "estado": "VIGENTE",
@@ -8836,11 +8806,7 @@
         "$oid": "6ac845f3ee70794d89b63957"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -8908,11 +8874,7 @@
         "$oid": "6ac845f3ee70794d89b63955"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396a"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -9803,9 +9765,6 @@
     "familias_ids": [
       {
         "$oid": "6ac845f3ee70794d89b6396c"
-      },
-      {
-        "$oid": "6ac845f3ee70794d89b6396a"
       }
     ],
     "estado": "VIGENTE",
@@ -10155,11 +10114,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -10223,11 +10178,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -10291,11 +10242,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -10359,11 +10306,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -10427,11 +10370,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -10495,11 +10434,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -10563,11 +10498,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -10631,11 +10562,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -10699,11 +10626,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -10839,11 +10762,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396a"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -10913,7 +10832,7 @@
     ],
     "familias_ids": [
       {
-        "$oid": "6ac845f3ee70794d89b6396a"
+        "$oid": "6ac845f3ee70794d89b63973"
       }
     ],
     "estado": "VIGENTE",
@@ -11317,11 +11236,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396a"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -11389,11 +11304,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396a"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -11457,11 +11368,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396a"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -11520,11 +11427,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396a"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -11583,11 +11486,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396a"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -11651,11 +11550,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396a"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -11719,11 +11614,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396a"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -11979,11 +11870,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -12895,11 +12782,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -12963,11 +12846,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -13031,11 +12910,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -13162,11 +13037,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -13230,11 +13101,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -13298,11 +13165,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -13366,11 +13229,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -13434,11 +13293,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -13502,11 +13357,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -13634,11 +13485,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -13790,11 +13637,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -13926,11 +13769,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -13994,11 +13833,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -14062,11 +13897,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -14130,11 +13961,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -14680,14 +14507,7 @@
         "$oid": "6ac845f3ee70794d89b63957"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      },
-      {
-        "$oid": "6ac845f3ee70794d89b63971"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -14814,11 +14634,7 @@
         "$oid": "6ac845f3ee70794d89b63957"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396a"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -14941,11 +14757,7 @@
         "$oid": "6ac845f3ee70794d89b63957"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396e"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -15200,11 +15012,7 @@
         "$oid": "6ac845f3ee70794d89b63957"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b63971"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -15268,11 +15076,7 @@
         "$oid": "6ac845f3ee70794d89b63957"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b63971"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -15393,9 +15197,6 @@
     "familias_ids": [
       {
         "$oid": "6ac845f3ee70794d89b6396c"
-      },
-      {
-        "$oid": "6ac845f3ee70794d89b63971"
       }
     ],
     "estado": "VIGENTE",
@@ -15851,11 +15652,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -15982,14 +15779,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      },
-      {
-        "$oid": "6ac845f3ee70794d89b6396b"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -16054,9 +15844,6 @@
       }
     ],
     "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      },
       {
         "$oid": "6ac845f3ee70794d89b6396b"
       }
@@ -16126,9 +15913,6 @@
     ],
     "familias_ids": [
       {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      },
-      {
         "$oid": "6ac845f3ee70794d89b6396b"
       }
     ],
@@ -16196,9 +15980,6 @@
       }
     ],
     "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      },
       {
         "$oid": "6ac845f3ee70794d89b6396b"
       }
@@ -16268,9 +16049,6 @@
     ],
     "familias_ids": [
       {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      },
-      {
         "$oid": "6ac845f3ee70794d89b6396b"
       }
     ],
@@ -16333,9 +16111,6 @@
       }
     ],
     "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      },
       {
         "$oid": "6ac845f3ee70794d89b6396b"
       }
@@ -16400,10 +16175,10 @@
     ],
     "familias_ids": [
       {
-        "$oid": "6ac845f3ee70794d89b6396c"
+        "$oid": "6ac845f3ee70794d89b6396b"
       },
       {
-        "$oid": "6ac845f3ee70794d89b6396b"
+        "$oid": "6ac845f3ee70794d89b6396c"
       }
     ],
     "estado": "VIGENTE",
@@ -16471,10 +16246,10 @@
     ],
     "familias_ids": [
       {
-        "$oid": "6ac845f3ee70794d89b6396c"
+        "$oid": "6ac845f3ee70794d89b6396b"
       },
       {
-        "$oid": "6ac845f3ee70794d89b6396b"
+        "$oid": "6ac845f3ee70794d89b6396c"
       }
     ],
     "estado": "VIGENTE",
@@ -16962,9 +16737,6 @@
     "familias_ids": [
       {
         "$oid": "6ac845f3ee70794d89b6396c"
-      },
-      {
-        "$oid": "6ac845f3ee70794d89b6396a"
       }
     ],
     "estado": "VIGENTE",
@@ -17030,11 +16802,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396a"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -17093,11 +16861,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396a"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -17161,11 +16925,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396a"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -18128,11 +17888,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396e"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -18204,11 +17960,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396e"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -18276,11 +18028,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396e"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -18416,11 +18164,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396e"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -18624,11 +18368,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396e"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -19717,11 +19457,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -19865,11 +19601,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -20072,11 +19804,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -20140,11 +19868,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -20203,11 +19927,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -20343,11 +20063,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396b"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -20479,11 +20195,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396b"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -20555,11 +20267,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396b"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -21172,11 +20880,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -21240,11 +20944,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -21308,11 +21008,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -21451,11 +21147,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -21531,11 +21223,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -21599,11 +21287,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -21667,11 +21351,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -21739,11 +21419,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -21819,11 +21495,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -22020,10 +21692,10 @@
     ],
     "familias_ids": [
       {
-        "$oid": "6ac845f3ee70794d89b6396c"
+        "$oid": "6ac845f3ee70794d89b6396b"
       },
       {
-        "$oid": "6ac845f3ee70794d89b6396b"
+        "$oid": "6ac845f3ee70794d89b6396c"
       }
     ],
     "estado": "VIGENTE",
@@ -22157,11 +21829,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396b"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -23081,17 +22749,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      },
-      {
-        "$oid": "6ac845f3ee70794d89b63972"
-      },
-      {
-        "$oid": "6ac845f3ee70794d89b63971"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -23158,9 +22816,6 @@
     "familias_ids": [
       {
         "$oid": "6ac845f3ee70794d89b6396d"
-      },
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
       }
     ],
     "estado": "VIGENTE",
@@ -23229,9 +22884,6 @@
     "familias_ids": [
       {
         "$oid": "6ac845f3ee70794d89b6396d"
-      },
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
       }
     ],
     "estado": "VIGENTE",
@@ -23297,11 +22949,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -23436,11 +23084,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -23504,11 +23148,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -23572,11 +23212,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -23640,11 +23276,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -23855,9 +23487,6 @@
         "$oid": "6ac845f3ee70794d89b6396c"
       },
       {
-        "$oid": "6ac845f3ee70794d89b6396b"
-      },
-      {
         "$oid": "6ac845f3ee70794d89b63972"
       }
     ],
@@ -24057,10 +23686,10 @@
     ],
     "familias_ids": [
       {
-        "$oid": "6ac845f3ee70794d89b6396c"
+        "$oid": "6ac845f3ee70794d89b6396b"
       },
       {
-        "$oid": "6ac845f3ee70794d89b6396b"
+        "$oid": "6ac845f3ee70794d89b6396c"
       }
     ],
     "estado": "VIGENTE",
@@ -24126,11 +23755,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396b"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -24332,10 +23957,10 @@
     ],
     "familias_ids": [
       {
-        "$oid": "6ac845f3ee70794d89b6396c"
+        "$oid": "6ac845f3ee70794d89b6396b"
       },
       {
-        "$oid": "6ac845f3ee70794d89b6396b"
+        "$oid": "6ac845f3ee70794d89b6396c"
       }
     ],
     "estado": "VIGENTE",
@@ -24810,9 +24435,6 @@
     "familias_ids": [
       {
         "$oid": "6ac845f3ee70794d89b6396e"
-      },
-      {
-        "$oid": "6ac845f3ee70794d89b6396b"
       }
     ],
     "estado": "VIGENTE",
@@ -24878,11 +24500,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396b"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -25547,11 +25165,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396b"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -26088,10 +25702,10 @@
     ],
     "familias_ids": [
       {
-        "$oid": "6ac845f3ee70794d89b6396c"
+        "$oid": "6ac845f3ee70794d89b6396b"
       },
       {
-        "$oid": "6ac845f3ee70794d89b6396b"
+        "$oid": "6ac845f3ee70794d89b6396c"
       },
       {
         "$oid": "6ac845f3ee70794d89b63972"
@@ -26877,14 +26491,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      },
-      {
-        "$oid": "6ac845f3ee70794d89b6396b"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -26948,11 +26555,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396b"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -27016,11 +26619,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396b"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -27151,9 +26750,6 @@
     "familias_ids": [
       {
         "$oid": "6ac845f3ee70794d89b6396c"
-      },
-      {
-        "$oid": "6ac845f3ee70794d89b6396d"
       }
     ],
     "estado": "VIGENTE",
@@ -27291,9 +26887,6 @@
     "familias_ids": [
       {
         "$oid": "6ac845f3ee70794d89b6396c"
-      },
-      {
-        "$oid": "6ac845f3ee70794d89b6396a"
       }
     ],
     "estado": "VIGENTE",
@@ -27357,9 +26950,6 @@
     "familias_ids": [
       {
         "$oid": "6ac845f3ee70794d89b6396c"
-      },
-      {
-        "$oid": "6ac845f3ee70794d89b6396a"
       },
       {
         "$oid": "6ac845f3ee70794d89b63972"
@@ -27426,9 +27016,6 @@
     "familias_ids": [
       {
         "$oid": "6ac845f3ee70794d89b6396c"
-      },
-      {
-        "$oid": "6ac845f3ee70794d89b6396a"
       }
     ],
     "estado": "VIGENTE",
@@ -27492,9 +27079,6 @@
     "familias_ids": [
       {
         "$oid": "6ac845f3ee70794d89b6396c"
-      },
-      {
-        "$oid": "6ac845f3ee70794d89b6396a"
       }
     ],
     "estado": "VIGENTE",
@@ -27558,9 +27142,6 @@
     "familias_ids": [
       {
         "$oid": "6ac845f3ee70794d89b6396c"
-      },
-      {
-        "$oid": "6ac845f3ee70794d89b6396a"
       }
     ],
     "estado": "VIGENTE",
@@ -27624,9 +27205,6 @@
     "familias_ids": [
       {
         "$oid": "6ac845f3ee70794d89b6396c"
-      },
-      {
-        "$oid": "6ac845f3ee70794d89b6396a"
       }
     ],
     "estado": "VIGENTE",
@@ -27690,9 +27268,6 @@
     "familias_ids": [
       {
         "$oid": "6ac845f3ee70794d89b6396c"
-      },
-      {
-        "$oid": "6ac845f3ee70794d89b6396a"
       }
     ],
     "estado": "VIGENTE",
@@ -27756,9 +27331,6 @@
     "familias_ids": [
       {
         "$oid": "6ac845f3ee70794d89b6396c"
-      },
-      {
-        "$oid": "6ac845f3ee70794d89b6396a"
       },
       {
         "$oid": "6ac845f3ee70794d89b63972"
@@ -27885,11 +27457,7 @@
         "$oid": "6ac845f3ee70794d89b63956"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396a"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -29771,9 +29339,6 @@
     "familias_ids": [
       {
         "$oid": "6ac845f3ee70794d89b6396c"
-      },
-      {
-        "$oid": "6ac845f3ee70794d89b6396e"
       }
     ],
     "estado": "VIGENTE",
@@ -29845,10 +29410,10 @@
     ],
     "familias_ids": [
       {
-        "$oid": "6ac845f3ee70794d89b6396c"
+        "$oid": "6ac845f3ee70794d89b6396a"
       },
       {
-        "$oid": "6ac845f3ee70794d89b6396a"
+        "$oid": "6ac845f3ee70794d89b6396c"
       }
     ],
     "estado": "VIGENTE",
@@ -30549,14 +30114,7 @@
         "$oid": "6ac845f3ee70794d89b63962"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396d"
-      },
-      {
-        "$oid": "6ac845f3ee70794d89b63971"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -31055,9 +30613,6 @@
     "familias_ids": [
       {
         "$oid": "6ac845f3ee70794d89b6396d"
-      },
-      {
-        "$oid": "6ac845f3ee70794d89b63973"
       }
     ],
     "estado": "VIGENTE",
@@ -31194,13 +30749,13 @@
     ],
     "familias_ids": [
       {
-        "$oid": "6ac845f3ee70794d89b6396d"
-      },
-      {
         "$oid": "6ac845f3ee70794d89b6396a"
       },
       {
         "$oid": "6ac845f3ee70794d89b6396c"
+      },
+      {
+        "$oid": "6ac845f3ee70794d89b6396d"
       }
     ],
     "estado": "VIGENTE",
@@ -31920,10 +31475,10 @@
     ],
     "familias_ids": [
       {
-        "$oid": "6ac845f3ee70794d89b6396d"
+        "$oid": "6ac845f3ee70794d89b6396c"
       },
       {
-        "$oid": "6ac845f3ee70794d89b6396c"
+        "$oid": "6ac845f3ee70794d89b6396d"
       }
     ],
     "estado": "VIGENTE",
@@ -32112,10 +31667,10 @@
     ],
     "familias_ids": [
       {
-        "$oid": "6ac845f3ee70794d89b6396d"
+        "$oid": "6ac845f3ee70794d89b6396c"
       },
       {
-        "$oid": "6ac845f3ee70794d89b6396c"
+        "$oid": "6ac845f3ee70794d89b6396d"
       }
     ],
     "estado": "VIGENTE",
@@ -32309,10 +31864,10 @@
     ],
     "familias_ids": [
       {
-        "$oid": "6ac845f3ee70794d89b6396d"
+        "$oid": "6ac845f3ee70794d89b6396a"
       },
       {
-        "$oid": "6ac845f3ee70794d89b6396a"
+        "$oid": "6ac845f3ee70794d89b6396d"
       }
     ],
     "estado": "VIGENTE",
@@ -32375,10 +31930,10 @@
     ],
     "familias_ids": [
       {
-        "$oid": "6ac845f3ee70794d89b6396d"
+        "$oid": "6ac845f3ee70794d89b6396c"
       },
       {
-        "$oid": "6ac845f3ee70794d89b6396c"
+        "$oid": "6ac845f3ee70794d89b6396d"
       }
     ],
     "estado": "VIGENTE",
@@ -32512,10 +32067,10 @@
     ],
     "familias_ids": [
       {
-        "$oid": "6ac845f3ee70794d89b6396d"
+        "$oid": "6ac845f3ee70794d89b6396c"
       },
       {
-        "$oid": "6ac845f3ee70794d89b6396c"
+        "$oid": "6ac845f3ee70794d89b6396d"
       }
     ],
     "estado": "VIGENTE",
@@ -32727,9 +32282,6 @@
     "familias_ids": [
       {
         "$oid": "6ac845f3ee70794d89b6396d"
-      },
-      {
-        "$oid": "6ac845f3ee70794d89b63973"
       }
     ],
     "estado": "VIGENTE",
@@ -32918,10 +32470,10 @@
     ],
     "familias_ids": [
       {
-        "$oid": "6ac845f3ee70794d89b6396d"
+        "$oid": "6ac845f3ee70794d89b6396b"
       },
       {
-        "$oid": "6ac845f3ee70794d89b6396b"
+        "$oid": "6ac845f3ee70794d89b6396d"
       },
       {
         "$oid": "6ac845f3ee70794d89b63971"
@@ -32987,10 +32539,10 @@
     ],
     "familias_ids": [
       {
-        "$oid": "6ac845f3ee70794d89b6396d"
+        "$oid": "6ac845f3ee70794d89b6396b"
       },
       {
-        "$oid": "6ac845f3ee70794d89b6396b"
+        "$oid": "6ac845f3ee70794d89b6396d"
       },
       {
         "$oid": "6ac845f3ee70794d89b63973"
@@ -33308,10 +32860,10 @@
     ],
     "familias_ids": [
       {
-        "$oid": "6ac845f3ee70794d89b6396d"
+        "$oid": "6ac845f3ee70794d89b6396b"
       },
       {
-        "$oid": "6ac845f3ee70794d89b6396b"
+        "$oid": "6ac845f3ee70794d89b6396d"
       },
       {
         "$oid": "6ac845f3ee70794d89b63971"
@@ -34195,10 +33747,10 @@
     ],
     "familias_ids": [
       {
-        "$oid": "6ac845f3ee70794d89b6396d"
+        "$oid": "6ac845f3ee70794d89b6396c"
       },
       {
-        "$oid": "6ac845f3ee70794d89b6396c"
+        "$oid": "6ac845f3ee70794d89b6396d"
       }
     ],
     "estado": "VIGENTE",
@@ -34762,10 +34314,10 @@
     ],
     "familias_ids": [
       {
-        "$oid": "6ac845f3ee70794d89b6396d"
+        "$oid": "6ac845f3ee70794d89b6396c"
       },
       {
-        "$oid": "6ac845f3ee70794d89b6396c"
+        "$oid": "6ac845f3ee70794d89b6396d"
       }
     ],
     "estado": "VIGENTE",
@@ -35782,10 +35334,10 @@
     ],
     "familias_ids": [
       {
-        "$oid": "6ac845f3ee70794d89b6396d"
+        "$oid": "6ac845f3ee70794d89b6396c"
       },
       {
-        "$oid": "6ac845f3ee70794d89b6396c"
+        "$oid": "6ac845f3ee70794d89b6396d"
       }
     ],
     "estado": "VIGENTE",
@@ -35993,13 +35545,13 @@
     ],
     "familias_ids": [
       {
+        "$oid": "6ac845f3ee70794d89b6396c"
+      },
+      {
         "$oid": "6ac845f3ee70794d89b6396d"
       },
       {
         "$oid": "6ac845f3ee70794d89b63971"
-      },
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
       }
     ],
     "estado": "VIGENTE",
@@ -36200,9 +35752,6 @@
     "familias_ids": [
       {
         "$oid": "6ac845f3ee70794d89b6396d"
-      },
-      {
-        "$oid": "6ac845f3ee70794d89b63971"
       }
     ],
     "estado": "VIGENTE",
@@ -36298,13 +35847,7 @@
     ],
     "familias_ids": [
       {
-        "$oid": "6ac845f3ee70794d89b63970"
-      },
-      {
         "$oid": "6ac845f3ee70794d89b6396d"
-      },
-      {
-        "$oid": "6ac845f3ee70794d89b63971"
       }
     ],
     "estado": "VIGENTE",
@@ -36405,9 +35948,6 @@
     "familias_ids": [
       {
         "$oid": "6ac845f3ee70794d89b6396d"
-      },
-      {
-        "$oid": "6ac845f3ee70794d89b63971"
       }
     ],
     "estado": "VIGENTE",
@@ -36580,9 +36120,6 @@
     "familias_ids": [
       {
         "$oid": "6ac845f3ee70794d89b6396d"
-      },
-      {
-        "$oid": "6ac845f3ee70794d89b63971"
       }
     ],
     "estado": "VIGENTE",
@@ -36672,13 +36209,7 @@
     ],
     "familias_ids": [
       {
-        "$oid": "6ac845f3ee70794d89b63970"
-      },
-      {
         "$oid": "6ac845f3ee70794d89b6396d"
-      },
-      {
-        "$oid": "6ac845f3ee70794d89b63971"
       }
     ],
     "estado": "VIGENTE",
@@ -36797,13 +36328,7 @@
     ],
     "familias_ids": [
       {
-        "$oid": "6ac845f3ee70794d89b63970"
-      },
-      {
         "$oid": "6ac845f3ee70794d89b6396d"
-      },
-      {
-        "$oid": "6ac845f3ee70794d89b63971"
       }
     ],
     "estado": "VIGENTE",
@@ -36908,9 +36433,6 @@
     "familias_ids": [
       {
         "$oid": "6ac845f3ee70794d89b6396d"
-      },
-      {
-        "$oid": "6ac845f3ee70794d89b63971"
       }
     ],
     "estado": "VIGENTE",
@@ -36982,9 +36504,6 @@
     "familias_ids": [
       {
         "$oid": "6ac845f3ee70794d89b6396d"
-      },
-      {
-        "$oid": "6ac845f3ee70794d89b63971"
       }
     ],
     "estado": "VIGENTE",
@@ -37071,9 +36590,6 @@
     "familias_ids": [
       {
         "$oid": "6ac845f3ee70794d89b6396d"
-      },
-      {
-        "$oid": "6ac845f3ee70794d89b63971"
       }
     ],
     "estado": "VIGENTE",
@@ -37170,9 +36686,6 @@
     "familias_ids": [
       {
         "$oid": "6ac845f3ee70794d89b6396d"
-      },
-      {
-        "$oid": "6ac845f3ee70794d89b63971"
       },
       {
         "$oid": "6ac845f3ee70794d89b63973"
@@ -37417,9 +36930,6 @@
     "familias_ids": [
       {
         "$oid": "6ac845f3ee70794d89b6396d"
-      },
-      {
-        "$oid": "6ac845f3ee70794d89b63971"
       }
     ],
     "estado": "VIGENTE",
@@ -37919,9 +37429,6 @@
     ],
     "familias_ids": [
       {
-        "$oid": "6ac845f3ee70794d89b63970"
-      },
-      {
         "$oid": "6ac845f3ee70794d89b6396d"
       }
     ],
@@ -38025,9 +37532,6 @@
       }
     ],
     "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b63970"
-      },
       {
         "$oid": "6ac845f3ee70794d89b6396d"
       }
@@ -38745,13 +38249,10 @@
     ],
     "familias_ids": [
       {
-        "$oid": "6ac845f3ee70794d89b63970"
+        "$oid": "6ac845f3ee70794d89b6396c"
       },
       {
         "$oid": "6ac845f3ee70794d89b6396d"
-      },
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
       }
     ],
     "estado": "VIGENTE",
@@ -39025,6 +38526,9 @@
     "familias_ids": [
       {
         "$oid": "6ac845f3ee70794d89b6396d"
+      },
+      {
+        "$oid": "6ac845f3ee70794d89b63971"
       }
     ],
     "estado": "VIGENTE",
@@ -39167,6 +38671,9 @@
     "familias_ids": [
       {
         "$oid": "6ac845f3ee70794d89b6396d"
+      },
+      {
+        "$oid": "6ac845f3ee70794d89b63971"
       }
     ],
     "estado": "VIGENTE",
@@ -39234,10 +38741,10 @@
     ],
     "familias_ids": [
       {
-        "$oid": "6ac845f3ee70794d89b6396d"
+        "$oid": "6ac845f3ee70794d89b6396c"
       },
       {
-        "$oid": "6ac845f3ee70794d89b6396c"
+        "$oid": "6ac845f3ee70794d89b6396d"
       }
     ],
     "estado": "VIGENTE",
@@ -39907,11 +39414,7 @@
         "$oid": "6ac845f3ee70794d89b6395e"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396d"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -39977,10 +39480,10 @@
     ],
     "familias_ids": [
       {
-        "$oid": "6ac845f3ee70794d89b6396d"
+        "$oid": "6ac845f3ee70794d89b6396c"
       },
       {
-        "$oid": "6ac845f3ee70794d89b6396c"
+        "$oid": "6ac845f3ee70794d89b6396d"
       }
     ],
     "estado": "VIGENTE",
@@ -40041,11 +39544,7 @@
         "$oid": "6ac845f3ee70794d89b6395e"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -40111,10 +39610,10 @@
     ],
     "familias_ids": [
       {
-        "$oid": "6ac845f3ee70794d89b6396d"
+        "$oid": "6ac845f3ee70794d89b6396c"
       },
       {
-        "$oid": "6ac845f3ee70794d89b6396c"
+        "$oid": "6ac845f3ee70794d89b6396d"
       }
     ],
     "estado": "VIGENTE",
@@ -40186,9 +39685,6 @@
     "familias_ids": [
       {
         "$oid": "6ac845f3ee70794d89b6396d"
-      },
-      {
-        "$oid": "6ac845f3ee70794d89b6396f"
       }
     ],
     "estado": "VIGENTE",
@@ -40389,11 +39885,7 @@
         "$oid": "6ac845f3ee70794d89b63957"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396f"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -40529,11 +40021,7 @@
         "$oid": "6ac845f3ee70794d89b63957"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396f"
-      }
-    ],
+    "familias_ids": [],
     "estado": "PROPUESTA_BRECHA",
     "vigencia": {
       "desde": {
@@ -40603,9 +40091,6 @@
     "familias_ids": [
       {
         "$oid": "6ac845f3ee70794d89b6396d"
-      },
-      {
-        "$oid": "6ac845f3ee70794d89b6396f"
       }
     ],
     "estado": "VIGENTE",
@@ -40676,13 +40161,10 @@
     ],
     "familias_ids": [
       {
-        "$oid": "6ac845f3ee70794d89b6396d"
-      },
-      {
-        "$oid": "6ac845f3ee70794d89b6396f"
-      },
-      {
         "$oid": "6ac845f3ee70794d89b6396c"
+      },
+      {
+        "$oid": "6ac845f3ee70794d89b6396d"
       }
     ],
     "estado": "VIGENTE",
@@ -40753,13 +40235,13 @@
     ],
     "familias_ids": [
       {
+        "$oid": "6ac845f3ee70794d89b6396c"
+      },
+      {
         "$oid": "6ac845f3ee70794d89b6396d"
       },
       {
         "$oid": "6ac845f3ee70794d89b6396f"
-      },
-      {
-        "$oid": "6ac845f3ee70794d89b6396c"
       }
     ],
     "estado": "VIGENTE",
@@ -40823,11 +40305,7 @@
         "$oid": "6ac845f3ee70794d89b63957"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396f"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -40896,13 +40374,13 @@
     ],
     "familias_ids": [
       {
+        "$oid": "6ac845f3ee70794d89b6396b"
+      },
+      {
         "$oid": "6ac845f3ee70794d89b6396d"
       },
       {
         "$oid": "6ac845f3ee70794d89b6396f"
-      },
-      {
-        "$oid": "6ac845f3ee70794d89b6396b"
       }
     ],
     "estado": "VIGENTE",
@@ -40966,11 +40444,7 @@
         "$oid": "6ac845f3ee70794d89b63957"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396f"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {
@@ -41033,9 +40507,6 @@
       }
     ],
     "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b63970"
-      },
       {
         "$oid": "6ac845f3ee70794d89b6396d"
       }
@@ -41108,9 +40579,6 @@
     ],
     "familias_ids": [
       {
-        "$oid": "6ac845f3ee70794d89b63970"
-      },
-      {
         "$oid": "6ac845f3ee70794d89b6396d"
       },
       {
@@ -41179,9 +40647,6 @@
       }
     ],
     "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b63970"
-      },
       {
         "$oid": "6ac845f3ee70794d89b6396d"
       }
@@ -41254,9 +40719,6 @@
     ],
     "familias_ids": [
       {
-        "$oid": "6ac845f3ee70794d89b63970"
-      },
-      {
         "$oid": "6ac845f3ee70794d89b6396d"
       }
     ],
@@ -41327,9 +40789,6 @@
       }
     ],
     "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b63970"
-      },
       {
         "$oid": "6ac845f3ee70794d89b6396d"
       }
@@ -41402,9 +40861,6 @@
     ],
     "familias_ids": [
       {
-        "$oid": "6ac845f3ee70794d89b63970"
-      },
-      {
         "$oid": "6ac845f3ee70794d89b6396d"
       }
     ],
@@ -41476,10 +40932,10 @@
     ],
     "familias_ids": [
       {
-        "$oid": "6ac845f3ee70794d89b63970"
+        "$oid": "6ac845f3ee70794d89b6396d"
       },
       {
-        "$oid": "6ac845f3ee70794d89b6396d"
+        "$oid": "6ac845f3ee70794d89b63970"
       }
     ],
     "estado": "VIGENTE",
@@ -41544,9 +41000,6 @@
       }
     ],
     "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b63970"
-      },
       {
         "$oid": "6ac845f3ee70794d89b6396d"
       }
@@ -41619,10 +41072,10 @@
     ],
     "familias_ids": [
       {
-        "$oid": "6ac845f3ee70794d89b63970"
+        "$oid": "6ac845f3ee70794d89b6396d"
       },
       {
-        "$oid": "6ac845f3ee70794d89b6396d"
+        "$oid": "6ac845f3ee70794d89b63970"
       }
     ],
     "estado": "PROPUESTA_BRECHA",
@@ -41693,10 +41146,10 @@
     ],
     "familias_ids": [
       {
-        "$oid": "6ac845f3ee70794d89b63970"
+        "$oid": "6ac845f3ee70794d89b6396d"
       },
       {
-        "$oid": "6ac845f3ee70794d89b6396d"
+        "$oid": "6ac845f3ee70794d89b63970"
       }
     ],
     "estado": "PROPUESTA_BRECHA",
@@ -41779,13 +41232,10 @@
     ],
     "familias_ids": [
       {
-        "$oid": "6ac845f3ee70794d89b63970"
+        "$oid": "6ac845f3ee70794d89b6396a"
       },
       {
         "$oid": "6ac845f3ee70794d89b6396d"
-      },
-      {
-        "$oid": "6ac845f3ee70794d89b6396a"
       }
     ],
     "estado": "VIGENTE",
@@ -41860,9 +41310,6 @@
     ],
     "familias_ids": [
       {
-        "$oid": "6ac845f3ee70794d89b63970"
-      },
-      {
         "$oid": "6ac845f3ee70794d89b6396d"
       },
       {
@@ -41931,9 +41378,6 @@
       }
     ],
     "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b63970"
-      },
       {
         "$oid": "6ac845f3ee70794d89b6396d"
       }
@@ -42006,9 +41450,6 @@
     ],
     "familias_ids": [
       {
-        "$oid": "6ac845f3ee70794d89b63970"
-      },
-      {
         "$oid": "6ac845f3ee70794d89b6396d"
       },
       {
@@ -42077,9 +41518,6 @@
       }
     ],
     "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b63970"
-      },
       {
         "$oid": "6ac845f3ee70794d89b6396d"
       }
@@ -42152,10 +41590,10 @@
     ],
     "familias_ids": [
       {
-        "$oid": "6ac845f3ee70794d89b63970"
+        "$oid": "6ac845f3ee70794d89b6396d"
       },
       {
-        "$oid": "6ac845f3ee70794d89b6396d"
+        "$oid": "6ac845f3ee70794d89b63970"
       }
     ],
     "estado": "VIGENTE",
@@ -42226,10 +41664,10 @@
     ],
     "familias_ids": [
       {
-        "$oid": "6ac845f3ee70794d89b63970"
+        "$oid": "6ac845f3ee70794d89b6396d"
       },
       {
-        "$oid": "6ac845f3ee70794d89b6396d"
+        "$oid": "6ac845f3ee70794d89b63970"
       }
     ],
     "estado": "PROPUESTA_BRECHA",
@@ -42304,9 +41742,6 @@
     ],
     "familias_ids": [
       {
-        "$oid": "6ac845f3ee70794d89b63970"
-      },
-      {
         "$oid": "6ac845f3ee70794d89b6396d"
       }
     ],
@@ -42377,9 +41812,6 @@
       }
     ],
     "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b63970"
-      },
       {
         "$oid": "6ac845f3ee70794d89b6396d"
       }
@@ -42452,10 +41884,10 @@
     ],
     "familias_ids": [
       {
-        "$oid": "6ac845f3ee70794d89b63970"
+        "$oid": "6ac845f3ee70794d89b6396d"
       },
       {
-        "$oid": "6ac845f3ee70794d89b6396d"
+        "$oid": "6ac845f3ee70794d89b63970"
       }
     ],
     "estado": "PROPUESTA_BRECHA",
@@ -42529,9 +41961,6 @@
       }
     ],
     "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b63970"
-      },
       {
         "$oid": "6ac845f3ee70794d89b6396d"
       },
@@ -42964,10 +42393,10 @@
     ],
     "familias_ids": [
       {
-        "$oid": "6ac845f3ee70794d89b6396d"
+        "$oid": "6ac845f3ee70794d89b6396c"
       },
       {
-        "$oid": "6ac845f3ee70794d89b6396c"
+        "$oid": "6ac845f3ee70794d89b6396d"
       }
     ],
     "estado": "VIGENTE",
@@ -43031,9 +42460,6 @@
     "familias_ids": [
       {
         "$oid": "6ac845f3ee70794d89b6396d"
-      },
-      {
-        "$oid": "6ac845f3ee70794d89b63971"
       }
     ],
     "estado": "VIGENTE",
@@ -43916,9 +43342,6 @@
     "familias_ids": [
       {
         "$oid": "6ac845f3ee70794d89b6396d"
-      },
-      {
-        "$oid": "6ac845f3ee70794d89b63971"
       }
     ],
     "estado": "VIGENTE",
@@ -44041,9 +43464,6 @@
     "familias_ids": [
       {
         "$oid": "6ac845f3ee70794d89b6396d"
-      },
-      {
-        "$oid": "6ac845f3ee70794d89b63971"
       }
     ],
     "estado": "VIGENTE",
@@ -44713,9 +44133,6 @@
     "familias_ids": [
       {
         "$oid": "6ac845f3ee70794d89b6396d"
-      },
-      {
-        "$oid": "6ac845f3ee70794d89b63971"
       }
     ],
     "estado": "VIGENTE",
@@ -45204,11 +44621,7 @@
         "$oid": "6ac845f3ee70794d89b63962"
       }
     ],
-    "familias_ids": [
-      {
-        "$oid": "6ac845f3ee70794d89b6396d"
-      }
-    ],
+    "familias_ids": [],
     "estado": "VIGENTE",
     "vigencia": {
       "desde": {

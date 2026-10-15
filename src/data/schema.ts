@@ -71,6 +71,8 @@ export interface TramiteItem {
   formulario?: string;
   requisitos?: string[];
   pasos?: string[];
+  familias_ids?: string[];
+  familiaTematica?: string;
 }
 
 export interface ProcesoPaso {
@@ -146,6 +148,8 @@ export interface ContenidoUnicoItem {
   categoriasAplicables?: string[];
   perfilDestinatario?: string;
   rutasProceso?: ProcesoRutaReferencia[];
+  familias_ids?: string[];
+  familiaTematica?: string;
 }
 
 export function slugify(value: string): string {
