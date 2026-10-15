@@ -74,7 +74,7 @@ export const RotaryBanner: React.FC = () => {
           onMouseLeave={() => setIsPaused(false)}
           onFocus={() => setIsPaused(true)}
           onBlur={() => setIsPaused(false)}
-          className="relative bg-gradient-to-r from-sat-fondo-tenue via-white to-sat-fondo-tenue border border-sat-gris/80 rounded-lg p-4 sm:p-5 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-xs overflow-hidden"
+          className="relative bg-sat-fondo-tenue border border-sat-gris rounded-lg p-4 sm:p-5 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-xs overflow-hidden"
           role="region"
           aria-label="Banner informativo rotativo"
           aria-live={reduceMotionRef.current ? 'polite' : 'off'}

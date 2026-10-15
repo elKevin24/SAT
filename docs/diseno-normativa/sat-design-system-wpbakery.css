@@ -1,0 +1,201 @@
+/*
+ * ============================================================================
+ * SAT GUATEMALA — DESIGN SYSTEM EN WORDPRESS (WPBakery Page Builder)
+ * Archivo: sat-design-system-wpbakery.css (Versión Optimizada para Cuadrícula)
+ * ============================================================================
+ * Incluye:
+ * - Altura uniforme automática (Equal Height / 100% height).
+ * - Cuadrícula centrada responsiva (.sat-cards-grid).
+ * - Cero bordes perimetrales (100% borderless).
+ * - Hover sólido institucional y transición de textos a blanco.
+ * ============================================================================
+ */
+
+/* ----------------------------------------------------------------------------
+ * 1. DESIGN TOKENS
+ * ---------------------------------------------------------------------------- */
+:root {
+  --sat-celeste: #19afe1;
+  --sat-azul: #14649b;
+  --sat-azul-oscuro: #19324b;
+  --sat-gris: #dcdcdc;
+  --sat-blanco: #ffffff;
+
+  --sat-seg-personas: #0284c7;
+  --sat-seg-empresas: #4d8014;
+  --sat-seg-aduanas: #c25e00;
+  --sat-seg-auxiliares: #6366f1;
+
+  --sat-ui-fondo-tenue: #f4f6f9;
+  --sat-ui-texto: #19324b;
+  --sat-ui-texto-suave: #475569;
+  --sat-font-family: "Gotham", "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --sat-radius: 12px;
+}
+
+/* ----------------------------------------------------------------------------
+ * 2. CONTENEDOR / CUADRÍCULA CENTRADA (4 COLUMNAS POR DEFECTO)
+ * ---------------------------------------------------------------------------- */
+.sat-cards-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important; /* 4 columnas por defecto */
+  gap: 16px !important;
+  width: 100% !important;
+  max-width: 1240px !important;
+  margin: 0 auto !important; /* Centrado en pantalla */
+  padding: 10px 0 !important;
+  box-sizing: border-box !important;
+  align-items: stretch !important; /* Misma altura garantizada */
+}
+
+/* Tablet (hasta 1024px): 2 columnas */
+@media (max-width: 1024px) {
+  .sat-cards-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 14px !important;
+  }
+}
+
+/* Móvil (hasta 640px): 1 columna apilada */
+@media (max-width: 640px) {
+  .sat-cards-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+}
+
+/* En WPBakery cuando se usan columnas normales (vc_column): */
+.vc_row.vc_row-flex .vc_column_container {
+  display: flex !important;
+}
+
+.vc_row.vc_row-flex .vc_column-inner {
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100% !important;
+}
+
+.vc_row.vc_row-flex .wpb_wrapper {
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 1 auto !important;
+  width: 100% !important;
+}
+
+/* ----------------------------------------------------------------------------
+ * 3. COMPONENTE CARD (MISMA ALTURA Y CONTENIDO EQUILIBRADO)
+ * ---------------------------------------------------------------------------- */
+.sat-card {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  width: 100% !important;
+  height: 100% !important; /* Misma altura en todas las columnas */
+  min-height: 140px !important;
+  text-decoration: none !important;
+  background-color: var(--sat-ui-fondo-tenue) !important;
+  border: none !important; /* REGLA INMUTABLE: Cero bordes */
+  border-radius: var(--sat-radius) !important;
+  padding: 22px 24px !important;
+  box-sizing: border-box !important;
+  cursor: pointer !important;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s ease-out, box-shadow 0.4s ease-out !important;
+  user-select: none !important;
+  font-family: var(--sat-font-family) !important;
+}
+
+/* Centrado o elevación sutil en hover */
+.sat-card:hover {
+  transform: translateY(-3px) !important;
+}
+
+.sat-card:active {
+  transform: translateY(0) !important;
+}
+
+/* ----------------------------------------------------------------------------
+ * 4. VARIANTES DE TONO SEGÚN SEGMENTO
+ * ---------------------------------------------------------------------------- */
+/* Profesionales (Verde Oficial) */
+.sat-card--profesionales:hover,
+.sat-card--verde:hover {
+  background-color: var(--sat-seg-empresas) !important; /* #4D8014 */
+  box-shadow: 0 12px 24px rgba(77, 128, 20, 0.22) !important;
+}
+.sat-card--profesionales:active,
+.sat-card--verde:active {
+  background-color: #365e0e !important;
+}
+
+/* Contribuyentes General (Azul SAT Oficial) */
+.sat-card--azul:hover {
+  background-color: var(--sat-azul) !important; /* #14649B */
+  box-shadow: 0 12px 24px rgba(20, 100, 155, 0.22) !important;
+}
+.sat-card--azul:active {
+  background-color: var(--sat-azul-oscuro) !important;
+}
+
+/* Personas (Celeste Oficial) */
+.sat-card--celeste:hover {
+  background-color: var(--sat-seg-personas) !important; /* #0284C7 */
+  box-shadow: 0 12px 24px rgba(2, 132, 199, 0.22) !important;
+}
+
+/* Aduanas (Naranja Oficial) */
+.sat-card--naranja:hover {
+  background-color: var(--sat-seg-aduanas) !important; /* #C25E00 */
+  box-shadow: 0 12px 24px rgba(194, 94, 0, 0.22) !important;
+}
+
+/* ----------------------------------------------------------------------------
+ * 5. CABECERA, TÍTULO, CHEVRON Y DESCRIPCIÓN
+ * ---------------------------------------------------------------------------- */
+.sat-card-head {
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: space-between !important;
+  gap: 12px !important;
+  width: 100% !important;
+}
+
+.sat-card-title {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+  color: var(--sat-ui-texto) !important;
+  transition: color 0.2s ease !important;
+}
+
+.sat-card-chevron {
+  flex-shrink: 0 !important;
+  width: 20px !important;
+  height: 20px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #94A3B8 !important;
+  transition: color 0.2s ease !important;
+}
+
+.sat-card-desc {
+  margin: 8px 0 0 0 !important;
+  padding: 0 !important;
+  font-size: 13px !important;
+  line-height: 1.55 !important;
+  color: var(--sat-ui-texto-suave) !important;
+  flex-grow: 1 !important; /* Empuja el espacio vertical para emparejar */
+  transition: color 0.2s ease !important;
+}
+
+/* Cambio a blanco en hover */
+.sat-card:hover .sat-card-title,
+.sat-card:hover .sat-card-chevron,
+.sat-card:hover .sat-card-desc,
+.sat-card:active .sat-card-title,
+.sat-card:active .sat-card-chevron,
+.sat-card:active .sat-card-desc {
+  color: #ffffff !important;
+}
