@@ -40,6 +40,12 @@ test('Página Solicitar NIT (#/solicitar-nit)', async ({ page }) => {
   await scan(page, 'SolicitarNitPage');
 });
 
+test('Página Factura Electrónica FEL (#/fel)', async ({ page }) => {
+  await page.goto('/#/fel');
+  await expect(page.getByRole('heading', { name: /^Factura Electrónica en Línea/i })).toBeVisible();
+  await scan(page, 'FelPage');
+});
+
 test('Abrir DirectConsultasModal', async ({ page }) => {
   await page.goto('/');
   await page.getByText('Verificadores y Consultas en Línea', { exact: true }).first().click();

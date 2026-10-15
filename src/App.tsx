@@ -14,6 +14,7 @@ import { VirtualAssistantModal } from './components/VirtualAssistantModal';
 import { SegmentTramitesCatalog } from './components/SegmentTramitesCatalog';
 import { QuickAccessCarousel } from './components/QuickAccessCarousel';
 import { SolicitarNitPage } from './pages/SolicitarNitPage';
+import { FelPage } from './pages/FelPage';
 import { EtapaAtoId, TipoInteraccionId, TramiteItem, ProcesoGuiado } from './data/schema';
 import { buildTaxonomy, resolveCategoria, categoriaId } from './data/taxonomy';
 
@@ -48,7 +49,7 @@ const DEFAULT_ACCESSIBILITY: AccessibilitySettings = {
 };
 
 export default function App() {
-  const [currentView, setCurrentView] = useState<'home' | 'catalog' | 'solicitar-nit'>('home');
+  const [currentView, setCurrentView] = useState<'home' | 'catalog' | 'solicitar-nit' | 'fel'>('home');
   const [activeSegment, setActiveSegment] = useState<SegmentId>('contribuyentes');
   const [activeCategory, setActiveCategory] = useState<string>('Todas las categorías');
   const [activeSubcategory, setActiveSubcategory] = useState<string | null>(null);
@@ -111,6 +112,9 @@ export default function App() {
         }
       } else if (hash.startsWith('#/solicitar-nit') || hash.startsWith('#/primer-nit') || hash.startsWith('#/quiero-ser-contribuyente')) {
         setCurrentView('solicitar-nit');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else if (hash.startsWith('#/fel') || hash.startsWith('#/factura-electronica-fel') || hash.startsWith('#/facturacion-electronica')) {
+        setCurrentView('fel');
         window.scrollTo({ top: 0, behavior: 'smooth' });
       } else if (!hash || hash === '#' || hash === '#/') {
         setCurrentView('home');
@@ -221,7 +225,7 @@ export default function App() {
                 } else if (item.id === 'solicitar-nit') {
                   window.location.hash = '#/solicitar-nit';
                 } else if (item.id === 'fel') {
-                  handleSelectSegment('contribuyentes', 'Facturación Electrónica en Línea (FEL)');
+                  window.location.hash = '#/fel';
                 }
               }}
             />
@@ -270,6 +274,12 @@ export default function App() {
                 if (procNit) setSelectedProceso(procNit);
               }}
             />
+          </main>
+        )}
+
+        {currentView === 'fel' && (
+          <main id="main-content" tabIndex={-1} className="focus:outline-hidden">
+            <FelPage onBackToHome={handleGoHome} />
           </main>
         )}
       </div>

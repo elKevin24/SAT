@@ -22,6 +22,15 @@ Consecuencia técnica: el diseño se entrega como **una capa de estilos + una pl
 
 ## 2. Inventario actual (línea base verificada)
 
+### Fuentes de diseño (jerarquía de autoridad)
+| Fuente | Ubicación | Estado | Rol |
+| :--- | :--- | :--- | :--- |
+| **Propuesta Gráfica Rediseño Portal Web (30.03.26)** | `docs/diseno-normativa/Presentación Propuesta Gráfica Rediseño Portal Web 30.03.26 2.pdf` | Aprobada | **Diseño del homepage**: composición y reglas por sección |
+| Manual de Imagen y Normas Gráficas V.5 | referenciado en `docs/diseno-normativa/README.md` | **Ausente del repositorio** | Autoridad de marca y tokens |
+| `DESIGN_RULES.md` | `docs/diseno-normativa/` | Vigente | Reglas de UI/UX, tarjetas, UX Writing, accesibilidad |
+
+> **Nota de verificación:** el PDF está compuesto por **mockups como imágenes**. Las *reglas* redactadas de cada sección están transcritas en la sección 6; los detalles puramente visuales (proporciones finas, color exacto de cada mockup) deben confirmarse contra el propio PDF o el Manual V.5.
+
 ### 2.1 Contenido y datos
 | Dataset | Registros | Uso |
 | :--- | ---: | :--- |
@@ -128,18 +137,37 @@ Primero se identifica el **elemento nativo concreto** (WPBakery *Post Grid* vs b
 
 ---
 
-## 6. Home page (recomposición por secciones)
+## 6. Home page (composición según la Propuesta Gráfica aprobada)
 
-| # | Sección (origen React) | Implementación WP |
-| :-- | :--- | :--- |
-| 1 | Hero/encabezado | fila WPBakery + header del tema |
-| 2 | 4 segmentos (`UserSegmentCards`) | Grid de tarjetas de términos `sat_segmento` |
-| 3 | Banner rotativo (`RotaryBanner`) | carrusel nativo/plugin |
-| 4 | Accesos rápidos 7+2 (`QuickAccessCarousel`) | grid de enlaces |
-| 5 | Temas populares (`PopularTopicsTabs`) | tabs/pestañas |
-| 6 | Procesos guiados (`GuidedProcessesSection`) | grid CPT `sat_proceso` |
-| 7 | Noticias y transparencia | CPT/posts + grid nativo |
-| 8 | Footer institucional | footer del tema |
+Orden de secciones documentado en la **Propuesta Gráfica (página 5)**:
+
+| # | Sección (pág. del PDF) | Regla documentada | Implementación WP |
+| :-- | :--- | :--- | :--- |
+| 1 | Header (pp. 6–8) | Barra 1: otras plataformas SAT (Formación Tributaria, Declaraguate, Declaración Jurada / de viajero, Agencia Virtual). Barra 2: logotipo (función home) + buscador interno + herramienta de accesibilidad (**UserWay**) | Header del tema + elementos nativos |
+| 2 | Segmentos por tipo de usuario (p. 9) | Imagen de fondo estática institucional; **tarjetas** con breve descripción; *efecto roll-over: cambio de color en el título del segmento* | Grid de términos `sat_segmento` |
+| 3 | Banner rotativo (p. 10) | Texto ≤ 120 caracteres; imagen ≤ 10% del banner; **3 banners simultáneos**; formato **1350×180 px** | Carrusel nativo/plugin |
+| 4 | Accesos rápidos (p. 11) | **7 opciones visibles + 2 ocultas** en carrusel; procesos centrales (BM): RTU Digital, Declaración y pago, Facturación | Grid/carrusel de enlaces |
+| 5 | Temas más consultados (p. 12) | Ley de Miller; contenido por frecuencia mensual según segmento; **1.ª opción fija: "Consultas"** → catálogo de aplicativos transaccionales | Tabs/lista dinámica |
+| 6 | Noticias y anuncios (p. 13) | Divulgación institucional | Grid nativo de posts |
+| 7 | Asistente Virtual (p. 5) | Presente en la home | `VirtualAssistantModal` → plugin/asistente |
+| 8 | Transparencia y rendición de cuentas (p. 13) | Gobierno abierto, acceso a la información y control institucional | Grid de enlaces/contenidos |
+| 9 | La SAT y todos sus canales de comunicación (p. 14) | Pie institucional presente en todas las páginas, con vías de contacto | Footer del tema |
+| — | Procesos guiados | **No listado en el PDF** (existe en la SPA) | Grid CPT `sat_proceso` — confirmar si se conserva |
+
+### 6.1 Segmentos según la Propuesta Gráfica (p. 9)
+| Segmento | Subgrupos documentados |
+| :--- | :--- |
+| Contribuyentes | NIT sin obligaciones · Pequeño Contribuyente · Régimen General · Contribuyentes Especiales |
+| Operadores de Comercio Exterior | Auxiliares de la función pública aduanera · Importadores · Exportadores |
+| Profesionales | Gestores y Auxiliares Tributarios · Abogados y Notarios · CPA y Peritos Contadores |
+| **Organismos Especiales** | Exentos · Entidades del Estado · Municipalidades |
+
+> **Delta a confirmar:** la Propuesta Gráfica nombra al 4.º segmento **"Organismos Especiales"** (la SPA usa "Entes Exentos"). Definir si se renombra la taxonomía `sat_segmento` al migrar.
+
+### 6.2 Roll-over de la tarjeta de segmento — punto a confirmar
+El PDF (p. 9) dice: *"Efecto roll over: cambio de color en título de segmento"*, mientras que `DESIGN_RULES.md` §4 y `ui/Card.tsx` implementan **relleno sólido completo** con texto e ícono a blanco. Definir cuál rige en la home:
+- **(A)** solo cambia el color del **título**, o
+- **(B)** la tarjeta entera se rellena con el color institucional del segmento (implementación actual).
 
 ---
 
@@ -173,7 +201,7 @@ Primero se identifica el **elemento nativo concreto** (WPBakery *Post Grid* vs b
 
 | Fase | Duración est. | Entregable | DoD |
 | :--- | :--- | :--- | :--- |
-| **0. Decisiones y entorno** | 1–2 d | Builder confirmado (WPBakery vs bloques), tema hijo, plugins; tokens congelados | Elemento nativo de tarjeta identificado y su markup documentado |
+| **0. Decisiones y entorno** | 1–2 d | Builder confirmado (WPBakery vs bloques), tema hijo, plugins; tokens congelados; **deltas de la Propuesta Gráfica resueltos** (nombre del 4.º segmento, roll-over de tarjeta) | Elemento nativo de tarjeta identificado y su markup documentado |
 | **1. Modelo de contenido** | 3–5 d | CPT + taxonomías + ACF + script de migración | 715/49/683 cargados; códigos únicos; conteos OK |
 | **2. Tema hijo + design system** | 2–3 d | Child theme; `tokens.css` + `sat-bridge.css`; bug `.sat-card-head` corregido | Tipografía/colores/radios institucionales aplicados |
 | **3. Elemento de tarjeta** | 3–5 d | Bridge CSS + override de plantilla del ítem | Paridad visual 1:1; axe 0 |
@@ -201,4 +229,4 @@ Primero se identifica el **elemento nativo concreto** (WPBakery *Post Grid* vs b
 
 ## 12. Siguiente paso inmediato
 
-**Fase 0:** confirmar builder y tema, e **identificar el elemento de tarjeta nativo** (WPBakery *Post Grid* vs bloque *Query Loop*), documentando su contrato de clases. Con eso se escribe el `sat-bridge.css` y la plantilla del ítem, sin tocar el HTML propio.
+**Fase 0:** confirmar builder y tema; resolver los **deltas entre la Propuesta Gráfica y la SPA** (nombre del 4.º segmento "Organismos Especiales" vs "Entes Exentos"; alcance del roll-over de tarjeta); e **identificar el elemento de tarjeta nativo** (WPBakery *Post Grid* vs bloque *Query Loop*), documentando su contrato de clases. Con eso se escribe el `sat-bridge.css` y la plantilla del ítem, sin tocar el HTML propio.

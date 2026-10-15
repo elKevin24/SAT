@@ -31,7 +31,7 @@ const QUICK_ITEMS: QuickAccessItem[] = [
     id: 'fel',
     title: 'Facturación Electrónica (FEL)',
     desc: 'Emite facturas y notas de crédito electrónicas de forma gratuita desde la web o con la aplicación en tu celular.',
-    url: 'https://portal.sat.gob.gt/portal/factura-electronica-fel/'
+    url: '#/fel'
   },
   {
     id: 'calendario-tributario',
