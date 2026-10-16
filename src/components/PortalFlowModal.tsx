@@ -276,7 +276,7 @@ export const PortalFlowModal: React.FC<PortalFlowModalProps> = ({
       // NIVEL 2: TIPOS DE CONTRIBUYENTE
       let n2Key = t.categoria;
       if (segId === 'contribuyentes') {
-        if (t.categoria === 'NIT sin Obligaciones') n2Key = 'NIT sin Obligaciones';
+        if (t.categoria === 'Sin Obligaciones' || t.categoria === 'NIT sin Obligaciones') n2Key = 'Sin Obligaciones';
         else if (t.categoria === 'Pequeños Contribuyentes') n2Key = 'Pequeños Contribuyentes';
         else if (t.categoria === 'Contribuyentes Especiales') n2Key = 'Contribuyentes Especiales';
         else n2Key = 'Contribuyente General';
@@ -320,7 +320,7 @@ export const PortalFlowModal: React.FC<PortalFlowModalProps> = ({
     const current = fullTree[selectedSegment];
     const keys = Object.keys(current?.n2Branches || {});
     if (selectedSegment === 'contribuyentes') {
-      const order = ['NIT sin Obligaciones', 'Pequeños Contribuyentes', 'Contribuyente General', 'Contribuyentes Especiales'];
+      const order = ['Sin Obligaciones', 'Pequeños Contribuyentes', 'Contribuyente General', 'Contribuyentes Especiales'];
       return order.filter((k) => keys.includes(k));
     }
     return keys;
