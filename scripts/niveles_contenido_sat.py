@@ -5,11 +5,11 @@ Contenido editorial de la arquitectura de información del Portal Web SAT.
 Este módulo concentra los textos orientadores (Qué es / Lead text / Base jurídica)
 de los niveles superiores del árbol canónico:
 
-    NIVEL 1  -> 4 segmentos institucionales          (editorial)
-    NIVEL 2  -> 20 áreas / regímenes                 (editorial)
-    NIVEL 3  -> 58 subáreas / categorías             (editorial)
-    NIVEL 4  -> temas (agrupaciones de gestiones)    (derivado del dataset)
-    NIVEL 5  -> trámites / gestiones terminales      (derivado del dataset)
+    NIVEL 1  -> 4 nodos                              (editorial)
+    NIVEL 2  -> 20 nodos                             (editorial)
+    NIVEL 3  -> 58 nodos                             (editorial)
+    NIVEL 4  -> 157 nodos (agrupaciones de gestiones)(derivado del dataset)
+    NIVEL 5  -> 715 trámites / gestiones terminales  (derivado del dataset)
 
 La Base jurídica de N2 y N3 se deriva automáticamente de las hojas del dataset
 (unión por frecuencia de los `baseLegal` hijos), por lo que aquí solo se
@@ -17,7 +17,7 @@ redactan las definiciones operativas y los lead text.
 """
 
 # ==============================================================================
-# NIVEL 1 — SEGMENTOS INSTITUCIONALES (definición completa autorada)
+# NIVEL 1 — DEFINICIÓN COMPLETA AUTORADA
 # ==============================================================================
 NIVEL1 = {
     "Operadores de Comercio Exterior": {

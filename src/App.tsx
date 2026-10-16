@@ -205,7 +205,7 @@ export default function App() {
             {/* Título de página (accesible; el hero visual lo presenta cada sección) */}
             <h1 className="sr-only">Portal de Gestiones y Servicios de la SAT en línea</h1>
 
-            {/* 2. User Segments (4 Macrogrupos Oficiales) */}
+            {/* 2. Fichas de Nivel 1 */}
             <UserSegmentCards
               selectedSegment={null}
               onSelectSegment={handleSelectSegment}

@@ -53,7 +53,7 @@ subtotal_border = Border(
 )
 
 # ==============================================================================
-# 1. DEFINICIÓN DE LOS 4 SEGMENTOS PRINCIPALES (NIVEL 1)
+# 1. DEFINICIÓN DE LOS 4 NODOS DE NIVEL 1
 # ==============================================================================
 SEGMENTOS_DATA = [
     {
@@ -399,7 +399,7 @@ banner.alignment = Alignment(horizontal='center', vertical='center')
 
 ws_resumen.merge_cells('B4:H4')
 sub_banner = ws_resumen['B4']
-sub_banner.value = "ARQUITECTURA DE INFORMACIÓN DEL PORTAL WEB — DEFINICIÓN DE SEGMENTOS, LEAD TEXT Y BASE JURÍDICA"
+sub_banner.value = "ARQUITECTURA DE INFORMACIÓN DEL PORTAL WEB — DEFINICIÓN DE NIVEL 1, LEAD TEXT Y BASE JURÍDICA"
 sub_banner.font = font_subtitle
 sub_banner.fill = PatternFill(start_color=NAVY_HEADER, end_color=NAVY_HEADER, fill_type='solid')
 sub_banner.alignment = Alignment(horizontal='center', vertical='center')
@@ -421,12 +421,12 @@ for label, sub, top_left, bot_right, color in kpis:
     cell.fill = PatternFill(start_color=color, end_color=color, fill_type='solid')
     cell.alignment = Alignment(horizontal='center', vertical='center', wrap_text=True)
 
-ws_resumen['B9'] = "1. SEGMENTOS PRINCIPALES DEL PORTAL (NIVEL 1) — DEFINICIONES INSTITUCIONALES"
+ws_resumen['B9'] = "1. NIVEL 1 — DEFINICIONES INSTITUCIONALES"
 ws_resumen['B9'].font = Font(name='Segoe UI', size=11, bold=True, color='1E293B')
 
 macro_headers = [
     "No.",
-    "Segmento (Nivel 1)",
+    "Nivel 1",
     "Qué es: (Definición Operativa)",
     "Lead text: (Texto Orientador de Interfaz)",
     "Base jurídica: (Fundamento Legal Oficial: CAUCA, RECAUCA, Leyes)",
@@ -635,12 +635,12 @@ sub_m.alignment = Alignment(horizontal='center', vertical='center')
 
 headers_mapa = [
     "No.",
-    "Nivel 1: Segmento Oficial",
-    "Nivel 2: Régimen / Área",
-    "Nivel 3: Categoría / Actor",
+    "Nivel 1",
+    "Nivel 2",
+    "Nivel 3",
     "Alcance y Especialidad de Navegación",
     "Trámites",
-    "% Segmento",
+    "% Nivel 1",
     "% Portal",
     "Ruta oficial de Navegación (Miga de Pan)"
 ]
@@ -708,7 +708,7 @@ for seg_name, seg_color in segmentos_orden:
     # Fila de Subtotal del Segmento
     ws_mapa.cell(row=subtotal_row, column=2, value="").border = subtotal_border
     ws_mapa.cell(row=subtotal_row, column=3, value=f"SUBTOTAL {seg_name.upper()}").font = font_bold
-    ws_mapa.cell(row=subtotal_row, column=4, value=f"{len(seg_nodes)} Categorías / Actores").font = font_small
+    ws_mapa.cell(row=subtotal_row, column=4, value=f"{len(seg_nodes)} nodos de Nivel 3").font = font_small
     ws_mapa.cell(row=subtotal_row, column=5, value="").border = subtotal_border
     ws_mapa.cell(row=subtotal_row, column=6, value="").border = subtotal_border
     
@@ -751,7 +751,7 @@ for start_r, end_r, sub_r in seg_ranges:
 # Fila TOTAL GENERAL DEL PORTAL
 ws_mapa.cell(row=final_row, column=2, value="").border = header_border
 ws_mapa.cell(row=final_row, column=3, value="TOTAL PORTAL WEB SAT").font = font_bold
-ws_mapa.cell(row=final_row, column=4, value=f"4 Segmentos y {len(NODOS_MAPA)} Categorías").font = font_small
+ws_mapa.cell(row=final_row, column=4, value=f"4 nodos de Nivel 1 y {len(NODOS_MAPA)} nodos de Nivel 3").font = font_small
 ws_mapa.cell(row=final_row, column=5, value="").border = header_border
 ws_mapa.cell(row=final_row, column=6, value="Universo Total de Fichas Oficiales").font = font_bold
 
@@ -793,16 +793,16 @@ banner_f.alignment = Alignment(horizontal='center', vertical='center')
 
 ws_fichas.merge_cells('A4:H4')
 sub_f = ws_fichas['A4']
-sub_f.value = f"MATRIZ COMPLETA DE LAS {len(NODOS_MAPA)} CATEGORÍAS DEL PORTAL CON SUS TEXTOS ORIENTADORES Y MARCO NORMATIVO OFICIAL"
+sub_f.value = f"MATRIZ COMPLETA DE LOS {len(NODOS_MAPA)} NODOS DE NIVEL 3 DEL PORTAL CON SUS TEXTOS ORIENTADORES Y MARCO NORMATIVO OFICIAL"
 sub_f.font = font_subtitle
 sub_f.fill = PatternFill(start_color=NAVY_HEADER, end_color=NAVY_HEADER, fill_type='solid')
 sub_f.alignment = Alignment(horizontal='center', vertical='center')
 
 headers_fichas = [
     "No.",
-    "Segmento (Nivel 1)",
-    "Régimen / Área (Nivel 2)",
-    "Categoría / Actor (Nivel 3)",
+    "Nivel 1",
+    "Nivel 2",
+    "Nivel 3",
     "Qué es: (Definición Operativa de la Figura)",
     "Lead text: (Texto Orientador de Interfaz)",
     "Base jurídica: (Fundamento Legal Oficial: CAUCA, RECAUCA, Leyes)",
@@ -849,8 +849,8 @@ for r_idx, node in enumerate(NODOS_MAPA, start=7):
 tot_fichas_row = len(NODOS_MAPA) + 7
 ws_fichas.cell(row=tot_fichas_row, column=1, value="").border = header_border
 ws_fichas.cell(row=tot_fichas_row, column=2, value="TOTAL PORTAL WEB SAT").font = font_bold
-ws_fichas.cell(row=tot_fichas_row, column=3, value="4 Segmentos Oficiales").font = font_small
-ws_fichas.cell(row=tot_fichas_row, column=4, value=f"{len(NODOS_MAPA)} Categorías").font = font_small
+ws_fichas.cell(row=tot_fichas_row, column=3, value="4 nodos de Nivel 1").font = font_small
+ws_fichas.cell(row=tot_fichas_row, column=4, value=f"{len(NODOS_MAPA)} nodos de Nivel 3").font = font_small
 ws_fichas.cell(row=tot_fichas_row, column=5, value="100% de la arquitectura de información clasificada").font = font_small
 ws_fichas.cell(row=tot_fichas_row, column=6, value="").border = header_border
 ws_fichas.cell(row=tot_fichas_row, column=7, value="").border = header_border

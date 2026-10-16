@@ -32,7 +32,7 @@ import { SatIsologotipo } from '../components/SatIsologotipo';
 import rawTramites from '../data/allTramites.json';
 import { SEGMENT_DESCRIPTIONS, getTaxonDescription, TaxonDescription } from '../data/taxonomyDescriptions';
 
-// --- NIVEL 1: MACRO-SEGMENTO ---
+// --- NIVEL 1 ---
 export type SegmentKey = 'contribuyentes' | 'comercio_exterior' | 'profesionales' | 'entes_exentos';
 
 const SEGMENT_META: Record<SegmentKey, { name: string; color: string; desc: string; que_es: string; base_juridica: string }> = {
@@ -396,7 +396,7 @@ export const PortalFlowPage: React.FC = () => {
       tree[segId].n2Branches[n2Key].total++;
       tree[segId].n2Branches[n2Key].tramites.push(tramiteItem);
 
-      // NIVEL 3: Subárea oficial (de la columna Nivel 3 del Excel, donde exista)
+      // NIVEL 3 (de la columna Nivel 3 del Excel, donde exista)
       const n3Key = (tramiteItem.nivel3_subarea && tramiteItem.nivel3_subarea !== '—') ? tramiteItem.nivel3_subarea : '';
 
       if (n3Key) {
@@ -498,7 +498,7 @@ export const PortalFlowPage: React.FC = () => {
     const segInfo = fullTree[selectedSegment];
     if (!segInfo) return { initialNodes: [], initialEdges: [] };
 
-    // --- COLUMNA 1: NIVEL 1 (Tipo de Usuario / Macro Segmento) ---
+    // --- COLUMNA 1: NIVEL 1 ---
     const macroNodeId = `n1-${selectedSegment}`;
     const macroCenterY = Math.max(160, (n2Keys.length * 115) / 2);
     nodes.push({
@@ -514,7 +514,7 @@ export const PortalFlowPage: React.FC = () => {
       }
     });
 
-    // --- COLUMNA 2: NIVEL 2 (Tipos de Contribuyente / Régimen) ---
+    // --- COLUMNA 2: NIVEL 2 ---
     n2Keys.forEach((n2Key, aIdx) => {
       const n2Obj = segInfo.n2Branches[n2Key];
       const n2NodeId = `n2-${aIdx}`;
@@ -561,7 +561,7 @@ export const PortalFlowPage: React.FC = () => {
     // EVALUACIÓN DE N3:
     const n3BranchesList = Object.entries(activeN2Obj.subBranches || {});
 
-    // CASO 1: Rama sin N3 (ej. OEA donde no existen subáreas)
+    // CASO 1: Rama sin Nivel 3 (ej. OEA donde no existen nodos de Nivel 3)
     if (n3BranchesList.length === 0) {
       let tramitesList = activeN2Obj.tramites;
       if (filtroCaracteristica !== 'todos') {
@@ -869,7 +869,7 @@ export const PortalFlowPage: React.FC = () => {
 
       {/* 2. BARRA DE CONTROL DE LA TAXONOMÍA */}
       <section aria-label="Control de taxonomía y filtros" className="bg-white border-b border-slate-200 px-4 lg:px-6 py-3 flex flex-wrap items-center justify-between gap-3 shrink-0 shadow-xs">
-        {/* Nivel 1: Segmento */}
+        {/* Nivel 1 */}
         <div className="flex items-center gap-2 flex-wrap">
           <span className="text-xs font-black text-slate-700 uppercase tracking-wider mr-1">
             Nivel 1:
@@ -969,7 +969,7 @@ export const PortalFlowPage: React.FC = () => {
                 <span>Estructura Taxonómica Oficial del Portal SAT:</span>
               </div>
               <ul className="text-[11px] text-slate-700 space-y-1 font-medium">
-                <li>• <strong>Nivel 1 a Nivel 5:</strong> Estructura canónica del Excel (Segmento → Área → Subárea → Tema → Gestión).</li>
+                <li>• <strong>Nivel 1 a Nivel 5:</strong> Estructura canónica del Excel (Nivel 1 → Nivel 2 → Nivel 3 → Nivel 4 → Nivel 5).</li>
                 <li>• <strong>Nivel 4 donde sí existe:</strong> Se despliega en los 577 trámites con tema específico.</li>
                 <li>• <strong>Asimetría Natural:</strong> Trámites sin Nivel 4 (o sin Nivel 3) se vinculan directamente al nivel superior sin crear niveles inventados.</li>
                 <li>• <strong>Ciclo ATO:</strong> Atributo transversal del trámite, reflejado en cada gestión.</li>

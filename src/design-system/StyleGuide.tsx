@@ -2080,7 +2080,7 @@ import { Button } from '../components/ui/Button';
                 {[
                   'Obtener el archivo vectorial SVG oficial del isologotipo SAT sin alteraciones tipográficas.',
                   'Licenciamiento institucional formal de la tipografía Gotham (Hoefler & Co).',
-                  'Confirmar matriz de colores para los 4 segmentos principales respetando la jerarquía del manual.',
+                  'Confirmar matriz de colores para los 4 nodos de Nivel 1 respetando la jerarquía del manual.',
                   'Aprobación formal del manual de UX Writing y sustitución de términos burocráticos.',
                 ].map((p, i) => (
                   <div key={p} className="flex items-start gap-3 rounded-xl border border-[#DCDCDC] bg-white p-3.5">

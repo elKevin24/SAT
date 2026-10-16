@@ -1,8 +1,8 @@
 """
 Script Maestro de Enriquecimiento y Sincronización Taxonómica Completa
 Portal SAT Guatemala
-Genera definiciones completas para Nivel 1 (Segmentos), Nivel 2 (Áreas) y Nivel 3 (Subáreas/Categorías),
-y síntesis para Nivel 4 (Temas), actualizando:
+Genera definiciones completas para Nivel 1, Nivel 2 y Nivel 3,
+y síntesis para Nivel 4, actualizando:
 1. database/nosql_mongodb/arbol_navegacion.json
 2. scripts/build_mapa_y_descripciones_excel.py
 3. docs/fuentes-datos/02_archivos_producto_entregables/Mapa_de_Navegacion_y_Descripciones_Portal_SAT.xlsx
@@ -34,7 +34,7 @@ def slugify(text: str) -> str:
     text = re.sub(r'-+', '-', text)
     return text.strip('-')
 
-# 1. DICCIONARIO N1: MACRO-SEGMENTOS
+# 1. DICCIONARIO N1
 N1_DEFS = {
     'contribuyentes': {
         'nombre': 'Contribuyentes',
@@ -282,7 +282,7 @@ def generate_node_description(node):
         base_juridica = base_juridica[:157] + "..."
         
     lead_text = f"Gestión oficial, requisitos y pasos para {nombre.lower()} ({cnt} gestiones disponibles)."
-    que_es = f"Subárea de trámites y servicios institucionales para {nombre}. Permite a los usuarios consultar requisitos, realizar gestiones en línea o presenciales y cumplir sus obligaciones conforme a los estándares de la SAT."
+    que_es = f"Trámites y servicios institucionales para {nombre}. Permite a los usuarios consultar requisitos, realizar gestiones en línea o presenciales y cumplir sus obligaciones conforme a los estándares de la SAT."
     
     # Casos especiales de N3 con alta relevancia
     if 'fel' in path or 'factur' in path:
@@ -332,7 +332,7 @@ ts_content = """/**
  * DICCIONARIO CANÓNICO DE DESCRIPCIONES TAXONÓMICAS
  * Portal SAT Guatemala
  * Provee fichas informativas oficiales (¿Qué es?, Texto orientador y Base jurídica)
- * para Nivel 1 (Segmentos), Nivel 2 (Áreas) y Nivel 3 (Categorías / Subáreas).
+ * para Nivel 1, Nivel 2 y Nivel 3.
  */
 
 export interface TaxonDescription {

@@ -214,7 +214,7 @@ export const GRUPOS_CONFIG: GrupoInfo[] = [
     ]
   },
 
-  // Profesionales (Nivel 2 — 3 Segmentos Oficiales)
+  // Profesionales (3 nodos de Nivel 2)
   {
     no: 7,
     nombre: 'Peritos Contadores y Auditores',
@@ -250,7 +250,7 @@ export const GRUPOS_CONFIG: GrupoInfo[] = [
     ]
   },
 
-  // Entes Exentos (Nivel 2 — 3 Segmentos Oficiales)
+  // Entes Exentos (3 nodos de Nivel 2)
   {
     no: 10,
     nombre: 'Sector Público y Entidades del Estado',

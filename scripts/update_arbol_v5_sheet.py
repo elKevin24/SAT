@@ -17,10 +17,10 @@ for r in range(sheet.max_row, 3, -1):
 
 # Encabezados en Fila 4 con Base Legal explícita
 headers = [
-    'Macro-Grupo',
-    'Actor / Rol',
-    'Especialidad / Tema',
-    'Área Funcional (Subtema)',
+    'Nivel 1',
+    'Nivel 2',
+    'Nivel 3',
+    'Nivel 4',
     'Nombre del Trámite',
     'Descripción (Lenguaje Ciudadano Activo)',
     'Base Legal (En base a qué: CAUCA, RECAUCA, Leyes)',

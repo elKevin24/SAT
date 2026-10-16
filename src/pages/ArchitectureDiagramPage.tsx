@@ -367,15 +367,15 @@ export const ArchitectureDiagramPage: React.FC = () => {
         <div className="bg-white p-3.5 sm:p-4 rounded-2xl border border-[#DCDCDC] shadow-2xs flex flex-wrap items-center justify-between gap-3 text-xs">
           <div className="flex items-center gap-2">
             <span className="font-bold text-[#19324B]">Jerarquía Oficial:</span>
-            <span className="bg-[#19324B] text-white px-2 py-0.5 rounded-md font-bold text-[11px]">Nivel 0: Raíz SAT</span>
+            <span className="bg-[#19324B] text-white px-2 py-0.5 rounded-md font-bold text-[11px]">Raíz institucional</span>
             <span className="text-slate-400">›</span>
-            <span className="bg-[#14649B] text-white px-2 py-0.5 rounded-md font-bold text-[11px]">Nivel 1: Pilar</span>
+            <span className="bg-[#14649B] text-white px-2 py-0.5 rounded-md font-bold text-[11px]">Nivel 1</span>
             <span className="text-slate-400">›</span>
-            <span className="bg-sky-700 text-white px-2 py-0.5 rounded-md font-bold text-[11px]">Nivel 2: Grupo Normativo</span>
+            <span className="bg-sky-700 text-white px-2 py-0.5 rounded-md font-bold text-[11px]">Nivel 2</span>
             <span className="text-slate-400">›</span>
-            <span className="bg-slate-700 text-white px-2 py-0.5 rounded-md font-bold text-[11px]">Nivel 3: Subnodo Temático</span>
+            <span className="bg-slate-700 text-white px-2 py-0.5 rounded-md font-bold text-[11px]">Nivel 3</span>
             <span className="text-slate-400">›</span>
-            <span className="bg-slate-200 text-slate-800 px-2 py-0.5 rounded-md font-bold text-[11px]">Nivel 4: Trámite Hoja</span>
+            <span className="bg-slate-200 text-slate-800 px-2 py-0.5 rounded-md font-bold text-[11px]">Nivel 4</span>
           </div>
           <div className="text-[11px] text-slate-500 font-medium">
             Sin categorías artificiales · Estructura normativa de 4 grupos en Contribuyentes
@@ -472,14 +472,14 @@ export const ArchitectureDiagramPage: React.FC = () => {
         {viewMode === 'diagram' && (
           <div className="space-y-6 animate-in fade-in duration-300">
             
-            {/* Raíz Institucional Nivel 0 */}
+            {/* Raíz institucional */}
             <div className="text-center bg-white p-5 rounded-2xl border-2 border-[#14649B] shadow-xs max-w-2xl mx-auto relative">
               <span className="text-[10px] font-black uppercase tracking-wider text-[#14649B] bg-[#14649B]/10 px-3 py-0.5 rounded-full inline-block mb-1">
-                Nivel 0 · Raíz Institucional
+                Raíz institucional
               </span>
               <h2 className="text-lg sm:text-xl font-black text-[#19324B]">PORTAL SAT GUATEMALA</h2>
               <p className="text-xs text-slate-600 mt-0.5">
-                Arquitectura de Información Unificada · 4 Macro Pilares · {rawTramites.length} Trámites
+                Arquitectura de Información Unificada · 4 nodos de Nivel 1 · {rawTramites.length} Trámites
               </p>
             </div>
 
@@ -515,7 +515,7 @@ export const ArchitectureDiagramPage: React.FC = () => {
                       {/* Grupos de Nivel 2 en este Pilar */}
                       <div className="space-y-1.5 pt-2 border-t border-slate-100">
                         <span className="text-[10px] font-black uppercase tracking-wider text-slate-400 block mb-1">
-                          Grupos Normativos (Nivel 2):
+                          Nivel 2:
                         </span>
                         <div className="flex flex-col gap-1">
                           {branches.map(bName => {
@@ -641,7 +641,7 @@ export const ArchitectureDiagramPage: React.FC = () => {
                             </span>
                           </div>
 
-                          {/* Trámites hojas dentro del subtema */}
+                          {/* Trámites hojas dentro del Nivel 3 */}
                           <div className="space-y-1.5">
                             {items.map(tr => (
                               // Página de exploración (dev): CRÍTICO 1 (ROADMAP-AUDITORIA.md, Fase 1)
@@ -677,7 +677,7 @@ export const ArchitectureDiagramPage: React.FC = () => {
             {/* Root Umbrella Node */}
             <div className="text-center bg-white p-6 rounded-2xl border-2 border-[#14649B] shadow-xs max-w-xl mx-auto">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#14649B]/10 text-[#14649B] text-xs font-black uppercase tracking-wider mb-2">
-                Nivel 0 · Raíz Institucional
+                Raíz institucional
               </div>
               <h2 className="text-xl font-black text-[#19324B]">PORTAL SAT GUATEMALA</h2>
               <p className="text-xs text-slate-600 mt-1">
@@ -771,7 +771,7 @@ export const ArchitectureDiagramPage: React.FC = () => {
                     <div>
                       <div className="flex items-center gap-2">
                         <span className="text-[10px] font-black uppercase tracking-wider text-slate-500">
-                          Nivel 1 · Macro Segmento
+                          Nivel 1
                         </span>
                         <span className="text-[10px] font-bold bg-white text-slate-700 px-2 py-0.5 rounded-full border border-slate-200">
                           {pillar.totalCount} trámites

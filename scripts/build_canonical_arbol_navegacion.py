@@ -3,10 +3,10 @@ Script de Generación Canónica del Árbol de Navegación Oficial (239 Nodos)
 Portal SAT Guatemala
 
 Estructura Taxonómica Canónica (4 / 20 / 58 / 157):
-- Nivel 1: 4 Macro-Segmentos
-- Nivel 2: 20 Áreas y Regímenes Oficiales
-- Nivel 3: 58 Subáreas Institucionales
-- Nivel 4: 157 Temas Específicos de Navegación
+- Nivel 1: 4 nodos
+- Nivel 2: 20 nodos
+- Nivel 3: 58 nodos
+- Nivel 4: 157 nodos
 
 Genera:
 1. database/nosql_mongodb/arbol_navegacion.json
@@ -272,7 +272,7 @@ def main():
         
         info = N1_DEFS.get(s1, {
             'nombre': nom1,
-            'que_es': f"Macro-segmento oficial para {nom1}.",
+            'que_es': f"Definición oficial de {nom1}.",
             'lead_text': f"Servicios y trámites para {nom1.lower()}.",
             'base_juridica': "Constitución Política de la República y Código Tributario."
         })
@@ -341,7 +341,7 @@ def main():
                     base_jur_3 = base_jur_3[:157] + "..."
 
                 lead_text_3 = f"Gestiones oficiales, requisitos y pasos para {nom3.lower()} ({len(ts_3)} trámites disponibles)."
-                que_es_3 = f"Subárea de trámites y servicios institucionales para {nom3} en {nom2}. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera."
+                que_es_3 = f"Trámites y servicios institucionales para {nom3} en {nom2}. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera."
 
                 # Enriquecimiento temático N3
                 if 'fel' in s3 or 'factur' in s3:
@@ -423,10 +423,10 @@ def main():
     c_n4 = sum(1 for n in tree_nodes if n['nivel'] == 4)
 
     print(f"\n--- VALIDACIÓN DE NODOS GENERADOS ---")
-    print(f"Nivel 1 (Segmentos): {c_n1} (Esperado: 4)")
-    print(f"Nivel 2 (Áreas):      {c_n2} (Esperado: 20)")
-    print(f"Nivel 3 (Subáreas):   {c_n3} (Esperado: 58)")
-    print(f"Nivel 4 (Temas):      {c_n4} (Esperado: 157)")
+    print(f"Nivel 1: {c_n1} (Esperado: 4)")
+    print(f"Nivel 2: {c_n2} (Esperado: 20)")
+    print(f"Nivel 3: {c_n3} (Esperado: 58)")
+    print(f"Nivel 4: {c_n4} (Esperado: 157)")
     print(f"TOTAL NODOS ÁRBOL:    {len(tree_nodes)} (Esperado: 239)")
 
     assert c_n1 == 4, f"Fallo N1: {c_n1}"

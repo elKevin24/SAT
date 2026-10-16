@@ -101,7 +101,7 @@ banner.alignment = Alignment(horizontal='center', vertical='center')
 
 ws_resumen.merge_cells('B4:H4')
 sub_banner = ws_resumen['B4']
-sub_banner.value = "ARQUITECTURA DE INFORMACIÓN DEL PORTAL WEB — DEFINICIÓN DE SEGMENTOS, LEAD TEXT Y BASE JURÍDICA"
+sub_banner.value = "ARQUITECTURA DE INFORMACIÓN DEL PORTAL WEB — DEFINICIÓN DE NIVEL 1, LEAD TEXT Y BASE JURÍDICA"
 sub_banner.font = font_subtitle
 sub_banner.fill = PatternFill(start_color=NAVY_HEADER, end_color=NAVY_HEADER, fill_type='solid')
 sub_banner.alignment = Alignment(horizontal='center', vertical='center')
@@ -123,13 +123,13 @@ for label, formula, sub, top_left, bot_right, color in kpis:
     cell.fill = PatternFill(start_color=color, end_color=color, fill_type='solid')
     cell.alignment = Alignment(horizontal='center', vertical='center', wrap_text=True)
 
-# Tabla 1: Segmentos con Qué es, Lead text y Base jurídica
-ws_resumen['B9'] = "1. SEGMENTOS PRINCIPALES DEL PORTAL (NIVEL 1) — DEFINICIONES INSTITUCIONALES"
+# Tabla 1: Nivel 1 con Qué es, Lead text y Base jurídica
+ws_resumen['B9'] = "1. NIVEL 1 — DEFINICIONES INSTITUCIONALES"
 ws_resumen['B9'].font = Font(name='Segoe UI', size=11, bold=True, color='1E293B')
 
 macro_headers = [
     "No.",
-    "Segmento (Nivel 1)",
+    "Nivel 1",
     "Qué es: (Definición Operativa)",
     "Lead text: (Texto Orientador de Interfaz)",
     "Base jurídica: (Fundamento Legal Oficial: CAUCA, RECAUCA, Leyes)",
@@ -575,8 +575,8 @@ ws_brechas.views.sheetView[0].showGridLines = True
 
 headers_brechas = [
     "No.",
-    "Actor / Rol Aduanero Afectado",
-    "Área Funcional / Subtema",
+    "Nivel 2",
+    "Nivel 3",
     "Trámite Propuesto (Brecha)",
     "Descripción / Situación Operativa",
     "Pregunta Formal para Mesa Técnica de Aduanas"

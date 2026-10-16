@@ -2,7 +2,7 @@
  * DICCIONARIO CANÓNICO DE DESCRIPCIONES TAXONÓMICAS
  * Portal SAT Guatemala
  * Provee fichas informativas oficiales (¿Qué es?, Texto orientador y Base jurídica)
- * para Nivel 1 (Segmentos), Nivel 2 (Áreas), Nivel 3 (Subáreas) y Nivel 4 (Temas),
+ * para Nivel 1, Nivel 2, Nivel 3 y Nivel 4,
  * así como para las 27 fichas de interfaz por categoría.
  */
 
@@ -206,7 +206,7 @@ export const TAXONOMY_NODE_DESCRIPTIONS: Record<string, TaxonDescription> = {
   },
   'contribuyentes/sin-obligaciones-de-impuestos/asalariados-compradores-de-bienes-y-residentes-en-el-extranjero': {
     nombre: "Asalariados, Compradores de Bienes y Residentes en el Extranjero",
-    que_es: "Subárea de trámites y servicios institucionales para Asalariados, Compradores de Bienes y Residentes en el Extranjero en Sin Obligaciones de Impuestos. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
+    que_es: "Trámites y servicios institucionales para Asalariados, Compradores de Bienes y Residentes en el Extranjero en Sin Obligaciones de Impuestos. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
     lead_text: "Gestiones oficiales, requisitos y pasos para asalariados, compradores de bienes y residentes en el extranjero (10 trámites disponibles).",
     base_juridica: "Código Tributario, Decreto 6-91 (Arts. 112 y 120) y Acuerdo de Directorio SAT 08-2020.",
     nivel: 3
@@ -283,7 +283,7 @@ export const TAXONOMY_NODE_DESCRIPTIONS: Record<string, TaxonDescription> = {
   },
   'contribuyentes/pequenos-contribuyentes/pequeno-contribuyente-general-5-regimen-electronico': {
     nombre: "Pequeño Contribuyente General (5% / Régimen Electrónico)",
-    que_es: "Subárea de trámites y servicios institucionales para Pequeño Contribuyente General (5% / Régimen Electrónico) en Pequeños Contribuyentes. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
+    que_es: "Trámites y servicios institucionales para Pequeño Contribuyente General (5% / Régimen Electrónico) en Pequeños Contribuyentes. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
     lead_text: "Gestiones oficiales, requisitos y pasos para pequeño contribuyente general (5% / régimen electrónico) (14 trámites disponibles).",
     base_juridica: "Decreto 27-92 (Ley del IVA, Arts. 45 al 50) y Decreto 7-2019 (Ley de Simplificación Tributaria).",
     nivel: 3
@@ -332,7 +332,7 @@ export const TAXONOMY_NODE_DESCRIPTIONS: Record<string, TaxonDescription> = {
   },
   'contribuyentes/pequenos-contribuyentes/productores-del-sector-primario-regimen-especial': {
     nombre: "Productores del Sector Primario (Régimen Especial)",
-    que_es: "Subárea de trámites y servicios institucionales para Productores del Sector Primario (Régimen Especial) en Pequeños Contribuyentes. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
+    que_es: "Trámites y servicios institucionales para Productores del Sector Primario (Régimen Especial) en Pequeños Contribuyentes. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
     lead_text: "Gestiones oficiales, requisitos y pasos para productores del sector primario (régimen especial) (8 trámites disponibles).",
     base_juridica: "Decreto 27-92 (Ley del IVA, Arts. 45 al 50) y Decreto 7-2019 (Ley de Simplificación Tributaria).",
     nivel: 3
@@ -500,7 +500,7 @@ export const TAXONOMY_NODE_DESCRIPTIONS: Record<string, TaxonDescription> = {
   },
   'contribuyentes/regimen-general/empresas-y-sociedades-mercantiles': {
     nombre: "Empresas y Sociedades Mercantiles",
-    que_es: "Subárea de trámites y servicios institucionales para Empresas y Sociedades Mercantiles en Régimen General. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
+    que_es: "Trámites y servicios institucionales para Empresas y Sociedades Mercantiles en Régimen General. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
     lead_text: "Gestiones oficiales, requisitos y pasos para empresas y sociedades mercantiles (32 trámites disponibles).",
     base_juridica: "Código Tributario, Decreto 6-91 (Arts. 112 y 120) y Acuerdo de Directorio SAT 08-2020.",
     nivel: 3
@@ -724,7 +724,7 @@ export const TAXONOMY_NODE_DESCRIPTIONS: Record<string, TaxonDescription> = {
   },
   'contribuyentes/regimen-general/servicios-al-contribuyente': {
     nombre: "Servicios al Contribuyente",
-    que_es: "Subárea de trámites y servicios institucionales para Servicios al Contribuyente en Régimen General. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
+    que_es: "Trámites y servicios institucionales para Servicios al Contribuyente en Régimen General. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
     lead_text: "Gestiones oficiales, requisitos y pasos para servicios al contribuyente (43 trámites disponibles).",
     base_juridica: "Código Tributario, Decreto 6-91 del Congreso de la República y Leyes Tributarias Específicas.",
     nivel: 3
@@ -829,7 +829,7 @@ export const TAXONOMY_NODE_DESCRIPTIONS: Record<string, TaxonDescription> = {
   },
   'contribuyentes/regimen-general/asalariados-y-relacion-de-dependencia': {
     nombre: "Asalariados y Relación de Dependencia",
-    que_es: "Subárea de trámites y servicios institucionales para Asalariados y Relación de Dependencia en Régimen General. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
+    que_es: "Trámites y servicios institucionales para Asalariados y Relación de Dependencia en Régimen General. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
     lead_text: "Gestiones oficiales, requisitos y pasos para asalariados y relación de dependencia (4 trámites disponibles).",
     base_juridica: "Decreto 10-2012 (Ley de Actualización Tributaria, Libro I - Impuesto Sobre la Renta).",
     nivel: 3
@@ -962,7 +962,7 @@ export const TAXONOMY_NODE_DESCRIPTIONS: Record<string, TaxonDescription> = {
   },
   'contribuyentes/contribuyentes-especiales/grandes-y-medianos-contribuyentes': {
     nombre: "Grandes y Medianos Contribuyentes",
-    que_es: "Subárea de trámites y servicios institucionales para Grandes y Medianos Contribuyentes en Contribuyentes Especiales. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
+    que_es: "Trámites y servicios institucionales para Grandes y Medianos Contribuyentes en Contribuyentes Especiales. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
     lead_text: "Gestiones oficiales, requisitos y pasos para grandes y medianos contribuyentes (14 trámites disponibles).",
     base_juridica: "Código Tributario, Decreto 6-91 (Arts. 112 y 120) y Acuerdo de Directorio SAT 08-2020.",
     nivel: 3
@@ -1032,7 +1032,7 @@ export const TAXONOMY_NODE_DESCRIPTIONS: Record<string, TaxonDescription> = {
   },
   'operadores-de-comercio-exterior/importadores/registro-y-padron-de-importadores': {
     nombre: "Registro y Padrón de Importadores",
-    que_es: "Subárea de trámites y servicios institucionales para Registro y Padrón de Importadores en Importadores. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
+    que_es: "Trámites y servicios institucionales para Registro y Padrón de Importadores en Importadores. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
     lead_text: "Gestiones oficiales, requisitos y pasos para registro y padrón de importadores (9 trámites disponibles).",
     base_juridica: "Código Aduanero Uniforme Centroamericano (CAUCA IV) y su Reglamento (RECAUCA IV).",
     nivel: 3
@@ -1151,7 +1151,7 @@ export const TAXONOMY_NODE_DESCRIPTIONS: Record<string, TaxonDescription> = {
   },
   'operadores-de-comercio-exterior/importadores/mercancias-en-abandono-depositos-y-franquicias': {
     nombre: "Mercancías en Abandono, Depósitos y Franquicias",
-    que_es: "Subárea de trámites y servicios institucionales para Mercancías en Abandono, Depósitos y Franquicias en Importadores. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
+    que_es: "Trámites y servicios institucionales para Mercancías en Abandono, Depósitos y Franquicias en Importadores. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
     lead_text: "Gestiones oficiales, requisitos y pasos para mercancías en abandono, depósitos y franquicias (9 trámites disponibles).",
     base_juridica: "Código Aduanero Uniforme Centroamericano (CAUCA IV) y su Reglamento (RECAUCA IV).",
     nivel: 3
@@ -1179,7 +1179,7 @@ export const TAXONOMY_NODE_DESCRIPTIONS: Record<string, TaxonDescription> = {
   },
   'operadores-de-comercio-exterior/exportadores/padron-y-registro-de-exportadores': {
     nombre: "Padrón y Registro de Exportadores",
-    que_es: "Subárea de trámites y servicios institucionales para Padrón y Registro de Exportadores en Exportadores. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
+    que_es: "Trámites y servicios institucionales para Padrón y Registro de Exportadores en Exportadores. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
     lead_text: "Gestiones oficiales, requisitos y pasos para padrón y registro de exportadores (7 trámites disponibles).",
     base_juridica: "Código Aduanero Uniforme Centroamericano (CAUCA IV) y su Reglamento (RECAUCA IV).",
     nivel: 3
@@ -1228,7 +1228,7 @@ export const TAXONOMY_NODE_DESCRIPTIONS: Record<string, TaxonDescription> = {
   },
   'operadores-de-comercio-exterior/exportadores/devolucion-de-credito-fiscal': {
     nombre: "Devolución de Crédito Fiscal",
-    que_es: "Subárea de trámites y servicios institucionales para Devolución de Crédito Fiscal en Exportadores. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
+    que_es: "Trámites y servicios institucionales para Devolución de Crédito Fiscal en Exportadores. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
     lead_text: "Gestiones oficiales, requisitos y pasos para devolución de crédito fiscal (10 trámites disponibles).",
     base_juridica: "Decreto 27-92 (Ley del IVA, Arts. 23 al 25 bis) y Acuerdo de Directorio SAT 07-2007.",
     nivel: 3
@@ -1347,7 +1347,7 @@ export const TAXONOMY_NODE_DESCRIPTIONS: Record<string, TaxonDescription> = {
   },
   'operadores-de-comercio-exterior/auxiliares-de-la-funcion-publica-aduanera-afpa/empresas-de-entrega-rapida-o-courier': {
     nombre: "Empresas de Entrega Rápida o Courier",
-    que_es: "Subárea de trámites y servicios institucionales para Empresas de Entrega Rápida o Courier en Auxiliares de la Función Pública Aduanera (AFPA). Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
+    que_es: "Trámites y servicios institucionales para Empresas de Entrega Rápida o Courier en Auxiliares de la Función Pública Aduanera (AFPA). Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
     lead_text: "Gestiones oficiales, requisitos y pasos para empresas de entrega rápida o courier (3 trámites disponibles).",
     base_juridica: "CAUCA IV y RECAUCA IV (Arts. 574 al 596, Régimen de Envíos de Entrega Rápida o Courier).",
     nivel: 3
@@ -1403,7 +1403,7 @@ export const TAXONOMY_NODE_DESCRIPTIONS: Record<string, TaxonDescription> = {
   },
   'operadores-de-comercio-exterior/regimenes-territoriales-y-zonas-especiales/maquilas-decreto-29-89': {
     nombre: "Maquilas (Decreto 29-89)",
-    que_es: "Subárea de trámites y servicios institucionales para Maquilas (Decreto 29-89) en Regímenes Territoriales y Zonas Especiales. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
+    que_es: "Trámites y servicios institucionales para Maquilas (Decreto 29-89) en Regímenes Territoriales y Zonas Especiales. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
     lead_text: "Gestiones oficiales, requisitos y pasos para maquilas (decreto 29-89) (12 trámites disponibles).",
     base_juridica: "Decreto 29-89 (Ley de Fomento y Desarrollo de la Actividad Exportadora y de Maquila).",
     nivel: 3
@@ -1417,7 +1417,7 @@ export const TAXONOMY_NODE_DESCRIPTIONS: Record<string, TaxonDescription> = {
   },
   'operadores-de-comercio-exterior/regimenes-territoriales-y-zonas-especiales/zonas-de-desarrollo-economico-especial-publico-zdeep': {
     nombre: "Zonas de Desarrollo Económico Especial Público (ZDEEP)",
-    que_es: "Subárea de trámites y servicios institucionales para Zonas de Desarrollo Económico Especial Público (ZDEEP) en Regímenes Territoriales y Zonas Especiales. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
+    que_es: "Trámites y servicios institucionales para Zonas de Desarrollo Económico Especial Público (ZDEEP) en Regímenes Territoriales y Zonas Especiales. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
     lead_text: "Gestiones oficiales, requisitos y pasos para zonas de desarrollo económico especial público (zdeep) (30 trámites disponibles).",
     base_juridica: "Decreto 22-73 (Ley Orgánica de ZOLIC / ZDEEP), CAUCA IV y RECAUCA IV.",
     nivel: 3
@@ -1445,7 +1445,7 @@ export const TAXONOMY_NODE_DESCRIPTIONS: Record<string, TaxonDescription> = {
   },
   'operadores-de-comercio-exterior/normativa-y-operaciones-aduaneras-generales/arancel-centroamericano-sac-y-permisos': {
     nombre: "Arancel Centroamericano (SAC) y Permisos",
-    que_es: "Subárea de trámites y servicios institucionales para Arancel Centroamericano (SAC) y Permisos en Normativa y Operaciones Aduaneras Generales. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
+    que_es: "Trámites y servicios institucionales para Arancel Centroamericano (SAC) y Permisos en Normativa y Operaciones Aduaneras Generales. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
     lead_text: "Gestiones oficiales, requisitos y pasos para arancel centroamericano (sac) y permisos (7 trámites disponibles).",
     base_juridica: "Convenio sobre el Régimen Arancelario y Aduanero Centroamericano (SAC) y Ley de Aduanas.",
     nivel: 3
@@ -1473,7 +1473,7 @@ export const TAXONOMY_NODE_DESCRIPTIONS: Record<string, TaxonDescription> = {
   },
   'operadores-de-comercio-exterior/normativa-y-operaciones-aduaneras-generales/acuerdos-comerciales-y-facilitacion': {
     nombre: "Acuerdos Comerciales y Facilitación",
-    que_es: "Subárea de trámites y servicios institucionales para Acuerdos Comerciales y Facilitación en Normativa y Operaciones Aduaneras Generales. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
+    que_es: "Trámites y servicios institucionales para Acuerdos Comerciales y Facilitación en Normativa y Operaciones Aduaneras Generales. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
     lead_text: "Gestiones oficiales, requisitos y pasos para acuerdos comerciales y facilitación (8 trámites disponibles).",
     base_juridica: "Convenio sobre el Régimen Arancelario y Aduanero Centroamericano (SAC) y Ley de Aduanas.",
     nivel: 3
@@ -1515,7 +1515,7 @@ export const TAXONOMY_NODE_DESCRIPTIONS: Record<string, TaxonDescription> = {
   },
   'operadores-de-comercio-exterior/normativa-y-operaciones-aduaneras-generales/prevencion-de-contrabando-y-defraudacion': {
     nombre: "Prevención de Contrabando y Defraudación",
-    que_es: "Subárea de trámites y servicios institucionales para Prevención de Contrabando y Defraudación en Normativa y Operaciones Aduaneras Generales. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
+    que_es: "Trámites y servicios institucionales para Prevención de Contrabando y Defraudación en Normativa y Operaciones Aduaneras Generales. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
     lead_text: "Gestiones oficiales, requisitos y pasos para prevención de contrabando y defraudación (3 trámites disponibles).",
     base_juridica: "Convenio sobre el Régimen Arancelario y Aduanero Centroamericano (SAC) y Ley de Aduanas.",
     nivel: 3
@@ -1536,7 +1536,7 @@ export const TAXONOMY_NODE_DESCRIPTIONS: Record<string, TaxonDescription> = {
   },
   'operadores-de-comercio-exterior/normativa-y-operaciones-aduaneras-generales/consultas-tecnicas-recursos-y-valoracion': {
     nombre: "Consultas Técnicas, Recursos y Valoración",
-    que_es: "Subárea de trámites y servicios institucionales para Consultas Técnicas, Recursos y Valoración en Normativa y Operaciones Aduaneras Generales. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
+    que_es: "Trámites y servicios institucionales para Consultas Técnicas, Recursos y Valoración en Normativa y Operaciones Aduaneras Generales. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
     lead_text: "Gestiones oficiales, requisitos y pasos para consultas técnicas, recursos y valoración (14 trámites disponibles).",
     base_juridica: "Convenio sobre el Régimen Arancelario y Aduanero Centroamericano (SAC) y Ley de Aduanas.",
     nivel: 3
@@ -1606,28 +1606,28 @@ export const TAXONOMY_NODE_DESCRIPTIONS: Record<string, TaxonDescription> = {
   },
   'profesionales/abogados-y-notarios/habilitacion-y-registro-notarial': {
     nombre: "Habilitación y Registro Notarial",
-    que_es: "Subárea de trámites y servicios institucionales para Habilitación y Registro Notarial en Abogados y Notarios. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
+    que_es: "Trámites y servicios institucionales para Habilitación y Registro Notarial en Abogados y Notarios. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
     lead_text: "Gestiones oficiales, requisitos y pasos para habilitación y registro notarial (4 trámites disponibles).",
     base_juridica: "Código de Notariado (Decreto 314, Art. 2), Ley de Colegiación Profesional Obligatoria (Decreto 72-2001) y Código Tributario (Art. 120).",
     nivel: 3
   },
   'profesionales/abogados-y-notarios/timbres-fiscales-y-papel-sellado-de-protocolo': {
     nombre: "Timbres Fiscales y Papel Sellado de Protocolo",
-    que_es: "Subárea de trámites y servicios institucionales para Timbres Fiscales y Papel Sellado de Protocolo en Abogados y Notarios. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
+    que_es: "Trámites y servicios institucionales para Timbres Fiscales y Papel Sellado de Protocolo en Abogados y Notarios. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
     lead_text: "Gestiones oficiales, requisitos y pasos para timbres fiscales y papel sellado de protocolo (5 trámites disponibles).",
     base_juridica: "Decreto 37-92 (Ley del Impuesto de Timbres Fiscales y de Papel Sellado Especial para Protocolos, Arts. 23 al 28).",
     nivel: 3
   },
   'profesionales/abogados-y-notarios/traspaso-electronico-vehicular-e-traspaso': {
     nombre: "Traspaso Electrónico Vehicular (e-Traspaso)",
-    que_es: "Subárea de trámites y servicios institucionales para Traspaso Electrónico Vehicular (e-Traspaso) en Abogados y Notarios. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
+    que_es: "Trámites y servicios institucionales para Traspaso Electrónico Vehicular (e-Traspaso) en Abogados y Notarios. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
     lead_text: "Gestiones oficiales, requisitos y pasos para traspaso electrónico vehicular (e-traspaso) (4 trámites disponibles).",
     base_juridica: "Código de Notariado (Decreto 314, Art. 54) y Ley del Impuesto sobre Circulación de Vehículos (Decreto 70-94).",
     nivel: 3
   },
   'profesionales/abogados-y-notarios/avisos-notariales-y-fe-publica': {
     nombre: "Avisos Notariales y Fe Pública",
-    que_es: "Subárea de trámites y servicios institucionales para Avisos Notariales y Fe Pública en Abogados y Notarios. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
+    que_es: "Trámites y servicios institucionales para Avisos Notariales y Fe Pública en Abogados y Notarios. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
     lead_text: "Gestiones oficiales, requisitos y pasos para avisos notariales y fe pública (5 trámites disponibles).",
     base_juridica: "Código de Notariado (Decreto 314, Art. 38) y Código Tributario (Decreto 6-91, Art. 112).",
     nivel: 3
@@ -1641,14 +1641,14 @@ export const TAXONOMY_NODE_DESCRIPTIONS: Record<string, TaxonDescription> = {
   },
   'profesionales/peritos-contadores/habilitacion-y-registro-de-perito-contador': {
     nombre: "Habilitación y Registro de Perito Contador",
-    que_es: "Subárea de trámites y servicios institucionales para Habilitación y Registro de Perito Contador en Peritos Contadores. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
+    que_es: "Trámites y servicios institucionales para Habilitación y Registro de Perito Contador en Peritos Contadores. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
     lead_text: "Gestiones oficiales, requisitos y pasos para habilitación y registro de perito contador (4 trámites disponibles).",
     base_juridica: "Decreto 2450 (Normas que Regulan el Ejercicio de la Profesión de Contador) y Código Tributario (Art. 120).",
     nivel: 3
   },
   'profesionales/peritos-contadores/consultas-retenciones-y-libros-contables': {
     nombre: "Consultas, Retenciones y Libros Contables",
-    que_es: "Subárea de trámites y servicios institucionales para Consultas, Retenciones y Libros Contables en Peritos Contadores. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
+    que_es: "Trámites y servicios institucionales para Consultas, Retenciones y Libros Contables en Peritos Contadores. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
     lead_text: "Gestiones oficiales, requisitos y pasos para consultas, retenciones y libros contables (7 trámites disponibles).",
     base_juridica: "Ley del IVA (Decreto 27-92, Art. 47 bis) y Ley de Actualización Tributaria (Decreto 10-2012, Art. 86).",
     nivel: 3
@@ -1662,14 +1662,14 @@ export const TAXONOMY_NODE_DESCRIPTIONS: Record<string, TaxonDescription> = {
   },
   'profesionales/auditores/habilitacion-y-registro-de-auditor-cpa': {
     nombre: "Habilitación y Registro de Auditor (CPA)",
-    que_es: "Subárea de trámites y servicios institucionales para Habilitación y Registro de Auditor (CPA) en Auditores. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
+    que_es: "Trámites y servicios institucionales para Habilitación y Registro de Auditor (CPA) en Auditores. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
     lead_text: "Gestiones oficiales, requisitos y pasos para habilitación y registro de auditor (cpa) (2 trámites disponibles).",
     base_juridica: "Ley de Colegiación Profesional Obligatoria (Decreto 72-2001) y Código Tributario (Art. 120).",
     nivel: 3
   },
   'profesionales/auditores/dictamenes-de-credito-fiscal-y-auditoria': {
     nombre: "Dictámenes de Crédito Fiscal y Auditoría",
-    que_es: "Subárea de trámites y servicios institucionales para Dictámenes de Crédito Fiscal y Auditoría en Auditores. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
+    que_es: "Trámites y servicios institucionales para Dictámenes de Crédito Fiscal y Auditoría en Auditores. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
     lead_text: "Gestiones oficiales, requisitos y pasos para dictámenes de crédito fiscal y auditoría (2 trámites disponibles).",
     base_juridica: "Ley del IVA (Decreto 27-92, Art. 25 bis) y Acuerdo de Directorio SAT 07-2007 (Régimen Optativo de Devolución).",
     nivel: 3
@@ -1683,14 +1683,14 @@ export const TAXONOMY_NODE_DESCRIPTIONS: Record<string, TaxonDescription> = {
   },
   'profesionales/gestores-tributarios/acreditacion-y-carne-oficial-de-gestor': {
     nombre: "Acreditación y Carné Oficial de Gestor",
-    que_es: "Subárea de trámites y servicios institucionales para Acreditación y Carné Oficial de Gestor en Gestores Tributarios. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
+    que_es: "Trámites y servicios institucionales para Acreditación y Carné Oficial de Gestor en Gestores Tributarios. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
     lead_text: "Gestiones oficiales, requisitos y pasos para acreditación y carné oficial de gestor (4 trámites disponibles).",
     base_juridica: "Código Tributario (Decreto 6-91, Art. 22 - Representación) y Manual Institucional de Acreditación de Gestores de la SAT.",
     nivel: 3
   },
   'profesionales/gestores-tributarios/renovacion-y-gestion-de-gafetes': {
     nombre: "Renovación y Gestión de Gafetes",
-    que_es: "Subárea de trámites y servicios institucionales para Renovación y Gestión de Gafetes en Gestores Tributarios. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
+    que_es: "Trámites y servicios institucionales para Renovación y Gestión de Gafetes en Gestores Tributarios. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
     lead_text: "Gestiones oficiales, requisitos y pasos para renovación y gestión de gafetes (4 trámites disponibles).",
     base_juridica: "Código Tributario (Decreto 6-91, Arts. 22 y 94) y Normativa de Control de Gestores Tributarios de la SAT.",
     nivel: 3
@@ -1718,14 +1718,14 @@ export const TAXONOMY_NODE_DESCRIPTIONS: Record<string, TaxonDescription> = {
   },
   'profesionales/servicios-profesionales/consultas-juridico-tributarias': {
     nombre: "Consultas Jurídico Tributarias",
-    que_es: "Subárea de trámites y servicios institucionales para Consultas Jurídico Tributarias en Servicios Profesionales. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
+    que_es: "Trámites y servicios institucionales para Consultas Jurídico Tributarias en Servicios Profesionales. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
     lead_text: "Gestiones oficiales, requisitos y pasos para consultas jurídico tributarias (2 trámites disponibles).",
     base_juridica: "Código Tributario (Decreto 6-91, Arts. 102 al 105 - Consultas vinculantes).",
     nivel: 3
   },
   'profesionales/servicios-profesionales/sistemas-de-retencion-y-cumplimiento': {
     nombre: "Sistemas de Retención y Cumplimiento",
-    que_es: "Subárea de trámites y servicios institucionales para Sistemas de Retención y Cumplimiento en Servicios Profesionales. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
+    que_es: "Trámites y servicios institucionales para Sistemas de Retención y Cumplimiento en Servicios Profesionales. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
     lead_text: "Gestiones oficiales, requisitos y pasos para sistemas de retención y cumplimiento (2 trámites disponibles).",
     base_juridica: "Código Tributario (Decreto 6-91, Art. 112) y Ley Orgánica de la SAT (Decreto 1-98).",
     nivel: 3
@@ -1746,7 +1746,7 @@ export const TAXONOMY_NODE_DESCRIPTIONS: Record<string, TaxonDescription> = {
   },
   'entes-exentos/entidades-del-estado/parque-vehicular-oficial-y-de-autoridad': {
     nombre: "Parque Vehicular Oficial y de Autoridad",
-    que_es: "Subárea de trámites y servicios institucionales para Parque Vehicular Oficial y de Autoridad en Entidades del Estado. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
+    que_es: "Trámites y servicios institucionales para Parque Vehicular Oficial y de Autoridad en Entidades del Estado. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
     lead_text: "Gestiones oficiales, requisitos y pasos para parque vehicular oficial y de autoridad (9 trámites disponibles).",
     base_juridica: "Ley Orgánica del Presupuesto (Decreto 101-97), Ley del IVA y Código Tributario.",
     nivel: 3
@@ -1767,7 +1767,7 @@ export const TAXONOMY_NODE_DESCRIPTIONS: Record<string, TaxonDescription> = {
   },
   'entes-exentos/entidades-del-estado/control-interno-solvencias-y-normativa': {
     nombre: "Control Interno, Solvencias y Normativa",
-    que_es: "Subárea de trámites y servicios institucionales para Control Interno, Solvencias y Normativa en Entidades del Estado. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
+    que_es: "Trámites y servicios institucionales para Control Interno, Solvencias y Normativa en Entidades del Estado. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
     lead_text: "Gestiones oficiales, requisitos y pasos para control interno, solvencias y normativa (6 trámites disponibles).",
     base_juridica: "Ley Orgánica del Presupuesto (Decreto 101-97), Ley del IVA y Código Tributario.",
     nivel: 3
@@ -1781,7 +1781,7 @@ export const TAXONOMY_NODE_DESCRIPTIONS: Record<string, TaxonDescription> = {
   },
   'entes-exentos/constitucionales/centros-educativos-y-universidades-arts-73-y-88': {
     nombre: "Centros Educativos y Universidades (Arts. 73 y 88)",
-    que_es: "Subárea de trámites y servicios institucionales para Centros Educativos y Universidades (Arts. 73 y 88) en Constitucionales. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
+    que_es: "Trámites y servicios institucionales para Centros Educativos y Universidades (Arts. 73 y 88) en Constitucionales. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
     lead_text: "Gestiones oficiales, requisitos y pasos para centros educativos y universidades (arts. 73 y 88) (5 trámites disponibles).",
     base_juridica: "Constitución Política de la República de Guatemala (Arts. 73 y 88) y Ley del IVA (Art. 8).",
     nivel: 3
@@ -1795,7 +1795,7 @@ export const TAXONOMY_NODE_DESCRIPTIONS: Record<string, TaxonDescription> = {
   },
   'entes-exentos/constitucionales/iglesias-y-deporte-federado-arts-37-y-92': {
     nombre: "Iglesias y Deporte Federado (Arts. 37 y 92)",
-    que_es: "Subárea de trámites y servicios institucionales para Iglesias y Deporte Federado (Arts. 37 y 92) en Constitucionales. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
+    que_es: "Trámites y servicios institucionales para Iglesias y Deporte Federado (Arts. 37 y 92) en Constitucionales. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
     lead_text: "Gestiones oficiales, requisitos y pasos para iglesias y deporte federado (arts. 37 y 92) (6 trámites disponibles).",
     base_juridica: "Constitución Política de la República (Art. 37), Código Civil y Código Tributario (Art. 62).",
     nivel: 3
@@ -1816,7 +1816,7 @@ export const TAXONOMY_NODE_DESCRIPTIONS: Record<string, TaxonDescription> = {
   },
   'entes-exentos/no-lucrativos/exenciones-civa-actualizacion-y-cierre-de-operaciones': {
     nombre: "Exenciones CIVA, Actualización y Cierre de Operaciones",
-    que_es: "Subárea de trámites y servicios institucionales para Exenciones CIVA, Actualización y Cierre de Operaciones en No Lucrativos. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
+    que_es: "Trámites y servicios institucionales para Exenciones CIVA, Actualización y Cierre de Operaciones en No Lucrativos. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
     lead_text: "Gestiones oficiales, requisitos y pasos para exenciones civa, actualización y cierre de operaciones (4 trámites disponibles).",
     base_juridica: "Decreto 02-2003 (Ley de Organizaciones No Gubernamentales para el Desarrollo) y Ley del IVA (Art. 8).",
     nivel: 3
@@ -1830,7 +1830,7 @@ export const TAXONOMY_NODE_DESCRIPTIONS: Record<string, TaxonDescription> = {
   },
   'entes-exentos/municipalidades/gestion-tributaria-y-patrimonio-municipal': {
     nombre: "Gestión Tributaria y Patrimonio Municipal",
-    que_es: "Subárea de trámites y servicios institucionales para Gestión Tributaria y Patrimonio Municipal en Municipalidades. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
+    que_es: "Trámites y servicios institucionales para Gestión Tributaria y Patrimonio Municipal en Municipalidades. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
     lead_text: "Gestiones oficiales, requisitos y pasos para gestión tributaria y patrimonio municipal (5 trámites disponibles).",
     base_juridica: "Constitución Política (Art. 257), Código Municipal (Decreto 12-2002) y Ley del IVA.",
     nivel: 3
@@ -1844,14 +1844,14 @@ export const TAXONOMY_NODE_DESCRIPTIONS: Record<string, TaxonDescription> = {
   },
   'entes-exentos/decreto/cooperativas-partidos-politicos-y-exenciones-especiales': {
     nombre: "Cooperativas, Partidos Políticos y Exenciones Especiales",
-    que_es: "Subárea de trámites y servicios institucionales para Cooperativas, Partidos Políticos y Exenciones Especiales en Decreto. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
+    que_es: "Trámites y servicios institucionales para Cooperativas, Partidos Políticos y Exenciones Especiales en Decreto. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
     lead_text: "Gestiones oficiales, requisitos y pasos para cooperativas, partidos políticos y exenciones especiales (5 trámites disponibles).",
     base_juridica: "Decreto Legislativo de Exención / Fomento Específico y Código Tributario.",
     nivel: 3
   },
   'entes-exentos/decreto/misiones-diplomaticas-y-organismos-internacionales': {
     nombre: "Misiones Diplomáticas y Organismos Internacionales",
-    que_es: "Subárea de trámites y servicios institucionales para Misiones Diplomáticas y Organismos Internacionales en Decreto. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
+    que_es: "Trámites y servicios institucionales para Misiones Diplomáticas y Organismos Internacionales en Decreto. Permite a los usuarios consultar requisitos y realizar sus gestiones conforme a la normativa tributaria y aduanera.",
     lead_text: "Gestiones oficiales, requisitos y pasos para misiones diplomáticas y organismos internacionales (6 trámites disponibles).",
     base_juridica: "Ley Orgánica del Presupuesto (Decreto 101-97), Ley del IVA y Código Tributario.",
     nivel: 3

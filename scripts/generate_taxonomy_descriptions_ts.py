@@ -41,7 +41,7 @@ ts_lines.append("""/**
  * DICCIONARIO CANÓNICO DE DESCRIPCIONES TAXONÓMICAS
  * Portal SAT Guatemala
  * Provee fichas informativas oficiales (¿Qué es?, Texto orientador y Base jurídica)
- * para Nivel 1 (Segmentos), Nivel 2 (Áreas), Nivel 3 (Subáreas) y Nivel 4 (Temas),
+ * para Nivel 1, Nivel 2, Nivel 3 y Nivel 4,
  * así como para las 27 fichas de interfaz por categoría.
  */
 
