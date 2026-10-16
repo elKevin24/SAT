@@ -180,19 +180,21 @@ body {
 }
 
 /* ----------------------------------------------------------------------------
- * CUADRÍCULA RESPONSIVA DE 4 COLUMNAS (POR DEFECTO)
+ * CUADRÍCULA RESPONSIVA DE 3 COLUMNAS (POR DEFECTO)
  * ---------------------------------------------------------------------------- */
 .sat-cards-grid {
   display: grid !important;
-  grid-template-columns: repeat(4, 1fr) !important;
+  grid-template-columns: repeat(3, 1fr) !important;
   gap: 16px !important;
   width: 100% !important;
+  max-width: 1140px !important;
+  margin: 0 auto !important;
   padding: 16px 0 40px 0 !important;
   align-items: stretch !important;
 }
 
-/* Tablet (hasta 1024px): 2 columnas */
-@media (max-width: 1024px) {
+/* Tablet (hasta 991px): 2 columnas */
+@media (max-width: 991px) {
   .sat-cards-grid {
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 14px !important;

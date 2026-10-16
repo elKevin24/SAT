@@ -34,22 +34,22 @@
 }
 
 /* ----------------------------------------------------------------------------
- * 2. CONTENEDOR / CUADRÍCULA CENTRADA (4 COLUMNAS POR DEFECTO)
+ * 2. CONTENEDOR / CUADRÍCULA CENTRADA (3 COLUMNAS POR DEFECTO)
  * ---------------------------------------------------------------------------- */
 .sat-cards-grid {
   display: grid !important;
-  grid-template-columns: repeat(4, 1fr) !important; /* 4 columnas por defecto */
+  grid-template-columns: repeat(3, 1fr) !important; /* 3 columnas fijas en desktop */
   gap: 16px !important;
   width: 100% !important;
-  max-width: 1240px !important;
+  max-width: 1140px !important;
   margin: 0 auto !important; /* Centrado en pantalla */
   padding: 10px 0 !important;
   box-sizing: border-box !important;
   align-items: stretch !important; /* Misma altura garantizada */
 }
 
-/* Tablet (hasta 1024px): 2 columnas */
-@media (max-width: 1024px) {
+/* Tablet (hasta 991px): 2 columnas */
+@media (max-width: 991px) {
   .sat-cards-grid {
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 14px !important;
