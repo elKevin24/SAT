@@ -1,0 +1,458 @@
+{
+  "total_normalizados": 70,
+  "rango": "SAT-GES-0001 a SAT-GES-0715",
+  "mapeo": {
+    "SAT-GES-0024-B": {
+      "nuevo_id": "SAT-GES-0684",
+      "codigos_legacy": [
+        "SAT-GES-0024-B",
+        "SAT-GES-0024"
+      ]
+    },
+    "SAT-GES-0092-B": {
+      "nuevo_id": "SAT-GES-0685",
+      "codigos_legacy": [
+        "SAT-GES-0092-B",
+        "SAT-GES-0092"
+      ]
+    },
+    "SAT-GES-0159-B": {
+      "nuevo_id": "SAT-GES-0686",
+      "codigos_legacy": [
+        "SAT-GES-0159-B",
+        "SAT-GES-0159"
+      ]
+    },
+    "SAT-GES-0230-B": {
+      "nuevo_id": "SAT-GES-0687",
+      "codigos_legacy": [
+        "SAT-GES-0230-B",
+        "SAT-GES-0230"
+      ]
+    },
+    "SAT-GES-0437-AGD": {
+      "nuevo_id": "SAT-GES-0688",
+      "codigos_legacy": [
+        "SAT-GES-0437-AGD",
+        "SAT-GES-0437"
+      ]
+    },
+    "SAT-GES-0428-AGD": {
+      "nuevo_id": "SAT-GES-0689",
+      "codigos_legacy": [
+        "SAT-GES-0428-AGD",
+        "SAT-GES-0428"
+      ]
+    },
+    "SAT-GES-0441-AGD": {
+      "nuevo_id": "SAT-GES-0441",
+      "codigos_legacy": [
+        "SAT-GES-0441-AGD"
+      ]
+    },
+    "SAT-GES-0442-AGD": {
+      "nuevo_id": "SAT-GES-0442",
+      "codigos_legacy": [
+        "SAT-GES-0442-AGD"
+      ]
+    },
+    "SAT-GES-0434-AGD": {
+      "nuevo_id": "SAT-GES-0690",
+      "codigos_legacy": [
+        "SAT-GES-0434-AGD",
+        "SAT-GES-0434"
+      ]
+    },
+    "SAT-GES-0443-AGD": {
+      "nuevo_id": "SAT-GES-0443",
+      "codigos_legacy": [
+        "SAT-GES-0443-AGD"
+      ]
+    },
+    "SAT-GES-0430-AGD": {
+      "nuevo_id": "SAT-GES-0691",
+      "codigos_legacy": [
+        "SAT-GES-0430-AGD",
+        "SAT-GES-0430"
+      ]
+    },
+    "SAT-GES-0431-AGD": {
+      "nuevo_id": "SAT-GES-0692",
+      "codigos_legacy": [
+        "SAT-GES-0431-AGD",
+        "SAT-GES-0431"
+      ]
+    },
+    "SAT-GES-0444-AGD": {
+      "nuevo_id": "SAT-GES-0444",
+      "codigos_legacy": [
+        "SAT-GES-0444-AGD"
+      ]
+    },
+    "SAT-GES-0445-AGD": {
+      "nuevo_id": "SAT-GES-0445",
+      "codigos_legacy": [
+        "SAT-GES-0445-AGD"
+      ]
+    },
+    "SAT-GES-0446-AGD": {
+      "nuevo_id": "SAT-GES-0446",
+      "codigos_legacy": [
+        "SAT-GES-0446-AGD"
+      ]
+    },
+    "SAT-GES-0447-AGD": {
+      "nuevo_id": "SAT-GES-0447",
+      "codigos_legacy": [
+        "SAT-GES-0447-AGD"
+      ]
+    },
+    "SAT-GES-0448-AGD": {
+      "nuevo_id": "SAT-GES-0448",
+      "codigos_legacy": [
+        "SAT-GES-0448-AGD"
+      ]
+    },
+    "SAT-GES-0426-AGD": {
+      "nuevo_id": "SAT-GES-0693",
+      "codigos_legacy": [
+        "SAT-GES-0426-AGD",
+        "SAT-GES-0426"
+      ]
+    },
+    "SAT-GES-0439-AGD": {
+      "nuevo_id": "SAT-GES-0694",
+      "codigos_legacy": [
+        "SAT-GES-0439-AGD",
+        "SAT-GES-0439"
+      ]
+    },
+    "SAT-GES-0449-AGD": {
+      "nuevo_id": "SAT-GES-0449",
+      "codigos_legacy": [
+        "SAT-GES-0449-AGD"
+      ]
+    },
+    "SAT-GES-0437-DAT": {
+      "nuevo_id": "SAT-GES-0695",
+      "codigos_legacy": [
+        "SAT-GES-0437-DAT",
+        "SAT-GES-0437"
+      ]
+    },
+    "SAT-GES-0428-DAT": {
+      "nuevo_id": "SAT-GES-0696",
+      "codigos_legacy": [
+        "SAT-GES-0428-DAT",
+        "SAT-GES-0428"
+      ]
+    },
+    "SAT-GES-0452-DAT": {
+      "nuevo_id": "SAT-GES-0452",
+      "codigos_legacy": [
+        "SAT-GES-0452-DAT"
+      ]
+    },
+    "SAT-GES-0453-DAT": {
+      "nuevo_id": "SAT-GES-0453",
+      "codigos_legacy": [
+        "SAT-GES-0453-DAT"
+      ]
+    },
+    "SAT-GES-0434-DAT": {
+      "nuevo_id": "SAT-GES-0697",
+      "codigos_legacy": [
+        "SAT-GES-0434-DAT",
+        "SAT-GES-0434"
+      ]
+    },
+    "SAT-GES-0454-DAT": {
+      "nuevo_id": "SAT-GES-0454",
+      "codigos_legacy": [
+        "SAT-GES-0454-DAT"
+      ]
+    },
+    "SAT-GES-0455-DAT": {
+      "nuevo_id": "SAT-GES-0455",
+      "codigos_legacy": [
+        "SAT-GES-0455-DAT"
+      ]
+    },
+    "SAT-GES-0430-DAT": {
+      "nuevo_id": "SAT-GES-0698",
+      "codigos_legacy": [
+        "SAT-GES-0430-DAT",
+        "SAT-GES-0430"
+      ]
+    },
+    "SAT-GES-0431-DAT": {
+      "nuevo_id": "SAT-GES-0699",
+      "codigos_legacy": [
+        "SAT-GES-0431-DAT",
+        "SAT-GES-0431"
+      ]
+    },
+    "SAT-GES-0444-DAT": {
+      "nuevo_id": "SAT-GES-0700",
+      "codigos_legacy": [
+        "SAT-GES-0444-DAT",
+        "SAT-GES-0444"
+      ]
+    },
+    "SAT-GES-0445-DAT": {
+      "nuevo_id": "SAT-GES-0701",
+      "codigos_legacy": [
+        "SAT-GES-0445-DAT",
+        "SAT-GES-0445"
+      ]
+    },
+    "SAT-GES-0446-DAT": {
+      "nuevo_id": "SAT-GES-0702",
+      "codigos_legacy": [
+        "SAT-GES-0446-DAT",
+        "SAT-GES-0446"
+      ]
+    },
+    "SAT-GES-0456-DAT": {
+      "nuevo_id": "SAT-GES-0456",
+      "codigos_legacy": [
+        "SAT-GES-0456-DAT"
+      ]
+    },
+    "SAT-GES-0426-DAT": {
+      "nuevo_id": "SAT-GES-0703",
+      "codigos_legacy": [
+        "SAT-GES-0426-DAT",
+        "SAT-GES-0426"
+      ]
+    },
+    "SAT-GES-0457-DAT": {
+      "nuevo_id": "SAT-GES-0457",
+      "codigos_legacy": [
+        "SAT-GES-0457-DAT"
+      ]
+    },
+    "SAT-GES-0439-DAT": {
+      "nuevo_id": "SAT-GES-0704",
+      "codigos_legacy": [
+        "SAT-GES-0439-DAT",
+        "SAT-GES-0439"
+      ]
+    },
+    "SAT-GES-0458-DAT": {
+      "nuevo_id": "SAT-GES-0458",
+      "codigos_legacy": [
+        "SAT-GES-0458-DAT"
+      ]
+    },
+    "SAT-GES-0440-DAT": {
+      "nuevo_id": "SAT-GES-0705",
+      "codigos_legacy": [
+        "SAT-GES-0440-DAT",
+        "SAT-GES-0440"
+      ]
+    },
+    "SAT-GES-0488-ZDEEP-USR": {
+      "nuevo_id": "SAT-GES-0488",
+      "codigos_legacy": [
+        "SAT-GES-0488-ZDEEP-USR"
+      ]
+    },
+    "SAT-GES-0489-ZDEEP-USR": {
+      "nuevo_id": "SAT-GES-0489",
+      "codigos_legacy": [
+        "SAT-GES-0489-ZDEEP-USR"
+      ]
+    },
+    "SAT-GES-0490-ZDEEP-USR": {
+      "nuevo_id": "SAT-GES-0490",
+      "codigos_legacy": [
+        "SAT-GES-0490-ZDEEP-USR"
+      ]
+    },
+    "SAT-GES-0491-ZDEEP-USR": {
+      "nuevo_id": "SAT-GES-0491",
+      "codigos_legacy": [
+        "SAT-GES-0491-ZDEEP-USR"
+      ]
+    },
+    "SAT-GES-0492-ZDEEP-USR": {
+      "nuevo_id": "SAT-GES-0492",
+      "codigos_legacy": [
+        "SAT-GES-0492-ZDEEP-USR"
+      ]
+    },
+    "SAT-GES-0493-ZDEEP-USR": {
+      "nuevo_id": "SAT-GES-0493",
+      "codigos_legacy": [
+        "SAT-GES-0493-ZDEEP-USR"
+      ]
+    },
+    "SAT-GES-0494-ZDEEP-USR": {
+      "nuevo_id": "SAT-GES-0494",
+      "codigos_legacy": [
+        "SAT-GES-0494-ZDEEP-USR"
+      ]
+    },
+    "SAT-GES-0495-ZDEEP-USR": {
+      "nuevo_id": "SAT-GES-0495",
+      "codigos_legacy": [
+        "SAT-GES-0495-ZDEEP-USR"
+      ]
+    },
+    "SAT-GES-0496-ZDEEP-USR": {
+      "nuevo_id": "SAT-GES-0496",
+      "codigos_legacy": [
+        "SAT-GES-0496-ZDEEP-USR"
+      ]
+    },
+    "SAT-GES-0431-ZDEEP-USR": {
+      "nuevo_id": "SAT-GES-0706",
+      "codigos_legacy": [
+        "SAT-GES-0431-ZDEEP-USR",
+        "SAT-GES-0431"
+      ]
+    },
+    "SAT-GES-0444-ZDEEP-USR": {
+      "nuevo_id": "SAT-GES-0707",
+      "codigos_legacy": [
+        "SAT-GES-0444-ZDEEP-USR",
+        "SAT-GES-0444"
+      ]
+    },
+    "SAT-GES-0497-ZDEEP-USR": {
+      "nuevo_id": "SAT-GES-0497",
+      "codigos_legacy": [
+        "SAT-GES-0497-ZDEEP-USR"
+      ]
+    },
+    "SAT-GES-0426-ZDEEP-USR": {
+      "nuevo_id": "SAT-GES-0708",
+      "codigos_legacy": [
+        "SAT-GES-0426-ZDEEP-USR",
+        "SAT-GES-0426"
+      ]
+    },
+    "SAT-GES-0498-ZDEEP-USR": {
+      "nuevo_id": "SAT-GES-0498",
+      "codigos_legacy": [
+        "SAT-GES-0498-ZDEEP-USR"
+      ]
+    },
+    "SAT-GES-0499-ZDEEP-USR": {
+      "nuevo_id": "SAT-GES-0499",
+      "codigos_legacy": [
+        "SAT-GES-0499-ZDEEP-USR"
+      ]
+    },
+    "SAT-GES-0500-ZDEEP-ADM": {
+      "nuevo_id": "SAT-GES-0500",
+      "codigos_legacy": [
+        "SAT-GES-0500-ZDEEP-ADM"
+      ]
+    },
+    "SAT-GES-0501-ZDEEP-ADM": {
+      "nuevo_id": "SAT-GES-0501",
+      "codigos_legacy": [
+        "SAT-GES-0501-ZDEEP-ADM"
+      ]
+    },
+    "SAT-GES-0502-ZDEEP-ADM": {
+      "nuevo_id": "SAT-GES-0502",
+      "codigos_legacy": [
+        "SAT-GES-0502-ZDEEP-ADM"
+      ]
+    },
+    "SAT-GES-0503-ZDEEP-ADM": {
+      "nuevo_id": "SAT-GES-0503",
+      "codigos_legacy": [
+        "SAT-GES-0503-ZDEEP-ADM"
+      ]
+    },
+    "SAT-GES-0455-ZDEEP-ADM": {
+      "nuevo_id": "SAT-GES-0709",
+      "codigos_legacy": [
+        "SAT-GES-0455-ZDEEP-ADM",
+        "SAT-GES-0455"
+      ]
+    },
+    "SAT-GES-0430-ZDEEP-ADM": {
+      "nuevo_id": "SAT-GES-0710",
+      "codigos_legacy": [
+        "SAT-GES-0430-ZDEEP-ADM",
+        "SAT-GES-0430"
+      ]
+    },
+    "SAT-GES-0504-ZDEEP-ADM": {
+      "nuevo_id": "SAT-GES-0504",
+      "codigos_legacy": [
+        "SAT-GES-0504-ZDEEP-ADM"
+      ]
+    },
+    "SAT-GES-0431-ZDEEP-ADM": {
+      "nuevo_id": "SAT-GES-0711",
+      "codigos_legacy": [
+        "SAT-GES-0431-ZDEEP-ADM",
+        "SAT-GES-0431"
+      ]
+    },
+    "SAT-GES-0444-ZDEEP-ADM": {
+      "nuevo_id": "SAT-GES-0712",
+      "codigos_legacy": [
+        "SAT-GES-0444-ZDEEP-ADM",
+        "SAT-GES-0444"
+      ]
+    },
+    "SAT-GES-0445-ZDEEP-ADM": {
+      "nuevo_id": "SAT-GES-0713",
+      "codigos_legacy": [
+        "SAT-GES-0445-ZDEEP-ADM",
+        "SAT-GES-0445"
+      ]
+    },
+    "SAT-GES-0505-ZDEEP-ADM": {
+      "nuevo_id": "SAT-GES-0505",
+      "codigos_legacy": [
+        "SAT-GES-0505-ZDEEP-ADM"
+      ]
+    },
+    "SAT-GES-0506-ZDEEP-ADM": {
+      "nuevo_id": "SAT-GES-0506",
+      "codigos_legacy": [
+        "SAT-GES-0506-ZDEEP-ADM"
+      ]
+    },
+    "SAT-GES-0426-ZDEEP-ADM": {
+      "nuevo_id": "SAT-GES-0714",
+      "codigos_legacy": [
+        "SAT-GES-0426-ZDEEP-ADM",
+        "SAT-GES-0426"
+      ]
+    },
+    "SAT-GES-0507-ZDEEP-ADM": {
+      "nuevo_id": "SAT-GES-0507",
+      "codigos_legacy": [
+        "SAT-GES-0507-ZDEEP-ADM"
+      ]
+    },
+    "SAT-GES-0508-ZDEEP-ADM": {
+      "nuevo_id": "SAT-GES-0508",
+      "codigos_legacy": [
+        "SAT-GES-0508-ZDEEP-ADM"
+      ]
+    },
+    "SAT-GES-0534-DAT": {
+      "nuevo_id": "SAT-GES-0534",
+      "codigos_legacy": [
+        "SAT-GES-0534-DAT"
+      ]
+    },
+    "SAT-GES-0340-B": {
+      "nuevo_id": "SAT-GES-0715",
+      "codigos_legacy": [
+        "SAT-GES-0340-B",
+        "SAT-GES-0340"
+      ]
+    }
+  }
+}

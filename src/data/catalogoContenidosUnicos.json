@@ -20249,8 +20249,8 @@
     "familiaTematica": "FAM-04 Declaraciones Aduaneras (DUCAs); FAM-08 Auxiliares de la Función Pública Aduanera (AFPA)"
   },
   {
-    "id": "cnt-SAT-GES-0426-ZDEEP-USR",
-    "codigo": "SAT-GES-0426",
+    "id": "cnt-SAT-GES-0708",
+    "codigo": "SAT-GES-0708",
     "idOriginal": "SAT-GES-0426-ZDEEP-USR",
     "titulo": "Requisitos para consulta de expedientes de gestión aduanera",
     "nombreActual": "Requisitos para consulta de expedientes de gestión aduanera",
@@ -20310,7 +20310,11 @@
       "ducas",
       "zdeep"
     ],
-    "familiaTematica": "FAM-04 Declaraciones Aduaneras (DUCAs); FAM-07 Zonas de Desarrollo Económico Especial Público (ZDEEP)"
+    "familiaTematica": "FAM-04 Declaraciones Aduaneras (DUCAs); FAM-07 Zonas de Desarrollo Económico Especial Público (ZDEEP)",
+    "codigos_legacy": [
+      "SAT-GES-0426-ZDEEP-USR",
+      "SAT-GES-0426"
+    ]
   },
   {
     "id": "cnt-SAT-GES-0427",
@@ -20469,8 +20473,8 @@
     ]
   },
   {
-    "id": "cnt-SAT-GES-0430-DAT",
-    "codigo": "SAT-GES-0430",
+    "id": "cnt-SAT-GES-0698",
+    "codigo": "SAT-GES-0698",
     "idOriginal": "SAT-GES-0430-DAT",
     "titulo": "Preguntas frecuentes sobre temas aduaneros",
     "nombreActual": "Preguntas frecuentes sobre temas aduaneros",
@@ -20525,11 +20529,15 @@
       "ducas",
       "afpa"
     ],
-    "familiaTematica": "FAM-04 Declaraciones Aduaneras (DUCAs); FAM-08 Auxiliares de la Función Pública Aduanera (AFPA)"
+    "familiaTematica": "FAM-04 Declaraciones Aduaneras (DUCAs); FAM-08 Auxiliares de la Función Pública Aduanera (AFPA)",
+    "codigos_legacy": [
+      "SAT-GES-0430-DAT",
+      "SAT-GES-0430"
+    ]
   },
   {
-    "id": "cnt-SAT-GES-0431-ZDEEP-USR",
-    "codigo": "SAT-GES-0431",
+    "id": "cnt-SAT-GES-0706",
+    "codigo": "SAT-GES-0706",
     "idOriginal": "SAT-GES-0431-ZDEEP-USR",
     "titulo": "Procedimientos administrativos de aduanas (Sanciones y recursos)",
     "nombreActual": "Procedimientos administrativos de aduanas (Sanciones y recursos)",
@@ -20589,7 +20597,11 @@
       "ducas",
       "zdeep"
     ],
-    "familiaTematica": "FAM-04 Declaraciones Aduaneras (DUCAs); FAM-07 Zonas de Desarrollo Económico Especial Público (ZDEEP)"
+    "familiaTematica": "FAM-04 Declaraciones Aduaneras (DUCAs); FAM-07 Zonas de Desarrollo Económico Especial Público (ZDEEP)",
+    "codigos_legacy": [
+      "SAT-GES-0431-ZDEEP-USR",
+      "SAT-GES-0431"
+    ]
   },
   {
     "id": "cnt-SAT-GES-0432",
@@ -21088,7 +21100,7 @@
     ]
   },
   {
-    "id": "cnt-SAT-GES-0441-AGD",
+    "id": "cnt-SAT-GES-0441",
     "codigo": "SAT-GES-0441",
     "idOriginal": "SAT-GES-0441-AGD",
     "titulo": "Consulta facilidades de pago y convenios",
@@ -21137,10 +21149,13 @@
         "pasoNo": 5,
         "pasoAccion": "Si no puedes pagar todo"
       }
+    ],
+    "codigos_legacy": [
+      "SAT-GES-0441-AGD"
     ]
   },
   {
-    "id": "cnt-SAT-GES-0442-AGD",
+    "id": "cnt-SAT-GES-0442",
     "codigo": "SAT-GES-0442",
     "idOriginal": "SAT-GES-0442-AGD",
     "titulo": "Consultas de aduanas (Retención y liberación de mercancías, arancel integrado)",
@@ -21180,10 +21195,13 @@
       "ducas",
       "afpa"
     ],
-    "familiaTematica": "FAM-04 Declaraciones Aduaneras (DUCAs); FAM-08 Auxiliares de la Función Pública Aduanera (AFPA)"
+    "familiaTematica": "FAM-04 Declaraciones Aduaneras (DUCAs); FAM-08 Auxiliares de la Función Pública Aduanera (AFPA)",
+    "codigos_legacy": [
+      "SAT-GES-0442-AGD"
+    ]
   },
   {
-    "id": "cnt-SAT-GES-0443-AGD",
+    "id": "cnt-SAT-GES-0443",
     "codigo": "SAT-GES-0443",
     "idOriginal": "SAT-GES-0443-AGD",
     "titulo": "Legislación aduanera y financiera (Decreto 1236 y RECAUCA)",
@@ -21231,11 +21249,14 @@
         "pasoNo": 2,
         "pasoAccion": "Conoce las sanciones y leyes"
       }
+    ],
+    "codigos_legacy": [
+      "SAT-GES-0443-AGD"
     ]
   },
   {
-    "id": "cnt-SAT-GES-0444-ZDEEP-USR",
-    "codigo": "SAT-GES-0444",
+    "id": "cnt-SAT-GES-0707",
+    "codigo": "SAT-GES-0707",
     "idOriginal": "SAT-GES-0444-ZDEEP-USR",
     "titulo": "Procedimientos, instructivos y guías para gestiones aduaneras",
     "nombreActual": "Procedimientos, instructivos y guías para gestiones aduaneras",
@@ -21304,11 +21325,15 @@
         "pasoNo": 2,
         "pasoAccion": "Prepárate"
       }
+    ],
+    "codigos_legacy": [
+      "SAT-GES-0444-ZDEEP-USR",
+      "SAT-GES-0444"
     ]
   },
   {
-    "id": "cnt-SAT-GES-0445-DAT",
-    "codigo": "SAT-GES-0445",
+    "id": "cnt-SAT-GES-0701",
+    "codigo": "SAT-GES-0701",
     "idOriginal": "SAT-GES-0445-DAT",
     "titulo": "Programa de modernización integral aduanera (MIAD)",
     "nombreActual": "Programa de modernización integral aduanera (MIAD)",
@@ -21358,11 +21383,15 @@
       "ducas",
       "afpa"
     ],
-    "familiaTematica": "FAM-04 Declaraciones Aduaneras (DUCAs); FAM-08 Auxiliares de la Función Pública Aduanera (AFPA)"
+    "familiaTematica": "FAM-04 Declaraciones Aduaneras (DUCAs); FAM-08 Auxiliares de la Función Pública Aduanera (AFPA)",
+    "codigos_legacy": [
+      "SAT-GES-0445-DAT",
+      "SAT-GES-0445"
+    ]
   },
   {
-    "id": "cnt-SAT-GES-0446-DAT",
-    "codigo": "SAT-GES-0446",
+    "id": "cnt-SAT-GES-0702",
+    "codigo": "SAT-GES-0702",
     "idOriginal": "SAT-GES-0446-DAT",
     "titulo": "Recepción de seguro de caución y pólizas de garantía operativa",
     "nombreActual": "Recepción de seguro de caución y pólizas de garantía operativa",
@@ -21406,10 +21435,14 @@
       "ducas",
       "afpa"
     ],
-    "familiaTematica": "FAM-04 Declaraciones Aduaneras (DUCAs); FAM-08 Auxiliares de la Función Pública Aduanera (AFPA)"
+    "familiaTematica": "FAM-04 Declaraciones Aduaneras (DUCAs); FAM-08 Auxiliares de la Función Pública Aduanera (AFPA)",
+    "codigos_legacy": [
+      "SAT-GES-0446-DAT",
+      "SAT-GES-0446"
+    ]
   },
   {
-    "id": "cnt-SAT-GES-0447-AGD",
+    "id": "cnt-SAT-GES-0447",
     "codigo": "SAT-GES-0447",
     "idOriginal": "SAT-GES-0447-AGD",
     "titulo": "Registro y emisión de títulos de crédito (Certificados de depósito y bonos de prenda)",
@@ -21457,10 +21490,13 @@
         "pasoNo": 1,
         "pasoAccion": "Conoce los requisitos"
       }
+    ],
+    "codigos_legacy": [
+      "SAT-GES-0447-AGD"
     ]
   },
   {
-    "id": "cnt-SAT-GES-0448-AGD",
+    "id": "cnt-SAT-GES-0448",
     "codigo": "SAT-GES-0448",
     "idOriginal": "SAT-GES-0448-AGD",
     "titulo": "Reporte de saldos y existencias afianzadas ante SAT",
@@ -21508,10 +21544,13 @@
         "pasoNo": 3,
         "pasoAccion": "Opera en los sistemas"
       }
+    ],
+    "codigos_legacy": [
+      "SAT-GES-0448-AGD"
     ]
   },
   {
-    "id": "cnt-SAT-GES-0449-AGD",
+    "id": "cnt-SAT-GES-0449",
     "codigo": "SAT-GES-0449",
     "idOriginal": "SAT-GES-0449-AGD",
     "titulo": "Solvencia fiscal (Requisito indispensable de renovación como auxiliar aduanero AFPA)",
@@ -21566,6 +21605,9 @@
         "pasoNo": 1,
         "pasoAccion": "Ponte al día antes de cerrar"
       }
+    ],
+    "codigos_legacy": [
+      "SAT-GES-0449-AGD"
     ]
   },
   {
@@ -21663,7 +21705,7 @@
     ]
   },
   {
-    "id": "cnt-SAT-GES-0452-DAT",
+    "id": "cnt-SAT-GES-0452",
     "codigo": "SAT-GES-0452",
     "idOriginal": "SAT-GES-0452-DAT",
     "titulo": "Consultas de aduanas (Asignación a rampa de revisión, revisores, retención y liberación)",
@@ -21703,10 +21745,13 @@
       "ducas",
       "afpa"
     ],
-    "familiaTematica": "FAM-04 Declaraciones Aduaneras (DUCAs); FAM-08 Auxiliares de la Función Pública Aduanera (AFPA)"
+    "familiaTematica": "FAM-04 Declaraciones Aduaneras (DUCAs); FAM-08 Auxiliares de la Función Pública Aduanera (AFPA)",
+    "codigos_legacy": [
+      "SAT-GES-0452-DAT"
+    ]
   },
   {
-    "id": "cnt-SAT-GES-0453-DAT",
+    "id": "cnt-SAT-GES-0453",
     "codigo": "SAT-GES-0453",
     "idOriginal": "SAT-GES-0453-DAT",
     "titulo": "Control de descarga, ingreso de bultos y actas de recepción DAT",
@@ -21754,10 +21799,13 @@
         "pasoNo": 3,
         "pasoAccion": "Opera en los sistemas"
       }
+    ],
+    "codigos_legacy": [
+      "SAT-GES-0453-DAT"
     ]
   },
   {
-    "id": "cnt-SAT-GES-0454-DAT",
+    "id": "cnt-SAT-GES-0454",
     "codigo": "SAT-GES-0454",
     "idOriginal": "SAT-GES-0454-DAT",
     "titulo": "Legislación aduanera (RECAUCA Art. 119 - Disposiciones sobre depósitos)",
@@ -21805,10 +21853,13 @@
         "pasoNo": 2,
         "pasoAccion": "Conoce las sanciones y leyes"
       }
+    ],
+    "codigos_legacy": [
+      "SAT-GES-0454-DAT"
     ]
   },
   {
-    "id": "cnt-SAT-GES-0455-DAT",
+    "id": "cnt-SAT-GES-0455",
     "codigo": "SAT-GES-0455",
     "idOriginal": "SAT-GES-0455-DAT",
     "titulo": "Monitoreo de sistemas informáticos de aduanas",
@@ -21855,10 +21906,13 @@
       "ducas",
       "afpa"
     ],
-    "familiaTematica": "FAM-03 Registro Tributario Unificado (RTU) Digital; FAM-04 Declaraciones Aduaneras (DUCAs); FAM-08 Auxiliares de la Función Pública Aduanera (AFPA)"
+    "familiaTematica": "FAM-03 Registro Tributario Unificado (RTU) Digital; FAM-04 Declaraciones Aduaneras (DUCAs); FAM-08 Auxiliares de la Función Pública Aduanera (AFPA)",
+    "codigos_legacy": [
+      "SAT-GES-0455-DAT"
+    ]
   },
   {
-    "id": "cnt-SAT-GES-0456-DAT",
+    "id": "cnt-SAT-GES-0456",
     "codigo": "SAT-GES-0456",
     "idOriginal": "SAT-GES-0456-DAT",
     "titulo": "Registro de admisión temporal de contenedores terrestres y su ampliación",
@@ -21898,10 +21952,13 @@
       "ducas",
       "afpa"
     ],
-    "familiaTematica": "FAM-04 Declaraciones Aduaneras (DUCAs); FAM-08 Auxiliares de la Función Pública Aduanera (AFPA)"
+    "familiaTematica": "FAM-04 Declaraciones Aduaneras (DUCAs); FAM-08 Auxiliares de la Función Pública Aduanera (AFPA)",
+    "codigos_legacy": [
+      "SAT-GES-0456-DAT"
+    ]
   },
   {
-    "id": "cnt-SAT-GES-0457-DAT",
+    "id": "cnt-SAT-GES-0457",
     "codigo": "SAT-GES-0457",
     "idOriginal": "SAT-GES-0457-DAT",
     "titulo": "Requisitos para habilitación y delimitación de recintos aduaneros temporales (DAT)",
@@ -21949,10 +22006,13 @@
         "pasoNo": 1,
         "pasoAccion": "Conoce los requisitos"
       }
+    ],
+    "codigos_legacy": [
+      "SAT-GES-0457-DAT"
     ]
   },
   {
-    "id": "cnt-SAT-GES-0458-DAT",
+    "id": "cnt-SAT-GES-0458",
     "codigo": "SAT-GES-0458",
     "idOriginal": "SAT-GES-0458-DAT",
     "titulo": "Sistema de cobro por permanencia en el país",
@@ -21992,7 +22052,10 @@
       "ducas",
       "afpa"
     ],
-    "familiaTematica": "FAM-04 Declaraciones Aduaneras (DUCAs); FAM-08 Auxiliares de la Función Pública Aduanera (AFPA)"
+    "familiaTematica": "FAM-04 Declaraciones Aduaneras (DUCAs); FAM-08 Auxiliares de la Función Pública Aduanera (AFPA)",
+    "codigos_legacy": [
+      "SAT-GES-0458-DAT"
+    ]
   },
   {
     "id": "cnt-SAT-GES-0459",
@@ -23439,7 +23502,7 @@
     "familiaTematica": "FAM-06 Regímenes Especiales y Maquilas (Dto. 29-89)"
   },
   {
-    "id": "cnt-SAT-GES-0488-ZDEEP-USR",
+    "id": "cnt-SAT-GES-0488",
     "codigo": "SAT-GES-0488",
     "idOriginal": "SAT-GES-0488-ZDEEP-USR",
     "titulo": "Capacitaciones aduaneras y tributarias",
@@ -23479,10 +23542,13 @@
       "ducas",
       "zdeep"
     ],
-    "familiaTematica": "FAM-04 Declaraciones Aduaneras (DUCAs); FAM-07 Zonas de Desarrollo Económico Especial Público (ZDEEP)"
+    "familiaTematica": "FAM-04 Declaraciones Aduaneras (DUCAs); FAM-07 Zonas de Desarrollo Económico Especial Público (ZDEEP)",
+    "codigos_legacy": [
+      "SAT-GES-0488-ZDEEP-USR"
+    ]
   },
   {
-    "id": "cnt-SAT-GES-0489-ZDEEP-USR",
+    "id": "cnt-SAT-GES-0489",
     "codigo": "SAT-GES-0489",
     "idOriginal": "SAT-GES-0489-ZDEEP-USR",
     "titulo": "Consulta y facilidades de pago de convenios",
@@ -23531,10 +23597,13 @@
         "pasoNo": 5,
         "pasoAccion": "Si no puedes pagar todo"
       }
+    ],
+    "codigos_legacy": [
+      "SAT-GES-0489-ZDEEP-USR"
     ]
   },
   {
-    "id": "cnt-SAT-GES-0490-ZDEEP-USR",
+    "id": "cnt-SAT-GES-0490",
     "codigo": "SAT-GES-0490",
     "idOriginal": "SAT-GES-0490-ZDEEP-USR",
     "titulo": "Consultas de aduanas (Arancel integrado, rampa de revisión, retención y liberación)",
@@ -23574,10 +23643,13 @@
       "ducas",
       "zdeep"
     ],
-    "familiaTematica": "FAM-04 Declaraciones Aduaneras (DUCAs); FAM-07 Zonas de Desarrollo Económico Especial Público (ZDEEP)"
+    "familiaTematica": "FAM-04 Declaraciones Aduaneras (DUCAs); FAM-07 Zonas de Desarrollo Económico Especial Público (ZDEEP)",
+    "codigos_legacy": [
+      "SAT-GES-0490-ZDEEP-USR"
+    ]
   },
   {
-    "id": "cnt-SAT-GES-0491-ZDEEP-USR",
+    "id": "cnt-SAT-GES-0491",
     "codigo": "SAT-GES-0491",
     "idOriginal": "SAT-GES-0491-ZDEEP-USR",
     "titulo": "Control, descargo y reporte periódico de inventarios de transformación",
@@ -23625,10 +23697,13 @@
         "pasoNo": 3,
         "pasoAccion": "Opera en los sistemas"
       }
+    ],
+    "codigos_legacy": [
+      "SAT-GES-0491-ZDEEP-USR"
     ]
   },
   {
-    "id": "cnt-SAT-GES-0492-ZDEEP-USR",
+    "id": "cnt-SAT-GES-0492",
     "codigo": "SAT-GES-0492",
     "idOriginal": "SAT-GES-0492-ZDEEP-USR",
     "titulo": "Declaración anticipada de mercancías",
@@ -23676,10 +23751,13 @@
         "pasoNo": 3,
         "pasoAccion": "Agiliza tus despachos"
       }
+    ],
+    "codigos_legacy": [
+      "SAT-GES-0492-ZDEEP-USR"
     ]
   },
   {
-    "id": "cnt-SAT-GES-0493-ZDEEP-USR",
+    "id": "cnt-SAT-GES-0493",
     "codigo": "SAT-GES-0493",
     "idOriginal": "SAT-GES-0493-ZDEEP-USR",
     "titulo": "Declaración de mercancías (DUCA, tránsitos aduaneros y aduana sin papeles)",
@@ -23727,10 +23805,13 @@
         "pasoNo": 3,
         "pasoAccion": "Opera en los sistemas"
       }
+    ],
+    "codigos_legacy": [
+      "SAT-GES-0493-ZDEEP-USR"
     ]
   },
   {
-    "id": "cnt-SAT-GES-0494-ZDEEP-USR",
+    "id": "cnt-SAT-GES-0494",
     "codigo": "SAT-GES-0494",
     "idOriginal": "SAT-GES-0494-ZDEEP-USR",
     "titulo": "Legislación aduanera y tributaria (Exenciones y marco legal de Zonas Especiales ZDEEP)",
@@ -23778,10 +23859,13 @@
         "pasoNo": 2,
         "pasoAccion": "Conoce las sanciones y leyes"
       }
+    ],
+    "codigos_legacy": [
+      "SAT-GES-0494-ZDEEP-USR"
     ]
   },
   {
-    "id": "cnt-SAT-GES-0495-ZDEEP-USR",
+    "id": "cnt-SAT-GES-0495",
     "codigo": "SAT-GES-0495",
     "idOriginal": "SAT-GES-0495-ZDEEP-USR",
     "titulo": "Preguntas frecuentes sobre temas aduaneros y cumplimiento",
@@ -23821,10 +23905,13 @@
       "ducas",
       "zdeep"
     ],
-    "familiaTematica": "FAM-04 Declaraciones Aduaneras (DUCAs); FAM-07 Zonas de Desarrollo Económico Especial Público (ZDEEP)"
+    "familiaTematica": "FAM-04 Declaraciones Aduaneras (DUCAs); FAM-07 Zonas de Desarrollo Económico Especial Público (ZDEEP)",
+    "codigos_legacy": [
+      "SAT-GES-0495-ZDEEP-USR"
+    ]
   },
   {
-    "id": "cnt-SAT-GES-0496-ZDEEP-USR",
+    "id": "cnt-SAT-GES-0496",
     "codigo": "SAT-GES-0496",
     "idOriginal": "SAT-GES-0496-ZDEEP-USR",
     "titulo": "Procedimiento aduanero de traslado de mercancías hacia y desde Zonas Especiales (ZDEEP)",
@@ -23872,10 +23959,13 @@
         "pasoNo": 3,
         "pasoAccion": "Opera en los sistemas"
       }
+    ],
+    "codigos_legacy": [
+      "SAT-GES-0496-ZDEEP-USR"
     ]
   },
   {
-    "id": "cnt-SAT-GES-0497-ZDEEP-USR",
+    "id": "cnt-SAT-GES-0497",
     "codigo": "SAT-GES-0497",
     "idOriginal": "SAT-GES-0497-ZDEEP-USR",
     "titulo": "Registro de empresas usuarias calificadas en Zonas Especiales (ZDEEP) ante SAT",
@@ -23923,10 +24013,13 @@
         "pasoNo": 1,
         "pasoAccion": "Conoce los requisitos"
       }
+    ],
+    "codigos_legacy": [
+      "SAT-GES-0497-ZDEEP-USR"
     ]
   },
   {
-    "id": "cnt-SAT-GES-0498-ZDEEP-USR",
+    "id": "cnt-SAT-GES-0498",
     "codigo": "SAT-GES-0498",
     "idOriginal": "SAT-GES-0498-ZDEEP-USR",
     "titulo": "Régimen de factura electrónica en línea (FEL)",
@@ -23993,10 +24086,13 @@
         "pasoNo": 4,
         "pasoAccion": "Ajusta tu facturación"
       }
+    ],
+    "codigos_legacy": [
+      "SAT-GES-0498-ZDEEP-USR"
     ]
   },
   {
-    "id": "cnt-SAT-GES-0499-ZDEEP-USR",
+    "id": "cnt-SAT-GES-0499",
     "codigo": "SAT-GES-0499",
     "idOriginal": "SAT-GES-0499-ZDEEP-USR",
     "titulo": "Solvencia fiscal (Requisito obligatorio para goce de incentivos tributarios)",
@@ -24051,10 +24147,13 @@
         "pasoNo": 1,
         "pasoAccion": "Ponte al día antes de cerrar"
       }
+    ],
+    "codigos_legacy": [
+      "SAT-GES-0499-ZDEEP-USR"
     ]
   },
   {
-    "id": "cnt-SAT-GES-0500-ZDEEP-ADM",
+    "id": "cnt-SAT-GES-0500",
     "codigo": "SAT-GES-0500",
     "idOriginal": "SAT-GES-0500-ZDEEP-ADM",
     "titulo": "Capacitaciones institucionales y cultura tributaria",
@@ -24094,10 +24193,13 @@
       "ducas",
       "zdeep"
     ],
-    "familiaTematica": "FAM-04 Declaraciones Aduaneras (DUCAs); FAM-07 Zonas de Desarrollo Económico Especial Público (ZDEEP)"
+    "familiaTematica": "FAM-04 Declaraciones Aduaneras (DUCAs); FAM-07 Zonas de Desarrollo Económico Especial Público (ZDEEP)",
+    "codigos_legacy": [
+      "SAT-GES-0500-ZDEEP-ADM"
+    ]
   },
   {
-    "id": "cnt-SAT-GES-0501-ZDEEP-ADM",
+    "id": "cnt-SAT-GES-0501",
     "codigo": "SAT-GES-0501",
     "idOriginal": "SAT-GES-0501-ZDEEP-ADM",
     "titulo": "Consulta facilidades de pago y convenios tributarios",
@@ -24146,10 +24248,13 @@
         "pasoNo": 5,
         "pasoAccion": "Si no puedes pagar todo"
       }
+    ],
+    "codigos_legacy": [
+      "SAT-GES-0501-ZDEEP-ADM"
     ]
   },
   {
-    "id": "cnt-SAT-GES-0502-ZDEEP-ADM",
+    "id": "cnt-SAT-GES-0502",
     "codigo": "SAT-GES-0502",
     "idOriginal": "SAT-GES-0502-ZDEEP-ADM",
     "titulo": "Consultas de aduanas (Retención, liberación, rampa y manifiestos de transporte)",
@@ -24189,10 +24294,13 @@
       "ducas",
       "zdeep"
     ],
-    "familiaTematica": "FAM-04 Declaraciones Aduaneras (DUCAs); FAM-07 Zonas de Desarrollo Económico Especial Público (ZDEEP)"
+    "familiaTematica": "FAM-04 Declaraciones Aduaneras (DUCAs); FAM-07 Zonas de Desarrollo Económico Especial Público (ZDEEP)",
+    "codigos_legacy": [
+      "SAT-GES-0502-ZDEEP-ADM"
+    ]
   },
   {
-    "id": "cnt-SAT-GES-0503-ZDEEP-ADM",
+    "id": "cnt-SAT-GES-0503",
     "codigo": "SAT-GES-0503",
     "idOriginal": "SAT-GES-0503-ZDEEP-ADM",
     "titulo": "Legislación aduanera y régimen especial de Zonas Especiales (ZDEEP) (Decreto 22-73 y reformas)",
@@ -24240,10 +24348,13 @@
         "pasoNo": 2,
         "pasoAccion": "Conoce las sanciones y leyes"
       }
+    ],
+    "codigos_legacy": [
+      "SAT-GES-0503-ZDEEP-ADM"
     ]
   },
   {
-    "id": "cnt-SAT-GES-0504-ZDEEP-ADM",
+    "id": "cnt-SAT-GES-0504",
     "codigo": "SAT-GES-0504",
     "idOriginal": "SAT-GES-0504-ZDEEP-ADM",
     "titulo": "Procedimiento de control para ingreso y egreso de carga en garita de Zonas Especiales (ZDEEP)",
@@ -24291,10 +24402,13 @@
         "pasoNo": 3,
         "pasoAccion": "Opera en los sistemas"
       }
+    ],
+    "codigos_legacy": [
+      "SAT-GES-0504-ZDEEP-ADM"
     ]
   },
   {
-    "id": "cnt-SAT-GES-0505-ZDEEP-ADM",
+    "id": "cnt-SAT-GES-0505",
     "codigo": "SAT-GES-0505",
     "idOriginal": "SAT-GES-0505-ZDEEP-ADM",
     "titulo": "Puestos de control interinstitucional (PCI) y rutas fiscales",
@@ -24348,10 +24462,13 @@
         "pasoNo": 2,
         "pasoAccion": "Operativos conjuntos"
       }
+    ],
+    "codigos_legacy": [
+      "SAT-GES-0505-ZDEEP-ADM"
     ]
   },
   {
-    "id": "cnt-SAT-GES-0506-ZDEEP-ADM",
+    "id": "cnt-SAT-GES-0506",
     "codigo": "SAT-GES-0506",
     "idOriginal": "SAT-GES-0506-ZDEEP-ADM",
     "titulo": "Registro y control de garitas aduaneras e infraestructura perimetral",
@@ -24399,10 +24516,13 @@
         "pasoNo": 3,
         "pasoAccion": "Opera en los sistemas"
       }
+    ],
+    "codigos_legacy": [
+      "SAT-GES-0506-ZDEEP-ADM"
     ]
   },
   {
-    "id": "cnt-SAT-GES-0507-ZDEEP-ADM",
+    "id": "cnt-SAT-GES-0507",
     "codigo": "SAT-GES-0507",
     "idOriginal": "SAT-GES-0507-ZDEEP-ADM",
     "titulo": "Requisitos para habilitación y delimitación perimetral del polígono de Zonas Especiales (ZDEEP)",
@@ -24450,10 +24570,13 @@
         "pasoNo": 1,
         "pasoAccion": "Conoce los requisitos"
       }
+    ],
+    "codigos_legacy": [
+      "SAT-GES-0507-ZDEEP-ADM"
     ]
   },
   {
-    "id": "cnt-SAT-GES-0508-ZDEEP-ADM",
+    "id": "cnt-SAT-GES-0508",
     "codigo": "SAT-GES-0508",
     "idOriginal": "SAT-GES-0508-ZDEEP-ADM",
     "titulo": "Solvencia fiscal (Requisito institucional de cumplimiento)",
@@ -24508,6 +24631,9 @@
         "pasoNo": 1,
         "pasoAccion": "Ponte al día antes de cerrar"
       }
+    ],
+    "codigos_legacy": [
+      "SAT-GES-0508-ZDEEP-ADM"
     ]
   },
   {
@@ -25643,7 +25769,7 @@
     "familiaTematica": "FAM-04 Declaraciones Aduaneras (DUCAs)"
   },
   {
-    "id": "cnt-SAT-GES-0534-DAT",
+    "id": "cnt-SAT-GES-0534",
     "codigo": "SAT-GES-0534",
     "idOriginal": "SAT-GES-0534-DAT",
     "titulo": "Requisitos, pasos y documentos para actualizar tus datos en Agencia Virtual.",
@@ -25684,7 +25810,10 @@
       "ducas",
       "agencia-virtual"
     ],
-    "familiaTematica": "FAM-03 Registro Tributario Unificado (RTU) Digital; FAM-04 Declaraciones Aduaneras (DUCAs); FAM-09 Agencia Virtual y Servicios Remotos"
+    "familiaTematica": "FAM-03 Registro Tributario Unificado (RTU) Digital; FAM-04 Declaraciones Aduaneras (DUCAs); FAM-09 Agencia Virtual y Servicios Remotos",
+    "codigos_legacy": [
+      "SAT-GES-0534-DAT"
+    ]
   },
   {
     "id": "cnt-SAT-GES-0535",

@@ -11,7 +11,8 @@ import {
   useNodesState,
   useEdgesState,
   NodeProps,
-  Panel
+  Panel,
+  useReactFlow
 } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 import {
@@ -29,30 +30,39 @@ import {
 } from 'lucide-react';
 import { SatIsologotipo } from '../components/SatIsologotipo';
 import rawTramites from '../data/allTramites.json';
+import { SEGMENT_DESCRIPTIONS, getTaxonDescription, TaxonDescription } from '../data/taxonomyDescriptions';
 
-// --- NIVEL 1: MACRO SEGMENTO (TIPO DE USUARIO 1) ---
+// --- NIVEL 1: MACRO-SEGMENTO ---
 export type SegmentKey = 'contribuyentes' | 'comercio_exterior' | 'profesionales' | 'entes_exentos';
 
-const SEGMENT_META: Record<SegmentKey, { name: string; color: string; desc: string }> = {
+const SEGMENT_META: Record<SegmentKey, { name: string; color: string; desc: string; que_es: string; base_juridica: string }> = {
   contribuyentes: {
     name: 'Contribuyentes',
     color: '#14649B',
-    desc: 'Información y servicios tributarios para personas individuales y jurídicas.'
+    desc: SEGMENT_DESCRIPTIONS['contribuyentes']?.lead_text || 'Información y servicios tributarios para personas individuales y jurídicas.',
+    que_es: SEGMENT_DESCRIPTIONS['contribuyentes']?.que_es || '',
+    base_juridica: SEGMENT_DESCRIPTIONS['contribuyentes']?.base_juridica || ''
   },
   comercio_exterior: {
     name: 'Operadores de Comercio Exterior',
     color: '#0284C7',
-    desc: 'Servicios e información aduanera para importación, exportación y auxiliares.'
+    desc: SEGMENT_DESCRIPTIONS['operadores-de-comercio-exterior']?.lead_text || 'Servicios e información aduanera para importación, exportación y logística.',
+    que_es: SEGMENT_DESCRIPTIONS['operadores-de-comercio-exterior']?.que_es || '',
+    base_juridica: SEGMENT_DESCRIPTIONS['operadores-de-comercio-exterior']?.base_juridica || ''
   },
   profesionales: {
     name: 'Profesionales',
     color: '#4D8014',
-    desc: 'Herramientas y habilitaciones para profesionales tributarios y auxiliares.'
+    desc: SEGMENT_DESCRIPTIONS['profesionales']?.lead_text || 'Herramientas y habilitaciones para profesionales tributarios y auxiliares.',
+    que_es: SEGMENT_DESCRIPTIONS['profesionales']?.que_es || '',
+    base_juridica: SEGMENT_DESCRIPTIONS['profesionales']?.base_juridica || ''
   },
   entes_exentos: {
     name: 'Entes Exentos',
     color: '#C25E00',
-    desc: 'Gestiones para entidades públicas, organizaciones no lucrativas y exenciones.'
+    desc: SEGMENT_DESCRIPTIONS['entes-exentos']?.lead_text || 'Gestiones para entidades públicas, organizaciones no lucrativas y exenciones.',
+    que_es: SEGMENT_DESCRIPTIONS['entes-exentos']?.que_es || '',
+    base_juridica: SEGMENT_DESCRIPTIONS['entes-exentos']?.base_juridica || ''
   }
 };
 
@@ -95,17 +105,20 @@ const ATO_FEATURE_META: Record<string, { label: string; bg: string; text: string
   }
 };
 
-// --- ESTRUCTURA DE CADA TRÁMITE ---
+// --- ESTRUCTURA DE CADA TRÁMITE (CANÓNICA DEL EXCEL) ---
 export interface FullTramiteItem {
   id: string;
   codigo: string;
   titulo: string;
   pillar: string;
-  categoria: string;
-  subcategoria: string;
+  nivel1_segmento: string;
+  nivel2_area: string;
+  nivel3_subarea: string;
+  nivel4_tema: string;
+  categoria?: string;
+  subcategoria?: string;
   tema?: string;
   subtema?: string;
-  nivel1_segmento: string;
   etapaAto: string;
   etapaAtoLabel: string;
   tipoInteraccionLabel: string;
@@ -115,9 +128,9 @@ export interface FullTramiteItem {
   url?: string;
 }
 
-// --- NODOS DE REACT FLOW (ROTULADOS POR NIVEL) ---
+// --- NODOS DE REACT FLOW (ROTULADOS POR NIVEL OFICIAL) ---
 
-// Nivel 1 — Tipo de Usuario
+// Nivel 1
 const NodeLevel1Component = ({ data }: NodeProps) => (
   <div
     className="w-72 bg-white border-2 rounded-xl p-4 shadow-md transition-transform hover:-translate-y-0.5"
@@ -132,14 +145,14 @@ const NodeLevel1Component = ({ data }: NodeProps) => (
     <p className="text-base font-black text-slate-900 mt-1">{data.name as string}</p>
     <p className="text-xs text-slate-600 mt-1 line-clamp-2">{data.desc as string}</p>
     <div className="mt-2 pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-600 font-semibold">
-      <span>Opciones de Nivel 2:</span>
-      <span className="font-bold text-slate-800">{data.n2Count as number} Tipos</span>
+      <span>Nodos en Nivel 2:</span>
+      <span className="font-bold text-slate-800">{data.n2Count as number} Áreas</span>
     </div>
     <Handle type="source" position={Position.Right} className="w-3 h-3 !bg-slate-700" />
   </div>
 );
 
-// Nivel 2 — Tipo de Contribuyente / Régimen
+// Nivel 2
 const NodeLevel2Component = ({ data }: NodeProps) => {
   const isSelected = data.isSelected as boolean;
   return (
@@ -171,7 +184,7 @@ const NodeLevel2Component = ({ data }: NodeProps) => {
   );
 };
 
-// Nivel 3 — Subtipo de Contribuyente o Contenido/Materia
+// Nivel 3
 const NodeLevel3Component = ({ data }: NodeProps) => {
   const isSelected = data.isSelected as boolean;
   return (
@@ -203,7 +216,7 @@ const NodeLevel3Component = ({ data }: NodeProps) => {
   );
 };
 
-// Nivel 4 — Tema / Contenido Específico
+// Nivel 4
 const NodeLevel4Component = ({ data }: NodeProps) => {
   const isSelected = data.isSelected as boolean;
   return (
@@ -235,7 +248,7 @@ const NodeLevel4Component = ({ data }: NodeProps) => {
   );
 };
 
-// Nivel 5 — Gestión / Servicio
+// Nivel 5 Oficial
 const NodeLevel5TramiteComponent = ({ data }: NodeProps) => {
   const atoStyle = ATO_FEATURE_META[data.etapaAto as string] || ATO_FEATURE_META.empezar;
   const handleInspect = () => {
@@ -256,7 +269,7 @@ const NodeLevel5TramiteComponent = ({ data }: NodeProps) => {
     >
       <Handle type="target" position={Position.Left} className="w-2.5 h-2.5 !bg-slate-600" />
       <div className="flex items-center justify-between text-[11px]">
-        <span className="font-black text-slate-700 uppercase tracking-wider">Nivel 5 — Gestión</span>
+        <span className="font-black text-slate-700 uppercase tracking-wider">Nivel 5</span>
         <span className="text-slate-600 font-mono text-xs">{data.codigo as string}</span>
       </div>
       <p className="text-xs font-bold text-slate-900 leading-snug group-hover:text-sky-800 transition-colors">
@@ -278,7 +291,7 @@ const NodeLevel5TramiteComponent = ({ data }: NodeProps) => {
       </div>
 
       <div className="pt-1 flex items-center justify-between text-[11px] text-sky-700 font-bold group-hover:underline">
-        <span>Inspeccionar ficha (L6-L8)</span>
+        <span>Ver detalle de la gestión</span>
         <ChevronRight className="w-3.5 h-3.5" />
       </div>
     </div>
@@ -309,12 +322,24 @@ interface SegmentTree {
   n2Branches: Record<string, CleanBranch>;
 }
 
+const AutoFitView: React.FC<{ activeKey: string }> = ({ activeKey }) => {
+  const { fitView } = useReactFlow();
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      fitView({ padding: 0.12, duration: 350 });
+    }, 60);
+    return () => clearTimeout(timer);
+  }, [activeKey, fitView]);
+  return null;
+};
+
 export const PortalFlowPage: React.FC = () => {
   const [selectedSegment, setSelectedSegment] = useState<SegmentKey>('contribuyentes');
   const [selectedN2, setSelectedN2] = useState<string>('');
   const [selectedN3, setSelectedN3] = useState<string>('');
   const [selectedN4, setSelectedN4] = useState<string>('');
   const [selectedTramite, setSelectedTramite] = useState<FullTramiteItem | null>(null);
+  const [selectedTaxonNode, setSelectedTaxonNode] = useState<TaxonDescription | null>(null);
   const [filtroCaracteristica, setFiltroCaracteristica] = useState<string>('todos');
   const [searchQuery, setSearchQuery] = useState<string>('');
 
@@ -334,14 +359,17 @@ export const PortalFlowPage: React.FC = () => {
 
       const tramiteItem: FullTramiteItem = {
         id: t.id,
-        codigo: t.id,
+        codigo: t.codigo || t.id,
         titulo: t.tramite || t.nombreActual || 'Trámite Oficial',
         pillar: segId,
-        categoria: t.categoria || 'General',
-        subcategoria: t.subcategoria || 'General',
-        tema: t.tema,
-        subtema: t.subtema,
         nivel1_segmento: t.nivel1_segmento || SEGMENT_META[segId].name,
+        nivel2_area: (t.nivel2_area || '').trim(),
+        nivel3_subarea: (t.nivel3_subarea || '').trim(),
+        nivel4_tema: (t.nivel4_tema || '').trim(),
+        categoria: t.categoria || '',
+        subcategoria: t.subcategoria || '',
+        tema: t.tema || '',
+        subtema: t.subtema || '',
         etapaAto: t.etapaAto || 'empezar',
         etapaAtoLabel: t.etapaAtoLabel || 'Empezar y registrarse',
         tipoInteraccionLabel: t.tipoInteraccionLabel || 'Guía Informativa',
@@ -353,19 +381,9 @@ export const PortalFlowPage: React.FC = () => {
 
       tree[segId].total++;
 
-      // NIVEL 2: SIEMPRE TIPO DE CONTRIBUYENTE / USUARIO
-      let n2Key = t.categoria;
-      if (segId === 'contribuyentes') {
-        if (t.categoria === 'NIT sin Obligaciones') {
-          n2Key = 'NIT sin Obligaciones';
-        } else if (t.categoria === 'Pequeños Contribuyentes') {
-          n2Key = 'Pequeños Contribuyentes';
-        } else if (t.categoria === 'Contribuyentes Especiales') {
-          n2Key = 'Contribuyentes Especiales';
-        } else {
-          n2Key = 'Contribuyente General';
-        }
-      }
+      // NIVEL 2: Área oficial (de la columna Nivel 2 del Excel)
+      const n2Key = tramiteItem.nivel2_area;
+      if (!n2Key || n2Key === '—') return;
 
       if (!tree[segId].n2Branches[n2Key]) {
         tree[segId].n2Branches[n2Key] = {
@@ -378,70 +396,77 @@ export const PortalFlowPage: React.FC = () => {
       tree[segId].n2Branches[n2Key].total++;
       tree[segId].n2Branches[n2Key].tramites.push(tramiteItem);
 
-      // Agrupación para Nivel 3:
-      // En Contribuyente General, la materia de contenido es la categoría específica
-      let n3Key = t.subcategoria;
-      if (segId === 'contribuyentes' && n2Key === 'Contribuyente General') {
-        n3Key = t.categoria;
-      }
+      // NIVEL 3: Subárea oficial (de la columna Nivel 3 del Excel, donde exista)
+      const n3Key = (tramiteItem.nivel3_subarea && tramiteItem.nivel3_subarea !== '—') ? tramiteItem.nivel3_subarea : '';
 
-      const n2Node = tree[segId].n2Branches[n2Key];
-      if (!n2Node.subBranches![n3Key]) {
-        n2Node.subBranches![n3Key] = {
-          name: n3Key,
-          total: 0,
-          tramites: [],
-          subBranches: {}
-        };
-      }
-      n2Node.subBranches![n3Key].total++;
-      n2Node.subBranches![n3Key].tramites.push(tramiteItem);
-
-      // Agrupación para Nivel 4 (si aplica):
-      const n4Key = t.tema || t.subtema || '';
-      if (n4Key) {
-        const n3Node = n2Node.subBranches![n3Key];
-        if (!n3Node.subBranches![n4Key]) {
-          n3Node.subBranches![n4Key] = {
-            name: n4Key,
+      if (n3Key) {
+        const n2Node = tree[segId].n2Branches[n2Key];
+        if (!n2Node.subBranches![n3Key]) {
+          n2Node.subBranches![n3Key] = {
+            name: n3Key,
             total: 0,
-            tramites: []
+            tramites: [],
+            subBranches: {}
           };
         }
-        n3Node.subBranches![n4Key].total++;
-        n3Node.subBranches![n4Key].tramites.push(tramiteItem);
+        n2Node.subBranches![n3Key].total++;
+        n2Node.subBranches![n3Key].tramites.push(tramiteItem);
+
+        // NIVEL 4: Tema oficial (de la columna Nivel 4 del Excel, donde exista)
+        const n4Key = (tramiteItem.nivel4_tema && tramiteItem.nivel4_tema !== '—') ? tramiteItem.nivel4_tema : '';
+
+        if (n4Key) {
+          const n3Node = n2Node.subBranches![n3Key];
+          if (!n3Node.subBranches![n4Key]) {
+            n3Node.subBranches![n4Key] = {
+              name: n4Key,
+              total: 0,
+              tramites: []
+            };
+          }
+          n3Node.subBranches![n4Key].total++;
+          n3Node.subBranches![n4Key].tramites.push(tramiteItem);
+        }
       }
     });
 
     return tree;
   }, []);
 
-  // Orden preferencial oficial de Nivel 2
+  // Orden oficial de Nivel 2
   const n2Keys = useMemo(() => {
     const current = fullTree[selectedSegment];
     const keys = Object.keys(current?.n2Branches || {});
     if (selectedSegment === 'contribuyentes') {
-      const order = ['NIT sin Obligaciones', 'Pequeños Contribuyentes', 'Contribuyente General', 'Contribuyentes Especiales'];
-      return order.filter((k) => keys.includes(k));
+      const order = ['Sin Obligaciones', 'Pequeños Contribuyentes', 'Contribuyente General', 'Contribuyentes Especiales'];
+      const sorted = order.filter((k) => keys.includes(k));
+      const remaining = keys.filter((k) => !order.includes(k));
+      return [...sorted, ...remaining];
     }
     return keys;
   }, [selectedSegment, fullTree]);
 
-  // Sincronizar selección inicial
+  // Sincronizar selección inicial de forma fiel a los datos existentes
   useEffect(() => {
     if (n2Keys.length > 0) {
-      const firstN2 = n2Keys[0];
-      setSelectedN2(firstN2);
+      const activeN2 = selectedN2 && n2Keys.includes(selectedN2) ? selectedN2 : n2Keys[0];
+      setSelectedN2(activeN2);
 
-      const n2Data = fullTree[selectedSegment].n2Branches[firstN2];
+      const n2Data = fullTree[selectedSegment]?.n2Branches[activeN2];
       const rawSub = Object.keys(n2Data?.subBranches || {});
 
-      // REGLA DE COLAPSO: Si subBranches <= 2, se colapsa y no hay Nivel 3 intermedio
-      if (rawSub.length > 2) {
-        setSelectedN3(rawSub[0]);
-        const n3Data = n2Data.subBranches![rawSub[0]];
+      if (rawSub.length > 0) {
+        const activeN3 = selectedN3 && rawSub.includes(selectedN3) ? selectedN3 : rawSub[0];
+        setSelectedN3(activeN3);
+
+        const n3Data = n2Data.subBranches![activeN3];
         const rawN4 = Object.keys(n3Data?.subBranches || {});
-        setSelectedN4(rawN4.length > 2 ? rawN4[0] : '');
+        if (rawN4.length > 0) {
+          const activeN4 = selectedN4 && rawN4.includes(selectedN4) ? selectedN4 : rawN4[0];
+          setSelectedN4(activeN4);
+        } else {
+          setSelectedN4('');
+        }
       } else {
         setSelectedN3('');
         setSelectedN4('');
@@ -496,11 +521,10 @@ export const PortalFlowPage: React.FC = () => {
       const isN2Selected = n2Key === selectedN2;
       const subBranchesCount = Object.keys(n2Obj.subBranches || {}).length;
 
-      // Texto descriptivo según si colapsa o ramifica
       const detailText =
-        subBranchesCount <= 2
-          ? 'Trámites directos (Regla colapso)'
-          : `${subBranchesCount} ramas de contenido`;
+        subBranchesCount > 0
+          ? `${subBranchesCount} nodos (Nivel 3)`
+          : `${n2Obj.total} gestiones directas`;
 
       nodes.push({
         id: n2NodeId,
@@ -534,30 +558,29 @@ export const PortalFlowPage: React.FC = () => {
     const activeN2Idx = n2Keys.indexOf(selectedN2);
     const activeN2NodeId = `n2-${activeN2Idx >= 0 ? activeN2Idx : 0}`;
 
-    // APLICACIÓN DE LA REGLA DE COLAPSO:
+    // EVALUACIÓN DE N3:
     const n3BranchesList = Object.entries(activeN2Obj.subBranches || {});
-    const n2HasDirectTramites = n3BranchesList.length <= 2;
 
-    if (n2HasDirectTramites) {
-      // COLAPSO: Nivel 2 va DIRECTAMENTE a sus trámites (Nivel 5) sin nivel intermedio de 1 o 2 cards
-      let tramitesDirectos = activeN2Obj.tramites;
+    // CASO 1: Rama sin N3 (ej. OEA donde no existen subáreas)
+    if (n3BranchesList.length === 0) {
+      let tramitesList = activeN2Obj.tramites;
       if (filtroCaracteristica !== 'todos') {
-        tramitesDirectos = tramitesDirectos.filter((t) => t.etapaAto === filtroCaracteristica);
+        tramitesList = tramitesList.filter((t) => t.etapaAto === filtroCaracteristica);
       }
       if (searchQuery.trim().length > 1) {
-        tramitesDirectos = tramitesDirectos.filter(
+        tramitesList = tramitesList.filter(
           (t) =>
             t.titulo.toLowerCase().includes(searchQuery.toLowerCase()) ||
             t.codigo.toLowerCase().includes(searchQuery.toLowerCase())
         );
       }
 
-      tramitesDirectos.slice(0, 16).forEach((trItem, trIdx) => {
+      tramitesList.slice(0, 16).forEach((trItem, trIdx) => {
         const tramiteNodeId = `t-direct-${trIdx}`;
         nodes.push({
           id: tramiteNodeId,
           type: 'tramiteNode',
-          position: { x: 670, y: 40 + trIdx * 135 },
+          position: { x: 700, y: 40 + trIdx * 135 },
           data: {
             id: trItem.id,
             codigo: trItem.codigo,
@@ -578,20 +601,20 @@ export const PortalFlowPage: React.FC = () => {
         });
       });
     } else {
-      // RAMIFICACIÓN LEGÍTIMA (>= 3 ramas): DESPLEGAR NIVEL 3
-      const activeN3Key = selectedN3 || (n3BranchesList[0] ? n3BranchesList[0][0] : '');
+      // CASO 2: NIVEL 3 EXISTE — SE RENDERIZAN TODAS LAS SUBÁREAS N3
+      const activeN3Key = (selectedN3 && activeN2Obj.subBranches![selectedN3]) ? selectedN3 : n3BranchesList[0][0];
 
       n3BranchesList.forEach(([n3Name, n3Obj], sIdx) => {
         const n3NodeId = `n3-${sIdx}`;
         const isN3Selected = n3Name === activeN3Key;
         const subCount = Object.keys(n3Obj.subBranches || {}).length;
         const detailText =
-          subCount <= 2 ? `${n3Obj.total} trámites directos` : `${subCount} temas específicos`;
+          subCount > 0 ? `${subCount} nodos (Nivel 4)` : `${n3Obj.total} gestiones directas`;
 
         nodes.push({
           id: n3NodeId,
           type: 'level3Node',
-          position: { x: 670, y: 40 + sIdx * 115 },
+          position: { x: 700, y: 40 + sIdx * 115 },
           data: {
             name: n3Name,
             count: n3Obj.total,
@@ -619,10 +642,10 @@ export const PortalFlowPage: React.FC = () => {
         const activeN3NodeId = `n3-${activeN3Idx >= 0 ? activeN3Idx : 0}`;
 
         const n4BranchesList = Object.entries(activeN3Obj.subBranches || {});
-        const n3HasDirectTramites = n4BranchesList.length <= 2;
 
-        if (n3HasDirectTramites) {
-          // COLAPSO: Nivel 3 va DIRECTAMENTE a sus trámites (Nivel 5)
+        // SUB-CASO 2.A: ASIMETRÍA NATURAL — Nivel 4 no existe en esta rama (ej. Profesionales, Entes Exentos)
+        // Las gestiones cuelgan directamente de Nivel 3 en Columna 4 (x = 1050)
+        if (n4BranchesList.length === 0) {
           let tramitesList = activeN3Obj.tramites;
           if (filtroCaracteristica !== 'todos') {
             tramitesList = tramitesList.filter((t) => t.etapaAto === filtroCaracteristica);
@@ -640,7 +663,7 @@ export const PortalFlowPage: React.FC = () => {
             nodes.push({
               id: tramiteNodeId,
               type: 'tramiteNode',
-              position: { x: 990, y: 40 + trIdx * 135 },
+              position: { x: 1050, y: 40 + trIdx * 135 },
               data: {
                 id: trItem.id,
                 codigo: trItem.codigo,
@@ -661,8 +684,8 @@ export const PortalFlowPage: React.FC = () => {
             });
           });
         } else {
-          // RAMIFICACIÓN LEGÍTIMA EN NIVEL 4 (>= 3 temas)
-          const activeN4Key = selectedN4 || (n4BranchesList[0] ? n4BranchesList[0][0] : '');
+          // SUB-CASO 2.B: NIVEL 4 SÍ EXISTE — SE RENDERIZAN TODOS LOS TEMAS DE NIVEL 4 (Columna 4, x = 1050)
+          const activeN4Key = (selectedN4 && activeN3Obj.subBranches![selectedN4]) ? selectedN4 : n4BranchesList[0][0];
 
           n4BranchesList.forEach(([n4Name, n4Obj], tIdx) => {
             const n4NodeId = `n4-${tIdx}`;
@@ -671,11 +694,11 @@ export const PortalFlowPage: React.FC = () => {
             nodes.push({
               id: n4NodeId,
               type: 'level4Node',
-              position: { x: 990, y: 40 + tIdx * 115 },
+              position: { x: 1050, y: 40 + tIdx * 115 },
               data: {
                 name: n4Name,
                 count: n4Obj.total,
-                detailText: `${n4Obj.total} trámites`,
+                detailText: `${n4Obj.total} gestiones`,
                 isSelected: isN4Selected,
                 n4Key: n4Name
               }
@@ -693,6 +716,7 @@ export const PortalFlowPage: React.FC = () => {
             });
           });
 
+          // Renderizar Nivel 5 (Gestiones del Nivel 4 activo en Columna 5, x = 1400)
           const activeN4Obj = activeN3Obj.subBranches![activeN4Key];
           if (activeN4Obj) {
             const activeN4Idx = n4BranchesList.findIndex(([k]) => k === activeN4Key);
@@ -715,7 +739,7 @@ export const PortalFlowPage: React.FC = () => {
               nodes.push({
                 id: tramiteNodeId,
                 type: 'tramiteNode',
-                position: { x: 1310, y: 40 + trIdx * 135 },
+                position: { x: 1400, y: 40 + trIdx * 135 },
                 data: {
                   id: trItem.id,
                   codigo: trItem.codigo,
@@ -762,17 +786,25 @@ export const PortalFlowPage: React.FC = () => {
 
   // Manejar clics en nodos del árbol
   const handleNodeClick = (_: React.MouseEvent, node: Node) => {
-    if (node.type === 'level2Node' && node.data.n2Key) {
+    if (node.type === 'macroNode') {
+      const segSlug = selectedSegment === 'comercio_exterior' ? 'operadores-de-comercio-exterior' : selectedSegment;
+      const taxon = getTaxonDescription(segSlug);
+      if (taxon) setSelectedTaxonNode(taxon);
+      setSelectedTramite(null);
+    } else if (node.type === 'level2Node' && node.data.n2Key) {
       const newN2 = node.data.n2Key as string;
       setSelectedN2(newN2);
+      const taxon = getTaxonDescription(newN2);
+      if (taxon) setSelectedTaxonNode(taxon);
+      setSelectedTramite(null);
 
       const n2Obj = fullTree[selectedSegment]?.n2Branches[newN2];
       const subKeys = Object.keys(n2Obj?.subBranches || {});
-      if (subKeys.length > 2) {
+      if (subKeys.length > 0) {
         setSelectedN3(subKeys[0]);
         const n3Obj = n2Obj?.subBranches![subKeys[0]];
         const n4Keys = Object.keys(n3Obj?.subBranches || {});
-        setSelectedN4(n4Keys.length > 2 ? n4Keys[0] : '');
+        setSelectedN4(n4Keys.length > 0 ? n4Keys[0] : '');
       } else {
         setSelectedN3('');
         setSelectedN4('');
@@ -780,17 +812,24 @@ export const PortalFlowPage: React.FC = () => {
     } else if (node.type === 'level3Node' && node.data.n3Key) {
       const newN3 = node.data.n3Key as string;
       setSelectedN3(newN3);
+      const taxon = getTaxonDescription(newN3);
+      if (taxon) setSelectedTaxonNode(taxon);
+      setSelectedTramite(null);
 
       const n3Obj = fullTree[selectedSegment]?.n2Branches[selectedN2]?.subBranches![newN3];
       const n4Keys = Object.keys(n3Obj?.subBranches || {});
-      setSelectedN4(n4Keys.length > 2 ? n4Keys[0] : '');
+      setSelectedN4(n4Keys.length > 0 ? n4Keys[0] : '');
     } else if (node.type === 'level4Node' && node.data.n4Key) {
-      setSelectedN4(node.data.n4Key as string);
+      const newN4 = node.data.n4Key as string;
+      setSelectedN4(newN4);
+      const taxon = getTaxonDescription(newN4);
+      if (taxon) setSelectedTaxonNode(taxon);
+      setSelectedTramite(null);
     }
   };
 
   return (
-    <div className="min-h-screen bg-slate-100 flex flex-col font-sans">
+    <div className="h-screen w-screen bg-slate-100 flex flex-col font-sans overflow-hidden">
       {/* 1. HEADER INSTITUCIONAL COMPLETO */}
       <header className="bg-sat-azul-oscuro text-white border-b border-sat-azul px-4 lg:px-6 py-2.5 flex flex-wrap items-center justify-between gap-3 shadow-md shrink-0">
         <div className="flex items-center gap-3">
@@ -820,20 +859,20 @@ export const PortalFlowPage: React.FC = () => {
 
         <div className="flex items-center gap-2">
           <span className="hidden sm:inline-flex text-[11px] font-bold px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
-            Regla de Colapso Taxonómico Activa (≤ 2 colapsa)
+            Jerarquía Oficial N1 → N5 (Excel Portal SAT)
           </span>
           <span className="text-[11px] font-black px-2.5 py-1 rounded-full bg-sky-500/20 text-sky-300 border border-sky-500/30">
-            683 Gestiones Canónicas Verificadas
+            715 Gestiones Canónicas
           </span>
         </div>
       </header>
 
       {/* 2. BARRA DE CONTROL DE LA TAXONOMÍA */}
       <section aria-label="Control de taxonomía y filtros" className="bg-white border-b border-slate-200 px-4 lg:px-6 py-3 flex flex-wrap items-center justify-between gap-3 shrink-0 shadow-xs">
-        {/* Nivel 1: Tipo de Usuario */}
+        {/* Nivel 1: Segmento */}
         <div className="flex items-center gap-2 flex-wrap">
           <span className="text-xs font-black text-slate-700 uppercase tracking-wider mr-1">
-            Nivel 1 (Tipo de Usuario):
+            Nivel 1:
           </span>
           {(['contribuyentes', 'comercio_exterior', 'profesionales', 'entes_exentos'] as SegmentKey[]).map((segId) => {
             const item = SEGMENT_META[segId];
@@ -895,102 +934,130 @@ export const PortalFlowPage: React.FC = () => {
       </section>
 
       {/* 3. CANVAS COMPLETO DE REACT FLOW (PÁGINA COMPLETA) */}
-      <main className="flex-1 w-full relative bg-slate-50 overflow-hidden min-h-[calc(100vh-125px)]">
-        <ReactFlow
-          nodes={nodes}
-          edges={edges}
-          onNodesChange={onNodesChange}
-          onEdgesChange={onEdgesChange}
-          onNodeClick={handleNodeClick}
-          nodeTypes={NODE_TYPES}
-          fitView
-          minZoom={0.2}
-          maxZoom={1.5}
-          attributionPosition="bottom-right"
-        >
-          <Background color="#cbd5e1" gap={20} size={1} />
-          <Controls showInteractive={false} />
-          <MiniMap
-            nodeColor={(node) => {
-              if (node.type === 'macroNode') return SEGMENT_META[selectedSegment].color;
-              if (node.type === 'level2Node') return '#0284c7';
-              if (node.type === 'level3Node') return '#10b981';
-              if (node.type === 'level4Node') return '#8b5cf6';
-              return '#64748b';
-            }}
-            className="!border !border-slate-200 !rounded-xl !bg-white/90 !shadow-sm"
-          />
+      <main className="flex-1 w-full relative bg-slate-50 overflow-hidden">
+        <div className="absolute inset-0 w-full h-full">
+          <ReactFlow
+            nodes={nodes}
+            edges={edges}
+            onNodesChange={onNodesChange}
+            onEdgesChange={onEdgesChange}
+            onNodeClick={handleNodeClick}
+            nodeTypes={NODE_TYPES}
+            fitView
+            minZoom={0.2}
+            maxZoom={1.5}
+            attributionPosition="bottom-right"
+          >
+            <AutoFitView activeKey={`${selectedSegment}-${selectedN2}-${selectedN3}-${selectedN4}`} />
+            <Background color="#cbd5e1" gap={20} size={1} />
+            <Controls showInteractive={false} />
+            <MiniMap
+              nodeColor={(node) => {
+                if (node.type === 'macroNode') return SEGMENT_META[selectedSegment].color;
+                if (node.type === 'level2Node') return '#0284c7';
+                if (node.type === 'level3Node') return '#10b981';
+                if (node.type === 'level4Node') return '#8b5cf6';
+                return '#64748b';
+              }}
+              className="!border !border-slate-200 !rounded-xl !bg-white/90 !shadow-sm"
+            />
 
-          {/* Panel Informativo de Metodología */}
-          <Panel position="bottom-left" className="bg-white/95 backdrop-blur-xs border border-slate-200 rounded-xl p-3.5 shadow-md text-xs space-y-1.5 max-w-md">
-            <div className="flex items-center gap-1.5 font-bold text-slate-900">
-              <Compass className="w-4 h-4 text-sky-700" />
-              <span>Metodología de Arquitectura de Niveles:</span>
-            </div>
-            <ul className="text-[11px] text-slate-700 space-y-1 font-medium">
-              <li>• <strong>Nivel 1 y 2:</strong> Estrictamente Tipos de Usuario / Contribuyentes.</li>
-              <li>• <strong>Nivel 3 hacia abajo:</strong> Subtipos de contribuyentes o contenido/gestión según la necesidad.</li>
-              <li>• <strong>Regla de Colapso Taxonómico:</strong> Si un nodo solo se subdivide en 1 o 2 ramas, no se crea un nivel intermedio; se colocan directamente en ese nivel.</li>
-              <li>• <strong>Característica ATO:</strong> Atributo transversal del trámite, no un orden jerárquico.</li>
-            </ul>
-          </Panel>
-        </ReactFlow>
+            {/* Panel Informativo de Metodología */}
+            <Panel position="bottom-left" className="bg-white/95 backdrop-blur-xs border border-slate-200 rounded-xl p-3.5 shadow-md text-xs space-y-1.5 max-w-md">
+              <div className="flex items-center gap-1.5 font-bold text-slate-900">
+                <Compass className="w-4 h-4 text-sky-700" />
+                <span>Estructura Taxonómica Oficial del Portal SAT:</span>
+              </div>
+              <ul className="text-[11px] text-slate-700 space-y-1 font-medium">
+                <li>• <strong>Nivel 1 a Nivel 5:</strong> Estructura canónica del Excel (Segmento → Área → Subárea → Tema → Gestión).</li>
+                <li>• <strong>Nivel 4 donde sí existe:</strong> Se despliega en los 577 trámites con tema específico.</li>
+                <li>• <strong>Asimetría Natural:</strong> Trámites sin Nivel 4 (o sin Nivel 3) se vinculan directamente al nivel superior sin crear niveles inventados.</li>
+                <li>• <strong>Ciclo ATO:</strong> Atributo transversal del trámite, reflejado en cada gestión.</li>
+              </ul>
+            </Panel>
+          </ReactFlow>
+        </div>
 
-        {/* 4. DRAWER LATERAL: INSPECTOR DE FICHA (NIVEL 5 + PROFUNDIZACIÓN L6-L8) */}
+        {/* 4. DRAWER LATERAL: FICHA OFICIAL DE GESTIÓN (NIVEL 5) */}
         {selectedTramite && (
-          <aside aria-label="Ficha de gestión e inspección procedural" className="absolute top-0 right-0 w-full sm:w-[480px] h-full bg-white border-l border-slate-200 shadow-2xl flex flex-col z-20 animate-in slide-in-from-right duration-200">
-            {/* Header del Inspector */}
+          <aside aria-label="Ficha oficial de gestión" className="absolute top-0 right-0 w-full sm:w-[480px] h-full bg-white border-l border-slate-200 shadow-2xl flex flex-col z-20 animate-in slide-in-from-right duration-200">
+            {/* Header de la Ficha */}
             <div className="px-5 py-4 border-b border-slate-200 bg-slate-50 flex items-center justify-between">
               <div>
                 <span className="text-[10px] font-black uppercase tracking-wider text-slate-600">
-                  Ficha de Gestión — Profundización
+                  Ficha Oficial de Gestión
                 </span>
                 <h2 className="text-sm font-black text-slate-900 leading-tight">
-                  Anatomía del Procedimiento
+                  Nivel 5 — Detalle del Trámite
                 </h2>
               </div>
               <button
                 onClick={() => setSelectedTramite(null)}
                 className="p-1.5 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-200 transition-colors"
-                aria-label="Cerrar inspector de gestión"
+                aria-label="Cerrar ficha de gestión"
               >
                 <X className="w-5 h-5" />
               </button>
             </div>
 
-            {/* Contenido del Inspector */}
+            {/* Contenido de la Ficha */}
             <div className="p-5 flex-1 overflow-y-auto space-y-4 text-xs">
-              {/* Ruta Oficial de Niveles */}
-              <div className="bg-slate-50 border border-slate-200 rounded-xl p-3 space-y-1">
+              {/* Ruta Oficial de Niveles en el Excel */}
+              <div className="bg-slate-50 border border-slate-200 rounded-xl p-3.5 space-y-2">
                 <span className="text-[10px] font-bold text-slate-600 uppercase tracking-wider">
-                  Ubicación en la Taxonomía:
+                  Jerarquía Taxonómica en el Portal SAT:
                 </span>
-                <div className="text-[11px] font-medium text-slate-800 flex flex-wrap items-center gap-1">
-                  <span className="font-semibold text-slate-900">{selectedTramite.nivel1_segmento}</span>
-                  <ChevronRight className="w-3 h-3 text-slate-400" />
-                  <span>{selectedTramite.categoria}</span>
-                  <ChevronRight className="w-3 h-3 text-slate-400" />
-                  <span className="font-semibold text-violet-700">{selectedTramite.subcategoria}</span>
+                <div className="space-y-1.5 text-xs text-slate-800">
+                  <div className="flex items-center gap-2">
+                    <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-slate-200 text-slate-700 w-16 text-center">Nivel 1</span>
+                    <span className="font-semibold text-slate-900">{selectedTramite.nivel1_segmento}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-sky-100 text-sky-800 w-16 text-center">Nivel 2</span>
+                    <span className="text-slate-800">{selectedTramite.nivel2_area}</span>
+                  </div>
+                  {selectedTramite.nivel3_subarea && selectedTramite.nivel3_subarea !== '—' && (
+                    <div className="flex items-center gap-2">
+                      <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-emerald-100 text-emerald-800 w-16 text-center">Nivel 3</span>
+                      <span className="text-slate-800">{selectedTramite.nivel3_subarea}</span>
+                    </div>
+                  )}
+                  {selectedTramite.nivel4_tema && selectedTramite.nivel4_tema !== '—' && (
+                    <div className="flex items-center gap-2">
+                      <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-violet-100 text-violet-800 w-16 text-center">Nivel 4</span>
+                      <span className="text-slate-800">{selectedTramite.nivel4_tema}</span>
+                    </div>
+                  )}
                 </div>
               </div>
 
-              {/* Título y Código (Nivel 5) */}
-              <div>
+              {/* Título y Código Oficial (Nivel 5) */}
+              <div className="border border-slate-200 rounded-xl p-3.5 bg-white space-y-2">
                 <div className="flex items-center justify-between">
-                  <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-sky-100 text-sky-800">
-                    Nivel 5 — Ficha
+                  <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-sky-100 text-sky-800 uppercase tracking-wider">
+                    Nivel 5 Oficial
                   </span>
-                  <span className="font-mono text-slate-600 text-xs">{selectedTramite.codigo}</span>
+                  <span className="font-mono text-slate-700 font-bold text-xs bg-slate-100 px-2 py-0.5 rounded">
+                    {selectedTramite.codigo}
+                  </span>
                 </div>
-                <h3 className="text-sm font-black text-slate-900 mt-1 leading-snug">
+                <h3 className="text-sm font-black text-slate-900 leading-snug">
                   {selectedTramite.titulo}
                 </h3>
-                <p className="text-slate-600 mt-1 text-xs leading-relaxed">
+              </div>
+
+              {/* ¿Para qué sirve? (Definición Operativa del Excel) */}
+              <div className="border border-slate-200 rounded-xl p-3.5 space-y-1.5">
+                <div className="flex items-center gap-2 text-slate-900 font-bold">
+                  <FileText className="w-4 h-4 text-sky-600" />
+                  <span>¿Para qué sirve? (Definición Operativa)</span>
+                </div>
+                <p className="text-xs text-slate-700 leading-relaxed pt-1">
                   {selectedTramite.descripcion}
                 </p>
               </div>
 
-              {/* CARACTERÍSTICA TRANSVERSAL DE CICLO DE VIDA (ATO) */}
+              {/* Atributo Transversal: Ciclo de Vida (ATO) */}
               <div className="p-3.5 rounded-xl border border-emerald-200 bg-emerald-50/50 space-y-1.5">
                 <div className="flex items-center gap-2">
                   <span className="text-base">
@@ -998,63 +1065,30 @@ export const PortalFlowPage: React.FC = () => {
                   </span>
                   <div>
                     <span className="text-[10px] font-black uppercase tracking-wider text-emerald-900">
-                      Característica Transversal de Ciclo de Vida:
+                      Ciclo de Vida del Contribuyente (ATO):
                     </span>
                     <p className="text-xs font-bold text-emerald-900">
                       {selectedTramite.etapaAtoLabel}
                     </p>
                   </div>
                 </div>
-                <p className="text-[11px] text-emerald-800 leading-tight">
-                  Esta categoría es un atributo transversal del contribuyente frente al ciclo tributario, no un orden de jerarquía en el portal.
-                </p>
               </div>
 
-              {/* NIVEL 6: PROCEDIMIENTO OPERATIVO */}
-              <div className="border border-slate-200 rounded-xl p-3.5 space-y-2">
-                <div className="flex items-center gap-2 text-slate-900 font-bold">
-                  <FileText className="w-4 h-4 text-sky-600" />
-                  <span>Nivel 6 — Procedimiento Operativo y Canales</span>
-                </div>
-                <div className="space-y-1.5 text-[11px] text-slate-700">
-                  <div className="flex items-center justify-between">
-                    <span className="text-slate-600">Canal / Modalidad:</span>
-                    <span className="font-semibold text-slate-900">{selectedTramite.tipoInteraccionLabel}</span>
-                  </div>
-                  <ol className="list-decimal list-inside space-y-1 text-slate-700 pt-1">
-                    <li>Verificación de requisitos y validación de solvencia fiscal.</li>
-                    <li>Ingreso a plataforma institucional o presentación de expediente.</li>
-                    <li>Generación y entrega de constancia o resolución oficial.</li>
-                  </ol>
+              {/* Tipo de Interacción y Canal */}
+              <div className="border border-slate-200 rounded-xl p-3.5 space-y-1.5">
+                <div className="flex items-center justify-between">
+                  <span className="font-bold text-slate-900">Tipo de Interacción:</span>
+                  <span className="px-2 py-0.5 rounded-full font-semibold bg-slate-100 text-slate-800 border border-slate-200 text-xs">
+                    {selectedTramite.tipoInteraccionLabel}
+                  </span>
                 </div>
               </div>
 
-              {/* NIVEL 7: CASOS ESPECIALES Y EXCEPCIONES */}
-              <div className="border border-slate-200 rounded-xl p-3.5 space-y-2">
+              {/* Base Legal / Fundamento Jurídico */}
+              <div className="border border-slate-200 rounded-xl p-3.5 space-y-1.5">
                 <div className="flex items-center gap-2 text-slate-900 font-bold">
-                  <ShieldCheck className="w-4 h-4 text-emerald-600" />
-                  <span>Nivel 7 — Casos Especiales y Representación</span>
-                </div>
-                <div className="space-y-1 text-[11px] text-slate-700">
-                  {selectedTramite.perfilDestinatario && (
-                    <p>
-                      <strong className="text-slate-800">Perfil destinatario:</strong> {selectedTramite.perfilDestinatario}
-                    </p>
-                  )}
-                  <p>
-                    <strong className="text-slate-800">Mandatarios y gestores:</strong> Requiere acreditación vigente y mandato inscrito en el Registro Tributario Unificado (RTU).
-                  </p>
-                  <p className="text-slate-600">
-                    Aplica validación diferenciada según persona individual o jurídica.
-                  </p>
-                </div>
-              </div>
-
-              {/* NIVEL 8: MARCO LEGAL Y NORMATIVA */}
-              <div className="border border-slate-200 rounded-xl p-3.5 space-y-2">
-                <div className="flex items-center gap-2 text-slate-900 font-bold">
-                  <Scale className="w-4 h-4 text-indigo-600" />
-                  <span>Nivel 8 — Marco Legal y Fundamento Normativo</span>
+                  <Scale className="w-4 h-4 text-slate-700" />
+                  <span>Base Legal / Fundamento Jurídico</span>
                 </div>
                 <p className="text-[11px] text-slate-700 leading-relaxed bg-slate-50 p-2.5 rounded-lg border border-slate-200">
                   {selectedTramite.baseLegal}
@@ -1068,11 +1102,70 @@ export const PortalFlowPage: React.FC = () => {
                     href={selectedTramite.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-sky-700 hover:bg-sky-800 text-white font-bold text-xs transition-colors shadow-xs"
+                    className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-sat-azul hover:bg-sat-azul-oscuro text-white font-bold text-xs transition-colors shadow-xs"
                   >
-                    <span>Abrir ficha oficial en Portal SAT</span>
+                    <span>Abrir trámite en Portal SAT</span>
                     <ExternalLink className="w-3.5 h-3.5" />
                   </a>
+                </div>
+              )}
+            </div>
+          </aside>
+        )}
+
+        {/* 5. DRAWER LATERAL: INSPECTOR DE NODO TAXONÓMICO (N1, N2, N3, N4) */}
+        {!selectedTramite && selectedTaxonNode && (
+          <aside aria-label="Ficha canónica de arquitectura" className="absolute top-0 right-0 w-full sm:w-[480px] h-full bg-white border-l border-slate-200 shadow-2xl flex flex-col z-20 animate-in slide-in-from-right duration-200">
+            <div className="px-5 py-4 border-b border-slate-200 bg-slate-50 flex items-center justify-between">
+              <div>
+                <div className="flex items-center gap-2">
+                  <span className="text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded-full bg-sky-100 text-sky-800">
+                    Nivel {selectedTaxonNode.nivel} Taxonómico
+                  </span>
+                </div>
+                <h2 className="text-sm font-black text-slate-900 leading-tight mt-1">
+                  {selectedTaxonNode.nombre}
+                </h2>
+              </div>
+              <button
+                onClick={() => setSelectedTaxonNode(null)}
+                className="p-1.5 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-200 transition-colors"
+                aria-label="Cerrar ficha taxonómica"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            <div className="p-5 flex-1 overflow-y-auto space-y-4 text-xs">
+              <div className="border border-slate-200 rounded-xl p-4 bg-sky-50/50 space-y-1.5">
+                <div className="flex items-center gap-2 text-slate-900 font-bold text-xs">
+                  <Layers className="w-4 h-4 text-sky-700" />
+                  <span>¿Qué es? (Definición Operativa Ciudadana)</span>
+                </div>
+                <p className="text-xs text-slate-700 leading-relaxed pt-1">
+                  {selectedTaxonNode.que_es}
+                </p>
+              </div>
+
+              <div className="border border-slate-200 rounded-xl p-4 space-y-1.5">
+                <div className="flex items-center gap-2 text-slate-900 font-bold text-xs">
+                  <Compass className="w-4 h-4 text-emerald-700" />
+                  <span>Texto Orientador de Interfaz (Lead Text)</span>
+                </div>
+                <p className="text-xs text-slate-600 italic leading-relaxed pt-1">
+                  "{selectedTaxonNode.lead_text}"
+                </p>
+              </div>
+
+              {selectedTaxonNode.base_juridica && (
+                <div className="border border-slate-200 rounded-xl p-4 space-y-1.5 bg-slate-50">
+                  <div className="flex items-center gap-2 text-slate-900 font-bold text-xs">
+                    <Scale className="w-4 h-4 text-indigo-700" />
+                    <span>Fundamento Legal Oficial (CAUCA, RECAUCA, Leyes)</span>
+                  </div>
+                  <p className="text-[11px] text-slate-700 leading-relaxed pt-1 font-medium">
+                    {selectedTaxonNode.base_juridica}
+                  </p>
                 </div>
               )}
             </div>

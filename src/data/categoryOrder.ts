@@ -8,7 +8,7 @@ import { PillarType, TramiteItem } from './schema';
 
 export const OFFICIAL_CATEGORY_ORDER: Record<PillarType, string[]> = {
   contribuyentes: [
-    'NIT sin Obligaciones',
+    'Sin Obligaciones',
     'Pequeños Contribuyentes',
     'Contribuyentes Especiales',
   ],
@@ -48,7 +48,7 @@ const GENERIC_LIFECYCLE_ORDER = [
 const GENERIC_LIFECYCLE_CATEGORIES = new Set<string>();
 
 const SPECIFIC_SUBCATEGORY_ORDER: Record<string, string[]> = {
-  'NIT sin Obligaciones': [
+  'Sin Obligaciones': [
     'Inscripción de NIT',
     'Servicios en Línea y Solvencias',
     'Títulos Universitarios',

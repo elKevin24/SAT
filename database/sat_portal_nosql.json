@@ -1107,7 +1107,7 @@
     "totalAudiencias": 2,
     "tramiteIds": [
       "SAT-GES-0024",
-      "SAT-GES-0024-B"
+      "SAT-GES-0684"
     ],
     "ubicaciones": [
       {
@@ -1115,7 +1115,7 @@
         "segmentoId": "contribuyentes"
       },
       {
-        "tramiteId": "SAT-GES-0024-B",
+        "tramiteId": "SAT-GES-0684",
         "segmentoId": "contribuyentes"
       }
     ],
@@ -4547,7 +4547,7 @@
     "totalAudiencias": 2,
     "tramiteIds": [
       "SAT-GES-0092",
-      "SAT-GES-0092-B"
+      "SAT-GES-0685"
     ],
     "ubicaciones": [
       {
@@ -4555,7 +4555,7 @@
         "segmentoId": "contribuyentes"
       },
       {
-        "tramiteId": "SAT-GES-0092-B",
+        "tramiteId": "SAT-GES-0685",
         "segmentoId": "contribuyentes"
       }
     ],
@@ -7830,7 +7830,7 @@
     "totalAudiencias": 2,
     "tramiteIds": [
       "SAT-GES-0159",
-      "SAT-GES-0159-B"
+      "SAT-GES-0686"
     ],
     "ubicaciones": [
       {
@@ -7838,7 +7838,7 @@
         "segmentoId": "contribuyentes"
       },
       {
-        "tramiteId": "SAT-GES-0159-B",
+        "tramiteId": "SAT-GES-0686",
         "segmentoId": "contribuyentes"
       }
     ],
@@ -11250,7 +11250,7 @@
     "totalAudiencias": 2,
     "tramiteIds": [
       "SAT-GES-0230",
-      "SAT-GES-0230-B"
+      "SAT-GES-0687"
     ],
     "ubicaciones": [
       {
@@ -11258,7 +11258,7 @@
         "segmentoId": "contribuyentes"
       },
       {
-        "tramiteId": "SAT-GES-0230-B",
+        "tramiteId": "SAT-GES-0687",
         "segmentoId": "contribuyentes"
       }
     ],
@@ -16475,7 +16475,7 @@
     "totalAudiencias": 2,
     "tramiteIds": [
       "SAT-GES-0340",
-      "SAT-GES-0340-B"
+      "SAT-GES-0715"
     ],
     "ubicaciones": [
       {
@@ -16483,7 +16483,7 @@
         "segmentoId": "contribuyentes"
       },
       {
-        "tramiteId": "SAT-GES-0340-B",
+        "tramiteId": "SAT-GES-0715",
         "segmentoId": "comercio_exterior"
       }
     ],
@@ -20249,9 +20249,9 @@
     "familiaTematica": "FAM-04 Declaraciones Aduaneras (DUCAs); FAM-08 Auxiliares de la Función Pública Aduanera (AFPA)"
   },
   {
-    "id": "cnt-SAT-GES-0426-ZDEEP-USR",
+    "id": "cnt-SAT-GES-0708",
     "codigo": "SAT-GES-0426",
-    "idOriginal": "SAT-GES-0426-ZDEEP-USR",
+    "idOriginal": "SAT-GES-0708",
     "titulo": "Requisitos para consulta de expedientes de gestión aduanera",
     "nombreActual": "Requisitos para consulta de expedientes de gestión aduanera",
     "descripcion": "Gestión y especificaciones para Requisitos para consulta de expedientes de gestión aduanera conforme a normativa aduanera aplicable.",
@@ -20271,10 +20271,10 @@
     "totalAudiencias": 5,
     "tramiteIds": [
       "SAT-GES-0426",
-      "SAT-GES-0426-AGD",
-      "SAT-GES-0426-DAT",
-      "SAT-GES-0426-ZDEEP-USR",
-      "SAT-GES-0426-ZDEEP-ADM"
+      "SAT-GES-0693",
+      "SAT-GES-0703",
+      "SAT-GES-0708",
+      "SAT-GES-0714"
     ],
     "ubicaciones": [
       {
@@ -20282,19 +20282,19 @@
         "segmentoId": "comercio_exterior"
       },
       {
-        "tramiteId": "SAT-GES-0426-AGD",
+        "tramiteId": "SAT-GES-0693",
         "segmentoId": "comercio_exterior"
       },
       {
-        "tramiteId": "SAT-GES-0426-DAT",
+        "tramiteId": "SAT-GES-0703",
         "segmentoId": "comercio_exterior"
       },
       {
-        "tramiteId": "SAT-GES-0426-ZDEEP-USR",
+        "tramiteId": "SAT-GES-0708",
         "segmentoId": "comercio_exterior"
       },
       {
-        "tramiteId": "SAT-GES-0426-ZDEEP-ADM",
+        "tramiteId": "SAT-GES-0714",
         "segmentoId": "comercio_exterior"
       }
     ],
@@ -20386,8 +20386,8 @@
     "totalAudiencias": 3,
     "tramiteIds": [
       "SAT-GES-0428",
-      "SAT-GES-0428-AGD",
-      "SAT-GES-0428-DAT"
+      "SAT-GES-0689",
+      "SAT-GES-0696"
     ],
     "ubicaciones": [
       {
@@ -20395,11 +20395,11 @@
         "segmentoId": "comercio_exterior"
       },
       {
-        "tramiteId": "SAT-GES-0428-AGD",
+        "tramiteId": "SAT-GES-0689",
         "segmentoId": "comercio_exterior"
       },
       {
-        "tramiteId": "SAT-GES-0428-DAT",
+        "tramiteId": "SAT-GES-0696",
         "segmentoId": "comercio_exterior"
       }
     ],
@@ -20469,9 +20469,9 @@
     ]
   },
   {
-    "id": "cnt-SAT-GES-0430-DAT",
+    "id": "cnt-SAT-GES-0698",
     "codigo": "SAT-GES-0430",
-    "idOriginal": "SAT-GES-0430-DAT",
+    "idOriginal": "SAT-GES-0698",
     "titulo": "Preguntas frecuentes sobre temas aduaneros",
     "nombreActual": "Preguntas frecuentes sobre temas aduaneros",
     "descripcion": "Respuestas a consultas frecuentes sobre manejo de carga, plazos de permanencia temporal y levante de mercancías en recintos.",
@@ -20491,9 +20491,9 @@
     "totalAudiencias": 4,
     "tramiteIds": [
       "SAT-GES-0430",
-      "SAT-GES-0430-AGD",
-      "SAT-GES-0430-DAT",
-      "SAT-GES-0430-ZDEEP-ADM"
+      "SAT-GES-0691",
+      "SAT-GES-0698",
+      "SAT-GES-0710"
     ],
     "ubicaciones": [
       {
@@ -20501,15 +20501,15 @@
         "segmentoId": "comercio_exterior"
       },
       {
-        "tramiteId": "SAT-GES-0430-AGD",
+        "tramiteId": "SAT-GES-0691",
         "segmentoId": "comercio_exterior"
       },
       {
-        "tramiteId": "SAT-GES-0430-DAT",
+        "tramiteId": "SAT-GES-0698",
         "segmentoId": "comercio_exterior"
       },
       {
-        "tramiteId": "SAT-GES-0430-ZDEEP-ADM",
+        "tramiteId": "SAT-GES-0710",
         "segmentoId": "comercio_exterior"
       }
     ],
@@ -20528,9 +20528,9 @@
     "familiaTematica": "FAM-04 Declaraciones Aduaneras (DUCAs); FAM-08 Auxiliares de la Función Pública Aduanera (AFPA)"
   },
   {
-    "id": "cnt-SAT-GES-0431-ZDEEP-USR",
+    "id": "cnt-SAT-GES-0706",
     "codigo": "SAT-GES-0431",
-    "idOriginal": "SAT-GES-0431-ZDEEP-USR",
+    "idOriginal": "SAT-GES-0706",
     "titulo": "Procedimientos administrativos de aduanas (Sanciones y recursos)",
     "nombreActual": "Procedimientos administrativos de aduanas (Sanciones y recursos)",
     "descripcion": "Gestión y especificaciones para Procedimientos administrativos de aduanas (Sanciones y recursos) conforme a normativa aduanera aplicable.",
@@ -20550,10 +20550,10 @@
     "totalAudiencias": 5,
     "tramiteIds": [
       "SAT-GES-0431",
-      "SAT-GES-0431-AGD",
-      "SAT-GES-0431-DAT",
-      "SAT-GES-0431-ZDEEP-USR",
-      "SAT-GES-0431-ZDEEP-ADM"
+      "SAT-GES-0692",
+      "SAT-GES-0699",
+      "SAT-GES-0706",
+      "SAT-GES-0711"
     ],
     "ubicaciones": [
       {
@@ -20561,19 +20561,19 @@
         "segmentoId": "comercio_exterior"
       },
       {
-        "tramiteId": "SAT-GES-0431-AGD",
+        "tramiteId": "SAT-GES-0692",
         "segmentoId": "comercio_exterior"
       },
       {
-        "tramiteId": "SAT-GES-0431-DAT",
+        "tramiteId": "SAT-GES-0699",
         "segmentoId": "comercio_exterior"
       },
       {
-        "tramiteId": "SAT-GES-0431-ZDEEP-USR",
+        "tramiteId": "SAT-GES-0706",
         "segmentoId": "comercio_exterior"
       },
       {
-        "tramiteId": "SAT-GES-0431-ZDEEP-ADM",
+        "tramiteId": "SAT-GES-0711",
         "segmentoId": "comercio_exterior"
       }
     ],
@@ -20722,8 +20722,8 @@
     "totalAudiencias": 3,
     "tramiteIds": [
       "SAT-GES-0434",
-      "SAT-GES-0434-AGD",
-      "SAT-GES-0434-DAT"
+      "SAT-GES-0690",
+      "SAT-GES-0697"
     ],
     "ubicaciones": [
       {
@@ -20731,11 +20731,11 @@
         "segmentoId": "comercio_exterior"
       },
       {
-        "tramiteId": "SAT-GES-0434-AGD",
+        "tramiteId": "SAT-GES-0690",
         "segmentoId": "comercio_exterior"
       },
       {
-        "tramiteId": "SAT-GES-0434-DAT",
+        "tramiteId": "SAT-GES-0697",
         "segmentoId": "comercio_exterior"
       }
     ],
@@ -20898,8 +20898,8 @@
     "totalAudiencias": 3,
     "tramiteIds": [
       "SAT-GES-0437",
-      "SAT-GES-0437-AGD",
-      "SAT-GES-0437-DAT"
+      "SAT-GES-0688",
+      "SAT-GES-0695"
     ],
     "ubicaciones": [
       {
@@ -20907,11 +20907,11 @@
         "segmentoId": "comercio_exterior"
       },
       {
-        "tramiteId": "SAT-GES-0437-AGD",
+        "tramiteId": "SAT-GES-0688",
         "segmentoId": "comercio_exterior"
       },
       {
-        "tramiteId": "SAT-GES-0437-DAT",
+        "tramiteId": "SAT-GES-0695",
         "segmentoId": "comercio_exterior"
       }
     ],
@@ -20994,8 +20994,8 @@
     "totalAudiencias": 3,
     "tramiteIds": [
       "SAT-GES-0439",
-      "SAT-GES-0439-AGD",
-      "SAT-GES-0439-DAT"
+      "SAT-GES-0694",
+      "SAT-GES-0704"
     ],
     "ubicaciones": [
       {
@@ -21003,11 +21003,11 @@
         "segmentoId": "comercio_exterior"
       },
       {
-        "tramiteId": "SAT-GES-0439-AGD",
+        "tramiteId": "SAT-GES-0694",
         "segmentoId": "comercio_exterior"
       },
       {
-        "tramiteId": "SAT-GES-0439-DAT",
+        "tramiteId": "SAT-GES-0704",
         "segmentoId": "comercio_exterior"
       }
     ],
@@ -21047,7 +21047,7 @@
     "totalAudiencias": 2,
     "tramiteIds": [
       "SAT-GES-0440",
-      "SAT-GES-0440-DAT"
+      "SAT-GES-0705"
     ],
     "ubicaciones": [
       {
@@ -21055,7 +21055,7 @@
         "segmentoId": "comercio_exterior"
       },
       {
-        "tramiteId": "SAT-GES-0440-DAT",
+        "tramiteId": "SAT-GES-0705",
         "segmentoId": "comercio_exterior"
       }
     ],
@@ -21088,9 +21088,9 @@
     ]
   },
   {
-    "id": "cnt-SAT-GES-0441-AGD",
+    "id": "cnt-SAT-GES-0441",
     "codigo": "SAT-GES-0441",
-    "idOriginal": "SAT-GES-0441-AGD",
+    "idOriginal": "SAT-GES-0441",
     "titulo": "Consulta facilidades de pago y convenios",
     "nombreActual": "Consulta facilidades de pago y convenios",
     "descripcion": "Consultar cuotas, estados de cuenta y facilidades de pago formalizadas ante SAT para obligaciones tributarias aduaneras.",
@@ -21109,11 +21109,11 @@
     "esTransversal": false,
     "totalAudiencias": 1,
     "tramiteIds": [
-      "SAT-GES-0441-AGD"
+      "SAT-GES-0441"
     ],
     "ubicaciones": [
       {
-        "tramiteId": "SAT-GES-0441-AGD",
+        "tramiteId": "SAT-GES-0441",
         "segmentoId": "comercio_exterior"
       }
     ],
@@ -21140,9 +21140,9 @@
     ]
   },
   {
-    "id": "cnt-SAT-GES-0442-AGD",
+    "id": "cnt-SAT-GES-0442",
     "codigo": "SAT-GES-0442",
-    "idOriginal": "SAT-GES-0442-AGD",
+    "idOriginal": "SAT-GES-0442",
     "titulo": "Consultas de aduanas (Retención y liberación de mercancías, arancel integrado)",
     "nombreActual": "Consultas de aduanas (Retención y liberación de mercancías, arancel integrado)",
     "descripcion": "Verificar en tiempo real estatus de retención, órdenes de liberación y clasificación en el Sistema Arancelario Centroamericano (SAC).",
@@ -21161,11 +21161,11 @@
     "esTransversal": false,
     "totalAudiencias": 1,
     "tramiteIds": [
-      "SAT-GES-0442-AGD"
+      "SAT-GES-0442"
     ],
     "ubicaciones": [
       {
-        "tramiteId": "SAT-GES-0442-AGD",
+        "tramiteId": "SAT-GES-0442",
         "segmentoId": "comercio_exterior"
       }
     ],
@@ -21183,9 +21183,9 @@
     "familiaTematica": "FAM-04 Declaraciones Aduaneras (DUCAs); FAM-08 Auxiliares de la Función Pública Aduanera (AFPA)"
   },
   {
-    "id": "cnt-SAT-GES-0443-AGD",
+    "id": "cnt-SAT-GES-0443",
     "codigo": "SAT-GES-0443",
-    "idOriginal": "SAT-GES-0443-AGD",
+    "idOriginal": "SAT-GES-0443",
     "titulo": "Legislación aduanera y financiera (Decreto 1236 y RECAUCA)",
     "nombreActual": "Legislación aduanera y financiera (Decreto 1236 y RECAUCA)",
     "descripcion": "Compendio legal del Decreto 1236, CAUCA y RECAUCA aplicable al régimen de depósito aduanero y emisión de títulos de crédito afianzados.",
@@ -21204,11 +21204,11 @@
     "esTransversal": false,
     "totalAudiencias": 1,
     "tramiteIds": [
-      "SAT-GES-0443-AGD"
+      "SAT-GES-0443"
     ],
     "ubicaciones": [
       {
-        "tramiteId": "SAT-GES-0443-AGD",
+        "tramiteId": "SAT-GES-0443",
         "segmentoId": "comercio_exterior"
       }
     ],
@@ -21234,9 +21234,9 @@
     ]
   },
   {
-    "id": "cnt-SAT-GES-0444-ZDEEP-USR",
+    "id": "cnt-SAT-GES-0707",
     "codigo": "SAT-GES-0444",
-    "idOriginal": "SAT-GES-0444-ZDEEP-USR",
+    "idOriginal": "SAT-GES-0707",
     "titulo": "Procedimientos, instructivos y guías para gestiones aduaneras",
     "nombreActual": "Procedimientos, instructivos y guías para gestiones aduaneras",
     "descripcion": "Gestión y especificaciones para Procedimientos, instructivos y guías para gestiones aduaneras conforme a normativa aduanera aplicable.",
@@ -21255,26 +21255,26 @@
     "esTransversal": true,
     "totalAudiencias": 4,
     "tramiteIds": [
-      "SAT-GES-0444-AGD",
-      "SAT-GES-0444-DAT",
-      "SAT-GES-0444-ZDEEP-USR",
-      "SAT-GES-0444-ZDEEP-ADM"
+      "SAT-GES-0444",
+      "SAT-GES-0700",
+      "SAT-GES-0707",
+      "SAT-GES-0712"
     ],
     "ubicaciones": [
       {
-        "tramiteId": "SAT-GES-0444-AGD",
+        "tramiteId": "SAT-GES-0444",
         "segmentoId": "comercio_exterior"
       },
       {
-        "tramiteId": "SAT-GES-0444-DAT",
+        "tramiteId": "SAT-GES-0700",
         "segmentoId": "comercio_exterior"
       },
       {
-        "tramiteId": "SAT-GES-0444-ZDEEP-USR",
+        "tramiteId": "SAT-GES-0707",
         "segmentoId": "comercio_exterior"
       },
       {
-        "tramiteId": "SAT-GES-0444-ZDEEP-ADM",
+        "tramiteId": "SAT-GES-0712",
         "segmentoId": "comercio_exterior"
       }
     ],
@@ -21307,9 +21307,9 @@
     ]
   },
   {
-    "id": "cnt-SAT-GES-0445-DAT",
+    "id": "cnt-SAT-GES-0701",
     "codigo": "SAT-GES-0445",
-    "idOriginal": "SAT-GES-0445-DAT",
+    "idOriginal": "SAT-GES-0701",
     "titulo": "Programa de modernización integral aduanera (MIAD)",
     "nombreActual": "Programa de modernización integral aduanera (MIAD)",
     "descripcion": "Especificaciones técnicas de cámaras CCTV, básculas y lectores OCR requeridos bajo el Programa de Modernización Integral Aduanera.",
@@ -21328,21 +21328,21 @@
     "esTransversal": true,
     "totalAudiencias": 3,
     "tramiteIds": [
-      "SAT-GES-0445-AGD",
-      "SAT-GES-0445-DAT",
-      "SAT-GES-0445-ZDEEP-ADM"
+      "SAT-GES-0445",
+      "SAT-GES-0701",
+      "SAT-GES-0713"
     ],
     "ubicaciones": [
       {
-        "tramiteId": "SAT-GES-0445-AGD",
+        "tramiteId": "SAT-GES-0445",
         "segmentoId": "comercio_exterior"
       },
       {
-        "tramiteId": "SAT-GES-0445-DAT",
+        "tramiteId": "SAT-GES-0701",
         "segmentoId": "comercio_exterior"
       },
       {
-        "tramiteId": "SAT-GES-0445-ZDEEP-ADM",
+        "tramiteId": "SAT-GES-0713",
         "segmentoId": "comercio_exterior"
       }
     ],
@@ -21361,9 +21361,9 @@
     "familiaTematica": "FAM-04 Declaraciones Aduaneras (DUCAs); FAM-08 Auxiliares de la Función Pública Aduanera (AFPA)"
   },
   {
-    "id": "cnt-SAT-GES-0446-DAT",
+    "id": "cnt-SAT-GES-0702",
     "codigo": "SAT-GES-0446",
-    "idOriginal": "SAT-GES-0446-DAT",
+    "idOriginal": "SAT-GES-0702",
     "titulo": "Recepción de seguro de caución y pólizas de garantía operativa",
     "nombreActual": "Recepción de seguro de caución y pólizas de garantía operativa",
     "descripcion": "Recepción y registro de pólizas de seguro de caución para garantizar la operación fiscal y custodia de mercancías en DAT.",
@@ -21382,16 +21382,16 @@
     "esTransversal": true,
     "totalAudiencias": 2,
     "tramiteIds": [
-      "SAT-GES-0446-AGD",
-      "SAT-GES-0446-DAT"
+      "SAT-GES-0446",
+      "SAT-GES-0702"
     ],
     "ubicaciones": [
       {
-        "tramiteId": "SAT-GES-0446-AGD",
+        "tramiteId": "SAT-GES-0446",
         "segmentoId": "comercio_exterior"
       },
       {
-        "tramiteId": "SAT-GES-0446-DAT",
+        "tramiteId": "SAT-GES-0702",
         "segmentoId": "comercio_exterior"
       }
     ],
@@ -21409,9 +21409,9 @@
     "familiaTematica": "FAM-04 Declaraciones Aduaneras (DUCAs); FAM-08 Auxiliares de la Función Pública Aduanera (AFPA)"
   },
   {
-    "id": "cnt-SAT-GES-0447-AGD",
+    "id": "cnt-SAT-GES-0447",
     "codigo": "SAT-GES-0447",
-    "idOriginal": "SAT-GES-0447-AGD",
+    "idOriginal": "SAT-GES-0447",
     "titulo": "Registro y emisión de títulos de crédito (Certificados de depósito y bonos de prenda)",
     "nombreActual": "[Propuesta brecha] Registro y emisión de títulos de crédito (Certificados de depósito y bonos de prenda)",
     "descripcion": "Mecanismo propuesto para registrar y validar digitalmente ante SAT la emisión de certificados de depósito y bonos de prenda afianzados.",
@@ -21430,11 +21430,11 @@
     "esTransversal": false,
     "totalAudiencias": 1,
     "tramiteIds": [
-      "SAT-GES-0447-AGD"
+      "SAT-GES-0447"
     ],
     "ubicaciones": [
       {
-        "tramiteId": "SAT-GES-0447-AGD",
+        "tramiteId": "SAT-GES-0447",
         "segmentoId": "comercio_exterior"
       }
     ],
@@ -21460,9 +21460,9 @@
     ]
   },
   {
-    "id": "cnt-SAT-GES-0448-AGD",
+    "id": "cnt-SAT-GES-0448",
     "codigo": "SAT-GES-0448",
-    "idOriginal": "SAT-GES-0448-AGD",
+    "idOriginal": "SAT-GES-0448",
     "titulo": "Reporte de saldos y existencias afianzadas ante SAT",
     "nombreActual": "[Propuesta brecha] Reporte de saldos y existencias afianzadas ante SAT",
     "descripcion": "Transmisión electrónica periódica de existencias y saldos de mercancías bajo custodia fiscal requerida por la intendencia aduanera.",
@@ -21481,11 +21481,11 @@
     "esTransversal": false,
     "totalAudiencias": 1,
     "tramiteIds": [
-      "SAT-GES-0448-AGD"
+      "SAT-GES-0448"
     ],
     "ubicaciones": [
       {
-        "tramiteId": "SAT-GES-0448-AGD",
+        "tramiteId": "SAT-GES-0448",
         "segmentoId": "comercio_exterior"
       }
     ],
@@ -21511,9 +21511,9 @@
     ]
   },
   {
-    "id": "cnt-SAT-GES-0449-AGD",
+    "id": "cnt-SAT-GES-0449",
     "codigo": "SAT-GES-0449",
-    "idOriginal": "SAT-GES-0449-AGD",
+    "idOriginal": "SAT-GES-0449",
     "titulo": "Solvencia fiscal (Requisito indispensable de renovación como auxiliar aduanero AFPA)",
     "nombreActual": "Solvencia fiscal (Requisito indispensable de renovación como auxiliar aduanero AFPA)",
     "descripcion": "Obtención en línea de la solvencia fiscal requerida para la prórroga y continuidad de la habilitación operativa ante la SAT.",
@@ -21532,11 +21532,11 @@
     "esTransversal": false,
     "totalAudiencias": 1,
     "tramiteIds": [
-      "SAT-GES-0449-AGD"
+      "SAT-GES-0449"
     ],
     "ubicaciones": [
       {
-        "tramiteId": "SAT-GES-0449-AGD",
+        "tramiteId": "SAT-GES-0449",
         "segmentoId": "comercio_exterior"
       }
     ],
@@ -21663,9 +21663,9 @@
     ]
   },
   {
-    "id": "cnt-SAT-GES-0452-DAT",
+    "id": "cnt-SAT-GES-0452",
     "codigo": "SAT-GES-0452",
-    "idOriginal": "SAT-GES-0452-DAT",
+    "idOriginal": "SAT-GES-0452",
     "titulo": "Consultas de aduanas (Asignación a rampa de revisión, revisores, retención y liberación)",
     "nombreActual": "Consultas de aduanas (Asignación a rampa de revisión, revisores, retención y liberación)",
     "descripcion": "Consulta en línea de asignación a rampa de revisión física, técnicos asignados, retenciones y órdenes de levante de mercancías.",
@@ -21684,11 +21684,11 @@
     "esTransversal": false,
     "totalAudiencias": 1,
     "tramiteIds": [
-      "SAT-GES-0452-DAT"
+      "SAT-GES-0452"
     ],
     "ubicaciones": [
       {
-        "tramiteId": "SAT-GES-0452-DAT",
+        "tramiteId": "SAT-GES-0452",
         "segmentoId": "comercio_exterior"
       }
     ],
@@ -21706,9 +21706,9 @@
     "familiaTematica": "FAM-04 Declaraciones Aduaneras (DUCAs); FAM-08 Auxiliares de la Función Pública Aduanera (AFPA)"
   },
   {
-    "id": "cnt-SAT-GES-0453-DAT",
+    "id": "cnt-SAT-GES-0453",
     "codigo": "SAT-GES-0453",
-    "idOriginal": "SAT-GES-0453-DAT",
+    "idOriginal": "SAT-GES-0453",
     "titulo": "Control de descarga, ingreso de bultos y actas de recepción DAT",
     "nombreActual": "[Propuesta brecha] Control de descarga, ingreso de bultos y actas de recepción DAT",
     "descripcion": "Procedimiento propuesto para registrar digitalmente actas de recepción, inconsistencias y control de descarga de bultos en recintos DAT.",
@@ -21727,11 +21727,11 @@
     "esTransversal": false,
     "totalAudiencias": 1,
     "tramiteIds": [
-      "SAT-GES-0453-DAT"
+      "SAT-GES-0453"
     ],
     "ubicaciones": [
       {
-        "tramiteId": "SAT-GES-0453-DAT",
+        "tramiteId": "SAT-GES-0453",
         "segmentoId": "comercio_exterior"
       }
     ],
@@ -21757,9 +21757,9 @@
     ]
   },
   {
-    "id": "cnt-SAT-GES-0454-DAT",
+    "id": "cnt-SAT-GES-0454",
     "codigo": "SAT-GES-0454",
-    "idOriginal": "SAT-GES-0454-DAT",
+    "idOriginal": "SAT-GES-0454",
     "titulo": "Legislación aduanera (RECAUCA Art. 119 - Disposiciones sobre depósitos)",
     "nombreActual": "Legislación aduanera (RECAUCA Art. 119 - Disposiciones sobre depósitos)",
     "descripcion": "Marco normativo del CAUCA y RECAUCA (Art. 119) sobre operación, obligaciones y plazos legales en depósitos temporales.",
@@ -21778,11 +21778,11 @@
     "esTransversal": false,
     "totalAudiencias": 1,
     "tramiteIds": [
-      "SAT-GES-0454-DAT"
+      "SAT-GES-0454"
     ],
     "ubicaciones": [
       {
-        "tramiteId": "SAT-GES-0454-DAT",
+        "tramiteId": "SAT-GES-0454",
         "segmentoId": "comercio_exterior"
       }
     ],
@@ -21808,9 +21808,9 @@
     ]
   },
   {
-    "id": "cnt-SAT-GES-0455-DAT",
+    "id": "cnt-SAT-GES-0455",
     "codigo": "SAT-GES-0455",
-    "idOriginal": "SAT-GES-0455-DAT",
+    "idOriginal": "SAT-GES-0455",
     "titulo": "Monitoreo de sistemas informáticos de aduanas",
     "nombreActual": "Monitoreo de sistemas informáticos de aduanas",
     "descripcion": "Monitoreo de disponibilidad y operatividad en tiempo real de los sistemas informáticos aduaneros para recintos temporales.",
@@ -21829,16 +21829,16 @@
     "esTransversal": true,
     "totalAudiencias": 2,
     "tramiteIds": [
-      "SAT-GES-0455-DAT",
-      "SAT-GES-0455-ZDEEP-ADM"
+      "SAT-GES-0455",
+      "SAT-GES-0709"
     ],
     "ubicaciones": [
       {
-        "tramiteId": "SAT-GES-0455-DAT",
+        "tramiteId": "SAT-GES-0455",
         "segmentoId": "comercio_exterior"
       },
       {
-        "tramiteId": "SAT-GES-0455-ZDEEP-ADM",
+        "tramiteId": "SAT-GES-0709",
         "segmentoId": "comercio_exterior"
       }
     ],
@@ -21858,9 +21858,9 @@
     "familiaTematica": "FAM-03 Registro Tributario Unificado (RTU) Digital; FAM-04 Declaraciones Aduaneras (DUCAs); FAM-08 Auxiliares de la Función Pública Aduanera (AFPA)"
   },
   {
-    "id": "cnt-SAT-GES-0456-DAT",
+    "id": "cnt-SAT-GES-0456",
     "codigo": "SAT-GES-0456",
-    "idOriginal": "SAT-GES-0456-DAT",
+    "idOriginal": "SAT-GES-0456",
     "titulo": "Registro de admisión temporal de contenedores terrestres y su ampliación",
     "nombreActual": "Registro de admisión temporal de contenedores terrestres y su ampliación",
     "descripcion": "Control y registro de ingreso y ampliación de plazo para la admisión temporal de contenedores y chasises terrestres.",
@@ -21879,11 +21879,11 @@
     "esTransversal": false,
     "totalAudiencias": 1,
     "tramiteIds": [
-      "SAT-GES-0456-DAT"
+      "SAT-GES-0456"
     ],
     "ubicaciones": [
       {
-        "tramiteId": "SAT-GES-0456-DAT",
+        "tramiteId": "SAT-GES-0456",
         "segmentoId": "comercio_exterior"
       }
     ],
@@ -21901,9 +21901,9 @@
     "familiaTematica": "FAM-04 Declaraciones Aduaneras (DUCAs); FAM-08 Auxiliares de la Función Pública Aduanera (AFPA)"
   },
   {
-    "id": "cnt-SAT-GES-0457-DAT",
+    "id": "cnt-SAT-GES-0457",
     "codigo": "SAT-GES-0457",
-    "idOriginal": "SAT-GES-0457-DAT",
+    "idOriginal": "SAT-GES-0457",
     "titulo": "Requisitos para habilitación y delimitación de recintos aduaneros temporales (DAT)",
     "nombreActual": "[Propuesta brecha] Requisitos para habilitación y delimitación de recintos aduaneros temporales (DAT)",
     "descripcion": "Requisitos normativos propuestos para delimitar perímetros, equipamiento y habilitación inicial de recintos aduaneros temporales.",
@@ -21922,11 +21922,11 @@
     "esTransversal": false,
     "totalAudiencias": 1,
     "tramiteIds": [
-      "SAT-GES-0457-DAT"
+      "SAT-GES-0457"
     ],
     "ubicaciones": [
       {
-        "tramiteId": "SAT-GES-0457-DAT",
+        "tramiteId": "SAT-GES-0457",
         "segmentoId": "comercio_exterior"
       }
     ],
@@ -21952,9 +21952,9 @@
     ]
   },
   {
-    "id": "cnt-SAT-GES-0458-DAT",
+    "id": "cnt-SAT-GES-0458",
     "codigo": "SAT-GES-0458",
-    "idOriginal": "SAT-GES-0458-DAT",
+    "idOriginal": "SAT-GES-0458",
     "titulo": "Sistema de cobro por permanencia en el país",
     "nombreActual": "Sistema de cobro por permanencia en el país",
     "descripcion": "Plataforma para calcular y gestionar el cobro por días de permanencia de contenedores y medios de transporte en el país.",
@@ -21973,11 +21973,11 @@
     "esTransversal": false,
     "totalAudiencias": 1,
     "tramiteIds": [
-      "SAT-GES-0458-DAT"
+      "SAT-GES-0458"
     ],
     "ubicaciones": [
       {
-        "tramiteId": "SAT-GES-0458-DAT",
+        "tramiteId": "SAT-GES-0458",
         "segmentoId": "comercio_exterior"
       }
     ],
@@ -23439,9 +23439,9 @@
     "familiaTematica": "FAM-06 Regímenes Especiales y Maquilas (Dto. 29-89)"
   },
   {
-    "id": "cnt-SAT-GES-0488-ZDEEP-USR",
+    "id": "cnt-SAT-GES-0488",
     "codigo": "SAT-GES-0488",
-    "idOriginal": "SAT-GES-0488-ZDEEP-USR",
+    "idOriginal": "SAT-GES-0488",
     "titulo": "Capacitaciones aduaneras y tributarias",
     "nombreActual": "Capacitaciones aduaneras y tributarias",
     "descripcion": "Gestión y especificaciones para Capacitaciones aduaneras y tributarias conforme a normativa aduanera aplicable.",
@@ -23460,11 +23460,11 @@
     "esTransversal": false,
     "totalAudiencias": 1,
     "tramiteIds": [
-      "SAT-GES-0488-ZDEEP-USR"
+      "SAT-GES-0488"
     ],
     "ubicaciones": [
       {
-        "tramiteId": "SAT-GES-0488-ZDEEP-USR",
+        "tramiteId": "SAT-GES-0488",
         "segmentoId": "comercio_exterior"
       }
     ],
@@ -23482,9 +23482,9 @@
     "familiaTematica": "FAM-04 Declaraciones Aduaneras (DUCAs); FAM-07 Zonas de Desarrollo Económico Especial Público (ZDEEP)"
   },
   {
-    "id": "cnt-SAT-GES-0489-ZDEEP-USR",
+    "id": "cnt-SAT-GES-0489",
     "codigo": "SAT-GES-0489",
-    "idOriginal": "SAT-GES-0489-ZDEEP-USR",
+    "idOriginal": "SAT-GES-0489",
     "titulo": "Consulta y facilidades de pago de convenios",
     "nombreActual": "Consulta y facilidades de pago de convenios",
     "descripcion": "Gestión y especificaciones para Consulta y facilidades de pago de convenios conforme a normativa aduanera aplicable.",
@@ -23503,11 +23503,11 @@
     "esTransversal": false,
     "totalAudiencias": 1,
     "tramiteIds": [
-      "SAT-GES-0489-ZDEEP-USR"
+      "SAT-GES-0489"
     ],
     "ubicaciones": [
       {
-        "tramiteId": "SAT-GES-0489-ZDEEP-USR",
+        "tramiteId": "SAT-GES-0489",
         "segmentoId": "comercio_exterior"
       }
     ],
@@ -23534,9 +23534,9 @@
     ]
   },
   {
-    "id": "cnt-SAT-GES-0490-ZDEEP-USR",
+    "id": "cnt-SAT-GES-0490",
     "codigo": "SAT-GES-0490",
-    "idOriginal": "SAT-GES-0490-ZDEEP-USR",
+    "idOriginal": "SAT-GES-0490",
     "titulo": "Consultas de aduanas (Arancel integrado, rampa de revisión, retención y liberación)",
     "nombreActual": "Consultas de aduanas (Arancel integrado, rampa de revisión, retención y liberación)",
     "descripcion": "Gestión y especificaciones para Consultas de aduanas (Arancel integrado, rampa de revisión, retención y liberación) conforme a normativa aduanera aplicable.",
@@ -23555,11 +23555,11 @@
     "esTransversal": false,
     "totalAudiencias": 1,
     "tramiteIds": [
-      "SAT-GES-0490-ZDEEP-USR"
+      "SAT-GES-0490"
     ],
     "ubicaciones": [
       {
-        "tramiteId": "SAT-GES-0490-ZDEEP-USR",
+        "tramiteId": "SAT-GES-0490",
         "segmentoId": "comercio_exterior"
       }
     ],
@@ -23577,9 +23577,9 @@
     "familiaTematica": "FAM-04 Declaraciones Aduaneras (DUCAs); FAM-07 Zonas de Desarrollo Económico Especial Público (ZDEEP)"
   },
   {
-    "id": "cnt-SAT-GES-0491-ZDEEP-USR",
+    "id": "cnt-SAT-GES-0491",
     "codigo": "SAT-GES-0491",
-    "idOriginal": "SAT-GES-0491-ZDEEP-USR",
+    "idOriginal": "SAT-GES-0491",
     "titulo": "Control, descargo y reporte periódico de inventarios de transformación",
     "nombreActual": "[Propuesta brecha] Control, descargo y reporte periódico de inventarios de transformación",
     "descripcion": "Gestión y especificaciones para Control, descargo y reporte periódico de inventarios de transformación conforme a normativa aduanera aplicable.",
@@ -23598,11 +23598,11 @@
     "esTransversal": false,
     "totalAudiencias": 1,
     "tramiteIds": [
-      "SAT-GES-0491-ZDEEP-USR"
+      "SAT-GES-0491"
     ],
     "ubicaciones": [
       {
-        "tramiteId": "SAT-GES-0491-ZDEEP-USR",
+        "tramiteId": "SAT-GES-0491",
         "segmentoId": "comercio_exterior"
       }
     ],
@@ -23628,9 +23628,9 @@
     ]
   },
   {
-    "id": "cnt-SAT-GES-0492-ZDEEP-USR",
+    "id": "cnt-SAT-GES-0492",
     "codigo": "SAT-GES-0492",
-    "idOriginal": "SAT-GES-0492-ZDEEP-USR",
+    "idOriginal": "SAT-GES-0492",
     "titulo": "Declaración anticipada de mercancías",
     "nombreActual": "Declaración anticipada de mercancías",
     "descripcion": "Gestión y especificaciones para Declaración anticipada de mercancías conforme a normativa aduanera aplicable.",
@@ -23649,11 +23649,11 @@
     "esTransversal": false,
     "totalAudiencias": 1,
     "tramiteIds": [
-      "SAT-GES-0492-ZDEEP-USR"
+      "SAT-GES-0492"
     ],
     "ubicaciones": [
       {
-        "tramiteId": "SAT-GES-0492-ZDEEP-USR",
+        "tramiteId": "SAT-GES-0492",
         "segmentoId": "comercio_exterior"
       }
     ],
@@ -23679,9 +23679,9 @@
     ]
   },
   {
-    "id": "cnt-SAT-GES-0493-ZDEEP-USR",
+    "id": "cnt-SAT-GES-0493",
     "codigo": "SAT-GES-0493",
-    "idOriginal": "SAT-GES-0493-ZDEEP-USR",
+    "idOriginal": "SAT-GES-0493",
     "titulo": "Declaración de mercancías (DUCA, tránsitos aduaneros y aduana sin papeles)",
     "nombreActual": "Declaración de mercancías (DUCA, tránsitos aduaneros y aduana sin papeles)",
     "descripcion": "Gestión y especificaciones para Declaración de mercancías (DUCA, tránsitos aduaneros y aduana sin papeles) conforme a normativa aduanera aplicable.",
@@ -23700,11 +23700,11 @@
     "esTransversal": false,
     "totalAudiencias": 1,
     "tramiteIds": [
-      "SAT-GES-0493-ZDEEP-USR"
+      "SAT-GES-0493"
     ],
     "ubicaciones": [
       {
-        "tramiteId": "SAT-GES-0493-ZDEEP-USR",
+        "tramiteId": "SAT-GES-0493",
         "segmentoId": "comercio_exterior"
       }
     ],
@@ -23730,9 +23730,9 @@
     ]
   },
   {
-    "id": "cnt-SAT-GES-0494-ZDEEP-USR",
+    "id": "cnt-SAT-GES-0494",
     "codigo": "SAT-GES-0494",
-    "idOriginal": "SAT-GES-0494-ZDEEP-USR",
+    "idOriginal": "SAT-GES-0494",
     "titulo": "Legislación aduanera y tributaria (Exenciones y marco legal de Zonas Especiales ZDEEP)",
     "nombreActual": "Legislación aduanera y tributaria (Exenciones y marco legal de Zonas Especiales ZDEEP)",
     "descripcion": "Gestión y especificaciones para Legislación aduanera y tributaria (Exenciones y marco legal ZDEEP) conforme a normativa aduanera aplicable.",
@@ -23751,11 +23751,11 @@
     "esTransversal": false,
     "totalAudiencias": 1,
     "tramiteIds": [
-      "SAT-GES-0494-ZDEEP-USR"
+      "SAT-GES-0494"
     ],
     "ubicaciones": [
       {
-        "tramiteId": "SAT-GES-0494-ZDEEP-USR",
+        "tramiteId": "SAT-GES-0494",
         "segmentoId": "comercio_exterior"
       }
     ],
@@ -23781,9 +23781,9 @@
     ]
   },
   {
-    "id": "cnt-SAT-GES-0495-ZDEEP-USR",
+    "id": "cnt-SAT-GES-0495",
     "codigo": "SAT-GES-0495",
-    "idOriginal": "SAT-GES-0495-ZDEEP-USR",
+    "idOriginal": "SAT-GES-0495",
     "titulo": "Preguntas frecuentes sobre temas aduaneros y cumplimiento",
     "nombreActual": "Preguntas frecuentes sobre temas aduaneros y cumplimiento",
     "descripcion": "Gestión y especificaciones para Preguntas frecuentes sobre temas aduaneros y cumplimiento conforme a normativa aduanera aplicable.",
@@ -23802,11 +23802,11 @@
     "esTransversal": false,
     "totalAudiencias": 1,
     "tramiteIds": [
-      "SAT-GES-0495-ZDEEP-USR"
+      "SAT-GES-0495"
     ],
     "ubicaciones": [
       {
-        "tramiteId": "SAT-GES-0495-ZDEEP-USR",
+        "tramiteId": "SAT-GES-0495",
         "segmentoId": "comercio_exterior"
       }
     ],
@@ -23824,9 +23824,9 @@
     "familiaTematica": "FAM-04 Declaraciones Aduaneras (DUCAs); FAM-07 Zonas de Desarrollo Económico Especial Público (ZDEEP)"
   },
   {
-    "id": "cnt-SAT-GES-0496-ZDEEP-USR",
+    "id": "cnt-SAT-GES-0496",
     "codigo": "SAT-GES-0496",
-    "idOriginal": "SAT-GES-0496-ZDEEP-USR",
+    "idOriginal": "SAT-GES-0496",
     "titulo": "Procedimiento aduanero de traslado de mercancías hacia y desde Zonas Especiales (ZDEEP)",
     "nombreActual": "Procedimiento aduanero de traslado de mercancías hacia y desde Zonas Especiales (ZDEEP)",
     "descripcion": "Gestión y especificaciones para Procedimiento aduanero de traslado de mercancías hacia y desde ZDEEP conforme a normativa aduanera aplicable.",
@@ -23845,11 +23845,11 @@
     "esTransversal": false,
     "totalAudiencias": 1,
     "tramiteIds": [
-      "SAT-GES-0496-ZDEEP-USR"
+      "SAT-GES-0496"
     ],
     "ubicaciones": [
       {
-        "tramiteId": "SAT-GES-0496-ZDEEP-USR",
+        "tramiteId": "SAT-GES-0496",
         "segmentoId": "comercio_exterior"
       }
     ],
@@ -23875,9 +23875,9 @@
     ]
   },
   {
-    "id": "cnt-SAT-GES-0497-ZDEEP-USR",
+    "id": "cnt-SAT-GES-0497",
     "codigo": "SAT-GES-0497",
-    "idOriginal": "SAT-GES-0497-ZDEEP-USR",
+    "idOriginal": "SAT-GES-0497",
     "titulo": "Registro de empresas usuarias calificadas en Zonas Especiales (ZDEEP) ante SAT",
     "nombreActual": "Registro de empresas usuarias calificadas en Zonas Especiales (ZDEEP) ante SAT",
     "descripcion": "Gestión y especificaciones para Registro de empresas usuarias calificadas en ZDEEP ante SAT conforme a normativa aduanera aplicable.",
@@ -23896,11 +23896,11 @@
     "esTransversal": false,
     "totalAudiencias": 1,
     "tramiteIds": [
-      "SAT-GES-0497-ZDEEP-USR"
+      "SAT-GES-0497"
     ],
     "ubicaciones": [
       {
-        "tramiteId": "SAT-GES-0497-ZDEEP-USR",
+        "tramiteId": "SAT-GES-0497",
         "segmentoId": "comercio_exterior"
       }
     ],
@@ -23926,9 +23926,9 @@
     ]
   },
   {
-    "id": "cnt-SAT-GES-0498-ZDEEP-USR",
+    "id": "cnt-SAT-GES-0498",
     "codigo": "SAT-GES-0498",
-    "idOriginal": "SAT-GES-0498-ZDEEP-USR",
+    "idOriginal": "SAT-GES-0498",
     "titulo": "Régimen de factura electrónica en línea (FEL)",
     "nombreActual": "Régimen de factura electrónica en línea (FEL)",
     "descripcion": "Gestión y especificaciones para Régimen de factura electrónica en línea (FEL) conforme a normativa aduanera aplicable.",
@@ -23947,11 +23947,11 @@
     "esTransversal": false,
     "totalAudiencias": 1,
     "tramiteIds": [
-      "SAT-GES-0498-ZDEEP-USR"
+      "SAT-GES-0498"
     ],
     "ubicaciones": [
       {
-        "tramiteId": "SAT-GES-0498-ZDEEP-USR",
+        "tramiteId": "SAT-GES-0498",
         "segmentoId": "comercio_exterior"
       }
     ],
@@ -23996,9 +23996,9 @@
     ]
   },
   {
-    "id": "cnt-SAT-GES-0499-ZDEEP-USR",
+    "id": "cnt-SAT-GES-0499",
     "codigo": "SAT-GES-0499",
-    "idOriginal": "SAT-GES-0499-ZDEEP-USR",
+    "idOriginal": "SAT-GES-0499",
     "titulo": "Solvencia fiscal (Requisito obligatorio para goce de incentivos tributarios)",
     "nombreActual": "Solvencia fiscal (Requisito obligatorio para goce de incentivos tributarios)",
     "descripcion": "Gestión y especificaciones para Solvencia fiscal (Requisito obligatorio para goce de incentivos tributarios) conforme a normativa aduanera aplicable.",
@@ -24017,11 +24017,11 @@
     "esTransversal": false,
     "totalAudiencias": 1,
     "tramiteIds": [
-      "SAT-GES-0499-ZDEEP-USR"
+      "SAT-GES-0499"
     ],
     "ubicaciones": [
       {
-        "tramiteId": "SAT-GES-0499-ZDEEP-USR",
+        "tramiteId": "SAT-GES-0499",
         "segmentoId": "comercio_exterior"
       }
     ],
@@ -24054,9 +24054,9 @@
     ]
   },
   {
-    "id": "cnt-SAT-GES-0500-ZDEEP-ADM",
+    "id": "cnt-SAT-GES-0500",
     "codigo": "SAT-GES-0500",
-    "idOriginal": "SAT-GES-0500-ZDEEP-ADM",
+    "idOriginal": "SAT-GES-0500",
     "titulo": "Capacitaciones institucionales y cultura tributaria",
     "nombreActual": "Capacitaciones institucionales y cultura tributaria",
     "descripcion": "Gestión y especificaciones para Capacitaciones institucionales y cultura tributaria conforme a normativa aduanera aplicable.",
@@ -24075,11 +24075,11 @@
     "esTransversal": false,
     "totalAudiencias": 1,
     "tramiteIds": [
-      "SAT-GES-0500-ZDEEP-ADM"
+      "SAT-GES-0500"
     ],
     "ubicaciones": [
       {
-        "tramiteId": "SAT-GES-0500-ZDEEP-ADM",
+        "tramiteId": "SAT-GES-0500",
         "segmentoId": "comercio_exterior"
       }
     ],
@@ -24097,9 +24097,9 @@
     "familiaTematica": "FAM-04 Declaraciones Aduaneras (DUCAs); FAM-07 Zonas de Desarrollo Económico Especial Público (ZDEEP)"
   },
   {
-    "id": "cnt-SAT-GES-0501-ZDEEP-ADM",
+    "id": "cnt-SAT-GES-0501",
     "codigo": "SAT-GES-0501",
-    "idOriginal": "SAT-GES-0501-ZDEEP-ADM",
+    "idOriginal": "SAT-GES-0501",
     "titulo": "Consulta facilidades de pago y convenios tributarios",
     "nombreActual": "Consulta facilidades de pago y convenios tributarios",
     "descripcion": "Gestión y especificaciones para Consulta facilidades de pago y convenios tributarios conforme a normativa aduanera aplicable.",
@@ -24118,11 +24118,11 @@
     "esTransversal": false,
     "totalAudiencias": 1,
     "tramiteIds": [
-      "SAT-GES-0501-ZDEEP-ADM"
+      "SAT-GES-0501"
     ],
     "ubicaciones": [
       {
-        "tramiteId": "SAT-GES-0501-ZDEEP-ADM",
+        "tramiteId": "SAT-GES-0501",
         "segmentoId": "comercio_exterior"
       }
     ],
@@ -24149,9 +24149,9 @@
     ]
   },
   {
-    "id": "cnt-SAT-GES-0502-ZDEEP-ADM",
+    "id": "cnt-SAT-GES-0502",
     "codigo": "SAT-GES-0502",
-    "idOriginal": "SAT-GES-0502-ZDEEP-ADM",
+    "idOriginal": "SAT-GES-0502",
     "titulo": "Consultas de aduanas (Retención, liberación, rampa y manifiestos de transporte)",
     "nombreActual": "Consultas de aduanas (Retención, liberación, rampa y manifiestos de transporte)",
     "descripcion": "Gestión y especificaciones para Consultas de aduanas (Retención, liberación, rampa y manifiestos de transporte) conforme a normativa aduanera aplicable.",
@@ -24170,11 +24170,11 @@
     "esTransversal": false,
     "totalAudiencias": 1,
     "tramiteIds": [
-      "SAT-GES-0502-ZDEEP-ADM"
+      "SAT-GES-0502"
     ],
     "ubicaciones": [
       {
-        "tramiteId": "SAT-GES-0502-ZDEEP-ADM",
+        "tramiteId": "SAT-GES-0502",
         "segmentoId": "comercio_exterior"
       }
     ],
@@ -24192,9 +24192,9 @@
     "familiaTematica": "FAM-04 Declaraciones Aduaneras (DUCAs); FAM-07 Zonas de Desarrollo Económico Especial Público (ZDEEP)"
   },
   {
-    "id": "cnt-SAT-GES-0503-ZDEEP-ADM",
+    "id": "cnt-SAT-GES-0503",
     "codigo": "SAT-GES-0503",
-    "idOriginal": "SAT-GES-0503-ZDEEP-ADM",
+    "idOriginal": "SAT-GES-0503",
     "titulo": "Legislación aduanera y régimen especial de Zonas Especiales (ZDEEP) (Decreto 22-73 y reformas)",
     "nombreActual": "Legislación aduanera y régimen especial de Zonas Especiales (ZDEEP) (Decreto 22-73 y reformas)",
     "descripcion": "Gestión y especificaciones para Legislación aduanera y régimen especial ZDEEP (Decreto 22-73 y reformas) conforme a normativa aduanera aplicable.",
@@ -24213,11 +24213,11 @@
     "esTransversal": false,
     "totalAudiencias": 1,
     "tramiteIds": [
-      "SAT-GES-0503-ZDEEP-ADM"
+      "SAT-GES-0503"
     ],
     "ubicaciones": [
       {
-        "tramiteId": "SAT-GES-0503-ZDEEP-ADM",
+        "tramiteId": "SAT-GES-0503",
         "segmentoId": "comercio_exterior"
       }
     ],
@@ -24243,9 +24243,9 @@
     ]
   },
   {
-    "id": "cnt-SAT-GES-0504-ZDEEP-ADM",
+    "id": "cnt-SAT-GES-0504",
     "codigo": "SAT-GES-0504",
-    "idOriginal": "SAT-GES-0504-ZDEEP-ADM",
+    "idOriginal": "SAT-GES-0504",
     "titulo": "Procedimiento de control para ingreso y egreso de carga en garita de Zonas Especiales (ZDEEP)",
     "nombreActual": "Procedimiento de control para ingreso y egreso de carga en garita de Zonas Especiales (ZDEEP)",
     "descripcion": "Gestión y especificaciones para Procedimiento de control para ingreso y egreso de carga en garita ZDEEP conforme a normativa aduanera aplicable.",
@@ -24264,11 +24264,11 @@
     "esTransversal": false,
     "totalAudiencias": 1,
     "tramiteIds": [
-      "SAT-GES-0504-ZDEEP-ADM"
+      "SAT-GES-0504"
     ],
     "ubicaciones": [
       {
-        "tramiteId": "SAT-GES-0504-ZDEEP-ADM",
+        "tramiteId": "SAT-GES-0504",
         "segmentoId": "comercio_exterior"
       }
     ],
@@ -24294,9 +24294,9 @@
     ]
   },
   {
-    "id": "cnt-SAT-GES-0505-ZDEEP-ADM",
+    "id": "cnt-SAT-GES-0505",
     "codigo": "SAT-GES-0505",
-    "idOriginal": "SAT-GES-0505-ZDEEP-ADM",
+    "idOriginal": "SAT-GES-0505",
     "titulo": "Puestos de control interinstitucional (PCI) y rutas fiscales",
     "nombreActual": "Puestos de control interinstitucional (PCI) y rutas fiscales",
     "descripcion": "Gestión y especificaciones para Puestos de control interinstitucional (PCI) y rutas fiscales conforme a normativa aduanera aplicable.",
@@ -24315,11 +24315,11 @@
     "esTransversal": false,
     "totalAudiencias": 1,
     "tramiteIds": [
-      "SAT-GES-0505-ZDEEP-ADM"
+      "SAT-GES-0505"
     ],
     "ubicaciones": [
       {
-        "tramiteId": "SAT-GES-0505-ZDEEP-ADM",
+        "tramiteId": "SAT-GES-0505",
         "segmentoId": "comercio_exterior"
       }
     ],
@@ -24351,9 +24351,9 @@
     ]
   },
   {
-    "id": "cnt-SAT-GES-0506-ZDEEP-ADM",
+    "id": "cnt-SAT-GES-0506",
     "codigo": "SAT-GES-0506",
-    "idOriginal": "SAT-GES-0506-ZDEEP-ADM",
+    "idOriginal": "SAT-GES-0506",
     "titulo": "Registro y control de garitas aduaneras e infraestructura perimetral",
     "nombreActual": "[Propuesta brecha] Registro y control de garitas aduaneras e infraestructura perimetral",
     "descripcion": "Gestión y especificaciones para Registro y control de garitas aduaneras e infraestructura perimetral conforme a normativa aduanera aplicable.",
@@ -24372,11 +24372,11 @@
     "esTransversal": false,
     "totalAudiencias": 1,
     "tramiteIds": [
-      "SAT-GES-0506-ZDEEP-ADM"
+      "SAT-GES-0506"
     ],
     "ubicaciones": [
       {
-        "tramiteId": "SAT-GES-0506-ZDEEP-ADM",
+        "tramiteId": "SAT-GES-0506",
         "segmentoId": "comercio_exterior"
       }
     ],
@@ -24402,9 +24402,9 @@
     ]
   },
   {
-    "id": "cnt-SAT-GES-0507-ZDEEP-ADM",
+    "id": "cnt-SAT-GES-0507",
     "codigo": "SAT-GES-0507",
-    "idOriginal": "SAT-GES-0507-ZDEEP-ADM",
+    "idOriginal": "SAT-GES-0507",
     "titulo": "Requisitos para habilitación y delimitación perimetral del polígono de Zonas Especiales (ZDEEP)",
     "nombreActual": "Requisitos para habilitación y delimitación perimetral del polígono de Zonas Especiales (ZDEEP)",
     "descripcion": "Gestión y especificaciones para Requisitos para habilitación y delimitación perimetral del polígono ZDEEP conforme a normativa aduanera aplicable.",
@@ -24423,11 +24423,11 @@
     "esTransversal": false,
     "totalAudiencias": 1,
     "tramiteIds": [
-      "SAT-GES-0507-ZDEEP-ADM"
+      "SAT-GES-0507"
     ],
     "ubicaciones": [
       {
-        "tramiteId": "SAT-GES-0507-ZDEEP-ADM",
+        "tramiteId": "SAT-GES-0507",
         "segmentoId": "comercio_exterior"
       }
     ],
@@ -24453,9 +24453,9 @@
     ]
   },
   {
-    "id": "cnt-SAT-GES-0508-ZDEEP-ADM",
+    "id": "cnt-SAT-GES-0508",
     "codigo": "SAT-GES-0508",
-    "idOriginal": "SAT-GES-0508-ZDEEP-ADM",
+    "idOriginal": "SAT-GES-0508",
     "titulo": "Solvencia fiscal (Requisito institucional de cumplimiento)",
     "nombreActual": "Solvencia fiscal (Requisito institucional de cumplimiento)",
     "descripcion": "Gestión y especificaciones para Solvencia fiscal (Requisito institucional de cumplimiento) conforme a normativa aduanera aplicable.",
@@ -24474,11 +24474,11 @@
     "esTransversal": false,
     "totalAudiencias": 1,
     "tramiteIds": [
-      "SAT-GES-0508-ZDEEP-ADM"
+      "SAT-GES-0508"
     ],
     "ubicaciones": [
       {
-        "tramiteId": "SAT-GES-0508-ZDEEP-ADM",
+        "tramiteId": "SAT-GES-0508",
         "segmentoId": "comercio_exterior"
       }
     ],
@@ -25643,9 +25643,9 @@
     "familiaTematica": "FAM-04 Declaraciones Aduaneras (DUCAs)"
   },
   {
-    "id": "cnt-SAT-GES-0534-DAT",
+    "id": "cnt-SAT-GES-0534",
     "codigo": "SAT-GES-0534",
-    "idOriginal": "SAT-GES-0534-DAT",
+    "idOriginal": "SAT-GES-0534",
     "titulo": "Requisitos, pasos y documentos para actualizar tus datos en Agencia Virtual.",
     "nombreActual": "Actualizar tus datos en Agencia Virtual",
     "descripcion": "Gestiones para empresas que importan o exportan mercancías.",
@@ -25664,11 +25664,11 @@
     "esTransversal": false,
     "totalAudiencias": 1,
     "tramiteIds": [
-      "SAT-GES-0534-DAT"
+      "SAT-GES-0534"
     ],
     "ubicaciones": [
       {
-        "tramiteId": "SAT-GES-0534-DAT",
+        "tramiteId": "SAT-GES-0534",
         "segmentoId": "comercio_exterior"
       }
     ],

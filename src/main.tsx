@@ -3,6 +3,7 @@ import {createRoot} from 'react-dom/client';
 import App from './App.tsx';
 import StyleGuide from './design-system/StyleGuide.tsx';
 import { PortalFlowPage } from './pages/PortalFlowPage.tsx';
+import { ArchitectureDiagramPage } from './pages/ArchitectureDiagramPage.tsx';
 import './index.css';
 
 const STYLEGUIDE_PREFIX = '#/estilo';
@@ -10,6 +11,7 @@ const DIAGRAM_PREFIX = '#/diagrama';
 const MAPA_PREFIX = '#/mapa';
 const FLUJO_PREFIX = '#/flujo';
 const ARBOL_PREFIX = '#/arbol';
+const ARQUITECTURA_PREFIX = '#/arquitectura';
 
 export const isStyleGuideHash = (hash: string): boolean =>
   hash === STYLEGUIDE_PREFIX || hash.startsWith(`${STYLEGUIDE_PREFIX}/`);
@@ -20,9 +22,13 @@ export const isDiagramHash = (hash: string): boolean =>
   hash === FLUJO_PREFIX || hash.startsWith(`${FLUJO_PREFIX}/`) ||
   hash === ARBOL_PREFIX || hash.startsWith(`${ARBOL_PREFIX}/`);
 
+export const isArchitectureHash = (hash: string): boolean =>
+  hash === ARQUITECTURA_PREFIX || hash.startsWith(`${ARQUITECTURA_PREFIX}/`);
+
 function resolveView(): React.ReactElement {
   const hash = window.location.hash;
   if (isStyleGuideHash(hash)) return <StyleGuide />;
+  if (isArchitectureHash(hash)) return <ArchitectureDiagramPage />;
   if (isDiagramHash(hash)) return <PortalFlowPage />;
   return <App />;
 }

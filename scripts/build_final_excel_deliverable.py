@@ -418,39 +418,18 @@ def populate_unified_sheet(ws, dataset):
             rutas_str = "; ".join([f"Proc #{p['procesoNo']} ({p['pasoAccion']})" for p in item['rutasProceso']])
 
         miga_raw = item.get('migaBreadcrumb', '')
-        miga_parts = [p.strip() for p in miga_raw.split('>') if p.strip()] if miga_raw else []
 
-        nav_levels = miga_parts[:-1] if len(miga_parts) > 1 else miga_parts
-
-        n1 = item.get('nivel1_segmento') or item.get('segmento') or (nav_levels[0] if len(nav_levels) > 0 else '—')
-        n2 = item.get('nivel2_area') or item.get('nivel2_categoria') or item.get('nivel2_rama') or item.get('nivel2_rol') or item.get('regimenArea') or item.get('categoria') or (nav_levels[1] if len(nav_levels) > 1 else '—')
-        # Si la miga solo tiene 2 niveles de navegación (compactación directa en N2: sin N3, N4 ni N5, ej. OEA)
-        item_n3 = item.get('nivel3_subarea') or item.get('nivel3_subcategoria') or item.get('nivel3_actor') or item.get('grupoActor') or item.get('subcategoria')
-        item_n4 = item.get('nivel4_tema') or item.get('materiaTema') or item.get('tema')
-        item_n5 = item.get('nivel5_tramite') or item.get('subtemaGestion') or item.get('subtema')
-
-        if len(nav_levels) <= 2 or item_n3 in ['', '—']:
-            n3 = '—'
-            n4 = '—'
-            n5 = '—'
-        else:
-            n3 = item_n3 or (nav_levels[2] if len(nav_levels) > 2 else '—')
-            if len(nav_levels) <= 3 and (not item_n4 or item_n4 in ['', '—']):
-                n4 = '—'
-                n5 = '—'
-            else:
-                n4 = item_n4 or (nav_levels[3] if len(nav_levels) > 3 else '—')
-                n5 = item_n5 or (nav_levels[4] if len(nav_levels) > 4 else '—')
-
-        if not n3 or str(n3).strip() in ['', '—']: n3 = '—'
-        if not n4 or str(n4).strip() in ['', '—']: n4 = '—'
-        if not n5 or str(n5).strip() in ['', '—']: n5 = '—'
+        n1 = item.get('nivel1_segmento', '—')
+        n2 = item.get('nivel2_area', '—')
+        n3 = item.get('nivel3_subarea', '—')
+        n4 = item.get('nivel4_tema', '—')
+        n5 = item.get('nivel5_tramite', '—')
 
         ord_n1 = item.get('orden_n1', 1)
         ord_n2 = item.get('orden_n2', 1)
-        ord_n3 = item.get('orden_n3', 1) if n3 != '—' else '—'
-        ord_n4 = item.get('orden_n4', 1) if n4 != '—' else '—'
-        ord_n5 = item.get('orden_n5', 1) if n5 != '—' else '—'
+        ord_n3 = item.get('orden_n3', '—')
+        ord_n4 = item.get('orden_n4', '—')
+        ord_n5 = item.get('orden_n5', '—')
 
         # Col 1: No.
         ws.cell(row=r_idx, column=1, value=r_idx - 1).alignment = Alignment(horizontal='center')

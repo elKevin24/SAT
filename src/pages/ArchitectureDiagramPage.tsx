@@ -17,6 +17,7 @@ import {
 } from 'lucide-react';
 import rawTramites from '../data/allTramites.json';
 import { OFFICIAL_CATEGORY_ORDER as OFFICIAL_ORDER } from '../data/categoryOrder';
+import { SEGMENT_DESCRIPTIONS, getTaxonDescription } from '../data/taxonomyDescriptions';
 
 export type PillarKey = 'contribuyentes' | 'comercio_exterior' | 'profesionales' | 'entes_exentos';
 
@@ -29,6 +30,8 @@ interface PillarConfig {
   borderColor: string;
   bgLight: string;
   description: string;
+  que_es: string;
+  base_juridica: string;
 }
 
 const PILLARS: PillarConfig[] = [
@@ -40,7 +43,9 @@ const PILLARS: PillarConfig[] = [
     primaryColor: '#14649B',
     borderColor: 'border-[#14649B]',
     bgLight: 'bg-[#14649B]/5',
-    description: 'Información y servicios tributarios para personas y empresas.'
+    description: SEGMENT_DESCRIPTIONS['contribuyentes']?.lead_text || 'Información y servicios tributarios para personas y empresas.',
+    que_es: SEGMENT_DESCRIPTIONS['contribuyentes']?.que_es || '',
+    base_juridica: SEGMENT_DESCRIPTIONS['contribuyentes']?.base_juridica || ''
   },
   {
     id: 'comercio_exterior',
@@ -50,7 +55,9 @@ const PILLARS: PillarConfig[] = [
     primaryColor: '#0284C7',
     borderColor: 'border-[#0284C7]',
     bgLight: 'bg-[#0284C7]/5',
-    description: 'Servicios e información aduanera para la importación, exportación y logística.'
+    description: SEGMENT_DESCRIPTIONS['operadores-de-comercio-exterior']?.lead_text || 'Servicios e información aduanera para la importación, exportación y logística.',
+    que_es: SEGMENT_DESCRIPTIONS['operadores-de-comercio-exterior']?.que_es || '',
+    base_juridica: SEGMENT_DESCRIPTIONS['operadores-de-comercio-exterior']?.base_juridica || ''
   },
   {
     id: 'profesionales',
@@ -60,7 +67,9 @@ const PILLARS: PillarConfig[] = [
     primaryColor: '#4D8014',
     borderColor: 'border-[#4D8014]',
     bgLight: 'bg-[#4D8014]/5',
-    description: 'Herramientas y servicios especializados para profesionales tributarios y auxiliares.'
+    description: SEGMENT_DESCRIPTIONS['profesionales']?.lead_text || 'Herramientas y servicios especializados para profesionales tributarios y auxiliares.',
+    que_es: SEGMENT_DESCRIPTIONS['profesionales']?.que_es || '',
+    base_juridica: SEGMENT_DESCRIPTIONS['profesionales']?.base_juridica || ''
   },
   {
     id: 'entes_exentos',
@@ -70,7 +79,9 @@ const PILLARS: PillarConfig[] = [
     primaryColor: '#C25E00',
     borderColor: 'border-[#C25E00]',
     bgLight: 'bg-[#C25E00]/5',
-    description: 'Información y gestiones tributarias para entidades públicas y organizaciones no lucrativas.'
+    description: SEGMENT_DESCRIPTIONS['entes-exentos']?.lead_text || 'Información y gestiones tributarias para entidades públicas y organizaciones no lucrativas.',
+    que_es: SEGMENT_DESCRIPTIONS['entes-exentos']?.que_es || '',
+    base_juridica: SEGMENT_DESCRIPTIONS['entes-exentos']?.base_juridica || ''
   }
 ];
 
@@ -553,21 +564,42 @@ export const ArchitectureDiagramPage: React.FC = () => {
                 </div>
               </div>
 
-              {/* Banner contextual de Plain Language si es NIT sin Obligaciones */}
-              {selectedDiagramBranch === 'NIT sin Obligaciones' && (
-                <div className="p-4 bg-sky-50 border border-sky-200 rounded-xl space-y-1">
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-[#14649B]" />
-                    <h4 className="text-xs font-black text-[#14649B] uppercase tracking-wider">
-                      Número de Identificación Tributaria (NIT) · Regla de Exclusividad
-                    </h4>
+              {/* Ficha oficial de Definición Operativa (Plain Language & Base Jurídica) */}
+              {(() => {
+                const branchDesc = getTaxonDescription(selectedDiagramBranch);
+                if (!branchDesc) return null;
+                return (
+                  <div className="p-4 bg-slate-50 border border-slate-200 rounded-xl space-y-2">
+                    <div className="flex items-center justify-between gap-2">
+                      <div className="flex items-center gap-2">
+                        <CheckCircle2 className="w-4 h-4 text-[#14649B]" />
+                        <h4 className="text-xs font-black text-[#14649B] uppercase tracking-wider">
+                          Ficha Técnica Canónica · {branchDesc.nombre}
+                        </h4>
+                      </div>
+                      <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#14649B]/10 text-[#14649B]">
+                        Nivel {branchDesc.nivel}
+                      </span>
+                    </div>
+                    <div className="space-y-1.5 text-xs text-slate-700 leading-relaxed">
+                      <p>
+                        <strong className="text-slate-900 font-bold">¿Qué es? </strong>
+                        {branchDesc.que_es}
+                      </p>
+                      <p className="text-slate-600 italic">
+                        <strong className="text-slate-900 not-italic font-bold">Texto de Interfaz: </strong>
+                        {branchDesc.lead_text}
+                      </p>
+                      {branchDesc.base_juridica && (
+                        <p className="text-[11px] text-slate-600 bg-white p-2 rounded-lg border border-slate-200">
+                          <strong className="text-slate-800 font-bold">Fundamento Legal: </strong>
+                          {branchDesc.base_juridica}
+                        </p>
+                      )}
+                    </div>
                   </div>
-                  <p className="text-xs text-slate-700 leading-relaxed">
-                    Cómo solicitar un Número de Identificación Tributaria (NIT), actualizar sus datos, consultar su NIT y qué hacer si ha sido utilizado de forma indebida. 
-                    <strong> Exclusivo para personas sin actividad lucrativa (cero trabajadores asalariados).</strong>
-                  </p>
-                </div>
-              )}
+                );
+              })()}
 
               {/* Subnodos Temáticos (Nivel 3) */}
               <div className="space-y-4 pt-1">

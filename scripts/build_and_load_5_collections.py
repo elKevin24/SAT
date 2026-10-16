@@ -27,8 +27,8 @@ if hasattr(sys.stdout, 'reconfigure'):
 #   $env:ATLAS_URI = "mongodb+srv://<user>:<pass>@cluster0.qdieyln.mongodb.net/?appName=Cluster0"
 ATLAS_URI = os.environ.get("ATLAS_URI", "mongodb://localhost:27017/")
 DB_NAME = "SAT"
-EXCEL_PATH = "docs/fuentes-datos/Estructura_Final_Contenido_Portal_SAT_Actualizado.xlsx"
-RUTA_PROCESOS_PATH = "docs/fuentes-datos/Ruta de procesos.xlsx"
+EXCEL_PATH = "docs/fuentes-datos/02_archivos_producto_entregables/Estructura_Final_Contenido_Portal_SAT_Actualizado.xlsx"
+RUTA_PROCESOS_PATH = "docs/fuentes-datos/01_archivos_inicio_historicos/Ruta de procesos.xlsx"
 
 def slugify(text: str) -> str:
     if not text:
@@ -49,24 +49,26 @@ def slugify(text: str) -> str:
 # 1. Cargar Excel y preparar mapeo de hojas para trazabilidad forense
 print("Cargando libro Excel maestro...")
 wb = openpyxl.load_workbook(EXCEL_PATH, data_only=True)
-sheets = ['Contribuyentes (344)', 'Comercio Exterior (246)', 'Profesionales (47)', 'Entes Exentos (79)']
+sheets = ['Contribuyentes (344)', 'Comercio Exterior (245)', 'Profesionales (47)', 'Entes Exentos (79)']
 
 id_to_origen = {}
 for sname in sheets:
-    ws = wb[sname]
-    for row_idx in range(2, ws.max_row + 1):
-        tid = ws.cell(row=row_idx, column=2).value
-        if tid:
-            id_to_origen[str(tid).strip()] = {
-                "archivo": "Matriz",
-                "hoja": sname,
-                "fila": row_idx
-            }
+    if sname in wb.sheetnames:
+        ws = wb[sname]
+        for row_idx in range(2, ws.max_row + 1):
+            tid = ws.cell(row=row_idx, column=2).value
+            if tid:
+                id_to_origen[str(tid).strip()] = {
+                    "archivo": "Matriz",
+                    "hoja": sname,
+                    "fila": row_idx
+                }
 
 print(f"Mapeados {len(id_to_origen)} registros de origen exactos.")
 
-# Leer Matriz Maestra (716 filas)
-ws_matriz = wb['Matriz Maestra (716)']
+# Leer Matriz Maestra (715 filas)
+matriz_sheet_name = 'Matriz Maestra (715)' if 'Matriz Maestra (715)' in wb.sheetnames else 'Matriz Maestra (716)'
+ws_matriz = wb[matriz_sheet_name]
 header = [cell.value for cell in ws_matriz[1]]
 rows_raw = []
 for r in ws_matriz.iter_rows(min_row=2, values_only=True):
@@ -182,11 +184,11 @@ root_meta = {
         'lead_text': 'Gestione su ciclo de vida tributario: inscripción, facturación electrónica, declaraciones y pagos.',
         'base_juridica': 'Código Tributario (Decreto 6-91 del Congreso de la República de Guatemala) y reformas.'
     },
-    'comercio-exterior': {
+    'operadores-de-comercio-exterior': {
         'nombre': 'Operadores de Comercio Exterior',
-        'que_es': 'Ventanilla aduanera única para importadores, exportadores y auxiliares de la función pública.',
-        'lead_text': 'Operaciones de comercio internacional, declaraciones DUCAs, depósitos y regímenes especiales.',
-        'base_juridica': 'Código Aduanero Uniforme Centroamericano (CAUCA IV) y su Reglamento (RECAUCA IV).'
+        'que_es': 'Son todas las personas individuales o jurídicas que intervienen en el ingreso, permanencia, traslado y salida de mercancías del territorio aduanero nacional. Comprende tanto a los dueños de las mercancías (importadores y exportadores) como a los prestadores de servicios logísticos autorizados (auxiliares de la función pública, transportistas, depósitos) y empresas que operan bajo regímenes territoriales especiales.',
+        'lead_text': 'Servicios e información aduanera para la importación, exportación y logística.',
+        'base_juridica': 'Código Tributario (Dto. 6-91), CAUCA IV (Resolución 223-2008 COMIECO) y RECAUCA (Resolución 224-2008 COMIECO).'
     },
     'profesionales': {
         'nombre': 'Profesionales',
