@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect, useRef } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import {
   ReactFlow,
   Background,
@@ -12,7 +12,9 @@ import {
   useEdgesState,
   NodeProps,
   Panel,
-  useReactFlow
+  useReactFlow,
+  MarkerType,
+  BackgroundVariant
 } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 import {
@@ -26,7 +28,13 @@ import {
   ShieldCheck,
   Search,
   X,
-  Compass
+  Compass,
+  Sparkles,
+  Globe,
+  Database,
+  Download,
+  BookOpen,
+  CheckCircle2
 } from 'lucide-react';
 import { SatIsologotipo } from '../components/SatIsologotipo';
 import rawTramites from '../data/allTramites.json';
@@ -130,25 +138,32 @@ export interface FullTramiteItem {
 
 // --- NODOS DE REACT FLOW (ROTULADOS POR NIVEL OFICIAL) ---
 
+// --- NODOS DE REACT FLOW (ROTULADOS POR NIVEL OFICIAL) ---
+
 // Nivel 1
 const NodeLevel1Component = ({ data }: NodeProps) => (
   <div
-    className="w-72 bg-white border-2 rounded-xl p-4 shadow-md transition-transform hover:-translate-y-0.5"
-    style={{ borderColor: data.color as string }}
+    className="w-76 bg-white border border-slate-200/90 rounded-2xl p-4 shadow-md transition-all hover:shadow-lg hover:-translate-y-0.5 relative overflow-hidden"
+    style={{ borderTop: `4px solid ${data.color as string}` }}
   >
-    <div className="flex items-center justify-between">
-      <span className="text-[11px] font-black text-slate-700 uppercase tracking-wider">Nivel 1</span>
-      <span className="text-xs font-black px-2 py-0.5 rounded-full bg-slate-100 text-slate-800">
+    <div className="flex items-center justify-between gap-2">
+      <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-black uppercase tracking-wider text-slate-800 bg-slate-100 border border-slate-200">
+        <Layers className="w-3 h-3 text-slate-600" />
+        Nivel 1
+      </span>
+      <span className="text-[11px] font-black px-2.5 py-0.5 rounded-full bg-slate-900 text-white shadow-xs">
         {data.total as number} Gestiones
       </span>
     </div>
-    <p className="text-base font-black text-slate-900 mt-1">{data.name as string}</p>
-    <p className="text-xs text-slate-600 mt-1 line-clamp-2">{data.desc as string}</p>
-    <div className="mt-2 pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-600 font-semibold">
+    <p className="text-sm font-black text-slate-900 mt-2 leading-snug">{data.name as string}</p>
+    <p className="text-xs text-slate-600 mt-1 line-clamp-2 leading-relaxed">{data.desc as string}</p>
+    <div className="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500 font-semibold">
       <span>Nodos en Nivel 2:</span>
-      <span className="font-bold text-slate-800">{data.n2Count as number} Áreas</span>
+      <span className="font-bold text-slate-800 px-2 py-0.5 rounded-md bg-slate-50 border border-slate-200/60">
+        {data.n2Count as number} Áreas
+      </span>
     </div>
-    <Handle type="source" position={Position.Right} className="w-3 h-3 !bg-slate-700" />
+    <Handle type="source" position={Position.Right} className="w-3.5 h-3.5 !bg-slate-800 ring-4 ring-white shadow-md" />
   </div>
 );
 
@@ -157,29 +172,34 @@ const NodeLevel2Component = ({ data }: NodeProps) => {
   const isSelected = data.isSelected as boolean;
   return (
     <div
-      className={`w-72 bg-white border-2 rounded-xl p-3.5 shadow-xs transition-all cursor-pointer ${
+      className={`w-76 bg-white border rounded-2xl p-3.5 shadow-xs transition-all cursor-pointer relative overflow-hidden ${
         isSelected
-          ? 'ring-2 ring-sky-500 border-sky-500 bg-sky-50/50 shadow-md'
-          : 'border-slate-200 hover:border-slate-400'
+          ? 'ring-2 ring-sky-500 border-sky-500 bg-gradient-to-br from-white via-sky-50/40 to-sky-50/70 shadow-lg shadow-sky-500/10 -translate-y-0.5'
+          : 'border-slate-200 hover:border-sky-300 hover:shadow-md'
       }`}
+      style={{ borderTop: isSelected ? '4px solid #0284C7' : '3px solid #E2E8F0' }}
     >
-      <Handle type="target" position={Position.Left} className="w-2.5 h-2.5 !bg-slate-600" />
-      <div className="flex items-center justify-between">
-        <span className="text-[11px] font-black uppercase tracking-wider text-slate-700">Nivel 2</span>
-        <span className="text-[11px] font-black px-2 py-0.5 rounded bg-slate-100 text-slate-800">
+      <Handle type="target" position={Position.Left} className="w-3 h-3 !bg-slate-500 ring-3 ring-white shadow-sm" />
+      <div className="flex items-center justify-between gap-2">
+        <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider ${
+          isSelected ? 'bg-sky-100 text-sky-900 border border-sky-200' : 'bg-slate-100 text-slate-700 border border-slate-200'
+        }`}>
+          Nivel 2
+        </span>
+        <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-slate-100 text-slate-700 font-mono">
           {data.count as number} gestiones
         </span>
       </div>
-      <p className="text-xs font-bold text-slate-900 mt-1 leading-snug">{data.name as string}</p>
-      <div className="mt-2 flex items-center justify-between text-[11px] text-slate-600 font-medium">
-        <span>{data.detailText as string}</span>
+      <p className="text-xs font-black text-slate-900 mt-1.5 leading-snug">{data.name as string}</p>
+      <div className="mt-2.5 pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500">
+        <span className="truncate max-w-[170px]">{data.detailText as string}</span>
         {isSelected && (
-          <span className="font-bold text-sky-700 flex items-center gap-0.5">
+          <span className="font-bold text-sky-700 flex items-center gap-0.5 text-[10px] bg-sky-100/70 px-1.5 py-0.5 rounded">
             Activo <ChevronRight className="w-3 h-3" />
           </span>
         )}
       </div>
-      <Handle type="source" position={Position.Right} className="w-2.5 h-2.5 !bg-sky-600" />
+      <Handle type="source" position={Position.Right} className="w-3 h-3 !bg-sky-600 ring-3 ring-white shadow-sm" />
     </div>
   );
 };
@@ -189,29 +209,34 @@ const NodeLevel3Component = ({ data }: NodeProps) => {
   const isSelected = data.isSelected as boolean;
   return (
     <div
-      className={`w-72 bg-white border-2 rounded-xl p-3.5 shadow-xs transition-all cursor-pointer ${
+      className={`w-76 bg-white border rounded-2xl p-3.5 shadow-xs transition-all cursor-pointer relative overflow-hidden ${
         isSelected
-          ? 'ring-2 ring-emerald-500 border-emerald-500 bg-emerald-50/50 shadow-md'
-          : 'border-slate-200 hover:border-slate-400'
+          ? 'ring-2 ring-emerald-500 border-emerald-500 bg-gradient-to-br from-white via-emerald-50/40 to-emerald-50/70 shadow-lg shadow-emerald-500/10 -translate-y-0.5'
+          : 'border-slate-200 hover:border-emerald-300 hover:shadow-md'
       }`}
+      style={{ borderTop: isSelected ? '4px solid #10B981' : '3px solid #E2E8F0' }}
     >
-      <Handle type="target" position={Position.Left} className="w-2.5 h-2.5 !bg-slate-600" />
-      <div className="flex items-center justify-between">
-        <span className="text-[11px] font-black uppercase tracking-wider text-slate-700">Nivel 3</span>
-        <span className="text-[11px] font-black px-2 py-0.5 rounded bg-slate-100 text-slate-800">
+      <Handle type="target" position={Position.Left} className="w-3 h-3 !bg-slate-500 ring-3 ring-white shadow-sm" />
+      <div className="flex items-center justify-between gap-2">
+        <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider ${
+          isSelected ? 'bg-emerald-100 text-emerald-900 border border-emerald-200' : 'bg-slate-100 text-slate-700 border border-slate-200'
+        }`}>
+          Nivel 3
+        </span>
+        <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-slate-100 text-slate-700 font-mono">
           {data.count as number} gestiones
         </span>
       </div>
-      <p className="text-xs font-bold text-slate-900 mt-1 leading-snug">{data.name as string}</p>
-      <div className="mt-2 flex items-center justify-between text-[11px] text-slate-600 font-medium">
-        <span>{data.detailText as string}</span>
+      <p className="text-xs font-black text-slate-900 mt-1.5 leading-snug">{data.name as string}</p>
+      <div className="mt-2.5 pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500">
+        <span className="truncate max-w-[170px]">{data.detailText as string}</span>
         {isSelected && (
-          <span className="font-bold text-emerald-700 flex items-center gap-0.5">
+          <span className="font-bold text-emerald-700 flex items-center gap-0.5 text-[10px] bg-emerald-100/70 px-1.5 py-0.5 rounded">
             Activo <ChevronRight className="w-3 h-3" />
           </span>
         )}
       </div>
-      <Handle type="source" position={Position.Right} className="w-2.5 h-2.5 !bg-emerald-600" />
+      <Handle type="source" position={Position.Right} className="w-3 h-3 !bg-emerald-600 ring-3 ring-white shadow-sm" />
     </div>
   );
 };
@@ -221,34 +246,39 @@ const NodeLevel4Component = ({ data }: NodeProps) => {
   const isSelected = data.isSelected as boolean;
   return (
     <div
-      className={`w-72 bg-white border-2 rounded-xl p-3.5 shadow-xs transition-all cursor-pointer ${
+      className={`w-76 bg-white border rounded-2xl p-3.5 shadow-xs transition-all cursor-pointer relative overflow-hidden ${
         isSelected
-          ? 'ring-2 ring-violet-500 border-violet-500 bg-violet-50/50 shadow-md'
-          : 'border-slate-200 hover:border-slate-400'
+          ? 'ring-2 ring-violet-500 border-violet-500 bg-gradient-to-br from-white via-violet-50/40 to-violet-50/70 shadow-lg shadow-violet-500/10 -translate-y-0.5'
+          : 'border-slate-200 hover:border-violet-300 hover:shadow-md'
       }`}
+      style={{ borderTop: isSelected ? '4px solid #8B5CF6' : '3px solid #E2E8F0' }}
     >
-      <Handle type="target" position={Position.Left} className="w-2.5 h-2.5 !bg-slate-600" />
-      <div className="flex items-center justify-between">
-        <span className="text-[11px] font-black uppercase tracking-wider text-slate-700">Nivel 4</span>
-        <span className="text-[11px] font-black px-2 py-0.5 rounded bg-slate-100 text-slate-800">
+      <Handle type="target" position={Position.Left} className="w-3 h-3 !bg-slate-500 ring-3 ring-white shadow-sm" />
+      <div className="flex items-center justify-between gap-2">
+        <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider ${
+          isSelected ? 'bg-violet-100 text-violet-900 border border-violet-200' : 'bg-slate-100 text-slate-700 border border-slate-200'
+        }`}>
+          Nivel 4
+        </span>
+        <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-slate-100 text-slate-700 font-mono">
           {data.count as number} gestiones
         </span>
       </div>
-      <p className="text-xs font-bold text-slate-900 mt-1 leading-snug">{data.name as string}</p>
-      <div className="mt-2 flex items-center justify-between text-[11px] text-slate-600 font-medium">
-        <span>{data.detailText as string}</span>
+      <p className="text-xs font-black text-slate-900 mt-1.5 leading-snug">{data.name as string}</p>
+      <div className="mt-2.5 pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500">
+        <span className="truncate max-w-[170px]">{data.detailText as string}</span>
         {isSelected && (
-          <span className="font-bold text-violet-700 flex items-center gap-0.5">
+          <span className="font-bold text-violet-700 flex items-center gap-0.5 text-[10px] bg-violet-100/70 px-1.5 py-0.5 rounded">
             Activo <ChevronRight className="w-3 h-3" />
           </span>
         )}
       </div>
-      <Handle type="source" position={Position.Right} className="w-2.5 h-2.5 !bg-violet-600" />
+      <Handle type="source" position={Position.Right} className="w-3 h-3 !bg-violet-600 ring-3 ring-white shadow-sm" />
     </div>
   );
 };
 
-// Nivel 5 Oficial
+// Nivel 5 Oficial (Ficha de Gestión)
 const NodeLevel5TramiteComponent = ({ data }: NodeProps) => {
   const atoStyle = ATO_FEATURE_META[data.etapaAto as string] || ATO_FEATURE_META.empezar;
   const handleInspect = () => {
@@ -265,22 +295,27 @@ const NodeLevel5TramiteComponent = ({ data }: NodeProps) => {
           handleInspect();
         }
       }}
-      className="w-80 bg-white border border-slate-300 rounded-xl p-3.5 shadow-xs space-y-2 hover:border-sky-500 hover:shadow-md transition-all cursor-pointer group"
+      className="w-84 bg-white border border-slate-200/90 rounded-2xl p-3.5 shadow-xs space-y-2 hover:border-sky-500 hover:shadow-lg hover:-translate-y-0.5 transition-all cursor-pointer group relative overflow-hidden"
+      style={{ borderLeft: `4px solid ${atoStyle.text.includes('sky') ? '#0284c7' : atoStyle.text.includes('emerald') ? '#10b981' : atoStyle.text.includes('amber') ? '#f59e0b' : atoStyle.text.includes('purple') ? '#8b5cf6' : '#64748b'}` }}
     >
-      <Handle type="target" position={Position.Left} className="w-2.5 h-2.5 !bg-slate-600" />
+      <Handle type="target" position={Position.Left} className="w-3 h-3 !bg-slate-700 ring-3 ring-white shadow-sm" />
       <div className="flex items-center justify-between text-[11px]">
-        <span className="font-black text-slate-700 uppercase tracking-wider">Nivel 5</span>
-        <span className="text-slate-600 font-mono text-xs">{data.codigo as string}</span>
+        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md font-black text-slate-700 uppercase tracking-wider bg-slate-100 text-[10px]">
+          Nivel 5
+        </span>
+        <span className="text-slate-600 font-mono text-[11px] font-bold bg-slate-50 px-2 py-0.5 rounded-md border border-slate-200/60">
+          {data.codigo as string}
+        </span>
       </div>
-      <p className="text-xs font-bold text-slate-900 leading-snug group-hover:text-sky-800 transition-colors">
+      <p className="text-xs font-black text-slate-900 leading-snug group-hover:text-sky-800 transition-colors">
         {data.titulo as string}
       </p>
 
       {/* Característica Transversal (ATO) como atributo explícito */}
-      <div className="pt-1.5 border-t border-slate-100 flex flex-wrap items-center gap-1.5 text-[10px]">
+      <div className="pt-2 border-t border-slate-100 flex flex-wrap items-center gap-1.5 text-[10px]">
         <span
-          className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-bold border ${atoStyle.bg} ${atoStyle.text} ${atoStyle.border}`}
-          title="Característica transversal del ciclo de vida (no afecta el orden jerárquico)"
+          className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full font-bold border ${atoStyle.bg} ${atoStyle.text} ${atoStyle.border}`}
+          title="Característica transversal del ciclo de vida"
         >
           <span>{atoStyle.icon}</span>
           <span>{data.etapaAtoLabel as string}</span>
@@ -290,9 +325,9 @@ const NodeLevel5TramiteComponent = ({ data }: NodeProps) => {
         </span>
       </div>
 
-      <div className="pt-1 flex items-center justify-between text-[11px] text-sky-700 font-bold group-hover:underline">
-        <span>Ver detalle de la gestión</span>
-        <ChevronRight className="w-3.5 h-3.5" />
+      <div className="pt-1 flex items-center justify-between text-[11px] text-sky-700 font-black group-hover:text-sky-800">
+        <span className="inline-flex items-center gap-1">Ver ficha oficial</span>
+        <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
       </div>
     </div>
   );
@@ -544,10 +579,17 @@ export const PortalFlowPage: React.FC = () => {
         id: `e-${macroNodeId}-${n2NodeId}`,
         source: macroNodeId,
         target: n2NodeId,
+        type: 'smoothstep',
         animated: isN2Selected,
         style: {
           stroke: isN2Selected ? segInfo.color : '#CBD5E1',
           strokeWidth: isN2Selected ? 2.5 : 1.2
+        },
+        markerEnd: {
+          type: MarkerType.ArrowClosed,
+          width: 14,
+          height: 14,
+          color: isN2Selected ? segInfo.color : '#94A3B8'
         }
       });
     });
@@ -596,8 +638,15 @@ export const PortalFlowPage: React.FC = () => {
           id: `e-${activeN2NodeId}-${tramiteNodeId}`,
           source: activeN2NodeId,
           target: tramiteNodeId,
+          type: 'smoothstep',
           animated: true,
-          style: { stroke: '#0284C7', strokeWidth: 1.5 }
+          style: { stroke: '#0284C7', strokeWidth: 1.8 },
+          markerEnd: {
+            type: MarkerType.ArrowClosed,
+            width: 14,
+            height: 14,
+            color: '#0284C7'
+          }
         });
       });
     } else {
@@ -628,10 +677,17 @@ export const PortalFlowPage: React.FC = () => {
           id: `e-${activeN2NodeId}-${n3NodeId}`,
           source: activeN2NodeId,
           target: n3NodeId,
+          type: 'smoothstep',
           animated: isN3Selected,
           style: {
             stroke: isN3Selected ? '#0284C7' : '#CBD5E1',
             strokeWidth: isN3Selected ? 2.5 : 1.2
+          },
+          markerEnd: {
+            type: MarkerType.ArrowClosed,
+            width: 14,
+            height: 14,
+            color: isN3Selected ? '#0284C7' : '#94A3B8'
           }
         });
       });
@@ -679,8 +735,15 @@ export const PortalFlowPage: React.FC = () => {
               id: `e-${activeN3NodeId}-${tramiteNodeId}`,
               source: activeN3NodeId,
               target: tramiteNodeId,
+              type: 'smoothstep',
               animated: true,
-              style: { stroke: '#10B981', strokeWidth: 1.5 }
+              style: { stroke: '#10B981', strokeWidth: 1.8 },
+              markerEnd: {
+                type: MarkerType.ArrowClosed,
+                width: 14,
+                height: 14,
+                color: '#10B981'
+              }
             });
           });
         } else {
@@ -708,10 +771,17 @@ export const PortalFlowPage: React.FC = () => {
               id: `e-${activeN3NodeId}-${n4NodeId}`,
               source: activeN3NodeId,
               target: n4NodeId,
+              type: 'smoothstep',
               animated: isN4Selected,
               style: {
-                stroke: isN4Selected ? '#10B981' : '#CBD5E1',
+                stroke: isN4Selected ? '#8B5CF6' : '#CBD5E1',
                 strokeWidth: isN4Selected ? 2.5 : 1.2
+              },
+              markerEnd: {
+                type: MarkerType.ArrowClosed,
+                width: 14,
+                height: 14,
+                color: isN4Selected ? '#8B5CF6' : '#94A3B8'
               }
             });
           });
@@ -755,8 +825,15 @@ export const PortalFlowPage: React.FC = () => {
                 id: `e-${activeN4NodeId}-${tramiteNodeId}`,
                 source: activeN4NodeId,
                 target: tramiteNodeId,
+                type: 'smoothstep',
                 animated: true,
-                style: { stroke: '#8B5CF6', strokeWidth: 1.5 }
+                style: { stroke: '#8B5CF6', strokeWidth: 1.8 },
+                markerEnd: {
+                  type: MarkerType.ArrowClosed,
+                  width: 14,
+                  height: 14,
+                  color: '#8B5CF6'
+                }
               });
             });
           }
@@ -949,7 +1026,7 @@ export const PortalFlowPage: React.FC = () => {
             proOptions={{ hideAttribution: true }}
           >
             <AutoFitView activeKey={`${selectedSegment}-${selectedN2}-${selectedN3}-${selectedN4}`} />
-            <Background color="#cbd5e1" gap={20} size={1} />
+            <Background variant={BackgroundVariant.Dots} color="#cbd5e1" gap={20} size={1.5} />
             <Controls showInteractive={false} />
             <MiniMap
               nodeColor={(node) => {
