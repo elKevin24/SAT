@@ -12,8 +12,10 @@ export type TipoInteraccionId = 'servicio_transaccional' | 'consulta_datos' | 'g
 export type TipologiaContenidoId =
   | 'tramite_interactivo'
   | 'guia_requisitos'
+  | 'guia_informativa'
   | 'consulta_buscador'
   | 'normativa_criterio'
+  | 'contenido_multimedia'
   | 'recurso_descargable'
   | 'aviso_operativo';
 
