@@ -47,7 +47,7 @@
     * *Gestiones destacadas (N5):*  
       - `Descargar constancia de solvencia fiscal electrónica`  
       - `Consulta pública de estado y validez de Número de Identificación Tributaria (NIT)`  
-* **Nivel 2: Régimen de Pequeño Contribuyente**
+* **Nivel 2: Pequeño Contribuyente**
   * *Nivel 3:* **Emisión de Facturas y Declaración Mensual**
     * *Texto guía:* "Emite Factura Electrónica en Línea (FEL) sin costo y paga tu tarifa fija del 5% sin necesidad de llevar contabilidad compleja."
     * *Gestiones destacadas (N5):*  

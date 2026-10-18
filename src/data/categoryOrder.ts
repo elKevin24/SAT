@@ -58,6 +58,11 @@ const SPECIFIC_SUBCATEGORY_ORDER: Record<string, string[]> = {
     'Régimen de Pequeño Contribuyente',
     'Régimen Agropecuario y Productores',
   ],
+  'Contribuyentes Especiales': [
+    'Gerencias Especiales y Control Tributario',
+    'Declaraciones e Informes Especiales',
+    'Capacitación y Orientación Diferenciada',
+  ],
   'Abogados y Notarios': [
     'Habilitación y Registro Notarial',
     'Timbres Fiscales y Papel Sellado de Protocolo',
@@ -131,7 +136,7 @@ const SPECIFIC_SUBCATEGORY_ORDER: Record<string, string[]> = {
     'Exenciones CIVA, Actualización y Cierre de Operaciones',
   ],
   'Municipalidades': [
-    'Gestión Tributaria y Patrimonio Municipal',
+    '—',
   ],
   'Decreto': [
     'Misiones Diplomáticas y Organismos Internacionales',

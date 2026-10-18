@@ -10,7 +10,7 @@ description: >-
 
 # Skill: Auditoría y Sincronización de Arquitectura de Información (SAT IA-Audit-Sync)
 
-Esta skill documenta el procedimiento estándar, principios metodológicos y herramientas técnicas aplicadas en la reestructuración integral de la Arquitectura de Información del **Portal Web SAT Guatemala**, con especial énfasis en la optimización de los **Operadores de Comercio Exterior** (246 trámites en 6 ramas canónicas), el saneamiento de **Profesionales** (47 trámites netos en 5 roles) y el universo total de **716 trámites consolidados**.
+Esta skill documenta el procedimiento estándar, principios metodológicos y herramientas técnicas aplicadas en la reestructuración integral de la Arquitectura de Información del **Portal Web SAT Guatemala**, con especial énfasis en la optimización de los **Operadores de Comercio Exterior** (245 trámites en 6 ramas canónicas), el saneamiento de **Profesionales** (47 trámites netos en 5 roles) y el universo total de **715 trámites consolidados**.
 
 ---
 
@@ -21,10 +21,15 @@ Esta skill documenta el procedimiento estándar, principios metodológicos y her
 * **Modelo de Navegación:** Mecanismos visuales que permiten al usuario recorrer la arquitectura (Breadcrumbs, Sidebar, Menú Principal, Enlaces transversales).
 * **Regla de Desacoplamiento:** *Que un contenido resida en el nivel 5 o 6 de la IA no exige renderizar 5 o 6 niveles simultáneos en la interfaz.* El Sidebar se acota al hub temático local y el Breadcrumb aplica elipsis compacta `[…]` en pantallas móviles.
 
-### B. Capacidad de Memoria de Trabajo (Ley de Miller: $7 \pm 2$) y Rango Óptimo
+### B. Capacidad de Memoria de Trabajo (Ley de Miller: $7 \pm 2$), Rango Óptimo y Margen de Tolerancia (10 Opciones)
 * Conforme a la Ley de Miller (1956), la mente humana procesa con eficacia entre 5 y 9 fragmentos de información ($7 \pm 2$) en su memoria de trabajo simultáneamente.
 * **Rango Óptimo (5 a 9 elementos):** Cuando un nodo agrupa entre 5 y 9 trámites directos (ej. *Agentes Aduaneros* con exactamente 7 trámites), se exponen en **secuencia directa bajo el nodo contenedor**, eliminando carpetas intermedias artificiales.
-* **Sobrecarga Cognitiva (> 9 elementos):** Listas planas de 12 a 18 trámites (ej. *Apoderados Especiales* con 16 o *DAT* con 18) saturan al ciudadano y **exigen partición modular** en sub-bloques temáticos o de ciclo de vida ATO.
+* **Margen de Tolerancia Excepcional (Hasta 10 Opciones):** Se permite un máximo de 10 opciones de forma residual y para un **porcentaje muy bajo del catálogo ($\le 5\%$)**, exclusivamente cuando particionar el grupo generaría sobre-andamiaje o micro-ramas subdensas ($\le 3$), y siempre que cumpla estrictamente con:
+  1. Alta homogeneidad temática o de rol.
+  2. Orden secuencial estricto por ciclo ATO.
+  3. Lenguaje ciudadano claro.
+  4. Acceso garantizado en 2 a 3 clics sin clics pasarela.
+* **Sobrecarga Cognitiva ($\ge 11$ elementos):** Listas planas de 11 o más trámites (ej. *Apoderados Especiales* con 16 o *DAT* con 18) saturan al ciudadano y **exigen partición modular obligatoria** en sub-bloques temáticos o de ciclo de vida ATO.
 
 ### C. Regla de Umbral de Densidad y Ramificación (Notación $A, A_1, A_2$)
 La profundidad del árbol nunca es simétrica ni obligada; se rige por la densidad real de cada subrama:
@@ -61,7 +66,20 @@ La profundidad del árbol nunca es simétrica ni obligada; se rige por la densid
 ```
 * **Rama Monocatenaria ($A_1 \to A_{1.1}$):** Un nodo con un único hijo no clasifica nada (clasificar exige elegir entre $\ge 2$ opciones) $\to$ **Se compacta**.
 * **Rama Ramificada ($A_2 \to A_{2.1}, A_{2.2}, A_{2.3}$):** Bifurcación funcional genuina $\to$ **Se preserva la jerarquía**.
-* **Principio Rector:** La compactación se evalúa **rama por rama**, nunca imponiendo la misma profundidad a ramas hermanas.
+#### 4. Minimización de Clics sin Destruir la IA (*Breadth vs. Depth Trade-off* y *Zero Pass-through Clicks*)
+* **Objetivo de Eficiencia:** Permitir que el usuario alcance su trámite en la menor cantidad posible de clics (2 a 3 clics máximo).
+* **Cero Clics Pasarela (*Zero Pass-through Clicks*):** Cada clic en la interfaz debe representar una **decisión entre alternativas**. Si un nivel intermedio solo contiene un único elemento o una lista minúscula ($\le 3$), obligar al ciudadano a hacer clic para abrirlo es un clic parásito que genera fatiga cognitiva y abandono.
+* **Protección de la Arquitectura (Anti-Colapso de Contexto):** Minimizar clics no autoriza a aplanar todo el portal en una lista única indiscriminada. La arquitectura equilibra amplitud y profundidad mediante hubs temáticos desacoplados.
+
+#### 5. Regla del Guion Largo (`—`) en Niveles No Clasificados (Anti-Simetría Forzada)
+* **Desmitificación de la Simetría:** Es un error metodológico obligar a que los 715 trámites tengan títulos en los 5 niveles. La jerarquía es asimétrica por diseño.
+* **Sintaxis de Niveles Inexistentes:** Cuando una rama se compacta a N2 o N3 y no posee subclasificación terminal:
+  - En las columnas de nivel (`Nivel 3`, `Nivel 4`, `Nivel 5`) y sus columnas de orden correspondientes (`Orden N3`, `Orden N4`, `Orden N5`), se registra estrictamente un **guion largo em-dash (`—`)**.
+  - Queda terminantemente prohibido inventar carpetas artificiales ("General", "Otros", "Trámites") o duplicar en espejo el nombre del trámite para "rellenar" la celda.
+
+#### 6. Los Niveles NO Tienen Nombre (Estructura Estrictamente Numérica N1–N5)
+* Queda terminantemente prohibido asignarle rótulos, sufijos o nombres conceptuales a los niveles jerárquicos (como "Segmento", "Régimen", "Área", "Subárea", "Actor", "Tema", "Subtema", "Tipo de Usuario", "Persona").
+* Los niveles son única y exclusivamente estructurales: **Nivel 1, Nivel 2, Nivel 3, Nivel 4, Nivel 5**. En matrices Excel, JSONs, UI, diagramas de React Flow y documentación, solo se deben rotular por su número de nivel (`Nivel X`), jamás con nombres inventados.
 
 ### D. Gobernanza del Orden y Desacoplamiento Numérico
 * **Prohibición de Números Quemados en Títulos:** Queda terminantemente prohibido incluir prefijos numéricos en los textos de `Nivel 1..5` o `Nombre del Trámite` (ej. PROHIBIDO: `"1. Transmisión de Declaración"`; CORRECTO: `"Transmisión de la Declaración de Mercancías"`).
@@ -119,11 +137,11 @@ Cada trámite u objeto de contenido posee 4 dimensiones ortogonales:
 
 ## 2. Taxonomía Canónica de Comercio Exterior (Referencia Estable)
 
-Distribución de los **246 trámites aduaneros** en **6 ramas maestras**:
+Distribución de los **245 trámites aduaneros** en **6 ramas maestras**:
 
 | Rama Canónica | Trámites | Subcategorías Oficiales |
 | :--- | :---: | :--- |
-| **1. Importadores** | **55** | `Registro y Padrón de Importadores` (9), `Declaraciones Aduaneras y DUCAs` (10), `Despacho Aduanero, Levante y Selectivo` (17), `Importación y Nacionalización de Vehículos` (10), `Mercancías en Abandono, Depósitos y Franquicias` (9). |
+| **1. Importadores** | **54** | `Registro y Padrón de Importadores` (9), `Declaraciones Aduaneras y DUCAs` (10), `Despacho Aduanero, Levante y Selectivo` (16), `Importación y Nacionalización de Vehículos` (10), `Mercancías en Abandono, Depósitos y Franquicias` (9). |
 | **2. Exportadores** | **21** | `Padrón y Registro de Exportadores` (7), `Declaraciones Aduaneras y Embarques` (4), `Devolución de Crédito Fiscal` (10). |
 | **3. Operador Económico Autorizado (OEA)** | **2** | Compactado directo en N2 (2 gestiones terminales directas, sin N3 pasarela). |
 | **4. Auxiliares de la Función Pública Aduanera (AFPA)** | **76** | `Agentes Aduaneros` (7), `Apoderados Especiales Aduaneros` (16), `Depósitos Aduaneros` (36: DAT 18, AGD 16, Fiscales 2), `Empresas de Entrega Rápida o Courier` (3), `Transportistas Aduaneros` (14). |

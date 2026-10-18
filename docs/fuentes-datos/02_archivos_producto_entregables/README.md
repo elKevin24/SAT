@@ -13,10 +13,10 @@ Estos libros Excel reflejan el estado de verdad del portal en producción y se m
 ## 📁 Inventario de Archivos de Producto (Resultados)
 
 1. **`Estructura_Final_Contenido_Portal_SAT_Actualizado.xlsx` (Libro Maestro Definitivo)**:
-   - **716 registros únicos consolidados** (344 Contribuyentes, 246 Comercio Exterior, 79 Entes Exentos, 47 Profesionales).
+   - **715 registros consolidados** (344 Contribuyentes, 245 Comercio Exterior, 79 Entes Exentos, 47 Profesionales).
    - **Matriz Canónica de 25 Columnas Oficiales (Opción A):** Incorpora columnas explícitas de `Orden N1` a `Orden N5` intercaladas con `Nivel 1` a `Nivel 5`.
    - **Código Institucional Inmutable:** Gobernado universalmente por el estándar **`SAT-GES-####`**.
-   - **Hojas Especializadas:** Resumen Arquitectura, Matriz Maestra (716), Comercio Exterior (246), Profesionales (47) y Brechas Normativas (12).
+   - **Hojas Especializadas:** Resumen Arquitectura, Matriz Maestra (715), Contribuyentes (344), Comercio Exterior (245), Profesionales (47), Entes Exentos (79) y Brechas Normativas (12).
 
 2. **`Mapa_de_Navegacion_y_Descripciones_Portal_SAT.xlsx` (Taxonomía y Plain Language)**:
    - Hoja *Mapa de Navegación*: Comparativo antes/después por pilar.

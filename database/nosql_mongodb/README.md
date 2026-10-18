@@ -19,9 +19,9 @@ Inventario canónico de entidades de trámite y servicio, sin acoplamiento a sub
 * **`base_legal`**: Normativa aplicable.
 * **`ubicaciones`**: Referencias a los IDs de nodos del árbol (`nodo_id` / `tramiteId`) donde se publica la gestión.
 
-### 2. `arbol_navegacion.json` (Colección `arbol_navegacion` — 716 nodos)
+### 2. `arbol_navegacion.json` (Colección `arbol_navegacion` — 715 nodos)
 Colección que define la taxonomía jerárquica y el orden de navegación:
-* Nodos multinivel ($N_1$ Segmento $\to$ $N_2$ Área $\to$ $N_3$ Subárea $\to$ $N_4$ Tema $\to$ $N_5$ Trámite).
+* Nodos multinivel ($N_1 \to N_2 \to N_3 \to N_4 \to N_5$).
 * Índices de orden canónico `orden_n1` a `orden_n5` y dimensiones ATO.
 
 ### 3. Colecciones Auxiliares de Catálogo
@@ -40,7 +40,7 @@ Para importar la base de datos completa en una instancia de MongoDB (`sat_portal
 # 1. Colección maestra de gestiones canónicas (683)
 mongoimport --db sat_portal --collection gestiones --file database/nosql_mongodb/gestiones.json --jsonArray
 
-# 2. Colección de árbol de navegación (716)
+# 2. Colección de árbol de navegación (715)
 mongoimport --db sat_portal --collection arbol_navegacion --file database/nosql_mongodb/arbol_navegacion.json --jsonArray
 
 # 3. Catálogo de actores y roles

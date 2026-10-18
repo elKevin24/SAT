@@ -23,9 +23,9 @@ Este documento define la lógica oficial del **Viaje del Usuario (Taxpayer & Use
 
 ```mermaid
 flowchart TD
-    ROOT["Portal Web SAT Guatemala (783 trámites)"] --> P1["Contribuyentes (413)"]
-    ROOT --> P2["Operadores de Comercio Exterior (246)"]
-    ROOT --> P3["Profesionales (45)"]
+    ROOT["Portal Web SAT Guatemala (715 trámites consolidados)"] --> P1["Contribuyentes (344)"]
+    ROOT --> P2["Operadores de Comercio Exterior (245)"]
+    ROOT --> P3["Profesionales (47)"]
     ROOT --> P4["Entes Exentos (79)"]
 
     subgraph P1_SUBS["Segmento 1: Contribuyentes (4 Grupos Oficiales)"]
@@ -90,7 +90,7 @@ Estructura simétrica oficial en Lenguaje Ciudadano:
 
 ---
 
-## 4. Segmento 2: Operadores de Comercio Exterior (246 trámites)
+## 4. Segmento 2: Operadores de Comercio Exterior (245 trámites)
 
 Organizado según las 4 familias operativas aduaneras y los actores de la cadena logística:
 

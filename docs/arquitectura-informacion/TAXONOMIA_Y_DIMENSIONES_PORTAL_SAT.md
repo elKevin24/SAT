@@ -78,11 +78,16 @@ La arquitectura documental del repositorio opera bajo una regla estricta:
 
 ## 5. Reglas de Densidad, Miller ($7 \pm 2$), Orden y Código Inmutable
 
-### 5.1 Capacidad Cognitiva de Miller ($7 \pm 2$) y Rango Óptimo
-* **Rango Óptimo (5 a 9 elementos):** Cuando un nodo agrupa entre 5 y 9 trámites directos (ej. *Agentes Aduaneros* con 7 trámites), se presentan en **secuencia directa bajo N3**, eliminando carpetas intermedias artificiales.
-* **Sobrecarga (> 9 elementos):** Listas planas de más de 9 elementos (ej. *Apoderados Especiales* con 16) sobrecargan la memoria de trabajo y **exigen partición modular** en sub-bloques de ciclo de vida ATO o materia funcional.
+### 5.1 Capacidad Cognitiva de Miller ($7 \pm 2$), Rango Óptimo y Margen de Tolerancia (10 Opciones)
+* **Rango Óptimo (5 a 9 elementos):** Diseñar contenedores preferentemente entre 5 y 9 fragmentos de información simultáneos. Cuando un nodo agrupa entre 5 y 7 trámites directos (ej. *Agentes Aduaneros* con 7 trámites), se presentan en **secuencia directa bajo N3**, eliminando carpetas intermedias artificiales.
+* **Tolerancia Excepcional de 10 Opciones:** Se admite un contenedor de hasta 10 opciones de forma controlada y para un **porcentaje residual muy bajo del catálogo ($\le 5\%$)**, siempre y cuando:
+  1. Su división en subcategorías generaría sobre-andamiaje o micro-carpetas artificiales subdensas ($\le 3$).
+  2. Cumpla con una alta homogeneidad temática y secuencia limpia por ciclo ATO.
+  3. Garantice el acceso directo en 2–3 clics (*zero pass-through clicks*).
+* **Sobrecarga Cognitiva ($\ge 11$ elementos):** Listas planas de 11 o más elementos (ej. *Apoderados Especiales* con 16 o *DAT* con 18) sobrecargan la memoria de trabajo y **exigen partición modular obligatoria** en sub-bloques funcionales o de ciclo de vida ATO.
 
-### 5.2 Regla de Umbral de Densidad y Ramificación (Notación $A, A_1, A_2$)
+
+### 5.2 Regla de Umbral de Densidad y Ramificación Asimétrica (Notación $A, A_1, A_2$)
 1. **Sub-densidad ($A \to A_1, A_2$ con hojas $\le 3$):**  
    Si una categoría o rama secundaria contiene solo 1, 2 o 3 gestiones terminales y ahí terminan, **se compacta obligatoriamente al nivel superior**. Las gestiones terminales se exponen directamente en el contenedor padre ($A$), eliminando pantallas intermedias pasarela (*pass-through screens*) y clics redundantes.
    * *Caso Canónico OEA:* La categoría *Operador Económico Autorizado (OEA)* agrupa únicamente 2 gestiones (`SAT-GES-0417` y `SAT-GES-0416`). Crear una subcategoría intermedia artificial *«Programa OEA»* violaba este principio forzando una pantalla con 1 sola tarjeta. Se compactó para que al hacer clic en OEA, ambas gestiones se desplieguen de forma inmediata con miga limpia: `Operadores de Comercio Exterior > Operador Económico Autorizado (OEA) > [Gestión]`.
@@ -90,27 +95,55 @@ La arquitectura documental del repositorio opera bajo una regla estricta:
 2. **Alta densidad ($A \to A_1$ con $\ge 10$ trámites):**  
    Si $A_1$ agrupa $\ge 10$ trámites con alta complejidad operativa y distintos ciclos de vida, **se preserva la jerarquía profunda** ($N_4 / N_5$) para evitar la sobrecarga cognitiva y el colapso de contexto (*context collapse*) (ej. *Depósitos Aduaneros Temporales - DAT* con 18 y *ZDEEP* con 30).
 3. **Asimetría rama por rama:**  
-   Un nodo monocatenario ($A_1 \to A_{1.1}$) se compacta automáticamente, mientras una rama hermana ramificada ($A_2 \to A_{2.1}, A_{2.2}, A_{2.3}$) retiene su estructura profunda según su volumen.
-4. **Desacoplamiento del Catálogo de Contenidos Únicos:**  
-   El catálogo de entidades (`catalogoContenidosUnicos.json` / `gestiones.json`) registra únicamente atributos intrínsecos de la gestión (`codigo`, `titulo`, `url`, `descripcion`, `tipoInteraccion`, `baseLegal`). Las subcategorías, categorías y migas de pan pertenecen exclusivamente al Árbol de Navegación (`allTramites.json`), evitando doble mantenimiento y acoplamiento estructural.
+   Un nodo monocatenario ($A_1 \to A_{1.1}$) se compacta automáticamente, mientras una rama hermana ramificada ($A_2 \to A_{2.1}, A_{2.2}, A_{2.3}$) retiene su estructura profunda según su volumen. Clasificar exige elegir entre $\ge 2$ opciones reales.
 
-### 5.3 Gobernanza del Orden (Columnas `Orden N1..N5` vs Títulos)
+### 5.3 Minimización de Clics sin Destruir la IA (*Breadth vs. Depth Trade-off* y *Zero Pass-through Clicks*)
+* **Objetivo de Eficiencia Ciudadana:** El usuario debe alcanzar su trámite o servicio en la **menor cantidad posible de clics (2 a 3 clics máximo)**.
+* **Cero Clics Pasarela (*Zero Pass-through Clicks*):** Cada clic en la interfaz debe representar una **decisión entre alternativas**. Si un nivel intermedio solo contiene un único elemento o una lista minúscula ($\le 3$), obligar al ciudadano a hacer clic para abrirlo es un clic parásito que genera fatiga cognitiva y abandono.
+* **Protección de la Arquitectura (Anti-Colapso de Contexto):** Minimizar clics no autoriza a aplanar todo el portal en una lista única indiscriminada. La arquitectura equilibra amplitud y profundidad mediante hubs temáticos desacoplados.
+
+### 5.4 Regla del Guion Largo (`—`) en Niveles No Clasificados (Anti-Simetría Forzada)
+* **Desmitificación de la Simetría:** Es un error metodológico obligar a que los 715 trámites tengan títulos en los 5 niveles. La jerarquía es asimétrica por diseño.
+* **Sintaxis de Niveles Inexistentes:** Cuando una rama se compacta a N2 o N3 y no posee subclasificación terminal:
+  - En las columnas de nivel (`Nivel 3`, `Nivel 4`, `Nivel 5`) y sus columnas de orden correspondientes (`Orden N3`, `Orden N4`, `Orden N5`), se registra estrictamente un **guion largo em-dash (`—`)**.
+  - Queda terminantemente prohibido inventar carpetas artificiales ("General", "Otros", "Trámites") o duplicar en espejo el nombre del trámite para "rellenar" la celda.
+
+### 5.5 Los Niveles NO Tienen Nombre (Estructura Estrictamente Numérica N1–N5)
+* Queda terminantemente prohibido asignarle rótulos, sufijos o nombres conceptuales a los niveles jerárquicos (como "Segmento", "Régimen", "Área", "Subárea", "Actor", "Tema", "Subtema", "Tipo de Usuario", "Persona").
+* Los niveles son única y exclusivamente estructurales: **Nivel 1, Nivel 2, Nivel 3, Nivel 4, Nivel 5**. En matrices Excel, JSONs, UI, diagramas de React Flow y documentación, solo se deben rotular por su número de nivel (`Nivel X`), jamás con nombres inventados.
+
+### 5.6 Gobernanza del Orden (Columnas `Orden N1..N5` vs Títulos)
 * **Prohibido quemar prefijos numéricos en títulos:** Ni en categorías ni en nombres de trámites (ej. NO `1. Declaración`, SINO `Declaración de Mercancías`).
 * **Control exclusivo por campos numéricos:** `orden_n1`, `orden_n2`, `orden_n3`, `orden_n4`, `orden_n5` en la matriz de 25 columnas y JSON.
 * **Secuencia universal por ciclo ATO:** 1. `Empezar y registrarse` $\to$ 2. `Operación y declaraciones` $\to$ 3. `Consultas y herramientas` $\to$ 4. `Modificaciones y cierre` $\to$ 5. `Normativa y asistencia`.
 * **Indexación en ramas compactadas:** Cuando no hay N4 ni N5 (ej. Agentes Aduaneros), `orden_n4` toma el índice 1..7 y `orden_n5` queda como `—`.
 
-### 5.4 Identificador Institucional Inmutable (`SAT-GES-####`)
-* Todo trámite, servicio o guía se gobierna por el código canónico **`SAT-GES-####`** (del `SAT-GES-0001` al `SAT-GES-0683`).
+### 5.7 Identificador Institucional Inmutable (`SAT-GES-####`)
+* Todo trámite, servicio o guía se gobierna por el código canónico **`SAT-GES-####`** (del `SAT-GES-0001` al `SAT-GES-0715`).
 * No cambia si el trámite cambia de categoría, de nombre comercial o si se comparte entre múltiples audiencias (polijerarquía).
 * Los códigos de hojas clásicas (`comercio_exterior-X`, `profesionales-Y`) se archivan en `codigos_legacy` para auditoría forense.
 
-### 5.5 Validación Activa y Búsqueda de URLs (Zero Enlaces Rotos)
+### 5.8 Validación Activa y Búsqueda de URLs (Zero Enlaces Rotos)
 * **Verificación HTTP Mandatoria:** Toda URL asociada a un trámite o servicio debe ser verificada activamente contra el servidor del Portal SAT (`HTTP 200 OK`).
 * **Protocolo de Rescate para Enlaces Caídos o Genéricos:**
   1. Si una URL retorna `404 Not Found` o apunta a la raíz genérica (`https://portal.sat.gob.gt/`), es obligatorio investigar en el portal oficial mediante búsqueda directa (`site:portal.sat.gob.gt "[tema del trámite]"`).
   2. Localizar la ruta canónica activa reestructurada por la SAT (ej. secciones `/requisitos-tramites-aduanas/`, `/devolucion-credito-fiscal/`, `/programa-miad/`).
   3. Comprobar que la URL rescatada responda `HTTP 200` antes de inyectarla en el dataset y en el libro Excel maestro.
   4. Queda terminantemente prohibido publicar enlaces caídos o URLs genéricas que no resuelvan el trámite específico.
+
+---
+
+## 6. Distribución de Profundidad Activa y Eficiencia de Clics Post-Compactación
+
+Tras aplicar la compactación anti-pasarela y la optimización de N5 (reduciendo de 111 a 70 trámites en N5), la arquitectura de información consolidada para los 715 trámites del portal se distribuye de la siguiente forma:
+
+| Profundidad Terminal | Cantidad de Trámites | Porcentaje | Comportamiento en Navegación y Ejemplos Representativos |
+| :--- | :---: | :---: | :--- |
+| **Nivel 2 Directo** | **17** | **2.4%** | Acceso inmediato en 1 clic desde N1. Trámites terminales sin subcarpetas (`N3`, `N4` y `N5` = `—`). *Ejemplos:* Operador Económico Autorizado - OEA (2), Personas Sin Obligaciones Tributarias (10), Municipalidades (5). |
+| **Nivel 3 Directo** | **243** | **34.0%** | Acceso en 2 clics. Resuelven en listas directas bajo N3 (`N4` y `N5` = `—`). *Ejemplos:* Contribuyentes Especiales (14), Asalariados (4), Agentes Aduaneros (7), Courier (3), Exportadores (21), Profesionales y Gestores (47), Iglesias y ONGs (22). |
+| **Nivel 4 Directo** | **385** | **53.8%** | Acceso en 3 clics. Resuelven en N4 (`N5` = `—`). Cumplen regla de Miller y rango de tolerancia ($\le 10$). *Ejemplos:* Pequeño Contribuyente (22), Depósitos Aduaneros Temporales - DAT (18), Almacenes Generales de Depósito - AGD (16), ZDEEP (30), Personas Individuales con Negocio (37). |
+| **Nivel 5 Guiado** | **70** | **9.8%** | Estructura guiada profunda para clusters masivos con $\ge 11$ trámites por ciclo ATO. *Únicamente 4 clusters:* Registro Tributario Unificado - RTU (27), Cultura Tributaria (16), Otros Servicios Tributarios (16), Factura Electrónica en Línea - FEL (11). |
+| **Total Portal** | **715** | **100.0%** | **90.2% del portal (645 trámites) resuelve en $\le 4$ niveles (1 a 3 clics). 100% de los trámites y 536 URLs conservadas.** |
+
 
 

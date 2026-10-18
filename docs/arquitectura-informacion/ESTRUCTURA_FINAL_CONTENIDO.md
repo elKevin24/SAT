@@ -6,8 +6,8 @@
 > **Alineación:** Estructura Institucional SAT Guatemala, Modelo de Ciclo de Vida ATO (Australian Taxation Office) & Plain Language  
 > **Base de Datos Única (Single Source of Truth):** [`src/data/allTramites.json`](file:///c:/Users/busqu/Documents/GitHub/SAT/src/data/allTramites.json) (715 registros consolidados)  
 > **Libros Excel Entregables (Vivos):**  
-> * [`docs/fuentes-datos/Estructura_Final_Contenido_Portal_SAT_Actualizado.xlsx`](file:///c:/Users/busqu/Documents/GitHub/SAT/docs/fuentes-datos/Estructura_Final_Contenido_Portal_SAT_Actualizado.xlsx)  
-> * [`docs/fuentes-datos/Mapa_de_Navegacion_y_Descripciones_Portal_SAT.xlsx`](file:///c:/Users/busqu/Documents/GitHub/SAT/docs/fuentes-datos/Mapa_de_Navegacion_y_Descripciones_Portal_SAT.xlsx)  
+> * [`docs/fuentes-datos/02_archivos_producto_entregables/Estructura_Final_Contenido_Portal_SAT_Actualizado.xlsx`](file:///c:/Users/busqu/Documents/GitHub/SAT/docs/fuentes-datos/02_archivos_producto_entregables/Estructura_Final_Contenido_Portal_SAT_Actualizado.xlsx)  
+> * [`docs/fuentes-datos/02_archivos_producto_entregables/Mapa_de_Navegacion_y_Descripciones_Portal_SAT.xlsx`](file:///c:/Users/busqu/Documents/GitHub/SAT/docs/fuentes-datos/02_archivos_producto_entregables/Mapa_de_Navegacion_y_Descripciones_Portal_SAT.xlsx)  
 > **Fuentes Históricas de Referencia (Congeladas):**  
 > * [`docs/fuentes-datos/Detalle de Contenido para Grupos de Interes.xlsx`](file:///c:/Users/busqu/Documents/GitHub/SAT/docs/fuentes-datos/Detalle%20de%20Contenido%20para%20Grupos%20de%20Interes.xlsx)  
 > * [`docs/fuentes-datos/Arbol_de_Navegacion_Portal_v5.xlsx`](file:///c:/Users/busqu/Documents/GitHub/SAT/docs/fuentes-datos/Arbol_de_Navegacion_Portal_v5.xlsx)
@@ -25,9 +25,14 @@ La estructura resuelve de manera definitiva:
    * **Entes Exentos:** 79 trámites para entidades estatales, descentralizadas y no lucrativas.
    * **Profesionales:** 47 trámites netos para auxiliares tributarios y profesionales colegiados (2 duplicados fusionados).
 2. **La eliminación de jerga técnica interna y prefijos numéricos**: Se erradica el uso de términos abstractos como *"oficial"* y prefijos ordinales en textos visibles para el ciudadano.
-3. **El modelo asimétrico de profundidad balanceada**: Estructura que respeta la complejidad inherente de cada área (2-3 niveles para regímenes tributarios simples; 3-4 niveles organizados para la función pública aduanera, profesionales y zonas especiales) sin redundancias artificiales.
+3. **El modelo asimétrico de profundidad balanceada**: Estructura que respeta la complejidad inherente de cada área (2-3 niveles para regímenes tributarios simples; 3-4 niveles organizados para la función pública aduanera, profesionales y zonas especiales) sin redundancias artificiales:
+   * **Nivel 2 Directo:** 17 trámites (2.4%) $\to$ *OEA, Sin Obligaciones, Municipalidades*
+   * **Nivel 3 Directo:** 243 trámites (34.0%) $\to$ *Contribuyentes Especiales, Agentes, Courier, Exportadores, Profesionales*
+   * **Nivel 4 Directo:** 385 trámites (53.8%) $\to$ *DAT, AGD, ZDEEP, Pequeño Contribuyente, etc.*
+   * **Nivel 5 Guiado:** 70 trámites (9.8%) $\to$ *RTU (27), Cultura Tributaria (16), Otros Servicios (16), FEL (11)*
+   * **90.2% del portal** resuelve en $\le 4$ niveles (acceso en 2–3 clics).
 4. **La separación formal entre Arquitectura de Información y Mecanismos de Navegación**:
-   * **Arquitectura:** L1 Segmento, L2 Categoría / Rama, L3 Subcategoría / Actor, L4 Tema, L5 Contenido / Servicio.
+   * **Arquitectura:** Estructura estrictamente numérica posicional: **Nivel 1, Nivel 2, Nivel 3, Nivel 4, Nivel 5** (cero rótulos conceptuales inventados).
    * **Navegación:** Breadcrumb dinámico adaptable (con elipsis en móvil), Sidebar sticky para contexto local y Enlaces Contextuales transversales.
 5. **Calidad de Datos en Lenguaje Ciudadano**: Redacción orientada a tareas con verbos imperativos directos y erradicación de siglas opacas.
 6. **Documentación de 12 brechas normativas (`[Propuesta brecha]`)**, identificadas para ser normadas por la mesa técnica aduanera.

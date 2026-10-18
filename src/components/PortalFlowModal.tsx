@@ -174,7 +174,7 @@ const NodeLevel5TramiteComponent = ({ data }: NodeProps) => {
     >
       <Handle type="target" position={Position.Left} className="w-2.5 h-2.5 !bg-slate-600" />
       <div className="flex items-center justify-between text-[11px]">
-        <span className="font-black text-slate-700 uppercase tracking-wider">Nivel 5 — Trámite</span>
+        <span className="font-black text-slate-700 uppercase tracking-wider">Nivel 5</span>
         <span className="text-slate-600 font-mono text-xs">{data.codigo as string}</span>
       </div>
       <p className="text-xs font-bold text-slate-900 leading-snug group-hover:text-sky-800 transition-colors">
@@ -273,7 +273,7 @@ export const PortalFlowModal: React.FC<PortalFlowModalProps> = ({
 
       tree[segId].total++;
 
-      // NIVEL 2: TIPOS DE CONTRIBUYENTE
+      // NIVEL 2: CLASIFICACIÓN ESTRUCTURAL N2
       let n2Key = t.categoria;
       if (segId === 'contribuyentes') {
         if (t.categoria === 'Sin Obligaciones' || t.categoria === 'NIT sin Obligaciones') n2Key = 'Sin Obligaciones';
@@ -654,7 +654,7 @@ export const PortalFlowModal: React.FC<PortalFlowModalProps> = ({
                 </span>
               </div>
               <p className="text-xs text-slate-600">
-                Nivel 1 y 2 son Tipos de Usuario. Nivel 3 hacia abajo es contenido adaptable con colapso taxonómico.
+                Estructura estrictamente numérica de Nivel 1 a Nivel 5 con ramificación asimétrica y compactación anti-pasarela.
               </p>
             </div>
           </div>
@@ -739,9 +739,9 @@ export const PortalFlowModal: React.FC<PortalFlowModalProps> = ({
               className="!border !border-slate-200 !rounded-xl !bg-white/90 !shadow-sm"
             />
             <Panel position="bottom-left" className="bg-white/95 backdrop-blur-xs border border-slate-200 rounded-xl p-3 shadow-md text-xs space-y-1 max-w-sm">
-              <span className="font-bold text-slate-800 block">Metodología de Niveles:</span>
+              <span className="font-bold text-slate-800 block">Gobernanza de Niveles:</span>
               <p className="text-[11px] text-slate-600">
-                Nivel 1 y 2 identifican al usuario; desde Nivel 3 el contenido se adapta. Si solo hay 1 o 2 ramas, se colapsa directamente.
+                Estructura numérica Nivel 1 a Nivel 5: compactación en sub-densidad (≤ 3) y profundidad preservada en alta densidad.
               </p>
             </Panel>
           </ReactFlow>
@@ -771,7 +771,7 @@ export const PortalFlowModal: React.FC<PortalFlowModalProps> = ({
                 <div>
                   <div className="flex items-center justify-between">
                     <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-sky-100 text-sky-800">
-                      Nivel 5 — Ficha
+                      Ficha Oficial
                     </span>
                     <span className="font-mono text-slate-600 text-xs">{selectedTramite.codigo}</span>
                   </div>
@@ -796,7 +796,7 @@ export const PortalFlowModal: React.FC<PortalFlowModalProps> = ({
                 <div className="border border-slate-200 rounded-xl p-3.5 space-y-2">
                   <div className="flex items-center gap-2 text-slate-900 font-bold">
                     <FileText className="w-4 h-4 text-sky-600" />
-                    <span>Nivel 6 — Procedimiento Operativo</span>
+                    <span>Procedimiento Operativo</span>
                   </div>
                   <ol className="list-decimal list-inside space-y-1 text-slate-700 text-[11px]">
                     <li>Verificación de requisitos y solvencia fiscal.</li>
@@ -808,7 +808,7 @@ export const PortalFlowModal: React.FC<PortalFlowModalProps> = ({
                 <div className="border border-slate-200 rounded-xl p-3.5 space-y-2">
                   <div className="flex items-center gap-2 text-slate-900 font-bold">
                     <ShieldCheck className="w-4 h-4 text-emerald-600" />
-                    <span>Nivel 7 — Casos Especiales y Representación</span>
+                    <span>Casos Especiales y Representación</span>
                   </div>
                   <p className="text-[11px] text-slate-700">
                     Mandatarios y gestores requieren mandato activo en el Registro Tributario Unificado (RTU).
@@ -818,7 +818,7 @@ export const PortalFlowModal: React.FC<PortalFlowModalProps> = ({
                 <div className="border border-slate-200 rounded-xl p-3.5 space-y-2">
                   <div className="flex items-center gap-2 text-slate-900 font-bold">
                     <Scale className="w-4 h-4 text-indigo-600" />
-                    <span>Nivel 8 — Marco Legal y Fundamento</span>
+                    <span>Marco Legal y Fundamento</span>
                   </div>
                   <p className="text-[11px] text-slate-700 bg-slate-50 p-2.5 rounded-lg border border-slate-200">
                     {selectedTramite.baseLegal}

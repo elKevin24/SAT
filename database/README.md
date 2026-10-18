@@ -11,7 +11,7 @@ database/
 │
 ├── nosql_mongodb/         # Motor Documental NoSQL (Colecciones MongoDB / JSON)
 │   ├── gestiones.json      # Colección maestra 'gestiones' (683 entidades desacopladas)
-│   ├── arbol_navegacion.json # Colección 'arbol_navegacion' (716 nodos de árbol)
+│   ├── arbol_navegacion.json # Colección 'arbol_navegacion' (715 nodos de árbol)
 │   ├── cat_actores.json    # Catálogo de actores y roles
 │   ├── cat_familias.json   # Catálogo de familias temáticas
 │   ├── cat_procesos.json   # Catálogo de 31 procesos guiados

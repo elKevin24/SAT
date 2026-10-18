@@ -1,12 +1,12 @@
 # Mapa de Navegación Estructurado — Comercio Exterior (Antes vs. Después)
 
 > **Documento Oficial de Transición y Arquitectura de Información**  
-> **Área:** Operadores de Comercio Exterior (246 Trámites Consolidados)  
+> **Área:** Operadores de Comercio Exterior (245 Trámites Consolidados)  
 > **Fecha:** Octubre 2026  
 > **Fuente de Verdad:** [`src/data/allTramites.json`](file:///c:/Users/busqu/Documents/GitHub/SAT/src/data/allTramites.json)  
 > **Entregables Sincronizados:**  
-> * [`docs/fuentes-datos/Estructura_Final_Contenido_Portal_SAT_Actualizado.xlsx`](file:///c:/Users/busqu/Documents/GitHub/SAT/docs/fuentes-datos/Estructura_Final_Contenido_Portal_SAT_Actualizado.xlsx)  
-> * [`docs/fuentes-datos/Mapa_de_Navegacion_y_Descripciones_Portal_SAT.xlsx`](file:///c:/Users/busqu/Documents/GitHub/SAT/docs/fuentes-datos/Mapa_de_Navegacion_y_Descripciones_Portal_SAT.xlsx)
+> * [`docs/fuentes-datos/02_archivos_producto_entregables/Estructura_Final_Contenido_Portal_SAT_Actualizado.xlsx`](file:///c:/Users/busqu/Documents/GitHub/SAT/docs/fuentes-datos/02_archivos_producto_entregables/Estructura_Final_Contenido_Portal_SAT_Actualizado.xlsx)  
+> * [`docs/fuentes-datos/02_archivos_producto_entregables/Mapa_de_Navegacion_y_Descripciones_Portal_SAT.xlsx`](file:///c:/Users/busqu/Documents/GitHub/SAT/docs/fuentes-datos/02_archivos_producto_entregables/Mapa_de_Navegacion_y_Descripciones_Portal_SAT.xlsx)
 
 ---
 
@@ -34,7 +34,7 @@ El modelo anterior presentaba una fragmentación plana en 12 categorías artific
 | **Categorías Raíz** | 12 categorías planas desarticuladas | **6 ramas maestras canónicas** |
 | **Profundidad N4/N5** | Niveles redundantes con texto espejo | **Compactada y asimétrica** (3 a 4 niveles directos) |
 | **Subcategorización** | 4 etiquetas genéricas repetidas | **Subcategorías específicas por dominio aduanero** |
-| **Trámites Totales** | 246 trámites (con títulos duplicados) | **246 trámites únicos y estandarizados** |
+| **Trámites Totales** | 246 trámites (con títulos duplicados) | **245 trámites consolidados y estandarizados** |
 | **Lenguaje en Títulos** | Técnico/burocrático con siglas | **Lenguaje Ciudadano (Plain Language) con verbos de acción** |
 | **Brechas Operativas** | Dispersas sin trazabilidad | **12 brechas normativas identificadas con ficha formal** |
 
@@ -110,7 +110,7 @@ El modelo anterior presentaba una fragmentación plana en 12 categorías artific
 
 | Entregable | Rol | Estado |
 | :--- | :--- | :---: |
-| [`src/data/allTramites.json`](file:///c:/Users/busqu/Documents/GitHub/SAT/src/data/allTramites.json) | Base de datos única con 246 trámites aduaneros bajo las 6 ramas | Sincronizado |
+| [`src/data/allTramites.json`](file:///c:/Users/busqu/Documents/GitHub/SAT/src/data/allTramites.json) | Base de datos única con 245 trámites aduaneros bajo las 6 ramas | Sincronizado |
 | [`src/data/categoryOrder.ts`](file:///c:/Users/busqu/Documents/GitHub/SAT/src/data/categoryOrder.ts) | Contrato de orden canónico validado por tests automatizados | Sincronizado |
-| [`Estructura_Final_Contenido_Portal_SAT_Actualizado.xlsx`](file:///c:/Users/busqu/Documents/GitHub/SAT/docs/fuentes-datos/Estructura_Final_Contenido_Portal_SAT_Actualizado.xlsx) | Hoja específica *Comercio Exterior (246)* y fórmulas de resumen | Sincronizado |
-| [`Mapa_de_Navegacion_y_Descripciones_Portal_SAT.xlsx`](file:///c:/Users/busqu/Documents/GitHub/SAT/docs/fuentes-datos/Mapa_de_Navegacion_y_Descripciones_Portal_SAT.xlsx) | Mapa de navegación completo y fichas en Lenguaje Ciudadano | Sincronizado |
+| [`Estructura_Final_Contenido_Portal_SAT_Actualizado.xlsx`](file:///c:/Users/busqu/Documents/GitHub/SAT/docs/fuentes-datos/02_archivos_producto_entregables/Estructura_Final_Contenido_Portal_SAT_Actualizado.xlsx) | Hoja específica *Comercio Exterior (245)* y fórmulas de resumen | Sincronizado |
+| [`Mapa_de_Navegacion_y_Descripciones_Portal_SAT.xlsx`](file:///c:/Users/busqu/Documents/GitHub/SAT/docs/fuentes-datos/02_archivos_producto_entregables/Mapa_de_Navegacion_y_Descripciones_Portal_SAT.xlsx) | Mapa de navegación completo y fichas en Lenguaje Ciudadano | Sincronizado |

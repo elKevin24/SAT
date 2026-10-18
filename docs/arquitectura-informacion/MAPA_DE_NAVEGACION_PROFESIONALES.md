@@ -127,7 +127,7 @@
 
 | Entregable | Rol | Estado |
 | :--- | :--- | :---: |
-| [`src/data/allTramites.json`](file:///c:/Users/busqu/Documents/GitHub/SAT/src/data/allTramites.json) | Base de datos única con 47 trámites saneados de Profesionales | Sincronizado (716 total) |
+| [`src/data/allTramites.json`](file:///c:/Users/busqu/Documents/GitHub/SAT/src/data/allTramites.json) | Base de datos única con 47 trámites saneados de Profesionales | Sincronizado (715 total) |
 | [`src/data/categoryOrder.ts`](file:///c:/Users/busqu/Documents/GitHub/SAT/src/data/categoryOrder.ts) | Contrato de categorías y subcategorías oficiales | Validado por tests Playwright |
-| [`Estructura_Final_Contenido_Portal_SAT_Actualizado.xlsx`](file:///c:/Users/busqu/Documents/GitHub/SAT/docs/fuentes-datos/Estructura_Final_Contenido_Portal_SAT_Actualizado.xlsx) | Libro maestro Excel con 716 registros y fórmulas de resumen | Sincronizado |
-| [`Mapa_de_Navegacion_y_Descripciones_Portal_SAT.xlsx`](file:///c:/Users/busqu/Documents/GitHub/SAT/docs/fuentes-datos/Mapa_de_Navegacion_y_Descripciones_Portal_SAT.xlsx) | Mapa de navegación completo y fichas en Lenguaje Ciudadano | Sincronizado |
+| [`Estructura_Final_Contenido_Portal_SAT_Actualizado.xlsx`](file:///c:/Users/busqu/Documents/GitHub/SAT/docs/fuentes-datos/02_archivos_producto_entregables/Estructura_Final_Contenido_Portal_SAT_Actualizado.xlsx) | Libro maestro Excel con 715 registros y fórmulas de resumen | Sincronizado |
+| [`Mapa_de_Navegacion_y_Descripciones_Portal_SAT.xlsx`](file:///c:/Users/busqu/Documents/GitHub/SAT/docs/fuentes-datos/02_archivos_producto_entregables/Mapa_de_Navegacion_y_Descripciones_Portal_SAT.xlsx) | Mapa de navegación completo y fichas en Lenguaje Ciudadano | Sincronizado |

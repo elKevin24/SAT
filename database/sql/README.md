@@ -19,7 +19,7 @@ El modelo desacopla formalmente las entidades de contenido y la jerarquía de na
 5. **`tramite_regimen` (Tabla intermedia pivote N:M):**
    - Resuelve la polijerarquía y la transversalidad (18 contenidos compartidos entre múltiples audiencias) sin duplicar texto.
 6. **`vw_tramites_portal` (Vista relacional consolidada):**
-   - Resuelve el árbol completo desnormalizado de 716 proyecciones con orden canónico $N_1$ a $N_5$ para reportes y APIs.
+   - Resuelve el árbol completo desnormalizado de 715 proyecciones con orden canónico $N_1$ a $N_5$ para reportes y APIs.
 
 ---
 
