@@ -140,10 +140,10 @@ Tras aplicar la compactación anti-pasarela y la optimización de N5 (reduciendo
 | Profundidad Terminal | Cantidad de Trámites | Porcentaje | Comportamiento en Navegación y Ejemplos Representativos |
 | :--- | :---: | :---: | :--- |
 | **Nivel 2 Directo** | **17** | **2.4%** | Acceso inmediato en 1 clic desde N1. Trámites terminales sin subcarpetas (`N3`, `N4` y `N5` = `—`). *Ejemplos:* Operador Económico Autorizado - OEA (2), Personas Sin Obligaciones Tributarias (10), Municipalidades (5). |
-| **Nivel 3 Directo** | **243** | **34.0%** | Acceso en 2 clics. Resuelven en listas directas bajo N3 (`N4` y `N5` = `—`). *Ejemplos:* Contribuyentes Especiales (14), Asalariados (4), Agentes Aduaneros (7), Courier (3), Exportadores (21), Profesionales y Gestores (47), Iglesias y ONGs (22). |
-| **Nivel 4 Directo** | **385** | **53.8%** | Acceso en 3 clics. Resuelven en N4 (`N5` = `—`). Cumplen regla de Miller y rango de tolerancia ($\le 10$). *Ejemplos:* Pequeño Contribuyente (22), Depósitos Aduaneros Temporales - DAT (18), Almacenes Generales de Depósito - AGD (16), ZDEEP (30), Personas Individuales con Negocio (37). |
+| **Nivel 3 Directo** | **244** | **34.1%** | Acceso en 2 clics. Resuelven en listas directas bajo N3 (`N4` y `N5` = `—`). *Ejemplos:* Contribuyentes Especiales (14), RTU Digital y Agencia Virtual (2), Asalariados (4), Agentes Aduaneros (7), Courier (3), Exportadores (21), Profesionales y Gestores (47), Iglesias y ONGs (22). |
+| **Nivel 4 Directo** | **384** | **53.7%** | Acceso en 3 clics. Resuelven en N4 (`N5` = `—`). Cumplen regla de Miller y rango de tolerancia ($\le 10$). *Ejemplos:* Pequeño Contribuyente (22), Depósitos Aduaneros Temporales - DAT (18), Almacenes Generales de Depósito - AGD (16), ZDEEP (30), Personas Individuales con Negocio (37). |
 | **Nivel 5 Guiado** | **70** | **9.8%** | Estructura guiada profunda para clusters masivos con $\ge 11$ trámites por ciclo ATO. *Únicamente 4 clusters:* Registro Tributario Unificado - RTU (27), Cultura Tributaria (16), Otros Servicios Tributarios (16), Factura Electrónica en Línea - FEL (11). |
-| **Total Portal** | **715** | **100.0%** | **90.2% del portal (645 trámites) resuelve en $\le 4$ niveles (1 a 3 clics). 100% de los trámites y 536 URLs conservadas.** |
+| **Total Portal** | **715** | **100.0%** | **90.2% del portal (645 trámites) resuelve en $\le 4$ niveles (1 a 3 clics). 0 nodos pasarela monocatenarios. 100% de los trámites y 536 URLs conservadas.** |
 
 
 

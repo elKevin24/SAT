@@ -724,7 +724,7 @@ export const PortalFlowModal: React.FC<PortalFlowModalProps> = ({
             fitView
             minZoom={0.2}
             maxZoom={1.5}
-            attributionPosition="bottom-right"
+            proOptions={{ hideAttribution: true }}
           >
             <Background color="#cbd5e1" gap={20} size={1} />
             <Controls showInteractive={false} />

@@ -946,7 +946,7 @@ export const PortalFlowPage: React.FC = () => {
             fitView
             minZoom={0.2}
             maxZoom={1.5}
-            attributionPosition="bottom-right"
+            proOptions={{ hideAttribution: true }}
           >
             <AutoFitView activeKey={`${selectedSegment}-${selectedN2}-${selectedN3}-${selectedN4}`} />
             <Background color="#cbd5e1" gap={20} size={1} />
