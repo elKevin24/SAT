@@ -1,6 +1,6 @@
 [
   {
-    "_id": "6ad83f63e186e1002c404c66",
+    "_id": "6ad83fff0769f419cc5a0459",
     "slug": "contribuyentes",
     "nombre": "Contribuyentes",
     "nivel": 1,
@@ -16,13 +16,13 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404c67",
+    "_id": "6ad83fff0769f419cc5a045a",
     "slug": "pequenos-contribuyentes",
     "nombre": "Pequeños Contribuyentes",
     "nivel": 2,
-    "padre_id": "6ad83f63e186e1002c404c66",
+    "padre_id": "6ad83fff0769f419cc5a0459",
     "ruta": [
-      "6ad83f63e186e1002c404c66"
+      "6ad83fff0769f419cc5a0459"
     ],
     "materialized_path": "contribuyentes/pequenos-contribuyentes",
     "orden": 2,
@@ -34,14 +34,14 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404c68",
+    "_id": "6ad83fff0769f419cc5a045b",
     "slug": "regimen-de-pequeno-contribuyente",
     "nombre": "Régimen de Pequeño Contribuyente",
     "nivel": 3,
-    "padre_id": "6ad83f63e186e1002c404c67",
+    "padre_id": "6ad83fff0769f419cc5a045a",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404c67"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a045a"
     ],
     "materialized_path": "contribuyentes/pequenos-contribuyentes/regimen-de-pequeno-contribuyente",
     "orden": 3,
@@ -53,15 +53,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404c69",
+    "_id": "6ad83fff0769f419cc5a045c",
     "slug": "inscripcion-y-cambios-de-regimen",
     "nombre": "Inscripción y cambios de régimen",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404c68",
+    "padre_id": "6ad83fff0769f419cc5a045b",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404c67",
-      "6ad83f63e186e1002c404c68"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a045a",
+      "6ad83fff0769f419cc5a045b"
     ],
     "materialized_path": "contribuyentes/pequenos-contribuyentes/regimen-de-pequeno-contribuyente/inscripcion-y-cambios-de-regimen",
     "orden": 4,
@@ -73,15 +73,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404c6a",
+    "_id": "6ad83fff0769f419cc5a045d",
     "slug": "normativa-y-devoluciones",
     "nombre": "Normativa y devoluciones",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404c68",
+    "padre_id": "6ad83fff0769f419cc5a045b",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404c67",
-      "6ad83f63e186e1002c404c68"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a045a",
+      "6ad83fff0769f419cc5a045b"
     ],
     "materialized_path": "contribuyentes/pequenos-contribuyentes/regimen-de-pequeno-contribuyente/normativa-y-devoluciones",
     "orden": 5,
@@ -93,15 +93,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404c6b",
+    "_id": "6ad83fff0769f419cc5a045e",
     "slug": "obligaciones-y-operacion",
     "nombre": "Obligaciones y operación",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404c68",
+    "padre_id": "6ad83fff0769f419cc5a045b",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404c67",
-      "6ad83f63e186e1002c404c68"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a045a",
+      "6ad83fff0769f419cc5a045b"
     ],
     "materialized_path": "contribuyentes/pequenos-contribuyentes/regimen-de-pequeno-contribuyente/obligaciones-y-operacion",
     "orden": 6,
@@ -113,14 +113,14 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404c6c",
+    "_id": "6ad83fff0769f419cc5a045f",
     "slug": "regimen-agropecuario-y-productores",
     "nombre": "Régimen Agropecuario y Productores",
     "nivel": 3,
-    "padre_id": "6ad83f63e186e1002c404c67",
+    "padre_id": "6ad83fff0769f419cc5a045a",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404c67"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a045a"
     ],
     "materialized_path": "contribuyentes/pequenos-contribuyentes/regimen-agropecuario-y-productores",
     "orden": 7,
@@ -132,13 +132,13 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404c6d",
+    "_id": "6ad83fff0769f419cc5a0460",
     "slug": "contribuyente-general",
     "nombre": "Contribuyente General",
     "nivel": 2,
-    "padre_id": "6ad83f63e186e1002c404c66",
+    "padre_id": "6ad83fff0769f419cc5a0459",
     "ruta": [
-      "6ad83f63e186e1002c404c66"
+      "6ad83fff0769f419cc5a0459"
     ],
     "materialized_path": "contribuyentes/contribuyente-general",
     "orden": 8,
@@ -150,14 +150,14 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404c6e",
+    "_id": "6ad83fff0769f419cc5a0461",
     "slug": "inscripcion-y-actualizacion-en-el-rtu",
     "nombre": "Inscripción y actualización en el RTU",
     "nivel": 3,
-    "padre_id": "6ad83f63e186e1002c404c6d",
+    "padre_id": "6ad83fff0769f419cc5a0460",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404c6d"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a0460"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/inscripcion-y-actualizacion-en-el-rtu",
     "orden": 9,
@@ -169,15 +169,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404c6f",
+    "_id": "6ad83fff0769f419cc5a0462",
     "slug": "cierre-de-negocios-y-gestiones",
     "nombre": "Cierre de negocios y gestiones",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404c6e",
+    "padre_id": "6ad83fff0769f419cc5a0461",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404c6d",
-      "6ad83f63e186e1002c404c6e"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a0460",
+      "6ad83fff0769f419cc5a0461"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/inscripcion-y-actualizacion-en-el-rtu/cierre-de-negocios-y-gestiones",
     "orden": 10,
@@ -189,15 +189,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404c70",
+    "_id": "6ad83fff0769f419cc5a0463",
     "slug": "otras-entidades-y-patrimonios",
     "nombre": "Otras entidades y patrimonios",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404c6e",
+    "padre_id": "6ad83fff0769f419cc5a0461",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404c6d",
-      "6ad83f63e186e1002c404c6e"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a0460",
+      "6ad83fff0769f419cc5a0461"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/inscripcion-y-actualizacion-en-el-rtu/otras-entidades-y-patrimonios",
     "orden": 11,
@@ -209,15 +209,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404c71",
+    "_id": "6ad83fff0769f419cc5a0464",
     "slug": "personas-y-representantes",
     "nombre": "Personas y representantes",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404c6e",
+    "padre_id": "6ad83fff0769f419cc5a0461",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404c6d",
-      "6ad83f63e186e1002c404c6e"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a0460",
+      "6ad83fff0769f419cc5a0461"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/inscripcion-y-actualizacion-en-el-rtu/personas-y-representantes",
     "orden": 12,
@@ -229,15 +229,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404c72",
+    "_id": "6ad83fff0769f419cc5a0465",
     "slug": "sociedades-y-empresas",
     "nombre": "Sociedades y empresas",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404c6e",
+    "padre_id": "6ad83fff0769f419cc5a0461",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404c6d",
-      "6ad83f63e186e1002c404c6e"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a0460",
+      "6ad83fff0769f419cc5a0461"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/inscripcion-y-actualizacion-en-el-rtu/sociedades-y-empresas",
     "orden": 13,
@@ -249,14 +249,14 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404c73",
+    "_id": "6ad83fff0769f419cc5a0466",
     "slug": "facturacion-electronica-y-documentos-tributarios",
     "nombre": "Facturación electrónica y documentos tributarios",
     "nivel": 3,
-    "padre_id": "6ad83f63e186e1002c404c6d",
+    "padre_id": "6ad83fff0769f419cc5a0460",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404c6d"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a0460"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/facturacion-electronica-y-documentos-tributarios",
     "orden": 14,
@@ -268,15 +268,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404c74",
+    "_id": "6ad83fff0769f419cc5a0467",
     "slug": "autorizacion-de-documentos",
     "nombre": "Autorización de documentos",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404c73",
+    "padre_id": "6ad83fff0769f419cc5a0466",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404c6d",
-      "6ad83f63e186e1002c404c73"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a0460",
+      "6ad83fff0769f419cc5a0466"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/facturacion-electronica-y-documentos-tributarios/autorizacion-de-documentos",
     "orden": 15,
@@ -288,15 +288,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404c75",
+    "_id": "6ad83fff0769f419cc5a0468",
     "slug": "constancias-de-exencion-civa-y-cais",
     "nombre": "Constancias de exención (CIVA y CAIS)",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404c73",
+    "padre_id": "6ad83fff0769f419cc5a0466",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404c6d",
-      "6ad83f63e186e1002c404c73"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a0460",
+      "6ad83fff0769f419cc5a0466"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/facturacion-electronica-y-documentos-tributarios/constancias-de-exencion-civa-y-cais",
     "orden": 16,
@@ -308,15 +308,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404c76",
+    "_id": "6ad83fff0769f419cc5a0469",
     "slug": "factura-electronica",
     "nombre": "Factura electrónica",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404c73",
+    "padre_id": "6ad83fff0769f419cc5a0466",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404c6d",
-      "6ad83f63e186e1002c404c73"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a0460",
+      "6ad83fff0769f419cc5a0466"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/facturacion-electronica-y-documentos-tributarios/factura-electronica",
     "orden": 17,
@@ -328,15 +328,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404c77",
+    "_id": "6ad83fff0769f419cc5a046a",
     "slug": "guias-para-llenar-formularios",
     "nombre": "Guías para llenar formularios",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404c73",
+    "padre_id": "6ad83fff0769f419cc5a0466",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404c6d",
-      "6ad83f63e186e1002c404c73"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a0460",
+      "6ad83fff0769f419cc5a0466"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/facturacion-electronica-y-documentos-tributarios/guias-para-llenar-formularios",
     "orden": 18,
@@ -348,15 +348,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404c78",
+    "_id": "6ad83fff0769f419cc5a046b",
     "slug": "imprentas",
     "nombre": "Imprentas",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404c73",
+    "padre_id": "6ad83fff0769f419cc5a0466",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404c6d",
-      "6ad83f63e186e1002c404c73"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a0460",
+      "6ad83fff0769f419cc5a0466"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/facturacion-electronica-y-documentos-tributarios/imprentas",
     "orden": 19,
@@ -368,15 +368,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404c79",
+    "_id": "6ad83fff0769f419cc5a046c",
     "slug": "listado-y-requisitos-de-formularios",
     "nombre": "Listado y requisitos de formularios",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404c73",
+    "padre_id": "6ad83fff0769f419cc5a0466",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404c6d",
-      "6ad83f63e186e1002c404c73"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a0460",
+      "6ad83fff0769f419cc5a0466"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/facturacion-electronica-y-documentos-tributarios/listado-y-requisitos-de-formularios",
     "orden": 20,
@@ -388,15 +388,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404c7a",
+    "_id": "6ad83fff0769f419cc5a046d",
     "slug": "maquinas-registradoras-y-sistemas",
     "nombre": "Máquinas registradoras y sistemas",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404c73",
+    "padre_id": "6ad83fff0769f419cc5a0466",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404c6d",
-      "6ad83f63e186e1002c404c73"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a0460",
+      "6ad83fff0769f419cc5a0466"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/facturacion-electronica-y-documentos-tributarios/maquinas-registradoras-y-sistemas",
     "orden": 21,
@@ -408,14 +408,14 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404c7b",
+    "_id": "6ad83fff0769f419cc5a046e",
     "slug": "declaraciones-pagos-y-solvencias",
     "nombre": "Declaraciones, pagos y solvencias",
     "nivel": 3,
-    "padre_id": "6ad83f63e186e1002c404c6d",
+    "padre_id": "6ad83fff0769f419cc5a0460",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404c6d"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a0460"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/declaraciones-pagos-y-solvencias",
     "orden": 22,
@@ -427,15 +427,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404c7c",
+    "_id": "6ad83fff0769f419cc5a046f",
     "slug": "declaraciones",
     "nombre": "Declaraciones",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404c7b",
+    "padre_id": "6ad83fff0769f419cc5a046e",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404c6d",
-      "6ad83f63e186e1002c404c7b"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a0460",
+      "6ad83fff0769f419cc5a046e"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/declaraciones-pagos-y-solvencias/declaraciones",
     "orden": 23,
@@ -447,15 +447,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404c7d",
+    "_id": "6ad83fff0769f419cc5a0470",
     "slug": "formas-de-pago-y-convenios",
     "nombre": "Formas de pago y convenios",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404c7b",
+    "padre_id": "6ad83fff0769f419cc5a046e",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404c6d",
-      "6ad83f63e186e1002c404c7b"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a0460",
+      "6ad83fff0769f419cc5a046e"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/declaraciones-pagos-y-solvencias/formas-de-pago-y-convenios",
     "orden": 24,
@@ -467,15 +467,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404c7e",
+    "_id": "6ad83fff0769f419cc5a0471",
     "slug": "solvencia-fiscal",
     "nombre": "Solvencia fiscal",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404c7b",
+    "padre_id": "6ad83fff0769f419cc5a046e",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404c6d",
-      "6ad83f63e186e1002c404c7b"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a0460",
+      "6ad83fff0769f419cc5a046e"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/declaraciones-pagos-y-solvencias/solvencia-fiscal",
     "orden": 25,
@@ -487,14 +487,14 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404c7f",
+    "_id": "6ad83fff0769f419cc5a0472",
     "slug": "devoluciones-y-creditos-fiscales",
     "nombre": "Devoluciones y créditos fiscales",
     "nivel": 3,
-    "padre_id": "6ad83f63e186e1002c404c6d",
+    "padre_id": "6ad83fff0769f419cc5a0460",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404c6d"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a0460"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/devoluciones-y-creditos-fiscales",
     "orden": 26,
@@ -506,15 +506,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404c80",
+    "_id": "6ad83fff0769f419cc5a0473",
     "slug": "iva-impuesto-al-valor-agregado",
     "nombre": "IVA (Impuesto al Valor Agregado)",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404c7f",
+    "padre_id": "6ad83fff0769f419cc5a0472",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404c6d",
-      "6ad83f63e186e1002c404c7f"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a0460",
+      "6ad83fff0769f419cc5a0472"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/devoluciones-y-creditos-fiscales/iva-impuesto-al-valor-agregado",
     "orden": 27,
@@ -526,15 +526,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404c81",
+    "_id": "6ad83fff0769f419cc5a0474",
     "slug": "isr-impuesto-sobre-la-renta",
     "nombre": "ISR (Impuesto Sobre la Renta)",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404c7f",
+    "padre_id": "6ad83fff0769f419cc5a0472",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404c6d",
-      "6ad83f63e186e1002c404c7f"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a0460",
+      "6ad83fff0769f419cc5a0472"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/devoluciones-y-creditos-fiscales/isr-impuesto-sobre-la-renta",
     "orden": 28,
@@ -546,15 +546,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404c82",
+    "_id": "6ad83fff0769f419cc5a0475",
     "slug": "otros-impuestos",
     "nombre": "Otros impuestos",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404c7f",
+    "padre_id": "6ad83fff0769f419cc5a0472",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404c6d",
-      "6ad83f63e186e1002c404c7f"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a0460",
+      "6ad83fff0769f419cc5a0472"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/devoluciones-y-creditos-fiscales/otros-impuestos",
     "orden": 29,
@@ -566,14 +566,14 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404c83",
+    "_id": "6ad83fff0769f419cc5a0476",
     "slug": "regimenes-tributarios",
     "nombre": "Regímenes tributarios",
     "nivel": 3,
-    "padre_id": "6ad83f63e186e1002c404c6d",
+    "padre_id": "6ad83fff0769f419cc5a0460",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404c6d"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a0460"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/regimenes-tributarios",
     "orden": 30,
@@ -585,15 +585,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404c84",
+    "_id": "6ad83fff0769f419cc5a0477",
     "slug": "isr-para-negocios",
     "nombre": "ISR para negocios",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404c83",
+    "padre_id": "6ad83fff0769f419cc5a0476",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404c6d",
-      "6ad83f63e186e1002c404c83"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a0460",
+      "6ad83fff0769f419cc5a0476"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/regimenes-tributarios/isr-para-negocios",
     "orden": 31,
@@ -605,15 +605,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404c85",
+    "_id": "6ad83fff0769f419cc5a0478",
     "slug": "regimen-general-del-iva",
     "nombre": "Régimen General del IVA",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404c83",
+    "padre_id": "6ad83fff0769f419cc5a0476",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404c6d",
-      "6ad83f63e186e1002c404c83"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a0460",
+      "6ad83fff0769f419cc5a0476"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/regimenes-tributarios/regimen-general-del-iva",
     "orden": 32,
@@ -625,15 +625,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404c86",
+    "_id": "6ad83fff0769f419cc5a0479",
     "slug": "cambio-de-regimen",
     "nombre": "Cambio de régimen",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404c83",
+    "padre_id": "6ad83fff0769f419cc5a0476",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404c6d",
-      "6ad83f63e186e1002c404c83"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a0460",
+      "6ad83fff0769f419cc5a0476"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/regimenes-tributarios/cambio-de-regimen",
     "orden": 33,
@@ -645,14 +645,14 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404c87",
+    "_id": "6ad83fff0769f419cc5a047a",
     "slug": "vehiculos-como-propietario",
     "nombre": "Vehículos (como propietario)",
     "nivel": 3,
-    "padre_id": "6ad83f63e186e1002c404c6d",
+    "padre_id": "6ad83fff0769f419cc5a0460",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404c6d"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a0460"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/vehiculos-como-propietario",
     "orden": 34,
@@ -664,15 +664,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404c88",
+    "_id": "6ad83fff0769f419cc5a047b",
     "slug": "autorizaciones-consultas-y-requisitos",
     "nombre": "Autorizaciones, consultas y requisitos",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404c87",
+    "padre_id": "6ad83fff0769f419cc5a047a",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404c6d",
-      "6ad83f63e186e1002c404c87"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a0460",
+      "6ad83fff0769f419cc5a047a"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/vehiculos-como-propietario/autorizaciones-consultas-y-requisitos",
     "orden": 35,
@@ -684,15 +684,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404c89",
+    "_id": "6ad83fff0769f419cc5a047c",
     "slug": "inscripcion-distintivos-y-placas",
     "nombre": "Inscripción, distintivos y placas",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404c87",
+    "padre_id": "6ad83fff0769f419cc5a047a",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404c6d",
-      "6ad83f63e186e1002c404c87"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a0460",
+      "6ad83fff0769f419cc5a047a"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/vehiculos-como-propietario/inscripcion-distintivos-y-placas",
     "orden": 36,
@@ -704,15 +704,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404c8a",
+    "_id": "6ad83fff0769f419cc5a047d",
     "slug": "bajas-inactivacion-y-reactivacion",
     "nombre": "Bajas, inactivación y reactivación",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404c87",
+    "padre_id": "6ad83fff0769f419cc5a047a",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404c6d",
-      "6ad83f63e186e1002c404c87"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a0460",
+      "6ad83fff0769f419cc5a047a"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/vehiculos-como-propietario/bajas-inactivacion-y-reactivacion",
     "orden": 37,
@@ -724,15 +724,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404c8b",
+    "_id": "6ad83fff0769f419cc5a047e",
     "slug": "impuesto-de-circulacion-iscv-y-valores",
     "nombre": "Impuesto de circulación (ISCV) y valores",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404c87",
+    "padre_id": "6ad83fff0769f419cc5a047a",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404c6d",
-      "6ad83f63e186e1002c404c87"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a0460",
+      "6ad83fff0769f419cc5a047a"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/vehiculos-como-propietario/impuesto-de-circulacion-iscv-y-valores",
     "orden": 38,
@@ -744,15 +744,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404c8c",
+    "_id": "6ad83fff0769f419cc5a047f",
     "slug": "modificaciones-y-rectificaciones",
     "nombre": "Modificaciones y rectificaciones",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404c87",
+    "padre_id": "6ad83fff0769f419cc5a047a",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404c6d",
-      "6ad83f63e186e1002c404c87"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a0460",
+      "6ad83fff0769f419cc5a047a"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/vehiculos-como-propietario/modificaciones-y-rectificaciones",
     "orden": 39,
@@ -764,15 +764,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404c8d",
+    "_id": "6ad83fff0769f419cc5a0480",
     "slug": "traspasos-de-vehiculos",
     "nombre": "Traspasos de vehículos",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404c87",
+    "padre_id": "6ad83fff0769f419cc5a047a",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404c6d",
-      "6ad83f63e186e1002c404c87"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a0460",
+      "6ad83fff0769f419cc5a047a"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/vehiculos-como-propietario/traspasos-de-vehiculos",
     "orden": 40,
@@ -784,14 +784,14 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404c8e",
+    "_id": "6ad83fff0769f419cc5a0481",
     "slug": "servicios-y-gestiones-al-contribuyente",
     "nombre": "Servicios y gestiones al contribuyente",
     "nivel": 3,
-    "padre_id": "6ad83f63e186e1002c404c6d",
+    "padre_id": "6ad83fff0769f419cc5a0460",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404c6d"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a0460"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/servicios-y-gestiones-al-contribuyente",
     "orden": 41,
@@ -803,15 +803,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404c8f",
+    "_id": "6ad83fff0769f419cc5a0482",
     "slug": "constancias-y-gestiones-del-rtu",
     "nombre": "Constancias y gestiones del RTU",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404c8e",
+    "padre_id": "6ad83fff0769f419cc5a0481",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404c6d",
-      "6ad83f63e186e1002c404c8e"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a0460",
+      "6ad83fff0769f419cc5a0481"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/servicios-y-gestiones-al-contribuyente/constancias-y-gestiones-del-rtu",
     "orden": 42,
@@ -823,15 +823,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404c90",
+    "_id": "6ad83fff0769f419cc5a0483",
     "slug": "otros-servicios-al-contribuyente",
     "nombre": "Otros servicios al contribuyente",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404c8e",
+    "padre_id": "6ad83fff0769f419cc5a0481",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404c6d",
-      "6ad83f63e186e1002c404c8e"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a0460",
+      "6ad83fff0769f419cc5a0481"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/servicios-y-gestiones-al-contribuyente/otros-servicios-al-contribuyente",
     "orden": 43,
@@ -843,15 +843,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404c91",
+    "_id": "6ad83fff0769f419cc5a0484",
     "slug": "acceso-y-usuario",
     "nombre": "Acceso y usuario",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404c8e",
+    "padre_id": "6ad83fff0769f419cc5a0481",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404c6d",
-      "6ad83f63e186e1002c404c8e"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a0460",
+      "6ad83fff0769f419cc5a0481"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/servicios-y-gestiones-al-contribuyente/acceso-y-usuario",
     "orden": 44,
@@ -863,15 +863,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404c92",
+    "_id": "6ad83fff0769f419cc5a0485",
     "slug": "citas-y-oficinas",
     "nombre": "Citas y oficinas",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404c8e",
+    "padre_id": "6ad83fff0769f419cc5a0481",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404c6d",
-      "6ad83f63e186e1002c404c8e"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a0460",
+      "6ad83fff0769f419cc5a0481"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/servicios-y-gestiones-al-contribuyente/citas-y-oficinas",
     "orden": 45,
@@ -883,15 +883,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404c93",
+    "_id": "6ad83fff0769f419cc5a0486",
     "slug": "citas-estado-y-quejas",
     "nombre": "Citas, estado y quejas",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404c8e",
+    "padre_id": "6ad83fff0769f419cc5a0481",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404c6d",
-      "6ad83f63e186e1002c404c8e"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a0460",
+      "6ad83fff0769f419cc5a0481"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/servicios-y-gestiones-al-contribuyente/citas-estado-y-quejas",
     "orden": 46,
@@ -903,15 +903,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404c94",
+    "_id": "6ad83fff0769f419cc5a0487",
     "slug": "correcciones",
     "nombre": "Correcciones",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404c8e",
+    "padre_id": "6ad83fff0769f419cc5a0481",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404c6d",
-      "6ad83f63e186e1002c404c8e"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a0460",
+      "6ad83fff0769f419cc5a0481"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/servicios-y-gestiones-al-contribuyente/correcciones",
     "orden": 47,
@@ -923,15 +923,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404c95",
+    "_id": "6ad83fff0769f419cc5a0488",
     "slug": "libros-facturas-y-maquinas",
     "nombre": "Libros, facturas y máquinas",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404c8e",
+    "padre_id": "6ad83fff0769f419cc5a0481",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404c6d",
-      "6ad83f63e186e1002c404c8e"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a0460",
+      "6ad83fff0769f419cc5a0481"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/servicios-y-gestiones-al-contribuyente/libros-facturas-y-maquinas",
     "orden": 48,
@@ -943,15 +943,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404c96",
+    "_id": "6ad83fff0769f419cc5a0489",
     "slug": "orientacion-y-constancias",
     "nombre": "Orientación y constancias",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404c8e",
+    "padre_id": "6ad83fff0769f419cc5a0481",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404c6d",
-      "6ad83f63e186e1002c404c8e"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a0460",
+      "6ad83fff0769f419cc5a0481"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/servicios-y-gestiones-al-contribuyente/orientacion-y-constancias",
     "orden": 49,
@@ -963,15 +963,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404c97",
+    "_id": "6ad83fff0769f419cc5a048a",
     "slug": "agencia-virtual-y-accesos",
     "nombre": "Agencia Virtual y accesos",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404c8e",
+    "padre_id": "6ad83fff0769f419cc5a0481",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404c6d",
-      "6ad83f63e186e1002c404c8e"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a0460",
+      "6ad83fff0769f419cc5a0481"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/servicios-y-gestiones-al-contribuyente/agencia-virtual-y-accesos",
     "orden": 50,
@@ -983,15 +983,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404c98",
+    "_id": "6ad83fff0769f419cc5a048b",
     "slug": "sistemas-de-retencion",
     "nombre": "Sistemas de retención",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404c8e",
+    "padre_id": "6ad83fff0769f419cc5a0481",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404c6d",
-      "6ad83f63e186e1002c404c8e"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a0460",
+      "6ad83fff0769f419cc5a0481"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/servicios-y-gestiones-al-contribuyente/sistemas-de-retencion",
     "orden": 51,
@@ -1003,14 +1003,14 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404c99",
+    "_id": "6ad83fff0769f419cc5a048c",
     "slug": "cultura-tributaria-y-capacitacion",
     "nombre": "Cultura tributaria y capacitación",
     "nivel": 3,
-    "padre_id": "6ad83f63e186e1002c404c6d",
+    "padre_id": "6ad83fff0769f419cc5a0460",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404c6d"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a0460"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/cultura-tributaria-y-capacitacion",
     "orden": 52,
@@ -1022,15 +1022,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404c9a",
+    "_id": "6ad83fff0769f419cc5a048d",
     "slug": "programas-de-cultura-tributaria",
     "nombre": "Programas de cultura tributaria",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404c99",
+    "padre_id": "6ad83fff0769f419cc5a048c",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404c6d",
-      "6ad83f63e186e1002c404c99"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a0460",
+      "6ad83fff0769f419cc5a048c"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/cultura-tributaria-y-capacitacion/programas-de-cultura-tributaria",
     "orden": 53,
@@ -1042,15 +1042,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404c9b",
+    "_id": "6ad83fff0769f419cc5a048e",
     "slug": "cursos-de-herramientas-y-gestiones",
     "nombre": "Cursos de herramientas y gestiones",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404c99",
+    "padre_id": "6ad83fff0769f419cc5a048c",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404c6d",
-      "6ad83f63e186e1002c404c99"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a0460",
+      "6ad83fff0769f419cc5a048c"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/cultura-tributaria-y-capacitacion/cursos-de-herramientas-y-gestiones",
     "orden": 54,
@@ -1062,15 +1062,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404c9c",
+    "_id": "6ad83fff0769f419cc5a048f",
     "slug": "biblioteca-virtual-y-descargas",
     "nombre": "Biblioteca virtual y descargas",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404c99",
+    "padre_id": "6ad83fff0769f419cc5a048c",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404c6d",
-      "6ad83f63e186e1002c404c99"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a0460",
+      "6ad83fff0769f419cc5a048c"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/cultura-tributaria-y-capacitacion/biblioteca-virtual-y-descargas",
     "orden": 55,
@@ -1082,15 +1082,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404c9d",
+    "_id": "6ad83fff0769f419cc5a0490",
     "slug": "calendario-y-modalidades",
     "nombre": "Calendario y modalidades",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404c99",
+    "padre_id": "6ad83fff0769f419cc5a048c",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404c6d",
-      "6ad83f63e186e1002c404c99"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a0460",
+      "6ad83fff0769f419cc5a048c"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/cultura-tributaria-y-capacitacion/calendario-y-modalidades",
     "orden": 56,
@@ -1102,15 +1102,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404c9e",
+    "_id": "6ad83fff0769f419cc5a0491",
     "slug": "cursos-de-isr",
     "nombre": "Cursos de ISR",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404c99",
+    "padre_id": "6ad83fff0769f419cc5a048c",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404c6d",
-      "6ad83f63e186e1002c404c99"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a0460",
+      "6ad83fff0769f419cc5a048c"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/cultura-tributaria-y-capacitacion/cursos-de-isr",
     "orden": 57,
@@ -1122,15 +1122,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404c9f",
+    "_id": "6ad83fff0769f419cc5a0492",
     "slug": "cursos-de-iva",
     "nombre": "Cursos de IVA",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404c99",
+    "padre_id": "6ad83fff0769f419cc5a048c",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404c6d",
-      "6ad83f63e186e1002c404c99"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a0460",
+      "6ad83fff0769f419cc5a048c"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/cultura-tributaria-y-capacitacion/cursos-de-iva",
     "orden": 58,
@@ -1142,15 +1142,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404ca0",
+    "_id": "6ad83fff0769f419cc5a0493",
     "slug": "cursos-de-otros-impuestos-y-criterios",
     "nombre": "Cursos de otros impuestos y criterios",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404c99",
+    "padre_id": "6ad83fff0769f419cc5a048c",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404c6d",
-      "6ad83f63e186e1002c404c99"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a0460",
+      "6ad83fff0769f419cc5a048c"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/cultura-tributaria-y-capacitacion/cursos-de-otros-impuestos-y-criterios",
     "orden": 59,
@@ -1162,15 +1162,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404ca1",
+    "_id": "6ad83fff0769f419cc5a0494",
     "slug": "cursos-por-tipo-de-contribuyente",
     "nombre": "Cursos por tipo de contribuyente",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404c99",
+    "padre_id": "6ad83fff0769f419cc5a048c",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404c6d",
-      "6ad83f63e186e1002c404c99"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a0460",
+      "6ad83fff0769f419cc5a048c"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/cultura-tributaria-y-capacitacion/cursos-por-tipo-de-contribuyente",
     "orden": 60,
@@ -1182,15 +1182,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404ca2",
+    "_id": "6ad83fff0769f419cc5a0495",
     "slug": "informacion-institucional",
     "nombre": "Información institucional",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404c99",
+    "padre_id": "6ad83fff0769f419cc5a048c",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404c6d",
-      "6ad83f63e186e1002c404c99"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a0460",
+      "6ad83fff0769f419cc5a048c"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/cultura-tributaria-y-capacitacion/informacion-institucional",
     "orden": 61,
@@ -1202,15 +1202,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404ca3",
+    "_id": "6ad83fff0769f419cc5a0496",
     "slug": "leyes-y-normativa",
     "nombre": "Leyes y normativa",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404c99",
+    "padre_id": "6ad83fff0769f419cc5a048c",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404c6d",
-      "6ad83f63e186e1002c404c99"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a0460",
+      "6ad83fff0769f419cc5a048c"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/cultura-tributaria-y-capacitacion/leyes-y-normativa",
     "orden": 62,
@@ -1222,15 +1222,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404ca4",
+    "_id": "6ad83fff0769f419cc5a0497",
     "slug": "preguntas-frecuentes",
     "nombre": "Preguntas frecuentes",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404c99",
+    "padre_id": "6ad83fff0769f419cc5a048c",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404c6d",
-      "6ad83f63e186e1002c404c99"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a0460",
+      "6ad83fff0769f419cc5a048c"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/cultura-tributaria-y-capacitacion/preguntas-frecuentes",
     "orden": 63,
@@ -1242,13 +1242,13 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404ca5",
+    "_id": "6ad83fff0769f419cc5a0498",
     "slug": "contribuyentes-especiales",
     "nombre": "Contribuyentes Especiales",
     "nivel": 2,
-    "padre_id": "6ad83f63e186e1002c404c66",
+    "padre_id": "6ad83fff0769f419cc5a0459",
     "ruta": [
-      "6ad83f63e186e1002c404c66"
+      "6ad83fff0769f419cc5a0459"
     ],
     "materialized_path": "contribuyentes/contribuyentes-especiales",
     "orden": 64,
@@ -1260,14 +1260,14 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404ca6",
+    "_id": "6ad83fff0769f419cc5a0499",
     "slug": "gerencias-especiales-y-control-tributario",
     "nombre": "Gerencias Especiales y Control Tributario",
     "nivel": 3,
-    "padre_id": "6ad83f63e186e1002c404ca5",
+    "padre_id": "6ad83fff0769f419cc5a0498",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404ca5"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a0498"
     ],
     "materialized_path": "contribuyentes/contribuyentes-especiales/gerencias-especiales-y-control-tributario",
     "orden": 65,
@@ -1279,14 +1279,14 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404ca7",
+    "_id": "6ad83fff0769f419cc5a049a",
     "slug": "declaraciones-e-informes-especiales",
     "nombre": "Declaraciones e Informes Especiales",
     "nivel": 3,
-    "padre_id": "6ad83f63e186e1002c404ca5",
+    "padre_id": "6ad83fff0769f419cc5a0498",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404ca5"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a0498"
     ],
     "materialized_path": "contribuyentes/contribuyentes-especiales/declaraciones-e-informes-especiales",
     "orden": 66,
@@ -1298,14 +1298,14 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404ca8",
+    "_id": "6ad83fff0769f419cc5a049b",
     "slug": "capacitacion-y-orientacion-diferenciada",
     "nombre": "Capacitación y Orientación Diferenciada",
     "nivel": 3,
-    "padre_id": "6ad83f63e186e1002c404ca5",
+    "padre_id": "6ad83fff0769f419cc5a0498",
     "ruta": [
-      "6ad83f63e186e1002c404c66",
-      "6ad83f63e186e1002c404ca5"
+      "6ad83fff0769f419cc5a0459",
+      "6ad83fff0769f419cc5a0498"
     ],
     "materialized_path": "contribuyentes/contribuyentes-especiales/capacitacion-y-orientacion-diferenciada",
     "orden": 67,
@@ -1317,13 +1317,13 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404ca9",
+    "_id": "6ad83fff0769f419cc5a049c",
     "slug": "sin-obligaciones",
     "nombre": "Sin Obligaciones",
     "nivel": 2,
-    "padre_id": "6ad83f63e186e1002c404c66",
+    "padre_id": "6ad83fff0769f419cc5a0459",
     "ruta": [
-      "6ad83f63e186e1002c404c66"
+      "6ad83fff0769f419cc5a0459"
     ],
     "materialized_path": "contribuyentes/sin-obligaciones",
     "orden": 68,
@@ -1335,7 +1335,7 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404caa",
+    "_id": "6ad83fff0769f419cc5a049d",
     "slug": "operadores-de-comercio-exterior",
     "nombre": "Operadores de Comercio Exterior",
     "nivel": 1,
@@ -1351,13 +1351,13 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cab",
+    "_id": "6ad83fff0769f419cc5a049e",
     "slug": "regimenes-territoriales-y-zonas-especiales",
     "nombre": "Regímenes Territoriales y Zonas Especiales",
     "nivel": 2,
-    "padre_id": "6ad83f63e186e1002c404caa",
+    "padre_id": "6ad83fff0769f419cc5a049d",
     "ruta": [
-      "6ad83f63e186e1002c404caa"
+      "6ad83fff0769f419cc5a049d"
     ],
     "materialized_path": "operadores-de-comercio-exterior/regimenes-territoriales-y-zonas-especiales",
     "orden": 70,
@@ -1369,14 +1369,14 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cac",
+    "_id": "6ad83fff0769f419cc5a049f",
     "slug": "maquilas-decreto-29-89",
     "nombre": "Maquilas (Decreto 29-89)",
     "nivel": 3,
-    "padre_id": "6ad83f63e186e1002c404cab",
+    "padre_id": "6ad83fff0769f419cc5a049e",
     "ruta": [
-      "6ad83f63e186e1002c404caa",
-      "6ad83f63e186e1002c404cab"
+      "6ad83fff0769f419cc5a049d",
+      "6ad83fff0769f419cc5a049e"
     ],
     "materialized_path": "operadores-de-comercio-exterior/regimenes-territoriales-y-zonas-especiales/maquilas-decreto-29-89",
     "orden": 71,
@@ -1388,15 +1388,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cad",
+    "_id": "6ad83fff0769f419cc5a04a0",
     "slug": "inscripcion-y-garantias",
     "nombre": "Inscripción y garantías",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404cac",
+    "padre_id": "6ad83fff0769f419cc5a049f",
     "ruta": [
-      "6ad83f63e186e1002c404caa",
-      "6ad83f63e186e1002c404cab",
-      "6ad83f63e186e1002c404cac"
+      "6ad83fff0769f419cc5a049d",
+      "6ad83fff0769f419cc5a049e",
+      "6ad83fff0769f419cc5a049f"
     ],
     "materialized_path": "operadores-de-comercio-exterior/regimenes-territoriales-y-zonas-especiales/maquilas-decreto-29-89/inscripcion-y-garantias",
     "orden": 72,
@@ -1408,15 +1408,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cae",
+    "_id": "6ad83fff0769f419cc5a04a1",
     "slug": "operacion-y-descargos",
     "nombre": "Operación y descargos",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404cac",
+    "padre_id": "6ad83fff0769f419cc5a049f",
     "ruta": [
-      "6ad83f63e186e1002c404caa",
-      "6ad83f63e186e1002c404cab",
-      "6ad83f63e186e1002c404cac"
+      "6ad83fff0769f419cc5a049d",
+      "6ad83fff0769f419cc5a049e",
+      "6ad83fff0769f419cc5a049f"
     ],
     "materialized_path": "operadores-de-comercio-exterior/regimenes-territoriales-y-zonas-especiales/maquilas-decreto-29-89/operacion-y-descargos",
     "orden": 73,
@@ -1428,15 +1428,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404caf",
+    "_id": "6ad83fff0769f419cc5a04a2",
     "slug": "cierre-desperdicios-y-normativa",
     "nombre": "Cierre, desperdicios y normativa",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404cac",
+    "padre_id": "6ad83fff0769f419cc5a049f",
     "ruta": [
-      "6ad83f63e186e1002c404caa",
-      "6ad83f63e186e1002c404cab",
-      "6ad83f63e186e1002c404cac"
+      "6ad83fff0769f419cc5a049d",
+      "6ad83fff0769f419cc5a049e",
+      "6ad83fff0769f419cc5a049f"
     ],
     "materialized_path": "operadores-de-comercio-exterior/regimenes-territoriales-y-zonas-especiales/maquilas-decreto-29-89/cierre-desperdicios-y-normativa",
     "orden": 74,
@@ -1448,14 +1448,14 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cb0",
+    "_id": "6ad83fff0769f419cc5a04a3",
     "slug": "zonas-de-desarrollo-economico-especial-publico-zdeep",
     "nombre": "Zonas de Desarrollo Económico Especial Público (ZDEEP)",
     "nivel": 3,
-    "padre_id": "6ad83f63e186e1002c404cab",
+    "padre_id": "6ad83fff0769f419cc5a049e",
     "ruta": [
-      "6ad83f63e186e1002c404caa",
-      "6ad83f63e186e1002c404cab"
+      "6ad83fff0769f419cc5a049d",
+      "6ad83fff0769f419cc5a049e"
     ],
     "materialized_path": "operadores-de-comercio-exterior/regimenes-territoriales-y-zonas-especiales/zonas-de-desarrollo-economico-especial-publico-zdeep",
     "orden": 75,
@@ -1467,15 +1467,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cb1",
+    "_id": "6ad83fff0769f419cc5a04a4",
     "slug": "habilitacion-e-infraestructura",
     "nombre": "Habilitación e infraestructura",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404cb0",
+    "padre_id": "6ad83fff0769f419cc5a04a3",
     "ruta": [
-      "6ad83f63e186e1002c404caa",
-      "6ad83f63e186e1002c404cab",
-      "6ad83f63e186e1002c404cb0"
+      "6ad83fff0769f419cc5a049d",
+      "6ad83fff0769f419cc5a049e",
+      "6ad83fff0769f419cc5a04a3"
     ],
     "materialized_path": "operadores-de-comercio-exterior/regimenes-territoriales-y-zonas-especiales/zonas-de-desarrollo-economico-especial-publico-zdeep/habilitacion-e-infraestructura",
     "orden": 76,
@@ -1487,15 +1487,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cb2",
+    "_id": "6ad83fff0769f419cc5a04a5",
     "slug": "registro-y-habilitacion-de-empresas",
     "nombre": "Registro y habilitación de empresas",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404cb0",
+    "padre_id": "6ad83fff0769f419cc5a04a3",
     "ruta": [
-      "6ad83f63e186e1002c404caa",
-      "6ad83f63e186e1002c404cab",
-      "6ad83f63e186e1002c404cb0"
+      "6ad83fff0769f419cc5a049d",
+      "6ad83fff0769f419cc5a049e",
+      "6ad83fff0769f419cc5a04a3"
     ],
     "materialized_path": "operadores-de-comercio-exterior/regimenes-territoriales-y-zonas-especiales/zonas-de-desarrollo-economico-especial-publico-zdeep/registro-y-habilitacion-de-empresas",
     "orden": 77,
@@ -1507,15 +1507,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cb3",
+    "_id": "6ad83fff0769f419cc5a04a6",
     "slug": "normativa-y-asistencia",
     "nombre": "Normativa y asistencia",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404cb0",
+    "padre_id": "6ad83fff0769f419cc5a04a3",
     "ruta": [
-      "6ad83f63e186e1002c404caa",
-      "6ad83f63e186e1002c404cab",
-      "6ad83f63e186e1002c404cb0"
+      "6ad83fff0769f419cc5a049d",
+      "6ad83fff0769f419cc5a049e",
+      "6ad83fff0769f419cc5a04a3"
     ],
     "materialized_path": "operadores-de-comercio-exterior/regimenes-territoriales-y-zonas-especiales/zonas-de-desarrollo-economico-especial-publico-zdeep/normativa-y-asistencia",
     "orden": 78,
@@ -1527,15 +1527,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cb4",
+    "_id": "6ad83fff0769f419cc5a04a7",
     "slug": "operacion-y-control-de-carga",
     "nombre": "Operación y control de carga",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404cb0",
+    "padre_id": "6ad83fff0769f419cc5a04a3",
     "ruta": [
-      "6ad83f63e186e1002c404caa",
-      "6ad83f63e186e1002c404cab",
-      "6ad83f63e186e1002c404cb0"
+      "6ad83fff0769f419cc5a049d",
+      "6ad83fff0769f419cc5a049e",
+      "6ad83fff0769f419cc5a04a3"
     ],
     "materialized_path": "operadores-de-comercio-exterior/regimenes-territoriales-y-zonas-especiales/zonas-de-desarrollo-economico-especial-publico-zdeep/operacion-y-control-de-carga",
     "orden": 79,
@@ -1547,15 +1547,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cb5",
+    "_id": "6ad83fff0769f419cc5a04a8",
     "slug": "operacion-y-control-en-zonas-francas",
     "nombre": "Operación y control en zonas francas",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404cb0",
+    "padre_id": "6ad83fff0769f419cc5a04a3",
     "ruta": [
-      "6ad83f63e186e1002c404caa",
-      "6ad83f63e186e1002c404cab",
-      "6ad83f63e186e1002c404cb0"
+      "6ad83fff0769f419cc5a049d",
+      "6ad83fff0769f419cc5a049e",
+      "6ad83fff0769f419cc5a04a3"
     ],
     "materialized_path": "operadores-de-comercio-exterior/regimenes-territoriales-y-zonas-especiales/zonas-de-desarrollo-economico-especial-publico-zdeep/operacion-y-control-en-zonas-francas",
     "orden": 80,
@@ -1567,13 +1567,13 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cb6",
+    "_id": "6ad83fff0769f419cc5a04a9",
     "slug": "importadores",
     "nombre": "Importadores",
     "nivel": 2,
-    "padre_id": "6ad83f63e186e1002c404caa",
+    "padre_id": "6ad83fff0769f419cc5a049d",
     "ruta": [
-      "6ad83f63e186e1002c404caa"
+      "6ad83fff0769f419cc5a049d"
     ],
     "materialized_path": "operadores-de-comercio-exterior/importadores",
     "orden": 81,
@@ -1585,14 +1585,14 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cb7",
+    "_id": "6ad83fff0769f419cc5a04aa",
     "slug": "registro-y-padron-de-importadores",
     "nombre": "Registro y Padrón de Importadores",
     "nivel": 3,
-    "padre_id": "6ad83f63e186e1002c404cb6",
+    "padre_id": "6ad83fff0769f419cc5a04a9",
     "ruta": [
-      "6ad83f63e186e1002c404caa",
-      "6ad83f63e186e1002c404cb6"
+      "6ad83fff0769f419cc5a049d",
+      "6ad83fff0769f419cc5a04a9"
     ],
     "materialized_path": "operadores-de-comercio-exterior/importadores/registro-y-padron-de-importadores",
     "orden": 82,
@@ -1604,14 +1604,14 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cb8",
+    "_id": "6ad83fff0769f419cc5a04ab",
     "slug": "declaraciones-aduaneras-y-ducas",
     "nombre": "Declaraciones Aduaneras y DUCAs",
     "nivel": 3,
-    "padre_id": "6ad83f63e186e1002c404cb6",
+    "padre_id": "6ad83fff0769f419cc5a04a9",
     "ruta": [
-      "6ad83f63e186e1002c404caa",
-      "6ad83f63e186e1002c404cb6"
+      "6ad83fff0769f419cc5a049d",
+      "6ad83fff0769f419cc5a04a9"
     ],
     "materialized_path": "operadores-de-comercio-exterior/importadores/declaraciones-aduaneras-y-ducas",
     "orden": 83,
@@ -1623,15 +1623,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cb9",
+    "_id": "6ad83fff0769f419cc5a04ac",
     "slug": "preparacion-y-documentos-de-soporte",
     "nombre": "Preparación y Documentos de Soporte",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404cb8",
+    "padre_id": "6ad83fff0769f419cc5a04ab",
     "ruta": [
-      "6ad83f63e186e1002c404caa",
-      "6ad83f63e186e1002c404cb6",
-      "6ad83f63e186e1002c404cb8"
+      "6ad83fff0769f419cc5a049d",
+      "6ad83fff0769f419cc5a04a9",
+      "6ad83fff0769f419cc5a04ab"
     ],
     "materialized_path": "operadores-de-comercio-exterior/importadores/declaraciones-aduaneras-y-ducas/preparacion-y-documentos-de-soporte",
     "orden": 84,
@@ -1643,15 +1643,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cba",
+    "_id": "6ad83fff0769f419cc5a04ad",
     "slug": "transmision-de-la-declaracion-de-mercancias",
     "nombre": "Transmisión de la Declaración de Mercancías",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404cb8",
+    "padre_id": "6ad83fff0769f419cc5a04ab",
     "ruta": [
-      "6ad83f63e186e1002c404caa",
-      "6ad83f63e186e1002c404cb6",
-      "6ad83f63e186e1002c404cb8"
+      "6ad83fff0769f419cc5a049d",
+      "6ad83fff0769f419cc5a04a9",
+      "6ad83fff0769f419cc5a04ab"
     ],
     "materialized_path": "operadores-de-comercio-exterior/importadores/declaraciones-aduaneras-y-ducas/transmision-de-la-declaracion-de-mercancias",
     "orden": 85,
@@ -1663,15 +1663,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cbb",
+    "_id": "6ad83fff0769f419cc5a04ae",
     "slug": "verificacion-y-seguimiento-de-declaraciones",
     "nombre": "Verificación y Seguimiento de Declaraciones",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404cb8",
+    "padre_id": "6ad83fff0769f419cc5a04ab",
     "ruta": [
-      "6ad83f63e186e1002c404caa",
-      "6ad83f63e186e1002c404cb6",
-      "6ad83f63e186e1002c404cb8"
+      "6ad83fff0769f419cc5a049d",
+      "6ad83fff0769f419cc5a04a9",
+      "6ad83fff0769f419cc5a04ab"
     ],
     "materialized_path": "operadores-de-comercio-exterior/importadores/declaraciones-aduaneras-y-ducas/verificacion-y-seguimiento-de-declaraciones",
     "orden": 86,
@@ -1683,14 +1683,14 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cbc",
+    "_id": "6ad83fff0769f419cc5a04af",
     "slug": "despacho-aduanero-levante-y-selectivo",
     "nombre": "Despacho Aduanero, Levante y Selectivo",
     "nivel": 3,
-    "padre_id": "6ad83f63e186e1002c404cb6",
+    "padre_id": "6ad83fff0769f419cc5a04a9",
     "ruta": [
-      "6ad83f63e186e1002c404caa",
-      "6ad83f63e186e1002c404cb6"
+      "6ad83fff0769f419cc5a049d",
+      "6ad83fff0769f419cc5a04a9"
     ],
     "materialized_path": "operadores-de-comercio-exterior/importadores/despacho-aduanero-levante-y-selectivo",
     "orden": 87,
@@ -1702,15 +1702,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cbd",
+    "_id": "6ad83fff0769f419cc5a04b0",
     "slug": "gestiones-anticipadas",
     "nombre": "Gestiones anticipadas",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404cbc",
+    "padre_id": "6ad83fff0769f419cc5a04af",
     "ruta": [
-      "6ad83f63e186e1002c404caa",
-      "6ad83f63e186e1002c404cb6",
-      "6ad83f63e186e1002c404cbc"
+      "6ad83fff0769f419cc5a049d",
+      "6ad83fff0769f419cc5a04a9",
+      "6ad83fff0769f419cc5a04af"
     ],
     "materialized_path": "operadores-de-comercio-exterior/importadores/despacho-aduanero-levante-y-selectivo/gestiones-anticipadas",
     "orden": 88,
@@ -1722,15 +1722,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cbe",
+    "_id": "6ad83fff0769f419cc5a04b1",
     "slug": "puestos-de-control-trazabilidad-y-facilitacion",
     "nombre": "Puestos de control, trazabilidad y facilitación",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404cbc",
+    "padre_id": "6ad83fff0769f419cc5a04af",
     "ruta": [
-      "6ad83f63e186e1002c404caa",
-      "6ad83f63e186e1002c404cb6",
-      "6ad83f63e186e1002c404cbc"
+      "6ad83fff0769f419cc5a049d",
+      "6ad83fff0769f419cc5a04a9",
+      "6ad83fff0769f419cc5a04af"
     ],
     "materialized_path": "operadores-de-comercio-exterior/importadores/despacho-aduanero-levante-y-selectivo/puestos-de-control-trazabilidad-y-facilitacion",
     "orden": 89,
@@ -1742,15 +1742,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cbf",
+    "_id": "6ad83fff0769f419cc5a04b2",
     "slug": "operaciones-en-recinto-selectivo-y-levante",
     "nombre": "Operaciones en recinto, selectivo y levante",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404cbc",
+    "padre_id": "6ad83fff0769f419cc5a04af",
     "ruta": [
-      "6ad83f63e186e1002c404caa",
-      "6ad83f63e186e1002c404cb6",
-      "6ad83f63e186e1002c404cbc"
+      "6ad83fff0769f419cc5a049d",
+      "6ad83fff0769f419cc5a04a9",
+      "6ad83fff0769f419cc5a04af"
     ],
     "materialized_path": "operadores-de-comercio-exterior/importadores/despacho-aduanero-levante-y-selectivo/operaciones-en-recinto-selectivo-y-levante",
     "orden": 90,
@@ -1762,14 +1762,14 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cc0",
+    "_id": "6ad83fff0769f419cc5a04b3",
     "slug": "importacion-y-nacionalizacion-de-vehiculos",
     "nombre": "Importación y Nacionalización de Vehículos",
     "nivel": 3,
-    "padre_id": "6ad83f63e186e1002c404cb6",
+    "padre_id": "6ad83fff0769f419cc5a04a9",
     "ruta": [
-      "6ad83f63e186e1002c404caa",
-      "6ad83f63e186e1002c404cb6"
+      "6ad83fff0769f419cc5a049d",
+      "6ad83fff0769f419cc5a04a9"
     ],
     "materialized_path": "operadores-de-comercio-exterior/importadores/importacion-y-nacionalizacion-de-vehiculos",
     "orden": 91,
@@ -1781,15 +1781,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cc1",
+    "_id": "6ad83fff0769f419cc5a04b4",
     "slug": "gestiones-de-importacion-y-registro",
     "nombre": "Gestiones de importación y registro",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404cc0",
+    "padre_id": "6ad83fff0769f419cc5a04b3",
     "ruta": [
-      "6ad83f63e186e1002c404caa",
-      "6ad83f63e186e1002c404cb6",
-      "6ad83f63e186e1002c404cc0"
+      "6ad83fff0769f419cc5a049d",
+      "6ad83fff0769f419cc5a04a9",
+      "6ad83fff0769f419cc5a04b3"
     ],
     "materialized_path": "operadores-de-comercio-exterior/importadores/importacion-y-nacionalizacion-de-vehiculos/gestiones-de-importacion-y-registro",
     "orden": 92,
@@ -1801,15 +1801,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cc2",
+    "_id": "6ad83fff0769f419cc5a04b5",
     "slug": "tablas-de-valores-y-calculo-de-impuestos",
     "nombre": "Tablas de valores y cálculo de impuestos",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404cc0",
+    "padre_id": "6ad83fff0769f419cc5a04b3",
     "ruta": [
-      "6ad83f63e186e1002c404caa",
-      "6ad83f63e186e1002c404cb6",
-      "6ad83f63e186e1002c404cc0"
+      "6ad83fff0769f419cc5a049d",
+      "6ad83fff0769f419cc5a04a9",
+      "6ad83fff0769f419cc5a04b3"
     ],
     "materialized_path": "operadores-de-comercio-exterior/importadores/importacion-y-nacionalizacion-de-vehiculos/tablas-de-valores-y-calculo-de-impuestos",
     "orden": 93,
@@ -1821,14 +1821,14 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cc3",
+    "_id": "6ad83fff0769f419cc5a04b6",
     "slug": "mercancias-en-abandono-depositos-y-franquicias",
     "nombre": "Mercancías en Abandono, Depósitos y Franquicias",
     "nivel": 3,
-    "padre_id": "6ad83f63e186e1002c404cb6",
+    "padre_id": "6ad83fff0769f419cc5a04a9",
     "ruta": [
-      "6ad83f63e186e1002c404caa",
-      "6ad83f63e186e1002c404cb6"
+      "6ad83fff0769f419cc5a049d",
+      "6ad83fff0769f419cc5a04a9"
     ],
     "materialized_path": "operadores-de-comercio-exterior/importadores/mercancias-en-abandono-depositos-y-franquicias",
     "orden": 94,
@@ -1840,15 +1840,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cc4",
+    "_id": "6ad83fff0769f419cc5a04b7",
     "slug": "franquicias-y-menor-cuantia",
     "nombre": "Franquicias y menor cuantía",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404cc3",
+    "padre_id": "6ad83fff0769f419cc5a04b6",
     "ruta": [
-      "6ad83f63e186e1002c404caa",
-      "6ad83f63e186e1002c404cb6",
-      "6ad83f63e186e1002c404cc3"
+      "6ad83fff0769f419cc5a049d",
+      "6ad83fff0769f419cc5a04a9",
+      "6ad83fff0769f419cc5a04b6"
     ],
     "materialized_path": "operadores-de-comercio-exterior/importadores/mercancias-en-abandono-depositos-y-franquicias/franquicias-y-menor-cuantia",
     "orden": 95,
@@ -1860,15 +1860,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cc5",
+    "_id": "6ad83fff0769f419cc5a04b8",
     "slug": "rescate-de-mercancias-y-devoluciones",
     "nombre": "Rescate de mercancías y devoluciones",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404cc3",
+    "padre_id": "6ad83fff0769f419cc5a04b6",
     "ruta": [
-      "6ad83f63e186e1002c404caa",
-      "6ad83f63e186e1002c404cb6",
-      "6ad83f63e186e1002c404cc3"
+      "6ad83fff0769f419cc5a049d",
+      "6ad83fff0769f419cc5a04a9",
+      "6ad83fff0769f419cc5a04b6"
     ],
     "materialized_path": "operadores-de-comercio-exterior/importadores/mercancias-en-abandono-depositos-y-franquicias/rescate-de-mercancias-y-devoluciones",
     "orden": 96,
@@ -1880,13 +1880,13 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cc6",
+    "_id": "6ad83fff0769f419cc5a04b9",
     "slug": "exportadores",
     "nombre": "Exportadores",
     "nivel": 2,
-    "padre_id": "6ad83f63e186e1002c404caa",
+    "padre_id": "6ad83fff0769f419cc5a049d",
     "ruta": [
-      "6ad83f63e186e1002c404caa"
+      "6ad83fff0769f419cc5a049d"
     ],
     "materialized_path": "operadores-de-comercio-exterior/exportadores",
     "orden": 97,
@@ -1898,14 +1898,14 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cc7",
+    "_id": "6ad83fff0769f419cc5a04ba",
     "slug": "padron-y-registro-de-exportadores",
     "nombre": "Padrón y Registro de Exportadores",
     "nivel": 3,
-    "padre_id": "6ad83f63e186e1002c404cc6",
+    "padre_id": "6ad83fff0769f419cc5a04b9",
     "ruta": [
-      "6ad83f63e186e1002c404caa",
-      "6ad83f63e186e1002c404cc6"
+      "6ad83fff0769f419cc5a049d",
+      "6ad83fff0769f419cc5a04b9"
     ],
     "materialized_path": "operadores-de-comercio-exterior/exportadores/padron-y-registro-de-exportadores",
     "orden": 98,
@@ -1917,14 +1917,14 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cc8",
+    "_id": "6ad83fff0769f419cc5a04bb",
     "slug": "declaraciones-aduaneras-y-embarques",
     "nombre": "Declaraciones Aduaneras y Embarques",
     "nivel": 3,
-    "padre_id": "6ad83f63e186e1002c404cc6",
+    "padre_id": "6ad83fff0769f419cc5a04b9",
     "ruta": [
-      "6ad83f63e186e1002c404caa",
-      "6ad83f63e186e1002c404cc6"
+      "6ad83fff0769f419cc5a049d",
+      "6ad83fff0769f419cc5a04b9"
     ],
     "materialized_path": "operadores-de-comercio-exterior/exportadores/declaraciones-aduaneras-y-embarques",
     "orden": 99,
@@ -1936,14 +1936,14 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cc9",
+    "_id": "6ad83fff0769f419cc5a04bc",
     "slug": "devolucion-de-credito-fiscal",
     "nombre": "Devolución de Crédito Fiscal",
     "nivel": 3,
-    "padre_id": "6ad83f63e186e1002c404cc6",
+    "padre_id": "6ad83fff0769f419cc5a04b9",
     "ruta": [
-      "6ad83f63e186e1002c404caa",
-      "6ad83f63e186e1002c404cc6"
+      "6ad83fff0769f419cc5a049d",
+      "6ad83fff0769f419cc5a04b9"
     ],
     "materialized_path": "operadores-de-comercio-exterior/exportadores/devolucion-de-credito-fiscal",
     "orden": 100,
@@ -1955,13 +1955,13 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cca",
+    "_id": "6ad83fff0769f419cc5a04bd",
     "slug": "auxiliares-de-la-funcion-publica-aduanera-afpa",
     "nombre": "Auxiliares de la Función Pública Aduanera (AFPA)",
     "nivel": 2,
-    "padre_id": "6ad83f63e186e1002c404caa",
+    "padre_id": "6ad83fff0769f419cc5a049d",
     "ruta": [
-      "6ad83f63e186e1002c404caa"
+      "6ad83fff0769f419cc5a049d"
     ],
     "materialized_path": "operadores-de-comercio-exterior/auxiliares-de-la-funcion-publica-aduanera-afpa",
     "orden": 101,
@@ -1973,14 +1973,14 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404ccb",
+    "_id": "6ad83fff0769f419cc5a04be",
     "slug": "agentes-aduaneros",
     "nombre": "Agentes Aduaneros",
     "nivel": 3,
-    "padre_id": "6ad83f63e186e1002c404cca",
+    "padre_id": "6ad83fff0769f419cc5a04bd",
     "ruta": [
-      "6ad83f63e186e1002c404caa",
-      "6ad83f63e186e1002c404cca"
+      "6ad83fff0769f419cc5a049d",
+      "6ad83fff0769f419cc5a04bd"
     ],
     "materialized_path": "operadores-de-comercio-exterior/auxiliares-de-la-funcion-publica-aduanera-afpa/agentes-aduaneros",
     "orden": 102,
@@ -1992,14 +1992,14 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404ccc",
+    "_id": "6ad83fff0769f419cc5a04bf",
     "slug": "apoderados-especiales-aduaneros",
     "nombre": "Apoderados Especiales Aduaneros",
     "nivel": 3,
-    "padre_id": "6ad83f63e186e1002c404cca",
+    "padre_id": "6ad83fff0769f419cc5a04bd",
     "ruta": [
-      "6ad83f63e186e1002c404caa",
-      "6ad83f63e186e1002c404cca"
+      "6ad83fff0769f419cc5a049d",
+      "6ad83fff0769f419cc5a04bd"
     ],
     "materialized_path": "operadores-de-comercio-exterior/auxiliares-de-la-funcion-publica-aduanera-afpa/apoderados-especiales-aduaneros",
     "orden": 103,
@@ -2011,15 +2011,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404ccd",
+    "_id": "6ad83fff0769f419cc5a04c0",
     "slug": "acreditacion-garantias-y-habilitacion",
     "nombre": "Acreditación, Garantías y Habilitación",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404ccc",
+    "padre_id": "6ad83fff0769f419cc5a04bf",
     "ruta": [
-      "6ad83f63e186e1002c404caa",
-      "6ad83f63e186e1002c404cca",
-      "6ad83f63e186e1002c404ccc"
+      "6ad83fff0769f419cc5a049d",
+      "6ad83fff0769f419cc5a04bd",
+      "6ad83fff0769f419cc5a04bf"
     ],
     "materialized_path": "operadores-de-comercio-exterior/auxiliares-de-la-funcion-publica-aduanera-afpa/apoderados-especiales-aduaneros/acreditacion-garantias-y-habilitacion",
     "orden": 104,
@@ -2031,15 +2031,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cce",
+    "_id": "6ad83fff0769f419cc5a04c1",
     "slug": "operaciones-de-despacho-y-consultas",
     "nombre": "Operaciones de Despacho y Consultas",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404ccc",
+    "padre_id": "6ad83fff0769f419cc5a04bf",
     "ruta": [
-      "6ad83f63e186e1002c404caa",
-      "6ad83f63e186e1002c404cca",
-      "6ad83f63e186e1002c404ccc"
+      "6ad83fff0769f419cc5a049d",
+      "6ad83fff0769f419cc5a04bd",
+      "6ad83fff0769f419cc5a04bf"
     ],
     "materialized_path": "operadores-de-comercio-exterior/auxiliares-de-la-funcion-publica-aduanera-afpa/apoderados-especiales-aduaneros/operaciones-de-despacho-y-consultas",
     "orden": 105,
@@ -2051,15 +2051,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404ccf",
+    "_id": "6ad83fff0769f419cc5a04c2",
     "slug": "procedimientos-normativa-y-capacitacion",
     "nombre": "Procedimientos, Normativa y Capacitación",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404ccc",
+    "padre_id": "6ad83fff0769f419cc5a04bf",
     "ruta": [
-      "6ad83f63e186e1002c404caa",
-      "6ad83f63e186e1002c404cca",
-      "6ad83f63e186e1002c404ccc"
+      "6ad83fff0769f419cc5a049d",
+      "6ad83fff0769f419cc5a04bd",
+      "6ad83fff0769f419cc5a04bf"
     ],
     "materialized_path": "operadores-de-comercio-exterior/auxiliares-de-la-funcion-publica-aduanera-afpa/apoderados-especiales-aduaneros/procedimientos-normativa-y-capacitacion",
     "orden": 106,
@@ -2071,14 +2071,14 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cd0",
+    "_id": "6ad83fff0769f419cc5a04c3",
     "slug": "depositos-aduaneros",
     "nombre": "Depósitos Aduaneros",
     "nivel": 3,
-    "padre_id": "6ad83f63e186e1002c404cca",
+    "padre_id": "6ad83fff0769f419cc5a04bd",
     "ruta": [
-      "6ad83f63e186e1002c404caa",
-      "6ad83f63e186e1002c404cca"
+      "6ad83fff0769f419cc5a049d",
+      "6ad83fff0769f419cc5a04bd"
     ],
     "materialized_path": "operadores-de-comercio-exterior/auxiliares-de-la-funcion-publica-aduanera-afpa/depositos-aduaneros",
     "orden": 107,
@@ -2090,15 +2090,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cd1",
+    "_id": "6ad83fff0769f419cc5a04c4",
     "slug": "habilitacion-de-recintos-y-garantias",
     "nombre": "Habilitación de recintos y garantías",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404cd0",
+    "padre_id": "6ad83fff0769f419cc5a04c3",
     "ruta": [
-      "6ad83f63e186e1002c404caa",
-      "6ad83f63e186e1002c404cca",
-      "6ad83f63e186e1002c404cd0"
+      "6ad83fff0769f419cc5a049d",
+      "6ad83fff0769f419cc5a04bd",
+      "6ad83fff0769f419cc5a04c3"
     ],
     "materialized_path": "operadores-de-comercio-exterior/auxiliares-de-la-funcion-publica-aduanera-afpa/depositos-aduaneros/habilitacion-de-recintos-y-garantias",
     "orden": 108,
@@ -2110,15 +2110,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cd2",
+    "_id": "6ad83fff0769f419cc5a04c5",
     "slug": "habilitacion-y-garantias",
     "nombre": "Habilitación y garantías",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404cd0",
+    "padre_id": "6ad83fff0769f419cc5a04c3",
     "ruta": [
-      "6ad83f63e186e1002c404caa",
-      "6ad83f63e186e1002c404cca",
-      "6ad83f63e186e1002c404cd0"
+      "6ad83fff0769f419cc5a049d",
+      "6ad83fff0769f419cc5a04bd",
+      "6ad83fff0769f419cc5a04c3"
     ],
     "materialized_path": "operadores-de-comercio-exterior/auxiliares-de-la-funcion-publica-aduanera-afpa/depositos-aduaneros/habilitacion-y-garantias",
     "orden": 109,
@@ -2130,15 +2130,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cd3",
+    "_id": "6ad83fff0769f419cc5a04c6",
     "slug": "almacenes-fiscales",
     "nombre": "Almacenes Fiscales",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404cd0",
+    "padre_id": "6ad83fff0769f419cc5a04c3",
     "ruta": [
-      "6ad83f63e186e1002c404caa",
-      "6ad83f63e186e1002c404cca",
-      "6ad83f63e186e1002c404cd0"
+      "6ad83fff0769f419cc5a049d",
+      "6ad83fff0769f419cc5a04bd",
+      "6ad83fff0769f419cc5a04c3"
     ],
     "materialized_path": "operadores-de-comercio-exterior/auxiliares-de-la-funcion-publica-aduanera-afpa/depositos-aduaneros/almacenes-fiscales",
     "orden": 110,
@@ -2150,15 +2150,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cd4",
+    "_id": "6ad83fff0769f419cc5a04c7",
     "slug": "normativa-y-asistencia",
     "nombre": "Normativa y asistencia",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404cd0",
+    "padre_id": "6ad83fff0769f419cc5a04c3",
     "ruta": [
-      "6ad83f63e186e1002c404caa",
-      "6ad83f63e186e1002c404cca",
-      "6ad83f63e186e1002c404cd0"
+      "6ad83fff0769f419cc5a049d",
+      "6ad83fff0769f419cc5a04bd",
+      "6ad83fff0769f419cc5a04c3"
     ],
     "materialized_path": "operadores-de-comercio-exterior/auxiliares-de-la-funcion-publica-aduanera-afpa/depositos-aduaneros/normativa-y-asistencia",
     "orden": 111,
@@ -2170,15 +2170,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cd5",
+    "_id": "6ad83fff0769f419cc5a04c8",
     "slug": "operacion-y-control-de-mercancias",
     "nombre": "Operación y control de mercancías",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404cd0",
+    "padre_id": "6ad83fff0769f419cc5a04c3",
     "ruta": [
-      "6ad83f63e186e1002c404caa",
-      "6ad83f63e186e1002c404cca",
-      "6ad83f63e186e1002c404cd0"
+      "6ad83fff0769f419cc5a049d",
+      "6ad83fff0769f419cc5a04bd",
+      "6ad83fff0769f419cc5a04c3"
     ],
     "materialized_path": "operadores-de-comercio-exterior/auxiliares-de-la-funcion-publica-aduanera-afpa/depositos-aduaneros/operacion-y-control-de-mercancias",
     "orden": 112,
@@ -2190,15 +2190,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cd6",
+    "_id": "6ad83fff0769f419cc5a04c9",
     "slug": "operacion-y-saldos-afianzados",
     "nombre": "Operación y saldos afianzados",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404cd0",
+    "padre_id": "6ad83fff0769f419cc5a04c3",
     "ruta": [
-      "6ad83f63e186e1002c404caa",
-      "6ad83f63e186e1002c404cca",
-      "6ad83f63e186e1002c404cd0"
+      "6ad83fff0769f419cc5a049d",
+      "6ad83fff0769f419cc5a04bd",
+      "6ad83fff0769f419cc5a04c3"
     ],
     "materialized_path": "operadores-de-comercio-exterior/auxiliares-de-la-funcion-publica-aduanera-afpa/depositos-aduaneros/operacion-y-saldos-afianzados",
     "orden": 113,
@@ -2210,14 +2210,14 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cd7",
+    "_id": "6ad83fff0769f419cc5a04ca",
     "slug": "empresas-de-entrega-rapida-o-courier",
     "nombre": "Empresas de Entrega Rápida o Courier",
     "nivel": 3,
-    "padre_id": "6ad83f63e186e1002c404cca",
+    "padre_id": "6ad83fff0769f419cc5a04bd",
     "ruta": [
-      "6ad83f63e186e1002c404caa",
-      "6ad83f63e186e1002c404cca"
+      "6ad83fff0769f419cc5a049d",
+      "6ad83fff0769f419cc5a04bd"
     ],
     "materialized_path": "operadores-de-comercio-exterior/auxiliares-de-la-funcion-publica-aduanera-afpa/empresas-de-entrega-rapida-o-courier",
     "orden": 114,
@@ -2229,14 +2229,14 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cd8",
+    "_id": "6ad83fff0769f419cc5a04cb",
     "slug": "transportistas-aduaneros",
     "nombre": "Transportistas Aduaneros",
     "nivel": 3,
-    "padre_id": "6ad83f63e186e1002c404cca",
+    "padre_id": "6ad83fff0769f419cc5a04bd",
     "ruta": [
-      "6ad83f63e186e1002c404caa",
-      "6ad83f63e186e1002c404cca"
+      "6ad83fff0769f419cc5a049d",
+      "6ad83fff0769f419cc5a04bd"
     ],
     "materialized_path": "operadores-de-comercio-exterior/auxiliares-de-la-funcion-publica-aduanera-afpa/transportistas-aduaneros",
     "orden": 115,
@@ -2248,15 +2248,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cd9",
+    "_id": "6ad83fff0769f419cc5a04cc",
     "slug": "equipo-de-carga-y-contenedores-regimen-atc",
     "nombre": "Equipo de Carga y Contenedores — Régimen ATC",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404cd8",
+    "padre_id": "6ad83fff0769f419cc5a04cb",
     "ruta": [
-      "6ad83f63e186e1002c404caa",
-      "6ad83f63e186e1002c404cca",
-      "6ad83f63e186e1002c404cd8"
+      "6ad83fff0769f419cc5a049d",
+      "6ad83fff0769f419cc5a04bd",
+      "6ad83fff0769f419cc5a04cb"
     ],
     "materialized_path": "operadores-de-comercio-exterior/auxiliares-de-la-funcion-publica-aduanera-afpa/transportistas-aduaneros/equipo-de-carga-y-contenedores-regimen-atc",
     "orden": 116,
@@ -2268,15 +2268,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cda",
+    "_id": "6ad83fff0769f419cc5a04cd",
     "slug": "despacho-y-operaciones-en-recintos",
     "nombre": "Despacho y Operaciones en Recintos",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404cd8",
+    "padre_id": "6ad83fff0769f419cc5a04cb",
     "ruta": [
-      "6ad83f63e186e1002c404caa",
-      "6ad83f63e186e1002c404cca",
-      "6ad83f63e186e1002c404cd8"
+      "6ad83fff0769f419cc5a049d",
+      "6ad83fff0769f419cc5a04bd",
+      "6ad83fff0769f419cc5a04cb"
     ],
     "materialized_path": "operadores-de-comercio-exterior/auxiliares-de-la-funcion-publica-aduanera-afpa/transportistas-aduaneros/despacho-y-operaciones-en-recintos",
     "orden": 117,
@@ -2288,15 +2288,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cdb",
+    "_id": "6ad83fff0769f419cc5a04ce",
     "slug": "manifiestos-de-carga-y-cuscar",
     "nombre": "Manifiestos de Carga y CUSCAR",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404cd8",
+    "padre_id": "6ad83fff0769f419cc5a04cb",
     "ruta": [
-      "6ad83f63e186e1002c404caa",
-      "6ad83f63e186e1002c404cca",
-      "6ad83f63e186e1002c404cd8"
+      "6ad83fff0769f419cc5a049d",
+      "6ad83fff0769f419cc5a04bd",
+      "6ad83fff0769f419cc5a04cb"
     ],
     "materialized_path": "operadores-de-comercio-exterior/auxiliares-de-la-funcion-publica-aduanera-afpa/transportistas-aduaneros/manifiestos-de-carga-y-cuscar",
     "orden": 118,
@@ -2308,15 +2308,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cdc",
+    "_id": "6ad83fff0769f419cc5a04cf",
     "slug": "monitoreo-en-ruta-y-marchamo-electronico",
     "nombre": "Monitoreo en Ruta y Marchamo Electrónico",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404cd8",
+    "padre_id": "6ad83fff0769f419cc5a04cb",
     "ruta": [
-      "6ad83f63e186e1002c404caa",
-      "6ad83f63e186e1002c404cca",
-      "6ad83f63e186e1002c404cd8"
+      "6ad83fff0769f419cc5a049d",
+      "6ad83fff0769f419cc5a04bd",
+      "6ad83fff0769f419cc5a04cb"
     ],
     "materialized_path": "operadores-de-comercio-exterior/auxiliares-de-la-funcion-publica-aduanera-afpa/transportistas-aduaneros/monitoreo-en-ruta-y-marchamo-electronico",
     "orden": 119,
@@ -2328,15 +2328,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cdd",
+    "_id": "6ad83fff0769f419cc5a04d0",
     "slug": "infracciones-y-defensa-aduanera",
     "nombre": "Infracciones y Defensa Aduanera",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404cd8",
+    "padre_id": "6ad83fff0769f419cc5a04cb",
     "ruta": [
-      "6ad83f63e186e1002c404caa",
-      "6ad83f63e186e1002c404cca",
-      "6ad83f63e186e1002c404cd8"
+      "6ad83fff0769f419cc5a049d",
+      "6ad83fff0769f419cc5a04bd",
+      "6ad83fff0769f419cc5a04cb"
     ],
     "materialized_path": "operadores-de-comercio-exterior/auxiliares-de-la-funcion-publica-aduanera-afpa/transportistas-aduaneros/infracciones-y-defensa-aduanera",
     "orden": 120,
@@ -2348,13 +2348,13 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cde",
+    "_id": "6ad83fff0769f419cc5a04d1",
     "slug": "normativa-y-operaciones-aduaneras-generales",
     "nombre": "Normativa y Operaciones Aduaneras Generales",
     "nivel": 2,
-    "padre_id": "6ad83f63e186e1002c404caa",
+    "padre_id": "6ad83fff0769f419cc5a049d",
     "ruta": [
-      "6ad83f63e186e1002c404caa"
+      "6ad83fff0769f419cc5a049d"
     ],
     "materialized_path": "operadores-de-comercio-exterior/normativa-y-operaciones-aduaneras-generales",
     "orden": 121,
@@ -2366,14 +2366,14 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cdf",
+    "_id": "6ad83fff0769f419cc5a04d2",
     "slug": "arancel-centroamericano-sac-y-permisos",
     "nombre": "Arancel Centroamericano (SAC) y Permisos",
     "nivel": 3,
-    "padre_id": "6ad83f63e186e1002c404cde",
+    "padre_id": "6ad83fff0769f419cc5a04d1",
     "ruta": [
-      "6ad83f63e186e1002c404caa",
-      "6ad83f63e186e1002c404cde"
+      "6ad83fff0769f419cc5a049d",
+      "6ad83fff0769f419cc5a04d1"
     ],
     "materialized_path": "operadores-de-comercio-exterior/normativa-y-operaciones-aduaneras-generales/arancel-centroamericano-sac-y-permisos",
     "orden": 122,
@@ -2385,14 +2385,14 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404ce0",
+    "_id": "6ad83fff0769f419cc5a04d3",
     "slug": "acuerdos-comerciales-y-facilitacion",
     "nombre": "Acuerdos Comerciales y Facilitación",
     "nivel": 3,
-    "padre_id": "6ad83f63e186e1002c404cde",
+    "padre_id": "6ad83fff0769f419cc5a04d1",
     "ruta": [
-      "6ad83f63e186e1002c404caa",
-      "6ad83f63e186e1002c404cde"
+      "6ad83fff0769f419cc5a049d",
+      "6ad83fff0769f419cc5a04d1"
     ],
     "materialized_path": "operadores-de-comercio-exterior/normativa-y-operaciones-aduaneras-generales/acuerdos-comerciales-y-facilitacion",
     "orden": 123,
@@ -2404,14 +2404,14 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404ce1",
+    "_id": "6ad83fff0769f419cc5a04d4",
     "slug": "prevencion-de-contrabando-y-defraudacion",
     "nombre": "Prevención de Contrabando y Defraudación",
     "nivel": 3,
-    "padre_id": "6ad83f63e186e1002c404cde",
+    "padre_id": "6ad83fff0769f419cc5a04d1",
     "ruta": [
-      "6ad83f63e186e1002c404caa",
-      "6ad83f63e186e1002c404cde"
+      "6ad83fff0769f419cc5a049d",
+      "6ad83fff0769f419cc5a04d1"
     ],
     "materialized_path": "operadores-de-comercio-exterior/normativa-y-operaciones-aduaneras-generales/prevencion-de-contrabando-y-defraudacion",
     "orden": 124,
@@ -2423,14 +2423,14 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404ce2",
+    "_id": "6ad83fff0769f419cc5a04d5",
     "slug": "consultas-tecnicas-recursos-y-valoracion",
     "nombre": "Consultas Técnicas, Recursos y Valoración",
     "nivel": 3,
-    "padre_id": "6ad83f63e186e1002c404cde",
+    "padre_id": "6ad83fff0769f419cc5a04d1",
     "ruta": [
-      "6ad83f63e186e1002c404caa",
-      "6ad83f63e186e1002c404cde"
+      "6ad83fff0769f419cc5a049d",
+      "6ad83fff0769f419cc5a04d1"
     ],
     "materialized_path": "operadores-de-comercio-exterior/normativa-y-operaciones-aduaneras-generales/consultas-tecnicas-recursos-y-valoracion",
     "orden": 125,
@@ -2442,15 +2442,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404ce3",
+    "_id": "6ad83fff0769f419cc5a04d6",
     "slug": "consultas-tecnicas-y-criterios-vinculantes",
     "nombre": "Consultas técnicas y criterios vinculantes",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404ce2",
+    "padre_id": "6ad83fff0769f419cc5a04d5",
     "ruta": [
-      "6ad83f63e186e1002c404caa",
-      "6ad83f63e186e1002c404cde",
-      "6ad83f63e186e1002c404ce2"
+      "6ad83fff0769f419cc5a049d",
+      "6ad83fff0769f419cc5a04d1",
+      "6ad83fff0769f419cc5a04d5"
     ],
     "materialized_path": "operadores-de-comercio-exterior/normativa-y-operaciones-aduaneras-generales/consultas-tecnicas-recursos-y-valoracion/consultas-tecnicas-y-criterios-vinculantes",
     "orden": 126,
@@ -2462,15 +2462,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404ce4",
+    "_id": "6ad83fff0769f419cc5a04d7",
     "slug": "gestiones-generales-del-operador",
     "nombre": "Gestiones generales del operador",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404ce2",
+    "padre_id": "6ad83fff0769f419cc5a04d5",
     "ruta": [
-      "6ad83f63e186e1002c404caa",
-      "6ad83f63e186e1002c404cde",
-      "6ad83f63e186e1002c404ce2"
+      "6ad83fff0769f419cc5a049d",
+      "6ad83fff0769f419cc5a04d1",
+      "6ad83fff0769f419cc5a04d5"
     ],
     "materialized_path": "operadores-de-comercio-exterior/normativa-y-operaciones-aduaneras-generales/consultas-tecnicas-recursos-y-valoracion/gestiones-generales-del-operador",
     "orden": 127,
@@ -2482,15 +2482,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404ce5",
+    "_id": "6ad83fff0769f419cc5a04d8",
     "slug": "recursos-administrativos-y-defensa-aduanera",
     "nombre": "Recursos administrativos y defensa aduanera",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404ce2",
+    "padre_id": "6ad83fff0769f419cc5a04d5",
     "ruta": [
-      "6ad83f63e186e1002c404caa",
-      "6ad83f63e186e1002c404cde",
-      "6ad83f63e186e1002c404ce2"
+      "6ad83fff0769f419cc5a049d",
+      "6ad83fff0769f419cc5a04d1",
+      "6ad83fff0769f419cc5a04d5"
     ],
     "materialized_path": "operadores-de-comercio-exterior/normativa-y-operaciones-aduaneras-generales/consultas-tecnicas-recursos-y-valoracion/recursos-administrativos-y-defensa-aduanera",
     "orden": 128,
@@ -2502,14 +2502,14 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404ce6",
+    "_id": "6ad83fff0769f419cc5a04d9",
     "slug": "modernizacion-e-infraestructura-aduanera",
     "nombre": "Modernización e Infraestructura Aduanera",
     "nivel": 3,
-    "padre_id": "6ad83f63e186e1002c404cde",
+    "padre_id": "6ad83fff0769f419cc5a04d1",
     "ruta": [
-      "6ad83f63e186e1002c404caa",
-      "6ad83f63e186e1002c404cde"
+      "6ad83fff0769f419cc5a049d",
+      "6ad83fff0769f419cc5a04d1"
     ],
     "materialized_path": "operadores-de-comercio-exterior/normativa-y-operaciones-aduaneras-generales/modernizacion-e-infraestructura-aduanera",
     "orden": 129,
@@ -2521,15 +2521,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404ce7",
+    "_id": "6ad83fff0769f419cc5a04da",
     "slug": "infraestructura-y-puestos-fronterizos",
     "nombre": "Infraestructura y puestos fronterizos",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404ce6",
+    "padre_id": "6ad83fff0769f419cc5a04d9",
     "ruta": [
-      "6ad83f63e186e1002c404caa",
-      "6ad83f63e186e1002c404cde",
-      "6ad83f63e186e1002c404ce6"
+      "6ad83fff0769f419cc5a049d",
+      "6ad83fff0769f419cc5a04d1",
+      "6ad83fff0769f419cc5a04d9"
     ],
     "materialized_path": "operadores-de-comercio-exterior/normativa-y-operaciones-aduaneras-generales/modernizacion-e-infraestructura-aduanera/infraestructura-y-puestos-fronterizos",
     "orden": 130,
@@ -2541,15 +2541,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404ce8",
+    "_id": "6ad83fff0769f419cc5a04db",
     "slug": "tecnologia-y-revision-no-intrusiva",
     "nombre": "Tecnología y revisión no intrusiva",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404ce6",
+    "padre_id": "6ad83fff0769f419cc5a04d9",
     "ruta": [
-      "6ad83f63e186e1002c404caa",
-      "6ad83f63e186e1002c404cde",
-      "6ad83f63e186e1002c404ce6"
+      "6ad83fff0769f419cc5a049d",
+      "6ad83fff0769f419cc5a04d1",
+      "6ad83fff0769f419cc5a04d9"
     ],
     "materialized_path": "operadores-de-comercio-exterior/normativa-y-operaciones-aduaneras-generales/modernizacion-e-infraestructura-aduanera/tecnologia-y-revision-no-intrusiva",
     "orden": 131,
@@ -2561,15 +2561,15 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404ce9",
+    "_id": "6ad83fff0769f419cc5a04dc",
     "slug": "transparencia-repositorio-y-estadisticas",
     "nombre": "Transparencia, repositorio y estadísticas",
     "nivel": 4,
-    "padre_id": "6ad83f63e186e1002c404ce6",
+    "padre_id": "6ad83fff0769f419cc5a04d9",
     "ruta": [
-      "6ad83f63e186e1002c404caa",
-      "6ad83f63e186e1002c404cde",
-      "6ad83f63e186e1002c404ce6"
+      "6ad83fff0769f419cc5a049d",
+      "6ad83fff0769f419cc5a04d1",
+      "6ad83fff0769f419cc5a04d9"
     ],
     "materialized_path": "operadores-de-comercio-exterior/normativa-y-operaciones-aduaneras-generales/modernizacion-e-infraestructura-aduanera/transparencia-repositorio-y-estadisticas",
     "orden": 132,
@@ -2581,13 +2581,13 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cea",
+    "_id": "6ad83fff0769f419cc5a04dd",
     "slug": "operador-economico-autorizado-oea",
     "nombre": "Operador Económico Autorizado (OEA)",
     "nivel": 2,
-    "padre_id": "6ad83f63e186e1002c404caa",
+    "padre_id": "6ad83fff0769f419cc5a049d",
     "ruta": [
-      "6ad83f63e186e1002c404caa"
+      "6ad83fff0769f419cc5a049d"
     ],
     "materialized_path": "operadores-de-comercio-exterior/operador-economico-autorizado-oea",
     "orden": 133,
@@ -2599,7 +2599,7 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404ceb",
+    "_id": "6ad83fff0769f419cc5a04de",
     "slug": "profesionales",
     "nombre": "Profesionales",
     "nivel": 1,
@@ -2615,13 +2615,13 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cec",
+    "_id": "6ad83fff0769f419cc5a04df",
     "slug": "abogados-y-notarios",
     "nombre": "Abogados y Notarios",
     "nivel": 2,
-    "padre_id": "6ad83f63e186e1002c404ceb",
+    "padre_id": "6ad83fff0769f419cc5a04de",
     "ruta": [
-      "6ad83f63e186e1002c404ceb"
+      "6ad83fff0769f419cc5a04de"
     ],
     "materialized_path": "profesionales/abogados-y-notarios",
     "orden": 135,
@@ -2633,14 +2633,14 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404ced",
+    "_id": "6ad83fff0769f419cc5a04e0",
     "slug": "habilitacion-y-registro-notarial",
     "nombre": "Habilitación y Registro Notarial",
     "nivel": 3,
-    "padre_id": "6ad83f63e186e1002c404cec",
+    "padre_id": "6ad83fff0769f419cc5a04df",
     "ruta": [
-      "6ad83f63e186e1002c404ceb",
-      "6ad83f63e186e1002c404cec"
+      "6ad83fff0769f419cc5a04de",
+      "6ad83fff0769f419cc5a04df"
     ],
     "materialized_path": "profesionales/abogados-y-notarios/habilitacion-y-registro-notarial",
     "orden": 136,
@@ -2652,14 +2652,14 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cee",
+    "_id": "6ad83fff0769f419cc5a04e1",
     "slug": "timbres-fiscales-y-papel-sellado-de-protocolo",
     "nombre": "Timbres Fiscales y Papel Sellado de Protocolo",
     "nivel": 3,
-    "padre_id": "6ad83f63e186e1002c404cec",
+    "padre_id": "6ad83fff0769f419cc5a04df",
     "ruta": [
-      "6ad83f63e186e1002c404ceb",
-      "6ad83f63e186e1002c404cec"
+      "6ad83fff0769f419cc5a04de",
+      "6ad83fff0769f419cc5a04df"
     ],
     "materialized_path": "profesionales/abogados-y-notarios/timbres-fiscales-y-papel-sellado-de-protocolo",
     "orden": 137,
@@ -2671,14 +2671,14 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cef",
+    "_id": "6ad83fff0769f419cc5a04e2",
     "slug": "traspaso-electronico-vehicular-e-traspaso",
     "nombre": "Traspaso Electrónico Vehicular (e-Traspaso)",
     "nivel": 3,
-    "padre_id": "6ad83f63e186e1002c404cec",
+    "padre_id": "6ad83fff0769f419cc5a04df",
     "ruta": [
-      "6ad83f63e186e1002c404ceb",
-      "6ad83f63e186e1002c404cec"
+      "6ad83fff0769f419cc5a04de",
+      "6ad83fff0769f419cc5a04df"
     ],
     "materialized_path": "profesionales/abogados-y-notarios/traspaso-electronico-vehicular-e-traspaso",
     "orden": 138,
@@ -2690,14 +2690,14 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cf0",
+    "_id": "6ad83fff0769f419cc5a04e3",
     "slug": "avisos-notariales-y-fe-publica",
     "nombre": "Avisos Notariales y Fe Pública",
     "nivel": 3,
-    "padre_id": "6ad83f63e186e1002c404cec",
+    "padre_id": "6ad83fff0769f419cc5a04df",
     "ruta": [
-      "6ad83f63e186e1002c404ceb",
-      "6ad83f63e186e1002c404cec"
+      "6ad83fff0769f419cc5a04de",
+      "6ad83fff0769f419cc5a04df"
     ],
     "materialized_path": "profesionales/abogados-y-notarios/avisos-notariales-y-fe-publica",
     "orden": 139,
@@ -2709,13 +2709,13 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cf1",
+    "_id": "6ad83fff0769f419cc5a04e4",
     "slug": "peritos-contadores",
     "nombre": "Peritos Contadores",
     "nivel": 2,
-    "padre_id": "6ad83f63e186e1002c404ceb",
+    "padre_id": "6ad83fff0769f419cc5a04de",
     "ruta": [
-      "6ad83f63e186e1002c404ceb"
+      "6ad83fff0769f419cc5a04de"
     ],
     "materialized_path": "profesionales/peritos-contadores",
     "orden": 140,
@@ -2727,14 +2727,14 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cf2",
+    "_id": "6ad83fff0769f419cc5a04e5",
     "slug": "habilitacion-y-registro-de-perito-contador",
     "nombre": "Habilitación y Registro de Perito Contador",
     "nivel": 3,
-    "padre_id": "6ad83f63e186e1002c404cf1",
+    "padre_id": "6ad83fff0769f419cc5a04e4",
     "ruta": [
-      "6ad83f63e186e1002c404ceb",
-      "6ad83f63e186e1002c404cf1"
+      "6ad83fff0769f419cc5a04de",
+      "6ad83fff0769f419cc5a04e4"
     ],
     "materialized_path": "profesionales/peritos-contadores/habilitacion-y-registro-de-perito-contador",
     "orden": 141,
@@ -2746,14 +2746,14 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cf3",
+    "_id": "6ad83fff0769f419cc5a04e6",
     "slug": "consultas-retenciones-y-libros-contables",
     "nombre": "Consultas, Retenciones y Libros Contables",
     "nivel": 3,
-    "padre_id": "6ad83f63e186e1002c404cf1",
+    "padre_id": "6ad83fff0769f419cc5a04e4",
     "ruta": [
-      "6ad83f63e186e1002c404ceb",
-      "6ad83f63e186e1002c404cf1"
+      "6ad83fff0769f419cc5a04de",
+      "6ad83fff0769f419cc5a04e4"
     ],
     "materialized_path": "profesionales/peritos-contadores/consultas-retenciones-y-libros-contables",
     "orden": 142,
@@ -2765,13 +2765,13 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cf4",
+    "_id": "6ad83fff0769f419cc5a04e7",
     "slug": "auditores",
     "nombre": "Auditores",
     "nivel": 2,
-    "padre_id": "6ad83f63e186e1002c404ceb",
+    "padre_id": "6ad83fff0769f419cc5a04de",
     "ruta": [
-      "6ad83f63e186e1002c404ceb"
+      "6ad83fff0769f419cc5a04de"
     ],
     "materialized_path": "profesionales/auditores",
     "orden": 143,
@@ -2783,14 +2783,14 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cf5",
+    "_id": "6ad83fff0769f419cc5a04e8",
     "slug": "habilitacion-y-registro-de-auditor-cpa",
     "nombre": "Habilitación y Registro de Auditor (CPA)",
     "nivel": 3,
-    "padre_id": "6ad83f63e186e1002c404cf4",
+    "padre_id": "6ad83fff0769f419cc5a04e7",
     "ruta": [
-      "6ad83f63e186e1002c404ceb",
-      "6ad83f63e186e1002c404cf4"
+      "6ad83fff0769f419cc5a04de",
+      "6ad83fff0769f419cc5a04e7"
     ],
     "materialized_path": "profesionales/auditores/habilitacion-y-registro-de-auditor-cpa",
     "orden": 144,
@@ -2802,14 +2802,14 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cf6",
+    "_id": "6ad83fff0769f419cc5a04e9",
     "slug": "dictamenes-de-credito-fiscal-y-auditoria",
     "nombre": "Dictámenes de Crédito Fiscal y Auditoría",
     "nivel": 3,
-    "padre_id": "6ad83f63e186e1002c404cf4",
+    "padre_id": "6ad83fff0769f419cc5a04e7",
     "ruta": [
-      "6ad83f63e186e1002c404ceb",
-      "6ad83f63e186e1002c404cf4"
+      "6ad83fff0769f419cc5a04de",
+      "6ad83fff0769f419cc5a04e7"
     ],
     "materialized_path": "profesionales/auditores/dictamenes-de-credito-fiscal-y-auditoria",
     "orden": 145,
@@ -2821,13 +2821,13 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cf7",
+    "_id": "6ad83fff0769f419cc5a04ea",
     "slug": "gestores-tributarios",
     "nombre": "Gestores Tributarios",
     "nivel": 2,
-    "padre_id": "6ad83f63e186e1002c404ceb",
+    "padre_id": "6ad83fff0769f419cc5a04de",
     "ruta": [
-      "6ad83f63e186e1002c404ceb"
+      "6ad83fff0769f419cc5a04de"
     ],
     "materialized_path": "profesionales/gestores-tributarios",
     "orden": 146,
@@ -2839,14 +2839,14 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cf8",
+    "_id": "6ad83fff0769f419cc5a04eb",
     "slug": "acreditacion-y-carne-oficial-de-gestor",
     "nombre": "Acreditación y Carné Oficial de Gestor",
     "nivel": 3,
-    "padre_id": "6ad83f63e186e1002c404cf7",
+    "padre_id": "6ad83fff0769f419cc5a04ea",
     "ruta": [
-      "6ad83f63e186e1002c404ceb",
-      "6ad83f63e186e1002c404cf7"
+      "6ad83fff0769f419cc5a04de",
+      "6ad83fff0769f419cc5a04ea"
     ],
     "materialized_path": "profesionales/gestores-tributarios/acreditacion-y-carne-oficial-de-gestor",
     "orden": 147,
@@ -2858,14 +2858,14 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cf9",
+    "_id": "6ad83fff0769f419cc5a04ec",
     "slug": "renovacion-y-gestion-de-gafetes",
     "nombre": "Renovación y Gestión de Gafetes",
     "nivel": 3,
-    "padre_id": "6ad83f63e186e1002c404cf7",
+    "padre_id": "6ad83fff0769f419cc5a04ea",
     "ruta": [
-      "6ad83f63e186e1002c404ceb",
-      "6ad83f63e186e1002c404cf7"
+      "6ad83fff0769f419cc5a04de",
+      "6ad83fff0769f419cc5a04ea"
     ],
     "materialized_path": "profesionales/gestores-tributarios/renovacion-y-gestion-de-gafetes",
     "orden": 148,
@@ -2877,13 +2877,13 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cfa",
+    "_id": "6ad83fff0769f419cc5a04ed",
     "slug": "servicios-profesionales",
     "nombre": "Servicios Profesionales",
     "nivel": 2,
-    "padre_id": "6ad83f63e186e1002c404ceb",
+    "padre_id": "6ad83fff0769f419cc5a04de",
     "ruta": [
-      "6ad83f63e186e1002c404ceb"
+      "6ad83fff0769f419cc5a04de"
     ],
     "materialized_path": "profesionales/servicios-profesionales",
     "orden": 149,
@@ -2895,14 +2895,14 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cfb",
+    "_id": "6ad83fff0769f419cc5a04ee",
     "slug": "facturacion-por-honorarios-y-formularios",
     "nombre": "Facturación por Honorarios y Formularios",
     "nivel": 3,
-    "padre_id": "6ad83f63e186e1002c404cfa",
+    "padre_id": "6ad83fff0769f419cc5a04ed",
     "ruta": [
-      "6ad83f63e186e1002c404ceb",
-      "6ad83f63e186e1002c404cfa"
+      "6ad83fff0769f419cc5a04de",
+      "6ad83fff0769f419cc5a04ed"
     ],
     "materialized_path": "profesionales/servicios-profesionales/facturacion-por-honorarios-y-formularios",
     "orden": 150,
@@ -2914,14 +2914,14 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cfc",
+    "_id": "6ad83fff0769f419cc5a04ef",
     "slug": "actualizacion-de-actividad-y-rtu",
     "nombre": "Actualización de Actividad y RTU",
     "nivel": 3,
-    "padre_id": "6ad83f63e186e1002c404cfa",
+    "padre_id": "6ad83fff0769f419cc5a04ed",
     "ruta": [
-      "6ad83f63e186e1002c404ceb",
-      "6ad83f63e186e1002c404cfa"
+      "6ad83fff0769f419cc5a04de",
+      "6ad83fff0769f419cc5a04ed"
     ],
     "materialized_path": "profesionales/servicios-profesionales/actualizacion-de-actividad-y-rtu",
     "orden": 151,
@@ -2933,14 +2933,14 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cfd",
+    "_id": "6ad83fff0769f419cc5a04f0",
     "slug": "consultas-juridico-tributarias",
     "nombre": "Consultas Jurídico Tributarias",
     "nivel": 3,
-    "padre_id": "6ad83f63e186e1002c404cfa",
+    "padre_id": "6ad83fff0769f419cc5a04ed",
     "ruta": [
-      "6ad83f63e186e1002c404ceb",
-      "6ad83f63e186e1002c404cfa"
+      "6ad83fff0769f419cc5a04de",
+      "6ad83fff0769f419cc5a04ed"
     ],
     "materialized_path": "profesionales/servicios-profesionales/consultas-juridico-tributarias",
     "orden": 152,
@@ -2952,14 +2952,14 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cfe",
+    "_id": "6ad83fff0769f419cc5a04f1",
     "slug": "sistemas-de-retencion-y-cumplimiento",
     "nombre": "Sistemas de Retención y Cumplimiento",
     "nivel": 3,
-    "padre_id": "6ad83f63e186e1002c404cfa",
+    "padre_id": "6ad83fff0769f419cc5a04ed",
     "ruta": [
-      "6ad83f63e186e1002c404ceb",
-      "6ad83f63e186e1002c404cfa"
+      "6ad83fff0769f419cc5a04de",
+      "6ad83fff0769f419cc5a04ed"
     ],
     "materialized_path": "profesionales/servicios-profesionales/sistemas-de-retencion-y-cumplimiento",
     "orden": 153,
@@ -2971,7 +2971,7 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404cff",
+    "_id": "6ad83fff0769f419cc5a04f2",
     "slug": "entes-exentos",
     "nombre": "Entes Exentos",
     "nivel": 1,
@@ -2987,13 +2987,13 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404d00",
+    "_id": "6ad83fff0769f419cc5a04f3",
     "slug": "constitucionales",
     "nombre": "Constitucionales",
     "nivel": 2,
-    "padre_id": "6ad83f63e186e1002c404cff",
+    "padre_id": "6ad83fff0769f419cc5a04f2",
     "ruta": [
-      "6ad83f63e186e1002c404cff"
+      "6ad83fff0769f419cc5a04f2"
     ],
     "materialized_path": "entes-exentos/constitucionales",
     "orden": 155,
@@ -3005,14 +3005,14 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404d01",
+    "_id": "6ad83fff0769f419cc5a04f4",
     "slug": "centros-educativos-y-universidades-arts-73-y-88",
     "nombre": "Centros Educativos y Universidades (Arts. 73 y 88)",
     "nivel": 3,
-    "padre_id": "6ad83f63e186e1002c404d00",
+    "padre_id": "6ad83fff0769f419cc5a04f3",
     "ruta": [
-      "6ad83f63e186e1002c404cff",
-      "6ad83f63e186e1002c404d00"
+      "6ad83fff0769f419cc5a04f2",
+      "6ad83fff0769f419cc5a04f3"
     ],
     "materialized_path": "entes-exentos/constitucionales/centros-educativos-y-universidades-arts-73-y-88",
     "orden": 156,
@@ -3024,14 +3024,14 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404d02",
+    "_id": "6ad83fff0769f419cc5a04f5",
     "slug": "iglesias-y-deporte-federado-arts-37-y-92",
     "nombre": "Iglesias y Deporte Federado (Arts. 37 y 92)",
     "nivel": 3,
-    "padre_id": "6ad83f63e186e1002c404d00",
+    "padre_id": "6ad83fff0769f419cc5a04f3",
     "ruta": [
-      "6ad83f63e186e1002c404cff",
-      "6ad83f63e186e1002c404d00"
+      "6ad83fff0769f419cc5a04f2",
+      "6ad83fff0769f419cc5a04f3"
     ],
     "materialized_path": "entes-exentos/constitucionales/iglesias-y-deporte-federado-arts-37-y-92",
     "orden": 157,
@@ -3043,14 +3043,14 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404d03",
+    "_id": "6ad83fff0769f419cc5a04f6",
     "slug": "vehiculos-solvencias-y-asistencia-institucional",
     "nombre": "Vehículos, Solvencias y Asistencia Institucional",
     "nivel": 3,
-    "padre_id": "6ad83f63e186e1002c404d00",
+    "padre_id": "6ad83fff0769f419cc5a04f3",
     "ruta": [
-      "6ad83f63e186e1002c404cff",
-      "6ad83f63e186e1002c404d00"
+      "6ad83fff0769f419cc5a04f2",
+      "6ad83fff0769f419cc5a04f3"
     ],
     "materialized_path": "entes-exentos/constitucionales/vehiculos-solvencias-y-asistencia-institucional",
     "orden": 158,
@@ -3062,13 +3062,13 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404d04",
+    "_id": "6ad83fff0769f419cc5a04f7",
     "slug": "no-lucrativos",
     "nombre": "No Lucrativos",
     "nivel": 2,
-    "padre_id": "6ad83f63e186e1002c404cff",
+    "padre_id": "6ad83fff0769f419cc5a04f2",
     "ruta": [
-      "6ad83f63e186e1002c404cff"
+      "6ad83fff0769f419cc5a04f2"
     ],
     "materialized_path": "entes-exentos/no-lucrativos",
     "orden": 159,
@@ -3080,14 +3080,14 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404d05",
+    "_id": "6ad83fff0769f419cc5a04f8",
     "slug": "inscripcion-y-rtu-de-organizaciones-no-lucrativas",
     "nombre": "Inscripción y RTU de Organizaciones No Lucrativas",
     "nivel": 3,
-    "padre_id": "6ad83f63e186e1002c404d04",
+    "padre_id": "6ad83fff0769f419cc5a04f7",
     "ruta": [
-      "6ad83f63e186e1002c404cff",
-      "6ad83f63e186e1002c404d04"
+      "6ad83fff0769f419cc5a04f2",
+      "6ad83fff0769f419cc5a04f7"
     ],
     "materialized_path": "entes-exentos/no-lucrativos/inscripcion-y-rtu-de-organizaciones-no-lucrativas",
     "orden": 160,
@@ -3099,14 +3099,14 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404d06",
+    "_id": "6ad83fff0769f419cc5a04f9",
     "slug": "exenciones-civa-actualizacion-y-cierre-de-operaciones",
     "nombre": "Exenciones CIVA, Actualización y Cierre de Operaciones",
     "nivel": 3,
-    "padre_id": "6ad83f63e186e1002c404d04",
+    "padre_id": "6ad83fff0769f419cc5a04f7",
     "ruta": [
-      "6ad83f63e186e1002c404cff",
-      "6ad83f63e186e1002c404d04"
+      "6ad83fff0769f419cc5a04f2",
+      "6ad83fff0769f419cc5a04f7"
     ],
     "materialized_path": "entes-exentos/no-lucrativos/exenciones-civa-actualizacion-y-cierre-de-operaciones",
     "orden": 161,
@@ -3118,13 +3118,13 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404d07",
+    "_id": "6ad83fff0769f419cc5a04fa",
     "slug": "entidades-del-estado",
     "nombre": "Entidades del Estado",
     "nivel": 2,
-    "padre_id": "6ad83f63e186e1002c404cff",
+    "padre_id": "6ad83fff0769f419cc5a04f2",
     "ruta": [
-      "6ad83f63e186e1002c404cff"
+      "6ad83fff0769f419cc5a04f2"
     ],
     "materialized_path": "entes-exentos/entidades-del-estado",
     "orden": 162,
@@ -3136,14 +3136,14 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404d08",
+    "_id": "6ad83fff0769f419cc5a04fb",
     "slug": "registro-institucional-y-rtu-estatal",
     "nombre": "Registro Institucional y RTU Estatal",
     "nivel": 3,
-    "padre_id": "6ad83f63e186e1002c404d07",
+    "padre_id": "6ad83fff0769f419cc5a04fa",
     "ruta": [
-      "6ad83f63e186e1002c404cff",
-      "6ad83f63e186e1002c404d07"
+      "6ad83fff0769f419cc5a04f2",
+      "6ad83fff0769f419cc5a04fa"
     ],
     "materialized_path": "entes-exentos/entidades-del-estado/registro-institucional-y-rtu-estatal",
     "orden": 163,
@@ -3155,14 +3155,14 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404d09",
+    "_id": "6ad83fff0769f419cc5a04fc",
     "slug": "facturacion-fel-retenciones-y-operaciones",
     "nombre": "Facturación FEL, Retenciones y Operaciones",
     "nivel": 3,
-    "padre_id": "6ad83f63e186e1002c404d07",
+    "padre_id": "6ad83fff0769f419cc5a04fa",
     "ruta": [
-      "6ad83f63e186e1002c404cff",
-      "6ad83f63e186e1002c404d07"
+      "6ad83fff0769f419cc5a04f2",
+      "6ad83fff0769f419cc5a04fa"
     ],
     "materialized_path": "entes-exentos/entidades-del-estado/facturacion-fel-retenciones-y-operaciones",
     "orden": 164,
@@ -3174,14 +3174,14 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404d0a",
+    "_id": "6ad83fff0769f419cc5a04fd",
     "slug": "parque-vehicular-oficial-y-de-autoridad",
     "nombre": "Parque Vehicular Oficial y de Autoridad",
     "nivel": 3,
-    "padre_id": "6ad83f63e186e1002c404d07",
+    "padre_id": "6ad83fff0769f419cc5a04fa",
     "ruta": [
-      "6ad83f63e186e1002c404cff",
-      "6ad83f63e186e1002c404d07"
+      "6ad83fff0769f419cc5a04f2",
+      "6ad83fff0769f419cc5a04fa"
     ],
     "materialized_path": "entes-exentos/entidades-del-estado/parque-vehicular-oficial-y-de-autoridad",
     "orden": 165,
@@ -3193,14 +3193,14 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404d0b",
+    "_id": "6ad83fff0769f419cc5a04fe",
     "slug": "control-interno-solvencias-y-normativa",
     "nombre": "Control Interno, Solvencias y Normativa",
     "nivel": 3,
-    "padre_id": "6ad83f63e186e1002c404d07",
+    "padre_id": "6ad83fff0769f419cc5a04fa",
     "ruta": [
-      "6ad83f63e186e1002c404cff",
-      "6ad83f63e186e1002c404d07"
+      "6ad83fff0769f419cc5a04f2",
+      "6ad83fff0769f419cc5a04fa"
     ],
     "materialized_path": "entes-exentos/entidades-del-estado/control-interno-solvencias-y-normativa",
     "orden": 166,
@@ -3212,13 +3212,13 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404d0c",
+    "_id": "6ad83fff0769f419cc5a04ff",
     "slug": "decreto",
     "nombre": "Decreto",
     "nivel": 2,
-    "padre_id": "6ad83f63e186e1002c404cff",
+    "padre_id": "6ad83fff0769f419cc5a04f2",
     "ruta": [
-      "6ad83f63e186e1002c404cff"
+      "6ad83fff0769f419cc5a04f2"
     ],
     "materialized_path": "entes-exentos/decreto",
     "orden": 167,
@@ -3230,14 +3230,14 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404d0d",
+    "_id": "6ad83fff0769f419cc5a0500",
     "slug": "misiones-diplomaticas-y-organismos-internacionales",
     "nombre": "Misiones Diplomáticas y Organismos Internacionales",
     "nivel": 3,
-    "padre_id": "6ad83f63e186e1002c404d0c",
+    "padre_id": "6ad83fff0769f419cc5a04ff",
     "ruta": [
-      "6ad83f63e186e1002c404cff",
-      "6ad83f63e186e1002c404d0c"
+      "6ad83fff0769f419cc5a04f2",
+      "6ad83fff0769f419cc5a04ff"
     ],
     "materialized_path": "entes-exentos/decreto/misiones-diplomaticas-y-organismos-internacionales",
     "orden": 168,
@@ -3249,14 +3249,14 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404d0e",
+    "_id": "6ad83fff0769f419cc5a0501",
     "slug": "cooperativas-partidos-politicos-y-exenciones-especiales",
     "nombre": "Cooperativas, Partidos Políticos y Exenciones Especiales",
     "nivel": 3,
-    "padre_id": "6ad83f63e186e1002c404d0c",
+    "padre_id": "6ad83fff0769f419cc5a04ff",
     "ruta": [
-      "6ad83f63e186e1002c404cff",
-      "6ad83f63e186e1002c404d0c"
+      "6ad83fff0769f419cc5a04f2",
+      "6ad83fff0769f419cc5a04ff"
     ],
     "materialized_path": "entes-exentos/decreto/cooperativas-partidos-politicos-y-exenciones-especiales",
     "orden": 169,
@@ -3268,14 +3268,14 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404d0f",
+    "_id": "6ad83fff0769f419cc5a0502",
     "slug": "donaciones-oficiales-y-despacho-aduanero",
     "nombre": "Donaciones Oficiales y Despacho Aduanero",
     "nivel": 3,
-    "padre_id": "6ad83f63e186e1002c404d0c",
+    "padre_id": "6ad83fff0769f419cc5a04ff",
     "ruta": [
-      "6ad83f63e186e1002c404cff",
-      "6ad83f63e186e1002c404d0c"
+      "6ad83fff0769f419cc5a04f2",
+      "6ad83fff0769f419cc5a04ff"
     ],
     "materialized_path": "entes-exentos/decreto/donaciones-oficiales-y-despacho-aduanero",
     "orden": 170,
@@ -3287,13 +3287,13 @@
     }
   },
   {
-    "_id": "6ad83f63e186e1002c404d10",
+    "_id": "6ad83fff0769f419cc5a0503",
     "slug": "municipalidades",
     "nombre": "Municipalidades",
     "nivel": 2,
-    "padre_id": "6ad83f63e186e1002c404cff",
+    "padre_id": "6ad83fff0769f419cc5a04f2",
     "ruta": [
-      "6ad83f63e186e1002c404cff"
+      "6ad83fff0769f419cc5a04f2"
     ],
     "materialized_path": "entes-exentos/municipalidades",
     "orden": 171,

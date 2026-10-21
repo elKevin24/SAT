@@ -436,6 +436,8 @@ test('regla 12: prohibido el término "trámite" en campos visibles al ciudadano
     'nombreActual',
     'tramite',
     'descripcion',
+    'nota',
+    'impactoOImportancia',
     'categoria',
     'subcategoria',
     'nivel1',
