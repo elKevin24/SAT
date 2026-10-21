@@ -11,6 +11,12 @@ import {
 } from '../src/data/schema';
 import { buildTaxonomy, categoriaId, subcategoriaId, resolveCategoria } from '../src/data/taxonomy';
 import { OFFICIAL_CATEGORY_ORDER, OFFICIAL_SUBCATEGORY_ORDER, subcategoryOrderFor } from '../src/data/categoryOrder';
+import {
+  FAMILIAS_TEMATICAS,
+  RELACIONES_PROCESO_CANONICAS,
+  buildRelationshipGraph,
+  FamiliaTematicaId
+} from '../src/data/contentRelationships';
 
 const DATA_URL = new URL('../src/data/', import.meta.url);
 
@@ -164,4 +170,43 @@ test('catalogoContenidosUnicos: 683 contenidos únicos desacoplados y suma exact
     expect(c.url).toMatch(/^https?:\/\//);
     expect(c.tramiteIds.length).toBe(c.totalAudiencias);
   });
+});
+
+test('contentRelationships: validacion del grafo interno, familias tematicas y polijerarquia', () => {
+  const relGraph = buildRelationshipGraph(tramites);
+
+  const familiaKeys = Object.keys(FAMILIAS_TEMATICAS) as FamiliaTematicaId[];
+  expect(familiaKeys.length).toBe(10);
+  familiaKeys.forEach((fId) => {
+    const meta = FAMILIAS_TEMATICAS[fId];
+    expect(meta.codigo).toMatch(/^FAM-\d{2}$/);
+    expect(meta.nombre).toBeTruthy();
+    expect(meta.descripcion).toBeTruthy();
+  });
+
+  const todosLosCodigos = new Set(tramites.map((t) => t.codigo));
+  RELACIONES_PROCESO_CANONICAS.forEach((rel) => {
+    expect(todosLosCodigos.has(rel.origenCodigo)).toBe(true);
+    expect(todosLosCodigos.has(rel.destinoCodigo)).toBe(true);
+    expect(rel.justificacion).toBeTruthy();
+  });
+
+  const prereqsAV = relGraph.getPrerrequisitos('SAT-GES-0003');
+  expect(prereqsAV.length).toBeGreaterThanOrEqual(1);
+  expect(prereqsAV.some((p) => p.tramite.codigo === 'SAT-GES-0001')).toBe(true);
+
+  const sigPasosNIT = relGraph.getSiguientesPasos('SAT-GES-0001');
+  expect(sigPasosNIT.length).toBeGreaterThanOrEqual(1);
+  expect(sigPasosNIT.some((s) => s.tramite.codigo === 'SAT-GES-0003')).toBe(true);
+
+  const felGestiones = relGraph.getGestionesFamilia('fel', { limit: 5 });
+  expect(felGestiones.length).toBe(5);
+  felGestiones.forEach((g) => {
+    expect(g.familias_ids).toContain('fel');
+  });
+
+  const grafoFEL = relGraph.getGrafoRelaciones('SAT-GES-0319');
+  expect(grafoFEL).not.toBeNull();
+  expect(grafoFEL?.prerrequisitos.length).toBeGreaterThanOrEqual(1);
+  expect(grafoFEL?.familias.some((f) => f.id === 'fel')).toBe(true);
 });
