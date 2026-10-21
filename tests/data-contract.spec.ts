@@ -24,12 +24,15 @@ function loadJson(file: string): unknown {
   return JSON.parse(readFileSync(new URL(file, DATA_URL), 'utf8')) as unknown;
 }
 
+let rawTramitesJson: Record<string, unknown>[];
 let tramites: TramiteItem[];
 let procesos: ProcesoGuiado[];
 let contenidosUnicos: ContenidoUnicoItem[];
 
 test.beforeAll(() => {
-  tramites = assertTramites(loadJson('allTramites.json'));
+  const raw = loadJson('allTramites.json') as Record<string, unknown>[];
+  rawTramitesJson = JSON.parse(JSON.stringify(raw));
+  tramites = assertTramites(raw);
   procesos = assertProcesos(loadJson('allProcesos.json'));
   contenidosUnicos = assertContenidosUnicos(loadJson('catalogoContenidosUnicos.json'));
 });
@@ -382,23 +385,38 @@ test('guion largo: todo nivel sin clasificar usa "—" y su orden también (Regl
   });
 });
 
-test('alias de nivel: nivel1..nivel5 espejan *_segmento/area/subarea/tema/tramite', () => {
-  const pares: [keyof TramiteItem, keyof TramiteItem][] = [
-    ['nivel1', 'nivel1_segmento'],
-    ['nivel2', 'nivel2_area'],
-    ['nivel3', 'nivel3_subarea'],
-    ['nivel4', 'nivel4_tema'],
-    ['nivel5', 'nivel5_tramite'],
+test('regla 1: niveles estrictamente numéricos N1..N5 sin sufijos conceptuales ni alias legacy en allTramites.json', () => {
+  const CAMPOS_PROHIBIDOS = [
+    'macroGrupo',
+    'categoria',
+    'subcategoria',
+    'tema',
+    'subtema',
+    'tramite',
+    'nivel1_segmento',
+    'nivel2_area',
+    'nivel3_subarea',
+    'nivel4_tema',
+    'nivel5_tramite',
+    'segmento',
+    'regimenArea',
+    'grupoActor',
+    'materiaTema',
+    'subtemaGestion',
+    'seccionActual',
   ];
 
-  const desincronizados = tramites
-    .filter((t) => pares.some(([alias, canonico]) => t[alias] !== t[canonico]))
-    .map((t) => t.id);
-
-  expect(
-    desincronizados,
-    `Alias de nivel desincronizados respecto a los campos canónicos: ${desincronizados.join(', ')}`,
-  ).toEqual([]);
+  rawTramitesJson.forEach((t) => {
+    CAMPOS_PROHIBIDOS.forEach((k) => {
+      expect(t[k], `Campo prohibido/legacy '${k}' presente en ${t.id}`).toBeUndefined();
+    });
+    expect(t.nivel1).toBeTruthy();
+    expect(t.nivel2).toBeTruthy();
+    expect(t.nivel3).toBeTruthy();
+    expect(t.nivel4).toBeTruthy();
+    expect(t.nivel5).toBeTruthy();
+    expect(t.gestion).toBeTruthy();
+  });
 });
 
 test('anti-espejo: ningún nivel consecutivo repite la etiqueta del padre', () => {
@@ -422,7 +440,7 @@ test('regla 7: sin números quemados en títulos visibles', () => {
 
   const quemados = tramites
     .filter((t) => {
-      const campos = [t.nombreActual, t.tramite].filter(Boolean) as string[];
+      const campos = [t.nombreActual, t.gestion, t.tramite].filter(Boolean) as string[];
       return campos.some((c) => PREFIJO_NUMERICO.test(c) || PREFIJO_ROMANO.test(c));
     })
     .map((t) => `${t.id}: "${t.nombreActual ?? t.tramite}"`);
@@ -434,7 +452,7 @@ test('regla 12: prohibido el término "trámite" en campos visibles al ciudadano
   const PROHIBIDO = /\btr[aá]mites?\b/i;
   const VISIBLES: (keyof TramiteItem)[] = [
     'nombreActual',
-    'tramite',
+    'gestion',
     'descripcion',
     'nota',
     'impactoOImportancia',

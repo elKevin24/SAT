@@ -35,8 +35,10 @@ export function subcategoriaId(categoriaIdValue: string, nombre: string): string
 
 interface Categorizable {
   pillar: PillarType;
-  categoria: string;
-  subcategoria: string;
+  categoria?: string;
+  subcategoria?: string;
+  nivel2?: string;
+  nivel3?: string;
 }
 
 export function buildTaxonomy(tramites: Categorizable[]): Taxonomy {
@@ -61,10 +63,12 @@ export function buildTaxonomy(tramites: Categorizable[]): Taxonomy {
   };
 
   tramites.forEach((t) => {
-    const cat = indexFor(t.pillar, t.categoria);
+    const catNombre = t.categoria || t.nivel2 || '';
+    const subNombre = t.subcategoria || t.nivel3 || '—';
+    const cat = indexFor(t.pillar, catNombre);
     cat.count += 1;
-    if (!t.subcategoria) return;
-    const subId = subcategoriaId(cat.id, t.subcategoria);
+    if (!subNombre || subNombre === '—') return;
+    const subId = subcategoriaId(cat.id, subNombre);
     const count = (subCounts.get(subId) ?? 0) + 1;
     subCounts.set(subId, count);
     const existing = cat.subcategorias.find((s) => s.id === subId);

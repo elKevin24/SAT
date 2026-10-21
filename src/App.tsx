@@ -15,14 +15,14 @@ import { SegmentTramitesCatalog } from './components/SegmentTramitesCatalog';
 import { QuickAccessCarousel } from './components/QuickAccessCarousel';
 import { SolicitarNitPage } from './pages/SolicitarNitPage';
 import { FelPage } from './pages/FelPage';
-import { EtapaAtoId, TipoInteraccionId, TramiteItem, ProcesoGuiado } from './data/schema';
+import { EtapaAtoId, TipoInteraccionId, TramiteItem, ProcesoGuiado, assertTramites } from './data/schema';
 import { buildTaxonomy, resolveCategoria, categoriaId } from './data/taxonomy';
 
 // Import official extracted datasets
 import rawTramites from './data/allTramites.json';
 import rawProcesos from './data/allProcesos.json';
 
-const allTramites = rawTramites as TramiteItem[];
+const allTramites = assertTramites(rawTramites);
 const allProcesos = rawProcesos as ProcesoGuiado[];
 const TAXONOMY = buildTaxonomy(allTramites);
 
@@ -220,7 +220,7 @@ export default function App() {
                 if (item.id === 'cual-es-mi-nit' || item.id === 'consultar-vehiculos' || item.id === 'omisos') {
                   setConsultasModalSegment('contribuyentes');
                 } else if (item.id === 'solvencia-fiscal') {
-                  const solvencia = allTramites.find(t => t.id === 'SAT-GES-0154' || t.tramite.toLowerCase().includes('solvencia fiscal'));
+                  const solvencia = allTramites.find(t => t.id === 'SAT-GES-0154' || (t.gestion || t.tramite || '').toLowerCase().includes('solvencia fiscal'));
                   if (solvencia) setSelectedTramite(solvencia);
                 } else if (item.id === 'solicitar-nit') {
                   window.location.hash = '#/solicitar-nit';

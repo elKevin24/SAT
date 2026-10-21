@@ -115,7 +115,7 @@ export const Header: React.FC<HeaderProps> = ({
   const filteredTramites = searchQuery.trim().length > 1
     ? allTramites.filter(t =>
         (t.id && t.id.toLowerCase().includes(searchQuery.toLowerCase())) ||
-        (t.tramite && t.tramite.toLowerCase().includes(searchQuery.toLowerCase())) ||
+        ((t.gestion || t.tramite) && (t.gestion || t.tramite)!.toLowerCase().includes(searchQuery.toLowerCase())) ||
         (t.descripcion && t.descripcion.toLowerCase().includes(searchQuery.toLowerCase())) ||
         (t.categoria && t.categoria.toLowerCase().includes(searchQuery.toLowerCase()))
       ).slice(0, 8)
@@ -351,7 +351,7 @@ export const Header: React.FC<HeaderProps> = ({
                               </span>
                             </div>
                             <span className="block text-xs font-bold text-sat-texto group-hover:text-sat-azul line-clamp-2 leading-snug">
-                              {t.tramite}
+                              {t.gestion || t.tramite}
                             </span>
                             <span className="block text-[11px] text-sat-texto-suave line-clamp-2 mt-1 leading-relaxed">
                               {t.descripcion}

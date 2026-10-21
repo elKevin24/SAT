@@ -419,11 +419,11 @@ def populate_unified_sheet(ws, dataset):
 
         miga_raw = item.get('migaBreadcrumb', '')
 
-        n1 = item.get('nivel1_segmento', '—')
-        n2 = item.get('nivel2_area', '—')
-        n3 = item.get('nivel3_subarea', '—')
-        n4 = item.get('nivel4_tema', '—')
-        n5 = item.get('nivel5_tramite', '—')
+        n1 = item.get('nivel1') or item.get('nivel1_segmento', '—')
+        n2 = item.get('nivel2') or item.get('nivel2_area', '—')
+        n3 = item.get('nivel3') or item.get('nivel3_subarea', '—')
+        n4 = item.get('nivel4') or item.get('nivel4_tema', '—')
+        n5 = item.get('nivel5') or item.get('nivel5_tramite', '—')
 
         ord_n1 = item.get('orden_n1', 1)
         ord_n2 = item.get('orden_n2', 1)
@@ -473,8 +473,8 @@ def populate_unified_sheet(ws, dataset):
         c_oc = ws.cell(row=r_idx, column=13, value=val_oc)
         c_oc.alignment = Alignment(horizontal='center')
         c_oc.font = font_bold
-        # Col 14: Nombre del Trámite / Servicio (Lenguaje Claro)
-        ws.cell(row=r_idx, column=14, value=item.get('tramite', '')).font = font_bold
+        # Col 14: Nombre de la Gestión / Servicio (Lenguaje Claro)
+        ws.cell(row=r_idx, column=14, value=item.get('gestion') or item.get('tramite', '')).font = font_bold
         # Col 15: Ruta de Navegación (Miga de Pan)
         c_miga = ws.cell(row=r_idx, column=15, value=miga_raw)
         c_miga.font = font_small
@@ -591,18 +591,19 @@ for col_idx, h in enumerate(headers_brechas, start=1):
 ws_brechas.row_dimensions[1].height = 30
 
 for r_idx, b in enumerate(ce_brechas, start=2):
-    t_clean = b['tramite'].lower()
+    nom_gest = b.get('gestion') or b.get('tramite', '')
+    t_clean = nom_gest.lower()
     
     # Buscar situación y pregunta oficial coincidente
     match_oficial = next((m for m in brechas_oficiales if m['tramite'].lower() in t_clean or t_clean in m['tramite'].lower()), None)
     
-    sit_val = match_oficial['situacion'] if match_oficial else b['descripcion']
-    preg_val = match_oficial['pregunta'] if match_oficial else f"¿Existe acuerdo de directorio o resolución que formalice el requisito digital para '{b['tramite']}' ante SAT?"
+    sit_val = match_oficial['situacion'] if match_oficial else b.get('descripcion', '')
+    preg_val = match_oficial['pregunta'] if match_oficial else f"¿Existe acuerdo de directorio o resolución que formalice el requisito digital para '{nom_gest}' ante SAT?"
 
     ws_brechas.cell(row=r_idx, column=1, value=r_idx - 1).alignment = Alignment(horizontal='center')
-    ws_brechas.cell(row=r_idx, column=2, value=b['categoria']).font = font_bold
-    ws_brechas.cell(row=r_idx, column=3, value=b['subcategoria'])
-    ws_brechas.cell(row=r_idx, column=4, value=b['tramite']).font = font_bold
+    ws_brechas.cell(row=r_idx, column=2, value=b.get('nivel2') or b.get('categoria', '')).font = font_bold
+    ws_brechas.cell(row=r_idx, column=3, value=b.get('nivel3') or b.get('subcategoria', '—'))
+    ws_brechas.cell(row=r_idx, column=4, value=nom_gest).font = font_bold
     ws_brechas.cell(row=r_idx, column=5, value=sit_val)
     
     c_preg = ws_brechas.cell(row=r_idx, column=6, value=preg_val)

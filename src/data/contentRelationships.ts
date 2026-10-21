@@ -221,7 +221,7 @@ function toResumen(item: TramiteItem): TramiteResumen {
   return {
     id: item.id,
     codigo: item.codigo || item.id,
-    titulo: item.tramite || item.nombreActual || 'Gestión Oficial',
+    titulo: item.gestion || item.tramite || item.nombreActual || 'Gestión Oficial',
     url: item.url,
     pillar: item.pillar,
     etapaAto: item.etapaAto,

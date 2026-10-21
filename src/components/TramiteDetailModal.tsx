@@ -102,7 +102,7 @@ export const TramiteDetailModal: React.FC<TramiteDetailModalProps> = ({
             </span>
           </div>
           <h2 id="gestion-title" className="text-base sm:text-lg font-bold leading-tight">
-            {tramite.tramite}
+            {tramite.gestion || tramite.tramite || tramite.nombreActual}
           </h2>
         </div>
         <button 

@@ -395,7 +395,7 @@ export const PortalFlowPage: React.FC = () => {
       const tramiteItem: FullTramiteItem = {
         id: t.id,
         codigo: t.codigo || t.id,
-        titulo: t.tramite || t.nombreActual || 'Gestión Oficial',
+        titulo: t.gestion || t.tramite || t.nombreActual || 'Gestión Oficial',
         pillar: segId,
         nivel1_segmento: t.nivel1_segmento || SEGMENT_META[segId].name,
         nivel2_area: (t.nivel2_area || '').trim(),

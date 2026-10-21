@@ -21,23 +21,40 @@ export type TipologiaContenidoId =
 
 export interface TramiteItem {
   id: string;
+  codigo?: string;
   pillar: PillarType;
   pillarName: string;
-  categoria: string;
-  subcategoria: string;
-  tramite: string;
+
+  // Estructura Estrictamente Numérica N1–N5 (Regla 1)
+  nivel1: string;
+  orden_n1: number;
+  nivel2: string;
+  orden_n2: number;
+  nivel3: string;
+  orden_n3?: number | string;
+  nivel4: string;
+  orden_n4?: number | string;
+  nivel5: string;
+  orden_n5?: number | string;
+  orden_contenido?: number | null;
+
+  // Denominación Oficial de la Gestión (Regla 12)
+  gestion: string;
+  nombreActual?: string;
   descripcion: string;
   url: string;
+
+  // Compatibilidad legacy e hidratación en runtime
+  tramite?: string;
+  categoria?: string;
+  subcategoria?: string;
   categoriaId?: string;
   subcategoriaId?: string;
 
-  macroGrupo?: string;
-  tema?: string;
-  subtema?: string;
-  nombreActual?: string;
+  // Metadatos operativos y taxonomía extendida
+  migaBreadcrumb?: string;
   perfilDestinatario?: string;
   impactoOImportancia?: string;
-  seccionActual?: string;
   nota?: string;
   grupoNo?: number;
   grupoNombre?: string;
@@ -47,27 +64,13 @@ export interface TramiteItem {
   tipoInteraccionLabel?: string;
   tipologiaContenido?: TipologiaContenidoId;
   tipologiaContenidoLabel?: string;
+  plataformaSistema?: string;
+  plataformaSistemaLabel?: string;
+  canalAtencion?: string;
   esBrecha?: boolean;
   subfamiliaAduanera?: string;
+  familiaAduanera?: string;
   actorEspecifico?: string;
-  nivel1_segmento?: string;
-  orden_n1?: number;
-  nivel2_area?: string;
-  orden_n2?: number;
-  nivel3_subarea?: string;
-  orden_n3?: number;
-  nivel4_tema?: string;
-  orden_n4?: number;
-  nivel5_tramite?: string;
-  orden_n5?: number;
-  orden_contenido?: number | null;
-  codigo?: string;
-  segmento?: string;
-  regimenArea?: string;
-  grupoActor?: string;
-  materiaTema?: string;
-  subtemaGestion?: string;
-  migaBreadcrumb?: string;
   controlAuditoria?: string;
   baseLegal?: string;
   formulario?: string;
@@ -75,6 +78,13 @@ export interface TramiteItem {
   pasos?: string[];
   familias_ids?: string[];
   familiaTematica?: string;
+  rutasProceso?: {
+    procesoNo: number;
+    procesoNombre: string;
+    pasoNo: number;
+    pasoAccion: string;
+  }[];
+  codigos_legacy?: string[];
 }
 
 export interface ProcesoPaso {
@@ -176,9 +186,10 @@ const REQUIRED_TRAMITE_FIELDS: { field: keyof TramiteItem; label: string }[] = [
   { field: 'id', label: 'id' },
   { field: 'pillar', label: 'pillar' },
   { field: 'pillarName', label: 'pillarName' },
-  { field: 'categoria', label: 'categoria' },
-  { field: 'subcategoria', label: 'subcategoria' },
-  { field: 'tramite', label: 'tramite' },
+  { field: 'nivel1', label: 'nivel1' },
+  { field: 'nivel2', label: 'nivel2' },
+  { field: 'nivel3', label: 'nivel3' },
+  { field: 'gestion', label: 'gestion' },
   { field: 'descripcion', label: 'descripcion' },
   { field: 'url', label: 'url' },
 ];
@@ -268,7 +279,15 @@ function formatErrors(kind: string, errors: string[]): Error {
 export function assertTramites(raw: unknown): TramiteItem[] {
   const errors = collectTramiteErrors(raw);
   if (errors.length > 0) throw formatErrors('allTramites.json', errors);
-  return raw as TramiteItem[];
+  const items = raw as TramiteItem[];
+  items.forEach((t) => {
+    // Hidratación de retrocompatibilidad para componentes UI y taxonomía
+    if (!t.gestion) t.gestion = t.tramite || t.nombreActual || '';
+    if (!t.tramite) t.tramite = t.gestion;
+    if (!t.categoria) t.categoria = t.nivel2;
+    if (!t.subcategoria) t.subcategoria = (t.nivel3 && t.nivel3 !== '—') ? t.nivel3 : t.nivel2;
+  });
+  return items;
 }
 
 export function assertProcesos(raw: unknown): ProcesoGuiado[] {

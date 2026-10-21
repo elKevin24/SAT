@@ -303,7 +303,7 @@ const subcategoriesList = useMemo(() => {
       const q = internalQuery.toLowerCase();
       list = segmentTramites.filter(t =>
         (t.id && t.id.toLowerCase().includes(q)) ||
-        (t.tramite && t.tramite.toLowerCase().includes(q)) ||
+        ((t.gestion || t.tramite) && (t.gestion || t.tramite)!.toLowerCase().includes(q)) ||
         (t.descripcion && t.descripcion.toLowerCase().includes(q)) ||
         (t.subcategoria && t.subcategoria.toLowerCase().includes(q)) ||
         (t.categoria && t.categoria.toLowerCase().includes(q))
@@ -371,7 +371,7 @@ const subcategoriesList = useMemo(() => {
     return (
       <Card
         key={tramite.id}
-        title={tramite.tramite}
+        title={tramite.gestion || tramite.tramite || tramite.nombreActual || ''}
         description={tramite.descripcion}
         tone={cardTone}
         headingLevel="h3"

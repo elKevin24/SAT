@@ -205,7 +205,12 @@ export const GRUPOS_OFICIALES_MASTER: {
   }
 ];
 
-export const PORTAL_MASTER_DATA: PortalMasterItem[] = rawMasterData as unknown as PortalMasterItem[];
+export const PORTAL_MASTER_DATA: PortalMasterItem[] = (rawMasterData as Record<string, unknown>[]).map((item) => ({
+  ...item,
+  tramite: (item.gestion as string) || (item.tramite as string) || (item.nombreActual as string) || '',
+  categoria: (item.categoria as string) || (item.nivel2 as string) || '',
+  subcategoria: (item.subcategoria as string) || (item.nivel3 as string) || '',
+})) as unknown as PortalMasterItem[];
 
 /**
  * Filtro flexible de trámites para el portal

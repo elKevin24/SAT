@@ -199,10 +199,10 @@ def main():
     # Agrupar trámites por cada ruta
     by_path_tramites = defaultdict(list)
     for t in all_t:
-        n1 = t.get('nivel1_segmento')
-        n2 = t.get('nivel2_area')
-        n3 = t.get('nivel3_subarea')
-        n4 = t.get('nivel4_tema')
+        n1 = t.get('nivel1') or t.get('nivel1_segmento')
+        n2 = t.get('nivel2') or t.get('nivel2_area')
+        n3 = t.get('nivel3') or t.get('nivel3_subarea')
+        n4 = t.get('nivel4') or t.get('nivel4_tema')
         
         p1 = slugify(n1)
         by_path_tramites[p1].append(t)
@@ -238,10 +238,10 @@ def main():
     n4_by_n3 = defaultdict(dict)
 
     for t in all_t:
-        n1 = t.get('nivel1_segmento')
-        n2 = t.get('nivel2_area')
-        n3 = t.get('nivel3_subarea')
-        n4 = t.get('nivel4_tema')
+        n1 = t.get('nivel1') or t.get('nivel1_segmento')
+        n2 = t.get('nivel2') or t.get('nivel2_area')
+        n3 = t.get('nivel3') or t.get('nivel3_subarea')
+        n4 = t.get('nivel4') or t.get('nivel4_tema')
 
         s1 = slugify(n1)
         n1_names[s1] = n1

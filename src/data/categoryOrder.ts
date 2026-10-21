@@ -234,5 +234,5 @@ export function compareCanonicalTramiteOrder(a: TramiteItem, b: TramiteItem): nu
   const atoB = b.etapaAto ? (ATO_CYCLE_ORDER[b.etapaAto] ?? 99) : 99;
   if (atoA !== atoB) return atoA - atoB;
 
-  return (a.tramite || '').localeCompare(b.tramite || '');
+  return (a.gestion || a.tramite || '').localeCompare(b.gestion || b.tramite || '');
 }

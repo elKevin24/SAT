@@ -1,6 +1,6 @@
 [
   {
-    "_id": "6ad83fff0769f419cc5a0459",
+    "_id": "6ad8421581847cff034f1395",
     "slug": "contribuyentes",
     "nombre": "Contribuyentes",
     "nivel": 1,
@@ -16,13 +16,13 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a045a",
+    "_id": "6ad8421581847cff034f1396",
     "slug": "pequenos-contribuyentes",
     "nombre": "Pequeños Contribuyentes",
     "nivel": 2,
-    "padre_id": "6ad83fff0769f419cc5a0459",
+    "padre_id": "6ad8421581847cff034f1395",
     "ruta": [
-      "6ad83fff0769f419cc5a0459"
+      "6ad8421581847cff034f1395"
     ],
     "materialized_path": "contribuyentes/pequenos-contribuyentes",
     "orden": 2,
@@ -34,14 +34,14 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a045b",
+    "_id": "6ad8421581847cff034f1397",
     "slug": "regimen-de-pequeno-contribuyente",
     "nombre": "Régimen de Pequeño Contribuyente",
     "nivel": 3,
-    "padre_id": "6ad83fff0769f419cc5a045a",
+    "padre_id": "6ad8421581847cff034f1396",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a045a"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f1396"
     ],
     "materialized_path": "contribuyentes/pequenos-contribuyentes/regimen-de-pequeno-contribuyente",
     "orden": 3,
@@ -53,74 +53,74 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a045c",
+    "_id": "6ad8421581847cff034f1398",
     "slug": "inscripcion-y-cambios-de-regimen",
     "nombre": "Inscripción y cambios de régimen",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a045b",
+    "padre_id": "6ad8421581847cff034f1397",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a045a",
-      "6ad83fff0769f419cc5a045b"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f1396",
+      "6ad8421581847cff034f1397"
     ],
     "materialized_path": "contribuyentes/pequenos-contribuyentes/regimen-de-pequeno-contribuyente/inscripcion-y-cambios-de-regimen",
     "orden": 4,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Inscripción y cambios de régimen dentro de la subárea Régimen de Pequeño Contribuyente. Incluye trámites como: Solicitar tu NIT en línea, Curso: Régimen Electrónico de Pequeño Contribuyente.",
+      "que_es": "Tema operativo para la gestión de Inscripción y cambios de régimen dentro de la subárea Régimen de Pequeño Contribuyente.",
       "lead_text": "Requisitos, pasos e información orientadora para inscripción y cambios de régimen (5 gestiones).",
       "base_juridica": "Decreto 27-92 (Ley del IVA, Arts. 45 al 50) y Decreto 7-2019 (Ley de Simplificación Tributaria)."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a045d",
+    "_id": "6ad8421581847cff034f1399",
     "slug": "normativa-y-devoluciones",
     "nombre": "Normativa y devoluciones",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a045b",
+    "padre_id": "6ad8421581847cff034f1397",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a045a",
-      "6ad83fff0769f419cc5a045b"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f1396",
+      "6ad8421581847cff034f1397"
     ],
     "materialized_path": "contribuyentes/pequenos-contribuyentes/regimen-de-pequeno-contribuyente/normativa-y-devoluciones",
     "orden": 5,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Normativa y devoluciones dentro de la subárea Régimen de Pequeño Contribuyente. Incluye trámites como: Curso: régimen de Pequeño Contribuyente, Devolución del 5% de ISR retenido al pequeño contribuyente.",
+      "que_es": "Tema operativo para la gestión de Normativa y devoluciones dentro de la subárea Régimen de Pequeño Contribuyente.",
       "lead_text": "Requisitos, pasos e información orientadora para normativa y devoluciones (4 gestiones).",
       "base_juridica": "Decreto 27-92 (Ley del IVA, Arts. 45 al 50) y Decreto 7-2019 (Ley de Simplificación Tributaria)."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a045e",
+    "_id": "6ad8421581847cff034f139a",
     "slug": "obligaciones-y-operacion",
     "nombre": "Obligaciones y operación",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a045b",
+    "padre_id": "6ad8421581847cff034f1397",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a045a",
-      "6ad83fff0769f419cc5a045b"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f1396",
+      "6ad8421581847cff034f1397"
     ],
     "materialized_path": "contribuyentes/pequenos-contribuyentes/regimen-de-pequeno-contribuyente/obligaciones-y-operacion",
     "orden": 6,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Obligaciones y operación dentro de la subárea Régimen de Pequeño Contribuyente. Incluye trámites como: Curso: LET para pequeño contribuyente, Autorizar documentos para pequeños contribuyentes.",
+      "que_es": "Tema operativo para la gestión de Obligaciones y operación dentro de la subárea Régimen de Pequeño Contribuyente.",
       "lead_text": "Requisitos, pasos e información orientadora para obligaciones y operación (5 gestiones).",
       "base_juridica": "Decreto 27-92 (Ley del IVA, Arts. 45 al 50) y Decreto 7-2019 (Ley de Simplificación Tributaria)."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a045f",
+    "_id": "6ad8421581847cff034f139b",
     "slug": "regimen-agropecuario-y-productores",
     "nombre": "Régimen Agropecuario y Productores",
     "nivel": 3,
-    "padre_id": "6ad83fff0769f419cc5a045a",
+    "padre_id": "6ad8421581847cff034f1396",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a045a"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f1396"
     ],
     "materialized_path": "contribuyentes/pequenos-contribuyentes/regimen-agropecuario-y-productores",
     "orden": 7,
@@ -132,13 +132,13 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a0460",
+    "_id": "6ad8421581847cff034f139c",
     "slug": "contribuyente-general",
     "nombre": "Contribuyente General",
     "nivel": 2,
-    "padre_id": "6ad83fff0769f419cc5a0459",
+    "padre_id": "6ad8421581847cff034f1395",
     "ruta": [
-      "6ad83fff0769f419cc5a0459"
+      "6ad8421581847cff034f1395"
     ],
     "materialized_path": "contribuyentes/contribuyente-general",
     "orden": 8,
@@ -150,14 +150,14 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a0461",
+    "_id": "6ad8421581847cff034f139d",
     "slug": "inscripcion-y-actualizacion-en-el-rtu",
     "nombre": "Inscripción y actualización en el RTU",
     "nivel": 3,
-    "padre_id": "6ad83fff0769f419cc5a0460",
+    "padre_id": "6ad8421581847cff034f139c",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a0460"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f139c"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/inscripcion-y-actualizacion-en-el-rtu",
     "orden": 9,
@@ -169,94 +169,94 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a0462",
+    "_id": "6ad8421581847cff034f139e",
     "slug": "cierre-de-negocios-y-gestiones",
     "nombre": "Cierre de negocios y gestiones",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a0461",
+    "padre_id": "6ad8421581847cff034f139d",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a0460",
-      "6ad83fff0769f419cc5a0461"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f139c",
+      "6ad8421581847cff034f139d"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/inscripcion-y-actualizacion-en-el-rtu/cierre-de-negocios-y-gestiones",
     "orden": 10,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Cierre de negocios y gestiones dentro de la subárea Inscripción y actualización en el RTU. Incluye trámites como: Requisitos, pasos y documentos para descargar aplicaciones de la SAT., Requisitos, pasos y documentos para autorizar a otra persona para gestiones del Registro Tributario Unificado (RTU)..",
+      "que_es": "Tema operativo para la gestión de Cierre de negocios y gestiones dentro de la subárea Inscripción y actualización en el RTU.",
       "lead_text": "Requisitos, pasos e información orientadora para cierre de negocios y gestiones (7 gestiones).",
       "base_juridica": "Código Tributario, Decreto 6-91 (Arts. 112 y 120) y Acuerdo de Directorio SAT 08-2020."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a0463",
+    "_id": "6ad8421581847cff034f139f",
     "slug": "otras-entidades-y-patrimonios",
     "nombre": "Otras entidades y patrimonios",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a0461",
+    "padre_id": "6ad8421581847cff034f139d",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a0460",
-      "6ad83fff0769f419cc5a0461"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f139c",
+      "6ad8421581847cff034f139d"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/inscripcion-y-actualizacion-en-el-rtu/otras-entidades-y-patrimonios",
     "orden": 11,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Otras entidades y patrimonios dentro de la subárea Inscripción y actualización en el RTU. Incluye trámites como: Inscribir un club deportivo, Inscribir un condominio.",
+      "que_es": "Tema operativo para la gestión de Otras entidades y patrimonios dentro de la subárea Inscripción y actualización en el RTU.",
       "lead_text": "Requisitos, pasos e información orientadora para otras entidades y patrimonios (12 gestiones).",
       "base_juridica": "Código Tributario, Decreto 6-91 (Arts. 112 y 120) y Acuerdo de Directorio SAT 08-2020."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a0464",
+    "_id": "6ad8421581847cff034f13a0",
     "slug": "personas-y-representantes",
     "nombre": "Personas y representantes",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a0461",
+    "padre_id": "6ad8421581847cff034f139d",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a0460",
-      "6ad83fff0769f419cc5a0461"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f139c",
+      "6ad8421581847cff034f139d"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/inscripcion-y-actualizacion-en-el-rtu/personas-y-representantes",
     "orden": 12,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Personas y representantes dentro de la subárea Inscripción y actualización en el RTU. Incluye trámites como: Agendar cita para obtener tu NIT, Obtener NIT para tener un negocio (con obligaciones).",
+      "que_es": "Tema operativo para la gestión de Personas y representantes dentro de la subárea Inscripción y actualización en el RTU.",
       "lead_text": "Requisitos, pasos e información orientadora para personas y representantes (20 gestiones).",
       "base_juridica": "Código Tributario, Decreto 6-91 (Arts. 112 y 120) y Acuerdo de Directorio SAT 08-2020."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a0465",
+    "_id": "6ad8421581847cff034f13a1",
     "slug": "sociedades-y-empresas",
     "nombre": "Sociedades y empresas",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a0461",
+    "padre_id": "6ad8421581847cff034f139d",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a0460",
-      "6ad83fff0769f419cc5a0461"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f139c",
+      "6ad8421581847cff034f139d"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/inscripcion-y-actualizacion-en-el-rtu/sociedades-y-empresas",
     "orden": 13,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Sociedades y empresas dentro de la subárea Inscripción y actualización en el RTU. Incluye trámites como: Inscribir la sucursal de una empresa extranjera, Inscribir una Sociedad de Emprendimiento.",
+      "que_es": "Tema operativo para la gestión de Sociedades y empresas dentro de la subárea Inscripción y actualización en el RTU.",
       "lead_text": "Requisitos, pasos e información orientadora para sociedades y empresas (13 gestiones).",
       "base_juridica": "Código Tributario, Decreto 6-91 (Arts. 112 y 120) y Acuerdo de Directorio SAT 08-2020."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a0466",
+    "_id": "6ad8421581847cff034f13a2",
     "slug": "facturacion-electronica-y-documentos-tributarios",
     "nombre": "Facturación electrónica y documentos tributarios",
     "nivel": 3,
-    "padre_id": "6ad83fff0769f419cc5a0460",
+    "padre_id": "6ad8421581847cff034f139c",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a0460"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f139c"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/facturacion-electronica-y-documentos-tributarios",
     "orden": 14,
@@ -268,154 +268,154 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a0467",
+    "_id": "6ad8421581847cff034f13a3",
     "slug": "autorizacion-de-documentos",
     "nombre": "Autorización de documentos",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a0466",
+    "padre_id": "6ad8421581847cff034f13a2",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a0460",
-      "6ad83fff0769f419cc5a0466"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f139c",
+      "6ad8421581847cff034f13a2"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/facturacion-electronica-y-documentos-tributarios/autorizacion-de-documentos",
     "orden": 15,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Autorización de documentos dentro de la subárea Facturación electrónica y documentos tributarios. Incluye trámites como: Autorizar facturas impresas por una imprenta, Autorizar facturas si las imprimes tú mismo.",
+      "que_es": "Tema operativo para la gestión de Autorización de documentos dentro de la subárea Facturación electrónica y documentos tributarios.",
       "lead_text": "Requisitos, pasos e información orientadora para autorización de documentos (3 gestiones).",
       "base_juridica": "Decreto 10-2012 (Ley de Actualización Tributaria, Libro I - Impuesto Sobre la Renta)."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a0468",
+    "_id": "6ad8421581847cff034f13a4",
     "slug": "constancias-de-exencion-civa-y-cais",
     "nombre": "Constancias de exención (CIVA y CAIS)",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a0466",
+    "padre_id": "6ad8421581847cff034f13a2",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a0460",
-      "6ad83fff0769f419cc5a0466"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f139c",
+      "6ad8421581847cff034f13a2"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/facturacion-electronica-y-documentos-tributarios/constancias-de-exencion-civa-y-cais",
     "orden": 16,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Constancias de exención (CIVA y CAIS) dentro de la subárea Facturación electrónica y documentos tributarios. Incluye trámites como: Emitir constancias de exención del Impuesto al Valor Agregado (CIVA), Emitir constancias CAIS.",
+      "que_es": "Tema operativo para la gestión de Constancias de exención (CIVA y CAIS) dentro de la subárea Facturación electrónica y documentos tributarios.",
       "lead_text": "Requisitos, pasos e información orientadora para constancias de exención (civa y cais) (2 gestiones).",
       "base_juridica": "Decreto 27-92 del Congreso de la República (Ley del Impuesto al Valor Agregado)."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a0469",
+    "_id": "6ad8421581847cff034f13a5",
     "slug": "factura-electronica",
     "nombre": "Factura electrónica",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a0466",
+    "padre_id": "6ad8421581847cff034f13a2",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a0460",
-      "6ad83fff0769f419cc5a0466"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f139c",
+      "6ad8421581847cff034f13a2"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/facturacion-electronica-y-documentos-tributarios/factura-electronica",
     "orden": 17,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Factura electrónica dentro de la subárea Facturación electrónica y documentos tributarios. Incluye trámites como: Factura Electrónica en Línea (FEL), Curso: Factura Electrónica en Línea.",
+      "que_es": "Tema operativo para la gestión de Factura electrónica dentro de la subárea Facturación electrónica y documentos tributarios.",
       "lead_text": "Requisitos, pasos e información orientadora para factura electrónica (2 gestiones).",
       "base_juridica": "Decreto 27-92 (Ley del IVA, Arts. 29 y 29 'A') y Acuerdo de Directorio SAT 13-2018."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a046a",
+    "_id": "6ad8421581847cff034f13a6",
     "slug": "guias-para-llenar-formularios",
     "nombre": "Guías para llenar formularios",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a0466",
+    "padre_id": "6ad8421581847cff034f13a2",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a0460",
-      "6ad83fff0769f419cc5a0466"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f139c",
+      "6ad8421581847cff034f13a2"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/facturacion-electronica-y-documentos-tributarios/guias-para-llenar-formularios",
     "orden": 18,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Guías para llenar formularios dentro de la subárea Facturación electrónica y documentos tributarios. Incluye trámites como: Cómo llenar el formulario SAT-1411 (ISR anual), Cómo llenar el formulario SAT-2237.",
+      "que_es": "Tema operativo para la gestión de Guías para llenar formularios dentro de la subárea Facturación electrónica y documentos tributarios.",
       "lead_text": "Requisitos, pasos e información orientadora para guías para llenar formularios (2 gestiones).",
       "base_juridica": "Decreto 10-2012 (Ley de Actualización Tributaria, Libro I - Impuesto Sobre la Renta)."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a046b",
+    "_id": "6ad8421581847cff034f13a7",
     "slug": "imprentas",
     "nombre": "Imprentas",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a0466",
+    "padre_id": "6ad8421581847cff034f13a2",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a0460",
-      "6ad83fff0769f419cc5a0466"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f139c",
+      "6ad8421581847cff034f13a2"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/facturacion-electronica-y-documentos-tributarios/imprentas",
     "orden": 19,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Imprentas dentro de la subárea Facturación electrónica y documentos tributarios. Incluye trámites como: Activar o inactivar una imprenta, Registrarte como imprenta.",
+      "que_es": "Tema operativo para la gestión de Imprentas dentro de la subárea Facturación electrónica y documentos tributarios.",
       "lead_text": "Requisitos, pasos e información orientadora para imprentas (3 gestiones).",
       "base_juridica": "Decreto 10-2012 (Ley de Actualización Tributaria, Libro I - Impuesto Sobre la Renta)."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a046c",
+    "_id": "6ad8421581847cff034f13a8",
     "slug": "listado-y-requisitos-de-formularios",
     "nombre": "Listado y requisitos de formularios",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a0466",
+    "padre_id": "6ad8421581847cff034f13a2",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a0460",
-      "6ad83fff0769f419cc5a0466"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f139c",
+      "6ad8421581847cff034f13a2"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/facturacion-electronica-y-documentos-tributarios/listado-y-requisitos-de-formularios",
     "orden": 20,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Listado y requisitos de formularios dentro de la subárea Facturación electrónica y documentos tributarios. Incluye trámites como: Requisitos del formulario SAT-2251, Requisitos del formulario SAT-2390.",
+      "que_es": "Tema operativo para la gestión de Listado y requisitos de formularios dentro de la subárea Facturación electrónica y documentos tributarios.",
       "lead_text": "Requisitos, pasos e información orientadora para listado y requisitos de formularios (2 gestiones).",
       "base_juridica": "Código Tributario, Decreto 6-91 del Congreso de la República y Leyes Tributarias Específicas."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a046d",
+    "_id": "6ad8421581847cff034f13a9",
     "slug": "maquinas-registradoras-y-sistemas",
     "nombre": "Máquinas registradoras y sistemas",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a0466",
+    "padre_id": "6ad8421581847cff034f13a2",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a0460",
-      "6ad83fff0769f419cc5a0466"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f139c",
+      "6ad8421581847cff034f13a2"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/facturacion-electronica-y-documentos-tributarios/maquinas-registradoras-y-sistemas",
     "orden": 21,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Máquinas registradoras y sistemas dentro de la subárea Facturación electrónica y documentos tributarios. Incluye trámites como: Trasladar o actualizar una máquina registradora, Autorizar un sistema computarizado o máquina registradora.",
+      "que_es": "Tema operativo para la gestión de Máquinas registradoras y sistemas dentro de la subárea Facturación electrónica y documentos tributarios.",
       "lead_text": "Requisitos, pasos e información orientadora para máquinas registradoras y sistemas (2 gestiones).",
       "base_juridica": "Decreto 10-2012 (Ley de Actualización Tributaria, Libro I - Impuesto Sobre la Renta)."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a046e",
+    "_id": "6ad8421581847cff034f13aa",
     "slug": "declaraciones-pagos-y-solvencias",
     "nombre": "Declaraciones, pagos y solvencias",
     "nivel": 3,
-    "padre_id": "6ad83fff0769f419cc5a0460",
+    "padre_id": "6ad8421581847cff034f139c",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a0460"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f139c"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/declaraciones-pagos-y-solvencias",
     "orden": 22,
@@ -427,74 +427,74 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a046f",
+    "_id": "6ad8421581847cff034f13ab",
     "slug": "declaraciones",
     "nombre": "Declaraciones",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a046e",
+    "padre_id": "6ad8421581847cff034f13aa",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a0460",
-      "6ad83fff0769f419cc5a046e"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f139c",
+      "6ad8421581847cff034f13aa"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/declaraciones-pagos-y-solvencias/declaraciones",
     "orden": 23,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Declaraciones dentro de la subárea Declaraciones, pagos y solvencias. Incluye trámites como: Declarar y pagar en Declaraguate, Presentar declaración sin movimiento (valor cero).",
+      "que_es": "Tema operativo para la gestión de Declaraciones dentro de la subárea Declaraciones, pagos y solvencias.",
       "lead_text": "Requisitos, pasos e información orientadora para declaraciones (4 gestiones).",
       "base_juridica": "Código Tributario, Decreto 6-91 del Congreso de la República (Art. 57 'A')."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a0470",
+    "_id": "6ad8421581847cff034f13ac",
     "slug": "formas-de-pago-y-convenios",
     "nombre": "Formas de pago y convenios",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a046e",
+    "padre_id": "6ad8421581847cff034f13aa",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a0460",
-      "6ad83fff0769f419cc5a046e"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f139c",
+      "6ad8421581847cff034f13aa"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/declaraciones-pagos-y-solvencias/formas-de-pago-y-convenios",
     "orden": 24,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Formas de pago y convenios dentro de la subárea Declaraciones, pagos y solvencias. Incluye trámites como: Formas de pago de impuestos, Historial de facilidades de pago.",
+      "que_es": "Tema operativo para la gestión de Formas de pago y convenios dentro de la subárea Declaraciones, pagos y solvencias.",
       "lead_text": "Requisitos, pasos e información orientadora para formas de pago y convenios (5 gestiones).",
       "base_juridica": "Código Tributario, Decreto 6-91 del Congreso de la República (Art. 57 'A')."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a0471",
+    "_id": "6ad8421581847cff034f13ad",
     "slug": "solvencia-fiscal",
     "nombre": "Solvencia fiscal",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a046e",
+    "padre_id": "6ad8421581847cff034f13aa",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a0460",
-      "6ad83fff0769f419cc5a046e"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f139c",
+      "6ad8421581847cff034f13aa"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/declaraciones-pagos-y-solvencias/solvencia-fiscal",
     "orden": 25,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Solvencia fiscal dentro de la subárea Declaraciones, pagos y solvencias. Incluye trámites como: Obtener tu solvencia fiscal, Requisitos para la solvencia fiscal (SOFI).",
+      "que_es": "Tema operativo para la gestión de Solvencia fiscal dentro de la subárea Declaraciones, pagos y solvencias.",
       "lead_text": "Requisitos, pasos e información orientadora para solvencia fiscal (3 gestiones).",
       "base_juridica": "Código Tributario, Decreto 6-91 del Congreso de la República (Art. 57 'A')."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a0472",
+    "_id": "6ad8421581847cff034f13ae",
     "slug": "devoluciones-y-creditos-fiscales",
     "nombre": "Devoluciones y créditos fiscales",
     "nivel": 3,
-    "padre_id": "6ad83fff0769f419cc5a0460",
+    "padre_id": "6ad8421581847cff034f139c",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a0460"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f139c"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/devoluciones-y-creditos-fiscales",
     "orden": 26,
@@ -506,74 +506,74 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a0473",
+    "_id": "6ad8421581847cff034f13af",
     "slug": "iva-impuesto-al-valor-agregado",
     "nombre": "IVA (Impuesto al Valor Agregado)",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a0472",
+    "padre_id": "6ad8421581847cff034f13ae",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a0460",
-      "6ad83fff0769f419cc5a0472"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f139c",
+      "6ad8421581847cff034f13ae"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/devoluciones-y-creditos-fiscales/iva-impuesto-al-valor-agregado",
     "orden": 27,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de IVA (Impuesto al Valor Agregado) dentro de la subárea Devoluciones y créditos fiscales. Incluye trámites como: Usar el saldo a favor de retenciones de IVA, Devolución de IVA de facturas especiales.",
+      "que_es": "Tema operativo para la gestión de IVA (Impuesto al Valor Agregado) dentro de la subárea Devoluciones y créditos fiscales.",
       "lead_text": "Requisitos, pasos e información orientadora para iva (impuesto al valor agregado) (4 gestiones).",
       "base_juridica": "Decreto 27-92 del Congreso de la República (Ley del Impuesto al Valor Agregado)."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a0474",
+    "_id": "6ad8421581847cff034f13b0",
     "slug": "isr-impuesto-sobre-la-renta",
     "nombre": "ISR (Impuesto Sobre la Renta)",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a0472",
+    "padre_id": "6ad8421581847cff034f13ae",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a0460",
-      "6ad83fff0769f419cc5a0472"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f139c",
+      "6ad8421581847cff034f13ae"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/devoluciones-y-creditos-fiscales/isr-impuesto-sobre-la-renta",
     "orden": 28,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de ISR (Impuesto Sobre la Renta) dentro de la subárea Devoluciones y créditos fiscales. Incluye trámites como: Devolución del Impuesto Sobre la Renta (ISR) anual pagado de más, Devolución del Impuesto Sobre la Renta (ISR) opcional mensual.",
+      "que_es": "Tema operativo para la gestión de ISR (Impuesto Sobre la Renta) dentro de la subárea Devoluciones y créditos fiscales.",
       "lead_text": "Requisitos, pasos e información orientadora para isr (impuesto sobre la renta) (6 gestiones).",
       "base_juridica": "Decreto 10-2012 (Ley de Actualización Tributaria, Libro I - Impuesto Sobre la Renta)."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a0475",
+    "_id": "6ad8421581847cff034f13b1",
     "slug": "otros-impuestos",
     "nombre": "Otros impuestos",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a0472",
+    "padre_id": "6ad8421581847cff034f13ae",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a0460",
-      "6ad83fff0769f419cc5a0472"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f139c",
+      "6ad8421581847cff034f13ae"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/devoluciones-y-creditos-fiscales/otros-impuestos",
     "orden": 29,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Otros impuestos dentro de la subárea Devoluciones y créditos fiscales. Incluye trámites como: Devolución del Impuesto de Solidaridad (ISO), Requisitos para devolución del Impuesto de Solidaridad (ISO).",
+      "que_es": "Tema operativo para la gestión de Otros impuestos dentro de la subárea Devoluciones y créditos fiscales.",
       "lead_text": "Requisitos, pasos e información orientadora para otros impuestos (2 gestiones).",
       "base_juridica": "Decreto 73-2008 (Ley del Impuesto de Solidaridad - ISO)."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a0476",
+    "_id": "6ad8421581847cff034f13b2",
     "slug": "regimenes-tributarios",
     "nombre": "Regímenes tributarios",
     "nivel": 3,
-    "padre_id": "6ad83fff0769f419cc5a0460",
+    "padre_id": "6ad8421581847cff034f139c",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a0460"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f139c"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/regimenes-tributarios",
     "orden": 30,
@@ -585,74 +585,74 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a0477",
+    "_id": "6ad8421581847cff034f13b3",
     "slug": "isr-para-negocios",
     "nombre": "ISR para negocios",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a0476",
+    "padre_id": "6ad8421581847cff034f13b2",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a0460",
-      "6ad83fff0769f419cc5a0476"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f139c",
+      "6ad8421581847cff034f13b2"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/regimenes-tributarios/isr-para-negocios",
     "orden": 31,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de ISR para negocios dentro de la subárea Regímenes tributarios. Incluye trámites como: Curso: Régimen Opcional Simplificado, Curso: costos y gastos deducibles (régimen sobre utilidades).",
+      "que_es": "Tema operativo para la gestión de ISR para negocios dentro de la subárea Regímenes tributarios.",
       "lead_text": "Requisitos, pasos e información orientadora para isr para negocios (3 gestiones).",
       "base_juridica": "Decreto 10-2012 (Ley de Actualización Tributaria, Libro I - Impuesto Sobre la Renta)."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a0478",
+    "_id": "6ad8421581847cff034f13b4",
     "slug": "regimen-general-del-iva",
     "nombre": "Régimen General del IVA",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a0476",
+    "padre_id": "6ad8421581847cff034f13b2",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a0460",
-      "6ad83fff0769f419cc5a0476"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f139c",
+      "6ad8421581847cff034f13b2"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/regimenes-tributarios/regimen-general-del-iva",
     "orden": 32,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Régimen General del IVA dentro de la subárea Regímenes tributarios. Incluye trámites como: Curso: Régimen General del Impuesto al Valor Agregado (IVA), Curso: errores comunes en la declaración mensual del Impuesto al Valor Agregado (IVA).",
+      "que_es": "Tema operativo para la gestión de Régimen General del IVA dentro de la subárea Regímenes tributarios.",
       "lead_text": "Requisitos, pasos e información orientadora para régimen general del iva (3 gestiones).",
       "base_juridica": "Decreto 27-92 del Congreso de la República (Ley del Impuesto al Valor Agregado)."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a0479",
+    "_id": "6ad8421581847cff034f13b5",
     "slug": "cambio-de-regimen",
     "nombre": "Cambio de régimen",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a0476",
+    "padre_id": "6ad8421581847cff034f13b2",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a0460",
-      "6ad83fff0769f419cc5a0476"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f139c",
+      "6ad8421581847cff034f13b2"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/regimenes-tributarios/cambio-de-regimen",
     "orden": 33,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Cambio de régimen dentro de la subárea Regímenes tributarios. Incluye trámites como: Cambiar a ISR Opcional Simplificado con pago directo.",
+      "que_es": "Tema operativo para la gestión de Cambio de régimen dentro de la subárea Regímenes tributarios.",
       "lead_text": "Requisitos, pasos e información orientadora para cambio de régimen (1 gestiones).",
       "base_juridica": "Decreto 10-2012 (Ley de Actualización Tributaria, Libro I - Impuesto Sobre la Renta)."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a047a",
+    "_id": "6ad8421581847cff034f13b6",
     "slug": "vehiculos-como-propietario",
     "nombre": "Vehículos (como propietario)",
     "nivel": 3,
-    "padre_id": "6ad83fff0769f419cc5a0460",
+    "padre_id": "6ad8421581847cff034f139c",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a0460"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f139c"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/vehiculos-como-propietario",
     "orden": 34,
@@ -664,134 +664,134 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a047b",
+    "_id": "6ad8421581847cff034f13b7",
     "slug": "autorizaciones-consultas-y-requisitos",
     "nombre": "Autorizaciones, consultas y requisitos",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a047a",
+    "padre_id": "6ad8421581847cff034f13b6",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a0460",
-      "6ad83fff0769f419cc5a047a"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f139c",
+      "6ad8421581847cff034f13b6"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/vehiculos-como-propietario/autorizaciones-consultas-y-requisitos",
     "orden": 35,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Autorizaciones, consultas y requisitos dentro de la subárea Vehículos (como propietario). Incluye trámites como: Requisitos para la Inscripción de Vehículos, Requisitos para la Reposición de Distintivos (Certificado de Propiedad, Tarjeta y Placas de Circulación) con Formularios Electrónicos (Declaraguate).",
+      "que_es": "Tema operativo para la gestión de Autorizaciones, consultas y requisitos dentro de la subárea Vehículos (como propietario).",
       "lead_text": "Requisitos, pasos e información orientadora para autorizaciones, consultas y requisitos (16 gestiones).",
       "base_juridica": "Decreto 70-94 (Ley del Impuesto sobre Circulación de Vehículos Terrestres, Marítimos y Aéreos)."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a047c",
+    "_id": "6ad8421581847cff034f13b8",
     "slug": "inscripcion-distintivos-y-placas",
     "nombre": "Inscripción, distintivos y placas",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a047a",
+    "padre_id": "6ad8421581847cff034f13b6",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a0460",
-      "6ad83fff0769f419cc5a047a"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f139c",
+      "6ad8421581847cff034f13b6"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/vehiculos-como-propietario/inscripcion-distintivos-y-placas",
     "orden": 36,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Inscripción, distintivos y placas dentro de la subárea Vehículos (como propietario). Incluye trámites como: Inscribir remolques y semirremolques fabricados en Guatemala, Inscribir un vehículo.",
+      "que_es": "Tema operativo para la gestión de Inscripción, distintivos y placas dentro de la subárea Vehículos (como propietario).",
       "lead_text": "Requisitos, pasos e información orientadora para inscripción, distintivos y placas (19 gestiones).",
       "base_juridica": "Decreto 70-94 (Ley del Impuesto sobre Circulación de Vehículos Terrestres, Marítimos y Aéreos)."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a047d",
+    "_id": "6ad8421581847cff034f13b9",
     "slug": "bajas-inactivacion-y-reactivacion",
     "nombre": "Bajas, inactivación y reactivación",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a047a",
+    "padre_id": "6ad8421581847cff034f13b6",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a0460",
-      "6ad83fff0769f419cc5a047a"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f139c",
+      "6ad8421581847cff034f13b6"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/vehiculos-como-propietario/bajas-inactivacion-y-reactivacion",
     "orden": 37,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Bajas, inactivación y reactivación dentro de la subárea Vehículos (como propietario). Incluye trámites como: Reactivar un vehículo por orden judicial, Reactivar vehículos del caso San Marcos.",
+      "que_es": "Tema operativo para la gestión de Bajas, inactivación y reactivación dentro de la subárea Vehículos (como propietario).",
       "lead_text": "Requisitos, pasos e información orientadora para bajas, inactivación y reactivación (11 gestiones).",
       "base_juridica": "Decreto 70-94 (Ley del Impuesto sobre Circulación de Vehículos Terrestres, Marítimos y Aéreos)."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a047e",
+    "_id": "6ad8421581847cff034f13ba",
     "slug": "impuesto-de-circulacion-iscv-y-valores",
     "nombre": "Impuesto de circulación (ISCV) y valores",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a047a",
+    "padre_id": "6ad8421581847cff034f13b6",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a0460",
-      "6ad83fff0769f419cc5a047a"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f139c",
+      "6ad8421581847cff034f13b6"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/vehiculos-como-propietario/impuesto-de-circulacion-iscv-y-valores",
     "orden": 38,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Impuesto de circulación (ISCV) y valores dentro de la subárea Vehículos (como propietario). Incluye trámites como: Acuerdo que aprueba la tabla del IVA por venta de vehículos, Acuerdo que aprueba la tabla del impuesto de circulación.",
+      "que_es": "Tema operativo para la gestión de Impuesto de circulación (ISCV) y valores dentro de la subárea Vehículos (como propietario).",
       "lead_text": "Requisitos, pasos e información orientadora para impuesto de circulación (iscv) y valores (11 gestiones).",
       "base_juridica": "Decreto 70-94 (Ley del Impuesto sobre Circulación de Vehículos Terrestres, Marítimos y Aéreos)."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a047f",
+    "_id": "6ad8421581847cff034f13bb",
     "slug": "modificaciones-y-rectificaciones",
     "nombre": "Modificaciones y rectificaciones",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a047a",
+    "padre_id": "6ad8421581847cff034f13b6",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a0460",
-      "6ad83fff0769f419cc5a047a"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f139c",
+      "6ad8421581847cff034f13b6"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/vehiculos-como-propietario/modificaciones-y-rectificaciones",
     "orden": 39,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Modificaciones y rectificaciones dentro de la subárea Vehículos (como propietario). Incluye trámites como: Corregir el código del impuesto de circulación, Cambiar características del vehículo (conversión o transformación).",
+      "que_es": "Tema operativo para la gestión de Modificaciones y rectificaciones dentro de la subárea Vehículos (como propietario).",
       "lead_text": "Requisitos, pasos e información orientadora para modificaciones y rectificaciones (6 gestiones).",
       "base_juridica": "Decreto 70-94 (Ley del Impuesto sobre Circulación de Vehículos Terrestres, Marítimos y Aéreos)."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a0480",
+    "_id": "6ad8421581847cff034f13bc",
     "slug": "traspasos-de-vehiculos",
     "nombre": "Traspasos de vehículos",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a047a",
+    "padre_id": "6ad8421581847cff034f13b6",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a0460",
-      "6ad83fff0769f419cc5a047a"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f139c",
+      "6ad8421581847cff034f13b6"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/vehiculos-como-propietario/traspasos-de-vehiculos",
     "orden": 40,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Traspasos de vehículos dentro de la subárea Vehículos (como propietario). Incluye trámites como: Traspasar un vehículo con escritura pública o factura, Activar un vehículo para traspaso con declaración jurada o mandato.",
+      "que_es": "Tema operativo para la gestión de Traspasos de vehículos dentro de la subárea Vehículos (como propietario).",
       "lead_text": "Requisitos, pasos e información orientadora para traspasos de vehículos (17 gestiones).",
       "base_juridica": "Decreto 70-94 (Ley del Impuesto sobre Circulación de Vehículos Terrestres, Marítimos y Aéreos)."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a0481",
+    "_id": "6ad8421581847cff034f13bd",
     "slug": "servicios-y-gestiones-al-contribuyente",
     "nombre": "Servicios y gestiones al contribuyente",
     "nivel": 3,
-    "padre_id": "6ad83fff0769f419cc5a0460",
+    "padre_id": "6ad8421581847cff034f139c",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a0460"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f139c"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/servicios-y-gestiones-al-contribuyente",
     "orden": 41,
@@ -803,214 +803,214 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a0482",
+    "_id": "6ad8421581847cff034f13be",
     "slug": "constancias-y-gestiones-del-rtu",
     "nombre": "Constancias y gestiones del RTU",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a0481",
+    "padre_id": "6ad8421581847cff034f13bd",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a0460",
-      "6ad83fff0769f419cc5a0481"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f139c",
+      "6ad8421581847cff034f13bd"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/servicios-y-gestiones-al-contribuyente/constancias-y-gestiones-del-rtu",
     "orden": 42,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Constancias y gestiones del RTU dentro de la subárea Servicios y gestiones al contribuyente. Incluye trámites como: Requisitos sobre Formularios Electrónicos Solicitud Dev. C.F. Régimen Especial Electrónico y Régimen General, Requisitos para la Inscripción en el Registro Tributario Unificado (RTU).",
+      "que_es": "Tema operativo para la gestión de Constancias y gestiones del RTU dentro de la subárea Servicios y gestiones al contribuyente.",
       "lead_text": "Requisitos, pasos e información orientadora para constancias y gestiones del rtu (9 gestiones).",
       "base_juridica": "Código Tributario, Decreto 6-91 (Arts. 112 y 120) y Acuerdo de Directorio SAT 08-2020."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a0483",
+    "_id": "6ad8421581847cff034f13bf",
     "slug": "otros-servicios-al-contribuyente",
     "nombre": "Otros servicios al contribuyente",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a0481",
+    "padre_id": "6ad8421581847cff034f13bd",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a0460",
-      "6ad83fff0769f419cc5a0481"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f139c",
+      "6ad8421581847cff034f13bd"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/servicios-y-gestiones-al-contribuyente/otros-servicios-al-contribuyente",
     "orden": 43,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Otros servicios al contribuyente dentro de la subárea Servicios y gestiones al contribuyente. Incluye trámites como: Consultar códigos de actividades económicas, Imprimir tu constancia del Registro Tributario Unificado (RTU).",
+      "que_es": "Tema operativo para la gestión de Otros servicios al contribuyente dentro de la subárea Servicios y gestiones al contribuyente.",
       "lead_text": "Requisitos, pasos e información orientadora para otros servicios al contribuyente (16 gestiones).",
       "base_juridica": "Código Tributario, Decreto 6-91 (Arts. 112 y 120) y Acuerdo de Directorio SAT 08-2020."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a0484",
+    "_id": "6ad8421581847cff034f13c0",
     "slug": "acceso-y-usuario",
     "nombre": "Acceso y usuario",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a0481",
+    "padre_id": "6ad8421581847cff034f13bd",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a0460",
-      "6ad83fff0769f419cc5a0481"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f139c",
+      "6ad8421581847cff034f13bd"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/servicios-y-gestiones-al-contribuyente/acceso-y-usuario",
     "orden": 44,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Acceso y usuario dentro de la subárea Servicios y gestiones al contribuyente. Incluye trámites como: Activar tu usuario de Agencia Virtual.",
+      "que_es": "Tema operativo para la gestión de Acceso y usuario dentro de la subárea Servicios y gestiones al contribuyente.",
       "lead_text": "Requisitos, pasos e información orientadora para acceso y usuario (1 gestiones).",
       "base_juridica": "Código Tributario, Decreto 6-91 (Arts. 112 y 120) y Acuerdo de Directorio SAT 08-2020."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a0485",
+    "_id": "6ad8421581847cff034f13c1",
     "slug": "citas-y-oficinas",
     "nombre": "Citas y oficinas",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a0481",
+    "padre_id": "6ad8421581847cff034f13bd",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a0460",
-      "6ad83fff0769f419cc5a0481"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f139c",
+      "6ad8421581847cff034f13bd"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/servicios-y-gestiones-al-contribuyente/citas-y-oficinas",
     "orden": 45,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Citas y oficinas dentro de la subárea Servicios y gestiones al contribuyente. Incluye trámites como: Oficinas administrativas.",
+      "que_es": "Tema operativo para la gestión de Citas y oficinas dentro de la subárea Servicios y gestiones al contribuyente.",
       "lead_text": "Requisitos, pasos e información orientadora para citas y oficinas (1 gestiones).",
       "base_juridica": "Decreto 27-92 del Congreso de la República (Ley del Impuesto al Valor Agregado)."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a0486",
+    "_id": "6ad8421581847cff034f13c2",
     "slug": "citas-estado-y-quejas",
     "nombre": "Citas, estado y quejas",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a0481",
+    "padre_id": "6ad8421581847cff034f13bd",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a0460",
-      "6ad83fff0769f419cc5a0481"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f139c",
+      "6ad8421581847cff034f13bd"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/servicios-y-gestiones-al-contribuyente/citas-estado-y-quejas",
     "orden": 46,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Citas, estado y quejas dentro de la subárea Servicios y gestiones al contribuyente. Incluye trámites como: Denunciar a quien no da factura, Chatear con la SAT.",
+      "que_es": "Tema operativo para la gestión de Citas, estado y quejas dentro de la subárea Servicios y gestiones al contribuyente.",
       "lead_text": "Requisitos, pasos e información orientadora para citas, estado y quejas (7 gestiones).",
       "base_juridica": "Código Tributario, Decreto 6-91 del Congreso de la República y Leyes Tributarias Específicas."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a0487",
+    "_id": "6ad8421581847cff034f13c3",
     "slug": "correcciones",
     "nombre": "Correcciones",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a0481",
+    "padre_id": "6ad8421581847cff034f13bd",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a0460",
-      "6ad83fff0769f419cc5a0481"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f139c",
+      "6ad8421581847cff034f13bd"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/servicios-y-gestiones-al-contribuyente/correcciones",
     "orden": 47,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Correcciones dentro de la subárea Servicios y gestiones al contribuyente. Incluye trámites como: Corregir el período de una declaración o pago, Corregir la casilla de declaración rectificativa.",
+      "que_es": "Tema operativo para la gestión de Correcciones dentro de la subárea Servicios y gestiones al contribuyente.",
       "lead_text": "Requisitos, pasos e información orientadora para correcciones (2 gestiones).",
       "base_juridica": "Código Tributario, Decreto 6-91 del Congreso de la República y Leyes Tributarias Específicas."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a0488",
+    "_id": "6ad8421581847cff034f13c4",
     "slug": "libros-facturas-y-maquinas",
     "nombre": "Libros, facturas y máquinas",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a0481",
+    "padre_id": "6ad8421581847cff034f13bd",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a0460",
-      "6ad83fff0769f419cc5a0481"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f139c",
+      "6ad8421581847cff034f13bd"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/servicios-y-gestiones-al-contribuyente/libros-facturas-y-maquinas",
     "orden": 48,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Libros, facturas y máquinas dentro de la subárea Servicios y gestiones al contribuyente. Incluye trámites como: Anular documentos en Agencia Virtual.",
+      "que_es": "Tema operativo para la gestión de Libros, facturas y máquinas dentro de la subárea Servicios y gestiones al contribuyente.",
       "lead_text": "Requisitos, pasos e información orientadora para libros, facturas y máquinas (1 gestiones).",
       "base_juridica": "Código Tributario, Decreto 6-91 (Arts. 112 y 120) y Acuerdo de Directorio SAT 08-2020."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a0489",
+    "_id": "6ad8421581847cff034f13c5",
     "slug": "orientacion-y-constancias",
     "nombre": "Orientación y constancias",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a0481",
+    "padre_id": "6ad8421581847cff034f13bd",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a0460",
-      "6ad83fff0769f419cc5a0481"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f139c",
+      "6ad8421581847cff034f13bd"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/servicios-y-gestiones-al-contribuyente/orientacion-y-constancias",
     "orden": 49,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Orientación y constancias dentro de la subárea Servicios y gestiones al contribuyente. Incluye trámites como: Información sobre: Orientación legal., Planilla del Impuesto al Valor Agregado (IVA) en Factura Electrónica en Línea (FEL).",
+      "que_es": "Tema operativo para la gestión de Orientación y constancias dentro de la subárea Servicios y gestiones al contribuyente.",
       "lead_text": "Requisitos, pasos e información orientadora para orientación y constancias (6 gestiones).",
       "base_juridica": "Decreto 27-92 del Congreso de la República (Ley del Impuesto al Valor Agregado)."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a048a",
+    "_id": "6ad8421581847cff034f13c6",
     "slug": "agencia-virtual-y-accesos",
     "nombre": "Agencia Virtual y accesos",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a0481",
+    "padre_id": "6ad8421581847cff034f13bd",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a0460",
-      "6ad83fff0769f419cc5a0481"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f139c",
+      "6ad8421581847cff034f13bd"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/servicios-y-gestiones-al-contribuyente/agencia-virtual-y-accesos",
     "orden": 50,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Agencia Virtual y accesos dentro de la subárea Servicios y gestiones al contribuyente. Incluye trámites como: Autorizar máquinas registradoras en Agencia Virtual, Solicitar usuario de Agencia Virtual.",
+      "que_es": "Tema operativo para la gestión de Agencia Virtual y accesos dentro de la subárea Servicios y gestiones al contribuyente.",
       "lead_text": "Requisitos, pasos e información orientadora para agencia virtual y accesos (6 gestiones).",
       "base_juridica": "Código Tributario, Decreto 6-91 (Arts. 112 y 120) y Acuerdo de Directorio SAT 08-2020."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a048b",
+    "_id": "6ad8421581847cff034f13c7",
     "slug": "sistemas-de-retencion",
     "nombre": "Sistemas de retención",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a0481",
+    "padre_id": "6ad8421581847cff034f13bd",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a0460",
-      "6ad83fff0769f419cc5a0481"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f139c",
+      "6ad8421581847cff034f13bd"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/servicios-y-gestiones-al-contribuyente/sistemas-de-retencion",
     "orden": 51,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Sistemas de retención dentro de la subárea Servicios y gestiones al contribuyente. Incluye trámites como: Sistema de retenciones del Impuesto al Valor Agregado (IVA).",
+      "que_es": "Tema operativo para la gestión de Sistemas de retención dentro de la subárea Servicios y gestiones al contribuyente.",
       "lead_text": "Requisitos, pasos e información orientadora para sistemas de retención (1 gestiones).",
       "base_juridica": "Código Tributario, Decreto 6-91 (Arts. 112 y 120) y Acuerdo de Directorio SAT 08-2020."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a048c",
+    "_id": "6ad8421581847cff034f13c8",
     "slug": "cultura-tributaria-y-capacitacion",
     "nombre": "Cultura tributaria y capacitación",
     "nivel": 3,
-    "padre_id": "6ad83fff0769f419cc5a0460",
+    "padre_id": "6ad8421581847cff034f139c",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a0460"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f139c"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/cultura-tributaria-y-capacitacion",
     "orden": 52,
@@ -1022,233 +1022,233 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a048d",
+    "_id": "6ad8421581847cff034f13c9",
     "slug": "programas-de-cultura-tributaria",
     "nombre": "Programas de cultura tributaria",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a048c",
+    "padre_id": "6ad8421581847cff034f13c8",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a0460",
-      "6ad83fff0769f419cc5a048c"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f139c",
+      "6ad8421581847cff034f13c8"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/cultura-tributaria-y-capacitacion/programas-de-cultura-tributaria",
     "orden": 53,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Programas de cultura tributaria dentro de la subárea Cultura tributaria y capacitación. Incluye trámites como: Proyección educativa, Capacitaciones en idiomas mayas.",
+      "que_es": "Tema operativo para la gestión de Programas de cultura tributaria dentro de la subárea Cultura tributaria y capacitación.",
       "lead_text": "Requisitos, pasos e información orientadora para programas de cultura tributaria (3 gestiones).",
       "base_juridica": "Decreto 27-92 del Congreso de la República (Ley del Impuesto al Valor Agregado)."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a048e",
+    "_id": "6ad8421581847cff034f13ca",
     "slug": "cursos-de-herramientas-y-gestiones",
     "nombre": "Cursos de herramientas y gestiones",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a048c",
+    "padre_id": "6ad8421581847cff034f13c8",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a0460",
-      "6ad83fff0769f419cc5a048c"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f139c",
+      "6ad8421581847cff034f13c8"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/cultura-tributaria-y-capacitacion/cursos-de-herramientas-y-gestiones",
     "orden": 54,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Cursos de herramientas y gestiones dentro de la subárea Cultura tributaria y capacitación. Incluye trámites como: Curso: cancelación por prescripción en Agencia Virtual, Curso: Libros Electrónicos Tributarios (LET).",
+      "que_es": "Tema operativo para la gestión de Cursos de herramientas y gestiones dentro de la subárea Cultura tributaria y capacitación.",
       "lead_text": "Requisitos, pasos e información orientadora para cursos de herramientas y gestiones (10 gestiones).",
       "base_juridica": "Decreto 27-92 (Ley del IVA, Arts. 29 y 29 'A') y Acuerdo de Directorio SAT 13-2018."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a048f",
+    "_id": "6ad8421581847cff034f13cb",
     "slug": "biblioteca-virtual-y-descargas",
     "nombre": "Biblioteca virtual y descargas",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a048c",
+    "padre_id": "6ad8421581847cff034f13c8",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a0460",
-      "6ad83fff0769f419cc5a048c"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f139c",
+      "6ad8421581847cff034f13c8"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/cultura-tributaria-y-capacitacion/biblioteca-virtual-y-descargas",
     "orden": 55,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Biblioteca virtual y descargas dentro de la subárea Cultura tributaria y capacitación. Incluye trámites como: Biblioteca virtual, Presentaciones virtuales.",
+      "que_es": "Tema operativo para la gestión de Biblioteca virtual y descargas dentro de la subárea Cultura tributaria y capacitación.",
       "lead_text": "Requisitos, pasos e información orientadora para biblioteca virtual y descargas (3 gestiones).",
       "base_juridica": "Código Tributario, Decreto 6-91 (Arts. 112 y 120) y Acuerdo de Directorio SAT 08-2020."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a0490",
+    "_id": "6ad8421581847cff034f13cc",
     "slug": "calendario-y-modalidades",
     "nombre": "Calendario y modalidades",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a048c",
+    "padre_id": "6ad8421581847cff034f13c8",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a0460",
-      "6ad83fff0769f419cc5a048c"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f139c",
+      "6ad8421581847cff034f13c8"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/cultura-tributaria-y-capacitacion/calendario-y-modalidades",
     "orden": 56,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Calendario y modalidades dentro de la subárea Cultura tributaria y capacitación. Incluye trámites como: Capacitaciones en vivo, Diplomados virtuales.",
+      "que_es": "Tema operativo para la gestión de Calendario y modalidades dentro de la subárea Cultura tributaria y capacitación.",
       "lead_text": "Requisitos, pasos e información orientadora para calendario y modalidades (9 gestiones).",
       "base_juridica": "Código Tributario, Decreto 6-91 (Arts. 112 y 120) y Acuerdo de Directorio SAT 08-2020."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a0491",
+    "_id": "6ad8421581847cff034f13cd",
     "slug": "cursos-de-isr",
     "nombre": "Cursos de ISR",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a048c",
+    "padre_id": "6ad8421581847cff034f13c8",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a0460",
-      "6ad83fff0769f419cc5a048c"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f139c",
+      "6ad8421581847cff034f13c8"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/cultura-tributaria-y-capacitacion/cursos-de-isr",
     "orden": 57,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Cursos de ISR dentro de la subárea Cultura tributaria y capacitación. Incluye trámites como: Curso: retiros de fondos del dueño para gastos personales, Curso: regímenes del ISR para negocios.",
+      "que_es": "Tema operativo para la gestión de Cursos de ISR dentro de la subárea Cultura tributaria y capacitación.",
       "lead_text": "Requisitos, pasos e información orientadora para cursos de isr (7 gestiones).",
       "base_juridica": "Decreto 10-2012 (Ley de Actualización Tributaria, Libro I - Impuesto Sobre la Renta)."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a0492",
+    "_id": "6ad8421581847cff034f13ce",
     "slug": "cursos-de-iva",
     "nombre": "Cursos de IVA",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a048c",
+    "padre_id": "6ad8421581847cff034f13c8",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a0460",
-      "6ad83fff0769f419cc5a048c"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f139c",
+      "6ad8421581847cff034f13c8"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/cultura-tributaria-y-capacitacion/cursos-de-iva",
     "orden": 58,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Cursos de IVA dentro de la subárea Cultura tributaria y capacitación. Incluye trámites como: Curso: Impuesto de Solidaridad (ISO), Curso: Impuesto al Valor Agregado (IVA).",
+      "que_es": "Tema operativo para la gestión de Cursos de IVA dentro de la subárea Cultura tributaria y capacitación.",
       "lead_text": "Requisitos, pasos e información orientadora para cursos de iva (4 gestiones).",
       "base_juridica": "Decreto 10-2012 (Ley de Actualización Tributaria, Libro I - Impuesto Sobre la Renta)."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a0493",
+    "_id": "6ad8421581847cff034f13cf",
     "slug": "cursos-de-otros-impuestos-y-criterios",
     "nombre": "Cursos de otros impuestos y criterios",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a048c",
+    "padre_id": "6ad8421581847cff034f13c8",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a0460",
-      "6ad83fff0769f419cc5a048c"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f139c",
+      "6ad8421581847cff034f13c8"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/cultura-tributaria-y-capacitacion/cursos-de-otros-impuestos-y-criterios",
     "orden": 59,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Cursos de otros impuestos y criterios dentro de la subárea Cultura tributaria y capacitación. Incluye trámites como: Curso: criterios institucionales, Curso: impuesto a bebidas alcohólicas.",
+      "que_es": "Tema operativo para la gestión de Cursos de otros impuestos y criterios dentro de la subárea Cultura tributaria y capacitación.",
       "lead_text": "Requisitos, pasos e información orientadora para cursos de otros impuestos y criterios (7 gestiones).",
       "base_juridica": "Decreto 10-2012 (Ley de Actualización Tributaria, Libro I - Impuesto Sobre la Renta)."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a0494",
+    "_id": "6ad8421581847cff034f13d0",
     "slug": "cursos-por-tipo-de-contribuyente",
     "nombre": "Cursos por tipo de contribuyente",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a048c",
+    "padre_id": "6ad8421581847cff034f13c8",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a0460",
-      "6ad83fff0769f419cc5a048c"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f139c",
+      "6ad8421581847cff034f13c8"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/cultura-tributaria-y-capacitacion/cursos-por-tipo-de-contribuyente",
     "orden": 60,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Cursos por tipo de contribuyente dentro de la subárea Cultura tributaria y capacitación. Incluye trámites como: Curso: beneficios de formalizarte si eres emprendedor, Curso: gestiones de las Organizaciones de Padres de Familia.",
+      "que_es": "Tema operativo para la gestión de Cursos por tipo de contribuyente dentro de la subárea Cultura tributaria y capacitación.",
       "lead_text": "Requisitos, pasos e información orientadora para cursos por tipo de contribuyente (2 gestiones).",
       "base_juridica": "Código Tributario, Decreto 6-91 (Arts. 112 y 120) y Acuerdo de Directorio SAT 08-2020."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a0495",
+    "_id": "6ad8421581847cff034f13d1",
     "slug": "informacion-institucional",
     "nombre": "Información institucional",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a048c",
+    "padre_id": "6ad8421581847cff034f13c8",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a0460",
-      "6ad83fff0769f419cc5a048c"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f139c",
+      "6ad8421581847cff034f13c8"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/cultura-tributaria-y-capacitacion/informacion-institucional",
     "orden": 61,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Información institucional dentro de la subárea Cultura tributaria y capacitación. Incluye trámites como: Autoridades de la SAT, ¿Qué es la SAT?.",
+      "que_es": "Tema operativo para la gestión de Información institucional dentro de la subárea Cultura tributaria y capacitación.",
       "lead_text": "Requisitos, pasos e información orientadora para información institucional (2 gestiones).",
       "base_juridica": "Decreto 27-92 del Congreso de la República (Ley del Impuesto al Valor Agregado)."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a0496",
+    "_id": "6ad8421581847cff034f13d2",
     "slug": "leyes-y-normativa",
     "nombre": "Leyes y normativa",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a048c",
+    "padre_id": "6ad8421581847cff034f13c8",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a0460",
-      "6ad83fff0769f419cc5a048c"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f139c",
+      "6ad8421581847cff034f13c8"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/cultura-tributaria-y-capacitacion/leyes-y-normativa",
     "orden": 62,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Leyes y normativa dentro de la subárea Cultura tributaria y capacitación. Incluye trámites como: Leyes tributarias, Normativa de la SAT.",
+      "que_es": "Tema operativo para la gestión de Leyes y normativa dentro de la subárea Cultura tributaria y capacitación.",
       "lead_text": "Requisitos, pasos e información orientadora para leyes y normativa (2 gestiones).",
       "base_juridica": "Decreto 27-92 del Congreso de la República (Ley del Impuesto al Valor Agregado)."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a0497",
+    "_id": "6ad8421581847cff034f13d3",
     "slug": "preguntas-frecuentes",
     "nombre": "Preguntas frecuentes",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a048c",
+    "padre_id": "6ad8421581847cff034f13c8",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a0460",
-      "6ad83fff0769f419cc5a048c"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f139c",
+      "6ad8421581847cff034f13c8"
     ],
     "materialized_path": "contribuyentes/contribuyente-general/cultura-tributaria-y-capacitacion/preguntas-frecuentes",
     "orden": 63,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Preguntas frecuentes dentro de la subárea Cultura tributaria y capacitación. Incluye trámites como: Preguntas Frecuentes sobre Cumplimiento Tributario, Preguntas frecuentes: gestiones en línea.",
+      "que_es": "Tema operativo para la gestión de Preguntas frecuentes dentro de la subárea Cultura tributaria y capacitación.",
       "lead_text": "Requisitos, pasos e información orientadora para preguntas frecuentes (4 gestiones).",
       "base_juridica": "Decreto 27-92 del Congreso de la República (Ley del Impuesto al Valor Agregado)."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a0498",
+    "_id": "6ad8421581847cff034f13d4",
     "slug": "contribuyentes-especiales",
     "nombre": "Contribuyentes Especiales",
     "nivel": 2,
-    "padre_id": "6ad83fff0769f419cc5a0459",
+    "padre_id": "6ad8421581847cff034f1395",
     "ruta": [
-      "6ad83fff0769f419cc5a0459"
+      "6ad8421581847cff034f1395"
     ],
     "materialized_path": "contribuyentes/contribuyentes-especiales",
     "orden": 64,
@@ -1260,14 +1260,14 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a0499",
+    "_id": "6ad8421581847cff034f13d5",
     "slug": "gerencias-especiales-y-control-tributario",
     "nombre": "Gerencias Especiales y Control Tributario",
     "nivel": 3,
-    "padre_id": "6ad83fff0769f419cc5a0498",
+    "padre_id": "6ad8421581847cff034f13d4",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a0498"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f13d4"
     ],
     "materialized_path": "contribuyentes/contribuyentes-especiales/gerencias-especiales-y-control-tributario",
     "orden": 65,
@@ -1279,14 +1279,14 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a049a",
+    "_id": "6ad8421581847cff034f13d6",
     "slug": "declaraciones-e-informes-especiales",
     "nombre": "Declaraciones e Informes Especiales",
     "nivel": 3,
-    "padre_id": "6ad83fff0769f419cc5a0498",
+    "padre_id": "6ad8421581847cff034f13d4",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a0498"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f13d4"
     ],
     "materialized_path": "contribuyentes/contribuyentes-especiales/declaraciones-e-informes-especiales",
     "orden": 66,
@@ -1298,14 +1298,14 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a049b",
+    "_id": "6ad8421581847cff034f13d7",
     "slug": "capacitacion-y-orientacion-diferenciada",
     "nombre": "Capacitación y Orientación Diferenciada",
     "nivel": 3,
-    "padre_id": "6ad83fff0769f419cc5a0498",
+    "padre_id": "6ad8421581847cff034f13d4",
     "ruta": [
-      "6ad83fff0769f419cc5a0459",
-      "6ad83fff0769f419cc5a0498"
+      "6ad8421581847cff034f1395",
+      "6ad8421581847cff034f13d4"
     ],
     "materialized_path": "contribuyentes/contribuyentes-especiales/capacitacion-y-orientacion-diferenciada",
     "orden": 67,
@@ -1317,13 +1317,13 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a049c",
+    "_id": "6ad8421581847cff034f13d8",
     "slug": "sin-obligaciones",
     "nombre": "Sin Obligaciones",
     "nivel": 2,
-    "padre_id": "6ad83fff0769f419cc5a0459",
+    "padre_id": "6ad8421581847cff034f1395",
     "ruta": [
-      "6ad83fff0769f419cc5a0459"
+      "6ad8421581847cff034f1395"
     ],
     "materialized_path": "contribuyentes/sin-obligaciones",
     "orden": 68,
@@ -1335,7 +1335,7 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a049d",
+    "_id": "6ad8421581847cff034f13d9",
     "slug": "operadores-de-comercio-exterior",
     "nombre": "Operadores de Comercio Exterior",
     "nivel": 1,
@@ -1351,13 +1351,13 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a049e",
+    "_id": "6ad8421581847cff034f13da",
     "slug": "regimenes-territoriales-y-zonas-especiales",
     "nombre": "Regímenes Territoriales y Zonas Especiales",
     "nivel": 2,
-    "padre_id": "6ad83fff0769f419cc5a049d",
+    "padre_id": "6ad8421581847cff034f13d9",
     "ruta": [
-      "6ad83fff0769f419cc5a049d"
+      "6ad8421581847cff034f13d9"
     ],
     "materialized_path": "operadores-de-comercio-exterior/regimenes-territoriales-y-zonas-especiales",
     "orden": 70,
@@ -1369,14 +1369,14 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a049f",
+    "_id": "6ad8421581847cff034f13db",
     "slug": "maquilas-decreto-29-89",
     "nombre": "Maquilas (Decreto 29-89)",
     "nivel": 3,
-    "padre_id": "6ad83fff0769f419cc5a049e",
+    "padre_id": "6ad8421581847cff034f13da",
     "ruta": [
-      "6ad83fff0769f419cc5a049d",
-      "6ad83fff0769f419cc5a049e"
+      "6ad8421581847cff034f13d9",
+      "6ad8421581847cff034f13da"
     ],
     "materialized_path": "operadores-de-comercio-exterior/regimenes-territoriales-y-zonas-especiales/maquilas-decreto-29-89",
     "orden": 71,
@@ -1388,74 +1388,74 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04a0",
+    "_id": "6ad8421581847cff034f13dc",
     "slug": "inscripcion-y-garantias",
     "nombre": "Inscripción y garantías",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a049f",
+    "padre_id": "6ad8421581847cff034f13db",
     "ruta": [
-      "6ad83fff0769f419cc5a049d",
-      "6ad83fff0769f419cc5a049e",
-      "6ad83fff0769f419cc5a049f"
+      "6ad8421581847cff034f13d9",
+      "6ad8421581847cff034f13da",
+      "6ad8421581847cff034f13db"
     ],
     "materialized_path": "operadores-de-comercio-exterior/regimenes-territoriales-y-zonas-especiales/maquilas-decreto-29-89/inscripcion-y-garantias",
     "orden": 72,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Inscripción y garantías dentro de la subárea Maquilas (Decreto 29-89). Incluye trámites como: Constitución y Validación de Póliza de Fianza / Seguro de Caución (Dto. 29-89), Habilitación y Registro de Cuenta Corriente de Insumos y Materias Primas.",
+      "que_es": "Tema operativo para la gestión de Inscripción y garantías dentro de la subárea Maquilas (Decreto 29-89).",
       "lead_text": "Requisitos, pasos e información orientadora para inscripción y garantías (4 gestiones).",
       "base_juridica": "Decreto 29-89 (Ley de Fomento y Desarrollo de la Actividad Exportadora y de Maquila)."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04a1",
+    "_id": "6ad8421581847cff034f13dd",
     "slug": "operacion-y-descargos",
     "nombre": "Operación y descargos",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a049f",
+    "padre_id": "6ad8421581847cff034f13db",
     "ruta": [
-      "6ad83fff0769f419cc5a049d",
-      "6ad83fff0769f419cc5a049e",
-      "6ad83fff0769f419cc5a049f"
+      "6ad8421581847cff034f13d9",
+      "6ad8421581847cff034f13da",
+      "6ad8421581847cff034f13db"
     ],
     "materialized_path": "operadores-de-comercio-exterior/regimenes-territoriales-y-zonas-especiales/maquilas-decreto-29-89/operacion-y-descargos",
     "orden": 73,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Operación y descargos dentro de la subárea Maquilas (Decreto 29-89). Incluye trámites como: Declaración Aduanera de Admisión Temporal (DUCA Perfeccionamiento Activo), Descargo Periódico de Cuentas Corrientes y Cuadre Insumo-Producto.",
+      "que_es": "Tema operativo para la gestión de Operación y descargos dentro de la subárea Maquilas (Decreto 29-89).",
       "lead_text": "Requisitos, pasos e información orientadora para operación y descargos (4 gestiones).",
       "base_juridica": "Decreto 29-89 (Ley de Fomento y Desarrollo de la Actividad Exportadora y de Maquila)."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04a2",
+    "_id": "6ad8421581847cff034f13de",
     "slug": "cierre-desperdicios-y-normativa",
     "nombre": "Cierre, desperdicios y normativa",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a049f",
+    "padre_id": "6ad8421581847cff034f13db",
     "ruta": [
-      "6ad83fff0769f419cc5a049d",
-      "6ad83fff0769f419cc5a049e",
-      "6ad83fff0769f419cc5a049f"
+      "6ad8421581847cff034f13d9",
+      "6ad8421581847cff034f13da",
+      "6ad8421581847cff034f13db"
     ],
     "materialized_path": "operadores-de-comercio-exterior/regimenes-territoriales-y-zonas-especiales/maquilas-decreto-29-89/cierre-desperdicios-y-normativa",
     "orden": 74,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Cierre, desperdicios y normativa dentro de la subárea Maquilas (Decreto 29-89). Incluye trámites como: Cancelación de Cuenta Corriente y Liberación de Fianza por Cese de Operaciones, Destrucción o Donación de Desperdicios bajo Supervisión Aduanera.",
+      "que_es": "Tema operativo para la gestión de Cierre, desperdicios y normativa dentro de la subárea Maquilas (Decreto 29-89).",
       "lead_text": "Requisitos, pasos e información orientadora para cierre, desperdicios y normativa (4 gestiones).",
       "base_juridica": "Decreto 29-89 (Ley de Fomento y Desarrollo de la Actividad Exportadora y de Maquila)."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04a3",
+    "_id": "6ad8421581847cff034f13df",
     "slug": "zonas-de-desarrollo-economico-especial-publico-zdeep",
     "nombre": "Zonas de Desarrollo Económico Especial Público (ZDEEP)",
     "nivel": 3,
-    "padre_id": "6ad83fff0769f419cc5a049e",
+    "padre_id": "6ad8421581847cff034f13da",
     "ruta": [
-      "6ad83fff0769f419cc5a049d",
-      "6ad83fff0769f419cc5a049e"
+      "6ad8421581847cff034f13d9",
+      "6ad8421581847cff034f13da"
     ],
     "materialized_path": "operadores-de-comercio-exterior/regimenes-territoriales-y-zonas-especiales/zonas-de-desarrollo-economico-especial-publico-zdeep",
     "orden": 75,
@@ -1467,113 +1467,113 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04a4",
+    "_id": "6ad8421581847cff034f13e0",
     "slug": "habilitacion-e-infraestructura",
     "nombre": "Habilitación e infraestructura",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a04a3",
+    "padre_id": "6ad8421581847cff034f13df",
     "ruta": [
-      "6ad83fff0769f419cc5a049d",
-      "6ad83fff0769f419cc5a049e",
-      "6ad83fff0769f419cc5a04a3"
+      "6ad8421581847cff034f13d9",
+      "6ad8421581847cff034f13da",
+      "6ad8421581847cff034f13df"
     ],
     "materialized_path": "operadores-de-comercio-exterior/regimenes-territoriales-y-zonas-especiales/zonas-de-desarrollo-economico-especial-publico-zdeep/habilitacion-e-infraestructura",
     "orden": 76,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Habilitación e infraestructura dentro de la subárea Zonas de Desarrollo Económico Especial Público (ZDEEP). Incluye trámites como: Registro y control de garitas aduaneras e infraestructura perimetral, Requisitos para habilitación y delimitación perimetral del polígono de Zonas Especiales (ZDEEP).",
+      "que_es": "Tema operativo para la gestión de Habilitación e infraestructura dentro de la subárea Zonas de Desarrollo Económico Especial Público (ZDEEP).",
       "lead_text": "Requisitos, pasos e información orientadora para habilitación e infraestructura (4 gestiones).",
       "base_juridica": "Decreto 22-73 (Ley Orgánica de ZOLIC / ZDEEP), CAUCA IV y RECAUCA IV."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04a5",
+    "_id": "6ad8421581847cff034f13e1",
     "slug": "registro-y-habilitacion-de-empresas",
     "nombre": "Registro y habilitación de empresas",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a04a3",
+    "padre_id": "6ad8421581847cff034f13df",
     "ruta": [
-      "6ad83fff0769f419cc5a049d",
-      "6ad83fff0769f419cc5a049e",
-      "6ad83fff0769f419cc5a04a3"
+      "6ad8421581847cff034f13d9",
+      "6ad8421581847cff034f13da",
+      "6ad8421581847cff034f13df"
     ],
     "materialized_path": "operadores-de-comercio-exterior/regimenes-territoriales-y-zonas-especiales/zonas-de-desarrollo-economico-especial-publico-zdeep/registro-y-habilitacion-de-empresas",
     "orden": 77,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Registro y habilitación de empresas dentro de la subárea Zonas de Desarrollo Económico Especial Público (ZDEEP). Incluye trámites como: Registro de empresas usuarias calificadas en Zonas Especiales (ZDEEP) ante SAT, Régimen de factura electrónica en línea (FEL).",
+      "que_es": "Tema operativo para la gestión de Registro y habilitación de empresas dentro de la subárea Zonas de Desarrollo Económico Especial Público (ZDEEP).",
       "lead_text": "Requisitos, pasos e información orientadora para registro y habilitación de empresas (5 gestiones).",
       "base_juridica": "Decreto 22-73 (Ley Orgánica de ZOLIC / ZDEEP), CAUCA IV y RECAUCA IV."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04a6",
+    "_id": "6ad8421581847cff034f13e2",
     "slug": "normativa-y-asistencia",
     "nombre": "Normativa y asistencia",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a04a3",
+    "padre_id": "6ad8421581847cff034f13df",
     "ruta": [
-      "6ad83fff0769f419cc5a049d",
-      "6ad83fff0769f419cc5a049e",
-      "6ad83fff0769f419cc5a04a3"
+      "6ad8421581847cff034f13d9",
+      "6ad8421581847cff034f13da",
+      "6ad8421581847cff034f13df"
     ],
     "materialized_path": "operadores-de-comercio-exterior/regimenes-territoriales-y-zonas-especiales/zonas-de-desarrollo-economico-especial-publico-zdeep/normativa-y-asistencia",
     "orden": 78,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Normativa y asistencia dentro de la subárea Zonas de Desarrollo Económico Especial Público (ZDEEP). Incluye trámites como: Guías operativas e instructivos aduaneros (para Regímenes Territoriales y Zonas Especiales), Programa de modernización integral aduanera MIAD (para Regímenes Territoriales y Zonas Especiales).",
+      "que_es": "Tema operativo para la gestión de Normativa y asistencia dentro de la subárea Zonas de Desarrollo Económico Especial Público (ZDEEP).",
       "lead_text": "Requisitos, pasos e información orientadora para normativa y asistencia (9 gestiones).",
       "base_juridica": "Decreto 22-73 (Ley Orgánica de ZOLIC / ZDEEP), CAUCA IV y RECAUCA IV."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04a7",
+    "_id": "6ad8421581847cff034f13e3",
     "slug": "operacion-y-control-de-carga",
     "nombre": "Operación y control de carga",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a04a3",
+    "padre_id": "6ad8421581847cff034f13df",
     "ruta": [
-      "6ad83fff0769f419cc5a049d",
-      "6ad83fff0769f419cc5a049e",
-      "6ad83fff0769f419cc5a04a3"
+      "6ad8421581847cff034f13d9",
+      "6ad8421581847cff034f13da",
+      "6ad8421581847cff034f13df"
     ],
     "materialized_path": "operadores-de-comercio-exterior/regimenes-territoriales-y-zonas-especiales/zonas-de-desarrollo-economico-especial-publico-zdeep/operacion-y-control-de-carga",
     "orden": 79,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Operación y control de carga dentro de la subárea Zonas de Desarrollo Económico Especial Público (ZDEEP). Incluye trámites como: Consultas de aduanas (Retención, liberación, rampa y manifiestos de transporte), Procedimiento de control para ingreso y egreso de carga en garita de Zonas Especiales (ZDEEP).",
+      "que_es": "Tema operativo para la gestión de Operación y control de carga dentro de la subárea Zonas de Desarrollo Económico Especial Público (ZDEEP).",
       "lead_text": "Requisitos, pasos e información orientadora para operación y control de carga (5 gestiones).",
       "base_juridica": "Decreto 22-73 (Ley Orgánica de ZOLIC / ZDEEP), CAUCA IV y RECAUCA IV."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04a8",
+    "_id": "6ad8421581847cff034f13e4",
     "slug": "operacion-y-control-en-zonas-francas",
     "nombre": "Operación y control en zonas francas",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a04a3",
+    "padre_id": "6ad8421581847cff034f13df",
     "ruta": [
-      "6ad83fff0769f419cc5a049d",
-      "6ad83fff0769f419cc5a049e",
-      "6ad83fff0769f419cc5a04a3"
+      "6ad8421581847cff034f13d9",
+      "6ad8421581847cff034f13da",
+      "6ad8421581847cff034f13df"
     ],
     "materialized_path": "operadores-de-comercio-exterior/regimenes-territoriales-y-zonas-especiales/zonas-de-desarrollo-economico-especial-publico-zdeep/operacion-y-control-en-zonas-francas",
     "orden": 80,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Operación y control en zonas francas dentro de la subárea Zonas de Desarrollo Económico Especial Público (ZDEEP). Incluye trámites como: Control, descargo y reporte periódico de inventarios de transformación, Declaración anticipada de mercancías.",
+      "que_es": "Tema operativo para la gestión de Operación y control en zonas francas dentro de la subárea Zonas de Desarrollo Económico Especial Público (ZDEEP).",
       "lead_text": "Requisitos, pasos e información orientadora para operación y control en zonas francas (6 gestiones).",
       "base_juridica": "Decreto 22-73 (Ley Orgánica de ZOLIC / ZDEEP), CAUCA IV y RECAUCA IV."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04a9",
+    "_id": "6ad8421581847cff034f13e5",
     "slug": "importadores",
     "nombre": "Importadores",
     "nivel": 2,
-    "padre_id": "6ad83fff0769f419cc5a049d",
+    "padre_id": "6ad8421581847cff034f13d9",
     "ruta": [
-      "6ad83fff0769f419cc5a049d"
+      "6ad8421581847cff034f13d9"
     ],
     "materialized_path": "operadores-de-comercio-exterior/importadores",
     "orden": 81,
@@ -1585,14 +1585,14 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04aa",
+    "_id": "6ad8421581847cff034f13e6",
     "slug": "registro-y-padron-de-importadores",
     "nombre": "Registro y Padrón de Importadores",
     "nivel": 3,
-    "padre_id": "6ad83fff0769f419cc5a04a9",
+    "padre_id": "6ad8421581847cff034f13e5",
     "ruta": [
-      "6ad83fff0769f419cc5a049d",
-      "6ad83fff0769f419cc5a04a9"
+      "6ad8421581847cff034f13d9",
+      "6ad8421581847cff034f13e5"
     ],
     "materialized_path": "operadores-de-comercio-exterior/importadores/registro-y-padron-de-importadores",
     "orden": 82,
@@ -1604,14 +1604,14 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04ab",
+    "_id": "6ad8421581847cff034f13e7",
     "slug": "declaraciones-aduaneras-y-ducas",
     "nombre": "Declaraciones Aduaneras y DUCAs",
     "nivel": 3,
-    "padre_id": "6ad83fff0769f419cc5a04a9",
+    "padre_id": "6ad8421581847cff034f13e5",
     "ruta": [
-      "6ad83fff0769f419cc5a049d",
-      "6ad83fff0769f419cc5a04a9"
+      "6ad8421581847cff034f13d9",
+      "6ad8421581847cff034f13e5"
     ],
     "materialized_path": "operadores-de-comercio-exterior/importadores/declaraciones-aduaneras-y-ducas",
     "orden": 83,
@@ -1623,74 +1623,74 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04ac",
+    "_id": "6ad8421581847cff034f13e8",
     "slug": "preparacion-y-documentos-de-soporte",
     "nombre": "Preparación y Documentos de Soporte",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a04ab",
+    "padre_id": "6ad8421581847cff034f13e7",
     "ruta": [
-      "6ad83fff0769f419cc5a049d",
-      "6ad83fff0769f419cc5a04a9",
-      "6ad83fff0769f419cc5a04ab"
+      "6ad8421581847cff034f13d9",
+      "6ad8421581847cff034f13e5",
+      "6ad8421581847cff034f13e7"
     ],
     "materialized_path": "operadores-de-comercio-exterior/importadores/declaraciones-aduaneras-y-ducas/preparacion-y-documentos-de-soporte",
     "orden": 84,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Preparación y Documentos de Soporte dentro de la subárea Declaraciones Aduaneras y DUCAs. Incluye trámites como: Declaración del Valor en Aduana de las Mercancías, Manual Operativo: Aduana sin Papeles y Digitalización de Documentos de Soporte.",
+      "que_es": "Tema operativo para la gestión de Preparación y Documentos de Soporte dentro de la subárea Declaraciones Aduaneras y DUCAs.",
       "lead_text": "Requisitos, pasos e información orientadora para preparación y documentos de soporte (2 gestiones).",
       "base_juridica": "Resolución COMIECO 409-2018 (Régimen DUCA), CAUCA IV y RECAUCA IV."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04ad",
+    "_id": "6ad8421581847cff034f13e9",
     "slug": "transmision-de-la-declaracion-de-mercancias",
     "nombre": "Transmisión de la Declaración de Mercancías",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a04ab",
+    "padre_id": "6ad8421581847cff034f13e7",
     "ruta": [
-      "6ad83fff0769f419cc5a049d",
-      "6ad83fff0769f419cc5a04a9",
-      "6ad83fff0769f419cc5a04ab"
+      "6ad8421581847cff034f13d9",
+      "6ad8421581847cff034f13e5",
+      "6ad8421581847cff034f13e7"
     ],
     "materialized_path": "operadores-de-comercio-exterior/importadores/declaraciones-aduaneras-y-ducas/transmision-de-la-declaracion-de-mercancias",
     "orden": 85,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Transmisión de la Declaración de Mercancías dentro de la subárea Declaraciones Aduaneras y DUCAs. Incluye trámites como: Información sobre  la declaración única centroamericana DUCA, declaración única aduanera, aduana sin papeles y su instructivo, codificación de documentos digitalizados y la declaración de valor., Declaración Única Aduanera (DUA-GT / Régimen General).",
+      "que_es": "Tema operativo para la gestión de Transmisión de la Declaración de Mercancías dentro de la subárea Declaraciones Aduaneras y DUCAs.",
       "lead_text": "Requisitos, pasos e información orientadora para transmisión de la declaración de mercancías (5 gestiones).",
       "base_juridica": "Resolución COMIECO 409-2018 (Régimen DUCA), CAUCA IV y RECAUCA IV."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04ae",
+    "_id": "6ad8421581847cff034f13ea",
     "slug": "verificacion-y-seguimiento-de-declaraciones",
     "nombre": "Verificación y Seguimiento de Declaraciones",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a04ab",
+    "padre_id": "6ad8421581847cff034f13e7",
     "ruta": [
-      "6ad83fff0769f419cc5a049d",
-      "6ad83fff0769f419cc5a04a9",
-      "6ad83fff0769f419cc5a04ab"
+      "6ad8421581847cff034f13d9",
+      "6ad8421581847cff034f13e5",
+      "6ad8421581847cff034f13e7"
     ],
     "materialized_path": "operadores-de-comercio-exterior/importadores/declaraciones-aduaneras-y-ducas/verificacion-y-seguimiento-de-declaraciones",
     "orden": 86,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Verificación y Seguimiento de Declaraciones dentro de la subárea Declaraciones Aduaneras y DUCAs. Incluye trámites como: Consulta de Pago de DUCA-F en País de Destino, Consulta y Verificación de Declaraciones DUCA-F / FAUCA.",
+      "que_es": "Tema operativo para la gestión de Verificación y Seguimiento de Declaraciones dentro de la subárea Declaraciones Aduaneras y DUCAs.",
       "lead_text": "Requisitos, pasos e información orientadora para verificación y seguimiento de declaraciones (2 gestiones).",
       "base_juridica": "Resolución COMIECO 409-2018 (Régimen DUCA), CAUCA IV y RECAUCA IV."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04af",
+    "_id": "6ad8421581847cff034f13eb",
     "slug": "despacho-aduanero-levante-y-selectivo",
     "nombre": "Despacho Aduanero, Levante y Selectivo",
     "nivel": 3,
-    "padre_id": "6ad83fff0769f419cc5a04a9",
+    "padre_id": "6ad8421581847cff034f13e5",
     "ruta": [
-      "6ad83fff0769f419cc5a049d",
-      "6ad83fff0769f419cc5a04a9"
+      "6ad8421581847cff034f13d9",
+      "6ad8421581847cff034f13e5"
     ],
     "materialized_path": "operadores-de-comercio-exterior/importadores/despacho-aduanero-levante-y-selectivo",
     "orden": 87,
@@ -1702,74 +1702,74 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04b0",
+    "_id": "6ad8421581847cff034f13ec",
     "slug": "gestiones-anticipadas",
     "nombre": "Gestiones anticipadas",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a04af",
+    "padre_id": "6ad8421581847cff034f13eb",
     "ruta": [
-      "6ad83fff0769f419cc5a049d",
-      "6ad83fff0769f419cc5a04a9",
-      "6ad83fff0769f419cc5a04af"
+      "6ad8421581847cff034f13d9",
+      "6ad8421581847cff034f13e5",
+      "6ad8421581847cff034f13eb"
     ],
     "materialized_path": "operadores-de-comercio-exterior/importadores/despacho-aduanero-levante-y-selectivo/gestiones-anticipadas",
     "orden": 88,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Gestiones anticipadas dentro de la subárea Despacho Aduanero, Levante y Selectivo. Incluye trámites como: Requisitos, pasos y documentos para entregar documentos de envíos parciales., Requisitos, pasos y documentos para presentar la declaración para análisis de riesgo..",
+      "que_es": "Tema operativo para la gestión de Gestiones anticipadas dentro de la subárea Despacho Aduanero, Levante y Selectivo.",
       "lead_text": "Requisitos, pasos e información orientadora para gestiones anticipadas (6 gestiones).",
       "base_juridica": "Resolución COMIECO 409-2018 (Régimen DUCA), CAUCA IV y RECAUCA IV."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04b1",
+    "_id": "6ad8421581847cff034f13ed",
     "slug": "puestos-de-control-trazabilidad-y-facilitacion",
     "nombre": "Puestos de control, trazabilidad y facilitación",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a04af",
+    "padre_id": "6ad8421581847cff034f13eb",
     "ruta": [
-      "6ad83fff0769f419cc5a049d",
-      "6ad83fff0769f419cc5a04a9",
-      "6ad83fff0769f419cc5a04af"
+      "6ad8421581847cff034f13d9",
+      "6ad8421581847cff034f13e5",
+      "6ad8421581847cff034f13eb"
     ],
     "materialized_path": "operadores-de-comercio-exterior/importadores/despacho-aduanero-levante-y-selectivo/puestos-de-control-trazabilidad-y-facilitacion",
     "orden": 89,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Puestos de control, trazabilidad y facilitación dentro de la subárea Despacho Aduanero, Levante y Selectivo. Incluye trámites como: Información sobre procedimientos, procedimientos conjuntos, formatos, instructivos, guías y foliares para gestiones aduaneras., Información sobre: Puestos de Control Interinstitucional (PCI)..",
+      "que_es": "Tema operativo para la gestión de Puestos de control, trazabilidad y facilitación dentro de la subárea Despacho Aduanero, Levante y Selectivo.",
       "lead_text": "Requisitos, pasos e información orientadora para puestos de control, trazabilidad y facilitación (4 gestiones).",
       "base_juridica": "Resolución COMIECO 409-2018 (Régimen DUCA), CAUCA IV y RECAUCA IV."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04b2",
+    "_id": "6ad8421581847cff034f13ee",
     "slug": "operaciones-en-recinto-selectivo-y-levante",
     "nombre": "Operaciones en recinto, selectivo y levante",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a04af",
+    "padre_id": "6ad8421581847cff034f13eb",
     "ruta": [
-      "6ad83fff0769f419cc5a049d",
-      "6ad83fff0769f419cc5a04a9",
-      "6ad83fff0769f419cc5a04af"
+      "6ad8421581847cff034f13d9",
+      "6ad8421581847cff034f13e5",
+      "6ad8421581847cff034f13eb"
     ],
     "materialized_path": "operadores-de-comercio-exterior/importadores/despacho-aduanero-levante-y-selectivo/operaciones-en-recinto-selectivo-y-levante",
     "orden": 90,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Operaciones en recinto, selectivo y levante dentro de la subárea Despacho Aduanero, Levante y Selectivo. Incluye trámites como: Información sobre: Historial del selectivo en aduanas., Servicio en línea para consultar manifiestos de la Unión Aduanera..",
+      "que_es": "Tema operativo para la gestión de Operaciones en recinto, selectivo y levante dentro de la subárea Despacho Aduanero, Levante y Selectivo.",
       "lead_text": "Requisitos, pasos e información orientadora para operaciones en recinto, selectivo y levante (6 gestiones).",
       "base_juridica": "Código Aduanero Uniforme Centroamericano (CAUCA IV) y su Reglamento (RECAUCA IV)."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04b3",
+    "_id": "6ad8421581847cff034f13ef",
     "slug": "importacion-y-nacionalizacion-de-vehiculos",
     "nombre": "Importación y Nacionalización de Vehículos",
     "nivel": 3,
-    "padre_id": "6ad83fff0769f419cc5a04a9",
+    "padre_id": "6ad8421581847cff034f13e5",
     "ruta": [
-      "6ad83fff0769f419cc5a049d",
-      "6ad83fff0769f419cc5a04a9"
+      "6ad8421581847cff034f13d9",
+      "6ad8421581847cff034f13e5"
     ],
     "materialized_path": "operadores-de-comercio-exterior/importadores/importacion-y-nacionalizacion-de-vehiculos",
     "orden": 91,
@@ -1781,54 +1781,54 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04b4",
+    "_id": "6ad8421581847cff034f13f0",
     "slug": "gestiones-de-importacion-y-registro",
     "nombre": "Gestiones de importación y registro",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a04b3",
+    "padre_id": "6ad8421581847cff034f13ef",
     "ruta": [
-      "6ad83fff0769f419cc5a049d",
-      "6ad83fff0769f419cc5a04a9",
-      "6ad83fff0769f419cc5a04b3"
+      "6ad8421581847cff034f13d9",
+      "6ad8421581847cff034f13e5",
+      "6ad8421581847cff034f13ef"
     ],
     "materialized_path": "operadores-de-comercio-exterior/importadores/importacion-y-nacionalizacion-de-vehiculos/gestiones-de-importacion-y-registro",
     "orden": 92,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Gestiones de importación y registro dentro de la subárea Importación y Nacionalización de Vehículos. Incluye trámites como: Requisitos, pasos y documentos para inscribir vehículos nuevos (importadores)., Permiso de Internación Temporal de Vehículos Turísticos / Extranjeros.",
+      "que_es": "Tema operativo para la gestión de Gestiones de importación y registro dentro de la subárea Importación y Nacionalización de Vehículos.",
       "lead_text": "Requisitos, pasos e información orientadora para gestiones de importación y registro (6 gestiones).",
       "base_juridica": "Decreto 10-2012 (Ley de Actualización Tributaria, Libro II - IPRIMA) y Decreto 70-94."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04b5",
+    "_id": "6ad8421581847cff034f13f1",
     "slug": "tablas-de-valores-y-calculo-de-impuestos",
     "nombre": "Tablas de valores y cálculo de impuestos",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a04b3",
+    "padre_id": "6ad8421581847cff034f13ef",
     "ruta": [
-      "6ad83fff0769f419cc5a049d",
-      "6ad83fff0769f419cc5a04a9",
-      "6ad83fff0769f419cc5a04b3"
+      "6ad8421581847cff034f13d9",
+      "6ad8421581847cff034f13e5",
+      "6ad8421581847cff034f13ef"
     ],
     "materialized_path": "operadores-de-comercio-exterior/importadores/importacion-y-nacionalizacion-de-vehiculos/tablas-de-valores-y-calculo-de-impuestos",
     "orden": 93,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Tablas de valores y cálculo de impuestos dentro de la subárea Importación y Nacionalización de Vehículos. Incluye trámites como: Requisitos, pasos y documentos para comprobar el valor de un vehículo usado importado., Información sobre: Acuerdo que aprueba la tabla de IVA de vehículos usados..",
+      "que_es": "Tema operativo para la gestión de Tablas de valores y cálculo de impuestos dentro de la subárea Importación y Nacionalización de Vehículos.",
       "lead_text": "Requisitos, pasos e información orientadora para tablas de valores y cálculo de impuestos (4 gestiones).",
       "base_juridica": "Decreto 10-2012 (Ley de Actualización Tributaria, Libro II - IPRIMA) y Decreto 70-94."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04b6",
+    "_id": "6ad8421581847cff034f13f2",
     "slug": "mercancias-en-abandono-depositos-y-franquicias",
     "nombre": "Mercancías en Abandono, Depósitos y Franquicias",
     "nivel": 3,
-    "padre_id": "6ad83fff0769f419cc5a04a9",
+    "padre_id": "6ad8421581847cff034f13e5",
     "ruta": [
-      "6ad83fff0769f419cc5a049d",
-      "6ad83fff0769f419cc5a04a9"
+      "6ad8421581847cff034f13d9",
+      "6ad8421581847cff034f13e5"
     ],
     "materialized_path": "operadores-de-comercio-exterior/importadores/mercancias-en-abandono-depositos-y-franquicias",
     "orden": 94,
@@ -1840,53 +1840,53 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04b7",
+    "_id": "6ad8421581847cff034f13f3",
     "slug": "franquicias-y-menor-cuantia",
     "nombre": "Franquicias y menor cuantía",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a04b6",
+    "padre_id": "6ad8421581847cff034f13f2",
     "ruta": [
-      "6ad83fff0769f419cc5a049d",
-      "6ad83fff0769f419cc5a04a9",
-      "6ad83fff0769f419cc5a04b6"
+      "6ad8421581847cff034f13d9",
+      "6ad8421581847cff034f13e5",
+      "6ad8421581847cff034f13f2"
     ],
     "materialized_path": "operadores-de-comercio-exterior/importadores/mercancias-en-abandono-depositos-y-franquicias/franquicias-y-menor-cuantia",
     "orden": 95,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Franquicias y menor cuantía dentro de la subárea Mercancías en Abandono, Depósitos y Franquicias. Incluye trámites como: Información sobre documentación técnica de orientación al usuario externo para solicitudes de Franquicia Electrónica y videos informativos., Declaración Jurada Regional de Viajero y Franquicia de Equipaje.",
+      "que_es": "Tema operativo para la gestión de Franquicias y menor cuantía dentro de la subárea Mercancías en Abandono, Depósitos y Franquicias.",
       "lead_text": "Requisitos, pasos e información orientadora para franquicias y menor cuantía (4 gestiones).",
       "base_juridica": "Resolución COMIECO 409-2018 (Régimen DUCA), CAUCA IV y RECAUCA IV."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04b8",
+    "_id": "6ad8421581847cff034f13f4",
     "slug": "rescate-de-mercancias-y-devoluciones",
     "nombre": "Rescate de mercancías y devoluciones",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a04b6",
+    "padre_id": "6ad8421581847cff034f13f2",
     "ruta": [
-      "6ad83fff0769f419cc5a049d",
-      "6ad83fff0769f419cc5a04a9",
-      "6ad83fff0769f419cc5a04b6"
+      "6ad8421581847cff034f13d9",
+      "6ad8421581847cff034f13e5",
+      "6ad8421581847cff034f13f2"
     ],
     "materialized_path": "operadores-de-comercio-exterior/importadores/mercancias-en-abandono-depositos-y-franquicias/rescate-de-mercancias-y-devoluciones",
     "orden": 96,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Rescate de mercancías y devoluciones dentro de la subárea Mercancías en Abandono, Depósitos y Franquicias. Incluye trámites como: Información y requisitos sobre recepción de seguro de caución de importacion y admisión temporal, presentación de mercancia de importación y admisiones temporales para cargos y fianzas y requisitos para la importación temporal de vehículos de turismo., Solicitud de Devolución de Tributos Arancelarios (DAI e IVA Importación).",
+      "que_es": "Tema operativo para la gestión de Rescate de mercancías y devoluciones dentro de la subárea Mercancías en Abandono, Depósitos y Franquicias.",
       "lead_text": "Requisitos, pasos e información orientadora para rescate de mercancías y devoluciones (5 gestiones).",
       "base_juridica": "Decreto 10-2012 (Ley de Actualización Tributaria, Libro II - IPRIMA) y Decreto 70-94."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04b9",
+    "_id": "6ad8421581847cff034f13f5",
     "slug": "exportadores",
     "nombre": "Exportadores",
     "nivel": 2,
-    "padre_id": "6ad83fff0769f419cc5a049d",
+    "padre_id": "6ad8421581847cff034f13d9",
     "ruta": [
-      "6ad83fff0769f419cc5a049d"
+      "6ad8421581847cff034f13d9"
     ],
     "materialized_path": "operadores-de-comercio-exterior/exportadores",
     "orden": 97,
@@ -1898,14 +1898,14 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04ba",
+    "_id": "6ad8421581847cff034f13f6",
     "slug": "padron-y-registro-de-exportadores",
     "nombre": "Padrón y Registro de Exportadores",
     "nivel": 3,
-    "padre_id": "6ad83fff0769f419cc5a04b9",
+    "padre_id": "6ad8421581847cff034f13f5",
     "ruta": [
-      "6ad83fff0769f419cc5a049d",
-      "6ad83fff0769f419cc5a04b9"
+      "6ad8421581847cff034f13d9",
+      "6ad8421581847cff034f13f5"
     ],
     "materialized_path": "operadores-de-comercio-exterior/exportadores/padron-y-registro-de-exportadores",
     "orden": 98,
@@ -1917,14 +1917,14 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04bb",
+    "_id": "6ad8421581847cff034f13f7",
     "slug": "declaraciones-aduaneras-y-embarques",
     "nombre": "Declaraciones Aduaneras y Embarques",
     "nivel": 3,
-    "padre_id": "6ad83fff0769f419cc5a04b9",
+    "padre_id": "6ad8421581847cff034f13f5",
     "ruta": [
-      "6ad83fff0769f419cc5a049d",
-      "6ad83fff0769f419cc5a04b9"
+      "6ad8421581847cff034f13d9",
+      "6ad8421581847cff034f13f5"
     ],
     "materialized_path": "operadores-de-comercio-exterior/exportadores/declaraciones-aduaneras-y-embarques",
     "orden": 99,
@@ -1936,14 +1936,14 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04bc",
+    "_id": "6ad8421581847cff034f13f8",
     "slug": "devolucion-de-credito-fiscal",
     "nombre": "Devolución de Crédito Fiscal",
     "nivel": 3,
-    "padre_id": "6ad83fff0769f419cc5a04b9",
+    "padre_id": "6ad8421581847cff034f13f5",
     "ruta": [
-      "6ad83fff0769f419cc5a049d",
-      "6ad83fff0769f419cc5a04b9"
+      "6ad8421581847cff034f13d9",
+      "6ad8421581847cff034f13f5"
     ],
     "materialized_path": "operadores-de-comercio-exterior/exportadores/devolucion-de-credito-fiscal",
     "orden": 100,
@@ -1955,13 +1955,13 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04bd",
+    "_id": "6ad8421581847cff034f13f9",
     "slug": "auxiliares-de-la-funcion-publica-aduanera-afpa",
     "nombre": "Auxiliares de la Función Pública Aduanera (AFPA)",
     "nivel": 2,
-    "padre_id": "6ad83fff0769f419cc5a049d",
+    "padre_id": "6ad8421581847cff034f13d9",
     "ruta": [
-      "6ad83fff0769f419cc5a049d"
+      "6ad8421581847cff034f13d9"
     ],
     "materialized_path": "operadores-de-comercio-exterior/auxiliares-de-la-funcion-publica-aduanera-afpa",
     "orden": 101,
@@ -1973,14 +1973,14 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04be",
+    "_id": "6ad8421581847cff034f13fa",
     "slug": "agentes-aduaneros",
     "nombre": "Agentes Aduaneros",
     "nivel": 3,
-    "padre_id": "6ad83fff0769f419cc5a04bd",
+    "padre_id": "6ad8421581847cff034f13f9",
     "ruta": [
-      "6ad83fff0769f419cc5a049d",
-      "6ad83fff0769f419cc5a04bd"
+      "6ad8421581847cff034f13d9",
+      "6ad8421581847cff034f13f9"
     ],
     "materialized_path": "operadores-de-comercio-exterior/auxiliares-de-la-funcion-publica-aduanera-afpa/agentes-aduaneros",
     "orden": 102,
@@ -1992,14 +1992,14 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04bf",
+    "_id": "6ad8421581847cff034f13fb",
     "slug": "apoderados-especiales-aduaneros",
     "nombre": "Apoderados Especiales Aduaneros",
     "nivel": 3,
-    "padre_id": "6ad83fff0769f419cc5a04bd",
+    "padre_id": "6ad8421581847cff034f13f9",
     "ruta": [
-      "6ad83fff0769f419cc5a049d",
-      "6ad83fff0769f419cc5a04bd"
+      "6ad8421581847cff034f13d9",
+      "6ad8421581847cff034f13f9"
     ],
     "materialized_path": "operadores-de-comercio-exterior/auxiliares-de-la-funcion-publica-aduanera-afpa/apoderados-especiales-aduaneros",
     "orden": 103,
@@ -2011,74 +2011,74 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04c0",
+    "_id": "6ad8421581847cff034f13fc",
     "slug": "acreditacion-garantias-y-habilitacion",
     "nombre": "Acreditación, Garantías y Habilitación",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a04bf",
+    "padre_id": "6ad8421581847cff034f13fb",
     "ruta": [
-      "6ad83fff0769f419cc5a049d",
-      "6ad83fff0769f419cc5a04bd",
-      "6ad83fff0769f419cc5a04bf"
+      "6ad8421581847cff034f13d9",
+      "6ad8421581847cff034f13f9",
+      "6ad8421581847cff034f13fb"
     ],
     "materialized_path": "operadores-de-comercio-exterior/auxiliares-de-la-funcion-publica-aduanera-afpa/apoderados-especiales-aduaneros/acreditacion-garantias-y-habilitacion",
     "orden": 104,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Acreditación, Garantías y Habilitación dentro de la subárea Apoderados Especiales Aduaneros. Incluye trámites como: Autorización inicial y registro de mandato para apoderados especiales, Auxiliares de la función pública aduanera (Carné, componente ActiveX PKI/DUA).",
+      "que_es": "Tema operativo para la gestión de Acreditación, Garantías y Habilitación dentro de la subárea Apoderados Especiales Aduaneros.",
       "lead_text": "Requisitos, pasos e información orientadora para acreditación, garantías y habilitación (5 gestiones).",
       "base_juridica": "CAUCA IV y RECAUCA IV (Arts. 86 al 90, Apoderados Especiales Aduaneros)."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04c1",
+    "_id": "6ad8421581847cff034f13fd",
     "slug": "operaciones-de-despacho-y-consultas",
     "nombre": "Operaciones de Despacho y Consultas",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a04bf",
+    "padre_id": "6ad8421581847cff034f13fb",
     "ruta": [
-      "6ad83fff0769f419cc5a049d",
-      "6ad83fff0769f419cc5a04bd",
-      "6ad83fff0769f419cc5a04bf"
+      "6ad8421581847cff034f13d9",
+      "6ad8421581847cff034f13f9",
+      "6ad8421581847cff034f13fb"
     ],
     "materialized_path": "operadores-de-comercio-exterior/auxiliares-de-la-funcion-publica-aduanera-afpa/apoderados-especiales-aduaneros/operaciones-de-despacho-y-consultas",
     "orden": 105,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Operaciones de Despacho y Consultas dentro de la subárea Apoderados Especiales Aduaneros. Incluye trámites como: Declaración anticipada, Declaración de mercancías (DUCA y Aduana sin papeles).",
+      "que_es": "Tema operativo para la gestión de Operaciones de Despacho y Consultas dentro de la subárea Apoderados Especiales Aduaneros.",
       "lead_text": "Requisitos, pasos e información orientadora para operaciones de despacho y consultas (5 gestiones).",
       "base_juridica": "CAUCA IV y RECAUCA IV (Arts. 86 al 90, Apoderados Especiales Aduaneros)."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04c2",
+    "_id": "6ad8421581847cff034f13fe",
     "slug": "procedimientos-normativa-y-capacitacion",
     "nombre": "Procedimientos, Normativa y Capacitación",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a04bf",
+    "padre_id": "6ad8421581847cff034f13fb",
     "ruta": [
-      "6ad83fff0769f419cc5a049d",
-      "6ad83fff0769f419cc5a04bd",
-      "6ad83fff0769f419cc5a04bf"
+      "6ad8421581847cff034f13d9",
+      "6ad8421581847cff034f13f9",
+      "6ad8421581847cff034f13fb"
     ],
     "materialized_path": "operadores-de-comercio-exterior/auxiliares-de-la-funcion-publica-aduanera-afpa/apoderados-especiales-aduaneros/procedimientos-normativa-y-capacitacion",
     "orden": 106,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Procedimientos, Normativa y Capacitación dentro de la subárea Apoderados Especiales Aduaneros. Incluye trámites como: Unión aduanera (Procedimientos y resoluciones de facilitación), Capacitaciones y programas de formación (para Auxiliares de la Función Pública Aduanera (AFPA)).",
+      "que_es": "Tema operativo para la gestión de Procedimientos, Normativa y Capacitación dentro de la subárea Apoderados Especiales Aduaneros.",
       "lead_text": "Requisitos, pasos e información orientadora para procedimientos, normativa y capacitación (6 gestiones).",
       "base_juridica": "CAUCA IV y RECAUCA IV (Arts. 86 al 90, Apoderados Especiales Aduaneros)."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04c3",
+    "_id": "6ad8421581847cff034f13ff",
     "slug": "depositos-aduaneros",
     "nombre": "Depósitos Aduaneros",
     "nivel": 3,
-    "padre_id": "6ad83fff0769f419cc5a04bd",
+    "padre_id": "6ad8421581847cff034f13f9",
     "ruta": [
-      "6ad83fff0769f419cc5a049d",
-      "6ad83fff0769f419cc5a04bd"
+      "6ad8421581847cff034f13d9",
+      "6ad8421581847cff034f13f9"
     ],
     "materialized_path": "operadores-de-comercio-exterior/auxiliares-de-la-funcion-publica-aduanera-afpa/depositos-aduaneros",
     "orden": 107,
@@ -2090,134 +2090,134 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04c4",
+    "_id": "6ad8421581847cff034f1400",
     "slug": "habilitacion-de-recintos-y-garantias",
     "nombre": "Habilitación de recintos y garantías",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a04c3",
+    "padre_id": "6ad8421581847cff034f13ff",
     "ruta": [
-      "6ad83fff0769f419cc5a049d",
-      "6ad83fff0769f419cc5a04bd",
-      "6ad83fff0769f419cc5a04c3"
+      "6ad8421581847cff034f13d9",
+      "6ad8421581847cff034f13f9",
+      "6ad8421581847cff034f13ff"
     ],
     "materialized_path": "operadores-de-comercio-exterior/auxiliares-de-la-funcion-publica-aduanera-afpa/depositos-aduaneros/habilitacion-de-recintos-y-garantias",
     "orden": 108,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Habilitación de recintos y garantías dentro de la subárea Depósitos Aduaneros. Incluye trámites como: Requisitos para habilitación y delimitación de recintos aduaneros temporales (DAT), Auxiliares de la función pública aduanera (Carné, componente ActiveX PKI/DUA).",
+      "que_es": "Tema operativo para la gestión de Habilitación de recintos y garantías dentro de la subárea Depósitos Aduaneros.",
       "lead_text": "Requisitos, pasos e información orientadora para habilitación de recintos y garantías (5 gestiones).",
       "base_juridica": "CAUCA IV y RECAUCA IV (Depósitos Aduaneros Temporales en puertos y aeropuertos)."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04c5",
+    "_id": "6ad8421581847cff034f1401",
     "slug": "habilitacion-y-garantias",
     "nombre": "Habilitación y garantías",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a04c3",
+    "padre_id": "6ad8421581847cff034f13ff",
     "ruta": [
-      "6ad83fff0769f419cc5a049d",
-      "6ad83fff0769f419cc5a04bd",
-      "6ad83fff0769f419cc5a04c3"
+      "6ad8421581847cff034f13d9",
+      "6ad8421581847cff034f13f9",
+      "6ad8421581847cff034f13ff"
     ],
     "materialized_path": "operadores-de-comercio-exterior/auxiliares-de-la-funcion-publica-aduanera-afpa/depositos-aduaneros/habilitacion-y-garantias",
     "orden": 109,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Habilitación y garantías dentro de la subárea Depósitos Aduaneros. Incluye trámites como: Recepción de seguro de caución y pólizas de garantía operativa, Registro y emisión de títulos de crédito (Certificados de depósito y bonos de prenda).",
+      "que_es": "Tema operativo para la gestión de Habilitación y garantías dentro de la subárea Depósitos Aduaneros.",
       "lead_text": "Requisitos, pasos e información orientadora para habilitación y garantías (5 gestiones).",
       "base_juridica": "Decreto 1236 (Ley de Almacenes Generales de Depósito) y RECAUCA IV Art. 119."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04c6",
+    "_id": "6ad8421581847cff034f1402",
     "slug": "almacenes-fiscales",
     "nombre": "Almacenes Fiscales",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a04c3",
+    "padre_id": "6ad8421581847cff034f13ff",
     "ruta": [
-      "6ad83fff0769f419cc5a049d",
-      "6ad83fff0769f419cc5a04bd",
-      "6ad83fff0769f419cc5a04c3"
+      "6ad8421581847cff034f13d9",
+      "6ad8421581847cff034f13f9",
+      "6ad8421581847cff034f13ff"
     ],
     "materialized_path": "operadores-de-comercio-exterior/auxiliares-de-la-funcion-publica-aduanera-afpa/depositos-aduaneros/almacenes-fiscales",
     "orden": 110,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Almacenes Fiscales dentro de la subárea Depósitos Aduaneros. Incluye trámites como: Sistema de Cobro por Permanencia de Mercancías (SCP), Declaración de Abandono y Subasta Aduanera de Mercancías.",
+      "que_es": "Tema operativo para la gestión de Almacenes Fiscales dentro de la subárea Depósitos Aduaneros.",
       "lead_text": "Requisitos, pasos e información orientadora para almacenes fiscales (2 gestiones).",
       "base_juridica": "CAUCA IV y RECAUCA IV (Arts. 119 al 129, Régimen de Depósito Aduanero o Fiscal)."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04c7",
+    "_id": "6ad8421581847cff034f1403",
     "slug": "normativa-y-asistencia",
     "nombre": "Normativa y asistencia",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a04c3",
+    "padre_id": "6ad8421581847cff034f13ff",
     "ruta": [
-      "6ad83fff0769f419cc5a049d",
-      "6ad83fff0769f419cc5a04bd",
-      "6ad83fff0769f419cc5a04c3"
+      "6ad8421581847cff034f13d9",
+      "6ad8421581847cff034f13f9",
+      "6ad8421581847cff034f13ff"
     ],
     "materialized_path": "operadores-de-comercio-exterior/auxiliares-de-la-funcion-publica-aduanera-afpa/depositos-aduaneros/normativa-y-asistencia",
     "orden": 111,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Normativa y asistencia dentro de la subárea Depósitos Aduaneros. Incluye trámites como: Guías operativas e instructivos aduaneros (almacenes generales de depósito), Guías operativas e instructivos aduaneros (depósitos aduaneros temporales).",
+      "que_es": "Tema operativo para la gestión de Normativa y asistencia dentro de la subárea Depósitos Aduaneros.",
       "lead_text": "Requisitos, pasos e información orientadora para normativa y asistencia (11 gestiones).",
       "base_juridica": "Decreto 1236 (Ley de Almacenes Generales de Depósito) y RECAUCA IV Art. 119."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04c8",
+    "_id": "6ad8421581847cff034f1404",
     "slug": "operacion-y-control-de-mercancias",
     "nombre": "Operación y control de mercancías",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a04c3",
+    "padre_id": "6ad8421581847cff034f13ff",
     "ruta": [
-      "6ad83fff0769f419cc5a049d",
-      "6ad83fff0769f419cc5a04bd",
-      "6ad83fff0769f419cc5a04c3"
+      "6ad8421581847cff034f13d9",
+      "6ad8421581847cff034f13f9",
+      "6ad8421581847cff034f13ff"
     ],
     "materialized_path": "operadores-de-comercio-exterior/auxiliares-de-la-funcion-publica-aduanera-afpa/depositos-aduaneros/operacion-y-control-de-mercancias",
     "orden": 112,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Operación y control de mercancías dentro de la subárea Depósitos Aduaneros. Incluye trámites como: Control de descarga, ingreso de bultos y actas de recepción DAT, Registro de admisión temporal de contenedores terrestres y su ampliación.",
+      "que_es": "Tema operativo para la gestión de Operación y control de mercancías dentro de la subárea Depósitos Aduaneros.",
       "lead_text": "Requisitos, pasos e información orientadora para operación y control de mercancías (7 gestiones).",
       "base_juridica": "CAUCA IV y RECAUCA IV (Depósitos Aduaneros Temporales en puertos y aeropuertos)."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04c9",
+    "_id": "6ad8421581847cff034f1405",
     "slug": "operacion-y-saldos-afianzados",
     "nombre": "Operación y saldos afianzados",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a04c3",
+    "padre_id": "6ad8421581847cff034f13ff",
     "ruta": [
-      "6ad83fff0769f419cc5a049d",
-      "6ad83fff0769f419cc5a04bd",
-      "6ad83fff0769f419cc5a04c3"
+      "6ad8421581847cff034f13d9",
+      "6ad8421581847cff034f13f9",
+      "6ad8421581847cff034f13ff"
     ],
     "materialized_path": "operadores-de-comercio-exterior/auxiliares-de-la-funcion-publica-aduanera-afpa/depositos-aduaneros/operacion-y-saldos-afianzados",
     "orden": 113,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Operación y saldos afianzados dentro de la subárea Depósitos Aduaneros. Incluye trámites como: Programa de modernización integral aduanera MIAD (para Auxiliares de la Función Pública Aduanera (AFPA)), Reporte de saldos y existencias afianzadas ante SAT.",
+      "que_es": "Tema operativo para la gestión de Operación y saldos afianzados dentro de la subárea Depósitos Aduaneros.",
       "lead_text": "Requisitos, pasos e información orientadora para operación y saldos afianzados (6 gestiones).",
       "base_juridica": "Decreto 1236 (Ley de Almacenes Generales de Depósito) y RECAUCA IV Art. 119."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04ca",
+    "_id": "6ad8421581847cff034f1406",
     "slug": "empresas-de-entrega-rapida-o-courier",
     "nombre": "Empresas de Entrega Rápida o Courier",
     "nivel": 3,
-    "padre_id": "6ad83fff0769f419cc5a04bd",
+    "padre_id": "6ad8421581847cff034f13f9",
     "ruta": [
-      "6ad83fff0769f419cc5a049d",
-      "6ad83fff0769f419cc5a04bd"
+      "6ad8421581847cff034f13d9",
+      "6ad8421581847cff034f13f9"
     ],
     "materialized_path": "operadores-de-comercio-exterior/auxiliares-de-la-funcion-publica-aduanera-afpa/empresas-de-entrega-rapida-o-courier",
     "orden": 114,
@@ -2229,14 +2229,14 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04cb",
+    "_id": "6ad8421581847cff034f1407",
     "slug": "transportistas-aduaneros",
     "nombre": "Transportistas Aduaneros",
     "nivel": 3,
-    "padre_id": "6ad83fff0769f419cc5a04bd",
+    "padre_id": "6ad8421581847cff034f13f9",
     "ruta": [
-      "6ad83fff0769f419cc5a049d",
-      "6ad83fff0769f419cc5a04bd"
+      "6ad8421581847cff034f13d9",
+      "6ad8421581847cff034f13f9"
     ],
     "materialized_path": "operadores-de-comercio-exterior/auxiliares-de-la-funcion-publica-aduanera-afpa/transportistas-aduaneros",
     "orden": 115,
@@ -2248,113 +2248,113 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04cc",
+    "_id": "6ad8421581847cff034f1408",
     "slug": "equipo-de-carga-y-contenedores-regimen-atc",
     "nombre": "Equipo de Carga y Contenedores — Régimen ATC",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a04cb",
+    "padre_id": "6ad8421581847cff034f1407",
     "ruta": [
-      "6ad83fff0769f419cc5a049d",
-      "6ad83fff0769f419cc5a04bd",
-      "6ad83fff0769f419cc5a04cb"
+      "6ad8421581847cff034f13d9",
+      "6ad8421581847cff034f13f9",
+      "6ad8421581847cff034f1407"
     ],
     "materialized_path": "operadores-de-comercio-exterior/auxiliares-de-la-funcion-publica-aduanera-afpa/transportistas-aduaneros/equipo-de-carga-y-contenedores-regimen-atc",
     "orden": 116,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Equipo de Carga y Contenedores — Régimen ATC dentro de la subárea Transportistas Aduaneros. Incluye trámites como: Registro y Habilitación de Equipo de Carga Terrestre (ATC), Ampliación de Plazo de Equipo de Carga en Admisión Temporal (ATC).",
+      "que_es": "Tema operativo para la gestión de Equipo de Carga y Contenedores — Régimen ATC dentro de la subárea Transportistas Aduaneros.",
       "lead_text": "Requisitos, pasos e información orientadora para equipo de carga y contenedores — régimen atc (4 gestiones).",
       "base_juridica": "CAUCA IV (Arts. 18 al 28), RECAUCA IV (Tránsito Aduanero Internacional Terrestre) y Ley de Aduanas."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04cd",
+    "_id": "6ad8421581847cff034f1409",
     "slug": "despacho-y-operaciones-en-recintos",
     "nombre": "Despacho y Operaciones en Recintos",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a04cb",
+    "padre_id": "6ad8421581847cff034f1407",
     "ruta": [
-      "6ad83fff0769f419cc5a049d",
-      "6ad83fff0769f419cc5a04bd",
-      "6ad83fff0769f419cc5a04cb"
+      "6ad8421581847cff034f13d9",
+      "6ad8421581847cff034f13f9",
+      "6ad8421581847cff034f1407"
     ],
     "materialized_path": "operadores-de-comercio-exterior/auxiliares-de-la-funcion-publica-aduanera-afpa/transportistas-aduaneros/despacho-y-operaciones-en-recintos",
     "orden": 117,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Despacho y Operaciones en Recintos dentro de la subárea Transportistas Aduaneros. Incluye trámites como: Autorización de Cartas de Ingreso a Zona Primaria Aduanera, Consulta de Asignación de Revisores Aduaneros.",
+      "que_es": "Tema operativo para la gestión de Despacho y Operaciones en Recintos dentro de la subárea Transportistas Aduaneros.",
       "lead_text": "Requisitos, pasos e información orientadora para despacho y operaciones en recintos (3 gestiones).",
       "base_juridica": "CAUCA IV (Arts. 18 al 28), RECAUCA IV (Tránsito Aduanero Internacional Terrestre) y Ley de Aduanas."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04ce",
+    "_id": "6ad8421581847cff034f140a",
     "slug": "manifiestos-de-carga-y-cuscar",
     "nombre": "Manifiestos de Carga y CUSCAR",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a04cb",
+    "padre_id": "6ad8421581847cff034f1407",
     "ruta": [
-      "6ad83fff0769f419cc5a049d",
-      "6ad83fff0769f419cc5a04bd",
-      "6ad83fff0769f419cc5a04cb"
+      "6ad8421581847cff034f13d9",
+      "6ad8421581847cff034f13f9",
+      "6ad8421581847cff034f1407"
     ],
     "materialized_path": "operadores-de-comercio-exterior/auxiliares-de-la-funcion-publica-aduanera-afpa/transportistas-aduaneros/manifiestos-de-carga-y-cuscar",
     "orden": 118,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Manifiestos de Carga y CUSCAR dentro de la subárea Transportistas Aduaneros. Incluye trámites como: Transmisión Electrónica de Mensaje de Carga Aduanera (CUSCAR), Consulta y Verificación de Documentos del Manifiesto de Carga.",
+      "que_es": "Tema operativo para la gestión de Manifiestos de Carga y CUSCAR dentro de la subárea Transportistas Aduaneros.",
       "lead_text": "Requisitos, pasos e información orientadora para manifiestos de carga y cuscar (2 gestiones).",
       "base_juridica": "CAUCA IV (Arts. 18 al 28), RECAUCA IV (Tránsito Aduanero Internacional Terrestre) y Ley de Aduanas."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04cf",
+    "_id": "6ad8421581847cff034f140b",
     "slug": "monitoreo-en-ruta-y-marchamo-electronico",
     "nombre": "Monitoreo en Ruta y Marchamo Electrónico",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a04cb",
+    "padre_id": "6ad8421581847cff034f1407",
     "ruta": [
-      "6ad83fff0769f419cc5a049d",
-      "6ad83fff0769f419cc5a04bd",
-      "6ad83fff0769f419cc5a04cb"
+      "6ad8421581847cff034f13d9",
+      "6ad8421581847cff034f13f9",
+      "6ad8421581847cff034f1407"
     ],
     "materialized_path": "operadores-de-comercio-exterior/auxiliares-de-la-funcion-publica-aduanera-afpa/transportistas-aduaneros/monitoreo-en-ruta-y-marchamo-electronico",
     "orden": 119,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Monitoreo en Ruta y Marchamo Electrónico dentro de la subárea Transportistas Aduaneros. Incluye trámites como: Especificaciones y Uso del Marchamo Electrónico Aduanero, Consulta de Tránsitos Aduaneros Pendientes en Ruta.",
+      "que_es": "Tema operativo para la gestión de Monitoreo en Ruta y Marchamo Electrónico dentro de la subárea Transportistas Aduaneros.",
       "lead_text": "Requisitos, pasos e información orientadora para monitoreo en ruta y marchamo electrónico (3 gestiones).",
       "base_juridica": "CAUCA IV (Arts. 18 al 28), RECAUCA IV (Tránsito Aduanero Internacional Terrestre) y Ley de Aduanas."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04d0",
+    "_id": "6ad8421581847cff034f140c",
     "slug": "infracciones-y-defensa-aduanera",
     "nombre": "Infracciones y Defensa Aduanera",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a04cb",
+    "padre_id": "6ad8421581847cff034f1407",
     "ruta": [
-      "6ad83fff0769f419cc5a049d",
-      "6ad83fff0769f419cc5a04bd",
-      "6ad83fff0769f419cc5a04cb"
+      "6ad8421581847cff034f13d9",
+      "6ad8421581847cff034f13f9",
+      "6ad8421581847cff034f1407"
     ],
     "materialized_path": "operadores-de-comercio-exterior/auxiliares-de-la-funcion-publica-aduanera-afpa/transportistas-aduaneros/infracciones-y-defensa-aduanera",
     "orden": 120,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Infracciones y Defensa Aduanera dentro de la subárea Transportistas Aduaneros. Incluye trámites como: Procedimiento Administrativo Sancionatorio y Recursos de Impugnación, Régimen de Infracciones y Sanciones en Tránsito Aduanero.",
+      "que_es": "Tema operativo para la gestión de Infracciones y Defensa Aduanera dentro de la subárea Transportistas Aduaneros.",
       "lead_text": "Requisitos, pasos e información orientadora para infracciones y defensa aduanera (2 gestiones).",
       "base_juridica": "CAUCA IV (Arts. 18 al 28), RECAUCA IV (Tránsito Aduanero Internacional Terrestre) y Ley de Aduanas."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04d1",
+    "_id": "6ad8421581847cff034f140d",
     "slug": "normativa-y-operaciones-aduaneras-generales",
     "nombre": "Normativa y Operaciones Aduaneras Generales",
     "nivel": 2,
-    "padre_id": "6ad83fff0769f419cc5a049d",
+    "padre_id": "6ad8421581847cff034f13d9",
     "ruta": [
-      "6ad83fff0769f419cc5a049d"
+      "6ad8421581847cff034f13d9"
     ],
     "materialized_path": "operadores-de-comercio-exterior/normativa-y-operaciones-aduaneras-generales",
     "orden": 121,
@@ -2366,14 +2366,14 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04d2",
+    "_id": "6ad8421581847cff034f140e",
     "slug": "arancel-centroamericano-sac-y-permisos",
     "nombre": "Arancel Centroamericano (SAC) y Permisos",
     "nivel": 3,
-    "padre_id": "6ad83fff0769f419cc5a04d1",
+    "padre_id": "6ad8421581847cff034f140d",
     "ruta": [
-      "6ad83fff0769f419cc5a049d",
-      "6ad83fff0769f419cc5a04d1"
+      "6ad8421581847cff034f13d9",
+      "6ad8421581847cff034f140d"
     ],
     "materialized_path": "operadores-de-comercio-exterior/normativa-y-operaciones-aduaneras-generales/arancel-centroamericano-sac-y-permisos",
     "orden": 122,
@@ -2385,14 +2385,14 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04d3",
+    "_id": "6ad8421581847cff034f140f",
     "slug": "acuerdos-comerciales-y-facilitacion",
     "nombre": "Acuerdos Comerciales y Facilitación",
     "nivel": 3,
-    "padre_id": "6ad83fff0769f419cc5a04d1",
+    "padre_id": "6ad8421581847cff034f140d",
     "ruta": [
-      "6ad83fff0769f419cc5a049d",
-      "6ad83fff0769f419cc5a04d1"
+      "6ad8421581847cff034f13d9",
+      "6ad8421581847cff034f140d"
     ],
     "materialized_path": "operadores-de-comercio-exterior/normativa-y-operaciones-aduaneras-generales/acuerdos-comerciales-y-facilitacion",
     "orden": 123,
@@ -2404,14 +2404,14 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04d4",
+    "_id": "6ad8421581847cff034f1410",
     "slug": "prevencion-de-contrabando-y-defraudacion",
     "nombre": "Prevención de Contrabando y Defraudación",
     "nivel": 3,
-    "padre_id": "6ad83fff0769f419cc5a04d1",
+    "padre_id": "6ad8421581847cff034f140d",
     "ruta": [
-      "6ad83fff0769f419cc5a049d",
-      "6ad83fff0769f419cc5a04d1"
+      "6ad8421581847cff034f13d9",
+      "6ad8421581847cff034f140d"
     ],
     "materialized_path": "operadores-de-comercio-exterior/normativa-y-operaciones-aduaneras-generales/prevencion-de-contrabando-y-defraudacion",
     "orden": 124,
@@ -2423,14 +2423,14 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04d5",
+    "_id": "6ad8421581847cff034f1411",
     "slug": "consultas-tecnicas-recursos-y-valoracion",
     "nombre": "Consultas Técnicas, Recursos y Valoración",
     "nivel": 3,
-    "padre_id": "6ad83fff0769f419cc5a04d1",
+    "padre_id": "6ad8421581847cff034f140d",
     "ruta": [
-      "6ad83fff0769f419cc5a049d",
-      "6ad83fff0769f419cc5a04d1"
+      "6ad8421581847cff034f13d9",
+      "6ad8421581847cff034f140d"
     ],
     "materialized_path": "operadores-de-comercio-exterior/normativa-y-operaciones-aduaneras-generales/consultas-tecnicas-recursos-y-valoracion",
     "orden": 125,
@@ -2442,74 +2442,74 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04d6",
+    "_id": "6ad8421581847cff034f1412",
     "slug": "consultas-tecnicas-y-criterios-vinculantes",
     "nombre": "Consultas técnicas y criterios vinculantes",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a04d5",
+    "padre_id": "6ad8421581847cff034f1411",
     "ruta": [
-      "6ad83fff0769f419cc5a049d",
-      "6ad83fff0769f419cc5a04d1",
-      "6ad83fff0769f419cc5a04d5"
+      "6ad8421581847cff034f13d9",
+      "6ad8421581847cff034f140d",
+      "6ad8421581847cff034f1411"
     ],
     "materialized_path": "operadores-de-comercio-exterior/normativa-y-operaciones-aduaneras-generales/consultas-tecnicas-recursos-y-valoracion/consultas-tecnicas-y-criterios-vinculantes",
     "orden": 126,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Consultas técnicas y criterios vinculantes dentro de la subárea Consultas Técnicas, Recursos y Valoración. Incluye trámites como: Requisitos, pasos y documentos para ampliar una consulta., Requisitos, pasos y documentos para enviar una consulta tributaria o aduanera..",
+      "que_es": "Tema operativo para la gestión de Consultas técnicas y criterios vinculantes dentro de la subárea Consultas Técnicas, Recursos y Valoración.",
       "lead_text": "Requisitos, pasos e información orientadora para consultas técnicas y criterios vinculantes (4 gestiones).",
       "base_juridica": "Convenio sobre el Régimen Arancelario y Aduanero Centroamericano (SAC) y Ley de Aduanas."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04d7",
+    "_id": "6ad8421581847cff034f1413",
     "slug": "gestiones-generales-del-operador",
     "nombre": "Gestiones generales del operador",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a04d5",
+    "padre_id": "6ad8421581847cff034f1411",
     "ruta": [
-      "6ad83fff0769f419cc5a049d",
-      "6ad83fff0769f419cc5a04d1",
-      "6ad83fff0769f419cc5a04d5"
+      "6ad8421581847cff034f13d9",
+      "6ad8421581847cff034f140d",
+      "6ad8421581847cff034f1411"
     ],
     "materialized_path": "operadores-de-comercio-exterior/normativa-y-operaciones-aduaneras-generales/consultas-tecnicas-recursos-y-valoracion/gestiones-generales-del-operador",
     "orden": 127,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Gestiones generales del operador dentro de la subárea Consultas Técnicas, Recursos y Valoración. Incluye trámites como: Información sobre el proceso de solicitud, colocación y funcionamiento del marchamo electrónico, inventario de áreas de activación y desactivación y entidades prestadoras del servicio autorizadas., Requisitos, pasos y documentos para confirmar declaraciones de mercancías..",
+      "que_es": "Tema operativo para la gestión de Gestiones generales del operador dentro de la subárea Consultas Técnicas, Recursos y Valoración.",
       "lead_text": "Requisitos, pasos e información orientadora para gestiones generales del operador (7 gestiones).",
       "base_juridica": "CAUCA IV (Arts. 18 al 28), RECAUCA IV (Tránsito Aduanero Internacional Terrestre) y Ley de Aduanas."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04d8",
+    "_id": "6ad8421581847cff034f1414",
     "slug": "recursos-administrativos-y-defensa-aduanera",
     "nombre": "Recursos administrativos y defensa aduanera",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a04d5",
+    "padre_id": "6ad8421581847cff034f1411",
     "ruta": [
-      "6ad83fff0769f419cc5a049d",
-      "6ad83fff0769f419cc5a04d1",
-      "6ad83fff0769f419cc5a04d5"
+      "6ad8421581847cff034f13d9",
+      "6ad8421581847cff034f140d",
+      "6ad8421581847cff034f1411"
     ],
     "materialized_path": "operadores-de-comercio-exterior/normativa-y-operaciones-aduaneras-generales/consultas-tecnicas-recursos-y-valoracion/recursos-administrativos-y-defensa-aduanera",
     "orden": 128,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Recursos administrativos y defensa aduanera dentro de la subárea Consultas Técnicas, Recursos y Valoración. Incluye trámites como: Requisitos, listado de pasos, y casos especiales; para la Devolución, Retención o Compensación de Impuestos en diferentes modalidades., Información sobre: Procedimientos de recursos aduaneros..",
+      "que_es": "Tema operativo para la gestión de Recursos administrativos y defensa aduanera dentro de la subárea Consultas Técnicas, Recursos y Valoración.",
       "lead_text": "Requisitos, pasos e información orientadora para recursos administrativos y defensa aduanera (3 gestiones).",
       "base_juridica": "Decreto 27-92 (Ley del IVA, Arts. 23 al 25 bis) y Acuerdo de Directorio SAT 07-2007."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04d9",
+    "_id": "6ad8421581847cff034f1415",
     "slug": "modernizacion-e-infraestructura-aduanera",
     "nombre": "Modernización e Infraestructura Aduanera",
     "nivel": 3,
-    "padre_id": "6ad83fff0769f419cc5a04d1",
+    "padre_id": "6ad8421581847cff034f140d",
     "ruta": [
-      "6ad83fff0769f419cc5a049d",
-      "6ad83fff0769f419cc5a04d1"
+      "6ad8421581847cff034f13d9",
+      "6ad8421581847cff034f140d"
     ],
     "materialized_path": "operadores-de-comercio-exterior/normativa-y-operaciones-aduaneras-generales/modernizacion-e-infraestructura-aduanera",
     "orden": 129,
@@ -2521,73 +2521,73 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04da",
+    "_id": "6ad8421581847cff034f1416",
     "slug": "infraestructura-y-puestos-fronterizos",
     "nombre": "Infraestructura y puestos fronterizos",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a04d9",
+    "padre_id": "6ad8421581847cff034f1415",
     "ruta": [
-      "6ad83fff0769f419cc5a049d",
-      "6ad83fff0769f419cc5a04d1",
-      "6ad83fff0769f419cc5a04d9"
+      "6ad8421581847cff034f13d9",
+      "6ad8421581847cff034f140d",
+      "6ad8421581847cff034f1415"
     ],
     "materialized_path": "operadores-de-comercio-exterior/normativa-y-operaciones-aduaneras-generales/modernizacion-e-infraestructura-aduanera/infraestructura-y-puestos-fronterizos",
     "orden": 130,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Infraestructura y puestos fronterizos dentro de la subárea Modernización e Infraestructura Aduanera. Incluye trámites como: Información sobre: Complejo Lavarreda (Aduana Central)., Información sobre: Componente de infraestructura..",
+      "que_es": "Tema operativo para la gestión de Infraestructura y puestos fronterizos dentro de la subárea Modernización e Infraestructura Aduanera.",
       "lead_text": "Requisitos, pasos e información orientadora para infraestructura y puestos fronterizos (7 gestiones).",
       "base_juridica": "Convenio sobre el Régimen Arancelario y Aduanero Centroamericano (SAC) y Ley de Aduanas."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04db",
+    "_id": "6ad8421581847cff034f1417",
     "slug": "tecnologia-y-revision-no-intrusiva",
     "nombre": "Tecnología y revisión no intrusiva",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a04d9",
+    "padre_id": "6ad8421581847cff034f1415",
     "ruta": [
-      "6ad83fff0769f419cc5a049d",
-      "6ad83fff0769f419cc5a04d1",
-      "6ad83fff0769f419cc5a04d9"
+      "6ad8421581847cff034f13d9",
+      "6ad8421581847cff034f140d",
+      "6ad8421581847cff034f1415"
     ],
     "materialized_path": "operadores-de-comercio-exterior/normativa-y-operaciones-aduaneras-generales/modernizacion-e-infraestructura-aduanera/tecnologia-y-revision-no-intrusiva",
     "orden": 131,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Tecnología y revisión no intrusiva dentro de la subárea Modernización e Infraestructura Aduanera. Incluye trámites como: Información sobre: Componente de seguridad., Información sobre: Componente de tecnología..",
+      "que_es": "Tema operativo para la gestión de Tecnología y revisión no intrusiva dentro de la subárea Modernización e Infraestructura Aduanera.",
       "lead_text": "Requisitos, pasos e información orientadora para tecnología y revisión no intrusiva (4 gestiones).",
       "base_juridica": "Convenio sobre el Régimen Arancelario y Aduanero Centroamericano (SAC) y Ley de Aduanas."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04dc",
+    "_id": "6ad8421581847cff034f1418",
     "slug": "transparencia-repositorio-y-estadisticas",
     "nombre": "Transparencia, repositorio y estadísticas",
     "nivel": 4,
-    "padre_id": "6ad83fff0769f419cc5a04d9",
+    "padre_id": "6ad8421581847cff034f1415",
     "ruta": [
-      "6ad83fff0769f419cc5a049d",
-      "6ad83fff0769f419cc5a04d1",
-      "6ad83fff0769f419cc5a04d9"
+      "6ad8421581847cff034f13d9",
+      "6ad8421581847cff034f140d",
+      "6ad8421581847cff034f1415"
     ],
     "materialized_path": "operadores-de-comercio-exterior/normativa-y-operaciones-aduaneras-generales/modernizacion-e-infraestructura-aduanera/transparencia-repositorio-y-estadisticas",
     "orden": 132,
     "estado": "VIGENTE",
     "contenido_segmento": {
-      "que_es": "Tema operativo para la gestión de Transparencia, repositorio y estadísticas dentro de la subárea Modernización e Infraestructura Aduanera. Incluye trámites como: Información sobre: Repositorio de documentos., Información sobre: Estadísticas tributarias..",
+      "que_es": "Tema operativo para la gestión de Transparencia, repositorio y estadísticas dentro de la subárea Modernización e Infraestructura Aduanera.",
       "lead_text": "Requisitos, pasos e información orientadora para transparencia, repositorio y estadísticas (7 gestiones).",
       "base_juridica": "Convenio sobre el Régimen Arancelario y Aduanero Centroamericano (SAC) y Ley de Aduanas."
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04dd",
+    "_id": "6ad8421581847cff034f1419",
     "slug": "operador-economico-autorizado-oea",
     "nombre": "Operador Económico Autorizado (OEA)",
     "nivel": 2,
-    "padre_id": "6ad83fff0769f419cc5a049d",
+    "padre_id": "6ad8421581847cff034f13d9",
     "ruta": [
-      "6ad83fff0769f419cc5a049d"
+      "6ad8421581847cff034f13d9"
     ],
     "materialized_path": "operadores-de-comercio-exterior/operador-economico-autorizado-oea",
     "orden": 133,
@@ -2599,7 +2599,7 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04de",
+    "_id": "6ad8421581847cff034f141a",
     "slug": "profesionales",
     "nombre": "Profesionales",
     "nivel": 1,
@@ -2615,13 +2615,13 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04df",
+    "_id": "6ad8421581847cff034f141b",
     "slug": "abogados-y-notarios",
     "nombre": "Abogados y Notarios",
     "nivel": 2,
-    "padre_id": "6ad83fff0769f419cc5a04de",
+    "padre_id": "6ad8421581847cff034f141a",
     "ruta": [
-      "6ad83fff0769f419cc5a04de"
+      "6ad8421581847cff034f141a"
     ],
     "materialized_path": "profesionales/abogados-y-notarios",
     "orden": 135,
@@ -2633,14 +2633,14 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04e0",
+    "_id": "6ad8421581847cff034f141c",
     "slug": "habilitacion-y-registro-notarial",
     "nombre": "Habilitación y Registro Notarial",
     "nivel": 3,
-    "padre_id": "6ad83fff0769f419cc5a04df",
+    "padre_id": "6ad8421581847cff034f141b",
     "ruta": [
-      "6ad83fff0769f419cc5a04de",
-      "6ad83fff0769f419cc5a04df"
+      "6ad8421581847cff034f141a",
+      "6ad8421581847cff034f141b"
     ],
     "materialized_path": "profesionales/abogados-y-notarios/habilitacion-y-registro-notarial",
     "orden": 136,
@@ -2652,14 +2652,14 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04e1",
+    "_id": "6ad8421581847cff034f141d",
     "slug": "timbres-fiscales-y-papel-sellado-de-protocolo",
     "nombre": "Timbres Fiscales y Papel Sellado de Protocolo",
     "nivel": 3,
-    "padre_id": "6ad83fff0769f419cc5a04df",
+    "padre_id": "6ad8421581847cff034f141b",
     "ruta": [
-      "6ad83fff0769f419cc5a04de",
-      "6ad83fff0769f419cc5a04df"
+      "6ad8421581847cff034f141a",
+      "6ad8421581847cff034f141b"
     ],
     "materialized_path": "profesionales/abogados-y-notarios/timbres-fiscales-y-papel-sellado-de-protocolo",
     "orden": 137,
@@ -2671,14 +2671,14 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04e2",
+    "_id": "6ad8421581847cff034f141e",
     "slug": "traspaso-electronico-vehicular-e-traspaso",
     "nombre": "Traspaso Electrónico Vehicular (e-Traspaso)",
     "nivel": 3,
-    "padre_id": "6ad83fff0769f419cc5a04df",
+    "padre_id": "6ad8421581847cff034f141b",
     "ruta": [
-      "6ad83fff0769f419cc5a04de",
-      "6ad83fff0769f419cc5a04df"
+      "6ad8421581847cff034f141a",
+      "6ad8421581847cff034f141b"
     ],
     "materialized_path": "profesionales/abogados-y-notarios/traspaso-electronico-vehicular-e-traspaso",
     "orden": 138,
@@ -2690,14 +2690,14 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04e3",
+    "_id": "6ad8421581847cff034f141f",
     "slug": "avisos-notariales-y-fe-publica",
     "nombre": "Avisos Notariales y Fe Pública",
     "nivel": 3,
-    "padre_id": "6ad83fff0769f419cc5a04df",
+    "padre_id": "6ad8421581847cff034f141b",
     "ruta": [
-      "6ad83fff0769f419cc5a04de",
-      "6ad83fff0769f419cc5a04df"
+      "6ad8421581847cff034f141a",
+      "6ad8421581847cff034f141b"
     ],
     "materialized_path": "profesionales/abogados-y-notarios/avisos-notariales-y-fe-publica",
     "orden": 139,
@@ -2709,13 +2709,13 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04e4",
+    "_id": "6ad8421581847cff034f1420",
     "slug": "peritos-contadores",
     "nombre": "Peritos Contadores",
     "nivel": 2,
-    "padre_id": "6ad83fff0769f419cc5a04de",
+    "padre_id": "6ad8421581847cff034f141a",
     "ruta": [
-      "6ad83fff0769f419cc5a04de"
+      "6ad8421581847cff034f141a"
     ],
     "materialized_path": "profesionales/peritos-contadores",
     "orden": 140,
@@ -2727,14 +2727,14 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04e5",
+    "_id": "6ad8421581847cff034f1421",
     "slug": "habilitacion-y-registro-de-perito-contador",
     "nombre": "Habilitación y Registro de Perito Contador",
     "nivel": 3,
-    "padre_id": "6ad83fff0769f419cc5a04e4",
+    "padre_id": "6ad8421581847cff034f1420",
     "ruta": [
-      "6ad83fff0769f419cc5a04de",
-      "6ad83fff0769f419cc5a04e4"
+      "6ad8421581847cff034f141a",
+      "6ad8421581847cff034f1420"
     ],
     "materialized_path": "profesionales/peritos-contadores/habilitacion-y-registro-de-perito-contador",
     "orden": 141,
@@ -2746,14 +2746,14 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04e6",
+    "_id": "6ad8421581847cff034f1422",
     "slug": "consultas-retenciones-y-libros-contables",
     "nombre": "Consultas, Retenciones y Libros Contables",
     "nivel": 3,
-    "padre_id": "6ad83fff0769f419cc5a04e4",
+    "padre_id": "6ad8421581847cff034f1420",
     "ruta": [
-      "6ad83fff0769f419cc5a04de",
-      "6ad83fff0769f419cc5a04e4"
+      "6ad8421581847cff034f141a",
+      "6ad8421581847cff034f1420"
     ],
     "materialized_path": "profesionales/peritos-contadores/consultas-retenciones-y-libros-contables",
     "orden": 142,
@@ -2765,13 +2765,13 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04e7",
+    "_id": "6ad8421581847cff034f1423",
     "slug": "auditores",
     "nombre": "Auditores",
     "nivel": 2,
-    "padre_id": "6ad83fff0769f419cc5a04de",
+    "padre_id": "6ad8421581847cff034f141a",
     "ruta": [
-      "6ad83fff0769f419cc5a04de"
+      "6ad8421581847cff034f141a"
     ],
     "materialized_path": "profesionales/auditores",
     "orden": 143,
@@ -2783,14 +2783,14 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04e8",
+    "_id": "6ad8421581847cff034f1424",
     "slug": "habilitacion-y-registro-de-auditor-cpa",
     "nombre": "Habilitación y Registro de Auditor (CPA)",
     "nivel": 3,
-    "padre_id": "6ad83fff0769f419cc5a04e7",
+    "padre_id": "6ad8421581847cff034f1423",
     "ruta": [
-      "6ad83fff0769f419cc5a04de",
-      "6ad83fff0769f419cc5a04e7"
+      "6ad8421581847cff034f141a",
+      "6ad8421581847cff034f1423"
     ],
     "materialized_path": "profesionales/auditores/habilitacion-y-registro-de-auditor-cpa",
     "orden": 144,
@@ -2802,14 +2802,14 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04e9",
+    "_id": "6ad8421581847cff034f1425",
     "slug": "dictamenes-de-credito-fiscal-y-auditoria",
     "nombre": "Dictámenes de Crédito Fiscal y Auditoría",
     "nivel": 3,
-    "padre_id": "6ad83fff0769f419cc5a04e7",
+    "padre_id": "6ad8421581847cff034f1423",
     "ruta": [
-      "6ad83fff0769f419cc5a04de",
-      "6ad83fff0769f419cc5a04e7"
+      "6ad8421581847cff034f141a",
+      "6ad8421581847cff034f1423"
     ],
     "materialized_path": "profesionales/auditores/dictamenes-de-credito-fiscal-y-auditoria",
     "orden": 145,
@@ -2821,13 +2821,13 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04ea",
+    "_id": "6ad8421581847cff034f1426",
     "slug": "gestores-tributarios",
     "nombre": "Gestores Tributarios",
     "nivel": 2,
-    "padre_id": "6ad83fff0769f419cc5a04de",
+    "padre_id": "6ad8421581847cff034f141a",
     "ruta": [
-      "6ad83fff0769f419cc5a04de"
+      "6ad8421581847cff034f141a"
     ],
     "materialized_path": "profesionales/gestores-tributarios",
     "orden": 146,
@@ -2839,14 +2839,14 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04eb",
+    "_id": "6ad8421581847cff034f1427",
     "slug": "acreditacion-y-carne-oficial-de-gestor",
     "nombre": "Acreditación y Carné Oficial de Gestor",
     "nivel": 3,
-    "padre_id": "6ad83fff0769f419cc5a04ea",
+    "padre_id": "6ad8421581847cff034f1426",
     "ruta": [
-      "6ad83fff0769f419cc5a04de",
-      "6ad83fff0769f419cc5a04ea"
+      "6ad8421581847cff034f141a",
+      "6ad8421581847cff034f1426"
     ],
     "materialized_path": "profesionales/gestores-tributarios/acreditacion-y-carne-oficial-de-gestor",
     "orden": 147,
@@ -2858,14 +2858,14 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04ec",
+    "_id": "6ad8421581847cff034f1428",
     "slug": "renovacion-y-gestion-de-gafetes",
     "nombre": "Renovación y Gestión de Gafetes",
     "nivel": 3,
-    "padre_id": "6ad83fff0769f419cc5a04ea",
+    "padre_id": "6ad8421581847cff034f1426",
     "ruta": [
-      "6ad83fff0769f419cc5a04de",
-      "6ad83fff0769f419cc5a04ea"
+      "6ad8421581847cff034f141a",
+      "6ad8421581847cff034f1426"
     ],
     "materialized_path": "profesionales/gestores-tributarios/renovacion-y-gestion-de-gafetes",
     "orden": 148,
@@ -2877,13 +2877,13 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04ed",
+    "_id": "6ad8421581847cff034f1429",
     "slug": "servicios-profesionales",
     "nombre": "Servicios Profesionales",
     "nivel": 2,
-    "padre_id": "6ad83fff0769f419cc5a04de",
+    "padre_id": "6ad8421581847cff034f141a",
     "ruta": [
-      "6ad83fff0769f419cc5a04de"
+      "6ad8421581847cff034f141a"
     ],
     "materialized_path": "profesionales/servicios-profesionales",
     "orden": 149,
@@ -2895,14 +2895,14 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04ee",
+    "_id": "6ad8421581847cff034f142a",
     "slug": "facturacion-por-honorarios-y-formularios",
     "nombre": "Facturación por Honorarios y Formularios",
     "nivel": 3,
-    "padre_id": "6ad83fff0769f419cc5a04ed",
+    "padre_id": "6ad8421581847cff034f1429",
     "ruta": [
-      "6ad83fff0769f419cc5a04de",
-      "6ad83fff0769f419cc5a04ed"
+      "6ad8421581847cff034f141a",
+      "6ad8421581847cff034f1429"
     ],
     "materialized_path": "profesionales/servicios-profesionales/facturacion-por-honorarios-y-formularios",
     "orden": 150,
@@ -2914,14 +2914,14 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04ef",
+    "_id": "6ad8421581847cff034f142b",
     "slug": "actualizacion-de-actividad-y-rtu",
     "nombre": "Actualización de Actividad y RTU",
     "nivel": 3,
-    "padre_id": "6ad83fff0769f419cc5a04ed",
+    "padre_id": "6ad8421581847cff034f1429",
     "ruta": [
-      "6ad83fff0769f419cc5a04de",
-      "6ad83fff0769f419cc5a04ed"
+      "6ad8421581847cff034f141a",
+      "6ad8421581847cff034f1429"
     ],
     "materialized_path": "profesionales/servicios-profesionales/actualizacion-de-actividad-y-rtu",
     "orden": 151,
@@ -2933,14 +2933,14 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04f0",
+    "_id": "6ad8421581847cff034f142c",
     "slug": "consultas-juridico-tributarias",
     "nombre": "Consultas Jurídico Tributarias",
     "nivel": 3,
-    "padre_id": "6ad83fff0769f419cc5a04ed",
+    "padre_id": "6ad8421581847cff034f1429",
     "ruta": [
-      "6ad83fff0769f419cc5a04de",
-      "6ad83fff0769f419cc5a04ed"
+      "6ad8421581847cff034f141a",
+      "6ad8421581847cff034f1429"
     ],
     "materialized_path": "profesionales/servicios-profesionales/consultas-juridico-tributarias",
     "orden": 152,
@@ -2952,14 +2952,14 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04f1",
+    "_id": "6ad8421581847cff034f142d",
     "slug": "sistemas-de-retencion-y-cumplimiento",
     "nombre": "Sistemas de Retención y Cumplimiento",
     "nivel": 3,
-    "padre_id": "6ad83fff0769f419cc5a04ed",
+    "padre_id": "6ad8421581847cff034f1429",
     "ruta": [
-      "6ad83fff0769f419cc5a04de",
-      "6ad83fff0769f419cc5a04ed"
+      "6ad8421581847cff034f141a",
+      "6ad8421581847cff034f1429"
     ],
     "materialized_path": "profesionales/servicios-profesionales/sistemas-de-retencion-y-cumplimiento",
     "orden": 153,
@@ -2971,7 +2971,7 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04f2",
+    "_id": "6ad8421581847cff034f142e",
     "slug": "entes-exentos",
     "nombre": "Entes Exentos",
     "nivel": 1,
@@ -2987,13 +2987,13 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04f3",
+    "_id": "6ad8421581847cff034f142f",
     "slug": "constitucionales",
     "nombre": "Constitucionales",
     "nivel": 2,
-    "padre_id": "6ad83fff0769f419cc5a04f2",
+    "padre_id": "6ad8421581847cff034f142e",
     "ruta": [
-      "6ad83fff0769f419cc5a04f2"
+      "6ad8421581847cff034f142e"
     ],
     "materialized_path": "entes-exentos/constitucionales",
     "orden": 155,
@@ -3005,14 +3005,14 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04f4",
+    "_id": "6ad8421581847cff034f1430",
     "slug": "centros-educativos-y-universidades-arts-73-y-88",
     "nombre": "Centros Educativos y Universidades (Arts. 73 y 88)",
     "nivel": 3,
-    "padre_id": "6ad83fff0769f419cc5a04f3",
+    "padre_id": "6ad8421581847cff034f142f",
     "ruta": [
-      "6ad83fff0769f419cc5a04f2",
-      "6ad83fff0769f419cc5a04f3"
+      "6ad8421581847cff034f142e",
+      "6ad8421581847cff034f142f"
     ],
     "materialized_path": "entes-exentos/constitucionales/centros-educativos-y-universidades-arts-73-y-88",
     "orden": 156,
@@ -3024,14 +3024,14 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04f5",
+    "_id": "6ad8421581847cff034f1431",
     "slug": "iglesias-y-deporte-federado-arts-37-y-92",
     "nombre": "Iglesias y Deporte Federado (Arts. 37 y 92)",
     "nivel": 3,
-    "padre_id": "6ad83fff0769f419cc5a04f3",
+    "padre_id": "6ad8421581847cff034f142f",
     "ruta": [
-      "6ad83fff0769f419cc5a04f2",
-      "6ad83fff0769f419cc5a04f3"
+      "6ad8421581847cff034f142e",
+      "6ad8421581847cff034f142f"
     ],
     "materialized_path": "entes-exentos/constitucionales/iglesias-y-deporte-federado-arts-37-y-92",
     "orden": 157,
@@ -3043,14 +3043,14 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04f6",
+    "_id": "6ad8421581847cff034f1432",
     "slug": "vehiculos-solvencias-y-asistencia-institucional",
     "nombre": "Vehículos, Solvencias y Asistencia Institucional",
     "nivel": 3,
-    "padre_id": "6ad83fff0769f419cc5a04f3",
+    "padre_id": "6ad8421581847cff034f142f",
     "ruta": [
-      "6ad83fff0769f419cc5a04f2",
-      "6ad83fff0769f419cc5a04f3"
+      "6ad8421581847cff034f142e",
+      "6ad8421581847cff034f142f"
     ],
     "materialized_path": "entes-exentos/constitucionales/vehiculos-solvencias-y-asistencia-institucional",
     "orden": 158,
@@ -3062,13 +3062,13 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04f7",
+    "_id": "6ad8421581847cff034f1433",
     "slug": "no-lucrativos",
     "nombre": "No Lucrativos",
     "nivel": 2,
-    "padre_id": "6ad83fff0769f419cc5a04f2",
+    "padre_id": "6ad8421581847cff034f142e",
     "ruta": [
-      "6ad83fff0769f419cc5a04f2"
+      "6ad8421581847cff034f142e"
     ],
     "materialized_path": "entes-exentos/no-lucrativos",
     "orden": 159,
@@ -3080,14 +3080,14 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04f8",
+    "_id": "6ad8421581847cff034f1434",
     "slug": "inscripcion-y-rtu-de-organizaciones-no-lucrativas",
     "nombre": "Inscripción y RTU de Organizaciones No Lucrativas",
     "nivel": 3,
-    "padre_id": "6ad83fff0769f419cc5a04f7",
+    "padre_id": "6ad8421581847cff034f1433",
     "ruta": [
-      "6ad83fff0769f419cc5a04f2",
-      "6ad83fff0769f419cc5a04f7"
+      "6ad8421581847cff034f142e",
+      "6ad8421581847cff034f1433"
     ],
     "materialized_path": "entes-exentos/no-lucrativos/inscripcion-y-rtu-de-organizaciones-no-lucrativas",
     "orden": 160,
@@ -3099,14 +3099,14 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04f9",
+    "_id": "6ad8421581847cff034f1435",
     "slug": "exenciones-civa-actualizacion-y-cierre-de-operaciones",
     "nombre": "Exenciones CIVA, Actualización y Cierre de Operaciones",
     "nivel": 3,
-    "padre_id": "6ad83fff0769f419cc5a04f7",
+    "padre_id": "6ad8421581847cff034f1433",
     "ruta": [
-      "6ad83fff0769f419cc5a04f2",
-      "6ad83fff0769f419cc5a04f7"
+      "6ad8421581847cff034f142e",
+      "6ad8421581847cff034f1433"
     ],
     "materialized_path": "entes-exentos/no-lucrativos/exenciones-civa-actualizacion-y-cierre-de-operaciones",
     "orden": 161,
@@ -3118,13 +3118,13 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04fa",
+    "_id": "6ad8421581847cff034f1436",
     "slug": "entidades-del-estado",
     "nombre": "Entidades del Estado",
     "nivel": 2,
-    "padre_id": "6ad83fff0769f419cc5a04f2",
+    "padre_id": "6ad8421581847cff034f142e",
     "ruta": [
-      "6ad83fff0769f419cc5a04f2"
+      "6ad8421581847cff034f142e"
     ],
     "materialized_path": "entes-exentos/entidades-del-estado",
     "orden": 162,
@@ -3136,14 +3136,14 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04fb",
+    "_id": "6ad8421581847cff034f1437",
     "slug": "registro-institucional-y-rtu-estatal",
     "nombre": "Registro Institucional y RTU Estatal",
     "nivel": 3,
-    "padre_id": "6ad83fff0769f419cc5a04fa",
+    "padre_id": "6ad8421581847cff034f1436",
     "ruta": [
-      "6ad83fff0769f419cc5a04f2",
-      "6ad83fff0769f419cc5a04fa"
+      "6ad8421581847cff034f142e",
+      "6ad8421581847cff034f1436"
     ],
     "materialized_path": "entes-exentos/entidades-del-estado/registro-institucional-y-rtu-estatal",
     "orden": 163,
@@ -3155,14 +3155,14 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04fc",
+    "_id": "6ad8421581847cff034f1438",
     "slug": "facturacion-fel-retenciones-y-operaciones",
     "nombre": "Facturación FEL, Retenciones y Operaciones",
     "nivel": 3,
-    "padre_id": "6ad83fff0769f419cc5a04fa",
+    "padre_id": "6ad8421581847cff034f1436",
     "ruta": [
-      "6ad83fff0769f419cc5a04f2",
-      "6ad83fff0769f419cc5a04fa"
+      "6ad8421581847cff034f142e",
+      "6ad8421581847cff034f1436"
     ],
     "materialized_path": "entes-exentos/entidades-del-estado/facturacion-fel-retenciones-y-operaciones",
     "orden": 164,
@@ -3174,14 +3174,14 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04fd",
+    "_id": "6ad8421581847cff034f1439",
     "slug": "parque-vehicular-oficial-y-de-autoridad",
     "nombre": "Parque Vehicular Oficial y de Autoridad",
     "nivel": 3,
-    "padre_id": "6ad83fff0769f419cc5a04fa",
+    "padre_id": "6ad8421581847cff034f1436",
     "ruta": [
-      "6ad83fff0769f419cc5a04f2",
-      "6ad83fff0769f419cc5a04fa"
+      "6ad8421581847cff034f142e",
+      "6ad8421581847cff034f1436"
     ],
     "materialized_path": "entes-exentos/entidades-del-estado/parque-vehicular-oficial-y-de-autoridad",
     "orden": 165,
@@ -3193,14 +3193,14 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04fe",
+    "_id": "6ad8421581847cff034f143a",
     "slug": "control-interno-solvencias-y-normativa",
     "nombre": "Control Interno, Solvencias y Normativa",
     "nivel": 3,
-    "padre_id": "6ad83fff0769f419cc5a04fa",
+    "padre_id": "6ad8421581847cff034f1436",
     "ruta": [
-      "6ad83fff0769f419cc5a04f2",
-      "6ad83fff0769f419cc5a04fa"
+      "6ad8421581847cff034f142e",
+      "6ad8421581847cff034f1436"
     ],
     "materialized_path": "entes-exentos/entidades-del-estado/control-interno-solvencias-y-normativa",
     "orden": 166,
@@ -3212,13 +3212,13 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a04ff",
+    "_id": "6ad8421581847cff034f143b",
     "slug": "decreto",
     "nombre": "Decreto",
     "nivel": 2,
-    "padre_id": "6ad83fff0769f419cc5a04f2",
+    "padre_id": "6ad8421581847cff034f142e",
     "ruta": [
-      "6ad83fff0769f419cc5a04f2"
+      "6ad8421581847cff034f142e"
     ],
     "materialized_path": "entes-exentos/decreto",
     "orden": 167,
@@ -3230,14 +3230,14 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a0500",
+    "_id": "6ad8421581847cff034f143c",
     "slug": "misiones-diplomaticas-y-organismos-internacionales",
     "nombre": "Misiones Diplomáticas y Organismos Internacionales",
     "nivel": 3,
-    "padre_id": "6ad83fff0769f419cc5a04ff",
+    "padre_id": "6ad8421581847cff034f143b",
     "ruta": [
-      "6ad83fff0769f419cc5a04f2",
-      "6ad83fff0769f419cc5a04ff"
+      "6ad8421581847cff034f142e",
+      "6ad8421581847cff034f143b"
     ],
     "materialized_path": "entes-exentos/decreto/misiones-diplomaticas-y-organismos-internacionales",
     "orden": 168,
@@ -3249,14 +3249,14 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a0501",
+    "_id": "6ad8421581847cff034f143d",
     "slug": "cooperativas-partidos-politicos-y-exenciones-especiales",
     "nombre": "Cooperativas, Partidos Políticos y Exenciones Especiales",
     "nivel": 3,
-    "padre_id": "6ad83fff0769f419cc5a04ff",
+    "padre_id": "6ad8421581847cff034f143b",
     "ruta": [
-      "6ad83fff0769f419cc5a04f2",
-      "6ad83fff0769f419cc5a04ff"
+      "6ad8421581847cff034f142e",
+      "6ad8421581847cff034f143b"
     ],
     "materialized_path": "entes-exentos/decreto/cooperativas-partidos-politicos-y-exenciones-especiales",
     "orden": 169,
@@ -3268,14 +3268,14 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a0502",
+    "_id": "6ad8421581847cff034f143e",
     "slug": "donaciones-oficiales-y-despacho-aduanero",
     "nombre": "Donaciones Oficiales y Despacho Aduanero",
     "nivel": 3,
-    "padre_id": "6ad83fff0769f419cc5a04ff",
+    "padre_id": "6ad8421581847cff034f143b",
     "ruta": [
-      "6ad83fff0769f419cc5a04f2",
-      "6ad83fff0769f419cc5a04ff"
+      "6ad8421581847cff034f142e",
+      "6ad8421581847cff034f143b"
     ],
     "materialized_path": "entes-exentos/decreto/donaciones-oficiales-y-despacho-aduanero",
     "orden": 170,
@@ -3287,13 +3287,13 @@
     }
   },
   {
-    "_id": "6ad83fff0769f419cc5a0503",
+    "_id": "6ad8421581847cff034f143f",
     "slug": "municipalidades",
     "nombre": "Municipalidades",
     "nivel": 2,
-    "padre_id": "6ad83fff0769f419cc5a04f2",
+    "padre_id": "6ad8421581847cff034f142e",
     "ruta": [
-      "6ad83fff0769f419cc5a04f2"
+      "6ad8421581847cff034f142e"
     ],
     "materialized_path": "entes-exentos/municipalidades",
     "orden": 171,

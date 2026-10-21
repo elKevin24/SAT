@@ -233,9 +233,9 @@ export const ArchitectureDiagramPage: React.FC = () => {
       if (searchQuery.trim()) {
         const q = searchQuery.toLowerCase();
         pillarTramites = pillarTramites.filter(t => 
-          t.tramite?.toLowerCase().includes(q) ||
-          t.categoria?.toLowerCase().includes(q) ||
-          t.subcategoria?.toLowerCase().includes(q) ||
+          (t.gestion || t.tramite)?.toLowerCase().includes(q) ||
+          (t.categoria || t.nivel2)?.toLowerCase().includes(q) ||
+          (t.subcategoria || t.nivel3)?.toLowerCase().includes(q) ||
           t.descripcion?.toLowerCase().includes(q)
         );
       }
@@ -652,7 +652,7 @@ export const ArchitectureDiagramPage: React.FC = () => {
                                 className="p-2 bg-white hover:bg-sky-50/50 border border-slate-200 hover:border-[#14649B] rounded-lg cursor-pointer transition-all flex items-center justify-between gap-2 text-xs group"
                               >
                                 <span className="font-semibold text-slate-800 group-hover:text-[#14649B] truncate">
-                                  {tr.tramite}
+                                  {tr.gestion || tr.tramite}
                                 </span>
                                 <ExternalLink className="w-3 h-3 text-slate-300 group-hover:text-[#14649B] shrink-0" />
                               </div>
@@ -867,7 +867,7 @@ export const ArchitectureDiagramPage: React.FC = () => {
                                     >
                                       <div>
                                         <h4 className="text-xs font-bold text-[#19324B] group-hover:text-[#14649B] line-clamp-2 leading-snug">
-                                          {tr.tramite}
+                                          {tr.gestion || tr.tramite}
                                         </h4>
                                         <p className="text-[11px] text-slate-500 line-clamp-2 mt-1 leading-normal">
                                           {tr.descripcion || 'Requisitos normativos oficiales y pasos en línea de la SAT.'}
@@ -911,7 +911,7 @@ export const ArchitectureDiagramPage: React.FC = () => {
                   {activeModalTramite.pillarName || activeModalTramite.pillar} › {activeModalTramite.categoria}
                 </span>
                 <h3 className="text-base sm:text-lg font-black text-[#19324B] leading-tight">
-                  {activeModalTramite.tramite}
+                  {activeModalTramite.gestion || activeModalTramite.tramite}
                 </h3>
               </div>
               <button 
