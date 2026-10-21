@@ -82,7 +82,7 @@ export const TramiteDetailModal: React.FC<TramiteDetailModalProps> = ({
     <Modal
       open={!!tramite}
       onClose={onClose}
-      ariaLabelledBy="tramite-title"
+      ariaLabelledBy="gestion-title"
       maxWidth="max-w-2xl"
       hideHeader
       panelClassName="p-0 overflow-hidden rounded-sat-lg border border-sat-gris text-sat-texto flex flex-col max-h-[90vh]"
@@ -101,7 +101,7 @@ export const TramiteDetailModal: React.FC<TramiteDetailModalProps> = ({
               {tramite.categoria} {tramite.subcategoria ? `› ${tramite.subcategoria}` : ''}
             </span>
           </div>
-          <h2 id="tramite-title" className="text-base sm:text-lg font-bold leading-tight">
+          <h2 id="gestion-title" className="text-base sm:text-lg font-bold leading-tight">
             {tramite.tramite}
           </h2>
         </div>
@@ -117,7 +117,7 @@ export const TramiteDetailModal: React.FC<TramiteDetailModalProps> = ({
       {/* Cuerpo de la Ficha en Pasos Cronológicos (Lenguaje Ciudadano) */}
       <div className="p-4 sm:p-6 overflow-y-auto space-y-5 sm:space-y-6 text-xs sm:text-sm">
         
-        {/* Resumen del Trámite */}
+        {/* Resumen de la Gestión */}
         <div className="p-4 rounded-sat-md bg-sat-fondo-tenue border border-sat-gris space-y-2">
           <h3 className="font-bold text-sat-texto text-xs uppercase tracking-wider flex items-center gap-1.5">
             <Info className="w-4 h-4 text-sat-azul shrink-0" /> Propósito y Descripción
@@ -186,7 +186,7 @@ export const TramiteDetailModal: React.FC<TramiteDetailModalProps> = ({
             </div>
           </div>
 
-          {/* PASO 2: Canal de Atención e Inicio del Trámite */}
+          {/* PASO 2: Canal de Atención e Inicio de la Gestión */}
           <div className="p-4 rounded-sat-md border border-sat-gris bg-white space-y-3">
             <div className="flex items-center gap-2">
               <span className="w-6 h-6 rounded-full bg-sat-azul text-white font-bold text-xs flex items-center justify-center shrink-0">
@@ -217,7 +217,7 @@ export const TramiteDetailModal: React.FC<TramiteDetailModalProps> = ({
                   rel="noopener noreferrer"
                   className="px-4 py-2 bg-sat-azul hover:bg-sat-azul-oscuro text-white text-xs font-bold rounded-sat-md shadow-sat-sm transition-all inline-flex items-center gap-1.5 focus:outline-hidden focus:ring-2 focus:ring-sat-azul"
                 >
-                  <span>Iniciar Trámite Ahora</span>
+                  <span>Iniciar Gestión en Línea</span>
                   <ExternalLink className="w-3.5 h-3.5" />
                 </a>
               </div>

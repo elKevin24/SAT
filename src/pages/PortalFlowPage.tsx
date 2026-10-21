@@ -395,7 +395,7 @@ export const PortalFlowPage: React.FC = () => {
       const tramiteItem: FullTramiteItem = {
         id: t.id,
         codigo: t.codigo || t.id,
-        titulo: t.tramite || t.nombreActual || 'Trámite Oficial',
+        titulo: t.tramite || t.nombreActual || 'Gestión Oficial',
         pillar: segId,
         nivel1_segmento: t.nivel1_segmento || SEGMENT_META[segId].name,
         nivel2_area: (t.nivel2_area || '').trim(),
@@ -1047,9 +1047,9 @@ export const PortalFlowPage: React.FC = () => {
               </div>
               <ul className="text-[11px] text-slate-700 space-y-1 font-medium">
                 <li>• <strong>Nivel 1 a Nivel 5:</strong> Estructura canónica del Excel (Nivel 1 → Nivel 2 → Nivel 3 → Nivel 4 → Nivel 5).</li>
-                <li>• <strong>Nivel 4 donde sí existe:</strong> Se despliega en los 577 trámites con tema específico.</li>
-                <li>• <strong>Asimetría Natural:</strong> Trámites sin Nivel 4 (o sin Nivel 3) se vinculan directamente al nivel superior sin crear niveles inventados.</li>
-                <li>• <strong>Ciclo ATO:</strong> Atributo transversal del trámite, reflejado en cada gestión.</li>
+                <li>• <strong>Nivel 4 donde sí existe:</strong> Se despliega en las 577 gestiones con tema específico.</li>
+                <li>• <strong>Asimetría Natural:</strong> Gestiones sin Nivel 4 (o sin Nivel 3) se vinculan directamente al nivel superior sin crear niveles inventados.</li>
+                <li>• <strong>Ciclo ATO:</strong> Atributo transversal de la gestión, reflejado en cada gestión.</li>
               </ul>
             </Panel>
           </ReactFlow>
@@ -1065,7 +1065,7 @@ export const PortalFlowPage: React.FC = () => {
                   Ficha Oficial de Gestión
                 </span>
                 <h2 className="text-sm font-black text-slate-900 leading-tight">
-                  Nivel 5 — Detalle del Trámite
+                  Nivel 5 — Detalle de la Gestión
                 </h2>
               </div>
               <button
@@ -1181,7 +1181,7 @@ export const PortalFlowPage: React.FC = () => {
                     rel="noopener noreferrer"
                     className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-sat-azul hover:bg-sat-azul-oscuro text-white font-bold text-xs transition-colors shadow-xs"
                   >
-                    <span>Abrir trámite en Portal SAT</span>
+                    <span>Abrir gestión en Portal SAT</span>
                     <ExternalLink className="w-3.5 h-3.5" />
                   </a>
                 </div>

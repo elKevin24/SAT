@@ -324,7 +324,7 @@ export const PortalFlowModal: React.FC<PortalFlowModalProps> = ({
       const tramiteItem: FullTramiteItem = {
         id: t.id,
         codigo: t.id,
-        titulo: t.tramite || t.nombreActual || 'Trámite Oficial',
+        titulo: t.tramite || t.nombreActual || 'Gestión Oficial',
         pillar: segId,
         categoria: t.categoria || 'General',
         subcategoria: t.subcategoria || 'General',
@@ -466,7 +466,7 @@ export const PortalFlowModal: React.FC<PortalFlowModalProps> = ({
       const n2NodeId = `n2-${aIdx}`;
       const isN2Selected = n2Key === selectedN2;
       const subCount = Object.keys(n2Obj.subBranches || {}).length;
-      const detailText = subCount <= 2 ? 'Trámites directos (Regla colapso)' : `${subCount} ramas de contenido`;
+      const detailText = subCount <= 2 ? 'Gestiones directas (Regla colapso)' : `${subCount} ramas de contenido`;
 
       nodes.push({
         id: n2NodeId,
@@ -547,7 +547,7 @@ export const PortalFlowModal: React.FC<PortalFlowModalProps> = ({
         const n3NodeId = `n3-${sIdx}`;
         const isN3Selected = n3Name === activeN3Key;
         const subCount = Object.keys(n3Obj.subBranches || {}).length;
-        const detailText = subCount <= 2 ? `${n3Obj.total} trámites directos` : `${subCount} temas específicos`;
+        const detailText = subCount <= 2 ? `${n3Obj.total} gestiones directas` : `${subCount} temas específicos`;
 
         nodes.push({
           id: n3NodeId,
@@ -631,7 +631,7 @@ export const PortalFlowModal: React.FC<PortalFlowModalProps> = ({
               id: n4NodeId,
               type: 'level4Node',
               position: { x: 990, y: 40 + tIdx * 115 },
-              data: { name: n4Name, count: n4Obj.total, detailText: `${n4Obj.total} trámites`, isSelected: isN4Selected, n4Key: n4Name }
+              data: { name: n4Name, count: n4Obj.total, detailText: `${n4Obj.total} gestiones`, isSelected: isN4Selected, n4Key: n4Name }
             });
 
             edges.push({
@@ -863,7 +863,7 @@ export const PortalFlowModal: React.FC<PortalFlowModalProps> = ({
               <div className="px-5 py-4 border-b border-slate-200 bg-slate-50 flex items-center justify-between">
                 <div>
                   <span className="text-[10px] font-black uppercase tracking-wider text-slate-600">
-                    Ficha de Trámite — Profundización
+                    Ficha de Gestión — Profundización
                   </span>
                   <h3 className="text-sm font-black text-slate-900 leading-tight">
                     Anatomía del Procedimiento
@@ -872,7 +872,7 @@ export const PortalFlowModal: React.FC<PortalFlowModalProps> = ({
                 <button
                   onClick={() => setSelectedTramite(null)}
                   className="p-1.5 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-200 transition-colors"
-                  aria-label="Cerrar inspector de trámite"
+                  aria-label="Cerrar inspector de gestión"
                 >
                   <X className="w-5 h-5" />
                 </button>
