@@ -6,7 +6,8 @@ import {
   Clock, 
   ShieldAlert, 
   Palette,
-  Layers
+  Layers,
+  FileSpreadsheet
 } from 'lucide-react';
 
 interface InstitutionalFooterProps {
@@ -164,6 +165,16 @@ export const InstitutionalFooter: React.FC<InstitutionalFooterProps> = ({ onOpen
             >
               <Layers className="w-3.5 h-3.5" />
               <span>Diagrama de Árbol</span>
+            </a>
+
+            <a
+              href="/api/download/mapa-navegacion"
+              download="Mapa_de_Navegacion_y_Descripciones_Portal_SAT.xlsx"
+              className="hover:text-white text-emerald-400 flex items-center gap-1 font-semibold transition-colors"
+              title="Descargar libro Excel oficial (6 hojas: Árbol Jerárquico N1-N5, Nivel 1 a Nivel 5)"
+            >
+              <FileSpreadsheet className="w-3.5 h-3.5" />
+              <span>Descargar Excel (N1–N5)</span>
             </a>
 
             <a href="https://portal.sat.gob.gt/portal/mapa-del-sitio/" target="_blank" rel="noopener noreferrer" className="hover:text-slate-200">
