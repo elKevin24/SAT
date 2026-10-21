@@ -10,6 +10,7 @@ export const OFFICIAL_CATEGORY_ORDER: Record<PillarType, string[]> = {
   contribuyentes: [
     'Sin Obligaciones',
     'Pequeños Contribuyentes',
+    'Contribuyente General',
     'Contribuyentes Especiales',
   ],
   comercio_exterior: [
@@ -48,11 +49,16 @@ const GENERIC_LIFECYCLE_ORDER = [
 const GENERIC_LIFECYCLE_CATEGORIES = new Set<string>();
 
 const SPECIFIC_SUBCATEGORY_ORDER: Record<string, string[]> = {
-  'Sin Obligaciones': [
-    'Inscripción de NIT',
-    'Servicios en Línea y Solvencias',
-    'Títulos Universitarios',
-    'Información Pública',
+  'Sin Obligaciones': ['—'],
+  'Contribuyente General': [
+    'Inscripción y actualización en el RTU',
+    'Facturación electrónica y documentos tributarios',
+    'Declaraciones, pagos y solvencias',
+    'Devoluciones y créditos fiscales',
+    'Regímenes tributarios',
+    'Vehículos (como propietario)',
+    'Servicios y gestiones al contribuyente',
+    'Cultura tributaria y capacitación',
   ],
   'Pequeños Contribuyentes': [
     'Régimen de Pequeño Contribuyente',

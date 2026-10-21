@@ -210,3 +210,82 @@ test('contentRelationships: validacion del grafo interno, familias tematicas y p
   expect(grafoFEL?.prerrequisitos.length).toBeGreaterThanOrEqual(1);
   expect(grafoFEL?.familias.some((f) => f.id === 'fel')).toBe(true);
 });
+
+
+test('auditoria de gobernanza: verificacion de los 6 principios de calidad taxonomica', () => {
+  // 1. Contrato de datos: Contribuyente General declarado con 8 ramas N3
+  expect(OFFICIAL_CATEGORY_ORDER.contribuyentes).toContain('Contribuyente General');
+  expect(OFFICIAL_SUBCATEGORY_ORDER['Contribuyente General'].length).toBe(8);
+  expect(OFFICIAL_SUBCATEGORY_ORDER['Sin Obligaciones']).toEqual(['—']);
+
+  // 2. Cero nodos monocatenarios (pasarelas de 1 solo hijo)
+  const n3ByN2 = new Map<string, Set<string>>();
+  tramites.forEach((t) => {
+    const key = `${t.pillar}>${t.nivel2}`;
+    if (!n3ByN2.has(key)) n3ByN2.set(key, new Set());
+    if (t.nivel3 && t.nivel3 !== '—') n3ByN2.get(key)!.add(t.nivel3);
+  });
+  n3ByN2.forEach((hijos, padre) => {
+    if (hijos.size > 0) {
+      expect(hijos.size, `Pasarela monocatenaria detectada en ${padre}`).toBeGreaterThanOrEqual(2);
+    }
+  });
+
+  // 3. Capacidad de Miller: ningún nodo N2 o N3 tiene >= 11 hijos directos
+  n3ByN2.forEach((hijos, padre) => {
+    expect(hijos.size, `Sobrecarga de Miller en ${padre} (${hijos.size} hijos)`).toBeLessThanOrEqual(10);
+  });
+
+  // 4. Gobernanza del orden: cero duplicados de orden_contenido entre hermanos y ciclo ATO
+  const folders = new Map<string, typeof tramites>();
+  tramites.forEach((t) => {
+    const key = `${t.pillar}>${t.nivel2}>${t.nivel3}>${t.nivel4}`;
+    if (!folders.has(key)) folders.set(key, []);
+    folders.get(key)!.push(t);
+  });
+
+  const ATO_WEIGHT: Record<string, number> = {
+    empezar: 1,
+    operar: 2,
+    consultar: 3,
+    modificar_cerrar: 4,
+    normativa: 5,
+  };
+
+  folders.forEach((items, folderKey) => {
+    const ocs = items.map((i) => i.orden_contenido);
+    const uniqueOcs = new Set(ocs);
+    expect(uniqueOcs.size, `Duplicados de orden_contenido en ${folderKey}`).toBe(items.length);
+
+    // Validar orden ascendente respecto al ciclo ATO
+    for (let i = 0; i < items.length - 1; i++) {
+      const pesoActual = ATO_WEIGHT[items[i].etapaAto || 'empezar'] || 1;
+      const pesoSiguiente = ATO_WEIGHT[items[i + 1].etapaAto || 'empezar'] || 1;
+      expect(
+        pesoActual,
+        `Inversión de ciclo ATO en ${folderKey}: ${items[i].codigo} (${items[i].etapaAto}) antes de ${items[i + 1].codigo} (${items[i + 1].etapaAto})`
+      ).toBeLessThanOrEqual(pesoSiguiente);
+    }
+  });
+
+  // 5. Cero duplicados de 'Requisitos de persona/empresa' en nombreActual
+  const genericDupes = tramites.filter((t) => (t.nombreActual || '').trim() === 'Requisitos de persona/empresa');
+  expect(genericDupes.length).toBe(0);
+
+  // 6. Campos canónicos nivel1..nivel5 presentes y sin campos muertos
+  tramites.forEach((t) => {
+    expect(t.nivel1).toBeTruthy();
+    expect(t.nivel2).toBeTruthy();
+    expect(t.nivel3).toBeTruthy();
+    expect(t.nivel4).toBeTruthy();
+    expect(t.nivel5).toBeTruthy();
+    expect(t.orden_n1).toBeGreaterThanOrEqual(1);
+
+    // Campos muertos eliminados
+    expect((t as any).segmento).toBeUndefined();
+    expect((t as any).regimenArea).toBeUndefined();
+    expect((t as any).grupoActor).toBeUndefined();
+    expect((t as any).materiaTema).toBeUndefined();
+    expect((t as any).subtemaGestion).toBeUndefined();
+  });
+});

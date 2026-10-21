@@ -63,7 +63,6 @@ test('Abrir GuidedProcessModal', async ({ page }) => {
 test('Abrir TramiteDetailModal', async ({ page }) => {
   await page.goto('/#/catalogo');
   await page.getByRole('button', { name: 'Sin Obligaciones' }).first().click();
-  await page.getByRole('button', { name: 'Inscripción de NIT' }).first().click();
   await page.locator('[role="button"]:has-text("Ver detalle")').first().click();
   await expect(page.getByRole('dialog')).toBeVisible();
   await scan(page, 'TramiteDetailModal');

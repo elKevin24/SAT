@@ -348,9 +348,9 @@ const subcategoriesList = useMemo(() => {
             tramite.tipoInteraccion === 'servicio_transaccional'
               ? 'bg-sat-azul/10 text-sat-azul border border-sat-azul/20'
               : tramite.tipoInteraccion === 'consulta_datos'
-                ? 'bg-[#059669]/10 text-[#059669] border border-[#059669]/20'
+                ? 'bg-emerald-50 text-emerald-800 border border-emerald-300'
                 : tramite.tipoInteraccion === 'descarga_recurso'
-                  ? 'bg-[#7C3AED]/10 text-[#7C3AED] border border-[#7C3AED]/20'
+                  ? 'bg-purple-50 text-purple-800 border border-purple-300'
                   : 'bg-sat-fondo-medio/70 text-sat-texto-suave border border-sat-gris/60'
           }`}>
             {tramite.tipoInteraccion === 'servicio_transaccional' && 'Gestión en Línea'}
