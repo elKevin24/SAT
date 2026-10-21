@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import { Search, ArrowLeft } from 'lucide-react';
+import { Search, ArrowLeft, Compass, BookmarkCheck } from 'lucide-react';
 import { SegmentId } from './UserSegmentCards';
 import { Card, type CardTone } from './ui/Card';
 import { Breadcrumbs } from './ui/Breadcrumbs';
@@ -512,24 +512,52 @@ const subcategoriesList = useMemo(() => {
              * VISTA DE CATEGORÍAS / CLASIFICACIONES (Sin títulos redundantes)
              * ============================================================= */}
             {!selectedCategory && (
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-3.5">
-                {categoriesList.map((catName) => {
-                  const desc = CATEGORY_DESCRIPTIONS[catName] || 'Explora las gestiones y obligaciones agrupadas en esta clasificación oficial.';
+              <div className="space-y-4">
+                {/* BLOQUE ATO AUSTRALIA: EN ESTA SECCIÓN (IN THIS SECTION) */}
+                <div className="bg-[#F8FAFC] border border-[#E2E8F0] rounded-2xl p-4 sm:p-5 shadow-2xs">
+                  <div className="flex items-center gap-2 mb-3">
+                    <Compass className="w-4 h-4 text-sat-azul" aria-hidden="true" />
+                    <h2 className="text-xs font-bold uppercase tracking-wider text-sat-azul-oscuro">
+                      En esta sección: Clasificaciones oficiales de {meta.shortTitle}
+                    </h2>
+                  </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+                    {categoriesList.map((catName) => (
+                      <button
+                        key={catName}
+                        type="button"
+                        onClick={() => {
+                          setSelectedCategory(catName);
+                          setSelectedSubcategory(null);
+                        }}
+                        className="text-left flex items-start gap-2 p-2 rounded-lg hover:bg-white hover:text-sat-azul text-xs text-[#334155] font-semibold transition-all group border border-transparent hover:border-[#E2E8F0]"
+                      >
+                        <span className="w-1.5 h-1.5 rounded-full bg-sat-celeste shrink-0 mt-1.5 group-hover:scale-125 transition-transform" />
+                        <span className="line-clamp-1">{catName}</span>
+                      </button>
+                    ))}
+                  </div>
+                </div>
 
-                  return (
-                    <Card
-                      key={catName}
-                      title={catName}
-                      description={desc}
-                      tone={cardTone}
-                      headingLevel="h2"
-                      onClick={() => {
-                        setSelectedCategory(catName);
-                        setSelectedSubcategory(null);
-                      }}
-                    />
-                  );
-                })}
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-3.5">
+                  {categoriesList.map((catName) => {
+                    const desc = CATEGORY_DESCRIPTIONS[catName] || 'Explora las gestiones y obligaciones agrupadas en esta clasificación oficial.';
+
+                    return (
+                      <Card
+                        key={catName}
+                        title={catName}
+                        description={desc}
+                        tone={cardTone}
+                        headingLevel="h2"
+                        onClick={() => {
+                          setSelectedCategory(catName);
+                          setSelectedSubcategory(null);
+                        }}
+                      />
+                    );
+                  })}
+                </div>
               </div>
             )}
 
@@ -556,7 +584,38 @@ const subcategoriesList = useMemo(() => {
                   onResetToSegment={handleResetToCategories}
                 />
 
-                <div className="flex-1 min-w-0 w-full">
+                <div className="flex-1 min-w-0 w-full space-y-4">
+                  {/* BLOQUE ATO AUSTRALIA: EN ESTA SECCIÓN (Nivel Subtemas) */}
+                  {subcategoriesList.length > 1 && (
+                    <div className="bg-[#F8FAFC] border border-[#E2E8F0] rounded-2xl p-4 sm:p-5 shadow-2xs">
+                      <div className="flex items-center gap-2 mb-2.5">
+                        <BookmarkCheck className="w-4 h-4 text-sat-azul" aria-hidden="true" />
+                        <h2 className="text-xs font-bold uppercase tracking-wider text-sat-azul-oscuro">
+                          En esta sección: Subtemas de {selectedCategory}
+                        </h2>
+                      </div>
+                      <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
+                        {subcategoriesList.map((subName) => {
+                          const isCurrent = selectedSubcategory === subName;
+                          return (
+                            <button
+                              key={subName}
+                              type="button"
+                              onClick={() => setSelectedSubcategory(subName)}
+                              className={`text-xs px-3 py-1.5 rounded-lg font-medium transition-all flex items-center gap-1.5 ${
+                                isCurrent
+                                  ? 'bg-sat-azul text-white font-bold shadow-xs'
+                                  : 'bg-white border border-[#CBD5E1] text-[#334155] hover:border-sat-azul hover:text-sat-azul'
+                              }`}
+                            >
+                              <span className={`w-1.5 h-1.5 rounded-full ${isCurrent ? 'bg-white' : 'bg-[#94A3B8]'}`} />
+                              <span>{subName}</span>
+                            </button>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  )}
                   {!selectedSubcategory && subcategoriesList.length > 1 ? (
                     <div>
                       <div className="flex items-center justify-between mb-3 pb-2 border-b border-[#E2E8F0]">

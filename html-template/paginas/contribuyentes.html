@@ -8,6 +8,7 @@
 </head>
 <body>
 
+  <!-- CABECERA INSTITUCIONAL -->
   <header class="sat-header-top">
     <div class="sat-container sat-header-inner">
       <a href="../index.html" class="sat-brand">
@@ -21,90 +22,83 @@
     </div>
   </header>
 
-  <section class="sat-page-hero">
-    <div class="sat-container">
-      <nav class="sat-breadcrumb" aria-label="Miga de pan">
-        <a href="../index.html">Inicio</a>
-        <span>›</span>
-        <span>Contribuyentes</span>
-      </nav>
-      <h1 class="sat-page-title">Contribuyentes</h1>
-      <p class="sat-page-desc">
-        Información y servicios tributarios para personas individuales, pequeños contribuyentes, asalariados y empresas.
-      </p>
-    </div>
-  </section>
-
   <main class="sat-container">
+    <!-- 1. MIGA DE PAN (BREADCRUMB OFICIAL) -->
+    <nav class="sat-breadcrumb" aria-label="Miga de pan">
+      <a href="../index.html">Inicio</a>
+      <span class="sat-breadcrumb-sep">›</span>
+      <span class="sat-breadcrumb-current" aria-current="page">Contribuyentes</span>
+    </nav>
+
+    <!-- 2. CABECERA Y "EN ESTA SECCIÓN" (ESTÁNDAR ATO AUSTRALIA) -->
+    <header class="sat-section-header">
+      <div class="sat-segment-badge">
+        <span class="sat-badge-dot sat-badge-dot--contribuyentes"></span>
+        <span class="sat-badge-text">SEGMENTO OFICIAL</span>
+      </div>
+      <h1 class="sat-section-title">Contribuyentes</h1>
+      <p class="sat-section-desc">
+        Información y servicios tributarios para personas y empresas. Accede a las gestiones de tu régimen, declaraciones juradas, RTU Digital y vehículos.
+      </p>
+
+      <!-- BLOQUE IN THIS SECTION -->
+      <div class="sat-in-this-section">
+        <div class="sat-its-head">
+          <svg class="sat-its-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.5-4-1.5 1.5-4 4 1.5z"/></svg>
+          <span class="sat-its-label">EN ESTA SECCIÓN:</span>
+        </div>
+        <div class="sat-its-links">
+          <a href="contribuyentes/nit-sin-obligaciones.html" class="sat-its-link">NIT sin Obligaciones</a>
+          <a href="contribuyentes/pequenos-contribuyentes.html" class="sat-its-link">Pequeños Contribuyentes</a>
+          <a href="contribuyentes/regimen-general.html" class="sat-its-link">Contribuyente General</a>
+          <a href="contribuyentes/contribuyentes-especiales.html" class="sat-its-link">Contribuyentes Especiales</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- 3. CUADRÍCULA DE LAS 4 ÁREAS CANÓNICAS DE CONTRIBUYENTES (3 COLUMNAS RECTAS) -->
     <div class="sat-cards-grid">
 
-      <a href="https://portal.sat.gob.gt/portal/solicitar-nit/" target="_blank" rel="noopener noreferrer" class="sat-card sat-card--azul">
+      <!-- Área 1 -->
+      <a href="contribuyentes/nit-sin-obligaciones.html" class="sat-card sat-card--azul">
         <div class="sat-card-head">
           <h2 class="sat-card-title">NIT sin Obligaciones</h2>
-          <span class="sat-card-chevron" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></span>
+          <span class="sat-card-chevron"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></span>
         </div>
-        <p class="sat-card-desc">Solicitud de NIT por primera vez para empleo o trámites personales sin actividad comercial.</p>
+        <p class="sat-card-desc">Gestiones y servicios de identificación tributaria para personas sin actividad comercial.</p>
       </a>
 
-      <a href="https://portal.sat.gob.gt/portal/pequeno-contribuyente/" target="_blank" rel="noopener noreferrer" class="sat-card sat-card--azul">
+      <!-- Área 2 -->
+      <a href="contribuyentes/pequenos-contribuyentes.html" class="sat-card sat-card--azul">
         <div class="sat-card-head">
           <h2 class="sat-card-title">Pequeños Contribuyentes</h2>
-          <span class="sat-card-chevron" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></span>
+          <span class="sat-card-chevron"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></span>
         </div>
-        <p class="sat-card-desc">Inscripción al régimen del 5%, facturación FEL y pago mensual en formulario SAT-2046.</p>
+        <p class="sat-card-desc">Información y obligaciones para pequeños negocios y régimen simplificado.</p>
       </a>
 
-      <a href="https://portal.sat.gob.gt/portal/rtu-digital/" target="_blank" rel="noopener noreferrer" class="sat-card sat-card--azul">
+      <!-- Área 3 -->
+      <a href="contribuyentes/regimen-general.html" class="sat-card sat-card--azul">
         <div class="sat-card-head">
-          <h2 class="sat-card-title">RTU Digital y Agencia Virtual</h2>
-          <span class="sat-card-chevron" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></span>
+          <h2 class="sat-card-title">Contribuyente General</h2>
+          <span class="sat-card-chevron"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></span>
         </div>
-        <p class="sat-card-desc">Actualización de datos registrales, cambio de dirección, actividad económica y activación de usuario.</p>
+        <p class="sat-card-desc">Declaración y pago de IVA General, pagos de ISR, RTU Digital, facturación FEL, libros contables y vehículos.</p>
       </a>
 
-      <a href="https://portal.sat.gob.gt/portal/empresas-sociedades/" target="_blank" rel="noopener noreferrer" class="sat-card sat-card--azul">
+      <!-- Área 4 -->
+      <a href="contribuyentes/contribuyentes-especiales.html" class="sat-card sat-card--azul">
         <div class="sat-card-head">
-          <h2 class="sat-card-title">Empresas y Sociedades</h2>
-          <span class="sat-card-chevron" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></span>
+          <h2 class="sat-card-title">Contribuyentes Especiales</h2>
+          <span class="sat-card-chevron"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></span>
         </div>
-        <p class="sat-card-desc">Inscripción de sociedades mercantiles, representantes legales, sucursales y régimen general.</p>
-      </a>
-
-      <a href="https://declaraguate.sat.gob.gt/" target="_blank" rel="noopener noreferrer" class="sat-card sat-card--azul">
-        <div class="sat-card-head">
-          <h2 class="sat-card-title">Declaraciones y Pagos</h2>
-          <span class="sat-card-chevron" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></span>
-        </div>
-        <p class="sat-card-desc">Presentación de declaraciones juradas de IVA, ISR, ISO y pago de boletas SAT-2000 en banca virtual.</p>
-      </a>
-
-      <a href="https://portal.sat.gob.gt/portal/vehiculos/" target="_blank" rel="noopener noreferrer" class="sat-card sat-card--azul">
-        <div class="sat-card-head">
-          <h2 class="sat-card-title">Vehículos e Impuesto de Circulación</h2>
-          <span class="sat-card-chevron" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></span>
-        </div>
-        <p class="sat-card-desc">Pago de calcomanía ISCV, traspaso electrónico de vehículos, placas y solvencia de multas.</p>
-      </a>
-
-      <a href="https://portal.sat.gob.gt/portal/factura-electronica-fel/" target="_blank" rel="noopener noreferrer" class="sat-card sat-card--azul">
-        <div class="sat-card-head">
-          <h2 class="sat-card-title">Facturación Electrónica (FEL)</h2>
-          <span class="sat-card-chevron" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></span>
-        </div>
-        <p class="sat-card-desc">Emisión gratuita de facturas electrónicas desde Agencia Virtual y APP SAT Móvil.</p>
-      </a>
-
-      <a href="https://portal.sat.gob.gt/portal/solvencia-fiscal/" target="_blank" rel="noopener noreferrer" class="sat-card sat-card--azul">
-        <div class="sat-card-head">
-          <h2 class="sat-card-title">Solvencia Fiscal y Convenios</h2>
-          <span class="sat-card-chevron" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></span>
-        </div>
-        <p class="sat-card-desc">Generación de solvencia fiscal inmediata en línea y solicitudes de facilidades de pago.</p>
+        <p class="sat-card-desc">Servicios y gestiones tributarias para empresas con atención diferenciada.</p>
       </a>
 
     </div>
   </main>
 
+  <!-- PIE DE PÁGINA -->
   <footer class="sat-footer">
     <div class="sat-container sat-footer-inner">
       <span>© 2026 Superintendencia de Administración Tributaria — Guatemala</span>

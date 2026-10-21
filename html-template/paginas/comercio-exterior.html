@@ -21,53 +21,87 @@
     </div>
   </header>
 
-  <section class="sat-page-hero">
-    <div class="sat-container">
-      <nav class="sat-breadcrumb" aria-label="Miga de pan">
-        <a href="../index.html">Inicio</a>
-        <span>›</span>
-        <span>Operadores de Comercio Exterior</span>
-      </nav>
-      <h1 class="sat-page-title">Operadores de Comercio Exterior</h1>
-      <p class="sat-page-desc">
-        Servicios aduaneros para importadores, exportadores, transportistas y auxiliares de la función pública aduanera.
-      </p>
-    </div>
-  </section>
-
   <main class="sat-container">
+    <!-- 1. MIGA DE PAN OFICIAL -->
+    <nav class="sat-breadcrumb" aria-label="Miga de pan">
+      <a href="../index.html">Inicio</a>
+      <span class="sat-breadcrumb-sep">›</span>
+      <span class="sat-breadcrumb-current" aria-current="page">Operadores de Comercio Exterior</span>
+    </nav>
+
+    <!-- 2. CABECERA Y "EN ESTA SECCIÓN" (ATO AUSTRALIA) -->
+    <header class="sat-section-header">
+      <div class="sat-segment-badge">
+        <span class="sat-badge-dot sat-badge-dot--comercio_exterior"></span>
+        <span class="sat-badge-text">ADUANAS Y COMERCIO EXTERIOR</span>
+      </div>
+      <h1 class="sat-section-title">Operadores de Comercio Exterior</h1>
+      <p class="sat-section-desc">
+        Servicios e información aduanera para la importación, exportación y logística. Inscripción en padrones, declaración DUCA y auxiliares de la función pública.
+      </p>
+
+      <!-- BLOQUE IN THIS SECTION -->
+      <div class="sat-in-this-section sat-in-this-section--comercio_exterior">
+        <div class="sat-its-head">
+          <svg class="sat-its-icon" style="color: #0284C7;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.5-4-1.5 1.5-4 4 1.5z"/></svg>
+          <span class="sat-its-label">EN ESTA SECCIÓN:</span>
+        </div>
+        <div class="sat-its-links">
+          <a href="#importadores" class="sat-its-link">Importadores</a>
+          <a href="#exportadores" class="sat-its-link">Exportadores</a>
+          <a href="#regimenes" class="sat-its-link">Regímenes Territoriales y Zonas Especiales</a>
+          <a href="#afpa" class="sat-its-link">Auxiliares de la Función Pública Aduanera (AFPA)</a>
+          <a href="#normativa" class="sat-its-link">Normativa y Operaciones Aduaneras Generales</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- 3. CUADRÍCULA DE LAS 5 RAMAS CANÓNICAS (3 COLUMNAS RECTAS) -->
     <div class="sat-cards-grid">
 
-      <a href="https://portal.sat.gob.gt/portal/importaciones/" target="_blank" rel="noopener noreferrer" class="sat-card sat-card--comercio_exterior">
+      <!-- 1 -->
+      <a href="https://portal.sat.gob.gt/portal/importadores/" target="_blank" rel="noopener noreferrer" class="sat-card sat-card--celeste">
         <div class="sat-card-head">
           <h2 class="sat-card-title">Importadores</h2>
-          <span class="sat-card-chevron" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></span>
+          <span class="sat-card-chevron"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></span>
         </div>
-        <p class="sat-card-desc">Padrón de importadores, declaración DUCA-D, aranceles SAC y requisitos no arancelarios.</p>
+        <p class="sat-card-desc">Padrón de importadores habituales, declaración DUCA-D, aranceles SAC y nacionalización de mercancías.</p>
       </a>
 
-      <a href="https://portal.sat.gob.gt/portal/exportaciones/" target="_blank" rel="noopener noreferrer" class="sat-card sat-card--comercio_exterior">
+      <!-- 2 -->
+      <a href="https://portal.sat.gob.gt/portal/exportadores/" target="_blank" rel="noopener noreferrer" class="sat-card sat-card--celeste">
         <div class="sat-card-head">
           <h2 class="sat-card-title">Exportadores</h2>
-          <span class="sat-card-chevron" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></span>
+          <span class="sat-card-chevron"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></span>
         </div>
-        <p class="sat-card-desc">Registro de exportadores, listas de embarque, declaración DUCA y devolución de crédito fiscal.</p>
+        <p class="sat-card-desc">Registro de exportadores, listas de embarque, declaración DUCA y devolución de crédito fiscal del IVA.</p>
       </a>
 
-      <a href="https://portal.sat.gob.gt/portal/oea/" target="_blank" rel="noopener noreferrer" class="sat-card sat-card--comercio_exterior">
+      <!-- 3 -->
+      <a href="https://portal.sat.gob.gt/portal/regimenes-especiales/" target="_blank" rel="noopener noreferrer" class="sat-card sat-card--celeste">
         <div class="sat-card-head">
-          <h2 class="sat-card-title">Operador Económico Autorizado (OEA)</h2>
-          <span class="sat-card-chevron" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></span>
+          <h2 class="sat-card-title">Regímenes Territoriales y Zonas Especiales</h2>
+          <span class="sat-card-chevron"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></span>
         </div>
-        <p class="sat-card-desc">Certificación internacional de seguridad en la cadena logística y despacho aduanero prioritario.</p>
+        <p class="sat-card-desc">Industria de Maquila (Decreto 29-89) y Zonas de Desarrollo Económico Especial Público (ZDEEP) para empresas usuarias.</p>
       </a>
 
-      <a href="https://portal.sat.gob.gt/portal/afpa/" target="_blank" rel="noopener noreferrer" class="sat-card sat-card--comercio_exterior">
+      <!-- 4 -->
+      <a href="comercio-exterior/afpa.html" class="sat-card sat-card--celeste">
         <div class="sat-card-head">
-          <h2 class="sat-card-title">Auxiliares de la Función Pública Aduanera</h2>
-          <span class="sat-card-chevron" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></span>
+          <h2 class="sat-card-title">Auxiliares de la Función Pública Aduanera (AFPA)</h2>
+          <span class="sat-card-chevron"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></span>
         </div>
-        <p class="sat-card-desc">Habilitación y acreditación de agentes aduaneros, transportistas terrestres, depósitos y consolidadores.</p>
+        <p class="sat-card-desc">Habilitación de agentes aduaneros, apoderados especiales, depósitos aduaneros, empresas courier y transportistas.</p>
+      </a>
+
+      <!-- 5 -->
+      <a href="https://portal.sat.gob.gt/portal/normativa-aduanera/" target="_blank" rel="noopener noreferrer" class="sat-card sat-card--celeste">
+        <div class="sat-card-head">
+          <h2 class="sat-card-title">Normativa y Operaciones Aduaneras Generales</h2>
+          <span class="sat-card-chevron"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></span>
+        </div>
+        <p class="sat-card-desc">Arancel Centroamericano (SAC), valoración aduanera, acuerdos comerciales y modernización de aduanas.</p>
       </a>
 
     </div>

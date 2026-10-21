@@ -22,76 +22,85 @@
     </div>
   </header>
 
-  <!-- SECCIÓN HERO DE PROFESIONALES -->
-  <section class="sat-page-hero">
-    <div class="sat-container">
-      <nav class="sat-breadcrumb" aria-label="Miga de pan">
-        <a href="../index.html">Inicio</a>
-        <span>›</span>
-        <span>Profesionales</span>
-      </nav>
-      <h1 class="sat-page-title">Profesionales</h1>
-      <p class="sat-page-desc">
-        Herramientas, acreditaciones oficiales y servicios especializados para contadores, notarios, auditores y gestores tributarios.
-      </p>
-    </div>
-  </section>
-
-  <!-- CUADRÍCULA DE LAS 5 CATEGORÍAS DE PROFESIONALES (4 COLUMNAS POR DEFECTO) -->
   <main class="sat-container">
+    <!-- 1. MIGA DE PAN OFICIAL -->
+    <nav class="sat-breadcrumb" aria-label="Miga de pan">
+      <a href="../index.html">Inicio</a>
+      <span class="sat-breadcrumb-sep">›</span>
+      <span class="sat-breadcrumb-current" aria-current="page">Profesionales</span>
+    </nav>
+
+    <!-- 2. CABECERA Y "EN ESTA SECCIÓN" (ATO AUSTRALIA) -->
+    <header class="sat-section-header">
+      <div class="sat-segment-badge">
+        <span class="sat-badge-dot sat-badge-dot--profesionales"></span>
+        <span class="sat-badge-text">PROFESIONALES Y AUXILIARES</span>
+      </div>
+      <h1 class="sat-section-title">Profesionales</h1>
+      <p class="sat-section-desc">
+        Herramientas y habilitaciones para profesionales tributarios y auxiliares. Acreditaciones, timbres fiscales, traspasos vehiculares y libros contables.
+      </p>
+
+      <!-- BLOQUE IN THIS SECTION -->
+      <div class="sat-in-this-section sat-in-this-section--profesionales">
+        <div class="sat-its-head">
+          <svg class="sat-its-icon" style="color: #4D8014;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.5-4-1.5 1.5-4 4 1.5z"/></svg>
+          <span class="sat-its-label">EN ESTA SECCIÓN:</span>
+        </div>
+        <div class="sat-its-links">
+          <a href="#notarios" class="sat-its-link">Abogados y Notarios</a>
+          <a href="#contadores" class="sat-its-link">Peritos Contadores</a>
+          <a href="#auditores" class="sat-its-link">Auditores (CPA)</a>
+          <a href="#gestores" class="sat-its-link">Gestores Tributarios</a>
+          <a href="#servicios" class="sat-its-link">Servicios Profesionales</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- 3. CUADRÍCULA DE LAS 5 CATEGORÍAS OFICIALES (3 COLUMNAS RECTAS) -->
     <div class="sat-cards-grid">
 
-      <!-- 1. Abogados y Notarios -->
+      <!-- 1 -->
       <a href="https://portal.sat.gob.gt/portal/traspaso-electronico-notarial/" target="_blank" rel="noopener noreferrer" class="sat-card sat-card--profesionales">
         <div class="sat-card-head">
           <h2 class="sat-card-title">Abogados y Notarios</h2>
-          <span class="sat-card-chevron" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
-          </span>
+          <span class="sat-card-chevron"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></span>
         </div>
         <p class="sat-card-desc">Papel sellado de protocolo, timbres fiscales, traspaso notarial de vehículos (e-Traspaso) y avisos notariales.</p>
       </a>
 
-      <!-- 2. Peritos Contadores -->
+      <!-- 2 -->
       <a href="https://portal.sat.gob.gt/portal/peritos-contadores/" target="_blank" rel="noopener noreferrer" class="sat-card sat-card--profesionales">
         <div class="sat-card-head">
           <h2 class="sat-card-title">Peritos Contadores</h2>
-          <span class="sat-card-chevron" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
-          </span>
+          <span class="sat-card-chevron"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></span>
         </div>
-        <p class="sat-card-desc">Inscripción y carné de contador, autorización de libros contables, retenciones y administración del régimen FEL.</p>
+        <p class="sat-card-desc">Técnicos y profesionales contables inscritos ante la SAT facultados para llevar y certificar registros contables, libros tributarios electrónicos y declaraciones juradas de contribuyentes.</p>
       </a>
 
-      <!-- 3. Auditores (CPA) -->
+      <!-- 3 -->
       <a href="https://portal.sat.gob.gt/portal/habilitacion-titulos/" target="_blank" rel="noopener noreferrer" class="sat-card sat-card--profesionales">
         <div class="sat-card-head">
           <h2 class="sat-card-title">Auditores (CPA)</h2>
-          <span class="sat-card-chevron" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
-          </span>
+          <span class="sat-card-chevron"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></span>
         </div>
-        <p class="sat-card-desc">Habilitación de Contadores Públicos y Auditores y emisión de dictámenes para devolución de crédito fiscal.</p>
+        <p class="sat-card-desc">Habilitación para dictámenes fiscales, auditorías tributarias y gestiones de devolución de crédito fiscal.</p>
       </a>
 
-      <!-- 4. Gestores Tributarios -->
+      <!-- 4 -->
       <a href="https://portal.sat.gob.gt/portal/gestores-tributarios/" target="_blank" rel="noopener noreferrer" class="sat-card sat-card--profesionales">
         <div class="sat-card-head">
           <h2 class="sat-card-title">Gestores Tributarios</h2>
-          <span class="sat-card-chevron" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
-          </span>
+          <span class="sat-card-chevron"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></span>
         </div>
-        <p class="sat-card-desc">Acreditación oficial ante agencias tributarias, emisión y renovación de carné y padrón de gestores activos.</p>
+        <p class="sat-card-desc">Acreditación oficial de gestores y personas autorizadas para tramitar ante agencias de la SAT y renovación de gafetes.</p>
       </a>
 
-      <!-- 5. Servicios Profesionales -->
+      <!-- 5 -->
       <a href="https://portal.sat.gob.gt/portal/criterios-tributarios/" target="_blank" rel="noopener noreferrer" class="sat-card sat-card--profesionales">
         <div class="sat-card-head">
           <h2 class="sat-card-title">Servicios Profesionales</h2>
-          <span class="sat-card-chevron" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
-          </span>
+          <span class="sat-card-chevron"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></span>
         </div>
         <p class="sat-card-desc">Facturación por honorarios profesionales, consultas técnico-jurídicas vinculantes y sistemas de retención web.</p>
       </a>
@@ -99,7 +108,6 @@
     </div>
   </main>
 
-  <!-- PIE DE PÁGINA -->
   <footer class="sat-footer">
     <div class="sat-container sat-footer-inner">
       <span>© 2026 Superintendencia de Administración Tributaria — Guatemala</span>

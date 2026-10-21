@@ -21,51 +21,75 @@
     </div>
   </header>
 
-  <section class="sat-page-hero">
-    <div class="sat-container">
-      <nav class="sat-breadcrumb" aria-label="Miga de pan">
-        <a href="../index.html">Inicio</a>
-        <span>›</span>
-        <span>Entes Exentos</span>
-      </nav>
-      <h1 class="sat-page-title">Entes Exentos</h1>
-      <p class="sat-page-desc">
-        Información y trámites tributarios para entidades del Estado, municipalidades, centros educativos e iglesias.
-      </p>
-    </div>
-  </section>
-
   <main class="sat-container">
+    <!-- 1. MIGA DE PAN OFICIAL -->
+    <nav class="sat-breadcrumb" aria-label="Miga de pan">
+      <a href="../index.html">Inicio</a>
+      <span class="sat-breadcrumb-sep">›</span>
+      <span class="sat-breadcrumb-current" aria-current="page">Entes Exentos</span>
+    </nav>
+
+    <!-- 2. CABECERA Y "EN ESTA SECCIÓN" (ATO AUSTRALIA) -->
+    <header class="sat-section-header">
+      <div class="sat-segment-badge">
+        <span class="sat-badge-dot sat-badge-dot--entes_exentos"></span>
+        <span class="sat-badge-text">EXENCIONES Y SECTOR PÚBLICO</span>
+      </div>
+      <h1 class="sat-section-title">Entes Exentos</h1>
+      <p class="sat-section-desc">
+        Información y gestiones tributarias para entidades públicas y organizaciones no lucrativas. Constancias de exención, CIVA y personería jurídica.
+      </p>
+
+      <!-- BLOQUE IN THIS SECTION -->
+      <div class="sat-in-this-section sat-in-this-section--entes_exentos">
+        <div class="sat-its-head">
+          <svg class="sat-its-icon" style="color: #C25E00;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.5-4-1.5 1.5-4 4 1.5z"/></svg>
+          <span class="sat-its-label">EN ESTA SECCIÓN:</span>
+        </div>
+        <div class="sat-its-links">
+          <a href="#estado" class="sat-its-link">Entidades del Estado</a>
+          <a href="#educativos" class="sat-its-link">Centros Educativos y Universidades</a>
+          <a href="#ongs" class="sat-its-link">Iglesias y Organizaciones No Lucrativas</a>
+          <a href="#municipalidades" class="sat-its-link">Municipalidades</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- 3. CUADRÍCULA DE LAS 4 SUBÁREAS OFICIALES (3 COLUMNAS RECTAS) -->
     <div class="sat-cards-grid">
 
-      <a href="https://portal.sat.gob.gt/portal/entidades-estado/" target="_blank" rel="noopener noreferrer" class="sat-card sat-card--entes_exentos">
+      <!-- 1 -->
+      <a href="https://portal.sat.gob.gt/portal/entidades-estado/" target="_blank" rel="noopener noreferrer" class="sat-card sat-card--naranja">
         <div class="sat-card-head">
           <h2 class="sat-card-title">Entidades del Estado</h2>
-          <span class="sat-card-chevron" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></span>
+          <span class="sat-card-chevron"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></span>
         </div>
         <p class="sat-card-desc">Constancias de exención del IVA (CIVA), compras públicas y acreditación de representantes estatales.</p>
       </a>
 
-      <a href="https://portal.sat.gob.gt/portal/centros-educativos/" target="_blank" rel="noopener noreferrer" class="sat-card sat-card--entes_exentos">
+      <!-- 2 -->
+      <a href="https://portal.sat.gob.gt/portal/centros-educativos/" target="_blank" rel="noopener noreferrer" class="sat-card sat-card--naranja">
         <div class="sat-card-head">
           <h2 class="sat-card-title">Centros Educativos y Universidades</h2>
-          <span class="sat-card-chevron" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></span>
+          <span class="sat-card-chevron"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></span>
         </div>
         <p class="sat-card-desc">Exención constitucional de colegios y universidades, actualización registral y donaciones recibidas.</p>
       </a>
 
-      <a href="https://portal.sat.gob.gt/portal/iglesias-ongs/" target="_blank" rel="noopener noreferrer" class="sat-card sat-card--entes_exentos">
+      <!-- 3 -->
+      <a href="https://portal.sat.gob.gt/portal/iglesias-ongs/" target="_blank" rel="noopener noreferrer" class="sat-card sat-card--naranja">
         <div class="sat-card-head">
           <h2 class="sat-card-title">Iglesias y Organizaciones No Lucrativas</h2>
-          <span class="sat-card-chevron" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></span>
+          <span class="sat-card-chevron"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></span>
         </div>
         <p class="sat-card-desc">Reconocimiento formal de exención tributaria para asociaciones benéficas, fundaciones y entidades religiosas.</p>
       </a>
 
-      <a href="https://portal.sat.gob.gt/portal/municipalidades/" target="_blank" rel="noopener noreferrer" class="sat-card sat-card--entes_exentos">
+      <!-- 4 -->
+      <a href="https://portal.sat.gob.gt/portal/municipalidades/" target="_blank" rel="noopener noreferrer" class="sat-card sat-card--naranja">
         <div class="sat-card-head">
           <h2 class="sat-card-title">Municipalidades y Gobiernos Locales</h2>
-          <span class="sat-card-chevron" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></span>
+          <span class="sat-card-chevron"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></span>
         </div>
         <p class="sat-card-desc">Gestión vehicular oficial, asignación de placas institucionales y constancias municipales de no afectación.</p>
       </a>

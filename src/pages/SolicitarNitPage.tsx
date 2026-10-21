@@ -258,6 +258,8 @@ export const SolicitarNitPage: React.FC<SolicitarNitPageProps> = ({
               return (
                 <label
                   key={req.id}
+                  htmlFor={`req-check-${req.id}`}
+                  aria-label={`${req.nombre}: ${req.detalle}`}
                   className={`flex items-start gap-3 p-3.5 rounded-lg border cursor-pointer transition-all ${
                     isChecked 
                       ? 'border-sat-azul/40 bg-sat-azul/5' 
@@ -265,13 +267,14 @@ export const SolicitarNitPage: React.FC<SolicitarNitPageProps> = ({
                   }`}
                 >
                   <input
+                    id={`req-check-${req.id}`}
                     type="checkbox"
                     checked={isChecked}
                     onChange={() => handleToggleRequisito(req.id)}
-                    className="mt-0.5 w-4 h-4 rounded text-sat-azul focus:ring-sat-azul border-sat-gris"
+                    className="mt-0.5 w-4 h-4 rounded text-sat-azul focus:ring-sat-azul border-sat-gris cursor-pointer"
                   />
-                  <div className="space-y-0.5 text-left">
-                    <div className="flex items-center gap-2">
+                  <span className="space-y-0.5 text-left cursor-pointer flex-1 block">
+                    <span className="flex items-center gap-2">
                       <span className={`text-xs font-bold ${isChecked ? 'text-sat-azul-oscuro' : 'text-sat-texto'}`}>
                         {req.nombre}
                       </span>
@@ -280,11 +283,11 @@ export const SolicitarNitPage: React.FC<SolicitarNitPageProps> = ({
                           Obligatorio
                         </span>
                       )}
-                    </div>
-                    <p className="text-xs text-sat-texto-suave leading-relaxed">
+                    </span>
+                    <span className="text-xs text-sat-texto-suave leading-relaxed block">
                       {req.detalle}
-                    </p>
-                  </div>
+                    </span>
+                  </span>
                 </label>
               );
             })}
