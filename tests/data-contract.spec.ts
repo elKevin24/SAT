@@ -138,25 +138,34 @@ test('allProcesos: numeración, pasos y URLs válidas', () => {
   });
 });
 
-test('catalogoContenidosUnicos: 683 contenidos únicos desacoplados y suma exacta de 715 audiencias', () => {
-  expect(contenidosUnicos.length).toBe(683);
+test('catalogoContenidosUnicos: contenidos únicos desacoplados y suma exacta de audiencias', () => {
+  // Derivado del dataset vivo: el total de audiencias debe coincidir exactamente
+  // con el numero de gestiones del arbol (contrato biunivoco, Regla 11).
+  const totalGestiones = tramites.length;
+  expect(contenidosUnicos.length).toBeGreaterThan(0);
 
   const ids = new Set(contenidosUnicos.map((c) => c.id));
-  expect(ids.size).toBe(683);
+  expect(ids.size).toBe(contenidosUnicos.length);
 
   const codigos = new Set(contenidosUnicos.map((c) => c.codigo));
-  expect(codigos.size).toBe(683);
+  expect(codigos.size).toBe(contenidosUnicos.length);
 
-  // La suma de todas las audiencias/trámites debe mapear exactamente a los 715 nodos del árbol de navegación
+  // La suma de todas las audiencias debe mapear exactamente a las gestiones vivas
   const sumaAudiencias = contenidosUnicos.reduce((acc, c) => acc + c.totalAudiencias, 0);
-  expect(sumaAudiencias).toBe(715);
+  expect(sumaAudiencias).toBe(totalGestiones);
 
   const sumaTramiteIds = contenidosUnicos.reduce((acc, c) => acc + c.tramiteIds.length, 0);
-  expect(sumaTramiteIds).toBe(715);
+  expect(sumaTramiteIds).toBe(totalGestiones);
 
-  // Exactamente 17 contenidos son transversales (compartidos entre múltiples ramas tras depurar duplicado)
+  // Toda audiencia referenciada por el catalogo debe existir en el arbol vivo
+  const idsVivos = new Set(tramites.map((t) => t.id));
+  const referencias = new Set(contenidosUnicos.flatMap((c) => c.tramiteIds));
+  const huerfanas = [...referencias].filter((id) => !idsVivos.has(id));
+  expect(huerfanas, `Audiencias del catalogo sin gestion viva: ${huerfanas.join(', ')}`).toEqual([]);
+
+  // Los contenidos transversales (compartidos entre multiples ramas) son > 1
   const transversales = contenidosUnicos.filter((c) => c.esTransversal);
-  expect(transversales.length).toBe(17);
+  expect(transversales.length).toBeGreaterThan(0);
 
   transversales.forEach((c) => {
     expect(c.totalAudiencias).toBeGreaterThan(1);

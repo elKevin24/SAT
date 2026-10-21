@@ -20532,12 +20532,11 @@
     "baseLegal": "Decreto 22-73 (Ley Orgánica de ZOLIC / ZDEEP), CAUCA IV y RECAUCA IV.",
     "esBrecha": false,
     "esTransversal": true,
-    "totalAudiencias": 5,
+    "totalAudiencias": 4,
     "tramiteIds": [
       "SAT-GES-0431",
       "SAT-GES-0692",
       "SAT-GES-0699",
-      "SAT-GES-0706",
       "SAT-GES-0711"
     ],
     "ubicaciones": [
@@ -20551,10 +20550,6 @@
       },
       {
         "tramiteId": "SAT-GES-0699",
-        "segmentoId": "comercio_exterior"
-      },
-      {
-        "tramiteId": "SAT-GES-0706",
         "segmentoId": "comercio_exterior"
       },
       {

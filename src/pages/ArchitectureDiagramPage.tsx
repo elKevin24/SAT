@@ -155,7 +155,7 @@ const OFFICIAL_SUBCATEGORY_PRIORITY: Record<string, string[]> = {
     'Aduanas: Declaraciones, DUCAs y Valor',
     'Aduanas: Consultas, Retención y Estados',
     'Aduanas: Control, Abandono y Despacho',
-    'Aduanas: Requisitos y Trámites Aduaneros'
+    'Aduanas: Requisitos y Gestiones Aduaneras'
   ],
   'Exportadores': [
     'Exportación: Registro y Regímenes de Exportador',

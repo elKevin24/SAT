@@ -160,7 +160,7 @@ export const SolicitarNitPage: React.FC<SolicitarNitPageProps> = ({
         <header className="bg-sat-blanco rounded-xl border border-sat-gris p-6 sm:p-8 shadow-sat-sm relative overflow-hidden">
           <div className="max-w-3xl space-y-3 relative z-10">
             <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-sat-azul/10 text-sat-azul text-xs font-bold">
-              <span>Trámite Inicial y Gratuito</span>
+              <span>Gestión Inicial y Gratuita</span>
             </div>
             <h1 className="text-2xl sm:text-4xl font-black text-sat-azul-oscuro tracking-tight leading-tight">
               Solicitar NIT

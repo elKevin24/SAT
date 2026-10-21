@@ -1244,7 +1244,7 @@ export default function StyleGuide() {
                   <div className="rounded-xl border-l-4 border-[#4D8014] bg-[#F0FDF4] p-4 text-xs text-[#166534] space-y-2">
                     <strong className="text-[#14532D] block text-sm">Taxonomía y Modelo de Datos:</strong>
                     <ul className="list-disc pl-4 space-y-1">
-                      <li><strong>Nivel 5 Contenido / Servicio:</strong> El 67% son guías informativas; <code>tipo_interaccion</code> define si es Trámite en Línea, Consulta, Guía o Descarga.</li>
+                      <li><strong>Nivel 5 Contenido / Servicio:</strong> El 67% son guías informativas; <code>tipo_interaccion</code> define si es Gestión en Línea, Consulta, Guía o Descarga.</li>
                       <li><strong>Modelo Padre / Hijo:</strong> En base de datos usar <code>parent_id</code>, no campos estáticos <code>categoria1..categoria9</code>.</li>
                       <li><strong>Cero números en títulos:</strong> Plain Language orientado al beneficio ciudadano.</li>
                       <li><strong>W3C / WCAG 2.2 AA:</strong> Marcado semántico <code>&lt;nav&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;li&gt;</code> y <code>aria-current=&quot;page&quot;</code>.</li>
@@ -1273,7 +1273,7 @@ export default function StyleGuide() {
             <SectionDoc
               id="badges"
               titulo="Badges y Etiquetas de Estado"
-              descripcion="Etiquetas contextuales compactas para modalidad de trámites (En línea, Presencial), costo (Gratuito) o requisitos previos."
+              descripcion="Etiquetas contextuales compactas para modalidad de gestiones (En línea, Presencial), costo (Gratuito) o requisitos previos."
             >
               <div className="space-y-6">
                 <div className="rounded-xl border border-[#DCDCDC] bg-white p-6">
@@ -1283,7 +1283,7 @@ export default function StyleGuide() {
                   <div className="flex flex-wrap items-center gap-2.5">
                     <Badge tone="online">100% En Línea</Badge>
                     <Badge tone="agencia">Agencia Virtual</Badge>
-                    <Badge tone="gratuito">Trámite Gratuito</Badge>
+                    <Badge tone="gratuito">Gestión Gratuita</Badge>
                     <Badge tone="cita">Cita Previa Requerida</Badge>
                     <Badge tone="presencial">Presencial</Badge>
                     <Badge tone="neutral" dot={false}>Neutral sin punto</Badge>
@@ -1294,7 +1294,7 @@ export default function StyleGuide() {
                   code={`import { Badge } from '../components/ui/Badge';
 
 <Badge tone="online">100% En Línea</Badge>
-<Badge tone="gratuito">Trámite Gratuito</Badge>
+<Badge tone="gratuito">Gestión Gratuita</Badge>
 <Badge tone="presencial">Presencial</Badge>`}
                 />
               </div>
@@ -1555,7 +1555,7 @@ import { Button } from '../components/ui/Button';
                 <Modal
                   open={modalOpen}
                   onClose={() => setModalOpen(false)}
-                  title="Confirmación de trámite"
+                  title="Confirmación de gestión"
                   footer={
                     <>
                       <Button variant="outline" onClick={() => setModalOpen(false)}>
@@ -1663,7 +1663,7 @@ import { Button } from '../components/ui/Button';
                     <tr>
                       <td className="px-4 py-3 text-[#DC2626] font-medium">DUCA</td>
                       <td className="px-4 py-3 font-bold text-[#19324B]">Declaración Única Centroamericana (Aduanas)</td>
-                      <td className="px-4 py-3 text-[#475569]">Trámite aduanero para ingreso o egreso de mercancías.</td>
+                      <td className="px-4 py-3 text-[#475569]">Gestión aduanera para ingreso o egreso de mercancías.</td>
                     </tr>
                   </tbody>
                 </table>
