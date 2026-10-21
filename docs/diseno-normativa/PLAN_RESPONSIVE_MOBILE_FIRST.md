@@ -12,11 +12,11 @@
 ```mermaid
 flowchart TD
     subgraph IA ["ARQUITECTURA DE INFORMACIÓN (Invariable)"]
-        L1["L1: Segmento"] --> L2["L2: Área"]
-        L2 --> L3["L3: Contexto"]
-        L3 --> L4["L4: Tema"]
-        L4 --> L5["L5: Contenido / Servicio"]
-        L5 --> L6["L6+: Profundización Libre"]
+        L1["Nivel 1"] --> L2["Nivel 2"]
+        L2 --> L3["Nivel 3"]
+        L3 --> L4["Nivel 4"]
+        L4 --> L5["Nivel 5"]
+        L5 --> L6["Nivel 6+: Profundización Libre"]
     end
 
     subgraph PRESENTACION ["CAPA DE PRESENTACIÓN RESPONSIVE (Adaptable)"]

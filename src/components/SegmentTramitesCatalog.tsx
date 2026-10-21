@@ -284,6 +284,7 @@ const subcategoriesList = useMemo(() => {
           segmentTramites
             .filter((t) => t.categoria === catName && t.subcategoria && t.subcategoria !== catName)
             .map((t) => t.subcategoria)
+            .filter((s): s is string => Boolean(s))
         )
       ).sort();
       return {

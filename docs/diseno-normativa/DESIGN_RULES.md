@@ -98,7 +98,7 @@ ARQUITECTURA DE INFORMACIÓN (IA)
        ↓
 Organiza la información (el árbol lógico)
        ↓
-L1 (Segmento) → L2 (Área) → L3 (Contexto) → L4 (Tema) → L5 (Contenido/Servicio) → L6+ (Profundización)
+L1 → L2 → L3 → L4 → L5 → L6+ (Profundización)
        ↓
        ↓ se representa y recorre mediante
        ↓
@@ -119,20 +119,20 @@ Mobile (< 768px) │ Tablet (768–1023px) │ Desktop (≥ 1024px) │ Wide Des
 > **Regla Clave:** *Que un contenido se ubique en el Nivel 8 de la Arquitectura de Información NO implica que la interfaz deba mostrar ocho niveles de navegación simultáneamente.*
 
 * **Ejemplo en IA (8 Niveles):**
-  `Contribuyentes (L1) › Empleo y salarios (L2) › Relación de dependencia (L3) › ISR (L4) › Retenciones (L5) › Cálculo (L6) › Casos especiales (L7) › Ejemplo (L8)`
+  `Nivel 1 › Nivel 2 › Nivel 3 › Nivel 4 › Nivel 5 › Nivel 6 › Nivel 7 › Nivel 8`
 * **Mapeo en Navegación:**
-  * **Breadcrumb:** `Inicio › … › Retenciones › Ejemplo` *(orientación jerárquica compacta)*.
-  * **Sidebar:** Despliega el hub local de ISR *(solo 4 ítems: Retenciones, Deducciones, Declaraciones, Constancias; NO replica 8 niveles)*.
+  * **Breadcrumb:** `Inicio › … › Nivel 5 › Nivel 8` *(orientación jerárquica compacta)*.
+  * **Sidebar:** Despliega el hub local de la sección *(solo 4 ítems; NO replica 8 niveles)*.
   * **Contenido Central:** Página actual: *Ejemplo de cálculo y tablas*.
   * **Enlaces Contextuales:** Conexiones transversales directas entre contenidos relacionados.
 
-### C. Capas de la Arquitectura de Información (Modelo Padre/Hijo)
-1. **Nivel 1 — Segmento / Audiencia:** Macro-audiencia (ej. *Contribuyentes*).
-2. **Nivel 2 — Área / Dominio:** Gran ámbito (ej. *Empleo y salarios*).
-3. **Nivel 3 — Contexto / Subárea:** Situación del usuario (ej. *Trabajar en relación de dependencia*).
-4. **Nivel 4 — Tema / Hub:** Agrupador temático (ej. *ISR para empleados*).
-5. **Nivel 5 — Contenido / Servicio:** Unidad funcional concreta (ej. *Retenciones de ISR*). No sesgado a trámites (el 67% son guías informativas); `tipo_interaccion` define la modalidad técnica.
-6. **Nivel 6+ — Profundización libre:** Subcontenido, procedimiento, detalle o cálculo soportado en BD mediante `parent_id` recursivo sin columnas fijas `categoria1..9`.
+### C. Capas de la Arquitectura de Información (Estructura Estrictamente Numérica N1–N5)
+1. **Nivel 1:** Macro-clasificación inicial (ej. *Contribuyentes*).
+2. **Nivel 2:** Segunda jerarquía estructural (ej. *Sin Obligaciones de Impuestos*, *Pequeños Contribuyentes*).
+3. **Nivel 3:** Tercera jerarquía clasificatoria intermedia.
+4. **Nivel 4:** Cuarta jerarquía temática en ramas de alta densidad.
+5. **Nivel 5:** Unidad funcional de contenido/servicio concreto con código universal `SAT-GES-####`.
+6. **Nivel 6+ — Profundización libre:** Subcontenido, procedimiento, detalle o cálculo soportado en BD mediante `parent_id` recursivo sin columnas fijas arbitrarias.
 
 ### D. Distribución Funcional de los Mecanismos de Navegación
 1. **Breadcrumb (Ubicación Jerárquica):**
