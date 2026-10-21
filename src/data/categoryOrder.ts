@@ -49,7 +49,8 @@ const GENERIC_LIFECYCLE_ORDER = [
 const GENERIC_LIFECYCLE_CATEGORIES = new Set<string>();
 
 const SPECIFIC_SUBCATEGORY_ORDER: Record<string, string[]> = {
-  'Sin Obligaciones': ['—'],
+  // Categorias compactadas: el subconjunto es la propia categoria (nivel3 = —).
+  'Sin Obligaciones': ['Sin Obligaciones'],
   'Contribuyente General': [
     'Inscripción y actualización en el RTU',
     'Facturación electrónica y documentos tributarios',
@@ -106,7 +107,7 @@ const SPECIFIC_SUBCATEGORY_ORDER: Record<string, string[]> = {
     'Devolución de Crédito Fiscal',
   ],
   'Operador Económico Autorizado (OEA)': [
-    '—',
+    'Operador Económico Autorizado (OEA)',
   ],
   'Auxiliares de la Función Pública Aduanera (AFPA)': [
     'Agentes Aduaneros',
@@ -142,7 +143,7 @@ const SPECIFIC_SUBCATEGORY_ORDER: Record<string, string[]> = {
     'Exenciones CIVA, Actualización y Cierre de Operaciones',
   ],
   'Municipalidades': [
-    '—',
+    'Municipalidades',
   ],
   'Decreto': [
     'Misiones Diplomáticas y Organismos Internacionales',

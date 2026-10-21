@@ -216,7 +216,7 @@ test('auditoria de gobernanza: verificacion de los 6 principios de calidad taxon
   // 1. Contrato de datos: Contribuyente General declarado con 8 ramas N3
   expect(OFFICIAL_CATEGORY_ORDER.contribuyentes).toContain('Contribuyente General');
   expect(OFFICIAL_SUBCATEGORY_ORDER['Contribuyente General'].length).toBe(8);
-  expect(OFFICIAL_SUBCATEGORY_ORDER['Sin Obligaciones']).toEqual(['—']);
+  expect(OFFICIAL_SUBCATEGORY_ORDER['Sin Obligaciones']).toEqual(['Sin Obligaciones']);
 
   // 2. Cero nodos monocatenarios (pasarelas de 1 solo hijo)
   const n3ByN2 = new Map<string, Set<string>>();
@@ -288,4 +288,167 @@ test('auditoria de gobernanza: verificacion de los 6 principios de calidad taxon
     expect((t as any).materiaTema).toBeUndefined();
     expect((t as any).subtemaGestion).toBeUndefined();
   });
+});
+
+// ---------------------------------------------------------------------------
+// Guardas de gobernanza añadidas: cubren los huecos detectados por mutación.
+// Cada una falla si se reintroduce el defecto que vigila (no son snapshots).
+// ---------------------------------------------------------------------------
+const DASH = '—';
+
+const ATO_PESO: Record<string, number> = {
+  empezar: 1,
+  operar: 2,
+  consultar: 3,
+  modificar_cerrar: 4,
+  normativa: 5,
+};
+
+const NADA = new Set<string | undefined>([DASH, '-', '', undefined, null as unknown as undefined]);
+
+/** Ruta canónica de carpetas (sin el ítem terminal) usada para medir densidad. */
+function folderKeyN4(t: TramiteItem): string {
+  return [t.pillar, t.nivel2, t.nivel3, t.nivel4].join('>');
+}
+
+test('densidad terminal: ninguna carpeta expone >= 11 gestiones en una sola lista (Regla 2)', () => {
+  const porCarpeta = new Map<string, TramiteItem[]>();
+  tramites.forEach((t) => {
+    const key = folderKeyN4(t);
+    if (!porCarpeta.has(key)) porCarpeta.set(key, []);
+    porCarpeta.get(key)!.push(t);
+  });
+
+  const sobrecargadas: string[] = [];
+  porCarpeta.forEach((items, key) => {
+    // Solo carpetas que realmente son pantalla de contenido: las que agotan la
+    // jerarquía declarada (N4 terminal) o superan el umbral de Miller.
+    const esTerminal = items.every((i) => NADA.has(i.nivel5));
+    if (items.length >= 11 && esTerminal) {
+      sobrecargadas.push(`${key} (${items.length} gestiones)`);
+    }
+  });
+
+  expect(
+    sobrecargadas,
+    `Carpetas con sobrecarga terminal (Regla 2: modularizar >= 11):\n  - ${sobrecargadas.join('\n  - ')}`,
+  ).toEqual([]);
+});
+
+test('guion largo: todo nivel sin clasificar usa "—" y su orden también (Regla 5)', () => {
+  const campos: [keyof TramiteItem, keyof TramiteItem][] = [
+    ['nivel3', 'orden_n3'],
+    ['nivel4', 'orden_n4'],
+    ['nivel5', 'orden_n5'],
+  ];
+
+  tramites.forEach((t) => {
+    campos.forEach(([nivelKey, ordenKey]) => {
+      const nivel = t[nivelKey];
+      const orden = t[ordenKey];
+
+      // Anti-simetria forzada: si el nivel es "—", el orden DEBE ser "—".
+      if (nivel === DASH) {
+        expect(
+          orden,
+          `${t.id}: ${String(nivelKey)}="—" pero ${String(ordenKey)}=${JSON.stringify(orden)} (Regla 5)`,
+        ).toBe(DASH);
+      }
+
+      // Guion de nivel intermedio prohibido si existe contenido en el nivel siguiente.
+      if (nivel === DASH && nivelKey === 'nivel3') {
+        expect(
+          NADA.has(t.nivel4),
+          `${t.id}: nivel3="—" no puede tener nivel4 clasificado (${JSON.stringify(t.nivel4)})`,
+        ).toBe(true);
+      }
+    });
+
+    // El guion es el único permitido: ni "-" ni textos inventados en niveles no clasificados.
+    ['nivel3', 'nivel4', 'nivel5'].forEach((k) => {
+      const valor = (t as unknown as Record<string, unknown>)[k];
+      expect(valor, `${t.id}: ${k} vacío (debe ser "—" o etiqueta)`).not.toBe('');
+      expect(valor, `${t.id}: ${k} con guion ASCII "-" (usar "—")`).not.toBe('-');
+    });
+  });
+});
+
+test('alias de nivel: nivel1..nivel5 espejan *_segmento/area/subarea/tema/tramite', () => {
+  const pares: [keyof TramiteItem, keyof TramiteItem][] = [
+    ['nivel1', 'nivel1_segmento'],
+    ['nivel2', 'nivel2_area'],
+    ['nivel3', 'nivel3_subarea'],
+    ['nivel4', 'nivel4_tema'],
+    ['nivel5', 'nivel5_tramite'],
+  ];
+
+  const desincronizados = tramites
+    .filter((t) => pares.some(([alias, canonico]) => t[alias] !== t[canonico]))
+    .map((t) => t.id);
+
+  expect(
+    desincronizados,
+    `Alias de nivel desincronizados respecto a los campos canónicos: ${desincronizados.join(', ')}`,
+  ).toEqual([]);
+});
+
+test('anti-espejo: ningún nivel consecutivo repite la etiqueta del padre', () => {
+  const espejos: string[] = [];
+  tramites.forEach((t) => {
+    const cadena = [t.nivel1, t.nivel2, t.nivel3, t.nivel4, t.nivel5].filter((v) => !NADA.has(v as string));
+    for (let i = 0; i < cadena.length - 1; i++) {
+      if (cadena[i] === cadena[i + 1]) {
+        espejos.push(`${t.id}: "${cadena[i]}" repetido en niveles consecutivos`);
+        break;
+      }
+    }
+  });
+
+  expect(espejos, `Migas en espejo (clic pasarela disfrazado):\n  - ${espejos.join('\n  - ')}`).toEqual([]);
+});
+
+test('regla 7: sin números quemados en títulos visibles', () => {
+  const PREFIJO_NUMERICO = /^\s*(?:cap[ií]tulo|secci[oó]n|parte)?\s*\d+\s*[.):\-–]\s+/i;
+  const PREFIJO_ROMANO = /^\s*(?:cap[ií]tulo|secci[oó]n|parte)\s+[IVXLCDM]+\b/i;
+
+  const quemados = tramites
+    .filter((t) => {
+      const campos = [t.nombreActual, t.tramite].filter(Boolean) as string[];
+      return campos.some((c) => PREFIJO_NUMERICO.test(c) || PREFIJO_ROMANO.test(c));
+    })
+    .map((t) => `${t.id}: "${t.nombreActual ?? t.tramite}"`);
+
+  expect(quemados, `Títulos con números quemados (Regla 7):\n  - ${quemados.join('\n  - ')}`).toEqual([]);
+});
+
+test('regla 12: prohibido el término "trámite" en campos visibles al ciudadano', () => {
+  const PROHIBIDO = /\btr[aá]mites?\b/i;
+  const VISIBLES: (keyof TramiteItem)[] = [
+    'nombreActual',
+    'tramite',
+    'descripcion',
+    'categoria',
+    'subcategoria',
+    'nivel1',
+    'nivel2',
+    'nivel3',
+    'nivel4',
+    'nivel5',
+    'migaBreadcrumb',
+  ];
+
+  const violaciones: string[] = [];
+  tramites.forEach((t) => {
+    VISIBLES.forEach((campo) => {
+      const valor = t[campo];
+      if (typeof valor === 'string' && PROHIBIDO.test(valor)) {
+        violaciones.push(`${t.id}.${String(campo)}: "${valor}"`);
+      }
+    });
+  });
+
+  expect(
+    violaciones,
+    `Término "trámite" en campos visibles (Regla 12, usar "gestión"):\n  - ${violaciones.slice(0, 40).join('\n  - ')}`,
+  ).toEqual([]);
 });
