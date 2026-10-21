@@ -206,28 +206,29 @@ const ATO_CYCLE_ORDER: Record<string, number> = {
  * 4. Desempate alfabético por título.
  */
 export function compareCanonicalTramiteOrder(a: TramiteItem, b: TramiteItem): number {
-  const o1A = a.orden_n1 ?? 999;
-  const o1B = b.orden_n1 ?? 999;
+  const toNum = (v: unknown): number => (typeof v === 'number' ? v : (typeof v === 'string' && /^\d+$/.test(v) ? parseInt(v, 10) : 999));
+  const o1A = toNum(a.orden_n1);
+  const o1B = toNum(b.orden_n1);
   if (o1A !== o1B) return o1A - o1B;
 
-  const o2A = a.orden_n2 ?? 999;
-  const o2B = b.orden_n2 ?? 999;
+  const o2A = toNum(a.orden_n2);
+  const o2B = toNum(b.orden_n2);
   if (o2A !== o2B) return o2A - o2B;
 
-  const o3A = a.orden_n3 ?? 999;
-  const o3B = b.orden_n3 ?? 999;
+  const o3A = toNum(a.orden_n3);
+  const o3B = toNum(b.orden_n3);
   if (o3A !== o3B) return o3A - o3B;
 
-  const o4A = a.orden_n4 ?? 999;
-  const o4B = b.orden_n4 ?? 999;
+  const o4A = toNum(a.orden_n4);
+  const o4B = toNum(b.orden_n4);
   if (o4A !== o4B) return o4A - o4B;
 
-  const o5A = a.orden_n5 ?? 999;
-  const o5B = b.orden_n5 ?? 999;
+  const o5A = toNum(a.orden_n5);
+  const o5B = toNum(b.orden_n5);
   if (o5A !== o5B) return o5A - o5B;
 
-  const ocA = a.orden_contenido ?? 999;
-  const ocB = b.orden_contenido ?? 999;
+  const ocA = toNum(a.orden_contenido);
+  const ocB = toNum(b.orden_contenido);
   if (ocA !== ocB) return ocA - ocB;
 
   const atoA = a.etapaAto ? (ATO_CYCLE_ORDER[a.etapaAto] ?? 99) : 99;

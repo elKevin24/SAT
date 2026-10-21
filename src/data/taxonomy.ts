@@ -75,7 +75,7 @@ export function buildTaxonomy(tramites: Categorizable[]): Taxonomy {
     if (existing) {
       existing.count = count;
     } else {
-      cat.subcategorias.push({ id: subId, nombre: t.subcategoria, count });
+      cat.subcategorias.push({ id: subId, nombre: t.subcategoria ?? subNombre, count });
     }
   });
 

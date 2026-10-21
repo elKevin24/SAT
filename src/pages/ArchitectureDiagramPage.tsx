@@ -209,7 +209,7 @@ export const ArchitectureDiagramPage: React.FC = () => {
     const next: Record<string, boolean> = {};
     PILLARS.forEach(p => {
       const items = rawTramites.filter(t => t.pillar === p.id);
-      const cats = Array.from(new Set(items.map(i => i.categoria)));
+      const cats = Array.from(new Set(items.map(i => (i as Record<string, any>).categoria || i.nivel2 || '')));
       cats.forEach(c => {
         next[`${p.id}-${c}`] = true;
       });

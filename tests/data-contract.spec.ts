@@ -39,14 +39,14 @@ test.beforeAll(() => {
 
 const enrichedTramites = () =>
   tramites.map((t) => {
-    const catId = categoriaId(t.pillar, t.categoria);
-    return { ...t, categoriaId: catId, subcategoriaId: subcategoriaId(catId, t.subcategoria) };
+    const catId = categoriaId(t.pillar, t.categoria ?? '');
+    return { ...t, categoriaId: catId, subcategoriaId: subcategoriaId(catId, t.subcategoria ?? '') };
   });
 
 const taxonomy = () => buildTaxonomy(enrichedTramites());
 
 const subcategoriasDe = (categoria: string): Set<string> =>
-  new Set(tramites.filter((t) => t.categoria === categoria).map((t) => t.subcategoria));
+  new Set(tramites.filter((t) => t.categoria === categoria).map((t) => t.subcategoria ?? ''));
 
 test('allTramites: ids únicos y campos esenciales', () => {
   const ids = new Set(tramites.map((t) => t.id));
@@ -64,10 +64,10 @@ test('allTramites: la taxonomía resuelve a IDs estables sin colisiones', () => 
   expect(Object.keys(tax.pillars).sort()).toEqual([...PILLARS].sort());
 
   tramites.forEach((t) => {
-    const cat = tax.byCategoriaId.get(categoriaId(t.pillar, t.categoria));
+    const cat = tax.byCategoriaId.get(categoriaId(t.pillar, t.categoria ?? ''));
     expect(cat, `categoría "${t.categoria}" (${t.pillar}) no indexada`).toBeDefined();
     expect(
-      cat!.subcategorias.some((s) => s.id === subcategoriaId(cat!.id, t.subcategoria)),
+      cat!.subcategorias.some((s) => s.id === subcategoriaId(cat!.id, t.subcategoria ?? '')),
       `subcategoría "${t.subcategoria}" de "${t.categoria}" no indexada`,
     ).toBe(true);
   });
@@ -76,9 +76,9 @@ test('allTramites: la taxonomía resuelve a IDs estables sin colisiones', () => 
 test('allTramites: resolveCategoria acepta id y nombre (compat URL)', () => {
   const tax = taxonomy();
   tramites.forEach((t) => {
-    const id = categoriaId(t.pillar, t.categoria);
+    const id = categoriaId(t.pillar, t.categoria ?? '');
     expect(resolveCategoria(tax, t.pillar, id)).toBe(t.categoria);
-    expect(resolveCategoria(tax, t.pillar, t.categoria)).toBe(t.categoria);
+    expect(resolveCategoria(tax, t.pillar, t.categoria ?? '')).toBe(t.categoria);
   });
   expect(resolveCategoria(tax, 'contribuyentes', 'nombre-inexistente')).toBeNull();
 });
@@ -87,7 +87,7 @@ test('order categorías: cada nombre oficial existe en el dataset', () => {
   const porPilar = new Map<string, Set<string>>();
   tramites.forEach((t) => {
     if (!porPilar.has(t.pillar)) porPilar.set(t.pillar, new Set());
-    porPilar.get(t.pillar)!.add(t.categoria);
+    porPilar.get(t.pillar)!.add(t.categoria ?? '');
   });
 
   (Object.keys(OFFICIAL_CATEGORY_ORDER) as (typeof PILLARS)[number][]).forEach((pillar) => {
@@ -110,7 +110,7 @@ test('order subcategorías: nombres oficiales existen y cubren categorías gené
   const GENERIC_4 = ['Registro y acreditación', 'Operaciones y trámites', 'Consultas y seguimiento', 'Normativa y recursos'];
   const categoriasGenericas = new Set(
     tramites
-      .map((t) => t.categoria)
+      .map((t) => t.categoria ?? '')
       .filter((cat, i, arr) => {
         const subs = subcategoriasDe(cat);
         return subs.size === 4 && GENERIC_4.every((g) => subs.has(g)) && arr.indexOf(cat) === i;
