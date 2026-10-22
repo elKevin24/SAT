@@ -717,7 +717,7 @@ export const TRAMITES_DATA: TramiteItem[] = [
     ],
     requisitos: [
       'Tener NIT activo y ratificado en el RTU.',
-      'No superar el límite de facturación anual de Q150,000.00.',
+      'No superar el límite de facturación anual legal del régimen simplificado (Decreto 31-2024).',
       'Contar con usuario en Agencia Virtual y firma electrónica para emisión de FEL.'
     ],
     pasos: [

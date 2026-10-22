@@ -54,7 +54,7 @@ N2_DESCRIPTIONS = {
         'base_juridica': 'Código Tributario (Decreto 6-91, Arts. 112 y 120), Ley de Actualización Tributaria (Decreto 10-2012) y Acuerdo de Directorio SAT 08-2020.'
     },
     ('Contribuyentes', 'Pequeños Contribuyentes'): {
-        'que_es': 'Régimen tributario simplificado para personas individuales o jurídicas con ventas o servicios de hasta Q150,000 anuales (tarifa definitiva 5% de IVA sin crédito fiscal), así como productores agropecuarios del sector primario.',
+        'que_es': 'Régimen tributario simplificado para personas individuales o jurídicas con tarifa definitiva 5% de IVA sin crédito fiscal conforme al límite de ley, así como productores agropecuarios del sector primario.',
         'lead_text': 'Facturación electrónica FEL, declaraciones mensuales del 5%, régimen electrónico y facilidades para el sector primario.',
         'base_juridica': 'Ley del IVA (Decreto 27-92, Arts. 45 al 50), Decreto 7-2019 (Régimen Electrónico) y Decreto 31-2024 (Sector Primario y Agropecuario).'
     },
@@ -158,7 +158,7 @@ N3_DESCRIPTIONS = {
         'base_juridica': 'Código Tributario (Decreto 6-91, Arts. 112 y 120), Ley de Actualización Tributaria (Decreto 10-2012) y Acuerdo de Directorio SAT 08-2020.'
     },
     ('Contribuyentes', 'Pequeños Contribuyentes', 'Régimen de Pequeño Contribuyente'): {
-        'que_es': 'Régimen tributario simplificado de tarifa definitiva 5% de IVA mensual sin crédito fiscal para personas individuales o jurídicas con ventas de hasta Q150,000 en el año calendario.',
+        'que_es': 'Régimen tributario simplificado de tarifa definitiva 5% de IVA mensual sin crédito fiscal para personas individuales o jurídicas conforme al límite legal de facturación anual del régimen simplificado.',
         'lead_text': 'Requisitos, pasos y documentos para solicitar tu Número de Identificación Tributaria (NIT) en línea e inscribirte al Régimen.',
         'base_juridica': 'Decreto 27-92 (Ley del IVA, Arts. 45 al 50) y Decreto 7-2019 (Ley de Simplificación Tributaria).'
     },

@@ -73,7 +73,7 @@ N2_DEFS = {
     },
     'contribuyentes/pequenos-contribuyentes': {
         'nombre': 'Pequeños Contribuyentes',
-        'que_es': 'Régimen tributario simplificado para personas individuales o jurídicas con ventas o servicios de hasta Q150,000 anuales (tarifa definitiva 5% de IVA sin crédito fiscal), así como productores agropecuarios del sector primario.',
+        'que_es': 'Régimen tributario simplificado para personas individuales o jurídicas con tarifa definitiva 5% de IVA sin crédito fiscal conforme al límite de ley, así como productores agropecuarios del sector primario.',
         'lead_text': 'Facturación electrónica FEL, declaraciones mensuales del 5%, régimen electrónico y facilidades para el sector primario.',
         'base_juridica': 'Ley del IVA (Decreto 27-92, Arts. 45 al 50), Decreto 7-2019 (Régimen Electrónico) y Decreto 31-2024 (Sector Primario y Agropecuario).'
     },

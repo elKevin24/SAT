@@ -93,7 +93,7 @@ NIVEL2 = {
     },
     "Pequeños Contribuyentes": {
         "que_es": (
-            "Personas individuales o jurídicas cuyas ventas anuales no superan Q150,000 y tributan el 5% definitivo "
+            "Personas individuales o jurídicas que tributan la tarifa definitiva del 5% en el régimen simplificado "
             "sobre ingresos brutos, incluyendo el régimen electrónico y los productores del sector primario y agropecuario."
         ),
         "lead_text": "Información y obligaciones para pequeños negocios y el régimen simplificado.",

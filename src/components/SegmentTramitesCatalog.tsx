@@ -65,7 +65,7 @@ const SEGMENT_CARD_TONE: Record<SegmentId, CardTone> = {
 
 const CATEGORY_DESCRIPTIONS: Record<string, string> = {
   'NIT sin Obligaciones': 'Personas individuales, estudiantes y graduados sin actividad económica que requieren NIT para gestiones civiles, cuentas bancarias, títulos y remesas.',
-  'Pequeños Contribuyentes': 'Régimen simplificado con tarifa definitiva del 5% hasta Q150,000 anuales y actividades agropecuarias especiales.',
+  'Pequeños Contribuyentes': 'Información y obligaciones para pequeños negocios y régimen simplificado.',
   'Contribuyente General': 'Personas y empresas con obligaciones generales de IVA e ISR, facturación electrónica, asalariados y gestión vehicular.',
   'Contribuyentes Especiales': 'Medianos y grandes contribuyentes sujetos a control diferenciado y gerencias de fiscalización tributaria intensiva.',
   'Importadores y Exportadores': 'Gestiones tributarias y aduaneras comunes: RTU Digital, solvencia fiscal habilitante, declaraciones DUCA y aranceles.',

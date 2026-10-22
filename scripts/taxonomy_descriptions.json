@@ -39,7 +39,7 @@
     },
     "contribuyentes/pequenos-contribuyentes": {
       "nombre": "Pequeños Contribuyentes",
-      "que_es": "Régimen tributario simplificado para personas individuales o jurídicas con ventas o servicios de hasta Q150,000 anuales (tarifa definitiva 5% de IVA sin crédito fiscal), así como productores agropecuarios del sector primario.",
+      "que_es": "Régimen tributario simplificado para personas individuales o jurídicas con tarifa definitiva 5% de IVA sin crédito fiscal conforme al límite de ley, así como productores agropecuarios del sector primario.",
       "lead_text": "Facturación electrónica FEL, declaraciones mensuales del 5%, régimen electrónico y facilidades para el sector primario.",
       "base_juridica": "Ley del IVA (Decreto 27-92, Arts. 45 al 50), Decreto 7-2019 (Régimen Electrónico) y Decreto 31-2024 (Sector Primario y Agropecuario).",
       "nivel": 2
@@ -258,7 +258,7 @@
     },
     "contribuyentes/pequenos-contribuyentes": {
       "nombre": "Pequeños Contribuyentes",
-      "que_es": "Régimen tributario simplificado para personas individuales o jurídicas con ventas o servicios de hasta Q150,000 anuales (tarifa definitiva 5% de IVA sin crédito fiscal), así como productores agropecuarios del sector primario.",
+      "que_es": "Régimen tributario simplificado para personas individuales o jurídicas con tarifa definitiva 5% de IVA sin crédito fiscal conforme al límite de ley, así como productores agropecuarios del sector primario.",
       "lead_text": "Facturación electrónica FEL, declaraciones mensuales del 5%, régimen electrónico y facilidades para el sector primario.",
       "base_juridica": "Ley del IVA (Decreto 27-92, Arts. 45 al 50), Decreto 7-2019 (Régimen Electrónico) y Decreto 31-2024 (Sector Primario y Agropecuario).",
       "nivel": 2
@@ -1855,7 +1855,7 @@
     },
     "categoria/pequenos-contribuyentes": {
       "nombre": "Pequeños Contribuyentes",
-      "que_es": "Régimen simplificado para personas individuales o jurídicas cuyas ventas de bienes o prestación de servicios no superan el monto de Q150,000 en el año calendario, tributando bajo una tarifa definitiva del 5% sobre ingresos brutos mensuales sin derecho a crédito fiscal, incluyendo productores agropecuarios (ICT).",
+      "que_es": "Régimen simplificado para personas individuales o jurídicas que tributan bajo una tarifa definitiva del 5% sobre ingresos brutos mensuales sin derecho a crédito fiscal, incluyendo productores agropecuarios (ICT).",
       "lead_text": "Información y obligaciones para pequeños negocios y régimen simplificado.",
       "base_juridica": "Ley del IVA (Decreto 27-92, Arts. 45 al 50), Decreto 7-2019 (Régimen Electrónico) y Decreto 31-2024 (Sector Primario y Agropecuario).",
       "alcance": "Régimen del 5% definitivo, facturación FEL, régimen electrónico y regímenes especiales del sector primario y agropecuario.",

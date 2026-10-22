@@ -400,7 +400,7 @@ export const FelPage: React.FC<FelPageProps> = ({ onBackToHome }) => {
               <>
                 <h3 className="text-sm font-bold text-sat-azul-oscuro">Factura Electrónica de Pequeño Contribuyente</h3>
                 <p className="text-xs text-sat-texto-suave leading-relaxed">
-                  Emitida por personas individuales o jurídicas inscritas en el Régimen de Pequeño Contribuyente cuyos ingresos no superen los Q 150,000.00 anuales. Tarifa del 5% del valor total (o 4% si tributa en el Régimen Electrónico de Pequeño Contribuyente). No genera crédito fiscal para el comprador.
+                  Emitida por personas individuales o jurídicas inscritas en el Régimen de Pequeño Contribuyente conforme al límite de facturación legal vigente. Tarifa del 5% del valor total (o 4% si tributa en el Régimen Electrónico de Pequeño Contribuyente). No genera crédito fiscal para el comprador.
                 </p>
               </>
             )}

@@ -206,7 +206,7 @@ export const MACROGRUPOS_DATA: MacroGrupoOption[] = [
       {
         id: 'pequeno_contribuyente',
         nombre: 'Pequeño Contribuyente (5% e Integrados)',
-        descripcion: 'Facturación anual hasta Q150,000.00 en régimen simplificado de tarifa única.',
+        descripcion: 'Emisión y control de facturas tributarias en régimen simplificado de tarifa única.',
         paginasBase: 40,
         tipo: 'general'
       },
@@ -1145,7 +1145,7 @@ export const FICHAS_CATALOGO_DATA: FichaTramite[] = [
         items: [
           'Facturación electrónica FEL emitida en el mes a declarar.',
           'Formulario SAT-2046 generado en Declaraguate.',
-          'Facturación total que no exceda el límite anual de Q150,000.00.'
+          'Facturación total que no exceda el límite anual del régimen simplificado según la ley vigente (Decreto 31-2024).'
         ]
       },
       {

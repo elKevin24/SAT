@@ -59,7 +59,7 @@ ACTORES = [
      '(Dto. 10-2012) y Acuerdo de Directorio SAT 08-2020.'),
     (2, 'Pequeños Contribuyentes',
      'Régimen tributario simplificado para personas individuales o jurídicas con ventas o servicios '
-     'de hasta Q150,000 anuales (tarifa definitiva 5% de IVA sin crédito fiscal), así como '
+     'en el régimen simplificado (tarifa definitiva 5% de IVA sin crédito fiscal), así como '
      'productores agropecuarios del sector primario.',
      'Facturación electrónica FEL, declaraciones mensuales del 5%, régimen electrónico y '
      'facilidades para el sector primario.',

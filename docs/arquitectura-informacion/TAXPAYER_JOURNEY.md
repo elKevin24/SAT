@@ -76,7 +76,7 @@ Estructura simétrica oficial en Lenguaje Ciudadano:
      * **Títulos Universitarios:** Registro de títulos universitarios para ejercer y verificación digital mediante código QR.
      * **Información Pública:** Solicitud formal de información pública y portal de información de oficio (Decreto 57-2008).
      * **Servicios en Línea y Solvencias:** Agencia Virtual, consulta de expedientes, Solvencia Fiscal en línea y cita previa.
-2. **`Pequeños Contribuyentes`:** Régimen simplificado (5% IVA definitivo hasta Q150,000 anuales), agropecuario primario y pecuario.
+2. **`Pequeños Contribuyentes`:** Régimen simplificado (5% IVA definitivo), agropecuario primario y pecuario.
    * *Nodos de gestión:* Regímenes tributarios, Otros servicios al contribuyente, Capacitación y orientación, Inscripción en RTU, Facturación electrónica FEL.
 3. **`Contribuyente General`:** Personas y empresas con actividad comercial, Régimen Sobre las Utilidades, Opcional Simplificado, IVA General (12%), Rentas del Trabajo (asalariados), trámites del Registro Fiscal de Vehículos como propietario, declaraciones y gestiones de RTU.
    * *Nodos de gestión ramificados según Ley de Miller:*

@@ -116,7 +116,7 @@ NODOS_MAPA = [
         'regimen': 'Pequeños Contribuyentes',
         'categoria': 'Pequeños Contribuyentes',
         'alcance': 'Régimen del 5% definitivo, facturación FEL, régimen electrónico y regímenes especiales del sector primario y agropecuario.',
-        'que_es': 'Régimen simplificado para personas individuales o jurídicas cuyas ventas de bienes o prestación de servicios no superan el monto de Q150,000 en el año calendario, tributando bajo una tarifa definitiva del 5% sobre ingresos brutos mensuales sin derecho a crédito fiscal, incluyendo productores agropecuarios (ICT).',
+        'que_es': 'Régimen simplificado para personas individuales o jurídicas que tributan bajo una tarifa definitiva del 5% sobre ingresos brutos mensuales sin derecho a crédito fiscal, incluyendo productores agropecuarios (ICT).',
         'lead_text': 'Información y obligaciones para pequeños negocios y régimen simplificado.',
         'base_juridica': 'Ley del IVA (Decreto 27-92, Arts. 45 al 50), Decreto 7-2019 (Régimen Electrónico) y Decreto 31-2024 (Sector Primario y Agropecuario).',
     },
