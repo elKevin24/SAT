@@ -2013,7 +2013,7 @@
       {
         "numero": 6,
         "accion": "Si no puedes ir en persona",
-        "pagina": "Autorizar a otra persona para tus trámites de vehículos",
+        "pagina": "Autorizar a otra persona para tus gestiones de vehículos",
         "ubicacion": "Contribuyentes › Contribuyente General",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/tercera-persona-autorizada-en-el-registro-fiscal-de-vehiculos/"
       }
@@ -3797,7 +3797,7 @@
       {
         "numero": 2,
         "accion": "Habilítate para traspasos electrónicos",
-        "pagina": "Requisitos de trámites de vehículos para notarios",
+        "pagina": "Requisitos de gestiones de vehículos para notarios",
         "ubicacion": "Profesionales › Terceras Personas › Todos los grupos",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-notarios/"
       },
@@ -3836,7 +3836,7 @@
     "nombre": "Ser gestor tributario",
     "audiencia": "Profesionales",
     "etapa": "Registrarse",
-    "paraQuien": "Personas que hacen trámites por otros",
+    "paraQuien": "Personas que hacen gestiones por otros",
     "categorias": "Terceras Personas › Gestores Tributarios\r\nTerceras Personas › Auxiliar Tributario",
     "totalPasos": 4,
     "totalPaginas": 6,
@@ -3917,7 +3917,7 @@
       {
         "numero": 1,
         "accion": "Conoce los requisitos",
-        "pagina": "Requisitos de trámites en aduanas",
+        "pagina": "Requisitos de gestiones en aduanas",
         "ubicacion": "Operadores de comercio exterior › Importadores y Exportadores › Importadores",
         "url": "https://portal.sat.gob.gt/portal/requisitos-de-aduanas/"
       },
@@ -4020,7 +4020,7 @@
   },
   {
     "no": 42,
-    "nombre": "Hacer trámites en nombre de un cliente",
+    "nombre": "Hacer gestiones en nombre de un cliente",
     "audiencia": "Profesionales",
     "etapa": "Operar",
     "paraQuien": "Contadores, gestores, notarios y abogados",
@@ -4031,7 +4031,7 @@
       "1. Obtén la autorización",
       "2. Quedar como contador del negocio",
       "3. Identifícate como gestor",
-      "4. Requisitos por trámite"
+      "4. Requisitos por gestión"
     ],
     "pasos": [
       {
@@ -4044,7 +4044,7 @@
       {
         "numero": 1,
         "accion": "Obtén la autorización",
-        "pagina": "Autorizar a otra persona para tus trámites de vehículos",
+        "pagina": "Autorizar a otra persona para tus gestiones de vehículos",
         "ubicacion": "Profesionales › Terceras Personas › Abogados y Notarios",
         "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/tercera-persona-autorizada-en-el-registro-fiscal-de-vehiculos/"
       },
@@ -4071,15 +4071,15 @@
       },
       {
         "numero": 4,
-        "accion": "Requisitos por trámite",
-        "pagina": "Ver requisitos de trámites para personas y empresas",
+        "accion": "Requisitos por gestión",
+        "pagina": "Ver requisitos de gestiones para personas y empresas",
         "ubicacion": "Profesionales › Terceras Personas › Todos los grupos",
         "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/"
       },
       {
         "numero": 4,
-        "accion": "Requisitos por trámite",
-        "pagina": "Ver requisitos de trámites de vehículos",
+        "accion": "Requisitos por gestión",
+        "pagina": "Ver requisitos de gestiones de vehículos",
         "ubicacion": "Profesionales › Terceras Personas › Todos los grupos",
         "url": "https://portal.sat.gob.gt/portal/requisitos-de-vehiculos/"
       }
@@ -4360,7 +4360,7 @@
   },
   {
     "no": 47,
-    "nombre": "Trámites de misiones diplomáticas y organismos internacionales",
+    "nombre": "Gestiones de misiones diplomáticas y organismos internacionales",
     "audiencia": "Organismos especiales",
     "etapa": "Internacional",
     "paraQuien": "Embajadas, consulados y organismos de cooperación",

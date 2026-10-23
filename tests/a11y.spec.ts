@@ -10,6 +10,7 @@ const AXE_TAGS = ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa', 'best-
 const ALLOWED_RULES = new Set<string>();
 
 async function scan(page: Page, label: string) {
+  await page.waitForTimeout(250);
   const results = await new AxeBuilder({ page }).withTags(AXE_TAGS).analyze();
   const blocker = results.violations.filter((v) => !ALLOWED_RULES.has(v.id));
   const summary = results.violations

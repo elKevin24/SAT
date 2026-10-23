@@ -40,7 +40,7 @@ export const OFFICIAL_CATEGORY_ORDER: Record<PillarType, string[]> = {
 /** Ciclo de vida homogeneizado para categorías genéricas. */
 const GENERIC_LIFECYCLE_ORDER = [
   'Registro y acreditación',
-  'Operaciones y trámites',
+  'Operaciones y gestiones',
   'Consultas y seguimiento',
   'Normativa y recursos',
 ];

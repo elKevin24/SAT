@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "tsx server.ts",
     "build": "vite build && esbuild server.ts --platform=node --packages=external --bundle --format=esm --outfile=server.js",
+    "test:unit": "node --import tsx --test tests/unit/schema.test.ts tests/unit/taxonomy.test.ts tests/unit/order.test.ts tests/unit/relationships.test.ts",
     "test:a11y": "playwright test",
+    "test": "npm run test:unit && playwright test",
     "predeploy": "vite build",
     "deploy": "gh-pages -d dist",
     "start": "node server.js",

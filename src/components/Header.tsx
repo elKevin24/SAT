@@ -483,14 +483,59 @@ export const Header: React.FC<HeaderProps> = ({
         </div>
       </nav>
 
-      {/* 3. Barra de Navegación Principal: Minimalismo & Dinamismo */}
+      {/* 3. Barra de Navegación Principal: Estructura en Z con Menú a la Izquierda y Macrogrupos al Centro */}
       <nav
-        className="bg-white border-b border-slate-200 shadow-[0_1px_3px_rgba(0,0,0,0.02)] relative z-30 transition-all duration-200"
+        className="bg-white border-b border-slate-200 shadow-[0_1px_3px_rgba(0,0,0,0.02)] relative z-40 transition-colors"
         aria-label="Menú de Navegación y Segmentos Oficiales"
       >
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between min-h-[42px] gap-2">
-          {/* Lado izquierdo: Inicio + Los 4 Macrogrupos siempre presentes con pills elegantes */}
-          <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-1">
+          
+          {/* LADO IZQUIERDO: Botón Menú Hamburguesa + Botón Inicio */}
+          <div className="flex items-center gap-1.5 shrink-0 z-10">
+            <button
+              type="button"
+              onClick={() => setIsLevelMenuOpen(!isLevelMenuOpen)}
+              className={`inline-flex items-center gap-2 h-7.5 px-3 rounded-full text-xs transition-colors cursor-pointer ${
+                isLevelMenuOpen
+                  ? 'bg-slate-900 text-white font-semibold shadow-xs ring-2 ring-slate-900/10'
+                  : isContentLevel
+                    ? 'bg-sky-50 text-sky-950 border border-sky-400 hover:bg-sky-100 font-bold shadow-2xs ring-2 ring-sky-500/20'
+                    : 'bg-white text-slate-800 border border-slate-300 hover:bg-slate-50 hover:text-slate-950 font-semibold'
+              }`}
+              aria-expanded={isLevelMenuOpen}
+              aria-controls="sat-level-menu-panel"
+              title={isLevelMenuOpen ? 'Cerrar menú' : 'Abrir menú'}
+            >
+              {/* Icono de hamburguesa animado con morph suave a X */}
+              <div className="w-3.5 h-3 relative flex flex-col justify-between items-center shrink-0" aria-hidden="true">
+                <span
+                  className={`block h-[1.5px] w-3.5 bg-current rounded-full transition-transform duration-200 ease-out ${
+                    isLevelMenuOpen ? 'rotate-45 translate-y-[5px]' : ''
+                  }`}
+                />
+                <span
+                  className={`block h-[1.5px] w-3.5 bg-current rounded-full transition-opacity duration-150 ease-out ${
+                    isLevelMenuOpen ? 'opacity-0 scale-x-0' : 'opacity-100'
+                  }`}
+                />
+                <span
+                  className={`block h-[1.5px] w-3.5 bg-current rounded-full transition-transform duration-200 ease-out ${
+                    isLevelMenuOpen ? '-rotate-45 -translate-y-[5.5px]' : ''
+                  }`}
+                />
+              </div>
+
+              <span>Menú</span>
+
+              {isContentLevel && (
+                <span className="min-w-[18px] h-4.5 px-1.5 rounded-full text-[10px] font-black bg-[#14649B] text-white shadow-2xs flex items-center justify-center animate-fadeIn">
+                  {contentLevelItems.length}
+                </span>
+              )}
+            </button>
+
+            <span className="h-3.5 w-px bg-slate-200 mx-0.5 shrink-0" aria-hidden="true" />
+
             <button
               type="button"
               onClick={() => {
@@ -500,7 +545,7 @@ export const Header: React.FC<HeaderProps> = ({
                   onGoHome();
                 }
               }}
-              className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs transition-all shrink-0 ${
+              className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs transition-colors shrink-0 ${
                 currentView === 'home'
                   ? 'bg-slate-900 text-white font-semibold shadow-2xs'
                   : 'text-slate-800 hover:text-slate-950 hover:bg-slate-100 font-semibold'
@@ -510,9 +555,10 @@ export const Header: React.FC<HeaderProps> = ({
               <Home className="w-3.5 h-3.5" />
               <span className="hidden sm:inline">Inicio</span>
             </button>
+          </div>
 
-            <span className="h-3.5 w-px bg-slate-200 mx-0.5 shrink-0" aria-hidden="true" />
-
+          {/* CENTRO: Los 4 Macrogrupos siempre presentes y perfectamente alineados en medio */}
+          <div className="flex-1 flex items-center justify-center gap-1.5 overflow-x-auto no-scrollbar py-1">
             {MACROGROUPS.map((macro) => {
               const isActive = (currentView === 'catalog' || currentView === 'gestion') && activeSegment === macro.id;
               return (
@@ -524,7 +570,7 @@ export const Header: React.FC<HeaderProps> = ({
                       onSelectSegment(macro.id);
                     }
                   }}
-                  className={`group relative inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs transition-all shrink-0 ${
+                  className={`group relative inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs transition-colors shrink-0 ${
                     isActive
                       ? 'bg-slate-900 text-white font-semibold shadow-2xs'
                       : 'text-slate-800 hover:text-slate-950 hover:bg-slate-100 font-semibold'
@@ -540,10 +586,12 @@ export const Header: React.FC<HeaderProps> = ({
                 </button>
               );
             })}
+          </div>
 
-            {/* Rastro Contextual Dinámico: Muestra la ubicación actual en la jerarquía y permite retroceder */}
-            {(currentView === 'catalog' || currentView === 'gestion') && activeCategory && activeCategory !== 'Todas las categorías' && (
-              <div className="hidden lg:flex items-center gap-1.5 pl-2 text-xs text-slate-500 animate-fadeIn shrink-0">
+          {/* LADO DERECHO: Rastro Contextual o Balanceador para preservar centrado de macrogrupos */}
+          <div className="flex items-center justify-end gap-1.5 shrink-0 min-w-0">
+            {(currentView === 'catalog' || currentView === 'gestion') && activeCategory && activeCategory !== 'Todas las categorías' ? (
+              <div className="hidden lg:flex items-center gap-1.5 text-xs text-slate-500 animate-fadeIn shrink-0">
                 <ChevronRight className="w-3.5 h-3.5 text-slate-300 shrink-0" />
                 <button
                   type="button"
@@ -562,83 +610,32 @@ export const Header: React.FC<HeaderProps> = ({
                   </>
                 )}
               </div>
+            ) : (
+              /* Balanceador espacial para centrado en desktop */
+              <div className="w-[120px] hidden md:block" aria-hidden="true" />
             )}
           </div>
 
-          {/* Lado derecho: Botón Menú Hamburguesa Minimalista con Animación Geométrica y Contador Dinámico */}
-          <div className="flex items-center gap-2 shrink-0">
-            <button
-              type="button"
-              onClick={() => setIsLevelMenuOpen(!isLevelMenuOpen)}
-              className={`inline-flex items-center gap-2 h-7.5 px-3 rounded-full text-xs transition-all duration-200 cursor-pointer ${
-                isLevelMenuOpen
-                  ? 'bg-slate-900 text-white font-semibold shadow-xs ring-2 ring-slate-900/10'
-                  : isContentLevel
-                    ? 'bg-sky-50 text-sky-950 border border-sky-400 hover:bg-sky-100 font-bold shadow-2xs ring-2 ring-sky-500/20'
-                    : 'bg-white text-slate-800 border border-slate-300 hover:bg-slate-50 hover:text-slate-950 font-semibold'
-              }`}
-              aria-expanded={isLevelMenuOpen}
-              aria-controls="sat-level-menu-panel"
-              title={
-                isContentLevel
-                  ? `Ver ${contentLevelItems.length} opciones de este nivel de contenido`
-                  : 'Abrir menú de navegación'
-              }
-            >
-              {/* Icono de hamburguesa animado con morph suave a X */}
-              <div className="w-3.5 h-3 relative flex flex-col justify-between items-center shrink-0" aria-hidden="true">
-                <span
-                  className={`block h-[1.5px] w-3.5 bg-current rounded-full transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-                    isLevelMenuOpen ? 'rotate-45 translate-y-[5px]' : ''
-                  }`}
-                />
-                <span
-                  className={`block h-[1.5px] w-3.5 bg-current rounded-full transition-all duration-200 ease-out ${
-                    isLevelMenuOpen ? 'opacity-0 scale-x-0' : 'opacity-100'
-                  }`}
-                />
-                <span
-                  className={`block h-[1.5px] w-3.5 bg-current rounded-full transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-                    isLevelMenuOpen ? '-rotate-45 -translate-y-[5.5px]' : ''
-                  }`}
-                />
-              </div>
-
-              <span>
-                {isContentLevel
-                  ? 'Opciones del nivel'
-                  : 'Menú'}
-              </span>
-
-              {isContentLevel && (
-                <span className="min-w-[18px] h-4.5 px-1.5 rounded-full text-[10px] font-black bg-[#14649B] text-white shadow-2xs flex items-center justify-center animate-fadeIn">
-                  {contentLevelItems.length}
-                </span>
-              )}
-            </button>
-          </div>
         </div>
 
-        {/* Panel Desplegable Flotante Ultra-Minimalista: Solo Título y Líneas de Texto */}
+        {/* Panel Desplegable Flotante en el Eje Z (Absolute: nunca empuja el contenido) */}
         {isLevelMenuOpen && (
           <>
-            {/* Backdrop con desenfoque suave para cerrar al hacer clic fuera */}
+            {/* Backdrop con desenfoque suave para cerrar al tocar fuera */}
             <div
-              className="fixed inset-0 top-[118px] sm:top-[122px] bg-slate-900/10 backdrop-blur-xs z-30 transition-opacity duration-200"
+              className="fixed inset-0 bg-slate-900/20 backdrop-blur-xs z-40 transition-opacity duration-200"
               onClick={() => setIsLevelMenuOpen(false)}
               aria-hidden="true"
             />
 
             <div
               id="sat-level-menu-panel"
-              className="relative z-40 bg-white border-t border-b sm:border border-slate-200 sm:rounded-xl shadow-xl max-w-2xl mx-auto sm:my-2 p-4 animate-fadeIn max-h-[70vh] overflow-y-auto"
+              className="absolute left-4 sm:left-6 lg:left-8 top-full mt-2 z-50 bg-white border border-slate-200 rounded-2xl shadow-2xl w-[calc(100vw-2rem)] sm:w-[580px] max-w-2xl p-4 sm:p-5 animate-fadeIn max-h-[75vh] overflow-y-auto"
             >
               {/* Cabecera Minimalista: Solo el Título y Botón Cerrar */}
               <div className="flex items-center justify-between pb-2 mb-2 border-b border-slate-100">
                 <h3 className="text-xs sm:text-sm font-bold text-slate-800">
-                  {isContentLevel
-                    ? contentLevelTitle || 'Opciones del nivel'
-                    : 'Menú de Navegación Oficial'}
+                  {contentLevelTitle || 'Menú de Navegación'}
                 </h3>
                 <button
                   type="button"

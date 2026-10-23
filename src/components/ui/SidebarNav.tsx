@@ -82,26 +82,21 @@ export const SidebarNav: React.FC<SidebarNavProps> = ({
     <div className="space-y-4">
       {/* Cabecera del Segmento */}
       <div className="pb-3 border-b border-[#E2E8F0]">
-        <div className="flex items-center gap-2 mb-1">
-          <span
-            className="w-2.5 h-2.5 rounded-full shrink-0"
-            style={{ backgroundColor: segmentColor }}
-            aria-hidden="true"
-          />
-          <span className="text-[11px] font-bold uppercase tracking-wider text-[#64748B]">
-            Navegación Contextual
-          </span>
-        </div>
         <button
           type="button"
           onClick={() => {
             if (onResetToSegment) onResetToSegment();
             setMobileDrawerOpen(false);
           }}
-          className="text-left font-bold text-xs text-[#19324B] hover:text-[#14649B] transition-colors line-clamp-1"
+          className="flex items-center gap-2 text-left font-bold text-xs text-[#19324B] hover:text-[#14649B] transition-colors line-clamp-1 w-full group"
           title={`Ver todo ${segmentTitle}`}
         >
-          {segmentTitle}
+          <span
+            className="w-2.5 h-2.5 rounded-full shrink-0 group-hover:scale-110 transition-transform"
+            style={{ backgroundColor: segmentColor }}
+            aria-hidden="true"
+          />
+          <span className="truncate">{segmentTitle}</span>
         </button>
       </div>
 

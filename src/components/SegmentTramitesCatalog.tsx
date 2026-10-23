@@ -451,12 +451,6 @@ const subcategoriesList = useMemo(() => {
          * ----------------------------------------------------------------- */}
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 sm:gap-4">
           <div>
-            <div className="flex items-center gap-2 mb-1">
-              <span className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: meta.color }} />
-              <span className="text-xs font-bold uppercase tracking-wider text-[#64748B]">
-                {meta.shortTitle}
-              </span>
-            </div>
             <h1 className="text-2xl sm:text-3xl font-black text-[#19324B] tracking-tight">
               {internalQuery
                 ? `Resultados para "${internalQuery}"`
