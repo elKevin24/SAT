@@ -1,6 +1,7 @@
 # Directrices y Reglas del Proyecto SAT
 
 ## 1. Principios de Comportamiento y Estilo
+- **Lectura Previa Obligatoria antes de Crear o Editar (Prevención de Errores Ya Cometidos):** Antes de crear cualquier archivo, escribir código, editar componentes, generar datasets, matrices Excel o modificar documentación, es **obligatorio leer y validar activamente las reglas ya escritas** en este archivo (`AGENTS.md`) y en `docs/diseno-normativa/DESIGN_RULES.md`. Está terminantemente prohibido asumir convenciones o proceder sin verificar; el objetivo primordial es evitar reincidir en errores previamente cometidos (tales como usar el término prohibido *"trámite"*, nombrar niveles jerárquicos con rótulos inventados, alterar contratos sin actualizar dependencias, romper la simetría con categorías vacías en vez de guion largo `—`, o dejar acrónimos huérfanos).
 - **Concisión y precisión:** Respuestas directas, al punto y sin rodeos ni complacencias.
 - **Fundamento técnico:** Cada decisión, sugerencia o cambio de código debe estar rigurosamente justificado en hechos y estándares.
 - **Proactividad:** Proponer e implementar soluciones completas, anticipando dependencias e impacto colateral.
