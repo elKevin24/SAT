@@ -179,15 +179,6 @@ def main():
   </div>
   <h1 class="sat-section-title">{title}</h1>
   <p class="sat-section-desc">{excerpt}</p>
-
-  <div class="sat-in-this-section sat-in-this-section--{tone}">
-    <div class="sat-its-head">
-      <svg class="sat-its-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.5-4-1.5 1.5-4 4 1.5z"/></svg>
-      <span class="sat-its-label">EN ESTA SECCIÓN:</span>
-    </div>
-    <div class="sat-its-links">
-{in_this_section_links}    </div>
-  </div>
 </header>'''
 
         grid_html = f'<div class="sat-cards-grid">{cards_html}\n</div>'

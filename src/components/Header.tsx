@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useMemo } from 'react';
 import {
   Search,
   ChevronDown,
@@ -15,10 +15,14 @@ import {
   Compass,
   ArrowRight,
   Palette,
-  Menu as MenuIcon
+  Menu as MenuIcon,
+  Home,
+  ChevronRight
 } from 'lucide-react';
 import { SatIsologotipo } from './SatIsologotipo';
 import type { TramiteItem, ProcesoGuiado } from '../data/schema';
+import type { SegmentId } from './UserSegmentCards';
+import { OFFICIAL_CATEGORY_ORDER } from '../data/categoryOrder';
 
 interface HeaderProps {
   onGoHome: () => void;
@@ -30,7 +34,25 @@ interface HeaderProps {
   onOpenAccessibility: () => void;
   allTramites: TramiteItem[];
   allProcesos: ProcesoGuiado[];
+
+  // Props para Barra de Navegación Principal y Menú de Nivel
+  currentView?: 'home' | 'catalog' | 'solicitar-nit' | 'fel';
+  activeSegment?: SegmentId | null;
+  activeCategory?: string;
+  activeSubcategory?: string | null;
+  onSelectSegment?: (segId: SegmentId, category?: string) => void;
+  onSelectBreadcrumb?: (level: 'home' | 'segment' | 'category') => void;
+  isContentLevel?: boolean;
+  contentLevelItems?: TramiteItem[];
+  contentLevelTitle?: string;
 }
+
+const MACROGROUPS: { id: SegmentId; name: string; shortName: string; color: string }[] = [
+  { id: 'contribuyentes', name: 'Contribuyentes', shortName: 'Contribuyentes', color: '#14649B' },
+  { id: 'comercio_exterior', name: 'Operadores de Comercio Exterior', shortName: 'Comercio Exterior', color: '#0284C7' },
+  { id: 'profesionales', name: 'Profesionales', shortName: 'Profesionales', color: '#4D8014' },
+  { id: 'entes_exentos', name: 'Entes Exentos', shortName: 'Entes Exentos', color: '#C25E00' },
+];
 
 const FORMACION_ITEMS = [
   {
@@ -74,13 +96,60 @@ export const Header: React.FC<HeaderProps> = ({
   onSelectProceso,
   onOpenAccessibility,
   allTramites,
-  allProcesos
+  allProcesos,
+  currentView = 'home',
+  activeSegment = null,
+  activeCategory = '',
+  activeSubcategory = null,
+  onSelectSegment,
+  onSelectBreadcrumb,
+  isContentLevel = false,
+  contentLevelItems = [],
+  contentLevelTitle = ''
 }) => {
   const [showFormacionMenu, setShowFormacionMenu] = useState(false);
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [isSearchFocused, setIsSearchFocused] = useState(false);
+  const [isLevelMenuOpen, setIsLevelMenuOpen] = useState(false);
+  const [menuSearchQuery, setMenuSearchQuery] = useState('');
+  const prevContentLevelRef = useRef<boolean>(false);
+  const prevContentTitleRef = useRef<string>('');
   const searchContainerRef = useRef<HTMLDivElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // Si llegamos al nivel de contenido (o cambió el nivel de contenido), abrir automáticamente
+    if (isContentLevel && (!prevContentLevelRef.current || prevContentTitleRef.current !== contentLevelTitle)) {
+      setIsLevelMenuOpen(true);
+      setMenuSearchQuery('');
+    } else if (!isContentLevel && prevContentLevelRef.current) {
+      // Si salimos del nivel de contenido, cerrarlo
+      setIsLevelMenuOpen(false);
+      setMenuSearchQuery('');
+    }
+    prevContentLevelRef.current = !!isContentLevel;
+    prevContentTitleRef.current = contentLevelTitle || '';
+  }, [isContentLevel, contentLevelTitle]);
+
+  useEffect(() => {
+    const handleEsc = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && isLevelMenuOpen) {
+        setIsLevelMenuOpen(false);
+      }
+    };
+    window.addEventListener('keydown', handleEsc);
+    return () => window.removeEventListener('keydown', handleEsc);
+  }, [isLevelMenuOpen]);
+
+  const visibleLevelItems = useMemo(() => {
+    if (!menuSearchQuery.trim()) return contentLevelItems;
+    const q = menuSearchQuery.toLowerCase();
+    return contentLevelItems.filter(item =>
+      (item.codigo || item.id || '').toLowerCase().includes(q) ||
+      (item.gestion || item.tramite || '').toLowerCase().includes(q) ||
+      (item.descripcion || '').toLowerCase().includes(q)
+    );
+  }, [contentLevelItems, menuSearchQuery]);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -343,10 +412,7 @@ export const Header: React.FC<HeaderProps> = ({
                         >
                           <div>
                             <div className="flex items-center justify-between gap-1 mb-1">
-                              <span className="font-mono text-[10px] font-bold text-sat-azul bg-sat-azul/10 px-1.5 py-0.2 rounded-sm">
-                                {t.id}
-                              </span>
-                              <span className="text-[10px] text-sat-texto-suave truncate">
+                              <span className="text-[11px] font-semibold text-sat-azul truncate">
                                 {t.pillarName || t.categoria}
                               </span>
                             </div>
@@ -419,6 +485,252 @@ export const Header: React.FC<HeaderProps> = ({
             </button>
           </div>
         </div>
+      </nav>
+
+      {/* 3. Barra de Navegación Principal: Minimalismo & Dinamismo */}
+      <nav
+        className="bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-[0_1px_3px_rgba(0,0,0,0.02)] relative z-30 transition-all duration-200"
+        aria-label="Menú de Navegación y Segmentos Oficiales"
+      >
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between min-h-[42px] gap-2">
+          {/* Lado izquierdo: Inicio + Los 4 Macrogrupos siempre presentes con pills elegantes */}
+          <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-1">
+            <button
+              type="button"
+              onClick={() => {
+                if (onSelectBreadcrumb) {
+                  onSelectBreadcrumb('home');
+                } else {
+                  onGoHome();
+                }
+              }}
+              className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs transition-all shrink-0 ${
+                currentView === 'home'
+                  ? 'bg-slate-900 text-white font-semibold shadow-2xs'
+                  : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100 font-medium'
+              }`}
+              title="Ir al Inicio del Portal"
+            >
+              <Home className="w-3.5 h-3.5" />
+              <span className="hidden sm:inline">Inicio</span>
+            </button>
+
+            <span className="h-3.5 w-px bg-slate-200 mx-0.5 shrink-0" aria-hidden="true" />
+
+            {MACROGROUPS.map((macro) => {
+              const isActive = currentView === 'catalog' && activeSegment === macro.id;
+              return (
+                <button
+                  key={macro.id}
+                  type="button"
+                  onClick={() => {
+                    if (onSelectSegment) {
+                      onSelectSegment(macro.id);
+                    }
+                  }}
+                  className={`group relative inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs transition-all shrink-0 ${
+                    isActive
+                      ? 'bg-slate-900 text-white font-semibold shadow-2xs'
+                      : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100 font-medium'
+                  }`}
+                >
+                  <span
+                    className={`w-1.5 h-1.5 rounded-full transition-transform duration-200 ${
+                      isActive ? 'scale-125 ring-2 ring-white/60' : 'group-hover:scale-110 opacity-70 group-hover:opacity-100'
+                    }`}
+                    style={{ backgroundColor: macro.color }}
+                  />
+                  <span>{macro.shortName}</span>
+                </button>
+              );
+            })}
+
+            {/* Rastro Contextual Dinámico: Muestra la ubicación actual en la jerarquía y permite retroceder */}
+            {currentView === 'catalog' && activeCategory && activeCategory !== 'Todas las categorías' && (
+              <div className="hidden lg:flex items-center gap-1.5 pl-2 text-xs text-slate-500 animate-fadeIn shrink-0">
+                <ChevronRight className="w-3.5 h-3.5 text-slate-300 shrink-0" />
+                <button
+                  type="button"
+                  onClick={() => onSelectBreadcrumb?.('category')}
+                  className="px-2.5 py-0.5 rounded-full bg-slate-100 hover:bg-slate-200/80 text-slate-700 font-medium border border-slate-200/60 truncate max-w-[170px] transition-colors cursor-pointer"
+                  title={`Volver a ${activeCategory}`}
+                >
+                  {activeCategory}
+                </button>
+                {activeSubcategory && (
+                  <>
+                    <ChevronRight className="w-3.5 h-3.5 text-slate-300 shrink-0" />
+                    <span className="px-2.5 py-0.5 rounded-full bg-sky-50 text-sky-900 font-semibold border border-sky-200/80 truncate max-w-[190px]">
+                      {activeSubcategory}
+                    </span>
+                  </>
+                )}
+              </div>
+            )}
+          </div>
+
+          {/* Lado derecho: Botón Menú Hamburguesa Minimalista con Animación Geométrica y Contador Dinámico */}
+          <div className="flex items-center gap-2 shrink-0">
+            <button
+              type="button"
+              onClick={() => setIsLevelMenuOpen(!isLevelMenuOpen)}
+              className={`inline-flex items-center gap-2 h-7.5 px-3 rounded-full text-xs transition-all duration-200 cursor-pointer ${
+                isLevelMenuOpen
+                  ? 'bg-slate-900 text-white font-semibold shadow-xs ring-2 ring-slate-900/10'
+                  : isContentLevel
+                    ? 'bg-sky-50 text-sky-900 border border-sky-300/80 hover:bg-sky-100 font-bold shadow-2xs ring-2 ring-sky-500/20 animate-pulse'
+                    : 'bg-white text-slate-700 border border-slate-200/90 hover:bg-slate-50 hover:text-slate-900 font-medium'
+              }`}
+              aria-expanded={isLevelMenuOpen}
+              aria-controls="sat-level-menu-panel"
+              title={
+                isContentLevel
+                  ? `Ver ${contentLevelItems.length} opciones de este nivel de contenido`
+                  : 'Abrir menú de navegación'
+              }
+            >
+              {/* Icono de hamburguesa animado con morph suave a X */}
+              <div className="w-3.5 h-3 relative flex flex-col justify-between items-center shrink-0" aria-hidden="true">
+                <span
+                  className={`block h-[1.5px] w-3.5 bg-current rounded-full transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                    isLevelMenuOpen ? 'rotate-45 translate-y-[5px]' : ''
+                  }`}
+                />
+                <span
+                  className={`block h-[1.5px] w-3.5 bg-current rounded-full transition-all duration-200 ease-out ${
+                    isLevelMenuOpen ? 'opacity-0 scale-x-0' : 'opacity-100'
+                  }`}
+                />
+                <span
+                  className={`block h-[1.5px] w-3.5 bg-current rounded-full transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                    isLevelMenuOpen ? '-rotate-45 -translate-y-[5.5px]' : ''
+                  }`}
+                />
+              </div>
+
+              <span>
+                {isContentLevel
+                  ? 'Opciones del nivel'
+                  : 'Menú'}
+              </span>
+
+              {isContentLevel && (
+                <span className="min-w-[18px] h-4.5 px-1.5 rounded-full text-[10px] font-black bg-sky-600 text-white shadow-2xs flex items-center justify-center animate-fadeIn">
+                  {contentLevelItems.length}
+                </span>
+              )}
+            </button>
+          </div>
+        </div>
+
+        {/* Panel Desplegable Flotante Ultra-Minimalista: Solo Título y Líneas de Texto */}
+        {isLevelMenuOpen && (
+          <>
+            {/* Backdrop con desenfoque suave para cerrar al hacer clic fuera */}
+            <div
+              className="fixed inset-0 top-[118px] sm:top-[122px] bg-slate-900/10 backdrop-blur-xs z-30 transition-opacity duration-200"
+              onClick={() => setIsLevelMenuOpen(false)}
+              aria-hidden="true"
+            />
+
+            <div
+              id="sat-level-menu-panel"
+              className="relative z-40 bg-white border-t border-b sm:border border-slate-200 sm:rounded-xl shadow-xl max-w-2xl mx-auto sm:my-2 p-4 animate-fadeIn max-h-[70vh] overflow-y-auto"
+            >
+              {/* Cabecera Minimalista: Solo el Título y Botón Cerrar */}
+              <div className="flex items-center justify-between pb-2 mb-2 border-b border-slate-100">
+                <h3 className="text-xs sm:text-sm font-bold text-slate-800">
+                  {isContentLevel
+                    ? contentLevelTitle || 'Opciones del nivel'
+                    : 'Menú de Navegación Oficial'}
+                </h3>
+                <button
+                  type="button"
+                  onClick={() => setIsLevelMenuOpen(false)}
+                  className="text-slate-400 hover:text-slate-600 p-1 rounded-full text-xs transition-colors cursor-pointer"
+                  title="Cerrar menú (Esc)"
+                >
+                  <X className="w-3.5 h-3.5" />
+                </button>
+              </div>
+
+              {/* Si estamos en Nivel de Contenido: Solo Líneas de Texto */}
+              {isContentLevel && visibleLevelItems.length > 0 ? (
+                <>
+                  <ul className="divide-y divide-slate-100">
+                    {visibleLevelItems.map((item) => (
+                      <li key={item.id}>
+                        <button
+                          type="button"
+                          onClick={() => {
+                            onSelectTramite(item);
+                            setIsLevelMenuOpen(false);
+                          }}
+                          className="w-full text-left py-2 px-2.5 rounded-md text-xs sm:text-sm text-slate-700 hover:text-sky-700 hover:bg-slate-50 transition-colors flex items-center justify-between group cursor-pointer"
+                        >
+                          <span className="font-medium group-hover:translate-x-1 transition-transform">
+                            {item.gestion || item.tramite}
+                          </span>
+                          <span className="text-slate-300 group-hover:text-sky-500 text-xs transition-all shrink-0 ml-2">
+                            →
+                          </span>
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+
+                  {contentLevelItems.length > 5 && (
+                    <div className="pt-2 mt-2 border-t border-slate-100">
+                      <input
+                        type="text"
+                        value={menuSearchQuery}
+                        onChange={(e) => setMenuSearchQuery(e.target.value)}
+                        placeholder="Filtrar por texto..."
+                        className="w-full px-2.5 py-1 text-xs bg-slate-50 hover:bg-slate-100 focus:bg-white border border-slate-200 rounded-md focus:outline-none focus:ring-1 focus:ring-sky-500 font-normal text-slate-800"
+                      />
+                    </div>
+                  )}
+                </>
+              ) : isContentLevel && visibleLevelItems.length === 0 ? (
+                <div className="text-center py-4 text-xs text-slate-500">
+                  No se encontraron coincidencias para "{menuSearchQuery}".
+                </div>
+              ) : (
+                /* Vista General cuando NO estamos en nivel de contenido: Líneas de texto por Macrogrupo */
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 py-1">
+                  {MACROGROUPS.map((macro) => {
+                    const subCats = OFFICIAL_CATEGORY_ORDER[macro.id] || [];
+                    return (
+                      <div key={macro.id} className="space-y-1">
+                        <h4 className="text-xs font-bold text-slate-900 pb-1 border-b border-slate-100">
+                          {macro.name}
+                        </h4>
+                        <ul className="divide-y divide-slate-50">
+                          {subCats.map((catName) => (
+                            <li key={catName}>
+                              <button
+                                type="button"
+                                onClick={() => {
+                                  if (onSelectSegment) {
+                                    onSelectSegment(macro.id, catName);
+                                  }
+                                  setIsLevelMenuOpen(false);
+                                }}
+                                className="w-full text-left py-1 text-xs text-slate-600 hover:text-sky-700 hover:underline transition-colors cursor-pointer"
+                              >
+                                {catName}
+                              </button>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
+            </div>
+          </>
+        )}
       </nav>
     </header>
   );

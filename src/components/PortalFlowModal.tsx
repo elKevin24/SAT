@@ -323,14 +323,14 @@ export const PortalFlowModal: React.FC<PortalFlowModalProps> = ({
 
       const tramiteItem: FullTramiteItem = {
         id: t.id,
-        codigo: t.id,
-        titulo: t.tramite || t.nombreActual || 'Gestión Oficial',
+        codigo: t.codigo || t.id,
+        titulo: t.gestion || t.tramite || t.nombreActual || 'Gestión Oficial',
         pillar: segId,
-        categoria: t.categoria || 'General',
-        subcategoria: t.subcategoria || 'General',
-        tema: t.tema,
-        subtema: t.subtema,
-        nivel1_segmento: t.nivel1_segmento || SEGMENT_META[segId].name,
+        categoria: t.nivel2 || t.categoria || 'General',
+        subcategoria: t.nivel3 || t.subcategoria || 'General',
+        tema: t.nivel4 || t.tema,
+        subtema: t.nivel5 || t.subtema,
+        nivel1_segmento: t.nivel1 || t.nivel1_segmento || SEGMENT_META[segId].name,
         etapaAto: t.etapaAto || 'empezar',
         etapaAtoLabel: t.etapaAtoLabel || 'Empezar y registrarse',
         tipoInteraccionLabel: t.tipoInteraccionLabel || 'Guía Informativa',
@@ -343,11 +343,12 @@ export const PortalFlowModal: React.FC<PortalFlowModalProps> = ({
       tree[segId].total++;
 
       // NIVEL 2: CLASIFICACIÓN ESTRUCTURAL N2
-      let n2Key = t.categoria;
+      let n2Key = (t.nivel2 || t.categoria || '').trim();
+      if (!n2Key || n2Key === '—') return;
       if (segId === 'contribuyentes') {
-        if (t.categoria === 'Sin Obligaciones' || t.categoria === 'NIT sin Obligaciones') n2Key = 'Sin Obligaciones';
-        else if (t.categoria === 'Pequeños Contribuyentes') n2Key = 'Pequeños Contribuyentes';
-        else if (t.categoria === 'Contribuyentes Especiales') n2Key = 'Contribuyentes Especiales';
+        if (n2Key === 'Sin Obligaciones' || n2Key === 'NIT sin Obligaciones') n2Key = 'Sin Obligaciones';
+        else if (n2Key === 'Pequeños Contribuyentes') n2Key = 'Pequeños Contribuyentes';
+        else if (n2Key === 'Contribuyentes Especiales') n2Key = 'Contribuyentes Especiales';
         else n2Key = 'Contribuyente General';
       }
 
@@ -358,10 +359,11 @@ export const PortalFlowModal: React.FC<PortalFlowModalProps> = ({
       tree[segId].n2Branches[n2Key].tramites.push(tramiteItem);
 
       // Agrupación para Nivel 3:
-      let n3Key = t.subcategoria;
-      if (segId === 'contribuyentes' && n2Key === 'Contribuyente General') {
-        n3Key = t.categoria;
+      let n3Key = (t.nivel3 && t.nivel3 !== '—') ? t.nivel3.trim() : (t.subcategoria || '');
+      if (segId === 'contribuyentes' && n2Key === 'Contribuyente General' && (!n3Key || n3Key === '—')) {
+        n3Key = (t.nivel2 || t.categoria || '').trim();
       }
+      if (!n3Key || n3Key === '—') return;
 
       const n2Node = tree[segId].n2Branches[n2Key];
       if (!n2Node.subBranches![n3Key]) {
@@ -371,7 +373,7 @@ export const PortalFlowModal: React.FC<PortalFlowModalProps> = ({
       n2Node.subBranches![n3Key].tramites.push(tramiteItem);
 
       // Agrupación para Nivel 4 (si aplica):
-      const n4Key = t.tema || t.subtema || '';
+      const n4Key = (t.nivel4 && t.nivel4 !== '—') ? t.nivel4.trim() : (t.tema || t.subtema || '');
       if (n4Key) {
         const n3Node = n2Node.subBranches![n3Key];
         if (!n3Node.subBranches![n4Key]) {

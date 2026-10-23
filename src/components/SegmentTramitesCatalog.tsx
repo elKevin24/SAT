@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import { Search, ArrowLeft, Compass, BookmarkCheck } from 'lucide-react';
+import { Search, ArrowLeft, BookmarkCheck } from 'lucide-react';
 import { SegmentId } from './UserSegmentCards';
 import { Card, type CardTone } from './ui/Card';
 import { Breadcrumbs } from './ui/Breadcrumbs';
@@ -22,6 +22,8 @@ interface SegmentTramitesCatalogProps {
   onSelectTramite: (tramite: TramiteItem) => void;
   onBackToHome: () => void;
   onSwitchSegment: (segId: SegmentId) => void;
+  onCategoryChange?: (category: string | null) => void;
+  onSubcategoryChange?: (subcategory: string | null) => void;
 }
 
 const SEGMENT_METADATA: Record<SegmentId, {
@@ -200,7 +202,9 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
   allTramites,
   onSelectTramite,
   onBackToHome,
-  onSwitchSegment
+  onSwitchSegment,
+  onCategoryChange,
+  onSubcategoryChange
 }) => {
   const [internalQuery, setInternalQuery] = useState('');
 
@@ -211,6 +215,18 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
 
   // Subcategoría seleccionada
   const [selectedSubcategory, setSelectedSubcategory] = useState<string | null>(initialSubcategory || null);
+
+  const updateCategory = (cat: string | null) => {
+    setSelectedCategory(cat);
+    setSelectedSubcategory(null);
+    onCategoryChange?.(cat);
+    onSubcategoryChange?.(null);
+  };
+
+  const updateSubcategory = (sub: string | null) => {
+    setSelectedSubcategory(sub);
+    onSubcategoryChange?.(sub);
+  };
 
   useEffect(() => {
     if (initialCategory && initialCategory !== 'Todas las categorías') {
@@ -330,13 +346,12 @@ const subcategoriesList = useMemo(() => {
 
   // Navegación limpia de migas de pan
   const handleResetToCategories = () => {
-    setSelectedCategory(null);
-    setSelectedSubcategory(null);
+    updateCategory(null);
     setInternalQuery('');
   };
 
   const handleResetToSubcategories = () => {
-    setSelectedSubcategory(null);
+    updateSubcategory(null);
     setInternalQuery('');
   };
 
@@ -380,10 +395,8 @@ const subcategoriesList = useMemo(() => {
         badges={badges}
         footer={
           <>
-            <span className="truncate flex items-center gap-1.5 font-mono text-[11px] text-sat-texto-suave">
-              <span className="font-bold text-sat-azul-oscuro">{tramite.id}</span>
-              <span aria-hidden="true" className="text-sat-gris">·</span>
-              <span className="truncate">{tramite.categoria} {tramite.subcategoria ? `› ${tramite.subcategoria}` : ''}</span>
+            <span className="truncate text-[11px] text-sat-texto-suave group-hover:text-white/80">
+              {tramite.categoria} {tramite.subcategoria && tramite.subcategoria !== tramite.categoria ? `› ${tramite.subcategoria}` : ''}
             </span>
             <span className="font-bold flex items-center gap-1 shrink-0 text-xs">
               Ver detalle →
@@ -514,32 +527,6 @@ const subcategoriesList = useMemo(() => {
              * ============================================================= */}
             {!selectedCategory && (
               <div className="space-y-4">
-                {/* BLOQUE ATO AUSTRALIA: EN ESTA SECCIÓN (IN THIS SECTION) */}
-                <div className="bg-[#F8FAFC] border border-[#E2E8F0] rounded-2xl p-4 sm:p-5 shadow-2xs">
-                  <div className="flex items-center gap-2 mb-3">
-                    <Compass className="w-4 h-4 text-sat-azul" aria-hidden="true" />
-                    <h2 className="text-xs font-bold uppercase tracking-wider text-sat-azul-oscuro">
-                      En esta sección: Clasificaciones oficiales de {meta.shortTitle}
-                    </h2>
-                  </div>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
-                    {categoriesList.map((catName) => (
-                      <button
-                        key={catName}
-                        type="button"
-                        onClick={() => {
-                          setSelectedCategory(catName);
-                          setSelectedSubcategory(null);
-                        }}
-                        className="text-left flex items-start gap-2 p-2 rounded-lg hover:bg-white hover:text-sat-azul text-xs text-[#334155] font-semibold transition-all group border border-transparent hover:border-[#E2E8F0]"
-                      >
-                        <span className="w-1.5 h-1.5 rounded-full bg-sat-celeste shrink-0 mt-1.5 group-hover:scale-125 transition-transform" />
-                        <span className="line-clamp-1">{catName}</span>
-                      </button>
-                    ))}
-                  </div>
-                </div>
-
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-3.5">
                   {categoriesList.map((catName) => {
                     const desc = CATEGORY_DESCRIPTIONS[catName] || 'Explora las gestiones y obligaciones agrupadas en esta clasificación oficial.';
@@ -552,8 +539,7 @@ const subcategoriesList = useMemo(() => {
                         tone={cardTone}
                         headingLevel="h2"
                         onClick={() => {
-                          setSelectedCategory(catName);
-                          setSelectedSubcategory(null);
+                          updateCategory(catName);
                         }}
                       />
                     );
@@ -575,19 +561,21 @@ const subcategoriesList = useMemo(() => {
                   selectedCategory={selectedCategory}
                   selectedSubcategory={selectedSubcategory}
                   onSelectCategory={(cat) => {
-                    setSelectedCategory(cat);
-                    setSelectedSubcategory(null);
+                    updateCategory(cat);
                   }}
                   onSelectSubcategory={(cat, sub) => {
-                    setSelectedCategory(cat);
-                    setSelectedSubcategory(sub);
+                    if (selectedCategory !== cat) {
+                      setSelectedCategory(cat);
+                      onCategoryChange?.(cat);
+                    }
+                    updateSubcategory(sub);
                   }}
                   onResetToSegment={handleResetToCategories}
                 />
 
                 <div className="flex-1 min-w-0 w-full space-y-4">
-                  {/* BLOQUE ATO AUSTRALIA: EN ESTA SECCIÓN (Nivel Subtemas) */}
-                  {subcategoriesList.length > 1 && (
+                  {/* BLOQUE ATO AUSTRALIA: EN ESTA SECCIÓN (Solo en vista de contenido) */}
+                  {Boolean(selectedSubcategory && subcategoriesList.length > 1) && (
                     <div className="bg-[#F8FAFC] border border-[#E2E8F0] rounded-2xl p-4 sm:p-5 shadow-2xs">
                       <div className="flex items-center gap-2 mb-2.5">
                         <BookmarkCheck className="w-4 h-4 text-sat-azul" aria-hidden="true" />
@@ -602,7 +590,7 @@ const subcategoriesList = useMemo(() => {
                             <button
                               key={subName}
                               type="button"
-                              onClick={() => setSelectedSubcategory(subName)}
+                              onClick={() => updateSubcategory(subName)}
                               className={`text-xs px-3 py-1.5 rounded-lg font-medium transition-all flex items-center gap-1.5 ${
                                 isCurrent
                                   ? 'bg-sat-azul text-white font-bold shadow-xs'
@@ -643,7 +631,7 @@ const subcategoriesList = useMemo(() => {
                               description={desc}
                               tone={cardTone}
                               headingLevel="h3"
-                              onClick={() => setSelectedSubcategory(subName)}
+                              onClick={() => updateSubcategory(subName)}
                             />
                           );
                         })}

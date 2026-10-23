@@ -209,7 +209,7 @@ export const ArchitectureDiagramPage: React.FC = () => {
     const next: Record<string, boolean> = {};
     PILLARS.forEach(p => {
       const items = rawTramites.filter(t => t.pillar === p.id);
-      const cats = Array.from(new Set(items.map(i => (i as Record<string, any>).categoria || i.nivel2 || '')));
+      const cats = Array.from(new Set(items.map(i => i.nivel2 || (i as Record<string, any>).categoria || '')));
       cats.forEach(c => {
         next[`${p.id}-${c}`] = true;
       });
@@ -243,7 +243,7 @@ export const ArchitectureDiagramPage: React.FC = () => {
       // Group by Category (Nivel 2)
       const categoriesMap: Record<string, any[]> = {};
       pillarTramites.forEach(t => {
-        const cat = t.categoria || 'General';
+        const cat = (t.nivel2 || t.categoria || 'General').trim();
         if (!categoriesMap[cat]) categoriesMap[cat] = [];
         categoriesMap[cat].push(t);
       });
@@ -262,7 +262,7 @@ export const ArchitectureDiagramPage: React.FC = () => {
         // Group by Subcategory / Theme (Nivel 3)
         const subcategoriesMap: Record<string, any[]> = {};
         tramitesInCat.forEach(t => {
-          const sub = t.subcategoria || 'General';
+          const sub = (t.nivel3 && t.nivel3 !== '—') ? t.nivel3.trim() : (t.subcategoria || catName);
           if (!subcategoriesMap[sub]) subcategoriesMap[sub] = [];
           subcategoriesMap[sub].push(t);
         });

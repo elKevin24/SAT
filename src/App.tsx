@@ -167,6 +167,26 @@ export default function App() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const handleSelectBreadcrumb = (level: 'home' | 'segment' | 'category') => {
+    if (level === 'home') {
+      handleGoHome();
+    } else if (level === 'segment') {
+      setActiveCategory('Todas las categorías');
+      setActiveSubcategory(null);
+      const params = new URLSearchParams();
+      if (activeSegment) params.set('segmento', activeSegment);
+      window.location.hash = '#/catalogo?' + params.toString();
+    } else if (level === 'category') {
+      setActiveSubcategory(null);
+      const params = new URLSearchParams();
+      if (activeSegment) params.set('segmento', activeSegment);
+      if (activeCategory && activeCategory !== 'Todas las categorías') {
+        params.set('categoria', categoriaId(activeSegment, activeCategory));
+      }
+      window.location.hash = '#/catalogo?' + params.toString();
+    }
+  };
+
   const getAccessibilityClasses = () => {
     const classes = [];
     if (accSettings.contrastMode === 'high') classes.push('contrast-125 saturate-150');
@@ -178,6 +198,56 @@ export default function App() {
     return classes.join(' ');
   };
 
+  // Cálculo de si la vista actual se encuentra en un Nivel de Contenido (terminal o página final)
+  const { isContentLevel, contentLevelItems, contentLevelTitle } = React.useMemo(() => {
+    if (currentView === 'solicitar-nit') {
+      const items = allTramites.filter(
+        t => t.id === 'SAT-GES-0001' || t.id === 'SAT-GES-0011' || ((t.gestion || '').toLowerCase().includes('solicitar') && (t.gestion || '').toLowerCase().includes('nit'))
+      );
+      return { isContentLevel: true, contentLevelItems: items, contentLevelTitle: 'Solicitar NIT en Línea' };
+    }
+
+    if (currentView === 'fel') {
+      const items = allTramites.filter(
+        t => (t.gestion || '').toLowerCase().includes('fel') || (t.gestion || '').toLowerCase().includes('factura')
+      );
+      return { isContentLevel: true, contentLevelItems: items, contentLevelTitle: 'Factura Electrónica en Línea (FEL)' };
+    }
+
+    if (currentView === 'catalog' && activeCategory && activeCategory !== 'Todas las categorías') {
+      const categoryTramites = allTramites.filter(
+        t => t.pillar === activeSegment && (t.nivel2 === activeCategory || t.categoria === activeCategory)
+      );
+
+      const distinctSubcategories = Array.from(
+        new Set(categoryTramites.map(t => (t.nivel3 && t.nivel3 !== '—' ? t.nivel3 : '').trim()).filter(Boolean))
+      );
+
+      // Rama compactada (ej. Sin Obligaciones o Régimen Agropecuario): está en nivel de contenido directo
+      if (distinctSubcategories.length <= 1) {
+        return {
+          isContentLevel: true,
+          contentLevelItems: categoryTramites,
+          contentLevelTitle: activeCategory
+        };
+      }
+
+      // Si tiene subcategorías y el usuario seleccionó una: está en nivel de contenido
+      if (activeSubcategory) {
+        const subTramites = categoryTramites.filter(
+          t => t.nivel3 === activeSubcategory || t.subcategoria === activeSubcategory
+        );
+        return {
+          isContentLevel: true,
+          contentLevelItems: subTramites,
+          contentLevelTitle: activeSubcategory
+        };
+      }
+    }
+
+    return { isContentLevel: false, contentLevelItems: [], contentLevelTitle: '' };
+  }, [currentView, activeSegment, activeCategory, activeSubcategory, allTramites]);
+
   return (
     <div 
       className={`min-h-screen bg-white text-slate-800 flex flex-col antialiased transition-all ${getAccessibilityClasses()}`}
@@ -185,7 +255,7 @@ export default function App() {
         fontSize: accSettings.fontSizeStep ? `${100 + accSettings.fontSizeStep * 8}%` : undefined
       }}
     >
-      {/* 1. Official Institutional Header */}
+      {/* 1. Official Institutional Header con Barra de Navegación Principal */}
       <Header
         onGoHome={handleGoHome}
         onGoStyleGuide={handleGoStyleGuide}
@@ -196,6 +266,15 @@ export default function App() {
         onOpenAccessibility={() => setAccessibilityModalOpen(true)}
         allTramites={allTramites}
         allProcesos={allProcesos}
+        currentView={currentView}
+        activeSegment={activeSegment}
+        activeCategory={activeCategory}
+        activeSubcategory={activeSubcategory}
+        onSelectSegment={handleSelectSegment}
+        onSelectBreadcrumb={handleSelectBreadcrumb}
+        isContentLevel={isContentLevel}
+        contentLevelItems={contentLevelItems}
+        contentLevelTitle={contentLevelTitle}
       />
 
       {/* Main Content Area */}
@@ -259,6 +338,13 @@ export default function App() {
               onBackToHome={handleGoHome}
               onSwitchSegment={(segId) => {
                 handleSelectSegment(segId);
+              }}
+              onCategoryChange={(cat) => {
+                setActiveCategory(cat || 'Todas las categorías');
+                setActiveSubcategory(null);
+              }}
+              onSubcategoryChange={(sub) => {
+                setActiveSubcategory(sub || null);
               }}
             />
           </main>
