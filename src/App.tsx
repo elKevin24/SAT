@@ -9,14 +9,14 @@ import { InstitutionalFooter } from './components/InstitutionalFooter';
 import { UserWayAccessibilityModal } from './components/UserWayAccessibilityModal';
 import { DirectConsultasModal } from './components/DirectConsultasModal';
 import { GuidedProcessModal } from './components/GuidedProcessModal';
-import { TramiteDetailModal } from './components/TramiteDetailModal';
+import { GestionContentPage } from './pages/GestionContentPage';
 import { VirtualAssistantModal } from './components/VirtualAssistantModal';
 import { SegmentTramitesCatalog } from './components/SegmentTramitesCatalog';
 import { QuickAccessCarousel } from './components/QuickAccessCarousel';
 import { SolicitarNitPage } from './pages/SolicitarNitPage';
 import { FelPage } from './pages/FelPage';
 import { EtapaAtoId, TipoInteraccionId, TramiteItem, ProcesoGuiado, assertTramites } from './data/schema';
-import { buildTaxonomy, resolveCategoria, categoriaId } from './data/taxonomy';
+import { buildTaxonomy, resolveCategoria, categoriaId, subcategoriaId } from './data/taxonomy';
 
 // Import official extracted datasets
 import rawTramites from './data/allTramites.json';
@@ -49,7 +49,7 @@ const DEFAULT_ACCESSIBILITY: AccessibilitySettings = {
 };
 
 export default function App() {
-  const [currentView, setCurrentView] = useState<'home' | 'catalog' | 'solicitar-nit' | 'fel'>('home');
+  const [currentView, setCurrentView] = useState<'home' | 'catalog' | 'solicitar-nit' | 'fel' | 'gestion'>('home');
   const [activeSegment, setActiveSegment] = useState<SegmentId>('contribuyentes');
   const [activeCategory, setActiveCategory] = useState<string>('Todas las categorías');
   const [activeSubcategory, setActiveSubcategory] = useState<string | null>(null);
@@ -110,6 +110,21 @@ export default function App() {
             setActiveTipoInteraccion('todos');
           }
         }
+      } else if (hash.startsWith('#/gestion/') || hash.startsWith('#/tramite/')) {
+        setCurrentView('gestion');
+        const code = hash.split('?')[0].replace('#/gestion/', '').replace('#/tramite/', '').trim();
+        const found = allTramites.find(t => t.id === code || (t.codigo && t.codigo === code));
+        if (found) {
+          setSelectedTramite(found);
+          if (found.pillar) setActiveSegment(found.pillar as SegmentId);
+          if (found.categoria) setActiveCategory(found.categoria);
+          if (found.subcategoria && found.subcategoria !== '—') {
+            setActiveSubcategory(found.subcategoria);
+          } else {
+            setActiveSubcategory(null);
+          }
+        }
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       } else if (hash.startsWith('#/solicitar-nit') || hash.startsWith('#/primer-nit') || hash.startsWith('#/quiero-ser-contribuyente')) {
         setCurrentView('solicitar-nit');
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -151,9 +166,24 @@ export default function App() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const handleSelectTramite = (t: TramiteItem) => {
+    setSelectedTramite(t);
+    if (t.pillar) setActiveSegment(t.pillar as SegmentId);
+    if (t.categoria) setActiveCategory(t.categoria);
+    if (t.subcategoria && t.subcategoria !== '—') {
+      setActiveSubcategory(t.subcategoria);
+    } else {
+      setActiveSubcategory(null);
+    }
+    setCurrentView('gestion');
+    window.location.hash = '#/gestion/' + t.id;
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   const handleGoHome = () => {
     window.location.hash = '';
     setCurrentView('home');
+    setSelectedTramite(null);
     setActiveCategory('Todas las categorías');
     setActiveSubcategory(null);
     setActiveEtapaAto('todas');
@@ -171,12 +201,17 @@ export default function App() {
     if (level === 'home') {
       handleGoHome();
     } else if (level === 'segment') {
+      setCurrentView('catalog');
+      setSelectedTramite(null);
       setActiveCategory('Todas las categorías');
       setActiveSubcategory(null);
       const params = new URLSearchParams();
       if (activeSegment) params.set('segmento', activeSegment);
       window.location.hash = '#/catalogo?' + params.toString();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     } else if (level === 'category') {
+      setCurrentView('catalog');
+      setSelectedTramite(null);
       setActiveSubcategory(null);
       const params = new URLSearchParams();
       if (activeSegment) params.set('segmento', activeSegment);
@@ -184,6 +219,7 @@ export default function App() {
         params.set('categoria', categoriaId(activeSegment, activeCategory));
       }
       window.location.hash = '#/catalogo?' + params.toString();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
 
@@ -200,6 +236,27 @@ export default function App() {
 
   // Cálculo de si la vista actual se encuentra en un Nivel de Contenido (terminal o página final)
   const { isContentLevel, contentLevelItems, contentLevelTitle } = React.useMemo(() => {
+    // Si estamos en la página de contenido de una gestión (Nivel 5 / Terminal)
+    if (currentView === 'gestion' && selectedTramite) {
+      const currentSub = selectedTramite.subcategoria && selectedTramite.subcategoria !== '—'
+        ? selectedTramite.subcategoria
+        : null;
+      const currentCat = selectedTramite.categoria;
+
+      const siblingItems = allTramites.filter(t => {
+        if (currentSub) {
+          return t.subcategoria === currentSub || t.nivel3 === currentSub;
+        }
+        return t.categoria === currentCat || t.nivel2 === currentCat;
+      });
+
+      return {
+        isContentLevel: true,
+        contentLevelItems: siblingItems,
+        contentLevelTitle: currentSub || currentCat || selectedTramite.gestion || 'Opciones del nivel'
+      };
+    }
+
     if (currentView === 'solicitar-nit') {
       const items = allTramites.filter(
         t => t.id === 'SAT-GES-0001' || t.id === 'SAT-GES-0011' || ((t.gestion || '').toLowerCase().includes('solicitar') && (t.gestion || '').toLowerCase().includes('nit'))
@@ -246,7 +303,7 @@ export default function App() {
     }
 
     return { isContentLevel: false, contentLevelItems: [], contentLevelTitle: '' };
-  }, [currentView, activeSegment, activeCategory, activeSubcategory, allTramites]);
+  }, [currentView, selectedTramite, activeSegment, activeCategory, activeSubcategory, allTramites]);
 
   return (
     <div 
@@ -261,7 +318,7 @@ export default function App() {
         onGoStyleGuide={handleGoStyleGuide}
         searchQuery={searchQuery}
         onSearchChange={setSearchQuery}
-        onSelectTramite={(t) => setSelectedTramite(t)}
+        onSelectTramite={handleSelectTramite}
         onSelectProceso={(p) => setSelectedProceso(p)}
         onOpenAccessibility={() => setAccessibilityModalOpen(true)}
         allTramites={allTramites}
@@ -300,7 +357,7 @@ export default function App() {
                   setConsultasModalSegment('contribuyentes');
                 } else if (item.id === 'solvencia-fiscal') {
                   const solvencia = allTramites.find(t => t.id === 'SAT-GES-0154' || (t.gestion || t.tramite || '').toLowerCase().includes('solvencia fiscal'));
-                  if (solvencia) setSelectedTramite(solvencia);
+                  if (solvencia) handleSelectTramite(solvencia);
                 } else if (item.id === 'solicitar-nit') {
                   window.location.hash = '#/solicitar-nit';
                 } else if (item.id === 'fel') {
@@ -334,7 +391,7 @@ export default function App() {
               initialEtapaAto={activeEtapaAto}
               initialTipoInteraccion={activeTipoInteraccion}
               allTramites={allTramites}
-              onSelectTramite={(t) => setSelectedTramite(t)}
+              onSelectTramite={handleSelectTramite}
               onBackToHome={handleGoHome}
               onSwitchSegment={(segId) => {
                 handleSelectSegment(segId);
@@ -346,6 +403,32 @@ export default function App() {
               onSubcategoryChange={(sub) => {
                 setActiveSubcategory(sub || null);
               }}
+            />
+          </main>
+        )}
+
+        {currentView === 'gestion' && selectedTramite && (
+          <main id="main-content" tabIndex={-1} className="focus:outline-hidden">
+            <GestionContentPage
+              tramite={selectedTramite}
+              allTramites={allTramites}
+              onSelectTramite={handleSelectTramite}
+              onBackToCatalog={() => {
+                setCurrentView('catalog');
+                const params = new URLSearchParams();
+                const pillar = (selectedTramite.pillar as SegmentId) || 'contribuyentes';
+                const catName = selectedTramite.categoria || 'Todas las categorías';
+                params.set('segmento', pillar);
+                const catId = categoriaId(pillar, catName);
+                params.set('categoria', catId);
+                if (selectedTramite.subcategoria && selectedTramite.subcategoria !== '—') {
+                  params.set('subcategoria', subcategoriaId(catId, selectedTramite.subcategoria));
+                }
+                window.location.hash = '#/catalogo?' + params.toString();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+              onGoHome={handleGoHome}
+              onSelectSegment={handleSelectSegment}
             />
           </main>
         )}
@@ -373,7 +456,7 @@ export default function App() {
       {/* 8. Institutional Footer */}
       <InstitutionalFooter onOpenStyleGuide={handleGoStyleGuide} />
 
-      {/* Modals & Overlays */}
+      {/* Modals & Overlays (Solo consultas interactivas y accesibilidad, cero modales de contenido) */}
       <UserWayAccessibilityModal
         isOpen={accessibilityModalOpen}
         onClose={() => setAccessibilityModalOpen(false)}
@@ -391,11 +474,6 @@ export default function App() {
       <GuidedProcessModal
         proceso={selectedProceso}
         onClose={() => setSelectedProceso(null)}
-      />
-
-      <TramiteDetailModal
-        tramite={selectedTramite}
-        onClose={() => setSelectedTramite(null)}
       />
 
       <VirtualAssistantModal />

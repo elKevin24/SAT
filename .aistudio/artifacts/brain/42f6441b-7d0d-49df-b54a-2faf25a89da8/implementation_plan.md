@@ -36,10 +36,12 @@ Plan de ejecución técnica e integración para consolidar el frontend del Porta
    - Migas de pan (`Breadcrumbs`) con elipsis interactiva en dispositivos móviles.
    - Navegación lateral (`SidebarNav`) colapsable en desktop y Drawer off-canvas táctil en pantallas $< 1024\text{px}$.
    - Rejilla de trámites ordenada estrictamente por `orden_n1..orden_n5` y ciclo ATO.
-3. **Ficha de Trámite en Lenguaje Ciudadano (Modal Accesible)**:
-   - Estructuración de requisitos en 3 fases cronológicas legibles (*"Paso 1: Reúne requisitos"*, *"Paso 2: Inicia trámite"*, *"Paso 3: Obtén constancia"*).
-   - Llamado a la acción (CTA) destacado hacia el canal oficial correspondiente.
-   - Marco legal colapsable accesible (`aria-expanded`) para evitar sobrecarga visual.
+3. **Página de Contenido de Gestión en Lenguaje Ciudadano (`GestionContentPage` - Zero Flotantes)**:
+   - Contenido renderizado en página completa (`#/gestion/:id`), eliminando modales y ventanas emergentes flotantes.
+   - Estructuración de requisitos en 3 fases cronológicas legibles (*"Paso 1: Reúne los requisitos previos"*, *"Paso 2: Inicia la gestión en el sistema oficial"*, *"Paso 3: Obtén constancia o documento"*).
+   - Llamado a la acción (CTA) destacado hacia el canal oficial correspondiente (Agencia Virtual, Declaraguate, etc.).
+   - Sección oficial *"En esta sección"* con gestiones hermanas y base legal colapsable accesible (`aria-expanded`).
+   - Sincronización con el nivel de contenido (`isContentLevel = true`) y el menú hamburguesa minimalista de líneas de texto.
 
 #### Identidad Visual, Tipografía y Tokens Institucionales
 - **Paleta de Color Institucional**:

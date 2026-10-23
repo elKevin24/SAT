@@ -36,7 +36,7 @@ interface HeaderProps {
   allProcesos: ProcesoGuiado[];
 
   // Props para Barra de Navegación Principal y Menú de Nivel
-  currentView?: 'home' | 'catalog' | 'solicitar-nit' | 'fel';
+  currentView?: 'home' | 'catalog' | 'solicitar-nit' | 'fel' | 'gestion';
   activeSegment?: SegmentId | null;
   activeCategory?: string;
   activeSubcategory?: string | null;
@@ -518,7 +518,7 @@ export const Header: React.FC<HeaderProps> = ({
             <span className="h-3.5 w-px bg-slate-200 mx-0.5 shrink-0" aria-hidden="true" />
 
             {MACROGROUPS.map((macro) => {
-              const isActive = currentView === 'catalog' && activeSegment === macro.id;
+              const isActive = (currentView === 'catalog' || currentView === 'gestion') && activeSegment === macro.id;
               return (
                 <button
                   key={macro.id}
@@ -546,7 +546,7 @@ export const Header: React.FC<HeaderProps> = ({
             })}
 
             {/* Rastro Contextual Dinámico: Muestra la ubicación actual en la jerarquía y permite retroceder */}
-            {currentView === 'catalog' && activeCategory && activeCategory !== 'Todas las categorías' && (
+            {(currentView === 'catalog' || currentView === 'gestion') && activeCategory && activeCategory !== 'Todas las categorías' && (
               <div className="hidden lg:flex items-center gap-1.5 pl-2 text-xs text-slate-500 animate-fadeIn shrink-0">
                 <ChevronRight className="w-3.5 h-3.5 text-slate-300 shrink-0" />
                 <button
