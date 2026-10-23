@@ -6,6 +6,13 @@ dotenv.config();
 async function startServer() {
   const app = express();
   app.use(express.json({ limit: "10mb" }));
+  app.get("/api/download/mapa-navegacion", (_req, res) => {
+    const filePath = "docs/fuentes-datos/02_archivos_producto_entregables/Mapa_de_Navegacion_y_Descripciones_Portal_SAT.xlsx";
+    res.setHeader("Content-Type", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
+    res.setHeader("Content-Disposition", 'attachment; filename="Mapa_de_Navegacion_y_Descripciones_Portal_SAT.xlsx"');
+    res.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+    res.sendFile(filePath, { root: process.cwd() });
+  });
   const isProduction = process.env.NODE_ENV === "production";
   if (!isProduction) {
     const vite = await createViteServer({

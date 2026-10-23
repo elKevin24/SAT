@@ -1,0 +1,7 @@
+[vc_row gap="5px"][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row]
+[vc_section]
+[vc_row gap="0px" el_class="sat-seccion-profesionales"]
+[vc_column width="1/3"][bsf-info-box icon_type="none" title="Presentación de consultas técnico-tributarias vinculantes ante Asuntos Jurídicos" read_more="box" link=""]Presenta consultas técnico-jurídicas formales sobre la aplicación de normas tributarias ante la Intendencia de Asuntos Jurídicos para obtener criterio vinculante.[/bsf-info-box][/vc_column]
+[vc_column width="1/3"][bsf-info-box icon_type="none" title="Recepción de propuestas y observaciones técnicas a criterios de Asuntos Jurídicos" read_more="box" link=""]Envía observaciones técnicas, sugerencias o cuestionamientos fundamentados a los proyectos de criterios institucionales publicados por la Intendencia de Asuntos Jurídicos.[/bsf-info-box][/vc_column]
+[/vc_row]
+[/vc_section]

@@ -1,0 +1,6 @@
+[vc_row gap="5px"][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row]
+[vc_section]
+[vc_row gap="0px" el_class="sat-seccion-profesionales"]
+[vc_column width="1/3"][bsf-info-box icon_type="none" title="Catálogo general de formularios tributarios electrónicos en Declaraguate" read_more="box" link=""]Consulta y genera todos los formularios electrónicos para la liquidación mensual, trimestral y anual de impuestos por honorarios y servicios técnicos.[/bsf-info-box][/vc_column]
+[/vc_row]
+[/vc_section]

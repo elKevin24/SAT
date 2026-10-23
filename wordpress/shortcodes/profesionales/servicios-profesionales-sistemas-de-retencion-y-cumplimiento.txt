@@ -1,0 +1,7 @@
+[vc_row gap="5px"][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row]
+[vc_section]
+[vc_row gap="0px" el_class="sat-seccion-profesionales"]
+[vc_column width="1/3"][bsf-info-box icon_type="none" title="Sistema de retenciones para servicios médicos y hospitalarios (Asiste Web)" read_more="box" link=""]Opera el aplicativo Asiste Hospitales Web para gestionar y conciliar retenciones del ISR aplicables a servicios prestados por médicos en clínicas y sanatorios.[/bsf-info-box][/vc_column]
+[vc_column width="1/3"][bsf-info-box icon_type="none" title="Documentación y herramientas del Programa de Cumplimiento Tributario Voluntario" read_more="box" link=""]Accede a las guías metodológicas y herramientas de autoevaluación fiscal del Programa de Cumplimiento Voluntario de la SAT para mitigar riesgos de auditoría.[/bsf-info-box][/vc_column]
+[/vc_row]
+[/vc_section]
