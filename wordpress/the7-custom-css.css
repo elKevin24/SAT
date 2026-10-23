@@ -1,0 +1,207 @@
+/*
+ * ============================================================================
+ * SAT GUATEMALA — ESTILOS OFICIALES PARA THE7 CLASSIC & WPBAKERY
+ * Pega este bloque en: The7 > Theme Options > Advanced > Custom CSS
+ * (O en Apariencia > Personalizar > CSS adicional)
+ * ============================================================================
+ */
+
+/* 1. PALETA INSTITUCIONAL Y VARIABLES */
+:root {
+  --sat-azul-institucional: #003865;
+  --sat-celeste-sat: #0072ce;
+  --sat-color-contribuyentes: #14649b;
+  --sat-color-comercio: #0284c7;
+  --sat-color-profesionales: #2e7d32;
+  --sat-color-exentos: #c25e00;
+  --sat-card-border: #dde2e5;
+  --sat-text-title: #19324b;
+  --sat-text-desc: #475569;
+}
+
+/* 2. HERO / CABECERA DE INICIO */
+.sat-hero-section {
+  background: linear-gradient(135deg, #003865 0%, #19324b 100%) !important;
+  color: #ffffff !important;
+  border-bottom: 4px solid var(--sat-celeste-sat);
+}
+
+.sat-hero-section h1,
+.sat-hero-section p {
+  color: #ffffff !important;
+  margin: 0 auto !important;
+}
+
+/* 3. FILA DE ACCESOS RÁPIDOS */
+.sat-quick-access-row .aio-icon-box,
+.sat-quick-access-row .bsf-info-box {
+  background: #ffffff !important;
+  border: 1px solid var(--sat-card-border) !important;
+  border-top: 3px solid var(--sat-azul-institucional) !important;
+  border-radius: 6px !important;
+  padding: 12px 14px !important;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.04) !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-top-color 0.2s ease !important;
+}
+
+.sat-quick-access-row .aio-icon-box:hover,
+.sat-quick-access-row .bsf-info-box:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08) !important;
+  border-top-color: var(--sat-celeste-sat) !important;
+}
+
+.sat-quick-access-row .aio-icon-title,
+.sat-quick-access-row .info-box-title {
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  color: var(--sat-azul-institucional) !important;
+  margin-bottom: 2px !important;
+}
+
+.sat-quick-access-row .aio-icon-description,
+.sat-quick-access-row .info-box-description {
+  font-size: 11px !important;
+  color: var(--sat-text-desc) !important;
+  line-height: 1.3 !important;
+}
+
+/* 4. TARJETAS DE LOS 4 MACRO-SEGMENTOS (NIVEL 1) */
+.sat-seccion-macro-segmentos .aio-icon-box,
+.sat-seccion-macro-segmentos .bsf-info-box {
+  background: #ffffff !important;
+  border: 1px solid var(--sat-card-border) !important;
+  border-radius: 8px !important;
+  padding: 24px 20px !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05) !important;
+  transition: all 0.2s ease !important;
+  min-height: 170px !important;
+}
+
+/* Contribuyentes (Azul) */
+.sat-seccion-macro-segmentos .vc_column_container:nth-child(1) .aio-icon-box,
+.sat-seccion-macro-segmentos .vc_column_container:nth-child(1) .bsf-info-box {
+  border-top: 4px solid var(--sat-color-contribuyentes) !important;
+}
+
+/* Comercio Exterior (Celeste) */
+.sat-seccion-macro-segmentos .vc_column_container:nth-child(2) .aio-icon-box,
+.sat-seccion-macro-segmentos .vc_column_container:nth-child(2) .bsf-info-box {
+  border-top: 4px solid var(--sat-color-comercio) !important;
+}
+
+/* Profesionales (Verde) */
+.sat-seccion-macro-segmentos .vc_column_container:nth-child(3) .aio-icon-box,
+.sat-seccion-macro-segmentos .vc_column_container:nth-child(3) .bsf-info-box {
+  border-top: 4px solid var(--sat-color-profesionales) !important;
+}
+
+/* Entes Exentos (Naranja) */
+.sat-seccion-macro-segmentos .vc_column_container:nth-child(4) .aio-icon-box,
+.sat-seccion-macro-segmentos .vc_column_container:nth-child(4) .bsf-info-box {
+  border-top: 4px solid var(--sat-color-exentos) !important;
+}
+
+.sat-seccion-macro-segmentos .aio-icon-box:hover,
+.sat-seccion-macro-segmentos .bsf-info-box:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.09) !important;
+}
+
+.sat-seccion-macro-segmentos .aio-icon-title,
+.sat-seccion-macro-segmentos .info-box-title {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  color: var(--sat-text-title) !important;
+  margin-bottom: 8px !important;
+}
+
+.sat-seccion-macro-segmentos .aio-icon-description,
+.sat-seccion-macro-segmentos .info-box-description {
+  font-size: 13px !important;
+  color: var(--sat-text-desc) !important;
+  line-height: 1.5 !important;
+}
+
+/* 5. TARJETAS DE GESTIONES TERMINALES EN FILAS (NIVEL 2 Y 3) */
+.sat-seccion-contribuyentes .aio-icon-box,
+.sat-seccion-contribuyentes .bsf-info-box,
+.sat-seccion-comercio-exterior .aio-icon-box,
+.sat-seccion-comercio-exterior .bsf-info-box,
+.sat-seccion-profesionales .aio-icon-box,
+.sat-seccion-profesionales .bsf-info-box,
+.sat-seccion-entes-exentos .aio-icon-box,
+.sat-seccion-entes-exentos .bsf-info-box {
+  background: #ffffff !important;
+  border: 1px solid var(--sat-card-border) !important;
+  border-radius: 8px !important;
+  padding: 18px 20px !important;
+  margin-bottom: 16px !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03) !important;
+  transition: all 0.2s ease !important;
+  min-height: 135px !important;
+}
+
+.sat-seccion-contribuyentes .aio-icon-box:hover,
+.sat-seccion-contribuyentes .bsf-info-box:hover,
+.sat-seccion-comercio-exterior .aio-icon-box:hover,
+.sat-seccion-comercio-exterior .bsf-info-box:hover,
+.sat-seccion-profesionales .aio-icon-box:hover,
+.sat-seccion-profesionales .bsf-info-box:hover,
+.sat-seccion-entes-exentos .aio-icon-box:hover,
+.sat-seccion-entes-exentos .bsf-info-box:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08) !important;
+  border-color: var(--sat-celeste-sat) !important;
+}
+
+.sat-seccion-contribuyentes .aio-icon-title,
+.sat-seccion-contribuyentes .info-box-title,
+.sat-seccion-comercio-exterior .aio-icon-title,
+.sat-seccion-comercio-exterior .info-box-title,
+.sat-seccion-profesionales .aio-icon-title,
+.sat-seccion-profesionales .info-box-title,
+.sat-seccion-entes-exentos .aio-icon-title,
+.sat-seccion-entes-exentos .info-box-title {
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  color: var(--sat-azul-institucional) !important;
+  line-height: 1.35 !important;
+  margin-bottom: 6px !important;
+}
+
+.sat-seccion-contribuyentes .aio-icon-description,
+.sat-seccion-contribuyentes .info-box-description,
+.sat-seccion-comercio-exterior .aio-icon-description,
+.sat-seccion-comercio-exterior .info-box-description,
+.sat-seccion-profesionales .aio-icon-description,
+.sat-seccion-profesionales .info-box-description,
+.sat-seccion-entes-exentos .aio-icon-description,
+.sat-seccion-entes-exentos .info-box-description {
+  font-size: 12.5px !important;
+  color: var(--sat-text-desc) !important;
+  line-height: 1.45 !important;
+}
+
+/* 6. ENCABEZADOS FANCY TITLE DE THE7 */
+.sat-main-heading .dt-fancy-title span {
+  font-size: 22px !important;
+  color: var(--sat-azul-institucional) !important;
+  font-weight: 700 !important;
+}
+
+/* 7. BREADCRUMBS THE7 */
+.dt-breadcrumbs {
+  font-size: 12px !important;
+  color: #64748b !important;
+  margin-bottom: 8px !important;
+}
+
+.dt-breadcrumbs a {
+  color: var(--sat-celeste-sat) !important;
+  text-decoration: none !important;
+}
+
+.dt-breadcrumbs a:hover {
+  text-decoration: underline !important;
+}

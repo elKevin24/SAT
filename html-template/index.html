@@ -3,8 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portal SAT Guatemala — Trámites y Servicios Tributarios</title>
+  <title>Portal SAT Guatemala — Gestiones y Servicios Tributarios</title>
   <link rel="stylesheet" href="css/sat-portal.css">
+  <style>
+    /* Estilos específicos para la Página Principal */
+    .sat-quick-access-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 12px;
+      margin: -25px auto 40px;
+      max-width: var(--sat-max-w, 1140px);
+      position: relative;
+      z-index: 10;
+    }
+    .sat-qa-card {
+      background: #ffffff;
+      border: 1px solid #dce2e6;
+      border-radius: 8px;
+      padding: 14px 16px;
+      text-decoration: none;
+      color: #19324b;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: all 0.2s ease;
+      border-top: 3px solid #14649b;
+    }
+    .sat-qa-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+      border-top-color: #19afe1;
+    }
+    .sat-qa-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #14649b;
+      margin-bottom: 4px;
+    }
+    .sat-qa-desc {
+      font-size: 11px;
+      color: #64748b;
+      line-height: 1.3;
+      margin: 0;
+    }
+    .sat-section-title-home {
+      font-size: 22px;
+      color: #19324b;
+      font-weight: 700;
+      margin: 30px 0 16px;
+      text-align: center;
+      position: relative;
+    }
+    .sat-section-title-home::after {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 3px;
+      background: #19afe1;
+      margin: 8px auto 0;
+      border-radius: 2px;
+    }
+    .sat-cards-grid-4 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+  </style>
 </head>
 <body>
 
@@ -23,64 +88,206 @@
   </header>
 
   <!-- SECCIÓN HERO DE BIENVENIDA -->
-  <section class="sat-page-hero">
+  <section class="sat-page-hero" style="background: linear-gradient(135deg, #14649b 0%, #19324b 100%); color: #fff; padding: 45px 0 55px; text-align: center;">
     <div class="sat-container">
-      <h1 class="sat-page-title">Selecciona tu grupo de interés</h1>
-      <p class="sat-page-desc">
-        Accede a los requisitos oficiales, gestiones en línea, verificadores en base de datos y normativa aplicable a tu personería.
+      <h1 class="sat-page-title" style="color: #fff; font-size: 32px; margin-bottom: 10px;">Portal SAT Guatemala</h1>
+      <p class="sat-page-desc" style="color: #e2e8f0; font-size: 16px; max-width: 700px; margin: 0 auto;">
+        Gestiones oficiales, requisitos normados y servicios tributarios y aduaneros en línea para personas y empresas.
       </p>
     </div>
   </section>
 
-  <!-- CUADRÍCULA DE 4 GRUPOS PRINCIPALES (4 COLUMNAS) -->
+  <!-- ACCESOS RÁPIDOS (HERRAMIENTAS OPERATIVAS) -->
+  <div class="sat-container">
+    <div class="sat-quick-access-grid">
+      <a href="https://declaraguate.sat.gob.gt/" target="_blank" rel="noopener noreferrer" class="sat-qa-card">
+        <span class="sat-qa-title">Declaraguate</span>
+        <p class="sat-qa-desc">Llenado y presentación de formularios de impuestos.</p>
+      </a>
+      <a href="https://farm3.sat.gob.gt/menu/login.jsf" target="_blank" rel="noopener noreferrer" class="sat-qa-card">
+        <span class="sat-qa-title">Agencia Virtual</span>
+        <p class="sat-qa-desc">Consultas personales, RTU digital y solvencias.</p>
+      </a>
+      <a href="https://portal.sat.gob.gt/portal/rtu-digital/" target="_blank" rel="noopener noreferrer" class="sat-qa-card">
+        <span class="sat-qa-title">RTU Digital</span>
+        <p class="sat-qa-desc">Actualización y confirmación de datos tributarios.</p>
+      </a>
+      <a href="https://portal.sat.gob.gt/portal/factura-electronica-en-linea-fel/" target="_blank" rel="noopener noreferrer" class="sat-qa-card">
+        <span class="sat-qa-title">Factura FEL</span>
+        <p class="sat-qa-desc">Emisión gratuita y verificación de DTE.</p>
+      </a>
+      <a href="https://portal.sat.gob.gt/portal/consulta-cui-nit/" target="_blank" rel="noopener noreferrer" class="sat-qa-card">
+        <span class="sat-qa-title">Consulta de NIT</span>
+        <p class="sat-qa-desc">Verificar estado tributario y validez de NIT.</p>
+      </a>
+      <a href="https://portal.sat.gob.gt/portal/cita-previa/" target="_blank" rel="noopener noreferrer" class="sat-qa-card">
+        <span class="sat-qa-title">Cita Previa</span>
+        <p class="sat-qa-desc">Programación de atención física en agencias.</p>
+      </a>
+    </div>
+  </div>
+
   <main class="sat-container">
-    <div class="sat-cards-grid">
+
+    <!-- 1. SELECTOR DE LOS 4 MACRO-SEGMENTOS (NIVEL 1) -->
+    <h2 class="sat-section-title-home">Selecciona tu perfil de atención</h2>
+    <div class="sat-cards-grid-4">
 
       <!-- 1. Contribuyentes (Azul) -->
       <a href="paginas/contribuyentes.html" class="sat-card sat-card--azul">
         <div class="sat-card-head">
-          <h2 class="sat-card-title">Contribuyentes</h2>
-          <span class="sat-card-chevron" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
-          </span>
+          <h3 class="sat-card-title">Contribuyentes</h3>
+          <span class="sat-card-chevron" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></span>
         </div>
-        <p class="sat-card-desc">Información y servicios tributarios para personas y empresas.</p>
+        <p class="sat-card-desc">Información y gestiones para personas y empresas. RTU Digital, régimen general, pequeños contribuyentes y vehículos.</p>
       </a>
 
       <!-- 2. Operadores de Comercio Exterior (Celeste) -->
       <a href="paginas/comercio-exterior.html" class="sat-card sat-card--celeste">
         <div class="sat-card-head">
-          <h2 class="sat-card-title">Operadores de Comercio Exterior</h2>
-          <span class="sat-card-chevron" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
-          </span>
+          <h3 class="sat-card-title">Operadores de Comercio Exterior</h3>
+          <span class="sat-card-chevron" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></span>
         </div>
-        <p class="sat-card-desc">Servicios e información aduanera para la importación, exportación y logística.</p>
+        <p class="sat-card-desc">Servicios e información aduanera. Importación, exportación, padrones, auxiliares de la función pública (AFPA) y declaraciones DUCA.</p>
       </a>
 
       <!-- 3. Profesionales (Verde) -->
       <a href="paginas/profesionales.html" class="sat-card sat-card--profesionales">
         <div class="sat-card-head">
-          <h2 class="sat-card-title">Profesionales</h2>
-          <span class="sat-card-chevron" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
-          </span>
+          <h3 class="sat-card-title">Profesionales</h3>
+          <span class="sat-card-chevron" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></span>
         </div>
-        <p class="sat-card-desc">Herramientas y servicios especializados para profesionales tributarios y auxiliares.</p>
+        <p class="sat-card-desc">Herramientas especializadas para auxiliares y profesionales tributarios. Abogados, notarios, contadores, auditores y gestores.</p>
       </a>
 
       <!-- 4. Entes Exentos (Naranja) -->
       <a href="paginas/entes-exentos.html" class="sat-card sat-card--naranja">
         <div class="sat-card-head">
-          <h2 class="sat-card-title">Entes Exentos</h2>
-          <span class="sat-card-chevron" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
-          </span>
+          <h3 class="sat-card-title">Entes Exentos</h3>
+          <span class="sat-card-chevron" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></span>
         </div>
-        <p class="sat-card-desc">Información y gestiones tributarias para entidades públicas y organizaciones no lucrativas.</p>
+        <p class="sat-card-desc">Gestiones y normativa para entidades públicas, centros educativos, misiones diplomáticas, ONG y organismos no lucrativos.</p>
       </a>
 
     </div>
+
+    <!-- 2. GESTIONES MÁS FRECUENTES (CICLO ATO) -->
+    <h2 class="sat-section-title-home">Gestiones más frecuentes</h2>
+    <div class="sat-cards-grid">
+
+      <a href="https://portal.sat.gob.gt/portal/solicitar-nit/" target="_blank" rel="noopener noreferrer" class="sat-card sat-card--azul">
+        <div class="sat-card-head">
+          <h3 class="sat-card-title">Solicitar tu NIT en línea</h3>
+          <span class="sat-card-chevron" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></span>
+        </div>
+        <p class="sat-card-desc">Requisitos, pasos y documentos para solicitar tu Número de Identificación Tributaria (NIT) en línea.</p>
+      </a>
+
+      <a href="https://portal.sat.gob.gt/portal/requisitos-tramites-agencia-virtual/" target="_blank" rel="noopener noreferrer" class="sat-card sat-card--azul">
+        <div class="sat-card-head">
+          <h3 class="sat-card-title">Solicitud y Activación de Agencia Virtual</h3>
+          <span class="sat-card-chevron" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></span>
+        </div>
+        <p class="sat-card-desc">Acceso a la plataforma web de la SAT para consultar datos personales y constancia RTU.</p>
+      </a>
+
+      <a href="https://portal.sat.gob.gt/portal/solvencia-fiscal/" target="_blank" rel="noopener noreferrer" class="sat-card sat-card--azul">
+        <div class="sat-card-head">
+          <h3 class="sat-card-title">Solicitud y Emisión de Solvencia Fiscal</h3>
+          <span class="sat-card-chevron" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></span>
+        </div>
+        <p class="sat-card-desc">Consulta, pago y descarga del certificado electrónico que acredita la ausencia de adeudos tributarios.</p>
+      </a>
+
+      <a href="https://portal.sat.gob.gt/portal/factura-electronica-en-linea-fel/" target="_blank" rel="noopener noreferrer" class="sat-card sat-card--azul">
+        <div class="sat-card-head">
+          <h3 class="sat-card-title">Habilitación para Factura Electrónica (FEL)</h3>
+          <span class="sat-card-chevron" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></span>
+        </div>
+        <p class="sat-card-desc">Pasos para incorporarte al régimen FEL y emitir documentos tributarios electrónicos de forma gratuita.</p>
+      </a>
+
+      <a href="https://portal.sat.gob.gt/portal/traspaso-electronico-de-vehiculos/" target="_blank" rel="noopener noreferrer" class="sat-card sat-card--azul">
+        <div class="sat-card-head">
+          <h3 class="sat-card-title">Traspaso Electrónico de Vehículos en Línea</h3>
+          <span class="sat-card-chevron" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></span>
+        </div>
+        <p class="sat-card-desc">Transferencia de dominio de automotores autorizada notarialmente a través de Agencia Virtual.</p>
+      </a>
+
+      <a href="https://portal.sat.gob.gt/portal/padron-de-importadores/" target="_blank" rel="noopener noreferrer" class="sat-card sat-card--azul">
+        <div class="sat-card-head">
+          <h3 class="sat-card-title">Inscripción en el Padrón de Importadores</h3>
+          <span class="sat-card-chevron" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></span>
+        </div>
+        <p class="sat-card-desc">Requisitos y activación de estado en el padrón aduanero para el despacho de mercancías.</p>
+      </a>
+
+    </div>
+
+    <!-- ========================================================================= -->
+    <!-- BLOQUE WPBAKERY / THE7 CLASSIC - LISTO PARA COPIAR A WORDPRESS           -->
+    <!-- ========================================================================= -->
+    <section class="sat-wp-export-box" style="margin-top: 50px; margin-bottom: 30px; background: #f8fafc; border: 2px dashed #0072ce; border-radius: 8px; padding: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; flex-wrap: wrap; gap: 12px;">
+        <div>
+          <span style="display: inline-block; background: #003865; color: #fff; font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 4px; text-transform: uppercase;">WordPress &bull; The7 Classic &bull; WPBakery</span>
+          <h3 style="font-size: 17px; color: #003865; margin: 6px 0 2px; font-weight: 700;">Código WPBakery para la Página Principal (Home)</h3>
+          <p style="font-size: 13px; color: #475569; margin: 0;">Pega este código en la pestaña <strong>Texto (Classic Mode)</strong> de WPBakery en la página de Inicio de WordPress.</p>
+        </div>
+        <button onclick="copiarShortcodeWp(this, 'wp-shortcode-home')" style="background: #0072ce; color: #fff; border: none; padding: 10px 18px; border-radius: 6px; font-weight: 600; font-size: 13px; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+          <span>Copiar Shortcode</span>
+        </button>
+      </div>
+      <textarea id="wp-shortcode-home" readonly style="width: 100%; height: 280px; font-family: Consolas, 'Liberation Mono', Menlo, monospace; font-size: 12px; line-height: 1.5; padding: 14px; border: 1px solid #cbd5e1; border-radius: 6px; background: #ffffff; color: #0f172a; resize: vertical; box-sizing: border-box;">[vc_row full_width="stretch_row" el_class="sat-hero-section" css=".vc_custom_hero{background-color: #003865; padding: 45px 0;}"]
+[vc_column]
+[vc_custom_heading text="Portal SAT Guatemala" font_container="tag:h1|font_size:32px|text_align:center|color:%23ffffff" use_theme_fonts="yes"]
+[vc_custom_heading text="Gestiones, requisitos oficiales y servicios tributarios y aduaneros en línea" font_container="tag:p|font_size:16px|text_align:center|color:%23e2e8f0" use_theme_fonts="yes"]
+[/vc_column]
+[/vc_row]
+
+[vc_row el_class="sat-quick-access-row" css=".vc_custom_qa{margin-top: -25px; margin-bottom: 30px;}"]
+[vc_column width="1/6"][bsf-info-box icon_type="none" title="Declaraguate" read_more="box" link="url:https%3A%2F%2Fdeclaraguate.sat.gob.gt%2F||target:%20_blank|"]Presentación y pago de formularios.[/bsf-info-box][/vc_column]
+[vc_column width="1/6"][bsf-info-box icon_type="none" title="Agencia Virtual" read_more="box" link="url:https%3A%2F%2Ffarm3.sat.gob.gt%2Fmenu%2Flogin.jsf||target:%20_blank|"]Servicios en línea y constancia RTU.[/bsf-info-box][/vc_column]
+[vc_column width="1/6"][bsf-info-box icon_type="none" title="RTU Digital" read_more="box" link="url:https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Frtu-digital%2F||target:%20_blank|"]Actualización y datos personales.[/bsf-info-box][/vc_column]
+[vc_column width="1/6"][bsf-info-box icon_type="none" title="Factura FEL" read_more="box" link="url:https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Ffactura-electronica-en-linea-fel%2F||target:%20_blank|"]Emisión y verificación de DTE.[/bsf-info-box][/vc_column]
+[vc_column width="1/6"][bsf-info-box icon_type="none" title="Consulta de NIT" read_more="box" link="url:https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fconsulta-cui-nit%2F||target:%20_blank|"]Verificar estado y validez tributaria.[/bsf-info-box][/vc_column]
+[vc_column width="1/6"][bsf-info-box icon_type="none" title="Cita Previa" read_more="box" link="url:https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fcita-previa%2F||target:%20_blank|"]Programar atención en agencias.[/bsf-info-box][/vc_column]
+[/vc_row]
+
+[vc_row]
+[vc_column]
+[dt_fancy_title title="Selecciona tu perfil de atención" title_size="h2" title_color="accent"]
+[vc_empty_space height="20px"]
+[/vc_column]
+[/vc_row]
+
+[vc_row gap="15px" el_class="sat-seccion-macro-segmentos"]
+[vc_column width="1/4"][bsf-info-box icon_type="none" title="Contribuyentes" read_more="box" link="url:%2Fcontribuyentes%2F|||"]Información y servicios tributarios para personas y empresas. RTU Digital, régimen general, pequeños contribuyentes y vehículos.[/bsf-info-box][/vc_column]
+[vc_column width="1/4"][bsf-info-box icon_type="none" title="Operadores de Comercio Exterior" read_more="box" link="url:%2Fcomercio-exterior%2F|||"]Servicios e información aduanera. Importación, exportación, padrones, auxiliares de la función pública (AFPA) y declaraciones DUCA.[/bsf-info-box][/vc_column]
+[vc_column width="1/4"][bsf-info-box icon_type="none" title="Profesionales" read_more="box" link="url:%2Fprofesionales%2F|||"]Herramientas especializadas para auxiliares y profesionales tributarios. Abogados, notarios, contadores públicos, auditores y gestores.[/bsf-info-box][/vc_column]
+[vc_column width="1/4"][bsf-info-box icon_type="none" title="Entes Exentos" read_more="box" link="url:%2Fentes-exentos%2F|||"]Gestiones y normativa para entidades públicas, centros educativos, misiones diplomáticas, ONG y organismos no lucrativos.[/bsf-info-box][/vc_column]
+[/vc_row]
+
+[vc_row]
+[vc_column]
+[vc_empty_space height="30px"]
+[dt_fancy_title title="Gestiones más frecuentes" title_size="h2" title_color="accent"]
+[vc_empty_space height="20px"]
+[/vc_column]
+[/vc_row]
+
+[vc_row gap="10px" el_class="sat-seccion-contribuyentes"]
+[vc_column width="1/3"][bsf-info-box icon_type="none" title="Solicitar tu NIT en línea" read_more="box" link="url:https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fsolicitar-nit%2F||target:%20_blank|"]Requisitos, pasos y documentos para solicitar tu Número de Identificación Tributaria (NIT) en línea.[/bsf-info-box][/vc_column]
+[vc_column width="1/3"][bsf-info-box icon_type="none" title="Solicitud y Activación de Agencia Virtual" read_more="box" link="url:https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Frequisitos-tramites-agencia-virtual%2F||target:%20_blank|"]Acceso a la plataforma web de la SAT para consultar datos personales y constancia RTU.[/bsf-info-box][/vc_column]
+[vc_column width="1/3"][bsf-info-box icon_type="none" title="Solicitud y Emisión de Solvencia Fiscal en Línea" read_more="box" link="url:https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fsolvencia-fiscal%2F||target:%20_blank|"]Consulta, pago y descarga del certificado electrónico que acredita la ausencia de adeudos tributarios.[/bsf-info-box][/vc_column]
+[vc_column width="1/3"][bsf-info-box icon_type="none" title="Habilitación para emitir Factura Electrónica (FEL)" read_more="box" link="url:https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Ffactura-electronica-en-linea-fel%2F||target:%20_blank|"]Pasos para incorporarte al régimen FEL y emitir documentos tributarios electrónicos de forma gratuita.[/bsf-info-box][/vc_column]
+[vc_column width="1/3"][bsf-info-box icon_type="none" title="Traspaso Electrónico de Vehículos en Línea" read_more="box" link="url:https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Ftraspaso-electronico-de-vehiculos%2F||target:%20_blank|"]Transferencia de dominio de automotores autorizada notarialmente a través de Agencia Virtual.[/bsf-info-box][/vc_column]
+[vc_column width="1/3"][bsf-info-box icon_type="none" title="Inscripción en el Padrón de Importadores" read_more="box" link="url:https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fpadron-de-importadores%2F||target:%20_blank|"]Requisitos y activación de estado en el padrón aduanero para el despacho de mercancías.[/bsf-info-box][/vc_column]
+[/vc_row]</textarea>
+    </section>
+
   </main>
 
   <!-- PIE DE PÁGINA -->
@@ -91,5 +298,23 @@
     </div>
   </footer>
 
+  <!-- SCRIPT PARA COPIAR CÓDIGO WPBAKERY -->
+  <script>
+    function copiarShortcodeWp(btn, targetId) {
+      const ta = document.getElementById(targetId);
+      if (!ta) return;
+      ta.select();
+      navigator.clipboard.writeText(ta.value).then(() => {
+        const span = btn.querySelector('span') || btn;
+        const orig = span.textContent;
+        span.textContent = '¡Copiado!';
+        btn.style.background = '#2e7d32';
+        setTimeout(() => {
+          span.textContent = orig;
+          btn.style.background = '#0072ce';
+        }, 2000);
+      });
+    }
+  </script>
 </body>
 </html>
