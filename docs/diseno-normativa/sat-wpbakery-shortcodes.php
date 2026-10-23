@@ -25,7 +25,7 @@ add_action('wp_enqueue_scripts', 'sat_ds_enqueue_scripts');
 /**
  * 2. Shortcode: [sat_card]
  * Parámetros:
- * - title: Título del trámite o servicio en lenguaje claro
+ * - title: Título de la gestión o servicio en lenguaje claro
  * - desc: Descripción ciudadana orientada a beneficio (máx 2 oraciones)
  * - tone: azul | celeste | verde | naranja | morado
  * - url: Enlace de destino
@@ -34,7 +34,7 @@ add_action('wp_enqueue_scripts', 'sat_ds_enqueue_scripts');
  */
 function sat_card_shortcode($atts) {
     $a = shortcode_atts(array(
-        'title'       => 'Título del Trámite',
+        'title'       => 'Título de la Gestión',
         'desc'        => '',
         'tone'        => 'azul',
         'url'         => '#',
@@ -91,7 +91,7 @@ function sat_ds_integrate_wpbakery() {
         'params'      => array(
             array(
                 'type'        => 'textfield',
-                'heading'     => __('Título del Trámite', 'sat-ds'),
+                'heading'     => __('Título de la Gestión', 'sat-ds'),
                 'param_name'  => 'title',
                 'value'       => __('Inscripción de NIT', 'sat-ds'),
                 'admin_label' => true,

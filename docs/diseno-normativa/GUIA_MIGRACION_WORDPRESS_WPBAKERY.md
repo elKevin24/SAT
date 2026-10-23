@@ -17,63 +17,60 @@ Este documento detalla la implementación y réplica exacta de las reglas del **
 
 ---
 
-## 2. Los 3 Métodos de Implementación en WordPress
+## 2. Métodos de Implementación Oficiales en WPBakery
 
-### Método 1: Inserción Directa de CSS + Elemento "Bloque de Texto" / "HTML Puro" (El más rápido sin programar PHP)
-
-1. En el administrador de WordPress, ve a **Apariencia $\rightarrow$ Personalizar $\rightarrow$ CSS Adicional** (o en **WPBakery Page Builder $\rightarrow$ General Settings $\rightarrow$ Custom CSS**).
-2. Pega el contenido completo del archivo:
-   `docs/diseno-normativa/sat-design-system-wpbakery.css`
-3. En cualquier página con WPBakery:
-   * Inserta un elemento **Raw HTML** o **Text Block** (en modo código fuente).
-   * Pega la estructura de la tarjeta:
-
-```html
-<a href="https://portal.sat.gob.gt/portal/rtu-digital/" class="sat-card sat-card--azul">
-  <div class="sat-card-header">
-    <h3 class="sat-card-title">Inscripción y Solicitud de NIT</h3>
-    <span class="sat-card-chevron" aria-hidden="true">
-      <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
-    </span>
-  </div>
-  <p class="sat-card-desc">
-    Obtén tu Número de Identificación Tributaria por primera vez en línea para emitir facturas o empleo.
-  </p>
-</a>
-```
-
-#### Variantes de Tono disponibles:
-* `sat-card--azul`: Contribuyentes general (#14649B)
-* `sat-card--celeste`: Personas individuales (#0284C7)
-* `sat-card--verde`: Empresas y personas jurídicas (#4D8014)
-* `sat-card--naranja`: Operadores de Comercio Exterior y Aduanas (#C25E00)
-* `sat-card--morado`: Auxiliares de la función pública y Entes Exentos (#6366F1)
+> **IMPORTANTE — REGLA DE ARQUITECTURA:** El uso de bloques **"Raw HTML" o inyección manual de etiquetas HTML está estrictamente PROHIBIDO**. Las tarjetas deben gestionarse exclusivamente mediante componentes nativos del builder o shortcodes limpios para garantizar la integridad visual, accesibilidad y facilidad de edición para los redactores.
 
 ---
 
-### Método 2: Shortcode Nativo (Fácil para editores de contenido)
+### Método 1: Componente Visual Nativo en la Paleta de WPBakery (`vc_map`) — (MÉTODO RECOMENDADO)
 
-Agrega el archivo `docs/diseno-normativa/sat-wpbakery-shortcodes.php` a tu tema hijo (`functions.php` del tema activo) o como un mini-plugin en `wp-content/plugins/sat-design-system/`.
+Este método integra la tarjeta oficial del SAT directamente en el catálogo de componentes de WPBakery:
 
-Una vez activo, los redactores pueden usar shortcodes directamente en WPBakery:
+1. **Instalación:**
+   Copia el archivo `docs/diseno-normativa/sat-wpbakery-shortcodes.php` dentro del directorio de tu tema hijo (`functions.php`) o en `wp-content/plugins/sat-design-system/`.
+2. **Carga de Estilos:**
+   El plugin encola automáticamente `sat-design-system-wpbakery.css` en WordPress.
+3. **Uso en el Editor Visual de WPBakery:**
+   * Haz clic en el botón **"+" (Agregar Elemento)** de WPBakery.
+   * Ve a la categoría **"SAT Guatemala"**.
+   * Selecciona el componente **"Card SAT (Design System)"**.
+   * Completa los campos en el formulario nativo (sin tocar una sola línea de código):
+     * **Título de la Gestión:** (Texto plano en lenguaje ciudadano).
+     * **Descripción Ciudadana:** (Orientada a beneficios y requisitos).
+     * **Tono de Segmento:** Selector desplegable (Azul Institucional, Celeste Personas, Verde Empresas, Naranja Aduanas, Morado Auxiliares).
+     * **URL de Destino:** Enlace canónico al servicio o aplicativo.
+     * **Abrir en:** Misma pestaña (`_self`) o nueva pestaña (`_blank`).
+
+---
+
+### Método 2: Shortcode Limpio en Bloque de Texto Estándar
+
+Para redactores que prefieren escribir contenido dentro de un elemento estándar de WPBakery (**Text Block** normal, **sin HTML**):
 
 ```text
-[sat_card title="Solicitar NIT" desc="Obtén tu Número de Identificación Tributaria para empleo o negocio." tone="azul" url="https://portal.sat.gob.gt/"]
+[sat_card title="Solicitar NIT" desc="Obtén tu Número de Identificación Tributaria por primera vez en línea para emitir facturas o empleo." tone="azul" url="https://portal.sat.gob.gt/portal/rtu-digital/"]
+```
 
+```text
 [sat_card title="Operaciones Aduaneras" desc="Gestión de DUCA y tránsitos aduaneros." tone="naranja" url="https://portal.sat.gob.gt/portal/aduanas/"]
 ```
 
+#### Variantes de Tono disponibles:
+* `tone="azul"`: Contribuyentes general (`#14649B`)
+* `tone="celeste"`: Personas individuales (`#0284C7`)
+* `tone="verde"`: Empresas y personas jurídicas (`#4D8014`)
+* `tone="naranja"`: Operadores de Comercio Exterior y Aduanas (`#C25E00`)
+* `tone="morado"`: Auxiliares de la función pública y Entes Exentos (`#6366F1`)
+
 ---
 
-### Método 3: Elemento Visual Integrado en la Paleta de WPBakery (`vc_map`)
+### Método 3: Elemento Nativo "Post Grid" de WPBakery con CSS Puente
 
-El archivo `sat-wpbakery-shortcodes.php` ya contiene la función `vc_map()`:
-* Al presionar el botón **"+" (Agregar Elemento)** en WPBakery, verás la categoría **"SAT Guatemala"** con el componente **"Card SAT (Design System)"**.
-* Cuenta con formulario visual para:
-  * Título del trámite (texto plano)
-  * Descripción orientada a beneficios ciudadanos
-  * Selector desplegable de Tono oficial (Azul, Celeste, Verde, Naranja, Morado)
-  * URL y destino (`_self` o `_blank`)
+Para catálogos automáticos conectados al Custom Post Type (`sat_tramite`):
+1. Inserta el elemento nativo **Post Grid** de WPBakery.
+2. Vincula la consulta al CPT de gestiones y filtra por la taxonomía del segmento.
+3. El archivo `docs/diseno-normativa/sat-design-system-wpbakery.css` mapea automáticamente los estilos a los contenedores nativos de WPBakery, eliminando bordes y aplicando la tipografía Gotham/Montserrat y el hover sólido institucional.
 
 ---
 
