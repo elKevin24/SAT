@@ -258,7 +258,7 @@ export const GestionContentPage: React.FC<GestionContentPageProps> = ({
                     Paso 1: Reúne los Requisitos Previos
                   </h2>
                 </div>
-                <span className="text-[11px] text-slate-400">
+                <span className="text-[11px] text-slate-600">
                   Verifica tu documentación
                 </span>
               </div>

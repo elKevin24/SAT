@@ -60,12 +60,12 @@ test('Abrir GuidedProcessModal', async ({ page }) => {
   await scan(page, 'GuidedProcessModal');
 });
 
-test('Abrir TramiteDetailModal', async ({ page }) => {
+test('Navegación a página de contenido de gestión (GestionContentPage)', async ({ page }) => {
   await page.goto('/#/catalogo');
   await page.getByRole('button', { name: 'Sin Obligaciones' }).first().click();
   await page.locator('[role="button"]:has-text("Ver detalle")').first().click();
-  await expect(page.getByRole('dialog')).toBeVisible();
-  await scan(page, 'TramiteDetailModal');
+  await expect(page.locator('h1')).toBeVisible();
+  await scan(page, 'GestionContentPage');
 });
 
 test('Abrir UserWayAccessibilityModal', async ({ page }) => {

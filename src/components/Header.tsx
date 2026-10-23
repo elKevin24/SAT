@@ -118,12 +118,8 @@ export const Header: React.FC<HeaderProps> = ({
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Si llegamos al nivel de contenido (o cambió el nivel de contenido), abrir automáticamente
-    if (isContentLevel && (!prevContentLevelRef.current || prevContentTitleRef.current !== contentLevelTitle)) {
-      setIsLevelMenuOpen(true);
-      setMenuSearchQuery('');
-    } else if (!isContentLevel && prevContentLevelRef.current) {
-      // Si salimos del nivel de contenido, cerrarlo
+    // Al cambiar de vista o salir del nivel de contenido, asegurar que el menú quede cerrado
+    if (!isContentLevel && prevContentLevelRef.current) {
       setIsLevelMenuOpen(false);
       setMenuSearchQuery('');
     }
@@ -489,7 +485,7 @@ export const Header: React.FC<HeaderProps> = ({
 
       {/* 3. Barra de Navegación Principal: Minimalismo & Dinamismo */}
       <nav
-        className="bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-[0_1px_3px_rgba(0,0,0,0.02)] relative z-30 transition-all duration-200"
+        className="bg-white border-b border-slate-200 shadow-[0_1px_3px_rgba(0,0,0,0.02)] relative z-30 transition-all duration-200"
         aria-label="Menú de Navegación y Segmentos Oficiales"
       >
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between min-h-[42px] gap-2">
@@ -507,7 +503,7 @@ export const Header: React.FC<HeaderProps> = ({
               className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs transition-all shrink-0 ${
                 currentView === 'home'
                   ? 'bg-slate-900 text-white font-semibold shadow-2xs'
-                  : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100 font-medium'
+                  : 'text-slate-800 hover:text-slate-950 hover:bg-slate-100 font-semibold'
               }`}
               title="Ir al Inicio del Portal"
             >
@@ -531,7 +527,7 @@ export const Header: React.FC<HeaderProps> = ({
                   className={`group relative inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs transition-all shrink-0 ${
                     isActive
                       ? 'bg-slate-900 text-white font-semibold shadow-2xs'
-                      : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100 font-medium'
+                      : 'text-slate-800 hover:text-slate-950 hover:bg-slate-100 font-semibold'
                   }`}
                 >
                   <span
@@ -578,8 +574,8 @@ export const Header: React.FC<HeaderProps> = ({
                 isLevelMenuOpen
                   ? 'bg-slate-900 text-white font-semibold shadow-xs ring-2 ring-slate-900/10'
                   : isContentLevel
-                    ? 'bg-sky-50 text-sky-900 border border-sky-300/80 hover:bg-sky-100 font-bold shadow-2xs ring-2 ring-sky-500/20 animate-pulse'
-                    : 'bg-white text-slate-700 border border-slate-200/90 hover:bg-slate-50 hover:text-slate-900 font-medium'
+                    ? 'bg-sky-50 text-sky-950 border border-sky-400 hover:bg-sky-100 font-bold shadow-2xs ring-2 ring-sky-500/20'
+                    : 'bg-white text-slate-800 border border-slate-300 hover:bg-slate-50 hover:text-slate-950 font-semibold'
               }`}
               aria-expanded={isLevelMenuOpen}
               aria-controls="sat-level-menu-panel"
@@ -615,7 +611,7 @@ export const Header: React.FC<HeaderProps> = ({
               </span>
 
               {isContentLevel && (
-                <span className="min-w-[18px] h-4.5 px-1.5 rounded-full text-[10px] font-black bg-sky-600 text-white shadow-2xs flex items-center justify-center animate-fadeIn">
+                <span className="min-w-[18px] h-4.5 px-1.5 rounded-full text-[10px] font-black bg-[#14649B] text-white shadow-2xs flex items-center justify-center animate-fadeIn">
                   {contentLevelItems.length}
                 </span>
               )}

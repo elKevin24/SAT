@@ -292,17 +292,18 @@ const subcategoriesList = useMemo(() => {
     return Array.from(set).sort((a, b) => compareByCategoryOrder(orderList, a, b));
   }, [segmentTramites, selectedCategory]);
 
-  // Lista estructurada de categorías y subcategorías para el Sidebar contextual
+  // Lista estructurada de categorías y subcategorías para el Sidebar contextual (orden canónico de matriz Excel / categoryOrder)
   const sidebarCategories = useMemo<SidebarCategory[]>(() => {
     return categoriesList.map((catName) => {
+      const orderList = subcategoryOrderFor(catName);
       const subs = Array.from(
         new Set(
           segmentTramites
-            .filter((t) => t.categoria === catName && t.subcategoria && t.subcategoria !== catName)
+            .filter((t) => t.categoria === catName && t.subcategoria && t.subcategoria !== catName && t.subcategoria !== '—')
             .map((t) => t.subcategoria)
-            .filter((s): s is string => Boolean(s))
+            .filter((s): s is string => Boolean(s && s.trim() !== '' && s !== '—'))
         )
-      ).sort();
+      ).sort((a, b) => compareByCategoryOrder(orderList, a, b));
       return {
         name: catName,
         count: segmentTramites.filter((t) => t.categoria === catName).length,

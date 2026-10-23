@@ -16,6 +16,7 @@ import { QuickAccessCarousel } from './components/QuickAccessCarousel';
 import { SolicitarNitPage } from './pages/SolicitarNitPage';
 import { FelPage } from './pages/FelPage';
 import { EtapaAtoId, TipoInteraccionId, TramiteItem, ProcesoGuiado, assertTramites } from './data/schema';
+import { compareCanonicalTramiteOrder } from './data/categoryOrder';
 import { buildTaxonomy, resolveCategoria, categoriaId, subcategoriaId } from './data/taxonomy';
 
 // Import official extracted datasets
@@ -252,7 +253,7 @@ export default function App() {
 
       return {
         isContentLevel: true,
-        contentLevelItems: siblingItems,
+        contentLevelItems: [...siblingItems].sort(compareCanonicalTramiteOrder),
         contentLevelTitle: currentSub || currentCat || selectedTramite.gestion || 'Opciones del nivel'
       };
     }
@@ -261,14 +262,14 @@ export default function App() {
       const items = allTramites.filter(
         t => t.id === 'SAT-GES-0001' || t.id === 'SAT-GES-0011' || ((t.gestion || '').toLowerCase().includes('solicitar') && (t.gestion || '').toLowerCase().includes('nit'))
       );
-      return { isContentLevel: true, contentLevelItems: items, contentLevelTitle: 'Solicitar NIT en Línea' };
+      return { isContentLevel: true, contentLevelItems: [...items].sort(compareCanonicalTramiteOrder), contentLevelTitle: 'Solicitar NIT en Línea' };
     }
 
     if (currentView === 'fel') {
       const items = allTramites.filter(
         t => (t.gestion || '').toLowerCase().includes('fel') || (t.gestion || '').toLowerCase().includes('factura')
       );
-      return { isContentLevel: true, contentLevelItems: items, contentLevelTitle: 'Factura Electrónica en Línea (FEL)' };
+      return { isContentLevel: true, contentLevelItems: [...items].sort(compareCanonicalTramiteOrder), contentLevelTitle: 'Factura Electrónica en Línea (FEL)' };
     }
 
     if (currentView === 'catalog' && activeCategory && activeCategory !== 'Todas las categorías') {
@@ -284,7 +285,7 @@ export default function App() {
       if (distinctSubcategories.length <= 1) {
         return {
           isContentLevel: true,
-          contentLevelItems: categoryTramites,
+          contentLevelItems: [...categoryTramites].sort(compareCanonicalTramiteOrder),
           contentLevelTitle: activeCategory
         };
       }
@@ -296,7 +297,7 @@ export default function App() {
         );
         return {
           isContentLevel: true,
-          contentLevelItems: subTramites,
+          contentLevelItems: [...subTramites].sort(compareCanonicalTramiteOrder),
           contentLevelTitle: activeSubcategory
         };
       }
