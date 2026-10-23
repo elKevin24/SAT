@@ -64,8 +64,8 @@ export const Breadcrumbs: React.FC<BreadcrumbsProps> = ({
     };
   }, [isMenuOpen]);
 
-  // Lista consolidada incluyendo 'Inicio' si aplica
-  const fullList: BreadcrumbItem[] = [
+  // Lista consolidada incluyendo 'Inicio' si aplica, deduplicando niveles consecutivos idénticos (anti-espejo)
+  const rawList: BreadcrumbItem[] = [
     ...(includeHome
       ? [
           {
@@ -77,6 +77,14 @@ export const Breadcrumbs: React.FC<BreadcrumbsProps> = ({
       : []),
     ...items,
   ];
+
+  const fullList = rawList.filter((item, idx, arr) => {
+    if (!item.label || item.label.trim() === '' || item.label === '—') return false;
+    if (idx > 0 && arr[idx - 1].label.trim().toLowerCase() === item.label.trim().toLowerCase()) {
+      return false;
+    }
+    return true;
+  });
 
   if (fullList.length === 0) return null;
 

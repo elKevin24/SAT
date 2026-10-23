@@ -16,8 +16,7 @@ import {
   ArrowRight,
   Palette,
   Menu as MenuIcon,
-  Home,
-  ChevronRight
+  Home
 } from 'lucide-react';
 import { SatIsologotipo } from './SatIsologotipo';
 import type { TramiteItem, ProcesoGuiado } from '../data/schema';
@@ -526,12 +525,6 @@ export const Header: React.FC<HeaderProps> = ({
               </div>
 
               <span>Menú</span>
-
-              {isContentLevel && (
-                <span className="min-w-[18px] h-4.5 px-1.5 rounded-full text-[10px] font-black bg-[#14649B] text-white shadow-2xs flex items-center justify-center animate-fadeIn">
-                  {contentLevelItems.length}
-                </span>
-              )}
             </button>
 
             <span className="h-3.5 w-px bg-slate-200 mx-0.5 shrink-0" aria-hidden="true" />
@@ -588,33 +581,8 @@ export const Header: React.FC<HeaderProps> = ({
             })}
           </div>
 
-          {/* LADO DERECHO: Rastro Contextual o Balanceador para preservar centrado de macrogrupos */}
-          <div className="flex items-center justify-end gap-1.5 shrink-0 min-w-0">
-            {(currentView === 'catalog' || currentView === 'gestion') && activeCategory && activeCategory !== 'Todas las categorías' ? (
-              <div className="hidden lg:flex items-center gap-1.5 text-xs text-slate-500 animate-fadeIn shrink-0">
-                <ChevronRight className="w-3.5 h-3.5 text-slate-300 shrink-0" />
-                <button
-                  type="button"
-                  onClick={() => onSelectBreadcrumb?.('category')}
-                  className="px-2.5 py-0.5 rounded-full bg-slate-100 hover:bg-slate-200/80 text-slate-700 font-medium border border-slate-200/60 truncate max-w-[170px] transition-colors cursor-pointer"
-                  title={`Volver a ${activeCategory}`}
-                >
-                  {activeCategory}
-                </button>
-                {activeSubcategory && (
-                  <>
-                    <ChevronRight className="w-3.5 h-3.5 text-slate-300 shrink-0" />
-                    <span className="px-2.5 py-0.5 rounded-full bg-sky-50 text-sky-900 font-semibold border border-sky-200/80 truncate max-w-[190px]">
-                      {activeSubcategory}
-                    </span>
-                  </>
-                )}
-              </div>
-            ) : (
-              /* Balanceador espacial para centrado en desktop */
-              <div className="w-[120px] hidden md:block" aria-hidden="true" />
-            )}
-          </div>
+          {/* LADO DERECHO: Espaciador balanceador para centrado simétrico de los macrogrupos */}
+          <div className="hidden sm:block w-[130px] shrink-0" aria-hidden="true" />
 
         </div>
 

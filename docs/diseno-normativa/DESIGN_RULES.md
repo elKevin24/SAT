@@ -230,4 +230,36 @@ DESIGN SYSTEM SAT GUATEMALA
 
 ---
 
+## 9. Prohibición Estricta de Popovers, Modales y Overlays Flotantes para Contenidos o Navegación
+
+### A. Regla Fundamental
+Queda **terminantemente prohibido** utilizar ventanas modales emergentes (`<dialog>`, overlays fijos de pantalla, popups flotantes), popovers contextuales o cuadros superpuestos para mostrar el contenido de una gestión, sus requisitos, pasos normados o su navegación jerárquica.
+
+### B. Justificación Técnica y de Experiencia Ciudadana (UX / A11y)
+1. **Pérdida de URL y Deep Linking:** Las ventanas modales carecen de una URL única indexable y compartible. Un contribuyente o asesor tributario no puede guardar en favoritos, compartir por correo/WhatsApp ni enlazar directamente una gestión mostrada en un modal.
+2. **Ruptura del Botón Atrás del Navegador:** En dispositivos móviles y de escritorio, al presionar el botón "Atrás" se espera regresar a la lista o pantalla anterior. En ventanas modales esto suele provocar navegación no deseada fuera del portal o pérdida de contexto.
+3. **Inaccesibilidad y Trampas de Foco:** Los modales introducen complejidades severas de accesibilidad WCAG 2.2 AA (trampas de tabulación, foco huérfano, bloqueo de scroll en el documento y problemas con lectores de pantalla).
+4. **Colapso en Dispositivos Móviles:** En pantallas pequeñas se producen conflictos de doble barra de desplazamiento (scroll del viewport + scroll interno del modal), cabeceras truncadas y botones de cierre fuera de la zona ergonómica táctil.
+
+### C. Patrón Obligatorio: Página Completa Dedicada (Full-Page Content)
+- Toda gestión o servicio debe abrirse en su **propia página completa dedicada** (ruta web limpia o deep linking `#/gestion/:id`).
+- La página de contenido debe incluir:
+  - Migas de pan (*breadcrumbs*) completas y clickeables hacia el catálogo y niveles superiores.
+  - Título principal H1 claro y sin códigos `SAT-GES-####` en la vista pública.
+  - Botón de retorno explícito ("Volver al catálogo" / "Volver al inicio").
+  - Flujo secuencial estructurado (Paso 1: Requisitos checklist, Paso 2: Ejecución oficial con enlace directo al servicio, Paso 3: Constancia o resolución).
+  - Marco legal oficial y canales de asistencia.
+  - Módulo de gestiones relacionadas ("En esta sección") para navegar entre gestiones afines sin volver a la raíz.
+
+### D. Excepciones Residuales Únicas
+Las únicas excepciones permitidas para elementos superpuestos son herramientas auxiliares del sistema:
+- Panel global de accesibilidad (ej. UserWay).
+- Ventana del Asistente Virtual conversacional.
+- Cuadros de diálogo nativos de confirmación del sistema.
+
+**Bajo ninguna circunstancia se permite para fichas de gestiones, catálogos, menús o información ciudadana.**
+
+---
+
 *Fecha de actualización: Octubre 2026*
+
