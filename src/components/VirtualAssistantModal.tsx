@@ -116,7 +116,7 @@ export const VirtualAssistantModal: React.FC = () => {
         aria-controls="rita-dialog"
         aria-haspopup="dialog"
         className="fixed bottom-5 right-5 z-40 p-3.5 bg-sat-azul hover:bg-sat-azul-oscuro text-white rounded-full shadow-2xl hover:scale-105 active:scale-95 transition-all flex items-center gap-2 group border-2 border-white"
-        aria-label="Abrir asistente virtual RITA"
+        aria-label="Asistente SAT: abrir asistente virtual RITA"
       >
         <div className="relative" aria-hidden="true">
           <Bot className="w-6 h-6" />

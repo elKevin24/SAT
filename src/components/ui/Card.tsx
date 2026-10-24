@@ -98,7 +98,6 @@ export function Card({
     <div
       role={onClick ? 'button' : undefined}
       tabIndex={onClick ? 0 : undefined}
-      aria-label={onClick ? title : undefined}
       aria-pressed={selected ? true : undefined}
       onClick={onClick}
       onKeyDown={handleKeyDown}

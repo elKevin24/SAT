@@ -4,6 +4,7 @@ interface SatIsologotipoProps {
   className?: string;
   variant?: 'azul' | 'blanco' | 'oscuro';
   showSubtitle?: boolean;
+  'aria-hidden'?: boolean | 'true' | 'false';
 }
 
 /**
@@ -14,7 +15,8 @@ interface SatIsologotipoProps {
 export const SatIsologotipo: React.FC<SatIsologotipoProps> = ({
   className = '',
   variant = 'azul',
-  showSubtitle = true
+  showSubtitle = true,
+  'aria-hidden': ariaHidden,
 }) => {
   const isBlanco = variant === 'blanco';
 
@@ -23,6 +25,7 @@ export const SatIsologotipo: React.FC<SatIsologotipoProps> = ({
       className={`inline-flex items-center gap-2.5 select-none text-left ${className}`} 
       role="img" 
       aria-label="Superintendencia de Administración Tributaria - SAT Guatemala"
+      aria-hidden={ariaHidden}
     >
       {/* Siglas SAT en tipografía institucional sobria */}
       <div className="flex items-baseline font-black tracking-tight leading-none">
