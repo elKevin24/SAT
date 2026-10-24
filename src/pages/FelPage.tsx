@@ -4,7 +4,6 @@ import {
   ExternalLink, 
   CheckCircle2, 
   Search, 
-  FileCheck2, 
   Smartphone, 
   Laptop, 
   ShieldCheck, 
@@ -102,10 +101,6 @@ export const FelPage: React.FC<FelPageProps> = ({ onBackToHome }) => {
         {/* 2. Hero Principal */}
         <header className="bg-sat-blanco rounded-xl border border-sat-gris p-6 sm:p-8 shadow-sat-sm relative overflow-hidden">
           <div className="max-w-3xl space-y-3 relative z-10">
-            <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-sat-azul/10 text-sat-azul text-xs font-bold">
-              <FileCheck2 className="w-3.5 h-3.5" />
-              <span>Ecosistema de Facturación Electrónica Oficial</span>
-            </div>
             <h1 className="text-2xl sm:text-4xl font-black text-sat-azul-oscuro tracking-tight leading-tight">
               Factura Electrónica en Línea (FEL)
             </h1>

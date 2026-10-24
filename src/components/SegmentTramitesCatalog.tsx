@@ -1,9 +1,8 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import { Search, ArrowLeft, BookmarkCheck } from 'lucide-react';
+import { Search, ArrowLeft } from 'lucide-react';
 import { SegmentId } from './UserSegmentCards';
 import { Card, type CardTone } from './ui/Card';
 import { Breadcrumbs } from './ui/Breadcrumbs';
-import { SidebarNav, type SidebarCategory } from './ui/SidebarNav';
 import { Alert } from './ui/Alert';
 import type { EtapaAtoId, TipoInteraccionId } from '../data/portalMasterTaxonomy';
 import type { TramiteItem } from '../data/schema';
@@ -292,26 +291,6 @@ const subcategoriesList = useMemo(() => {
     return Array.from(set).sort((a, b) => compareByCategoryOrder(orderList, a, b));
   }, [segmentTramites, selectedCategory]);
 
-  // Lista estructurada de categorías y subcategorías para el Sidebar contextual (orden canónico de matriz Excel / categoryOrder)
-  const sidebarCategories = useMemo<SidebarCategory[]>(() => {
-    return categoriesList.map((catName) => {
-      const orderList = subcategoryOrderFor(catName);
-      const subs = Array.from(
-        new Set(
-          segmentTramites
-            .filter((t) => t.categoria === catName && t.subcategoria && t.subcategoria !== catName && t.subcategoria !== '—')
-            .map((t) => t.subcategoria)
-            .filter((s): s is string => Boolean(s && s.trim() !== '' && s !== '—'))
-        )
-      ).sort((a, b) => compareByCategoryOrder(orderList, a, b));
-      return {
-        name: catName,
-        count: segmentTramites.filter((t) => t.categoria === catName).length,
-        subcategories: subs,
-      };
-    });
-  }, [categoriesList, segmentTramites]);
-
   // Trámites finales (filtrados por subcategoría o búsqueda directa)
   // Regla de Umbral de Densidad: categorías con subcategoría única o compactada exponen sus trámites directamente
   const currentTramites = useMemo(() => {
@@ -327,15 +306,23 @@ const subcategoriesList = useMemo(() => {
         (t.categoria && t.categoria.toLowerCase().includes(q))
       );
     } else if (selectedCategory) {
-      if (selectedSubcategory) {
+      const isSubEffective = Boolean(
+        selectedSubcategory &&
+        selectedSubcategory !== '—' &&
+        selectedSubcategory.trim().toLowerCase() !== selectedCategory.trim().toLowerCase() &&
+        subcategoriesList.length > 1
+      );
+
+      if (isSubEffective) {
         list = segmentTramites.filter(
-          t => t.categoria === selectedCategory && t.subcategoria === selectedSubcategory
+          t => (t.categoria === selectedCategory || t.nivel2 === selectedCategory) &&
+               (t.subcategoria === selectedSubcategory || t.nivel3 === selectedSubcategory)
         );
-      } else if (subcategoriesList.length <= 1) {
-        // Regla de Umbral de Densidad: categoría compactada muestra sus trámites directamente
-        list = segmentTramites.filter(t => t.categoria === selectedCategory);
       } else {
-        return [];
+        // Categoría compactada o sin subcategoría efectiva: muestra todas las gestiones
+        list = segmentTramites.filter(
+          t => t.categoria === selectedCategory || t.nivel2 === selectedCategory
+        );
       }
     } else {
       return [];
@@ -434,7 +421,7 @@ const subcategoriesList = useMemo(() => {
                     },
                   ]
                 : []),
-              ...(selectedSubcategory && selectedSubcategory !== selectedCategory && subcategoriesList.length > 1
+              ...(selectedSubcategory && selectedSubcategory.trim().toLowerCase() !== (selectedCategory || '').trim().toLowerCase() && subcategoriesList.length > 1
                 ? [
                     {
                       label: selectedSubcategory,
@@ -544,68 +531,57 @@ const subcategoriesList = useMemo(() => {
             )}
 
             {/* =============================================================
-             * VISTA PROFUNDA: SIDEBAR CONTEXTUAL + CONTENIDO (NIVEL 4+)
+             * VISTA DE CONTENIDO (SIN MENÚS EN PÁGINA: EL ÚNICO MENÚ ES EL DESPLEGABLE)
              * ============================================================= */}
             {selectedCategory && (
-              <div className="flex flex-col lg:flex-row gap-6 items-start">
-                <SidebarNav
-                  segmentTitle={meta.title}
-                  segmentShortTitle={meta.shortTitle}
-                  segmentColor={meta.color}
-                  categories={sidebarCategories}
-                  selectedCategory={selectedCategory}
-                  selectedSubcategory={selectedSubcategory}
-                  onSelectCategory={(cat) => {
-                    updateCategory(cat);
-                  }}
-                  onSelectSubcategory={(cat, sub) => {
-                    if (selectedCategory !== cat) {
-                      setSelectedCategory(cat);
-                      onCategoryChange?.(cat);
-                    }
-                    updateSubcategory(sub);
-                  }}
-                  onResetToSegment={handleResetToCategories}
-                />
-
-                <div className="flex-1 min-w-0 w-full space-y-4">
-                  {/* BLOQUE ATO AUSTRALIA: EN ESTA SECCIÓN (Solo en vista de contenido) */}
-                  {Boolean(selectedSubcategory && subcategoriesList.length > 1) && (
-                    <div className="bg-[#F8FAFC] border border-[#E2E8F0] rounded-2xl p-4 sm:p-5 shadow-2xs">
-                      <div className="flex items-center gap-2 mb-2.5">
-                        <BookmarkCheck className="w-4 h-4 text-sat-azul" aria-hidden="true" />
-                        <h2 className="text-xs font-bold uppercase tracking-wider text-sat-azul-oscuro">
-                          En esta sección: Subtemas de {selectedCategory}
-                        </h2>
-                      </div>
-                      <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
-                        {subcategoriesList.map((subName) => {
-                          const isCurrent = selectedSubcategory === subName;
-                          return (
-                            <button
-                              key={subName}
-                              type="button"
-                              onClick={() => updateSubcategory(subName)}
-                              className={`text-xs px-3 py-1.5 rounded-lg font-medium transition-all flex items-center gap-1.5 ${
-                                isCurrent
-                                  ? 'bg-sat-azul text-white font-bold shadow-xs'
-                                  : 'bg-white border border-[#CBD5E1] text-[#334155] hover:border-sat-azul hover:text-sat-azul'
-                              }`}
-                            >
-                              <span className={`w-1.5 h-1.5 rounded-full ${isCurrent ? 'bg-white' : 'bg-[#94A3B8]'}`} />
-                              <span>{subName}</span>
-                            </button>
-                          );
-                        })}
-                      </div>
+              <div className="space-y-4">
+                {!selectedSubcategory && subcategoriesList.length > 1 ? (
+                  <div>
+                    <div className="flex items-center justify-between mb-3 pb-2 border-b border-[#E2E8F0]">
+                      <h2 className="text-xs font-bold uppercase tracking-wider text-[#64748B]">
+                        Subtemas de {selectedCategory} ({subcategoriesList.length})
+                      </h2>
+                      <button
+                        onClick={handleResetToCategories}
+                        className="inline-flex items-center gap-1.5 text-xs font-bold text-[#14649B] hover:underline"
+                      >
+                        <ArrowLeft className="w-3.5 h-3.5" />
+                        <span>Volver a {meta.shortTitle}</span>
+                      </button>
                     </div>
-                  )}
-                  {!selectedSubcategory && subcategoriesList.length > 1 ? (
-                    <div>
-                      <div className="flex items-center justify-between mb-3 pb-2 border-b border-[#E2E8F0]">
-                        <h2 className="text-xs font-bold uppercase tracking-wider text-[#64748B]">
-                          Subtemas de {selectedCategory} ({subcategoriesList.length})
-                        </h2>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-3.5">
+                      {subcategoriesList.map((subName) => {
+                        const desc = SUBCATEGORY_DESCRIPTIONS[subName] || 'Consulta las gestiones específicas y requisitos correspondientes.';
+
+                        return (
+                          <Card
+                            key={subName}
+                            title={subName}
+                            description={desc}
+                            tone={cardTone}
+                            headingLevel="h3"
+                            onClick={() => updateSubcategory(subName)}
+                          />
+                        );
+                      })}
+                    </div>
+                  </div>
+                ) : (
+                  <div>
+                    <div className="flex items-center justify-between mb-3 pb-2 border-b border-[#E2E8F0]">
+                      <h2 className="text-xs font-bold uppercase tracking-wider text-[#64748B]">
+                        Servicios y gestiones ({currentTramites.length})
+                      </h2>
+                      {subcategoriesList.length > 1 ? (
+                        <button
+                          onClick={handleResetToSubcategories}
+                          className="inline-flex items-center gap-1.5 text-xs font-bold text-[#14649B] hover:underline"
+                        >
+                          <ArrowLeft className="w-3.5 h-3.5" />
+                          <span>Volver a subtemas</span>
+                        </button>
+                      ) : (
                         <button
                           onClick={handleResetToCategories}
                           className="inline-flex items-center gap-1.5 text-xs font-bold text-[#14649B] hover:underline"
@@ -613,109 +589,12 @@ const subcategoriesList = useMemo(() => {
                           <ArrowLeft className="w-3.5 h-3.5" />
                           <span>Volver a {meta.shortTitle}</span>
                         </button>
-                      </div>
+                      )}
+                    </div>
 
                       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-3.5">
-                        {subcategoriesList.map((subName) => {
-                          const desc = SUBCATEGORY_DESCRIPTIONS[subName] || 'Consulta las gestiones específicas y requisitos correspondientes.';
-
-                          return (
-                            <Card
-                              key={subName}
-                              title={subName}
-                              description={desc}
-                              tone={cardTone}
-                              headingLevel="h3"
-                              onClick={() => updateSubcategory(subName)}
-                            />
-                          );
-                        })}
+                        {currentTramites.map(renderTramiteCard)}
                       </div>
-                    </div>
-                  ) : (
-                    <div>
-                      <div className="flex items-center justify-between mb-3 pb-2 border-b border-[#E2E8F0]">
-                        <h2 className="text-xs font-bold uppercase tracking-wider text-[#64748B]">
-                          Servicios y gestiones ({currentTramites.length})
-                        </h2>
-                        {subcategoriesList.length > 1 ? (
-                          <button
-                            onClick={handleResetToSubcategories}
-                            className="inline-flex items-center gap-1.5 text-xs font-bold text-[#14649B] hover:underline"
-                          >
-                            <ArrowLeft className="w-3.5 h-3.5" />
-                            <span>Volver a subtemas</span>
-                          </button>
-                        ) : (
-                          <button
-                            onClick={handleResetToCategories}
-                            className="inline-flex items-center gap-1.5 text-xs font-bold text-[#14649B] hover:underline"
-                          >
-                            <ArrowLeft className="w-3.5 h-3.5" />
-                            <span>Volver a {meta.shortTitle}</span>
-                          </button>
-                        )}
-                      </div>
-
-                      {(() => {
-                        const DASH = '—';
-                        const isDash = (v?: string) => !v || v === DASH || v === '-';
-                        const norm = (s?: string) => String(s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
-                        // Group by N4, but if a N4 group has >10 items and has N5 subgroups, group by N5
-                        const level4Groups = new Map<string, TramiteItem[]>();
-                        for (const t of currentTramites) {
-                          const g = isDash(t.nivel4) ? DASH : t.nivel4;
-                          if (!level4Groups.has(g)) level4Groups.set(g, []);
-                          level4Groups.get(g)!.push(t);
-                        }
-                        const sections: Array<{ key: string; title: string; items: TramiteItem[] }> = [];
-                        for (const [gkey, items] of level4Groups) {
-                          const n5Values = items
-                            .map((t) => (isDash(t.nivel5) ? '' : t.nivel5))
-                            .filter((v) => v && norm(v) !== norm(items.find((x) => !isDash(x.nivel5) && norm(x.nivel5) === norm(v))?.gestion || v));
-                          const meaningfulN5 = new Set(items.filter((t) => !isDash(t.nivel5) && norm(t.nivel5) !== norm(t.gestion || t.tramite || t.nombreActual)).map((t) => t.nivel5));
-                          if (items.length >= 11 && meaningfulN5.size > 1) {
-                            const subGroups = new Map<string, TramiteItem[]>();
-                            for (const t of items) {
-                              const useN5 = !isDash(t.nivel5) && norm(t.nivel5) !== norm(t.gestion || t.tramite || t.nombreActual);
-                              const sg = useN5 ? t.nivel5 : (gkey === DASH ? DASH : gkey);
-                              if (!subGroups.has(sg)) subGroups.set(sg, []);
-                              subGroups.get(sg)!.push(t);
-                            }
-                            for (const [sgkey, sitems] of subGroups) {
-                              sections.push({ key: `${gkey}::${sgkey}`, title: sgkey === DASH ? (gkey === DASH ? 'Otras gestiones' : gkey) : sgkey, items: sitems });
-                            }
-                          } else {
-                            sections.push({ key: gkey, title: gkey === DASH ? 'Otras gestiones' : gkey, items });
-                          }
-                        }
-                        sections.sort((a, b) => {
-                          const aIsDash = a.title === 'Otras gestiones';
-                          const bIsDash = b.title === 'Otras gestiones';
-                          if (aIsDash && !bIsDash) return 1;
-                          if (bIsDash && !aIsDash) return -1;
-                          return a.title.localeCompare(b.title);
-                        });
-                        return (
-                          <div className="space-y-6">
-                            {sections.map((sec) => (
-                              <section key={sec.key} aria-labelledby={`g-${sec.key}`}>
-                                {sections.length > 1 && (
-                                  <div className="flex items-center justify-between mb-3 pb-2 border-b border-[#E2E8F0]">
-                                    <h3 id={`g-${sec.key}`} className="text-xs font-bold uppercase tracking-wider text-[#64748B]">
-                                      {sec.title}
-                                    </h3>
-                                    <span className="text-xs text-slate-400">{sec.items.length}</span>
-                                  </div>
-                                )}
-                                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-3.5">
-                                  {sec.items.map(renderTramiteCard)}
-                                </div>
-                              </section>
-                            ))}
-                          </div>
-                        );
-                      })()}
                     </div>
                   )}
                 </div>

@@ -151,7 +151,8 @@
 /* ----------------------------------------------------------------------------
  * 5. CABECERA, TÍTULO, CHEVRON Y DESCRIPCIÓN
  * ---------------------------------------------------------------------------- */
-.sat-card-head {
+.sat-card-head,
+.sat-card-header {
   display: flex !important;
   align-items: flex-start !important;
   justify-content: space-between !important;

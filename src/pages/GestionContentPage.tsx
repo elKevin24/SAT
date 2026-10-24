@@ -4,7 +4,6 @@ import {
   Printer,
   Copy,
   Check,
-  ChevronRight,
   ArrowLeft,
   Info,
   Clock,
@@ -15,6 +14,7 @@ import {
   Building,
   HelpCircle
 } from 'lucide-react';
+import { Breadcrumbs } from '../components/ui/Breadcrumbs';
 import type { TramiteItem } from '../data/schema';
 import type { SegmentId } from '../components/UserSegmentCards';
 
@@ -81,68 +81,49 @@ export const GestionContentPage: React.FC<GestionContentPageProps> = ({
 
   const plataformaDestino = urlValido ? getPlataformaSugerida(tramite.url) : 'Agencia u Oficina Tributaria Presencial';
 
-  // Gestiones hermanas para la sección oficial "En esta sección"
-  const siblingTramites = React.useMemo(() => {
-    const currentSub = tramite.subcategoria && tramite.subcategoria !== '—' ? tramite.subcategoria : null;
-    const currentCat = tramite.categoria;
-
-    return allTramites.filter(t => {
-      if (t.id === tramite.id) return false;
-      if (currentSub) {
-        return t.subcategoria === currentSub || t.nivel3 === currentSub;
-      }
-      return t.categoria === currentCat || t.nivel2 === currentCat;
-    }).slice(0, 8);
-  }, [allTramites, tramite]);
-
   return (
     <div className="bg-white min-h-[80vh] py-6 sm:py-8">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
         
         {/* Barra superior de navegación y migas de pan */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-slate-200">
-          <nav aria-label="Migas de pan" className="flex items-center flex-wrap gap-1.5 text-xs text-slate-500">
-            <button
-              type="button"
-              onClick={onGoHome}
-              className="hover:text-sky-700 transition-colors font-medium"
-            >
-              Inicio
-            </button>
-            <ChevronRight className="w-3 h-3 text-slate-300 shrink-0" />
-            <button
-              type="button"
-              onClick={() => onSelectSegment?.(tramite.pillar as SegmentId)}
-              className="hover:text-sky-700 transition-colors font-medium"
-            >
-              {tramite.pillarName || 'Contribuyentes'}
-            </button>
-            {tramite.categoria && (
-              <>
-                <ChevronRight className="w-3 h-3 text-slate-300 shrink-0" />
-                <button
-                  type="button"
-                  onClick={onBackToCatalog}
-                  className="hover:text-sky-700 transition-colors font-medium"
-                >
-                  {tramite.categoria}
-                </button>
-              </>
-            )}
-            {tramite.subcategoria && tramite.subcategoria !== '—' && (
-              <>
-                <ChevronRight className="w-3 h-3 text-slate-300 shrink-0" />
-                <span className="text-slate-800 font-semibold truncate max-w-[200px]">
-                  {tramite.subcategoria}
-                </span>
-              </>
-            )}
-          </nav>
+          <Breadcrumbs
+            includeHome
+            onHomeClick={onGoHome}
+            items={[
+              {
+                label: tramite.pillarName || 'Contribuyentes',
+                onClick: () => onSelectSegment?.(tramite.pillar as SegmentId),
+              },
+              ...(tramite.categoria
+                ? [
+                    {
+                      label: tramite.categoria,
+                      onClick: onBackToCatalog,
+                    },
+                  ]
+                : []),
+              ...(tramite.subcategoria &&
+                  tramite.subcategoria !== '—' &&
+                  tramite.subcategoria.trim().toLowerCase() !== (tramite.categoria || '').trim().toLowerCase()
+                ? [
+                    {
+                      label: tramite.subcategoria,
+                      onClick: onBackToCatalog,
+                    },
+                  ]
+                : []),
+              {
+                label: tramite.gestion || tramite.tramite || 'Gestión Oficial',
+                isCurrent: true,
+              },
+            ]}
+          />
 
           <button
             type="button"
             onClick={onBackToCatalog}
-            className="inline-flex items-center gap-1.5 text-xs font-bold text-sky-700 hover:text-sky-900 transition-colors self-start sm:self-auto cursor-pointer"
+            className="inline-flex items-center gap-1.5 text-xs font-bold text-sky-700 hover:text-sky-900 transition-colors self-start sm:self-auto cursor-pointer shrink-0"
           >
             <ArrowLeft className="w-3.5 h-3.5" />
             <span>Volver al catálogo</span>
@@ -363,38 +344,8 @@ export const GestionContentPage: React.FC<GestionContentPageProps> = ({
             </section>
           </div>
 
-          {/* Columna Lateral (1 columna): "En esta sección" (Regla de contenido) + Canales */}
+          {/* Columna Lateral (1 columna): Canales de Asistencia */}
           <div className="space-y-6">
-            
-            {/* Bloque Oficial: En esta sección (Solo en páginas de contenido según Regla 2) */}
-            {siblingTramites.length > 0 && (
-              <div className="p-5 rounded-2xl border border-slate-200 bg-white space-y-3 shadow-2xs">
-                <div className="flex items-center gap-2 pb-2 border-b border-slate-100">
-                  <BookmarkCheck className="w-4 h-4 text-sky-700" />
-                  <h2 className="text-xs font-bold text-slate-800 uppercase tracking-wider">
-                    En esta sección: {tramite.subcategoria || tramite.categoria}
-                  </h2>
-                </div>
-                <ul className="divide-y divide-slate-100">
-                  {siblingTramites.map((sibling) => (
-                    <li key={sibling.id}>
-                      <button
-                        type="button"
-                        onClick={() => onSelectTramite(sibling)}
-                        className="w-full text-left py-2 px-1 text-xs text-slate-700 hover:text-sky-700 hover:bg-slate-50 rounded-md transition-colors flex items-center justify-between group cursor-pointer"
-                      >
-                        <span className="line-clamp-2 leading-snug group-hover:translate-x-0.5 transition-transform">
-                          {sibling.gestion || sibling.tramite}
-                        </span>
-                        <span className="text-slate-300 group-hover:text-sky-600 text-xs shrink-0 ml-1">
-                          →
-                        </span>
-                      </button>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
 
             {/* Canales de Asistencia */}
             <div className="p-5 rounded-2xl border border-slate-200 bg-slate-50/70 space-y-3">

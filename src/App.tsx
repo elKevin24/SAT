@@ -88,14 +88,29 @@ export default function App() {
           }
 
           const cat = params.get('categoria');
-          if (cat) {
-            setActiveCategory(resolveCategoria(TAXONOMY, resolvedSeg ?? 'contribuyentes', cat) ?? cat);
-          } else {
-            setActiveCategory('Todas las categorías');
-          }
+          const resolvedCat = cat
+            ? (resolveCategoria(TAXONOMY, resolvedSeg ?? 'contribuyentes', cat) ?? cat)
+            : 'Todas las categorías';
+          setActiveCategory(resolvedCat);
 
           const sub = params.get('subcategoria');
-          setActiveSubcategory(sub || null);
+          if (sub && resolvedCat !== 'Todas las categorías') {
+            const catNode = TAXONOMY.pillars[resolvedSeg ?? 'contribuyentes']?.find(
+              c => c.nombre.toLowerCase() === resolvedCat.toLowerCase() || c.id === cat
+            );
+            const foundSub = catNode?.subcategorias.find(
+              s => s.id === sub || s.nombre.toLowerCase() === sub.toLowerCase() || s.id.endsWith('/' + sub)
+            );
+            if (foundSub && foundSub.nombre.toLowerCase() !== resolvedCat.toLowerCase() && foundSub.nombre !== '—') {
+              setActiveSubcategory(foundSub.nombre);
+            } else if (!foundSub && !sub.includes('/') && sub.toLowerCase() !== resolvedCat.toLowerCase() && sub !== '—') {
+              setActiveSubcategory(sub);
+            } else {
+              setActiveSubcategory(null);
+            }
+          } else {
+            setActiveSubcategory(null);
+          }
 
           const etapa = params.get('etapa') as EtapaAtoId | null;
           if (etapa && ['empezar', 'operar', 'consultar', 'modificar_cerrar', 'normativa'].includes(etapa)) {
@@ -416,14 +431,26 @@ export default function App() {
               onSelectTramite={handleSelectTramite}
               onBackToCatalog={() => {
                 setCurrentView('catalog');
-                const params = new URLSearchParams();
                 const pillar = (selectedTramite.pillar as SegmentId) || 'contribuyentes';
                 const catName = selectedTramite.categoria || 'Todas las categorías';
+                const isRealSub = Boolean(
+                  selectedTramite.subcategoria &&
+                  selectedTramite.subcategoria !== '—' &&
+                  selectedTramite.subcategoria.trim().toLowerCase() !== catName.trim().toLowerCase() &&
+                  selectedTramite.nivel3 &&
+                  selectedTramite.nivel3 !== '—'
+                );
+
+                setActiveSegment(pillar);
+                setActiveCategory(catName);
+                setActiveSubcategory(isRealSub ? selectedTramite.subcategoria! : null);
+
+                const params = new URLSearchParams();
                 params.set('segmento', pillar);
                 const catId = categoriaId(pillar, catName);
                 params.set('categoria', catId);
-                if (selectedTramite.subcategoria && selectedTramite.subcategoria !== '—') {
-                  params.set('subcategoria', subcategoriaId(catId, selectedTramite.subcategoria));
+                if (isRealSub) {
+                  params.set('subcategoria', subcategoriaId(catId, selectedTramite.subcategoria!));
                 }
                 window.location.hash = '#/catalogo?' + params.toString();
                 window.scrollTo({ top: 0, behavior: 'smooth' });
