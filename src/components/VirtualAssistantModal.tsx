@@ -118,11 +118,11 @@ export const VirtualAssistantModal: React.FC = () => {
         className="fixed bottom-5 right-5 z-40 p-3.5 bg-sat-azul hover:bg-sat-azul-oscuro text-white rounded-full shadow-2xl hover:scale-105 active:scale-95 transition-all flex items-center gap-2 group border-2 border-white"
         aria-label="Abrir asistente virtual RITA"
       >
-        <div className="relative">
+        <div className="relative" aria-hidden="true">
           <Bot className="w-6 h-6" />
           <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-emerald-400 rounded-full border-2 border-white" />
         </div>
-        <span className="text-xs font-bold hidden sm:inline pr-1">Asistente SAT</span>
+        <span className="text-xs font-bold hidden sm:inline pr-1" aria-hidden="true">Asistente SAT</span>
       </button>
 
       {/* Modal / Ventana de Chat */}
