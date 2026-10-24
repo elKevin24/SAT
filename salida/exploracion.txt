@@ -1,0 +1,507 @@
+======================================================================
+EXPLORACIÓN COMPLETA: Catalogo_Contenidos_Unicos_Portal_SAT.xlsx
+======================================================================
+Archivo : C:\Users\busqu\Documents\GitHub\SAT\docs\fuentes-datos\02_archivos_producto_entregables\Catalogo_Contenidos_Unicos_Portal_SAT.xlsx
+Tamaño  : 238.0 KB
+
+Hojas disponibles (5):
+  • Resumen Ejecutivo
+  • Catálogo Único (683)
+  • Contenidos Transversales (17)
+  • Mapeo a Nodos (715)
+  • Familias Temáticas (10)
+
+[Saltando hoja 'Resumen Ejecutivo' — es portada/resumen narrativo]
+
+======================================================================
+HOJA: Catálogo Único (683)
+  Filas: 683  |  Columnas: 19
+======================================================================
+
+── COLUMNAS DISPONIBLES ─────────────────────────────────────────────
+#    Nombre                                             Dtype        Ejemplo (primer valor no nulo)
+──── ────────────────────────────────────────────────── ──────────── ───────────────────────────────────
+1    No.                                                int64        1
+2    Código Canónico Oficial (SAT-GES-####)             object       SAT-GES-0001
+3    ID Content Hub                                     object       cnt-SAT-GES-0001
+4    Nombre de la Gestión / Contenido (Lenguaje Claro)  object       Solicitar Número de Identificación Tributaria (NIT)
+5    Nombre Oficial Administrativo                      object       Solicitar Número de Identificación Tributaria (NIT)
+6    ¿Para qué sirve? (Descripción Operativa)           object       Cómo solicitar un Número de Identificación Tributaria (
+7    Etapa del Ciclo de Vida                            object       Empezar y registrarse
+8    Tipo de Interacción                                object       Guía Informativa / Texto
+9    Tipología de Contenido                             object       Guía de Requisitos y Pasos
+10   Plataforma / Sistema Técnico                       object       Portal Web SAT
+11   Canal de Atención                                  object       Presencial / Mixto
+12   Perfil Destinatario                                object       Personas Individuales (Nacionales y Extranjeros sin act
+13   Base Legal / Fundamento Jurídico                   object       Código Tributario, Decreto 6-91 (Arts. 112 y 120) y Acu
+14   ¿Es Transversal?                                   object       NO
+15   Total Audiencias / Nodos                           int64        1
+16   Segmentos Aplicables                               object       contribuyentes
+17   ¿Es Brecha Normativa?                              object       NO
+18   URL Portal SAT                                     object       https://portal.sat.gob.gt/portal/requisitos-de-personas
+19   Familia Temática                                   object       FAM-03 Registro Tributario Unificado (RTU) Digital
+
+── NULOS POR COLUMNA ────────────────────────────────────────────────
+Columna                                              Nulos        %
+────────────────────────────────────────────────── ─────── ────────
+No.                                                      0     0.0%
+Código Canónico Oficial (SAT-GES-####)                   0     0.0%
+ID Content Hub                                           0     0.0%
+Nombre de la Gestión / Contenido (Lenguaje Claro)        0     0.0%
+Nombre Oficial Administrativo                            0     0.0%
+¿Para qué sirve? (Descripción Operativa)                 0     0.0%
+Etapa del Ciclo de Vida                                  0     0.0%
+Tipo de Interacción                                      0     0.0%
+Tipología de Contenido                                   0     0.0%
+Plataforma / Sistema Técnico                             0     0.0%
+Canal de Atención                                        0     0.0%
+Perfil Destinatario                                     65     9.5%
+Base Legal / Fundamento Jurídico                         0     0.0%
+¿Es Transversal?                                         0     0.0%
+Total Audiencias / Nodos                                 0     0.0%
+Segmentos Aplicables                                     0     0.0%
+¿Es Brecha Normativa?                                    0     0.0%
+URL Portal SAT                                           0     0.0%
+Familia Temática                                         0     0.0%
+
+── COLUMNAS URL IDENTIFICADAS: ['URL Portal SAT']
+── COLUMNAS NOMBRE/TÍTULO:     ['Nombre de la Gestión / Contenido (Lenguaje Claro)', 'Nombre Oficial Administrativo', 'Tipología de Contenido']
+
+── DUPLICADOS EXACTOS DE URL ────────────────────────────────────────
+  Col 'URL Portal SAT': 683 no nulas | 215 filas con URL duplicada (31.5%)
+    [14x] https://portal.sat.gob.gt/portal/consultas-aduanas/
+    [14x] https://portal.sat.gob.gt/portal/requisitos-de-aduanas/
+    [9x] https://portal.sat.gob.gt/portal/biblioteca-en-linea-sat/legislacion-aduanera/
+    [9x] https://portal.sat.gob.gt/portal/procedimientos-aduanas/#1555105635499-a4507e58-10e9
+    [8x] https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/
+    [7x] https://portal.sat.gob.gt/portal/solvencia-fiscal/
+    [5x] https://portal.sat.gob.gt/portal/procedimientos-aduanas/
+    [5x] https://portal.sat.gob.gt/portal/declaracion-de-mercancias-duca/
+    [4x] https://portal.sat.gob.gt/portal/procedimientos-aduanas/#1571412473853-2ed0b43f-287f
+    [4x] https://portal.sat.gob.gt/portal/preguntas-frecuentes/temas-aduaneros/
+    [4x] https://farm3.sat.gob.gt/menu/login.jsf
+    [4x] https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1541621044169-4198d06d-6
+    [4x] https://portal.sat.gob.gt/portal/consulta-movimiento-convenio/
+    [4x] https://portal.sat.gob.gt/portal/efactura/
+    [4x] https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/recepcion-de-seguro-de-cauci
+
+── DUPLICADOS EXACTOS DE NOMBRE / TÍTULO ────────────────────────────
+  Col 'Nombre de la Gestión / Contenido (Lenguaje Claro)': 683 no nulas | 0 filas con nombre duplicado (0.0%)
+  Col 'Nombre Oficial Administrativo': 683 no nulas | 53 filas con nombre duplicado (7.8%)
+  Top 15:
+    [10x] Requisitos de persona/empresa
+    [8x] Requisitos Gestiones Vehículos para Propietarios: Requisitos de Vehiculos
+    [3x] Opinar sobre procedimientos de Asuntos Jurídicos
+    [3x] Requisitos para la Gestión de Devolución de Pagos Indebidos
+    [3x] Factura Electrónica en Línea (FEL)
+    [2x] Requisitos para la Actualización en el Registro Tributario Unificado (RTU)
+    [2x] Actualización de Datos
+    [2x] Leyes aduaneras
+    [2x] Tercera Persona Autorizada en el Registro Fiscal de Vehículos
+    [2x] Emisión Constancias de Exención del Impuesto al Valor Agregado (CIVA)
+    [2x] Historial del selectivo en aduanas
+    [2x] Declaración Anticipada
+    [2x] Consultar tablas de valores de vehículos
+    [2x] Unión Aduanera
+    [2x] Sistema de franquicias electrónicas
+  Col 'Tipología de Contenido': 683 no nulas | 683 filas con nombre duplicado (100.0%)
+  Top 15:
+    [254x] Guía de Requisitos y Pasos
+    [193x] Guía Informativa / Texto
+    [63x] Trámite Transaccional
+    [59x] Multimedia / Video e Infografía
+    [44x] Consulta Pública / Buscador
+    [23x] Trámite / Aplicativo en Línea
+    [21x] Trámite en Línea Interactivo
+    [17x] Normativa y Criterio Legal
+    [4x] Recurso / Software Descargable
+    [3x] Buscador / Base de Datos
+    [2x] Recurso / Formulario Descargable
+
+── URLs CON FORMATO ROTO ────────────────────────────────────────────
+  Col 'URL Portal SAT' (683 URLs no nulas):
+    Sin prefijo http(s) : 0
+    Con espacios intern.: 0
+    Con backslash       : 0
+    Valores vacíos/null : 0
+
+── MUESTRA: PRIMERAS 5 FILAS ────────────────────────────────────────
+   No. Código Canónico Oficial (SAT-GES-####)    ID Content Hub    Nombre de la Gestión / Contenido (Lenguaje Claro)                                               Nombre Oficial Administrativo                                                                                                                          ¿Para qué sirve? (Descripción Operativa)    Etapa del Ciclo de Vida            Tipo de Interacción       Tipología de Contenido Plataforma / Sistema Técnico   Canal de Atención                                                       Perfil Destinatario                                                        Base Legal / Fundamento Jurídico ¿Es Transversal?  Total Audiencias / Nodos Segmentos Aplicables ¿Es Brecha Normativa?                                                                                 URL Portal SAT                                                                                                                       Familia Temática
+0    1                           SAT-GES-0001  cnt-SAT-GES-0001  Solicitar Número de Identificación Tributaria (NIT)                         Solicitar Número de Identificación Tributaria (NIT)           Cómo solicitar un Número de Identificación Tributaria (NIT), actualizar sus datos, consultar su NIT y qué hacer si ha sido utilizado de forma indebida.      Empezar y registrarse       Guía Informativa / Texto   Guía de Requisitos y Pasos               Portal Web SAT  Presencial / Mixto  Personas Individuales (Nacionales y Extranjeros sin actividad económica)  Código Tributario, Decreto 6-91 (Arts. 112 y 120) y Acuerdo de Directorio SAT 08-2020.               NO                         1       contribuyentes                    NO  https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1615485066841-639e67c5-51e3                                                                                     FAM-03 Registro Tributario Unificado (RTU) Digital
+1    2                           SAT-GES-0002  cnt-SAT-GES-0002       Actualización de Datos y Transición de Régimen  Requisitos para la Actualización en el Registro Tributario Unificado (RTU)  Actualiza tus datos personales en el Registro Tributario Unificado (RTU) o solicita el paso formal al régimen con negocio cuando inicies actividades económicas.    Modificaciones y cierre       Guía Informativa / Texto   Guía de Requisitos y Pasos               Portal Web SAT  Presencial / Mixto                         Personas que inician relación laboral o comercial  Código Tributario, Decreto 6-91 (Arts. 112 y 120) y Acuerdo de Directorio SAT 08-2020.               NO                         1       contribuyentes                    NO  https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1541621044169-4198d06d-693f                                                                                     FAM-03 Registro Tributario Unificado (RTU) Digital
+2    3                           SAT-GES-0003  cnt-SAT-GES-0003            Solicitud y Activación de Agencia Virtual                                                             Agencia Virtual                           Acceso a la plataforma web de la SAT para consultar datos personales y descargar tu constancia del Registro Tributario Unificado (RTU).  Operación y declaraciones  Trámite / Aplicativo en Línea        Trámite Transaccional          Agencia Virtual SAT        100% Digital                                              Usuarios registrados con NIT  Código Tributario, Decreto 6-91 (Arts. 112 y 120) y Acuerdo de Directorio SAT 08-2020.               NO                         1       contribuyentes                    NO                                                        https://farm3.sat.gob.gt/menu/login.jsf  FAM-03 Registro Tributario Unificado (RTU) Digital; FAM-05 Solvencias y Convenios de Pago; FAM-09 Agencia Virtual y Servicios Remotos
+3    4                           SAT-GES-0004  cnt-SAT-GES-0004     Consulta de Estado de Gestión de Agencia Virtual                                        Estado de Gestión de Agencia Virtual                                          Herramienta de seguimiento en línea para verificar el estado de aprobación de tu usuario o solicitud en Agencia Virtual.   Consultas y herramientas      Consulta en Base de Datos  Consulta Pública / Buscador               Portal Web SAT  Presencial / Mixto                                           Solicitantes de Agencia Virtual  Código Tributario, Decreto 6-91 (Arts. 112 y 120) y Acuerdo de Directorio SAT 08-2020.               NO                         1       contribuyentes                    NO                        https://portal.sat.gob.gt/portal/consulta-de-gestion-del-contribuyente/  FAM-03 Registro Tributario Unificado (RTU) Digital; FAM-05 Solvencias y Convenios de Pago; FAM-09 Agencia Virtual y Servicios Remotos
+4    5                           SAT-GES-0005  cnt-SAT-GES-0005     Solicitud y Emisión de Solvencia Fiscal en Línea                                                   Solvencia Fiscal en Línea              Consulta, pago y descarga del certificado electrónico que acredita la ausencia de adeudos tributarios ante la SAT para fines laborales o personales.   Consultas y herramientas  Trámite / Aplicativo en Línea        Trámite Transaccional               Portal Web SAT  Presencial / Mixto                                                     Personas Individuales  Código Tributario, Decreto 6-91 (Arts. 112 y 120) y Acuerdo de Directorio SAT 08-2020.               NO                         1       contribuyentes                    NO                                             https://portal.sat.gob.gt/portal/solvencia-fiscal/                                              FAM-03 Registro Tributario Unificado (RTU) Digital; FAM-05 Solvencias y Convenios de Pago
+
+======================================================================
+HOJA: Contenidos Transversales (17)
+  Filas: 17  |  Columnas: 8
+======================================================================
+
+── COLUMNAS DISPONIBLES ─────────────────────────────────────────────
+#    Nombre                                             Dtype        Ejemplo (primer valor no nulo)
+──── ────────────────────────────────────────────────── ──────────── ───────────────────────────────────
+1    No.                                                int64        1
+2    Código Oficial                                     object       SAT-GES-0024
+3    Nombre del Contenido Canónico                      object       Curso: Régimen Electrónico de Pequeño Contribuyente
+4    Apariciones                                        int64        2
+5    Segmentos que lo Comparten                         object       contribuyentes
+6    Ubicaciones / Nodos en el Árbol de Navegación      object       •  >  > 
+•  >  > 
+7    ¿Para qué sirve?                                   object       Capacitación virtual de la SAT sobre Régimen Electrónic
+8    URL Portal SAT                                     object       https://sites.google.com/capacitacionessat.page/cultura
+
+── NULOS POR COLUMNA ────────────────────────────────────────────────
+Columna                                              Nulos        %
+────────────────────────────────────────────────── ─────── ────────
+No.                                                      0     0.0%
+Código Oficial                                           0     0.0%
+Nombre del Contenido Canónico                            0     0.0%
+Apariciones                                              0     0.0%
+Segmentos que lo Comparten                               0     0.0%
+Ubicaciones / Nodos en el Árbol de Navegación            0     0.0%
+¿Para qué sirve?                                         0     0.0%
+URL Portal SAT                                           0     0.0%
+
+── COLUMNAS URL IDENTIFICADAS: ['URL Portal SAT']
+── COLUMNAS NOMBRE/TÍTULO:     ['Nombre del Contenido Canónico']
+
+── DUPLICADOS EXACTOS DE URL ────────────────────────────────────────
+  Col 'URL Portal SAT': 17 no nulas | 0 filas con URL duplicada (0.0%)
+
+── DUPLICADOS EXACTOS DE NOMBRE / TÍTULO ────────────────────────────
+  Col 'Nombre del Contenido Canónico': 17 no nulas | 0 filas con nombre duplicado (0.0%)
+
+── URLs CON FORMATO ROTO ────────────────────────────────────────────
+  Col 'URL Portal SAT' (17 URLs no nulas):
+    Sin prefijo http(s) : 0
+    Con espacios intern.: 0
+    Con backslash       : 0
+    Valores vacíos/null : 0
+
+── MUESTRA: PRIMERAS 5 FILAS ────────────────────────────────────────
+   No. Código Oficial                                        Nombre del Contenido Canónico  Apariciones         Segmentos que lo Comparten Ubicaciones / Nodos en el Árbol de Navegación                                                                                                                      ¿Para qué sirve?                                                                                                                                                                       URL Portal SAT
+0    1   SAT-GES-0024                  Curso: Régimen Electrónico de Pequeño Contribuyente            2                     contribuyentes                            •  >  > \n•  >  >                                                     Capacitación virtual de la SAT sobre Régimen Electrónico de Pequeño Contribuyente.  https://sites.google.com/capacitacionessat.page/cultura-tributariad/cursos-virtuales-sat/impuesto-al-valor-agregado-iva/r%C3%A9gimen-electr%C3%B3nico-de-peque%C3%B1o-contribuyente
+1    2   SAT-GES-0092                                             Presentaciones virtuales            2                     contribuyentes                            •  >  > \n•  >  >                     Descargar diapositivas y presentaciones oficiales utilizadas en las jornadas de capacitación tributaria de la SAT.                                                                                                                                 https://portal.sat.gob.gt/portal/referencia-virtual/
+2    3   SAT-GES-0159                                 Curso: rentas y ganancias de capital            2                     contribuyentes                            •  >  > \n•  >  >                                                                    Capacitación virtual de la SAT sobre rentas y ganancias de capital.              https://sites.google.com/capacitacionessat.page/cultura-tributariad/cursos-virtuales-sat/impuesto-sobre-la-renta/rentas-de-capital-ganancias-y-p%C3%A9rdidas-de-capital
+3    4   SAT-GES-0230           Devolución del impuesto de herencias, legados y donaciones            2                     contribuyentes                            •  >  > \n•  >  >                        Tramitar la restitución de pagos indebidos practicados sobre el Impuesto sobre Herencias, Legados y Donaciones.                                                                https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/devoulucion-impuesto-de-herencias-legados-y-donaciones/
+4    5   SAT-GES-0340  Servicio en línea para consultar listado de contribuyentes morosos.            2  comercio_exterior, contribuyentes                            •  >  > \n•  >  >   Consultar el listado oficial de contribuyentes en situación de morosidad tributaria publicado en cumplimiento del Código Tributario.                                                                                                                  https://portal.sat.gob.gt/portal/listado-de-contribuyentes-morosos/
+
+======================================================================
+HOJA: Mapeo a Nodos (715)
+  Filas: 715  |  Columnas: 12
+======================================================================
+
+── COLUMNAS DISPONIBLES ─────────────────────────────────────────────
+#    Nombre                                             Dtype        Ejemplo (primer valor no nulo)
+──── ────────────────────────────────────────────────── ──────────── ───────────────────────────────────
+1    No.                                                int64        1
+2    Código Oficial (SAT-GES-####)                      object       SAT-GES-0001
+3    ID Nodo de Navegación                              object       SAT-GES-0001
+4    Nombre de la Gestión / Contenido                   object       Solicitar Número de Identificación Tributaria (NIT)
+5    Segmento (Nivel 1)                                 float64      — (todo nulo)
+6    Categoría (Nivel 2)                                float64      — (todo nulo)
+7    Subcategoría (Nivel 3)                             float64      — (todo nulo)
+8    Tema / Subárea (Nivel 4)                           object       —
+9    Ruta de Navegación (Miga de Pan)                   float64      — (todo nulo)
+10   Etapa del Ciclo de Vida                            object       Empezar y registrarse
+11   Tipo de Interacción                                object       Guía Informativa / Texto
+12   URL Portal SAT                                     object       https://portal.sat.gob.gt/portal/requisitos-de-personas
+
+── NULOS POR COLUMNA ────────────────────────────────────────────────
+Columna                                              Nulos        %
+────────────────────────────────────────────────── ─────── ────────
+No.                                                      0     0.0%
+Código Oficial (SAT-GES-####)                            0     0.0%
+ID Nodo de Navegación                                    0     0.0%
+Nombre de la Gestión / Contenido                         0     0.0%
+Segmento (Nivel 1)                                     715   100.0% ◄ ALTA
+Categoría (Nivel 2)                                    715   100.0% ◄ ALTA
+Subcategoría (Nivel 3)                                 715   100.0% ◄ ALTA
+Tema / Subárea (Nivel 4)                                 0     0.0%
+Ruta de Navegación (Miga de Pan)                       715   100.0% ◄ ALTA
+Etapa del Ciclo de Vida                                  0     0.0%
+Tipo de Interacción                                      0     0.0%
+URL Portal SAT                                           0     0.0%
+
+── COLUMNAS URL IDENTIFICADAS: ['URL Portal SAT']
+── COLUMNAS NOMBRE/TÍTULO:     ['Nombre de la Gestión / Contenido']
+
+── DUPLICADOS EXACTOS DE URL ────────────────────────────────────────
+  Col 'URL Portal SAT': 715 no nulas | 256 filas con URL duplicada (35.8%)
+    [15x] https://portal.sat.gob.gt/portal/consultas-aduanas/
+    [14x] https://portal.sat.gob.gt/portal/requisitos-de-aduanas/
+    [11x] https://portal.sat.gob.gt/portal/procedimientos-aduanas/#1555105635499-a4507e58-10e9
+    [9x] https://portal.sat.gob.gt/portal/biblioteca-en-linea-sat/legislacion-aduanera/
+    [8x] https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/
+    [8x] https://portal.sat.gob.gt/portal/solvencia-fiscal/
+    [7x] https://portal.sat.gob.gt/portal/preguntas-frecuentes/temas-aduaneros/
+    [7x] https://portal.sat.gob.gt/portal/procedimientos-aduanas/#1571412473853-2ed0b43f-287f
+    [5x] https://portal.sat.gob.gt/portal/programa-miad/
+    [5x] https://portal.sat.gob.gt/portal/declaracion-de-mercancias-duca/
+    [5x] https://portal.sat.gob.gt/portal/procedimientos-aduanas/
+    [5x] https://portal.sat.gob.gt/portal/requisitos-de-aduanas/#1542142398181-8db4844a-6760
+    [5x] https://portal.sat.gob.gt/portal/#capacitacion
+    [5x] https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/recepcion-de-seguro-de-cauci
+    [5x] https://portal.sat.gob.gt/portal/procedimientos-aduanas/#1570112033454-be3581a4-383a
+
+── DUPLICADOS EXACTOS DE NOMBRE / TÍTULO ────────────────────────────
+  Col 'Nombre de la Gestión / Contenido': 715 no nulas | 49 filas con nombre duplicado (6.9%)
+  Top 15:
+    [5x] Procedimientos administrativos de aduanas (Sanciones y recursos)
+    [5x] Requisitos para consulta de expedientes de gestión aduanera
+    [4x] Preguntas frecuentes sobre temas aduaneros
+    [4x] Procedimientos, instructivos y guías para gestiones aduaneras
+    [3x] Programa de modernización integral aduanera (MIAD)
+    [3x] Auxiliares de la función pública aduanera (Carné, componente ActiveX PKI/DUA)
+    [3x] Requisitos para la renovación de operación de auxiliares de la función pública
+    [3x] Declaración de mercancías (DUCA y Aduana sin papeles)
+    [3x] Capacitaciones para auxiliares de la función pública
+    [2x] Curso: Régimen Electrónico de Pequeño Contribuyente
+    [2x] Curso: rentas y ganancias de capital
+    [2x] Devolución del impuesto de herencias, legados y donaciones
+    [2x] Servicio en línea para consultar listado de contribuyentes morosos.
+    [2x] Presentaciones virtuales
+    [2x] Solvencia fiscal (Requisito para renovación como auxiliar aduanero AFPA)
+
+── URLs CON FORMATO ROTO ────────────────────────────────────────────
+  Col 'URL Portal SAT' (715 URLs no nulas):
+    Sin prefijo http(s) : 0
+    Con espacios intern.: 0
+    Con backslash       : 0
+    Valores vacíos/null : 0
+
+── MUESTRA: PRIMERAS 5 FILAS ────────────────────────────────────────
+   No. Código Oficial (SAT-GES-####) ID Nodo de Navegación                     Nombre de la Gestión / Contenido  Segmento (Nivel 1)  Categoría (Nivel 2)  Subcategoría (Nivel 3) Tema / Subárea (Nivel 4)  Ruta de Navegación (Miga de Pan)    Etapa del Ciclo de Vida            Tipo de Interacción                                                                                 URL Portal SAT
+0    1                  SAT-GES-0001          SAT-GES-0001  Solicitar Número de Identificación Tributaria (NIT)                 NaN                  NaN                     NaN                        —                               NaN      Empezar y registrarse       Guía Informativa / Texto  https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1615485066841-639e67c5-51e3
+1    2                  SAT-GES-0002          SAT-GES-0002       Actualización de Datos y Transición de Régimen                 NaN                  NaN                     NaN                        —                               NaN    Modificaciones y cierre       Guía Informativa / Texto  https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1541621044169-4198d06d-693f
+2    3                  SAT-GES-0003          SAT-GES-0003            Solicitud y Activación de Agencia Virtual                 NaN                  NaN                     NaN                        —                               NaN  Operación y declaraciones  Trámite / Aplicativo en Línea                                                        https://farm3.sat.gob.gt/menu/login.jsf
+3    4                  SAT-GES-0004          SAT-GES-0004     Consulta de Estado de Gestión de Agencia Virtual                 NaN                  NaN                     NaN                        —                               NaN   Consultas y herramientas      Consulta en Base de Datos                        https://portal.sat.gob.gt/portal/consulta-de-gestion-del-contribuyente/
+4    5                  SAT-GES-0005          SAT-GES-0005     Solicitud y Emisión de Solvencia Fiscal en Línea                 NaN                  NaN                     NaN                        —                               NaN   Consultas y herramientas  Trámite / Aplicativo en Línea                                             https://portal.sat.gob.gt/portal/solvencia-fiscal/
+
+======================================================================
+HOJA: Familias Temáticas (10)
+  Filas: 10  |  Columnas: 7
+======================================================================
+
+── COLUMNAS DISPONIBLES ─────────────────────────────────────────────
+#    Nombre                                             Dtype        Ejemplo (primer valor no nulo)
+──── ────────────────────────────────────────────────── ──────────── ───────────────────────────────────
+1    No.                                                int64        1
+2    Código Canónico Oficial                            object       FAM-01
+3    Identificador Técnico (Slug)                       object       fel
+4    Nombre Oficial de la Familia Temática              object       Factura Electrónica en Línea (FEL)
+5    Descripción del Ecosistema de Servicios            object       Ecosistema integral de emisión, certificación, anulació
+6    Total Gestiones Canónicas Únicas                   float64      — (todo nulo)
+7    % del Catálogo                                     float64      — (todo nulo)
+
+── NULOS POR COLUMNA ────────────────────────────────────────────────
+Columna                                              Nulos        %
+────────────────────────────────────────────────── ─────── ────────
+No.                                                      0     0.0%
+Código Canónico Oficial                                  0     0.0%
+Identificador Técnico (Slug)                             0     0.0%
+Nombre Oficial de la Familia Temática                    0     0.0%
+Descripción del Ecosistema de Servicios                  0     0.0%
+Total Gestiones Canónicas Únicas                        10   100.0% ◄ ALTA
+% del Catálogo                                          10   100.0% ◄ ALTA
+
+── COLUMNAS URL IDENTIFICADAS: — ninguna
+── COLUMNAS NOMBRE/TÍTULO:     ['Nombre Oficial de la Familia Temática', 'Total Gestiones Canónicas Únicas']
+
+── DUPLICADOS EXACTOS DE URL ────────────────────────────────────────
+  — Sin columnas URL.
+
+── DUPLICADOS EXACTOS DE NOMBRE / TÍTULO ────────────────────────────
+  Col 'Nombre Oficial de la Familia Temática': 10 no nulas | 0 filas con nombre duplicado (0.0%)
+  Col 'Total Gestiones Canónicas Únicas': 0 no nulas | 0 filas con nombre duplicado (0.0%)
+
+── URLs CON FORMATO ROTO ────────────────────────────────────────────
+  — Sin columnas URL.
+
+── MUESTRA: PRIMERAS 5 FILAS ────────────────────────────────────────
+   No. Código Canónico Oficial Identificador Técnico (Slug)        Nombre Oficial de la Familia Temática                                                                           Descripción del Ecosistema de Servicios  Total Gestiones Canónicas Únicas  % del Catálogo
+0    1                  FAM-01                          fel           Factura Electrónica en Línea (FEL)       Ecosistema integral de emisión, certificación, anulación y consulta de documentos tributarios electrónicos.                               NaN             NaN
+1    2                  FAM-02                    vehiculos           Registro Fiscal de Vehículos (RFV)  Traspasos electrónicos, primeras placas, reposición de distintivos y pago del impuesto sobre circulación (ISCV).                               NaN             NaN
+2    3                  FAM-03                  rtu-digital  Registro Tributario Unificado (RTU) Digital        Inscripción de primer NIT, actualización periódica de datos y ratificación domiciliaria de contribuyentes.                               NaN             NaN
+3    4                  FAM-04                        ducas              Declaraciones Aduaneras (DUCAs)              Transmisión, despacho y liquidación electrónica de declaraciones aduaneras (DUCA-F, DUCA-D, DUCA-T).                               NaN             NaN
+4    5                  FAM-05             solvencia-fiscal               Solvencias y Convenios de Pago            Acreditación de solvencia fiscal en línea, constancias de no deuda y convenios de facilidades de pago.                               NaN             NaN
+
+======================================================================
+ANÁLISIS CRUZADO: Catálogo Único (683) vs Mapeo a Nodos (715)
+======================================================================
+
+  Códigos únicos en Catálogo Único  : 683
+  Códigos únicos en Mapeo a Nodos   : 683
+  Códigos en Catálogo pero NO en Mapeo: 0
+  Códigos en Mapeo pero NO en Catálogo: 0
+
+── DISTRIBUCIÓN: Etapa del Ciclo de Vida (Catálogo Único) ─────────────
+  Operación y declaraciones            252  (36.9%)
+  Modificaciones y cierre              130  (19.0%)
+  Normativa y asistencia               118  (17.3%)
+  Consultas y herramientas             110  (16.1%)
+  Empezar y registrarse                 73  (10.7%)
+
+── DISTRIBUCIÓN: Tipo de Interacción (Catálogo Único) ──────────────────
+  Guía Informativa / Texto                  474  (69.4%)
+  Trámite / Aplicativo en Línea             129  (18.9%)
+  Consulta en Base de Datos                  30  (4.4%)
+  Consulta a Base de Datos                   23  (3.4%)
+  Buscador / Consulta en Línea               16  (2.3%)
+  Descarga / Software                         9  (1.3%)
+  Descarga de Documento / Software            1  (0.1%)
+  Formulario / Documento Descargable          1  (0.1%)
+
+── DISTRIBUCIÓN: Familia Temática (Catálogo Único) ─────────────────────
+  FAM-03 Registro Tributario Unificado (RTU) Digital  107  (15.7%)
+  Normativa y Gestiones Generales                      91  (13.3%)
+  FAM-02 Registro Fiscal de Vehículos (RFV)            86  (12.6%)
+  FAM-03 Registro Tributario Unificado (RTU) Digital; FAM-09 Agencia Virtual y Servicios Remotos   74  (10.8%)
+  FAM-04 Declaraciones Aduaneras (DUCAs)               70  (10.2%)
+  FAM-04 Declaraciones Aduaneras (DUCAs); FAM-08 Auxiliares de la Función Pública Aduanera (AFPA)   50  (7.3%)
+  FAM-01 Factura Electrónica en Línea (FEL)            25  (3.7%)
+  FAM-04 Declaraciones Aduaneras (DUCAs); FAM-07 Zonas de Desarrollo Económico Especial Público (ZDEEP)   19  (2.8%)
+  FAM-05 Solvencias y Convenios de Pago                17  (2.5%)
+  FAM-02 Registro Fiscal de Vehículos (RFV); FAM-03 Registro Tributario Unificado (RTU) Digital   16  (2.3%)
+  FAM-03 Registro Tributario Unificado (RTU) Digital; FAM-04 Declaraciones Aduaneras (DUCAs)   12  (1.8%)
+  FAM-01 Factura Electrónica en Línea (FEL); FAM-03 Registro Tributario Unificado (RTU) Digital   11  (1.6%)
+  FAM-04 Declaraciones Aduaneras (DUCAs); FAM-10 Franquicias y Exenciones Tributarias   10  (1.5%)
+  FAM-03 Registro Tributario Unificado (RTU) Digital; FAM-04 Declaraciones Aduaneras (DUCAs); FAM-08 Auxiliares de la Función Pública Aduanera (AFPA)    8  (1.2%)
+  FAM-01 Factura Electrónica en Línea (FEL); FAM-03 Registro Tributario Unificado (RTU) Digital; FAM-09 Agencia Virtual y Servicios Remotos    6  (0.9%)
+  FAM-03 Registro Tributario Unificado (RTU) Digital; FAM-05 Solvencias y Convenios de Pago    6  (0.9%)
+  FAM-06 Regímenes Especiales y Maquilas (Dto. 29-89)    6  (0.9%)
+  FAM-02 Registro Fiscal de Vehículos (RFV); FAM-05 Solvencias y Convenios de Pago    5  (0.7%)
+  FAM-03 Registro Tributario Unificado (RTU) Digital; FAM-10 Franquicias y Exenciones Tributarias    4  (0.6%)
+  FAM-08 Auxiliares de la Función Pública Aduanera (AFPA)    4  (0.6%)
+  FAM-03 Registro Tributario Unificado (RTU) Digital; FAM-04 Declaraciones Aduaneras (DUCAs); FAM-10 Franquicias y Exenciones Tributarias    4  (0.6%)
+  FAM-04 Declaraciones Aduaneras (DUCAs); FAM-05 Solvencias y Convenios de Pago; FAM-07 Zonas de Desarrollo Económico Especial Público (ZDEEP)    4  (0.6%)
+  FAM-02 Registro Fiscal de Vehículos (RFV); FAM-03 Registro Tributario Unificado (RTU) Digital; FAM-09 Agencia Virtual y Servicios Remotos    4  (0.6%)
+  FAM-04 Declaraciones Aduaneras (DUCAs); FAM-05 Solvencias y Convenios de Pago; FAM-08 Auxiliares de la Función Pública Aduanera (AFPA)    3  (0.4%)
+  FAM-02 Registro Fiscal de Vehículos (RFV); FAM-04 Declaraciones Aduaneras (DUCAs); FAM-08 Auxiliares de la Función Pública Aduanera (AFPA)    3  (0.4%)
+  FAM-02 Registro Fiscal de Vehículos (RFV); FAM-05 Solvencias y Convenios de Pago; FAM-10 Franquicias y Exenciones Tributarias    3  (0.4%)
+  FAM-03 Registro Tributario Unificado (RTU) Digital; FAM-04 Declaraciones Aduaneras (DUCAs); FAM-09 Agencia Virtual y Servicios Remotos    3  (0.4%)
+  FAM-10 Franquicias y Exenciones Tributarias           3  (0.4%)
+  FAM-04 Declaraciones Aduaneras (DUCAs); FAM-06 Regímenes Especiales y Maquilas (Dto. 29-89)    3  (0.4%)
+  FAM-03 Registro Tributario Unificado (RTU) Digital; FAM-05 Solvencias y Convenios de Pago; FAM-09 Agencia Virtual y Servicios Remotos    2  (0.3%)
+  FAM-03 Registro Tributario Unificado (RTU) Digital; FAM-09 Agencia Virtual y Servicios Remotos; FAM-10 Franquicias y Exenciones Tributarias    2  (0.3%)
+  FAM-02 Registro Fiscal de Vehículos (RFV); FAM-10 Franquicias y Exenciones Tributarias    2  (0.3%)
+  FAM-03 Registro Tributario Unificado (RTU) Digital; FAM-08 Auxiliares de la Función Pública Aduanera (AFPA)    2  (0.3%)
+  FAM-04 Declaraciones Aduaneras (DUCAs); FAM-05 Solvencias y Convenios de Pago; FAM-10 Franquicias y Exenciones Tributarias    2  (0.3%)
+  FAM-04 Declaraciones Aduaneras (DUCAs); FAM-08 Auxiliares de la Función Pública Aduanera (AFPA); FAM-10 Franquicias y Exenciones Tributarias    2  (0.3%)
+  FAM-03 Registro Tributario Unificado (RTU) Digital; FAM-04 Declaraciones Aduaneras (DUCAs); FAM-06 Regímenes Especiales y Maquilas (Dto. 29-89)    2  (0.3%)
+  FAM-01 Factura Electrónica en Línea (FEL); FAM-04 Declaraciones Aduaneras (DUCAs)    2  (0.3%)
+  FAM-01 Factura Electrónica en Línea (FEL); FAM-10 Franquicias y Exenciones Tributarias    1  (0.1%)
+  FAM-01 Factura Electrónica en Línea (FEL); FAM-02 Registro Fiscal de Vehículos (RFV)    1  (0.1%)
+  FAM-02 Registro Fiscal de Vehículos (RFV); FAM-04 Declaraciones Aduaneras (DUCAs); FAM-10 Franquicias y Exenciones Tributarias    1  (0.1%)
+  FAM-01 Factura Electrónica en Línea (FEL); FAM-03 Registro Tributario Unificado (RTU) Digital; FAM-04 Declaraciones Aduaneras (DUCAs)    1  (0.1%)
+  FAM-01 Factura Electrónica en Línea (FEL); FAM-04 Declaraciones Aduaneras (DUCAs); FAM-07 Zonas de Desarrollo Económico Especial Público (ZDEEP)    1  (0.1%)
+  FAM-02 Registro Fiscal de Vehículos (RFV); FAM-04 Declaraciones Aduaneras (DUCAs); FAM-06 Regímenes Especiales y Maquilas (Dto. 29-89)    1  (0.1%)
+  FAM-05 Solvencias y Convenios de Pago; FAM-08 Auxiliares de la Función Pública Aduanera (AFPA)    1  (0.1%)
+  FAM-04 Declaraciones Aduaneras (DUCAs); FAM-06 Regímenes Especiales y Maquilas (Dto. 29-89); FAM-08 Auxiliares de la Función Pública Aduanera (AFPA); FAM-10 Franquicias y Exenciones Tributarias    1  (0.1%)
+  FAM-02 Registro Fiscal de Vehículos (RFV); FAM-04 Declaraciones Aduaneras (DUCAs); FAM-05 Solvencias y Convenios de Pago    1  (0.1%)
+  FAM-01 Factura Electrónica en Línea (FEL); FAM-03 Registro Tributario Unificado (RTU) Digital; FAM-09 Agencia Virtual y Servicios Remotos; FAM-10 Franquicias y Exenciones Tributarias    1  (0.1%)
+
+── DISTRIBUCIÓN: Perfil Destinatario (Catálogo Único) ──────────────────
+  Varias categorías de contribuyentes                 186  (27.2%)
+  Personas y empresas con régimen general              67  (9.8%)
+  nan                                                  65  (9.5%)
+  Importadores                                         54  (7.9%)
+  Normativa y Aranceles                                38  (5.6%)
+  Entidades del Estado                                 26  (3.8%)
+  Personas y empresas del régimen de pequeño contribuyente   21  (3.1%)
+  Exportadores                                         20  (2.9%)
+  Decreto                                              20  (2.9%)
+  Constitucionales                                     19  (2.8%)
+  Abogados y Notarios                                  19  (2.8%)
+  No Lucrativos                                        14  (2.0%)
+  Personas y empresas con calidad de contribuyente especial   14  (2.0%)
+  Peritos Contadores                                   11  (1.6%)
+  Servicios Profesionales                              10  (1.5%)
+  NIT sin Obligaciones, Pequeños Contribuyentes, Contribuyente General, Contribuyentes Especiales    9  (1.3%)
+  Gestores Tributarios                                  8  (1.2%)
+  Pequeños Contribuyentes, Contribuyente General, Contribuyentes Especiales    8  (1.2%)
+  Pequeños Contribuyentes, Contribuyente General        6  (0.9%)
+  Transportistas                                        6  (0.9%)
+  Municipalidades                                       5  (0.7%)
+  Auditores                                             4  (0.6%)
+  Pequeños Contribuyentes, Contribuyentes Especiales    3  (0.4%)
+  NIT sin Obligaciones, Pequeños Contribuyentes, Contribuyente General    3  (0.4%)
+  NIT sin Obligaciones                                  2  (0.3%)
+  Transportistas Terrestres Internacionales             2  (0.3%)
+  ZOLIC                                                 2  (0.3%)
+  Contribuyente General, Contribuyentes Especiales      2  (0.3%)
+  Usuarios registrados con NIT                          1  (0.1%)
+  Personas Individuales (Nacionales y Extranjeros sin actividad económica)    1  (0.1%)
+  Personas que inician relación laboral o comercial     1  (0.1%)
+  Personas individuales sin actividad económica         1  (0.1%)
+  NIT sin Obligaciones, Pequeños Contribuyentes, Contribuyentes Especiales    1  (0.1%)
+  NIT sin Obligaciones, Pequeños Contribuyentes         1  (0.1%)
+  Solicitantes de Agencia Virtual                       1  (0.1%)
+  Agentes Aduaneros, Apoderados y Asistentes            1  (0.1%)
+  Agentes Aduaneros, Transportistas, Depositarios y Courier    1  (0.1%)
+  Aspirantes a Agentes Aduaneros, Transportistas y Depositarios    1  (0.1%)
+  Importadores, Exportadores, AFPA y Agentes Aduaneros    1  (0.1%)
+  Operadores de Comercio Exterior y Ciudadanía          1  (0.1%)
+  OEA                                                   1  (0.1%)
+  Pequeños Contribuyentes                               1  (0.1%)
+  NIT sin Obligaciones, Contribuyente General           1  (0.1%)
+  Empleados en relación de dependencia                  1  (0.1%)
+  Personas Individuales                                 1  (0.1%)
+  Casos especiales (menores o extranjeros)              1  (0.1%)
+  Agentes Aduaneros y Apoderados Especiales             1  (0.1%)
+  Agentes de Aduana, Importadores y Exportadores        1  (0.1%)
+  Depositarios Aduaneros y Almacenes Fiscales           1  (0.1%)
+  Agentes, Transportistas y Operadores de Recinto       1  (0.1%)
+  Agentes Aduaneros, Apoderados y Operadores            1  (0.1%)
+  Empresas de Transporte Terrestre Internacional        1  (0.1%)
+  Transportistas, Pilotos y Agentes de Aduana           1  (0.1%)
+  Auxiliares de la Función Pública y Abogados           1  (0.1%)
+  Transportistas, Pilotos y Agentes Portuarios          1  (0.1%)
+  Transportistas, Agentes de Aduana y Gestores          1  (0.1%)
+  Transportistas Terrestres, Navieros y Agentes de Carga    1  (0.1%)
+  Empresas de Entrega Rápida o Courier                  1  (0.1%)
+  Empresas Courier, Diplomáticos y Beneficiarios de Exención    1  (0.1%)
+  Empresas Courier y Consolidadores de Paquetería       1  (0.1%)
+  Depositarios Aduaneros, Almacenes Fiscales y Agentes de Aduana    1  (0.1%)
+  Transportistas y Agentes Aduaneros                    1  (0.1%)
+  Transportistas, Gestores y Usuarios de Comercio       1  (0.1%)
+  Transportistas y Líneas de Carga                      1  (0.1%)
+  Transportistas de Carga Terrestre Centroamericano     1  (0.1%)
+  Líneas Navieras, Aerolíneas y Empresas Consolidadoras    1  (0.1%)
+  Transportistas Internacionales y Agentes Navieros     1  (0.1%)
+
+── DISTRIBUCIÓN: Segmento Nivel 1 (Mapeo a Nodos) ─────────────────────
+  nan                                                 715  (100.0%)
+
+── DISTRIBUCIÓN: Categoría Nivel 2 (Mapeo a Nodos) ────────────────────
+  nan                                                      715  (100.0%)
+
+── DISTRIBUCIÓN: Subcategoría Nivel 3 (Mapeo a Nodos) ─────────────────
+  nan                                                      715  (100.0%)
+
+── ANÁLISIS DE URLs (Catálogo Único) ──────────────────────────────────
+  Total gestiones con URL : 683 / 683
+  Sin URL (nulas)         : 0
+  URLs sin prefijo http   : 0
+  URLs duplicadas (filas) : 215
+  Top 15 URLs duplicadas:
+    [14x] https://portal.sat.gob.gt/portal/consultas-aduanas/
+    [14x] https://portal.sat.gob.gt/portal/requisitos-de-aduanas/
+    [9x] https://portal.sat.gob.gt/portal/biblioteca-en-linea-sat/legislacion-aduanera/
+    [9x] https://portal.sat.gob.gt/portal/procedimientos-aduanas/#1555105635499-a4507e58-10e9
+    [8x] https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/
+    [7x] https://portal.sat.gob.gt/portal/solvencia-fiscal/
+    [5x] https://portal.sat.gob.gt/portal/procedimientos-aduanas/
+    [5x] https://portal.sat.gob.gt/portal/declaracion-de-mercancias-duca/
+    [4x] https://portal.sat.gob.gt/portal/procedimientos-aduanas/#1571412473853-2ed0b43f-287f
+    [4x] https://portal.sat.gob.gt/portal/preguntas-frecuentes/temas-aduaneros/
+    [4x] https://farm3.sat.gob.gt/menu/login.jsf
+    [4x] https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1541621044169-4198d06d-6
+    [4x] https://portal.sat.gob.gt/portal/consulta-movimiento-convenio/
+    [4x] https://portal.sat.gob.gt/portal/efactura/
+    [4x] https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/recepcion-de-seguro-de-cauci
+
+======================================================================
+FIN DE LA EXPLORACIÓN COMPLETA
+======================================================================
