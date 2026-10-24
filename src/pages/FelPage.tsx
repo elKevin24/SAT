@@ -91,7 +91,7 @@ export const FelPage: React.FC<FelPageProps> = ({ onBackToHome }) => {
             type="button"
             onClick={onBackToHome}
             className="inline-flex items-center gap-1.5 text-xs font-semibold text-sat-azul hover:text-sat-azul-oscuro transition-colors py-1.5 px-3 rounded-sat-sm hover:bg-sat-fondo-medio focus:outline-none focus-visible:ring-2 focus-visible:ring-sat-azul min-h-[32px] self-start sm:self-auto"
-            aria-label="Volver a la página principal"
+            aria-label="Volver al inicio"
           >
             <ArrowLeft className="w-3.5 h-3.5" />
             <span>Volver al inicio</span>

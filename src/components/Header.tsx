@@ -330,13 +330,11 @@ export const Header: React.FC<HeaderProps> = ({
             type="button"
             onClick={onGoHome}
             className="p-0.5 shrink-0 border-0 shadow-none group rounded-sat-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-sat-azul"
-            aria-label="Ir al inicio del Portal SAT"
           >
             <SatIsologotipo
               className="h-8 w-auto"
               variant="azul"
               showSubtitle={true}
-              aria-hidden="true"
             />
           </button>
 
