@@ -657,9 +657,65 @@ const subcategoriesList = useMemo(() => {
                         )}
                       </div>
 
-                      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-3.5">
-                        {currentTramites.map(renderTramiteCard)}
-                      </div>
+                      {(() => {
+                        const DASH = '—';
+                        const isDash = (v?: string) => !v || v === DASH || v === '-';
+                        const norm = (s?: string) => String(s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+                        // Group by N4, but if a N4 group has >10 items and has N5 subgroups, group by N5
+                        const level4Groups = new Map<string, TramiteItem[]>();
+                        for (const t of currentTramites) {
+                          const g = isDash(t.nivel4) ? DASH : t.nivel4;
+                          if (!level4Groups.has(g)) level4Groups.set(g, []);
+                          level4Groups.get(g)!.push(t);
+                        }
+                        const sections: Array<{ key: string; title: string; items: TramiteItem[] }> = [];
+                        for (const [gkey, items] of level4Groups) {
+                          const n5Values = items
+                            .map((t) => (isDash(t.nivel5) ? '' : t.nivel5))
+                            .filter((v) => v && norm(v) !== norm(items.find((x) => !isDash(x.nivel5) && norm(x.nivel5) === norm(v))?.gestion || v));
+                          const meaningfulN5 = new Set(items.filter((t) => !isDash(t.nivel5) && norm(t.nivel5) !== norm(t.gestion || t.tramite || t.nombreActual)).map((t) => t.nivel5));
+                          if (items.length >= 11 && meaningfulN5.size > 1) {
+                            const subGroups = new Map<string, TramiteItem[]>();
+                            for (const t of items) {
+                              const useN5 = !isDash(t.nivel5) && norm(t.nivel5) !== norm(t.gestion || t.tramite || t.nombreActual);
+                              const sg = useN5 ? t.nivel5 : (gkey === DASH ? DASH : gkey);
+                              if (!subGroups.has(sg)) subGroups.set(sg, []);
+                              subGroups.get(sg)!.push(t);
+                            }
+                            for (const [sgkey, sitems] of subGroups) {
+                              sections.push({ key: `${gkey}::${sgkey}`, title: sgkey === DASH ? (gkey === DASH ? 'Otras gestiones' : gkey) : sgkey, items: sitems });
+                            }
+                          } else {
+                            sections.push({ key: gkey, title: gkey === DASH ? 'Otras gestiones' : gkey, items });
+                          }
+                        }
+                        sections.sort((a, b) => {
+                          const aIsDash = a.title === 'Otras gestiones';
+                          const bIsDash = b.title === 'Otras gestiones';
+                          if (aIsDash && !bIsDash) return 1;
+                          if (bIsDash && !aIsDash) return -1;
+                          return a.title.localeCompare(b.title);
+                        });
+                        return (
+                          <div className="space-y-6">
+                            {sections.map((sec) => (
+                              <section key={sec.key} aria-labelledby={`g-${sec.key}`}>
+                                {sections.length > 1 && (
+                                  <div className="flex items-center justify-between mb-3 pb-2 border-b border-[#E2E8F0]">
+                                    <h3 id={`g-${sec.key}`} className="text-xs font-bold uppercase tracking-wider text-[#64748B]">
+                                      {sec.title}
+                                    </h3>
+                                    <span className="text-xs text-slate-400">{sec.items.length}</span>
+                                  </div>
+                                )}
+                                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-3.5">
+                                  {sec.items.map(renderTramiteCard)}
+                                </div>
+                              </section>
+                            ))}
+                          </div>
+                        );
+                      })()}
                     </div>
                   )}
                 </div>

@@ -1,6 +1,0 @@
-[vc_row gap="5px"][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row]
-[vc_section]
-[vc_row gap="0px" el_class="sat-seccion-profesionales"]
-[vc_column width="1/3"][bsf-info-box icon_type="none" title="Actualización de datos registrales de Servicios Profesionales en Agencia Virtual" read_more="box" link=""]Modifica o ratifica en el RTU Digital tus actividades económicas profesionales, régimen de afiliación (IVA/ISR) y datos de domicilio fiscal o clínica/oficina.[/bsf-info-box][/vc_column]
-[/vc_row]
-[/vc_section]

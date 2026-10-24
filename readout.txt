@@ -1,0 +1,4 @@
+  File "C:\tmp\read.py", line 8
+    docs/fuentes-datos/02_archivos_producto_entregables/Catalogo_Contenidos_Unicos_Portal_SAT.xlsx
+                         ^
+SyntaxError: invalid decimal literal

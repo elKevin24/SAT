@@ -93,6 +93,7 @@ test('Página completa: Mapa Jerárquico Oficial (PortalFlowPage en #/mapa)', as
 test('Modal accesible: Cierre con Escape y restauración de foco', async ({ page }) => {
   await page.goto('/');
   const trigger = page.getByRole('button', { name: 'Abrir panel de accesibilidad' });
+  await trigger.focus();
   await trigger.click();
   const dialog = page.getByRole('dialog');
   await expect(dialog).toBeVisible();
@@ -100,6 +101,9 @@ test('Modal accesible: Cierre con Escape y restauración de foco', async ({ page
   // Presionar Escape
   await page.keyboard.press('Escape');
   await expect(dialog).toBeHidden();
+  await expect(trigger).toBeFocused();
+  const root = page.locator('#root');
+  await expect(root).not.toHaveAttribute('aria-hidden', 'true');
 });
 
 test('Modal accesible: Contención de foco (Focus trap)', async ({ page }) => {
@@ -114,6 +118,20 @@ test('Modal accesible: Contención de foco (Focus trap)', async ({ page }) => {
     const isInside = await dialog.evaluate((el) => el.contains(document.activeElement));
     expect(isInside).toBe(true);
   }
+  // Shift+Tab también permanece dentro
+  for (let i = 0; i < 6; i++) {
+    await page.keyboard.press('Shift+Tab');
+    const isInside = await dialog.evaluate((el) => el.contains(document.activeElement));
+    expect(isInside).toBe(true);
+  }
+});
+
+test.beforeEach(async ({ page }) => {
+  await page.addInitScript(() => {
+    try {
+      localStorage.clear();
+    } catch {}
+  });
 });
 
 test('Tarjetas accesibles: Operables por teclado con tecla Enter', async ({ page }) => {

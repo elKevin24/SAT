@@ -51,12 +51,29 @@ const subcategoriasDe = (categoria: string): Set<string> =>
 test('allTramites: ids únicos y campos esenciales', () => {
   const ids = new Set(tramites.map((t) => t.id));
   expect(ids.size).toBe(tramites.length);
+  const codigos = new Set(tramites.map((t) => t.codigo));
+  expect(codigos.size).toBe(tramites.length);
   tramites.forEach((t) => {
     expect(t.pillar).toBeDefined();
     expect(t.categoria).toBeTruthy();
     expect(t.subcategoria).toBeTruthy();
     expect(t.url).toMatch(/^https?:\/\//);
+    expect(t.codigo).toMatch(/^SAT-GES-\d{4}$/);
+    expect(t.gestion || t.tramite || t.nombreActual).toBeTruthy();
+    expect(t.nivel1).toBeTruthy();
+    expect(t.nivel2).toBeTruthy();
+    expect(t.nivel3).toBeTruthy();
   });
+  const idsSet = new Set(tramites.map((t) => t.id));
+  rawTramitesJson.forEach((t, i) => {
+    expect((t as any).categoria, `raw allTramites[${i}].categoria debe estar ausente (Regla 1)`).toBeUndefined();
+    expect((t as any).subcategoria, `raw allTramites[${i}].subcategoria debe estar ausente (Regla 1)`).toBeUndefined();
+    expect((t as any).nivel2).toBeTruthy();
+    expect((t as any).nivel3).toBeTruthy();
+  });
+  // bijección
+  expect(codigos.size).toBe(tramites.length);
+  expect(idsSet.size).toBe(tramites.length);
 });
 
 test('allTramites: la taxonomía resuelve a IDs estables sin colisiones', () => {
@@ -95,6 +112,10 @@ test('order categorías: cada nombre oficial existe en el dataset', () => {
     OFFICIAL_CATEGORY_ORDER[pillar].forEach((nombre) => {
       expect(reales.has(nombre), `categoría oficial ausente en datos: ${pillar} / ${nombre}`).toBe(true);
     });
+    // bidireccional
+    for (const c of reales) {
+      expect(OFFICIAL_CATEGORY_ORDER[pillar].includes(c), `categoría no oficial en orden: ${pillar} / ${c}`).toBe(true);
+    }
   });
 });
 
@@ -105,9 +126,13 @@ test('order subcategorías: nombres oficiales existen y cubren categorías gené
     OFFICIAL_SUBCATEGORY_ORDER[categoria].forEach((nombre) => {
       expect(reales.has(nombre), `subcategoría oficial ausente: ${categoria} / ${nombre}`).toBe(true);
     });
+    // bidireccional
+    for (const s of reales) {
+      expect(OFFICIAL_SUBCATEGORY_ORDER[categoria].includes(s), `subcategoría no oficial en orden: ${categoria} / ${s}`).toBe(true);
+    }
   });
 
-  const GENERIC_4 = ['Registro y acreditación', 'Operaciones y trámites', 'Consultas y seguimiento', 'Normativa y recursos'];
+  const GENERIC_4 = ['Registro y acreditación', 'Operaciones y gestiones', 'Consultas y seguimiento', 'Normativa y recursos'];
   const categoriasGenericas = new Set(
     tramites
       .map((t) => t.categoria ?? '')
@@ -129,15 +154,28 @@ test('allProcesos: numeración, pasos y URLs válidas', () => {
   expect(procesos.length).toBeGreaterThan(0);
   procesos.forEach((p) => {
     expect(p.nombre).toBeTruthy();
+    expect(p.nombre).not.toMatch(/\btr[aá]mites?\b/i);
     p.pasos!.forEach((paso) => {
       expect(paso.numero).toBeGreaterThan(0);
       expect(paso.accion).toBeTruthy();
+      expect(paso.accion).not.toMatch(/\btr[aá]mites?\b/i);
+      if (paso.pagina) expect(paso.pagina).not.toMatch(/\btr[aá]mites?\b/i);
+      if (paso.ubicacion) expect(paso.ubicacion).not.toMatch(/\btr[aá]mites?\b/i);
       expect(paso.url).toMatch(/^https?:\/\//);
     });
+    if (p.rutaPasosResumen) {
+      p.rutaPasosResumen.forEach((r) => expect(r).not.toMatch(/\btr[aá]mites?\b/i));
+    }
+    if (p.paraQuien) expect(p.paraQuien).not.toMatch(/\btr[aá]mites?\b/i);
+    if (p.categorias) expect(p.categorias).not.toMatch(/\btr[aá]mites?\b/i);
     if (typeof p.totalPasos === 'number' && p.pasos!.length > 0) {
       const maxStep = Math.max(...p.pasos!.map((s) => s.numero));
       expect(maxStep).toBe(p.totalPasos);
+      const nums = [...new Set(p.pasos!.map((s) => s.numero))].sort((a, b) => a - b);
+      const expected = Array.from({ length: maxStep }, (_, i) => i + 1);
+      expect(nums).toEqual(expected);
     }
+    if (typeof p.totalPaginas === 'number') expect(p.totalPaginas).toBe(p.pasos!.length);
   });
 });
 
@@ -162,8 +200,14 @@ test('catalogoContenidosUnicos: contenidos únicos desacoplados y suma exacta de
 
   // Toda audiencia referenciada por el catalogo debe existir en el arbol vivo
   const idsVivos = new Set(tramites.map((t) => t.id));
-  const referencias = new Set(contenidosUnicos.flatMap((c) => c.tramiteIds));
-  const huerfanas = [...referencias].filter((id) => !idsVivos.has(id));
+  const referencias = contenidosUnicos.flatMap((c) => c.tramiteIds);
+  const referenciasSet = new Set(referencias);
+  expect(referenciasSet.size).toBe(totalGestiones);
+  expect(referencias.length).toBe(totalGestiones);
+  expect(idsVivos.size).toBe(totalGestiones);
+  expect([...referenciasSet].every((id) => idsVivos.has(id))).toBe(true);
+  expect([...idsVivos].every((id) => referenciasSet.has(id))).toBe(true);
+  const huerfanas = [...referenciasSet].filter((id) => !idsVivos.has(id));
   expect(huerfanas, `Audiencias del catalogo sin gestion viva: ${huerfanas.join(', ')}`).toEqual([]);
 
   // Los contenidos transversales (compartidos entre multiples ramas) son > 1
@@ -174,13 +218,23 @@ test('catalogoContenidosUnicos: contenidos únicos desacoplados y suma exacta de
     expect(c.totalAudiencias).toBeGreaterThan(1);
     expect(c.tramiteIds.length).toBe(c.totalAudiencias);
     expect(c.segmentosAplicables.length).toBeGreaterThanOrEqual(1);
+    expect(c.esTransversal).toBe(true);
   });
 
   contenidosUnicos.forEach((c) => {
     expect(c.titulo).toBeTruthy();
+    expect(c.titulo).not.toMatch(/\btr[aá]mites?\b/i);
     expect(c.descripcion).toBeTruthy();
+    expect(c.descripcion).not.toMatch(/\btr[aá]mites?\b/i);
+    if (c.nombreActual) expect(c.nombreActual).not.toMatch(/\btr[aá]mites?\b/i);
     expect(c.url).toMatch(/^https?:\/\//);
     expect(c.tramiteIds.length).toBe(c.totalAudiencias);
+    expect(c.codigo).toMatch(/^SAT-GES-\d{4}$/);
+    if (c.familias_ids) {
+      for (const f of c.familias_ids) {
+        expect(Object.keys(FAMILIAS_TEMATICAS)).toContain(f);
+      }
+    }
   });
 });
 
@@ -189,9 +243,12 @@ test('contentRelationships: validacion del grafo interno, familias tematicas y p
 
   const familiaKeys = Object.keys(FAMILIAS_TEMATICAS) as FamiliaTematicaId[];
   expect(familiaKeys.length).toBe(10);
+  const codigosF = new Set<string>();
   familiaKeys.forEach((fId) => {
     const meta = FAMILIAS_TEMATICAS[fId];
     expect(meta.codigo).toMatch(/^FAM-\d{2}$/);
+    expect(codigosF.has(meta.codigo)).toBe(false);
+    codigosF.add(meta.codigo);
     expect(meta.nombre).toBeTruthy();
     expect(meta.descripcion).toBeTruthy();
   });
@@ -216,11 +273,23 @@ test('contentRelationships: validacion del grafo interno, familias tematicas y p
   felGestiones.forEach((g) => {
     expect(g.familias_ids).toContain('fel');
   });
+  const felSin0319 = relGraph.getGestionesFamilia('fel', { excludeCodigo: 'SAT-GES-0319', limit: 5 });
+  expect(felSin0319.some((g) => g.codigo === 'SAT-GES-0319')).toBe(false);
+
+  const herramientas = relGraph.getHerramientasApoyo('SAT-GES-0358');
+  expect(herramientas.some((h) => h.tramite.codigo === 'SAT-GES-0359')).toBe(true);
 
   const grafoFEL = relGraph.getGrafoRelaciones('SAT-GES-0319');
   expect(grafoFEL).not.toBeNull();
   expect(grafoFEL?.prerrequisitos.length).toBeGreaterThanOrEqual(1);
   expect(grafoFEL?.familias.some((f) => f.id === 'fel')).toBe(true);
+  expect(relGraph.getGrafoRelaciones('NO-EXISTE')).toBeNull();
+
+  tramites.forEach((t) => {
+    if (t.familias_ids && t.familias_ids.length > 0) {
+      t.familias_ids.forEach((f) => expect(familiaKeys).toContain(f));
+    }
+  });
 });
 
 
@@ -270,12 +339,17 @@ test('auditoria de gobernanza: verificacion de los 6 principios de calidad taxon
     expect(uniqueOcs.size, `Duplicados de orden_contenido en ${folderKey}`).toBe(items.length);
 
     // Validar orden ascendente respecto al ciclo ATO
-    for (let i = 0; i < items.length - 1; i++) {
-      const pesoActual = ATO_WEIGHT[items[i].etapaAto || 'empezar'] || 1;
-      const pesoSiguiente = ATO_WEIGHT[items[i + 1].etapaAto || 'empezar'] || 1;
+    const sorted = [...items].sort((a, b) => {
+      const oa = typeof a.orden_contenido === 'number' ? a.orden_contenido : 999;
+      const ob = typeof b.orden_contenido === 'number' ? b.orden_contenido : 999;
+      return oa - ob;
+    });
+    for (let i = 0; i < sorted.length - 1; i++) {
+      const pesoActual = ATO_WEIGHT[sorted[i].etapaAto || 'empezar'] || 1;
+      const pesoSiguiente = ATO_WEIGHT[sorted[i + 1].etapaAto || 'empezar'] || 1;
       expect(
         pesoActual,
-        `Inversión de ciclo ATO en ${folderKey}: ${items[i].codigo} (${items[i].etapaAto}) antes de ${items[i + 1].codigo} (${items[i + 1].etapaAto})`
+        `Inversión de ciclo ATO en ${folderKey}: ${sorted[i].codigo} (${sorted[i].etapaAto}) antes de ${sorted[i + 1].codigo} (${sorted[i + 1].etapaAto})`
       ).toBeLessThanOrEqual(pesoSiguiente);
     }
   });
@@ -291,6 +365,7 @@ test('auditoria de gobernanza: verificacion de los 6 principios de calidad taxon
     expect(t.nivel3).toBeTruthy();
     expect(t.nivel4).toBeTruthy();
     expect(t.nivel5).toBeTruthy();
+    expect(typeof t.orden_n1).toBe('number');
     expect(t.orden_n1).toBeGreaterThanOrEqual(1);
 
     // Campos muertos eliminados
@@ -333,8 +408,6 @@ test('densidad terminal: ninguna carpeta expone >= 11 gestiones en una sola list
 
   const sobrecargadas: string[] = [];
   porCarpeta.forEach((items, key) => {
-    // Solo carpetas que realmente son pantalla de contenido: las que agotan la
-    // jerarquía declarada (N4 terminal) o superan el umbral de Miller.
     const esTerminal = items.every((i) => NADA.has(i.nivel5));
     if (items.length >= 11 && esTerminal) {
       sobrecargadas.push(`${key} (${items.length} gestiones)`);
@@ -344,6 +417,45 @@ test('densidad terminal: ninguna carpeta expone >= 11 gestiones en una sola list
   expect(
     sobrecargadas,
     `Carpetas con sobrecarga terminal (Regla 2: modularizar >= 11):\n  - ${sobrecargadas.join('\n  - ')}`,
+  ).toEqual([]);
+});
+
+test('densidad por grupos N4/N3: ninguna lista renderizada >= 11 (Regla 2)', () => {
+  const porN3 = new Map<string, TramiteItem[]>();
+  tramites.forEach((t) => {
+    const key = `${t.pillar}>${t.nivel2}>${t.nivel3}`;
+    if (!porN3.has(key)) porN3.set(key, []);
+    porN3.get(key)!.push(t);
+  });
+
+  const violaciones: string[] = [];
+  porN3.forEach((items, key) => {
+    const level4Groups = new Map<string, TramiteItem[]>();
+    items.forEach((t) => {
+      const g = NADA.has(t.nivel4) ? '—' : t.nivel4;
+      if (!level4Groups.has(g)) level4Groups.set(g, []);
+      level4Groups.get(g)!.push(t);
+    });
+    for (const [gkey, gitems] of level4Groups) {
+      const n5Values = new Set(gitems.map((t) => (NADA.has(t.nivel5) ? '' : t.nivel5)).filter(Boolean));
+      if (gitems.length >= 11 && n5Values.size > 1) {
+        const subGroups = new Map<string, TramiteItem[]>();
+        for (const t of gitems) {
+          const sg = NADA.has(t.nivel5) ? gkey : t.nivel5;
+          if (!subGroups.has(sg)) subGroups.set(sg, []);
+          subGroups.get(sg)!.push(t);
+        }
+        for (const [sg, sitems] of subGroups) {
+          if (sitems.length >= 11) violaciones.push(`${key}::${sg} (${sitems.length})`);
+        }
+      } else if (gitems.length >= 11) {
+        violaciones.push(`${key}::${gkey} (${gitems.length})`);
+      }
+    }
+  });
+  expect(
+    violaciones,
+    `Grupos renderizados con >= 11 gestiones:\n  - ${violaciones.join('\n  - ')}`,
   ).toEqual([]);
 });
 
