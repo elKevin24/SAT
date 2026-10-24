@@ -7,12 +7,12 @@
 ## Resumen Ejecutivo
 
 Se analizaron **683 gestiones** del Catálogo Único del Portal SAT mediante clustering semántico.
-El método de representación utilizado fue **TF-IDF char_wb ngram(3,5)**.
-El algoritmo seleccionado fue **KMeans k=26 (silhouette=0.0483)**, con un silhouette promedio de **0.0483**.
-Se identificaron **26 grupos temáticos** que revelan patrones en la estructura de contenidos del portal.
-Se detectaron **2 pares casi-duplicados** (similitud coseno ≥ 0.95),
-**170 outliers globales** (silhouette negativo) y
-**3 gestiones posiblemente mal ubicadas**.
+El método de representación utilizado fue **sentence-transformers (paraphrase-multilingual-MiniLM-L12-v2)**.
+El algoritmo seleccionado fue **KMeans k=8 (silhouette=0.1022)**, con un silhouette promedio de **0.1022**.
+Se identificaron **8 grupos temáticos** que revelan patrones en la estructura de contenidos del portal.
+Se detectaron **12 pares casi-duplicados** (similitud coseno ≥ 0.95),
+**79 outliers globales** (silhouette negativo) y
+**10 gestiones posiblemente mal ubicadas**.
 La estructura actual del portal se distribuye en los clusters de forma heterogénea,
 lo que sugiere oportunidades de consolidación y reorganización temática.
 
@@ -20,7 +20,7 @@ lo que sugiere oportunidades de consolidación y reorganización temática.
 
 ## 1. Método de Representación
 
-**Método usado:** TF-IDF char_wb ngram(3,5)
+**Método usado:** sentence-transformers (paraphrase-multilingual-MiniLM-L12-v2)
 
 **Justificación:**
 - Los embeddings multilingües capturan semántica contextual, superando la simple coincidencia léxica.
@@ -31,28 +31,28 @@ lo que sugiere oportunidades de consolidación y reorganización temática.
 
 ## 2. Método de Clustering y Valor de k
 
-**Algoritmo elegido:** KMeans k=26 (silhouette=0.0483)
+**Algoritmo elegido:** KMeans k=8 (silhouette=0.1022)
 
 **Justificación:**
 - Se evaluaron K-Means (k=5…30), clustering jerárquico Ward y HDBSCAN.
 - K-Means elegido por mayor silhouette y estabilidad entre semillas.
-- k=26 maximiza el silhouette score en el rango probado.
+- k=8 maximiza el silhouette score en el rango probado.
 
-**Alternativas razonables:** k=30 (sil=0.0507), k=22 (sil=0.0504), k=23 (sil=0.0501)
+**Alternativas razonables:** k=7 (sil=0.1026), k=9 (sil=0.1007), k=6 (sil=0.0972)
 
 **Nota sobre HDBSCAN:** Detectó 3 clusters
-con 433 gestiones catalogadas como ruido.
+con 435 gestiones catalogadas como ruido.
 Útil para identificar outliers pero produce número variable de clusters.
 
 ---
 
 ## 3. Resultados por Cluster (Top 5 por tamaño)
 
-  - **Cluster 25 – Requisitos / Inscribir / Documentos**: 68 gestiones | términos: requisitos, inscribir, documentos, documentos para, requisitos pasos, pasos documentos, pasos, de, inscripcion, agencias inscripcion
-  - **Cluster 17 – De / Tributario / En**: 62 gestiones | términos: de, tributario, en, para, la, registro, requisitos, portal, gestiones, requisitos de
-  - **Cluster 0 – Aduanas / De / Aduanera**: 53 gestiones | términos: aduanas, de, aduanera, procedimientos, de aduanas, para, portal, portal procedimientos, procedimientos aduanas, especificaciones
-  - **Cluster 10 – Información / Información Sobre / Pública**: 42 gestiones | términos: información, información sobre, pública, auxiliares, auxiliares de, la, importadores, de, exportadores, función pública
-  - **Cluster 21 – C3 / Capacitacionessat / Capacitacionessat Page**: 42 gestiones | términos: c3, capacitacionessat, capacitacionessat page, page, sat, cultura, virtuales, virtual, cursos, la sat
+  - **Cluster 3 – De / Aduanera / Aduanas**: 161 gestiones | términos: de, aduanera, aduanas, información, portal, información sobre, comercio, sobre, de comercio, para
+  - **Cluster 0 – De / Del / Impuesto**: 138 gestiones | términos: de, del, impuesto, del impuesto, para, en, la, portal, devolución, fiscal
+  - **Cluster 7 – Requisitos / De / Para**: 124 gestiones | términos: requisitos, de, para, documentos, portal requisitos, pasos, documentos para, pasos documentos, requisitos pasos, portal
+  - **Cluster 6 – Vehículo / Un Vehículo / Vehiculos**: 81 gestiones | términos: vehículo, un vehículo, vehiculos, vehículos, requisitos, un, de vehiculos, de, de vehículos, portal requisitos
+  - **Cluster 4 – C3 / Sat / Capacitacionessat Page**: 74 gestiones | términos: c3, sat, capacitacionessat page, capacitacionessat, page, capacitación, cultura, virtuales, cursos, virtual
 
 *(Ver hoja `resumen_clusters` en `clusters.xlsx` para el listado completo.)*
 
@@ -73,9 +73,9 @@ para revisión editorial.
 
 | Hallazgo | Cantidad |
 |---|---|
-| Pares casi-duplicados (cos ≥ 0.95) | 2 |
-| Outliers globales (silhouette < 0) | 170 |
-| Gestiones posiblemente mal ubicadas | 3 |
+| Pares casi-duplicados (cos ≥ 0.95) | 12 |
+| Outliers globales (silhouette < 0) | 79 |
+| Gestiones posiblemente mal ubicadas | 10 |
 | Clusters que mezclan secciones | 0 |
 | Secciones repartidas en varios clusters | 1 |
 
@@ -84,7 +84,7 @@ para revisión editorial.
 ## 6. Propuesta de Estructura de Navegación
 
 **Evidencia del dato** (clustering semántico):
-- Los 26 clusters revelan agrupaciones temáticas naturales que difieren
+- Los 8 clusters revelan agrupaciones temáticas naturales que difieren
   parcialmente de la organización URL actual.
 - Los clusters más cohesivos (silhouette alto) representan áreas temáticas bien
   diferenciadas que podrían convertirse en secciones de primer nivel.
@@ -126,8 +126,8 @@ para revisión editorial.
 ## 9. Siguientes Pasos
 
 1. Validar con expertos de dominio los nombres propuestos para cada cluster.
-2. Revisar los 2 pares casi-duplicados para confirmar consolidación o eliminar.
-3. Investigar los 3 gestiones posiblemente mal ubicadas.
+2. Revisar los 12 pares casi-duplicados para confirmar consolidación o eliminar.
+3. Investigar los 10 gestiones posiblemente mal ubicadas.
 4. Ejecutar card sorting con usuarios para validar la agrupación propuesta.
 5. Incorporar métricas de tráfico para priorizar la reorganización por impacto real.
 6. Iterar con texto completo de páginas para mejorar la representación vectorial.
@@ -135,6 +135,6 @@ para revisión editorial.
 ---
 
 *Archivos generados: `clusters.xlsx`, `mapa_clusters.png`, `informe.md`*
-*Método representación: TF-IDF char_wb ngram(3,5)*
-*Método clustering: KMeans k=26 (silhouette=0.0483)*
-*Reducción dimensional: PCA (2 componentes)*
+*Método representación: sentence-transformers (paraphrase-multilingual-MiniLM-L12-v2)*
+*Método clustering: KMeans k=8 (silhouette=0.1022)*
+*Reducción dimensional: UMAP (cosine)*
