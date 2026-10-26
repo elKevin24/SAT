@@ -1,0 +1,133 @@
+[vc_row gap="5px"][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row]
+
+[vc_row el_class="sat-gestion-header"]
+[vc_column]
+[vc_custom_heading text="Solicitar Número de Identificación Tributaria (NIT)" font_container="tag:h1|font_size:30px|text_align:left|color:%23003865" use_theme_fonts="yes"]
+[vc_custom_heading text="Obtén por primera vez tu Número de Identificación Tributaria (NIT) y activa tu usuario de Agencia Virtual en 3 pasos conectados sin salir de esta página." font_container="tag:p|font_size:16px|text_align:left|color:%23475569" use_theme_fonts="yes"]
+[vc_empty_space height="12px"]
+[/vc_column]
+[/vc_row]
+
+[vc_section]
+[vc_row]
+[vc_column]
+[vc_tta_tabs style="modern" shape="rounded" color="blue" active_section="1" el_class="sat-connected-steps-tabs"]
+
+[vc_tta_section title="1. Requisitos" tab_id="paso-1-requisitos"]
+[vc_row]
+[vc_column]
+[vc_message message_box_style="solid-icon" message_box_color="warning" icon_fontawesome="fas fa-id-card"]<strong> Condición indispensable sobre tu documento de identificación:</strong> Tu Documento Personal de Identificación (DPI) debe estar <strong>físico y vigente</strong>. Para la inscripción de datos en el Registro Tributario Unificado (RTU), <strong>no se acepta la constancia de solicitud o renovación emitida por el RENAP</strong>.[/vc_message]
+[vc_empty_space height="16px"]
+[vc_custom_heading text="Elige tu modalidad y verifica los documentos que necesitas en formato digital (PDF o JPG, máximo 5 MB)" font_container="tag:h2|font_size:20px|text_align:left|color:%23003865" use_theme_fonts="yes"]
+[vc_empty_space height="12px"]
+[/vc_column]
+[/vc_row]
+
+[vc_row gap="15px" el_class="sat-seccion-contribuyentes"]
+[vc_column width="1/2"]
+[vc_column_text]
+<div class="sat-modalidad-card" style="border: 1px solid #dde2e5; border-top: 4px solid #14649b; border-radius: 10px; padding: 18px; background: #fff;">
+  <h3 style="color: #003865; font-size: 16px; margin-bottom: 6px;">Uso Personal o Laboral (Sin Obligaciones de Impuestos)</h3>
+  <p style="font-size: 13px; color: #475569; margin-bottom: 10px;">Para empleados en relación de dependencia, estudiantes, gestiones bancarias, compra de vehículos o actos civiles sin negocio propio.</p>
+  <ul style="font-size: 13px; color: #1e293b; padding-left: 18px; line-height: 1.6;">
+    <li><strong>DPI original, físico y vigente</strong> (ambos lados legibles) o pasaporte vigente en caso de extranjeros.</li>
+    <li><strong>Correo electrónico personal activo</strong> al que tengas acceso inmediato para validar tu código de seguridad.</li>
+    <li><strong>Comprobante de domicilio</strong> (únicamente si la dirección actual es distinta a la impresa en tu DPI o si el DPI no especifica dirección completa).</li>
+  </ul>
+</div>
+[/vc_column_text]
+[/vc_column]
+
+[vc_column width="1/2"]
+[vc_column_text]
+<div class="sat-modalidad-card" style="border: 1px solid #dde2e5; border-top: 4px solid #0284c7; border-radius: 10px; padding: 18px; background: #fff;">
+  <h3 style="color: #003865; font-size: 16px; margin-bottom: 6px;">Negocio, Comercio o Profesión (Con Obligaciones Tributarias)</h3>
+  <p style="font-size: 13px; color: #475569; margin-bottom: 10px;">Para emprender un negocio propio, emitir facturas como Pequeño Contribuyente, Régimen General o ejercer una profesión liberal.</p>
+  <ul style="font-size: 13px; color: #1e293b; padding-left: 18px; line-height: 1.6;">
+    <li><strong>DPI original, físico y vigente</strong> o pasaporte vigente si eres extranjero.</li>
+    <li><strong>Factura o comprobante de domicilio fiscal y comercial</strong> con antigüedad no mayor a 3 meses.</li>
+    <li><strong>Constancia de colegiado activo o título universitario</strong> (si te inscribes como profesional liberal).</li>
+  </ul>
+</div>
+[/vc_column_text]
+[/vc_column]
+[/vc_row]
+
+[vc_row gap="15px" el_class="sat-seccion-contribuyentes"]
+[vc_column width="1/2"]
+[vc_column_text]
+<div class="sat-modalidad-card" style="border: 1px solid #dde2e5; border-top: 4px solid #2e7d32; border-radius: 10px; padding: 18px; background: #fff;">
+  <h3 style="color: #003865; font-size: 16px; margin-bottom: 6px;">Personas con Discapacidad Visual, Auditiva o Invalidez</h3>
+  <p style="font-size: 13px; color: #475569; margin-bottom: 10px;">Atención preferencial acompañada en cualquier agencia o delegación tributaria de la SAT.</p>
+  <ul style="font-size: 13px; color: #1e293b; padding-left: 18px; line-height: 1.6;">
+    <li><strong>DPI original y vigente</strong> del solicitante.</li>
+    <li><strong>Acompañamiento de un familiar</strong> dentro de los grados de ley (con su propio DPI vigente) o auxilio de un Notario para la firma y validación biométrica.</li>
+  </ul>
+</div>
+[/vc_column_text]
+[/vc_column]
+
+[vc_column width="1/2"]
+[vc_column_text]
+<div class="sat-modalidad-card" style="border: 1px solid #dde2e5; border-top: 4px solid #c25e00; border-radius: 10px; padding: 18px; background: #fff;">
+  <h3 style="color: #003865; font-size: 16px; margin-bottom: 6px;">Guatemalteco Residente en el Extranjero</h3>
+  <p style="font-size: 13px; color: #475569; margin-bottom: 10px;">Para ciudadanos guatemaltecos que residen fuera del país y requieren su NIT para gestiones consulares, bancarias o patrimoniales.</p>
+  <ul style="font-size: 13px; color: #1e293b; padding-left: 18px; line-height: 1.6;">
+    <li><strong>DPI vigente o Pasaporte vigente</strong> digitalizado en alta resolución.</li>
+    <li><strong>Fotografía tipo selfie</strong> sosteniendo tu documento de identificación a la altura del rostro.</li>
+    <li><strong>Dirección en Guatemala</strong> (de un familiar o inmueble propio) y correo electrónico personal.</li>
+  </ul>
+</div>
+[/vc_column_text]
+[/vc_column]
+[/vc_row]
+
+[vc_empty_space height="16px"]
+
+[vc_row]
+[vc_column width="1/2"]
+[vc_column_text]
+<div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 10px; padding: 16px;">
+  <h4 style="color: #166534; font-size: 15px; margin-bottom: 8px;">¿Cuándo NO necesitas adjuntar factura de servicios?</h4>
+  <p style="font-size: 13px; color: #14532d; margin: 0; line-height: 1.55;">Si tu DPI muestra tu dirección completa de residencia actual y seleccionas la casilla <strong>"Dirección según DPI"</strong> dentro del formulario electrónico, no necesitas adjuntar recibo de luz, agua ni teléfono.</p>
+</div>
+[/vc_column_text]
+[/vc_column]
+
+[vc_column width="1/2"]
+[vc_column_text]
+<div style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 10px; padding: 16px;">
+  <h4 style="color: #003865; font-size: 15px; margin-bottom: 8px;">¿Qué documentos se aceptan si tu dirección es distinta a la del DPI?</h4>
+  <p style="font-size: 13px; color: #334155; margin: 0; line-height: 1.55;">Factura de energía eléctrica, agua potable, teléfono residencial o internet fijo, recibo del Impuesto Único Sobre Inmuebles (IUSI) o contrato de arrendamiento vigente (con máximo 3 meses de antigüedad).</p>
+</div>
+[/vc_column_text]
+[/vc_column]
+[/vc_row]
+[/vc_tta_section]
+
+[vc_tta_section title="2. Solicitar Gestión" tab_id="paso-2-solicitar-gestion"]
+[vc_row]
+[vc_column]
+[vc_custom_heading text="Paso 2: Completa el Formulario Oficial de Inscripción de NIT" font_container="tag:h2|font_size:20px|text_align:left|color:%23003865" use_theme_fonts="yes"]
+[vc_column_text]Ingresa tu correo electrónico en el aplicativo oficial a continuación, escribe el código de seguridad que recibirás en tu bandeja de entrada, completa tus datos personales y adjunta tu DPI vigente. Al finalizar, si el sistema te indica que debes concluir presencialmente o por validación, pasa directamente a la pestaña <strong>3. Solicitar Cita</strong>.[/vc_column_text]
+[vc_empty_space height="12px"]
+[vc_raw_html]JTNDZGl2JTIwY2xhc3MlM0QlMjJzYXQtaWZyYW1lLXdyYXBwZXIlMjIlMjBzdHlsZSUzRCUyMmJvcmRlciUzQSUyMDFweCUyMHNvbGlkJTIwJTIzY2JkNWUxJTNCJTIwYm9yZGVyLXJhZGl1cyUzQSUyMDEycHglM0IlMjBvdmVyZmxvdyUzQSUyMGhpZGRlbiUzQiUyMGJhY2tncm91bmQlM0ElMjAlMjNmZmZmZmYlM0IlMjBib3gtc2hhZG93JTNBJTIwMCUyMDRweCUyMDE0cHglMjByZ2JhJTI4MCUyQzU2JTJDMTAxJTJDMC4wNiUyOSUzQiUyMiUzRSUwQSUyMCUyMCUzQ2RpdiUyMHN0eWxlJTNEJTIyYmFja2dyb3VuZCUzQSUyMCUyMzAwMzg2NSUzQiUyMGNvbG9yJTNBJTIwJTIzZmZmZmZmJTNCJTIwcGFkZGluZyUzQSUyMDEycHglMjAxOHB4JTNCJTIwZGlzcGxheSUzQSUyMGZsZXglM0IlMjBqdXN0aWZ5LWNvbnRlbnQlM0ElMjBzcGFjZS1iZXR3ZWVuJTNCJTIwYWxpZ24taXRlbXMlM0ElMjBjZW50ZXIlM0IlMjBmbGV4LXdyYXAlM0ElMjB3cmFwJTNCJTIwZ2FwJTNBJTIwMTBweCUzQiUyMiUzRSUwQSUyMCUyMCUyMCUyMCUzQ3NwYW4lMjBzdHlsZSUzRCUyMmZvbnQtc2l6ZSUzQSUyMDEzcHglM0IlMjBmb250LXdlaWdodCUzQSUyMDcwMCUzQiUyMiUzRUFwbGljYXRpdm8lMjBPZmljaWFsJTIwU0FUJTIwJUUyJTgwJTk0JTIwRm9ybXVsYXJpbyUyMEVsZWN0ciVDMyVCM25pY28lMjBkZSUyMEluc2NyaXBjaSVDMyVCM24lMjBlbiUyMGVsJTIwUlRVJTNDL3NwYW4lM0UlMEElMjAlMjAlMjAlMjAlM0NhJTIwaHJlZiUzRCUyMmh0dHBzJTNBLy9hcHAuYy5zYXQuZ29iLmd0L3J0dS9mb3JtdWxhcmlvLWluc2NyaXBjaW9uJTIyJTIwdGFyZ2V0JTNEJTIyX2JsYW5rJTIyJTIwcmVsJTNEJTIybm9vcGVuZXIlMjBub3JlZmVycmVyJTIyJTIwc3R5bGUlM0QlMjJjb2xvciUzQSUyMCUyMzdkZDNmYyUzQiUyMGZvbnQtc2l6ZSUzQSUyMDEycHglM0IlMjBmb250LXdlaWdodCUzQSUyMDYwMCUzQiUyMHRleHQtZGVjb3JhdGlvbiUzQSUyMHVuZGVybGluZSUzQiUyMiUzRUFicmlyJTIwYXBsaWNhdGl2byUyMGVuJTIwcGVzdGElQzMlQjFhJTIwY29tcGxldGElMjAlRTIlODYlOTclM0MvYSUzRSUwQSUyMCUyMCUzQy9kaXYlM0UlMEElMjAlMjAlM0NpZnJhbWUlMjBzcmMlM0QlMjJodHRwcyUzQS8vYXBwLmMuc2F0LmdvYi5ndC9ydHUvZm9ybXVsYXJpby1pbnNjcmlwY2lvbiUyMiUyMHRpdGxlJTNEJTIyRm9ybXVsYXJpbyUyMGRlJTIwSW5zY3JpcGNpJUMzJUIzbiUyMGRlJTIwTklUJTIwZW4lMjBlbCUyMFJUVSUyMERpZ2l0YWwlMjIlMjBzdHlsZSUzRCUyMndpZHRoJTNBJTIwMTAwJTI1JTNCJTIwaGVpZ2h0JTNBJTIwODIwcHglM0IlMjBib3JkZXIlM0ElMjAwJTNCJTIwZGlzcGxheSUzQSUyMGJsb2NrJTNCJTIyJTIwbG9hZGluZyUzRCUyMmxhenklMjIlMjBhbGxvdyUzRCUyMmNhbWVyYSUzQiUyMG1pY3JvcGhvbmUlM0IlMjBnZW9sb2NhdGlvbiUyMiUzRSUzQy9pZnJhbWUlM0UlMEElM0MvZGl2JTNF[/vc_raw_html]
+[/vc_column]
+[/vc_row]
+[/vc_tta_section]
+
+[vc_tta_section title="3. Solicitar Cita" tab_id="paso-3-solicitar-cita"]
+[vc_row]
+[vc_column]
+[vc_custom_heading text="Paso 3: Programa tu Cita para Finalizar tu Solicitud de NIT" font_container="tag:h2|font_size:20px|text_align:left|color:%23003865" use_theme_fonts="yes"]
+[vc_column_text]Si ya enviaste tu solicitud en el Paso 2 y recibiste el correo electrónico de confirmación indicando que debes programar cita para finalizar la validación de tu NIT, ingresa tu CUI (DPI) y el correo registrado en el aplicativo oficial a continuación.[/vc_column_text]
+[vc_empty_space height="12px"]
+[vc_raw_html]JTNDZGl2JTIwY2xhc3MlM0QlMjJzYXQtaWZyYW1lLXdyYXBwZXIlMjIlMjBzdHlsZSUzRCUyMmJvcmRlciUzQSUyMDFweCUyMHNvbGlkJTIwJTIzY2JkNWUxJTNCJTIwYm9yZGVyLXJhZGl1cyUzQSUyMDEycHglM0IlMjBvdmVyZmxvdyUzQSUyMGhpZGRlbiUzQiUyMGJhY2tncm91bmQlM0ElMjAlMjNmZmZmZmYlM0IlMjBib3gtc2hhZG93JTNBJTIwMCUyMDRweCUyMDE0cHglMjByZ2JhJTI4MCUyQzU2JTJDMTAxJTJDMC4wNiUyOSUzQiUyMiUzRSUwQSUyMCUyMCUzQ2RpdiUyMHN0eWxlJTNEJTIyYmFja2dyb3VuZCUzQSUyMCUyMzAwMzg2NSUzQiUyMGNvbG9yJTNBJTIwJTIzZmZmZmZmJTNCJTIwcGFkZGluZyUzQSUyMDEycHglMjAxOHB4JTNCJTIwZGlzcGxheSUzQSUyMGZsZXglM0IlMjBqdXN0aWZ5LWNvbnRlbnQlM0ElMjBzcGFjZS1iZXR3ZWVuJTNCJTIwYWxpZ24taXRlbXMlM0ElMjBjZW50ZXIlM0IlMjBmbGV4LXdyYXAlM0ElMjB3cmFwJTNCJTIwZ2FwJTNBJTIwMTBweCUzQiUyMiUzRSUwQSUyMCUyMCUyMCUyMCUzQ3NwYW4lMjBzdHlsZSUzRCUyMmZvbnQtc2l6ZSUzQSUyMDEzcHglM0IlMjBmb250LXdlaWdodCUzQSUyMDcwMCUzQiUyMiUzRUFwbGljYXRpdm8lMjBPZmljaWFsJTIwU0FUJTIwJUUyJTgwJTk0JTIwU2lzdGVtYSUyMGRlJTIwQ2l0YSUyMFZhbGlkYWRhJTIwcGFyYSUyMFNvbGljaXR1ZCUyMGRlJTIwTklUJTNDL3NwYW4lM0UlMEElMjAlMjAlMjAlMjAlM0NkaXYlMjBzdHlsZSUzRCUyMmRpc3BsYXklM0ElMjBmbGV4JTNCJTIwZ2FwJTNBJTIwMTZweCUzQiUyMGFsaWduLWl0ZW1zJTNBJTIwY2VudGVyJTNCJTIyJTNFJTBBJTIwJTIwJTIwJTIwJTIwJTIwJTNDYSUyMGhyZWYlM0QlMjJodHRwcyUzQS8vcG9ydGFsLnNhdC5nb2IuZ3QvcG9ydGFsL2Rlc2NhcmdhLzE1Mzg5L2NpdGEtY29udHJvbGFkYS85NjI0OC9tYW51YWwtdXN1YXJpby1wb3J0YWwtMiUyMiUyMHRhcmdldCUzRCUyMl9ibGFuayUyMiUyMHJlbCUzRCUyMm5vb3BlbmVyJTIwbm9yZWZlcnJlciUyMiUyMHN0eWxlJTNEJTIyY29sb3IlM0ElMjAlMjNmZGU2OGElM0IlMjBmb250LXNpemUlM0ElMjAxMnB4JTNCJTIwZm9udC13ZWlnaHQlM0ElMjA2MDAlM0IlMjB0ZXh0LWRlY29yYXRpb24lM0ElMjB1bmRlcmxpbmUlM0IlMjIlM0VEZXNjYXJnYXIlMjBNYW51YWwlMjBkZSUyMENpdGElMjAlMjhQREYlMjklM0MvYSUzRSUwQSUyMCUyMCUyMCUyMCUyMCUyMCUzQ2ElMjBocmVmJTNEJTIyaHR0cHMlM0EvL2Nkbi5jLnNhdC5nb2IuZ3QvY2l0YS12YWxpZGFkYS9jaXRhLXZhbGlkYWRhLXBvcnRhbC9wb3J0YWwlMjIlMjB0YXJnZXQlM0QlMjJfYmxhbmslMjIlMjByZWwlM0QlMjJub29wZW5lciUyMG5vcmVmZXJyZXIlMjIlMjBzdHlsZSUzRCUyMmNvbG9yJTNBJTIwJTIzN2RkM2ZjJTNCJTIwZm9udC1zaXplJTNBJTIwMTJweCUzQiUyMGZvbnQtd2VpZ2h0JTNBJTIwNjAwJTNCJTIwdGV4dC1kZWNvcmF0aW9uJTNBJTIwdW5kZXJsaW5lJTNCJTIyJTNFQWJyaXIlMjBlbiUyMHBlc3RhJUMzJUIxYSUyMGNvbXBsZXRhJTIwJUUyJTg2JTk3JTNDL2ElM0UlMEElMjAlMjAlMjAlMjAlM0MvZGl2JTNFJTBBJTIwJTIwJTNDL2RpdiUzRSUwQSUyMCUyMCUzQ2lmcmFtZSUyMHNyYyUzRCUyMmh0dHBzJTNBLy9jZG4uYy5zYXQuZ29iLmd0L2NpdGEtdmFsaWRhZGEvY2l0YS12YWxpZGFkYS1wb3J0YWwvcG9ydGFsJTIyJTIwdGl0bGUlM0QlMjJTb2xpY2l0dWQlMjBkZSUyMENpdGElMjBwYXJhJTIwTklUJTIyJTIwc3R5bGUlM0QlMjJ3aWR0aCUzQSUyMDEwMCUyNSUzQiUyMGhlaWdodCUzQSUyMDgyMHB4JTNCJTIwYm9yZGVyJTNBJTIwMCUzQiUyMGRpc3BsYXklM0ElMjBibG9jayUzQiUyMiUyMGxvYWRpbmclM0QlMjJsYXp5JTIyJTNFJTNDL2lmcmFtZSUzRSUwQSUzQy9kaXYlM0U=[/vc_raw_html]
+[/vc_column]
+[/vc_row]
+[/vc_tta_section]
+
+[/vc_tta_tabs]
+[/vc_column]
+[/vc_row]
+[/vc_section]

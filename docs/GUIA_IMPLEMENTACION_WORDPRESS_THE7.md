@@ -1,6 +1,6 @@
 # Guía Operativa de Implementación: Portal SAT en WordPress + The7 Classic + WPBakery
 
-Esta guía describe el procedimiento paso a paso, **100% manual y sin requerir línea de comandos (CLI)**, para construir, maquetar y publicar la Arquitectura de Información (IA) de SAT en **WordPress** utilizando el tema **The7 (estilo Classic)** y **WPBakery Page Builder**.
+Esta guía describe el procedimiento paso a paso, **100% manual y sin requerir línea de comandos (CLI)**, para construir, maquetar y publicar la Arquitectura de Información (Nivel 1 a Nivel 5) y los procesos conectados del **Portal SAT Guatemala** en **WordPress** utilizando el tema **The7 (estilo Classic)** y **WPBakery Page Builder**.
 
 ---
 
@@ -13,7 +13,7 @@ Asegúrate de que los siguientes componentes estén instalados y activos en Word
 3. **Ultimate Addons for WPBakery Page Builder** (provee el elemento `[bsf-info-box]`, incluido en los plugins recomendados de The7).
 
 ### 1.2 Estructura de Enlaces Permanentes (*Permalinks*)
-Para que las URLs jerárquicas funcionen sin colisiones:
+Para que las URLs jerárquicas y limpias (como `/solicitar-nit/` o `/contribuyentes/contribuyente-general/`) funcionen sin colisiones:
 1. Ve a **Ajustes > Enlaces permanentes**.
 2. Selecciona la opción **Nombre de la entrada** (`/%postname%/`).
 3. Guarda los cambios.
@@ -22,7 +22,7 @@ Para que las URLs jerárquicas funcionen sin colisiones:
 
 ## 2. Paso 1: Integración de Estilos CSS Oficiales de SAT
 
-Los shortcodes de WPBakery requieren las clases y variables institucionales de SAT para renderizar bordes de colores por segmento, tipografía corporativa y efectos *hover*.
+Los shortcodes de WPBakery requieren las clases y variables institucionales de SAT para renderizar bordes de colores por segmento, tipografía corporativa, pestañas de procesos conectados en 3 pasos, contenedores de iframes oficiales y efectos *hover*.
 
 1. En tu panel de WordPress, dirígete a:  
    **The7 > Theme Options > Advanced > Custom CSS**  
@@ -74,7 +74,7 @@ Los shortcodes de WPBakery requieren las clases y variables institucionales de S
   font-size: 11px !important; color: var(--sat-text-desc) !important; line-height: 1.3 !important;
 }
 
-/* 3. MACRO-SEGMENTOS (NIVEL 1) */
+/* 3. TARJETAS DE NIVEL 1 */
 .sat-seccion-macro-segmentos .aio-icon-box, .sat-seccion-macro-segmentos .bsf-info-box {
   background: #ffffff !important;
   border: 1px solid var(--sat-card-border) !important;
@@ -93,7 +93,7 @@ Los shortcodes de WPBakery requieren las clases y variables institucionales de S
 .sat-seccion-macro-segmentos .vc_column_container:nth-child(3) .aio-icon-box { border-top: 4px solid var(--sat-color-profesionales) !important; }
 .sat-seccion-macro-segmentos .vc_column_container:nth-child(4) .aio-icon-box { border-top: 4px solid var(--sat-color-exentos) !important; }
 
-/* 4. TARJETAS DE GESTIONES (NIVEL 2 Y 3) */
+/* 4. TARJETAS DE GESTIONES Y NIVELES INTERNOS (NIVEL 2, NIVEL 3 Y NIVEL 4) */
 .sat-seccion-contribuyentes .aio-icon-box, .sat-seccion-contribuyentes .bsf-info-box,
 .sat-seccion-comercio-exterior .aio-icon-box, .sat-seccion-comercio-exterior .bsf-info-box,
 .sat-seccion-profesionales .aio-icon-box, .sat-seccion-profesionales .bsf-info-box,
@@ -106,16 +106,43 @@ Los shortcodes de WPBakery requieren las clases y variables institucionales de S
   min-height: 130px !important;
   transition: all 0.2s ease !important;
 }
-.sat-seccion-contribuyentes .aio-icon-box:hover, .sat-seccion-contribuyentes .bsf-info-box:hover {
+.sat-seccion-contribuyentes .aio-icon-box:hover, .sat-seccion-contribuyentes .bsf-info-box:hover,
+.sat-seccion-comercio-exterior .aio-icon-box:hover, .sat-seccion-comercio-exterior .bsf-info-box:hover,
+.sat-seccion-profesionales .aio-icon-box:hover, .sat-seccion-profesionales .bsf-info-box:hover,
+.sat-seccion-entes-exentos .aio-icon-box:hover, .sat-seccion-entes-exentos .bsf-info-box:hover {
   transform: translateY(-3px) !important;
   border-color: var(--sat-celeste-sat) !important;
   box-shadow: 0 8px 18px rgba(0,0,0,0.08) !important;
 }
-.sat-seccion-contribuyentes .aio-icon-title, .sat-seccion-contribuyentes .info-box-title {
+.sat-seccion-contribuyentes .aio-icon-title, .sat-seccion-contribuyentes .info-box-title,
+.sat-seccion-comercio-exterior .aio-icon-title, .sat-seccion-comercio-exterior .info-box-title,
+.sat-seccion-profesionales .aio-icon-title, .sat-seccion-profesionales .info-box-title,
+.sat-seccion-entes-exentos .aio-icon-title, .sat-seccion-entes-exentos .info-box-title {
   font-size: 15px !important; font-weight: 700 !important; color: var(--sat-azul-institucional) !important; line-height: 1.35 !important;
 }
-.sat-seccion-contribuyentes .aio-icon-description, .sat-seccion-contribuyentes .info-box-description {
+.sat-seccion-contribuyentes .aio-icon-description, .sat-seccion-contribuyentes .info-box-description,
+.sat-seccion-comercio-exterior .aio-icon-description, .sat-seccion-comercio-exterior .info-box-description,
+.sat-seccion-profesionales .aio-icon-description, .sat-seccion-profesionales .info-box-description,
+.sat-seccion-entes-exentos .aio-icon-description, .sat-seccion-entes-exentos .info-box-description {
   font-size: 12.5px !important; color: var(--sat-text-desc) !important; line-height: 1.45 !important;
+}
+
+/* 5. PESTAÑAS CONECTADAS DE 3 PASOS E IFRAMES OFICIALES (SOLICITAR NIT) */
+.sat-connected-steps-tabs .vc_tta-tabs-list .vc_tta-tab > a {
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  padding: 14px 24px !important;
+}
+.sat-connected-steps-tabs .vc_tta-tab.vc_active > a {
+  background-color: var(--sat-azul-institucional) !important;
+  color: #ffffff !important;
+  border-color: var(--sat-azul-institucional) !important;
+}
+.sat-modalidad-card {
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.sat-modalidad-card:hover {
+  box-shadow: 0 8px 20px rgba(0,56,101,0.08);
 }
 ```
 
@@ -125,164 +152,153 @@ Los shortcodes de WPBakery requieren las clases y variables institucionales de S
 
 ## 3. Paso 2: Creación de la Página Principal (Home / Portada)
 
+El código íntegro de la portada se encuentra en **`docs/plantillas-wpbakery/HOME_portada-portal-sat.txt`**.
+
 1. En WordPress, ve a **Páginas > Añadir nueva**.
 2. Título de la página: `Inicio` (o `Portal SAT`).
 3. En la barra superior del editor, activa **WPBakery Page Builder** y selecciona la pestaña **Modo Clásico** / **Texto** (para ver el editor HTML/Shortcode).
-4. Pega el siguiente shortcode oficial de la Home:
-
-```shortcode
-[vc_row full_width="stretch_row" el_class="sat-hero-section" css=".vc_custom_hero{background-color: #003865; padding: 45px 0;}"]
-[vc_column]
-[vc_custom_heading text="Portal SAT Guatemala" font_container="tag:h1|font_size:32px|text_align:center|color:%23ffffff" use_theme_fonts="yes"]
-[vc_custom_heading text="Gestiones, requisitos oficiales y servicios tributarios y aduaneros en línea" font_container="tag:p|font_size:16px|text_align:center|color:%23e2e8f0" use_theme_fonts="yes"]
-[/vc_column]
-[/vc_row]
-
-[vc_row el_class="sat-quick-access-row" css=".vc_custom_qa{margin-top: -25px; margin-bottom: 30px;}"]
-[vc_column width="1/6"][bsf-info-box icon_type="none" title="Declaraguate" read_more="box" link="url:https%3A%2F%2Fdeclaraguate.sat.gob.gt%2F||target:%20_blank|"]Presentación y pago de formularios.[/bsf-info-box][/vc_column]
-[vc_column width="1/6"][bsf-info-box icon_type="none" title="Agencia Virtual" read_more="box" link="url:https%3A%2F%2Ffarm3.sat.gob.gt%2Fmenu%2Flogin.jsf||target:%20_blank|"]Servicios en línea y constancia RTU.[/bsf-info-box][/vc_column]
-[vc_column width="1/6"][bsf-info-box icon_type="none" title="RTU Digital" read_more="box" link="url:https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Frtu-digital%2F||target:%20_blank|"]Actualización y datos personales.[/bsf-info-box][/vc_column]
-[vc_column width="1/6"][bsf-info-box icon_type="none" title="Factura FEL" read_more="box" link="url:https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Ffactura-electronica-en-linea-fel%2F||target:%20_blank|"]Emisión y verificación de DTE.[/bsf-info-box][/vc_column]
-[vc_column width="1/6"][bsf-info-box icon_type="none" title="Consulta de NIT" read_more="box" link="url:https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fconsulta-cui-nit%2F||target:%20_blank|"]Verificar estado y validez tributaria.[/bsf-info-box][/vc_column]
-[vc_column width="1/6"][bsf-info-box icon_type="none" title="Cita Previa" read_more="box" link="url:https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fcita-previa%2F||target:%20_blank|"]Programar atención en agencias.[/bsf-info-box][/vc_column]
-[/vc_row]
-
-[vc_row]
-[vc_column]
-[dt_fancy_title title="Selecciona tu perfil de atención" title_size="h2" title_color="accent"]
-[vc_empty_space height="20px"]
-[/vc_column]
-[/vc_row]
-
-[vc_row gap="15px" el_class="sat-seccion-macro-segmentos"]
-[vc_column width="1/4"][bsf-info-box icon_type="none" title="Contribuyentes" read_more="box" link="url:%2Fcontribuyentes%2F|||"]Información y servicios tributarios para personas y empresas. RTU Digital, régimen general, pequeños contribuyentes y vehículos.[/bsf-info-box][/vc_column]
-[vc_column width="1/4"][bsf-info-box icon_type="none" title="Operadores de Comercio Exterior" read_more="box" link="url:%2Fcomercio-exterior%2F|||"]Servicios e información aduanera. Importación, exportación, padrones, auxiliares de la función pública (AFPA) y declaraciones DUCA.[/bsf-info-box][/vc_column]
-[vc_column width="1/4"][bsf-info-box icon_type="none" title="Profesionales" read_more="box" link="url:%2Fprofesionales%2F|||"]Herramientas especializadas para auxiliares y profesionales tributarios. Abogados, notarios, contadores públicos, auditores y gestores.[/bsf-info-box][/vc_column]
-[vc_column width="1/4"][bsf-info-box icon_type="none" title="Entes Exentos" read_more="box" link="url:%2Fentes-exentos%2F|||"]Gestiones y normativa para entidades públicas, centros educativos, misiones diplomáticas, ONG y organismos no lucrativos.[/bsf-info-box][/vc_column]
-[/vc_row]
-
-[vc_row]
-[vc_column]
-[vc_empty_space height="30px"]
-[dt_fancy_title title="Gestiones más frecuentes" title_size="h2" title_color="accent"]
-[vc_empty_space height="20px"]
-[/vc_column]
-[/vc_row]
-
-[vc_row gap="10px" el_class="sat-seccion-contribuyentes"]
-[vc_column width="1/3"][bsf-info-box icon_type="none" title="Solicitar tu NIT en línea" read_more="box" link="url:https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fsolicitar-nit%2F||target:%20_blank|"]Requisitos, pasos y documentos para solicitar tu Número de Identificación Tributaria (NIT) en línea.[/bsf-info-box][/vc_column]
-[vc_column width="1/3"][bsf-info-box icon_type="none" title="Solicitud y Activación de Agencia Virtual" read_more="box" link="url:https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Frequisitos-tramites-agencia-virtual%2F||target:%20_blank|"]Acceso a la plataforma web de la SAT para consultar datos personales y constancia RTU.[/bsf-info-box][/vc_column]
-[vc_column width="1/3"][bsf-info-box icon_type="none" title="Solicitud y Emisión de Solvencia Fiscal en Línea" read_more="box" link="url:https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fsolvencia-fiscal%2F||target:%20_blank|"]Consulta, pago y descarga del certificado electrónico que acredita la ausencia de adeudos tributarios.[/bsf-info-box][/vc_column]
-[vc_column width="1/3"][bsf-info-box icon_type="none" title="Habilitación para emitir Factura Electrónica (FEL)" read_more="box" link="url:https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Ffactura-electronica-en-linea-fel%2F||target:%20_blank|"]Pasos para incorporarte al régimen FEL y emitir documentos tributarios electrónicos de forma gratuita.[/bsf-info-box][/vc_column]
-[vc_column width="1/3"][bsf-info-box icon_type="none" title="Traspaso Electrónico de Vehículos en Línea" read_more="box" link="url:https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Ftraspaso-electronico-de-vehiculos%2F||target:%20_blank|"]Transferencia de dominio de automotores autorizada notarialmente a través de Agencia Virtual.[/bsf-info-box][/vc_column]
-[vc_column width="1/3"][bsf-info-box icon_type="none" title="Inscripción en el Padrón de Importadores" read_more="box" link="url:https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fpadron-de-importadores%2F||target:%20_blank|"]Requisitos y activación de estado en el padrón aduanero para el despacho de mercancías.[/bsf-info-box][/vc_column]
-[/vc_row]
-```
-
-5. En la barra lateral derecha:
-   * **Atributos de página > Plantilla:** Selecciona `Default Template` (o ancho completo sin barra lateral).
-6. Haz clic en **Publicar**.
-7. Ve a **Ajustes > Lectura > Tu portada muestra:** Selecciona **Una página estática** y elige la página `Inicio`.
+4. Copia y pega el contenido de `docs/plantillas-wpbakery/HOME_portada-portal-sat.txt`.
+5. En la barra lateral derecha (**Atributos de página > Plantilla**), selecciona `Default Template` (ancho completo sin barra lateral).
+6. Haz clic en **Publicar** y configúrala como página de inicio en **Ajustes > Lectura > Tu portada muestra: Una página estática (`Inicio`)**.
 
 ---
 
-## 4. Paso 3: Flujo de Copiado y Creación de Páginas Internas (N1, N2 y N3)
+## 4. Paso 3: Creación de la Página Universal Conectada en 3 Pasos (`/solicitar-nit/`)
 
-Para crear cada página interna con cero fricción, utiliza las plantillas HTML preparadas en el proyecto.
+Para evitar redirecciones dispersas o ventanas modales (prohibidas por Regla 13), la gestión **Solicitar Número de Identificación Tributaria (NIT)** (`SAT-GES-0001`) se implementa en una **única página universal dedicada** con slug limpio **`/solicitar-nit/`**, a la cual apuntan todos los puntos de entrada del portal (Acceso Rápido, Gestiones Frecuentes, Procesos y Catálogo de Contribuyentes).
 
-### 4.1 Árbol Canónico de Páginas y Slugs
+### 4.1 Arquitectura de la Página `/solicitar-nit/` en WPBakery
+La plantilla oficial lista para pegar se encuentra en:
+- **`docs/plantillas-wpbakery/procesos-conectados/G_solicitar-nit.txt`**
 
-Crea primero las **4 páginas padre (Nivel 1)** y luego sus **páginas hijas (Nivel 2)** asignando el atributo "Superior" (*Parent Page*):
+Utiliza el contenedor de pestañas nativo de WPBakery (`[vc_tta_tabs]`) para conectar los 3 pasos sin recargar ni abandonar la página:
 
-| Nivel 1 (Página Padre) | Nivel 2 (Página Hija) | Slug sugerido | Plantilla HTML con el código |
-| :--- | :--- | :--- | :--- |
-| **Contribuyentes** | *(Página Hub N1)* | `/contribuyentes/` | `html-template/paginas/contribuyentes.html` |
-| Contribuyentes | NIT sin Obligaciones | `/contribuyentes/nit-sin-obligaciones/` | `.../contribuyentes/nit-sin-obligaciones.html` |
-| Contribuyentes | Pequeños Contribuyentes | `/contribuyentes/pequenos-contribuyentes/` | `.../contribuyentes/pequenos-contribuyentes.html` |
-| Contribuyentes | Régimen Agropecuario | `/contribuyentes/regimen-agropecuario/` | `.../contribuyentes/regimen-agropecuario.html` |
-| Contribuyentes | Contribuyente General | `/contribuyentes/regimen-general/` | `.../contribuyentes/regimen-general.html` |
-| Contribuyentes | Contribuyentes Especiales | `/contribuyentes/contribuyentes-especiales/` | `.../contribuyentes/contribuyentes-especiales.html` |
-| **Comercio Exterior** | *(Página Hub N1)* | `/comercio-exterior/` | `html-template/paginas/comercio-exterior.html` |
-| Comercio Exterior | AFPA (Auxiliares Aduaneros) | `/comercio-exterior/afpa/` | `.../comercio-exterior/afpa.html` |
-| Comercio Exterior | Importadores | `/comercio-exterior/importadores/` | `.../comercio-exterior/importadores.html` |
-| Comercio Exterior | Exportadores | `/comercio-exterior/exportadores/` | `.../comercio-exterior/exportadores.html` |
-| Comercio Exterior | Regímenes Territoriales | `/comercio-exterior/regimenes-territoriales/`| `.../comercio-exterior/regimenes-territoriales-y-zonas-especiales.html` |
-| Comercio Exterior | Normativa Aduanera | `/comercio-exterior/normativa-aduanera/` | `.../comercio-exterior/normativa-y-operaciones-aduaneras-generales.html` |
-| **Profesionales** | *(Página Hub N1)* | `/profesionales/` | `html-template/paginas/profesionales.html` |
-| Profesionales | Abogados y Notarios | `/profesionales/abogados-y-notarios/` | `.../profesionales/abogados-y-notarios.html` |
-| Profesionales | Peritos Contadores | `/profesionales/peritos-contadores/` | `.../profesionales/peritos-contadores.html` |
-| Profesionales | Auditores | `/profesionales/auditores/` | `.../profesionales/auditores.html` |
-| Profesionales | Gestores Tributarios | `/profesionales/gestores-tributarios/` | `.../profesionales/gestores-tributarios.html` |
-| Profesionales | Servicios Profesionales | `/profesionales/servicios-profesionales/` | `.../profesionales/servicios-profesionales.html` |
-| **Entes Exentos** | *(Página Hub N1)* | `/entes-exentos/` | `html-template/paginas/entes-exentos.html` |
-| Entes Exentos | Entidades del Estado | `/entes-exentos/entidades-del-estado/` | `.../entes-exentos/entidades-del-estado.html` |
-| Entes Exentos | Centros Educativos | `/entes-exentos/centros-educativos/` | `.../entes-exentos/constitucionales.html` |
-| Entes Exentos | No Lucrativos | `/entes-exentos/no-lucrativos/` | `.../entes-exentos/no-lucrativos.html` |
-| Entes Exentos | Decreto | `/entes-exentos/decreto/` | `.../entes-exentos/decreto.html` |
-| Entes Exentos | Municipalidades | `/entes-exentos/municipalidades/` | `.../entes-exentos/municipalidades.html` |
-
-### 4.2 Procedimiento de 3 Pasos por Página
-
-1. **Abrir la plantilla:** Abre el archivo HTML correspondiente de la tabla en tu navegador (ej. haciendo doble clic en `pequenos-contribuyentes.html`).
-2. **Copiar shortcode:** Baja al final de la página (bajo las tarjetas) y haz clic en el botón azul **"Copiar Shortcode"**. El botón mostrará `¡Copiado!` en verde.
-3. **Pegar en WordPress:**
-   * En WordPress: **Páginas > Añadir nueva**.
-   * Pon el título de la página.
-   * Si es página de Nivel 2, en la barra lateral selecciona la **Página superior** (ej. *Contribuyentes*).
-   * Pega en la pestaña **Texto** de WPBakery.
-   * Haz clic en **Publicar**.
+1. **Pestaña `1. Requisitos` (Texto nativo optimizado en Lenguaje Ciudadano):**
+   - **Aviso prioritario sobre el DPI:** Destaca mediante `[vc_message]` que el Documento Personal de Identificación (DPI) debe estar **físico y vigente**, aclarando expresamente que **no se acepta la constancia de solicitud o renovación emitida por el RENAP**.
+   - **4 Modalidades claras:**
+     - *Uso Personal o Laboral (Sin Obligaciones de Impuestos)*
+     - *Negocio, Comercio o Profesión (Con Obligaciones Tributarias)*
+     - *Personas con Discapacidad Visual, Auditiva o Invalidez*
+     - *Guatemalteco Residente en el Extranjero*
+   - **Guía de comprobante de domicilio:** Explica cuándo NO se requiere adjuntar factura de servicios (cuando se marca *"Dirección según DPI"*) y qué documentos son válidos cuando la dirección difiere.
+   - **Depuración arquitectónica:** Se omite el listado antiguo de *"5. Oficinas o Agencias Tributarias habilitadas por Región"*.
+2. **Pestaña `2. Solicitar Gestión` (Iframe oficial de RTU Digital):**
+   - Utiliza `[vc_raw_html]` para incrustar directamente el formulario transaccional oficial de la SAT:
+     - **URL del Iframe:** `https://app.c.sat.gob.gt/rtu/formulario-inscripcion`
+   - Incluye barra superior institucional con enlace de respaldo para abrir en pestaña completa si el ciudadano lo prefiere.
+3. **Pestaña `3. Solicitar Cita` (Iframe oficial de Cita Validada + Manual PDF):**
+   - Utiliza `[vc_raw_html]` para incrustar el sistema oficial de programación de citas para finalizar la solicitud de NIT:
+     - **URL del Iframe:** `https://cdn.c.sat.gob.gt/cita-validada/cita-validada-portal/portal`
+     - **Manual Oficial en PDF:** `https://portal.sat.gob.gt/portal/descarga/15389/cita-controlada/96248/manual-usuario-portal-2`
 
 ---
 
-## 5. Paso 4: Estructuración del Menú de Navegación de The7
+## 5. Paso 4: Creación de Páginas Jerárquicas del Catálogo (Nivel 1 a Nivel 4)
+
+Todas las plantillas WPBakery del catálogo (**714 gestiones canónicas**) se encuentran generadas y organizadas jerárquicamente en **`docs/plantillas-wpbakery/`** (consulta el inventario completo en **`docs/plantillas-wpbakery/_INDICE.md`**).
+
+### 5.1 Árbol Canónico de Páginas de Nivel 1 y Nivel 2
+
+Crea primero las **4 páginas de Nivel 1** y luego sus **19 páginas de Nivel 2** asignando el atributo "Superior" (*Parent Page*):
+
+| Nivel 1 (Página Padre) | Nivel 2 (Página Hija) | Comportamiento Arquitectónico | Slug Sugerido | Archivo Shortcode en `docs/plantillas-wpbakery/` |
+| :--- | :--- | :--- | :--- | :--- |
+| **Contribuyentes** | *(Hub Nivel 1)* | Muestra 4 tarjetas de Nivel 2 | `/contribuyentes/` | `contribuyentes/N1_contribuyentes.txt` |
+| Contribuyentes | Sin Obligaciones | **Lista directa (10 gestiones)** | `/contribuyentes/sin-obligaciones/` | `contribuyentes/N2_sin-obligaciones.txt` |
+| Contribuyentes | Pequeños Contribuyentes | Muestra 2 tarjetas de Nivel 3 | `/contribuyentes/pequenos-contribuyentes/` | `contribuyentes/N2_pequenos-contribuyentes.txt` |
+| Contribuyentes | Contribuyente General | Muestra 8 tarjetas de Nivel 3 | `/contribuyentes/contribuyente-general/` | `contribuyentes/N2_contribuyente-general.txt` |
+| Contribuyentes | Contribuyentes Especiales | Muestra 3 tarjetas de Nivel 3 | `/contribuyentes/contribuyentes-especiales/` | `contribuyentes/N2_contribuyentes-especiales.txt` |
+| **Operadores de Comercio Exterior** | *(Hub Nivel 1)* | Muestra 6 tarjetas de Nivel 2 | `/operadores-de-comercio-exterior/` | `operadores-de-comercio-exterior/N1_operadores-de-comercio-exterior.txt` |
+| Operadores de Comercio Exterior | Importadores | Muestra 5 tarjetas de Nivel 3 | `/operadores-de-comercio-exterior/importadores/` | `operadores-de-comercio-exterior/N2_importadores.txt` |
+| Operadores de Comercio Exterior | Exportadores | Muestra 3 tarjetas de Nivel 3 | `/operadores-de-comercio-exterior/exportadores/` | `operadores-de-comercio-exterior/N2_exportadores.txt` |
+| Operadores de Comercio Exterior | Operador Económico Autorizado (OEA) | **Lista directa (2 gestiones)** | `/operadores-de-comercio-exterior/operador-economico-autorizado-oea/` | `operadores-de-comercio-exterior/N2_operador-economico-autorizado-oea.txt` |
+| Operadores de Comercio Exterior | Auxiliares de la Función Pública Aduanera (AFPA) | Muestra 5 tarjetas de Nivel 3 | `/operadores-de-comercio-exterior/auxiliares-de-la-funcion-publica-aduanera-afpa/` | `operadores-de-comercio-exterior/N2_auxiliares-de-la-funcion-publica-aduanera-afpa.txt` |
+| Operadores de Comercio Exterior | Regímenes Territoriales y Zonas Especiales | Muestra 2 tarjetas de Nivel 3 | `/operadores-de-comercio-exterior/regimenes-territoriales-y-zonas-especiales/` | `operadores-de-comercio-exterior/N2_regimenes-territoriales-y-zonas-especiales.txt` |
+| Operadores de Comercio Exterior | Normativa y Operaciones Aduaneras Generales | Muestra 5 tarjetas de Nivel 3 | `/operadores-de-comercio-exterior/normativa-y-operaciones-aduaneras-generales/` | `operadores-de-comercio-exterior/N2_normativa-y-operaciones-aduaneras-generales.txt` |
+| **Profesionales** | *(Hub Nivel 1)* | Muestra 5 tarjetas de Nivel 2 | `/profesionales/` | `profesionales/N1_profesionales.txt` |
+| Profesionales | Abogados y Notarios | Muestra 4 tarjetas de Nivel 3 | `/profesionales/abogados-y-notarios/` | `profesionales/N2_abogados-y-notarios.txt` |
+| Profesionales | Peritos Contadores | Muestra 2 tarjetas de Nivel 3 | `/profesionales/peritos-contadores/` | `profesionales/N2_peritos-contadores.txt` |
+| Profesionales | Auditores | **Lista directa (4 gestiones — Compactación Hallazgo A)** | `/profesionales/auditores/` | `profesionales/N2_auditores.txt` |
+| Profesionales | Gestores Tributarios | Muestra 2 tarjetas de Nivel 3 | `/profesionales/gestores-tributarios/` | `profesionales/N2_gestores-tributarios.txt` |
+| Profesionales | Servicios Profesionales | **Lista directa (6 gestiones — Compactación Hallazgo A)** | `/profesionales/servicios-profesionales/` | `profesionales/N2_servicios-profesionales.txt` |
+| **Entes Exentos** | *(Hub Nivel 1)* | Muestra 5 tarjetas de Nivel 2 | `/entes-exentos/` | `entes-exentos/N1_entes-exentos.txt` |
+| Entes Exentos | Entidades del Estado | Muestra 4 tarjetas de Nivel 3 | `/entes-exentos/entidades-del-estado/` | `entes-exentos/N2_entidades-del-estado.txt` |
+| Entes Exentos | Constitucionales | Muestra 3 tarjetas de Nivel 3 | `/entes-exentos/constitucionales/` | `entes-exentos/N2_constitucionales.txt` |
+| Entes Exentos | No Lucrativos | Muestra 2 tarjetas de Nivel 3 | `/entes-exentos/no-lucrativos/` | `entes-exentos/N2_no-lucrativos.txt` |
+| Entes Exentos | Municipalidades | **Lista directa (5 gestiones)** | `/entes-exentos/municipalidades/` | `entes-exentos/N2_municipalidades.txt` |
+| Entes Exentos | Decreto | Muestra 3 tarjetas de Nivel 3 | `/entes-exentos/decreto/` | `entes-exentos/N2_decreto.txt` |
+
+### 5.2 Compactaciones y Consolidaciones Aplicadas en Nivel 3 y Nivel 4 (Hallazgos A y B)
+- **Hallazgo A (`Profesionales`):**
+  - `Profesionales > Auditores` (4 gestiones) y `Profesionales > Servicios Profesionales` (6 gestiones) se presentan en **lista directa en Nivel 2** (`N2_auditores.txt` y `N2_servicios-profesionales.txt`), eliminando carpetas intermedias de sub-densidad.
+- **Hallazgo B (`Contribuyentes > Contribuyente General`):**
+  - `Regímenes tributarios` (8 gestiones) se presenta en **lista directa en Nivel 3** (`N3_regimenes-tributarios.txt`), sin fragmentación en Nivel 4.
+  - `Facturación electrónica y documentos tributarios` (17 gestiones) agrupa sus gestiones en **3 bloques equilibrados de Nivel 4**:
+    1. *Factura Electrónica en Línea (FEL) y Autorización de Documentos* (6 gestiones)
+    2. *Imprentas, Máquinas Registradoras y Sistemas* (5 gestiones)
+    3. *Formularios y Constancias de Exención* (6 gestiones)
+  - `Servicios y gestiones al contribuyente` (50 gestiones) agrupa sus gestiones en **5 bloques equilibrados de Nivel 4**:
+    1. *Constancias y gestiones del RTU* (9 gestiones)
+    2. *Agencia Virtual y accesos* (9 gestiones)
+    3. *Citas, estado y quejas* (8 gestiones)
+    4. *Orientación y constancias* (8 gestiones)
+    5. *Otros servicios al contribuyente* (16 gestiones)
+
+---
+
+## 6. Paso 5: Estructuración del Menú de Navegación de The7
 
 Para garantizar el cumplimiento de Miller ($7 \pm 2$ opciones visibles) y cero clics pasarela:
 
 1. Ve a **Apariencia > Menús**.
 2. Crea un menú llamado **Menú Principal SAT**.
-3. Añade las páginas y organízalas jerárquicamente arrastrando hacia la derecha:
-   * **Inicio**
-   * **Contribuyentes**
-     * NIT sin Obligaciones
+3. Añade las páginas principales y organízalas jerárquicamente:
+   * **Inicio** (`/`)
+   * **Contribuyentes** (`/contribuyentes/`)
+     * Sin Obligaciones
      * Pequeños Contribuyentes
-     * Régimen Agropecuario
      * Contribuyente General
      * Contribuyentes Especiales
-   * **Operadores de Comercio Exterior**
-     * Auxiliares Aduaneros (AFPA)
+   * **Operadores de Comercio Exterior** (`/operadores-de-comercio-exterior/`)
      * Importadores
      * Exportadores
-     * Regímenes Territoriales
-     * Normativa Aduanera
-   * **Profesionales**
+     * Operador Económico Autorizado (OEA)
+     * Auxiliares de la Función Pública Aduanera (AFPA)
+     * Regímenes Territoriales y Zonas Especiales
+     * Normativa y Operaciones Aduaneras Generales
+   * **Profesionales** (`/profesionales/`)
      * Abogados y Notarios
      * Peritos Contadores
      * Auditores
      * Gestores Tributarios
      * Servicios Profesionales
-   * **Entes Exentos**
+   * **Entes Exentos** (`/entes-exentos/`)
      * Entidades del Estado
-     * Centros Educativos y Universidades
-     * Organizaciones No Lucrativas
-     * Misiones y Decretos
+     * Constitucionales
+     * No Lucrativos
      * Municipalidades
+     * Decreto
 4. En **Ajustes del menú > Dónde se verá**, marca la casilla: **Main Menu** (o Menú primario de The7).
 5. Guarda el menú.
 
 ---
 
-## 6. Reglas de Gobernanza en la Administración Diaria
+## 7. Reglas de Gobernanza en la Administración Diaria y Regeneración Automática
 
-Al crear o editar páginas en WordPress, el equipo debe mantener rigurosamente estas reglas institucionales:
+Al crear o editar páginas en WordPress o actualizar el catálogo, el equipo debe mantener rigurosamente estas reglas institucionales:
 
-1. **Prohibición de la palabra "Trámite":**  
+1. **Sincronización Automática de Plantillas WPBakery:**  
+   Cada vez que se actualice `src/data/allTramites.json`, ejecuta:
+   ```bash
+   python3 scripts/generar_wpbakery_shortcodes.py
+   ```
+   Esto regenera automáticamente todas las plantillas en `docs/plantillas-wpbakery/` y su índice `_INDICE.md`.
+2. **Prohibición de la palabra "Trámite":**  
    Queda terminantemente prohibido utilizar "trámite" o "trámites" en títulos, botones, migas de pan y textos. Usar estrictamente **"gestión" / "gestiones"**.
-2. **Niveles Estructurales sin Nombres Inventados:**  
-   Los niveles son exclusivamente numéricos: **Nivel 1, Nivel 2, Nivel 3, Nivel 4, Nivel 5**. No inventar nombres de taxonomía ficticios.
-3. **Capacidad de Miller ($7 \pm 2$):**  
-   Ninguna página debe contener listas masivas indiferenciadas. Mantener de 5 a 9 tarjetas por fila o subtema.
-4. **Ciclo ATO (Australian Taxation Office):**  
-   Al agregar nuevas tarjetas, mantener el orden cronológico de vida del contribuyente:  
-   `1. Empezar/Inscripción` $\to$ `2. Operar/Declarar` $\to$ `3. Consultar` $\to$ `4. Modificar/Cerrar` $\to$ `5. Normativa/Cursos`.
-5. **Código Canónico Inmutable:**  
-   Cada gestión terminal debe conservar su código canónico `SAT-GES-####` en la documentación y base legal.
+3. **Prohibición de Modales o Popovers para Contenido:**  
+   Ninguna gestión o proceso puede abrirse en ventanas emergentes o modales flotantes; toda gestión se presenta en su propia página completa dedicada.
+4. **Niveles Estructurales sin Nombres Inventados:**  
+   Los niveles son exclusivamente numéricos: **Nivel 1, Nivel 2, Nivel 3, Nivel 4, Nivel 5**.
+5. **Ciclo ATO (Australian Taxation Office):**  
+   Al agregar nuevas tarjetas, mantener el orden cronológico del ciclo de vida del contribuyente:  
+   `1. Empezar` $\to$ `2. Operar` $\to$ `3. Consultar` $\to$ `4. Modificar/Cerrar` $\to$ `5. Normativa`.

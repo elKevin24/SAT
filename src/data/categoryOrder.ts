@@ -81,18 +81,14 @@ const SPECIFIC_SUBCATEGORY_ORDER: Record<string, string[]> = {
     'Consultas, Retenciones y Libros Contables',
   ],
   'Auditores': [
-    'Habilitación y Registro de Auditor (CPA)',
-    'Dictámenes de Crédito Fiscal y Auditoría',
+    'Auditores',
   ],
   'Gestores Tributarios': [
     'Acreditación y Carné Oficial de Gestor',
     'Renovación y Gestión de Gafetes',
   ],
   'Servicios Profesionales': [
-    'Facturación por Honorarios y Formularios',
-    'Actualización de Actividad y RTU',
-    'Consultas Jurídico Tributarias',
-    'Sistemas de Retención y Cumplimiento',
+    'Servicios Profesionales',
   ],
   'Importadores': [
     'Registro y Padrón de Importadores',

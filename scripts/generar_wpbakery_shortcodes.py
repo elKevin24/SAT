@@ -1,352 +1,670 @@
 """
-generar_wpbakery_shortcodes.py  v3
-===================================
-Genera shortcodes WPBakery por cada nodo de la arquitectura de información SAT.
+generar_wpbakery_shortcodes.py  v4 (Sincronizado con allTramites.json + Hallazgos A y B + Solicitar NIT 3 Pasos)
+=================================================================================================================
+Genera todos los shortcodes oficiales de WPBakery + The7 Classic para el Portal SAT Guatemala.
 
-Fuente canónica:
-  - Mapa_de_Navegacion_y_Descripciones_Portal_SAT.xlsx
-      · Nivel 3 → describe cada N3 (Lead text + hijos N4)
-      · Nivel 4 → describe cada N4 (Lead text + gestiones N5)
-  - Estructura_Final_Contenido_Portal_SAT_Actualizado.xlsx
-      · Matriz Maestra (714) → gestiones hoja con URL real
+Fuente canónica única (Single Source of Truth):
+  - src/data/allTramites.json (714 gestiones canónicas con orden_n1..orden_n5 y orden_contenido)
 
-Reglas aplicadas (AGENTS.md):
-  - Zero pass-through clicks: páginas con 1 solo ítem NO se generan.
-  - Miller (7±2): se avisa si una página supera 10 ítems.
-  - Guion largo (—): nodos sin N4 real van a lista directa de gestiones.
-  - el_class varía según N1.
-
-Salida: scripts/output/wpbakery/
-  N2_<slug>.txt   → info-boxes = hijos N3
-  N3_<slug>.txt   → info-boxes = hijos N4 (o gestiones si lista directa)
-  N4_<slug>.txt   → info-boxes = gestiones con URL real
-  _INDICE.md      → mapa completo de archivos generados
+Reglas aplicadas (AGENTS.md & DESIGN_RULES.md):
+  - Estructura estrictamente numérica (Nivel 1 a Nivel 5), sin nombres conceptuales inventados.
+  - Prohibición estricta de la palabra "trámite" / "trámites" -> Uso obligatorio de "gestión" / "gestiones".
+  - Regla del Guion Largo (—):
+      · Si nivel3 == "—" (ej. Sin Obligaciones, OEA, Auditores, Servicios Profesionales, Municipalidades),
+        las gestiones se listan directamente en la página N2_<slug>.txt (sin crear subcarpetas vacías ni N3_.txt).
+      · Si nivel4 == "—" (ej. Contribuyente General > Regímenes tributarios, Agentes Aduaneros, etc.),
+        las gestiones se listan directamente en la página N3_<slug>.txt.
+  - Capacidad de Miller (7±2) y orden cronológico del ciclo de vida ATO (orden_contenido).
+  - Página Universal Conectada en 3 Pasos para Solicitar NIT (/solicitar-nit/):
+      · Paso 1: 1. Requisitos (4 modalidades en lenguaje ciudadano + alerta DPI físico vigente sin constancia RENAP + guía de domicilio, sin listado de agencias por región).
+      · Paso 2: 2. Solicitar Gestión (Iframe oficial RTU Digital: https://app.c.sat.gob.gt/rtu/formulario-inscripcion).
+      · Paso 3: 3. Solicitar Cita (Iframe oficial Cita Validada: https://cdn.c.sat.gob.gt/cita-validada/cita-validada-portal/portal + Manual PDF).
 """
 
-import sys
+import base64
+import json
 import re
-from collections import defaultdict, OrderedDict
+import shutil
+import sys
+import urllib.parse
+from collections import OrderedDict
 from pathlib import Path
-
-import openpyxl
 
 sys.stdout.reconfigure(encoding="utf-8")
 
-# ── Rutas ─────────────────────────────────────────────────────────────────────
-BASE_DIR   = Path(__file__).parent.parent
-ENTREGABLES = BASE_DIR / "docs" / "fuentes-datos" / "02_archivos_producto_entregables"
-MAPA_XLS   = ENTREGABLES / "Mapa_de_Navegacion_y_Descripciones_Portal_SAT.xlsx"
-MATRIZ_XLS = ENTREGABLES / "Estructura_Final_Contenido_Portal_SAT_Actualizado.xlsx"
+BASE_DIR = Path(__file__).parent.parent
+TRAMITES_JSON = BASE_DIR / "src" / "data" / "allTramites.json"
 OUTPUT_DIR = BASE_DIR / "docs" / "plantillas-wpbakery"
-OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-def page_dir(*parts) -> Path:
-    """Crea y devuelve subcarpeta jerárquica. parts = (n1, n2, n3, ...)"""
-    d = OUTPUT_DIR
-    for p in parts:
-        d = d / slug(p)
-        d.mkdir(parents=True, exist_ok=True)
-    return d
-
-# Mapeo N1 → clase CSS
 CSS_CLASS = {
-    "Contribuyentes":               "sat-seccion-contribuyentes",
+    "Contribuyentes": "sat-seccion-contribuyentes",
     "Operadores de Comercio Exterior": "sat-seccion-comercio-exterior",
-    "Profesionales":                "sat-seccion-profesionales",
-    "Entes Exentos":                "sat-seccion-entes-exentos",
+    "Profesionales": "sat-seccion-profesionales",
+    "Entes Exentos": "sat-seccion-entes-exentos",
 }
 
-WARN_MILLER = 10   # avisar si >= 10 ítems (tolerancia excepcional)
-SKIP_SINGLE = True # no generar páginas con 1 solo ítem (pasarela)
+N1_SLUGS = {
+    "Contribuyentes": "contribuyentes",
+    "Operadores de Comercio Exterior": "operadores-de-comercio-exterior",
+    "Profesionales": "profesionales",
+    "Entes Exentos": "entes-exentos",
+}
+
+# Descripciones ciudadanas curadas para tarjetas de Nivel 2, Nivel 3 y Nivel 4
+CURATED_DESCRIPTIONS = {
+    # Nivel 2
+    "Sin Obligaciones": "Obtén tu primer NIT, actualiza tus datos personales, emite tu Solvencia Fiscal o registra tu título universitario sin tener negocio activo.",
+    "Pequeños Contribuyentes": "Facturación electrónica FEL, declaraciones mensuales del 5%, régimen electrónico y facilidades para productores del sector primario.",
+    "Contribuyente General": "Inscripción y actualización en el RTU, facturación electrónica FEL, declaraciones de IVA e ISR, vehículos y servicios al contribuyente.",
+    "Contribuyentes Especiales": "Atención especializada en gerencias diferenciadas, informes de precios de transferencia, estados financieros auditados y cumplimiento corporativo.",
+    "Importadores": "Inscripción en el padrón de importadores, declaraciones aduaneras DUCA, despacho, levante e importación de vehículos.",
+    "Exportadores": "Padrón de exportadores, declaraciones aduaneras de embarque y solicitud de devolución de crédito fiscal del IVA.",
+    "Operador Económico Autorizado (OEA)": "Certificación en seguridad logística de la cadena de suministro y beneficios de facilitación aduanera.",
+    "Auxiliares de la Función Pública Aduanera (AFPA)": "Habilitación, carnés, fianzas y operaciones para agentes aduaneros, apoderados, depósitos, couriers y transportistas.",
+    "Regímenes Territoriales y Zonas Especiales": "Operación aduanera y fiscal para empresas calificadas bajo Maquilas (Decreto 29-89) y Zonas de Desarrollo Económico Especial Público (ZDEEP).",
+    "Normativa y Operaciones Aduaneras Generales": "Consulta del Arancel Centroamericano (SAC), acuerdos comerciales, prevención de contrabando, criterios técnicos y modernización aduanera.",
+    "Abogados y Notarios": "Habilitación notarial, compra de papel sellado de protocolo, timbres fiscales, traspaso electrónico vehicular (e-Traspaso) y avisos notariales.",
+    "Peritos Contadores": "Inscripción y actualización en el registro de peritos contadores, autorización de libros contables y consultas de retenciones.",
+    "Auditores": "Habilitación de Contador Público y Auditor (CPA), emisión de dictámenes de crédito fiscal y solvencia para auditorías tributarias.",
+    "Gestores Tributarios": "Acreditación oficial, emisión y renovación anual de carnés y gafetes para realizar gestiones en representación de terceros.",
+    "Servicios Profesionales": "Facturación electrónica por honorarios, actualización de actividad profesional en el RTU, consultas vinculantes y sistemas de retención.",
+    "Entidades del Estado": "Unidades ejecutoras estatales en el RTU, facturación FEL, retenciones en compras públicas, solvencias y parque vehicular oficial.",
+    "Constitucionales": "Registro, exenciones de impuestos, constancias y vehículos para centros educativos, universidades, iglesias y confederaciones deportivas.",
+    "No Lucrativos": "Inscripción en el RTU, reconocimiento de exención de impuestos, constancias de exención del IVA (CIVA) y actualización de ONGs y asociaciones.",
+    "Municipalidades": "Registro de corporaciones municipales y autoridades ediles en el RTU, exención para flotillas municipales y solvencias institucionales.",
+    "Decreto": "Exenciones y franquicias para misiones diplomáticas, organismos internacionales, cooperativas, partidos políticos y donaciones oficiales.",
+
+    # Nivel 3 — Contribuyentes
+    "Régimen de Pequeño Contribuyente": "Inscripción, cambio al régimen electrónico del 4% o general del 5%, facturación FEL y declaraciones mensuales.",
+    "Régimen Agropecuario y Productores": "Inscripción, confirmación de datos, libros electrónicos y pago de impuestos para productores agropecuarios, artesanales y de reciclaje.",
+    "Inscripción y actualización en el RTU": "Inscripción de personas, sociedades, empresas mercantiles, representantes legales, actualización de datos y cierre de negocios.",
+    "Facturación electrónica y documentos tributarios": "Habilitación en Factura Electrónica en Línea (FEL), autorización de documentos, imprentas, máquinas registradoras y constancias de exención.",
+    "Declaraciones, pagos y solvencias": "Presentación de formularios en Declaraguate, formas de pago bancario, convenios de pago a plazos y emisión de Solvencia Fiscal.",
+    "Devoluciones y créditos fiscales": "Solicitud de devolución de crédito fiscal del IVA, pagos en exceso o indebidos de ISR y acreditamiento de otros impuestos.",
+    "Regímenes tributarios": "Inscripción, obligaciones, pagos trimestrales o mensuales y cambio de régimen en el Impuesto Sobre la Renta (ISR) e Impuesto al Valor Agregado (IVA).",
+    "Vehículos (como propietario)": "Primeras placas, traspasos de propiedad, pago anual del Impuesto de Circulación (ISCV), reposición de distintivos, modificaciones y bajas.",
+    "Servicios y gestiones al contribuyente": "Constancias del RTU, Agencia Virtual, programación de citas previas, orientación tributaria y otros servicios de asistencia.",
+    "Cultura tributaria y capacitación": "Cursos virtuales gratuitos de IVA, ISR y herramientas electrónicas, calendario de capacitaciones, biblioteca virtual y normativa.",
+    "Gerencias Especiales y Control Tributario": "Calificación en gerencias de grandes y medianos contribuyentes, solvencias, actualización registral y atención especializada.",
+    "Declaraciones e Informes Especiales": "Estudio de precios de transferencia, estados financieros auditados, informe semestral de saldos de inventario y retenciones.",
+    "Capacitación y Orientación Diferenciada": "Programas de formación especializada y boletines técnicos para grandes y medianos contribuyentes.",
+
+    # Nivel 4 — Contribuyente General (Consolidados con Hallazgo B)
+    "Factura Electrónica en Línea (FEL) y Autorización de Documentos": "Habilitación como emisor en el régimen FEL, emisión y verificación de Documentos Tributarios Electrónicos (DTE) y autorización de documentos.",
+    "Imprentas, Máquinas Registradoras y Sistemas": "Inscripción en el Registro Fiscal de Imprentas, autorización de máquinas registradoras y sistemas computarizados de facturación.",
+    "Formularios y Constancias de Exención": "Constancias de exención del IVA (CIVA), Constancias de Adquisición de Insumos (CAIS), listado de formularios y guías de llenado.",
+    "Constancias y gestiones del RTU": "Emisión de constancia de inscripción en el RTU, ratificación de datos, acreditación de imprentas y consultas del registro tributario.",
+    "Agencia Virtual y accesos": "Solicitud de usuario, recuperación de contraseña, desbloqueo de credenciales y configuración de accesos en Agencia Virtual.",
+    "Citas, estado y quejas": "Programación de citas previas para agencias tributarias, consulta de estado de expedientes y presentación de quejas o denuncias.",
+    "Orientación y constancias": "Consultas tributarias, constancias de retención, certificaciones administrativas y asistencia técnica al contribuyente.",
+    "Otros servicios al contribuyente": "Habilitación de libros contables, corrección de formularios, sistemas de retención de IVA e ISR y gestiones complementarias.",
+    "Personas y representantes": "Inscripción y actualización de personas individuales, profesionales liberales, representantes legales y mandatarios en el RTU.",
+    "Sociedades y empresas": "Inscripción, modificación de datos y apertura de establecimientos para sociedades anónimas y empresas mercantiles.",
+    "Otras entidades y patrimonios": "Inscripción de copropiedades, fideicomisos, contratos de participación, sucursales extranjeras y entes especiales.",
+    "Cierre de negocios y gestiones": "Cese temporal o definitivo de actividades económicas, cancelación de establecimientos mercantiles y prescripción de obligaciones.",
+    "Declaraciones": "Presentación de declaraciones juradas mensuales, trimestrales y anuales de impuestos a través de Declaraguate.",
+    "Formas de pago y convenios": "Bancos autorizados para recepción de pagos con boleta SAT-2000, solicitud de convenios de pago y facilidades tributarias.",
+    "Solvencia fiscal": "Emisión electrónica de Solvencia Fiscal para acreditar que te encuentras al día en el cumplimiento de tus obligaciones tributarias.",
+    "IVA (Impuesto al Valor Agregado)": "Solicitud de devolución de crédito fiscal del IVA en los regímenes general, optativo y especial.",
+    "ISR (Impuesto Sobre la Renta)": "Devolución o acreditamiento de pagos en exceso o indebidos del Impuesto Sobre la Renta (ISR).",
+    "Otros impuestos": "Reclamo y devolución de pagos en exceso en el Impuesto de Solidaridad (ISO), timbres y otros tributos.",
+    "Inscripción, distintivos y placas": "Inscripción de vehículos nuevos o importados, asignación de primeras placas y reposición de tarjeta de circulación o calcomanía.",
+    "Traspasos de vehículos": "Transferencia de propiedad de vehículos por compraventa electrónica notarial, donación, sucesión hereditaria o subasta.",
+    "Impuesto de circulación (ISCV) y valores": "Consulta y pago anual del Impuesto Sobre Circulación de Vehículos (ISCV), tablas de valores imponibles y rebajas por antigüedad.",
+    "Modificaciones y rectificaciones": "Cambio de uso o tipo de vehículo, cambio de color, rectificación de número de motor o chasis y transformación de carrocería.",
+    "Bajas, inactivación y reactivación": "Retiro temporal o definitivo de circulación por robo, hurto, pérdida total, exportación o desarme, y reactivación vehicular.",
+    "Autorizaciones, consultas y requisitos": "Consultas del Registro Fiscal de Vehículos, historial de propiedad, solvencias vehiculares y autorizaciones para terceros.",
+}
 
 
-# ── Helpers ───────────────────────────────────────────────────────────────────
+def clean_text(text: str) -> str:
+    if not text:
+        return ""
+    t = str(text)
+    t = re.sub(r"\bTramitar\b", "Gestionar", t)
+    t = re.sub(r"\btramitar\b", "gestionar", t)
+    t = re.sub(r"\bTrámites\b", "Gestiones", t)
+    t = re.sub(r"\btrámites\b", "gestiones", t)
+    t = re.sub(r"\bTrámite\b", "Gestión", t)
+    t = re.sub(r"\btrámite\b", "gestión", t)
+    return t.replace('"', "&quot;").strip()
+
+
 def slug(text: str) -> str:
     if not text:
         return "sin-nombre"
     t = str(text).lower().strip()
-    for src, dst in [("á","a"),("à","a"),("ä","a"),("é","e"),("è","e"),("ë","e"),
-                     ("í","i"),("ì","i"),("ï","i"),("ó","o"),("ò","o"),("ö","o"),
-                     ("ú","u"),("ù","u"),("ü","u"),("ñ","n"),("ç","c")]:
+    for src, dst in [
+        ("á", "a"), ("à", "a"), ("ä", "a"), ("é", "e"), ("è", "e"), ("ë", "e"),
+        ("í", "i"), ("ì", "i"), ("ï", "i"), ("ó", "o"), ("ò", "o"), ("ö", "o"),
+        ("ú", "u"), ("ù", "u"), ("ü", "u"), ("ñ", "n"), ("ç", "c")
+    ]:
         t = t.replace(src, dst)
     t = re.sub(r"[^a-z0-9]+", "-", t)
     return t.strip("-")[:70]
-
-
-def esc(text) -> str:
-    return str(text or "").replace('"', "&quot;").strip()
 
 
 def es_vacio(v) -> bool:
     return v is None or str(v).strip() in ("", "—", "–", "-", "None")
 
 
-def es_lista_directa(v) -> bool:
-    return es_vacio(v) or "lista directa" in str(v).lower()
+def safe_order(val) -> int:
+    if val is None:
+        return 999
+    s = str(val).strip()
+    return int(s) if s.isdigit() else 999
 
 
-def css_class(n1: str) -> str:
-    return CSS_CLASS.get(n1, "sat-seccion-contribuyentes")
+def get_node_desc(title: str, child_items: list[dict]) -> str:
+    if title in CURATED_DESCRIPTIONS:
+        return clean_text(CURATED_DESCRIPTIONS[title])
+    # Si no está en el diccionario curado, construir resumen ciudadano a partir de las primeras gestiones
+    sample_titles = [
+        clean_text(it.get("gestion") or it.get("nombreActual") or "")
+        for it in child_items[:3]
+        if (it.get("gestion") or it.get("nombreActual"))
+    ]
+    if sample_titles:
+        joined = ", ".join(sample_titles)
+        return clean_text(f"Incluye gestiones como: {joined}.")
+    return clean_text(f"Consulta los requisitos oficiales, pasos y servicios en línea para {title}.")
 
 
-def info_box(title: str, desc: str, url: str = "") -> str:
-    link_val = f"url:{url}" if url and url.startswith("http") else ""
+def encode_vc_link(url: str, target_blank: bool = False) -> str:
+    if not url:
+        return ""
+    enc = urllib.parse.quote(url, safe=":/#?=&%-_.")
+    target = "target:%20_blank|" if target_blank else "|"
+    return f"url:{enc}||{target}"
+
+
+def encode_raw_html(html_str: str) -> str:
+    """Codifica HTML en Base64 URL-encoded como requiere [vc_raw_html] en WPBakery."""
+    raw_bytes = urllib.parse.quote(html_str.strip()).encode("utf-8")
+    return base64.b64encode(raw_bytes).decode("utf-8")
+
+
+def info_box(title: str, desc: str, url: str = "", target_blank: bool = False) -> str:
+    link_val = encode_vc_link(url, target_blank=target_blank)
     return (
-        f'[bsf-info-box icon_type="none" title="{esc(title)}" '
+        f'[bsf-info-box icon_type="none" title="{clean_text(title)}" '
         f'read_more="box" link="{link_val}"]'
-        f'{esc(desc)}'
+        f'{clean_text(desc)}'
         f'[/bsf-info-box]'
     )
 
 
-def columna(content: str) -> str:
-    return f'[vc_column width="1/2"]{content}[/vc_column]'
+def columna(content: str, width: str = "1/2") -> str:
+    return f'[vc_column width="{width}"]{content}[/vc_column]'
 
 
-def wrap_page(items: list[dict], n1: str) -> str:
+def wrap_page(items: list[dict], n1: str, heading: str = "", lead_text: str = "") -> str:
     breadcrumb = (
         '[vc_row gap="5px"][vc_column]'
         '[dt_breadcrumbs font_style="italic:normal:none" alignment="left"]'
         '[vc_separator][/vc_column][/vc_row]'
     )
-    cols = "".join(columna(info_box(it["title"], it["desc"], it.get("url", ""))) for it in items)
+    header_block = ""
+    if heading:
+        header_block = (
+            f'[vc_row][vc_column]'
+            f'[vc_custom_heading text="{clean_text(heading)}" font_container="tag:h1|font_size:28px|text_align:left|color:%23003865" use_theme_fonts="yes"]'
+            + (
+                f'[vc_custom_heading text="{clean_text(lead_text)}" font_container="tag:p|font_size:15px|text_align:left|color:%23475569" use_theme_fonts="yes"]'
+                if lead_text else ""
+            )
+            + '[vc_empty_space height="16px"][/vc_column][/vc_row]\n'
+        )
+    cols = "".join(
+        columna(info_box(it["title"], it["desc"], it.get("url", ""), it.get("target_blank", False)))
+        for it in items
+    )
     section = (
         f'[vc_section]'
-        f'[vc_row gap="0px" el_class="{css_class(n1)}"]'
+        f'[vc_row gap="0px" el_class="{CSS_CLASS.get(n1, "sat-seccion-contribuyentes")}"]'
         f'{cols}'
         f'[/vc_row][/vc_section]'
     )
-    return f"{breadcrumb}\n{section}"
+    return f"{breadcrumb}\n{header_block}{section}"
 
 
-def sval(row, *keys) -> str:
-    """Busca las primeras columnas cuyo nombre empiece con cualquiera de las keys."""
-    for key in keys:
-        for k, v in row.items():
-            if str(k).startswith(key):
-                s = str(v).strip() if v is not None else ""
-                if s:
-                    return s
-    return ""
+def build_home_shortcode() -> str:
+    return """[vc_row full_width="stretch_row" el_class="sat-hero-section" css=".vc_custom_hero{background-color: #003865; padding: 45px 0;}"]
+[vc_column]
+[vc_custom_heading text="Portal SAT Guatemala" font_container="tag:h1|font_size:32px|text_align:center|color:%23ffffff" use_theme_fonts="yes"]
+[vc_custom_heading text="Gestiones, requisitos oficiales y servicios tributarios y aduaneros en línea" font_container="tag:p|font_size:16px|text_align:center|color:%23e2e8f0" use_theme_fonts="yes"]
+[/vc_column]
+[/vc_row]
+
+[vc_row el_class="sat-quick-access-row" css=".vc_custom_qa{margin-top: -25px; margin-bottom: 30px;}"]
+[vc_column width="1/6"][bsf-info-box icon_type="none" title="Declaraguate" read_more="box" link="url:https://declaraguate.sat.gob.gt/||target:%20_blank|"]Presentación y pago de formularios.[/bsf-info-box][/vc_column]
+[vc_column width="1/6"][bsf-info-box icon_type="none" title="Agencia Virtual" read_more="box" link="url:https://farm3.sat.gob.gt/menu/login.jsf||target:%20_blank|"]Servicios en línea y constancia RTU.[/bsf-info-box][/vc_column]
+[vc_column width="1/6"][bsf-info-box icon_type="none" title="Solicitar NIT" read_more="box" link="url:/solicitar-nit/|||"]Requisitos, formulario oficial y cita en 3 pasos.[/bsf-info-box][/vc_column]
+[vc_column width="1/6"][bsf-info-box icon_type="none" title="Factura FEL" read_more="box" link="url:https://portal.sat.gob.gt/portal/factura-electronica-en-linea-fel/||target:%20_blank|"]Emisión y verificación de DTE.[/bsf-info-box][/vc_column]
+[vc_column width="1/6"][bsf-info-box icon_type="none" title="Consulta de NIT" read_more="box" link="url:https://portal.sat.gob.gt/portal/consulta-cui-nit/||target:%20_blank|"]Verificar estado y validez tributaria.[/bsf-info-box][/vc_column]
+[vc_column width="1/6"][bsf-info-box icon_type="none" title="Cita Previa" read_more="box" link="url:https://cdn.c.sat.gob.gt/cita-validada/cita-validada-portal/portal||target:%20_blank|"]Programar atención en agencias.[/bsf-info-box][/vc_column]
+[/vc_row]
+
+[vc_row]
+[vc_column]
+[dt_fancy_title title="Selecciona tu perfil de atención" title_size="h2" title_color="accent"]
+[vc_empty_space height="20px"]
+[/vc_column]
+[/vc_row]
+
+[vc_row gap="15px" el_class="sat-seccion-macro-segmentos"]
+[vc_column width="1/4"][bsf-info-box icon_type="none" title="Contribuyentes" read_more="box" link="url:/contribuyentes/|||"]Información y servicios tributarios para personas y empresas. Registro Tributario Unificado (RTU), pequeños contribuyentes, régimen general y vehículos.[/bsf-info-box][/vc_column]
+[vc_column width="1/4"][bsf-info-box icon_type="none" title="Operadores de Comercio Exterior" read_more="box" link="url:/operadores-de-comercio-exterior/|||"]Servicios e información aduanera. Importación, exportación, padrones, auxiliares de la función pública (AFPA) y declaraciones DUCA.[/bsf-info-box][/vc_column]
+[vc_column width="1/4"][bsf-info-box icon_type="none" title="Profesionales" read_more="box" link="url:/profesionales/|||"]Herramientas especializadas para auxiliares y profesionales tributarios. Abogados, notarios, peritos contadores, auditores y gestores.[/bsf-info-box][/vc_column]
+[vc_column width="1/4"][bsf-info-box icon_type="none" title="Entes Exentos" read_more="box" link="url:/entes-exentos/|||"]Gestiones y normativa para entidades del Estado, centros educativos, misiones diplomáticas, ONGs y municipalidades.[/bsf-info-box][/vc_column]
+[/vc_row]
+
+[vc_row]
+[vc_column]
+[vc_empty_space height="30px"]
+[dt_fancy_title title="Gestiones más frecuentes" title_size="h2" title_color="accent"]
+[vc_empty_space height="20px"]
+[/vc_column]
+[/vc_row]
+
+[vc_row gap="10px" el_class="sat-seccion-contribuyentes"]
+[vc_column width="1/3"][bsf-info-box icon_type="none" title="Solicitar Número de Identificación Tributaria (NIT)" read_more="box" link="url:/solicitar-nit/|||"]Requisitos claros, formulario oficial RTU Digital integrado y programación de cita en 3 pasos conectados.[/bsf-info-box][/vc_column]
+[vc_column width="1/3"][bsf-info-box icon_type="none" title="Solicitud y Activación de Agencia Virtual" read_more="box" link="url:https://farm3.sat.gob.gt/menu/login.jsf||target:%20_blank|"]Acceso a la plataforma web de la SAT para consultar datos personales y descargar tu constancia del Registro Tributario Unificado (RTU).[/bsf-info-box][/vc_column]
+[vc_column width="1/3"][bsf-info-box icon_type="none" title="Solicitud y Emisión de Solvencia Fiscal en Línea" read_more="box" link="url:https://portal.sat.gob.gt/portal/solvencia-fiscal/||target:%20_blank|"]Consulta, pago y descarga del certificado electrónico que acredita la ausencia de adeudos tributarios.[/bsf-info-box][/vc_column]
+[vc_column width="1/3"][bsf-info-box icon_type="none" title="Habilitación para emitir Factura Electrónica (FEL)" read_more="box" link="url:https://portal.sat.gob.gt/portal/factura-electronica-en-linea-fel/||target:%20_blank|"]Pasos para incorporarte al régimen FEL y emitir Documentos Tributarios Electrónicos (DTE) de forma gratuita.[/bsf-info-box][/vc_column]
+[vc_column width="1/3"][bsf-info-box icon_type="none" title="Traspaso Electrónico de Vehículos en Línea" read_more="box" link="url:https://portal.sat.gob.gt/portal/vehiculos/||target:%20_blank|"]Transferencia de dominio de automotores autorizada notarialmente a través de Agencia Virtual.[/bsf-info-box][/vc_column]
+[vc_column width="1/3"][bsf-info-box icon_type="none" title="Inscripción en el Padrón de Importadores" read_more="box" link="url:https://portal.sat.gob.gt/portal/padron-de-importadores/||target:%20_blank|"]Requisitos y activación de estado en el padrón aduanero para el despacho e internación de mercancías.[/bsf-info-box][/vc_column]
+[/vc_row]"""
 
 
-def load_sheet(wb, sheet_name: str, header_row: int) -> list[dict]:
-    """Carga una hoja devolviendo lista de dicts. header_row es 1-based."""
-    ws = wb[sheet_name]
-    all_rows = list(ws.iter_rows(values_only=True))
-    hdrs = [
-        str(c).strip() if c is not None else f"_col{i}"
-        for i, c in enumerate(all_rows[header_row - 1])
+def build_solicitar_nit_shortcode() -> str:
+    """
+    Construye el Shortcode WPBakery para la Página Universal Conectada en 3 Pasos:
+    /solicitar-nit/
+      - Paso 1: 1. Requisitos (texto nativo en lenguaje ciudadano, alerta DPI físico vigente sin constancia RENAP,
+        4 modalidades y guía de comprobante de domicilio; sin lista de agencias por región).
+      - Paso 2: 2. Solicitar Gestión (iframe oficial https://app.c.sat.gob.gt/rtu/formulario-inscripcion).
+      - Paso 3: 3. Solicitar Cita (iframe oficial https://cdn.c.sat.gob.gt/cita-validada/cita-validada-portal/portal
+        + manual PDF oficial).
+    """
+    iframe_paso_2 = """<div class="sat-iframe-wrapper" style="border: 1px solid #cbd5e1; border-radius: 12px; overflow: hidden; background: #ffffff; box-shadow: 0 4px 14px rgba(0,56,101,0.06);">
+  <div style="background: #003865; color: #ffffff; padding: 12px 18px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+    <span style="font-size: 13px; font-weight: 700;">Aplicativo Oficial SAT — Formulario Electrónico de Inscripción en el RTU</span>
+    <a href="https://app.c.sat.gob.gt/rtu/formulario-inscripcion" target="_blank" rel="noopener noreferrer" style="color: #7dd3fc; font-size: 12px; font-weight: 600; text-decoration: underline;">Abrir aplicativo en pestaña completa ↗</a>
+  </div>
+  <iframe src="https://app.c.sat.gob.gt/rtu/formulario-inscripcion" title="Formulario de Inscripción de NIT en el RTU Digital" style="width: 100%; height: 820px; border: 0; display: block;" loading="lazy" allow="camera; microphone; geolocation"></iframe>
+</div>"""
+
+    iframe_paso_3 = """<div class="sat-iframe-wrapper" style="border: 1px solid #cbd5e1; border-radius: 12px; overflow: hidden; background: #ffffff; box-shadow: 0 4px 14px rgba(0,56,101,0.06);">
+  <div style="background: #003865; color: #ffffff; padding: 12px 18px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+    <span style="font-size: 13px; font-weight: 700;">Aplicativo Oficial SAT — Sistema de Cita Validada para Solicitud de NIT</span>
+    <div style="display: flex; gap: 16px; align-items: center;">
+      <a href="https://portal.sat.gob.gt/portal/descarga/15389/cita-controlada/96248/manual-usuario-portal-2" target="_blank" rel="noopener noreferrer" style="color: #fde68a; font-size: 12px; font-weight: 600; text-decoration: underline;">Descargar Manual de Cita (PDF)</a>
+      <a href="https://cdn.c.sat.gob.gt/cita-validada/cita-validada-portal/portal" target="_blank" rel="noopener noreferrer" style="color: #7dd3fc; font-size: 12px; font-weight: 600; text-decoration: underline;">Abrir en pestaña completa ↗</a>
+    </div>
+  </div>
+  <iframe src="https://cdn.c.sat.gob.gt/cita-validada/cita-validada-portal/portal" title="Solicitud de Cita para NIT" style="width: 100%; height: 820px; border: 0; display: block;" loading="lazy"></iframe>
+</div>"""
+
+    b64_iframe_2 = encode_raw_html(iframe_paso_2)
+    b64_iframe_3 = encode_raw_html(iframe_paso_3)
+
+    return f"""[vc_row gap="5px"][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row]
+
+[vc_row el_class="sat-gestion-header"]
+[vc_column]
+[vc_custom_heading text="Solicitar Número de Identificación Tributaria (NIT)" font_container="tag:h1|font_size:30px|text_align:left|color:%23003865" use_theme_fonts="yes"]
+[vc_custom_heading text="Obtén por primera vez tu Número de Identificación Tributaria (NIT) y activa tu usuario de Agencia Virtual en 3 pasos conectados sin salir de esta página." font_container="tag:p|font_size:16px|text_align:left|color:%23475569" use_theme_fonts="yes"]
+[vc_empty_space height="12px"]
+[/vc_column]
+[/vc_row]
+
+[vc_section]
+[vc_row]
+[vc_column]
+[vc_tta_tabs style="modern" shape="rounded" color="blue" active_section="1" el_class="sat-connected-steps-tabs"]
+
+[vc_tta_section title="1. Requisitos" tab_id="paso-1-requisitos"]
+[vc_row]
+[vc_column]
+[vc_message message_box_style="solid-icon" message_box_color="warning" icon_fontawesome="fas fa-id-card"]<strong> Condición indispensable sobre tu documento de identificación:</strong> Tu Documento Personal de Identificación (DPI) debe estar <strong>físico y vigente</strong>. Para la inscripción de datos en el Registro Tributario Unificado (RTU), <strong>no se acepta la constancia de solicitud o renovación emitida por el RENAP</strong>.[/vc_message]
+[vc_empty_space height="16px"]
+[vc_custom_heading text="Elige tu modalidad y verifica los documentos que necesitas en formato digital (PDF o JPG, máximo 5 MB)" font_container="tag:h2|font_size:20px|text_align:left|color:%23003865" use_theme_fonts="yes"]
+[vc_empty_space height="12px"]
+[/vc_column]
+[/vc_row]
+
+[vc_row gap="15px" el_class="sat-seccion-contribuyentes"]
+[vc_column width="1/2"]
+[vc_column_text]
+<div class="sat-modalidad-card" style="border: 1px solid #dde2e5; border-top: 4px solid #14649b; border-radius: 10px; padding: 18px; background: #fff;">
+  <h3 style="color: #003865; font-size: 16px; margin-bottom: 6px;">Uso Personal o Laboral (Sin Obligaciones de Impuestos)</h3>
+  <p style="font-size: 13px; color: #475569; margin-bottom: 10px;">Para empleados en relación de dependencia, estudiantes, gestiones bancarias, compra de vehículos o actos civiles sin negocio propio.</p>
+  <ul style="font-size: 13px; color: #1e293b; padding-left: 18px; line-height: 1.6;">
+    <li><strong>DPI original, físico y vigente</strong> (ambos lados legibles) o pasaporte vigente en caso de extranjeros.</li>
+    <li><strong>Correo electrónico personal activo</strong> al que tengas acceso inmediato para validar tu código de seguridad.</li>
+    <li><strong>Comprobante de domicilio</strong> (únicamente si la dirección actual es distinta a la impresa en tu DPI o si el DPI no especifica dirección completa).</li>
+  </ul>
+</div>
+[/vc_column_text]
+[/vc_column]
+
+[vc_column width="1/2"]
+[vc_column_text]
+<div class="sat-modalidad-card" style="border: 1px solid #dde2e5; border-top: 4px solid #0284c7; border-radius: 10px; padding: 18px; background: #fff;">
+  <h3 style="color: #003865; font-size: 16px; margin-bottom: 6px;">Negocio, Comercio o Profesión (Con Obligaciones Tributarias)</h3>
+  <p style="font-size: 13px; color: #475569; margin-bottom: 10px;">Para emprender un negocio propio, emitir facturas como Pequeño Contribuyente, Régimen General o ejercer una profesión liberal.</p>
+  <ul style="font-size: 13px; color: #1e293b; padding-left: 18px; line-height: 1.6;">
+    <li><strong>DPI original, físico y vigente</strong> o pasaporte vigente si eres extranjero.</li>
+    <li><strong>Factura o comprobante de domicilio fiscal y comercial</strong> con antigüedad no mayor a 3 meses.</li>
+    <li><strong>Constancia de colegiado activo o título universitario</strong> (si te inscribes como profesional liberal).</li>
+  </ul>
+</div>
+[/vc_column_text]
+[/vc_column]
+[/vc_row]
+
+[vc_row gap="15px" el_class="sat-seccion-contribuyentes"]
+[vc_column width="1/2"]
+[vc_column_text]
+<div class="sat-modalidad-card" style="border: 1px solid #dde2e5; border-top: 4px solid #2e7d32; border-radius: 10px; padding: 18px; background: #fff;">
+  <h3 style="color: #003865; font-size: 16px; margin-bottom: 6px;">Personas con Discapacidad Visual, Auditiva o Invalidez</h3>
+  <p style="font-size: 13px; color: #475569; margin-bottom: 10px;">Atención preferencial acompañada en cualquier agencia o delegación tributaria de la SAT.</p>
+  <ul style="font-size: 13px; color: #1e293b; padding-left: 18px; line-height: 1.6;">
+    <li><strong>DPI original y vigente</strong> del solicitante.</li>
+    <li><strong>Acompañamiento de un familiar</strong> dentro de los grados de ley (con su propio DPI vigente) o auxilio de un Notario para la firma y validación biométrica.</li>
+  </ul>
+</div>
+[/vc_column_text]
+[/vc_column]
+
+[vc_column width="1/2"]
+[vc_column_text]
+<div class="sat-modalidad-card" style="border: 1px solid #dde2e5; border-top: 4px solid #c25e00; border-radius: 10px; padding: 18px; background: #fff;">
+  <h3 style="color: #003865; font-size: 16px; margin-bottom: 6px;">Guatemalteco Residente en el Extranjero</h3>
+  <p style="font-size: 13px; color: #475569; margin-bottom: 10px;">Para ciudadanos guatemaltecos que residen fuera del país y requieren su NIT para gestiones consulares, bancarias o patrimoniales.</p>
+  <ul style="font-size: 13px; color: #1e293b; padding-left: 18px; line-height: 1.6;">
+    <li><strong>DPI vigente o Pasaporte vigente</strong> digitalizado en alta resolución.</li>
+    <li><strong>Fotografía tipo selfie</strong> sosteniendo tu documento de identificación a la altura del rostro.</li>
+    <li><strong>Dirección en Guatemala</strong> (de un familiar o inmueble propio) y correo electrónico personal.</li>
+  </ul>
+</div>
+[/vc_column_text]
+[/vc_column]
+[/vc_row]
+
+[vc_empty_space height="16px"]
+
+[vc_row]
+[vc_column width="1/2"]
+[vc_column_text]
+<div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 10px; padding: 16px;">
+  <h4 style="color: #166534; font-size: 15px; margin-bottom: 8px;">¿Cuándo NO necesitas adjuntar factura de servicios?</h4>
+  <p style="font-size: 13px; color: #14532d; margin: 0; line-height: 1.55;">Si tu DPI muestra tu dirección completa de residencia actual y seleccionas la casilla <strong>"Dirección según DPI"</strong> dentro del formulario electrónico, no necesitas adjuntar recibo de luz, agua ni teléfono.</p>
+</div>
+[/vc_column_text]
+[/vc_column]
+
+[vc_column width="1/2"]
+[vc_column_text]
+<div style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 10px; padding: 16px;">
+  <h4 style="color: #003865; font-size: 15px; margin-bottom: 8px;">¿Qué documentos se aceptan si tu dirección es distinta a la del DPI?</h4>
+  <p style="font-size: 13px; color: #334155; margin: 0; line-height: 1.55;">Factura de energía eléctrica, agua potable, teléfono residencial o internet fijo, recibo del Impuesto Único Sobre Inmuebles (IUSI) o contrato de arrendamiento vigente (con máximo 3 meses de antigüedad).</p>
+</div>
+[/vc_column_text]
+[/vc_column]
+[/vc_row]
+[/vc_tta_section]
+
+[vc_tta_section title="2. Solicitar Gestión" tab_id="paso-2-solicitar-gestion"]
+[vc_row]
+[vc_column]
+[vc_custom_heading text="Paso 2: Completa el Formulario Oficial de Inscripción de NIT" font_container="tag:h2|font_size:20px|text_align:left|color:%23003865" use_theme_fonts="yes"]
+[vc_column_text]Ingresa tu correo electrónico en el aplicativo oficial a continuación, escribe el código de seguridad que recibirás en tu bandeja de entrada, completa tus datos personales y adjunta tu DPI vigente. Al finalizar, si el sistema te indica que debes concluir presencialmente o por validación, pasa directamente a la pestaña <strong>3. Solicitar Cita</strong>.[/vc_column_text]
+[vc_empty_space height="12px"]
+[vc_raw_html]{b64_iframe_2}[/vc_raw_html]
+[/vc_column]
+[/vc_row]
+[/vc_tta_section]
+
+[vc_tta_section title="3. Solicitar Cita" tab_id="paso-3-solicitar-cita"]
+[vc_row]
+[vc_column]
+[vc_custom_heading text="Paso 3: Programa tu Cita para Finalizar tu Solicitud de NIT" font_container="tag:h2|font_size:20px|text_align:left|color:%23003865" use_theme_fonts="yes"]
+[vc_column_text]Si ya enviaste tu solicitud en el Paso 2 y recibiste el correo electrónico de confirmación indicando que debes programar cita para finalizar la validación de tu NIT, ingresa tu CUI (DPI) y el correo registrado en el aplicativo oficial a continuación.[/vc_column_text]
+[vc_empty_space height="12px"]
+[vc_raw_html]{b64_iframe_3}[/vc_raw_html]
+[/vc_column]
+[/vc_row]
+[/vc_tta_section]
+
+[/vc_tta_tabs]
+[/vc_column]
+[/vc_row]
+[/vc_section]"""
+
+
+def main():
+    with open(TRAMITES_JSON, "r", encoding="utf-8") as f:
+        tramites = json.load(f)
+
+    # Limpiar directorio de salida para eliminar archivos huérfanos antiguos (como N3_.txt o ramas pre-Hallazgo A/B)
+    if OUTPUT_DIR.exists():
+        shutil.rmtree(OUTPUT_DIR)
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+
+    # Ordenar todas las gestiones por su jerarquía oficial y orden_contenido (ATO)
+    tramites_sorted = sorted(
+        tramites,
+        key=lambda t: (
+            safe_order(t.get("orden_n1")),
+            safe_order(t.get("orden_n2")),
+            safe_order(t.get("orden_n3")),
+            safe_order(t.get("orden_n4")),
+            safe_order(t.get("orden_contenido")),
+            str(t.get("id") or ""),
+        ),
+    )
+
+    index_lines = [
+        "# Índice Maestro de Plantillas y Shortcodes WPBakery — Portal SAT Guatemala\n\n",
+        "Este directorio contiene los shortcodes oficiales de **WPBakery Page Builder + The7 Classic + Ultimate Addons (`[bsf-info-box]`)**, sincronizados 100% con `src/data/allTramites.json` (**714 gestiones canónicas**), los **Hallazgos A y B** de la Arquitectura de Información y la **Página Universal Conectada en 3 Pasos (`/solicitar-nit/`)**.\n\n",
+        "## 1. Portada y Páginas de Proceso Conectado (3 Pasos + Iframes Oficiales)\n\n",
+        "| Archivo | Tipo | Ruta Web Sugerida | Contenido |\n",
+        "| :--- | :---: | :--- | :--- |\n",
+        "| `HOME_portada-portal-sat.txt` | Portada | `/` | Hero institucional, 6 accesos rápidos, 4 tarjetas de Nivel 1 y 6 gestiones frecuentes |\n",
+        "| `procesos-conectados/G_solicitar-nit.txt` | Gestión Conectada (3 Pasos) | `/solicitar-nit/` | Pestañas conectadas: **1. Requisitos** (4 modalidades + aviso DPI físico sin constancia RENAP) › **2. Solicitar Gestión** (Iframe oficial RTU Digital) › **3. Solicitar Cita** (Iframe oficial Cita Validada + Manual PDF) |\n\n",
+        "## 2. Páginas Jerárquicas del Catálogo (Nivel 1 a Nivel 4)\n\n",
+        "| Archivo | Nivel | Ruta Jerárquica Canónica | Elementos en Página |\n",
+        "| :--- | :---: | :--- | :---: |\n",
     ]
-    return [
-        dict(zip(hdrs, row))
-        for row in all_rows[header_row:]
-        if any(v is not None for v in row)
-    ]
+
+    # 1. Guardar Portada (Home) y Página Conectada de Solicitar NIT
+    (OUTPUT_DIR / "HOME_portada-portal-sat.txt").write_text(build_home_shortcode(), encoding="utf-8")
+    proc_dir = OUTPUT_DIR / "procesos-conectados"
+    proc_dir.mkdir(parents=True, exist_ok=True)
+    (proc_dir / "G_solicitar-nit.txt").write_text(build_solicitar_nit_shortcode(), encoding="utf-8")
+
+    # 2. Construir estructuras por Nivel 1 -> Nivel 2 -> Nivel 3 -> Nivel 4
+    n1_groups: dict[str, list[dict]] = OrderedDict()
+    for t in tramites_sorted:
+        n1 = t.get("nivel1") or "Contribuyentes"
+        if n1 not in n1_groups:
+            n1_groups[n1] = []
+        n1_groups[n1].append(t)
+
+    pages_count = 2  # Home + Solicitar NIT
+
+    for n1, n1_items in n1_groups.items():
+        n1_slug = N1_SLUGS.get(n1, slug(n1))
+        n1_dir = OUTPUT_DIR / n1_slug
+        n1_dir.mkdir(parents=True, exist_ok=True)
+
+        # Agrupar por Nivel 2
+        n2_groups: dict[str, list[dict]] = OrderedDict()
+        for t in n1_items:
+            n2 = t.get("nivel2") or "General"
+            if n2 not in n2_groups:
+                n2_groups[n2] = []
+            n2_groups[n2].append(t)
+
+        # Generar Página Hub N1_<slug>.txt con tarjetas hacia cada Nivel 2
+        n1_cards = []
+        for n2, n2_items in n2_groups.items():
+            n2_slug = slug(n2)
+            n1_cards.append({
+                "title": n2,
+                "desc": get_node_desc(n2, n2_items),
+                "url": f"/{n1_slug}/{n2_slug}/",
+                "target_blank": False,
+            })
+        n1_file = n1_dir / f"N1_{n1_slug}.txt"
+        n1_file.write_text(wrap_page(n1_cards, n1, heading=n1), encoding="utf-8")
+        pages_count += 1
+        index_lines.append(f"| `{n1_slug}/N1_{n1_slug}.txt` | Nivel 1 | **{n1}** | {len(n1_cards)} |\n")
+
+        # Procesar cada Nivel 2
+        for n2, n2_items in n2_groups.items():
+            n2_slug = slug(n2)
+            # Verificar si este Nivel 2 tiene hijos en Nivel 3 o si es lista directa en Nivel 2 (nivel3 == "—")
+            n3_groups: dict[str, list[dict]] = OrderedDict()
+            for t in n2_items:
+                n3 = t.get("nivel3") or "—"
+                if not es_vacio(n3):
+                    if n3 not in n3_groups:
+                        n3_groups[n3] = []
+                    n3_groups[n3].append(t)
+
+            n2_file = n1_dir / f"N2_{n2_slug}.txt"
+
+            if not n3_groups:
+                # Lista directa en Nivel 2 (ej. Sin Obligaciones, OEA, Auditores, Servicios Profesionales, Municipalidades)
+                leaf_cards = []
+                for t in n2_items:
+                    is_nit = t.get("id") == "SAT-GES-0001" or t.get("codigo") == "SAT-GES-0001"
+                    url = "/solicitar-nit/" if is_nit else (t.get("url") or "")
+                    leaf_cards.append({
+                        "title": t.get("gestion") or t.get("nombreActual") or "",
+                        "desc": t.get("descripcion") or "",
+                        "url": url,
+                        "target_blank": not is_nit and bool(url),
+                    })
+                n2_file.write_text(
+                    wrap_page(leaf_cards, n1, heading=n2, lead_text=get_node_desc(n2, n2_items)),
+                    encoding="utf-8",
+                )
+                pages_count += 1
+                index_lines.append(
+                    f"| `{n1_slug}/N2_{n2_slug}.txt` | Nivel 2 (Lista Directa) | {n1} > **{n2}** | {len(leaf_cards)} |\n"
+                )
+            else:
+                # Nivel 2 tiene hijos en Nivel 3
+                n2_cards = []
+                for n3, n3_items in n3_groups.items():
+                    n3_slug = slug(n3)
+                    n2_cards.append({
+                        "title": n3,
+                        "desc": get_node_desc(n3, n3_items),
+                        "url": f"/{n1_slug}/{n2_slug}/{n3_slug}/",
+                        "target_blank": False,
+                    })
+                n2_file.write_text(
+                    wrap_page(n2_cards, n1, heading=n2, lead_text=get_node_desc(n2, n2_items)),
+                    encoding="utf-8",
+                )
+                pages_count += 1
+                index_lines.append(
+                    f"| `{n1_slug}/N2_{n2_slug}.txt` | Nivel 2 | {n1} > **{n2}** | {len(n2_cards)} |\n"
+                )
+
+                # Crear subdirectorio para las páginas Nivel 3 de este Nivel 2
+                n2_subdir = n1_dir / n2_slug
+                n2_subdir.mkdir(parents=True, exist_ok=True)
+
+                for n3, n3_items in n3_groups.items():
+                    n3_slug = slug(n3)
+                    n3_file = n2_subdir / f"N3_{n3_slug}.txt"
+
+                    # Verificar si este Nivel 3 tiene hijos en Nivel 4 o si es lista directa en Nivel 3 (nivel4 == "—")
+                    n4_groups: dict[str, list[dict]] = OrderedDict()
+                    for t in n3_items:
+                        n4 = t.get("nivel4") or "—"
+                        if not es_vacio(n4):
+                            if n4 not in n4_groups:
+                                n4_groups[n4] = []
+                            n4_groups[n4].append(t)
+
+                    if not n4_groups:
+                        # Lista directa en Nivel 3 (ej. Contribuyente General > Regímenes tributarios, Agentes Aduaneros, etc.)
+                        leaf_cards = []
+                        for t in n3_items:
+                            is_nit = t.get("id") == "SAT-GES-0001" or t.get("codigo") == "SAT-GES-0001"
+                            url = "/solicitar-nit/" if is_nit else (t.get("url") or "")
+                            leaf_cards.append({
+                                "title": t.get("gestion") or t.get("nombreActual") or "",
+                                "desc": t.get("descripcion") or "",
+                                "url": url,
+                                "target_blank": not is_nit and bool(url),
+                            })
+                        n3_file.write_text(
+                            wrap_page(leaf_cards, n1, heading=n3, lead_text=get_node_desc(n3, n3_items)),
+                            encoding="utf-8",
+                        )
+                        pages_count += 1
+                        index_lines.append(
+                            f"| `{n1_slug}/{n2_slug}/N3_{n3_slug}.txt` | Nivel 3 (Lista Directa) | {n1} > {n2} > **{n3}** | {len(leaf_cards)} |\n"
+                        )
+                    else:
+                        # Nivel 3 tiene hijos en Nivel 4
+                        n3_cards = []
+                        for n4, n4_items in n4_groups.items():
+                            n4_slug = slug(n4)
+                            n3_cards.append({
+                                "title": n4,
+                                "desc": get_node_desc(n4, n4_items),
+                                "url": f"/{n1_slug}/{n2_slug}/{n3_slug}/{n4_slug}/",
+                                "target_blank": False,
+                            })
+                        n3_file.write_text(
+                            wrap_page(n3_cards, n1, heading=n3, lead_text=get_node_desc(n3, n3_items)),
+                            encoding="utf-8",
+                        )
+                        pages_count += 1
+                        index_lines.append(
+                            f"| `{n1_slug}/{n2_slug}/N3_{n3_slug}.txt` | Nivel 3 | {n1} > {n2} > **{n3}** | {len(n3_cards)} |\n"
+                        )
+
+                        # Crear subdirectorio para las páginas Nivel 4 de este Nivel 3
+                        n3_subdir = n2_subdir / n3_slug
+                        n3_subdir.mkdir(parents=True, exist_ok=True)
+
+                        for n4, n4_items in n4_groups.items():
+                            n4_slug = slug(n4)
+                            n4_file = n3_subdir / f"N4_{n4_slug}.txt"
+                            leaf_cards = []
+                            for t in n4_items:
+                                is_nit = t.get("id") == "SAT-GES-0001" or t.get("codigo") == "SAT-GES-0001"
+                                url = "/solicitar-nit/" if is_nit else (t.get("url") or "")
+                                leaf_cards.append({
+                                    "title": t.get("gestion") or t.get("nombreActual") or "",
+                                    "desc": t.get("descripcion") or "",
+                                    "url": url,
+                                    "target_blank": not is_nit and bool(url),
+                                })
+                            n4_file.write_text(
+                                wrap_page(leaf_cards, n1, heading=n4, lead_text=get_node_desc(n4, n4_items)),
+                                encoding="utf-8",
+                            )
+                            pages_count += 1
+                            index_lines.append(
+                                f"| `{n1_slug}/{n2_slug}/{n3_slug}/N4_{n4_slug}.txt` | Nivel 4 (Gestiones) | {n1} > {n2} > {n3} > **{n4}** | {len(leaf_cards)} |\n"
+                            )
+
+    indice_path = OUTPUT_DIR / "_INDICE.md"
+    indice_path.write_text("".join(index_lines), encoding="utf-8")
+
+    print(f"Generación WPBakery completada con éxito: {pages_count} plantillas generadas en {OUTPUT_DIR}")
 
 
-# ══════════════════════════════════════════════════════════════════════════════
-# 1. Cargar Matriz Maestra → gestiones hoja agrupadas por (n1,n2,n3,n4)
-# ══════════════════════════════════════════════════════════════════════════════
-print("Cargando Matriz Maestra...")
-wb_m = openpyxl.load_workbook(MATRIZ_XLS, read_only=True, data_only=True)
-matriz = load_sheet(wb_m, "Matriz Maestra (714)", header_row=1)
-wb_m.close()
-
-# gestiones_n4[(n1,n2,n3,n4)] = lista ordenada de {title, desc, url}
-gestiones_n4: dict[tuple, list] = OrderedDict()
-seen_ges: set = set()
-
-for r in matriz:
-    n1  = sval(r, "Nivel 1")
-    n2  = sval(r, "Nivel 2")
-    n3  = sval(r, "Nivel 3")
-    n4  = sval(r, "Nivel 4")
-    ges = sval(r, "Nombre de la Gestión")
-    desc = sval(r, "¿Para qué sirve?")
-    url  = sval(r, "URL Portal SAT")
-    cod  = sval(r, "ID Gestión")
-
-    k4 = (n1, n2, n3, n4)
-    uid = (k4, cod or ges)
-
-    if k4 not in gestiones_n4:
-        gestiones_n4[k4] = []
-
-    if uid not in seen_ges and ges:
-        seen_ges.add(uid)
-        gestiones_n4[k4].append({
-            "title": ges,
-            "desc":  desc,
-            "url":   url if url.startswith("http") else "",
-        })
-
-print(f"  {len(gestiones_n4)} nodos N4, {len(seen_ges)} gestiones cargadas.")
-
-
-# ══════════════════════════════════════════════════════════════════════════════
-# 2. Cargar Mapa de Navegación
-# ══════════════════════════════════════════════════════════════════════════════
-print("Cargando Mapa de Navegacion...")
-wb_mapa = openpyxl.load_workbook(MAPA_XLS, read_only=True, data_only=True)
-n2_rows = load_sheet(wb_mapa, "Nivel 2", header_row=5)
-n3_rows = load_sheet(wb_mapa, "Nivel 3", header_row=5)
-n4_rows = load_sheet(wb_mapa, "Nivel 4", header_row=5)
-wb_mapa.close()
-print(f"  N2: {len(n2_rows)} filas, N3: {len(n3_rows)} filas, N4: {len(n4_rows)} filas.")
-
-
-# ══════════════════════════════════════════════════════════════════════════════
-# 3. Construir árbol jerárquico desde el Mapa
-#    n2_tree[(n1,n2)] = [{ title:n3, desc, url }]   (hijos N3 de cada N2)
-#    n3_tree[(n1,n2,n3)] = [{ title:n4, desc, url }] (hijos N4 de cada N3)
-# ══════════════════════════════════════════════════════════════════════════════
-
-# -- N3 por N2 (para páginas N2) --
-n2_tree: dict[tuple, list] = OrderedDict()
-for r in n3_rows:
-    n1 = sval(r, "Nivel 1")
-    n2 = sval(r, "Nivel 2")
-    n3 = sval(r, "Nivel 3")
-    if es_vacio(n2) or es_vacio(n1):
-        continue
-    k = (n1, n2)
-    if k not in n2_tree:
-        n2_tree[k] = []
-    if es_vacio(n3):
-        continue
-    lead = sval(r, "Lead text:")
-    que  = sval(r, "Qué es:")
-    desc = lead or que or f"Gestiones de {n3}."
-    if not any(x["title"] == n3 for x in n2_tree[k]):
-        n2_tree[k].append({"title": n3, "desc": desc, "url": ""})
-
-# -- N4 por N3 (para páginas N3) --
-n3_tree: dict[tuple, list] = OrderedDict()
-for r in n4_rows:
-    n1 = sval(r, "Nivel 1")
-    n2 = sval(r, "Nivel 2")
-    n3 = sval(r, "Nivel 3")
-    n4 = sval(r, "Nivel 4")
-    if es_vacio(n1) or es_vacio(n2):
-        continue
-    k = (n1, n2, n3)
-    if k not in n3_tree:
-        n3_tree[k] = []
-    if es_lista_directa(n4):
-        continue  # se marcará como lista directa más abajo
-    lead = sval(r, "Lead text:")
-    que  = sval(r, "Qué es:")
-    desc = lead or que or f"Accede a las gestiones de {n4}."
-    if not any(x["title"] == n4 for x in n3_tree[k]):
-        n3_tree[k].append({"title": n4, "desc": desc, "url": ""})
-
-
-# ══════════════════════════════════════════════════════════════════════════════
-# 4. Generar archivos
-# ══════════════════════════════════════════════════════════════════════════════
-pages_ok   = 0
-pages_skip = 0
-pages_warn = 0
-index_lines = ["# Índice de Shortcodes WPBakery — Portal SAT\n",
-               "| Archivo | Nivel | Ruta jerárquica | Ítems |\n",
-               "|---------|-------|-----------------|-------|\n"]
-
-
-def write_page(fname: Path, items: list[dict], n1: str, ruta: str) -> bool:
-    global pages_ok, pages_skip, pages_warn
-    n = len(items)
-    if SKIP_SINGLE and n <= 1:
-        print(f"  [SKIP] {fname.name}  ({n} items — pasarela omitida)")
-        pages_skip += 1
-        return False
-    sc = wrap_page(items, n1)
-    fname.write_text(sc, encoding="utf-8")
-    warn = " ⚠ MILLER" if n > WARN_MILLER else ""
-    print(f"  [OK]   {fname.name}  ({n} items){warn}")
-    if n > WARN_MILLER:
-        pages_warn += 1
-    pages_ok += 1
-    nivel = fname.name[:2]
-    index_lines.append(f"| `{fname.name}` | {nivel} | {ruta} | {n} |\n")
-    return True
-
-
-# ─── Páginas N2 ───────────────────────────────────────────────────────────────
-print("\n--- Generando páginas N2 ---")
-for (n1, n2), children in n2_tree.items():
-    d     = page_dir(n1)
-    fname = d / f"N2_{slug(n2)}.txt"
-    ruta  = f"{n1} > **{n2}**"
-    write_page(fname, children, n1, ruta)
-
-
-# ─── Páginas N3 ───────────────────────────────────────────────────────────────
-print("\n--- Generando páginas N3 ---")
-# Recorrer todos los N3 del Mapa (únicos)
-n3_unicos: list[tuple] = []
-seen_n3 = set()
-for r in n4_rows:
-    n1 = sval(r, "Nivel 1")
-    n2 = sval(r, "Nivel 2")
-    n3 = sval(r, "Nivel 3")
-    k  = (n1, n2, n3)
-    if k not in seen_n3 and not es_vacio(n1):
-        seen_n3.add(k)
-        n3_unicos.append(k)
-
-for (n1, n2, n3) in n3_unicos:
-    k3 = (n1, n2, n3)
-    children = n3_tree.get(k3, [])
-    d     = page_dir(n1, n2)
-    fname = d / f"N3_{slug(n3)}.txt"
-    ruta  = f"{n1} > {n2} > **{n3}**"
-
-    if children:
-        write_page(fname, children, n1, ruta)
-    else:
-        gestiones = []
-        for k4, gs in gestiones_n4.items():
-            if k4[0] == n1 and k4[1] == n2 and k4[2] == n3:
-                gestiones.extend(gs)
-        if gestiones:
-            write_page(fname, gestiones, n1, ruta)
-
-
-# ─── Páginas N4 ───────────────────────────────────────────────────────────────
-print("\n--- Generando páginas N4 ---")
-seen_n4 = set()
-for r in n4_rows:
-    n1 = sval(r, "Nivel 1")
-    n2 = sval(r, "Nivel 2")
-    n3 = sval(r, "Nivel 3")
-    n4 = sval(r, "Nivel 4")
-    if es_lista_directa(n4) or es_vacio(n1):
-        continue
-    k4 = (n1, n2, n3, n4)
-    if k4 in seen_n4:
-        continue
-    seen_n4.add(k4)
-
-    gestiones = gestiones_n4.get(k4, [])
-    if not gestiones:
-        continue
-
-    d     = page_dir(n1, n2, n3)
-    fname = d / f"N4_{slug(n4)}.txt"
-    ruta  = f"{n1} > {n2} > {n3} > **{n4}**"
-    write_page(fname, gestiones, n1, ruta)
-
-
-# ─── Índice ───────────────────────────────────────────────────────────────────
-indice_path = OUTPUT_DIR / "_INDICE.md"
-indice_path.write_text("".join(index_lines), encoding="utf-8")
-
-print(f"""
-Resumen:
-  Generados:  {pages_ok} archivos
-  Omitidos:   {pages_skip} paginas (1 solo item = pasarela)
-  Avisos Miller (>10 items): {pages_warn}
-  Indice:  {indice_path}
-  Carpeta: {OUTPUT_DIR}
-""")
+if __name__ == "__main__":
+    main()
