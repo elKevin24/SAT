@@ -17,7 +17,7 @@ import { FelPage } from './pages/FelPage';
 import { GuidedAssistantPage } from './pages/GuidedAssistantPage';
 import { ProcessJourneyPage } from './pages/ProcessJourneyPage';
 import { EtapaAtoId, TipoInteraccionId, TramiteItem, ProcesoGuiado, assertTramites } from './data/schema';
-import { compareCanonicalTramiteOrder } from './data/categoryOrder';
+import { OFFICIAL_CATEGORY_ORDER, subcategoryOrderFor, compareByCategoryOrder, compareCanonicalTramiteOrder } from './data/categoryOrder';
 import { buildTaxonomy, resolveCategoria, categoriaId, subcategoriaId } from './data/taxonomy';
 
 // Import official extracted datasets
@@ -85,6 +85,7 @@ export default function App() {
   const [activeSubcategory, setActiveSubcategory] = useState<string | null>(null);
   const [activeEtapaAto, setActiveEtapaAto] = useState<EtapaAtoId | 'todas'>('todas');
   const [activeTipoInteraccion, setActiveTipoInteraccion] = useState<TipoInteraccionId | 'todos'>('todos');
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   // Search query in Header
   const [searchQuery, setSearchQuery] = useState('');
@@ -430,6 +431,125 @@ export default function App() {
     return { isContentLevel: false, contentLevelItems: [], contentLevelTitle: '' };
   }, [currentView, selectedTramite, activeSegment, activeCategory, activeSubcategory, allTramites]);
 
+  // Opciones estrictamente contextuales para el momento actual en el menú vertical acoplado
+  const contextualMenuOptions = React.useMemo<
+    { id: string; label: string; isActive?: boolean; onClick: () => void }[]
+  >(() => {
+    // 1. Nivel de contenido (gestión abierta o listado final de gestiones de un nivel)
+    if (isContentLevel && contentLevelItems.length > 0) {
+      return contentLevelItems.map((item) => ({
+        id: item.id,
+        label: item.gestion || item.tramite || item.id,
+        isActive: currentView === 'gestion' && selectedTramite?.id === item.id,
+        onClick: () => handleSelectTramite(item)
+      }));
+    }
+
+    // 2. Vista de procesos guiados
+    if (currentView === 'proceso') {
+      return allProcesos.map((p) => ({
+        id: `proc-${p.no}`,
+        label: p.nombre,
+        isActive: selectedProcessNo === p.no,
+        onClick: () => {
+          if (p.no === 1) {
+            window.location.hash = '#/solicitar-nit';
+          } else if (p.no === 9 || p.no === 10) {
+            const targetId = p.no === 10 ? 'SAT-GES-0115' : 'SAT-GES-0072';
+            const found = allTramites.find(t => t.id === targetId || t.codigo === targetId);
+            if (found) setSelectedTramite(found);
+            window.location.hash = '#/actualizar-rtu';
+          } else {
+            window.location.hash = `#/proceso/${toProcesoSlug(p)}`;
+          }
+        }
+      }));
+    }
+
+    // 3. Dentro de Catálogo: en un Nivel 2 que posee opciones de Nivel 3
+    if (currentView === 'catalog' && activeCategory && activeCategory !== 'Todas las categorías') {
+      const inCurrentCategory = allTramites.filter(
+        t => t.pillar === activeSegment && (t.categoria === activeCategory || t.nivel2 === activeCategory)
+      );
+      const subSet = new Set<string>();
+      inCurrentCategory.forEach(t => {
+        const sub = (t.subcategoria && t.subcategoria !== '—' ? t.subcategoria : t.nivel3 && t.nivel3 !== '—' ? t.nivel3 : '').trim();
+        if (sub && sub.toLowerCase() !== activeCategory.toLowerCase()) {
+          subSet.add(sub);
+        }
+      });
+      const orderList = subcategoryOrderFor(activeCategory);
+      const subs = Array.from(subSet).sort((a, b) => compareByCategoryOrder(orderList, a, b));
+
+      if (subs.length > 0) {
+        return subs.map((subName) => ({
+          id: `sub-${subName}`,
+          label: subName,
+          isActive: activeSubcategory === subName,
+          onClick: () => {
+            setActiveSubcategory(subName);
+            const params = new URLSearchParams();
+            params.set('segmento', activeSegment);
+            const catId = categoriaId(activeSegment, activeCategory);
+            params.set('categoria', catId);
+            params.set('subcategoria', subcategoriaId(catId, subName));
+            window.location.hash = '#/catalogo?' + params.toString();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }
+        }));
+      }
+    }
+
+    // 4. Dentro de Catálogo: en la raíz de un Nivel 1 (muestra sus opciones de Nivel 2)
+    if (currentView === 'catalog') {
+      const segmentTramites = allTramites.filter(t => t.pillar === activeSegment);
+      const catSet = new Set<string>();
+      segmentTramites.forEach(t => {
+        if (t.categoria) catSet.add(t.categoria);
+      });
+      const orderList = OFFICIAL_CATEGORY_ORDER[activeSegment] || [];
+      const cats = Array.from(catSet).sort((a, b) => {
+        const idxA = orderList.indexOf(a);
+        const idxB = orderList.indexOf(b);
+        if (idxA !== -1 && idxB !== -1) return idxA - idxB;
+        if (idxA !== -1) return -1;
+        if (idxB !== -1) return 1;
+        return a.localeCompare(b);
+      });
+
+      return cats.map((catName) => ({
+        id: `cat-${catName}`,
+        label: catName,
+        isActive: activeCategory === catName,
+        onClick: () => handleSelectSegment(activeSegment, catName)
+      }));
+    }
+
+    // 5. En Inicio (u otras vistas raíz): muestra las 4 opciones de Nivel 1
+    const rootOptions: { id: SegmentId; label: string }[] = [
+      { id: 'contribuyentes', label: 'Contribuyentes' },
+      { id: 'comercio_exterior', label: 'Operadores de Comercio Exterior' },
+      { id: 'profesionales', label: 'Profesionales' },
+      { id: 'entes_exentos', label: 'Entes Exentos' }
+    ];
+
+    return rootOptions.map((opt) => ({
+      id: opt.id,
+      label: opt.label,
+      isActive: false,
+      onClick: () => handleSelectSegment(opt.id)
+    }));
+  }, [
+    isContentLevel,
+    contentLevelItems,
+    currentView,
+    selectedTramite,
+    selectedProcessNo,
+    activeSegment,
+    activeCategory,
+    activeSubcategory
+  ]);
+
   return (
     <div 
       className={`min-h-screen bg-white text-slate-800 flex flex-col antialiased transition-all ${getAccessibilityClasses()}`}
@@ -466,12 +586,51 @@ export default function App() {
         onSelectSegment={handleSelectSegment}
         onSelectBreadcrumb={handleSelectBreadcrumb}
         isContentLevel={isContentLevel}
-        contentLevelItems={contentLevelItems}
-        contentLevelTitle={contentLevelTitle}
+        isMenuOpen={isMenuOpen}
+        onToggleMenu={() => setIsMenuOpen(prev => !prev)}
       />
 
-      {/* Main Content Area */}
-      <div className="flex-1 flex flex-col">
+      {/* Contenedor Principal con Menú Vertical Acoplado a la Página */}
+      <div className="flex-1 flex flex-col md:flex-row items-stretch">
+        {isMenuOpen && (
+          <aside
+            id="sat-level-menu-panel"
+            aria-label="Menú de opciones del nivel actual"
+            className="w-full md:w-72 lg:w-80 shrink-0 bg-white border-b md:border-b-0 md:border-r border-slate-200 pl-4 sm:pl-6 md:pl-8 lg:pl-12 pr-3"
+          >
+            <nav className="md:sticky md:top-0 py-3">
+              <ul className="divide-y divide-slate-100">
+                {contextualMenuOptions.map((opt) => (
+                  <li key={opt.id}>
+                    <button
+                      type="button"
+                      onClick={opt.onClick}
+                      aria-current={opt.isActive ? 'page' : undefined}
+                      className={`w-full text-left py-2.5 px-2.5 text-xs sm:text-[13px] leading-snug transition-colors flex items-center justify-between gap-2 cursor-pointer ${
+                        opt.isActive
+                          ? 'text-slate-950 font-semibold bg-slate-100/80 rounded-md'
+                          : 'text-slate-700 hover:text-slate-950 hover:bg-slate-50 font-normal rounded-md'
+                      }`}
+                    >
+                      <span>{opt.label}</span>
+                      <span
+                        className={`text-xs shrink-0 transition-transform ${
+                          opt.isActive ? 'text-slate-900 font-semibold' : 'text-slate-300'
+                        }`}
+                        aria-hidden="true"
+                      >
+                        →
+                      </span>
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </aside>
+        )}
+
+        {/* Main Content Area */}
+        <div className="flex-1 min-w-0 flex flex-col">
         {currentView === 'home' && (
           <main id="main-content" tabIndex={-1} className="focus:outline-hidden">
             {/* Título de página (accesible; el hero visual lo presenta cada sección) */}
@@ -639,6 +798,7 @@ export default function App() {
             />
           </main>
         )}
+        </div>
       </div>
 
       {/* 8. Institutional Footer */}

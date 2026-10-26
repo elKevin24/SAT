@@ -21,7 +21,6 @@ import {
 import { SatIsologotipo } from './SatIsologotipo';
 import type { TramiteItem, ProcesoGuiado } from '../data/schema';
 import type { SegmentId } from './UserSegmentCards';
-import { OFFICIAL_CATEGORY_ORDER } from '../data/categoryOrder';
 
 interface HeaderProps {
   onGoHome: () => void;
@@ -34,7 +33,7 @@ interface HeaderProps {
   allTramites: TramiteItem[];
   allProcesos: ProcesoGuiado[];
 
-  // Props para Barra de Navegación Principal y Menú de Nivel
+  // Props para Barra de Navegación Principal y Menú Contextual Acoplado
   currentView?: 'home' | 'catalog' | 'solicitar-nit' | 'fel' | 'gestion' | 'asistente' | 'proceso';
   activeSegment?: SegmentId | null;
   activeCategory?: string;
@@ -42,8 +41,8 @@ interface HeaderProps {
   onSelectSegment?: (segId: SegmentId, category?: string) => void;
   onSelectBreadcrumb?: (level: 'home' | 'segment' | 'category') => void;
   isContentLevel?: boolean;
-  contentLevelItems?: TramiteItem[];
-  contentLevelTitle?: string;
+  isMenuOpen?: boolean;
+  onToggleMenu?: () => void;
 }
 
 const MACROGROUPS: { id: SegmentId; name: string; shortName: string; color: string }[] = [
@@ -98,53 +97,17 @@ export const Header: React.FC<HeaderProps> = ({
   allProcesos,
   currentView = 'home',
   activeSegment = null,
-  activeCategory = '',
-  activeSubcategory = null,
   onSelectSegment,
   onSelectBreadcrumb,
   isContentLevel = false,
-  contentLevelItems = [],
-  contentLevelTitle = ''
+  isMenuOpen = false,
+  onToggleMenu
 }) => {
   const [showFormacionMenu, setShowFormacionMenu] = useState(false);
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [isSearchFocused, setIsSearchFocused] = useState(false);
-  const [isLevelMenuOpen, setIsLevelMenuOpen] = useState(false);
-  const [menuSearchQuery, setMenuSearchQuery] = useState('');
-  const prevContentLevelRef = useRef<boolean>(false);
-  const prevContentTitleRef = useRef<string>('');
   const searchContainerRef = useRef<HTMLDivElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    // Al cambiar de vista o salir del nivel de contenido, asegurar que el menú quede cerrado
-    if (!isContentLevel && prevContentLevelRef.current) {
-      setIsLevelMenuOpen(false);
-      setMenuSearchQuery('');
-    }
-    prevContentLevelRef.current = !!isContentLevel;
-    prevContentTitleRef.current = contentLevelTitle || '';
-  }, [isContentLevel, contentLevelTitle]);
-
-  useEffect(() => {
-    const handleEsc = (e: KeyboardEvent) => {
-      if (e.key === 'Escape' && isLevelMenuOpen) {
-        setIsLevelMenuOpen(false);
-      }
-    };
-    window.addEventListener('keydown', handleEsc);
-    return () => window.removeEventListener('keydown', handleEsc);
-  }, [isLevelMenuOpen]);
-
-  const visibleLevelItems = useMemo(() => {
-    if (!menuSearchQuery.trim()) return contentLevelItems;
-    const q = menuSearchQuery.toLowerCase();
-    return contentLevelItems.filter(item =>
-      (item.codigo || item.id || '').toLowerCase().includes(q) ||
-      (item.gestion || item.tramite || '').toLowerCase().includes(q) ||
-      (item.descripcion || '').toLowerCase().includes(q)
-    );
-  }, [contentLevelItems, menuSearchQuery]);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -492,33 +455,33 @@ export const Header: React.FC<HeaderProps> = ({
           <div className="flex items-center gap-1.5 shrink-0 z-10">
             <button
               type="button"
-              onClick={() => setIsLevelMenuOpen(!isLevelMenuOpen)}
+              onClick={() => onToggleMenu?.()}
               className={`inline-flex items-center gap-2 h-7.5 px-3 rounded-full text-xs transition-colors cursor-pointer ${
-                isLevelMenuOpen
+                isMenuOpen
                   ? 'bg-slate-900 text-white font-semibold shadow-xs ring-2 ring-slate-900/10'
                   : isContentLevel
                     ? 'bg-sky-50 text-sky-950 border border-sky-400 hover:bg-sky-100 font-bold shadow-2xs ring-2 ring-sky-500/20'
                     : 'bg-white text-slate-800 border border-slate-300 hover:bg-slate-50 hover:text-slate-950 font-semibold'
               }`}
-              aria-expanded={isLevelMenuOpen}
+              aria-expanded={isMenuOpen}
               aria-controls="sat-level-menu-panel"
-              title={isLevelMenuOpen ? 'Cerrar menú' : 'Abrir menú'}
+              title={isMenuOpen ? 'Ocultar menú lateral' : 'Mostrar menú lateral'}
             >
               {/* Icono de hamburguesa animado con morph suave a X */}
               <div className="w-3.5 h-3 relative flex flex-col justify-between items-center shrink-0" aria-hidden="true">
                 <span
                   className={`block h-[1.5px] w-3.5 bg-current rounded-full transition-transform duration-200 ease-out ${
-                    isLevelMenuOpen ? 'rotate-45 translate-y-[5px]' : ''
+                    isMenuOpen ? 'rotate-45 translate-y-[5px]' : ''
                   }`}
                 />
                 <span
                   className={`block h-[1.5px] w-3.5 bg-current rounded-full transition-opacity duration-150 ease-out ${
-                    isLevelMenuOpen ? 'opacity-0 scale-x-0' : 'opacity-100'
+                    isMenuOpen ? 'opacity-0 scale-x-0' : 'opacity-100'
                   }`}
                 />
                 <span
                   className={`block h-[1.5px] w-3.5 bg-current rounded-full transition-transform duration-200 ease-out ${
-                    isLevelMenuOpen ? '-rotate-45 -translate-y-[5.5px]' : ''
+                    isMenuOpen ? '-rotate-45 -translate-y-[5.5px]' : ''
                   }`}
                 />
               </div>
@@ -584,113 +547,6 @@ export const Header: React.FC<HeaderProps> = ({
           <div className="hidden sm:block w-[130px] shrink-0" aria-hidden="true" />
 
         </div>
-
-        {/* Panel Desplegable Flotante en el Eje Z (Absolute: nunca empuja el contenido) */}
-        {isLevelMenuOpen && (
-          <>
-            {/* Backdrop con desenfoque suave para cerrar al tocar fuera */}
-            <div
-              className="fixed inset-0 bg-slate-900/20 backdrop-blur-xs z-40 transition-opacity duration-200"
-              onClick={() => setIsLevelMenuOpen(false)}
-              aria-hidden="true"
-            />
-
-            <div
-              id="sat-level-menu-panel"
-              className="absolute left-4 sm:left-6 lg:left-8 top-full mt-2 z-50 bg-white border border-slate-200 rounded-2xl shadow-2xl w-[calc(100vw-2rem)] sm:w-[580px] max-w-2xl p-4 sm:p-5 animate-fadeIn max-h-[75vh] overflow-y-auto"
-            >
-              {/* Cabecera Minimalista: Solo el Título y Botón Cerrar */}
-              <div className="flex items-center justify-between pb-2 mb-2 border-b border-slate-100">
-                <h3 className="text-xs sm:text-sm font-bold text-slate-800">
-                  {contentLevelTitle || 'Menú de Navegación'}
-                </h3>
-                <button
-                  type="button"
-                  onClick={() => setIsLevelMenuOpen(false)}
-                  className="text-slate-400 hover:text-slate-600 p-1 rounded-full text-xs transition-colors cursor-pointer"
-                  title="Cerrar menú (Esc)"
-                >
-                  <X className="w-3.5 h-3.5" />
-                </button>
-              </div>
-
-              {/* Si estamos en Nivel de Contenido: Solo Líneas de Texto */}
-              {isContentLevel && visibleLevelItems.length > 0 ? (
-                <>
-                  <ul className="divide-y divide-slate-100">
-                    {visibleLevelItems.map((item) => (
-                      <li key={item.id}>
-                        <button
-                          type="button"
-                          onClick={() => {
-                            onSelectTramite(item);
-                            setIsLevelMenuOpen(false);
-                          }}
-                          className="w-full text-left py-2 px-2.5 rounded-md text-xs sm:text-sm text-slate-700 hover:text-sky-700 hover:bg-slate-50 transition-colors flex items-center justify-between group cursor-pointer"
-                        >
-                          <span className="font-medium group-hover:translate-x-1 transition-transform">
-                            {item.gestion || item.tramite}
-                          </span>
-                          <span className="text-slate-300 group-hover:text-sky-500 text-xs transition-all shrink-0 ml-2">
-                            →
-                          </span>
-                        </button>
-                      </li>
-                    ))}
-                  </ul>
-
-                  {contentLevelItems.length > 5 && (
-                    <div className="pt-2 mt-2 border-t border-slate-100">
-                      <input
-                        type="text"
-                        value={menuSearchQuery}
-                        onChange={(e) => setMenuSearchQuery(e.target.value)}
-                        placeholder="Filtrar por texto..."
-                        className="w-full px-2.5 py-1 text-xs bg-slate-50 hover:bg-slate-100 focus:bg-white border border-slate-200 rounded-md focus:outline-none focus:ring-1 focus:ring-sky-500 font-normal text-slate-800"
-                      />
-                    </div>
-                  )}
-                </>
-              ) : isContentLevel && visibleLevelItems.length === 0 ? (
-                <div className="text-center py-4 text-xs text-slate-500">
-                  No se encontraron coincidencias para "{menuSearchQuery}".
-                </div>
-              ) : (
-                /* Vista General cuando NO estamos en nivel de contenido: Líneas de texto por Macrogrupo */
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 py-1">
-                  {MACROGROUPS.map((macro) => {
-                    const subCats = OFFICIAL_CATEGORY_ORDER[macro.id] || [];
-                    return (
-                      <div key={macro.id} className="space-y-1">
-                        <h4 className="text-xs font-bold text-slate-900 pb-1 border-b border-slate-100">
-                          {macro.name}
-                        </h4>
-                        <ul className="divide-y divide-slate-50">
-                          {subCats.map((catName) => (
-                            <li key={catName}>
-                              <button
-                                type="button"
-                                onClick={() => {
-                                  if (onSelectSegment) {
-                                    onSelectSegment(macro.id, catName);
-                                  }
-                                  setIsLevelMenuOpen(false);
-                                }}
-                                className="w-full text-left py-1 text-xs text-slate-600 hover:text-sky-700 hover:underline transition-colors cursor-pointer"
-                              >
-                                {catName}
-                              </button>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    );
-                  })}
-                </div>
-              )}
-            </div>
-          </>
-        )}
       </nav>
     </header>
   );
