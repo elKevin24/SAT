@@ -74,7 +74,7 @@ export const GuidedProcessesSection: React.FC<GuidedProcessesSectionProps> = ({
             <Card
               key={p.no}
               title={p.nombre}
-              description={`Guía paso a paso para ${(p.paraQuien ?? 'ti').toLowerCase()}. Te orienta con los requisitos previos y el acceso directo al sistema oficial de la SAT.`}
+              description={`3 Pasos Canónicos (Requisitos › Gestión › Cita). Guía para ${(p.paraQuien ?? 'ti').toLowerCase()}.`}
               tone="azul"
               headingLevel="h4"
               onClick={() => onSelectProceso(p)}

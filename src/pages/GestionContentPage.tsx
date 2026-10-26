@@ -15,6 +15,7 @@ import {
   HelpCircle
 } from 'lucide-react';
 import { Breadcrumbs } from '../components/ui/Breadcrumbs';
+import { SolicitarNitPage } from './SolicitarNitPage';
 import type { TramiteItem } from '../data/schema';
 import type { SegmentId } from '../components/UserSegmentCards';
 
@@ -38,6 +39,11 @@ export const GestionContentPage: React.FC<GestionContentPageProps> = ({
   const [copied, setCopied] = useState(false);
   const [checkedReqs, setCheckedReqs] = useState<Record<string, boolean>>({});
   const [isLegalExpanded, setIsLegalExpanded] = useState(false);
+
+  // Página Universal Canónica para Solicitar NIT (SAT-GES-0001)
+  if (tramite.id === 'SAT-GES-0001' || tramite.codigo === 'SAT-GES-0001') {
+    return <SolicitarNitPage onBackToHome={onBackToCatalog} />;
+  }
 
   const urlValido = typeof tramite.url === 'string' && /^https?:\/\/\S+$/i.test(tramite.url.trim());
 
@@ -186,6 +192,26 @@ export const GestionContentPage: React.FC<GestionContentPageProps> = ({
           </div>
 
           <div className="flex flex-wrap items-center gap-2 shrink-0">
+            {['SAT-GES-0001', 'SAT-GES-0002', 'SAT-GES-0011', 'SAT-GES-0025'].includes(tramite.id) && (
+              <button
+                type="button"
+                onClick={() => {
+                  const map: Record<string, string> = {
+                    'SAT-GES-0001': 'primer-nit',
+                    'SAT-GES-0002': 'agencia-virtual',
+                    'SAT-GES-0011': 'pequeno-contribuyente',
+                    'SAT-GES-0025': 'e-traspaso',
+                  };
+                  const asstId = map[tramite.id] || 'primer-nit';
+                  window.location.hash = `#/asistente/${asstId}`;
+                }}
+                className="px-5 py-2.5 bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold text-xs sm:text-sm rounded-xl transition-all shadow-sm inline-flex items-center gap-2 cursor-pointer"
+              >
+                <Sparkles className="w-4 h-4 text-slate-950" />
+                <span>Iniciar con Asistente Guiado</span>
+              </button>
+            )}
+
             {urlValido && (
               <a
                 href={tramite.url}

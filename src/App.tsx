@@ -8,13 +8,14 @@ import { NewsAndTransparencySection } from './components/NewsAndTransparencySect
 import { InstitutionalFooter } from './components/InstitutionalFooter';
 import { UserWayAccessibilityModal } from './components/UserWayAccessibilityModal';
 import { DirectConsultasModal } from './components/DirectConsultasModal';
-import { GuidedProcessModal } from './components/GuidedProcessModal';
 import { GestionContentPage } from './pages/GestionContentPage';
 import { VirtualAssistantModal } from './components/VirtualAssistantModal';
 import { SegmentTramitesCatalog } from './components/SegmentTramitesCatalog';
 import { QuickAccessCarousel } from './components/QuickAccessCarousel';
 import { SolicitarNitPage } from './pages/SolicitarNitPage';
 import { FelPage } from './pages/FelPage';
+import { GuidedAssistantPage } from './pages/GuidedAssistantPage';
+import { ProcessJourneyPage } from './pages/ProcessJourneyPage';
 import { EtapaAtoId, TipoInteraccionId, TramiteItem, ProcesoGuiado, assertTramites } from './data/schema';
 import { compareCanonicalTramiteOrder } from './data/categoryOrder';
 import { buildTaxonomy, resolveCategoria, categoriaId, subcategoriaId } from './data/taxonomy';
@@ -26,6 +27,27 @@ import rawProcesos from './data/allProcesos.json';
 const allTramites = assertTramites(rawTramites);
 const allProcesos = rawProcesos as ProcesoGuiado[];
 const TAXONOMY = buildTaxonomy(allTramites);
+
+function toSlug(text: string): string {
+  return text
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '');
+}
+
+function toGestionSlug(t: TramiteItem): string {
+  if (t.id === 'SAT-GES-0001' || t.codigo === 'SAT-GES-0001') {
+    return 'solicitar-nit';
+  }
+  return toSlug(t.gestion || t.tramite || t.id);
+}
+
+function toProcesoSlug(p: ProcesoGuiado): string {
+  if (p.no === 1) return 'solicitar-nit';
+  return toSlug(p.nombre || String(p.no));
+}
 
 interface AccessibilitySettings {
   contrastMode: 'normal' | 'high' | 'dark' | 'inverted';
@@ -50,7 +72,9 @@ const DEFAULT_ACCESSIBILITY: AccessibilitySettings = {
 };
 
 export default function App() {
-  const [currentView, setCurrentView] = useState<'home' | 'catalog' | 'solicitar-nit' | 'fel' | 'gestion'>('home');
+  const [currentView, setCurrentView] = useState<'home' | 'catalog' | 'solicitar-nit' | 'fel' | 'gestion' | 'asistente' | 'proceso'>('home');
+  const [selectedAssistantId, setSelectedAssistantId] = useState<string>('primer-nit');
+  const [selectedProcessNo, setSelectedProcessNo] = useState<number>(1);
   const [activeSegment, setActiveSegment] = useState<SegmentId>('contribuyentes');
   const [activeCategory, setActiveCategory] = useState<string>('Todas las categorías');
   const [activeSubcategory, setActiveSubcategory] = useState<string | null>(null);
@@ -62,7 +86,6 @@ export default function App() {
 
   // Selected modals
   const [selectedTramite, setSelectedTramite] = useState<TramiteItem | null>(null);
-  const [selectedProceso, setSelectedProceso] = useState<ProcesoGuiado | null>(null);
   const [consultasModalSegment, setConsultasModalSegment] = useState<SegmentId | null>(null);
   const [accessibilityModalOpen, setAccessibilityModalOpen] = useState(false);
 
@@ -126,11 +149,35 @@ export default function App() {
             setActiveTipoInteraccion('todos');
           }
         }
+      } else if (
+        hash.startsWith('#/solicitar-nit') ||
+        hash.startsWith('#/primer-nit') ||
+        hash.startsWith('#/quiero-ser-contribuyente') ||
+        hash === '#/proceso/1' ||
+        hash === '#/asistente/primer-nit' ||
+        hash === '#/gestion/SAT-GES-0001' ||
+        hash === '#/gestion/solicitar-nit'
+      ) {
+        window.history.replaceState(null, '', '#/solicitar-nit');
+        setCurrentView('gestion');
+        const found = allTramites.find(t => t.id === 'SAT-GES-0001' || t.codigo === 'SAT-GES-0001');
+        if (found) {
+          setSelectedTramite(found);
+          setActiveSegment('contribuyentes');
+          setActiveCategory(found.categoria || 'Sin Obligaciones');
+          setActiveSubcategory(null);
+        }
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       } else if (hash.startsWith('#/gestion/') || hash.startsWith('#/tramite/')) {
         setCurrentView('gestion');
-        const code = hash.split('?')[0].replace('#/gestion/', '').replace('#/tramite/', '').trim();
-        const found = allTramites.find(t => t.id === code || (t.codigo && t.codigo === code));
+        const param = hash.split('?')[0].replace('#/gestion/', '').replace('#/tramite/', '').trim();
+        const found = allTramites.find(
+          t => t.id === param || (t.codigo && t.codigo === param) || toGestionSlug(t) === param
+        );
         if (found) {
+          const cleanSlug = toGestionSlug(found);
+          const targetHash = cleanSlug === 'solicitar-nit' ? '#/solicitar-nit' : `#/gestion/${cleanSlug}`;
+          window.history.replaceState(null, '', targetHash);
           setSelectedTramite(found);
           if (found.pillar) setActiveSegment(found.pillar as SegmentId);
           if (found.categoria) setActiveCategory(found.categoria);
@@ -141,8 +188,27 @@ export default function App() {
           }
         }
         window.scrollTo({ top: 0, behavior: 'smooth' });
-      } else if (hash.startsWith('#/solicitar-nit') || hash.startsWith('#/primer-nit') || hash.startsWith('#/quiero-ser-contribuyente')) {
-        setCurrentView('solicitar-nit');
+      } else if (hash.startsWith('#/asistente/')) {
+        setCurrentView('asistente');
+        const asstId = hash.replace('#/asistente/', '').split('?')[0].trim();
+        setSelectedAssistantId(asstId || 'primer-nit');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else if (hash.startsWith('#/proceso/')) {
+        const param = hash.replace('#/proceso/', '').split('?')[0].trim();
+        const foundProc = allProcesos.find(p => String(p.no) === param || toProcesoSlug(p) === param);
+        const pNo = foundProc ? foundProc.no : 1;
+        if (pNo === 1) {
+          window.history.replaceState(null, '', '#/solicitar-nit');
+          setCurrentView('gestion');
+          const found = allTramites.find(t => t.id === 'SAT-GES-0001' || t.codigo === 'SAT-GES-0001');
+          if (found) setSelectedTramite(found);
+        } else {
+          if (foundProc) {
+            window.history.replaceState(null, '', `#/proceso/${toProcesoSlug(foundProc)}`);
+          }
+          setCurrentView('proceso');
+          setSelectedProcessNo(pNo);
+        }
         window.scrollTo({ top: 0, behavior: 'smooth' });
       } else if (hash.startsWith('#/fel') || hash.startsWith('#/factura-electronica-fel') || hash.startsWith('#/facturacion-electronica')) {
         setCurrentView('fel');
@@ -192,7 +258,8 @@ export default function App() {
       setActiveSubcategory(null);
     }
     setCurrentView('gestion');
-    window.location.hash = '#/gestion/' + t.id;
+    const slug = toGestionSlug(t);
+    window.location.hash = slug === 'solicitar-nit' ? '#/solicitar-nit' : `#/gestion/${slug}`;
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -335,7 +402,9 @@ export default function App() {
         searchQuery={searchQuery}
         onSearchChange={setSearchQuery}
         onSelectTramite={handleSelectTramite}
-        onSelectProceso={(p) => setSelectedProceso(p)}
+        onSelectProceso={(p) => {
+          window.location.hash = p.no === 1 ? '#/solicitar-nit' : `#/proceso/${toProcesoSlug(p)}`;
+        }}
         onOpenAccessibility={() => setAccessibilityModalOpen(true)}
         allTramites={allTramites}
         allProcesos={allProcesos}
@@ -390,7 +459,9 @@ export default function App() {
             {/* 6. Guided Processes Section */}
             <GuidedProcessesSection
               procesos={allProcesos}
-              onSelectProceso={(p) => setSelectedProceso(p)}
+              onSelectProceso={(p) => {
+                window.location.hash = p.no === 1 ? '#/solicitar-nit' : `#/proceso/${toProcesoSlug(p)}`;
+              }}
             />
 
             {/* 7. News & Transparency Section */}
@@ -467,8 +538,7 @@ export default function App() {
               onBackToHome={handleGoHome}
               onOpenConsultasNIT={() => setConsultasModalSegment('contribuyentes')}
               onOpenProcesoGuiado={() => {
-                const procNit = allProcesos.find(p => p.no === 1);
-                if (procNit) setSelectedProceso(procNit);
+                window.location.hash = '#/proceso/1';
               }}
             />
           </main>
@@ -477,6 +547,36 @@ export default function App() {
         {currentView === 'fel' && (
           <main id="main-content" tabIndex={-1} className="focus:outline-hidden">
             <FelPage onBackToHome={handleGoHome} />
+          </main>
+        )}
+
+        {currentView === 'asistente' && (
+          <main id="main-content" tabIndex={-1} className="focus:outline-hidden">
+            <GuidedAssistantPage
+              assistantId={selectedAssistantId}
+              onBackToHome={handleGoHome}
+              onBackToCatalog={() => {
+                setCurrentView('catalog');
+                window.location.hash = `#/catalogo?segmento=${activeSegment}`;
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+              onSelectSegment={handleSelectSegment}
+            />
+          </main>
+        )}
+
+        {currentView === 'proceso' && (
+          <main id="main-content" tabIndex={-1} className="focus:outline-hidden">
+            <ProcessJourneyPage
+              procesoNo={selectedProcessNo}
+              onBackToHome={handleGoHome}
+              onBackToCatalog={() => {
+                setCurrentView('catalog');
+                window.location.hash = `#/catalogo?segmento=${activeSegment}`;
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+              onSelectSegment={handleSelectSegment}
+            />
           </main>
         )}
       </div>
@@ -497,11 +597,6 @@ export default function App() {
         isOpen={!!consultasModalSegment}
         onClose={() => setConsultasModalSegment(null)}
         segmentId={consultasModalSegment || 'contribuyentes'}
-      />
-
-      <GuidedProcessModal
-        proceso={selectedProceso}
-        onClose={() => setSelectedProceso(null)}
       />
 
       <VirtualAssistantModal />

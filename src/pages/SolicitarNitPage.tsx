@@ -1,23 +1,24 @@
-import React, { useState } from 'react';
-import { 
-  ArrowLeft, 
-  ExternalLink, 
-  Search, 
-  ShieldCheck, 
-  CheckCircle2, 
-  User, 
-  Users, 
-  Baby, 
-  Globe, 
-  FileText, 
-  Clock, 
-  HelpCircle,
-  AlertCircle
+import React, { useState, useEffect } from 'react';
+import {
+  ArrowLeft,
+  CheckCircle2,
+  User,
+  Briefcase,
+  HeartHandshake,
+  Globe,
+  FileText,
+  AlertCircle,
+  Calendar,
+  Check,
+  ChevronRight,
+  ExternalLink,
+  BookOpen,
+  Info,
+  Download,
+  Search,
+  Sparkles
 } from 'lucide-react';
 import { Breadcrumbs } from '../components/ui/Breadcrumbs';
-import { Button } from '../components/ui/Button';
-import { Card } from '../components/ui/Card';
-import { Badge } from '../components/ui/Badge';
 
 interface SolicitarNitPageProps {
   onBackToHome: () => void;
@@ -25,447 +26,756 @@ interface SolicitarNitPageProps {
   onOpenProcesoGuiado?: () => void;
 }
 
-type PerfilSolicitante = 'individual' | 'menor' | 'extranjero' | 'juridica';
+type ModalidadNitId =
+  | 'sin_obligaciones'
+  | 'con_obligaciones'
+  | 'discapacidad_invalidez'
+  | 'residente_extranjero';
 
-interface RequisitoPerfil {
+interface RequisitoCiudadano {
   id: string;
-  nombre: string;
+  titulo: string;
   detalle: string;
-  obligatorio: boolean;
+  opciones?: string[];
 }
 
-const REQUISITOS_POR_PERFIL: Record<PerfilSolicitante, { titulo: string; descripcion: string; requisitos: RequisitoPerfil[] }> = {
-  individual: {
-    titulo: 'Persona Individual (Mayor de edad nacional)',
-    descripcion: 'Para ciudadanos guatemaltecos mayores de 18 años con Documento Personal de Identificación (DPI).',
+interface ModalidadNitData {
+  id: ModalidadNitId;
+  nombreCorto: string;
+  titulo: string;
+  subtitulo: string;
+  requisitos: RequisitoCiudadano[];
+  pasosPreparacion: string[];
+  consejoDomicilio: {
+    sinAdjunto: string;
+    conAdjunto: string;
+  };
+  comoFinaliza: string;
+  resultadoObtenido: string;
+  advertenciaDpi: string;
+}
+
+const MODALIDADES_CIUDADANAS: Record<ModalidadNitId, ModalidadNitData> = {
+  sin_obligaciones: {
+    id: 'sin_obligaciones',
+    nombreCorto: 'Sin Obligaciones Tributarias',
+    titulo: 'NIT para gestiones personales, laborales o bancarias',
+    subtitulo: 'Para personas individuales que necesitan identificarse ante bancos, empleadores o estudios, sin emitir facturas ni inscribir un negocio.',
     requisitos: [
-      { id: 'dpi', nombre: 'Documento Personal de Identificación (DPI)', detalle: 'DPI original escaneado de ambos lados, vigente y legible emitido por RENAP.', obligatorio: true },
-      { id: 'correo', nombre: 'Correo electrónico personal activo', detalle: 'Dirección de correo a la que tengas acceso inmediato; allí recibirás el código de confirmación y tu NIT.', obligatorio: true },
-      { id: 'factura_servicios', nombre: 'Comprobante de domicilio (Agua, Luz o Teléfono)', detalle: 'Recibo reciente (no mayor a 3 meses) que coincida con tu dirección física de residencia.', obligatorio: true },
-      { id: 'foto', nombre: 'Fotografía reciente tipo selfie/cédula', detalle: 'Fotografía nítida sosteniendo tu DPI para la validación biométrica digital.', obligatorio: false }
-    ]
+      {
+        id: 'dpi',
+        titulo: 'Documento Personal de Identificación (DPI) vigente',
+        detalle: 'Escaneado o fotografiado de ambos lados de forma clara y legible (en formato PDF, JPG o PNG).',
+      },
+      {
+        id: 'pasaporte',
+        titulo: 'Pasaporte vigente (únicamente si eres extranjero)',
+        detalle: 'Copia digital legible de la hoja de datos personales de tu pasaporte.',
+      },
+      {
+        id: 'domicilio',
+        titulo: 'Comprobante de domicilio reciente (máximo 3 meses de antigüedad)',
+        detalle: 'Puedes utilizar cualquiera de los siguientes respaldos de tu dirección de residencia:',
+        opciones: [
+          'Factura de energía eléctrica, agua potable, teléfono de línea fija, internet residencial o cable.',
+          'Recibo de agua potable o certificación municipal de residencia (no mayor a 3 meses).',
+          'Recibo de pago del IUSI (del último trimestre o del año en curso si pagas por adelantado).',
+        ],
+      },
+    ],
+    pasosPreparacion: [
+      'Ten a la mano un correo electrónico personal activo; allí recibirás el código de seguridad para iniciar tu solicitud.',
+      'Verifica que las imágenes de tu DPI se lean con claridad en ambos lados antes de subirlas.',
+    ],
+    consejoDomicilio: {
+      sinAdjunto:
+        'Si eliges "Factura de Servicios" (luz, teléfono fijo, internet o cable), NO necesitas subir ningún archivo: el sistema solo te pedirá escribir el número de serie y documento de la factura.',
+      conAdjunto:
+        'Si eliges recibo de agua municipal, recibo de IUSI o certificación municipal de domicilio, sí deberás adjuntar el archivo digital en PDF, JPG o PNG.',
+    },
+    comoFinaliza:
+      'Tu gestión se aprueba y finaliza 100% en línea (únicamente las personas extranjeras deben acudir a una agencia para validar su pasaporte).',
+    resultadoObtenido:
+      'Recibirás la confirmación en tu correo y podrás descargar tu Constancia de Inscripción en el Registro Tributario Unificado (RTU) directamente desde Agencia Virtual.',
+    advertenciaDpi:
+      'Tu DPI debe estar físico y vigente. No se acepta la constancia de trámite o renovación emitida por el RENAP.',
   },
-  menor: {
-    titulo: 'Menor de Edad (Nacional)',
-    descripcion: 'Inscripción gestionada a través de padres en ejercicio de patria potestad o tutor legal.',
+
+  con_obligaciones: {
+    id: 'con_obligaciones',
+    nombreCorto: 'Con Obligaciones Tributarias',
+    titulo: 'NIT para iniciar un negocio, comercio o servicios profesionales',
+    subtitulo: 'Para personas individuales que van a emitir facturas, abrir un establecimiento comercial o prestar servicios técnicos o profesionales.',
     requisitos: [
-      { id: 'cert_nacimiento', nombre: 'Certificado de Nacimiento del menor', detalle: 'Emitido por RENAP con Código Único de Identificación (CUI), no mayor a 6 meses de emisión.', obligatorio: true },
-      { id: 'dpi_padres', nombre: 'DPI de los padres o tutor legal', detalle: 'DPI vigente escaneado de ambos lados del padre, madre o tutor con representación legal comprobada.', obligatorio: true },
-      { id: 'tutor_doc', nombre: 'Documento de Tutela Legal (si aplica)', detalle: 'Certificación judicial en caso de menores bajo tutela declarada legalmente.', obligatorio: false },
-      { id: 'correo_rep', nombre: 'Correo electrónico del representante', detalle: 'Cuenta de correo del tutor donde se recibirán las notificaciones tributarias del menor.', obligatorio: true }
-    ]
+      {
+        id: 'dpi_ob',
+        titulo: 'Documento Personal de Identificación (DPI) vigente',
+        detalle: 'Escaneado o fotografiado de ambos lados en formato PDF, JPG o PNG.',
+      },
+      {
+        id: 'pasaporte_ob',
+        titulo: 'Pasaporte vigente (si eres extranjero)',
+        detalle: 'Copia digital legible de tu pasaporte vigente.',
+      },
+      {
+        id: 'domicilio_ob',
+        titulo: 'Comprobante de domicilio fiscal y comercial (máximo 3 meses)',
+        detalle: 'Presenta uno de los siguientes documentos para respaldar tu ubicación:',
+        opciones: [
+          'Factura de energía eléctrica, agua potable, teléfono fijo o internet residencial.',
+          'Recibo de IUSI reciente o del año en curso.',
+          'Patente de comercio de empresa (cuando registres el domicilio comercial de tu negocio).',
+        ],
+      },
+    ],
+    pasosPreparacion: [
+      'La solicitud debe realizarla personalmente el titular del negocio o actividad económica.',
+      'Digitaliza tus documentos en formato PDF, JPG o PNG antes de abrir el formulario.',
+    ],
+    consejoDomicilio: {
+      sinAdjunto:
+        'Si seleccionas "Factura de Servicios" (energía eléctrica, teléfono fijo o internet), solo debes digitar la serie y número de la factura sin adjuntar archivo.',
+      conAdjunto:
+        'Si seleccionas "Otro tipo de documento" (recibo de agua, IUSI o patente de comercio), deberás subir el documento escaneado.',
+    },
+    comoFinaliza:
+      'Si usas factura de servicios finaliza en línea. Si registras obligaciones seleccionando "otro tipo de documento", deberás presentar los originales en agencia mediante cita previa.',
+    resultadoObtenido:
+      'Obtendrás tu Constancia de Inscripción y Actualización de Datos en el RTU con tus obligaciones e impuestos afiliados.',
+    advertenciaDpi:
+      'Tu DPI debe estar físico y vigente. No se acepta la constancia de trámite o renovación emitida por el RENAP.',
   },
-  extranjero: {
-    titulo: 'Extranjero (Residente o No Residente)',
-    descripcion: 'Para personas de otra nacionalidad que realizan actividades civiles, laborales o mercantiles en el país.',
+
+  discapacidad_invalidez: {
+    id: 'discapacidad_invalidez',
+    nombreCorto: 'Discapacidad o Invalidez Física',
+    titulo: 'NIT mediante representante para personas con discapacidad o invalidez física',
+    subtitulo: 'Diseñado para ciudadanos cuya condición física les impide presentarse personalmente a una agencia tributaria.',
     requisitos: [
-      { id: 'pasaporte', nombre: 'Pasaporte vigente original', detalle: 'Copia completa escaneada de las hojas con datos de identificación y visa o sello de ingreso.', obligatorio: true },
-      { id: 'residencia', nombre: 'Constancia de Residencia en Guatemala (si aplica)', detalle: 'Emitida por el Instituto Guatemalteco de Migración para residentes temporales o permanentes.', obligatorio: false },
-      { id: 'mandatario', nombre: 'Nombramiento de Mandatario Legal (no residentes)', detalle: 'Testimonio de escritura pública de mandato con representación debidamente registrado.', obligatorio: false },
-      { id: 'correo_ext', nombre: 'Correo electrónico personal', detalle: 'Bandeja activa para notificaciones oficiales de la SAT.', obligatorio: true }
-    ]
+      {
+        id: 'dpi_mandante',
+        titulo: 'DPI vigente del solicitante (mandante)',
+        detalle: 'Escaneado de ambos lados en formato PDF, JPG o PNG.',
+      },
+      {
+        id: 'dpi_mandatario',
+        titulo: 'DPI o Pasaporte vigente del representante (mandatario)',
+        detalle: 'El representante debe contar con Agencia Virtual activa y sus propios datos actualizados en el RTU.',
+      },
+      {
+        id: 'mandato',
+        titulo: 'Testimonio de escritura pública de mandato vigente',
+        detalle: 'Documento legal que acredita la representación para realizar la gestión.',
+      },
+      {
+        id: 'domicilio_disc',
+        titulo: 'Comprobante de domicilio (máximo 3 meses)',
+        detalle: 'Factura de servicios básicos (luz, agua, teléfono o internet) o recibo de IUSI.',
+      },
+    ],
+    pasosPreparacion: [
+      'El representante legal debe tener su usuario de Agencia Virtual activo y sus datos al día.',
+      'Dentro del formulario, en la pregunta "¿Quién finalizará la gestión?", selecciona la opción "Mandatario/Representante".',
+    ],
+    consejoDomicilio: {
+      sinAdjunto:
+        'Con "Factura de Servicios" solo necesitas ingresar la serie y el número de la factura.',
+      conAdjunto:
+        'Con recibo de agua, IUSI o certificación municipal de domicilio deberás adjuntar el archivo digitalizado.',
+    },
+    comoFinaliza:
+      'La gestión finaliza en línea a través del representante acreditado (salvo personas extranjeras que requieren validación presencial).',
+    resultadoObtenido:
+      'Constancia de Datos del Registro Tributario Unificado (RTU) descargable desde Agencia Virtual.',
+    advertenciaDpi:
+      'Tanto el DPI del solicitante como el del representante deben estar físicos y vigentes. No se acepta constancia de renovación del RENAP.',
   },
-  juridica: {
-    titulo: 'Persona Jurídica (Empresas y Sociedades)',
-    descripcion: 'Para sociedades mercantiles, ONGs, entidades religiosas o colectividades constituidas.',
+
+  residente_extranjero: {
+    id: 'residente_extranjero',
+    nombreCorto: 'Guatemaltecos en el Extranjero',
+    titulo: 'NIT para guatemaltecos residentes en el extranjero (Compra o alquiler de inmuebles)',
+    subtitulo: 'Gestionado por medio de un mandatario en Guatemala para adquirir o arrendar bienes inmuebles en el país.',
     requisitos: [
-      { id: 'escritura', nombre: 'Testimonio de Escritura de Constitución', detalle: 'Inscrita debidamente en el Registro Mercantil o registro público respectivo.', obligatorio: true },
-      { id: 'rep_legal', nombre: 'Nombramiento del Representante Legal', detalle: 'Vigente e inscrito en el Registro Mercantil, con DPI/pasaporte del representante.', obligatorio: true },
-      { id: 'nit_socios', nombre: 'NIT y RTU actualizado de socios y representante', detalle: 'El representante legal y socios fundadores deben tener NIT activo y sin omisos tributarios.', obligatorio: true },
-      { id: 'factura_empresa', nombre: 'Comprobante de domicilio fiscal', detalle: 'Recibo de servicios a nombre de la sociedad o contrato de arrendamiento del inmueble.', obligatorio: true }
-    ]
-  }
+      {
+        id: 'dpi_mandante_ext',
+        titulo: 'DPI vigente del ciudadano en el extranjero (mandante)',
+        detalle: 'Escaneado de ambos lados en formato PDF, JPG o PNG.',
+      },
+      {
+        id: 'dpi_mandatario_ext',
+        titulo: 'DPI o Pasaporte vigente del mandatario en Guatemala',
+        detalle: 'El mandatario debe contar con Agencia Virtual activa y datos actualizados en el RTU.',
+      },
+      {
+        id: 'mandato_ext',
+        titulo: 'Testimonio de escritura pública de mandato vigente',
+        detalle: 'Debidamente inscrito en los registros legales correspondientes.',
+      },
+      {
+        id: 'cert_propiedad',
+        titulo: 'Certificación del Registro General de la Propiedad',
+        detalle: 'Donde conste la ubicación geográfica del bien inmueble en Guatemala.',
+      },
+      {
+        id: 'domicilio_ext',
+        titulo: 'Comprobante de domicilio en Guatemala (máximo 3 meses)',
+        detalle: 'Factura de servicios básicos o recibo del IUSI vigente.',
+      },
+    ],
+    pasosPreparacion: [
+      'El mandatario en Guatemala debe tener su Agencia Virtual habilitada y datos actualizados.',
+      'En el formulario electrónico, selecciona que la gestión será finalizada por "Mandatario/Representante".',
+    ],
+    consejoDomicilio: {
+      sinAdjunto:
+        'Con "Factura de Servicios" basta con digitar la serie y el número de documento sin adjuntar archivo.',
+      conAdjunto:
+        'Con recibo de agua, IUSI o certificación municipal sí debes subir el documento escaneado.',
+    },
+    comoFinaliza:
+      'Se gestiona y concluye por medio del mandatario designado en Guatemala.',
+    resultadoObtenido:
+      'Constancia de Inscripción y Actualización del RTU disponible para descarga en Agencia Virtual.',
+    advertenciaDpi:
+      'El DPI debe estar físico y vigente. No se acepta la constancia de trámite o renovación emitida por el RENAP.',
+  },
 };
 
 export const SolicitarNitPage: React.FC<SolicitarNitPageProps> = ({
   onBackToHome,
   onOpenConsultasNIT,
-  onOpenProcesoGuiado
 }) => {
-  const [perfilActivo, setPerfilActivo] = useState<PerfilSolicitante>('individual');
-  const [requisitosCompletados, setRequisitosCompletados] = useState<Record<string, boolean>>({});
-  
-  // Estado para el verificador de solicitud
-  const [numSolicitud, setNumSolicitud] = useState('');
-  const [estadoSolicitud, setEstadoSolicitud] = useState<{
-    tipo: 'encontrado' | 'error' | null;
-    mensaje?: string;
-    detalle?: string;
-    fecha?: string;
-  }>({ tipo: null });
+  const [pasoActivo, setPasoActivo] = useState<1 | 2 | 3>(1);
+  const [modalidadActiva, setModalidadActiva] = useState<ModalidadNitId>('sin_obligaciones');
+  const [requisitosMarcados, setRequisitosMarcados] = useState<Record<string, boolean>>({});
 
-  const perfilData = REQUISITOS_POR_PERFIL[perfilActivo];
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [pasoActivo]);
 
-  const handleToggleRequisito = (id: string) => {
-    setRequisitosCompletados(prev => ({
+  const modData = MODALIDADES_CIUDADANAS[modalidadActiva];
+  const totalReqs = modData.requisitos.length;
+  const marcadosCount = modData.requisitos.filter((r) => requisitosMarcados[r.id]).length;
+
+  const toggleReq = (id: string) => {
+    setRequisitosMarcados((prev) => ({
       ...prev,
-      [id]: !prev[id]
+      [id]: !prev[id],
     }));
   };
 
-  const handleConsultarSolicitud = (e: React.FormEvent) => {
-    e.preventDefault();
-    const cleanNum = numSolicitud.trim();
-    if (!cleanNum) return;
-
-    if (cleanNum.length < 5) {
-      setEstadoSolicitud({
-        tipo: 'error',
-        mensaje: 'Número de solicitud no válido',
-        detalle: 'El número de solicitud emitido por el RTU Digital debe contener al menos 6 dígitos numéricos.'
-      });
-      return;
-    }
-
-    // Demostración interactiva ciudadana
-    setEstadoSolicitud({
-      tipo: 'encontrado',
-      mensaje: `Solicitud #${cleanNum} en proceso de validación registral`,
-      detalle: 'Tus documentos fueron recibidos correctamente en el portal RTU Digital. Un operador de la SAT está revisando la concordancia de tu DPI con RENAP.',
-      fecha: 'Tiempo estimado de respuesta: 24 a 48 horas hábiles.'
-    });
-  };
-
-  const totalRequisitos = perfilData.requisitos.length;
-  const completadosCount = perfilData.requisitos.filter(r => requisitosCompletados[r.id]).length;
-  const progresoPorcentaje = Math.round((completadosCount / totalRequisitos) * 100);
-
   return (
-    <div className="bg-sat-fondo-tenue min-h-screen pt-3 pb-12 text-sat-texto antialiased">
+    <div className="bg-slate-50/60 min-h-screen pt-3 pb-12 text-slate-800 antialiased">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-        
-        {/* 1. Miga de pan y control de retorno */}
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-sat-gris">
+
+        {/* 1. Miga de pan y botón de retorno */}
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-200">
           <Breadcrumbs
-            items={[
-              { label: 'Gestiones', onClick: onBackToHome },
-              { label: 'Inscripción Tributaria', onClick: onBackToHome },
-              { label: 'Solicitar NIT', isCurrent: true }
-            ]}
+            includeHome
             onHomeClick={onBackToHome}
+            items={[
+              { label: 'Contribuyentes', onClick: onBackToHome },
+              { label: 'Sin Obligaciones', onClick: onBackToHome },
+              { label: 'Solicitar Número de Identificación Tributaria (NIT)', isCurrent: true },
+            ]}
           />
 
           <button
             type="button"
             onClick={onBackToHome}
-            className="inline-flex items-center gap-1.5 text-xs font-semibold text-sat-azul hover:text-sat-azul-oscuro transition-colors py-1.5 px-3 rounded-sat-sm hover:bg-sat-fondo-medio focus:outline-none focus-visible:ring-2 focus-visible:ring-sat-azul min-h-[32px] self-start sm:self-auto"
-            aria-label="Volver al inicio"
+            className="inline-flex items-center gap-1.5 text-xs font-bold text-sky-700 hover:text-sky-900 transition-colors self-start sm:self-auto cursor-pointer"
           >
             <ArrowLeft className="w-3.5 h-3.5" />
-            <span>Volver al inicio</span>
+            <span>Volver al catálogo</span>
           </button>
         </div>
 
-        {/* 2. Hero Principal */}
-        <header className="bg-sat-blanco rounded-xl border border-sat-gris p-6 sm:p-8 shadow-sat-sm relative overflow-hidden">
-          <div className="max-w-3xl space-y-3 relative z-10">
-            <h1 className="text-2xl sm:text-4xl font-black text-sat-azul-oscuro tracking-tight leading-tight">
-              Solicitar NIT
-            </h1>
-            <p className="text-sm font-bold text-sat-azul uppercase tracking-wide">
-              Número de Identificación Tributaria
-            </p>
-            <p className="text-sm sm:text-base text-sat-texto-suave leading-relaxed">
-              El NIT es tu identificación oficial ante la SAT para actos civiles, contratos laborales, apertura de cuentas bancarias, emitir facturas o inscribir un negocio. La gestión es 100% gratuita y en línea.
-            </p>
+        {/* 2. Encabezado Institucional */}
+        <header className="bg-slate-900 text-white rounded-3xl p-6 sm:p-8 shadow-md space-y-3">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <span className="text-[10px] uppercase font-extrabold tracking-wider text-sky-300 bg-sky-950/80 border border-sky-700/60 px-3 py-1 rounded-full">
+              Inscripción RTU Digital · Proceso Guiado en 3 Pasos
+            </span>
+            {onOpenConsultasNIT && (
+              <button
+                type="button"
+                onClick={onOpenConsultasNIT}
+                className="inline-flex items-center gap-1.5 text-xs font-bold text-sky-300 hover:text-white bg-white/10 hover:bg-white/15 px-3 py-1.5 rounded-xl transition-colors cursor-pointer"
+              >
+                <Search className="w-3.5 h-3.5" />
+                <span>¿Ya tienes NIT y no lo recuerdas? Consúltalo con tu CUI</span>
+              </button>
+            )}
           </div>
+
+          <h1 className="text-2xl sm:text-3xl font-black text-white tracking-tight leading-tight">
+            Solicitar Número de Identificación Tributaria (NIT)
+          </h1>
+          <p className="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-3xl">
+            Revisa los documentos necesarios según tu caso, llena la solicitud electrónica en línea y programa tu cita únicamente si tu gestión requiere validación presencial.
+          </p>
         </header>
 
-        {/* 3. Selector de Perfil del Solicitante */}
-        <section aria-labelledby="perfil-heading" className="bg-sat-blanco rounded-xl border border-sat-gris p-5 sm:p-6 shadow-sat-sm space-y-4">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-sat-gris pb-3">
-            <div>
-              <span className="text-xs font-bold text-sat-azul uppercase tracking-wider">
-                Paso Previo Indispensable
-              </span>
-              <h2 id="perfil-heading" className="text-lg sm:text-xl font-bold text-sat-azul-oscuro">
-                ¿A nombre de quién solicitas el NIT?
-              </h2>
-            </div>
-            <span className="text-xs text-sat-texto-suave">
-              Selecciona tu tipo de personería para ver los requisitos exactos
-            </span>
-          </div>
+        {/* 3. Navegador de los 3 Pasos Conectados */}
+        <nav aria-label="Pasos para solicitar el NIT" className="bg-white rounded-2xl border border-slate-200 p-3 sm:p-4 shadow-2xs">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
-            {[
-              { id: 'individual', label: 'Persona Individual', sub: 'Mayor de 18 años con DPI', icon: User },
-              { id: 'menor', label: 'Menor de Edad', sub: 'Con CUI y tutor legal', icon: Baby },
-              { id: 'extranjero', label: 'Extranjero', sub: 'Con Pasaporte vigente', icon: Globe },
-              { id: 'juridica', label: 'Persona Jurídica', sub: 'Sociedades, ONGs o Empresas', icon: Users },
-            ].map(perfil => {
-              const Icon = perfil.icon;
-              const isSelected = perfilActivo === perfil.id;
-              return (
-                <button
-                  key={perfil.id}
-                  type="button"
-                  onClick={() => setPerfilActivo(perfil.id as PerfilSolicitante)}
-                  className={`flex flex-col items-start p-4 rounded-xl border text-left transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-sat-azul min-h-[90px] ${
-                    isSelected 
-                      ? 'border-sat-azul bg-sat-azul/5 shadow-sat-sm ring-1 ring-sat-azul' 
-                      : 'border-sat-gris hover:border-sat-azul-medio hover:bg-sat-fondo-tenue'
-                  }`}
-                  aria-pressed={isSelected}
-                >
-                  <div className="flex items-center justify-between w-full mb-1">
-                    <Icon className={`w-5 h-5 ${isSelected ? 'text-sat-azul' : 'text-sat-texto-suave'}`} />
-                    {isSelected && <CheckCircle2 className="w-4 h-4 text-sat-azul" />}
+            <button
+              type="button"
+              onClick={() => setPasoActivo(1)}
+              className={`p-3.5 rounded-xl border text-left transition-all cursor-pointer flex items-center gap-3 ${
+                pasoActivo === 1
+                  ? 'bg-sky-700 text-white border-sky-800 shadow-xs ring-2 ring-sky-300'
+                  : pasoActivo > 1
+                  ? 'bg-emerald-50 text-emerald-950 border-emerald-300'
+                  : 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100'
+              }`}
+            >
+              <div className={`w-8 h-8 rounded-lg font-black text-xs flex items-center justify-center shrink-0 ${
+                pasoActivo === 1 ? 'bg-white/20 text-white' : pasoActivo > 1 ? 'bg-emerald-600 text-white' : 'bg-slate-200 text-slate-700'
+              }`}>
+                {pasoActivo > 1 ? <Check className="w-4 h-4" /> : '1'}
+              </div>
+              <div>
+                <span className="text-[10px] font-extrabold uppercase tracking-wider block opacity-80">
+                  Paso 1 · Preparación
+                </span>
+                <span className="font-bold text-xs sm:text-sm block leading-tight">
+                  Requisitos
+                </span>
+              </div>
+            </button>
+
+            <button
+              type="button"
+              onClick={() => setPasoActivo(2)}
+              className={`p-3.5 rounded-xl border text-left transition-all cursor-pointer flex items-center gap-3 ${
+                pasoActivo === 2
+                  ? 'bg-sky-700 text-white border-sky-800 shadow-xs ring-2 ring-sky-300'
+                  : pasoActivo > 2
+                  ? 'bg-emerald-50 text-emerald-950 border-emerald-300'
+                  : 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100'
+              }`}
+            >
+              <div className={`w-8 h-8 rounded-lg font-black text-xs flex items-center justify-center shrink-0 ${
+                pasoActivo === 2 ? 'bg-white/20 text-white' : pasoActivo > 2 ? 'bg-emerald-600 text-white' : 'bg-slate-200 text-slate-700'
+              }`}>
+                {pasoActivo > 2 ? <Check className="w-4 h-4" /> : '2'}
+              </div>
+              <div>
+                <span className="text-[10px] font-extrabold uppercase tracking-wider block opacity-80">
+                  Paso 2 · Formulario en Línea
+                </span>
+                <span className="font-bold text-xs sm:text-sm block leading-tight">
+                  Solicitar Gestión
+                </span>
+              </div>
+            </button>
+
+            <button
+              type="button"
+              onClick={() => setPasoActivo(3)}
+              className={`p-3.5 rounded-xl border text-left transition-all cursor-pointer flex items-center gap-3 ${
+                pasoActivo === 3
+                  ? 'bg-sky-700 text-white border-sky-800 shadow-xs ring-2 ring-sky-300'
+                  : 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100'
+              }`}
+            >
+              <div className={`w-8 h-8 rounded-lg font-black text-xs flex items-center justify-center shrink-0 ${
+                pasoActivo === 3 ? 'bg-white/20 text-white' : 'bg-slate-200 text-slate-700'
+              }`}>
+                3
+              </div>
+              <div>
+                <span className="text-[10px] font-extrabold uppercase tracking-wider block opacity-80">
+                  Paso 3 · Cita Controlada
+                </span>
+                <span className="font-bold text-xs sm:text-sm block leading-tight">
+                  Solicitar Cita
+                </span>
+              </div>
+            </button>
+
+          </div>
+        </nav>
+
+        {/* =====================================================================
+            PASO 1: REQUISITOS Y RECOMENDACIONES EN LENGUAJE CIUDADANO
+           ===================================================================== */}
+        {pasoActivo === 1 && (
+          <div className="space-y-6">
+
+            {/* Selector de Modalidad */}
+            <section aria-labelledby="modalidad-heading" className="bg-white rounded-2xl border border-slate-200 p-5 sm:p-6 shadow-2xs space-y-4">
+              <div className="border-b border-slate-100 pb-3">
+                <span className="text-xs font-bold text-sky-700 uppercase tracking-wider">
+                  ¿Para qué necesitas tu NIT?
+                </span>
+                <h2 id="modalidad-heading" className="text-base sm:text-lg font-bold text-slate-900">
+                  Elige tu situación para ver únicamente los requisitos que te corresponden
+                </h2>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+                {[
+                  {
+                    id: 'sin_obligaciones',
+                    label: 'Uso Personal o Laboral',
+                    sub: 'Sin obligaciones tributarias ni facturación',
+                    icon: User,
+                  },
+                  {
+                    id: 'con_obligaciones',
+                    label: 'Negocio o Profesión',
+                    sub: 'Para facturar o abrir un comercio',
+                    icon: Briefcase,
+                  },
+                  {
+                    id: 'discapacidad_invalidez',
+                    label: 'Discapacidad o Invalidez',
+                    sub: 'Gestión por medio de representante',
+                    icon: HeartHandshake,
+                  },
+                  {
+                    id: 'residente_extranjero',
+                    label: 'Guatemalteco en el Exterior',
+                    sub: 'Compra o alquiler de inmuebles con mandatario',
+                    icon: Globe,
+                  },
+                ].map((item) => {
+                  const Icon = item.icon;
+                  const isSelected = modalidadActiva === item.id;
+                  return (
+                    <button
+                      key={item.id}
+                      type="button"
+                      onClick={() => setModalidadActiva(item.id as ModalidadNitId)}
+                      className={`flex flex-col items-start p-4 rounded-xl border text-left transition-all cursor-pointer ${
+                        isSelected
+                          ? 'border-sky-700 bg-sky-50/70 shadow-2xs ring-1 ring-sky-600'
+                          : 'border-slate-200 hover:border-slate-300 hover:bg-slate-50'
+                      }`}
+                    >
+                      <div className="flex items-center justify-between w-full mb-1.5">
+                        <Icon className={`w-5 h-5 ${isSelected ? 'text-sky-700' : 'text-slate-400'}`} />
+                        {isSelected && <CheckCircle2 className="w-4 h-4 text-sky-700" />}
+                      </div>
+                      <span className="text-xs font-bold text-slate-900">{item.label}</span>
+                      <span className="text-[11px] text-slate-500 mt-0.5 leading-snug">{item.sub}</span>
+                    </button>
+                  );
+                })}
+              </div>
+            </section>
+
+            {/* Lista de Documentos Requeridos */}
+            <section aria-labelledby="requisitos-heading" className="bg-white rounded-2xl border border-slate-200 p-5 sm:p-6 shadow-2xs space-y-4">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 pb-3">
+                <div>
+                  <span className="text-xs font-bold text-sky-700 uppercase tracking-wider">
+                    Documentos Necesarios
+                  </span>
+                  <h2 id="requisitos-heading" className="text-base sm:text-lg font-bold text-slate-900">
+                    {modData.titulo}
+                  </h2>
+                  <p className="text-xs text-slate-500 mt-0.5">{modData.subtitulo}</p>
+                </div>
+
+                <div className="flex items-center gap-2 bg-slate-50 px-3 py-1.5 rounded-xl border border-slate-200 self-start sm:self-auto shrink-0">
+                  <span className="text-xs font-bold text-slate-800">
+                    Listos: {marcadosCount} de {totalReqs}
+                  </span>
+                </div>
+              </div>
+
+              {/* Aviso Importante sobre el DPI */}
+              <div className="p-3.5 rounded-xl bg-amber-50/90 border border-amber-200 text-amber-950 text-xs flex items-start gap-2.5">
+                <AlertCircle className="w-4 h-4 text-amber-700 shrink-0 mt-0.5" />
+                <span>
+                  <strong>Importante sobre tu identificación:</strong> {modData.advertenciaDpi}
+                </span>
+              </div>
+
+              <div className="space-y-3">
+                {modData.requisitos.map((req) => {
+                  const isChecked = !!requisitosMarcados[req.id];
+                  return (
+                    <div
+                      key={req.id}
+                      className={`p-4 rounded-xl border transition-all ${
+                        isChecked ? 'bg-sky-50/60 border-sky-300' : 'bg-white border-slate-200'
+                      }`}
+                    >
+                      <div className="flex items-start gap-3">
+                        <input
+                          id={`req-${req.id}`}
+                          type="checkbox"
+                          checked={isChecked}
+                          onChange={() => toggleReq(req.id)}
+                          className="mt-1 w-4 h-4 rounded text-sky-700 focus:ring-sky-600 border-slate-300 cursor-pointer"
+                        />
+                        <label htmlFor={`req-${req.id}`} className="text-xs cursor-pointer flex-1 space-y-1.5">
+                          <span className="font-bold text-slate-900 block leading-snug">
+                            {req.titulo}
+                          </span>
+                          <span className="text-slate-600 block leading-relaxed">
+                            {req.detalle}
+                          </span>
+
+                          {req.opciones && req.opciones.length > 0 && (
+                            <ul className="pl-5 pt-1 space-y-1 text-slate-700 list-disc">
+                              {req.opciones.map((op, i) => (
+                                <li key={i} className="text-xs leading-relaxed">
+                                  {op}
+                                </li>
+                              ))}
+                            </ul>
+                          )}
+                        </label>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </section>
+
+            {/* Cómo presentar el comprobante de domicilio y qué obtendrás */}
+            <section aria-labelledby="guia-domicilio-heading" className="bg-white rounded-2xl border border-slate-200 p-5 sm:p-6 shadow-2xs space-y-5">
+              <div className="border-b border-slate-100 pb-3 flex items-center gap-2">
+                <BookOpen className="w-5 h-5 text-sky-700" />
+                <h2 id="guia-domicilio-heading" className="text-base sm:text-lg font-bold text-slate-900">
+                  Recomendaciones antes de llenar el formulario
+                </h2>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="p-4 rounded-xl bg-emerald-50/70 border border-emerald-200 space-y-1.5">
+                  <div className="flex items-center gap-1.5 text-xs font-bold text-emerald-900">
+                    <Sparkles className="w-4 h-4 text-emerald-700 shrink-0" />
+                    <span>Cuándo NO necesitas subir factura de domicilio</span>
                   </div>
-                  <span className="text-sm font-bold text-sat-azul-oscuro">{perfil.label}</span>
-                  <span className="text-xs text-sat-texto-suave leading-snug">{perfil.sub}</span>
+                  <p className="text-xs text-emerald-950 leading-relaxed">
+                    {modData.consejoDomicilio.sinAdjunto}
+                  </p>
+                </div>
+
+                <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-1.5">
+                  <div className="flex items-center gap-1.5 text-xs font-bold text-slate-900">
+                    <FileText className="w-4 h-4 text-sky-700 shrink-0" />
+                    <span>Cuándo SÍ debes adjuntar el comprobante</span>
+                  </div>
+                  <p className="text-xs text-slate-700 leading-relaxed">
+                    {modData.consejoDomicilio.conAdjunto}
+                  </p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-1">
+                <div className="p-4 rounded-xl bg-sky-50/70 border border-sky-200 text-xs text-sky-950 space-y-1">
+                  <span className="font-bold flex items-center gap-1.5 text-sky-900">
+                    <Info className="w-4 h-4 text-sky-700 shrink-0" />
+                    <span>¿Cómo concluye tu solicitud?</span>
+                  </span>
+                  <p className="leading-relaxed">{modData.comoFinaliza}</p>
+                </div>
+
+                <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-700 space-y-1">
+                  <span className="font-bold flex items-center gap-1.5 text-slate-900">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                    <span>¿Qué documento obtendrás?</span>
+                  </span>
+                  <p className="leading-relaxed">{modData.resultadoObtenido}</p>
+                </div>
+              </div>
+
+              {/* Botón de conexión directa al Paso 2 */}
+              <div className="pt-4 border-t border-slate-100 flex flex-wrap items-center justify-between gap-3">
+                <p className="text-xs text-slate-500">
+                  Cuando tengas listos tus documentos, avanza al Paso 2 para llenar la solicitud en línea.
+                </p>
+                <button
+                  type="button"
+                  onClick={() => setPasoActivo(2)}
+                  className="px-6 py-2.5 bg-sky-700 hover:bg-sky-800 text-white font-bold text-xs sm:text-sm rounded-xl transition-all shadow-xs flex items-center gap-2 cursor-pointer"
+                >
+                  <span>Ir al Paso 2: Solicitar Gestión</span>
+                  <ChevronRight className="w-4 h-4" />
                 </button>
-              );
-            })}
+              </div>
+            </section>
+
           </div>
-        </section>
+        )}
 
-        {/* 4. Checklist Interactivo de Requisitos */}
-        <section aria-labelledby="requisitos-heading" className="bg-sat-blanco rounded-xl border border-sat-gris p-5 sm:p-6 shadow-sat-sm space-y-4">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-sat-gris pb-3">
-            <div>
-              <span className="text-xs font-bold text-sat-azul uppercase tracking-wider">
-                Verificación de Documentos
-              </span>
-              <h2 id="requisitos-heading" className="text-lg sm:text-xl font-bold text-sat-azul-oscuro">
-                Requisitos obligatorios para: {perfilData.titulo}
-              </h2>
-              <p className="text-xs text-sat-texto-suave mt-0.5">
-                {perfilData.descripcion}
-              </p>
-            </div>
+        {/* =====================================================================
+            PASO 2: SOLICITAR GESTIÓN — IFRAME OFICIAL DEL RTU DIGITAL DE LA SAT
+           ===================================================================== */}
+        {pasoActivo === 2 && (
+          <div className="space-y-5">
 
-            {/* Barra de Progreso de Documentación */}
-            <div className="flex items-center gap-3 bg-sat-fondo-tenue px-3 py-1.5 rounded-lg border border-sat-gris self-start sm:self-auto">
-              <span className="text-xs font-bold text-sat-azul-oscuro">
-                Listo: {completadosCount} de {totalRequisitos}
-              </span>
-              <div className="w-24 bg-sat-gris rounded-full h-2 overflow-hidden">
-                <div 
-                  className="bg-sat-azul h-full transition-all duration-300"
-                  style={{ width: `${progresoPorcentaje}%` }}
+            <section className="bg-white rounded-2xl border border-slate-200 p-5 sm:p-6 shadow-2xs space-y-4">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 pb-3">
+                <div>
+                  <span className="text-xs font-bold text-sky-700 uppercase tracking-wider">
+                    Paso 2 · Formulario Electrónico Oficial
+                  </span>
+                  <h2 className="text-base sm:text-lg font-bold text-slate-900">
+                    Solicitud Electrónica de NIT en Línea
+                  </h2>
+                  <p className="text-xs text-slate-600 mt-0.5">
+                    Ingresa tu correo electrónico activo en el módulo de abajo para recibir el código de verificación e iniciar el llenado.
+                  </p>
+                </div>
+
+                <div className="flex flex-wrap items-center gap-2">
+                  {onOpenConsultasNIT && (
+                    <button
+                      type="button"
+                      onClick={onOpenConsultasNIT}
+                      className="px-3.5 py-2 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs rounded-xl transition-colors inline-flex items-center gap-1.5 cursor-pointer"
+                    >
+                      <Search className="w-3.5 h-3.5 text-sky-700" />
+                      <span>Consultar NIT con CUI (DPI)</span>
+                    </button>
+                  )}
+                  <a
+                    href="https://app.c.sat.gob.gt/rtu/formulario-inscripcion"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-3.5 py-2 bg-sky-50 hover:bg-sky-100 text-sky-800 border border-sky-200 font-bold text-xs rounded-xl transition-colors inline-flex items-center gap-1.5"
+                  >
+                    <span>Abrir aplicativo en pestaña completa</span>
+                    <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
+                </div>
+              </div>
+
+              {/* Contenedor del Iframe Oficial de Solicitud de NIT */}
+              <div className="rounded-xl border border-slate-200 overflow-hidden bg-slate-50">
+                <iframe
+                  src="https://app.c.sat.gob.gt/rtu/formulario-inscripcion"
+                  title="Formulario Oficial de Solicitud Electrónica de NIT - SAT"
+                  className="w-full h-[680px] border-0 bg-white"
+                  loading="lazy"
                 />
               </div>
-            </div>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-1">
-            {perfilData.requisitos.map(req => {
-              const isChecked = !!requisitosCompletados[req.id];
-              return (
-                <label
-                  key={req.id}
-                  htmlFor={`req-check-${req.id}`}
-                  aria-label={`${req.nombre}: ${req.detalle}`}
-                  className={`flex items-start gap-3 p-3.5 rounded-lg border cursor-pointer transition-all ${
-                    isChecked 
-                      ? 'border-sat-azul/40 bg-sat-azul/5' 
-                      : 'border-sat-gris hover:bg-sat-fondo-tenue'
-                  }`}
+              <div className="pt-3 border-t border-slate-100 flex flex-wrap items-center justify-between gap-3">
+                <button
+                  type="button"
+                  onClick={() => setPasoActivo(1)}
+                  className="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs rounded-xl transition-colors cursor-pointer"
                 >
-                  <input
-                    id={`req-check-${req.id}`}
-                    type="checkbox"
-                    checked={isChecked}
-                    onChange={() => handleToggleRequisito(req.id)}
-                    className="mt-0.5 w-4 h-4 rounded text-sat-azul focus:ring-sat-azul border-sat-gris cursor-pointer"
-                  />
-                  <span className="space-y-0.5 text-left cursor-pointer flex-1 block">
-                    <span className="flex items-center gap-2">
-                      <span className={`text-xs font-bold ${isChecked ? 'text-sat-azul-oscuro' : 'text-sat-texto'}`}>
-                        {req.nombre}
-                      </span>
-                      {req.obligatorio && (
-                        <span className="text-[10px] uppercase font-bold text-sat-azul bg-sat-azul/10 px-1.5 py-0.2 rounded">
-                          Obligatorio
-                        </span>
-                      )}
-                    </span>
-                    <span className="text-xs text-sat-texto-suave leading-relaxed block">
-                      {req.detalle}
-                    </span>
+                  Regresar a Paso 1: Requisitos
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => setPasoActivo(3)}
+                  className="px-6 py-2.5 bg-sky-700 hover:bg-sky-800 text-white font-bold text-xs sm:text-sm rounded-xl transition-all shadow-xs flex items-center gap-2 cursor-pointer"
+                >
+                  <span>Ir al Paso 3: Solicitar Cita</span>
+                  <ChevronRight className="w-4 h-4" />
+                </button>
+              </div>
+            </section>
+
+          </div>
+        )}
+
+        {/* =====================================================================
+            PASO 3: SOLICITAR CITA — IFRAME OFICIAL DE CITAS SAT
+           ===================================================================== */}
+        {pasoActivo === 3 && (
+          <div className="space-y-5">
+
+            <section className="bg-white rounded-2xl border border-slate-200 p-5 sm:p-6 shadow-2xs space-y-4">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 pb-3">
+                <div>
+                  <span className="text-xs font-bold text-sky-700 uppercase tracking-wider">
+                    Paso 3 · Cita Previa Controlada
                   </span>
-                </label>
-              );
-            })}
-          </div>
+                  <h2 className="text-base sm:text-lg font-bold text-slate-900">
+                    Programar Cita para Solicitud de NIT
+                  </h2>
+                </div>
 
-          {progresoPorcentaje === 100 ? (
-            <div className="flex items-center gap-2.5 p-3 rounded-lg bg-green-50 border border-green-200 text-green-800 text-xs">
-              <CheckCircle2 className="w-4 h-4 text-green-600 flex-shrink-0" />
-              <span><strong>¡Excelente!</strong> Tienes todos los requisitos listos. Ahora puedes proceder al <strong>Paso 2</strong> para llenar tu solicitud electrónica.</span>
-            </div>
-          ) : (
-            <div className="flex items-center gap-2.5 p-3 rounded-lg bg-sat-fondo-tenue border border-sat-gris text-sat-texto-suave text-xs">
-              <AlertCircle className="w-4 h-4 text-sat-azul flex-shrink-0" />
-              <span>Marca los documentos que ya tienes listos para asegurar que no te rechacen tu solicitud en línea.</span>
-            </div>
-          )}
-        </section>
-
-        {/* 5. El Recorrido Oficial en 3 Pasos */}
-        <section aria-labelledby="pasos-heading" className="space-y-4">
-          <div className="space-y-1">
-            <span className="text-xs font-bold text-sat-azul uppercase tracking-wider">
-              Flujo Oficial de Gestión
-            </span>
-            <h2 id="pasos-heading" className="text-xl sm:text-2xl font-black text-sat-azul-oscuro tracking-tight">
-              Cómo obtener tu NIT en 3 pasos
-            </h2>
-            <p className="text-xs sm:text-sm text-sat-texto-suave">
-              Sigue la secuencia lógica: prepara los documentos, ingresa la solicitud electrónica y asegura la confirmación.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5">
-            
-            {/* Paso 1: Requisitos de Inscripción */}
-            <Card
-              title="1. Requisitos de Inscripción"
-              description="Verifica los documentos obligatorios escaneados según tu personería (DPI, recibo de servicios y correo activo)."
-              tone="azul"
-              badges={<Badge tone="neutral" dot={false}>Paso 01 · Preparación</Badge>}
-              footer={
-                <span className="flex items-center justify-between w-full">
-                  <span>Consultar acordeón oficial</span>
-                  <ExternalLink className="w-3.5 h-3.5" />
-                </span>
-              }
-              onClick={() => window.open('https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1615485066841-639e67c5-51e3', '_blank')}
-            />
-
-            {/* Paso 2: Solicitar NIT en Línea */}
-            <Card
-              title="2. Llenar Solicitud en Línea"
-              description="Ingresa al formulario electrónico del RTU Digital para completar tus datos, adjuntar tus documentos y generar tu número de gestión."
-              tone="azul"
-              badges={<Badge tone="online">Paso 02 · Gestión en Línea</Badge>}
-              footer={
-                <span className="flex items-center justify-between w-full font-bold">
-                  <span>Abrir aplicativo RTU Digital</span>
-                  <ExternalLink className="w-3.5 h-3.5" />
-                </span>
-              }
-              onClick={() => window.open('https://portal.sat.gob.gt/portal/solicitud-electronica-de-nit/', '_blank')}
-            />
-
-            {/* Paso 3: Agendar mi Cita */}
-            <Card
-              title="3. Confirmación o Cita"
-              description="Si tu solicitud requiere validación presencial o por videollamada, agenda tu cita oficial en la agencia que elijas."
-              tone="azul"
-              badges={<Badge tone="cita">Paso 03 · Confirmación</Badge>}
-              footer={
-                <span className="flex items-center justify-between w-full">
-                  <span>Agendar cita de validación</span>
-                  <ExternalLink className="w-3.5 h-3.5" />
-                </span>
-              }
-              onClick={() => window.open('https://portal.sat.gob.gt/portal/citas-solicitud-de-NIT/', '_blank')}
-            />
-
-          </div>
-        </section>
-
-        {/* 6. Verificador Interactivo de Estado de Solicitud */}
-        <section aria-labelledby="verificador-heading" className="bg-sat-blanco rounded-xl border border-sat-gris p-5 sm:p-6 shadow-sat-sm space-y-4">
-          <div className="flex items-center gap-2.5">
-            <Clock className="w-5 h-5 text-sat-azul" />
-            <div>
-              <h2 id="verificador-heading" className="text-base sm:text-lg font-bold text-sat-azul-oscuro">
-                ¿Ya llenaste tu solicitud? Consulta su estado
-              </h2>
-              <p className="text-xs text-sat-texto-suave">
-                Ingresa el número de solicitud que recibiste en tu correo al completar el formulario electrónico.
-              </p>
-            </div>
-          </div>
-
-          <form onSubmit={handleConsultarSolicitud} className="flex flex-col sm:flex-row gap-3 max-w-xl">
-            <input
-              type="text"
-              value={numSolicitud}
-              onChange={(e) => setNumSolicitud(e.target.value)}
-              placeholder="Ej. 10482910 o SAT-2026-..."
-              className="flex-1 px-3.5 py-2 text-sm rounded-lg border border-sat-gris focus:outline-none focus:ring-2 focus:ring-sat-azul focus:border-sat-azul"
-              aria-label="Número de solicitud de NIT"
-            />
-            <Button type="submit" variant="primary" size="md">
-              <Search className="w-4 h-4 mr-1.5" />
-              <span>Verificar Estado</span>
-            </Button>
-          </form>
-
-          {estadoSolicitud.tipo === 'encontrado' && (
-            <div className="p-4 rounded-xl bg-blue-50 border border-blue-200 text-sat-azul-oscuro space-y-1.5">
-              <div className="flex items-center gap-2 font-bold text-sm">
-                <CheckCircle2 className="w-4 h-4 text-sat-azul" />
-                <span>{estadoSolicitud.mensaje}</span>
+                <div className="flex flex-wrap items-center gap-2">
+                  <a
+                    href="https://portal.sat.gob.gt/portal/descarga/15389/cita-controlada/96248/manual-usuario-portal-2"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-3.5 py-2 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs rounded-xl transition-colors inline-flex items-center gap-1.5"
+                  >
+                    <Download className="w-3.5 h-3.5 text-sky-700" />
+                    <span>Descargar guía de citas (PDF)</span>
+                  </a>
+                  <a
+                    href="https://cdn.c.sat.gob.gt/cita-validada/cita-validada-portal/portal"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-3.5 py-2 bg-sky-50 hover:bg-sky-100 text-sky-800 border border-sky-200 font-bold text-xs rounded-xl transition-colors inline-flex items-center gap-1.5"
+                  >
+                    <span>Abrir módulo en pestaña completa</span>
+                    <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
+                </div>
               </div>
-              <p className="text-xs text-sat-texto-suave leading-relaxed">
-                {estadoSolicitud.detalle}
-              </p>
-              {estadoSolicitud.fecha && (
-                <span className="inline-block text-[11px] font-semibold text-sat-azul mt-1">
-                  {estadoSolicitud.fecha}
-                </span>
-              )}
-            </div>
-          )}
 
-          {estadoSolicitud.tipo === 'error' && (
-            <div className="p-4 rounded-xl bg-red-50 border border-red-200 text-red-900 space-y-1">
-              <div className="flex items-center gap-2 font-bold text-sm">
-                <AlertCircle className="w-4 h-4 text-red-600" />
-                <span>{estadoSolicitud.mensaje}</span>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+                <div className="p-3.5 rounded-xl bg-sky-50 border border-sky-200 text-sky-950 space-y-1">
+                  <p className="font-bold flex items-center gap-1.5">
+                    <Calendar className="w-4 h-4 text-sky-700 shrink-0" />
+                    <span>Exclusivo para finalizar Solicitud de NIT</span>
+                  </p>
+                  <p className="leading-relaxed">
+                    Agenda aquí únicamente si ya enviaste el formulario del{' '}
+                    <button
+                      type="button"
+                      onClick={() => setPasoActivo(2)}
+                      className="font-bold text-sky-700 underline cursor-pointer"
+                    >
+                      Paso 2
+                    </button>{' '}
+                    y el sistema te indicó asistir a una agencia. Para cualquier otra gestión tributaria, las citas se programan desde Agencia Virtual.
+                  </p>
+                </div>
+
+                <div className="p-3.5 rounded-xl bg-amber-50 border border-amber-200 text-amber-950 space-y-1">
+                  <p className="font-bold flex items-center gap-1.5">
+                    <AlertCircle className="w-4 h-4 text-amber-700 shrink-0" />
+                    <span>Trámite personal e intransferible</span>
+                  </p>
+                  <p className="leading-relaxed">
+                    La cita se registra con tu correo y número de solicitud. Haz buen uso de esta herramienta para evitar la anulación de tu gestión.
+                  </p>
+                </div>
               </div>
-              <p className="text-xs text-red-700">
-                {estadoSolicitud.detalle}
-              </p>
-            </div>
-          )}
-        </section>
 
-        {/* 7. Herramientas de Apoyo Complementarias */}
-        <section aria-labelledby="apoyo-heading" className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="bg-sat-blanco rounded-xl border border-sat-gris p-6 space-y-3">
-            <h3 id="apoyo-heading" className="text-base font-bold text-sat-azul-oscuro flex items-center gap-2">
-              <Search className="w-4 h-4 text-sat-azul" />
-              <span>¿Ya tienes NIT y no lo recuerdas?</span>
-            </h3>
-            <p className="text-xs text-sat-texto-suave leading-relaxed">
-              Si solicitaste tu NIT en el pasado o no estás seguro de tu número, consúltalo al instante ingresando los 13 dígitos de tu DPI (CUI).
-            </p>
-            {onOpenConsultasNIT && (
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={onOpenConsultasNIT}
-              >
-                <span>Consultar mi NIT con DPI</span>
-              </Button>
-            )}
-          </div>
+              {/* Contenedor del Iframe Oficial de Citas SAT */}
+              <div className="rounded-xl border border-slate-200 overflow-hidden bg-slate-50">
+                <iframe
+                  src="https://cdn.c.sat.gob.gt/cita-validada/cita-validada-portal/portal"
+                  title="Sistema Oficial de Citas para Solicitud de NIT - SAT"
+                  className="w-full h-[680px] border-0 bg-white"
+                  loading="lazy"
+                />
+              </div>
 
-          <div className="bg-sat-blanco rounded-xl border border-sat-gris p-6 space-y-3">
-            <h3 className="text-base font-bold text-sat-azul-oscuro flex items-center gap-2">
-              <ShieldCheck className="w-4 h-4 text-sat-azul" />
-              <span>Recorrido Guiado Paso a Paso</span>
-            </h3>
-            <p className="text-xs text-sat-texto-suave leading-relaxed">
-              Explora el recorrido interactivo con cada una de las etapas detalladas del proceso para evitar rechazos o cometer omisos tributarios.
-            </p>
-            {onOpenProcesoGuiado && (
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={onOpenProcesoGuiado}
-              >
-                <span>Ver guía paso a paso</span>
-              </Button>
-            )}
+              <div className="pt-3 border-t border-slate-100 flex justify-start">
+                <button
+                  type="button"
+                  onClick={() => setPasoActivo(2)}
+                  className="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs rounded-xl transition-colors cursor-pointer"
+                >
+                  Regresar a Paso 2: Solicitar Gestión
+                </button>
+              </div>
+            </section>
+
           </div>
-        </section>
+        )}
 
       </div>
     </div>

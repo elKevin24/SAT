@@ -35,7 +35,7 @@ interface HeaderProps {
   allProcesos: ProcesoGuiado[];
 
   // Props para Barra de Navegación Principal y Menú de Nivel
-  currentView?: 'home' | 'catalog' | 'solicitar-nit' | 'fel' | 'gestion';
+  currentView?: 'home' | 'catalog' | 'solicitar-nit' | 'fel' | 'gestion' | 'asistente' | 'proceso';
   activeSegment?: SegmentId | null;
   activeCategory?: string;
   activeSubcategory?: string | null;
