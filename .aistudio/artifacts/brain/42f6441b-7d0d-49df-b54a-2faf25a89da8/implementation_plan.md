@@ -1,48 +1,39 @@
-# Plan de Implementación: Asistentes Guiados Paso a Paso para Gestiones Clave
+# Plan de Implementación: Página Universal Conectada — Actualización de Datos en el RTU Digital
 
-Este plan detalla el desarrollo de la siguiente fase del portal: un módulo interactivo de **Asistentes Guiados Paso a Paso** para orientar al ciudadano en la preparación y ejecución de las gestiones con mayor demanda institucional.
+## 1. ¿Qué significa crear una "Página Universal Conectada en 3 Pasos"?
 
----
+En el portal actual de la SAT, cuando un contribuyente necesita **actualizar sus datos en el RTU Digital**, la información está fragmentada en más de 12 páginas separadas (requisitos de domicilio fiscal, requisitos de establecimiento, afiliación de impuestos, nombramiento de contador, videos y enlaces sueltos para consultar el estado o imprimir la constancia).
 
-## 1. Alcance y Objetivos
+Al igual que hicimos con **Solicitar NIT (`#/solicitar-nit`)**, crear una **Página Universal Conectada** para **Actualización de Datos en el RTU Digital (`#/actualizar-rtu`)** consiste en:
 
-* **Objetivo:** Proporcionar una experiencia interactiva a página completa (cumpliendo con la Regla 13 de cero modales ni overlays) donde el ciudadano verifique requisitos, complete listas de chequeo y siga una secuencia clara hasta la ejecución en los sistemas de la SAT.
-* **Gestiones prioritarias a integrar:**
-  1. **Solicitud de Primer NIT para Personas Individuales** (`/primer-nit`).
-  2. **Habilitación y Activación de Agencia Virtual** (`/agencia-virtual-guia`).
-  3. **Inscripción y Cambio al Régimen de Pequeño Contribuyente** (`/pequeno-contribuyente-guia`).
-  4. **Traspaso Electrónico Vehicular (e-Traspaso)** (`/e-traspaso-guia`).
-
----
-
-## 2. Componentes e Integración de Arquitectura
-
-### A. Estructura de Datos (`src/data/guidedFlowsData.ts`)
-* Arreglo fuertemente tipado con la secuencia de pasos, requisitos previos con opción de verificación (checkbox), estimación de tiempo, avisos importantes y enlace oficial final.
-
-### B. Vista Principal a Página Completa (`src/pages/GuidedAssistantPage.tsx`)
-* **Barra de Progreso y Miga de Pan:** Muestra la etapa actual (Paso X de Y) con la ruta canónica `Inicio › Gestiones › Asistente Guiado`.
-* **Paso 1: Verificación de Requisitos:** Lista interactiva con casillas de selección para que el usuario confirme si cuenta con DPI, factura reciente, correo activo, etc.
-* **Paso 2: Guía Operativa de Ejecución:** Instrucciones en lenguaje ciudadano orientadas a la acción (verbos en infinitivo).
-* **Paso 3: Redirección Segura:** Botón de acción hacia la plataforma transaccional oficial de la SAT (`portal.sat.gob.gt` o `agenciavirtual.sat.gob.gt`).
-
-### C. Integración en Navegación y Catálogo (`src/App.tsx`)
-* Registro de rutas hash dedicadas (`#/asistente/primer-nit`, `#/asistente/agencia-virtual`, etc.).
-* Botón de acceso directo en las fichas de gestión relevantes (*"Iniciar con Asistente Guiado"*).
+1. **Unificar en una sola URL amigable (`#/actualizar-rtu`)** todos los caminos de navegación (desde el Catálogo de Gestiones `SAT-GES-0002`, `SAT-GES-0071`, `SAT-GES-0072` y desde la sección de Procesos Guiados `Proceso #9: Actualizar mis datos`).
+2. **Conectar todo el flujo en 3 pasos dentro de la misma página**, sin redirecciones innecesarias ni pérdida de contexto:
+   - **Paso 1 — Requisitos según tu caso:** Selector en lenguaje ciudadano (Datos personales y domicilio fiscal, Datos de negocio o establecimiento, Impuestos y actividad económica, Contador y representante legal, o Persona Jurídica / Ente Exento), con la regla oficial del comprobante de domicilio (ingreso de serie y número de factura de servicios sin adjuntar archivo vs. recibo de agua o IUSI) y el plazo legal de 30 días hábiles (Art. 94 Código Tributario).
+   - **Paso 2 — Realizar Actualización en Línea (Agencia Virtual):** Guía operativa paso a paso para enviar la solicitud desde Agencia Virtual (`Servicios › RTU › Actualizar Datos`), con acceso directo al portal de Agencia Virtual (`https://farm3.sat.gob.gt/menu/login.jsf`) y descarga directa de los manuales oficiales en PDF de la SAT (*Guía de Actualización RTU Digital* y *Manual de Comprobante de Domicilio*).
+   - **Paso 3 — Seguimiento y Constancia de RTU (Con Iframes Oficiales Integrados):**
+     - Sub-pestaña 3A: **Consultar Estado de Gestión RTU Digital** embebiendo el iframe oficial `https://cdn.c.sat.gob.gt/rtu/consulta-gestion`.
+     - Sub-pestaña 3B: **Imprimir Constancia de RTU** embebiendo el iframe oficial `https://cdn.c.sat.gob.gt/rtu/constancia-rtu-portal`.
+     - Sub-pestaña 3C: **Solicitar Cita Presencial** (`https://cdn.c.sat.gob.gt/cita-validada/cita-validada-portal/portal`) para contribuyentes con obligaciones que seleccionen "otro tipo de documento" como comprobante de domicilio y deban concluir su gestión en agencia.
 
 ---
 
-## 3. Fases de Ejecución
+## 2. Alcance de los Cambios Técnicos
 
-1. **Fase 1 (Dataset y Tipado):** Definir el modelo de datos `GuidedStep` y `GuidedAssistant` en `src/data/guidedFlowsData.ts`.
-2. **Fase 2 (Componente de Interfaz):** Crear `src/pages/GuidedAssistantPage.tsx` con estilos Tailwind responsive y accesibilidad WCAG 2.2 AA.
-3. **Fase 3 (Enrutamiento y Puntos de Entrada):** Conectar las rutas hash en `App.tsx` e integrar los accesos en el catálogo.
-4. **Fase 4 (Verificación):** Ejecutar `compile_applet`, `lint_applet` y los tests de Playwright (`tests/data-contract.spec.ts`).
+### A. Aplicación Web Interactiva (React + TypeScript)
+1. **Nuevo componente `src/pages/ActualizarRtuPage.tsx`**:
+   - Diseño institucional con miga de pan dinámica, selector de los **3 pasos conectados** y tarjetas interactivas de requisitos en lenguaje ciudadano basadas 100 % en el contenido oficial de la SAT.
+   - Aviso destacado sobre el **Comprobante de Domicilio Fiscal y Comercial** (factura de energía eléctrica, agua potable, teléfono fijo o internet residencial no mayor a 3 meses ingresando solo serie y número, o adjunto en JPG/PDF/PNG para recibo de IUSI/agua).
+   - Integración de los iframes oficiales de la SAT (`consulta-gestion`, `constancia-rtu-portal` y `cita-validada-portal`) en el Paso 3 con enlace de respaldo en caso de bloqueo del navegador.
+2. **Enrutamiento Canónico Universal en `src/App.tsx` y `src/pages/GestionContentPage.tsx`**:
+   - Ruta amigable `#/actualizar-rtu` conectada automáticamente cuando el usuario selecciona las gestiones `SAT-GES-0002`, `SAT-GES-0071` o `SAT-GES-0072` desde cualquier nivel del catálogo o cuando ingresa al **Proceso #9 ("Actualizar mis datos")**.
+
+### B. Plantilla WPBakery + The7 Classic (`docs/plantillas-wpbakery/`)
+1. **Generación de `docs/plantillas-wpbakery/procesos-conectados/G_actualizar-rtu.txt`**:
+   - Shortcodes puros de WPBakery (`[vc_row]`, `[vc_tta_tabs]`, `[vc_tta_accordion]`, `[vc_raw_html]`) listos para copiar y pegar en WordPress (`/portal/actualizar-rtu/`).
+   - Actualización de `scripts/generar_plantillas_wpbakery.py` para que las tarjetas de `SAT-GES-0002`, `SAT-GES-0071` y `SAT-GES-0072` apunten a la ruta interna `/portal/actualizar-rtu/` y regeneración del índice `docs/plantillas-wpbakery/_INDICE.md` y la guía `docs/GUIA_IMPLEMENTACION_WORDPRESS_THE7.md`.
 
 ---
 
-## 4. Criterios de Aceptación
-
-* Cumplimiento estricto de la **Regla 13** (pantalla completa dedicada con URL navegable, sin popups ni modales).
-* Lenguaje ciudadano alineado a la **Regla 10** (sin jerga burocrática ni términos prohibidos).
-* Total compatibilidad móvil y persistencia local del estado del checklist.
+## 3. Verificación y Gobernanza
+- Cumplimiento estricto de las reglas de arquitectura (`AGENTS.md` y `DESIGN_RULES.md`): cero uso del término prohibido, niveles estrictamente numéricos (Nivel 1 a Nivel 5), página completa dedicada sin modales ni popovers, y lenguaje claro orientado al ciudadano.
+- Compilación limpia con `compile_applet` y validación con `lint_applet` sin errores.

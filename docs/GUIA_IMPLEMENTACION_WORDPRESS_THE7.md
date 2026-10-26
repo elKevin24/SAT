@@ -163,9 +163,9 @@ El código íntegro de la portada se encuentra en **`docs/plantillas-wpbakery/HO
 
 ---
 
-## 4. Paso 3: Creación de la Página Universal Conectada en 3 Pasos (`/solicitar-nit/`)
+## 4. Paso 3: Creación de las Páginas Universales Conectadas en 3 Pasos (`/solicitar-nit/` y `/actualizar-rtu/`)
 
-Para evitar redirecciones dispersas o ventanas modales (prohibidas por Regla 13), la gestión **Solicitar Número de Identificación Tributaria (NIT)** (`SAT-GES-0001`) se implementa en una **única página universal dedicada** con slug limpio **`/solicitar-nit/`**, a la cual apuntan todos los puntos de entrada del portal (Acceso Rápido, Gestiones Frecuentes, Procesos y Catálogo de Contribuyentes).
+Para evitar redirecciones dispersas o ventanas modales (prohibidas por Regla 13), las gestiones de más alta demanda del Registro Tributario Unificado (RTU Digital) se implementan en **páginas universales dedicadas** con slugs limpios (**`/solicitar-nit/`** y **`/actualizar-rtu/`**), a las cuales apuntan todos los puntos de entrada del portal.
 
 ### 4.1 Arquitectura de la Página `/solicitar-nit/` en WPBakery
 La plantilla oficial lista para pegar se encuentra en:
@@ -190,6 +190,30 @@ Utiliza el contenedor de pestañas nativo de WPBakery (`[vc_tta_tabs]`) para con
    - Utiliza `[vc_raw_html]` para incrustar el sistema oficial de programación de citas para finalizar la solicitud de NIT:
      - **URL del Iframe:** `https://cdn.c.sat.gob.gt/cita-validada/cita-validada-portal/portal`
      - **Manual Oficial en PDF:** `https://portal.sat.gob.gt/portal/descarga/15389/cita-controlada/96248/manual-usuario-portal-2`
+
+### 4.2 Arquitectura de la Página `/actualizar-rtu/` en WPBakery
+La plantilla oficial lista para pegar se encuentra en:
+- **`docs/plantillas-wpbakery/procesos-conectados/G_actualizar-rtu.txt`**
+
+Unifica en una sola página todas las gestiones de actualización y ratificación de datos del RTU Digital (`SAT-GES-0002`, `SAT-GES-0040`, `SAT-GES-0054`, `SAT-GES-0068` a `SAT-GES-0076`, `SAT-GES-0115` y `SAT-GES-0118`):
+
+1. **Pestaña `1. Requisitos según tu caso` (Texto nativo en Lenguaje Ciudadano):**
+   - **Aviso sobre el plazo legal:** Destaca mediante `[vc_message]` el plazo legal de **treinta (30) días hábiles** (Art. 94 del Código Tributario, Decreto 6-91) a partir de cualquier modificación de datos, y la exigencia de contar con **DPI físico y vigente**.
+   - **4 Escenarios ciudadanos:**
+     - *Datos Personales, Domicilio Fiscal o Ratificación Anual*
+     - *Establecimiento Comercial, Negocio o Actividad Económica* (incluyendo patente de comercio y resoluciones especiales para centros educativos, Zonas Francas/ZOLIC/Decreto 29-89/Movilidad Eléctrica y solvencias municipales para fincas)
+     - *Impuestos, Afiliaciones, Cambio de Régimen o Contador*
+     - *Persona Jurídica (Sociedad, Empresa) o Ente Exento* (con la condición de Agencia Virtual activa y RTU actualizado para la Entidad, Representante Legal y Perito Contador)
+   - **Regla oficial sobre el Comprobante de Domicilio:** Aclara que al elegir **"Factura de Servicios"** solo se digita la **serie y número de documento** sin adjuntar archivo (100% en línea), mientras que al elegir recibo de agua, recibo de IUSI o certificación municipal se debe adjuntar el archivo digital (y los contribuyentes con obligaciones activas en IVA finalizan en agencia).
+2. **Pestaña `2. Realizar Actualización` (Ruta en Agencia Virtual + Manuales PDF):**
+   - Botón directo e instrucciones paso a paso para ingresar a **Agencia Virtual SAT** (`https://farm3.sat.gob.gt/menu/login.jsf` › *Servicios › RTU › Actualizar Datos* o *Ratificación de Datos*).
+   - Tarjetas `[bsf-info-box]` para descargar los 2 manuales PDF oficiales:
+     - `https://portal.sat.gob.gt/portal/descarga/14366/rtu-digital/43540/actualizacion-rtu-digital.pdf`
+     - `https://portal.sat.gob.gt/portal/descarga/14366/rtu-digital/80676/manual-comprobante-de-domicilio-actualizacion-2.pdf`
+3. **Pestaña `3. Estado, Constancia y Cita` (3 Iframes oficiales de la SAT integrados):**
+   - **3.1 Consulta de Estado de Gestión de RTU Digital:** `https://cdn.c.sat.gob.gt/rtu/consulta-gestion`
+   - **3.2 Impresión de Constancia de Inscripción y Actualización en el RTU:** `https://cdn.c.sat.gob.gt/rtu/constancia-rtu-portal`
+   - **3.3 Sistema Oficial de Cita Validada:** `https://cdn.c.sat.gob.gt/cita-validada/cita-validada-portal/portal`
 
 ---
 

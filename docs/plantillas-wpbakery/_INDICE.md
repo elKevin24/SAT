@@ -1,6 +1,6 @@
 # Índice Maestro de Plantillas y Shortcodes WPBakery — Portal SAT Guatemala
 
-Este directorio contiene los shortcodes oficiales de **WPBakery Page Builder + The7 Classic + Ultimate Addons (`[bsf-info-box]`)**, sincronizados 100% con `src/data/allTramites.json` (**714 gestiones canónicas**), los **Hallazgos A y B** de la Arquitectura de Información y la **Página Universal Conectada en 3 Pasos (`/solicitar-nit/`)**.
+Este directorio contiene los shortcodes oficiales de **WPBakery Page Builder + The7 Classic + Ultimate Addons (`[bsf-info-box]`)**, sincronizados 100% con `src/data/allTramites.json` (**714 gestiones canónicas**), los **Hallazgos A y B** de la Arquitectura de Información y las **Páginas Universales Conectadas en 3 Pasos (`/solicitar-nit/` y `/actualizar-rtu/`)**.
 
 ## 1. Portada y Páginas de Proceso Conectado (3 Pasos + Iframes Oficiales)
 
@@ -8,6 +8,7 @@ Este directorio contiene los shortcodes oficiales de **WPBakery Page Builder + T
 | :--- | :---: | :--- | :--- |
 | `HOME_portada-portal-sat.txt` | Portada | `/` | Hero institucional, 6 accesos rápidos, 4 tarjetas de Nivel 1 y 6 gestiones frecuentes |
 | `procesos-conectados/G_solicitar-nit.txt` | Gestión Conectada (3 Pasos) | `/solicitar-nit/` | Pestañas conectadas: **1. Requisitos** (4 modalidades + aviso DPI físico sin constancia RENAP) › **2. Solicitar Gestión** (Iframe oficial RTU Digital) › **3. Solicitar Cita** (Iframe oficial Cita Validada + Manual PDF) |
+| `procesos-conectados/G_actualizar-rtu.txt` | Gestión Conectada (3 Pasos) | `/actualizar-rtu/` | Pestañas conectadas: **1. Requisitos según tu caso** (plazo legal 30 días Art. 94 + 4 casos + reglas de Factura de Servicios) › **2. Realizar Actualización** (Agencia Virtual + Manuales PDF) › **3. Estado, Constancia y Cita** (3 Iframes oficiales SAT) |
 
 ## 2. Páginas Jerárquicas del Catálogo (Nivel 1 a Nivel 4)
 

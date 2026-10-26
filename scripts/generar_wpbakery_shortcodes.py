@@ -269,7 +269,7 @@ def build_home_shortcode() -> str:
 
 [vc_row gap="10px" el_class="sat-seccion-contribuyentes"]
 [vc_column width="1/3"][bsf-info-box icon_type="none" title="Solicitar Número de Identificación Tributaria (NIT)" read_more="box" link="url:/solicitar-nit/|||"]Requisitos claros, formulario oficial RTU Digital integrado y programación de cita en 3 pasos conectados.[/bsf-info-box][/vc_column]
-[vc_column width="1/3"][bsf-info-box icon_type="none" title="Solicitud y Activación de Agencia Virtual" read_more="box" link="url:https://farm3.sat.gob.gt/menu/login.jsf||target:%20_blank|"]Acceso a la plataforma web de la SAT para consultar datos personales y descargar tu constancia del Registro Tributario Unificado (RTU).[/bsf-info-box][/vc_column]
+[vc_column width="1/3"][bsf-info-box icon_type="none" title="Actualizar o Ratificar Datos en el RTU Digital" read_more="box" link="url:/actualizar-rtu/|||"]Actualiza tu dirección fiscal, establecimientos, impuestos o contador, consulta el estado e imprime tu Constancia de RTU en 3 pasos.[/bsf-info-box][/vc_column]
 [vc_column width="1/3"][bsf-info-box icon_type="none" title="Solicitud y Emisión de Solvencia Fiscal en Línea" read_more="box" link="url:https://portal.sat.gob.gt/portal/solvencia-fiscal/||target:%20_blank|"]Consulta, pago y descarga del certificado electrónico que acredita la ausencia de adeudos tributarios.[/bsf-info-box][/vc_column]
 [vc_column width="1/3"][bsf-info-box icon_type="none" title="Habilitación para emitir Factura Electrónica (FEL)" read_more="box" link="url:https://portal.sat.gob.gt/portal/factura-electronica-en-linea-fel/||target:%20_blank|"]Pasos para incorporarte al régimen FEL y emitir Documentos Tributarios Electrónicos (DTE) de forma gratuita.[/bsf-info-box][/vc_column]
 [vc_column width="1/3"][bsf-info-box icon_type="none" title="Traspaso Electrónico de Vehículos en Línea" read_more="box" link="url:https://portal.sat.gob.gt/portal/vehiculos/||target:%20_blank|"]Transferencia de dominio de automotores autorizada notarialmente a través de Agencia Virtual.[/bsf-info-box][/vc_column]
@@ -444,6 +444,246 @@ def build_solicitar_nit_shortcode() -> str:
 [/vc_section]"""
 
 
+def build_actualizar_rtu_shortcode() -> str:
+    """
+    Construye el Shortcode WPBakery para la Página Universal Conectada en 3 Pasos:
+    /actualizar-rtu/
+      - Paso 1: 1. Requisitos según tu caso (plazo legal de 30 días hábiles Art. 94 Código Tributario,
+        4 escenarios ciudadanos y reglas oficiales sobre Factura de Servicios vs otro comprobante).
+      - Paso 2: 2. Realizar Actualización (ruta operativa en Agencia Virtual + enlaces directos +
+        manuales PDF oficiales de la SAT).
+      - Paso 3: 3. Estado, Constancia y Cita (3 iframes oficiales de la SAT integrados:
+        consulta de estado RTU Digital, impresión de Constancia de RTU y sistema de Cita Validada).
+    """
+    iframe_estado = """<div class="sat-iframe-wrapper" style="border: 1px solid #cbd5e1; border-radius: 12px; overflow: hidden; background: #ffffff; box-shadow: 0 4px 14px rgba(0,56,101,0.06); margin-bottom: 24px;">
+  <div style="background: #003865; color: #ffffff; padding: 12px 18px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+    <span style="font-size: 13px; font-weight: 700;">3.1 Aplicativo Oficial SAT — Consulta de Estado de Gestión de RTU Digital</span>
+    <a href="https://cdn.c.sat.gob.gt/rtu/consulta-gestion" target="_blank" rel="noopener noreferrer" style="color: #7dd3fc; font-size: 12px; font-weight: 600; text-decoration: underline;">Abrir en pestaña completa ↗</a>
+  </div>
+  <iframe src="https://cdn.c.sat.gob.gt/rtu/consulta-gestion" title="Consulta de Estado de Gestión de RTU Digital" style="width: 100%; height: 660px; border: 0; display: block;" loading="lazy"></iframe>
+</div>"""
+
+    iframe_constancia = """<div class="sat-iframe-wrapper" style="border: 1px solid #cbd5e1; border-radius: 12px; overflow: hidden; background: #ffffff; box-shadow: 0 4px 14px rgba(0,56,101,0.06); margin-bottom: 24px;">
+  <div style="background: #003865; color: #ffffff; padding: 12px 18px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+    <span style="font-size: 13px; font-weight: 700;">3.2 Aplicativo Oficial SAT — Imprimir Constancia de Inscripción y Actualización en el RTU</span>
+    <a href="https://cdn.c.sat.gob.gt/rtu/constancia-rtu-portal" target="_blank" rel="noopener noreferrer" style="color: #7dd3fc; font-size: 12px; font-weight: 600; text-decoration: underline;">Abrir en pestaña completa ↗</a>
+  </div>
+  <iframe src="https://cdn.c.sat.gob.gt/rtu/constancia-rtu-portal" title="Impresión de Constancia de RTU" style="width: 100%; height: 660px; border: 0; display: block;" loading="lazy"></iframe>
+</div>"""
+
+    iframe_cita = """<div class="sat-iframe-wrapper" style="border: 1px solid #cbd5e1; border-radius: 12px; overflow: hidden; background: #ffffff; box-shadow: 0 4px 14px rgba(0,56,101,0.06);">
+  <div style="background: #003865; color: #ffffff; padding: 12px 18px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+    <span style="font-size: 13px; font-weight: 700;">3.3 Aplicativo Oficial SAT — Solicitar Cita Presencial (Solo cuando el sistema indique acudir a Agencia)</span>
+    <div style="display: flex; gap: 16px; align-items: center;">
+      <a href="https://portal.sat.gob.gt/portal/descarga/15389/cita-controlada/96248/manual-usuario-portal-2" target="_blank" rel="noopener noreferrer" style="color: #fde68a; font-size: 12px; font-weight: 600; text-decoration: underline;">Descargar Manual de Cita (PDF)</a>
+      <a href="https://cdn.c.sat.gob.gt/cita-validada/cita-validada-portal/portal" target="_blank" rel="noopener noreferrer" style="color: #7dd3fc; font-size: 12px; font-weight: 600; text-decoration: underline;">Abrir en pestaña completa ↗</a>
+    </div>
+  </div>
+  <iframe src="https://cdn.c.sat.gob.gt/cita-validada/cita-validada-portal/portal" title="Sistema de Cita Validada SAT" style="width: 100%; height: 760px; border: 0; display: block;" loading="lazy"></iframe>
+</div>"""
+
+    b64_estado = encode_raw_html(iframe_estado)
+    b64_constancia = encode_raw_html(iframe_constancia)
+    b64_cita = encode_raw_html(iframe_cita)
+
+    return f"""[vc_row gap="5px"][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row]
+
+[vc_row el_class="sat-gestion-header"]
+[vc_column]
+[vc_custom_heading text="Actualizar o Ratificar Datos en el Registro Tributario Unificado (RTU Digital)" font_container="tag:h1|font_size:30px|text_align:left|color:%23003865" use_theme_fonts="yes"]
+[vc_custom_heading text="Actualiza tu dirección fiscal, datos de identificación, establecimientos comerciales, afiliaciones de impuestos, contador o representante legal, consulta el estado de tu gestión e imprime tu Constancia de RTU en 3 pasos conectados." font_container="tag:p|font_size:16px|text_align:left|color:%23475569" use_theme_fonts="yes"]
+[vc_empty_space height="12px"]
+[/vc_column]
+[/vc_row]
+
+[vc_section]
+[vc_row]
+[vc_column]
+[vc_tta_tabs style="modern" shape="rounded" color="blue" active_section="1" el_class="sat-connected-steps-tabs"]
+
+[vc_tta_section title="1. Requisitos según tu caso" tab_id="paso-1-requisitos-rtu"]
+[vc_row]
+[vc_column]
+[vc_message message_box_style="solid-icon" message_box_color="warning" icon_fontawesome="fas fa-clock"]<strong>Plazo legal de 30 días hábiles (Art. 94 del Código Tributario, Decreto 6-91):</strong> A partir de la fecha en que realices cualquier modificación en tus datos o cambies de domicilio fiscal o comercial, cuentas con <strong>treinta (30) días hábiles</strong> para actualizar tu información ante la SAT sin sanciones. Tu <strong>DPI debe estar físico y vigente</strong>.[/vc_message]
+[vc_empty_space height="16px"]
+[vc_custom_heading text="Verifica los documentos requeridos según el tipo de actualización (Formatos: PDF, JPG o PNG)" font_container="tag:h2|font_size:20px|text_align:left|color:%23003865" use_theme_fonts="yes"]
+[vc_empty_space height="12px"]
+[/vc_column]
+[/vc_row]
+
+[vc_row gap="15px" el_class="sat-seccion-contribuyentes"]
+[vc_column width="1/2"]
+[vc_column_text]
+<div class="sat-modalidad-card" style="border: 1px solid #dde2e5; border-top: 4px solid #14649b; border-radius: 10px; padding: 18px; background: #fff;">
+  <h3 style="color: #003865; font-size: 16px; margin-bottom: 6px;">Datos Personales, Domicilio Fiscal o Ratificación Anual</h3>
+  <p style="font-size: 13px; color: #475569; margin-bottom: 10px;">Cambio de dirección de residencia, teléfono, correo electrónico, actividad económica personal o confirmación anual de datos.</p>
+  <ul style="font-size: 13px; color: #1e293b; padding-left: 18px; line-height: 1.6;">
+    <li><strong>DPI vigente de ambos lados</strong> (o Pasaporte vigente en caso de ser extranjero).</li>
+    <li><strong>Comprobante de domicilio fiscal</strong> con máximo 3 meses de emisión (Factura de servicios donde solo digitas serie y número, o recibo de agua / IUSI adjunto).</li>
+    <li><strong>Usuario activo de Agencia Virtual SAT</strong> (si solo realizas la ratificación anual sin cambios, se confirma de inmediato en línea).</li>
+  </ul>
+</div>
+[/vc_column_text]
+[/vc_column]
+
+[vc_column width="1/2"]
+[vc_column_text]
+<div class="sat-modalidad-card" style="border: 1px solid #dde2e5; border-top: 4px solid #0284c7; border-radius: 10px; padding: 18px; background: #fff;">
+  <h3 style="color: #003865; font-size: 16px; margin-bottom: 6px;">Establecimiento Comercial, Negocio o Actividad Económica</h3>
+  <p style="font-size: 13px; color: #475569; margin-bottom: 10px;">Apertura, cambio de dirección comercial, cambio de nombre comercial o modificación de actividad económica.</p>
+  <ul style="font-size: 13px; color: #1e293b; padding-left: 18px; line-height: 1.6;">
+    <li><strong>DPI vigente de ambos lados</strong> o Pasaporte vigente en caso de ser extranjero.</li>
+    <li><strong>Comprobante de domicilio comercial</strong> (máximo 3 meses de antigüedad).</li>
+    <li><strong>Patente de comercio de empresa</strong> (para comerciantes inscritos en el Registro Mercantil).</li>
+    <li><strong>Casos especiales:</strong> Centros educativos adjuntan resolución del MINEDUC; Zonas Francas / ZOLIC / Decreto 29-89 / Movilidad Eléctrica Decreto 40-2022 adjuntan resolución ministerial; Fincas adjuntan certificación o solvencia municipal con dirección.</li>
+  </ul>
+</div>
+[/vc_column_text]
+[/vc_column]
+[/vc_row]
+
+[vc_row gap="15px" el_class="sat-seccion-contribuyentes"]
+[vc_column width="1/2"]
+[vc_column_text]
+<div class="sat-modalidad-card" style="border: 1px solid #dde2e5; border-top: 4px solid #2e7d32; border-radius: 10px; padding: 18px; background: #fff;">
+  <h3 style="color: #003865; font-size: 16px; margin-bottom: 6px;">Impuestos, Afiliaciones, Cambio de Régimen o Contador</h3>
+  <p style="font-size: 13px; color: #475569; margin-bottom: 10px;">Agregar o actualizar afiliaciones de impuestos (IVA, ISR, ISO), transición de régimen o nombramiento/cambio de Perito Contador.</p>
+  <ul style="font-size: 13px; color: #1e293b; padding-left: 18px; line-height: 1.6;">
+    <li><strong>Usuario activo de Agencia Virtual</strong> y datos de identificación actualizados en el RTU Digital.</li>
+    <li><strong>Para nombrar o cambiar Perito Contador:</strong> Tanto el contribuyente como el Perito Contador deben contar con Agencia Virtual activa y sus propios datos actualizados en el RTU Digital. El contador deberá confirmar su nombramiento desde su Agencia Virtual.</li>
+  </ul>
+</div>
+[/vc_column_text]
+[/vc_column]
+
+[vc_column width="1/2"]
+[vc_column_text]
+<div class="sat-modalidad-card" style="border: 1px solid #dde2e5; border-top: 4px solid #c25e00; border-radius: 10px; padding: 18px; background: #fff;">
+  <h3 style="color: #003865; font-size: 16px; margin-bottom: 6px;">Persona Jurídica (Sociedad, Empresa) o Ente Exento</h3>
+  <p style="font-size: 13px; color: #475569; margin-bottom: 10px;">Actualización de sociedades mercantiles, nombramiento o cambio de Representante Legal, entidades no lucrativas o del Estado.</p>
+  <ul style="font-size: 13px; color: #1e293b; padding-left: 18px; line-height: 1.6;">
+    <li><strong>Agencia Virtual activa y RTU Digital actualizado</strong> para la Entidad, su Representante Legal y su Perito Contador previo a iniciar la gestión.</li>
+    <li><strong>DPI vigente de ambos lados</strong> (o Pasaporte vigente) del Representante Legal.</li>
+    <li><strong>Acta Notarial de Nombramiento vigente e inscrita</strong> en el Registro Mercantil, REPEJU o registro correspondiente.</li>
+    <li><strong>Comprobante de domicilio fiscal y comercial</strong> (máximo 3 meses de emisión).</li>
+  </ul>
+</div>
+[/vc_column_text]
+[/vc_column]
+[/vc_row]
+
+[vc_empty_space height="16px"]
+
+[vc_row]
+[vc_column width="1/2"]
+[vc_column_text]
+<div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 10px; padding: 16px;">
+  <h4 style="color: #166534; font-size: 15px; margin-bottom: 8px;">¿Cuándo NO necesitas adjuntar el archivo de la factura?</h4>
+  <p style="font-size: 13px; color: #14532d; margin: 0; line-height: 1.55;">Si en el campo <em>"Tipo de documento comprobante de domicilio"</em> eliges <strong>"Factura de Servicios"</strong> (energía eléctrica, agua potable, teléfono de línea fija o internet residencial no mayor a 3 meses), <strong>únicamente debes digitar la serie y el número de documento de la factura</strong>. No se requiere adjuntar archivo y tu gestión finaliza 100% en línea.</p>
+</div>
+[/vc_column_text]
+[/vc_column]
+
+[vc_column width="1/2"]
+[vc_column_text]
+<div style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 10px; padding: 16px;">
+  <h4 style="color: #003865; font-size: 15px; margin-bottom: 8px;">¿Cuándo SÍ debes adjuntar comprobante digital (JPG, PDF o PNG)?</h4>
+  <p style="font-size: 13px; color: #334155; margin: 0; line-height: 1.55;">Si eliges <strong>Recibo de agua potable</strong>, <strong>Recibo de IUSI</strong> o <strong>Certificación/Solvencia municipal</strong>, debes adjuntar el archivo. <strong>Importante:</strong> Los contribuyentes con obligaciones (establecimientos y afiliación al IVA en estado activo) que elijan "otro tipo de documento" deberán finalizar su gestión presencialmente en Agencia Tributaria (Paso 3).</p>
+</div>
+[/vc_column_text]
+[/vc_column]
+[/vc_row]
+[/vc_tta_section]
+
+[vc_tta_section title="2. Realizar Actualización" tab_id="paso-2-actualizar-agencia-virtual"]
+[vc_row]
+[vc_column]
+[vc_custom_heading text="Paso 2: Realiza tu Actualización o Ratificación dentro de Agencia Virtual SAT" font_container="tag:h2|font_size:20px|text_align:left|color:%23003865" use_theme_fonts="yes"]
+[vc_column_text]
+<div style="background: #ffffff; border: 1px solid #cbd5e1; border-radius: 12px; padding: 22px; margin-bottom: 20px;">
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; padding-bottom: 16px; border-bottom: 1px solid #e2e8f0;">
+    <div>
+      <h3 style="color: #003865; font-size: 18px; margin: 0 0 6px 0;">Acceso Directo a Agencia Virtual SAT</h3>
+      <p style="color: #475569; font-size: 13px; margin: 0;">Por seguridad tributaria, la modificación de datos del RTU Digital requiere iniciar sesión con tu NIT y contraseña.</p>
+    </div>
+    <a href="https://farm3.sat.gob.gt/menu/login.jsf" target="_blank" rel="noopener noreferrer" style="background: #003865; color: #ffffff; padding: 12px 22px; border-radius: 8px; font-weight: 700; font-size: 14px; text-decoration: none; display: inline-block;">Ingresar a Agencia Virtual SAT ↗</a>
+  </div>
+  <ol style="font-size: 13px; color: #1e293b; line-height: 1.75; margin-top: 16px; padding-left: 20px;">
+    <li>Ingresa a <strong>Agencia Virtual</strong> con tu usuario (NIT) y contraseña, y dirígete al menú <strong>Servicios › RTU › Actualizar Datos</strong> (o <em>Ratificación de Datos</em>).</li>
+    <li>Modifica únicamente las secciones que necesitas poner al día: Identificación, Ubicación (domicilio fiscal), Actividad Económica, Establecimientos, Afiliaciones de Impuestos o Contador.</li>
+    <li>Adjunta tu DPI vigente de ambos lados. En comprobante de domicilio, selecciona <strong>"Factura de Servicios"</strong> para digitar únicamente la serie y número de tu factura sin adjuntar archivo.</li>
+    <li>Confirma y envía tu solicitud. Luego abre la pestaña <strong>3. Estado, Constancia y Cita</strong> en esta misma página para consultar la aprobación o imprimir tu Constancia de RTU.</li>
+  </ol>
+</div>
+[/vc_column_text]
+[/vc_column]
+[/vc_row]
+
+[vc_row gap="15px" el_class="sat-seccion-contribuyentes"]
+[vc_column width="1/2"]
+[bsf-info-box icon_type="none" title="Descargar Guía Paso a Paso de Actualización en el RTU Digital (PDF)" read_more="box" link="url:https://portal.sat.gob.gt/portal/descarga/14366/rtu-digital/43540/actualizacion-rtu-digital.pdf||target:%20_blank|"]Manual ilustrado oficial de la SAT con las pantallas paso a paso para completar tu actualización de datos dentro de Agencia Virtual.[/bsf-info-box]
+[/vc_column]
+[vc_column width="1/2"]
+[bsf-info-box icon_type="none" title="Descargar Manual de Comprobante de Domicilio (PDF)" read_more="box" link="url:https://portal.sat.gob.gt/portal/descarga/14366/rtu-digital/80676/manual-comprobante-de-domicilio-actualizacion-2.pdf||target:%20_blank|"]Guía oficial sobre cómo registrar tu Factura de Servicios (serie y número) o adjuntar otro tipo de comprobante de domicilio.[/bsf-info-box]
+[/vc_column]
+[/vc_row]
+[/vc_tta_section]
+
+[vc_tta_section title="3. Estado, Constancia y Cita" tab_id="paso-3-estado-constancia-cita"]
+[vc_row]
+[vc_column]
+[vc_custom_heading text="Paso 3: Consulta el Estado de tu Gestión, Imprime tu Constancia de RTU o Solicita Cita" font_container="tag:h2|font_size:20px|text_align:left|color:%23003865" use_theme_fonts="yes"]
+[vc_column_text]Utiliza directamente los aplicativos oficiales de la SAT integrados a continuación para dar seguimiento a tu solicitud, descargar tu Constancia de RTU actualizada o programar cita presencial si el sistema te lo requirió:[/vc_column_text]
+[vc_empty_space height="12px"]
+[vc_raw_html]{b64_estado}[/vc_raw_html]
+[vc_raw_html]{b64_constancia}[/vc_raw_html]
+[vc_raw_html]{b64_cita}[/vc_raw_html]
+[/vc_column]
+[/vc_row]
+[/vc_tta_section]
+
+[/vc_tta_tabs]
+[/vc_column]
+[/vc_row]
+[/vc_section]"""
+
+
+SOLICITAR_NIT_IDS = {
+    "SAT-GES-0001",
+    "SAT-GES-0049",
+    "SAT-GES-0050",
+    "SAT-GES-0051",
+}
+
+ACTUALIZAR_RTU_IDS = {
+    "SAT-GES-0002",
+    "SAT-GES-0040",
+    "SAT-GES-0054",
+    "SAT-GES-0068",
+    "SAT-GES-0069",
+    "SAT-GES-0070",
+    "SAT-GES-0071",
+    "SAT-GES-0072",
+    "SAT-GES-0073",
+    "SAT-GES-0074",
+    "SAT-GES-0075",
+    "SAT-GES-0076",
+    "SAT-GES-0115",
+    "SAT-GES-0118",
+}
+
+
+def resolve_card_link(t: dict) -> tuple[str, bool]:
+    """Devuelve (url, target_blank) enlazando gestiones conectadas a su página universal interna."""
+    cid = t.get("id") or t.get("codigo") or ""
+    if cid in SOLICITAR_NIT_IDS:
+        return "/solicitar-nit/", False
+    if cid in ACTUALIZAR_RTU_IDS:
+        return "/actualizar-rtu/", False
+    url = t.get("url") or ""
+    return url, bool(url)
+
+
 def main():
     with open(TRAMITES_JSON, "r", encoding="utf-8") as f:
         tramites = json.load(f)
@@ -468,22 +708,24 @@ def main():
 
     index_lines = [
         "# Índice Maestro de Plantillas y Shortcodes WPBakery — Portal SAT Guatemala\n\n",
-        "Este directorio contiene los shortcodes oficiales de **WPBakery Page Builder + The7 Classic + Ultimate Addons (`[bsf-info-box]`)**, sincronizados 100% con `src/data/allTramites.json` (**714 gestiones canónicas**), los **Hallazgos A y B** de la Arquitectura de Información y la **Página Universal Conectada en 3 Pasos (`/solicitar-nit/`)**.\n\n",
+        "Este directorio contiene los shortcodes oficiales de **WPBakery Page Builder + The7 Classic + Ultimate Addons (`[bsf-info-box]`)**, sincronizados 100% con `src/data/allTramites.json` (**714 gestiones canónicas**), los **Hallazgos A y B** de la Arquitectura de Información y las **Páginas Universales Conectadas en 3 Pasos (`/solicitar-nit/` y `/actualizar-rtu/`)**.\n\n",
         "## 1. Portada y Páginas de Proceso Conectado (3 Pasos + Iframes Oficiales)\n\n",
         "| Archivo | Tipo | Ruta Web Sugerida | Contenido |\n",
         "| :--- | :---: | :--- | :--- |\n",
         "| `HOME_portada-portal-sat.txt` | Portada | `/` | Hero institucional, 6 accesos rápidos, 4 tarjetas de Nivel 1 y 6 gestiones frecuentes |\n",
-        "| `procesos-conectados/G_solicitar-nit.txt` | Gestión Conectada (3 Pasos) | `/solicitar-nit/` | Pestañas conectadas: **1. Requisitos** (4 modalidades + aviso DPI físico sin constancia RENAP) › **2. Solicitar Gestión** (Iframe oficial RTU Digital) › **3. Solicitar Cita** (Iframe oficial Cita Validada + Manual PDF) |\n\n",
+        "| `procesos-conectados/G_solicitar-nit.txt` | Gestión Conectada (3 Pasos) | `/solicitar-nit/` | Pestañas conectadas: **1. Requisitos** (4 modalidades + aviso DPI físico sin constancia RENAP) › **2. Solicitar Gestión** (Iframe oficial RTU Digital) › **3. Solicitar Cita** (Iframe oficial Cita Validada + Manual PDF) |\n",
+        "| `procesos-conectados/G_actualizar-rtu.txt` | Gestión Conectada (3 Pasos) | `/actualizar-rtu/` | Pestañas conectadas: **1. Requisitos según tu caso** (plazo legal 30 días Art. 94 + 4 casos + reglas de Factura de Servicios) › **2. Realizar Actualización** (Agencia Virtual + Manuales PDF) › **3. Estado, Constancia y Cita** (3 Iframes oficiales SAT) |\n\n",
         "## 2. Páginas Jerárquicas del Catálogo (Nivel 1 a Nivel 4)\n\n",
         "| Archivo | Nivel | Ruta Jerárquica Canónica | Elementos en Página |\n",
         "| :--- | :---: | :--- | :---: |\n",
     ]
 
-    # 1. Guardar Portada (Home) y Página Conectada de Solicitar NIT
+    # 1. Guardar Portada (Home) y Páginas Conectadas (Solicitar NIT y Actualizar RTU)
     (OUTPUT_DIR / "HOME_portada-portal-sat.txt").write_text(build_home_shortcode(), encoding="utf-8")
     proc_dir = OUTPUT_DIR / "procesos-conectados"
     proc_dir.mkdir(parents=True, exist_ok=True)
     (proc_dir / "G_solicitar-nit.txt").write_text(build_solicitar_nit_shortcode(), encoding="utf-8")
+    (proc_dir / "G_actualizar-rtu.txt").write_text(build_actualizar_rtu_shortcode(), encoding="utf-8")
 
     # 2. Construir estructuras por Nivel 1 -> Nivel 2 -> Nivel 3 -> Nivel 4
     n1_groups: dict[str, list[dict]] = OrderedDict()
@@ -493,7 +735,7 @@ def main():
             n1_groups[n1] = []
         n1_groups[n1].append(t)
 
-    pages_count = 2  # Home + Solicitar NIT
+    pages_count = 3  # Home + Solicitar NIT + Actualizar RTU
 
     for n1, n1_items in n1_groups.items():
         n1_slug = N1_SLUGS.get(n1, slug(n1))
@@ -541,13 +783,12 @@ def main():
                 # Lista directa en Nivel 2 (ej. Sin Obligaciones, OEA, Auditores, Servicios Profesionales, Municipalidades)
                 leaf_cards = []
                 for t in n2_items:
-                    is_nit = t.get("id") == "SAT-GES-0001" or t.get("codigo") == "SAT-GES-0001"
-                    url = "/solicitar-nit/" if is_nit else (t.get("url") or "")
+                    url, target_blank = resolve_card_link(t)
                     leaf_cards.append({
                         "title": t.get("gestion") or t.get("nombreActual") or "",
                         "desc": t.get("descripcion") or "",
                         "url": url,
-                        "target_blank": not is_nit and bool(url),
+                        "target_blank": target_blank,
                     })
                 n2_file.write_text(
                     wrap_page(leaf_cards, n1, heading=n2, lead_text=get_node_desc(n2, n2_items)),
@@ -598,13 +839,12 @@ def main():
                         # Lista directa en Nivel 3 (ej. Contribuyente General > Regímenes tributarios, Agentes Aduaneros, etc.)
                         leaf_cards = []
                         for t in n3_items:
-                            is_nit = t.get("id") == "SAT-GES-0001" or t.get("codigo") == "SAT-GES-0001"
-                            url = "/solicitar-nit/" if is_nit else (t.get("url") or "")
+                            url, target_blank = resolve_card_link(t)
                             leaf_cards.append({
                                 "title": t.get("gestion") or t.get("nombreActual") or "",
                                 "desc": t.get("descripcion") or "",
                                 "url": url,
-                                "target_blank": not is_nit and bool(url),
+                                "target_blank": target_blank,
                             })
                         n3_file.write_text(
                             wrap_page(leaf_cards, n1, heading=n3, lead_text=get_node_desc(n3, n3_items)),
@@ -643,13 +883,12 @@ def main():
                             n4_file = n3_subdir / f"N4_{n4_slug}.txt"
                             leaf_cards = []
                             for t in n4_items:
-                                is_nit = t.get("id") == "SAT-GES-0001" or t.get("codigo") == "SAT-GES-0001"
-                                url = "/solicitar-nit/" if is_nit else (t.get("url") or "")
+                                url, target_blank = resolve_card_link(t)
                                 leaf_cards.append({
                                     "title": t.get("gestion") or t.get("nombreActual") or "",
                                     "desc": t.get("descripcion") or "",
                                     "url": url,
-                                    "target_blank": not is_nit and bool(url),
+                                    "target_blank": target_blank,
                                 })
                             n4_file.write_text(
                                 wrap_page(leaf_cards, n1, heading=n4, lead_text=get_node_desc(n4, n4_items)),

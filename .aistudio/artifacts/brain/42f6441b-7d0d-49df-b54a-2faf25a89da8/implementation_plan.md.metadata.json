@@ -1,6 +1,6 @@
 {
-  "summary":  "Plan de implementación para desarrollar los Asistentes Guiados Paso a Paso para gestiones clave de la SAT (Primer NIT, Agencia Virtual, Pequeño Contribuyente y e-Traspaso). Incluye arquitectura de flujo a página completa, verificación interactiva de requisitos y enlaces a sistemas oficiales.",
-  "updatedAt":  "2026-10-26T17:54:08.667702183Z",
+  "summary":  "Plan de implementación para crear la Página Universal Conectada en 3 Pasos de Actualización de Datos en el RTU Digital (#/actualizar-rtu) y su plantilla WPBakery + The7 (G_actualizar-rtu.txt), integrando requisitos por caso, acceso guiado a Agencia Virtual e iframes oficiales de seguimiento y constancia RTU.",
+  "updatedAt":  "2026-10-26T20:24:06.527623335Z",
   "requestFeedback":  true,
   "userFacing":  true
 }

@@ -16,8 +16,33 @@ import {
 } from 'lucide-react';
 import { Breadcrumbs } from '../components/ui/Breadcrumbs';
 import { SolicitarNitPage } from './SolicitarNitPage';
+import { ActualizarRtuPage, CasoActualizacionId } from './ActualizarRtuPage';
 import type { TramiteItem } from '../data/schema';
 import type { SegmentId } from '../components/UserSegmentCards';
+
+export const SOLICITAR_NIT_IDS = new Set([
+  'SAT-GES-0001',
+  'SAT-GES-0049',
+  'SAT-GES-0050',
+  'SAT-GES-0051',
+]);
+
+export const ACTUALIZAR_RTU_CASO_BY_ID: Record<string, CasoActualizacionId> = {
+  'SAT-GES-0002': 'domicilio_fiscal',
+  'SAT-GES-0040': 'domicilio_fiscal',
+  'SAT-GES-0069': 'domicilio_fiscal',
+  'SAT-GES-0070': 'domicilio_fiscal',
+  'SAT-GES-0071': 'domicilio_fiscal',
+  'SAT-GES-0072': 'domicilio_fiscal',
+  'SAT-GES-0075': 'domicilio_fiscal',
+  'SAT-GES-0076': 'domicilio_fiscal',
+  'SAT-GES-0068': 'establecimiento_negocio',
+  'SAT-GES-0074': 'establecimiento_negocio',
+  'SAT-GES-0054': 'afiliaciones_contador',
+  'SAT-GES-0073': 'afiliaciones_contador',
+  'SAT-GES-0115': 'persona_juridica',
+  'SAT-GES-0118': 'persona_juridica',
+};
 
 interface GestionContentPageProps {
   tramite: TramiteItem;
@@ -40,9 +65,21 @@ export const GestionContentPage: React.FC<GestionContentPageProps> = ({
   const [checkedReqs, setCheckedReqs] = useState<Record<string, boolean>>({});
   const [isLegalExpanded, setIsLegalExpanded] = useState(false);
 
-  // Página Universal Canónica para Solicitar NIT (SAT-GES-0001)
-  if (tramite.id === 'SAT-GES-0001' || tramite.codigo === 'SAT-GES-0001') {
+  const canonicalId = tramite.id || tramite.codigo || '';
+
+  // Página Universal Canónica para Solicitar NIT
+  if (SOLICITAR_NIT_IDS.has(canonicalId)) {
     return <SolicitarNitPage onBackToHome={onBackToCatalog} />;
+  }
+
+  // Página Universal Canónica para Actualizar o Ratificar Datos en el RTU Digital
+  if (canonicalId in ACTUALIZAR_RTU_CASO_BY_ID) {
+    return (
+      <ActualizarRtuPage
+        onBackToHome={onBackToCatalog}
+        initialCaso={ACTUALIZAR_RTU_CASO_BY_ID[canonicalId]}
+      />
+    );
   }
 
   const urlValido = typeof tramite.url === 'string' && /^https?:\/\/\S+$/i.test(tramite.url.trim());

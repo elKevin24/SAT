@@ -8,7 +8,7 @@ import { NewsAndTransparencySection } from './components/NewsAndTransparencySect
 import { InstitutionalFooter } from './components/InstitutionalFooter';
 import { UserWayAccessibilityModal } from './components/UserWayAccessibilityModal';
 import { DirectConsultasModal } from './components/DirectConsultasModal';
-import { GestionContentPage } from './pages/GestionContentPage';
+import { GestionContentPage, SOLICITAR_NIT_IDS, ACTUALIZAR_RTU_CASO_BY_ID } from './pages/GestionContentPage';
 import { VirtualAssistantModal } from './components/VirtualAssistantModal';
 import { SegmentTramitesCatalog } from './components/SegmentTramitesCatalog';
 import { QuickAccessCarousel } from './components/QuickAccessCarousel';
@@ -38,14 +38,19 @@ function toSlug(text: string): string {
 }
 
 function toGestionSlug(t: TramiteItem): string {
-  if (t.id === 'SAT-GES-0001' || t.codigo === 'SAT-GES-0001') {
+  const cid = t.id || t.codigo || '';
+  if (SOLICITAR_NIT_IDS.has(cid)) {
     return 'solicitar-nit';
+  }
+  if (cid in ACTUALIZAR_RTU_CASO_BY_ID) {
+    return 'actualizar-rtu';
   }
   return toSlug(t.gestion || t.tramite || t.id);
 }
 
 function toProcesoSlug(p: ProcesoGuiado): string {
   if (p.no === 1) return 'solicitar-nit';
+  if (p.no === 9 || p.no === 10) return 'actualizar-rtu';
   return toSlug(p.nombre || String(p.no));
 }
 
@@ -168,6 +173,27 @@ export default function App() {
           setActiveSubcategory(null);
         }
         window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else if (
+        hash.startsWith('#/actualizar-rtu') ||
+        hash.startsWith('#/actualizacion-rtu') ||
+        hash === '#/proceso/9' ||
+        hash === '#/proceso/10' ||
+        hash === '#/gestion/actualizar-rtu'
+      ) {
+        const targetId = hash === '#/proceso/10' ? 'SAT-GES-0115' : 'SAT-GES-0072';
+        window.history.replaceState(null, '', '#/actualizar-rtu');
+        setCurrentView('gestion');
+        setSelectedTramite(prev => {
+          if (prev && (prev.id || prev.codigo || '') in ACTUALIZAR_RTU_CASO_BY_ID) {
+            return prev;
+          }
+          return (
+            allTramites.find(t => t.id === targetId || t.codigo === targetId) ||
+            allTramites.find(t => t.id === 'SAT-GES-0002' || t.codigo === 'SAT-GES-0002') ||
+            null
+          );
+        });
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       } else if (hash.startsWith('#/gestion/') || hash.startsWith('#/tramite/')) {
         setCurrentView('gestion');
         const param = hash.split('?')[0].replace('#/gestion/', '').replace('#/tramite/', '').trim();
@@ -176,7 +202,12 @@ export default function App() {
         );
         if (found) {
           const cleanSlug = toGestionSlug(found);
-          const targetHash = cleanSlug === 'solicitar-nit' ? '#/solicitar-nit' : `#/gestion/${cleanSlug}`;
+          const targetHash =
+            cleanSlug === 'solicitar-nit'
+              ? '#/solicitar-nit'
+              : cleanSlug === 'actualizar-rtu'
+                ? '#/actualizar-rtu'
+                : `#/gestion/${cleanSlug}`;
           window.history.replaceState(null, '', targetHash);
           setSelectedTramite(found);
           if (found.pillar) setActiveSegment(found.pillar as SegmentId);
@@ -201,6 +232,12 @@ export default function App() {
           window.history.replaceState(null, '', '#/solicitar-nit');
           setCurrentView('gestion');
           const found = allTramites.find(t => t.id === 'SAT-GES-0001' || t.codigo === 'SAT-GES-0001');
+          if (found) setSelectedTramite(found);
+        } else if (pNo === 9 || pNo === 10) {
+          const targetId = pNo === 10 ? 'SAT-GES-0115' : 'SAT-GES-0072';
+          window.history.replaceState(null, '', '#/actualizar-rtu');
+          setCurrentView('gestion');
+          const found = allTramites.find(t => t.id === targetId || t.codigo === targetId);
           if (found) setSelectedTramite(found);
         } else {
           if (foundProc) {
@@ -259,7 +296,12 @@ export default function App() {
     }
     setCurrentView('gestion');
     const slug = toGestionSlug(t);
-    window.location.hash = slug === 'solicitar-nit' ? '#/solicitar-nit' : `#/gestion/${slug}`;
+    window.location.hash =
+      slug === 'solicitar-nit'
+        ? '#/solicitar-nit'
+        : slug === 'actualizar-rtu'
+          ? '#/actualizar-rtu'
+          : `#/gestion/${slug}`;
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -403,7 +445,16 @@ export default function App() {
         onSearchChange={setSearchQuery}
         onSelectTramite={handleSelectTramite}
         onSelectProceso={(p) => {
-          window.location.hash = p.no === 1 ? '#/solicitar-nit' : `#/proceso/${toProcesoSlug(p)}`;
+          if (p.no === 1) {
+            window.location.hash = '#/solicitar-nit';
+          } else if (p.no === 9 || p.no === 10) {
+            const targetId = p.no === 10 ? 'SAT-GES-0115' : 'SAT-GES-0072';
+            const found = allTramites.find(t => t.id === targetId || t.codigo === targetId);
+            if (found) setSelectedTramite(found);
+            window.location.hash = '#/actualizar-rtu';
+          } else {
+            window.location.hash = `#/proceso/${toProcesoSlug(p)}`;
+          }
         }}
         onOpenAccessibility={() => setAccessibilityModalOpen(true)}
         allTramites={allTramites}
@@ -460,7 +511,16 @@ export default function App() {
             <GuidedProcessesSection
               procesos={allProcesos}
               onSelectProceso={(p) => {
-                window.location.hash = p.no === 1 ? '#/solicitar-nit' : `#/proceso/${toProcesoSlug(p)}`;
+                if (p.no === 1) {
+                  window.location.hash = '#/solicitar-nit';
+                } else if (p.no === 9 || p.no === 10) {
+                  const targetId = p.no === 10 ? 'SAT-GES-0115' : 'SAT-GES-0072';
+                  const found = allTramites.find(t => t.id === targetId || t.codigo === targetId);
+                  if (found) setSelectedTramite(found);
+                  window.location.hash = '#/actualizar-rtu';
+                } else {
+                  window.location.hash = `#/proceso/${toProcesoSlug(p)}`;
+                }
               }}
             />
 
