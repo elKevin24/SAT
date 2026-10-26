@@ -82,8 +82,8 @@ export const GestionContentPage: React.FC<GestionContentPageProps> = ({
   const plataformaDestino = urlValido ? getPlataformaSugerida(tramite.url) : 'Agencia u Oficina Tributaria Presencial';
 
   return (
-    <div className="bg-white min-h-[80vh] py-6 sm:py-8">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+    <div className="pt-2.5 sm:pt-3.5 pb-8 bg-white min-h-[80vh]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
         
         {/* Barra superior de navegación y migas de pan */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-slate-200">
