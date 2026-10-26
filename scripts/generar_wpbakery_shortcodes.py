@@ -37,7 +37,7 @@ BASE_DIR   = Path(__file__).parent.parent
 ENTREGABLES = BASE_DIR / "docs" / "fuentes-datos" / "02_archivos_producto_entregables"
 MAPA_XLS   = ENTREGABLES / "Mapa_de_Navegacion_y_Descripciones_Portal_SAT.xlsx"
 MATRIZ_XLS = ENTREGABLES / "Estructura_Final_Contenido_Portal_SAT_Actualizado.xlsx"
-OUTPUT_DIR = BASE_DIR / "scripts" / "output" / "wpbakery"
+OUTPUT_DIR = BASE_DIR / "docs" / "plantillas-wpbakery"
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 def page_dir(*parts) -> Path:

@@ -81,3 +81,14 @@ Para cumplir con la regla de capacidad y densidad visual:
 * **Tablet:** 2 columnas (`[vc_column width="1/2"]`)
 * **Desktop:** 3 o 4 columnas (`[vc_column width="1/3"]` o `[vc_column width="1/4"]`)
 * **Espaciado:** En las opciones de fila de WPBakery (`vc_row`), establecer un gap compacto (15px a 20px).
+
+---
+
+## 4. Colección de Plantillas Pre-generadas por Página
+
+Para acelerar la publicación en WordPress, el repositorio cuenta con la biblioteca completa de **113 plantillas pre-generadas** en shortcodes nativos de WPBakery listo para copiar y pegar:
+
+* **Directorio principal:** `docs/plantillas-wpbakery/`
+* **Catálogo e Índice Maestro:** `docs/plantillas-wpbakery/_INDICE.md`
+
+Cada archivo `.txt` de la colección contiene el código listo para copiar y pegar en la pestaña de texto/clásico de WPBakery para cada página de la arquitectura del portal.
