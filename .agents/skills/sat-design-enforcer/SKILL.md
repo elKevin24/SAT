@@ -1,97 +1,68 @@
 ---
 name: sat-design-enforcer
-description: Garantiza el cumplimiento estricto del Design System del SAT y de docs/diseno-normativa/DESIGN_RULES.md. Aplica tarjetas compactas sin íconos/números/botones redundantes, hover institucional, UX Writing en lenguaje ciudadano con acrónimos explicados, navegación en página completa (sin modales/popovers/overlays), enfoque mobile-first, responsive y accesibilidad WCAG 2.2 AA. Úsalo al crear/editar componentes en src/components/ o src/pages/, aplicar estilos con Tailwind o revisar UI.
+description: >-
+  Garantiza el cumplimiento estricto del Design System del SAT y de docs/diseno-normativa/DESIGN_RULES.md.
+  Aplica tarjetas compactas sin íconos/números/botones redundantes, hover institucional, UX Writing en
+  lenguaje ciudadano con acrónimos explicados, navegación en página completa dedicada (sin modales,
+  popovers ni overlays), layout mobile-first y accesibilidad WCAG 2.2 AA. Úsalo cuando el usuario pida
+  crear, editar o auditar componentes React en src/components/ o src/pages/, aplicar estilos con Tailwind
+  CSS o corregir la interfaz de usuario.
 ---
 
-# SAT Design Enforcer
+# SAT Design Enforcer (UI/UX, Design System y Accesibilidad)
 
-## Objetivo
-Asegurar que toda modificación visual o de UX respete the Design System oficial del SAT, manteniendo coherencia con `src/design-system/`, accesibilidad y las reglas de `docs/diseno-normativa/DESIGN_RULES.md`.
+Asegura que toda creación o modificación de interfaz en React y Tailwind CSS cumpla estrictamente las normas de [`docs/diseno-normativa/DESIGN_RULES.md`](../../../docs/diseno-normativa/DESIGN_RULES.md) y los tokens de [`src/design-system/tokens.css`](../../../src/design-system/tokens.css).
 
-## Cuándo activarlo
-- Al crear o editar componentes React (`src/components/`, `src/pages/`)
-- Al aplicar o refactorizar estilos con Tailwind CSS
-- Al revisar maquetaciones, tarjetas, listados o navegación
-- Al corregir patrones visuales que incumplan el Design System
-- Al trabajar con formularios, migas de pan o layouts responsive
+## 1. Lectura Previa Obligatoria
 
-## Lectura obligatoria (SIEMPRE primero)
-Antes de cualquier acción, lee y valida:
-- `docs/diseno-normativa/DESIGN_RULES.md`
-- `src/design-system/tokens.css`
-- `src/design-system/StyleGuide.tsx`
-- Componentes existentes similares al que se vaya a crear/editar (para mantener paridad)
+Antes de escribir o modificar cualquier componente visual, inspecciona:
+1. [`docs/diseno-normativa/DESIGN_RULES.md`](../../../docs/diseno-normativa/DESIGN_RULES.md) (reglas de tarjetas, acrónimos, breadcrumbs y página completa).
+2. [`src/design-system/tokens.css`](../../../src/design-system/tokens.css) y [`src/design-system/StyleGuide.tsx`](../../../src/design-system/StyleGuide.tsx).
+3. Componentes adyacentes en `src/components/` o `src/pages/` para preservar paridad visual.
 
-## Reglas inquebrantables
+---
 
-### 1) Tarjetas (Cards)
-- **Sin íconos decorativos**: Cero íconos puramente decorativos.
-- **Sin números o conteos**: Eliminar `X gestiones`, `N grupos`, etc.
-- **Sin textos redundantes**: Prohibido "Ver gestiones", "Ver trámites" o equivalentes.
-- **Toda la tarjeta clickeable**: El área completa debe ser interactiva.
-- **Compactas**: Usar `gap-3` o `gap-3.5` entre tarjetas.
-- **Estructura base**: `bg-white`, `border border-[#DCDCDC]`, `rounded-[14px]` o `rounded-[16px]`.
-- **Hover institucional**: Al hacer `hover`, usar el color institucional del segmento (`hover:bg-[#14649B]`, `hover:bg-[#0284C7]`, `hover:bg-[#4D8014]`, `hover:bg-[#C25E00]`).
-- **Efecto interactivo**: `hover:-translate-y-1`, `hover:shadow-[0_14px_30px_rgba(0,0,0,0.08)]`, con transición fluida.
-- **Texto blanco en hover**: Aplicar `group` a la tarjeta y `group-hover:text-white` a todos los textos internos.
+## 2. Reglas de Diseño Inquebrantables (Grado de Libertad Bajo)
 
-### 2) UX Writing y Acrónimos
-- **Lenguaje ciudadano**: Usar verbos en infinitivo para títulos orientados a acción (`"Solicitar mi NIT"`, `"Emitir facturas electrónicas"`).
-- **Acrónimos con expansión**: En primera mención, expandir el acrónimo (`Número de Identificación Tributaria (NIT)`). No dejar acrónimos huérfanos.
-- **Descripción concisa**: Máximo 2 oraciones. 1) ¿Qué es/para qué sirve? 2) ¿Qué beneficio obtiene o qué necesita?
-- **Sustituir jerga**: Preferir lenguaje claro frente a tecnicismos burocráticos.
-- **Sin "trámite"/"trámites"**: Usar **"gestión"/"gestiones"** obligatoriamente en toda UI visible.
+### A. Tarjetas Compactas (Cards)
+- **Cero elementos parásitos:** Prohibido incluir íconos decorativos, conteos numéricos (`X gestiones`, `N grupos`) o botones/textos de pie redundantes (`Ver gestiones`, `Ver más`).
+- **Contenido exclusivo:** Solo **Título en lenguaje claro** y **Descripción concisa** (máximo 2 oraciones).
+- **Área 100% interactiva:** Toda la tarjeta es un enlace o botón completo con `group`, `bg-white`, `border border-[#DCDCDC]`, `rounded-[14px]` o `rounded-[16px]`, y espaciado `gap-3` o `gap-3.5` en grillas.
+- **Hover institucional sólido:**
+  - Fondo según Nivel 1: `hover:bg-[#14649B]`, `hover:bg-[#0284C7]`, `hover:bg-[#4D8014]` o `hover:bg-[#C25E00]`.
+  - Elevación y sombra: `hover:-translate-y-1 hover:shadow-[0_14px_30px_rgba(0,0,0,0.08)] transition-all`.
+  - Contraste en hover: Todos los textos internos cambian a blanco con `group-hover:text-white`.
 
-### 3) Navegación y Contenido
-- **Página completa dedicada**: Toda ficha de gestión debe abrirse en su propia página con URL canónica. **Prohibido** modales, popovers, popups u overlays flotantes para mostrar gestiones, requisitos, pasos o navegación jerárquica.
-- **Excepciones únicas**: Únicamente se permiten panel global de accesibilidad, asistente virtual conversacional o diálogos nativos de confirmación del sistema.
-- **Migas de pan**: Deben ser visibles, clickeables y coherentes con la ruta jerárquica.
-- **Historial del navegador**: Soportar atrás/adelante correctamente.
+### B. UX Writing Ciudadano y Terminología
+- **Prohibido "trámite" / "trámites":** Usar obligatoriamente **"gestión" / "gestiones"** en cualquier texto visible, badge, contador, título o microcopy.
+- **Títulos orientados a la acción:** Iniciar con verbos en infinitivo o sustantivos directos (`"Solicitar Número de Identificación Tributaria (NIT)"`, `"Emitir Factura Electrónica (FEL)"`).
+- **Cero acrónimos huérfanos:** Expandir siempre la sigla en su primera mención:
+  - `Registro Tributario Unificado (RTU)` | `Factura Electrónica (FEL)` | `Declaración Única Centroamericana (DUCA - Aduanas)` | `Impuesto de Circulación de Vehículos (ISCV)`.
+- **Fórmula de descripción (máx. 2 oraciones):** 1) Qué es o para qué sirve + 2) Qué beneficio obtiene o qué necesita.
 
-### 4) Responsive, Mobile-First y Accesibilidad
-- **Mobile-first**: Diseñar primero para el viewport más reducido y escalar progresivamente.
-- **Breakpoints SAT**: `< 768px` (mobile), `768–1023px` (tablet), `1024–1439px` (desktop), `≥ 1440px` (wide).
-- **Contenedor**: `w-full max-w-7xl mx-auto` con gutters `px-4` → `px-6` → `px-8`.
-- **Tipografía fluida**: Ajustar `H1/H2/H3/body` por breakpoint según lo indicado en `DESIGN_RULES.md`.
-- **Touch targets**: Mínimo `44x44px`. Botones principales ≥ `48px` de altura.
-- **Sin depender solo de `hover`**: Ninguna acción crítica o información esencial debe depender exclusivamente de `hover`.
-- **Zoom 200%**: Debe funcionar sin scroll horizontal al hacer zoom al 200%.
-- **WCAG 2.2 AA**: Contraste >= 4.5:1, foco visible, navegación por teclado, semántica correcta, sin trampas de foco.
+### C. Navegación en Página Completa Dedicada (Cero Modales)
+- **Prohibición absoluta de overlays para contenido:** Queda prohibido usar modales (`<dialog>`, overlays fijos), popovers o popups para mostrar fichas de gestiones, requisitos, pasos o menús jerárquicos.
+- **Patrón de página dedicada:** Toda gestión se abre en su propia vista completa con URL canónica (`#/gestion/:id`), soporte de botón Atrás/Adelante del navegador, miga de pan (*breadcrumb*) clickeable y bloque lateral/inferior *"En esta sección"*.
+- **Breadcrumb adaptable:** Ruta completa en Desktop (`>= 1024px`) y compactación elíptica con `[…]` desplegable en Mobile (`< 1024px`).
 
-## Flujo de trabajo
-1. **Inspeccionar**: Revisar `tokens.css`, `StyleGuide.tsx` y componentes adyacentes.
-2. **Analizar patrón**: Identificar si existe un componente reutilizable antes de crear uno nuevo.
-3. **Diseñar coherente**: Aplicar reglas de tarjetas, UX Writing, hover institucional y espaciados.
-4. **Validar responsive**: Comprobar en lógica mobile-first y breakpoints SAT.
-5. **Comprobar A11y**: Foco, teclado, contraste, touch targets.
-6. **Revisar navegación**: Asegurar página completa dedicada si es contenido de gestión. Sin modales/popovers.
-7. **Pulir**: Mantener consistencia visual con el resto de la UI existente.
+### D. Mobile-First, Responsive y Accesibilidad WCAG 2.2 AA
+- **Breakpoints SAT:** Mobile (`< 768px`, 1 col, Drawer), Tablet (`768–1023px`, 2 cols), Desktop (`1024–1439px`, 3–4 cols, Sidebar fijo), Wide (`>= 1440px`, `max-w-7xl mx-auto`).
+- **Gutters y escala fluida:** Contenedor con `px-4 md:px-6 lg:px-8`.
+- **Ergonomía táctil y teclado:** Touch targets mínimos de `44x44px` (`min-h-[48px]` en botones primarios), foco visible (`focus-visible:ring`), contraste $\ge 4.5:1$, cero dependencia exclusiva de `:hover` y soporte de zoom al 200% sin scroll horizontal.
 
-## Checklist de validación
-- [ ] Sin íconos decorativos, sin conteos, sin botón/CTA redundante
-- [ ] Tarjeta 100% clickeable con estructura y hover institucional correctos
-- [ ] UX Writing con acrónimos explicados, verbos en infinitivo, sin "trámite"
-- [ ] Sin modales/popovers/overlays para gestiones/requisitos/pasos/navegación
-- [ ] Uso de tokens/estilos del Design System (`tokens.css` + `StyleGuide.tsx`)
-- [ ] Mobile-first, breakpoints SAT, gutters correctos
-- [ ] Touch targets >=44–48px, foco visible, teclado funcional
-- [ ] Sin scroll horizontal con zoom 200%, contraste >= 4.5:1
-- [ ] Coherente with components existentes
+---
 
-## Archivos clave
-- `docs/diseno-normativa/DESIGN_RULES.md`
-- `src/design-system/tokens.css`
-- `src/design-system/StyleGuide.tsx`
-- `src/components/`
-- `src/pages/`
-- `src/index.css`
+## 3. Flujo de Trabajo y Bucle de Verificación (Verification Loop)
 
-## Restricciones
-- **NO** añadir íconos decorativos
-- **NO** usar números/conteos en tarjetas
-- **NO** usar modales/popovers/overlays para contenido de gestión
-- **NO** depender exclusivamente de `hover`
-- **NO** romper accesibilidad para ganar "efecto"
-- **NO** inventar colores/tokens fuera de los existentes
-- **NO** usar "trámite"/"trámites"
-- **NO** introducir patrones ajenos al Design System SAT
+1. **Implementar o refactorizar** el componente en `src/components/` o `src/pages/` aplicando las reglas anteriores.
+2. **Verificar ausencia de términos prohibidos** en los archivos editados (buscar `"trámite"` / `"tramite"` insensible a mayúsculas en textos visibles).
+3. **Ejecutar compilación de producción:**
+   ```powershell
+   npm run build
+   ```
+   Si hay errores de TypeScript o JSX, corregirlos de inmediato.
+4. **Ejecutar auditoría automatizada de accesibilidad y UI (Playwright + axe-core):**
+   ```powershell
+   npx playwright test tests/a11y.spec.ts
+   ```
+   Si axe-core o las aserciones de layout fallan, inspeccionar el reporte de error, corregir el contraste/etiqueta ARIA/estructura y re-ejecutar el test hasta que pase al 100%.

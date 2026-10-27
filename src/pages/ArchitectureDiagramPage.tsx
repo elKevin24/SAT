@@ -479,7 +479,7 @@ export const ArchitectureDiagramPage: React.FC = () => {
               </span>
               <h2 className="text-lg sm:text-xl font-black text-[#19324B]">PORTAL SAT GUATEMALA</h2>
               <p className="text-xs text-slate-600 mt-0.5">
-                Arquitectura de Información Unificada · 4 nodos de Nivel 1 · {rawTramites.length} Trámites
+                Arquitectura de Información Unificada · 4 nodos de Nivel 1 · {rawTramites.length} Gestiones
               </p>
             </div>
 
@@ -681,7 +681,7 @@ export const ArchitectureDiagramPage: React.FC = () => {
               </div>
               <h2 className="text-xl font-black text-[#19324B]">PORTAL SAT GUATEMALA</h2>
               <p className="text-xs text-slate-600 mt-1">
-                Catálogo Unificado de {rawTramites.length} Trámites Oficiales y 49 Procesos Guiados
+                Catálogo Unificado de {rawTramites.length} Gestiones Oficiales y 49 Procesos Guiados
               </p>
             </div>
 

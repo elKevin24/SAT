@@ -123,6 +123,12 @@
   --sat-weight-bold: 700;
   --sat-weight-black: 900;
 
+  /* Escala Tipografica Fluida Mobile-First [DERIVADO] */
+  --sat-text-h1: clamp(1.5rem, 1.2rem + 1.5vw, 2.25rem);
+  --sat-text-h2: clamp(1.25rem, 1.05rem + 0.9vw, 1.625rem);
+  --sat-text-h3: clamp(1rem, 0.95rem + 0.35vw, 1.1875rem);
+  --sat-text-body: clamp(0.875rem, 0.85rem + 0.15vw, 1rem);
+
   /* Eslogan [NORMATIVO] p.58-59 - solo claims, no pesos de fuente.
    * Interletrado -25 (/1000 em) e italica segun el manual. */
   --sat-eslogan-tracking: -0.025em;

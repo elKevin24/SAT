@@ -4,6 +4,7 @@ import App from './App.tsx';
 import StyleGuide from './design-system/StyleGuide.tsx';
 import { PortalFlowPage } from './pages/PortalFlowPage.tsx';
 import { ArchitectureDiagramPage } from './pages/ArchitectureDiagramPage.tsx';
+import { WPBakeryBuilderPage } from './pages/WPBakeryBuilderPage.tsx';
 import './index.css';
 
 const STYLEGUIDE_PREFIX = '#/estilo';
@@ -12,6 +13,7 @@ const MAPA_PREFIX = '#/mapa';
 const FLUJO_PREFIX = '#/flujo';
 const ARBOL_PREFIX = '#/arbol';
 const ARQUITECTURA_PREFIX = '#/arquitectura';
+const WPBAKERY_PREFIX = '#/wpbakery';
 
 export const isStyleGuideHash = (hash: string): boolean =>
   hash === STYLEGUIDE_PREFIX || hash.startsWith(`${STYLEGUIDE_PREFIX}/`);
@@ -25,11 +27,15 @@ export const isDiagramHash = (hash: string): boolean =>
 export const isArchitectureHash = (hash: string): boolean =>
   hash === ARQUITECTURA_PREFIX || hash.startsWith(`${ARQUITECTURA_PREFIX}/`);
 
+export const isWPBakeryHash = (hash: string): boolean =>
+  hash === WPBAKERY_PREFIX || hash.startsWith(`${WPBAKERY_PREFIX}/`);
+
 function resolveView(): React.ReactElement {
   const hash = window.location.hash;
   if (isStyleGuideHash(hash)) return <StyleGuide />;
   if (isArchitectureHash(hash)) return <ArchitectureDiagramPage />;
   if (isDiagramHash(hash)) return <PortalFlowPage />;
+  if (isWPBakeryHash(hash)) return <WPBakeryBuilderPage />;
   return <App />;
 }
 

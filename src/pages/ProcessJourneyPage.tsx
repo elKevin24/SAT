@@ -199,13 +199,13 @@ export const ProcessJourneyPage: React.FC<ProcessJourneyPageProps> = ({
                 1
               </div>
               <div className="space-y-0.5">
-                <span className="text-[10px] uppercase tracking-wider font-extrabold block opacity-80">
+                <span className="text-[10px]  block">
                   Etapa 1
                 </span>
                 <span className="font-bold text-xs sm:text-sm block">
                   Requisitos y Documentación
                 </span>
-                <span className={`text-[11px] block ${activeStageIndex === 1 ? 'text-sky-100' : 'text-slate-500'}`}>
+                <span className={`text-[11px] block ${activeStageIndex === 1 ? 'text-white' : 'text-slate-500'}`}>
                   Documentos y condiciones previas
                 </span>
               </div>
@@ -227,13 +227,13 @@ export const ProcessJourneyPage: React.FC<ProcessJourneyPageProps> = ({
                 2
               </div>
               <div className="space-y-0.5">
-                <span className="text-[10px] uppercase tracking-wider font-extrabold block opacity-80">
+                <span className="text-[10px]  block">
                   Etapa 2
                 </span>
                 <span className="font-bold text-xs sm:text-sm block">
                   Solicitar Gestión en Línea
                 </span>
-                <span className={`text-[11px] block ${activeStageIndex === 2 ? 'text-sky-100' : 'text-slate-500'}`}>
+                <span className={`text-[11px] block ${activeStageIndex === 2 ? 'text-white' : 'text-slate-500'}`}>
                   Llenado de formulario digital
                 </span>
               </div>
@@ -255,13 +255,13 @@ export const ProcessJourneyPage: React.FC<ProcessJourneyPageProps> = ({
                 3
               </div>
               <div className="space-y-0.5">
-                <span className="text-[10px] uppercase tracking-wider font-extrabold block opacity-80">
+                <span className="text-[10px]  block">
                   Etapa 3
                 </span>
                 <span className="font-bold text-xs sm:text-sm block">
                   Solicitar Cita / Confirmación
                 </span>
-                <span className={`text-[11px] block ${activeStageIndex === 3 ? 'text-sky-100' : 'text-slate-500'}`}>
+                <span className={`text-[11px] block ${activeStageIndex === 3 ? 'text-white' : 'text-slate-500'}`}>
                   Cita presencial o recepción final
                 </span>
               </div>
@@ -446,7 +446,7 @@ export const ProcessJourneyPage: React.FC<ProcessJourneyPageProps> = ({
                   <span>Sistema de Cita Previa Controlada SAT:</span>
                 </div>
                 <p className="leading-relaxed">
-                  Si tu trámite requiere entrega física de documentos, autenticación de firmas o enrolamiento presencial, programa tu cita antes de acudir a la agencia tributaria.
+                  Si tu gestión requiere entrega física de documentos, autenticación de firmas o enrolamiento presencial, programa tu cita antes de acudir a la agencia tributaria.
                 </p>
                 <div className="pt-1">
                   <a

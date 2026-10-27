@@ -7,11 +7,14 @@ interface GuidedProcessesSectionProps {
   onSelectProceso: (proceso: ProcesoGuiado) => void;
 }
 
+const INITIAL_VISIBLE_COUNT = 9;
+
 export const GuidedProcessesSection: React.FC<GuidedProcessesSectionProps> = ({
   procesos,
   onSelectProceso
 }) => {
   const [activeStage, setActiveStage] = useState<string>('Todos');
+  const [showAll, setShowAll] = useState<boolean>(false);
 
   const stages = [
     { id: 'Todos', label: 'Todos los Procesos' },
@@ -24,6 +27,9 @@ export const GuidedProcessesSection: React.FC<GuidedProcessesSectionProps> = ({
   const filtered = activeStage === 'Todos'
     ? procesos
     : procesos.filter(p => p.etapa && p.etapa.toLowerCase().includes(activeStage.toLowerCase().split('/')[0]));
+
+  const visibleItems = showAll ? filtered : filtered.slice(0, INITIAL_VISIBLE_COUNT);
+  const hasMore = filtered.length > INITIAL_VISIBLE_COUNT;
 
   return (
     <section className="py-6 sm:py-8 bg-sat-fondo-tenue border-b border-sat-gris">
@@ -53,7 +59,10 @@ export const GuidedProcessesSection: React.FC<GuidedProcessesSectionProps> = ({
               return (
                 <button
                   key={stg.id}
-                  onClick={() => setActiveStage(stg.id)}
+                  onClick={() => {
+                    setActiveStage(stg.id);
+                    setShowAll(false);
+                  }}
                   aria-pressed={isActive}
                   className={`px-3 py-1.5 rounded-sat-sm text-xs font-bold transition-all whitespace-nowrap focus:outline-none focus-visible:ring-2 focus-visible:ring-sat-azul ${
                     isActive 
@@ -70,7 +79,7 @@ export const GuidedProcessesSection: React.FC<GuidedProcessesSectionProps> = ({
 
         {/* Process Cards Grid compacto sin footer de acción redundante */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
-          {filtered.slice(0, 9).map((p) => (
+          {visibleItems.map((p) => (
             <Card
               key={p.no}
               title={p.nombre}
@@ -80,6 +89,24 @@ export const GuidedProcessesSection: React.FC<GuidedProcessesSectionProps> = ({
               onClick={() => onSelectProceso(p)}
             />
           ))}
+        </div>
+
+        {/* Contador de truncado explícito y control de expansión */}
+        <div className="mt-4 pt-3 border-t border-sat-gris/70 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-sat-texto-suave">
+          <p aria-live="polite">
+            Mostrando <strong className="font-bold text-sat-azul-oscuro">{visibleItems.length}</strong> de{' '}
+            <strong className="font-bold text-sat-azul-oscuro">{filtered.length}</strong> rutas guiadas disponibles
+          </p>
+          {hasMore && (
+            <button
+              type="button"
+              onClick={() => setShowAll(prev => !prev)}
+              aria-expanded={showAll}
+              className="px-3.5 py-2 rounded-sat-sm bg-white border border-sat-gris text-sat-azul font-bold hover:bg-sat-azul hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-sat-azul"
+            >
+              {showAll ? 'Mostrar menos rutas guiadas' : `Ver las ${filtered.length} rutas guiadas`}
+            </button>
+          )}
         </div>
 
       </div>

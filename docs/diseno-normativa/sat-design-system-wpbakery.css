@@ -1,202 +1,330 @@
 /*
  * ============================================================================
- * SAT GUATEMALA — DESIGN SYSTEM EN WORDPRESS (WPBakery Page Builder)
- * Archivo: sat-design-system-wpbakery.css (Versión Optimizada para Cuadrícula)
+ * SAT GUATEMALA — DESIGN SYSTEM EN WORDPRESS (The7 Classic + WPBakery)
+ * Archivo: sat-design-system-wpbakery.css
+ * Enfoque: 100% Cero [vc_raw_html] — Compatible con [bsf-info-box] y .sat-card
  * ============================================================================
- * Incluye:
- * - Altura uniforme automática (Equal Height / 100% height).
- * - Cuadrícula centrada responsiva (.sat-cards-grid).
- * - Cero bordes perimetrales (100% borderless).
- * - Hover sólido institucional y transición de textos a blanco.
+ * Reglas del Design System SAT (docs/diseno-normativa/DESIGN_RULES.md):
+ * 1. Tarjetas compactas blancas (#FFFFFF), borde 1px solid #DCDCDC, radio 14px.
+ * 2. Cero íconos decorativos, cero conteos numéricos, cero botones redundantes.
+ * 3. Hover institucional sólido según Nivel 1 (#14649B, #0284C7, #4D8014, #C25E00)
+ *    con elevación translateY(-4px) y transición de todos los textos a #FFFFFF.
  * ============================================================================
  */
 
-/* ----------------------------------------------------------------------------
- * 1. DESIGN TOKENS
- * ---------------------------------------------------------------------------- */
 :root {
-  --sat-celeste: #19afe1;
-  --sat-azul: #14649b;
+  --sat-azul-institucional: #003865;
   --sat-azul-oscuro: #19324b;
-  --sat-gris: #dcdcdc;
-  --sat-blanco: #ffffff;
-
-  --sat-seg-personas: #0284c7;
-  --sat-seg-empresas: #4d8014;
-  --sat-seg-aduanas: #c25e00;
-  --sat-seg-auxiliares: #6366f1;
-
-  --sat-ui-fondo-tenue: #f4f6f9;
-  --sat-ui-texto: #19324b;
-  --sat-ui-texto-suave: #475569;
+  --sat-celeste: #19afe1;
+  --sat-color-contribuyentes: #14649b;
+  --sat-color-comercio: #0284c7;
+  --sat-color-profesionales: #4d8014;
+  --sat-color-exentos: #c25e00;
+  --sat-card-bg: #ffffff;
+  --sat-card-border: #dcdcdc;
+  --sat-text-title: #19324b;
+  --sat-text-desc: #475569;
+  --sat-radius: 14px;
   --sat-font-family: "Gotham", "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --sat-radius: 12px;
 }
 
 /* ----------------------------------------------------------------------------
- * 2. CONTENEDOR / CUADRÍCULA CENTRADA (3 COLUMNAS POR DEFECTO)
+ * 1. FILAS FLEX DE ALTURA UNIFORME EN WPBAKERY (vc_row-flex)
  * ---------------------------------------------------------------------------- */
-.sat-cards-grid {
-  display: grid !important;
-  grid-template-columns: repeat(3, 1fr) !important; /* 3 columnas fijas en desktop */
-  gap: 16px !important;
-  width: 100% !important;
-  max-width: 1140px !important;
-  margin: 0 auto !important; /* Centrado en pantalla */
-  padding: 10px 0 !important;
-  box-sizing: border-box !important;
-  align-items: stretch !important; /* Misma altura garantizada */
-}
-
-/* Tablet (hasta 991px): 2 columnas */
-@media (max-width: 991px) {
-  .sat-cards-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 14px !important;
-  }
-}
-
-/* Móvil (hasta 640px): 1 columna apilada */
-@media (max-width: 640px) {
-  .sat-cards-grid {
-    grid-template-columns: 1fr !important;
-    gap: 12px !important;
-  }
-}
-
-/* En WPBakery cuando se usan columnas normales (vc_column): */
-.vc_row.vc_row-flex .vc_column_container {
+.vc_row.vc_row-flex > .vc_column_container {
   display: flex !important;
 }
-
-.vc_row.vc_row-flex .vc_column-inner {
+.vc_row.vc_row-flex > .vc_column_container > .vc_column-inner {
   display: flex !important;
   flex-direction: column !important;
+  flex-grow: 1 !important;
   width: 100% !important;
 }
-
-.vc_row.vc_row-flex .wpb_wrapper {
+.vc_row.vc_row-flex > .vc_column_container > .vc_column-inner > .wpb_wrapper {
   display: flex !important;
   flex-direction: column !important;
   flex: 1 1 auto !important;
   width: 100% !important;
 }
+.vc_row.vc_row-flex .aio-icon-component,
+.vc_row.vc_row-flex .bsf-info-box-link {
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 1 auto !important;
+  width: 100% !important;
+  text-decoration: none !important;
+}
 
 /* ----------------------------------------------------------------------------
- * 3. COMPONENTE CARD (MISMA ALTURA Y CONTENIDO EQUILIBRADO)
+ * 2. HERO INSTITUCIONAL Y ACCESOS RÁPIDOS DE PORTADA
  * ---------------------------------------------------------------------------- */
+.sat-hero-section {
+  background: linear-gradient(135deg, #003865 0%, #19324b 100%) !important;
+  color: #ffffff !important;
+  border-bottom: 4px solid var(--sat-celeste) !important;
+}
+.sat-hero-section h1,
+.sat-hero-section p {
+  color: #ffffff !important;
+  margin: 0 auto !important;
+}
+
+.sat-quick-access-row .aio-icon-box,
+.sat-quick-access-row .bsf-info-box {
+  background: #ffffff !important;
+  border: 1px solid var(--sat-card-border) !important;
+  border-radius: 12px !important;
+  padding: 14px 16px !important;
+  height: 100% !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04) !important;
+  transition: background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease !important;
+}
+.sat-quick-access-row .aio-icon-box:hover,
+.sat-quick-access-row .bsf-info-box:hover {
+  background-color: var(--sat-color-contribuyentes) !important;
+  border-color: var(--sat-color-contribuyentes) !important;
+  transform: translateY(-3px) !important;
+  box-shadow: 0 12px 24px rgba(20, 100, 155, 0.18) !important;
+}
+.sat-quick-access-row .aio-icon-title,
+.sat-quick-access-row .info-box-title {
+  font-size: 13.5px !important;
+  font-weight: 700 !important;
+  color: var(--sat-text-title) !important;
+  margin-bottom: 4px !important;
+  transition: color 0.2s ease !important;
+}
+.sat-quick-access-row .aio-icon-description,
+.sat-quick-access-row .info-box-description {
+  font-size: 12px !important;
+  color: var(--sat-text-desc) !important;
+  line-height: 1.4 !important;
+  transition: color 0.2s ease !important;
+}
+.sat-quick-access-row .aio-icon-box:hover .aio-icon-title,
+.sat-quick-access-row .aio-icon-box:hover .aio-icon-description,
+.sat-quick-access-row .bsf-info-box:hover .info-box-title,
+.sat-quick-access-row .bsf-info-box:hover .info-box-description {
+  color: #ffffff !important;
+}
+
+/* ----------------------------------------------------------------------------
+ * 3. TARJETAS COMPACTAS OFICIALES ([bsf-info-box] & .sat-card)
+ *    Regla 3: bg-white, border 1px solid #DCDCDC, rounded 14px, hover sólido
+ * ---------------------------------------------------------------------------- */
+.sat-seccion-macro-segmentos .aio-icon-box,
+.sat-seccion-macro-segmentos .bsf-info-box,
+.sat-seccion-contribuyentes .aio-icon-box,
+.sat-seccion-contribuyentes .bsf-info-box,
+.sat-seccion-comercio-exterior .aio-icon-box,
+.sat-seccion-comercio-exterior .bsf-info-box,
+.sat-seccion-profesionales .aio-icon-box,
+.sat-seccion-profesionales .bsf-info-box,
+.sat-seccion-entes-exentos .aio-icon-box,
+.sat-seccion-entes-exentos .bsf-info-box,
 .sat-card {
   display: flex !important;
   flex-direction: column !important;
   justify-content: flex-start !important;
   width: 100% !important;
-  height: 100% !important; /* Misma altura en todas las columnas */
-  min-height: 140px !important;
-  text-decoration: none !important;
-  background-color: var(--sat-ui-fondo-tenue) !important;
-  border: none !important; /* REGLA INMUTABLE: Cero bordes */
+  height: 100% !important;
+  min-height: 132px !important;
+  background-color: var(--sat-card-bg) !important;
+  border: 1px solid var(--sat-card-border) !important;
   border-radius: var(--sat-radius) !important;
-  padding: 22px 24px !important;
+  padding: 20px 22px !important;
+  margin-bottom: 14px !important;
   box-sizing: border-box !important;
   cursor: pointer !important;
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s ease-out, box-shadow 0.4s ease-out !important;
-  user-select: none !important;
+  text-decoration: none !important;
   font-family: var(--sat-font-family) !important;
+  transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease !important;
 }
 
-/* Centrado o elevación sutil en hover */
-.sat-card:hover {
-  transform: translateY(-3px) !important;
+/* Ocultar cualquier ícono residual si el editor dejó icon_type activo por error */
+.sat-seccion-macro-segmentos .aio-icon-left,
+.sat-seccion-contribuyentes .aio-icon-left,
+.sat-seccion-comercio-exterior .aio-icon-left,
+.sat-seccion-profesionales .aio-icon-left,
+.sat-seccion-entes-exentos .aio-icon-left {
+  display: none !important;
 }
 
-.sat-card:active {
-  transform: translateY(0) !important;
-}
-
-/* ----------------------------------------------------------------------------
- * 4. VARIANTES DE TONO SEGÚN SEGMENTO
- * ---------------------------------------------------------------------------- */
-/* Profesionales (Verde Oficial) */
-.sat-card--profesionales:hover,
-.sat-card--verde:hover {
-  background-color: var(--sat-seg-empresas) !important; /* #4D8014 */
-  box-shadow: 0 12px 24px rgba(77, 128, 20, 0.22) !important;
-}
-.sat-card--profesionales:active,
-.sat-card--verde:active {
-  background-color: #365e0e !important;
-}
-
-/* Contribuyentes General (Azul SAT Oficial) */
-.sat-card--azul:hover {
-  background-color: var(--sat-azul) !important; /* #14649B */
-  box-shadow: 0 12px 24px rgba(20, 100, 155, 0.22) !important;
-}
-.sat-card--azul:active {
-  background-color: var(--sat-azul-oscuro) !important;
-}
-
-/* Personas (Celeste Oficial) */
-.sat-card--celeste:hover {
-  background-color: var(--sat-seg-personas) !important; /* #0284C7 */
-  box-shadow: 0 12px 24px rgba(2, 132, 199, 0.22) !important;
-}
-
-/* Aduanas (Naranja Oficial) */
-.sat-card--naranja:hover {
-  background-color: var(--sat-seg-aduanas) !important; /* #C25E00 */
-  box-shadow: 0 12px 24px rgba(194, 94, 0, 0.22) !important;
-}
-
-/* ----------------------------------------------------------------------------
- * 5. CABECERA, TÍTULO, CHEVRON Y DESCRIPCIÓN
- * ---------------------------------------------------------------------------- */
-.sat-card-head,
-.sat-card-header {
-  display: flex !important;
-  align-items: flex-start !important;
-  justify-content: space-between !important;
-  gap: 12px !important;
-  width: 100% !important;
-}
-
+/* Tipografía interna de las tarjetas */
+.sat-seccion-macro-segmentos .aio-icon-title,
+.sat-seccion-macro-segmentos .info-box-title,
+.sat-seccion-contribuyentes .aio-icon-title,
+.sat-seccion-contribuyentes .info-box-title,
+.sat-seccion-comercio-exterior .aio-icon-title,
+.sat-seccion-comercio-exterior .info-box-title,
+.sat-seccion-profesionales .aio-icon-title,
+.sat-seccion-profesionales .info-box-title,
+.sat-seccion-entes-exentos .aio-icon-title,
+.sat-seccion-entes-exentos .info-box-title,
 .sat-card-title {
-  margin: 0 !important;
+  margin: 0 0 8px 0 !important;
   padding: 0 !important;
   font-size: 16px !important;
   font-weight: 700 !important;
   line-height: 1.35 !important;
-  color: var(--sat-ui-texto) !important;
+  color: var(--sat-text-title) !important;
   transition: color 0.2s ease !important;
 }
 
-.sat-card-chevron {
-  flex-shrink: 0 !important;
-  width: 20px !important;
-  height: 20px !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  color: #94A3B8 !important;
-  transition: color 0.2s ease !important;
-}
-
+.sat-seccion-macro-segmentos .aio-icon-description,
+.sat-seccion-macro-segmentos .info-box-description,
+.sat-seccion-contribuyentes .aio-icon-description,
+.sat-seccion-contribuyentes .info-box-description,
+.sat-seccion-comercio-exterior .aio-icon-description,
+.sat-seccion-comercio-exterior .info-box-description,
+.sat-seccion-profesionales .aio-icon-description,
+.sat-seccion-profesionales .info-box-description,
+.sat-seccion-entes-exentos .aio-icon-description,
+.sat-seccion-entes-exentos .info-box-description,
 .sat-card-desc {
-  margin: 8px 0 0 0 !important;
+  margin: 0 !important;
   padding: 0 !important;
-  font-size: 13px !important;
-  line-height: 1.55 !important;
-  color: var(--sat-ui-texto-suave) !important;
-  flex-grow: 1 !important; /* Empuja el espacio vertical para emparejar */
+  font-size: 13.5px !important;
+  line-height: 1.5 !important;
+  color: var(--sat-text-desc) !important;
   transition: color 0.2s ease !important;
 }
 
-/* Cambio a blanco en hover */
-.sat-card:hover .sat-card-title,
-.sat-card:hover .sat-card-chevron,
-.sat-card:hover .sat-card-desc,
-.sat-card:active .sat-card-title,
-.sat-card:active .sat-card-chevron,
-.sat-card:active .sat-card-desc {
+/* ----------------------------------------------------------------------------
+ * 4. HOVER INSTITUCIONAL SÓLIDO POR NIVEL 1 (TEXTO BLANCO)
+ * ---------------------------------------------------------------------------- */
+
+/* 4.1 Tarjetas de los 4 perfiles de Nivel 1 en Home */
+.sat-seccion-macro-segmentos .vc_column_container:nth-child(1) .aio-icon-box:hover,
+.sat-seccion-macro-segmentos .vc_column_container:nth-child(1) .bsf-info-box:hover,
+.sat-seccion-contribuyentes .aio-icon-box:hover,
+.sat-seccion-contribuyentes .bsf-info-box:hover,
+.sat-card--azul:hover {
+  background-color: var(--sat-color-contribuyentes) !important; /* #14649B */
+  border-color: var(--sat-color-contribuyentes) !important;
+  transform: translateY(-4px) !important;
+  box-shadow: 0 14px 30px rgba(20, 100, 155, 0.18) !important;
+}
+
+.sat-seccion-macro-segmentos .vc_column_container:nth-child(2) .aio-icon-box:hover,
+.sat-seccion-macro-segmentos .vc_column_container:nth-child(2) .bsf-info-box:hover,
+.sat-seccion-comercio-exterior .aio-icon-box:hover,
+.sat-seccion-comercio-exterior .bsf-info-box:hover,
+.sat-card--celeste:hover {
+  background-color: var(--sat-color-comercio) !important; /* #0284C7 */
+  border-color: var(--sat-color-comercio) !important;
+  transform: translateY(-4px) !important;
+  box-shadow: 0 14px 30px rgba(2, 132, 199, 0.18) !important;
+}
+
+.sat-seccion-macro-segmentos .vc_column_container:nth-child(3) .aio-icon-box:hover,
+.sat-seccion-macro-segmentos .vc_column_container:nth-child(3) .bsf-info-box:hover,
+.sat-seccion-profesionales .aio-icon-box:hover,
+.sat-seccion-profesionales .bsf-info-box:hover,
+.sat-card--profesionales:hover,
+.sat-card--verde:hover {
+  background-color: var(--sat-color-profesionales) !important; /* #4D8014 */
+  border-color: var(--sat-color-profesionales) !important;
+  transform: translateY(-4px) !important;
+  box-shadow: 0 14px 30px rgba(77, 128, 20, 0.18) !important;
+}
+
+.sat-seccion-macro-segmentos .vc_column_container:nth-child(4) .aio-icon-box:hover,
+.sat-seccion-macro-segmentos .vc_column_container:nth-child(4) .bsf-info-box:hover,
+.sat-seccion-entes-exentos .aio-icon-box:hover,
+.sat-seccion-entes-exentos .bsf-info-box:hover,
+.sat-card--naranja:hover {
+  background-color: var(--sat-color-exentos) !important; /* #C25E00 */
+  border-color: var(--sat-color-exentos) !important;
+  transform: translateY(-4px) !important;
+  box-shadow: 0 14px 30px rgba(194, 94, 0, 0.18) !important;
+}
+
+/* Transición automática de todos los textos internos a blanco en hover */
+.sat-seccion-macro-segmentos .aio-icon-box:hover *,
+.sat-seccion-macro-segmentos .bsf-info-box:hover *,
+.sat-seccion-contribuyentes .aio-icon-box:hover *,
+.sat-seccion-contribuyentes .bsf-info-box:hover *,
+.sat-seccion-comercio-exterior .aio-icon-box:hover *,
+.sat-seccion-comercio-exterior .bsf-info-box:hover *,
+.sat-seccion-profesionales .aio-icon-box:hover *,
+.sat-seccion-profesionales .bsf-info-box:hover *,
+.sat-seccion-entes-exentos .aio-icon-box:hover *,
+.sat-seccion-entes-exentos .bsf-info-box:hover *,
+.sat-card:hover * {
   color: #ffffff !important;
+}
+
+/* ----------------------------------------------------------------------------
+ * 5. PESTAÑAS CONECTADAS DE 3 PASOS (/solicitar-nit/ y /actualizar-rtu/)
+ *    100% Nativo WPBakery ([vc_tta_tabs], .sat-modalidad-card, .sat-app-launch-card)
+ * ---------------------------------------------------------------------------- */
+.sat-connected-steps-tabs .vc_tta-tabs-list .vc_tta-tab > a {
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  padding: 14px 24px !important;
+  border-radius: 10px 10px 0 0 !important;
+}
+.sat-connected-steps-tabs .vc_tta-tab.vc_active > a {
+  background-color: var(--sat-azul-institucional) !important;
+  color: #ffffff !important;
+  border-color: var(--sat-azul-institucional) !important;
+}
+
+.sat-modalidad-card {
+  background: #ffffff !important;
+  border: 1px solid var(--sat-card-border) !important;
+  border-top: 4px solid var(--sat-color-contribuyentes) !important;
+  border-radius: 12px !important;
+  padding: 20px !important;
+  height: 100% !important;
+  box-sizing: border-box !important;
+  transition: box-shadow 0.2s ease, transform 0.2s ease !important;
+}
+.sat-modalidad-card:hover {
+  box-shadow: 0 10px 24px rgba(0, 56, 101, 0.08) !important;
+}
+.sat-modalidad-card h3 {
+  color: var(--sat-azul-institucional) !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  margin: 0 0 8px 0 !important;
+}
+.sat-modalidad-card p {
+  font-size: 13px !important;
+  color: var(--sat-text-desc) !important;
+  margin: 0 0 10px 0 !important;
+}
+.sat-modalidad-card ul {
+  font-size: 13px !important;
+  color: #1e293b !important;
+  padding-left: 18px !important;
+  line-height: 1.6 !important;
+  margin: 0 !important;
+}
+
+.sat-app-launch-card {
+  background: #f8fafc !important;
+  border: 1px solid #cbd5e1 !important;
+  border-left: 4px solid var(--sat-azul-institucional) !important;
+  border-radius: 12px !important;
+  padding: 20px 22px !important;
+}
+.sat-app-launch-card h3 {
+  color: var(--sat-azul-institucional) !important;
+  font-size: 17px !important;
+  font-weight: 700 !important;
+  margin: 0 0 8px 0 !important;
+}
+.sat-app-launch-card p {
+  font-size: 13.5px !important;
+  color: var(--sat-text-desc) !important;
+  margin: 0 0 10px 0 !important;
+}
+.sat-app-launch-card ol {
+  font-size: 13.5px !important;
+  color: #1e293b !important;
+  line-height: 1.7 !important;
+  padding-left: 20px !important;
+  margin: 0 !important;
 }

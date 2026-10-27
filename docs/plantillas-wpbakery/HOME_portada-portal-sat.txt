@@ -5,7 +5,7 @@
 [/vc_column]
 [/vc_row]
 
-[vc_row el_class="sat-quick-access-row" css=".vc_custom_qa{margin-top: -25px; margin-bottom: 30px;}"]
+[vc_row equal_height="yes" gap="10px" el_class="sat-quick-access-row" css=".vc_custom_qa{margin-top: -25px; margin-bottom: 30px;}"]
 [vc_column width="1/6"][bsf-info-box icon_type="none" title="Declaraguate" read_more="box" link="url:https://declaraguate.sat.gob.gt/||target:%20_blank|"]Presentación y pago de formularios.[/bsf-info-box][/vc_column]
 [vc_column width="1/6"][bsf-info-box icon_type="none" title="Agencia Virtual" read_more="box" link="url:https://farm3.sat.gob.gt/menu/login.jsf||target:%20_blank|"]Servicios en línea y constancia RTU.[/bsf-info-box][/vc_column]
 [vc_column width="1/6"][bsf-info-box icon_type="none" title="Solicitar NIT" read_more="box" link="url:/solicitar-nit/|||"]Requisitos, formulario oficial y cita en 3 pasos.[/bsf-info-box][/vc_column]
@@ -21,7 +21,7 @@
 [/vc_column]
 [/vc_row]
 
-[vc_row gap="15px" el_class="sat-seccion-macro-segmentos"]
+[vc_row equal_height="yes" gap="15px" el_class="sat-seccion-macro-segmentos"]
 [vc_column width="1/4"][bsf-info-box icon_type="none" title="Contribuyentes" read_more="box" link="url:/contribuyentes/|||"]Información y servicios tributarios para personas y empresas. Registro Tributario Unificado (RTU), pequeños contribuyentes, régimen general y vehículos.[/bsf-info-box][/vc_column]
 [vc_column width="1/4"][bsf-info-box icon_type="none" title="Operadores de Comercio Exterior" read_more="box" link="url:/operadores-de-comercio-exterior/|||"]Servicios e información aduanera. Importación, exportación, padrones, auxiliares de la función pública (AFPA) y declaraciones DUCA.[/bsf-info-box][/vc_column]
 [vc_column width="1/4"][bsf-info-box icon_type="none" title="Profesionales" read_more="box" link="url:/profesionales/|||"]Herramientas especializadas para auxiliares y profesionales tributarios. Abogados, notarios, peritos contadores, auditores y gestores.[/bsf-info-box][/vc_column]
@@ -36,8 +36,8 @@
 [/vc_column]
 [/vc_row]
 
-[vc_row gap="10px" el_class="sat-seccion-contribuyentes"]
-[vc_column width="1/3"][bsf-info-box icon_type="none" title="Solicitar Número de Identificación Tributaria (NIT)" read_more="box" link="url:/solicitar-nit/|||"]Requisitos claros, formulario oficial RTU Digital integrado y programación de cita en 3 pasos conectados.[/bsf-info-box][/vc_column]
+[vc_row equal_height="yes" gap="15px" el_class="sat-seccion-contribuyentes"]
+[vc_column width="1/3"][bsf-info-box icon_type="none" title="Solicitar Número de Identificación Tributaria (NIT)" read_more="box" link="url:/solicitar-nit/|||"]Requisitos claros, formulario oficial RTU Digital y programación de cita en 3 pasos conectados.[/bsf-info-box][/vc_column]
 [vc_column width="1/3"][bsf-info-box icon_type="none" title="Actualizar o Ratificar Datos en el RTU Digital" read_more="box" link="url:/actualizar-rtu/|||"]Actualiza tu dirección fiscal, establecimientos, impuestos o contador, consulta el estado e imprime tu Constancia de RTU en 3 pasos.[/bsf-info-box][/vc_column]
 [vc_column width="1/3"][bsf-info-box icon_type="none" title="Solicitud y Emisión de Solvencia Fiscal en Línea" read_more="box" link="url:https://portal.sat.gob.gt/portal/solvencia-fiscal/||target:%20_blank|"]Consulta, pago y descarga del certificado electrónico que acredita la ausencia de adeudos tributarios.[/bsf-info-box][/vc_column]
 [vc_column width="1/3"][bsf-info-box icon_type="none" title="Habilitación para emitir Factura Electrónica (FEL)" read_more="box" link="url:https://portal.sat.gob.gt/portal/factura-electronica-en-linea-fel/||target:%20_blank|"]Pasos para incorporarte al régimen FEL y emitir Documentos Tributarios Electrónicos (DTE) de forma gratuita.[/bsf-info-box][/vc_column]

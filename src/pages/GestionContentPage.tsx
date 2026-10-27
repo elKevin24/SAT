@@ -341,7 +341,7 @@ export const GestionContentPage: React.FC<GestionContentPageProps> = ({
                   2
                 </span>
                 <h2 className="text-sm sm:text-base font-bold text-slate-900">
-                  Paso 2: Realiza el Trámite en el Canal Correspondiente
+                  Paso 2: Realiza la Gestión en el Canal Correspondiente
                 </h2>
               </div>
 

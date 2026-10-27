@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, useMemo } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import {
   Search,
   ChevronDown,
@@ -8,7 +8,6 @@ import {
   Video,
   Layers,
   UserCheck,
-  FileText,
   Plane,
   Lock,
   X,
@@ -160,6 +159,14 @@ export const Header: React.FC<HeaderProps> = ({
 
   return (
     <header className="sticky top-0 z-40 bg-sat-blanco border-b border-sat-gris shadow-sat-sm">
+      {/* Enlace de salto al contenido principal (WCAG 2.4.1 Bypass Blocks) */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:px-4 focus:py-2 focus:bg-sat-azul-oscuro focus:text-sat-blanco focus:font-bold focus:text-xs focus:rounded-sat-sm focus:shadow-sat-lg"
+      >
+        Saltar al contenido principal
+      </a>
+
       {/* 1. Barra de Navegación 1: Plataformas Oficiales SAT (Azul Oscuro Normativo - Esbelta y Compacta) */}
       <nav
         className="bg-sat-azul-oscuro text-sat-blanco text-xs font-medium h-8 relative z-50"
@@ -183,7 +190,7 @@ export const Header: React.FC<HeaderProps> = ({
           >
             {/* Lado izquierdo: Formación Tributaria + Accesos complementarios */}
             <div className="flex items-center h-full gap-1">
-              <div className="dropdown relative h-full flex items-center" ref={dropdownRef}>
+              <div className="relative h-full flex items-center" ref={dropdownRef}>
                 <button
                   type="button"
                   onClick={() => setShowFormacionMenu(!showFormacionMenu)}
@@ -197,8 +204,8 @@ export const Header: React.FC<HeaderProps> = ({
 
                 {/* Dropdown Formación Tributaria */}
                 {showFormacionMenu && (
-                  <div className="dropdown-menu show absolute left-0 top-full mt-1 w-72 max-w-[calc(100vw-2rem)] bg-sat-blanco text-sat-texto border border-sat-gris rounded-sat-lg shadow-sat-lg p-2 z-50 animate-fadeIn">
-                    <h6 className="dropdown-header px-3 py-1.5 mb-1 text-[11px] uppercase tracking-wider font-bold text-sat-texto-suave border-b border-sat-gris">
+                  <div className="absolute left-0 top-full mt-1 w-72 max-w-[calc(100vw-2rem)] bg-sat-blanco text-sat-texto border border-sat-gris rounded-sat-lg shadow-sat-lg p-2 z-50 animate-fadeIn">
+                    <h6 className="px-3 py-1.5 mb-1 text-[11px] uppercase tracking-wider font-bold text-sat-texto-suave border-b border-sat-gris">
                       Cultura y Aprendizaje Fiscal
                     </h6>
                     {FORMACION_ITEMS.map((item) => (
@@ -207,7 +214,7 @@ export const Header: React.FC<HeaderProps> = ({
                         href={item.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="dropdown-item flex items-start gap-3 px-3 py-2 rounded-sat-sm text-sat-texto hover:bg-sat-fondo-tenue hover:text-sat-azul focus:bg-sat-fondo-tenue focus:text-sat-azul transition-colors"
+                        className="flex items-start gap-3 px-3 py-2 rounded-sat-sm text-sat-texto hover:bg-sat-fondo-tenue hover:text-sat-azul focus:bg-sat-fondo-tenue focus:text-sat-azul transition-colors"
                       >
                         <item.icon className="w-4 h-4 text-sat-azul mt-0.5 shrink-0" />
                         <span className="block">
@@ -244,6 +251,15 @@ export const Header: React.FC<HeaderProps> = ({
               >
                 <Layers className="w-3 h-3 text-sat-celeste" />
                 <span className="hidden xl:inline">Mapa del Portal</span>
+              </a>
+
+              <a
+                href="#/wpbakery"
+                className="inline-flex items-center gap-1 px-2 h-full text-sat-blanco/90 hover:text-sat-blanco hover:bg-white/10 rounded-sat-sm text-[11px] font-semibold transition-colors"
+                title="Abrir Constructor Manual WordPress + WPBakery (Cero Raw HTML)"
+              >
+                <BookOpen className="w-3 h-3 text-sat-celeste" />
+                <span className="hidden lg:inline">Modo WPBakery</span>
               </a>
             </div>
 
@@ -308,7 +324,9 @@ export const Header: React.FC<HeaderProps> = ({
                 <Search className="w-3.5 h-3.5 text-sat-azul" />
               </span>
               <input
-                type="text"
+                type="search"
+                id="sat-global-search" name="q" inputMode="search"
+                enterKeyHint="search"
                 value={searchQuery}
                 onChange={(e) => {
                   onSearchChange(e.target.value);
@@ -421,7 +439,7 @@ export const Header: React.FC<HeaderProps> = ({
             )}
 
             {showSuggestions && !hasResults && (
-              <div className="dropdown-menu show absolute left-0 right-0 top-full mt-1.5 p-0 bg-sat-blanco rounded-sat-lg shadow-sat-lg border border-sat-gris z-50">
+              <div className="absolute left-0 right-0 top-full mt-1.5 p-0 bg-sat-blanco rounded-sat-lg shadow-sat-lg border border-sat-gris z-50">
                 <div className="px-3 py-3 text-xs text-sat-texto-suave text-center">
                   Sin resultados para <span className="font-bold text-sat-texto">"{searchQuery}"</span>
                 </div>

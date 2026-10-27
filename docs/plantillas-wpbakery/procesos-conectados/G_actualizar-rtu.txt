@@ -23,13 +23,13 @@
 [/vc_column]
 [/vc_row]
 
-[vc_row gap="15px" el_class="sat-seccion-contribuyentes"]
+[vc_row equal_height="yes" gap="15px" el_class="sat-seccion-contribuyentes"]
 [vc_column width="1/2"]
 [vc_column_text]
-<div class="sat-modalidad-card" style="border: 1px solid #dde2e5; border-top: 4px solid #14649b; border-radius: 10px; padding: 18px; background: #fff;">
-  <h3 style="color: #003865; font-size: 16px; margin-bottom: 6px;">Datos Personales, Domicilio Fiscal o Ratificación Anual</h3>
-  <p style="font-size: 13px; color: #475569; margin-bottom: 10px;">Cambio de dirección de residencia, teléfono, correo electrónico, actividad económica personal o confirmación anual de datos.</p>
-  <ul style="font-size: 13px; color: #1e293b; padding-left: 18px; line-height: 1.6;">
+<div class="sat-modalidad-card">
+  <h3>Datos Personales, Domicilio Fiscal o Ratificación Anual</h3>
+  <p>Cambio de dirección de residencia, teléfono, correo electrónico, actividad económica personal o confirmación anual de datos.</p>
+  <ul>
     <li><strong>DPI vigente de ambos lados</strong> (o Pasaporte vigente en caso de ser extranjero).</li>
     <li><strong>Comprobante de domicilio fiscal</strong> con máximo 3 meses de emisión (Factura de servicios donde solo digitas serie y número, o recibo de agua / IUSI adjunto).</li>
     <li><strong>Usuario activo de Agencia Virtual SAT</strong> (si solo realizas la ratificación anual sin cambios, se confirma de inmediato en línea).</li>
@@ -40,10 +40,10 @@
 
 [vc_column width="1/2"]
 [vc_column_text]
-<div class="sat-modalidad-card" style="border: 1px solid #dde2e5; border-top: 4px solid #0284c7; border-radius: 10px; padding: 18px; background: #fff;">
-  <h3 style="color: #003865; font-size: 16px; margin-bottom: 6px;">Establecimiento Comercial, Negocio o Actividad Económica</h3>
-  <p style="font-size: 13px; color: #475569; margin-bottom: 10px;">Apertura, cambio de dirección comercial, cambio de nombre comercial o modificación de actividad económica.</p>
-  <ul style="font-size: 13px; color: #1e293b; padding-left: 18px; line-height: 1.6;">
+<div class="sat-modalidad-card">
+  <h3>Establecimiento Comercial, Negocio o Actividad Económica</h3>
+  <p>Apertura, cambio de dirección comercial, cambio de nombre comercial o modificación de actividad económica.</p>
+  <ul>
     <li><strong>DPI vigente de ambos lados</strong> o Pasaporte vigente en caso de ser extranjero.</li>
     <li><strong>Comprobante de domicilio comercial</strong> (máximo 3 meses de antigüedad).</li>
     <li><strong>Patente de comercio de empresa</strong> (para comerciantes inscritos en el Registro Mercantil).</li>
@@ -54,13 +54,13 @@
 [/vc_column]
 [/vc_row]
 
-[vc_row gap="15px" el_class="sat-seccion-contribuyentes"]
+[vc_row equal_height="yes" gap="15px" el_class="sat-seccion-contribuyentes"]
 [vc_column width="1/2"]
 [vc_column_text]
-<div class="sat-modalidad-card" style="border: 1px solid #dde2e5; border-top: 4px solid #2e7d32; border-radius: 10px; padding: 18px; background: #fff;">
-  <h3 style="color: #003865; font-size: 16px; margin-bottom: 6px;">Impuestos, Afiliaciones, Cambio de Régimen o Contador</h3>
-  <p style="font-size: 13px; color: #475569; margin-bottom: 10px;">Agregar o actualizar afiliaciones de impuestos (IVA, ISR, ISO), transición de régimen o nombramiento/cambio de Perito Contador.</p>
-  <ul style="font-size: 13px; color: #1e293b; padding-left: 18px; line-height: 1.6;">
+<div class="sat-modalidad-card">
+  <h3>Impuestos, Afiliaciones, Cambio de Régimen o Contador</h3>
+  <p>Agregar o actualizar afiliaciones de impuestos (IVA, ISR, ISO), transición de régimen o nombramiento/cambio de Perito Contador.</p>
+  <ul>
     <li><strong>Usuario activo de Agencia Virtual</strong> y datos de identificación actualizados en el RTU Digital.</li>
     <li><strong>Para nombrar o cambiar Perito Contador:</strong> Tanto el contribuyente como el Perito Contador deben contar con Agencia Virtual activa y sus propios datos actualizados en el RTU Digital. El contador deberá confirmar su nombramiento desde su Agencia Virtual.</li>
   </ul>
@@ -70,10 +70,10 @@
 
 [vc_column width="1/2"]
 [vc_column_text]
-<div class="sat-modalidad-card" style="border: 1px solid #dde2e5; border-top: 4px solid #c25e00; border-radius: 10px; padding: 18px; background: #fff;">
-  <h3 style="color: #003865; font-size: 16px; margin-bottom: 6px;">Persona Jurídica (Sociedad, Empresa) o Ente Exento</h3>
-  <p style="font-size: 13px; color: #475569; margin-bottom: 10px;">Actualización de sociedades mercantiles, nombramiento o cambio de Representante Legal, entidades no lucrativas o del Estado.</p>
-  <ul style="font-size: 13px; color: #1e293b; padding-left: 18px; line-height: 1.6;">
+<div class="sat-modalidad-card">
+  <h3>Persona Jurídica (Sociedad, Empresa) o Ente Exento</h3>
+  <p>Actualización de sociedades mercantiles, nombramiento o cambio de Representante Legal, entidades no lucrativas o del Estado.</p>
+  <ul>
     <li><strong>Agencia Virtual activa y RTU Digital actualizado</strong> para la Entidad, su Representante Legal y su Perito Contador previo a iniciar la gestión.</li>
     <li><strong>DPI vigente de ambos lados</strong> (o Pasaporte vigente) del Representante Legal.</li>
     <li><strong>Acta Notarial de Nombramiento vigente e inscrita</strong> en el Registro Mercantil, REPEJU o registro correspondiente.</li>
@@ -86,41 +86,25 @@
 
 [vc_empty_space height="16px"]
 
-[vc_row]
+[vc_row equal_height="yes" gap="15px"]
 [vc_column width="1/2"]
-[vc_column_text]
-<div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 10px; padding: 16px;">
-  <h4 style="color: #166534; font-size: 15px; margin-bottom: 8px;">¿Cuándo NO necesitas adjuntar el archivo de la factura?</h4>
-  <p style="font-size: 13px; color: #14532d; margin: 0; line-height: 1.55;">Si en el campo <em>"Tipo de documento comprobante de domicilio"</em> eliges <strong>"Factura de Servicios"</strong> (energía eléctrica, agua potable, teléfono de línea fija o internet residencial no mayor a 3 meses), <strong>únicamente debes digitar la serie y el número de documento de la factura</strong>. No se requiere adjuntar archivo y tu gestión finaliza 100% en línea.</p>
-</div>
-[/vc_column_text]
+[vc_message message_box_style="outline" message_box_color="success" icon_fontawesome="fas fa-check-circle"]<strong>¿Cuándo NO necesitas adjuntar el archivo de la factura?</strong> Si en el campo <em>"Tipo de documento comprobante de domicilio"</em> eliges <strong>"Factura de Servicios"</strong> (energía eléctrica, agua potable, teléfono de línea fija o internet residencial no mayor a 3 meses), <strong>únicamente debes digitar la serie y el número de documento de la factura</strong>. No se requiere adjuntar archivo y tu gestión finaliza 100% en línea.[/vc_message]
 [/vc_column]
 
 [vc_column width="1/2"]
-[vc_column_text]
-<div style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 10px; padding: 16px;">
-  <h4 style="color: #003865; font-size: 15px; margin-bottom: 8px;">¿Cuándo SÍ debes adjuntar comprobante digital (JPG, PDF o PNG)?</h4>
-  <p style="font-size: 13px; color: #334155; margin: 0; line-height: 1.55;">Si eliges <strong>Recibo de agua potable</strong>, <strong>Recibo de IUSI</strong> o <strong>Certificación/Solvencia municipal</strong>, debes adjuntar el archivo. <strong>Importante:</strong> Los contribuyentes con obligaciones (establecimientos y afiliación al IVA en estado activo) que elijan "otro tipo de documento" deberán finalizar su gestión presencialmente en Agencia Tributaria (Paso 3).</p>
-</div>
-[/vc_column_text]
+[vc_message message_box_style="outline" message_box_color="info" icon_fontawesome="fas fa-file-upload"]<strong>¿Cuándo SÍ debes adjuntar comprobante digital (JPG, PDF o PNG)?</strong> Si eliges <strong>Recibo de agua potable</strong>, <strong>Recibo de IUSI</strong> o <strong>Certificación/Solvencia municipal</strong>, debes adjuntar el archivo. Los contribuyentes con obligaciones activas en IVA que elijan otro tipo de documento finalizan su gestión en Agencia Tributaria (Paso 3).[/vc_message]
 [/vc_column]
 [/vc_row]
 [/vc_tta_section]
 
 [vc_tta_section title="2. Realizar Actualización" tab_id="paso-2-actualizar-agencia-virtual"]
-[vc_row]
+[vc_row el_class="sat-seccion-contribuyentes"]
 [vc_column]
 [vc_custom_heading text="Paso 2: Realiza tu Actualización o Ratificación dentro de Agencia Virtual SAT" font_container="tag:h2|font_size:20px|text_align:left|color:%23003865" use_theme_fonts="yes"]
 [vc_column_text]
-<div style="background: #ffffff; border: 1px solid #cbd5e1; border-radius: 12px; padding: 22px; margin-bottom: 20px;">
-  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; padding-bottom: 16px; border-bottom: 1px solid #e2e8f0;">
-    <div>
-      <h3 style="color: #003865; font-size: 18px; margin: 0 0 6px 0;">Acceso Directo a Agencia Virtual SAT</h3>
-      <p style="color: #475569; font-size: 13px; margin: 0;">Por seguridad tributaria, la modificación de datos del RTU Digital requiere iniciar sesión con tu NIT y contraseña.</p>
-    </div>
-    <a href="https://farm3.sat.gob.gt/menu/login.jsf" target="_blank" rel="noopener noreferrer" style="background: #003865; color: #ffffff; padding: 12px 22px; border-radius: 8px; font-weight: 700; font-size: 14px; text-decoration: none; display: inline-block;">Ingresar a Agencia Virtual SAT ↗</a>
-  </div>
-  <ol style="font-size: 13px; color: #1e293b; line-height: 1.75; margin-top: 16px; padding-left: 20px;">
+<div class="sat-app-launch-card">
+  <h3>Ruta Operativa dentro de Agencia Virtual SAT</h3>
+  <ol>
     <li>Ingresa a <strong>Agencia Virtual</strong> con tu usuario (NIT) y contraseña, y dirígete al menú <strong>Servicios › RTU › Actualizar Datos</strong> (o <em>Ratificación de Datos</em>).</li>
     <li>Modifica únicamente las secciones que necesitas poner al día: Identificación, Ubicación (domicilio fiscal), Actividad Económica, Establecimientos, Afiliaciones de Impuestos o Contador.</li>
     <li>Adjunta tu DPI vigente de ambos lados. En comprobante de domicilio, selecciona <strong>"Factura de Servicios"</strong> para digitar únicamente la serie y número de tu factura sin adjuntar archivo.</li>
@@ -128,10 +112,12 @@
   </ol>
 </div>
 [/vc_column_text]
+[vc_empty_space height="14px"]
+[bsf-info-box icon_type="none" title="Ingresar a Agencia Virtual SAT para Actualizar o Ratificar el RTU" read_more="box" link="url:https://farm3.sat.gob.gt/menu/login.jsf||target:%20_blank|"]Accede con tu NIT y contraseña al portal transaccional de Agencia Virtual SAT (Servicios › RTU › Actualizar Datos).[/bsf-info-box]
 [/vc_column]
 [/vc_row]
 
-[vc_row gap="15px" el_class="sat-seccion-contribuyentes"]
+[vc_row equal_height="yes" gap="15px" el_class="sat-seccion-contribuyentes"]
 [vc_column width="1/2"]
 [bsf-info-box icon_type="none" title="Descargar Guía Paso a Paso de Actualización en el RTU Digital (PDF)" read_more="box" link="url:https://portal.sat.gob.gt/portal/descarga/14366/rtu-digital/43540/actualizacion-rtu-digital.pdf||target:%20_blank|"]Manual ilustrado oficial de la SAT con las pantallas paso a paso para completar tu actualización de datos dentro de Agencia Virtual.[/bsf-info-box]
 [/vc_column]
@@ -145,11 +131,20 @@
 [vc_row]
 [vc_column]
 [vc_custom_heading text="Paso 3: Consulta el Estado de tu Gestión, Imprime tu Constancia de RTU o Solicita Cita" font_container="tag:h2|font_size:20px|text_align:left|color:%23003865" use_theme_fonts="yes"]
-[vc_column_text]Utiliza directamente los aplicativos oficiales de la SAT integrados a continuación para dar seguimiento a tu solicitud, descargar tu Constancia de RTU actualizada o programar cita presencial si el sistema te lo requirió:[/vc_column_text]
-[vc_empty_space height="12px"]
-[vc_raw_html]JTNDZGl2JTIwY2xhc3MlM0QlMjJzYXQtaWZyYW1lLXdyYXBwZXIlMjIlMjBzdHlsZSUzRCUyMmJvcmRlciUzQSUyMDFweCUyMHNvbGlkJTIwJTIzY2JkNWUxJTNCJTIwYm9yZGVyLXJhZGl1cyUzQSUyMDEycHglM0IlMjBvdmVyZmxvdyUzQSUyMGhpZGRlbiUzQiUyMGJhY2tncm91bmQlM0ElMjAlMjNmZmZmZmYlM0IlMjBib3gtc2hhZG93JTNBJTIwMCUyMDRweCUyMDE0cHglMjByZ2JhJTI4MCUyQzU2JTJDMTAxJTJDMC4wNiUyOSUzQiUyMG1hcmdpbi1ib3R0b20lM0ElMjAyNHB4JTNCJTIyJTNFJTBBJTIwJTIwJTNDZGl2JTIwc3R5bGUlM0QlMjJiYWNrZ3JvdW5kJTNBJTIwJTIzMDAzODY1JTNCJTIwY29sb3IlM0ElMjAlMjNmZmZmZmYlM0IlMjBwYWRkaW5nJTNBJTIwMTJweCUyMDE4cHglM0IlMjBkaXNwbGF5JTNBJTIwZmxleCUzQiUyMGp1c3RpZnktY29udGVudCUzQSUyMHNwYWNlLWJldHdlZW4lM0IlMjBhbGlnbi1pdGVtcyUzQSUyMGNlbnRlciUzQiUyMGZsZXgtd3JhcCUzQSUyMHdyYXAlM0IlMjBnYXAlM0ElMjAxMHB4JTNCJTIyJTNFJTBBJTIwJTIwJTIwJTIwJTNDc3BhbiUyMHN0eWxlJTNEJTIyZm9udC1zaXplJTNBJTIwMTNweCUzQiUyMGZvbnQtd2VpZ2h0JTNBJTIwNzAwJTNCJTIyJTNFMy4xJTIwQXBsaWNhdGl2byUyME9maWNpYWwlMjBTQVQlMjAlRTIlODAlOTQlMjBDb25zdWx0YSUyMGRlJTIwRXN0YWRvJTIwZGUlMjBHZXN0aSVDMyVCM24lMjBkZSUyMFJUVSUyMERpZ2l0YWwlM0Mvc3BhbiUzRSUwQSUyMCUyMCUyMCUyMCUzQ2ElMjBocmVmJTNEJTIyaHR0cHMlM0EvL2Nkbi5jLnNhdC5nb2IuZ3QvcnR1L2NvbnN1bHRhLWdlc3Rpb24lMjIlMjB0YXJnZXQlM0QlMjJfYmxhbmslMjIlMjByZWwlM0QlMjJub29wZW5lciUyMG5vcmVmZXJyZXIlMjIlMjBzdHlsZSUzRCUyMmNvbG9yJTNBJTIwJTIzN2RkM2ZjJTNCJTIwZm9udC1zaXplJTNBJTIwMTJweCUzQiUyMGZvbnQtd2VpZ2h0JTNBJTIwNjAwJTNCJTIwdGV4dC1kZWNvcmF0aW9uJTNBJTIwdW5kZXJsaW5lJTNCJTIyJTNFQWJyaXIlMjBlbiUyMHBlc3RhJUMzJUIxYSUyMGNvbXBsZXRhJTIwJUUyJTg2JTk3JTNDL2ElM0UlMEElMjAlMjAlM0MvZGl2JTNFJTBBJTIwJTIwJTNDaWZyYW1lJTIwc3JjJTNEJTIyaHR0cHMlM0EvL2Nkbi5jLnNhdC5nb2IuZ3QvcnR1L2NvbnN1bHRhLWdlc3Rpb24lMjIlMjB0aXRsZSUzRCUyMkNvbnN1bHRhJTIwZGUlMjBFc3RhZG8lMjBkZSUyMEdlc3RpJUMzJUIzbiUyMGRlJTIwUlRVJTIwRGlnaXRhbCUyMiUyMHN0eWxlJTNEJTIyd2lkdGglM0ElMjAxMDAlMjUlM0IlMjBoZWlnaHQlM0ElMjA2NjBweCUzQiUyMGJvcmRlciUzQSUyMDAlM0IlMjBkaXNwbGF5JTNBJTIwYmxvY2slM0IlMjIlMjBsb2FkaW5nJTNEJTIybGF6eSUyMiUzRSUzQy9pZnJhbWUlM0UlMEElM0MvZGl2JTNF[/vc_raw_html]
-[vc_raw_html]JTNDZGl2JTIwY2xhc3MlM0QlMjJzYXQtaWZyYW1lLXdyYXBwZXIlMjIlMjBzdHlsZSUzRCUyMmJvcmRlciUzQSUyMDFweCUyMHNvbGlkJTIwJTIzY2JkNWUxJTNCJTIwYm9yZGVyLXJhZGl1cyUzQSUyMDEycHglM0IlMjBvdmVyZmxvdyUzQSUyMGhpZGRlbiUzQiUyMGJhY2tncm91bmQlM0ElMjAlMjNmZmZmZmYlM0IlMjBib3gtc2hhZG93JTNBJTIwMCUyMDRweCUyMDE0cHglMjByZ2JhJTI4MCUyQzU2JTJDMTAxJTJDMC4wNiUyOSUzQiUyMG1hcmdpbi1ib3R0b20lM0ElMjAyNHB4JTNCJTIyJTNFJTBBJTIwJTIwJTNDZGl2JTIwc3R5bGUlM0QlMjJiYWNrZ3JvdW5kJTNBJTIwJTIzMDAzODY1JTNCJTIwY29sb3IlM0ElMjAlMjNmZmZmZmYlM0IlMjBwYWRkaW5nJTNBJTIwMTJweCUyMDE4cHglM0IlMjBkaXNwbGF5JTNBJTIwZmxleCUzQiUyMGp1c3RpZnktY29udGVudCUzQSUyMHNwYWNlLWJldHdlZW4lM0IlMjBhbGlnbi1pdGVtcyUzQSUyMGNlbnRlciUzQiUyMGZsZXgtd3JhcCUzQSUyMHdyYXAlM0IlMjBnYXAlM0ElMjAxMHB4JTNCJTIyJTNFJTBBJTIwJTIwJTIwJTIwJTNDc3BhbiUyMHN0eWxlJTNEJTIyZm9udC1zaXplJTNBJTIwMTNweCUzQiUyMGZvbnQtd2VpZ2h0JTNBJTIwNzAwJTNCJTIyJTNFMy4yJTIwQXBsaWNhdGl2byUyME9maWNpYWwlMjBTQVQlMjAlRTIlODAlOTQlMjBJbXByaW1pciUyMENvbnN0YW5jaWElMjBkZSUyMEluc2NyaXBjaSVDMyVCM24lMjB5JTIwQWN0dWFsaXphY2klQzMlQjNuJTIwZW4lMjBlbCUyMFJUVSUzQy9zcGFuJTNFJTBBJTIwJTIwJTIwJTIwJTNDYSUyMGhyZWYlM0QlMjJodHRwcyUzQS8vY2RuLmMuc2F0LmdvYi5ndC9ydHUvY29uc3RhbmNpYS1ydHUtcG9ydGFsJTIyJTIwdGFyZ2V0JTNEJTIyX2JsYW5rJTIyJTIwcmVsJTNEJTIybm9vcGVuZXIlMjBub3JlZmVycmVyJTIyJTIwc3R5bGUlM0QlMjJjb2xvciUzQSUyMCUyMzdkZDNmYyUzQiUyMGZvbnQtc2l6ZSUzQSUyMDEycHglM0IlMjBmb250LXdlaWdodCUzQSUyMDYwMCUzQiUyMHRleHQtZGVjb3JhdGlvbiUzQSUyMHVuZGVybGluZSUzQiUyMiUzRUFicmlyJTIwZW4lMjBwZXN0YSVDMyVCMWElMjBjb21wbGV0YSUyMCVFMiU4NiU5NyUzQy9hJTNFJTBBJTIwJTIwJTNDL2RpdiUzRSUwQSUyMCUyMCUzQ2lmcmFtZSUyMHNyYyUzRCUyMmh0dHBzJTNBLy9jZG4uYy5zYXQuZ29iLmd0L3J0dS9jb25zdGFuY2lhLXJ0dS1wb3J0YWwlMjIlMjB0aXRsZSUzRCUyMkltcHJlc2klQzMlQjNuJTIwZGUlMjBDb25zdGFuY2lhJTIwZGUlMjBSVFUlMjIlMjBzdHlsZSUzRCUyMndpZHRoJTNBJTIwMTAwJTI1JTNCJTIwaGVpZ2h0JTNBJTIwNjYwcHglM0IlMjBib3JkZXIlM0ElMjAwJTNCJTIwZGlzcGxheSUzQSUyMGJsb2NrJTNCJTIyJTIwbG9hZGluZyUzRCUyMmxhenklMjIlM0UlM0MvaWZyYW1lJTNFJTBBJTNDL2RpdiUzRQ==[/vc_raw_html]
-[vc_raw_html]JTNDZGl2JTIwY2xhc3MlM0QlMjJzYXQtaWZyYW1lLXdyYXBwZXIlMjIlMjBzdHlsZSUzRCUyMmJvcmRlciUzQSUyMDFweCUyMHNvbGlkJTIwJTIzY2JkNWUxJTNCJTIwYm9yZGVyLXJhZGl1cyUzQSUyMDEycHglM0IlMjBvdmVyZmxvdyUzQSUyMGhpZGRlbiUzQiUyMGJhY2tncm91bmQlM0ElMjAlMjNmZmZmZmYlM0IlMjBib3gtc2hhZG93JTNBJTIwMCUyMDRweCUyMDE0cHglMjByZ2JhJTI4MCUyQzU2JTJDMTAxJTJDMC4wNiUyOSUzQiUyMiUzRSUwQSUyMCUyMCUzQ2RpdiUyMHN0eWxlJTNEJTIyYmFja2dyb3VuZCUzQSUyMCUyMzAwMzg2NSUzQiUyMGNvbG9yJTNBJTIwJTIzZmZmZmZmJTNCJTIwcGFkZGluZyUzQSUyMDEycHglMjAxOHB4JTNCJTIwZGlzcGxheSUzQSUyMGZsZXglM0IlMjBqdXN0aWZ5LWNvbnRlbnQlM0ElMjBzcGFjZS1iZXR3ZWVuJTNCJTIwYWxpZ24taXRlbXMlM0ElMjBjZW50ZXIlM0IlMjBmbGV4LXdyYXAlM0ElMjB3cmFwJTNCJTIwZ2FwJTNBJTIwMTBweCUzQiUyMiUzRSUwQSUyMCUyMCUyMCUyMCUzQ3NwYW4lMjBzdHlsZSUzRCUyMmZvbnQtc2l6ZSUzQSUyMDEzcHglM0IlMjBmb250LXdlaWdodCUzQSUyMDcwMCUzQiUyMiUzRTMuMyUyMEFwbGljYXRpdm8lMjBPZmljaWFsJTIwU0FUJTIwJUUyJTgwJTk0JTIwU29saWNpdGFyJTIwQ2l0YSUyMFByZXNlbmNpYWwlMjAlMjhTb2xvJTIwY3VhbmRvJTIwZWwlMjBzaXN0ZW1hJTIwaW5kaXF1ZSUyMGFjdWRpciUyMGElMjBBZ2VuY2lhJTI5JTNDL3NwYW4lM0UlMEElMjAlMjAlMjAlMjAlM0NkaXYlMjBzdHlsZSUzRCUyMmRpc3BsYXklM0ElMjBmbGV4JTNCJTIwZ2FwJTNBJTIwMTZweCUzQiUyMGFsaWduLWl0ZW1zJTNBJTIwY2VudGVyJTNCJTIyJTNFJTBBJTIwJTIwJTIwJTIwJTIwJTIwJTNDYSUyMGhyZWYlM0QlMjJodHRwcyUzQS8vcG9ydGFsLnNhdC5nb2IuZ3QvcG9ydGFsL2Rlc2NhcmdhLzE1Mzg5L2NpdGEtY29udHJvbGFkYS85NjI0OC9tYW51YWwtdXN1YXJpby1wb3J0YWwtMiUyMiUyMHRhcmdldCUzRCUyMl9ibGFuayUyMiUyMHJlbCUzRCUyMm5vb3BlbmVyJTIwbm9yZWZlcnJlciUyMiUyMHN0eWxlJTNEJTIyY29sb3IlM0ElMjAlMjNmZGU2OGElM0IlMjBmb250LXNpemUlM0ElMjAxMnB4JTNCJTIwZm9udC13ZWlnaHQlM0ElMjA2MDAlM0IlMjB0ZXh0LWRlY29yYXRpb24lM0ElMjB1bmRlcmxpbmUlM0IlMjIlM0VEZXNjYXJnYXIlMjBNYW51YWwlMjBkZSUyMENpdGElMjAlMjhQREYlMjklM0MvYSUzRSUwQSUyMCUyMCUyMCUyMCUyMCUyMCUzQ2ElMjBocmVmJTNEJTIyaHR0cHMlM0EvL2Nkbi5jLnNhdC5nb2IuZ3QvY2l0YS12YWxpZGFkYS9jaXRhLXZhbGlkYWRhLXBvcnRhbC9wb3J0YWwlMjIlMjB0YXJnZXQlM0QlMjJfYmxhbmslMjIlMjByZWwlM0QlMjJub29wZW5lciUyMG5vcmVmZXJyZXIlMjIlMjBzdHlsZSUzRCUyMmNvbG9yJTNBJTIwJTIzN2RkM2ZjJTNCJTIwZm9udC1zaXplJTNBJTIwMTJweCUzQiUyMGZvbnQtd2VpZ2h0JTNBJTIwNjAwJTNCJTIwdGV4dC1kZWNvcmF0aW9uJTNBJTIwdW5kZXJsaW5lJTNCJTIyJTNFQWJyaXIlMjBlbiUyMHBlc3RhJUMzJUIxYSUyMGNvbXBsZXRhJTIwJUUyJTg2JTk3JTNDL2ElM0UlMEElMjAlMjAlMjAlMjAlM0MvZGl2JTNFJTBBJTIwJTIwJTNDL2RpdiUzRSUwQSUyMCUyMCUzQ2lmcmFtZSUyMHNyYyUzRCUyMmh0dHBzJTNBLy9jZG4uYy5zYXQuZ29iLmd0L2NpdGEtdmFsaWRhZGEvY2l0YS12YWxpZGFkYS1wb3J0YWwvcG9ydGFsJTIyJTIwdGl0bGUlM0QlMjJTaXN0ZW1hJTIwZGUlMjBDaXRhJTIwVmFsaWRhZGElMjBTQVQlMjIlMjBzdHlsZSUzRCUyMndpZHRoJTNBJTIwMTAwJTI1JTNCJTIwaGVpZ2h0JTNBJTIwNzYwcHglM0IlMjBib3JkZXIlM0ElMjAwJTNCJTIwZGlzcGxheSUzQSUyMGJsb2NrJTNCJTIyJTIwbG9hZGluZyUzRCUyMmxhenklMjIlM0UlM0MvaWZyYW1lJTNFJTBBJTNDL2RpdiUzRQ==[/vc_raw_html]
+[vc_column_text]Selecciona directamente el servicio oficial de la SAT que necesitas para dar seguimiento a tu solicitud, descargar tu Constancia de RTU actualizada o programar cita presencial si el sistema te lo requirió:[/vc_column_text]
+[vc_empty_space height="14px"]
+[/vc_column]
+[/vc_row]
+
+[vc_row equal_height="yes" gap="15px" el_class="sat-seccion-contribuyentes"]
+[vc_column width="1/3"]
+[bsf-info-box icon_type="none" title="3.1 Consultar Estado de Gestión de RTU Digital" read_more="box" link="url:https://cdn.c.sat.gob.gt/rtu/consulta-gestion||target:%20_blank|"]Verifica en tiempo real si tu solicitud de actualización del Registro Tributario Unificado (RTU) ya fue aprobada o si requiere acción adicional.[/bsf-info-box]
+[/vc_column]
+[vc_column width="1/3"]
+[bsf-info-box icon_type="none" title="3.2 Imprimir Constancia de Inscripción y Actualización en el RTU" read_more="box" link="url:https://cdn.c.sat.gob.gt/rtu/constancia-rtu-portal||target:%20_blank|"]Genera y descarga en formato PDF tu Constancia oficial del Registro Tributario Unificado (RTU) con código QR verificable.[/bsf-info-box]
+[/vc_column]
+[vc_column width="1/3"]
+[bsf-info-box icon_type="none" title="3.3 Solicitar Cita Presencial (Sistema de Cita Validada)" read_more="box" link="url:https://cdn.c.sat.gob.gt/cita-validada/cita-validada-portal/portal||target:%20_blank|"]Programa tu cita en Agencia Tributaria únicamente si el sistema te notificó por correo que debes concluir tu actualización presencialmente.[/bsf-info-box]
 [/vc_column]
 [/vc_row]
 [/vc_tta_section]

@@ -37,7 +37,7 @@ test('Catálogo', async ({ page }) => {
 
 test('Página Solicitar NIT (#/solicitar-nit)', async ({ page }) => {
   await page.goto('/#/solicitar-nit');
-  await expect(page.getByRole('heading', { name: /^Solicitar NIT$/i })).toBeVisible();
+  await expect(page.getByRole('heading', { name: /Solicitar.*NIT/i })).toBeVisible();
   await scan(page, 'SolicitarNitPage');
 });
 
@@ -54,11 +54,10 @@ test('Abrir DirectConsultasModal', async ({ page }) => {
   await scan(page, 'DirectConsultasModal');
 });
 
-test('Abrir GuidedProcessModal', async ({ page }) => {
-  await page.goto('/');
-  await page.locator('div.group:has-text("Guía paso a paso para")').first().click();
-  await expect(page.getByRole('dialog')).toBeVisible();
-  await scan(page, 'GuidedProcessModal');
+test('Navegación a Proceso Guiado (ProcessJourneyPage)', async ({ page }) => {
+  await page.goto('/#/proceso/2');
+  await expect(page.locator('h1')).toBeVisible();
+  await scan(page, 'ProcessJourneyPage');
 });
 
 test('Navegación a página de contenido de gestión (GestionContentPage)', async ({ page }) => {
@@ -141,4 +140,17 @@ test('Tarjetas accesibles: Operables por teclado con tecla Enter', async ({ page
   await page.keyboard.press('Enter');
   const dialog = page.getByRole('dialog');
   await expect(dialog).toBeVisible();
+});
+
+test('Reflow y Responsive 320px (WCAG 1.4.10): Cero desbordamiento horizontal en móvil compacto', async ({ page }) => {
+  await page.setViewportSize({ width: 320, height: 568 });
+  for (const route of ['/', '/#/catalogo', '/#/solicitar-nit']) {
+    await page.goto(route);
+    await page.waitForTimeout(200);
+    const hasHorizontalScroll = await page.evaluate(() => {
+      window.scrollTo(100, 0);
+      return window.scrollX > 0;
+    });
+    expect(hasHorizontalScroll, `Scroll horizontal activo en ${route} a 320px`).toBe(false);
+  }
 });

@@ -1,237 +1,95 @@
 ---
 name: sat-ia-audit-sync
 description: >-
-  Auditoría, normalización taxonómica, compactación de niveles y sincronización multidimensional
-  (dataset JSON, libros Excel maestros y contratos de datos TypeScript) para la arquitectura de
-  información del Portal SAT Guatemala o portales públicos de alta densidad. Usar cuando se requiera
-  reestructurar ramas de trámites, resolver redundancias de navegación, aplicar dimensiones ATO,
-  redactar en lenguaje ciudadano o sincronizar entregables garantizando la gobernanza documental.
+  Ejecuta el flujo ETL de auditoría taxonómica, compactación asimétrica de niveles, validación de URLs
+  (HTTP 200 OK) y sincronización multidimensional entre src/data/allTramites.json, src/data/categoryOrder.ts
+  y los libros Excel maestros de 25 columnas del Portal SAT. Úsalo cuando se pida ejecutar scripts de
+  datos en scripts/, regenerar entregables .xlsx, auditar enlaces rotos o sincronizar masivamente el catálogo.
 ---
 
-# Skill: Auditoría y Sincronización de Arquitectura de Información (SAT IA-Audit-Sync)
+# SAT IA Audit & Sync (Runbook ETL y Sincronización Multidimensional)
 
-Esta skill documenta el procedimiento estándar, principios metodológicos y herramientas técnicas aplicadas en la reestructuración integral de la Arquitectura de Información del **Portal Web SAT Guatemala**, con especial énfasis en la optimización de los **Operadores de Comercio Exterior** (245 trámites en 6 ramas canónicas), el saneamiento de **Profesionales** (47 trámites netos en 5 roles) y el universo total de **715 trámites consolidados**.
+Procedimiento ejecutable de bajo grado de libertad para auditar, normalizar y sincronizar en bloque el catálogo de **715 proyecciones (683 gestiones únicas)** entre el dataset JSON, los contratos TypeScript y los libros Excel entregables.
 
----
-
-## 1. Principios Metodológicos y Marco Teórico
-
-### A. Desacoplamiento Formal de Capas
-* **Arquitectura de Información (IA):** Estructura relacional del conocimiento (árbol semántico padre-hijo). Puede tener 3, 4 o más niveles según la complejidad intrínseca de la materia.
-* **Modelo de Navegación:** Mecanismos visuales que permiten al usuario recorrer la arquitectura (Breadcrumbs, Sidebar, Menú Principal, Enlaces transversales).
-* **Regla de Desacoplamiento:** *Que un contenido resida en el nivel 5 o 6 de la IA no exige renderizar 5 o 6 niveles simultáneos en la interfaz.* El Sidebar se acota al hub temático local y el Breadcrumb aplica elipsis compacta `[…]` en pantallas móviles.
-
-### B. Capacidad de Memoria de Trabajo (Ley de Miller: $7 \pm 2$), Rango Óptimo y Margen de Tolerancia (10 Opciones)
-* Conforme a la Ley de Miller (1956), la mente humana procesa con eficacia entre 5 y 9 fragmentos de información ($7 \pm 2$) en su memoria de trabajo simultáneamente.
-* **Rango Óptimo (5 a 9 elementos):** Cuando un nodo agrupa entre 5 y 9 trámites directos (ej. *Agentes Aduaneros* con exactamente 7 trámites), se exponen en **secuencia directa bajo el nodo contenedor**, eliminando carpetas intermedias artificiales.
-* **Margen de Tolerancia Excepcional (Hasta 10 Opciones):** Se permite un máximo de 10 opciones de forma residual y para un **porcentaje muy bajo del catálogo ($\le 5\%$)**, exclusivamente cuando particionar el grupo generaría sobre-andamiaje o micro-ramas subdensas ($\le 3$), y siempre que cumpla estrictamente con:
-  1. Alta homogeneidad temática o de rol.
-  2. Orden secuencial estricto por ciclo ATO.
-  3. Lenguaje ciudadano claro.
-  4. Acceso garantizado en 2 a 3 clics sin clics pasarela.
-* **Sobrecarga Cognitiva ($\ge 11$ elementos):** Listas planas de 11 o más trámites (ej. *Apoderados Especiales* con 16 o *DAT* con 18) saturan al ciudadano y **exigen partición modular obligatoria** en sub-bloques temáticos o de ciclo de vida ATO.
-
-### C. Regla de Umbral de Densidad y Ramificación (Notación $A, A_1, A_2$)
-La profundidad del árbol nunca es simétrica ni obligada; se rige por la densidad real de cada subrama:
-
-#### 1. Condición de Compactación / Sub-densidad ($A \to A_1, A_2$ con hojas $\le 3$)
-```
-        A
-      /   \
-    A1     A2       Si A1 y A2 contienen solo 1, 2 o 3 gestiones sueltas y ahí terminan:
-    |      |        -> Se eliminan los niveles intermedios A1 y A2 (sobre-andamiaje).
-   [G1]   [G2]      -> G1 y G2 cuelgan directamente de A.
-```
-* **Diagnóstico:** Crear un nivel intermedio para $\le 3$ gestiones terminales genera **nodos pasarela (*pass-through nodes*)** y pantallas vacías con escasos botones.
-* **Acción:** **SÍ se compacta**. Las gestiones se elevan al nivel superior. Ejemplos: *Empresas Courier* (3 gestiones netas pasan a N3 directo; se suprimen las carpetas de 1 gestión) y *OEA* (2 gestiones pasan a N2 directo).
-
-#### 2. Condición de Retención de Jerarquía Profunda ($A \to A_1$ con masa crítica $\ge 10$)
-```
-        A
-        |
-       A1 (>= 10 trámites con subestructura rica)
-     /    \
-   A1.1   A1.2 ...  -> NO se compacta. Se preserva la jerarquía profunda (N4 / N5).
-```
-* **Diagnóstico:** Compactar a la fuerza un subárbol con $\ge 10$ trámites provocaría **colapso de contexto (*context collapse*)**, listas heterogéneas caóticas y pérdida de especificación regulatoria.
-* **Acción:** **SE PRESERVA LA PROFUNDIDAD**. Ejemplos: *Depósitos Aduaneros Temporales (DAT - 18)*, *Almacenes Generales de Depósito (AGD - 16)* y *ZDEEP (30)*.
-
-#### 3. Asimetría Rama por Rama (Nodos Monocatenarios)
-```
-          A
-        /   \
-      A1     A2
-      |     / | \
-    A1.1  A2.1 A2.2 A2.3
-```
-* **Rama Monocatenaria ($A_1 \to A_{1.1}$):** Un nodo con un único hijo no clasifica nada (clasificar exige elegir entre $\ge 2$ opciones) $\to$ **Se compacta**.
-* **Rama Ramificada ($A_2 \to A_{2.1}, A_{2.2}, A_{2.3}$):** Bifurcación funcional genuina $\to$ **Se preserva la jerarquía**.
-#### 4. Minimización de Clics sin Destruir la IA (*Breadth vs. Depth Trade-off* y *Zero Pass-through Clicks*)
-* **Objetivo de Eficiencia:** Permitir que el usuario alcance su trámite en la menor cantidad posible de clics (2 a 3 clics máximo).
-* **Cero Clics Pasarela (*Zero Pass-through Clicks*):** Cada clic en la interfaz debe representar una **decisión entre alternativas**. Si un nivel intermedio solo contiene un único elemento o una lista minúscula ($\le 3$), obligar al ciudadano a hacer clic para abrirlo es un clic parásito que genera fatiga cognitiva y abandono.
-* **Protección de la Arquitectura (Anti-Colapso de Contexto):** Minimizar clics no autoriza a aplanar todo el portal en una lista única indiscriminada. La arquitectura equilibra amplitud y profundidad mediante hubs temáticos desacoplados.
-
-#### 5. Regla del Guion Largo (`—`) en Niveles No Clasificados (Anti-Simetría Forzada)
-* **Desmitificación de la Simetría:** Es un error metodológico obligar a que los 715 trámites tengan títulos en los 5 niveles. La jerarquía es asimétrica por diseño.
-* **Sintaxis de Niveles Inexistentes:** Cuando una rama se compacta a N2 o N3 y no posee subclasificación terminal:
-  - En las columnas de nivel (`Nivel 3`, `Nivel 4`, `Nivel 5`) y sus columnas de orden correspondientes (`Orden N3`, `Orden N4`, `Orden N5`), se registra estrictamente un **guion largo em-dash (`—`)**.
-  - Queda terminantemente prohibido inventar carpetas artificiales ("General", "Otros", "Trámites") o duplicar en espejo el nombre del trámite para "rellenar" la celda.
-
-#### 6. Los Niveles NO Tienen Nombre (Estructura Estrictamente Numérica N1–N5)
-* Queda terminantemente prohibido asignarle rótulos, sufijos o nombres conceptuales a los niveles jerárquicos (como "Segmento", "Régimen", "Área", "Subárea", "Actor", "Tema", "Subtema", "Tipo de Usuario", "Persona").
-* Los niveles son única y exclusivamente estructurales: **Nivel 1, Nivel 2, Nivel 3, Nivel 4, Nivel 5**. En matrices Excel, JSONs, UI, diagramas de React Flow y documentación, solo se deben rotular por su número de nivel (`Nivel X`), jamás con nombres inventados.
-
-### D. Gobernanza del Orden y Desacoplamiento Numérico
-* **Prohibición de Números Quemados en Títulos:** Queda terminantemente prohibido incluir prefijos numéricos en los textos de `Nivel 1..5` o `Nombre del Trámite` (ej. PROHIBIDO: `"1. Transmisión de Declaración"`; CORRECTO: `"Transmisión de la Declaración de Mercancías"`).
-* **Control Exclusivo por Columnas de Orden (`orden_n1` a `orden_n5`):** La posición y secuencia la gobiernan exclusivamente los campos numéricos de la matriz de 25 columnas.
-* **Criterio de Secuencia Universal por Ciclo ATO:**
-  1. `Empezar y registrarse` (altas, padrones, requisitos iniciales, carnés).
-  2. `Operación y declaraciones` (rutina operativa, transmisión DUCA, pagos, sistemas).
-  3. `Consultas y herramientas` (verificadores, consulta de expedientes, selectivo).
-  4. `Modificaciones y cierre` (renovación anual de fianza, traspasos, ceses).
-  5. `Normativa y asistencia` (capacitaciones, cursos virtuales, marco legal).
-* **Indexación en Ramas Compactadas:** Cuando una rama se compacta a N3 (como Agentes Aduaneros o Courier):
-  - `orden_n4` toma la posición ordinal **1 a 7** del trámite terminal.
-  - `nivel4_tema`, `nivel5_tramite` y `orden_n5` quedan en blanco / guion (**`—`**).
-
-### E. Estándar de Identificación Inmutable (`SAT-GES-####`)
-* **Código Universal Único:** Todo trámite, guía, consulta o descarga se gobierna por el código canónico **`SAT-GES-####`** (del `SAT-GES-0001` al `SAT-GES-0683`).
-* **Inmutabilidad Absoluta:**
-  1. No cambia ante reestructuraciones de menú o cambios de nivel.
-  2. No cambia ante reformas de nombres o títulos comerciales.
-  3. No se duplica ante proyecciones multi-audiencia (polijerarquía).
-* **Slug Semántico:** Identificador limpio en kebab-case para URLs amigables (`portal.sat.gob.gt/gestion/[slug]`).
-* **Trazabilidad Forense (`codigos_legacy`):** Los códigos de origen de hojas clásicas (`["comercio_exterior-128", "profesionales-15"]`) se archivan en `codigos_legacy` para auditoría, pero no operan como identificador primario.
-
-### F. Matriz Oficial de 25 Columnas (Opción A - Intercalada)
-Estructura canónica de los entregables Excel y datasets:
-1. `No.` | 2. `ID Trámite / Código Oficial (SAT-GES-####)` | 3. **`Orden N1`** | 4. **`Nivel 1`** | 5. **`Orden N2`** | 6. **`Nivel 2`** | 7. **`Orden N3`** | 8. **`Nivel 3`** | 9. **`Orden N4`** | 10. **`Nivel 4`** | 11. **`Orden N5`** | 12. **`Nivel 5`** | 13. `Nombre del Trámite / Servicio (Lenguaje Claro)` | 14. `Ruta de Navegación (Miga de Pan)` | 15. `Etapa Ciclo de Vida ATO` | 16. `Tipo de Interacción` | 17. `Tipología de Contenido` | 18. `Plataforma / Sistema` | 19. `Canal` | 20. `Control de Auditoría` | 21. `¿Para qué sirve? (Descripción Operativa)` | 22. `Base Legal / Fundamento Jurídico` | 23. `Ruta de Procesos Asociada` | 24. `Estado Normativo` | 25. `URL Portal SAT`
-
-### G. Taxonomía Multidimensional ATO (Australian Taxation Office)
-Cada trámite u objeto de contenido posee 4 dimensiones ortogonales:
-1. **Dimensión 1 (Perfil / Actor):** Audiencia primaria (Contribuyentes, Comercio Exterior, Entes Exentos, Profesionales) y rol específico.
-2. **Dimensión 2 (Ciclo de Vida ATO):** `empezar`, `operar`, `consultar`, `modificar_cerrar`, `normativa`. Sin prefijos numéricos en la interfaz.
-3. **Dimensión 3 (Tipología de Interacción):** `servicio_transaccional`, `consulta_datos`, `guia_informativa`, `descarga_recurso`.
-4. **Dimensión 4 (Plataforma Técnica):** Agencia Virtual, Declaraguate, Sistemas Aduaneros, Portales Públicos.
-
-### H. Plain Language (Lenguaje Ciudadano)
-* Títulos orientados a la acción con verbos infinitivos o sustantivos directos claros.
-* Cero acrónimos huérfanos o siglas opacas en títulos visibles.
-* Descripciones operativas bajo la fórmula: *[Verbo de acción] + [Objeto del trámite] + [Finalidad o beneficio ciudadano]*.
-
-### I. Gobernanza Documental Estricta
-* **Fuentes Históricas / Clásicas (Inalterables):** Se preservan intactas como testimonio de auditoría inicial (`Detalle de Contenido para Grupos de Interes.xlsx`, `Arbol_de_Navegacion_Portal_v5.xlsx`, `Ruta de procesos.xlsx`).
-* **Entregables Vivos / Oficiales (Sincronizados):** Se recalculan y mantienen en sincronía biunívoca con `src/data/allTramites.json`:
-  * `Estructura_Final_Contenido_Portal_SAT_Actualizado.xlsx` (Libro maestro con fórmulas dinámicas de resumen y matriz de 25 columnas).
-  * `Mapa_de_Navegacion_y_Descripciones_Portal_SAT.xlsx` (Mapa antes/después y fichas en lenguaje ciudadano).
-
-### J. Regla de Validación Activa y Búsqueda de URLs (Zero Enlaces Rotos)
-* **Verificación HTTP Mandatoria:** Toda URL asociada a un trámite o servicio debe ser verificada activamente contra el servidor del Portal SAT (garantizar `HTTP 200 OK`).
-* **Protocolo de Rescate para Enlaces Caídos o Genéricos:**
-  1. Si una URL retorna `404 Not Found` o apunta a la raíz genérica (`https://portal.sat.gob.gt/`), es obligatorio investigar en el portal oficial mediante búsqueda directa (`site:portal.sat.gob.gt "[tema del trámite]"`).
-  2. Localizar la ruta canónica activa reestructurada por la SAT (ej. secciones `/requisitos-tramites-aduanas/`, `/devolucion-credito-fiscal/`, `/programa-miad/`).
-  3. Comprobar que la URL rescatada responda `HTTP 200` antes de inyectarla en el dataset y en el libro Excel maestro.
-  4. Queda terminantemente prohibido publicar enlaces caídos o URLs genéricas que no resuelvan el trámite específico.
+> Para la especificación detallada de las **25 columnas oficiales (Opción A)**, la teoría de densidad ($A, A_1, A_2$) y la tabla de referencia de las 6 ramas de Comercio Exterior, consulta [references/taxonomy-and-matrix-spec.md](./references/taxonomy-and-matrix-spec.md).
 
 ---
 
-## 2. Taxonomía Canónica de Comercio Exterior (Referencia Estable)
+## 1. Reglas Críticas de Gobernanza ETL (Grado de Libertad Bajo)
 
-Distribución de los **245 trámites aduaneros** en **6 ramas maestras**:
-
-| Rama Canónica | Trámites | Subcategorías Oficiales |
-| :--- | :---: | :--- |
-| **1. Importadores** | **54** | `Registro y Padrón de Importadores` (9), `Declaraciones Aduaneras y DUCAs` (10), `Despacho Aduanero, Levante y Selectivo` (16), `Importación y Nacionalización de Vehículos` (10), `Mercancías en Abandono, Depósitos y Franquicias` (9). |
-| **2. Exportadores** | **21** | `Padrón y Registro de Exportadores` (7), `Declaraciones Aduaneras y Embarques` (4), `Devolución de Crédito Fiscal` (10). |
-| **3. Operador Económico Autorizado (OEA)** | **2** | Compactado directo en N2 (2 gestiones terminales directas, sin N3 pasarela). |
-| **4. Auxiliares de la Función Pública Aduanera (AFPA)** | **76** | `Agentes Aduaneros` (7), `Apoderados Especiales Aduaneros` (16), `Depósitos Aduaneros` (36: DAT 18, AGD 16, Fiscales 2), `Empresas de Entrega Rápida o Courier` (3), `Transportistas Aduaneros` (14). |
-| **5. Regímenes Territoriales y Zonas Especiales** | **42** | `Maquilas (Decreto 29-89)` (12), `Zonas de Desarrollo Económico Especial Público (ZDEEP)` (30: Usuarias 15, Administradoras 15). |
-| **6. Normativa y Operaciones Aduaneras Generales** | **50** | `Arancel Centroamericano (SAC) y Permisos` (7), `Acuerdos Comerciales y Facilitación` (8), `Prevención de Contrabando y Defraudación` (3), `Consultas Técnicas, Recursos y Valoración` (14), `Modernización e Infraestructura Aduanera` (18). |
+1. **Inmutabilidad de Fuentes Históricas:** Prohibido modificar los archivos en `docs/fuentes-datos/` (`Detalle de Contenido para Grupos de Interes.xlsx`, `Arbol_de_Navegacion_Portal_v5.xlsx`, `Ruta de procesos.xlsx`). Solo lectura.
+2. **Niveles Numéricos y Guion Largo (`—`):** Las columnas de jerarquía se rotulan estrictamente `Nivel 1` a `Nivel 5` y `Orden N1` a `Orden N5`. Si un nivel intermedio no aplica por compactación, inyectar exactamente `—` (guion largo) tanto en el nivel como en su columna de orden.
+3. **Desacoplamiento Numérico y Lenguaje:** Prohibido quemar números al inicio de títulos o niveles. Prohibido usar la palabra *"trámite"* en textos visibles (usar **"gestión" / "gestiones"**).
+4. **Cero Enlaces Rotos o al Home:** Ninguna gestión puede apuntar a `404` ni a `https://portal.sat.gob.gt/` genérico.
 
 ---
 
-## 3. Protocolo de Ejecución Paso a Paso (Runbook)
+## 2. Flujo de Ejecución Paso a Paso (Runbook)
 
-### Paso 1: Respaldo de Seguridad
-Antes de cualquier modificación masiva en los datos:
+### Paso 1: Respaldo Preventivo del Dataset
+Antes de correr scripts de transformación sobre el catálogo maestro:
 ```powershell
 Copy-Item "src/data/allTramites.json" "src/data/allTramites.json.bak"
 ```
 
-### Paso 2: Ejecución del Script de Normalización
-Aplicar las reglas de auditoría y consolidación taxonómica sobre el JSON:
-```powershell
-python scripts/apply_comercio_exterior_audit.py
-```
-*El script debe:*
-* Clasificar cada ID en su rama canónica y subcategoría correspondiente.
-* Reconstruir `migaBreadcrumb` sin duplicidades intermedias.
-* Sanear títulos con acrónimos crípticos.
-* Etiquetar correctamente las 12 brechas normativas (`esBrecha: true`).
+### Paso 2: Normalización Taxonómica y Saneamiento de Datos
+Ejecutar los scripts de auditoría y consolidación según la rama intervenida:
+- Auditoría general y coherencia del árbol:
+  [`scripts/auditoria_1_coherencia_arbol.py`](../../../scripts/auditoria_1_coherencia_arbol.py)
+- Verificación de números quemados en títulos/niveles:
+  [`scripts/check_numbers_in_json.py`](../../../scripts/check_numbers_in_json.py)
+- Expansión de acrónimos en títulos:
+  [`scripts/normalize_acronyms_in_titles.py`](../../../scripts/normalize_acronyms_in_titles.py)
+- Sincronización de taxonomía asimétrica:
+  [`scripts/sync_asymmetric_taxonomy.py`](../../../scripts/sync_asymmetric_taxonomy.py)
+- Generación del catálogo de 683 contenidos únicos desacoplados:
+  [`scripts/build_catalogo_contenidos_unicos.py`](../../../scripts/build_catalogo_contenidos_unicos.py)
 
-### Paso 3: Protocolo Mandatorio de Validación y Búsqueda Activa de URLs
-*Antes de publicar cualquier lote de datos o actualizar entregables:*
-1. **Auditoría HTTP Masiva:** Ejecutar prueba automatizada de red (`HEAD`/`GET`) sobre cada URL del lote.
-2. **Detección de Fricciones:** Identificar cualquier código `404 Not Found`, enlace roto o redirección pasiva a la raíz (`https://portal.sat.gob.gt/`).
-3. **Protocolo de Rescate en el Portal:** Para cada URL con error o genérica, ejecutar búsqueda activa en el portal oficial (`site:portal.sat.gob.gt "[nombre del trámite / servicio]"`).
-4. **Verificación de Enlace Activo:** Confirmar que la ruta canónica encontrada devuelva `HTTP 200 OK` y corresponda a la ficha de requisitos, procedimiento o aplicativo en línea del trámite.
-5. **Inyección Canónica:** Sustituir la URL rota por la URL activa verificada en `allTramites.json`.
+### Paso 3: Validación Activa y Rescate de URLs (`HTTP 200 OK`)
+1. Ejecutar el validador de enlaces:
+   ```powershell
+   python scripts/validate_urls.py
+   ```
+2. Si se detecta cualquier `404 Not Found` o redirección a la raíz `/`:
+   - Buscar la ruta activa en el portal oficial (`site:portal.sat.gob.gt "<nombre de la gestión>"`).
+   - Verificar que la nueva URL responda `HTTP 200 OK` y actualizarla en `src/data/allTramites.json`.
 
-### Paso 4: Sincronización de Libros Excel Entregables
-Reconstruir los libros Excel vivos utilizando `openpyxl`:
+### Paso 4: Sincronización de Contratos TypeScript (`src/data/categoryOrder.ts`)
+Si cambiaron nombres u órdenes de `Nivel 2` o `Nivel 3`:
+1. Actualizar `OFFICIAL_CATEGORY_ORDER` y `SPECIFIC_SUBCATEGORY_ORDER` en [`src/data/categoryOrder.ts`](../../../src/data/categoryOrder.ts).
+2. Si se modificaron descripciones de nodos taxonómicos, ejecutar:
+   ```powershell
+   python scripts/generate_taxonomy_descriptions_ts.py
+   ```
+
+### Paso 5: Regeneración de Libros Excel Entregables Vivos
+Reconstruir los libros maestros sincronizados con `src/data/allTramites.json`:
 ```powershell
 python scripts/build_final_excel_deliverable.py
 python scripts/build_mapa_y_descripciones_excel.py
+python scripts/build_catalogo_contenidos_excel.py
 ```
-*Verificar que:*
-* Se emita la matriz oficial de **25 columnas (Opción A)** con `Orden Contenido` y códigos `SAT-GES-####`.
-* Las fórmulas `=COUNTA`, `=COUNTIF`, `=SUM` de la hoja `Resumen Arquitectura` operen sin errores `#REF!` o `#VALUE!`.
-* El conteo total de filas coincida exactamente con la longitud del JSON.
-* Las fuentes clásicas en `docs/fuentes-datos/` no hayan sufrido alteración.
-
-### Paso 5: Actualización del Contrato de Datos (`src/data/categoryOrder.ts`)
-Actualizar las constantes que rigen la unión entre UI y datos:
-1. `OFFICIAL_CATEGORY_ORDER.comercio_exterior`: Contener exactamente las 6 ramas oficiales.
-2. `SPECIFIC_SUBCATEGORY_ORDER`: Mapear las subcategorías oficiales para cada una de las 6 ramas.
-3. Asegurar que no queden referencias a las 12 categorías planas obsoletas.
-
-### Paso 6: Verificación Automatizada (Build y Tests)
-Ejecutar la suite completa de pruebas:
-```powershell
-# 1. Compilación de producción
-npm run build
-
-# 2. Pruebas de accesibilidad y contrato de datos
-npx playwright test
-```
-*Criterio de Aceptación:*
-* **20 de 20 tests aprobados (100%)**.
-* 0 violaciones WCAG 2.2 AA detectadas por axe-core en modales, páginas y flujos.
-* `order categorías: cada nombre oficial existe en el dataset` $\to$ APROBADO.
-* `order subcategorías: nombres oficiales existen y cubren categorías` $\to$ APROBADO.
-* `catalogoContenidosUnicos: 683 contenidos únicos desacoplados y suma exacta de audiencias` $\to$ APROBADO.
-
-### Paso 7: Actualización Documental en Markdown
-Actualizar la documentación técnica para reflejar los cambios:
-* `docs/arquitectura-informacion/ESTRUCTURA_FINAL_CONTENIDO.md`
-* `docs/arquitectura-informacion/TAXONOMIA_Y_DIMENSIONES_PORTAL_SAT.md`
-* `docs/arquitectura-informacion/MAPA_DE_NAVEGACION_COMERCIO_EXTERIOR.md`
-* `docs/arquitectura-informacion/MAPA_DE_NAVEGACION_PROFESIONALES.md`
-* `docs/arquitectura-informacion/brechas-comercio-exterior.md`
-* `docs/fuentes-datos/README.md`
-* `docs/README.md`
-* `database/README.md`
+- **Auditar entregables generados:**
+  ```powershell
+  python scripts/audit_entregables_completa.py
+  ```
+  Confirmar que las 25 columnas estén completas, que las hojas de resumen no tengan errores `#REF!` / `#VALUE!` y que el conteo de filas coincida exactamente con el JSON.
 
 ---
 
-## 4. Checklist Rápido de Calidad (DoD - Definition of Done)
+## 3. Bucle de Verificación Obligatorio (Feedback Loop)
 
-- [ ] **100% URLs Validadas (`HTTP 200 OK`)**: Cero errores 404 y cero URLs genéricas al Home.
-- [ ] **Códigos Canónicos `SAT-GES-####`**: Clave universal inyectada en Columna 2 y JSON, cero IDs viejos en producción.
-- [ ] **Gobernanza del Orden**: Cero números quemados en títulos de trámites y columnas `Orden N1..N5` + `Orden Contenido` activas.
-- [ ] **Ley de Miller ($7 \pm 2$) y Sub-densidad**: Cero carpetas con 1 o 2 trámites y cero listas planas mayores a 9 elementos.
-- [ ] **0 Duplicados**: Filas redundantes fusionadas formalmente.
-- [ ] **Fuentes históricas intactas** (`Detalle de Contenido...`, `Arbol_de_Navegacion...`, `Ruta de procesos...`).
-- [ ] **Libros Excel vivos recalculados** y sincronizados con `allTramites.json`.
-- [ ] **`npm run build`** finalizado con 0 errores de tipado o compilación.
-- [ ] **`npx playwright test`** pasando al 100% (20/20 pruebas en verde).
+Ninguna ejecución ETL se da por terminada sin superar este bucle de pruebas:
+
+1. **Compilación y tipado estricto:**
+   ```powershell
+   npm run build
+   ```
+2. **Suite de pruebas E2E, contrato de datos y accesibilidad:**
+   ```powershell
+   npx playwright test
+   ```
+3. **Si algún test falla:**
+   - Leer la traza de error de Playwright (ej. desajuste entre `OFFICIAL_CATEGORY_ORDER` y `allTramites.json`, conteo de contenidos únicos o violación axe-core).
+   - Corregir el dato en el script/JSON o actualizar `categoryOrder.ts`, regenerar los Excel si aplica y **volver a ejecutar `npx playwright test` hasta obtener 100% en verde**.
+4. **Limpieza:** Eliminar `src/data/allTramites.json.bak` una vez validado el éxito total.

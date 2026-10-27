@@ -25,6 +25,15 @@ interface SegmentTramitesCatalogProps {
   onSubcategoryChange?: (subcategory: string | null) => void;
 }
 
+const ETAPAS_ATO_FILTER: { id: EtapaAtoId | 'todas'; label: string }[] = [
+  { id: 'todas', label: 'Todas las etapas' },
+  { id: 'empezar', label: '1. Empezar' },
+  { id: 'operar', label: '2. Operar' },
+  { id: 'consultar', label: '3. Consultar' },
+  { id: 'modificar_cerrar', label: '4. Modificar o Cerrar' },
+  { id: 'normativa', label: '5. Normativa' },
+];
+
 const SEGMENT_METADATA: Record<SegmentId, {
   title: string;
   shortTitle: string;
@@ -66,6 +75,7 @@ const SEGMENT_CARD_TONE: Record<SegmentId, CardTone> = {
 
 const CATEGORY_DESCRIPTIONS: Record<string, string> = {
   'NIT sin Obligaciones': 'Personas individuales, estudiantes y graduados sin actividad económica que requieren NIT para gestiones civiles, cuentas bancarias, títulos y remesas.',
+  'Sin Obligaciones': 'Personas individuales, estudiantes y graduados sin actividad económica que requieren NIT para gestiones civiles, cuentas bancarias, títulos y remesas.',
   'Pequeños Contribuyentes': 'Información y obligaciones para pequeños negocios y régimen simplificado.',
   'Contribuyente General': 'Personas y empresas con obligaciones generales de IVA e ISR, facturación electrónica, asalariados y gestión vehicular.',
   'Contribuyentes Especiales': 'Medianos y grandes contribuyentes sujetos a control diferenciado y gerencias de fiscalización tributaria intensiva.',
@@ -201,7 +211,6 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
   allTramites,
   onSelectTramite,
   onBackToHome,
-  onSwitchSegment,
   onCategoryChange,
   onSubcategoryChange
 }) => {
@@ -215,15 +224,23 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
   // Subcategoría seleccionada
   const [selectedSubcategory, setSelectedSubcategory] = useState<string | null>(initialSubcategory || null);
 
+  // Filtros facetados (Etapa del Ciclo ATO y Tipo de Interacción)
+  const [selectedEtapaAto, setSelectedEtapaAto] = useState<EtapaAtoId | 'todas'>(initialEtapaAto);
+  const [selectedTipoInteraccion, setSelectedTipoInteraccion] = useState<TipoInteraccionId | 'todos'>(initialTipoInteraccion);
+
   const updateCategory = (cat: string | null) => {
     setSelectedCategory(cat);
     setSelectedSubcategory(null);
+    setSelectedEtapaAto('todas');
+    setSelectedTipoInteraccion('todos');
     onCategoryChange?.(cat);
     onSubcategoryChange?.(null);
   };
 
   const updateSubcategory = (sub: string | null) => {
     setSelectedSubcategory(sub);
+    setSelectedEtapaAto('todas');
+    setSelectedTipoInteraccion('todos');
     onSubcategoryChange?.(sub);
   };
 
@@ -236,7 +253,9 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
     if (initialSubcategory !== undefined) {
       setSelectedSubcategory(initialSubcategory || null);
     }
-  }, [initialCategory, initialSubcategory, segmentId]);
+    setSelectedEtapaAto(initialEtapaAto);
+    setSelectedTipoInteraccion(initialTipoInteraccion);
+  }, [initialCategory, initialSubcategory, initialEtapaAto, initialTipoInteraccion, segmentId]);
 
   // Sincronización con window.location.hash para Deep Linking en GitHub Pages
   useEffect(() => {
@@ -246,17 +265,19 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
     if (selectedCategory && selectedSubcategory) {
       params.set('subcategoria', subcategoriaId(categoriaId(segmentId, selectedCategory), selectedSubcategory));
     }
+    if (selectedEtapaAto !== 'todas') params.set('etapa', selectedEtapaAto);
+    if (selectedTipoInteraccion !== 'todos') params.set('tipo', selectedTipoInteraccion);
 
     const targetHash = '#/catalogo?' + params.toString();
     if (window.location.hash !== targetHash) {
       window.history.replaceState(null, '', targetHash);
     }
-  }, [segmentId, selectedCategory, selectedSubcategory]);
+  }, [segmentId, selectedCategory, selectedSubcategory, selectedEtapaAto, selectedTipoInteraccion]);
 
   const meta = SEGMENT_METADATA[segmentId];
   const cardTone = SEGMENT_CARD_TONE[segmentId];
 
-  // Trámites del segmento actual (leídos directamente de allTramites consolidado)
+  // Gestiones del segmento actual
   const segmentTramites = useMemo(() => {
     return allTramites.filter(t => t.pillar === segmentId);
   }, [allTramites, segmentId]);
@@ -279,7 +300,7 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
   }, [segmentTramites, segmentId]);
 
   // Subcategorías disponibles dentro de la categoría seleccionada
-const subcategoriesList = useMemo(() => {
+  const subcategoriesList = useMemo(() => {
     if (!selectedCategory) return [];
     const inCurrentCategory = segmentTramites.filter(t => t.categoria === selectedCategory);
     const set = new Set<string>();
@@ -291,9 +312,8 @@ const subcategoriesList = useMemo(() => {
     return Array.from(set).sort((a, b) => compareByCategoryOrder(orderList, a, b));
   }, [segmentTramites, selectedCategory]);
 
-  // Trámites finales (filtrados por subcategoría o búsqueda directa)
-  // Regla de Umbral de Densidad: categorías con subcategoría única o compactada exponen sus trámites directamente
-  const currentTramites = useMemo(() => {
+  // Lista base del contenedor antes de filtros facetados ATO/Tipo
+  const baseLevelTramites = useMemo(() => {
     let list: TramiteItem[] = [];
 
     if (internalQuery.trim()) {
@@ -324,13 +344,19 @@ const subcategoriesList = useMemo(() => {
           t => t.categoria === selectedCategory || t.nivel2 === selectedCategory
         );
       }
-    } else {
-      return [];
     }
 
-    // Ordenamiento canónico oficial (orden_n1..orden_n5, orden_contenido y ciclo de vida ATO)
     return [...list].sort(compareCanonicalTramiteOrder);
   }, [segmentTramites, selectedCategory, selectedSubcategory, subcategoriesList, internalQuery]);
+
+  // Gestiones finales tras aplicar filtros facetados (etapaAto y tipoInteraccion)
+  const currentTramites = useMemo(() => {
+    return baseLevelTramites.filter(t => {
+      if (selectedEtapaAto !== 'todas' && t.etapaAto !== selectedEtapaAto) return false;
+      if (selectedTipoInteraccion !== 'todos' && t.tipoInteraccion !== selectedTipoInteraccion) return false;
+      return true;
+    });
+  }, [baseLevelTramites, selectedEtapaAto, selectedTipoInteraccion]);
 
   // Navegación limpia de migas de pan
   const handleResetToCategories = () => {
@@ -462,7 +488,9 @@ const subcategoriesList = useMemo(() => {
           <div className="relative w-full md:w-80 shrink-0">
             <Search className="w-4 h-4 text-[#94A3B8] absolute left-3 top-1/2 -translate-y-1/2" />
             <input
-              type="text"
+              type="search"
+              id="sat-segment-search" name="segment_q" inputMode="search"
+              enterKeyHint="search"
               value={internalQuery}
               onChange={(e) => setInternalQuery(e.target.value)}
               placeholder="Buscar en este segmento..."
@@ -568,15 +596,15 @@ const subcategoriesList = useMemo(() => {
                     </div>
                   </div>
                 ) : (
-                  <div>
-                    <div className="flex items-center justify-between mb-3 pb-2 border-b border-[#E2E8F0]">
+                  <div className="space-y-3.5">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-2 border-b border-[#E2E8F0]">
                       <h2 className="text-xs font-bold uppercase tracking-wider text-[#64748B]">
                         Servicios y gestiones ({currentTramites.length})
                       </h2>
                       {subcategoriesList.length > 1 ? (
                         <button
                           onClick={handleResetToSubcategories}
-                          className="inline-flex items-center gap-1.5 text-xs font-bold text-[#14649B] hover:underline"
+                          className="inline-flex items-center gap-1.5 text-xs font-bold text-[#14649B] hover:underline self-start sm:self-auto"
                         >
                           <ArrowLeft className="w-3.5 h-3.5" />
                           <span>Volver a subtemas</span>
@@ -584,7 +612,7 @@ const subcategoriesList = useMemo(() => {
                       ) : (
                         <button
                           onClick={handleResetToCategories}
-                          className="inline-flex items-center gap-1.5 text-xs font-bold text-[#14649B] hover:underline"
+                          className="inline-flex items-center gap-1.5 text-xs font-bold text-[#14649B] hover:underline self-start sm:self-auto"
                         >
                           <ArrowLeft className="w-3.5 h-3.5" />
                           <span>Volver a {meta.shortTitle}</span>
@@ -592,9 +620,43 @@ const subcategoriesList = useMemo(() => {
                       )}
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-3.5">
-                      {currentTramites.map(renderTramiteCard)}
-                    </div>
+                    {/* Barra compacta de filtro por Etapa del Ciclo ATO (solo cuando hay >= 6 gestiones en el nivel) */}
+                    {baseLevelTramites.length >= 6 && (
+                      <div
+                        role="group"
+                        aria-label="Filtrar por etapa del ciclo de vida"
+                        className="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-1"
+                      >
+                        {ETAPAS_ATO_FILTER.map((stg) => {
+                          const isActive = selectedEtapaAto === stg.id;
+                          return (
+                            <button
+                              key={stg.id}
+                              type="button"
+                              onClick={() => setSelectedEtapaAto(stg.id)}
+                              aria-pressed={isActive}
+                              className={`px-3 py-1.5 rounded-full text-xs font-bold whitespace-nowrap transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-sat-azul ${
+                                isActive
+                                  ? 'bg-sat-azul-oscuro text-white shadow-xs'
+                                  : 'bg-sat-fondo-tenue text-sat-texto-suave border border-sat-gris hover:text-sat-azul-oscuro hover:bg-sat-fondo-medio'
+                              }`}
+                            >
+                              {stg.label}
+                            </button>
+                          );
+                        })}
+                      </div>
+                    )}
+
+                    {currentTramites.length > 0 ? (
+                      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-3.5">
+                        {currentTramites.map(renderTramiteCard)}
+                      </div>
+                    ) : (
+                      <Alert tone="info" title="No hay gestiones en esta etapa">
+                        Selecciona «Todas las etapas» para ver todas las gestiones disponibles en esta sección.
+                      </Alert>
+                    )}
                   </div>
                 )}
               </div>

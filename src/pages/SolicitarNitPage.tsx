@@ -98,7 +98,7 @@ const MODALIDADES_CIUDADANAS: Record<ModalidadNitId, ModalidadNitData> = {
     resultadoObtenido:
       'Recibirás la confirmación en tu correo y podrás descargar tu Constancia de Inscripción en el Registro Tributario Unificado (RTU) directamente desde Agencia Virtual.',
     advertenciaDpi:
-      'Tu DPI debe estar físico y vigente. No se acepta la constancia de trámite o renovación emitida por el RENAP.',
+      'Tu DPI debe estar físico y vigente. No se acepta la constancia de solicitud o renovación emitida por el RENAP.',
   },
 
   con_obligaciones: {
@@ -143,7 +143,7 @@ const MODALIDADES_CIUDADANAS: Record<ModalidadNitId, ModalidadNitData> = {
     resultadoObtenido:
       'Obtendrás tu Constancia de Inscripción y Actualización de Datos en el RTU con tus obligaciones e impuestos afiliados.',
     advertenciaDpi:
-      'Tu DPI debe estar físico y vigente. No se acepta la constancia de trámite o renovación emitida por el RENAP.',
+      'Tu DPI debe estar físico y vigente. No se acepta la constancia de solicitud o renovación emitida por el RENAP.',
   },
 
   discapacidad_invalidez: {
@@ -238,7 +238,7 @@ const MODALIDADES_CIUDADANAS: Record<ModalidadNitId, ModalidadNitData> = {
     resultadoObtenido:
       'Constancia de Inscripción y Actualización del RTU disponible para descarga en Agencia Virtual.',
     advertenciaDpi:
-      'El DPI debe estar físico y vigente. No se acepta la constancia de trámite o renovación emitida por el RENAP.',
+      'El DPI debe estar físico y vigente. No se acepta la constancia de solicitud o renovación emitida por el RENAP.',
   },
 };
 
@@ -338,7 +338,7 @@ export const SolicitarNitPage: React.FC<SolicitarNitPageProps> = ({
                 {pasoActivo > 1 ? <Check className="w-4 h-4" /> : '1'}
               </div>
               <div>
-                <span className="text-[10px] font-extrabold uppercase tracking-wider block opacity-80">
+                <span className="text-[10px]  block">
                   Paso 1 · Preparación
                 </span>
                 <span className="font-bold text-xs sm:text-sm block leading-tight">
@@ -364,7 +364,7 @@ export const SolicitarNitPage: React.FC<SolicitarNitPageProps> = ({
                 {pasoActivo > 2 ? <Check className="w-4 h-4" /> : '2'}
               </div>
               <div>
-                <span className="text-[10px] font-extrabold uppercase tracking-wider block opacity-80">
+                <span className="text-[10px]  block">
                   Paso 2 · Formulario en Línea
                 </span>
                 <span className="font-bold text-xs sm:text-sm block leading-tight">
@@ -388,7 +388,7 @@ export const SolicitarNitPage: React.FC<SolicitarNitPageProps> = ({
                 3
               </div>
               <div>
-                <span className="text-[10px] font-extrabold uppercase tracking-wider block opacity-80">
+                <span className="text-[10px]  block">
                   Paso 3 · Cita Controlada
                 </span>
                 <span className="font-bold text-xs sm:text-sm block leading-tight">
@@ -745,7 +745,7 @@ export const SolicitarNitPage: React.FC<SolicitarNitPageProps> = ({
                 <div className="p-3.5 rounded-xl bg-amber-50 border border-amber-200 text-amber-950 space-y-1">
                   <p className="font-bold flex items-center gap-1.5">
                     <AlertCircle className="w-4 h-4 text-amber-700 shrink-0" />
-                    <span>Trámite personal e intransferible</span>
+                    <span>Gestión personal e intransferible</span>
                   </p>
                   <p className="leading-relaxed">
                     La cita se registra con tu correo y número de solicitud. Haz buen uso de esta herramienta para evitar la anulación de tu gestión.

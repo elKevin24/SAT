@@ -1,16 +1,18 @@
-# Guía Operativa de Implementación: Portal SAT en WordPress + The7 Classic + WPBakery
+# Guía Operativa de Implementación: Portal SAT en WordPress + The7 Classic + WPBakery (100% Cero `[vc_raw_html]`)
 
-Esta guía describe el procedimiento paso a paso, **100% manual y sin requerir línea de comandos (CLI)**, para construir, maquetar y publicar la Arquitectura de Información (Nivel 1 a Nivel 5) y los procesos conectados del **Portal SAT Guatemala** en **WordPress** utilizando el tema **The7 (estilo Classic)** y **WPBakery Page Builder**.
+Esta guía describe el procedimiento paso a paso, **100% manual, sin línea de comandos (CLI) y estrictamente SIN usar `[vc_raw_html]` (Raw HTML)**, para construir, maquetar y publicar la Arquitectura de Información (Nivel 1 a Nivel 5) y los procesos conectados del **Portal SAT Guatemala** en **WordPress** utilizando el tema **The7 (estilo Classic)** y **WPBakery Page Builder**.
 
 ---
 
 ## 1. Prerrequisitos y Configuración Inicial de WordPress
 
-### 1.1 Plugins Requeridos
-Asegúrate de que los siguientes componentes estén instalados y activos en WordPress:
-1. **The7 Theme** (Dream-Theme) con preset de diseño **Classic**.
-2. **WPBakery Page Builder** (incluido con The7).
-3. **Ultimate Addons for WPBakery Page Builder** (provee el elemento `[bsf-info-box]`, incluido en los plugins recomendados de The7).
+### 1.1 Componentes y Bloques Nativos Permitidos (Sin Raw HTML)
+Asegúrate de que los siguientes componentes estén activos en WordPress:
+1. **The7 Theme** (Dream-Theme) con preset **Classic** (`[dt_breadcrumbs]`, `[dt_fancy_title]`).
+2. **WPBakery Page Builder** (`[vc_section]`, `[vc_row]`, `[vc_column]`, `[vc_custom_heading]`, `[vc_column_text]`, `[vc_tta_tabs]`, `[vc_tta_section]`, `[vc_message]`, `[vc_empty_space]`, `[vc_separator]`).
+3. **Ultimate Addons for WPBakery Page Builder** (`[bsf-info-box icon_type="none" read_more="box"]`, utilizado como tarjeta clickeable nativa de WPBakery sin íconos ni botones redundantes).
+
+> **Restricción Institucional Estricta:** Ninguna de las **156 plantillas** en `docs/plantillas-wpbakery/` utiliza `[vc_raw_html]`. Todo el portal se construye exclusivamente con shortcodes nativos de WPBakery + The7 y una sola hoja de estilos CSS en las opciones del tema.
 
 ### 1.2 Estructura de Enlaces Permanentes (*Permalinks*)
 Para que las URLs jerárquicas y limpias (como `/solicitar-nit/` o `/contribuyentes/contribuyente-general/`) funcionen sin colisiones:
@@ -20,129 +22,78 @@ Para que las URLs jerárquicas y limpias (como `/solicitar-nit/` o `/contribuyen
 
 ---
 
-## 2. Paso 1: Integración de Estilos CSS Oficiales de SAT
+## 2. Paso 1: Integración del CSS Oficial del Design System SAT
 
-Los shortcodes de WPBakery requieren las clases y variables institucionales de SAT para renderizar bordes de colores por segmento, tipografía corporativa, pestañas de procesos conectados en 3 pasos, contenedores de iframes oficiales y efectos *hover*.
+Los shortcodes nativos de WPBakery (`[bsf-info-box]`, `[vc_tta_tabs]`, `.sat-modalidad-card`) reciben automáticamente el diseño normativo del SAT (`bg-white`, `border: 1px solid #DCDCDC`, `border-radius: 14px`, cero íconos y **hover sólido institucional** con texto blanco) pegando la hoja de estilos maestra [`docs/diseno-normativa/sat-design-system-wpbakery.css`](file:///c:/Users/busqu/Documents/GitHub/SAT/docs/diseno-normativa/sat-design-system-wpbakery.css).
 
 1. En tu panel de WordPress, dirígete a:  
    **The7 > Theme Options > Advanced > Custom CSS**  
    *(Alternativa nativa: Apariencia > Personalizar > CSS adicional)*.
-2. Copia íntegramente el siguiente bloque y pégalo en el editor:
+2. Copia íntegramente el contenido de [`docs/diseno-normativa/sat-design-system-wpbakery.css`](file:///c:/Users/busqu/Documents/GitHub/SAT/docs/diseno-normativa/sat-design-system-wpbakery.css) (o cópialo con 1 clic desde el **Modo WPBakery** integrado en la aplicación web) y pégalo en el editor:
 
 ```css
-/* ============================================================================
- * SAT GUATEMALA — ESTILOS OFICIALES PARA THE7 CLASSIC & WPBAKERY
- * ============================================================================ */
 :root {
   --sat-azul-institucional: #003865;
-  --sat-celeste-sat: #0072ce;
+  --sat-azul-oscuro: #19324b;
+  --sat-celeste: #19afe1;
   --sat-color-contribuyentes: #14649b;
   --sat-color-comercio: #0284c7;
-  --sat-color-profesionales: #2e7d32;
+  --sat-color-profesionales: #4d8014;
   --sat-color-exentos: #c25e00;
-  --sat-card-border: #dde2e5;
+  --sat-card-bg: #ffffff;
+  --sat-card-border: #dcdcdc;
   --sat-text-title: #19324b;
   --sat-text-desc: #475569;
+  --sat-radius: 14px;
+  --sat-font-family: "Gotham", "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-/* 1. HERO INSTITUCIONAL */
-.sat-hero-section {
-  background: linear-gradient(135deg, #003865 0%, #19324b 100%) !important;
-  color: #ffffff !important;
-  border-bottom: 4px solid var(--sat-celeste-sat);
-}
-.sat-hero-section h1, .sat-hero-section p { color: #ffffff !important; margin: 0 auto !important; }
+/* Filas Flex de altura uniforme en WPBakery */
+.vc_row.vc_row-flex > .vc_column_container { display: flex !important; }
+.vc_row.vc_row-flex > .vc_column_container > .vc_column-inner { display: flex !important; flex-direction: column !important; flex-grow: 1 !important; width: 100% !important; }
+.vc_row.vc_row-flex > .vc_column_container > .vc_column-inner > .wpb_wrapper { display: flex !important; flex-direction: column !important; flex: 1 1 auto !important; width: 100% !important; }
+.vc_row.vc_row-flex .aio-icon-component, .vc_row.vc_row-flex .bsf-info-box-link { display: flex !important; flex-direction: column !important; flex: 1 1 auto !important; width: 100% !important; text-decoration: none !important; }
 
-/* 2. ACCESOS RÁPIDOS */
-.sat-quick-access-row .aio-icon-box, .sat-quick-access-row .bsf-info-box {
-  background: #ffffff !important;
-  border: 1px solid var(--sat-card-border) !important;
-  border-top: 3px solid var(--sat-azul-institucional) !important;
-  border-radius: 6px !important;
-  padding: 12px 14px !important;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.04) !important;
-  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
-}
-.sat-quick-access-row .aio-icon-box:hover, .sat-quick-access-row .bsf-info-box:hover {
-  transform: translateY(-2px) !important;
-  border-top-color: var(--sat-celeste-sat) !important;
-}
-.sat-quick-access-row .aio-icon-title, .sat-quick-access-row .info-box-title {
-  font-size: 13px !important; font-weight: 700 !important; color: var(--sat-azul-institucional) !important;
-}
-.sat-quick-access-row .aio-icon-description, .sat-quick-access-row .info-box-description {
-  font-size: 11px !important; color: var(--sat-text-desc) !important; line-height: 1.3 !important;
-}
-
-/* 3. TARJETAS DE NIVEL 1 */
-.sat-seccion-macro-segmentos .aio-icon-box, .sat-seccion-macro-segmentos .bsf-info-box {
-  background: #ffffff !important;
-  border: 1px solid var(--sat-card-border) !important;
-  border-radius: 8px !important;
-  padding: 22px 18px !important;
-  min-height: 160px !important;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05) !important;
-  transition: all 0.2s ease !important;
-}
-.sat-seccion-macro-segmentos .aio-icon-box:hover, .sat-seccion-macro-segmentos .bsf-info-box:hover {
-  transform: translateY(-4px) !important;
-  box-shadow: 0 10px 24px rgba(0,0,0,0.09) !important;
-}
-.sat-seccion-macro-segmentos .vc_column_container:nth-child(1) .aio-icon-box { border-top: 4px solid var(--sat-color-contribuyentes) !important; }
-.sat-seccion-macro-segmentos .vc_column_container:nth-child(2) .aio-icon-box { border-top: 4px solid var(--sat-color-comercio) !important; }
-.sat-seccion-macro-segmentos .vc_column_container:nth-child(3) .aio-icon-box { border-top: 4px solid var(--sat-color-profesionales) !important; }
-.sat-seccion-macro-segmentos .vc_column_container:nth-child(4) .aio-icon-box { border-top: 4px solid var(--sat-color-exentos) !important; }
-
-/* 4. TARJETAS DE GESTIONES Y NIVELES INTERNOS (NIVEL 2, NIVEL 3 Y NIVEL 4) */
+/* Tarjetas compactas oficiales ([bsf-info-box] & .sat-card) */
+.sat-seccion-macro-segmentos .aio-icon-box, .sat-seccion-macro-segmentos .bsf-info-box,
 .sat-seccion-contribuyentes .aio-icon-box, .sat-seccion-contribuyentes .bsf-info-box,
 .sat-seccion-comercio-exterior .aio-icon-box, .sat-seccion-comercio-exterior .bsf-info-box,
 .sat-seccion-profesionales .aio-icon-box, .sat-seccion-profesionales .bsf-info-box,
 .sat-seccion-entes-exentos .aio-icon-box, .sat-seccion-entes-exentos .bsf-info-box {
-  background: #ffffff !important;
-  border: 1px solid var(--sat-card-border) !important;
-  border-radius: 8px !important;
-  padding: 16px 18px !important;
-  margin-bottom: 14px !important;
-  min-height: 130px !important;
-  transition: all 0.2s ease !important;
-}
-.sat-seccion-contribuyentes .aio-icon-box:hover, .sat-seccion-contribuyentes .bsf-info-box:hover,
-.sat-seccion-comercio-exterior .aio-icon-box:hover, .sat-seccion-comercio-exterior .bsf-info-box:hover,
-.sat-seccion-profesionales .aio-icon-box:hover, .sat-seccion-profesionales .bsf-info-box:hover,
-.sat-seccion-entes-exentos .aio-icon-box:hover, .sat-seccion-entes-exentos .bsf-info-box:hover {
-  transform: translateY(-3px) !important;
-  border-color: var(--sat-celeste-sat) !important;
-  box-shadow: 0 8px 18px rgba(0,0,0,0.08) !important;
-}
-.sat-seccion-contribuyentes .aio-icon-title, .sat-seccion-contribuyentes .info-box-title,
-.sat-seccion-comercio-exterior .aio-icon-title, .sat-seccion-comercio-exterior .info-box-title,
-.sat-seccion-profesionales .aio-icon-title, .sat-seccion-profesionales .info-box-title,
-.sat-seccion-entes-exentos .aio-icon-title, .sat-seccion-entes-exentos .info-box-title {
-  font-size: 15px !important; font-weight: 700 !important; color: var(--sat-azul-institucional) !important; line-height: 1.35 !important;
-}
-.sat-seccion-contribuyentes .aio-icon-description, .sat-seccion-contribuyentes .info-box-description,
-.sat-seccion-comercio-exterior .aio-icon-description, .sat-seccion-comercio-exterior .info-box-description,
-.sat-seccion-profesionales .aio-icon-description, .sat-seccion-profesionales .info-box-description,
-.sat-seccion-entes-exentos .aio-icon-description, .sat-seccion-entes-exentos .info-box-description {
-  font-size: 12.5px !important; color: var(--sat-text-desc) !important; line-height: 1.45 !important;
+  display: flex !important; flex-direction: column !important; justify-content: flex-start !important;
+  width: 100% !important; height: 100% !important; min-height: 132px !important;
+  background-color: var(--sat-card-bg) !important; border: 1px solid var(--sat-card-border) !important;
+  border-radius: var(--sat-radius) !important; padding: 20px 22px !important; margin-bottom: 14px !important;
+  transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease !important;
 }
 
-/* 5. PESTAÑAS CONECTADAS DE 3 PASOS E IFRAMES OFICIALES (SOLICITAR NIT) */
-.sat-connected-steps-tabs .vc_tta-tabs-list .vc_tta-tab > a {
-  font-weight: 700 !important;
-  font-size: 14px !important;
-  padding: 14px 24px !important;
+/* Hover institucional sólido por Nivel 1 con textos blancos */
+.sat-seccion-macro-segmentos .vc_column_container:nth-child(1) .aio-icon-box:hover,
+.sat-seccion-contribuyentes .aio-icon-box:hover, .sat-seccion-contribuyentes .bsf-info-box:hover {
+  background-color: var(--sat-color-contribuyentes) !important; border-color: var(--sat-color-contribuyentes) !important;
+  transform: translateY(-4px) !important; box-shadow: 0 14px 30px rgba(20, 100, 155, 0.18) !important;
 }
-.sat-connected-steps-tabs .vc_tta-tab.vc_active > a {
-  background-color: var(--sat-azul-institucional) !important;
+.sat-seccion-macro-segmentos .vc_column_container:nth-child(2) .aio-icon-box:hover,
+.sat-seccion-comercio-exterior .aio-icon-box:hover, .sat-seccion-comercio-exterior .bsf-info-box:hover {
+  background-color: var(--sat-color-comercio) !important; border-color: var(--sat-color-comercio) !important;
+  transform: translateY(-4px) !important; box-shadow: 0 14px 30px rgba(2, 132, 199, 0.18) !important;
+}
+.sat-seccion-macro-segmentos .vc_column_container:nth-child(3) .aio-icon-box:hover,
+.sat-seccion-profesionales .aio-icon-box:hover, .sat-seccion-profesionales .bsf-info-box:hover {
+  background-color: var(--sat-color-profesionales) !important; border-color: var(--sat-color-profesionales) !important;
+  transform: translateY(-4px) !important; box-shadow: 0 14px 30px rgba(77, 128, 20, 0.18) !important;
+}
+.sat-seccion-macro-segmentos .vc_column_container:nth-child(4) .aio-icon-box:hover,
+.sat-seccion-entes-exentos .aio-icon-box:hover, .sat-seccion-entes-exentos .bsf-info-box:hover {
+  background-color: var(--sat-color-exentos) !important; border-color: var(--sat-color-exentos) !important;
+  transform: translateY(-4px) !important; box-shadow: 0 14px 30px rgba(194, 94, 0, 0.18) !important;
+}
+.sat-seccion-macro-segmentos .aio-icon-box:hover *, .sat-seccion-macro-segmentos .bsf-info-box:hover *,
+.sat-seccion-contribuyentes .aio-icon-box:hover *, .sat-seccion-contribuyentes .bsf-info-box:hover *,
+.sat-seccion-comercio-exterior .aio-icon-box:hover *, .sat-seccion-comercio-exterior .bsf-info-box:hover *,
+.sat-seccion-profesionales .aio-icon-box:hover *, .sat-seccion-profesionales .bsf-info-box:hover *,
+.sat-seccion-entes-exentos .aio-icon-box:hover *, .sat-seccion-entes-exentos .bsf-info-box:hover * {
   color: #ffffff !important;
-  border-color: var(--sat-azul-institucional) !important;
-}
-.sat-modalidad-card {
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
-}
-.sat-modalidad-card:hover {
-  box-shadow: 0 8px 20px rgba(0,56,101,0.08);
 }
 ```
 
@@ -156,74 +107,40 @@ El código íntegro de la portada se encuentra en **`docs/plantillas-wpbakery/HO
 
 1. En WordPress, ve a **Páginas > Añadir nueva**.
 2. Título de la página: `Inicio` (o `Portal SAT`).
-3. En la barra superior del editor, activa **WPBakery Page Builder** y selecciona la pestaña **Modo Clásico** / **Texto** (para ver el editor HTML/Shortcode).
-4. Copia y pega el contenido de `docs/plantillas-wpbakery/HOME_portada-portal-sat.txt`.
+3. En la barra superior del editor, activa **WPBakery Page Builder** y cambia a **Modo Clásico** -> pestaña **Texto** (donde se pegan los shortcodes `[vc_row]...`, **sin** usar el bloque `[vc_raw_html]`).
+4. Copia y pega el contenido de `docs/plantillas-wpbakery/HOME_portada-portal-sat.txt`. Al volver a **Backend Editor**, WPBakery mostrará automáticamente todas las filas, columnas y cajas `[bsf-info-box]` listas para editar visualmente.
 5. En la barra lateral derecha (**Atributos de página > Plantilla**), selecciona `Default Template` (ancho completo sin barra lateral).
 6. Haz clic en **Publicar** y configúrala como página de inicio en **Ajustes > Lectura > Tu portada muestra: Una página estática (`Inicio`)**.
 
 ---
 
-## 4. Paso 3: Creación de las Páginas Universales Conectadas en 3 Pasos (`/solicitar-nit/` y `/actualizar-rtu/`)
+## 4. Paso 3: Creación de las Páginas Universales Conectadas en 3 Pasos (`/solicitar-nit/` y `/actualizar-rtu/`) — Sin `[vc_raw_html]`
 
-Para evitar redirecciones dispersas o ventanas modales (prohibidas por Regla 13), las gestiones de más alta demanda del Registro Tributario Unificado (RTU Digital) se implementan en **páginas universales dedicadas** con slugs limpios (**`/solicitar-nit/`** y **`/actualizar-rtu/`**), a las cuales apuntan todos los puntos de entrada del portal.
+Para evitar redirecciones dispersas o ventanas modales (prohibidas por Regla 13), y cumpliendo la restricción de **cero `[vc_raw_html]`**, las gestiones de más alta demanda del Registro Tributario Unificado (RTU Digital) se construyen con pestañas nativas `[vc_tta_tabs]`, avisos `[vc_message]`, bloques de texto `[vc_column_text]` y tarjetas de lanzamiento directo `[bsf-info-box]` hacia los aplicativos oficiales:
 
-### 4.1 Arquitectura de la Página `/solicitar-nit/` en WPBakery
-La plantilla oficial lista para pegar se encuentra en:
-- **`docs/plantillas-wpbakery/procesos-conectados/G_solicitar-nit.txt`**
+### 4.1 Página `/solicitar-nit/` (`docs/plantillas-wpbakery/procesos-conectados/G_solicitar-nit.txt`)
+1. **Pestaña `1. Requisitos` (`[vc_tta_section]`):**
+   - Aviso prioritario `[vc_message]` sobre **DPI físico y vigente** (aclarando que no se acepta constancia emitida por el RENAP).
+   - 4 tarjetas `.sat-modalidad-card` dentro de `[vc_column_text]` (*Uso Personal o Laboral*, *Negocio o Profesión*, *Personas con Discapacidad*, *Guatemalteco en el Extranjero*).
+   - 2 avisos `[vc_message]` con la regla oficial sobre cuándo NO adjuntar factura de servicios (*"Dirección según DPI"*).
+2. **Pestaña `2. Solicitar Gestión` (`[vc_tta_section]`):**
+   - Guía numerada en `[vc_column_text]` (`.sat-app-launch-card`) + tarjeta `[bsf-info-box]` de acción directa hacia `https://app.c.sat.gob.gt/rtu/formulario-inscripcion`.
+3. **Pestaña `3. Solicitar Cita` (`[vc_tta_section]`):**
+   - 2 tarjetas `[bsf-info-box]` nativas: programación de cita en `https://cdn.c.sat.gob.gt/cita-validada/cita-validada-portal/portal` y descarga del Manual Oficial en PDF.
 
-Utiliza el contenedor de pestañas nativo de WPBakery (`[vc_tta_tabs]`) para conectar los 3 pasos sin recargar ni abandonar la página:
-
-1. **Pestaña `1. Requisitos` (Texto nativo optimizado en Lenguaje Ciudadano):**
-   - **Aviso prioritario sobre el DPI:** Destaca mediante `[vc_message]` que el Documento Personal de Identificación (DPI) debe estar **físico y vigente**, aclarando expresamente que **no se acepta la constancia de solicitud o renovación emitida por el RENAP**.
-   - **4 Modalidades claras:**
-     - *Uso Personal o Laboral (Sin Obligaciones de Impuestos)*
-     - *Negocio, Comercio o Profesión (Con Obligaciones Tributarias)*
-     - *Personas con Discapacidad Visual, Auditiva o Invalidez*
-     - *Guatemalteco Residente en el Extranjero*
-   - **Guía de comprobante de domicilio:** Explica cuándo NO se requiere adjuntar factura de servicios (cuando se marca *"Dirección según DPI"*) y qué documentos son válidos cuando la dirección difiere.
-   - **Depuración arquitectónica:** Se omite el listado antiguo de *"5. Oficinas o Agencias Tributarias habilitadas por Región"*.
-2. **Pestaña `2. Solicitar Gestión` (Iframe oficial de RTU Digital):**
-   - Utiliza `[vc_raw_html]` para incrustar directamente el formulario transaccional oficial de la SAT:
-     - **URL del Iframe:** `https://app.c.sat.gob.gt/rtu/formulario-inscripcion`
-   - Incluye barra superior institucional con enlace de respaldo para abrir en pestaña completa si el ciudadano lo prefiere.
-3. **Pestaña `3. Solicitar Cita` (Iframe oficial de Cita Validada + Manual PDF):**
-   - Utiliza `[vc_raw_html]` para incrustar el sistema oficial de programación de citas para finalizar la solicitud de NIT:
-     - **URL del Iframe:** `https://cdn.c.sat.gob.gt/cita-validada/cita-validada-portal/portal`
-     - **Manual Oficial en PDF:** `https://portal.sat.gob.gt/portal/descarga/15389/cita-controlada/96248/manual-usuario-portal-2`
-
-### 4.2 Arquitectura de la Página `/actualizar-rtu/` en WPBakery
-La plantilla oficial lista para pegar se encuentra en:
-- **`docs/plantillas-wpbakery/procesos-conectados/G_actualizar-rtu.txt`**
-
-Unifica en una sola página todas las gestiones de actualización y ratificación de datos del RTU Digital (`SAT-GES-0002`, `SAT-GES-0040`, `SAT-GES-0054`, `SAT-GES-0068` a `SAT-GES-0076`, `SAT-GES-0115` y `SAT-GES-0118`):
-
-1. **Pestaña `1. Requisitos según tu caso` (Texto nativo en Lenguaje Ciudadano):**
-   - **Aviso sobre el plazo legal:** Destaca mediante `[vc_message]` el plazo legal de **treinta (30) días hábiles** (Art. 94 del Código Tributario, Decreto 6-91) a partir de cualquier modificación de datos, y la exigencia de contar con **DPI físico y vigente**.
-   - **4 Escenarios ciudadanos:**
-     - *Datos Personales, Domicilio Fiscal o Ratificación Anual*
-     - *Establecimiento Comercial, Negocio o Actividad Económica* (incluyendo patente de comercio y resoluciones especiales para centros educativos, Zonas Francas/ZOLIC/Decreto 29-89/Movilidad Eléctrica y solvencias municipales para fincas)
-     - *Impuestos, Afiliaciones, Cambio de Régimen o Contador*
-     - *Persona Jurídica (Sociedad, Empresa) o Ente Exento* (con la condición de Agencia Virtual activa y RTU actualizado para la Entidad, Representante Legal y Perito Contador)
-   - **Regla oficial sobre el Comprobante de Domicilio:** Aclara que al elegir **"Factura de Servicios"** solo se digita la **serie y número de documento** sin adjuntar archivo (100% en línea), mientras que al elegir recibo de agua, recibo de IUSI o certificación municipal se debe adjuntar el archivo digital (y los contribuyentes con obligaciones activas en IVA finalizan en agencia).
-2. **Pestaña `2. Realizar Actualización` (Ruta en Agencia Virtual + Manuales PDF):**
-   - Botón directo e instrucciones paso a paso para ingresar a **Agencia Virtual SAT** (`https://farm3.sat.gob.gt/menu/login.jsf` › *Servicios › RTU › Actualizar Datos* o *Ratificación de Datos*).
-   - Tarjetas `[bsf-info-box]` para descargar los 2 manuales PDF oficiales:
-     - `https://portal.sat.gob.gt/portal/descarga/14366/rtu-digital/43540/actualizacion-rtu-digital.pdf`
-     - `https://portal.sat.gob.gt/portal/descarga/14366/rtu-digital/80676/manual-comprobante-de-domicilio-actualizacion-2.pdf`
-3. **Pestaña `3. Estado, Constancia y Cita` (3 Iframes oficiales de la SAT integrados):**
-   - **3.1 Consulta de Estado de Gestión de RTU Digital:** `https://cdn.c.sat.gob.gt/rtu/consulta-gestion`
-   - **3.2 Impresión de Constancia de Inscripción y Actualización en el RTU:** `https://cdn.c.sat.gob.gt/rtu/constancia-rtu-portal`
-   - **3.3 Sistema Oficial de Cita Validada:** `https://cdn.c.sat.gob.gt/cita-validada/cita-validada-portal/portal`
+### 4.2 Página `/actualizar-rtu/` (`docs/plantillas-wpbakery/procesos-conectados/G_actualizar-rtu.txt`)
+1. **Pestaña `1. Requisitos según tu caso`:** Plazo legal de 30 días hábiles (Art. 94 Código Tributario) en `[vc_message]`, 4 escenarios ciudadanos y reglas sobre Factura de Servicios (solo serie y número).
+2. **Pestaña `2. Realizar Actualización`:** Pasos dentro de Agencia Virtual SAT + tarjeta `[bsf-info-box]` de ingreso a `https://farm3.sat.gob.gt/menu/login.jsf` + 2 tarjetas `[bsf-info-box]` para los manuales PDF oficiales.
+3. **Pestaña `3. Estado, Constancia y Cita`:** 3 tarjetas `[bsf-info-box]` en 3 columnas hacia:
+   - `https://cdn.c.sat.gob.gt/rtu/consulta-gestion` (*3.1 Consultar Estado de Gestión*)
+   - `https://cdn.c.sat.gob.gt/rtu/constancia-rtu-portal` (*3.2 Imprimir Constancia de RTU*)
+   - `https://cdn.c.sat.gob.gt/cita-validada/cita-validada-portal/portal` (*3.3 Solicitar Cita Presencial*)
 
 ---
 
 ## 5. Paso 4: Creación de Páginas Jerárquicas del Catálogo (Nivel 1 a Nivel 4)
 
-Todas las plantillas WPBakery del catálogo (**714 gestiones canónicas**) se encuentran generadas y organizadas jerárquicamente en **`docs/plantillas-wpbakery/`** (consulta el inventario completo en **`docs/plantillas-wpbakery/_INDICE.md`**).
-
-### 5.1 Árbol Canónico de Páginas de Nivel 1 y Nivel 2
-
-Crea primero las **4 páginas de Nivel 1** y luego sus **19 páginas de Nivel 2** asignando el atributo "Superior" (*Parent Page*):
+Las **156 plantillas WPBakery** del catálogo (**714 gestiones canónicas**) están generadas en **`docs/plantillas-wpbakery/`** (consulta el inventario completo en **`docs/plantillas-wpbakery/_INDICE.md`** o cópialas desde la vista **`#/wpbakery`** del prototipo web).
 
 | Nivel 1 (Página Padre) | Nivel 2 (Página Hija) | Comportamiento Arquitectónico | Slug Sugerido | Archivo Shortcode en `docs/plantillas-wpbakery/` |
 | :--- | :--- | :--- | :--- | :--- |
@@ -252,77 +169,12 @@ Crea primero las **4 páginas de Nivel 1** y luego sus **19 páginas de Nivel 2*
 | Entes Exentos | Municipalidades | **Lista directa (5 gestiones)** | `/entes-exentos/municipalidades/` | `entes-exentos/N2_municipalidades.txt` |
 | Entes Exentos | Decreto | Muestra 3 tarjetas de Nivel 3 | `/entes-exentos/decreto/` | `entes-exentos/N2_decreto.txt` |
 
-### 5.2 Compactaciones y Consolidaciones Aplicadas en Nivel 3 y Nivel 4 (Hallazgos A y B)
-- **Hallazgo A (`Profesionales`):**
-  - `Profesionales > Auditores` (4 gestiones) y `Profesionales > Servicios Profesionales` (6 gestiones) se presentan en **lista directa en Nivel 2** (`N2_auditores.txt` y `N2_servicios-profesionales.txt`), eliminando carpetas intermedias de sub-densidad.
-- **Hallazgo B (`Contribuyentes > Contribuyente General`):**
-  - `Regímenes tributarios` (8 gestiones) se presenta en **lista directa en Nivel 3** (`N3_regimenes-tributarios.txt`), sin fragmentación en Nivel 4.
-  - `Facturación electrónica y documentos tributarios` (17 gestiones) agrupa sus gestiones en **3 bloques equilibrados de Nivel 4**:
-    1. *Factura Electrónica en Línea (FEL) y Autorización de Documentos* (6 gestiones)
-    2. *Imprentas, Máquinas Registradoras y Sistemas* (5 gestiones)
-    3. *Formularios y Constancias de Exención* (6 gestiones)
-  - `Servicios y gestiones al contribuyente` (50 gestiones) agrupa sus gestiones en **5 bloques equilibrados de Nivel 4**:
-    1. *Constancias y gestiones del RTU* (9 gestiones)
-    2. *Agencia Virtual y accesos* (9 gestiones)
-    3. *Citas, estado y quejas* (8 gestiones)
-    4. *Orientación y constancias* (8 gestiones)
-    5. *Otros servicios al contribuyente* (16 gestiones)
-
 ---
 
-## 6. Paso 5: Estructuración del Menú de Navegación de The7
+## 6. Regeneración Automática de Plantillas
 
-Para garantizar el cumplimiento de Miller ($7 \pm 2$ opciones visibles) y cero clics pasarela:
-
-1. Ve a **Apariencia > Menús**.
-2. Crea un menú llamado **Menú Principal SAT**.
-3. Añade las páginas principales y organízalas jerárquicamente:
-   * **Inicio** (`/`)
-   * **Contribuyentes** (`/contribuyentes/`)
-     * Sin Obligaciones
-     * Pequeños Contribuyentes
-     * Contribuyente General
-     * Contribuyentes Especiales
-   * **Operadores de Comercio Exterior** (`/operadores-de-comercio-exterior/`)
-     * Importadores
-     * Exportadores
-     * Operador Económico Autorizado (OEA)
-     * Auxiliares de la Función Pública Aduanera (AFPA)
-     * Regímenes Territoriales y Zonas Especiales
-     * Normativa y Operaciones Aduaneras Generales
-   * **Profesionales** (`/profesionales/`)
-     * Abogados y Notarios
-     * Peritos Contadores
-     * Auditores
-     * Gestores Tributarios
-     * Servicios Profesionales
-   * **Entes Exentos** (`/entes-exentos/`)
-     * Entidades del Estado
-     * Constitucionales
-     * No Lucrativos
-     * Municipalidades
-     * Decreto
-4. En **Ajustes del menú > Dónde se verá**, marca la casilla: **Main Menu** (o Menú primario de The7).
-5. Guarda el menú.
-
----
-
-## 7. Reglas de Gobernanza en la Administración Diaria y Regeneración Automática
-
-Al crear o editar páginas en WordPress o actualizar el catálogo, el equipo debe mantener rigurosamente estas reglas institucionales:
-
-1. **Sincronización Automática de Plantillas WPBakery:**  
-   Cada vez que se actualice `src/data/allTramites.json`, ejecuta:
-   ```bash
-   python3 scripts/generar_wpbakery_shortcodes.py
-   ```
-   Esto regenera automáticamente todas las plantillas en `docs/plantillas-wpbakery/` y su índice `_INDICE.md`.
-2. **Prohibición de la palabra "Trámite":**  
-   Queda terminantemente prohibido utilizar "trámite" o "trámites" en títulos, botones, migas de pan y textos. Usar estrictamente **"gestión" / "gestiones"**.
-3. **Prohibición de Modales o Popovers para Contenido:**  
-   Ninguna gestión o proceso puede abrirse en ventanas emergentes o modales flotantes; toda gestión se presenta en su propia página completa dedicada.
-4. **Niveles Estructurales sin Nombres Inventados:**  
-   Los niveles son exclusivamente numéricos: **Nivel 1, Nivel 2, Nivel 3, Nivel 4, Nivel 5**.
-5. **Ciclo ATO (Australian Taxation Office):**  
-   Al agregar nuevas tarjetas, mantener el orden cronológico del ciclo de vida del contribuyente:  
-   `1. Empezar` $\to$ `2. Operar` $\to$ `3. Consultar` $\to$ `4. Modificar/Cerrar` $\to$ `5. Normativa`.
+Cada vez que se actualice `src/data/allTramites.json`, ejecuta:
+```bash
+python scripts/generar_wpbakery_shortcodes.py
+```
+Esto regenera las **156 plantillas libres de `[vc_raw_html]`** en `docs/plantillas-wpbakery/` y su índice `_INDICE.md`.
