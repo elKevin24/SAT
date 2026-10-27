@@ -152,11 +152,42 @@ function encodeVcLink(url: string, targetBlank: boolean, basePath = ''): string 
   return `url:${enc}||${targetBlank ? 'target:%20_blank|' : '|'}`;
 }
 
-function applyBasePathToShortcode(shortcode: string, basePath: string): string {
+export type CardShortcodeMode = 'bsf' | 'vc_core';
+
+function applyBasePathAndModeToShortcode(
+  shortcode: string,
+  basePath: string,
+  cardMode: CardShortcodeMode
+): string {
   const cleanBase = basePath.trim().replace(/\/+$/, '');
-  if (!cleanBase) return shortcode;
-  const encBase = encodeURI(cleanBase).replace(/\//g, '%2F');
-  return shortcode.replace(/link="url:%2F/g, `link="url:${encBase}%2F`);
+  let out = shortcode;
+  if (cleanBase) {
+    const encBase = encodeURI(cleanBase).replace(/\//g, '%2F');
+    out = out
+      .replace(/link="url:%2F/g, `link="url:${encBase}%2F`)
+      .replace(/link="url:\//g, `link="url:${cleanBase}/`);
+  }
+  if (cardMode === 'vc_core') {
+    out = out.replace(
+      /\[bsf-info-box[^\]]*title="([^"]*)"[^\]]*link="([^"]*)"[^\]]*\]([\s\S]*?)\[\/bsf-info-box\]/g,
+      (_match, title: string, linkAttr: string, desc: string) => {
+        let href = '#';
+        let isBlank = false;
+        if (linkAttr && linkAttr.startsWith('url:')) {
+          const parts = linkAttr.slice(4).split('|');
+          try {
+            href = decodeURIComponent(parts[0] || '#');
+          } catch {
+            href = parts[0] || '#';
+          }
+          isBlank = linkAttr.includes('_blank');
+        }
+        const targetAttr = isBlank ? ' target="_blank" rel="noopener noreferrer"' : '';
+        return `[vc_column_text el_class="sat-card"]<h3 class="sat-card-title"><a href="${href}"${targetAttr}>${title}</a></h3><p class="sat-card-desc">${desc}</p>[/vc_column_text]`;
+      }
+    );
+  }
+  return out;
 }
 
 function buildPageShortcode(
@@ -165,7 +196,8 @@ function buildPageShortcode(
   heading: string,
   leadText: string,
   includeUrls: boolean,
-  basePath = ''
+  basePath = '',
+  cardMode: CardShortcodeMode = 'bsf'
 ): string {
   const breadcrumb =
     '[vc_row gap="5px"][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row]';
@@ -185,7 +217,8 @@ function buildPageShortcode(
     .join('');
 
   const sectionClass = CSS_CLASS_BY_N1[n1] || 'sat-seccion-contribuyentes';
-  return `${breadcrumb}\n${headerBlock}[vc_section][vc_row equal_height="yes" gap="15px" el_class="${sectionClass}"]${cols}[/vc_row][/vc_section]`;
+  const raw = `${breadcrumb}\n${headerBlock}[vc_section][vc_row equal_height="yes" gap="15px" el_class="${sectionClass}"]${cols}[/vc_row][/vc_section]`;
+  return applyBasePathAndModeToShortcode(raw, '', cardMode);
 }
 
 export type OlaId = 'Todas' | 'Ola 0 (Portada + Universales)' | 'Ola 1 (Nivel 1)' | 'Ola 2 (Nivel 2)' | 'Ola 3 (Nivel 3)' | 'Ola 4 (Nivel 4)';
@@ -560,6 +593,7 @@ export const WPBakeryBuilderPage: React.FC = () => {
   const [filterWave, setFilterWave] = useState<OlaId>('Todas');
   const [filterN1, setFilterN1] = useState<string>('Todos');
   const [includeUrls, setIncludeUrls] = useState(true);
+  const [cardMode, setCardMode] = useState<CardShortcodeMode>('bsf');
   const [basePath, setBasePath] = useState<string>(() => {
     try {
       return localStorage.getItem('sat_wpbakery_base_path_v1') || '';
@@ -637,7 +671,7 @@ export const WPBakeryBuilderPage: React.FC = () => {
 
   const currentShortcode = useMemo(() => {
     if (currentPage.staticShortcode) {
-      return applyBasePathToShortcode(currentPage.staticShortcode, basePath);
+      return applyBasePathAndModeToShortcode(currentPage.staticShortcode, basePath, cardMode);
     }
     return buildPageShortcode(
       currentPage.cards,
@@ -645,9 +679,10 @@ export const WPBakeryBuilderPage: React.FC = () => {
       currentPage.title,
       currentPage.leadText,
       includeUrls,
-      basePath
+      basePath,
+      cardMode
     );
-  }, [currentPage, includeUrls, basePath]);
+  }, [currentPage, includeUrls, basePath, cardMode]);
 
   const handleCopy = (text: string, type: 'shortcode' | 'css' | 'slug' | 'title') => {
     navigator.clipboard.writeText(text);
@@ -1049,6 +1084,18 @@ export const WPBakeryBuilderPage: React.FC = () => {
               {activeTab === 'shortcode' && (
                 <div className="flex flex-wrap items-center gap-4">
                   <label className="inline-flex items-center gap-2 text-xs font-semibold text-slate-700">
+                    <span>Modo Tarjeta:</span>
+                    <select
+                      value={cardMode}
+                      onChange={e => setCardMode(e.target.value as CardShortcodeMode)}
+                      aria-label="Modo de shortcode para tarjetas"
+                      className="px-2.5 py-1 text-xs font-semibold bg-white border border-slate-300 rounded-lg focus:outline-none focus:border-[#14649B]"
+                    >
+                      <option value="bsf">Ultimate Addons ([bsf-info-box])</option>
+                      <option value="vc_core">Fallback WPBakery Core ([vc_column_text])</option>
+                    </select>
+                  </label>
+                  <label className="inline-flex items-center gap-2 text-xs font-semibold text-slate-700">
                     <span>Subcarpeta WP (opcional):</span>
                     <input
                       type="text"
@@ -1180,7 +1227,7 @@ export const WPBakeryBuilderPage: React.FC = () => {
                     type="button"
                     onClick={() =>
                       handleDownloadXml(
-                        applyBasePathToShortcode(wpXmlOlas012Raw, basePath),
+                        applyBasePathAndModeToShortcode(wpXmlOlas012Raw, basePath, cardMode),
                         'wordpress-import-olas-0-1-2.xml'
                       )
                     }
@@ -1207,7 +1254,7 @@ export const WPBakeryBuilderPage: React.FC = () => {
                     type="button"
                     onClick={() =>
                       handleDownloadXml(
-                        applyBasePathToShortcode(wpXmlAll160Raw, basePath),
+                        applyBasePathAndModeToShortcode(wpXmlAll160Raw, basePath, cardMode),
                         'wordpress-import-completo-160.xml'
                       )
                     }

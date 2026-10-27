@@ -256,6 +256,61 @@
 }
 
 /* ----------------------------------------------------------------------------
+ * 4.2 FALLBACK 100% WPBAKERY CORE ([vc_column_text el_class="sat-card"])
+ *     Por si WordPress no tiene instalado Ultimate Addons ([bsf-info-box]).
+ *     Convierte toda la tarjeta en un enlace clickeable mediante ::after.
+ * ---------------------------------------------------------------------------- */
+.wpb_text_column.sat-card {
+  position: relative !important;
+  margin-bottom: 14px !important;
+}
+.wpb_text_column.sat-card .wpb_wrapper {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 6px !important;
+}
+.wpb_text_column.sat-card h3.sat-card-title a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+.wpb_text_column.sat-card h3.sat-card-title a::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 2 !important;
+  border-radius: var(--sat-radius) !important;
+}
+.sat-quick-access-row .wpb_text_column.sat-card:hover,
+.sat-seccion-macro-segmentos .vc_column_container:nth-child(1) .wpb_text_column.sat-card:hover,
+.sat-seccion-contribuyentes .wpb_text_column.sat-card:hover {
+  background-color: var(--sat-color-contribuyentes) !important;
+  border-color: var(--sat-color-contribuyentes) !important;
+  transform: translateY(-4px) !important;
+  box-shadow: 0 14px 30px rgba(20, 100, 155, 0.18) !important;
+}
+.sat-seccion-macro-segmentos .vc_column_container:nth-child(2) .wpb_text_column.sat-card:hover,
+.sat-seccion-comercio-exterior .wpb_text_column.sat-card:hover {
+  background-color: var(--sat-color-comercio) !important;
+  border-color: var(--sat-color-comercio) !important;
+  transform: translateY(-4px) !important;
+  box-shadow: 0 14px 30px rgba(2, 132, 199, 0.18) !important;
+}
+.sat-seccion-macro-segmentos .vc_column_container:nth-child(3) .wpb_text_column.sat-card:hover,
+.sat-seccion-profesionales .wpb_text_column.sat-card:hover {
+  background-color: var(--sat-color-profesionales) !important;
+  border-color: var(--sat-color-profesionales) !important;
+  transform: translateY(-4px) !important;
+  box-shadow: 0 14px 30px rgba(77, 128, 20, 0.18) !important;
+}
+.sat-seccion-macro-segmentos .vc_column_container:nth-child(4) .wpb_text_column.sat-card:hover,
+.sat-seccion-entes-exentos .wpb_text_column.sat-card:hover {
+  background-color: var(--sat-color-exentos) !important;
+  border-color: var(--sat-color-exentos) !important;
+  transform: translateY(-4px) !important;
+  box-shadow: 0 14px 30px rgba(194, 94, 0, 0.18) !important;
+}
+
+/* ----------------------------------------------------------------------------
  * 5. PESTAÑAS CONECTADAS DE 3 PASOS (6 Procesos Universales en Ola 0)
  *    100% Nativo WPBakery ([vc_tta_tabs], .sat-modalidad-card, .sat-app-launch-card)
  * ---------------------------------------------------------------------------- */

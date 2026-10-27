@@ -424,6 +424,13 @@ def main():
     </div>
     <div class="top-actions">
       <label style="font-size:12px;display:flex;align-items:center;gap:6px;">
+        <span>Modo Tarjeta:</span>
+        <select id="cardModeSelect" style="padding:5px 8px;border-radius:6px;border:none;font-size:12px;font-weight:700;">
+          <option value="bsf">Ultimate Addons ([bsf-info-box])</option>
+          <option value="vc_core">Fallback WPBakery Core ([vc_column_text])</option>
+        </select>
+      </label>
+      <label style="font-size:12px;display:flex;align-items:center;gap:6px;">
         <span>Subcarpeta WP (opcional):</span>
         <input id="basePathInput" type="text" placeholder="/ (raíz)" style="padding:5px 8px;border-radius:6px;border:none;font-size:12px;width:120px;font-family:monospace;" />
       </label>
@@ -520,12 +527,14 @@ def main():
     const WP_CSS = {css_json};
     const STORAGE_DONE = 'sat_wpbakery_created_pages_v1';
     const STORAGE_BASE = 'sat_wpbakery_base_path_v1';
+    const STORAGE_MODE = 'sat_wpbakery_card_mode_v1';
 
     let selectedId = PAGES[0].id;
     let activeWave = 'Todas';
     let activeN1 = 'Todos';
     let searchQuery = '';
     let basePath = localStorage.getItem(STORAGE_BASE) || '';
+    let cardMode = localStorage.getItem(STORAGE_MODE) || 'bsf';
     let completed = new Set(JSON.parse(localStorage.getItem(STORAGE_DONE) || '[]'));
 
     const waves = [
@@ -562,9 +571,30 @@ def main():
 
     function applyBase(shortcode) {{
       const clean = basePath.trim().replace(/\\/+$/, '');
-      if (!clean) return shortcode;
-      const enc = encodeURI(clean).replace(/\\//g, '%2F');
-      return shortcode.replace(/link="url:%2F/g, 'link="url:' + enc + '%2F');
+      let out = shortcode;
+      if (clean) {{
+        const enc = encodeURI(clean).replace(/\\//g, '%2F');
+        out = out
+          .replace(/link="url:%2F/g, 'link="url:' + enc + '%2F')
+          .replace(/link="url:\\//g, 'link="url:' + clean + '/');
+      }}
+      if (cardMode === 'vc_core') {{
+        out = out.replace(
+          /\\[bsf-info-box[^\\]]*title="([^"]*)"[^\\]]*link="([^"]*)"[^\\]]*\\]([\\s\\S]*?)\\[\\/bsf-info-box\\]/g,
+          (_m, title, linkAttr, desc) => {{
+            let href = '#';
+            let isBlank = false;
+            if (linkAttr && linkAttr.startsWith('url:')) {{
+              const parts = linkAttr.slice(4).split('|');
+              try {{ href = decodeURIComponent(parts[0] || '#'); }} catch {{ href = parts[0] || '#'; }}
+              isBlank = linkAttr.includes('_blank');
+            }}
+            const targetAttr = isBlank ? ' target="_blank" rel="noopener noreferrer"' : '';
+            return '[vc_column_text el_class="sat-card"]<h3 class="sat-card-title"><a href="' + href + '"' + targetAttr + '>' + title + '</a></h3><p class="sat-card-desc">' + desc + '</p>[/vc_column_text]';
+          }}
+        );
+      }}
+      return out;
     }}
 
     function getFiltered() {{
@@ -692,6 +722,13 @@ def main():
     baseInput.oninput = (e) => {{
       basePath = e.target.value;
       localStorage.setItem(STORAGE_BASE, basePath);
+      render();
+    }};
+    const modeSelect = document.getElementById('cardModeSelect');
+    modeSelect.value = cardMode;
+    modeSelect.onchange = (e) => {{
+      cardMode = e.target.value;
+      localStorage.setItem(STORAGE_MODE, cardMode);
       render();
     }};
     document.getElementById('copyCssBtn').onclick = () => copyText(WP_CSS, '¡CSS Global de The7 copiado!');
