@@ -8,11 +8,17 @@
      - `.agents/rules/sat-ui-ux-design.md`: Prohibición de *"trámite"* (uso de **"gestión"**), prohibición de modales/popovers (página dedicada `#/gestion/:id`), tarjetas compactas sin íconos/conteos, UX Writing con acrónimos expandidos, responsive y WCAG 2.2 AA.
      - `.agents/rules/sat-content-relationships.md`: Polijerarquía sin duplicación (`683` únicos / `715` proyecciones), relaciones secuenciales ATO y familias temáticas (`familias_ids`).
   3. La normativa visual y de navegación en `docs/diseno-normativa/DESIGN_RULES.md`.
-  4. Las **Skills Especializadas en `.agents/skills/`** y sus documentos técnicos en `references/` según la tarea a realizar:
-     - `sat-design-enforcer` (`.agents/skills/sat-design-enforcer/SKILL.md`): Creación, edición y auditoría de componentes React/Tailwind y accesibilidad.
-     - `sat-ia-governance` (`.agents/skills/sat-ia-governance/SKILL.md`): Clasificación y edición puntual del árbol jerárquico en `allTramites.json` y `categoryOrder.ts`.
-     - `sat-ia-audit-sync` (`.agents/skills/sat-ia-audit-sync/SKILL.md` + `references/taxonomy-and-matrix-spec.md`): Ejecución del pipeline ETL en `scripts/`, validación de URLs (`HTTP 200 OK`) y sincronización de entregables Excel de 25 columnas.
-     - `sat-content-relationships` (`.agents/skills/sat-content-relationships/SKILL.md` + `references/nosql-schema-queries.md`): Vinculación de gestiones relacionadas, ciclo ATO y modelado NoSQL en MongoDB.
+  4. Las **Skills Especializadas en `.agents/skills/`** y sus documentos técnicos en `references/` según la tarea o rol a ejecutar:
+     - **Skills de Dominio SAT:**
+       - `sat-design-enforcer` (`.agents/skills/sat-design-enforcer/SKILL.md`): Creación, edición y auditoría de componentes React/Tailwind y accesibilidad.
+       - `sat-ia-governance` (`.agents/skills/sat-ia-governance/SKILL.md`): Clasificación y edición puntual del árbol jerárquico en `allTramites.json` y `categoryOrder.ts`.
+       - `sat-ia-audit-sync` (`.agents/skills/sat-ia-audit-sync/SKILL.md` + `references/taxonomy-and-matrix-spec.md`): Ejecución del pipeline ETL en `scripts/`, validación de URLs (`HTTP 200 OK`) y sincronización de entregables Excel de 25 columnas.
+       - `sat-content-relationships` (`.agents/skills/sat-content-relationships/SKILL.md` + `references/nosql-schema-queries.md`): Vinculación de gestiones relacionadas, ciclo ATO y modelado NoSQL en MongoDB.
+     - **Skills de Roles y Gobernanza Multi-Agente ($\text{Orquestador} \to \text{Senior} \rightleftarrows \text{Junior} \to \text{QA}$):**
+       - `orchestrator-governance` (`.agents/skills/orchestrator-governance/SKILL.md`): Orquestador (Lead Architect & Manager); planifica, no edita código fuente directamente y coordina ciclos entre Senior y QA.
+       - `senior-developer` (`.agents/skills/senior-developer/SKILL.md`): Programador Senior; diseña arquitectura/core, delega módulos acotados al Junior, revisa/integra y entrega a QA.
+       - `junior-developer` (`.agents/skills/junior-developer/SKILL.md`): Programador Junior; ejecuta tareas delimitadas asignadas por el Senior y reporta exclusivamente al Senior.
+       - `qa-auditor` (`.agents/skills/qa-auditor/SKILL.md`): Auditor de QA (`EnableWriteTools: false`); audita en modo solo lectura y emite dictámenes `PASSED` / `FAILED` exclusivamente al Orquestador.
   - Está terminantemente prohibido asumir convenciones o proceder sin verificar estas fuentes; el objetivo primordial es evitar reincidir en errores previamente cometidos (tales como usar el término prohibido *"trámite"*, usar modales o popovers flotantes para mostrar contenido en vez de páginas dedicadas, nombrar niveles jerárquicos con rótulos inventados, alterar contratos sin actualizar dependencias, romper la simetría con categorías vacías en vez de guion largo `—`, o dejar acrónimos huérfanos).
 - **Concisión y precisión:** Respuestas directas, al punto y sin rodeos ni complacencias.
 - **Fundamento técnico:** Cada decisión, sugerencia o cambio de código debe estar rigurosamente justificado en hechos y estándares.
