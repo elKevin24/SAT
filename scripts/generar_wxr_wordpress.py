@@ -80,7 +80,11 @@ def build_wxr_xml(items: list[dict], title: str) -> str:
     <wp:is_sticky>0</wp:is_sticky>
     <wp:postmeta>
       <wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
-      <wp:meta_value><![CDATA[default]]></wp:meta_value>
+      <wp:meta_value><![CDATA[elementor_header_footer]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_wpb_post_custom_css]]></wp:meta_key>
+      <wp:meta_value><![CDATA[{it.get("custom_css", "")}]]></wp:meta_value>
     </wp:postmeta>
   </item>
 """)
@@ -108,7 +112,48 @@ def collect_all_pages() -> list[dict]:
     pages: list[dict] = []
     next_id = 1000
 
-    def add_page(wave: int, title: str, wp_slug: str, url: str, parent_id: int, menu_order: int, rel_file: str) -> int:
+    HOVER_COLORS = {
+        "Contribuyentes": "#14649B",
+        "Operadores de Comercio Exterior": "#0284C7",
+        "Profesionales": "#4D8014",
+        "Entes Exentos": "#C25E00",
+    }
+    SHADOW_COLORS = {
+        "Contribuyentes": "rgba(20, 100, 155, 0.22)",
+        "Operadores de Comercio Exterior": "rgba(2, 132, 199, 0.22)",
+        "Profesionales": "rgba(77, 128, 20, 0.22)",
+        "Entes Exentos": "rgba(194, 94, 0, 0.22)",
+    }
+    SECTION_CLASSES = {
+        "Contribuyentes": "sat-seccion-contribuyentes",
+        "Operadores de Comercio Exterior": "sat-seccion-comercio-exterior",
+        "Profesionales": "sat-seccion-profesionales",
+        "Entes Exentos": "sat-seccion-entes-exentos",
+    }
+
+    def build_custom_css(n1: str) -> str:
+        sec = SECTION_CLASSES.get(n1, "sat-seccion-contribuyentes")
+        col = HOVER_COLORS.get(n1, "#14649B")
+        shd = SHADOW_COLORS.get(n1, "rgba(20, 100, 155, 0.22)")
+        return (
+            f".{sec}.vc_row {{ display: flex !important; flex-wrap: wrap !important; align-items: stretch !important; margin-left: -8px !important; margin-right: -8px !important; }} "
+            f".{sec} > .vc_column_container {{ display: flex !important; flex-direction: column !important; flex: 0 0 33.333333% !important; max-width: 33.333333% !important; width: 33.333333% !important; padding-left: 8px !important; padding-right: 8px !important; margin-bottom: 16px !important; box-sizing: border-box !important; }} "
+            f"@media (max-width: 991px) {{ .{sec} > .vc_column_container {{ flex: 0 0 50% !important; max-width: 50% !important; width: 50% !important; }} }} "
+            f"@media (max-width: 640px) {{ .{sec} > .vc_column_container {{ flex: 0 0 100% !important; max-width: 100% !important; width: 100% !important; }} }} "
+            f".{sec} .vc_column-inner, .{sec} .wpb_wrapper {{ display: flex !important; flex-direction: column !important; flex: 1 1 auto !important; width: 100% !important; height: 100% !important; padding: 0 !important; margin: 0 !important; }} "
+            f".{sec} .aio-icon-component, .{sec} .aio-icon-box-link {{ display: flex !important; flex: 1 1 auto !important; width: 100% !important; height: 100% !important; margin: 0 !important; padding: 0 !important; }} "
+            f".{sec} .aio-icon-box {{ display: flex !important; flex-direction: column !important; justify-content: flex-start !important; position: relative !important; width: 100% !important; height: 100% !important; min-height: 140px !important; background-color: #F4F6F9 !important; border: none !important; border-radius: 12px !important; padding: 22px 24px !important; margin: 0 !important; box-sizing: border-box !important; cursor: pointer !important; user-select: none !important; transition: transform 0.35s ease, background-color 0.35s ease, box-shadow 0.35s ease !important; }} "
+            f".{sec} .aio-icon-box:hover {{ background-color: {col} !important; transform: translateY(-4px) !important; box-shadow: 0 12px 24px {shd} !important; }} "
+            f".{sec} .aio-icon-header {{ margin: 0 !important; padding-right: 24px !important; text-align: left !important; }} "
+            f".{sec} .aio-icon-box::after {{ content: \"\" !important; position: absolute !important; top: 24px !important; right: 22px !important; width: 18px !important; height: 18px !important; background-repeat: no-repeat !important; background-position: center !important; background-size: contain !important; background-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2394A3B8' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18l6-6-6-6'/%3E%3C/svg%3E\") !important; transition: background-image 0.2s ease !important; }} "
+            f".{sec} .aio-icon-box:hover::after {{ background-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FFFFFF' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18l6-6-6-6'/%3E%3C/svg%3E\") !important; }} "
+            f".{sec} .aio-icon-title {{ margin: 0 !important; padding: 0 !important; text-align: left !important; font-family: \"Gotham\", \"Montserrat\", sans-serif, -apple-system !important; font-size: 16px !important; font-weight: 700 !important; line-height: 1.35 !important; color: #19324B !important; transition: color 0.25s ease !important; }} "
+            f".{sec} .aio-icon-description {{ margin-top: 8px !important; padding: 0 !important; text-align: left !important; font-family: \"Gotham\", \"Montserrat\", sans-serif, -apple-system !important; font-size: 12.5px !important; line-height: 1.55 !important; color: #475569 !important; flex-grow: 1 !important; transition: color 0.25s ease !important; }} "
+            f".{sec} .aio-icon-box:hover .aio-icon-title {{ color: #FFFFFF !important; }} "
+            f".{sec} .aio-icon-box:hover .aio-icon-description {{ color: rgba(255, 255, 255, 0.92) !important; }}"
+        )
+
+    def add_page(wave: int, title: str, wp_slug: str, url: str, parent_id: int, menu_order: int, rel_file: str, n1: str = "Contribuyentes") -> int:
         nonlocal next_id
         pid = next_id
         next_id += 1
@@ -123,6 +168,7 @@ def collect_all_pages() -> list[dict]:
             "menu_order": menu_order,
             "rel_file": rel_file,
             "content": content,
+            "custom_css": build_custom_css(n1),
         })
         return pid
 
@@ -137,7 +183,7 @@ def collect_all_pages() -> list[dict]:
         ("Inscripción y Activación en el Padrón de Importadores", "padron-importadores", "/padron-importadores/", "procesos-conectados/G_padron-importadores.txt"),
     ]
     for idx, (t_title, t_slug, t_url, t_file) in enumerate(ola_0_specs, 1):
-        add_page(0, t_title, t_slug, t_url, 0, idx, t_file)
+        add_page(0, t_title, t_slug, t_url, 0, idx, t_file, "Contribuyentes")
 
     # Agrupar árbol Nivel 1 -> Nivel 2 -> Nivel 3 -> Nivel 4
     n1_groups = OrderedDict()
@@ -147,7 +193,7 @@ def collect_all_pages() -> list[dict]:
 
     for idx_n1, (n1, n1_items) in enumerate(n1_groups.items(), 1):
         n1_slug = N1_SLUGS.get(n1, slug(n1))
-        n1_id = add_page(1, n1, n1_slug, f"/{n1_slug}/", 0, idx_n1, f"{n1_slug}/N1_{n1_slug}.txt")
+        n1_id = add_page(1, n1, n1_slug, f"/{n1_slug}/", 0, idx_n1, f"{n1_slug}/N1_{n1_slug}.txt", n1)
 
         n2_groups = OrderedDict()
         for t in n1_items:
@@ -164,6 +210,7 @@ def collect_all_pages() -> list[dict]:
                 n1_id,
                 idx_n2,
                 f"{n1_slug}/N2_{n2_slug}.txt",
+                n1,
             )
 
             n3_groups = OrderedDict()
@@ -182,6 +229,7 @@ def collect_all_pages() -> list[dict]:
                     n2_id,
                     idx_n3,
                     f"{n1_slug}/{n2_slug}/N3_{n3_slug}.txt",
+                    n1,
                 )
 
                 n4_groups = OrderedDict()
@@ -200,6 +248,7 @@ def collect_all_pages() -> list[dict]:
                         n3_id,
                         idx_n4,
                         f"{n1_slug}/{n2_slug}/{n3_slug}/N4_{n4_slug}.txt",
+                        n1,
                     )
 
     return pages
@@ -211,6 +260,8 @@ def main():
 
     xml_012_path = OUTPUT_DIR / "wordpress-import-olas-0-1-2.xml"
     xml_all_path = OUTPUT_DIR / "wordpress-import-completo-160.xml"
+    xml_cg_n3_path = OUTPUT_DIR / "wordpress-import-contribuyente-general-n3.xml"
+    xml_cg_all_path = OUTPUT_DIR / "wordpress-import-contribuyente-general-completo.xml"
 
     xml_012_path.write_text(
         build_wxr_xml(olas_012, "Portal SAT Guatemala — Olas 0, 1 y 2 (31 Páginas Base)"),
@@ -221,7 +272,22 @@ def main():
         encoding="utf-8",
     )
 
-    print(f"Archivos WXR XML generados con éxito: {len(olas_012)} páginas en {xml_012_path.name} y {len(pages)} páginas en {xml_all_path.name}")
+    # Paquete controlado: Contribuyente General + 8 Subcategorías N3
+    cg_page = [p for p in pages if p["url"] == "/contribuyentes/contribuyente-general/"]
+    cg_n3 = [p for p in pages if p["url"].startswith("/contribuyentes/contribuyente-general/") and p["wave"] == 3]
+    xml_cg_n3_path.write_text(
+        build_wxr_xml(cg_page + cg_n3, "Portal SAT Guatemala — Contribuyente General (8 Subcategorías N3)"),
+        encoding="utf-8",
+    )
+
+    # Paquete completo de Contribuyente General (N2 + N3 + N4)
+    cg_all = [p for p in pages if p["url"].startswith("/contribuyentes/contribuyente-general/")]
+    xml_cg_all_path.write_text(
+        build_wxr_xml(cg_all, "Portal SAT Guatemala — Contribuyente General Completo"),
+        encoding="utf-8",
+    )
+
+    print(f"Archivos WXR XML generados con éxito: {len(olas_012)} en {xml_012_path.name}, {len(pages)} en {xml_all_path.name}, {len(cg_page + cg_n3)} en {xml_cg_n3_path.name} y {len(cg_all)} en {xml_cg_all_path.name}")
 
 
 if __name__ == "__main__":

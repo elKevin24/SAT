@@ -20,39 +20,97 @@
   --sat-color-comercio: #0284c7;
   --sat-color-profesionales: #4d8014;
   --sat-color-exentos: #c25e00;
-  --sat-card-bg: #ffffff;
-  --sat-card-border: #dcdcdc;
+  --sat-card-bg: #F4F6F9;
+  --sat-card-border: none;
   --sat-text-title: #19324b;
   --sat-text-desc: #475569;
-  --sat-radius: 14px;
-  --sat-font-family: "Gotham", "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --sat-radius: 12px;
+  --sat-font-family: "Gotham", "Montserrat", sans-serif, -apple-system;
 }
 
 /* ----------------------------------------------------------------------------
- * 1. FILAS FLEX DE ALTURA UNIFORME EN WPBAKERY (vc_row-flex)
+ * 1. FILAS FLEX DE 3 COLUMNAS Y ALINEACIÓN EXACTA WPBAKERY
  * ---------------------------------------------------------------------------- */
-.vc_row.vc_row-flex > .vc_column_container {
+.sat-seccion-contribuyentes.vc_row,
+.sat-seccion-comercio-exterior.vc_row,
+.sat-seccion-profesionales.vc_row,
+.sat-seccion-entes-exentos.vc_row,
+.sat-seccion-macro-segmentos.vc_row {
   display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: stretch !important;
+  margin-left: -8px !important;
+  margin-right: -8px !important;
 }
-.vc_row.vc_row-flex > .vc_column_container > .vc_column-inner {
+
+.sat-seccion-contribuyentes > .vc_column_container,
+.sat-seccion-comercio-exterior > .vc_column_container,
+.sat-seccion-profesionales > .vc_column_container,
+.sat-seccion-entes-exentos > .vc_column_container {
   display: flex !important;
   flex-direction: column !important;
-  flex-grow: 1 !important;
-  width: 100% !important;
+  flex: 0 0 33.333333% !important;
+  max-width: 33.333333% !important;
+  width: 33.333333% !important;
+  padding-left: 8px !important;
+  padding-right: 8px !important;
+  margin-bottom: 16px !important;
+  box-sizing: border-box !important;
 }
-.vc_row.vc_row-flex > .vc_column_container > .vc_column-inner > .wpb_wrapper {
+
+@media (max-width: 991px) {
+  .sat-seccion-contribuyentes > .vc_column_container,
+  .sat-seccion-comercio-exterior > .vc_column_container,
+  .sat-seccion-profesionales > .vc_column_container,
+  .sat-seccion-entes-exentos > .vc_column_container {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+    width: 50% !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .sat-seccion-contribuyentes > .vc_column_container,
+  .sat-seccion-comercio-exterior > .vc_column_container,
+  .sat-seccion-profesionales > .vc_column_container,
+  .sat-seccion-entes-exentos > .vc_column_container {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+}
+
+.sat-seccion-contribuyentes .vc_column-inner,
+.sat-seccion-comercio-exterior .vc_column-inner,
+.sat-seccion-profesionales .vc_column-inner,
+.sat-seccion-entes-exentos .vc_column-inner,
+.sat-seccion-contribuyentes .wpb_wrapper,
+.sat-seccion-comercio-exterior .wpb_wrapper,
+.sat-seccion-profesionales .wpb_wrapper,
+.sat-seccion-entes-exentos .wpb_wrapper {
   display: flex !important;
   flex-direction: column !important;
   flex: 1 1 auto !important;
   width: 100% !important;
+  height: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
-.vc_row.vc_row-flex .aio-icon-component,
-.vc_row.vc_row-flex .bsf-info-box-link {
+
+.sat-seccion-contribuyentes .aio-icon-component,
+.sat-seccion-contribuyentes .aio-icon-box-link,
+.sat-seccion-comercio-exterior .aio-icon-component,
+.sat-seccion-comercio-exterior .aio-icon-box-link,
+.sat-seccion-profesionales .aio-icon-component,
+.sat-seccion-profesionales .aio-icon-box-link,
+.sat-seccion-entes-exentos .aio-icon-component,
+.sat-seccion-entes-exentos .aio-icon-box-link {
   display: flex !important;
-  flex-direction: column !important;
   flex: 1 1 auto !important;
   width: 100% !important;
-  text-decoration: none !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 /* ----------------------------------------------------------------------------
@@ -119,6 +177,11 @@
 .sat-seccion-comercio-exterior .aio-icon-box,
 .sat-seccion-comercio-exterior .bsf-info-box,
 .sat-seccion-profesionales .aio-icon-box,
+.sat-seccion-contribuyentes .aio-icon-box,
+.sat-seccion-contribuyentes .bsf-info-box,
+.sat-seccion-comercio-exterior .aio-icon-box,
+.sat-seccion-comercio-exterior .bsf-info-box,
+.sat-seccion-profesionales .aio-icon-box,
 .sat-seccion-profesionales .bsf-info-box,
 .sat-seccion-entes-exentos .aio-icon-box,
 .sat-seccion-entes-exentos .bsf-info-box,
@@ -126,19 +189,21 @@
   display: flex !important;
   flex-direction: column !important;
   justify-content: flex-start !important;
+  position: relative !important;
   width: 100% !important;
   height: 100% !important;
-  min-height: 132px !important;
-  background-color: var(--sat-card-bg) !important;
-  border: 1px solid var(--sat-card-border) !important;
-  border-radius: var(--sat-radius) !important;
-  padding: 20px 22px !important;
-  margin-bottom: 14px !important;
+  min-height: 140px !important;
+  background-color: #F4F6F9 !important;
+  border: none !important;
+  border-radius: 12px !important;
+  padding: 22px 24px !important;
+  margin: 0 !important;
   box-sizing: border-box !important;
   cursor: pointer !important;
+  user-select: none !important;
   text-decoration: none !important;
   font-family: var(--sat-font-family) !important;
-  transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease !important;
+  transition: transform 0.35s ease, background-color 0.35s ease, box-shadow 0.35s ease !important;
 }
 
 /* Ocultar cualquier ícono residual si el editor dejó icon_type activo por error */
@@ -148,6 +213,40 @@
 .sat-seccion-profesionales .aio-icon-left,
 .sat-seccion-entes-exentos .aio-icon-left {
   display: none !important;
+}
+
+/* Cabecera y Chevron Oficial a la derecha */
+.sat-seccion-contribuyentes .aio-icon-header,
+.sat-seccion-comercio-exterior .aio-icon-header,
+.sat-seccion-profesionales .aio-icon-header,
+.sat-seccion-entes-exentos .aio-icon-header {
+  margin: 0 !important;
+  padding-right: 24px !important;
+  text-align: left !important;
+}
+
+.sat-seccion-contribuyentes .aio-icon-box::after,
+.sat-seccion-comercio-exterior .aio-icon-box::after,
+.sat-seccion-profesionales .aio-icon-box::after,
+.sat-seccion-entes-exentos .aio-icon-box::after {
+  content: "" !important;
+  position: absolute !important;
+  top: 24px !important;
+  right: 22px !important;
+  width: 18px !important;
+  height: 18px !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: contain !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2394A3B8' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18l6-6-6-6'/%3E%3C/svg%3E") !important;
+  transition: background-image 0.2s ease !important;
+}
+
+.sat-seccion-contribuyentes .aio-icon-box:hover::after,
+.sat-seccion-comercio-exterior .aio-icon-box:hover::after,
+.sat-seccion-profesionales .aio-icon-box:hover::after,
+.sat-seccion-entes-exentos .aio-icon-box:hover::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FFFFFF' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18l6-6-6-6'/%3E%3C/svg%3E") !important;
 }
 
 /* Tipografía interna de las tarjetas */
@@ -162,13 +261,15 @@
 .sat-seccion-entes-exentos .aio-icon-title,
 .sat-seccion-entes-exentos .info-box-title,
 .sat-card-title {
-  margin: 0 0 8px 0 !important;
+  margin: 0 !important;
   padding: 0 !important;
+  text-align: left !important;
+  font-family: var(--sat-font-family) !important;
   font-size: 16px !important;
   font-weight: 700 !important;
   line-height: 1.35 !important;
   color: var(--sat-text-title) !important;
-  transition: color 0.2s ease !important;
+  transition: color 0.25s ease !important;
 }
 
 .sat-seccion-macro-segmentos .aio-icon-description,
@@ -182,12 +283,15 @@
 .sat-seccion-entes-exentos .aio-icon-description,
 .sat-seccion-entes-exentos .info-box-description,
 .sat-card-desc {
-  margin: 0 !important;
+  margin-top: 8px !important;
   padding: 0 !important;
-  font-size: 13.5px !important;
-  line-height: 1.5 !important;
+  text-align: left !important;
+  font-family: var(--sat-font-family) !important;
+  font-size: 12.5px !important;
+  line-height: 1.55 !important;
   color: var(--sat-text-desc) !important;
-  transition: color 0.2s ease !important;
+  flex-grow: 1 !important;
+  transition: color 0.25s ease !important;
 }
 
 /* ----------------------------------------------------------------------------

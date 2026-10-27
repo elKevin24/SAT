@@ -190,29 +190,17 @@ def wrap_page(items: list[dict], n1: str, heading: str = "", lead_text: str = ""
         '[dt_breadcrumbs font_style="italic:normal:none" alignment="left"]'
         '[vc_separator][/vc_column][/vc_row]'
     )
-    header_block = ""
-    if heading:
-        header_block = (
-            f'[vc_row][vc_column]'
-            f'[vc_custom_heading text="{clean_text(heading)}" font_container="tag:h1|font_size:28px|text_align:left|color:%23003865" use_theme_fonts="yes"]'
-            + (
-                f'[vc_custom_heading text="{clean_text(lead_text)}" font_container="tag:p|font_size:15px|text_align:left|color:%23475569" use_theme_fonts="yes"]'
-                if lead_text else ""
-            )
-            + '[vc_empty_space height="16px"][/vc_column][/vc_row]\n'
-        )
-    col_width = "1/2" if len(items) in (2, 4) else "1/3"
     cols = "".join(
-        columna(info_box(it["title"], it["desc"], it.get("url", ""), it.get("target_blank", False)), width=col_width)
+        columna(info_box(it["title"], it["desc"], it.get("url", ""), it.get("target_blank", False)), width="1/3")
         for it in items
     )
     section = (
         f'[vc_section]'
-        f'[vc_row equal_height="yes" gap="15px" el_class="{CSS_CLASS.get(n1, "sat-seccion-contribuyentes")}"]'
+        f'[vc_row gap="0px" el_class="{CSS_CLASS.get(n1, "sat-seccion-contribuyentes")}"]'
         f'{cols}'
         f'[/vc_row][/vc_section]'
     )
-    return f"{breadcrumb}\n{header_block}{section}"
+    return f"{breadcrumb}{section}"
 
 
 def build_home_shortcode() -> str:

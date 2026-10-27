@@ -54,6 +54,178 @@ const HOVER_COLOR_BY_N1: Record<string, string> = {
   'Entes Exentos': '#C25E00',
 };
 
+export function getPageSpecificCss(n1: string, pageTitle: string): string {
+  const hoverColor = HOVER_COLOR_BY_N1[n1] || '#14649B';
+  const sectionClass = CSS_CLASS_BY_N1[n1] || 'sat-seccion-contribuyentes';
+  const shadowColor =
+    n1 === 'Contribuyentes'
+      ? 'rgba(20, 100, 155, 0.22)'
+      : n1 === 'Operadores de Comercio Exterior'
+      ? 'rgba(2, 132, 199, 0.22)'
+      : n1 === 'Profesionales'
+      ? 'rgba(77, 128, 20, 0.22)'
+      : 'rgba(194, 94, 0, 0.22)';
+
+  return `/* ==================================================
+   SAT GUATEMALA — ESTÁNDAR OFICIAL WPBAKERY
+   Página: ${pageTitle} | Sección: ${n1} (${hoverColor})
+   ================================================== */
+
+/* 1. La Fila: obliga a las 3 columnas a alinearse en una sola línea horizontal recta */
+.${sectionClass}.vc_row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: stretch !important;
+    margin-left: -8px !important;
+    margin-right: -8px !important;
+}
+
+/* 2. Cada Columna de WPBakery: 33.33% de ancho exacto (3 columnas por fila) */
+.${sectionClass} > .vc_column_container {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 0 0 33.333333% !important;
+    max-width: 33.333333% !important;
+    width: 33.333333% !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    margin-bottom: 16px !important;
+    box-sizing: border-box !important;
+}
+
+/* Responsivo: 2 columnas en Tablet */
+@media (max-width: 991px) {
+    .${sectionClass} > .vc_column_container {
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+        width: 50% !important;
+    }
+}
+
+/* Responsivo: 1 columna en Celular */
+@media (max-width: 640px) {
+    .${sectionClass} > .vc_column_container {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+}
+
+/* 3. Contenedores internos de WPBakery: estirar al 100% */
+.${sectionClass} .vc_column-inner,
+.${sectionClass} .wpb_wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1 1 auto !important;
+    width: 100% !important;
+    height: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* 4. Estructura de Info Box: ocupar todo el ancho disponible de la columna */
+.${sectionClass} .aio-icon-component,
+.${sectionClass} .aio-icon-box-link {
+    display: flex !important;
+    flex: 1 1 auto !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* 5. La Tarjeta SAT Oficial (Ancha, fondo gris suave, sin bordes) */
+.${sectionClass} .aio-icon-box {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    position: relative !important;
+
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 140px !important;
+
+    background-color: #F4F6F9 !important; /* Gris suave oficial */
+    border: none !important;              /* Cero bordes */
+    border-radius: 12px !important;       /* Esquinas redondas */
+    padding: 22px 24px !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+
+    cursor: pointer !important;
+    user-select: none !important;
+
+    /* Animación suave */
+    transition: transform 0.35s ease, background-color 0.35s ease, box-shadow 0.35s ease !important;
+}
+
+/* 6. Hover Oficial de la Sección (${hoverColor}) */
+.${sectionClass} .aio-icon-box:hover {
+    background-color: ${hoverColor} !important;
+    transform: translateY(-4px) !important;
+    box-shadow: 0 12px 24px ${shadowColor} !important;
+}
+
+/* 7. Cabecera y Chevron Oficial a la derecha */
+.${sectionClass} .aio-icon-header {
+    margin: 0 !important;
+    padding-right: 24px !important;
+    text-align: left !important;
+}
+
+.${sectionClass} .aio-icon-box::after {
+    content: "" !important;
+    position: absolute !important;
+    top: 24px !important;
+    right: 22px !important;
+    width: 18px !important;
+    height: 18px !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: contain !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2394A3B8' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18l6-6-6-6'/%3E%3C/svg%3E") !important;
+    transition: background-image 0.2s ease !important;
+}
+
+.${sectionClass} .aio-icon-box:hover::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FFFFFF' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18l6-6-6-6'/%3E%3C/svg%3E") !important;
+}
+
+/* 8. Título Institucional */
+.${sectionClass} .aio-icon-title {
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: left !important;
+    font-family: "Gotham", "Montserrat", sans-serif, -apple-system !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    line-height: 1.35 !important;
+    color: #19324B !important;
+    transition: color 0.25s ease !important;
+}
+
+/* 9. Descripción en Lenguaje Claro */
+.${sectionClass} .aio-icon-description {
+    margin-top: 8px !important;
+    padding: 0 !important;
+    text-align: left !important;
+    font-family: "Gotham", "Montserrat", sans-serif, -apple-system !important;
+    font-size: 12.5px !important;
+    line-height: 1.55 !important;
+    color: #475569 !important;
+    flex-grow: 1 !important;
+    transition: color 0.25s ease !important;
+}
+
+/* 10. Textos a blanco puro en Hover */
+.${sectionClass} .aio-icon-box:hover .aio-icon-title {
+    color: #FFFFFF !important;
+}
+.${sectionClass} .aio-icon-box:hover .aio-icon-description {
+    color: rgba(255, 255, 255, 0.92) !important;
+}`;
+}
+
 const CURATED_DESCRIPTIONS: Record<string, string> = {
   'Sin Obligaciones': 'Obtén tu primer Número de Identificación Tributaria (NIT), actualiza tus datos personales, emite tu Solvencia Fiscal o registra tu título universitario sin tener negocio activo.',
   'Pequeños Contribuyentes': 'Factura Electrónica en Línea (FEL), declaraciones mensuales del 5%, régimen electrónico y facilidades para productores del sector primario.',
@@ -194,31 +366,24 @@ function applyBasePathAndModeToShortcode(
 function buildPageShortcode(
   cards: { title: string; desc: string; url: string; targetBlank: boolean }[],
   n1: string,
-  heading: string,
-  leadText: string,
+  _heading: string,
+  _leadText: string,
   includeUrls: boolean,
   basePath = '',
   cardMode: CardShortcodeMode = 'bsf'
 ): string {
   const breadcrumb =
     '[vc_row gap="5px"][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row]';
-  const headerBlock =
-    `[vc_row][vc_column][vc_custom_heading text="${cleanText(heading)}" font_container="tag:h1|font_size:28px|text_align:left|color:%23003865" use_theme_fonts="yes"]` +
-    (leadText
-      ? `[vc_custom_heading text="${cleanText(leadText)}" font_container="tag:p|font_size:15px|text_align:left|color:%23475569" use_theme_fonts="yes"]`
-      : '') +
-    '[vc_empty_space height="16px"][/vc_column][/vc_row]\n';
 
-  const colWidth = cards.length === 2 || cards.length === 4 ? '1/2' : '1/3';
   const cols = cards
     .map(c => {
-      const linkVal = includeUrls ? encodeVcLink(c.url, c.targetBlank, basePath) : '';
-      return `[vc_column width="${colWidth}"][bsf-info-box icon_type="none" title="${cleanText(c.title)}" read_more="box" link="${linkVal}"]${cleanText(c.desc)}[/bsf-info-box][/vc_column]`;
+      const linkVal = includeUrls && c.url ? encodeVcLink(c.url, c.targetBlank, basePath) : '';
+      return `[vc_column width="1/3"][bsf-info-box icon_type="none" title="${cleanText(c.title)}" read_more="box" link="${linkVal}"]${cleanText(c.desc)}[/bsf-info-box][/vc_column]`;
     })
     .join('');
 
   const sectionClass = CSS_CLASS_BY_N1[n1] || 'sat-seccion-contribuyentes';
-  const raw = `${breadcrumb}\n${headerBlock}[vc_section][vc_row equal_height="yes" gap="15px" el_class="${sectionClass}"]${cols}[/vc_row][/vc_section]`;
+  const raw = `${breadcrumb}[vc_section][vc_row gap="0px" el_class="${sectionClass}"]${cols}[/vc_row][/vc_section]`;
   return applyBasePathAndModeToShortcode(raw, '', cardMode);
 }
 
@@ -603,8 +768,11 @@ export const WPBakeryBuilderPage: React.FC = () => {
     }
   });
   const [activeTab, setActiveTab] = useState<'shortcode' | 'preview' | 'css' | 'xml'>('shortcode');
+  const [cssMode, setCssMode] = useState<'page' | 'global'>('page');
   const [showXmlCode, setShowXmlCode] = useState(false);
-  const [copiedType, setCopiedType] = useState<'shortcode' | 'css' | 'slug' | 'title' | 'xml' | null>(null);
+  const [copiedType, setCopiedType] = useState<
+    'shortcode' | 'css' | 'slug' | 'title' | 'parent' | 'template' | 'xml' | null
+  >(null);
   const [completedIds, setCompletedIds] = useState<Set<string>>(() => {
     try {
       const raw = localStorage.getItem(STORAGE_KEY);
@@ -686,7 +854,11 @@ export const WPBakeryBuilderPage: React.FC = () => {
     );
   }, [currentPage, includeUrls, basePath, cardMode]);
 
-  const handleCopy = (text: string, type: 'shortcode' | 'css' | 'slug' | 'title') => {
+  const currentPageCss = useMemo(() => {
+    return getPageSpecificCss(currentPage.n1, currentPage.title);
+  }, [currentPage.n1, currentPage.title]);
+
+  const handleCopy = (text: string, type: 'shortcode' | 'css' | 'slug' | 'title' | 'parent' | 'template') => {
     navigator.clipboard.writeText(text);
     setCopiedType(type);
     setTimeout(() => setCopiedType(null), 2200);
@@ -953,70 +1125,131 @@ export const WPBakeryBuilderPage: React.FC = () => {
                   className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#003865] hover:bg-[#14649B] text-white font-bold text-xs shadow-sm transition-colors cursor-pointer"
                 >
                   {copiedType === 'shortcode' ? <Check className="w-4 h-4 text-emerald-300" /> : <Copy className="w-4 h-4" />}
-                  {copiedType === 'shortcode' ? '¡Shortcode Copiado!' : '4. Copiar Shortcode WPBakery'}
+                  {copiedType === 'shortcode' ? '¡Shortcode Copiado!' : '4. Copiar Shortcode'}
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => handleCopy(currentPageCss, 'css')}
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs shadow-sm transition-colors cursor-pointer"
+                  title="Copiar CSS para WPBakery Page Settings › Custom CSS (Opción 2)"
+                >
+                  {copiedType === 'css' ? <Check className="w-4 h-4 text-emerald-300" /> : <Sparkles className="w-4 h-4 text-amber-300" />}
+                  {copiedType === 'css' ? '¡CSS Copiado!' : '5. Copiar CSS (Opción 2)'}
                 </button>
               </div>
             </div>
 
-            {/* 4 Pasos Exactos para Crear la Página y Conectar su Enlace y Breadcrumb */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs">
-              <div className="p-3 rounded-xl bg-slate-50 border border-slate-200">
-                <div className="flex items-center justify-between">
-                  <span className="text-[10px] font-bold uppercase text-slate-500">
-                    1. Título de la Página
+            {/* 5 Atributos Clave de la Página en WordPress (Página Superior & Plantilla Elementor Full Width) */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 text-xs">
+              <div className="p-3 rounded-xl bg-slate-50 border border-slate-200 flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-[10px] font-bold uppercase text-slate-500">
+                      1. Título de la Página
+                    </span>
+                    <button
+                      type="button"
+                      onClick={() => handleCopy(currentPage.title, 'title')}
+                      className="text-[11px] font-semibold text-[#14649B] hover:underline cursor-pointer"
+                    >
+                      {copiedType === 'title' ? 'Copiado' : 'Copiar'}
+                    </button>
+                  </div>
+                  <div className="mt-1 font-bold text-slate-900 line-clamp-2" title={currentPage.title}>
+                    {currentPage.title}
+                  </div>
+                </div>
+                <span className="text-[10px] text-slate-500 mt-1">Encabezado H1</span>
+              </div>
+
+              <div className="p-3 rounded-xl bg-amber-50/80 border border-amber-300 flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-[10px] font-bold uppercase text-amber-900">
+                      2. Página Superior
+                    </span>
+                    {currentPage.parentPage !== '— (Sin superior / Principal)' && (
+                      <button
+                        type="button"
+                        onClick={() => handleCopy(currentPage.parentPage, 'parent')}
+                        className="text-[11px] font-semibold text-amber-900 hover:underline cursor-pointer"
+                      >
+                        {copiedType === 'parent' ? 'Copiado' : 'Copiar'}
+                      </button>
+                    )}
+                  </div>
+                  <div className="mt-1 font-bold text-amber-950 line-clamp-2" title={currentPage.parentPage}>
+                    {currentPage.parentPage}
+                  </div>
+                </div>
+                <span className="text-[10px] text-amber-800 font-semibold mt-1">
+                  Atributos de página › Superior
+                </span>
+              </div>
+
+              <div className="p-3 rounded-xl bg-indigo-50/80 border border-indigo-200 flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-[10px] font-bold uppercase text-indigo-900">
+                      3. Plantilla de Página
+                    </span>
+                    <button
+                      type="button"
+                      onClick={() => handleCopy('Elementor Ancho Completo', 'template')}
+                      className="text-[11px] font-semibold text-indigo-700 hover:underline cursor-pointer"
+                    >
+                      {copiedType === 'template' ? 'Copiado' : 'Copiar'}
+                    </button>
+                  </div>
+                  <div className="mt-1 font-bold text-indigo-950">
+                    Elementor Ancho Completo
+                  </div>
+                </div>
+                <div className="flex items-center justify-between text-[10px] text-indigo-800 mt-1 font-medium">
+                  <span>Atributos › Plantilla</span>
+                  <span className="font-mono text-[9px] bg-indigo-100 text-indigo-900 px-1 py-0.5 rounded">Full Width</span>
+                </div>
+              </div>
+
+              <div className="p-3 rounded-xl bg-slate-50 border border-slate-200 flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-[10px] font-bold uppercase text-slate-500">
+                      4. Slug / Enlace
+                    </span>
+                    <button
+                      type="button"
+                      onClick={() => handleCopy(currentPage.wpSlugOnly, 'slug')}
+                      className="text-[11px] font-semibold text-[#14649B] hover:underline cursor-pointer"
+                    >
+                      {copiedType === 'slug' ? 'Copiado' : 'Copiar'}
+                    </button>
+                  </div>
+                  <code className="mt-1 block font-mono font-bold text-[#003865] truncate">
+                    {currentPage.wpSlugOnly}
+                  </code>
+                </div>
+                <span className="text-[10px] text-slate-500 mt-1">Enlace permanente</span>
+              </div>
+
+              <div className="p-3 rounded-xl bg-emerald-50/80 border border-emerald-300 flex flex-col justify-between">
+                <div>
+                  <span className="block text-[10px] font-bold uppercase text-emerald-900 font-mono">
+                    URL Canónica Final
                   </span>
-                  <button
-                    type="button"
-                    onClick={() => handleCopy(currentPage.title, 'title')}
-                    className="text-[11px] font-semibold text-[#14649B] hover:underline cursor-pointer"
-                  >
-                    {copiedType === 'title' ? 'Copiado' : 'Copiar'}
-                  </button>
+                  <code className="mt-1 block font-mono font-bold text-emerald-950 break-all text-[11px]">
+                    {currentPage.wpPath}
+                  </code>
                 </div>
-                <div className="mt-1 font-bold text-slate-900 line-clamp-2">
-                  {currentPage.title}
-                </div>
-              </div>
-
-              <div className="p-3 rounded-xl bg-amber-50/70 border border-amber-200">
-                <span className="block text-[10px] font-bold uppercase text-amber-900">
-                  2. Atributo «Página Superior»
+                <span className="text-[10px] text-emerald-800 font-semibold mt-1">
+                  Coincidencia 100% canónica
                 </span>
-                <span className="mt-1 block font-bold text-amber-950 line-clamp-2">
-                  {currentPage.parentPage}
-                </span>
-              </div>
-
-              <div className="p-3 rounded-xl bg-slate-50 border border-slate-200">
-                <div className="flex items-center justify-between">
-                  <span className="text-[10px] font-bold uppercase text-slate-500">
-                    3. Slug en WordPress
-                  </span>
-                  <button
-                    type="button"
-                    onClick={() => handleCopy(currentPage.wpSlugOnly, 'slug')}
-                    className="text-[11px] font-semibold text-[#14649B] hover:underline cursor-pointer"
-                  >
-                    {copiedType === 'slug' ? 'Copiado' : 'Copiar'}
-                  </button>
-                </div>
-                <code className="mt-1 block font-mono font-bold text-[#003865] truncate">
-                  {currentPage.wpSlugOnly}
-                </code>
-              </div>
-
-              <div className="p-3 rounded-xl bg-emerald-50/70 border border-emerald-200">
-                <span className="block text-[10px] font-bold uppercase text-emerald-900">
-                  URL Final Auto-Conectada
-                </span>
-                <code className="mt-1 block font-mono font-bold text-emerald-950 break-all text-[11px]">
-                  {currentPage.wpPath}
-                </code>
               </div>
             </div>
 
-            {/* Demostración de la Miga de Pan ([dt_breadcrumbs]) según su nivel */}
-            <div className="p-3.5 rounded-xl bg-sky-50/80 border border-sky-200 flex flex-wrap items-center justify-between gap-2 text-xs">
+            {/* Demostración de la Miga de Pan ([dt_breadcrumbs]) y Plantilla */}
+            <div className="p-3.5 rounded-xl bg-sky-50/80 border border-sky-200 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
               <div>
                 <span className="font-bold text-[#003865] mr-2">
                   Breadcrumb Automático (`[dt_breadcrumbs]` en línea 1):
@@ -1025,8 +1258,8 @@ export const WPBakeryBuilderPage: React.FC = () => {
                   {currentPage.breadcrumbTrail}
                 </span>
               </div>
-              <span className="text-[11px] text-sky-900 font-semibold">
-                Se genera automáticamente al elegir la Página Superior ({currentPage.levelLabel})
+              <span className="text-[11px] text-sky-950 font-medium bg-sky-100/80 px-2 py-1 rounded-lg">
+                Encadenado por <strong>Página Superior</strong> con plantilla <strong>Elementor Ancho Completo</strong> (100% full-width sin barra lateral)
               </span>
             </div>
 
@@ -1160,13 +1393,7 @@ export const WPBakeryBuilderPage: React.FC = () => {
                 )}
               </div>
 
-              <div
-                className={`grid grid-cols-1 ${
-                  currentPage.cards.length === 2 || currentPage.cards.length === 4
-                    ? 'md:grid-cols-2'
-                    : 'md:grid-cols-3'
-                } gap-3.5`}
-              >
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {currentPage.cards.map((card, idx) => (
                   <a
                     key={idx}
@@ -1181,17 +1408,25 @@ export const WPBakeryBuilderPage: React.FC = () => {
                       }
                     }}
                     style={{ '--hover-bg': hoverColor } as React.CSSProperties}
-                    className="group flex flex-col justify-between bg-white border border-[#DCDCDC] rounded-[14px] p-5 transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_14px_30px_rgba(0,0,0,0.08)] hover:bg-[var(--hover-bg)] hover:border-[var(--hover-bg)] text-left"
+                    className="group relative flex flex-col justify-start bg-[#F4F6F9] border-0 rounded-[12px] p-[22px_24px] min-h-[140px] text-left transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_24px_rgba(0,0,0,0.12)] hover:bg-[var(--hover-bg)]"
                   >
-                    <div>
-                      <h4 className="text-[15px] font-bold text-[#19324B] group-hover:text-white leading-snug mb-2 transition-colors">
+                    {/* Chevron institucional a la derecha */}
+                    <div className="absolute top-[22px] right-[20px] w-[18px] height-[18px] text-[#94A3B8] group-hover:text-white transition-colors">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
+                        <path d="M9 18l6-6-6-6" />
+                      </svg>
+                    </div>
+
+                    <div className="pr-6">
+                      <h4 className="text-[16px] font-bold text-[#19324B] group-hover:text-white leading-[1.35] mb-2 transition-colors">
                         {card.title}
                       </h4>
-                      <p className="text-[13px] text-[#475569] group-hover:text-white/95 leading-relaxed transition-colors">
+                      <p className="text-[12.5px] text-[#475569] group-hover:text-white/95 leading-[1.55] transition-colors flex-grow">
                         {card.desc}
                       </p>
                     </div>
-                    <div className="mt-3 pt-2 border-t border-slate-100 group-hover:border-white/20 flex items-center justify-between text-[11px] font-mono text-slate-400 group-hover:text-white/90">
+
+                    <div className="mt-3 pt-2 border-t border-slate-200/60 group-hover:border-white/20 flex items-center justify-between text-[11px] font-mono text-slate-400 group-hover:text-white/80">
                       <span className="truncate">{card.url}</span>
                       {card.targetBlank && <ExternalLink className="w-3 h-3 shrink-0 ml-1" />}
                     </div>
@@ -1208,7 +1443,7 @@ export const WPBakeryBuilderPage: React.FC = () => {
                   Opción Aceleradora: Paquetes XML de Importación Nativa de WordPress (WXR 1.2)
                 </h3>
                 <p className="text-xs text-slate-600 mt-1 leading-relaxed">
-                  Si en el menú izquierdo de tu WordPress tienes acceso a <strong>Herramientas › Importar › WordPress</strong>, puedes subir cualquiera de estos dos archivos XML oficiales para crear automáticamente las páginas con su <strong>Página Superior (`post_parent`)</strong>, su <strong>Slug (`post_name`)</strong>, su <strong>Breadcrumb (`[dt_breadcrumbs]`)</strong> y sus <strong>Shortcodes WPBakery (0% `[vc_raw_html]`)</strong> en un solo paso. Si no tienes acceso a esa opción, usa las pestañas por Olas de arriba para crearlas manualmente.
+                  Si en el menú izquierdo de tu WordPress tienes acceso a <strong>Herramientas › Importar › WordPress</strong>, puedes subir cualquiera de estos archivos XML oficiales. Ya traen preconfigurados de fábrica la <strong>Página Superior (`post_parent`)</strong>, la <strong>Plantilla Elementor Ancho Completo (`elementor_header_footer`)</strong>, el <strong>CSS de WPBakery (`_wpb_post_custom_css`)</strong>, el <strong>Slug (`post_name`)</strong>, el <strong>Breadcrumb (`[dt_breadcrumbs]`)</strong> y los <strong>Shortcodes WPBakery (0% `[vc_raw_html]`)</strong> en un solo paso. Si no usas el importador, el planificador superior te indica exactamente qué valores elegir en cada página.
                 </p>
               </div>
 
@@ -1348,25 +1583,73 @@ export const WPBakeryBuilderPage: React.FC = () => {
           )}
 
           {activeTab === 'css' && (
-            <div className="bg-white border border-slate-200 rounded-2xl p-5 shadow-xs space-y-3">
-              <div className="flex items-center justify-between text-xs text-slate-600">
-                <span>
-                  Pega esta hoja una única vez en <strong>The7 › Theme Options › Advanced › Custom CSS</strong> (o en <em>Apariencia › Personalizar › CSS adicional</em>).
-                </span>
+            <div className="bg-white border border-slate-200 rounded-2xl p-5 shadow-xs space-y-4">
+              <div className="flex flex-wrap items-center justify-between gap-3 border-b border-slate-200 pb-3">
+                <div className="inline-flex rounded-xl bg-slate-100 p-1 gap-1 text-xs font-bold">
+                  <button
+                    type="button"
+                    onClick={() => setCssMode('page')}
+                    className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg cursor-pointer transition-colors ${
+                      cssMode === 'page'
+                        ? 'bg-white text-[#003865] shadow-2xs'
+                        : 'text-slate-600 hover:text-slate-900'
+                    }`}
+                  >
+                    <Sparkles className="w-3.5 h-3.5 text-amber-500" />
+                    Opción 2: CSS de esta Página (Page Settings)
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setCssMode('global')}
+                    className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg cursor-pointer transition-colors ${
+                      cssMode === 'global'
+                        ? 'bg-white text-[#003865] shadow-2xs'
+                        : 'text-slate-600 hover:text-slate-900'
+                    }`}
+                  >
+                    <Layers className="w-3.5 h-3.5 text-sky-500" />
+                    Opción 1: CSS Global (The7 / Personalizar)
+                  </button>
+                </div>
+
                 <button
                   type="button"
-                  onClick={() => handleCopy(wpCssRaw, 'css')}
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#003865] text-white font-bold text-xs cursor-pointer"
+                  onClick={() => handleCopy(cssMode === 'page' ? currentPageCss : wpCssRaw, 'css')}
+                  className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-[#003865] hover:bg-[#14649B] text-white font-bold text-xs cursor-pointer shadow-xs transition-colors"
                 >
-                  {copiedType === 'css' ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
-                  {copiedType === 'css' ? 'Copiado' : 'Copiar CSS'}
+                  {copiedType === 'css' ? <Check className="w-3.5 h-3.5 text-emerald-300" /> : <Copy className="w-3.5 h-3.5" />}
+                  {copiedType === 'css' ? '¡Copiado!' : cssMode === 'page' ? 'Copiar CSS de esta Página' : 'Copiar CSS Global'}
                 </button>
               </div>
+
+              {cssMode === 'page' ? (
+                <div className="p-3.5 rounded-xl bg-amber-50/70 border border-amber-200 text-xs text-amber-950 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
+                  <div className="space-y-0.5">
+                    <span className="font-bold">
+                      ¿Dónde se pega en WPBakery? (Opción 2 para «{currentPage.title}»)
+                    </span>
+                    <p className="text-[11px] text-amber-900">
+                      Al editar la página con WPBakery, haz clic arriba en el ícono del <strong>Engranaje / Tuerca (`Page Settings`)</strong> › pestaña <strong>Custom CSS</strong> › pega este bloque y guarda.
+                    </p>
+                  </div>
+                  <span className="shrink-0 text-[11px] font-mono font-bold px-2 py-1 rounded bg-amber-200/60 text-amber-900">
+                    Hover: {HOVER_COLOR_BY_N1[currentPage.n1] || '#14649B'}
+                  </span>
+                </div>
+              ) : (
+                <div className="p-3.5 rounded-xl bg-sky-50/70 border border-sky-200 text-xs text-sky-950">
+                  <span className="font-bold">¿Dónde se pega el CSS Global? (Opción 1):</span>
+                  <p className="text-[11px] text-sky-900 mt-0.5">
+                    Se pega una única vez en <strong>The7 › Theme Options › Advanced › Custom CSS</strong> (o en <em>Apariencia › Personalizar › CSS adicional</em>). Aplica automáticamente a todas las páginas del portal.
+                  </p>
+                </div>
+              )}
+
               <textarea
                 readOnly
-                value={wpCssRaw}
-                aria-label="Hoja de estilos CSS oficial para WPBakery y The7"
-                className="w-full h-[430px] font-mono text-xs leading-relaxed p-4 rounded-xl bg-slate-900 text-emerald-200 border border-slate-800 focus:outline-none"
+                value={cssMode === 'page' ? currentPageCss : wpCssRaw}
+                aria-label="Código CSS listo para pegar en WordPress"
+                className="w-full h-[400px] font-mono text-xs leading-relaxed p-4 rounded-xl bg-slate-900 text-emerald-200 border border-slate-800 focus:outline-none"
               />
             </div>
           )}
