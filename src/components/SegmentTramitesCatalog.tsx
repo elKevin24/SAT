@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import { Search, ArrowLeft } from 'lucide-react';
+import { Search } from 'lucide-react';
 import { SegmentId } from './UserSegmentCards';
 import { Card, type CardTone } from './ui/Card';
 import { Breadcrumbs } from './ui/Breadcrumbs';
@@ -369,35 +369,8 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
     setInternalQuery('');
   };
 
-  // Renderizador unificado de tarjeta de gestión con diseño Plain Language y badges oficiales
+  // Renderizador unificado de tarjeta de gestión con formato estándar del SAT Design System
   const renderTramiteCard = (tramite: TramiteItem) => {
-    const badges = (
-      <>
-        {tramite.tipoInteraccion && (
-          <span className={`inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider transition-colors group-hover:bg-white/20 group-hover:text-white ${
-            tramite.tipoInteraccion === 'servicio_transaccional'
-              ? 'bg-sat-azul/10 text-sat-azul border border-sat-azul/20'
-              : tramite.tipoInteraccion === 'consulta_datos'
-                ? 'bg-emerald-50 text-emerald-800 border border-emerald-300'
-                : tramite.tipoInteraccion === 'descarga_recurso'
-                  ? 'bg-purple-50 text-purple-800 border border-purple-300'
-                  : 'bg-sat-fondo-medio/70 text-sat-texto-suave border border-sat-gris/60'
-          }`}>
-            {tramite.tipoInteraccion === 'servicio_transaccional' && 'Gestión en Línea'}
-            {tramite.tipoInteraccion === 'consulta_datos' && 'Consulta BD'}
-            {tramite.tipoInteraccion === 'guia_informativa' && 'Guía'}
-            {tramite.tipoInteraccion === 'descarga_recurso' && 'Descarga'}
-          </span>
-        )}
-
-        {tramite.esBrecha && (
-          <span className="inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-bold bg-[#C25E00]/10 text-[#C25E00] border border-[#C25E00]/30 transition-colors group-hover:bg-white group-hover:text-[#C25E00]">
-            Propuesta normativa SAT
-          </span>
-        )}
-      </>
-    );
-
     return (
       <Card
         key={tramite.id}
@@ -406,17 +379,6 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
         tone={cardTone}
         headingLevel="h3"
         onClick={() => onSelectTramite(tramite)}
-        badges={badges}
-        footer={
-          <>
-            <span className="truncate text-[11px] text-sat-texto-suave group-hover:text-white/80">
-              {tramite.categoria} {tramite.subcategoria && tramite.subcategoria !== tramite.categoria ? `› ${tramite.subcategoria}` : ''}
-            </span>
-            <span className="font-bold flex items-center gap-1 shrink-0 text-xs">
-              Ver detalle →
-            </span>
-          </>
-        }
       />
     );
   };
@@ -565,19 +527,6 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
               <div className="space-y-4">
                 {!selectedSubcategory && subcategoriesList.length > 1 ? (
                   <div>
-                    <div className="flex items-center justify-between mb-3 pb-2 border-b border-[#E2E8F0]">
-                      <h2 className="text-xs font-bold uppercase tracking-wider text-[#64748B]">
-                        Subtemas de {selectedCategory} ({subcategoriesList.length})
-                      </h2>
-                      <button
-                        onClick={handleResetToCategories}
-                        className="inline-flex items-center gap-1.5 text-xs font-bold text-[#14649B] hover:underline"
-                      >
-                        <ArrowLeft className="w-3.5 h-3.5" />
-                        <span>Volver a {meta.shortTitle}</span>
-                      </button>
-                    </div>
-
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-3.5">
                       {subcategoriesList.map((subName) => {
                         const desc = SUBCATEGORY_DESCRIPTIONS[subName] || 'Consulta las gestiones específicas y requisitos correspondientes.';
@@ -597,29 +546,6 @@ export const SegmentTramitesCatalog: React.FC<SegmentTramitesCatalogProps> = ({
                   </div>
                 ) : (
                   <div className="space-y-3.5">
-                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-2 border-b border-[#E2E8F0]">
-                      <h2 className="text-xs font-bold uppercase tracking-wider text-[#64748B]">
-                        Servicios y gestiones ({currentTramites.length})
-                      </h2>
-                      {subcategoriesList.length > 1 ? (
-                        <button
-                          onClick={handleResetToSubcategories}
-                          className="inline-flex items-center gap-1.5 text-xs font-bold text-[#14649B] hover:underline self-start sm:self-auto"
-                        >
-                          <ArrowLeft className="w-3.5 h-3.5" />
-                          <span>Volver a subtemas</span>
-                        </button>
-                      ) : (
-                        <button
-                          onClick={handleResetToCategories}
-                          className="inline-flex items-center gap-1.5 text-xs font-bold text-[#14649B] hover:underline self-start sm:self-auto"
-                        >
-                          <ArrowLeft className="w-3.5 h-3.5" />
-                          <span>Volver a {meta.shortTitle}</span>
-                        </button>
-                      )}
-                    </div>
-
                     {/* Barra compacta de filtro por Etapa del Ciclo ATO (solo cuando hay >= 6 gestiones en el nivel) */}
                     {baseLevelTramites.length >= 6 && (
                       <div

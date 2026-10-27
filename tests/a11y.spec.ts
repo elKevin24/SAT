@@ -63,7 +63,7 @@ test('Navegación a Proceso Guiado (ProcessJourneyPage)', async ({ page }) => {
 test('Navegación a página de contenido de gestión (GestionContentPage)', async ({ page }) => {
   await page.goto('/#/catalogo');
   await page.getByRole('button', { name: 'Sin Obligaciones' }).first().click();
-  await page.locator('[role="button"]:has-text("Ver detalle")').first().click();
+  await page.getByRole('button', { name: /Solicitud y Activación de Agencia Virtual/i }).first().click();
   await expect(page.locator('h1')).toBeVisible();
   await scan(page, 'GestionContentPage');
 });
