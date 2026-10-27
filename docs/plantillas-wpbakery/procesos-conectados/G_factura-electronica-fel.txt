@@ -1,0 +1,96 @@
+[vc_row gap="5px"][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row]
+
+[vc_row el_class="sat-gestion-header"]
+[vc_column]
+[vc_custom_heading text="Habilitación y Emisión de Factura Electrónica en Línea (FEL)" font_container="tag:h1|font_size:30px|text_align:left|color:%23003865" use_theme_fonts="yes"]
+[vc_custom_heading text="Habilítate como emisor en el régimen de Factura Electrónica en Línea (FEL), genera tu contraseña de firma electrónica gratuita y emite o verifica Documentos Tributarios Electrónicos (DTE) en 3 pasos conectados." font_container="tag:p|font_size:16px|text_align:left|color:%23475569" use_theme_fonts="yes"]
+[vc_empty_space height="12px"]
+[/vc_column]
+[/vc_row]
+
+[vc_section]
+[vc_row]
+[vc_column]
+[vc_tta_tabs style="modern" shape="rounded" color="blue" active_section="1" el_class="sat-connected-steps-tabs"]
+
+[vc_tta_section title="1. Requisitos Previos" tab_id="paso-1-requisitos-fel"]
+[vc_row]
+[vc_column]
+[vc_message message_box_style="solid-icon" message_box_color="info" icon_fontawesome="fas fa-file-invoice"]<strong>Servicio gratuito en Agencia Virtual o vía Certificador Autorizado:</strong> La SAT pone a tu disposición el certificador gratuito dentro de Agencia Virtual y la aplicación móvil <strong>APP FEL</strong> sin costo de emisión.[/vc_message]
+[vc_empty_space height="16px"]
+[/vc_column]
+[/vc_row]
+
+[vc_row equal_height="yes" gap="15px" el_class="sat-seccion-contribuyentes"]
+[vc_column width="1/2"]
+[vc_column_text]
+<div class="sat-modalidad-card">
+  <h3>Condiciones en el Registro Tributario Unificado (RTU)</h3>
+  <p>Antes de solicitar tu habilitación como emisor FEL en Agencia Virtual, asegúrate de cumplir con lo siguiente:</p>
+  <ul>
+    <li><strong>Usuario activo de Agencia Virtual SAT</strong> con contraseña vigente.</li>
+    <li><strong>Datos actualizados o ratificados en el RTU Digital</strong> durante el último año.</li>
+    <li><strong>Al menos un establecimiento comercial activo</strong> y afiliación activa a un régimen del Impuesto al Valor Agregado (Pequeño Contribuyente, Régimen General o Especial).</li>
+  </ul>
+</div>
+[/vc_column_text]
+[/vc_column]
+
+[vc_column width="1/2"]
+[vc_column_text]
+<div class="sat-modalidad-card">
+  <h3>Modalidades de Emisión Disponibles</h3>
+  <p>Puedes emitir tus Documentos Tributarios Electrónicos (DTE) por cualquiera de estas dos vías:</p>
+  <ul>
+    <li><strong>Agencia Virtual / APP FEL (Certificador Gratuito SAT):</strong> Ideal para profesionales, pequeños contribuyentes y comercios con facturación directa.</li>
+    <li><strong>Certificador Autorizado (Guatefacturas, Infile, etc.):</strong> Para empresas con sistemas ERP, alto volumen de facturación o puntos de venta integrados.</li>
+  </ul>
+</div>
+[/vc_column_text]
+[/vc_column]
+[/vc_row]
+[/vc_tta_section]
+
+[vc_tta_section title="2. Habilitarse y Emitir DTE" tab_id="paso-2-habilitar-emitir-fel"]
+[vc_row el_class="sat-seccion-contribuyentes"]
+[vc_column]
+[vc_custom_heading text="Paso 2: Habilítate como Emisor y Emite tus Facturas en Agencia Virtual" font_container="tag:h2|font_size:20px|text_align:left|color:%23003865" use_theme_fonts="yes"]
+[vc_column_text]
+<div class="sat-app-launch-card">
+  <h3>Ruta Paso a Paso dentro de Agencia Virtual SAT</h3>
+  <ol>
+    <li>Ingresa a <strong>Agencia Virtual</strong> › menú <strong>Servicios › Factura Electrónica en Línea (FEL) › Habilitarse como Emisor</strong>.</li>
+    <li>Verifica el cumplimiento de los requisitos automáticos del sistema y acepta los términos para generar tu <strong>contraseña de Firma Electrónica FEL</strong>.</li>
+    <li>Para emitir facturas de inmediato, entra a <strong>Servicios › Factura Electrónica en Línea (FEL) › Emitir Documento Tributario Electrónico (DTE)</strong>, ingresa el NIT del receptor, el detalle del bien o servicio y presiona <strong>Certificar DTE</strong>.</li>
+  </ol>
+</div>
+[/vc_column_text]
+[vc_empty_space height="14px"]
+[/vc_column]
+[/vc_row]
+
+[vc_row equal_height="yes" gap="15px" el_class="sat-seccion-contribuyentes"]
+[vc_column width="1/2"]
+[bsf-info-box icon_type="none" title="Ingresar a Agencia Virtual SAT (Habilitación y Emisión FEL)" read_more="box" link="url:https://farm3.sat.gob.gt/menu/login.jsf||target:%20_blank|"]Accede con tu NIT y contraseña a Agencia Virtual para habilitarte como emisor y certificar facturas electrónicas.[/bsf-info-box]
+[/vc_column]
+[vc_column width="1/2"]
+[bsf-info-box icon_type="none" title="Portal Informativo y Manuales Oficiales de Factura Electrónica (FEL)" read_more="box" link="url:https://portal.sat.gob.gt/portal/efactura/||target:%20_blank|"]Consulta guías técnicas, reglas de anulación de DTE, listado de certificadores autorizados y preguntas frecuentes.[/bsf-info-box]
+[/vc_column]
+[/vc_row]
+[/vc_tta_section]
+
+[vc_tta_section title="3. Verificar DTE y Consultas" tab_id="paso-3-verificar-dte-fel"]
+[vc_row equal_height="yes" gap="15px" el_class="sat-seccion-contribuyentes"]
+[vc_column width="1/2"]
+[bsf-info-box icon_type="none" title="Verificador Público de Documentos Tributarios Electrónicos (DTE)" read_more="box" link="url:https://portal.sat.gob.gt/portal/verificador-integrado/||target:%20_blank|"]Comprueba la validez y vigencia de cualquier factura electrónica ingresando el Número de Autorización, Serie, Número de DTE y NIT del emisor.[/bsf-info-box]
+[/vc_column]
+[vc_column width="1/2"]
+[bsf-info-box icon_type="none" title="Presentación de Planilla de IVA-FEL (Asalariados)" read_more="box" link="url:https://portal.sat.gob.gt/portal/planilla-iva-fel/||target:%20_blank|"]Información sobre cómo el sistema consolida automáticamente tus facturas electrónicas recibidas para el crédito del Impuesto Sobre la Renta (ISR).[/bsf-info-box]
+[/vc_column]
+[/vc_row]
+[/vc_tta_section]
+
+[/vc_tta_tabs]
+[/vc_column]
+[/vc_row]
+[/vc_section]

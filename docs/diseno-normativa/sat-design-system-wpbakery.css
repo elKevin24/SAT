@@ -256,7 +256,7 @@
 }
 
 /* ----------------------------------------------------------------------------
- * 5. PESTAÑAS CONECTADAS DE 3 PASOS (/solicitar-nit/ y /actualizar-rtu/)
+ * 5. PESTAÑAS CONECTADAS DE 3 PASOS (6 Procesos Universales en Ola 0)
  *    100% Nativo WPBakery ([vc_tta_tabs], .sat-modalidad-card, .sat-app-launch-card)
  * ---------------------------------------------------------------------------- */
 .sat-connected-steps-tabs .vc_tta-tabs-list .vc_tta-tab > a {
@@ -327,4 +327,78 @@
   line-height: 1.7 !important;
   padding-left: 20px !important;
   margin: 0 !important;
+}
+
+/* ----------------------------------------------------------------------------
+ * 6. MIGAS DE PAN ([dt_breadcrumbs]) Y NAVEGACIÓN LATERAL THE7 (SIDEBAR)
+ *    Regla 5: Desacoplamiento IA vs. Navegación y compactación mobile-first
+ * ---------------------------------------------------------------------------- */
+.dt-breadcrumbs,
+.breadcrumbs {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  gap: 6px !important;
+  font-family: var(--sat-font-family) !important;
+  font-size: 13px !important;
+  font-style: normal !important;
+  color: var(--sat-text-desc) !important;
+  background: #f8fafc !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 10px !important;
+  padding: 10px 16px !important;
+  margin: 0 0 16px 0 !important;
+}
+.dt-breadcrumbs a,
+.breadcrumbs a {
+  color: var(--sat-color-contribuyentes) !important;
+  font-weight: 600 !important;
+  font-style: normal !important;
+  text-decoration: none !important;
+  transition: color 0.15s ease !important;
+}
+.dt-breadcrumbs a:hover,
+.breadcrumbs a:hover {
+  color: var(--sat-azul-institucional) !important;
+  text-decoration: underline !important;
+}
+.dt-breadcrumbs .current,
+.breadcrumbs .current {
+  color: var(--sat-text-title) !important;
+  font-weight: 700 !important;
+  font-style: normal !important;
+}
+
+/* Menú contextual lateral en The7 (Custom Menu Widget / Subpages) */
+.sidebar .widget_nav_menu ul,
+.sidebar .widget_pages ul {
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 1px solid var(--sat-card-border) !important;
+  border-radius: 12px !important;
+  background: #ffffff !important;
+  overflow: hidden !important;
+}
+.sidebar .widget_nav_menu li a,
+.sidebar .widget_pages li a {
+  display: block !important;
+  padding: 11px 16px !important;
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  color: var(--sat-text-title) !important;
+  border-bottom: 1px solid #f1f5f9 !important;
+  text-decoration: none !important;
+  transition: background-color 0.15s ease, color 0.15s ease !important;
+}
+.sidebar .widget_nav_menu li:last-child a,
+.sidebar .widget_pages li:last-child a {
+  border-bottom: none !important;
+}
+.sidebar .widget_nav_menu li a:hover,
+.sidebar .widget_pages li a:hover,
+.sidebar .widget_nav_menu li.current-menu-item > a,
+.sidebar .widget_pages li.current_page_item > a {
+  background-color: var(--sat-azul-institucional) !important;
+  color: #ffffff !important;
 }

@@ -1,0 +1,70 @@
+[vc_row gap="5px"][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row]
+
+[vc_row el_class="sat-gestion-header"]
+[vc_column]
+[vc_custom_heading text="Traspaso Electrónico de Vehículos en Línea (e-Traspaso)" font_container="tag:h1|font_size:30px|text_align:left|color:%23003865" use_theme_fonts="yes"]
+[vc_custom_heading text="Realiza la transferencia de propiedad de vehículos automotores y motocicletas en línea por medio de Notario autorizado y descarga los nuevos distintivos electrónicos en 3 pasos conectados." font_container="tag:p|font_size:16px|text_align:left|color:%23475569" use_theme_fonts="yes"]
+[vc_empty_space height="12px"]
+[/vc_column]
+[/vc_row]
+
+[vc_section]
+[vc_row]
+[vc_column]
+[vc_tta_tabs style="modern" shape="rounded" color="blue" active_section="1" el_class="sat-connected-steps-tabs"]
+
+[vc_tta_section title="1. Requisitos y Solvencia Vehicular" tab_id="paso-1-requisitos-traspaso"]
+[vc_row]
+[vc_column]
+[vc_message message_box_style="solid-icon" message_box_color="info" icon_fontawesome="fas fa-car"]<strong>Condiciones para el Vendedor, Comprador y Vehículo:</strong> Tanto el vendedor como el comprador deben tener su <strong>DPI vigente</strong> y sus datos actualizados en el <strong>RTU Digital</strong>. El vehículo debe tener pagado el <strong>Impuesto Sobre Circulación de Vehículos (ISCV)</strong> del año en curso y estar libre de multas o inactivaciones.[/vc_message]
+[vc_empty_space height="16px"]
+[/vc_column]
+[/vc_row]
+
+[vc_row equal_height="yes" gap="15px" el_class="sat-seccion-contribuyentes"]
+[vc_column width="1/2"]
+[vc_column_text]
+<div class="sat-modalidad-card">
+  <h3>Documentos que se entregan al Notario</h3>
+  <p>Para autorizar el traspaso electrónico desde Agencia Virtual del Notario se requiere:</p>
+  <ul>
+    <li><strong>Certificado de Propiedad de Vehículos</strong> endosado o con código de seguridad electrónico.</li>
+    <li><strong>Tarjeta de Circulación</strong> vigente (o constancia digital descargada de Agencia Virtual).</li>
+    <li><strong>DPI original y vigente</strong> del vendedor y del comprador, y sus respectivos NIT actualizados.</li>
+  </ul>
+</div>
+[/vc_column_text]
+[/vc_column]
+
+[vc_column width="1/2"]
+[bsf-info-box icon_type="none" title="Consultar Impuesto de Circulación (ISCV) y Estado del Vehículo" read_more="box" link="url:https://portal.sat.gob.gt/portal/impuesto-de-circulacion-de-vehiculos/||target:%20_blank|"]Verifica que el vehículo tenga solvente el Impuesto Sobre Circulación de Vehículos (ISCV) antes de iniciar el traspaso.[/bsf-info-box]
+[/vc_column]
+[/vc_row]
+[/vc_tta_section]
+
+[vc_tta_section title="2. Pago de Impuestos y Gestión Notarial" tab_id="paso-2-pago-notario-traspaso"]
+[vc_row equal_height="yes" gap="15px" el_class="sat-seccion-contribuyentes"]
+[vc_column width="1/2"]
+[bsf-info-box icon_type="none" title="Pagar IVA por Traspaso y Costo de Traspaso en Declaraguate" read_more="box" link="url:https://declaraguate.sat.gob.gt/||target:%20_blank|"]En la sección 5. Vehículos de Declaraguate genera los formularios SAT-2311 (IVA de Traspaso según tarifa fija o valor) y SAT-8611 (Costo de Traspaso Q 60.00).[/bsf-info-box]
+[/vc_column]
+[vc_column width="1/2"]
+[bsf-info-box icon_type="none" title="Autorización Electrónica del Traspaso en Agencia Virtual (Notario)" read_more="box" link="url:https://farm3.sat.gob.gt/menu/login.jsf||target:%20_blank|"]El Notario habilitado registra el traspaso electrónico con su huella biométrica o firma electrónica y remite el expediente digital.[/bsf-info-box]
+[/vc_column]
+[/vc_row]
+[/vc_tta_section]
+
+[vc_tta_section title="3. Descargar Tarjeta y Certificado" tab_id="paso-3-descargar-distintivos"]
+[vc_row equal_height="yes" gap="15px" el_class="sat-seccion-contribuyentes"]
+[vc_column width="1/2"]
+[bsf-info-box icon_type="none" title="Imprimir Nueva Tarjeta de Circulación y Certificado de Propiedad" read_more="box" link="url:https://farm3.sat.gob.gt/menu/login.jsf||target:%20_blank|"]El nuevo propietario ingresa a su Agencia Virtual › Servicios › Vehículos › Distintivos Electrónicos para descargar su Tarjeta de Circulación y Certificado a su nombre.[/bsf-info-box]
+[/vc_column]
+[vc_column width="1/2"]
+[bsf-info-box icon_type="none" title="Requisitos y Guía Completa del Registro Fiscal de Vehículos (RFV)" read_more="box" link="url:https://portal.sat.gob.gt/portal/requisitos-de-vehiculos/||target:%20_blank|"]Consulta casos especiales de traspaso en agencia tributaria por declaración jurada, donación, sucesión hereditaria o mandato.[/bsf-info-box]
+[/vc_column]
+[/vc_row]
+[/vc_tta_section]
+
+[/vc_tta_tabs]
+[/vc_column]
+[/vc_row]
+[/vc_section]

@@ -1,24 +1,19 @@
 """
-generar_wpbakery_shortcodes.py  v5 (100% Cero [vc_raw_html] — Sincronizado con allTramites.json + Hallazgos A y B)
-==================================================================================================================
-Genera todos los shortcodes oficiales de WPBakery + The7 Classic para el Portal SAT Guatemala,
+generar_wpbakery_shortcodes.py  v6 (100% Cero [vc_raw_html] — 6 Procesos Conectados + 153 Páginas de Catálogo)
+===============================================================================================================
+Genera los 160 shortcodes oficiales de WPBakery + The7 Classic para el Portal SAT Guatemala,
 sin utilizar en ningún caso [vc_raw_html] ni bloques de HTML crudo prohibidos.
 
 Fuente canónica única (Single Source of Truth):
   - src/data/allTramites.json (714 gestiones canónicas con orden_n1..orden_n5 y orden_contenido)
 
-Reglas aplicadas (AGENTS.md & DESIGN_RULES.md):
-  - Prohibición estricta de [vc_raw_html] -> Uso exclusivo de elementos nativos de WPBakery y The7
-    ([vc_row], [vc_column], [bsf-info-box], [vc_tta_tabs], [vc_message], [vc_custom_heading], [vc_column_text]).
-  - Estructura estrictamente numérica (Nivel 1 a Nivel 5), sin nombres conceptuales inventados.
-  - Prohibición estricta de la palabra "trámite" / "trámites" -> Uso obligatorio de "gestión" / "gestiones".
-  - Regla del Guion Largo (—):
-      · Si nivel3 == "—" (ej. Sin Obligaciones, OEA, Auditores, Servicios Profesionales, Municipalidades),
-        las gestiones se listan directamente en la página N2_<slug>.txt (sin crear subcarpetas vacías ni N3_.txt).
-      · Si nivel4 == "—" (ej. Contribuyente General > Regímenes tributarios, Agentes Aduaneros, etc.),
-        las gestiones se listan directamente en la página N3_<slug>.txt.
-  - Capacidad de Miller (7±2) y orden cronológico del ciclo de vida ATO (orden_contenido).
-  - Páginas Universales Conectadas en 3 Pasos (/solicitar-nit/ y /actualizar-rtu/) sin [vc_raw_html].
+Incluye 6 Páginas Universales de Proceso Conectado en 3 Pasos ([vc_tta_tabs] sin [vc_raw_html]):
+  1. /solicitar-nit/
+  2. /actualizar-rtu/
+  3. /factura-electronica-fel/
+  4. /solvencia-fiscal/
+  5. /traspaso-vehiculos/
+  6. /padron-importadores/
 """
 
 import json
@@ -49,7 +44,6 @@ N1_SLUGS = {
     "Entes Exentos": "entes-exentos",
 }
 
-# Descripciones ciudadanas curadas para tarjetas de Nivel 2, Nivel 3 y Nivel 4
 CURATED_DESCRIPTIONS = {
     # Nivel 2
     "Sin Obligaciones": "Obtén tu primer Número de Identificación Tributaria (NIT), actualiza tus datos personales, emite tu Solvencia Fiscal o registra tu título universitario sin tener negocio activo.",
@@ -88,7 +82,7 @@ CURATED_DESCRIPTIONS = {
     "Declaraciones e Informes Especiales": "Estudio de precios de transferencia, estados financieros auditados, informe semestral de saldos de inventario y retenciones.",
     "Capacitación y Orientación Diferenciada": "Programas de formación especializada y boletines técnicos para grandes y medianos contribuyentes.",
 
-    # Nivel 4 — Contribuyente General (Consolidados con Hallazgo B)
+    # Nivel 4 — Contribuyente General
     "Factura Electrónica en Línea (FEL) y Autorización de Documentos": "Habilitación como emisor en el régimen FEL, emisión y verificación de Documentos Tributarios Electrónicos (DTE) y autorización de documentos.",
     "Imprentas, Máquinas Registradoras y Sistemas": "Inscripción en el Registro Fiscal de Imprentas, autorización de máquinas registradoras y sistemas computarizados de facturación.",
     "Formularios y Constancias de Exención": "Constancias de exención del IVA (CIVA), Constancias de Adquisición de Insumos (CAIS), listado de formularios y guías de llenado.",
@@ -233,8 +227,8 @@ def build_home_shortcode() -> str:
 [vc_column width="1/6"][bsf-info-box icon_type="none" title="Declaraguate" read_more="box" link="url:https://declaraguate.sat.gob.gt/||target:%20_blank|"]Presentación y pago de formularios.[/bsf-info-box][/vc_column]
 [vc_column width="1/6"][bsf-info-box icon_type="none" title="Agencia Virtual" read_more="box" link="url:https://farm3.sat.gob.gt/menu/login.jsf||target:%20_blank|"]Servicios en línea y constancia RTU.[/bsf-info-box][/vc_column]
 [vc_column width="1/6"][bsf-info-box icon_type="none" title="Solicitar NIT" read_more="box" link="url:/solicitar-nit/|||"]Requisitos, formulario oficial y cita en 3 pasos.[/bsf-info-box][/vc_column]
-[vc_column width="1/6"][bsf-info-box icon_type="none" title="Factura FEL" read_more="box" link="url:https://portal.sat.gob.gt/portal/factura-electronica-en-linea-fel/||target:%20_blank|"]Emisión y verificación de DTE.[/bsf-info-box][/vc_column]
-[vc_column width="1/6"][bsf-info-box icon_type="none" title="Consulta de NIT" read_more="box" link="url:https://portal.sat.gob.gt/portal/consulta-cui-nit/||target:%20_blank|"]Verificar estado y validez tributaria.[/bsf-info-box][/vc_column]
+[vc_column width="1/6"][bsf-info-box icon_type="none" title="Factura FEL" read_more="box" link="url:/factura-electronica-fel/|||"]Habilitación, emisión y consulta de DTE en 3 pasos.[/bsf-info-box][/vc_column]
+[vc_column width="1/6"][bsf-info-box icon_type="none" title="Solvencia Fiscal" read_more="box" link="url:/solvencia-fiscal/|||"]Requisitos, pago y descarga en línea en 3 pasos.[/bsf-info-box][/vc_column]
 [vc_column width="1/6"][bsf-info-box icon_type="none" title="Cita Previa" read_more="box" link="url:https://cdn.c.sat.gob.gt/cita-validada/cita-validada-portal/portal||target:%20_blank|"]Programar atención en agencias.[/bsf-info-box][/vc_column]
 [/vc_row]
 
@@ -263,23 +257,14 @@ def build_home_shortcode() -> str:
 [vc_row equal_height="yes" gap="15px" el_class="sat-seccion-contribuyentes"]
 [vc_column width="1/3"][bsf-info-box icon_type="none" title="Solicitar Número de Identificación Tributaria (NIT)" read_more="box" link="url:/solicitar-nit/|||"]Requisitos claros, formulario oficial RTU Digital y programación de cita en 3 pasos conectados.[/bsf-info-box][/vc_column]
 [vc_column width="1/3"][bsf-info-box icon_type="none" title="Actualizar o Ratificar Datos en el RTU Digital" read_more="box" link="url:/actualizar-rtu/|||"]Actualiza tu dirección fiscal, establecimientos, impuestos o contador, consulta el estado e imprime tu Constancia de RTU en 3 pasos.[/bsf-info-box][/vc_column]
-[vc_column width="1/3"][bsf-info-box icon_type="none" title="Solicitud y Emisión de Solvencia Fiscal en Línea" read_more="box" link="url:https://portal.sat.gob.gt/portal/solvencia-fiscal/||target:%20_blank|"]Consulta, pago y descarga del certificado electrónico que acredita la ausencia de adeudos tributarios.[/bsf-info-box][/vc_column]
-[vc_column width="1/3"][bsf-info-box icon_type="none" title="Habilitación para emitir Factura Electrónica (FEL)" read_more="box" link="url:https://portal.sat.gob.gt/portal/factura-electronica-en-linea-fel/||target:%20_blank|"]Pasos para incorporarte al régimen FEL y emitir Documentos Tributarios Electrónicos (DTE) de forma gratuita.[/bsf-info-box][/vc_column]
-[vc_column width="1/3"][bsf-info-box icon_type="none" title="Traspaso Electrónico de Vehículos en Línea" read_more="box" link="url:https://portal.sat.gob.gt/portal/vehiculos/||target:%20_blank|"]Transferencia de dominio de automotores autorizada notarialmente a través de Agencia Virtual.[/bsf-info-box][/vc_column]
-[vc_column width="1/3"][bsf-info-box icon_type="none" title="Inscripción en el Padrón de Importadores" read_more="box" link="url:https://portal.sat.gob.gt/portal/padron-de-importadores/||target:%20_blank|"]Requisitos y activación de estado en el padrón aduanero para el despacho e internación de mercancías.[/bsf-info-box][/vc_column]
+[vc_column width="1/3"][bsf-info-box icon_type="none" title="Solicitud y Emisión de Solvencia Fiscal en Línea" read_more="box" link="url:/solvencia-fiscal/|||"]Verifica tus obligaciones al día, genera la boleta SAT-8421 en Declaraguate y descarga tu Solvencia Fiscal en 3 pasos.[/bsf-info-box][/vc_column]
+[vc_column width="1/3"][bsf-info-box icon_type="none" title="Habilitación para emitir Factura Electrónica (FEL)" read_more="box" link="url:/factura-electronica-fel/|||"]Pasos conectados para habilitarte como emisor en Agencia Virtual, configurar tu firma y emitir Documentos Tributarios Electrónicos (DTE).[/bsf-info-box][/vc_column]
+[vc_column width="1/3"][bsf-info-box icon_type="none" title="Traspaso Electrónico de Vehículos en Línea" read_more="box" link="url:/traspaso-vehiculos/|||"]Requisitos para comprador, vendedor y Notario, pago de IVA e ISCV en Declaraguate y descarga de distintivos electrónicos.[/bsf-info-box][/vc_column]
+[vc_column width="1/3"][bsf-info-box icon_type="none" title="Inscripción en el Padrón de Importadores" read_more="box" link="url:/padron-importadores/|||"]Requisitos de actividad económica y domicilio, registro de cuenta bancaria y activación del padrón aduanero en Agencia Virtual.[/bsf-info-box][/vc_column]
 [/vc_row]"""
 
 
 def build_solicitar_nit_shortcode() -> str:
-    """
-    Construye el Shortcode WPBakery para la Página Universal Conectada en 3 Pasos (100% Cero [vc_raw_html]):
-    /solicitar-nit/
-      - Paso 1: 1. Requisitos (texto nativo en lenguaje ciudadano, alerta DPI físico vigente sin constancia RENAP,
-        4 modalidades y guía de comprobante de domicilio; sin lista de agencias por región).
-      - Paso 2: 2. Solicitar Gestión (bloque nativo WPBakery sin [vc_raw_html] hacia https://app.c.sat.gob.gt/rtu/formulario-inscripcion).
-      - Paso 3: 3. Solicitar Cita (bloque nativo WPBakery sin [vc_raw_html] hacia https://cdn.c.sat.gob.gt/cita-validada/cita-validada-portal/portal
-        + manual PDF oficial).
-    """
     return """[vc_row gap="5px"][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row]
 
 [vc_row el_class="sat-gestion-header"]
@@ -424,16 +409,6 @@ def build_solicitar_nit_shortcode() -> str:
 
 
 def build_actualizar_rtu_shortcode() -> str:
-    """
-    Construye el Shortcode WPBakery para la Página Universal Conectada en 3 Pasos (100% Cero [vc_raw_html]):
-    /actualizar-rtu/
-      - Paso 1: 1. Requisitos según tu caso (plazo legal de 30 días hábiles Art. 94 Código Tributario,
-        4 escenarios ciudadanos y reglas oficiales sobre Factura de Servicios vs otro comprobante).
-      - Paso 2: 2. Realizar Actualización (ruta operativa en Agencia Virtual + enlaces directos +
-        manuales PDF oficiales de la SAT).
-      - Paso 3: 3. Estado, Constancia y Cita (3 tarjetas nativas [bsf-info-box] hacia los aplicativos oficiales:
-        consulta de estado RTU Digital, impresión de Constancia de RTU y sistema de Cita Validada).
-    """
     return """[vc_row gap="5px"][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row]
 
 [vc_row el_class="sat-gestion-header"]
@@ -591,8 +566,343 @@ def build_actualizar_rtu_shortcode() -> str:
 [/vc_section]"""
 
 
+def build_fel_shortcode() -> str:
+    return """[vc_row gap="5px"][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row]
+
+[vc_row el_class="sat-gestion-header"]
+[vc_column]
+[vc_custom_heading text="Habilitación y Emisión de Factura Electrónica en Línea (FEL)" font_container="tag:h1|font_size:30px|text_align:left|color:%23003865" use_theme_fonts="yes"]
+[vc_custom_heading text="Habilítate como emisor en el régimen de Factura Electrónica en Línea (FEL), genera tu contraseña de firma electrónica gratuita y emite o verifica Documentos Tributarios Electrónicos (DTE) en 3 pasos conectados." font_container="tag:p|font_size:16px|text_align:left|color:%23475569" use_theme_fonts="yes"]
+[vc_empty_space height="12px"]
+[/vc_column]
+[/vc_row]
+
+[vc_section]
+[vc_row]
+[vc_column]
+[vc_tta_tabs style="modern" shape="rounded" color="blue" active_section="1" el_class="sat-connected-steps-tabs"]
+
+[vc_tta_section title="1. Requisitos Previos" tab_id="paso-1-requisitos-fel"]
+[vc_row]
+[vc_column]
+[vc_message message_box_style="solid-icon" message_box_color="info" icon_fontawesome="fas fa-file-invoice"]<strong>Servicio gratuito en Agencia Virtual o vía Certificador Autorizado:</strong> La SAT pone a tu disposición el certificador gratuito dentro de Agencia Virtual y la aplicación móvil <strong>APP FEL</strong> sin costo de emisión.[/vc_message]
+[vc_empty_space height="16px"]
+[/vc_column]
+[/vc_row]
+
+[vc_row equal_height="yes" gap="15px" el_class="sat-seccion-contribuyentes"]
+[vc_column width="1/2"]
+[vc_column_text]
+<div class="sat-modalidad-card">
+  <h3>Condiciones en el Registro Tributario Unificado (RTU)</h3>
+  <p>Antes de solicitar tu habilitación como emisor FEL en Agencia Virtual, asegúrate de cumplir con lo siguiente:</p>
+  <ul>
+    <li><strong>Usuario activo de Agencia Virtual SAT</strong> con contraseña vigente.</li>
+    <li><strong>Datos actualizados o ratificados en el RTU Digital</strong> durante el último año.</li>
+    <li><strong>Al menos un establecimiento comercial activo</strong> y afiliación activa a un régimen del Impuesto al Valor Agregado (Pequeño Contribuyente, Régimen General o Especial).</li>
+  </ul>
+</div>
+[/vc_column_text]
+[/vc_column]
+
+[vc_column width="1/2"]
+[vc_column_text]
+<div class="sat-modalidad-card">
+  <h3>Modalidades de Emisión Disponibles</h3>
+  <p>Puedes emitir tus Documentos Tributarios Electrónicos (DTE) por cualquiera de estas dos vías:</p>
+  <ul>
+    <li><strong>Agencia Virtual / APP FEL (Certificador Gratuito SAT):</strong> Ideal para profesionales, pequeños contribuyentes y comercios con facturación directa.</li>
+    <li><strong>Certificador Autorizado (Guatefacturas, Infile, etc.):</strong> Para empresas con sistemas ERP, alto volumen de facturación o puntos de venta integrados.</li>
+  </ul>
+</div>
+[/vc_column_text]
+[/vc_column]
+[/vc_row]
+[/vc_tta_section]
+
+[vc_tta_section title="2. Habilitarse y Emitir DTE" tab_id="paso-2-habilitar-emitir-fel"]
+[vc_row el_class="sat-seccion-contribuyentes"]
+[vc_column]
+[vc_custom_heading text="Paso 2: Habilítate como Emisor y Emite tus Facturas en Agencia Virtual" font_container="tag:h2|font_size:20px|text_align:left|color:%23003865" use_theme_fonts="yes"]
+[vc_column_text]
+<div class="sat-app-launch-card">
+  <h3>Ruta Paso a Paso dentro de Agencia Virtual SAT</h3>
+  <ol>
+    <li>Ingresa a <strong>Agencia Virtual</strong> › menú <strong>Servicios › Factura Electrónica en Línea (FEL) › Habilitarse como Emisor</strong>.</li>
+    <li>Verifica el cumplimiento de los requisitos automáticos del sistema y acepta los términos para generar tu <strong>contraseña de Firma Electrónica FEL</strong>.</li>
+    <li>Para emitir facturas de inmediato, entra a <strong>Servicios › Factura Electrónica en Línea (FEL) › Emitir Documento Tributario Electrónico (DTE)</strong>, ingresa el NIT del receptor, el detalle del bien o servicio y presiona <strong>Certificar DTE</strong>.</li>
+  </ol>
+</div>
+[/vc_column_text]
+[vc_empty_space height="14px"]
+[/vc_column]
+[/vc_row]
+
+[vc_row equal_height="yes" gap="15px" el_class="sat-seccion-contribuyentes"]
+[vc_column width="1/2"]
+[bsf-info-box icon_type="none" title="Ingresar a Agencia Virtual SAT (Habilitación y Emisión FEL)" read_more="box" link="url:https://farm3.sat.gob.gt/menu/login.jsf||target:%20_blank|"]Accede con tu NIT y contraseña a Agencia Virtual para habilitarte como emisor y certificar facturas electrónicas.[/bsf-info-box]
+[/vc_column]
+[vc_column width="1/2"]
+[bsf-info-box icon_type="none" title="Portal Informativo y Manuales Oficiales de Factura Electrónica (FEL)" read_more="box" link="url:https://portal.sat.gob.gt/portal/efactura/||target:%20_blank|"]Consulta guías técnicas, reglas de anulación de DTE, listado de certificadores autorizados y preguntas frecuentes.[/bsf-info-box]
+[/vc_column]
+[/vc_row]
+[/vc_tta_section]
+
+[vc_tta_section title="3. Verificar DTE y Consultas" tab_id="paso-3-verificar-dte-fel"]
+[vc_row equal_height="yes" gap="15px" el_class="sat-seccion-contribuyentes"]
+[vc_column width="1/2"]
+[bsf-info-box icon_type="none" title="Verificador Público de Documentos Tributarios Electrónicos (DTE)" read_more="box" link="url:https://portal.sat.gob.gt/portal/verificador-integrado/||target:%20_blank|"]Comprueba la validez y vigencia de cualquier factura electrónica ingresando el Número de Autorización, Serie, Número de DTE y NIT del emisor.[/bsf-info-box]
+[/vc_column]
+[vc_column width="1/2"]
+[bsf-info-box icon_type="none" title="Presentación de Planilla de IVA-FEL (Asalariados)" read_more="box" link="url:https://portal.sat.gob.gt/portal/planilla-iva-fel/||target:%20_blank|"]Información sobre cómo el sistema consolida automáticamente tus facturas electrónicas recibidas para el crédito del Impuesto Sobre la Renta (ISR).[/bsf-info-box]
+[/vc_column]
+[/vc_row]
+[/vc_tta_section]
+
+[/vc_tta_tabs]
+[/vc_column]
+[/vc_row]
+[/vc_section]"""
+
+
+def build_solvencia_fiscal_shortcode() -> str:
+    return """[vc_row gap="5px"][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row]
+
+[vc_row el_class="sat-gestion-header"]
+[vc_column]
+[vc_custom_heading text="Solicitud y Emisión de Solvencia Fiscal en Línea" font_container="tag:h1|font_size:30px|text_align:left|color:%23003865" use_theme_fonts="yes"]
+[vc_custom_heading text="Obtén el documento oficial con código QR que acredita que te encuentras al día en el cumplimiento de tus deberes tributarios formales y de pago ante la SAT en 3 pasos conectados." font_container="tag:p|font_size:16px|text_align:left|color:%23475569" use_theme_fonts="yes"]
+[vc_empty_space height="12px"]
+[/vc_column]
+[/vc_row]
+
+[vc_section]
+[vc_row]
+[vc_column]
+[vc_tta_tabs style="modern" shape="rounded" color="blue" active_section="1" el_class="sat-connected-steps-tabs"]
+
+[vc_tta_section title="1. Requisitos y Consulta de Omisos" tab_id="paso-1-requisitos-solvencia"]
+[vc_row]
+[vc_column]
+[vc_message message_box_style="solid-icon" message_box_color="warning" icon_fontawesome="fas fa-check-double"]<strong>Verifica que no tengas declaraciones pendientes (omisos) antes de pagar:</strong> Para que la Solvencia Fiscal se emita sin inconvenientes, tu NIT debe estar actualizado en el RTU y no presentar omisos ni adeudos líquidos y exigibles.[/vc_message]
+[vc_empty_space height="16px"]
+[/vc_column]
+[/vc_row]
+
+[vc_row equal_height="yes" gap="15px" el_class="sat-seccion-contribuyentes"]
+[vc_column width="1/2"]
+[bsf-info-box icon_type="none" title="Consultar Incumplimientos u Omisos en Agencia Virtual" read_more="box" link="url:https://farm3.sat.gob.gt/menu/login.jsf||target:%20_blank|"]Ingresa a tu Agencia Virtual para verificar que todas tus declaraciones mensuales, trimestrales o anuales estén presentadas al día.[/bsf-info-box]
+[/vc_column]
+[vc_column width="1/2"]
+[bsf-info-box icon_type="none" title="Requisitos y Motivos de Rechazo de Solvencia Fiscal" read_more="box" link="url:https://portal.sat.gob.gt/portal/solvencia-fiscal/||target:%20_blank|"]Consulta la guía oficial sobre cómo solventar inconsistencias en el RTU, adeudos en cobranza o declaraciones pendientes.[/bsf-info-box]
+[/vc_column]
+[/vc_row]
+[/vc_tta_section]
+
+[vc_tta_section title="2. Llenar Formulario SAT-8421" tab_id="paso-2-pagar-solvencia"]
+[vc_row el_class="sat-seccion-contribuyentes"]
+[vc_column]
+[vc_custom_heading text="Paso 2: Genera y Paga el Formulario SAT-8421 en Declaraguate (Q 30.00)" font_container="tag:h2|font_size:20px|text_align:left|color:%23003865" use_theme_fonts="yes"]
+[vc_column_text]
+<div class="sat-app-launch-card">
+  <h3>Instrucciones en Declaraguate</h3>
+  <ol>
+    <li>Ingresa al portal <strong>Declaraguate</strong> y en la sección <strong>9. Varios</strong> selecciona el formulario <strong>SAT-8421 (Solvencia Fiscal)</strong>.</li>
+    <li>Ingresa tu NIT, congela el formulario para generar la boleta <strong>SAT-2000</strong> por <strong>Q 30.00</strong> y realiza el pago en tu banca en línea o banco autorizado.</li>
+    <li>Conserva el <strong>Número de Formulario y Número de Acceso</strong> impresos en tu boleta para descargar el documento en el Paso 3.</li>
+  </ol>
+</div>
+[/vc_column_text]
+[vc_empty_space height="14px"]
+[bsf-info-box icon_type="none" title="Ir a Declaraguate — Llenar Formulario SAT-8421 (Solvencia Fiscal)" read_more="box" link="url:https://declaraguate.sat.gob.gt/||target:%20_blank|"]Abre Declaraguate para llenar la solicitud de Solvencia Fiscal (Formulario SAT-8421) y generar tu boleta de pago SAT-2000.[/bsf-info-box]
+[/vc_column]
+[/vc_row]
+[/vc_tta_section]
+
+[vc_tta_section title="3. Descargar Solvencia Fiscal" tab_id="paso-3-descargar-solvencia"]
+[vc_row equal_height="yes" gap="15px" el_class="sat-seccion-contribuyentes"]
+[vc_column width="1/2"]
+[bsf-info-box icon_type="none" title="Descargar e Imprimir Solvencia Fiscal en PDF" read_more="box" link="url:https://portal.sat.gob.gt/portal/solvencia-fiscal/||target:%20_blank|"]Una vez pagada la boleta SAT-2000, descarga tu Solvencia Fiscal oficial firmada electrónicamente con código QR.[/bsf-info-box]
+[/vc_column]
+[vc_column width="1/2"]
+[bsf-info-box icon_type="none" title="Verificar Autenticidad de Solvencia Fiscal emitida" read_more="box" link="url:https://portal.sat.gob.gt/portal/verificador-integrado/||target:%20_blank|"]Valida en línea la autenticidad de una Solvencia Fiscal presentada ante entidades públicas o privadas.[/bsf-info-box]
+[/vc_column]
+[/vc_row]
+[/vc_tta_section]
+
+[/vc_tta_tabs]
+[/vc_column]
+[/vc_row]
+[/vc_section]"""
+
+
+def build_traspaso_vehiculos_shortcode() -> str:
+    return """[vc_row gap="5px"][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row]
+
+[vc_row el_class="sat-gestion-header"]
+[vc_column]
+[vc_custom_heading text="Traspaso Electrónico de Vehículos en Línea (e-Traspaso)" font_container="tag:h1|font_size:30px|text_align:left|color:%23003865" use_theme_fonts="yes"]
+[vc_custom_heading text="Realiza la transferencia de propiedad de vehículos automotores y motocicletas en línea por medio de Notario autorizado y descarga los nuevos distintivos electrónicos en 3 pasos conectados." font_container="tag:p|font_size:16px|text_align:left|color:%23475569" use_theme_fonts="yes"]
+[vc_empty_space height="12px"]
+[/vc_column]
+[/vc_row]
+
+[vc_section]
+[vc_row]
+[vc_column]
+[vc_tta_tabs style="modern" shape="rounded" color="blue" active_section="1" el_class="sat-connected-steps-tabs"]
+
+[vc_tta_section title="1. Requisitos y Solvencia Vehicular" tab_id="paso-1-requisitos-traspaso"]
+[vc_row]
+[vc_column]
+[vc_message message_box_style="solid-icon" message_box_color="info" icon_fontawesome="fas fa-car"]<strong>Condiciones para el Vendedor, Comprador y Vehículo:</strong> Tanto el vendedor como el comprador deben tener su <strong>DPI vigente</strong> y sus datos actualizados en el <strong>RTU Digital</strong>. El vehículo debe tener pagado el <strong>Impuesto Sobre Circulación de Vehículos (ISCV)</strong> del año en curso y estar libre de multas o inactivaciones.[/vc_message]
+[vc_empty_space height="16px"]
+[/vc_column]
+[/vc_row]
+
+[vc_row equal_height="yes" gap="15px" el_class="sat-seccion-contribuyentes"]
+[vc_column width="1/2"]
+[vc_column_text]
+<div class="sat-modalidad-card">
+  <h3>Documentos que se entregan al Notario</h3>
+  <p>Para autorizar el traspaso electrónico desde Agencia Virtual del Notario se requiere:</p>
+  <ul>
+    <li><strong>Certificado de Propiedad de Vehículos</strong> endosado o con código de seguridad electrónico.</li>
+    <li><strong>Tarjeta de Circulación</strong> vigente (o constancia digital descargada de Agencia Virtual).</li>
+    <li><strong>DPI original y vigente</strong> del vendedor y del comprador, y sus respectivos NIT actualizados.</li>
+  </ul>
+</div>
+[/vc_column_text]
+[/vc_column]
+
+[vc_column width="1/2"]
+[bsf-info-box icon_type="none" title="Consultar Impuesto de Circulación (ISCV) y Estado del Vehículo" read_more="box" link="url:https://portal.sat.gob.gt/portal/impuesto-de-circulacion-de-vehiculos/||target:%20_blank|"]Verifica que el vehículo tenga solvente el Impuesto Sobre Circulación de Vehículos (ISCV) antes de iniciar el traspaso.[/bsf-info-box]
+[/vc_column]
+[/vc_row]
+[/vc_tta_section]
+
+[vc_tta_section title="2. Pago de Impuestos y Gestión Notarial" tab_id="paso-2-pago-notario-traspaso"]
+[vc_row equal_height="yes" gap="15px" el_class="sat-seccion-contribuyentes"]
+[vc_column width="1/2"]
+[bsf-info-box icon_type="none" title="Pagar IVA por Traspaso y Costo de Traspaso en Declaraguate" read_more="box" link="url:https://declaraguate.sat.gob.gt/||target:%20_blank|"]En la sección 5. Vehículos de Declaraguate genera los formularios SAT-2311 (IVA de Traspaso según tarifa fija o valor) y SAT-8611 (Costo de Traspaso Q 60.00).[/bsf-info-box]
+[/vc_column]
+[vc_column width="1/2"]
+[bsf-info-box icon_type="none" title="Autorización Electrónica del Traspaso en Agencia Virtual (Notario)" read_more="box" link="url:https://farm3.sat.gob.gt/menu/login.jsf||target:%20_blank|"]El Notario habilitado registra el traspaso electrónico con su huella biométrica o firma electrónica y remite el expediente digital.[/bsf-info-box]
+[/vc_column]
+[/vc_row]
+[/vc_tta_section]
+
+[vc_tta_section title="3. Descargar Tarjeta y Certificado" tab_id="paso-3-descargar-distintivos"]
+[vc_row equal_height="yes" gap="15px" el_class="sat-seccion-contribuyentes"]
+[vc_column width="1/2"]
+[bsf-info-box icon_type="none" title="Imprimir Nueva Tarjeta de Circulación y Certificado de Propiedad" read_more="box" link="url:https://farm3.sat.gob.gt/menu/login.jsf||target:%20_blank|"]El nuevo propietario ingresa a su Agencia Virtual › Servicios › Vehículos › Distintivos Electrónicos para descargar su Tarjeta de Circulación y Certificado a su nombre.[/bsf-info-box]
+[/vc_column]
+[vc_column width="1/2"]
+[bsf-info-box icon_type="none" title="Requisitos y Guía Completa del Registro Fiscal de Vehículos (RFV)" read_more="box" link="url:https://portal.sat.gob.gt/portal/requisitos-de-vehiculos/||target:%20_blank|"]Consulta casos especiales de traspaso en agencia tributaria por declaración jurada, donación, sucesión hereditaria o mandato.[/bsf-info-box]
+[/vc_column]
+[/vc_row]
+[/vc_tta_section]
+
+[/vc_tta_tabs]
+[/vc_column]
+[/vc_row]
+[/vc_section]"""
+
+
+def build_padron_importadores_shortcode() -> str:
+    return """[vc_row gap="5px"][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row]
+
+[vc_row el_class="sat-gestion-header"]
+[vc_column]
+[vc_custom_heading text="Inscripción y Activación en el Padrón de Importadores" font_container="tag:h1|font_size:30px|text_align:left|color:%23003865" use_theme_fonts="yes"]
+[vc_custom_heading text="Habilita tu registro aduanero como importador ante la Intendencia de Aduanas de la SAT para transmitir Declaraciones Únicas Centroamericanas (DUCA) e internar mercancías al país en 3 pasos conectados." font_container="tag:p|font_size:16px|text_align:left|color:%23475569" use_theme_fonts="yes"]
+[vc_empty_space height="12px"]
+[/vc_column]
+[/vc_row]
+
+[vc_section]
+[vc_row]
+[vc_column]
+[vc_tta_tabs style="modern" shape="rounded" color="blue" active_section="1" el_class="sat-connected-steps-tabs"]
+
+[vc_tta_section title="1. Requisitos del Importador" tab_id="paso-1-requisitos-importador"]
+[vc_row]
+[vc_column]
+[vc_message message_box_style="solid-icon" message_box_color="info" icon_fontawesome="fas fa-ship"]<strong>Gestión 100% electrónica desde Agencia Virtual:</strong> No necesitas acudir a una aduana ni agencia tributaria si tus datos del Registro Tributario Unificado (RTU) están actualizados y cuentas con banca en línea habilitada para débito fiscal (BancaSAT).[/vc_message]
+[vc_empty_space height="16px"]
+[/vc_column]
+[/vc_row]
+
+[vc_row equal_height="yes" gap="15px" el_class="sat-seccion-comercio-exterior"]
+[vc_column width="1/2"]
+[vc_column_text]
+<div class="sat-modalidad-card">
+  <h3>Requisitos Tributarios y Registrales</h3>
+  <p>Condiciones obligatorias antes de llenar el formulario electrónico en Agencia Virtual:</p>
+  <ul>
+    <li><strong>RTU Digital actualizado o ratificado</strong>, con al menos un establecimiento activo y afiliación a impuestos vigente.</li>
+    <li><strong>Actividad económica compatible</strong> con el comercio o importación registrada en tu RTU.</li>
+    <li><strong>No presentar omisos</strong> ni incumplimientos tributarios pendientes.</li>
+  </ul>
+</div>
+[/vc_column_text]
+[/vc_column]
+
+[vc_column width="1/2"]
+[vc_column_text]
+<div class="sat-modalidad-card">
+  <h3>Requisitos Bancarios y Domiciliarios</h3>
+  <p>Para validar tus operaciones de comercio exterior necesitas:</p>
+  <ul>
+    <li><strong>Contrato activo de BancaSAT</strong> en un banco del sistema autorizado a nombre del importador (persona individual o jurídica).</li>
+    <li><strong>Coordenadas geográficas y fotografías del domicilio fiscal y bodegas</strong> donde se almacenarán las mercancías importadas.</li>
+  </ul>
+</div>
+[/vc_column_text]
+[/vc_column]
+[/vc_row]
+[/vc_tta_section]
+
+[vc_tta_section title="2. Inscribirse en Agencia Virtual" tab_id="paso-2-inscribir-importador"]
+[vc_row el_class="sat-seccion-comercio-exterior"]
+[vc_column]
+[vc_custom_heading text="Paso 2: Registra tu Solicitud en el Padrón de Importadores dentro de Agencia Virtual" font_container="tag:h2|font_size:20px|text_align:left|color:%23003865" use_theme_fonts="yes"]
+[vc_column_text]
+<div class="sat-app-launch-card">
+  <h3>Ruta Operativa dentro de Agencia Virtual SAT</h3>
+  <ol>
+    <li>Ingresa a <strong>Agencia Virtual</strong> con tu NIT y contraseña › menú <strong>Servicios › Aduanas › Padrón de Importadores › Inscripción / Actualización</strong>.</li>
+    <li>Registra los capítulos del Sistema Arancelario Centroamericano (SAC) que importarás, confirma el banco donde tienes contrato de BancaSAT y adjunta los requisitos del domicilio.</li>
+    <li>Envía la solicitud electrónica para validación del sistema aduanero.</li>
+  </ol>
+</div>
+[/vc_column_text]
+[vc_empty_space height="14px"]
+[bsf-info-box icon_type="none" title="Ingresar a Agencia Virtual SAT (Padrón de Importadores)" read_more="box" link="url:https://farm3.sat.gob.gt/menu/login.jsf||target:%20_blank|"]Accede con tu NIT y contraseña a Agencia Virtual para inscribirte o actualizar tu estado en el Padrón de Importadores.[/bsf-info-box]
+[/vc_column]
+[/vc_row]
+[/vc_tta_section]
+
+[vc_tta_section title="3. Consultas y Agentes Aduaneros" tab_id="paso-3-consulta-importador"]
+[vc_row equal_height="yes" gap="15px" el_class="sat-seccion-comercio-exterior"]
+[vc_column width="1/2"]
+[bsf-info-box icon_type="none" title="Requisitos y Manuales Oficiales del Padrón de Importadores" read_more="box" link="url:https://portal.sat.gob.gt/portal/requisitos-de-aduanas/||target:%20_blank|"]Descarga los manuales paso a paso para inscripción, confirmación anual de datos y asociación de Agentes Aduaneros en Agencia Virtual.[/bsf-info-box]
+[/vc_column]
+[vc_column width="1/2"]
+[bsf-info-box icon_type="none" title="Ir al Catálogo de Gestiones para Importadores" read_more="box" link="url:/operadores-de-comercio-exterior/importadores/|||"]Explora todas las gestiones de Declaración Única Centroamericana (DUCA), despacho, levante e importación de vehículos.[/bsf-info-box]
+[/vc_column]
+[/vc_row]
+[/vc_tta_section]
+
+[/vc_tta_tabs]
+[/vc_column]
+[/vc_row]
+[/vc_section]"""
+
+
 SOLICITAR_NIT_IDS = {
     "SAT-GES-0001",
+    "SAT-GES-0011",
     "SAT-GES-0049",
     "SAT-GES-0050",
     "SAT-GES-0051",
@@ -615,6 +925,28 @@ ACTUALIZAR_RTU_IDS = {
     "SAT-GES-0118",
 }
 
+FEL_IDS = {
+    "SAT-GES-0319",
+    "SAT-GES-0498",
+    "SAT-GES-0581",
+}
+
+SOLVENCIA_FISCAL_IDS = {
+    "SAT-GES-0005",
+    "SAT-GES-0336",
+    "SAT-GES-0337",
+}
+
+TRASPASO_VEHICULOS_IDS = {
+    "SAT-GES-0269",
+    "SAT-GES-0318",
+    "SAT-GES-0568",
+}
+
+PADRON_IMPORTADORES_IDS = {
+    "SAT-GES-0344",
+}
+
 
 def resolve_card_link(t: dict) -> tuple[str, bool]:
     """Devuelve (url, target_blank) enlazando gestiones conectadas a su página universal interna."""
@@ -623,6 +955,14 @@ def resolve_card_link(t: dict) -> tuple[str, bool]:
         return "/solicitar-nit/", False
     if cid in ACTUALIZAR_RTU_IDS:
         return "/actualizar-rtu/", False
+    if cid in FEL_IDS:
+        return "/factura-electronica-fel/", False
+    if cid in SOLVENCIA_FISCAL_IDS:
+        return "/solvencia-fiscal/", False
+    if cid in TRASPASO_VEHICULOS_IDS:
+        return "/traspaso-vehiculos/", False
+    if cid in PADRON_IMPORTADORES_IDS:
+        return "/padron-importadores/", False
     url = t.get("url") or ""
     return url, bool(url)
 
@@ -649,24 +989,32 @@ def main():
 
     index_lines = [
         "# Índice Maestro de Plantillas y Shortcodes WPBakery (Cero Raw HTML) — Portal SAT Guatemala\n\n",
-        "Este directorio contiene los shortcodes oficiales de **WPBakery Page Builder + The7 Classic + Ultimate Addons (`[bsf-info-box]`)**, **100% libres de `[vc_raw_html]`**, sincronizados con `src/data/allTramites.json` (**714 gestiones canónicas**), los **Hallazgos A y B** de la Arquitectura de Información y las **Páginas Universales Conectadas en 3 Pasos (`/solicitar-nit/` y `/actualizar-rtu/`)**.\n\n",
-        "## 1. Portada y Páginas de Proceso Conectado (3 Pasos Nativos WPBakery)\n\n",
+        "Este directorio contiene los **160 shortcodes oficiales** de **WPBakery Page Builder + The7 Classic + Ultimate Addons (`[bsf-info-box]`)**, **100% libres de `[vc_raw_html]`**, sincronizados con `src/data/allTramites.json` (**714 gestiones canónicas**), los **Hallazgos A y B** de la Arquitectura de Información y las **6 Páginas Universales Conectadas en 3 Pasos**.\n\n",
+        "## 1. Portada y 6 Páginas Universales de Proceso Conectado (3 Pasos Nativos WPBakery)\n\n",
         "| Archivo | Tipo | Ruta Web Sugerida | Contenido |\n",
         "| :--- | :---: | :--- | :--- |\n",
-        "| `HOME_portada-portal-sat.txt` | Portada | `/` | Hero institucional, 6 accesos rápidos, 4 tarjetas de Nivel 1 y 6 gestiones frecuentes |\n",
-        "| `procesos-conectados/G_solicitar-nit.txt` | Gestión Conectada (3 Pasos) | `/solicitar-nit/` | Pestañas conectadas (`[vc_tta_tabs]` sin `[vc_raw_html]`): **1. Requisitos** › **2. Solicitar Gestión** › **3. Solicitar Cita** |\n",
-        "| `procesos-conectados/G_actualizar-rtu.txt` | Gestión Conectada (3 Pasos) | `/actualizar-rtu/` | Pestañas conectadas (`[vc_tta_tabs]` sin `[vc_raw_html]`): **1. Requisitos según tu caso** › **2. Realizar Actualización** › **3. Estado, Constancia y Cita** |\n\n",
+        "| `HOME_portada-portal-sat.txt` | Portada | `/` | Hero institucional, 6 accesos rápidos, 4 tarjetas de Nivel 1 y 6 gestiones frecuentes conectadas |\n",
+        "| `procesos-conectados/G_solicitar-nit.txt` | Gestión Conectada (3 Pasos) | `/solicitar-nit/` | Pestañas `[vc_tta_tabs]`: **1. Requisitos** › **2. Solicitar Gestión** › **3. Solicitar Cita** |\n",
+        "| `procesos-conectados/G_actualizar-rtu.txt` | Gestión Conectada (3 Pasos) | `/actualizar-rtu/` | Pestañas `[vc_tta_tabs]`: **1. Requisitos según tu caso** › **2. Realizar Actualización** › **3. Estado, Constancia y Cita** |\n",
+        "| `procesos-conectados/G_factura-electronica-fel.txt` | Gestión Conectada (3 Pasos) | `/factura-electronica-fel/` | Pestañas `[vc_tta_tabs]`: **1. Requisitos Previos** › **2. Habilitarse y Emitir DTE** › **3. Verificar DTE y Consultas** |\n",
+        "| `procesos-conectados/G_solvencia-fiscal.txt` | Gestión Conectada (3 Pasos) | `/solvencia-fiscal/` | Pestañas `[vc_tta_tabs]`: **1. Requisitos y Consulta de Omisos** › **2. Llenar Formulario SAT-8421** › **3. Descargar Solvencia Fiscal** |\n",
+        "| `procesos-conectados/G_traspaso-vehiculos.txt` | Gestión Conectada (3 Pasos) | `/traspaso-vehiculos/` | Pestañas `[vc_tta_tabs]`: **1. Requisitos y Solvencia Vehicular** › **2. Pago de Impuestos y Gestión Notarial** › **3. Descargar Tarjeta y Certificado** |\n",
+        "| `procesos-conectados/G_padron-importadores.txt` | Gestión Conectada (3 Pasos) | `/padron-importadores/` | Pestañas `[vc_tta_tabs]`: **1. Requisitos del Importador** › **2. Inscribirse en Agencia Virtual** › **3. Consultas y Agentes Aduaneros** |\n\n",
         "## 2. Páginas Jerárquicas del Catálogo (Nivel 1 a Nivel 4)\n\n",
         "| Archivo | Nivel | Ruta Jerárquica Canónica | Elementos en Página |\n",
         "| :--- | :---: | :--- | :---: |\n",
     ]
 
-    # 1. Guardar Portada (Home) y Páginas Conectadas (Solicitar NIT y Actualizar RTU)
+    # 1. Guardar Portada (Home) y las 6 Páginas Conectadas
     (OUTPUT_DIR / "HOME_portada-portal-sat.txt").write_text(build_home_shortcode(), encoding="utf-8")
     proc_dir = OUTPUT_DIR / "procesos-conectados"
     proc_dir.mkdir(parents=True, exist_ok=True)
     (proc_dir / "G_solicitar-nit.txt").write_text(build_solicitar_nit_shortcode(), encoding="utf-8")
     (proc_dir / "G_actualizar-rtu.txt").write_text(build_actualizar_rtu_shortcode(), encoding="utf-8")
+    (proc_dir / "G_factura-electronica-fel.txt").write_text(build_fel_shortcode(), encoding="utf-8")
+    (proc_dir / "G_solvencia-fiscal.txt").write_text(build_solvencia_fiscal_shortcode(), encoding="utf-8")
+    (proc_dir / "G_traspaso-vehiculos.txt").write_text(build_traspaso_vehiculos_shortcode(), encoding="utf-8")
+    (proc_dir / "G_padron-importadores.txt").write_text(build_padron_importadores_shortcode(), encoding="utf-8")
 
     # 2. Construir estructuras por Nivel 1 -> Nivel 2 -> Nivel 3 -> Nivel 4
     n1_groups: dict[str, list[dict]] = OrderedDict()
@@ -676,14 +1024,13 @@ def main():
             n1_groups[n1] = []
         n1_groups[n1].append(t)
 
-    pages_count = 3  # Home + Solicitar NIT + Actualizar RTU
+    pages_count = 7  # Home + 6 Procesos Conectados
 
     for n1, n1_items in n1_groups.items():
         n1_slug = N1_SLUGS.get(n1, slug(n1))
         n1_dir = OUTPUT_DIR / n1_slug
         n1_dir.mkdir(parents=True, exist_ok=True)
 
-        # Agrupar por Nivel 2
         n2_groups: dict[str, list[dict]] = OrderedDict()
         for t in n1_items:
             n2 = t.get("nivel2") or "General"
@@ -691,7 +1038,6 @@ def main():
                 n2_groups[n2] = []
             n2_groups[n2].append(t)
 
-        # Generar Página Hub N1_<slug>.txt con tarjetas hacia cada Nivel 2
         n1_cards = []
         for n2, n2_items in n2_groups.items():
             n2_slug = slug(n2)
@@ -706,7 +1052,6 @@ def main():
         pages_count += 1
         index_lines.append(f"| `{n1_slug}/N1_{n1_slug}.txt` | Nivel 1 | **{n1}** | {len(n1_cards)} |\n")
 
-        # Procesar cada Nivel 2
         for n2, n2_items in n2_groups.items():
             n2_slug = slug(n2)
             n3_groups: dict[str, list[dict]] = OrderedDict()

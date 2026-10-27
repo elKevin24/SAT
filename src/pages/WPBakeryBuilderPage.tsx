@@ -4,6 +4,7 @@ import {
   Check,
   Search,
   ArrowLeft,
+  ArrowRight,
   FileCode2,
   Layers,
   Sparkles,
@@ -12,7 +13,8 @@ import {
   FolderTree,
   Paintbrush,
   Square,
-  CheckSquare
+  CheckSquare,
+  Download
 } from 'lucide-react';
 import rawTramites from '../data/allTramites.json';
 import { assertTramites, TramiteItem } from '../data/schema';
@@ -21,6 +23,12 @@ import wpCssRaw from '../../docs/diseno-normativa/sat-design-system-wpbakery.css
 import wpHomeRaw from '../../docs/plantillas-wpbakery/HOME_portada-portal-sat.txt?raw';
 import wpSolicitarNitRaw from '../../docs/plantillas-wpbakery/procesos-conectados/G_solicitar-nit.txt?raw';
 import wpActualizarRtuRaw from '../../docs/plantillas-wpbakery/procesos-conectados/G_actualizar-rtu.txt?raw';
+import wpFelRaw from '../../docs/plantillas-wpbakery/procesos-conectados/G_factura-electronica-fel.txt?raw';
+import wpSolvenciaRaw from '../../docs/plantillas-wpbakery/procesos-conectados/G_solvencia-fiscal.txt?raw';
+import wpTraspasoRaw from '../../docs/plantillas-wpbakery/procesos-conectados/G_traspaso-vehiculos.txt?raw';
+import wpPadronImpRaw from '../../docs/plantillas-wpbakery/procesos-conectados/G_padron-importadores.txt?raw';
+import wpXmlOlas012Raw from '../../docs/plantillas-wpbakery/wordpress-import-olas-0-1-2.xml?raw';
+import wpXmlAll160Raw from '../../docs/plantillas-wpbakery/wordpress-import-completo-160.xml?raw';
 
 const allTramites = assertTramites(rawTramites);
 
@@ -68,12 +76,28 @@ const CURATED_DESCRIPTIONS: Record<string, string> = {
   Decreto: 'Exenciones y franquicias para misiones diplomáticas, organismos internacionales, cooperativas, partidos políticos y donaciones oficiales.',
 };
 
-const SOLICITAR_NIT_IDS = new Set(['SAT-GES-0001', 'SAT-GES-0049', 'SAT-GES-0050', 'SAT-GES-0051']);
+const SOLICITAR_NIT_IDS = new Set(['SAT-GES-0001', 'SAT-GES-0011', 'SAT-GES-0049', 'SAT-GES-0050', 'SAT-GES-0051']);
 const ACTUALIZAR_RTU_IDS = new Set([
   'SAT-GES-0002', 'SAT-GES-0040', 'SAT-GES-0054', 'SAT-GES-0068', 'SAT-GES-0069',
   'SAT-GES-0070', 'SAT-GES-0071', 'SAT-GES-0072', 'SAT-GES-0073', 'SAT-GES-0074',
   'SAT-GES-0075', 'SAT-GES-0076', 'SAT-GES-0115', 'SAT-GES-0118',
 ]);
+const FEL_IDS = new Set(['SAT-GES-0319', 'SAT-GES-0498', 'SAT-GES-0581']);
+const SOLVENCIA_FISCAL_IDS = new Set(['SAT-GES-0005', 'SAT-GES-0336', 'SAT-GES-0337']);
+const TRASPASO_VEHICULOS_IDS = new Set(['SAT-GES-0269', 'SAT-GES-0318', 'SAT-GES-0568']);
+const PADRON_IMPORTADORES_IDS = new Set(['SAT-GES-0344']);
+
+function resolveLeafCardUrl(t: TramiteItem): { url: string; targetBlank: boolean } {
+  const cid = t.id || t.codigo || '';
+  if (SOLICITAR_NIT_IDS.has(cid)) return { url: '/solicitar-nit/', targetBlank: false };
+  if (ACTUALIZAR_RTU_IDS.has(cid)) return { url: '/actualizar-rtu/', targetBlank: false };
+  if (FEL_IDS.has(cid)) return { url: '/factura-electronica-fel/', targetBlank: false };
+  if (SOLVENCIA_FISCAL_IDS.has(cid)) return { url: '/solvencia-fiscal/', targetBlank: false };
+  if (TRASPASO_VEHICULOS_IDS.has(cid)) return { url: '/traspaso-vehiculos/', targetBlank: false };
+  if (PADRON_IMPORTADORES_IDS.has(cid)) return { url: '/padron-importadores/', targetBlank: false };
+  const url = t.url || '';
+  return { url, targetBlank: Boolean(url) };
+}
 
 function toSlug(text: string): string {
   return text
@@ -117,10 +141,22 @@ function getNodeDesc(title: string, children: TramiteItem[]): string {
   return `Consulta los requisitos oficiales, pasos y servicios en línea para ${title}.`;
 }
 
-function encodeVcLink(url: string, targetBlank: boolean): string {
+function encodeVcLink(url: string, targetBlank: boolean, basePath = ''): string {
   if (!url) return '';
-  const enc = encodeURI(url);
+  const cleanBase = basePath.trim().replace(/\/+$/, '');
+  const fullUrl =
+    cleanBase && url.startsWith('/') && !url.startsWith('//')
+      ? `${cleanBase}${url}`
+      : url;
+  const enc = encodeURI(fullUrl);
   return `url:${enc}||${targetBlank ? 'target:%20_blank|' : '|'}`;
+}
+
+function applyBasePathToShortcode(shortcode: string, basePath: string): string {
+  const cleanBase = basePath.trim().replace(/\/+$/, '');
+  if (!cleanBase) return shortcode;
+  const encBase = encodeURI(cleanBase).replace(/\//g, '%2F');
+  return shortcode.replace(/link="url:%2F/g, `link="url:${encBase}%2F`);
 }
 
 function buildPageShortcode(
@@ -128,7 +164,8 @@ function buildPageShortcode(
   n1: string,
   heading: string,
   leadText: string,
-  includeUrls: boolean
+  includeUrls: boolean,
+  basePath = ''
 ): string {
   const breadcrumb =
     '[vc_row gap="5px"][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row]';
@@ -142,7 +179,7 @@ function buildPageShortcode(
   const colWidth = cards.length === 2 || cards.length === 4 ? '1/2' : '1/3';
   const cols = cards
     .map(c => {
-      const linkVal = includeUrls ? encodeVcLink(c.url, c.targetBlank) : '';
+      const linkVal = includeUrls ? encodeVcLink(c.url, c.targetBlank, basePath) : '';
       return `[vc_column width="${colWidth}"][bsf-info-box icon_type="none" title="${cleanText(c.title)}" read_more="box" link="${linkVal}"]${cleanText(c.desc)}[/bsf-info-box][/vc_column]`;
     })
     .join('');
@@ -234,6 +271,86 @@ function buildAllWpPages(items: TramiteItem[]): WpPageTemplate[] {
       ],
       staticShortcode: wpActualizarRtuRaw,
     },
+    {
+      id: 'proceso-fel',
+      wave: 'Ola 0 (Portada + Universales)',
+      waveOrder: 0,
+      title: 'Habilitación y Emisión de Factura Electrónica en Línea (FEL)',
+      wpSlugOnly: 'factura-electronica-fel',
+      levelLabel: 'Proceso Conectado',
+      n1: 'Contribuyentes',
+      wpPath: '/factura-electronica-fel/',
+      parentPage: '— (Sin superior)',
+      breadcrumbTrail: 'Inicio › Habilitación y Emisión de Factura Electrónica en Línea (FEL)',
+      filePath: 'docs/plantillas-wpbakery/procesos-conectados/G_factura-electronica-fel.txt',
+      leadText: 'Habilítate como emisor en el régimen FEL, genera tu contraseña de firma electrónica gratuita y emite o verifica DTE en 3 pasos conectados.',
+      cards: [
+        { title: '1. Requisitos Previos en el RTU', desc: 'Usuario activo de Agencia Virtual, datos ratificados en el RTU Digital y al menos un establecimiento comercial activo.', url: '/factura-electronica-fel/#paso-1-requisitos-fel', targetBlank: false },
+        { title: '2. Habilitarse como Emisor y Certificar DTE', desc: 'Acceso directo a Agencia Virtual SAT para habilitarse como emisor FEL y emitir facturas electrónicas.', url: 'https://farm3.sat.gob.gt/menu/login.jsf', targetBlank: true },
+        { title: '3. Verificador Integrado de DTE y Planilla IVA-FEL', desc: 'Comprueba la validez de cualquier factura electrónica o consulta tu Planilla de IVA-FEL.', url: 'https://portal.sat.gob.gt/portal/verificador-integrado/', targetBlank: true },
+      ],
+      staticShortcode: wpFelRaw,
+    },
+    {
+      id: 'proceso-solvencia-fiscal',
+      wave: 'Ola 0 (Portada + Universales)',
+      waveOrder: 0,
+      title: 'Solicitud y Emisión de Solvencia Fiscal en Línea',
+      wpSlugOnly: 'solvencia-fiscal',
+      levelLabel: 'Proceso Conectado',
+      n1: 'Contribuyentes',
+      wpPath: '/solvencia-fiscal/',
+      parentPage: '— (Sin superior)',
+      breadcrumbTrail: 'Inicio › Solicitud y Emisión de Solvencia Fiscal en Línea',
+      filePath: 'docs/plantillas-wpbakery/procesos-conectados/G_solvencia-fiscal.txt',
+      leadText: 'Verifica tus obligaciones al día, genera el formulario SAT-8421 en Declaraguate y descarga tu Solvencia Fiscal con QR en 3 pasos conectados.',
+      cards: [
+        { title: '1. Requisitos y Consulta de Omisos', desc: 'Verifica en Agencia Virtual que no tengas declaraciones pendientes ni inconsistencias en el RTU antes de pagar.', url: '/solvencia-fiscal/#paso-1-requisitos-solvencia', targetBlank: false },
+        { title: '2. Llenar Formulario SAT-8421 en Declaraguate', desc: 'Genera la boleta SAT-2000 por Q 30.00 en la sección 9. Varios de Declaraguate.', url: 'https://declaraguate.sat.gob.gt/', targetBlank: true },
+        { title: '3. Descargar e Imprimir Solvencia Fiscal en PDF', desc: 'Descarga tu Solvencia Fiscal firmada electrónicamente o verifica su autenticidad en línea.', url: 'https://portal.sat.gob.gt/portal/solvencia-fiscal/', targetBlank: true },
+      ],
+      staticShortcode: wpSolvenciaRaw,
+    },
+    {
+      id: 'proceso-traspaso-vehiculos',
+      wave: 'Ola 0 (Portada + Universales)',
+      waveOrder: 0,
+      title: 'Traspaso Electrónico de Vehículos en Línea (e-Traspaso)',
+      wpSlugOnly: 'traspaso-vehiculos',
+      levelLabel: 'Proceso Conectado',
+      n1: 'Contribuyentes',
+      wpPath: '/traspaso-vehiculos/',
+      parentPage: '— (Sin superior)',
+      breadcrumbTrail: 'Inicio › Traspaso Electrónico de Vehículos en Línea (e-Traspaso)',
+      filePath: 'docs/plantillas-wpbakery/procesos-conectados/G_traspaso-vehiculos.txt',
+      leadText: 'Realiza la transferencia de propiedad de vehículos por medio de Notario autorizado y descarga los nuevos distintivos electrónicos en 3 pasos conectados.',
+      cards: [
+        { title: '1. Requisitos y Solvencia del Impuesto de Circulación (ISCV)', desc: 'Verifica que el vehículo esté al día en el ISCV y reúne el Certificado de Propiedad, Tarjeta de Circulación y DPI.', url: '/traspaso-vehiculos/#paso-1-requisitos-traspaso', targetBlank: false },
+        { title: '2. Pago de IVA e ISCV en Declaraguate y Gestión Notarial', desc: 'Formularios SAT-2311 y SAT-8611 en Declaraguate y formalización electrónica por Notario.', url: 'https://declaraguate.sat.gob.gt/', targetBlank: true },
+        { title: '3. Descargar Nueva Tarjeta de Circulación y Certificado', desc: 'Descarga los distintivos electrónicos actualizados desde Agencia Virtual del nuevo propietario.', url: 'https://farm3.sat.gob.gt/menu/login.jsf', targetBlank: true },
+      ],
+      staticShortcode: wpTraspasoRaw,
+    },
+    {
+      id: 'proceso-padron-importadores',
+      wave: 'Ola 0 (Portada + Universales)',
+      waveOrder: 0,
+      title: 'Inscripción y Activación en el Padrón de Importadores',
+      wpSlugOnly: 'padron-importadores',
+      levelLabel: 'Proceso Conectado',
+      n1: 'Operadores de Comercio Exterior',
+      wpPath: '/padron-importadores/',
+      parentPage: '— (Sin superior)',
+      breadcrumbTrail: 'Inicio › Inscripción y Activación en el Padrón de Importadores',
+      filePath: 'docs/plantillas-wpbakery/procesos-conectados/G_padron-importadores.txt',
+      leadText: 'Habilita tu registro aduanero como importador ante la Intendencia de Aduanas de la SAT para transmitir declaraciones DUCA en 3 pasos conectados.',
+      cards: [
+        { title: '1. Requisitos Tributarios, Bancarios y de Domicilio', desc: 'RTU actualizado, contrato activo de BancaSAT y coordenadas/fotografías de domicilio fiscal y bodegas.', url: '/padron-importadores/#paso-1-requisitos-importador', targetBlank: false },
+        { title: '2. Inscribirse en el Padrón dentro de Agencia Virtual', desc: 'Registra capítulos SAC y solicitud electrónica en Agencia Virtual › Servicios › Aduanas › Padrón de Importadores.', url: 'https://farm3.sat.gob.gt/menu/login.jsf', targetBlank: true },
+        { title: '3. Manuales Oficiales y Asociación de Agentes Aduaneros', desc: 'Consulta guías paso a paso y explora todas las gestiones de Importadores.', url: '/operadores-de-comercio-exterior/importadores/', targetBlank: false },
+      ],
+      staticShortcode: wpPadronImpRaw,
+    },
   ];
 
   const n1Map = new Map<string, TramiteItem[]>();
@@ -288,13 +405,7 @@ function buildAllWpPages(items: TramiteItem[]): WpPageTemplate[] {
 
       if (n3Map.size === 0) {
         const leafCards = n2Items.map(t => {
-          const cid = t.id || t.codigo || '';
-          const url = SOLICITAR_NIT_IDS.has(cid)
-            ? '/solicitar-nit/'
-            : ACTUALIZAR_RTU_IDS.has(cid)
-              ? '/actualizar-rtu/'
-              : t.url || '';
-          const targetBlank = !SOLICITAR_NIT_IDS.has(cid) && !ACTUALIZAR_RTU_IDS.has(cid) && Boolean(url);
+          const { url, targetBlank } = resolveLeafCardUrl(t);
           return {
             title: t.gestion || t.nombreActual || '',
             desc: t.descripcion || '',
@@ -355,13 +466,7 @@ function buildAllWpPages(items: TramiteItem[]): WpPageTemplate[] {
 
           if (n4Map.size === 0) {
             const leafCards = n3Items.map(t => {
-              const cid = t.id || t.codigo || '';
-              const url = SOLICITAR_NIT_IDS.has(cid)
-                ? '/solicitar-nit/'
-                : ACTUALIZAR_RTU_IDS.has(cid)
-                  ? '/actualizar-rtu/'
-                  : t.url || '';
-              const targetBlank = !SOLICITAR_NIT_IDS.has(cid) && !ACTUALIZAR_RTU_IDS.has(cid) && Boolean(url);
+              const { url, targetBlank } = resolveLeafCardUrl(t);
               return {
                 title: t.gestion || t.nombreActual || '',
                 desc: t.descripcion || '',
@@ -412,13 +517,7 @@ function buildAllWpPages(items: TramiteItem[]): WpPageTemplate[] {
             n4Map.forEach((n4Items, n4) => {
               const n4Slug = toSlug(n4);
               const leafCards = n4Items.map(t => {
-                const cid = t.id || t.codigo || '';
-                const url = SOLICITAR_NIT_IDS.has(cid)
-                  ? '/solicitar-nit/'
-                  : ACTUALIZAR_RTU_IDS.has(cid)
-                    ? '/actualizar-rtu/'
-                    : t.url || '';
-                const targetBlank = !SOLICITAR_NIT_IDS.has(cid) && !ACTUALIZAR_RTU_IDS.has(cid) && Boolean(url);
+                const { url, targetBlank } = resolveLeafCardUrl(t);
                 return {
                   title: t.gestion || t.nombreActual || '',
                   desc: t.descripcion || '',
@@ -461,7 +560,14 @@ export const WPBakeryBuilderPage: React.FC = () => {
   const [filterWave, setFilterWave] = useState<OlaId>('Todas');
   const [filterN1, setFilterN1] = useState<string>('Todos');
   const [includeUrls, setIncludeUrls] = useState(true);
-  const [activeTab, setActiveTab] = useState<'shortcode' | 'preview' | 'css'>('shortcode');
+  const [basePath, setBasePath] = useState<string>(() => {
+    try {
+      return localStorage.getItem('sat_wpbakery_base_path_v1') || '';
+    } catch {
+      return '';
+    }
+  });
+  const [activeTab, setActiveTab] = useState<'shortcode' | 'preview' | 'css' | 'xml'>('shortcode');
   const [copiedType, setCopiedType] = useState<'shortcode' | 'css' | 'slug' | 'title' | null>(null);
   const [completedIds, setCompletedIds] = useState<Set<string>>(() => {
     try {
@@ -479,6 +585,14 @@ export const WPBakeryBuilderPage: React.FC = () => {
       // ignore storage errors
     }
   }, [completedIds]);
+
+  useEffect(() => {
+    try {
+      localStorage.setItem('sat_wpbakery_base_path_v1', basePath);
+    } catch {
+      // ignore storage errors
+    }
+  }, [basePath]);
 
   const toggleCompleted = (id: string, e?: React.MouseEvent) => {
     if (e) e.stopPropagation();
@@ -510,18 +624,30 @@ export const WPBakeryBuilderPage: React.FC = () => {
     [allPages, selectedPageId]
   );
 
+  const currentFilteredIndex = useMemo(
+    () => filteredPages.findIndex(p => p.id === currentPage.id),
+    [filteredPages, currentPage.id]
+  );
+
+  const handlePrevNext = (delta: number) => {
+    if (filteredPages.length === 0) return;
+    const nextIdx = Math.min(Math.max(currentFilteredIndex + delta, 0), filteredPages.length - 1);
+    setSelectedPageId(filteredPages[nextIdx].id);
+  };
+
   const currentShortcode = useMemo(() => {
     if (currentPage.staticShortcode) {
-      return currentPage.staticShortcode;
+      return applyBasePathToShortcode(currentPage.staticShortcode, basePath);
     }
     return buildPageShortcode(
       currentPage.cards,
       currentPage.n1,
       currentPage.title,
       currentPage.leadText,
-      includeUrls
+      includeUrls,
+      basePath
     );
-  }, [currentPage, includeUrls]);
+  }, [currentPage, includeUrls, basePath]);
 
   const handleCopy = (text: string, type: 'shortcode' | 'css' | 'slug' | 'title') => {
     navigator.clipboard.writeText(text);
@@ -529,11 +655,23 @@ export const WPBakeryBuilderPage: React.FC = () => {
     setTimeout(() => setCopiedType(null), 2200);
   };
 
+  const handleDownloadXml = (content: string, filename: string) => {
+    const blob = new Blob([content], { type: 'application/xml;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
+
   const hoverColor = HOVER_COLOR_BY_N1[currentPage.n1] || '#14649B';
 
   const waveCounts: { wave: OlaId; label: string; total: number }[] = [
-    { wave: 'Todas', label: 'Todas (156)', total: 156 },
-    { wave: 'Ola 0 (Portada + Universales)', label: 'Ola 0: Raíz (3)', total: 3 },
+    { wave: 'Todas', label: `Todas (${allPages.length})`, total: allPages.length },
+    { wave: 'Ola 0 (Portada + Universales)', label: 'Ola 0: Portada + 6 Procesos (7)', total: 7 },
     { wave: 'Ola 1 (Nivel 1)', label: 'Ola 1: Nivel 1 (4)', total: 4 },
     { wave: 'Ola 2 (Nivel 2)', label: 'Ola 2: Nivel 2 (20)', total: 20 },
     { wave: 'Ola 3 (Nivel 3)', label: 'Ola 3: Nivel 3 (53)', total: 53 },
@@ -564,15 +702,23 @@ export const WPBakeryBuilderPage: React.FC = () => {
                 </span>
               </div>
               <p className="text-xs text-sky-200">
-                Crea las páginas en orden (Ola 0 → Ola 4) asignando su Página Superior para que los enlaces y el `[dt_breadcrumbs]` funcionen automáticamente
+                160 páginas jerárquicas con `[dt_breadcrumbs]` y `link=&quot;url:...&quot;` listos (creación manual por Olas o importador XML opcional)
               </p>
             </div>
           </div>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2.5">
             <div className="text-xs bg-white/10 px-3 py-1.5 rounded-lg font-semibold">
-              Progreso: <span className="text-emerald-300 font-bold">{completedIds.size}</span> / {allPages.length} páginas creadas
+              Progreso: <span className="text-emerald-300 font-bold">{completedIds.size}</span> / {allPages.length}
             </div>
+            <button
+              type="button"
+              onClick={() => setActiveTab('xml')}
+              className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs transition-colors cursor-pointer shadow-xs"
+            >
+              <Download className="w-4 h-4" />
+              Opción Importador XML
+            </button>
             <button
               type="button"
               onClick={() => {
@@ -613,7 +759,7 @@ export const WPBakeryBuilderPage: React.FC = () => {
         </div>
       </div>
 
-      {/* Layout Principal: Sidebar de 156 páginas + Panel de Trabajo */}
+      {/* Layout Principal: Sidebar de 160 páginas + Panel de Trabajo */}
       <main id="main-content" className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-5 grid grid-cols-1 lg:grid-cols-12 gap-6">
         {/* Columna Izquierda: Lista Secuencial de Páginas */}
         <aside className="lg:col-span-4 bg-white border border-slate-200 rounded-2xl shadow-xs flex flex-col max-h-[80vh] overflow-hidden">
@@ -665,8 +811,7 @@ export const WPBakeryBuilderPage: React.FC = () => {
               return (
                 <div
                   key={page.id}
-                  onClick={() => setSelectedPageId(page.id)}
-                  className={`w-full text-left px-3.5 py-3 transition-colors flex items-start gap-2.5 cursor-pointer ${
+                  className={`w-full text-left px-3.5 py-3 transition-colors flex items-start gap-2.5 ${
                     isSelected
                       ? 'bg-sky-50/90 border-l-4 border-[#14649B]'
                       : isDone
@@ -687,7 +832,11 @@ export const WPBakeryBuilderPage: React.FC = () => {
                     )}
                   </button>
 
-                  <div className="flex-1 min-w-0">
+                  <button
+                    type="button"
+                    onClick={() => setSelectedPageId(page.id)}
+                    className="flex-1 min-w-0 text-left cursor-pointer"
+                  >
                     <div className="flex items-center justify-between gap-2">
                       <span className="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-slate-200/80 text-slate-800">
                         {page.levelLabel}
@@ -702,7 +851,7 @@ export const WPBakeryBuilderPage: React.FC = () => {
                     <div className="text-[11px] text-slate-500 truncate">
                       Superior: <strong className="font-semibold text-slate-700">{page.parentPage}</strong>
                     </div>
-                  </div>
+                  </button>
                 </div>
               );
             })}
@@ -727,24 +876,44 @@ export const WPBakeryBuilderPage: React.FC = () => {
                 </h2>
               </div>
 
-              <div className="flex items-center gap-2">
+              <div className="flex flex-wrap items-center gap-2">
+                <button
+                  type="button"
+                  disabled={currentFilteredIndex <= 0}
+                  onClick={() => handlePrevNext(-1)}
+                  className="inline-flex items-center gap-1 px-2.5 py-2 rounded-xl border border-slate-300 text-xs font-bold text-slate-700 hover:bg-slate-50 disabled:opacity-40 cursor-pointer"
+                  title="Página anterior de la lista"
+                >
+                  <ArrowLeft className="w-3.5 h-3.5" />
+                </button>
+                <button
+                  type="button"
+                  disabled={currentFilteredIndex >= filteredPages.length - 1}
+                  onClick={() => handlePrevNext(1)}
+                  className="inline-flex items-center gap-1 px-2.5 py-2 rounded-xl border border-slate-300 text-xs font-bold text-slate-700 hover:bg-slate-50 disabled:opacity-40 cursor-pointer"
+                  title="Siguiente página de la lista"
+                >
+                  <span>Siguiente</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </button>
+
                 <button
                   type="button"
                   onClick={() => toggleCompleted(currentPage.id)}
-                  className={`inline-flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl font-bold text-xs border transition-colors cursor-pointer ${
+                  className={`inline-flex items-center gap-1.5 px-3 py-2 rounded-xl font-bold text-xs border transition-colors cursor-pointer ${
                     completedIds.has(currentPage.id)
                       ? 'bg-emerald-50 border-emerald-300 text-emerald-800'
                       : 'bg-white border-slate-300 text-slate-700 hover:bg-slate-50'
                   }`}
                 >
                   {completedIds.has(currentPage.id) ? <CheckSquare className="w-4 h-4 text-emerald-600" /> : <Square className="w-4 h-4" />}
-                  {completedIds.has(currentPage.id) ? 'Página Creada' : 'Marcar Creada'}
+                  {completedIds.has(currentPage.id) ? 'Creada' : 'Marcar Creada'}
                 </button>
 
                 <button
                   type="button"
                   onClick={() => handleCopy(currentShortcode, 'shortcode')}
-                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#003865] hover:bg-[#14649B] text-white font-bold text-xs shadow-sm transition-colors cursor-pointer"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#003865] hover:bg-[#14649B] text-white font-bold text-xs shadow-sm transition-colors cursor-pointer"
                 >
                   {copiedType === 'shortcode' ? <Check className="w-4 h-4 text-emerald-300" /> : <Copy className="w-4 h-4" />}
                   {copiedType === 'shortcode' ? '¡Shortcode Copiado!' : '4. Copiar Shortcode WPBakery'}
@@ -826,11 +995,11 @@ export const WPBakeryBuilderPage: React.FC = () => {
 
             {/* Selector de Pestañas de Trabajo */}
             <div className="flex flex-wrap items-center justify-between gap-3 pt-1">
-              <div className="inline-flex rounded-xl bg-slate-100 p-1">
+              <div className="inline-flex flex-wrap rounded-xl bg-slate-100 p-1 gap-1">
                 <button
                   type="button"
                   onClick={() => setActiveTab('shortcode')}
-                  className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold transition-colors cursor-pointer ${
+                  className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-colors cursor-pointer ${
                     activeTab === 'shortcode'
                       ? 'bg-white text-[#003865] shadow-2xs'
                       : 'text-slate-600 hover:text-slate-900'
@@ -842,7 +1011,7 @@ export const WPBakeryBuilderPage: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => setActiveTab('preview')}
-                  className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold transition-colors cursor-pointer ${
+                  className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-colors cursor-pointer ${
                     activeTab === 'preview'
                       ? 'bg-white text-[#003865] shadow-2xs'
                       : 'text-slate-600 hover:text-slate-900'
@@ -853,28 +1022,55 @@ export const WPBakeryBuilderPage: React.FC = () => {
                 </button>
                 <button
                   type="button"
+                  onClick={() => setActiveTab('xml')}
+                  className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-colors cursor-pointer ${
+                    activeTab === 'xml'
+                      ? 'bg-white text-[#003865] shadow-2xs'
+                      : 'text-slate-600 hover:text-slate-900'
+                  }`}
+                >
+                  <Download className="w-3.5 h-3.5" />
+                  Opción Importador XML (WXR)
+                </button>
+                <button
+                  type="button"
                   onClick={() => setActiveTab('css')}
-                  className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold transition-colors cursor-pointer ${
+                  className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-colors cursor-pointer ${
                     activeTab === 'css'
                       ? 'bg-white text-[#003865] shadow-2xs'
                       : 'text-slate-600 hover:text-slate-900'
                   }`}
                 >
                   <Sparkles className="w-3.5 h-3.5" />
-                  CSS Oficial The7 (`sat-design-system-wpbakery.css`)
+                  CSS Oficial The7
                 </button>
               </div>
 
-              {!currentPage.staticShortcode && activeTab === 'shortcode' && (
-                <label className="inline-flex items-center gap-2 text-xs font-semibold text-slate-700 cursor-pointer">
-                  <input
-                    type="checkbox"
-                    checked={includeUrls}
-                    onChange={e => setIncludeUrls(e.target.checked)}
-                    className="rounded border-slate-300 text-[#003865] focus:ring-[#003865]"
-                  />
-                  Incluir enlaces activos (`link="url:..."`) en cada `[bsf-info-box]`
-                </label>
+              {activeTab === 'shortcode' && (
+                <div className="flex flex-wrap items-center gap-4">
+                  <label className="inline-flex items-center gap-2 text-xs font-semibold text-slate-700">
+                    <span>Subcarpeta WP (opcional):</span>
+                    <input
+                      type="text"
+                      value={basePath}
+                      onChange={e => setBasePath(e.target.value)}
+                      placeholder="/ (raíz por defecto)"
+                      aria-label="Prefijo de subcarpeta en WordPress"
+                      className="w-36 px-2.5 py-1 text-xs font-mono bg-white border border-slate-300 rounded-lg focus:outline-none focus:border-[#14649B]"
+                    />
+                  </label>
+                  {!currentPage.staticShortcode && (
+                    <label className="inline-flex items-center gap-2 text-xs font-semibold text-slate-700 cursor-pointer">
+                      <input
+                        type="checkbox"
+                        checked={includeUrls}
+                        onChange={e => setIncludeUrls(e.target.checked)}
+                        className="rounded border-slate-300 text-[#003865] focus:ring-[#003865]"
+                      />
+                      Incluir enlaces (`link=&quot;url:...&quot;`)
+                    </label>
+                  )}
+                </div>
               )}
             </div>
           </div>
@@ -884,7 +1080,7 @@ export const WPBakeryBuilderPage: React.FC = () => {
             <div className="bg-white border border-slate-200 rounded-2xl p-5 shadow-xs space-y-3">
               <div className="flex items-center justify-between text-xs text-slate-600">
                 <span>
-                  Línea 1 incluye <code className="font-mono font-bold text-[#003865]">[dt_breadcrumbs]</code> y cada tarjeta <code className="font-mono font-bold text-[#003865]">[bsf-info-box]</code> ya lleva su <code className="font-mono font-bold text-emerald-700">link="url:..."</code> puesto.
+                  Línea 1 incluye <code className="font-mono font-bold text-[#003865]">[dt_breadcrumbs]</code> y cada tarjeta <code className="font-mono font-bold text-[#003865]">[bsf-info-box]</code> ya lleva su <code className="font-mono font-bold text-emerald-700">link=&quot;url:...&quot;</code> puesto.
                 </span>
                 <span className="font-mono text-[11px] text-emerald-700 font-bold">
                   0 bloques [vc_raw_html]
@@ -952,6 +1148,75 @@ export const WPBakeryBuilderPage: React.FC = () => {
                     </div>
                   </a>
                 ))}
+              </div>
+            </div>
+          )}
+
+          {activeTab === 'xml' && (
+            <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-xs space-y-5">
+              <div>
+                <h3 className="text-lg font-bold text-[#003865]">
+                  Opción Aceleradora: Paquetes XML de Importación Nativa de WordPress (WXR 1.2)
+                </h3>
+                <p className="text-xs text-slate-600 mt-1 leading-relaxed">
+                  Si en el menú izquierdo de tu WordPress tienes acceso a <strong>Herramientas › Importar › WordPress</strong>, puedes subir cualquiera de estos dos archivos XML oficiales para crear automáticamente las páginas con su <strong>Página Superior (`post_parent`)</strong>, su <strong>Slug (`post_name`)</strong>, su <strong>Breadcrumb (`[dt_breadcrumbs]`)</strong> y sus <strong>Shortcodes WPBakery (0% `[vc_raw_html]`)</strong> en un solo paso. Si no tienes acceso a esa opción, usa las pestañas por Olas de arriba para crearlas manualmente.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="p-5 rounded-xl border border-slate-200 bg-slate-50 flex flex-col justify-between gap-4">
+                  <div>
+                    <span className="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-sky-100 text-sky-900 mb-2">
+                      Paquete Troncal (31 Páginas)
+                    </span>
+                    <h4 className="text-sm font-bold text-slate-900">
+                      Olas 0, 1 y 2 (`wordpress-import-olas-0-1-2.xml`)
+                    </h4>
+                    <p className="text-xs text-slate-600 mt-1 leading-relaxed">
+                      Crea la Portada, las 6 páginas de Procesos Conectados (`/solicitar-nit/`, `/actualizar-rtu/`, `/factura-electronica-fel/`, `/solvencia-fiscal/`, `/traspaso-vehiculos/`, `/padron-importadores/`), las 4 páginas de Nivel 1 y las 20 páginas de Nivel 2.
+                    </p>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() =>
+                      handleDownloadXml(
+                        applyBasePathToShortcode(wpXmlOlas012Raw, basePath),
+                        'wordpress-import-olas-0-1-2.xml'
+                      )
+                    }
+                    className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#003865] hover:bg-[#14649B] text-white font-bold text-xs cursor-pointer transition-colors"
+                  >
+                    <Download className="w-4 h-4" />
+                    Descargar XML Olas 0–2 (31 páginas)
+                  </button>
+                </div>
+
+                <div className="p-5 rounded-xl border border-emerald-200 bg-emerald-50/50 flex flex-col justify-between gap-4">
+                  <div>
+                    <span className="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-200 text-emerald-950 mb-2">
+                      Catálogo Completo (160 Páginas)
+                    </span>
+                    <h4 className="text-sm font-bold text-slate-900">
+                      Olas 0 a 4 Completas (`wordpress-import-completo-160.xml`)
+                    </h4>
+                    <p className="text-xs text-slate-600 mt-1 leading-relaxed">
+                      Crea de una vez las 160 páginas completas (Portada + 6 Procesos Conectados + Nivel 1 a Nivel 4) con toda su jerarquía padre-hijo conectada.
+                    </p>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() =>
+                      handleDownloadXml(
+                        applyBasePathToShortcode(wpXmlAll160Raw, basePath),
+                        'wordpress-import-completo-160.xml'
+                      )
+                    }
+                    className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs cursor-pointer transition-colors"
+                  >
+                    <Download className="w-4 h-4" />
+                    Descargar XML Completo (160 páginas)
+                  </button>
+                </div>
               </div>
             </div>
           )}

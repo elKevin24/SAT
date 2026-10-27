@@ -1,0 +1,88 @@
+[vc_row gap="5px"][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row]
+
+[vc_row el_class="sat-gestion-header"]
+[vc_column]
+[vc_custom_heading text="Inscripción y Activación en el Padrón de Importadores" font_container="tag:h1|font_size:30px|text_align:left|color:%23003865" use_theme_fonts="yes"]
+[vc_custom_heading text="Habilita tu registro aduanero como importador ante la Intendencia de Aduanas de la SAT para transmitir Declaraciones Únicas Centroamericanas (DUCA) e internar mercancías al país en 3 pasos conectados." font_container="tag:p|font_size:16px|text_align:left|color:%23475569" use_theme_fonts="yes"]
+[vc_empty_space height="12px"]
+[/vc_column]
+[/vc_row]
+
+[vc_section]
+[vc_row]
+[vc_column]
+[vc_tta_tabs style="modern" shape="rounded" color="blue" active_section="1" el_class="sat-connected-steps-tabs"]
+
+[vc_tta_section title="1. Requisitos del Importador" tab_id="paso-1-requisitos-importador"]
+[vc_row]
+[vc_column]
+[vc_message message_box_style="solid-icon" message_box_color="info" icon_fontawesome="fas fa-ship"]<strong>Gestión 100% electrónica desde Agencia Virtual:</strong> No necesitas acudir a una aduana ni agencia tributaria si tus datos del Registro Tributario Unificado (RTU) están actualizados y cuentas con banca en línea habilitada para débito fiscal (BancaSAT).[/vc_message]
+[vc_empty_space height="16px"]
+[/vc_column]
+[/vc_row]
+
+[vc_row equal_height="yes" gap="15px" el_class="sat-seccion-comercio-exterior"]
+[vc_column width="1/2"]
+[vc_column_text]
+<div class="sat-modalidad-card">
+  <h3>Requisitos Tributarios y Registrales</h3>
+  <p>Condiciones obligatorias antes de llenar el formulario electrónico en Agencia Virtual:</p>
+  <ul>
+    <li><strong>RTU Digital actualizado o ratificado</strong>, con al menos un establecimiento activo y afiliación a impuestos vigente.</li>
+    <li><strong>Actividad económica compatible</strong> con el comercio o importación registrada en tu RTU.</li>
+    <li><strong>No presentar omisos</strong> ni incumplimientos tributarios pendientes.</li>
+  </ul>
+</div>
+[/vc_column_text]
+[/vc_column]
+
+[vc_column width="1/2"]
+[vc_column_text]
+<div class="sat-modalidad-card">
+  <h3>Requisitos Bancarios y Domiciliarios</h3>
+  <p>Para validar tus operaciones de comercio exterior necesitas:</p>
+  <ul>
+    <li><strong>Contrato activo de BancaSAT</strong> en un banco del sistema autorizado a nombre del importador (persona individual o jurídica).</li>
+    <li><strong>Coordenadas geográficas y fotografías del domicilio fiscal y bodegas</strong> donde se almacenarán las mercancías importadas.</li>
+  </ul>
+</div>
+[/vc_column_text]
+[/vc_column]
+[/vc_row]
+[/vc_tta_section]
+
+[vc_tta_section title="2. Inscribirse en Agencia Virtual" tab_id="paso-2-inscribir-importador"]
+[vc_row el_class="sat-seccion-comercio-exterior"]
+[vc_column]
+[vc_custom_heading text="Paso 2: Registra tu Solicitud en el Padrón de Importadores dentro de Agencia Virtual" font_container="tag:h2|font_size:20px|text_align:left|color:%23003865" use_theme_fonts="yes"]
+[vc_column_text]
+<div class="sat-app-launch-card">
+  <h3>Ruta Operativa dentro de Agencia Virtual SAT</h3>
+  <ol>
+    <li>Ingresa a <strong>Agencia Virtual</strong> con tu NIT y contraseña › menú <strong>Servicios › Aduanas › Padrón de Importadores › Inscripción / Actualización</strong>.</li>
+    <li>Registra los capítulos del Sistema Arancelario Centroamericano (SAC) que importarás, confirma el banco donde tienes contrato de BancaSAT y adjunta los requisitos del domicilio.</li>
+    <li>Envía la solicitud electrónica para validación del sistema aduanero.</li>
+  </ol>
+</div>
+[/vc_column_text]
+[vc_empty_space height="14px"]
+[bsf-info-box icon_type="none" title="Ingresar a Agencia Virtual SAT (Padrón de Importadores)" read_more="box" link="url:https://farm3.sat.gob.gt/menu/login.jsf||target:%20_blank|"]Accede con tu NIT y contraseña a Agencia Virtual para inscribirte o actualizar tu estado en el Padrón de Importadores.[/bsf-info-box]
+[/vc_column]
+[/vc_row]
+[/vc_tta_section]
+
+[vc_tta_section title="3. Consultas y Agentes Aduaneros" tab_id="paso-3-consulta-importador"]
+[vc_row equal_height="yes" gap="15px" el_class="sat-seccion-comercio-exterior"]
+[vc_column width="1/2"]
+[bsf-info-box icon_type="none" title="Requisitos y Manuales Oficiales del Padrón de Importadores" read_more="box" link="url:https://portal.sat.gob.gt/portal/requisitos-de-aduanas/||target:%20_blank|"]Descarga los manuales paso a paso para inscripción, confirmación anual de datos y asociación de Agentes Aduaneros en Agencia Virtual.[/bsf-info-box]
+[/vc_column]
+[vc_column width="1/2"]
+[bsf-info-box icon_type="none" title="Ir al Catálogo de Gestiones para Importadores" read_more="box" link="url:/operadores-de-comercio-exterior/importadores/|||"]Explora todas las gestiones de Declaración Única Centroamericana (DUCA), despacho, levante e importación de vehículos.[/bsf-info-box]
+[/vc_column]
+[/vc_row]
+[/vc_tta_section]
+
+[/vc_tta_tabs]
+[/vc_column]
+[/vc_row]
+[/vc_section]

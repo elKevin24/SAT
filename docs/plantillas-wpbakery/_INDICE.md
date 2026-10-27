@@ -1,14 +1,18 @@
 # Índice Maestro de Plantillas y Shortcodes WPBakery (Cero Raw HTML) — Portal SAT Guatemala
 
-Este directorio contiene los shortcodes oficiales de **WPBakery Page Builder + The7 Classic + Ultimate Addons (`[bsf-info-box]`)**, **100% libres de `[vc_raw_html]`**, sincronizados con `src/data/allTramites.json` (**714 gestiones canónicas**), los **Hallazgos A y B** de la Arquitectura de Información y las **Páginas Universales Conectadas en 3 Pasos (`/solicitar-nit/` y `/actualizar-rtu/`)**.
+Este directorio contiene los **160 shortcodes oficiales** de **WPBakery Page Builder + The7 Classic + Ultimate Addons (`[bsf-info-box]`)**, **100% libres de `[vc_raw_html]`**, sincronizados con `src/data/allTramites.json` (**714 gestiones canónicas**), los **Hallazgos A y B** de la Arquitectura de Información y las **6 Páginas Universales Conectadas en 3 Pasos**.
 
-## 1. Portada y Páginas de Proceso Conectado (3 Pasos Nativos WPBakery)
+## 1. Portada y 6 Páginas Universales de Proceso Conectado (3 Pasos Nativos WPBakery)
 
 | Archivo | Tipo | Ruta Web Sugerida | Contenido |
 | :--- | :---: | :--- | :--- |
-| `HOME_portada-portal-sat.txt` | Portada | `/` | Hero institucional, 6 accesos rápidos, 4 tarjetas de Nivel 1 y 6 gestiones frecuentes |
-| `procesos-conectados/G_solicitar-nit.txt` | Gestión Conectada (3 Pasos) | `/solicitar-nit/` | Pestañas conectadas (`[vc_tta_tabs]` sin `[vc_raw_html]`): **1. Requisitos** › **2. Solicitar Gestión** › **3. Solicitar Cita** |
-| `procesos-conectados/G_actualizar-rtu.txt` | Gestión Conectada (3 Pasos) | `/actualizar-rtu/` | Pestañas conectadas (`[vc_tta_tabs]` sin `[vc_raw_html]`): **1. Requisitos según tu caso** › **2. Realizar Actualización** › **3. Estado, Constancia y Cita** |
+| `HOME_portada-portal-sat.txt` | Portada | `/` | Hero institucional, 6 accesos rápidos, 4 tarjetas de Nivel 1 y 6 gestiones frecuentes conectadas |
+| `procesos-conectados/G_solicitar-nit.txt` | Gestión Conectada (3 Pasos) | `/solicitar-nit/` | Pestañas `[vc_tta_tabs]`: **1. Requisitos** › **2. Solicitar Gestión** › **3. Solicitar Cita** |
+| `procesos-conectados/G_actualizar-rtu.txt` | Gestión Conectada (3 Pasos) | `/actualizar-rtu/` | Pestañas `[vc_tta_tabs]`: **1. Requisitos según tu caso** › **2. Realizar Actualización** › **3. Estado, Constancia y Cita** |
+| `procesos-conectados/G_factura-electronica-fel.txt` | Gestión Conectada (3 Pasos) | `/factura-electronica-fel/` | Pestañas `[vc_tta_tabs]`: **1. Requisitos Previos** › **2. Habilitarse y Emitir DTE** › **3. Verificar DTE y Consultas** |
+| `procesos-conectados/G_solvencia-fiscal.txt` | Gestión Conectada (3 Pasos) | `/solvencia-fiscal/` | Pestañas `[vc_tta_tabs]`: **1. Requisitos y Consulta de Omisos** › **2. Llenar Formulario SAT-8421** › **3. Descargar Solvencia Fiscal** |
+| `procesos-conectados/G_traspaso-vehiculos.txt` | Gestión Conectada (3 Pasos) | `/traspaso-vehiculos/` | Pestañas `[vc_tta_tabs]`: **1. Requisitos y Solvencia Vehicular** › **2. Pago de Impuestos y Gestión Notarial** › **3. Descargar Tarjeta y Certificado** |
+| `procesos-conectados/G_padron-importadores.txt` | Gestión Conectada (3 Pasos) | `/padron-importadores/` | Pestañas `[vc_tta_tabs]`: **1. Requisitos del Importador** › **2. Inscribirse en Agencia Virtual** › **3. Consultas y Agentes Aduaneros** |
 
 ## 2. Páginas Jerárquicas del Catálogo (Nivel 1 a Nivel 4)
 

@@ -1,0 +1,68 @@
+[vc_row gap="5px"][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row]
+
+[vc_row el_class="sat-gestion-header"]
+[vc_column]
+[vc_custom_heading text="Solicitud y Emisión de Solvencia Fiscal en Línea" font_container="tag:h1|font_size:30px|text_align:left|color:%23003865" use_theme_fonts="yes"]
+[vc_custom_heading text="Obtén el documento oficial con código QR que acredita que te encuentras al día en el cumplimiento de tus deberes tributarios formales y de pago ante la SAT en 3 pasos conectados." font_container="tag:p|font_size:16px|text_align:left|color:%23475569" use_theme_fonts="yes"]
+[vc_empty_space height="12px"]
+[/vc_column]
+[/vc_row]
+
+[vc_section]
+[vc_row]
+[vc_column]
+[vc_tta_tabs style="modern" shape="rounded" color="blue" active_section="1" el_class="sat-connected-steps-tabs"]
+
+[vc_tta_section title="1. Requisitos y Consulta de Omisos" tab_id="paso-1-requisitos-solvencia"]
+[vc_row]
+[vc_column]
+[vc_message message_box_style="solid-icon" message_box_color="warning" icon_fontawesome="fas fa-check-double"]<strong>Verifica que no tengas declaraciones pendientes (omisos) antes de pagar:</strong> Para que la Solvencia Fiscal se emita sin inconvenientes, tu NIT debe estar actualizado en el RTU y no presentar omisos ni adeudos líquidos y exigibles.[/vc_message]
+[vc_empty_space height="16px"]
+[/vc_column]
+[/vc_row]
+
+[vc_row equal_height="yes" gap="15px" el_class="sat-seccion-contribuyentes"]
+[vc_column width="1/2"]
+[bsf-info-box icon_type="none" title="Consultar Incumplimientos u Omisos en Agencia Virtual" read_more="box" link="url:https://farm3.sat.gob.gt/menu/login.jsf||target:%20_blank|"]Ingresa a tu Agencia Virtual para verificar que todas tus declaraciones mensuales, trimestrales o anuales estén presentadas al día.[/bsf-info-box]
+[/vc_column]
+[vc_column width="1/2"]
+[bsf-info-box icon_type="none" title="Requisitos y Motivos de Rechazo de Solvencia Fiscal" read_more="box" link="url:https://portal.sat.gob.gt/portal/solvencia-fiscal/||target:%20_blank|"]Consulta la guía oficial sobre cómo solventar inconsistencias en el RTU, adeudos en cobranza o declaraciones pendientes.[/bsf-info-box]
+[/vc_column]
+[/vc_row]
+[/vc_tta_section]
+
+[vc_tta_section title="2. Llenar Formulario SAT-8421" tab_id="paso-2-pagar-solvencia"]
+[vc_row el_class="sat-seccion-contribuyentes"]
+[vc_column]
+[vc_custom_heading text="Paso 2: Genera y Paga el Formulario SAT-8421 en Declaraguate (Q 30.00)" font_container="tag:h2|font_size:20px|text_align:left|color:%23003865" use_theme_fonts="yes"]
+[vc_column_text]
+<div class="sat-app-launch-card">
+  <h3>Instrucciones en Declaraguate</h3>
+  <ol>
+    <li>Ingresa al portal <strong>Declaraguate</strong> y en la sección <strong>9. Varios</strong> selecciona el formulario <strong>SAT-8421 (Solvencia Fiscal)</strong>.</li>
+    <li>Ingresa tu NIT, congela el formulario para generar la boleta <strong>SAT-2000</strong> por <strong>Q 30.00</strong> y realiza el pago en tu banca en línea o banco autorizado.</li>
+    <li>Conserva el <strong>Número de Formulario y Número de Acceso</strong> impresos en tu boleta para descargar el documento en el Paso 3.</li>
+  </ol>
+</div>
+[/vc_column_text]
+[vc_empty_space height="14px"]
+[bsf-info-box icon_type="none" title="Ir a Declaraguate — Llenar Formulario SAT-8421 (Solvencia Fiscal)" read_more="box" link="url:https://declaraguate.sat.gob.gt/||target:%20_blank|"]Abre Declaraguate para llenar la solicitud de Solvencia Fiscal (Formulario SAT-8421) y generar tu boleta de pago SAT-2000.[/bsf-info-box]
+[/vc_column]
+[/vc_row]
+[/vc_tta_section]
+
+[vc_tta_section title="3. Descargar Solvencia Fiscal" tab_id="paso-3-descargar-solvencia"]
+[vc_row equal_height="yes" gap="15px" el_class="sat-seccion-contribuyentes"]
+[vc_column width="1/2"]
+[bsf-info-box icon_type="none" title="Descargar e Imprimir Solvencia Fiscal en PDF" read_more="box" link="url:https://portal.sat.gob.gt/portal/solvencia-fiscal/||target:%20_blank|"]Una vez pagada la boleta SAT-2000, descarga tu Solvencia Fiscal oficial firmada electrónicamente con código QR.[/bsf-info-box]
+[/vc_column]
+[vc_column width="1/2"]
+[bsf-info-box icon_type="none" title="Verificar Autenticidad de Solvencia Fiscal emitida" read_more="box" link="url:https://portal.sat.gob.gt/portal/verificador-integrado/||target:%20_blank|"]Valida en línea la autenticidad de una Solvencia Fiscal presentada ante entidades públicas o privadas.[/bsf-info-box]
+[/vc_column]
+[/vc_row]
+[/vc_tta_section]
+
+[/vc_tta_tabs]
+[/vc_column]
+[/vc_row]
+[/vc_section]

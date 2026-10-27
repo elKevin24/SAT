@@ -31,7 +31,7 @@ def main():
 
     ola_0 = [
         {
-            "no": 1,
+            "no": "0.1",
             "titulo": "Inicio",
             "wp_slug": "inicio",
             "url": "/",
@@ -40,7 +40,7 @@ def main():
             "plantilla": "HOME_portada-portal-sat.txt",
         },
         {
-            "no": 2,
+            "no": "0.2",
             "titulo": "Solicitar Número de Identificación Tributaria (NIT)",
             "wp_slug": "solicitar-nit",
             "url": "/solicitar-nit/",
@@ -49,13 +49,49 @@ def main():
             "plantilla": "procesos-conectados/G_solicitar-nit.txt",
         },
         {
-            "no": 3,
+            "no": "0.3",
             "titulo": "Actualizar o Ratificar Datos en el Registro Tributario Unificado (RTU Digital)",
             "wp_slug": "actualizar-rtu",
             "url": "/actualizar-rtu/",
             "superior": "— (Sin superior)",
             "breadcrumb": "Inicio › Actualizar o Ratificar Datos en el Registro Tributario Unificado (RTU Digital)",
             "plantilla": "procesos-conectados/G_actualizar-rtu.txt",
+        },
+        {
+            "no": "0.4",
+            "titulo": "Habilitación y Emisión de Factura Electrónica en Línea (FEL)",
+            "wp_slug": "factura-electronica-fel",
+            "url": "/factura-electronica-fel/",
+            "superior": "— (Sin superior)",
+            "breadcrumb": "Inicio › Habilitación y Emisión de Factura Electrónica en Línea (FEL)",
+            "plantilla": "procesos-conectados/G_factura-electronica-fel.txt",
+        },
+        {
+            "no": "0.5",
+            "titulo": "Solicitud y Emisión de Solvencia Fiscal en Línea",
+            "wp_slug": "solvencia-fiscal",
+            "url": "/solvencia-fiscal/",
+            "superior": "— (Sin superior)",
+            "breadcrumb": "Inicio › Solicitud y Emisión de Solvencia Fiscal en Línea",
+            "plantilla": "procesos-conectados/G_solvencia-fiscal.txt",
+        },
+        {
+            "no": "0.6",
+            "titulo": "Traspaso Electrónico de Vehículos en Línea (e-Traspaso)",
+            "wp_slug": "traspaso-vehiculos",
+            "url": "/traspaso-vehiculos/",
+            "superior": "— (Sin superior)",
+            "breadcrumb": "Inicio › Traspaso Electrónico de Vehículos en Línea (e-Traspaso)",
+            "plantilla": "procesos-conectados/G_traspaso-vehiculos.txt",
+        },
+        {
+            "no": "0.7",
+            "titulo": "Inscripción y Activación en el Padrón de Importadores",
+            "wp_slug": "padron-importadores",
+            "url": "/padron-importadores/",
+            "superior": "— (Sin superior)",
+            "breadcrumb": "Inicio › Inscripción y Activación en el Padrón de Importadores",
+            "plantilla": "procesos-conectados/G_padron-importadores.txt",
         },
     ]
 
@@ -143,29 +179,26 @@ def main():
 
     lines = [
         "# Plan Maestro de Creación de Páginas, Enlaces y Breadcrumbs en WordPress + WPBakery\n\n",
-        "Este documento organiza en **5 Olas Secuenciales (de arriba hacia abajo: Padres → Hijos)** las **156 páginas** del Portal SAT Guatemala en WordPress con **The7 Classic + WPBakery (0% `[vc_raw_html]`)**.\n\n",
-        "## ¿Por qué este orden garantiza que los Enlaces y el Breadcrumb funcionen al 100% desde el primer momento?\n\n",
-        "1. **Cómo arma WordPress + The7 el Breadcrumb (`[dt_breadcrumbs]`):**\n",
-        "   - El shortcode `[dt_breadcrumbs font_style=\"italic:normal:none\" alignment=\"left\"]` **ya viene incluido en la línea 1 de las 156 plantillas**.\n",
-        "   - The7 construye la miga de pan automáticamente leyendo el campo **Atributos de página › Superior (*Parent Page*)** de WordPress:\n",
-        "     - **Página de Nivel 1** (Superior: *Sin superior*) → Breadcrumb: `Inicio › Contribuyentes`\n",
-        "     - **Página de Nivel 2** (Superior: *Contribuyentes*) → Breadcrumb: `Inicio › Contribuyentes › Contribuyente General`\n",
-        "     - **Página de Nivel 3** (Superior: *Contribuyente General*) → Breadcrumb: `Inicio › Contribuyentes › Contribuyente General › Vehículos (como propietario)`\n",
-        "     - **Página de Nivel 4** (Superior: *Vehículos (como propietario)*) → Breadcrumb: `Inicio › Contribuyentes › Contribuyente General › Vehículos (como propietario) › Traspasos de vehículos`\n",
-        "2. **Cómo se conectan las URLs automáticamente sin editar enlaces a mano:**\n",
-        "   - Con **Ajustes › Enlaces permanentes › Nombre de la entrada (`/%postname%/`)**, cuando asignas la **Página Superior** y pones el **Slug** indicado en las tablas de abajo, WordPress genera **exactamente la misma URL jerárquica** (`/nivel-1/nivel-2/nivel-3/nivel-4/`) que ya tienen configuradas todas las tarjetas `[bsf-info-box]` en las plantillas.\n\n",
+        f"Este documento organiza en **5 Olas Secuenciales (de arriba hacia abajo: Padres → Hijos)** las **{total} páginas** del Portal SAT Guatemala en WordPress con **The7 Classic + WPBakery (0% `[vc_raw_html]`)**.\n\n",
+        "## Dos Modalidades de Creación Disponibles\n\n",
+        "1. **Modalidad A — Creación Manual Guiada por Olas (`http://localhost:3000/#/wpbakery`):**\n",
+        "   - Creas las páginas desde **Ola 0** hasta **Ola 4** copiando Título, Página Superior, Slug y Shortcode con un clic.\n",
+        "2. **Modalidad B — Acelerador de Importación XML Nativo de WordPress (`Herramientas › Importar › WordPress`):**\n",
+        "   - Si tu usuario de WordPress tiene habilitado el importador nativo, puedes descargar desde `#/wpbakery` (o desde `docs/plantillas-wpbakery/`) cualquiera de estos dos archivos `.xml`:\n",
+        "     - `wordpress-import-olas-0-1-2.xml` (**31 páginas troncales**: Portada, 6 Procesos Conectados, 4 de Nivel 1 y 20 de Nivel 2).\n",
+        f"     - `wordpress-import-completo-160.xml` (**Las {total} páginas completas** con su `post_parent`, `slug` y shortcodes WPBakery ya conectados).\n\n",
         "---\n\n",
-        "## Resumen de las 5 Olas de Creación (156 Páginas Totales)\n\n",
-        f"| Ola de Trabajo | Nivel Jerárquico | Cantidad de Páginas | Atributo «Página Superior» en WordPress | Resultado en Breadcrumb (`[dt_breadcrumbs]`) |\n",
+        f"## Resumen de las 5 Olas de Creación ({total} Páginas Totales)\n\n",
+        "| Ola de Trabajo | Nivel Jerárquico | Cantidad de Páginas | Atributo «Página Superior» en WordPress | Resultado en Breadcrumb (`[dt_breadcrumbs]`) |\n",
         "| :--- | :--- | :---: | :--- | :--- |\n",
-        f"| **Ola 0** | Portada y Procesos Universales | **{len(ola_0)}** | `(Sin superior)` | `Inicio › [Título]` |\n",
+        f"| **Ola 0** | Portada + 6 Procesos Conectados (3 Pasos) | **{len(ola_0)}** | `(Sin superior)` | `Inicio › [Título]` |\n",
         f"| **Ola 1** | **Nivel 1** | **{len(ola_1)}** | `(Sin superior)` | `Inicio › [Nivel 1]` |\n",
         f"| **Ola 2** | **Nivel 2** | **{len(ola_2)}** | Su página de **Nivel 1** | `Inicio › [Nivel 1] › [Nivel 2]` |\n",
         f"| **Ola 3** | **Nivel 3** | **{len(ola_3)}** | Su página de **Nivel 2** | `Inicio › [Nivel 1] › [Nivel 2] › [Nivel 3]` |\n",
         f"| **Ola 4** | **Nivel 4** | **{len(ola_4)}** | Su página de **Nivel 3** | `Inicio › [Nivel 1] › [Nivel 2] › [Nivel 3] › [Nivel 4]` |\n",
         f"| **TOTAL** | **Árbol Completo** | **{total}** | **100% Jerárquico** | **100% Automático** |\n\n",
         "---\n\n",
-        "## OLA 0: Portada y Páginas Universales de Proceso Conectado (3 Páginas)\n\n",
+        "## OLA 0: Portada y 6 Páginas Universales de Proceso Conectado (7 Páginas)\n\n",
         "| # | Título de la Página en WordPress | Slug (`post_name`) | Página Superior | URL Resultante | Breadcrumb Automático | Archivo Plantilla |\n",
         "| :---: | :--- | :--- | :--- | :--- | :--- | :--- |\n",
     ]
@@ -178,7 +211,6 @@ def main():
     lines.extend([
         "\n---\n\n",
         "## OLA 1: Creación de las 4 Páginas de Nivel 1 (Raíces del Árbol)\n\n",
-        "> **Importante:** Crea primero estas 4 páginas con **Superior: (Sin superior)** para que aparezcan en el desplegable al crear las páginas de Nivel 2.\n\n",
         "| # | Título de la Página (Nivel 1) | Slug en WP | Página Superior | URL Resultante | Breadcrumb Automático | Archivo Plantilla |\n",
         "| :---: | :--- | :--- | :--- | :--- | :--- | :--- |\n",
     ])
@@ -191,7 +223,6 @@ def main():
     lines.extend([
         "\n---\n\n",
         f"## OLA 2: Creación de las {len(ola_2)} Páginas de Nivel 2 (Hijas de Nivel 1)\n\n",
-        "> **Instrucción en WordPress:** En el panel derecho **Atributos de página › Superior**, selecciona la página de **Nivel 1** indicada en la columna *Página Superior*.\n\n",
         "| # | Página Superior (Nivel 1) | Título de la Página (Nivel 2) | Slug en WP | URL Jerárquica Generada | Breadcrumb Automático (`[dt_breadcrumbs]`) | Tipo de Contenido | Archivo Plantilla |\n",
         "| :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n",
     ])
@@ -204,7 +235,6 @@ def main():
     lines.extend([
         "\n---\n\n",
         f"## OLA 3: Creación de las {len(ola_3)} Páginas de Nivel 3 (Hijas de Nivel 2)\n\n",
-        "> **Instrucción en WordPress:** En **Atributos de página › Superior**, selecciona la página de **Nivel 2** correspondiente.\n\n",
         "| # | Página Superior (Nivel 2) | Título de la Página (Nivel 3) | Slug en WP | URL Jerárquica Generada | Breadcrumb Automático (`[dt_breadcrumbs]`) | Comportamiento | Archivo Plantilla |\n",
         "| :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n",
     ])
@@ -217,7 +247,6 @@ def main():
     lines.extend([
         "\n---\n\n",
         f"## OLA 4: Creación de las {len(ola_4)} Páginas de Nivel 4 (Hijas de Nivel 3)\n\n",
-        "> **Instrucción en WordPress:** En **Atributos de página › Superior**, selecciona la página de **Nivel 3** correspondiente. Con esto el breadcrumb mostrará automáticamente los 4 niveles (`Inicio › Nivel 1 › Nivel 2 › Nivel 3 › Nivel 4`).\n\n",
         "| # | Página Superior (Nivel 3) | Título de la Página (Nivel 4) | Slug en WP | URL Jerárquica Generada | Breadcrumb Automático (`[dt_breadcrumbs]`) | Gestiones | Archivo Plantilla |\n",
         "| :---: | :--- | :--- | :--- | :--- | :--- | :---: | :--- |\n",
     ])
@@ -228,7 +257,7 @@ def main():
         )
 
     PLAN_MD.write_text("".join(lines), encoding="utf-8")
-    print(f"Plan maestro generado: {PLAN_MD} ({total} páginas: Ola0={len(ola_0)}, Ola1={len(ola_1)}, Ola2={len(ola_2)}, Ola3={len(ola_3)}, Ola4={len(ola_4)})")
+    print(f"Plan maestro actualizado: {PLAN_MD} ({total} páginas: Ola0={len(ola_0)}, Ola1={len(ola_1)}, Ola2={len(ola_2)}, Ola3={len(ola_3)}, Ola4={len(ola_4)})")
 
 
 if __name__ == "__main__":

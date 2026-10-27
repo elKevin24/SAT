@@ -1,47 +1,46 @@
 # Plan Maestro de Creación de Páginas, Enlaces y Breadcrumbs en WordPress + WPBakery
 
-Este documento organiza en **5 Olas Secuenciales (de arriba hacia abajo: Padres → Hijos)** las **156 páginas** del Portal SAT Guatemala en WordPress con **The7 Classic + WPBakery (0% `[vc_raw_html]`)**.
+Este documento organiza en **5 Olas Secuenciales (de arriba hacia abajo: Padres → Hijos)** las **160 páginas** del Portal SAT Guatemala en WordPress con **The7 Classic + WPBakery (0% `[vc_raw_html]`)**.
 
-## ¿Por qué este orden garantiza que los Enlaces y el Breadcrumb funcionen al 100% desde el primer momento?
+## Dos Modalidades de Creación Disponibles
 
-1. **Cómo arma WordPress + The7 el Breadcrumb (`[dt_breadcrumbs]`):**
-   - El shortcode `[dt_breadcrumbs font_style="italic:normal:none" alignment="left"]` **ya viene incluido en la línea 1 de las 156 plantillas**.
-   - The7 construye la miga de pan automáticamente leyendo el campo **Atributos de página › Superior (*Parent Page*)** de WordPress:
-     - **Página de Nivel 1** (Superior: *Sin superior*) → Breadcrumb: `Inicio › Contribuyentes`
-     - **Página de Nivel 2** (Superior: *Contribuyentes*) → Breadcrumb: `Inicio › Contribuyentes › Contribuyente General`
-     - **Página de Nivel 3** (Superior: *Contribuyente General*) → Breadcrumb: `Inicio › Contribuyentes › Contribuyente General › Vehículos (como propietario)`
-     - **Página de Nivel 4** (Superior: *Vehículos (como propietario)*) → Breadcrumb: `Inicio › Contribuyentes › Contribuyente General › Vehículos (como propietario) › Traspasos de vehículos`
-2. **Cómo se conectan las URLs automáticamente sin editar enlaces a mano:**
-   - Con **Ajustes › Enlaces permanentes › Nombre de la entrada (`/%postname%/`)**, cuando asignas la **Página Superior** y pones el **Slug** indicado en las tablas de abajo, WordPress genera **exactamente la misma URL jerárquica** (`/nivel-1/nivel-2/nivel-3/nivel-4/`) que ya tienen configuradas todas las tarjetas `[bsf-info-box]` en las plantillas.
+1. **Modalidad A — Creación Manual Guiada por Olas (`http://localhost:3000/#/wpbakery`):**
+   - Creas las páginas desde **Ola 0** hasta **Ola 4** copiando Título, Página Superior, Slug y Shortcode con un clic.
+2. **Modalidad B — Acelerador de Importación XML Nativo de WordPress (`Herramientas › Importar › WordPress`):**
+   - Si tu usuario de WordPress tiene habilitado el importador nativo, puedes descargar desde `#/wpbakery` (o desde `docs/plantillas-wpbakery/`) cualquiera de estos dos archivos `.xml`:
+     - `wordpress-import-olas-0-1-2.xml` (**31 páginas troncales**: Portada, 6 Procesos Conectados, 4 de Nivel 1 y 20 de Nivel 2).
+     - `wordpress-import-completo-160.xml` (**Las 160 páginas completas** con su `post_parent`, `slug` y shortcodes WPBakery ya conectados).
 
 ---
 
-## Resumen de las 5 Olas de Creación (156 Páginas Totales)
+## Resumen de las 5 Olas de Creación (160 Páginas Totales)
 
 | Ola de Trabajo | Nivel Jerárquico | Cantidad de Páginas | Atributo «Página Superior» en WordPress | Resultado en Breadcrumb (`[dt_breadcrumbs]`) |
 | :--- | :--- | :---: | :--- | :--- |
-| **Ola 0** | Portada y Procesos Universales | **3** | `(Sin superior)` | `Inicio › [Título]` |
+| **Ola 0** | Portada + 6 Procesos Conectados (3 Pasos) | **7** | `(Sin superior)` | `Inicio › [Título]` |
 | **Ola 1** | **Nivel 1** | **4** | `(Sin superior)` | `Inicio › [Nivel 1]` |
 | **Ola 2** | **Nivel 2** | **20** | Su página de **Nivel 1** | `Inicio › [Nivel 1] › [Nivel 2]` |
 | **Ola 3** | **Nivel 3** | **53** | Su página de **Nivel 2** | `Inicio › [Nivel 1] › [Nivel 2] › [Nivel 3]` |
 | **Ola 4** | **Nivel 4** | **76** | Su página de **Nivel 3** | `Inicio › [Nivel 1] › [Nivel 2] › [Nivel 3] › [Nivel 4]` |
-| **TOTAL** | **Árbol Completo** | **156** | **100% Jerárquico** | **100% Automático** |
+| **TOTAL** | **Árbol Completo** | **160** | **100% Jerárquico** | **100% Automático** |
 
 ---
 
-## OLA 0: Portada y Páginas Universales de Proceso Conectado (3 Páginas)
+## OLA 0: Portada y 6 Páginas Universales de Proceso Conectado (7 Páginas)
 
 | # | Título de la Página en WordPress | Slug (`post_name`) | Página Superior | URL Resultante | Breadcrumb Automático | Archivo Plantilla |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | **Inicio** | `inicio` | — (Sin superior / Portada estática) | `/` | `Inicio` | `HOME_portada-portal-sat.txt` |
-| 2 | **Solicitar Número de Identificación Tributaria (NIT)** | `solicitar-nit` | — (Sin superior) | `/solicitar-nit/` | `Inicio › Solicitar Número de Identificación Tributaria (NIT)` | `procesos-conectados/G_solicitar-nit.txt` |
-| 3 | **Actualizar o Ratificar Datos en el Registro Tributario Unificado (RTU Digital)** | `actualizar-rtu` | — (Sin superior) | `/actualizar-rtu/` | `Inicio › Actualizar o Ratificar Datos en el Registro Tributario Unificado (RTU Digital)` | `procesos-conectados/G_actualizar-rtu.txt` |
+| 0.1 | **Inicio** | `inicio` | — (Sin superior / Portada estática) | `/` | `Inicio` | `HOME_portada-portal-sat.txt` |
+| 0.2 | **Solicitar Número de Identificación Tributaria (NIT)** | `solicitar-nit` | — (Sin superior) | `/solicitar-nit/` | `Inicio › Solicitar Número de Identificación Tributaria (NIT)` | `procesos-conectados/G_solicitar-nit.txt` |
+| 0.3 | **Actualizar o Ratificar Datos en el Registro Tributario Unificado (RTU Digital)** | `actualizar-rtu` | — (Sin superior) | `/actualizar-rtu/` | `Inicio › Actualizar o Ratificar Datos en el Registro Tributario Unificado (RTU Digital)` | `procesos-conectados/G_actualizar-rtu.txt` |
+| 0.4 | **Habilitación y Emisión de Factura Electrónica en Línea (FEL)** | `factura-electronica-fel` | — (Sin superior) | `/factura-electronica-fel/` | `Inicio › Habilitación y Emisión de Factura Electrónica en Línea (FEL)` | `procesos-conectados/G_factura-electronica-fel.txt` |
+| 0.5 | **Solicitud y Emisión de Solvencia Fiscal en Línea** | `solvencia-fiscal` | — (Sin superior) | `/solvencia-fiscal/` | `Inicio › Solicitud y Emisión de Solvencia Fiscal en Línea` | `procesos-conectados/G_solvencia-fiscal.txt` |
+| 0.6 | **Traspaso Electrónico de Vehículos en Línea (e-Traspaso)** | `traspaso-vehiculos` | — (Sin superior) | `/traspaso-vehiculos/` | `Inicio › Traspaso Electrónico de Vehículos en Línea (e-Traspaso)` | `procesos-conectados/G_traspaso-vehiculos.txt` |
+| 0.7 | **Inscripción y Activación en el Padrón de Importadores** | `padron-importadores` | — (Sin superior) | `/padron-importadores/` | `Inicio › Inscripción y Activación en el Padrón de Importadores` | `procesos-conectados/G_padron-importadores.txt` |
 
 ---
 
 ## OLA 1: Creación de las 4 Páginas de Nivel 1 (Raíces del Árbol)
-
-> **Importante:** Crea primero estas 4 páginas con **Superior: (Sin superior)** para que aparezcan en el desplegable al crear las páginas de Nivel 2.
 
 | # | Título de la Página (Nivel 1) | Slug en WP | Página Superior | URL Resultante | Breadcrumb Automático | Archivo Plantilla |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -53,8 +52,6 @@ Este documento organiza en **5 Olas Secuenciales (de arriba hacia abajo: Padres 
 ---
 
 ## OLA 2: Creación de las 20 Páginas de Nivel 2 (Hijas de Nivel 1)
-
-> **Instrucción en WordPress:** En el panel derecho **Atributos de página › Superior**, selecciona la página de **Nivel 1** indicada en la columna *Página Superior*.
 
 | # | Página Superior (Nivel 1) | Título de la Página (Nivel 2) | Slug en WP | URL Jerárquica Generada | Breadcrumb Automático (`[dt_breadcrumbs]`) | Tipo de Contenido | Archivo Plantilla |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -82,8 +79,6 @@ Este documento organiza en **5 Olas Secuenciales (de arriba hacia abajo: Padres 
 ---
 
 ## OLA 3: Creación de las 53 Páginas de Nivel 3 (Hijas de Nivel 2)
-
-> **Instrucción en WordPress:** En **Atributos de página › Superior**, selecciona la página de **Nivel 2** correspondiente.
 
 | # | Página Superior (Nivel 2) | Título de la Página (Nivel 3) | Slug en WP | URL Jerárquica Generada | Breadcrumb Automático (`[dt_breadcrumbs]`) | Comportamiento | Archivo Plantilla |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -144,8 +139,6 @@ Este documento organiza en **5 Olas Secuenciales (de arriba hacia abajo: Padres 
 ---
 
 ## OLA 4: Creación de las 76 Páginas de Nivel 4 (Hijas de Nivel 3)
-
-> **Instrucción en WordPress:** En **Atributos de página › Superior**, selecciona la página de **Nivel 3** correspondiente. Con esto el breadcrumb mostrará automáticamente los 4 niveles (`Inicio › Nivel 1 › Nivel 2 › Nivel 3 › Nivel 4`).
 
 | # | Página Superior (Nivel 3) | Título de la Página (Nivel 4) | Slug en WP | URL Jerárquica Generada | Breadcrumb Automático (`[dt_breadcrumbs]`) | Gestiones | Archivo Plantilla |
 | :---: | :--- | :--- | :--- | :--- | :--- | :---: | :--- |
