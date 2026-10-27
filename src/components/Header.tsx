@@ -255,11 +255,11 @@ export const Header: React.FC<HeaderProps> = ({
 
               <a
                 href="#/wpbakery"
-                className="inline-flex items-center gap-1 px-2 h-full text-sat-blanco/90 hover:text-sat-blanco hover:bg-white/10 rounded-sat-sm text-[11px] font-semibold transition-colors"
-                title="Abrir Constructor Manual WordPress + WPBakery (Cero Raw HTML)"
+                className="inline-flex items-center gap-1.5 px-2.5 py-0.5 my-1 text-white bg-emerald-700/80 hover:bg-emerald-600 border border-emerald-400/40 rounded-sat-sm text-[11px] font-bold transition-colors"
+                title="Abrir Centro de Descargas XML y Constructor WPBakery"
               >
-                <BookOpen className="w-3 h-3 text-sat-celeste" />
-                <span className="hidden lg:inline">Modo WPBakery</span>
+                <BookOpen className="w-3 h-3 text-emerald-200" />
+                <span>WPBakery & Descarga XML</span>
               </a>
             </div>
 

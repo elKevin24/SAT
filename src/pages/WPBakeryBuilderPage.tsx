@@ -29,6 +29,7 @@ import wpTraspasoRaw from '../../docs/plantillas-wpbakery/procesos-conectados/G_
 import wpPadronImpRaw from '../../docs/plantillas-wpbakery/procesos-conectados/G_padron-importadores.txt?raw';
 import wpXmlOlas012Raw from '../../docs/plantillas-wpbakery/wordpress-import-olas-0-1-2.xml?raw';
 import wpXmlAll160Raw from '../../docs/plantillas-wpbakery/wordpress-import-completo-160.xml?raw';
+import wpXmlCgN3Raw from '../../docs/plantillas-wpbakery/wordpress-import-contribuyente-general-n3.xml?raw';
 
 const allTramites = assertTramites(rawTramites);
 
@@ -602,7 +603,8 @@ export const WPBakeryBuilderPage: React.FC = () => {
     }
   });
   const [activeTab, setActiveTab] = useState<'shortcode' | 'preview' | 'css' | 'xml'>('shortcode');
-  const [copiedType, setCopiedType] = useState<'shortcode' | 'css' | 'slug' | 'title' | null>(null);
+  const [showXmlCode, setShowXmlCode] = useState(false);
+  const [copiedType, setCopiedType] = useState<'shortcode' | 'css' | 'slug' | 'title' | 'xml' | null>(null);
   const [completedIds, setCompletedIds] = useState<Set<string>>(() => {
     try {
       const raw = localStorage.getItem(STORAGE_KEY);
@@ -1209,6 +1211,83 @@ export const WPBakeryBuilderPage: React.FC = () => {
                   Si en el menú izquierdo de tu WordPress tienes acceso a <strong>Herramientas › Importar › WordPress</strong>, puedes subir cualquiera de estos dos archivos XML oficiales para crear automáticamente las páginas con su <strong>Página Superior (`post_parent`)</strong>, su <strong>Slug (`post_name`)</strong>, su <strong>Breadcrumb (`[dt_breadcrumbs]`)</strong> y sus <strong>Shortcodes WPBakery (0% `[vc_raw_html]`)</strong> en un solo paso. Si no tienes acceso a esa opción, usa las pestañas por Olas de arriba para crearlas manualmente.
                 </p>
               </div>
+
+              {/* Prueba Controlada: Contribuyente General */}
+              <div className="p-5 rounded-2xl border-2 border-sat-azul bg-sat-fondo-tenue flex flex-col md:flex-row items-start md:items-center justify-between gap-4 shadow-xs">
+                <div className="space-y-1">
+                  <div className="flex items-center gap-2">
+                    <span className="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-sat-azul text-white">
+                      Prueba Controlada (Solo Contribuyente General)
+                    </span>
+                    <span className="text-xs font-bold text-sat-texto-suave">8 Subcategorías N3</span>
+                  </div>
+                  <h4 className="text-base font-bold text-sat-azul-oscuro">
+                    Paquete XML para Contribuyente General
+                  </h4>
+                  <p className="text-xs text-sat-texto-suave max-w-2xl leading-relaxed">
+                    Crea únicamente las 8 subcategorías principales bajo tu página existente <em>«Contribuyente General»</em>. Si tu navegador bloquea la descarga automática, usa el botón «Copiar XML» para pegarlo en un archivo bloc de notas.
+                  </p>
+                </div>
+                <div className="flex items-center gap-2 w-full md:w-auto shrink-0">
+                  <button
+                    type="button"
+                    onClick={() =>
+                      handleDownloadXml(
+                        applyBasePathAndModeToShortcode(wpXmlCgN3Raw, basePath, cardMode),
+                        'wordpress-import-contribuyente-general-n3.xml'
+                      )
+                    }
+                    className="flex-1 md:flex-initial inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-sat-azul hover:bg-sat-azul-oscuro text-white font-bold text-xs cursor-pointer transition-colors shadow-xs"
+                  >
+                    <Download className="w-4 h-4" />
+                    Descargar XML (38 KB)
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      navigator.clipboard.writeText(
+                        applyBasePathAndModeToShortcode(wpXmlCgN3Raw, basePath, cardMode)
+                      );
+                      setCopiedType('xml');
+                      setTimeout(() => setCopiedType(null), 2500);
+                    }}
+                    className="inline-flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl border border-sat-gris bg-white hover:bg-sat-fondo-medio text-sat-azul-oscuro font-bold text-xs cursor-pointer transition-colors"
+                    title="Copiar código XML completo al portapapeles"
+                  >
+                    {copiedType === 'xml' ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5" />}
+                    <span>{copiedType === 'xml' ? '¡Copiado!' : 'Copiar XML'}</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setShowXmlCode(prev => !prev)}
+                    className="inline-flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl border border-slate-300 bg-white hover:bg-slate-100 text-slate-700 font-bold text-xs cursor-pointer transition-colors"
+                    title="Ver o inspeccionar el código XML completo"
+                  >
+                    <FileCode2 className="w-3.5 h-3.5" />
+                    <span>{showXmlCode ? 'Ocultar XML' : 'Ver XML'}</span>
+                  </button>
+                </div>
+              </div>
+
+              {showXmlCode && (
+                <div className="bg-slate-900 border border-slate-800 rounded-2xl p-4 space-y-2">
+                  <div className="flex items-center justify-between text-xs text-slate-300">
+                    <span className="font-mono font-bold text-sky-400">
+                      wordpress-import-contribuyente-general-n3.xml (38 KB, WXR 1.2)
+                    </span>
+                    <span className="text-[11px] text-slate-400">
+                      Puedes seleccionar todo (Ctrl+A), copiar y guardar en un archivo .xml
+                    </span>
+                  </div>
+                  <textarea
+                    readOnly
+                    value={applyBasePathAndModeToShortcode(wpXmlCgN3Raw, basePath, cardMode)}
+                    aria-label="Contenido XML WXR de Contribuyente General"
+                    className="w-full h-80 font-mono text-xs leading-relaxed p-3 rounded-lg bg-black/60 text-slate-100 border border-slate-700 focus:outline-none"
+                    onClick={e => (e.target as HTMLTextAreaElement).select()}
+                  />
+                </div>
+              )}
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="p-5 rounded-xl border border-slate-200 bg-slate-50 flex flex-col justify-between gap-4">

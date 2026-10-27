@@ -16,6 +16,7 @@ import { SolicitarNitPage } from './pages/SolicitarNitPage';
 import { FelPage } from './pages/FelPage';
 import { GuidedAssistantPage } from './pages/GuidedAssistantPage';
 import { ProcessJourneyPage } from './pages/ProcessJourneyPage';
+import { WPBakeryBuilderPage } from './pages/WPBakeryBuilderPage';
 import { EtapaAtoId, TipoInteraccionId, TramiteItem, ProcesoGuiado, assertTramites } from './data/schema';
 import { OFFICIAL_CATEGORY_ORDER, subcategoryOrderFor, compareByCategoryOrder, compareCanonicalTramiteOrder } from './data/categoryOrder';
 import { buildTaxonomy, resolveCategoria, categoriaId, subcategoriaId } from './data/taxonomy';
@@ -77,7 +78,7 @@ const DEFAULT_ACCESSIBILITY: AccessibilitySettings = {
 };
 
 export default function App() {
-  const [currentView, setCurrentView] = useState<'home' | 'catalog' | 'solicitar-nit' | 'fel' | 'gestion' | 'asistente' | 'proceso'>('home');
+  const [currentView, setCurrentView] = useState<'home' | 'catalog' | 'solicitar-nit' | 'fel' | 'gestion' | 'asistente' | 'proceso' | 'wpbakery'>('home');
   const [selectedAssistantId, setSelectedAssistantId] = useState<string>('primer-nit');
   const [selectedProcessNo, setSelectedProcessNo] = useState<number>(1);
   const [activeSegment, setActiveSegment] = useState<SegmentId>('contribuyentes');
@@ -247,6 +248,9 @@ export default function App() {
           setCurrentView('proceso');
           setSelectedProcessNo(pNo);
         }
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else if (hash.startsWith('#/wpbakery') || hash.startsWith('#wpbakery')) {
+        setCurrentView('wpbakery');
         window.scrollTo({ top: 0, behavior: 'smooth' });
       } else if (hash.startsWith('#/fel') || hash.startsWith('#/factura-electronica-fel') || hash.startsWith('#/facturacion-electronica')) {
         setCurrentView('fel');
@@ -549,6 +553,19 @@ export default function App() {
     activeCategory,
     activeSubcategory
   ]);
+
+  if (currentView === 'wpbakery') {
+    return (
+      <div 
+        className={`min-h-screen bg-white text-slate-800 flex flex-col antialiased transition-all ${getAccessibilityClasses()}`}
+        style={{
+          fontSize: accSettings.fontSizeStep ? `${100 + accSettings.fontSizeStep * 8}%` : undefined
+        }}
+      >
+        <WPBakeryBuilderPage />
+      </div>
+    );
+  }
 
   return (
     <div 

@@ -17,6 +17,35 @@ async function startServer() {
     res.sendFile(filePath, { root: process.cwd() });
   });
 
+  // Endpoints para descargar los archivos oficiales XML WXR de importación a WordPress
+  app.get('/api/download/wordpress-import-olas-0-1-2.xml', (_req, res) => {
+    const filePath = 'docs/plantillas-wpbakery/wordpress-import-olas-0-1-2.xml';
+    res.setHeader('Content-Type', 'application/xml');
+    res.setHeader('Content-Disposition', 'attachment; filename="wordpress-import-olas-0-1-2.xml"');
+    res.sendFile(filePath, { root: process.cwd() });
+  });
+
+  app.get('/api/download/wordpress-import-completo-160.xml', (_req, res) => {
+    const filePath = 'docs/plantillas-wpbakery/wordpress-import-completo-160.xml';
+    res.setHeader('Content-Type', 'application/xml');
+    res.setHeader('Content-Disposition', 'attachment; filename="wordpress-import-completo-160.xml"');
+    res.sendFile(filePath, { root: process.cwd() });
+  });
+
+  app.get('/api/download/wordpress-import-contribuyente-general-n3.xml', (_req, res) => {
+    const filePath = 'docs/plantillas-wpbakery/wordpress-import-contribuyente-general-n3.xml';
+    res.setHeader('Content-Type', 'application/xml');
+    res.setHeader('Content-Disposition', 'attachment; filename="wordpress-import-contribuyente-general-n3.xml"');
+    res.sendFile(filePath, { root: process.cwd() });
+  });
+
+  app.get('/api/download/wordpress-import-contribuyente-general-completo.xml', (_req, res) => {
+    const filePath = 'docs/plantillas-wpbakery/wordpress-import-contribuyente-general-completo.xml';
+    res.setHeader('Content-Type', 'application/xml');
+    res.setHeader('Content-Disposition', 'attachment; filename="wordpress-import-contribuyente-general-completo.xml"');
+    res.sendFile(filePath, { root: process.cwd() });
+  });
+
   // Vite middleware for development
   const isProduction = process.env.NODE_ENV === 'production';
   if (!isProduction) {
