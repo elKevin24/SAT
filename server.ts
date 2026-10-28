@@ -46,6 +46,17 @@ async function startServer() {
     res.sendFile(filePath, { root: process.cwd() });
   });
 
+  // Servir archivos estáticos de descargas directas
+  app.use('/downloads', express.static('public/downloads', {
+    setHeaders: (res, path) => {
+      if (path.endsWith('.xml')) {
+        res.setHeader('Content-Type', 'application/xml; charset=utf-8');
+        const filename = path.split('/').pop();
+        res.setHeader('Content-Disposition', `attachment; filename="${filename}"`);
+      }
+    }
+  }));
+
   // Vite middleware for development
   const isProduction = process.env.NODE_ENV === 'production';
   if (!isProduction) {
