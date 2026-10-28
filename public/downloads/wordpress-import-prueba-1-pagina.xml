@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0"
+  xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:wp="http://wordpress.org/export/1.2/"
+>
+<channel>
+  <title>Portal SAT Guatemala — Prueba 1 Página Contribuyente General (Declaraciones, pagos y solvencias)</title>
+  <link>https://prototipo.sat.gob.gt</link>
+  <description>Prueba unitaria de importación WPBakery + The7 Classic (1 sola página de Contribuyente General) — Portal SAT Guatemala</description>
+  <pubDate>Wed, 28 Oct 2026 02:20:08 +0000</pubDate>
+  <language>es-GT</language>
+  <wp:wxr_version>1.2</wp:wxr_version>
+  <wp:base_site_url>https://prototipo.sat.gob.gt</wp:base_site_url>
+  <wp:base_blog_url>https://prototipo.sat.gob.gt</wp:base_blog_url>
+  <wp:author>
+    <wp:author_id>1</wp:author_id>
+    <wp:author_login><![CDATA[admin]]></wp:author_login>
+    <wp:author_email><![CDATA[webmaster@sat.gob.gt]]></wp:author_email>
+    <wp:author_display_name><![CDATA[SAT Guatemala]]></wp:author_display_name>
+  </wp:author>
+  <item>
+    <title>Declaraciones, pagos y solvencias</title>
+    <link>https://prototipo.sat.gob.gt/contribuyentes/contribuyente-general/declaraciones-pagos-y-solvencias/</link>
+    <pubDate>Wed, 28 Oct 2026 02:20:08 +0000</pubDate>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <guid isPermaLink="false">https://prototipo.sat.gob.gt/?page_slug=declaraciones-pagos-y-solvencias-20261027202008</guid>
+    <description></description>
+    <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-contribuyentes"][vc_column width="1/3" offset="vc_col-xl-inherit vc_col-lg-inherit vc_col-md-4 vc_col-sm-inherit"][bsf-info-box icon_type="none" title="Declaraciones" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyente-general%2Fdeclaraciones-pagos-y-solvencias%2Fdeclaraciones%2F"]Presentación de declaraciones juradas mensuales, trimestrales y anuales de impuestos a través de Declaraguate.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Formas de pago y convenios" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyente-general%2Fdeclaraciones-pagos-y-solvencias%2Fformas-de-pago-y-convenios%2F"]Bancos autorizados para recepción de pagos con boleta SAT-2000, solicitud de convenios de pago y facilidades tributarias.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Solvencia fiscal" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyente-general%2Fdeclaraciones-pagos-y-solvencias%2Fsolvencia-fiscal%2F"]Emisión electrónica de Solvencia Fiscal para acreditar que te encuentras al día en el cumplimiento de tus obligaciones tributarias.[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>0</wp:post_id>
+    <wp:post_date><![CDATA[2026-10-27 20:20:08]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-10-28 02:20:08]]></wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name><![CDATA[declaraciones-pagos-y-solvencias]]></wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>3</wp:menu_order>
+    <wp:post_type><![CDATA[page]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
+      <wp:meta_value><![CDATA[elementor_header_footer]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_sidebar_position]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_header_title]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
+      <wp:meta_value><![CDATA[true]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_wpb_post_custom_css]]></wp:meta_key>
+      <wp:meta_value><![CDATA[/* ==================================================
+   SECCIÓN CONTRIBUYENTES (AZUL SAT #14649B)
+   ================================================== */
+
+/* 0. Contenedor centrado idéntico al diseño original (independiente de Elementor Full Width) */
+.wpb-content-wrapper,
+.entry-content {
+    max-width: 1200px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+    box-sizing: border-box !important;
+}
+
+/* 1. La Fila: obliga a las 3 columnas a alinearse en una sola línea horizontal recta */
+.sat-seccion-contribuyentes.vc_row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: stretch !important;
+    margin-left: -8px !important;
+    margin-right: -8px !important;
+}
+
+/* 2. Cada Columna de WPBakery: 33.33% de ancho exacto (3 columnas por fila) */
+.sat-seccion-contribuyentes > .vc_column_container {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 0 0 33.333333% !important;
+    max-width: 33.333333% !important;
+    width: 33.333333% !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    margin-bottom: 16px !important;
+    box-sizing: border-box !important;
+}
+
+/* Responsivo: 2 columnas en Tablet */
+@media (max-width: 991px) {
+    .sat-seccion-contribuyentes > .vc_column_container {
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+        width: 50% !important;
+    }
+}
+
+/* Responsivo: 1 columna en Celular */
+@media (max-width: 640px) {
+    .sat-seccion-contribuyentes > .vc_column_container {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+}
+
+/* 3. Contenedores internos de WPBakery: estirar al 100% */
+.sat-seccion-contribuyentes .vc_column-inner,
+.sat-seccion-contribuyentes .wpb_wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1 1 auto !important;
+    width: 100% !important;
+    height: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* 4. Estructura de Info Box: ocupar todo el ancho disponible de la columna */
+.sat-seccion-contribuyentes .aio-icon-component,
+.sat-seccion-contribuyentes .aio-icon-box-link {
+    display: flex !important;
+    flex: 1 1 auto !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* 5. La Tarjeta SAT Oficial (Ancha, fondo gris suave, sin bordes) */
+.sat-seccion-contribuyentes .aio-icon-box {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    position: relative !important;
+
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 140px !important;
+
+    background-color: #F4F6F9 !important; /* Gris suave oficial */
+    border: none !important;              /* Cero bordes */
+    border-radius: 12px !important;       /* Esquinas redondas */
+    padding: 22px 24px !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+
+    cursor: pointer !important;
+    user-select: none !important;
+
+    /* Animación suave */
+    transition: transform 0.35s ease, background-color 0.35s ease, box-shadow 0.35s ease !important;
+}
+
+/* 6. Hover Azul Oficial de Contribuyentes (#14649B) */
+.sat-seccion-contribuyentes .aio-icon-box:hover {
+    background-color: #14649B !important; /* Azul SAT Oficial */
+    transform: translateY(-4px) !important;
+    box-shadow: 0 12px 24px rgba(20, 100, 155, 0.22) !important;
+}
+
+/* 7. Cabecera y Chevron Oficial a la derecha */
+.sat-seccion-contribuyentes .aio-icon-header {
+    margin: 0 !important;
+    padding-right: 24px !important;
+    text-align: left !important;
+}
+
+.sat-seccion-contribuyentes .aio-icon-box::after {
+    content: "" !important;
+    position: absolute !important;
+    top: 24px !important;
+    right: 22px !important;
+    width: 18px !important;
+    height: 18px !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: contain !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2394A3B8' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18l6-6-6-6'/%3E%3C/svg%3E") !important;
+    transition: background-image 0.2s ease !important;
+}
+
+.sat-seccion-contribuyentes .aio-icon-box:hover::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FFFFFF' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18l6-6-6-6'/%3E%3C/svg%3E") !important;
+}
+
+/* 8. Título Institucional */
+.sat-seccion-contribuyentes .aio-icon-title {
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: left !important;
+    font-family: "Gotham", "Montserrat", sans-serif, -apple-system !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    line-height: 1.35 !important;
+    color: #19324B !important;
+    transition: color 0.25s ease !important;
+}
+
+/* 9. Descripción en Lenguaje Claro */
+.sat-seccion-contribuyentes .aio-icon-description {
+    margin-top: 8px !important;
+    padding: 0 !important;
+    text-align: left !important;
+    font-family: "Gotham", "Montserrat", sans-serif, -apple-system !important;
+    font-size: 12.5px !important;
+    line-height: 1.55 !important;
+    color: #475569 !important;
+    flex-grow: 1 !important;
+    transition: color 0.25s ease !important;
+}
+
+/* 10. Textos a blanco puro en Hover */
+.sat-seccion-contribuyentes .aio-icon-box:hover .aio-icon-title {
+    color: #FFFFFF !important;
+}
+.sat-seccion-contribuyentes .aio-icon-box:hover .aio-icon-description {
+    color: rgba(255, 255, 255, 0.92) !important;
+}]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+</channel>
+</rss>

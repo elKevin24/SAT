@@ -28,6 +28,17 @@
   --sat-font-family: "Gotham", "Montserrat", sans-serif, -apple-system;
 }
 
+/* 0. Contenedor centrado idéntico al diseño original (independiente de Elementor Full Width) */
+.wpb-content-wrapper,
+.entry-content {
+    max-width: 1200px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+    box-sizing: border-box !important;
+}
+
 /* ----------------------------------------------------------------------------
  * 1. FILAS FLEX DE 3 COLUMNAS Y ALINEACIÓN EXACTA WPBAKERY
  * ---------------------------------------------------------------------------- */

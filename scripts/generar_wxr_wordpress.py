@@ -136,7 +136,7 @@ def collect_all_pages() -> list[dict]:
         col = HOVER_COLORS.get(n1, "#14649B")
         shd = SHADOW_COLORS.get(n1, "rgba(20, 100, 155, 0.22)")
         return (
-            f".{sec}.vc_row {{ display: flex !important; flex-wrap: wrap !important; align-items: stretch !important; margin-left: -8px !important; margin-right: -8px !important; }} "
+            f".wpb-content-wrapper, .entry-content {{ max-width: 1200px !important; margin-left: auto !important; margin-right: auto !important; padding-left: 24px !important; padding-right: 24px !important; box-sizing: border-box !important; }} .{sec}.vc_row {{ display: flex !important; flex-wrap: wrap !important; align-items: stretch !important; margin-left: -8px !important; margin-right: -8px !important; }} "
             f".{sec} > .vc_column_container {{ display: flex !important; flex-direction: column !important; flex: 0 0 33.333333% !important; max-width: 33.333333% !important; width: 33.333333% !important; padding-left: 8px !important; padding-right: 8px !important; margin-bottom: 16px !important; box-sizing: border-box !important; }} "
             f"@media (max-width: 991px) {{ .{sec} > .vc_column_container {{ flex: 0 0 50% !important; max-width: 50% !important; width: 50% !important; }} }} "
             f"@media (max-width: 640px) {{ .{sec} > .vc_column_container {{ flex: 0 0 100% !important; max-width: 100% !important; width: 100% !important; }} }} "

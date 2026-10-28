@@ -13,6 +13,39 @@ async function startServer() {
     res.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
     res.sendFile(filePath, { root: process.cwd() });
   });
+  app.get("/api/download/wordpress-import-olas-0-1-2.xml", (_req, res) => {
+    const filePath = "docs/plantillas-wpbakery/wordpress-import-olas-0-1-2.xml";
+    res.setHeader("Content-Type", "application/xml");
+    res.setHeader("Content-Disposition", 'attachment; filename="wordpress-import-olas-0-1-2.xml"');
+    res.sendFile(filePath, { root: process.cwd() });
+  });
+  app.get("/api/download/wordpress-import-completo-160.xml", (_req, res) => {
+    const filePath = "docs/plantillas-wpbakery/wordpress-import-completo-160.xml";
+    res.setHeader("Content-Type", "application/xml");
+    res.setHeader("Content-Disposition", 'attachment; filename="wordpress-import-completo-160.xml"');
+    res.sendFile(filePath, { root: process.cwd() });
+  });
+  app.get("/api/download/wordpress-import-contribuyente-general-n3.xml", (_req, res) => {
+    const filePath = "docs/plantillas-wpbakery/wordpress-import-contribuyente-general-n3.xml";
+    res.setHeader("Content-Type", "application/xml");
+    res.setHeader("Content-Disposition", 'attachment; filename="wordpress-import-contribuyente-general-n3.xml"');
+    res.sendFile(filePath, { root: process.cwd() });
+  });
+  app.get("/api/download/wordpress-import-contribuyente-general-completo.xml", (_req, res) => {
+    const filePath = "docs/plantillas-wpbakery/wordpress-import-contribuyente-general-completo.xml";
+    res.setHeader("Content-Type", "application/xml");
+    res.setHeader("Content-Disposition", 'attachment; filename="wordpress-import-contribuyente-general-completo.xml"');
+    res.sendFile(filePath, { root: process.cwd() });
+  });
+  app.use("/downloads", express.static("public/downloads", {
+    setHeaders: (res, path) => {
+      if (path.endsWith(".xml")) {
+        res.setHeader("Content-Type", "application/xml; charset=utf-8");
+        const filename = path.split("/").pop();
+        res.setHeader("Content-Disposition", `attachment; filename="${filename}"`);
+      }
+    }
+  }));
   const isProduction = process.env.NODE_ENV === "production";
   if (!isProduction) {
     const vite = await createViteServer({

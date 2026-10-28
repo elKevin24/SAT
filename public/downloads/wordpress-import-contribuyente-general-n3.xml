@@ -10,11 +10,11 @@
   <title>Portal SAT Guatemala — Contribuyente General (8 Subcategorías N3)</title>
   <link>https://portal.sat.gob.gt</link>
   <description>Paquete de páginas jerárquicas WPBakery + The7 Classic (0% Raw HTML) — Portal SAT Guatemala</description>
-  <pubDate>Mon, 26 Oct 2026 19:00:00 +0000</pubDate>
+  <pubDate>Wed, 28 Oct 2026 02:27:43 +0000</pubDate>
   <language>es-GT</language>
   <wp:wxr_version>1.2</wp:wxr_version>
-  <wp:base_site_url>https://portal.sat.gob.gt</wp:base_site_url>
-  <wp:base_blog_url>https://portal.sat.gob.gt</wp:base_blog_url>
+  <wp:base_site_url>https://prototipo.sat.gob.gt</wp:base_site_url>
+  <wp:base_blog_url>https://prototipo.sat.gob.gt</wp:base_blog_url>
   <wp:author>
     <wp:author_id>1</wp:author_id>
     <wp:author_login><![CDATA[admin]]></wp:author_login>
@@ -23,16 +23,16 @@
   </wp:author>
   <item>
     <title>Contribuyente General</title>
-    <link>https://portal.sat.gob.gt/contribuyentes/contribuyente-general/</link>
-    <pubDate>Mon, 26 Oct 2026 19:00:00 +0000</pubDate>
+    <link>https://prototipo.sat.gob.gt/contribuyentes/contribuyente-general/</link>
+    <pubDate>Wed, 28 Oct 2026 02:27:43 +0000</pubDate>
     <dc:creator><![CDATA[admin]]></dc:creator>
-    <guid isPermaLink="false">https://portal.sat.gob.gt/?page_id=1015</guid>
+    <guid isPermaLink="false">https://portal.sat.gob.gt/?page_id=1015&amp;v=20261027202743</guid>
     <description></description>
-    <content:encoded><![CDATA[[vc_row gap="5px"][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-contribuyentes"][vc_column width="1/3"][bsf-info-box icon_type="none" title="Inscripción y actualización en el RTU" read_more="box" link="url:/contribuyentes/contribuyente-general/inscripcion-y-actualizacion-en-el-rtu/|||"]Inscripción de personas, sociedades, empresas mercantiles, representantes legales, actualización de datos y cierre de negocios en el Registro Tributario Unificado (RTU).[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Facturación electrónica y documentos tributarios" read_more="box" link="url:/contribuyentes/contribuyente-general/facturacion-electronica-y-documentos-tributarios/|||"]Habilitación en Factura Electrónica en Línea (FEL), autorización de documentos, imprentas, máquinas registradoras y constancias de exención.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Declaraciones, pagos y solvencias" read_more="box" link="url:/contribuyentes/contribuyente-general/declaraciones-pagos-y-solvencias/|||"]Presentación de formularios en Declaraguate, formas de pago bancario, convenios de pago a plazos y emisión de Solvencia Fiscal.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Devoluciones y créditos fiscales" read_more="box" link="url:/contribuyentes/contribuyente-general/devoluciones-y-creditos-fiscales/|||"]Solicitud de devolución de crédito fiscal del Impuesto al Valor Agregado (IVA), pagos en exceso o indebidos de ISR y acreditamiento de otros impuestos.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Regímenes tributarios" read_more="box" link="url:/contribuyentes/contribuyente-general/regimenes-tributarios/|||"]Inscripción, obligaciones, pagos trimestrales o mensuales y cambio de régimen en el Impuesto Sobre la Renta (ISR) e Impuesto al Valor Agregado (IVA).[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Vehículos (como propietario)" read_more="box" link="url:/contribuyentes/contribuyente-general/vehiculos-como-propietario/|||"]Primeras placas, traspasos de propiedad, pago anual del Impuesto Sobre Circulación de Vehículos (ISCV), reposición de distintivos, modificaciones y bajas.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Servicios y gestiones al contribuyente" read_more="box" link="url:/contribuyentes/contribuyente-general/servicios-y-gestiones-al-contribuyente/|||"]Constancias del Registro Tributario Unificado (RTU), Agencia Virtual, programación de citas previas, orientación tributaria y otros servicios de asistencia.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Cultura tributaria y capacitación" read_more="box" link="url:/contribuyentes/contribuyente-general/cultura-tributaria-y-capacitacion/|||"]Cursos virtuales gratuitos de IVA, ISR y herramientas electrónicas, calendario de capacitaciones, biblioteca virtual y normativa.[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
+    <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-contribuyentes"][vc_column width="1/3" offset="vc_col-xl-inherit vc_col-lg-inherit vc_col-md-4 vc_col-sm-inherit"][bsf-info-box icon_type="none" title="Inscripción y actualización en el RTU" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyente-general%2Finscripcion-y-actualizacion-en-el-rtu%2F"]Inscripción de personas, sociedades, empresas mercantiles, representantes legales, actualización de datos y cierre de negocios en el Registro Tributario Unificado (RTU).[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Facturación electrónica y documentos tributarios" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyente-general%2Ffacturacion-electronica-y-documentos-tributarios%2F"]Habilitación en Factura Electrónica en Línea (FEL), autorización de documentos, imprentas, máquinas registradoras y constancias de exención.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Declaraciones, pagos y solvencias" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyente-general%2Fdeclaraciones-pagos-y-solvencias%2F"]Presentación de formularios en Declaraguate, formas de pago bancario, convenios de pago a plazos y emisión de Solvencia Fiscal.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Devoluciones y créditos fiscales" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyente-general%2Fdevoluciones-y-creditos-fiscales%2F"]Solicitud de devolución de crédito fiscal del Impuesto al Valor Agregado (IVA), pagos en exceso o indebidos de ISR y acreditamiento de otros impuestos.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Regímenes tributarios" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyente-general%2Fregimenes-tributarios%2F"]Inscripción, obligaciones, pagos trimestrales o mensuales y cambio de régimen en el Impuesto Sobre la Renta (ISR) e Impuesto al Valor Agregado (IVA).[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Vehículos (como propietario)" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyente-general%2Fvehiculos-como-propietario%2F"]Primeras placas, traspasos de propiedad, pago anual del Impuesto Sobre Circulación de Vehículos (ISCV), reposición de distintivos, modificaciones y bajas.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Servicios y gestiones al contribuyente" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyente-general%2Fservicios-y-gestiones-al-contribuyente%2F"]Constancias del Registro Tributario Unificado (RTU), Agencia Virtual, programación de citas previas, orientación tributaria y otros servicios de asistencia.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Cultura tributaria y capacitación" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyente-general%2Fcultura-tributaria-y-capacitacion%2F"]Cursos virtuales gratuitos de IVA, ISR y herramientas electrónicas, calendario de capacitaciones, biblioteca virtual y normativa.[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
     <excerpt:encoded><![CDATA[]]></excerpt:encoded>
     <wp:post_id>1015</wp:post_id>
-    <wp:post_date><![CDATA[2026-10-26 19:00:00]]></wp:post_date>
-    <wp:post_date_gmt><![CDATA[2026-10-26 19:00:00]]></wp:post_date_gmt>
+    <wp:post_date><![CDATA[2026-10-27 20:27:43]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-10-28 02:27:43]]></wp:post_date_gmt>
     <wp:comment_status><![CDATA[closed]]></wp:comment_status>
     <wp:ping_status><![CDATA[closed]]></wp:ping_status>
     <wp:post_name><![CDATA[contribuyente-general]]></wp:post_name>
@@ -47,22 +47,201 @@
       <wp:meta_value><![CDATA[elementor_header_footer]]></wp:meta_value>
     </wp:postmeta>
     <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_sidebar_position]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_header_title]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
+      <wp:meta_value><![CDATA[true]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
       <wp:meta_key><![CDATA[_wpb_post_custom_css]]></wp:meta_key>
-      <wp:meta_value><![CDATA[.sat-seccion-contribuyentes.vc_row { display: flex !important; flex-wrap: wrap !important; align-items: stretch !important; margin-left: -8px !important; margin-right: -8px !important; } .sat-seccion-contribuyentes > .vc_column_container { display: flex !important; flex-direction: column !important; flex: 0 0 33.333333% !important; max-width: 33.333333% !important; width: 33.333333% !important; padding-left: 8px !important; padding-right: 8px !important; margin-bottom: 16px !important; box-sizing: border-box !important; } @media (max-width: 991px) { .sat-seccion-contribuyentes > .vc_column_container { flex: 0 0 50% !important; max-width: 50% !important; width: 50% !important; } } @media (max-width: 640px) { .sat-seccion-contribuyentes > .vc_column_container { flex: 0 0 100% !important; max-width: 100% !important; width: 100% !important; } } .sat-seccion-contribuyentes .vc_column-inner, .sat-seccion-contribuyentes .wpb_wrapper { display: flex !important; flex-direction: column !important; flex: 1 1 auto !important; width: 100% !important; height: 100% !important; padding: 0 !important; margin: 0 !important; } .sat-seccion-contribuyentes .aio-icon-component, .sat-seccion-contribuyentes .aio-icon-box-link { display: flex !important; flex: 1 1 auto !important; width: 100% !important; height: 100% !important; margin: 0 !important; padding: 0 !important; } .sat-seccion-contribuyentes .aio-icon-box { display: flex !important; flex-direction: column !important; justify-content: flex-start !important; position: relative !important; width: 100% !important; height: 100% !important; min-height: 140px !important; background-color: #F4F6F9 !important; border: none !important; border-radius: 12px !important; padding: 22px 24px !important; margin: 0 !important; box-sizing: border-box !important; cursor: pointer !important; user-select: none !important; transition: transform 0.35s ease, background-color 0.35s ease, box-shadow 0.35s ease !important; } .sat-seccion-contribuyentes .aio-icon-box:hover { background-color: #14649B !important; transform: translateY(-4px) !important; box-shadow: 0 12px 24px rgba(20, 100, 155, 0.22) !important; } .sat-seccion-contribuyentes .aio-icon-header { margin: 0 !important; padding-right: 24px !important; text-align: left !important; } .sat-seccion-contribuyentes .aio-icon-box::after { content: "" !important; position: absolute !important; top: 24px !important; right: 22px !important; width: 18px !important; height: 18px !important; background-repeat: no-repeat !important; background-position: center !important; background-size: contain !important; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2394A3B8' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18l6-6-6-6'/%3E%3C/svg%3E") !important; transition: background-image 0.2s ease !important; } .sat-seccion-contribuyentes .aio-icon-box:hover::after { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FFFFFF' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18l6-6-6-6'/%3E%3C/svg%3E") !important; } .sat-seccion-contribuyentes .aio-icon-title { margin: 0 !important; padding: 0 !important; text-align: left !important; font-family: "Gotham", "Montserrat", sans-serif, -apple-system !important; font-size: 16px !important; font-weight: 700 !important; line-height: 1.35 !important; color: #19324B !important; transition: color 0.25s ease !important; } .sat-seccion-contribuyentes .aio-icon-description { margin-top: 8px !important; padding: 0 !important; text-align: left !important; font-family: "Gotham", "Montserrat", sans-serif, -apple-system !important; font-size: 12.5px !important; line-height: 1.55 !important; color: #475569 !important; flex-grow: 1 !important; transition: color 0.25s ease !important; } .sat-seccion-contribuyentes .aio-icon-box:hover .aio-icon-title { color: #FFFFFF !important; } .sat-seccion-contribuyentes .aio-icon-box:hover .aio-icon-description { color: rgba(255, 255, 255, 0.92) !important; }]]></wp:meta_value>
+      <wp:meta_value><![CDATA[/* ==================================================
+   SECCIÓN CONTRIBUYENTES (AZUL SAT #14649B)
+   ================================================== */
+
+/* 0. Contenedor centrado idéntico al diseño original (independiente de Elementor Full Width) */
+.wpb-content-wrapper,
+.entry-content {
+    max-width: 1200px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+    box-sizing: border-box !important;
+}
+
+/* 1. La Fila: obliga a las 3 columnas a alinearse en una sola línea horizontal recta */
+.sat-seccion-contribuyentes.vc_row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: stretch !important;
+    margin-left: -8px !important;
+    margin-right: -8px !important;
+}
+
+/* 2. Cada Columna de WPBakery: 33.33% de ancho exacto (3 columnas por fila) */
+.sat-seccion-contribuyentes > .vc_column_container {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 0 0 33.333333% !important;
+    max-width: 33.333333% !important;
+    width: 33.333333% !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    margin-bottom: 16px !important;
+    box-sizing: border-box !important;
+}
+
+/* Responsivo: 2 columnas en Tablet */
+@media (max-width: 991px) {
+    .sat-seccion-contribuyentes > .vc_column_container {
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+        width: 50% !important;
+    }
+}
+
+/* Responsivo: 1 columna en Celular */
+@media (max-width: 640px) {
+    .sat-seccion-contribuyentes > .vc_column_container {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+}
+
+/* 3. Contenedores internos de WPBakery: estirar al 100% */
+.sat-seccion-contribuyentes .vc_column-inner,
+.sat-seccion-contribuyentes .wpb_wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1 1 auto !important;
+    width: 100% !important;
+    height: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* 4. Estructura de Info Box: ocupar todo el ancho disponible de la columna */
+.sat-seccion-contribuyentes .aio-icon-component,
+.sat-seccion-contribuyentes .aio-icon-box-link {
+    display: flex !important;
+    flex: 1 1 auto !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* 5. La Tarjeta SAT Oficial (Ancha, fondo gris suave, sin bordes) */
+.sat-seccion-contribuyentes .aio-icon-box {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    position: relative !important;
+
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 140px !important;
+
+    background-color: #F4F6F9 !important; /* Gris suave oficial */
+    border: none !important;              /* Cero bordes */
+    border-radius: 12px !important;       /* Esquinas redondas */
+    padding: 22px 24px !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+
+    cursor: pointer !important;
+    user-select: none !important;
+
+    /* Animación suave */
+    transition: transform 0.35s ease, background-color 0.35s ease, box-shadow 0.35s ease !important;
+}
+
+/* 6. Hover Azul Oficial de Contribuyentes (#14649B) */
+.sat-seccion-contribuyentes .aio-icon-box:hover {
+    background-color: #14649B !important; /* Azul SAT Oficial */
+    transform: translateY(-4px) !important;
+    box-shadow: 0 12px 24px rgba(20, 100, 155, 0.22) !important;
+}
+
+/* 7. Cabecera y Chevron Oficial a la derecha */
+.sat-seccion-contribuyentes .aio-icon-header {
+    margin: 0 !important;
+    padding-right: 24px !important;
+    text-align: left !important;
+}
+
+.sat-seccion-contribuyentes .aio-icon-box::after {
+    content: "" !important;
+    position: absolute !important;
+    top: 24px !important;
+    right: 22px !important;
+    width: 18px !important;
+    height: 18px !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: contain !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2394A3B8' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18l6-6-6-6'/%3E%3C/svg%3E") !important;
+    transition: background-image 0.2s ease !important;
+}
+
+.sat-seccion-contribuyentes .aio-icon-box:hover::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FFFFFF' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18l6-6-6-6'/%3E%3C/svg%3E") !important;
+}
+
+/* 8. Título Institucional */
+.sat-seccion-contribuyentes .aio-icon-title {
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: left !important;
+    font-family: "Gotham", "Montserrat", sans-serif, -apple-system !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    line-height: 1.35 !important;
+    color: #19324B !important;
+    transition: color 0.25s ease !important;
+}
+
+/* 9. Descripción en Lenguaje Claro */
+.sat-seccion-contribuyentes .aio-icon-description {
+    margin-top: 8px !important;
+    padding: 0 !important;
+    text-align: left !important;
+    font-family: "Gotham", "Montserrat", sans-serif, -apple-system !important;
+    font-size: 12.5px !important;
+    line-height: 1.55 !important;
+    color: #475569 !important;
+    flex-grow: 1 !important;
+    transition: color 0.25s ease !important;
+}
+
+/* 10. Textos a blanco puro en Hover */
+.sat-seccion-contribuyentes .aio-icon-box:hover .aio-icon-title {
+    color: #FFFFFF !important;
+}
+.sat-seccion-contribuyentes .aio-icon-box:hover .aio-icon-description {
+    color: rgba(255, 255, 255, 0.92) !important;
+}]]></wp:meta_value>
     </wp:postmeta>
   </item>
   <item>
     <title>Inscripción y actualización en el RTU</title>
-    <link>https://portal.sat.gob.gt/contribuyentes/contribuyente-general/inscripcion-y-actualizacion-en-el-rtu/</link>
-    <pubDate>Mon, 26 Oct 2026 19:00:00 +0000</pubDate>
+    <link>https://prototipo.sat.gob.gt/contribuyentes/contribuyente-general/inscripcion-y-actualizacion-en-el-rtu/</link>
+    <pubDate>Wed, 28 Oct 2026 02:27:43 +0000</pubDate>
     <dc:creator><![CDATA[admin]]></dc:creator>
-    <guid isPermaLink="false">https://portal.sat.gob.gt/?page_id=1016</guid>
+    <guid isPermaLink="false">https://portal.sat.gob.gt/?page_id=1016&amp;v=20261027202743</guid>
     <description></description>
-    <content:encoded><![CDATA[[vc_row gap="5px"][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-contribuyentes"][vc_column width="1/3"][bsf-info-box icon_type="none" title="Cierre de negocios y gestiones" read_more="box" link="url:/contribuyentes/contribuyente-general/inscripcion-y-actualizacion-en-el-rtu/cierre-de-negocios-y-gestiones/|||"]Cese temporal o definitivo de actividades económicas, cancelación de establecimientos mercantiles y prescripción de obligaciones.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Otras entidades y patrimonios" read_more="box" link="url:/contribuyentes/contribuyente-general/inscripcion-y-actualizacion-en-el-rtu/otras-entidades-y-patrimonios/|||"]Inscripción de copropiedades, fideicomisos, contratos de participación, sucursales extranjeras y entes especiales.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Personas y representantes" read_more="box" link="url:/contribuyentes/contribuyente-general/inscripcion-y-actualizacion-en-el-rtu/personas-y-representantes/|||"]Inscripción y actualización de personas individuales, profesionales liberales, representantes legales y mandatarios en el Registro Tributario Unificado (RTU).[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Sociedades y empresas" read_more="box" link="url:/contribuyentes/contribuyente-general/inscripcion-y-actualizacion-en-el-rtu/sociedades-y-empresas/|||"]Inscripción, modificación de datos y apertura de establecimientos para sociedades anónimas y empresas mercantiles.[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
+    <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-contribuyentes"][vc_column width="1/3" offset="vc_col-xl-inherit vc_col-lg-inherit vc_col-md-4 vc_col-sm-inherit"][bsf-info-box icon_type="none" title="Cierre de negocios y gestiones" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyente-general%2Finscripcion-y-actualizacion-en-el-rtu%2Fcierre-de-negocios-y-gestiones%2F"]Cese temporal o definitivo de actividades económicas, cancelación de establecimientos mercantiles y prescripción de obligaciones.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Otras entidades y patrimonios" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyente-general%2Finscripcion-y-actualizacion-en-el-rtu%2Fotras-entidades-y-patrimonios%2F"]Inscripción de copropiedades, fideicomisos, contratos de participación, sucursales extranjeras y entes especiales.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Personas y representantes" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyente-general%2Finscripcion-y-actualizacion-en-el-rtu%2Fpersonas-y-representantes%2F"]Inscripción y actualización de personas individuales, profesionales liberales, representantes legales y mandatarios en el Registro Tributario Unificado (RTU).[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Sociedades y empresas" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyente-general%2Finscripcion-y-actualizacion-en-el-rtu%2Fsociedades-y-empresas%2F"]Inscripción, modificación de datos y apertura de establecimientos para sociedades anónimas y empresas mercantiles.[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
     <excerpt:encoded><![CDATA[]]></excerpt:encoded>
     <wp:post_id>1016</wp:post_id>
-    <wp:post_date><![CDATA[2026-10-26 19:00:00]]></wp:post_date>
-    <wp:post_date_gmt><![CDATA[2026-10-26 19:00:00]]></wp:post_date_gmt>
+    <wp:post_date><![CDATA[2026-10-27 20:27:43]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-10-28 02:27:43]]></wp:post_date_gmt>
     <wp:comment_status><![CDATA[closed]]></wp:comment_status>
     <wp:ping_status><![CDATA[closed]]></wp:ping_status>
     <wp:post_name><![CDATA[inscripcion-y-actualizacion-en-el-rtu]]></wp:post_name>
@@ -77,22 +256,201 @@
       <wp:meta_value><![CDATA[elementor_header_footer]]></wp:meta_value>
     </wp:postmeta>
     <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_sidebar_position]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_header_title]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
+      <wp:meta_value><![CDATA[true]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
       <wp:meta_key><![CDATA[_wpb_post_custom_css]]></wp:meta_key>
-      <wp:meta_value><![CDATA[.sat-seccion-contribuyentes.vc_row { display: flex !important; flex-wrap: wrap !important; align-items: stretch !important; margin-left: -8px !important; margin-right: -8px !important; } .sat-seccion-contribuyentes > .vc_column_container { display: flex !important; flex-direction: column !important; flex: 0 0 33.333333% !important; max-width: 33.333333% !important; width: 33.333333% !important; padding-left: 8px !important; padding-right: 8px !important; margin-bottom: 16px !important; box-sizing: border-box !important; } @media (max-width: 991px) { .sat-seccion-contribuyentes > .vc_column_container { flex: 0 0 50% !important; max-width: 50% !important; width: 50% !important; } } @media (max-width: 640px) { .sat-seccion-contribuyentes > .vc_column_container { flex: 0 0 100% !important; max-width: 100% !important; width: 100% !important; } } .sat-seccion-contribuyentes .vc_column-inner, .sat-seccion-contribuyentes .wpb_wrapper { display: flex !important; flex-direction: column !important; flex: 1 1 auto !important; width: 100% !important; height: 100% !important; padding: 0 !important; margin: 0 !important; } .sat-seccion-contribuyentes .aio-icon-component, .sat-seccion-contribuyentes .aio-icon-box-link { display: flex !important; flex: 1 1 auto !important; width: 100% !important; height: 100% !important; margin: 0 !important; padding: 0 !important; } .sat-seccion-contribuyentes .aio-icon-box { display: flex !important; flex-direction: column !important; justify-content: flex-start !important; position: relative !important; width: 100% !important; height: 100% !important; min-height: 140px !important; background-color: #F4F6F9 !important; border: none !important; border-radius: 12px !important; padding: 22px 24px !important; margin: 0 !important; box-sizing: border-box !important; cursor: pointer !important; user-select: none !important; transition: transform 0.35s ease, background-color 0.35s ease, box-shadow 0.35s ease !important; } .sat-seccion-contribuyentes .aio-icon-box:hover { background-color: #14649B !important; transform: translateY(-4px) !important; box-shadow: 0 12px 24px rgba(20, 100, 155, 0.22) !important; } .sat-seccion-contribuyentes .aio-icon-header { margin: 0 !important; padding-right: 24px !important; text-align: left !important; } .sat-seccion-contribuyentes .aio-icon-box::after { content: "" !important; position: absolute !important; top: 24px !important; right: 22px !important; width: 18px !important; height: 18px !important; background-repeat: no-repeat !important; background-position: center !important; background-size: contain !important; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2394A3B8' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18l6-6-6-6'/%3E%3C/svg%3E") !important; transition: background-image 0.2s ease !important; } .sat-seccion-contribuyentes .aio-icon-box:hover::after { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FFFFFF' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18l6-6-6-6'/%3E%3C/svg%3E") !important; } .sat-seccion-contribuyentes .aio-icon-title { margin: 0 !important; padding: 0 !important; text-align: left !important; font-family: "Gotham", "Montserrat", sans-serif, -apple-system !important; font-size: 16px !important; font-weight: 700 !important; line-height: 1.35 !important; color: #19324B !important; transition: color 0.25s ease !important; } .sat-seccion-contribuyentes .aio-icon-description { margin-top: 8px !important; padding: 0 !important; text-align: left !important; font-family: "Gotham", "Montserrat", sans-serif, -apple-system !important; font-size: 12.5px !important; line-height: 1.55 !important; color: #475569 !important; flex-grow: 1 !important; transition: color 0.25s ease !important; } .sat-seccion-contribuyentes .aio-icon-box:hover .aio-icon-title { color: #FFFFFF !important; } .sat-seccion-contribuyentes .aio-icon-box:hover .aio-icon-description { color: rgba(255, 255, 255, 0.92) !important; }]]></wp:meta_value>
+      <wp:meta_value><![CDATA[/* ==================================================
+   SECCIÓN CONTRIBUYENTES (AZUL SAT #14649B)
+   ================================================== */
+
+/* 0. Contenedor centrado idéntico al diseño original (independiente de Elementor Full Width) */
+.wpb-content-wrapper,
+.entry-content {
+    max-width: 1200px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+    box-sizing: border-box !important;
+}
+
+/* 1. La Fila: obliga a las 3 columnas a alinearse en una sola línea horizontal recta */
+.sat-seccion-contribuyentes.vc_row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: stretch !important;
+    margin-left: -8px !important;
+    margin-right: -8px !important;
+}
+
+/* 2. Cada Columna de WPBakery: 33.33% de ancho exacto (3 columnas por fila) */
+.sat-seccion-contribuyentes > .vc_column_container {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 0 0 33.333333% !important;
+    max-width: 33.333333% !important;
+    width: 33.333333% !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    margin-bottom: 16px !important;
+    box-sizing: border-box !important;
+}
+
+/* Responsivo: 2 columnas en Tablet */
+@media (max-width: 991px) {
+    .sat-seccion-contribuyentes > .vc_column_container {
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+        width: 50% !important;
+    }
+}
+
+/* Responsivo: 1 columna en Celular */
+@media (max-width: 640px) {
+    .sat-seccion-contribuyentes > .vc_column_container {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+}
+
+/* 3. Contenedores internos de WPBakery: estirar al 100% */
+.sat-seccion-contribuyentes .vc_column-inner,
+.sat-seccion-contribuyentes .wpb_wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1 1 auto !important;
+    width: 100% !important;
+    height: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* 4. Estructura de Info Box: ocupar todo el ancho disponible de la columna */
+.sat-seccion-contribuyentes .aio-icon-component,
+.sat-seccion-contribuyentes .aio-icon-box-link {
+    display: flex !important;
+    flex: 1 1 auto !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* 5. La Tarjeta SAT Oficial (Ancha, fondo gris suave, sin bordes) */
+.sat-seccion-contribuyentes .aio-icon-box {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    position: relative !important;
+
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 140px !important;
+
+    background-color: #F4F6F9 !important; /* Gris suave oficial */
+    border: none !important;              /* Cero bordes */
+    border-radius: 12px !important;       /* Esquinas redondas */
+    padding: 22px 24px !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+
+    cursor: pointer !important;
+    user-select: none !important;
+
+    /* Animación suave */
+    transition: transform 0.35s ease, background-color 0.35s ease, box-shadow 0.35s ease !important;
+}
+
+/* 6. Hover Azul Oficial de Contribuyentes (#14649B) */
+.sat-seccion-contribuyentes .aio-icon-box:hover {
+    background-color: #14649B !important; /* Azul SAT Oficial */
+    transform: translateY(-4px) !important;
+    box-shadow: 0 12px 24px rgba(20, 100, 155, 0.22) !important;
+}
+
+/* 7. Cabecera y Chevron Oficial a la derecha */
+.sat-seccion-contribuyentes .aio-icon-header {
+    margin: 0 !important;
+    padding-right: 24px !important;
+    text-align: left !important;
+}
+
+.sat-seccion-contribuyentes .aio-icon-box::after {
+    content: "" !important;
+    position: absolute !important;
+    top: 24px !important;
+    right: 22px !important;
+    width: 18px !important;
+    height: 18px !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: contain !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2394A3B8' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18l6-6-6-6'/%3E%3C/svg%3E") !important;
+    transition: background-image 0.2s ease !important;
+}
+
+.sat-seccion-contribuyentes .aio-icon-box:hover::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FFFFFF' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18l6-6-6-6'/%3E%3C/svg%3E") !important;
+}
+
+/* 8. Título Institucional */
+.sat-seccion-contribuyentes .aio-icon-title {
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: left !important;
+    font-family: "Gotham", "Montserrat", sans-serif, -apple-system !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    line-height: 1.35 !important;
+    color: #19324B !important;
+    transition: color 0.25s ease !important;
+}
+
+/* 9. Descripción en Lenguaje Claro */
+.sat-seccion-contribuyentes .aio-icon-description {
+    margin-top: 8px !important;
+    padding: 0 !important;
+    text-align: left !important;
+    font-family: "Gotham", "Montserrat", sans-serif, -apple-system !important;
+    font-size: 12.5px !important;
+    line-height: 1.55 !important;
+    color: #475569 !important;
+    flex-grow: 1 !important;
+    transition: color 0.25s ease !important;
+}
+
+/* 10. Textos a blanco puro en Hover */
+.sat-seccion-contribuyentes .aio-icon-box:hover .aio-icon-title {
+    color: #FFFFFF !important;
+}
+.sat-seccion-contribuyentes .aio-icon-box:hover .aio-icon-description {
+    color: rgba(255, 255, 255, 0.92) !important;
+}]]></wp:meta_value>
     </wp:postmeta>
   </item>
   <item>
     <title>Facturación electrónica y documentos tributarios</title>
-    <link>https://portal.sat.gob.gt/contribuyentes/contribuyente-general/facturacion-electronica-y-documentos-tributarios/</link>
-    <pubDate>Mon, 26 Oct 2026 19:00:00 +0000</pubDate>
+    <link>https://prototipo.sat.gob.gt/contribuyentes/contribuyente-general/facturacion-electronica-y-documentos-tributarios/</link>
+    <pubDate>Wed, 28 Oct 2026 02:27:43 +0000</pubDate>
     <dc:creator><![CDATA[admin]]></dc:creator>
-    <guid isPermaLink="false">https://portal.sat.gob.gt/?page_id=1021</guid>
+    <guid isPermaLink="false">https://portal.sat.gob.gt/?page_id=1021&amp;v=20261027202743</guid>
     <description></description>
-    <content:encoded><![CDATA[[vc_row gap="5px"][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-contribuyentes"][vc_column width="1/3"][bsf-info-box icon_type="none" title="Factura Electrónica en Línea (FEL) y Autorización de Documentos" read_more="box" link="url:/contribuyentes/contribuyente-general/facturacion-electronica-y-documentos-tributarios/factura-electronica-en-linea-fel-y-autorizacion-de-documentos/|||"]Habilitación como emisor en el régimen FEL, emisión y verificación de Documentos Tributarios Electrónicos (DTE) y autorización de documentos.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Imprentas, Máquinas Registradoras y Sistemas" read_more="box" link="url:/contribuyentes/contribuyente-general/facturacion-electronica-y-documentos-tributarios/imprentas-maquinas-registradoras-y-sistemas/|||"]Inscripción en el Registro Fiscal de Imprentas, autorización de máquinas registradoras y sistemas computarizados de facturación.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Formularios y Constancias de Exención" read_more="box" link="url:/contribuyentes/contribuyente-general/facturacion-electronica-y-documentos-tributarios/formularios-y-constancias-de-exencion/|||"]Constancias de exención del IVA (CIVA), Constancias de Adquisición de Insumos (CAIS), listado de formularios y guías de llenado.[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
+    <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-contribuyentes"][vc_column width="1/3" offset="vc_col-xl-inherit vc_col-lg-inherit vc_col-md-4 vc_col-sm-inherit"][bsf-info-box icon_type="none" title="Factura Electrónica en Línea (FEL) y Autorización de Documentos" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyente-general%2Ffacturacion-electronica-y-documentos-tributarios%2Ffactura-electronica-en-linea-fel-y-autorizacion-de-documentos%2F"]Habilitación como emisor en el régimen FEL, emisión y verificación de Documentos Tributarios Electrónicos (DTE) y autorización de documentos.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Imprentas, Máquinas Registradoras y Sistemas" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyente-general%2Ffacturacion-electronica-y-documentos-tributarios%2Fimprentas-maquinas-registradoras-y-sistemas%2F"]Inscripción en el Registro Fiscal de Imprentas, autorización de máquinas registradoras y sistemas computarizados de facturación.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Formularios y Constancias de Exención" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyente-general%2Ffacturacion-electronica-y-documentos-tributarios%2Fformularios-y-constancias-de-exencion%2F"]Constancias de exención del IVA (CIVA), Constancias de Adquisición de Insumos (CAIS), listado de formularios y guías de llenado.[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
     <excerpt:encoded><![CDATA[]]></excerpt:encoded>
     <wp:post_id>1021</wp:post_id>
-    <wp:post_date><![CDATA[2026-10-26 19:00:00]]></wp:post_date>
-    <wp:post_date_gmt><![CDATA[2026-10-26 19:00:00]]></wp:post_date_gmt>
+    <wp:post_date><![CDATA[2026-10-27 20:27:43]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-10-28 02:27:43]]></wp:post_date_gmt>
     <wp:comment_status><![CDATA[closed]]></wp:comment_status>
     <wp:ping_status><![CDATA[closed]]></wp:ping_status>
     <wp:post_name><![CDATA[facturacion-electronica-y-documentos-tributarios]]></wp:post_name>
@@ -107,22 +465,201 @@
       <wp:meta_value><![CDATA[elementor_header_footer]]></wp:meta_value>
     </wp:postmeta>
     <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_sidebar_position]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_header_title]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
+      <wp:meta_value><![CDATA[true]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
       <wp:meta_key><![CDATA[_wpb_post_custom_css]]></wp:meta_key>
-      <wp:meta_value><![CDATA[.sat-seccion-contribuyentes.vc_row { display: flex !important; flex-wrap: wrap !important; align-items: stretch !important; margin-left: -8px !important; margin-right: -8px !important; } .sat-seccion-contribuyentes > .vc_column_container { display: flex !important; flex-direction: column !important; flex: 0 0 33.333333% !important; max-width: 33.333333% !important; width: 33.333333% !important; padding-left: 8px !important; padding-right: 8px !important; margin-bottom: 16px !important; box-sizing: border-box !important; } @media (max-width: 991px) { .sat-seccion-contribuyentes > .vc_column_container { flex: 0 0 50% !important; max-width: 50% !important; width: 50% !important; } } @media (max-width: 640px) { .sat-seccion-contribuyentes > .vc_column_container { flex: 0 0 100% !important; max-width: 100% !important; width: 100% !important; } } .sat-seccion-contribuyentes .vc_column-inner, .sat-seccion-contribuyentes .wpb_wrapper { display: flex !important; flex-direction: column !important; flex: 1 1 auto !important; width: 100% !important; height: 100% !important; padding: 0 !important; margin: 0 !important; } .sat-seccion-contribuyentes .aio-icon-component, .sat-seccion-contribuyentes .aio-icon-box-link { display: flex !important; flex: 1 1 auto !important; width: 100% !important; height: 100% !important; margin: 0 !important; padding: 0 !important; } .sat-seccion-contribuyentes .aio-icon-box { display: flex !important; flex-direction: column !important; justify-content: flex-start !important; position: relative !important; width: 100% !important; height: 100% !important; min-height: 140px !important; background-color: #F4F6F9 !important; border: none !important; border-radius: 12px !important; padding: 22px 24px !important; margin: 0 !important; box-sizing: border-box !important; cursor: pointer !important; user-select: none !important; transition: transform 0.35s ease, background-color 0.35s ease, box-shadow 0.35s ease !important; } .sat-seccion-contribuyentes .aio-icon-box:hover { background-color: #14649B !important; transform: translateY(-4px) !important; box-shadow: 0 12px 24px rgba(20, 100, 155, 0.22) !important; } .sat-seccion-contribuyentes .aio-icon-header { margin: 0 !important; padding-right: 24px !important; text-align: left !important; } .sat-seccion-contribuyentes .aio-icon-box::after { content: "" !important; position: absolute !important; top: 24px !important; right: 22px !important; width: 18px !important; height: 18px !important; background-repeat: no-repeat !important; background-position: center !important; background-size: contain !important; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2394A3B8' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18l6-6-6-6'/%3E%3C/svg%3E") !important; transition: background-image 0.2s ease !important; } .sat-seccion-contribuyentes .aio-icon-box:hover::after { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FFFFFF' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18l6-6-6-6'/%3E%3C/svg%3E") !important; } .sat-seccion-contribuyentes .aio-icon-title { margin: 0 !important; padding: 0 !important; text-align: left !important; font-family: "Gotham", "Montserrat", sans-serif, -apple-system !important; font-size: 16px !important; font-weight: 700 !important; line-height: 1.35 !important; color: #19324B !important; transition: color 0.25s ease !important; } .sat-seccion-contribuyentes .aio-icon-description { margin-top: 8px !important; padding: 0 !important; text-align: left !important; font-family: "Gotham", "Montserrat", sans-serif, -apple-system !important; font-size: 12.5px !important; line-height: 1.55 !important; color: #475569 !important; flex-grow: 1 !important; transition: color 0.25s ease !important; } .sat-seccion-contribuyentes .aio-icon-box:hover .aio-icon-title { color: #FFFFFF !important; } .sat-seccion-contribuyentes .aio-icon-box:hover .aio-icon-description { color: rgba(255, 255, 255, 0.92) !important; }]]></wp:meta_value>
+      <wp:meta_value><![CDATA[/* ==================================================
+   SECCIÓN CONTRIBUYENTES (AZUL SAT #14649B)
+   ================================================== */
+
+/* 0. Contenedor centrado idéntico al diseño original (independiente de Elementor Full Width) */
+.wpb-content-wrapper,
+.entry-content {
+    max-width: 1200px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+    box-sizing: border-box !important;
+}
+
+/* 1. La Fila: obliga a las 3 columnas a alinearse en una sola línea horizontal recta */
+.sat-seccion-contribuyentes.vc_row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: stretch !important;
+    margin-left: -8px !important;
+    margin-right: -8px !important;
+}
+
+/* 2. Cada Columna de WPBakery: 33.33% de ancho exacto (3 columnas por fila) */
+.sat-seccion-contribuyentes > .vc_column_container {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 0 0 33.333333% !important;
+    max-width: 33.333333% !important;
+    width: 33.333333% !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    margin-bottom: 16px !important;
+    box-sizing: border-box !important;
+}
+
+/* Responsivo: 2 columnas en Tablet */
+@media (max-width: 991px) {
+    .sat-seccion-contribuyentes > .vc_column_container {
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+        width: 50% !important;
+    }
+}
+
+/* Responsivo: 1 columna en Celular */
+@media (max-width: 640px) {
+    .sat-seccion-contribuyentes > .vc_column_container {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+}
+
+/* 3. Contenedores internos de WPBakery: estirar al 100% */
+.sat-seccion-contribuyentes .vc_column-inner,
+.sat-seccion-contribuyentes .wpb_wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1 1 auto !important;
+    width: 100% !important;
+    height: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* 4. Estructura de Info Box: ocupar todo el ancho disponible de la columna */
+.sat-seccion-contribuyentes .aio-icon-component,
+.sat-seccion-contribuyentes .aio-icon-box-link {
+    display: flex !important;
+    flex: 1 1 auto !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* 5. La Tarjeta SAT Oficial (Ancha, fondo gris suave, sin bordes) */
+.sat-seccion-contribuyentes .aio-icon-box {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    position: relative !important;
+
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 140px !important;
+
+    background-color: #F4F6F9 !important; /* Gris suave oficial */
+    border: none !important;              /* Cero bordes */
+    border-radius: 12px !important;       /* Esquinas redondas */
+    padding: 22px 24px !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+
+    cursor: pointer !important;
+    user-select: none !important;
+
+    /* Animación suave */
+    transition: transform 0.35s ease, background-color 0.35s ease, box-shadow 0.35s ease !important;
+}
+
+/* 6. Hover Azul Oficial de Contribuyentes (#14649B) */
+.sat-seccion-contribuyentes .aio-icon-box:hover {
+    background-color: #14649B !important; /* Azul SAT Oficial */
+    transform: translateY(-4px) !important;
+    box-shadow: 0 12px 24px rgba(20, 100, 155, 0.22) !important;
+}
+
+/* 7. Cabecera y Chevron Oficial a la derecha */
+.sat-seccion-contribuyentes .aio-icon-header {
+    margin: 0 !important;
+    padding-right: 24px !important;
+    text-align: left !important;
+}
+
+.sat-seccion-contribuyentes .aio-icon-box::after {
+    content: "" !important;
+    position: absolute !important;
+    top: 24px !important;
+    right: 22px !important;
+    width: 18px !important;
+    height: 18px !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: contain !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2394A3B8' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18l6-6-6-6'/%3E%3C/svg%3E") !important;
+    transition: background-image 0.2s ease !important;
+}
+
+.sat-seccion-contribuyentes .aio-icon-box:hover::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FFFFFF' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18l6-6-6-6'/%3E%3C/svg%3E") !important;
+}
+
+/* 8. Título Institucional */
+.sat-seccion-contribuyentes .aio-icon-title {
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: left !important;
+    font-family: "Gotham", "Montserrat", sans-serif, -apple-system !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    line-height: 1.35 !important;
+    color: #19324B !important;
+    transition: color 0.25s ease !important;
+}
+
+/* 9. Descripción en Lenguaje Claro */
+.sat-seccion-contribuyentes .aio-icon-description {
+    margin-top: 8px !important;
+    padding: 0 !important;
+    text-align: left !important;
+    font-family: "Gotham", "Montserrat", sans-serif, -apple-system !important;
+    font-size: 12.5px !important;
+    line-height: 1.55 !important;
+    color: #475569 !important;
+    flex-grow: 1 !important;
+    transition: color 0.25s ease !important;
+}
+
+/* 10. Textos a blanco puro en Hover */
+.sat-seccion-contribuyentes .aio-icon-box:hover .aio-icon-title {
+    color: #FFFFFF !important;
+}
+.sat-seccion-contribuyentes .aio-icon-box:hover .aio-icon-description {
+    color: rgba(255, 255, 255, 0.92) !important;
+}]]></wp:meta_value>
     </wp:postmeta>
   </item>
   <item>
     <title>Declaraciones, pagos y solvencias</title>
-    <link>https://portal.sat.gob.gt/contribuyentes/contribuyente-general/declaraciones-pagos-y-solvencias/</link>
-    <pubDate>Mon, 26 Oct 2026 19:00:00 +0000</pubDate>
+    <link>https://prototipo.sat.gob.gt/contribuyentes/contribuyente-general/declaraciones-pagos-y-solvencias/</link>
+    <pubDate>Wed, 28 Oct 2026 02:27:43 +0000</pubDate>
     <dc:creator><![CDATA[admin]]></dc:creator>
-    <guid isPermaLink="false">https://portal.sat.gob.gt/?page_id=1025</guid>
+    <guid isPermaLink="false">https://portal.sat.gob.gt/?page_id=1025&amp;v=20261027202743</guid>
     <description></description>
-    <content:encoded><![CDATA[[vc_row gap="5px"][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-contribuyentes"][vc_column width="1/3"][bsf-info-box icon_type="none" title="Declaraciones" read_more="box" link="url:/contribuyentes/contribuyente-general/declaraciones-pagos-y-solvencias/declaraciones/|||"]Presentación de declaraciones juradas mensuales, trimestrales y anuales de impuestos a través de Declaraguate.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Formas de pago y convenios" read_more="box" link="url:/contribuyentes/contribuyente-general/declaraciones-pagos-y-solvencias/formas-de-pago-y-convenios/|||"]Bancos autorizados para recepción de pagos con boleta SAT-2000, solicitud de convenios de pago y facilidades tributarias.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Solvencia fiscal" read_more="box" link="url:/contribuyentes/contribuyente-general/declaraciones-pagos-y-solvencias/solvencia-fiscal/|||"]Emisión electrónica de Solvencia Fiscal para acreditar que te encuentras al día en el cumplimiento de tus obligaciones tributarias.[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
+    <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-contribuyentes"][vc_column width="1/3" offset="vc_col-xl-inherit vc_col-lg-inherit vc_col-md-4 vc_col-sm-inherit"][bsf-info-box icon_type="none" title="Declaraciones" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyente-general%2Fdeclaraciones-pagos-y-solvencias%2Fdeclaraciones%2F"]Presentación de declaraciones juradas mensuales, trimestrales y anuales de impuestos a través de Declaraguate.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Formas de pago y convenios" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyente-general%2Fdeclaraciones-pagos-y-solvencias%2Fformas-de-pago-y-convenios%2F"]Bancos autorizados para recepción de pagos con boleta SAT-2000, solicitud de convenios de pago y facilidades tributarias.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Solvencia fiscal" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyente-general%2Fdeclaraciones-pagos-y-solvencias%2Fsolvencia-fiscal%2F"]Emisión electrónica de Solvencia Fiscal para acreditar que te encuentras al día en el cumplimiento de tus obligaciones tributarias.[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
     <excerpt:encoded><![CDATA[]]></excerpt:encoded>
     <wp:post_id>1025</wp:post_id>
-    <wp:post_date><![CDATA[2026-10-26 19:00:00]]></wp:post_date>
-    <wp:post_date_gmt><![CDATA[2026-10-26 19:00:00]]></wp:post_date_gmt>
+    <wp:post_date><![CDATA[2026-10-27 20:27:43]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-10-28 02:27:43]]></wp:post_date_gmt>
     <wp:comment_status><![CDATA[closed]]></wp:comment_status>
     <wp:ping_status><![CDATA[closed]]></wp:ping_status>
     <wp:post_name><![CDATA[declaraciones-pagos-y-solvencias]]></wp:post_name>
@@ -137,22 +674,201 @@
       <wp:meta_value><![CDATA[elementor_header_footer]]></wp:meta_value>
     </wp:postmeta>
     <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_sidebar_position]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_header_title]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
+      <wp:meta_value><![CDATA[true]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
       <wp:meta_key><![CDATA[_wpb_post_custom_css]]></wp:meta_key>
-      <wp:meta_value><![CDATA[.sat-seccion-contribuyentes.vc_row { display: flex !important; flex-wrap: wrap !important; align-items: stretch !important; margin-left: -8px !important; margin-right: -8px !important; } .sat-seccion-contribuyentes > .vc_column_container { display: flex !important; flex-direction: column !important; flex: 0 0 33.333333% !important; max-width: 33.333333% !important; width: 33.333333% !important; padding-left: 8px !important; padding-right: 8px !important; margin-bottom: 16px !important; box-sizing: border-box !important; } @media (max-width: 991px) { .sat-seccion-contribuyentes > .vc_column_container { flex: 0 0 50% !important; max-width: 50% !important; width: 50% !important; } } @media (max-width: 640px) { .sat-seccion-contribuyentes > .vc_column_container { flex: 0 0 100% !important; max-width: 100% !important; width: 100% !important; } } .sat-seccion-contribuyentes .vc_column-inner, .sat-seccion-contribuyentes .wpb_wrapper { display: flex !important; flex-direction: column !important; flex: 1 1 auto !important; width: 100% !important; height: 100% !important; padding: 0 !important; margin: 0 !important; } .sat-seccion-contribuyentes .aio-icon-component, .sat-seccion-contribuyentes .aio-icon-box-link { display: flex !important; flex: 1 1 auto !important; width: 100% !important; height: 100% !important; margin: 0 !important; padding: 0 !important; } .sat-seccion-contribuyentes .aio-icon-box { display: flex !important; flex-direction: column !important; justify-content: flex-start !important; position: relative !important; width: 100% !important; height: 100% !important; min-height: 140px !important; background-color: #F4F6F9 !important; border: none !important; border-radius: 12px !important; padding: 22px 24px !important; margin: 0 !important; box-sizing: border-box !important; cursor: pointer !important; user-select: none !important; transition: transform 0.35s ease, background-color 0.35s ease, box-shadow 0.35s ease !important; } .sat-seccion-contribuyentes .aio-icon-box:hover { background-color: #14649B !important; transform: translateY(-4px) !important; box-shadow: 0 12px 24px rgba(20, 100, 155, 0.22) !important; } .sat-seccion-contribuyentes .aio-icon-header { margin: 0 !important; padding-right: 24px !important; text-align: left !important; } .sat-seccion-contribuyentes .aio-icon-box::after { content: "" !important; position: absolute !important; top: 24px !important; right: 22px !important; width: 18px !important; height: 18px !important; background-repeat: no-repeat !important; background-position: center !important; background-size: contain !important; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2394A3B8' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18l6-6-6-6'/%3E%3C/svg%3E") !important; transition: background-image 0.2s ease !important; } .sat-seccion-contribuyentes .aio-icon-box:hover::after { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FFFFFF' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18l6-6-6-6'/%3E%3C/svg%3E") !important; } .sat-seccion-contribuyentes .aio-icon-title { margin: 0 !important; padding: 0 !important; text-align: left !important; font-family: "Gotham", "Montserrat", sans-serif, -apple-system !important; font-size: 16px !important; font-weight: 700 !important; line-height: 1.35 !important; color: #19324B !important; transition: color 0.25s ease !important; } .sat-seccion-contribuyentes .aio-icon-description { margin-top: 8px !important; padding: 0 !important; text-align: left !important; font-family: "Gotham", "Montserrat", sans-serif, -apple-system !important; font-size: 12.5px !important; line-height: 1.55 !important; color: #475569 !important; flex-grow: 1 !important; transition: color 0.25s ease !important; } .sat-seccion-contribuyentes .aio-icon-box:hover .aio-icon-title { color: #FFFFFF !important; } .sat-seccion-contribuyentes .aio-icon-box:hover .aio-icon-description { color: rgba(255, 255, 255, 0.92) !important; }]]></wp:meta_value>
+      <wp:meta_value><![CDATA[/* ==================================================
+   SECCIÓN CONTRIBUYENTES (AZUL SAT #14649B)
+   ================================================== */
+
+/* 0. Contenedor centrado idéntico al diseño original (independiente de Elementor Full Width) */
+.wpb-content-wrapper,
+.entry-content {
+    max-width: 1200px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+    box-sizing: border-box !important;
+}
+
+/* 1. La Fila: obliga a las 3 columnas a alinearse en una sola línea horizontal recta */
+.sat-seccion-contribuyentes.vc_row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: stretch !important;
+    margin-left: -8px !important;
+    margin-right: -8px !important;
+}
+
+/* 2. Cada Columna de WPBakery: 33.33% de ancho exacto (3 columnas por fila) */
+.sat-seccion-contribuyentes > .vc_column_container {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 0 0 33.333333% !important;
+    max-width: 33.333333% !important;
+    width: 33.333333% !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    margin-bottom: 16px !important;
+    box-sizing: border-box !important;
+}
+
+/* Responsivo: 2 columnas en Tablet */
+@media (max-width: 991px) {
+    .sat-seccion-contribuyentes > .vc_column_container {
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+        width: 50% !important;
+    }
+}
+
+/* Responsivo: 1 columna en Celular */
+@media (max-width: 640px) {
+    .sat-seccion-contribuyentes > .vc_column_container {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+}
+
+/* 3. Contenedores internos de WPBakery: estirar al 100% */
+.sat-seccion-contribuyentes .vc_column-inner,
+.sat-seccion-contribuyentes .wpb_wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1 1 auto !important;
+    width: 100% !important;
+    height: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* 4. Estructura de Info Box: ocupar todo el ancho disponible de la columna */
+.sat-seccion-contribuyentes .aio-icon-component,
+.sat-seccion-contribuyentes .aio-icon-box-link {
+    display: flex !important;
+    flex: 1 1 auto !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* 5. La Tarjeta SAT Oficial (Ancha, fondo gris suave, sin bordes) */
+.sat-seccion-contribuyentes .aio-icon-box {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    position: relative !important;
+
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 140px !important;
+
+    background-color: #F4F6F9 !important; /* Gris suave oficial */
+    border: none !important;              /* Cero bordes */
+    border-radius: 12px !important;       /* Esquinas redondas */
+    padding: 22px 24px !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+
+    cursor: pointer !important;
+    user-select: none !important;
+
+    /* Animación suave */
+    transition: transform 0.35s ease, background-color 0.35s ease, box-shadow 0.35s ease !important;
+}
+
+/* 6. Hover Azul Oficial de Contribuyentes (#14649B) */
+.sat-seccion-contribuyentes .aio-icon-box:hover {
+    background-color: #14649B !important; /* Azul SAT Oficial */
+    transform: translateY(-4px) !important;
+    box-shadow: 0 12px 24px rgba(20, 100, 155, 0.22) !important;
+}
+
+/* 7. Cabecera y Chevron Oficial a la derecha */
+.sat-seccion-contribuyentes .aio-icon-header {
+    margin: 0 !important;
+    padding-right: 24px !important;
+    text-align: left !important;
+}
+
+.sat-seccion-contribuyentes .aio-icon-box::after {
+    content: "" !important;
+    position: absolute !important;
+    top: 24px !important;
+    right: 22px !important;
+    width: 18px !important;
+    height: 18px !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: contain !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2394A3B8' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18l6-6-6-6'/%3E%3C/svg%3E") !important;
+    transition: background-image 0.2s ease !important;
+}
+
+.sat-seccion-contribuyentes .aio-icon-box:hover::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FFFFFF' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18l6-6-6-6'/%3E%3C/svg%3E") !important;
+}
+
+/* 8. Título Institucional */
+.sat-seccion-contribuyentes .aio-icon-title {
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: left !important;
+    font-family: "Gotham", "Montserrat", sans-serif, -apple-system !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    line-height: 1.35 !important;
+    color: #19324B !important;
+    transition: color 0.25s ease !important;
+}
+
+/* 9. Descripción en Lenguaje Claro */
+.sat-seccion-contribuyentes .aio-icon-description {
+    margin-top: 8px !important;
+    padding: 0 !important;
+    text-align: left !important;
+    font-family: "Gotham", "Montserrat", sans-serif, -apple-system !important;
+    font-size: 12.5px !important;
+    line-height: 1.55 !important;
+    color: #475569 !important;
+    flex-grow: 1 !important;
+    transition: color 0.25s ease !important;
+}
+
+/* 10. Textos a blanco puro en Hover */
+.sat-seccion-contribuyentes .aio-icon-box:hover .aio-icon-title {
+    color: #FFFFFF !important;
+}
+.sat-seccion-contribuyentes .aio-icon-box:hover .aio-icon-description {
+    color: rgba(255, 255, 255, 0.92) !important;
+}]]></wp:meta_value>
     </wp:postmeta>
   </item>
   <item>
     <title>Devoluciones y créditos fiscales</title>
-    <link>https://portal.sat.gob.gt/contribuyentes/contribuyente-general/devoluciones-y-creditos-fiscales/</link>
-    <pubDate>Mon, 26 Oct 2026 19:00:00 +0000</pubDate>
+    <link>https://prototipo.sat.gob.gt/contribuyentes/contribuyente-general/devoluciones-y-creditos-fiscales/</link>
+    <pubDate>Wed, 28 Oct 2026 02:27:43 +0000</pubDate>
     <dc:creator><![CDATA[admin]]></dc:creator>
-    <guid isPermaLink="false">https://portal.sat.gob.gt/?page_id=1029</guid>
+    <guid isPermaLink="false">https://portal.sat.gob.gt/?page_id=1029&amp;v=20261027202743</guid>
     <description></description>
-    <content:encoded><![CDATA[[vc_row gap="5px"][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-contribuyentes"][vc_column width="1/3"][bsf-info-box icon_type="none" title="IVA (Impuesto al Valor Agregado)" read_more="box" link="url:/contribuyentes/contribuyente-general/devoluciones-y-creditos-fiscales/iva-impuesto-al-valor-agregado/|||"]Solicitud de devolución de crédito fiscal del Impuesto al Valor Agregado (IVA) en los regímenes general, optativo y especial.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="ISR (Impuesto Sobre la Renta)" read_more="box" link="url:/contribuyentes/contribuyente-general/devoluciones-y-creditos-fiscales/isr-impuesto-sobre-la-renta/|||"]Devolución o acreditamiento de pagos en exceso o indebidos del Impuesto Sobre la Renta (ISR).[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Otros impuestos" read_more="box" link="url:/contribuyentes/contribuyente-general/devoluciones-y-creditos-fiscales/otros-impuestos/|||"]Reclamo y devolución de pagos en exceso en el Impuesto de Solidaridad (ISO), timbres y otros tributos.[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
+    <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-contribuyentes"][vc_column width="1/3" offset="vc_col-xl-inherit vc_col-lg-inherit vc_col-md-4 vc_col-sm-inherit"][bsf-info-box icon_type="none" title="IVA (Impuesto al Valor Agregado)" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyente-general%2Fdevoluciones-y-creditos-fiscales%2Fiva-impuesto-al-valor-agregado%2F"]Solicitud de devolución de crédito fiscal del Impuesto al Valor Agregado (IVA) en los regímenes general, optativo y especial.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="ISR (Impuesto Sobre la Renta)" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyente-general%2Fdevoluciones-y-creditos-fiscales%2Fisr-impuesto-sobre-la-renta%2F"]Devolución o acreditamiento de pagos en exceso o indebidos del Impuesto Sobre la Renta (ISR).[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Otros impuestos" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyente-general%2Fdevoluciones-y-creditos-fiscales%2Fotros-impuestos%2F"]Reclamo y devolución de pagos en exceso en el Impuesto de Solidaridad (ISO), timbres y otros tributos.[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
     <excerpt:encoded><![CDATA[]]></excerpt:encoded>
     <wp:post_id>1029</wp:post_id>
-    <wp:post_date><![CDATA[2026-10-26 19:00:00]]></wp:post_date>
-    <wp:post_date_gmt><![CDATA[2026-10-26 19:00:00]]></wp:post_date_gmt>
+    <wp:post_date><![CDATA[2026-10-27 20:27:43]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-10-28 02:27:43]]></wp:post_date_gmt>
     <wp:comment_status><![CDATA[closed]]></wp:comment_status>
     <wp:ping_status><![CDATA[closed]]></wp:ping_status>
     <wp:post_name><![CDATA[devoluciones-y-creditos-fiscales]]></wp:post_name>
@@ -167,22 +883,201 @@
       <wp:meta_value><![CDATA[elementor_header_footer]]></wp:meta_value>
     </wp:postmeta>
     <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_sidebar_position]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_header_title]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
+      <wp:meta_value><![CDATA[true]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
       <wp:meta_key><![CDATA[_wpb_post_custom_css]]></wp:meta_key>
-      <wp:meta_value><![CDATA[.sat-seccion-contribuyentes.vc_row { display: flex !important; flex-wrap: wrap !important; align-items: stretch !important; margin-left: -8px !important; margin-right: -8px !important; } .sat-seccion-contribuyentes > .vc_column_container { display: flex !important; flex-direction: column !important; flex: 0 0 33.333333% !important; max-width: 33.333333% !important; width: 33.333333% !important; padding-left: 8px !important; padding-right: 8px !important; margin-bottom: 16px !important; box-sizing: border-box !important; } @media (max-width: 991px) { .sat-seccion-contribuyentes > .vc_column_container { flex: 0 0 50% !important; max-width: 50% !important; width: 50% !important; } } @media (max-width: 640px) { .sat-seccion-contribuyentes > .vc_column_container { flex: 0 0 100% !important; max-width: 100% !important; width: 100% !important; } } .sat-seccion-contribuyentes .vc_column-inner, .sat-seccion-contribuyentes .wpb_wrapper { display: flex !important; flex-direction: column !important; flex: 1 1 auto !important; width: 100% !important; height: 100% !important; padding: 0 !important; margin: 0 !important; } .sat-seccion-contribuyentes .aio-icon-component, .sat-seccion-contribuyentes .aio-icon-box-link { display: flex !important; flex: 1 1 auto !important; width: 100% !important; height: 100% !important; margin: 0 !important; padding: 0 !important; } .sat-seccion-contribuyentes .aio-icon-box { display: flex !important; flex-direction: column !important; justify-content: flex-start !important; position: relative !important; width: 100% !important; height: 100% !important; min-height: 140px !important; background-color: #F4F6F9 !important; border: none !important; border-radius: 12px !important; padding: 22px 24px !important; margin: 0 !important; box-sizing: border-box !important; cursor: pointer !important; user-select: none !important; transition: transform 0.35s ease, background-color 0.35s ease, box-shadow 0.35s ease !important; } .sat-seccion-contribuyentes .aio-icon-box:hover { background-color: #14649B !important; transform: translateY(-4px) !important; box-shadow: 0 12px 24px rgba(20, 100, 155, 0.22) !important; } .sat-seccion-contribuyentes .aio-icon-header { margin: 0 !important; padding-right: 24px !important; text-align: left !important; } .sat-seccion-contribuyentes .aio-icon-box::after { content: "" !important; position: absolute !important; top: 24px !important; right: 22px !important; width: 18px !important; height: 18px !important; background-repeat: no-repeat !important; background-position: center !important; background-size: contain !important; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2394A3B8' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18l6-6-6-6'/%3E%3C/svg%3E") !important; transition: background-image 0.2s ease !important; } .sat-seccion-contribuyentes .aio-icon-box:hover::after { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FFFFFF' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18l6-6-6-6'/%3E%3C/svg%3E") !important; } .sat-seccion-contribuyentes .aio-icon-title { margin: 0 !important; padding: 0 !important; text-align: left !important; font-family: "Gotham", "Montserrat", sans-serif, -apple-system !important; font-size: 16px !important; font-weight: 700 !important; line-height: 1.35 !important; color: #19324B !important; transition: color 0.25s ease !important; } .sat-seccion-contribuyentes .aio-icon-description { margin-top: 8px !important; padding: 0 !important; text-align: left !important; font-family: "Gotham", "Montserrat", sans-serif, -apple-system !important; font-size: 12.5px !important; line-height: 1.55 !important; color: #475569 !important; flex-grow: 1 !important; transition: color 0.25s ease !important; } .sat-seccion-contribuyentes .aio-icon-box:hover .aio-icon-title { color: #FFFFFF !important; } .sat-seccion-contribuyentes .aio-icon-box:hover .aio-icon-description { color: rgba(255, 255, 255, 0.92) !important; }]]></wp:meta_value>
+      <wp:meta_value><![CDATA[/* ==================================================
+   SECCIÓN CONTRIBUYENTES (AZUL SAT #14649B)
+   ================================================== */
+
+/* 0. Contenedor centrado idéntico al diseño original (independiente de Elementor Full Width) */
+.wpb-content-wrapper,
+.entry-content {
+    max-width: 1200px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+    box-sizing: border-box !important;
+}
+
+/* 1. La Fila: obliga a las 3 columnas a alinearse en una sola línea horizontal recta */
+.sat-seccion-contribuyentes.vc_row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: stretch !important;
+    margin-left: -8px !important;
+    margin-right: -8px !important;
+}
+
+/* 2. Cada Columna de WPBakery: 33.33% de ancho exacto (3 columnas por fila) */
+.sat-seccion-contribuyentes > .vc_column_container {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 0 0 33.333333% !important;
+    max-width: 33.333333% !important;
+    width: 33.333333% !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    margin-bottom: 16px !important;
+    box-sizing: border-box !important;
+}
+
+/* Responsivo: 2 columnas en Tablet */
+@media (max-width: 991px) {
+    .sat-seccion-contribuyentes > .vc_column_container {
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+        width: 50% !important;
+    }
+}
+
+/* Responsivo: 1 columna en Celular */
+@media (max-width: 640px) {
+    .sat-seccion-contribuyentes > .vc_column_container {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+}
+
+/* 3. Contenedores internos de WPBakery: estirar al 100% */
+.sat-seccion-contribuyentes .vc_column-inner,
+.sat-seccion-contribuyentes .wpb_wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1 1 auto !important;
+    width: 100% !important;
+    height: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* 4. Estructura de Info Box: ocupar todo el ancho disponible de la columna */
+.sat-seccion-contribuyentes .aio-icon-component,
+.sat-seccion-contribuyentes .aio-icon-box-link {
+    display: flex !important;
+    flex: 1 1 auto !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* 5. La Tarjeta SAT Oficial (Ancha, fondo gris suave, sin bordes) */
+.sat-seccion-contribuyentes .aio-icon-box {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    position: relative !important;
+
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 140px !important;
+
+    background-color: #F4F6F9 !important; /* Gris suave oficial */
+    border: none !important;              /* Cero bordes */
+    border-radius: 12px !important;       /* Esquinas redondas */
+    padding: 22px 24px !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+
+    cursor: pointer !important;
+    user-select: none !important;
+
+    /* Animación suave */
+    transition: transform 0.35s ease, background-color 0.35s ease, box-shadow 0.35s ease !important;
+}
+
+/* 6. Hover Azul Oficial de Contribuyentes (#14649B) */
+.sat-seccion-contribuyentes .aio-icon-box:hover {
+    background-color: #14649B !important; /* Azul SAT Oficial */
+    transform: translateY(-4px) !important;
+    box-shadow: 0 12px 24px rgba(20, 100, 155, 0.22) !important;
+}
+
+/* 7. Cabecera y Chevron Oficial a la derecha */
+.sat-seccion-contribuyentes .aio-icon-header {
+    margin: 0 !important;
+    padding-right: 24px !important;
+    text-align: left !important;
+}
+
+.sat-seccion-contribuyentes .aio-icon-box::after {
+    content: "" !important;
+    position: absolute !important;
+    top: 24px !important;
+    right: 22px !important;
+    width: 18px !important;
+    height: 18px !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: contain !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2394A3B8' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18l6-6-6-6'/%3E%3C/svg%3E") !important;
+    transition: background-image 0.2s ease !important;
+}
+
+.sat-seccion-contribuyentes .aio-icon-box:hover::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FFFFFF' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18l6-6-6-6'/%3E%3C/svg%3E") !important;
+}
+
+/* 8. Título Institucional */
+.sat-seccion-contribuyentes .aio-icon-title {
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: left !important;
+    font-family: "Gotham", "Montserrat", sans-serif, -apple-system !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    line-height: 1.35 !important;
+    color: #19324B !important;
+    transition: color 0.25s ease !important;
+}
+
+/* 9. Descripción en Lenguaje Claro */
+.sat-seccion-contribuyentes .aio-icon-description {
+    margin-top: 8px !important;
+    padding: 0 !important;
+    text-align: left !important;
+    font-family: "Gotham", "Montserrat", sans-serif, -apple-system !important;
+    font-size: 12.5px !important;
+    line-height: 1.55 !important;
+    color: #475569 !important;
+    flex-grow: 1 !important;
+    transition: color 0.25s ease !important;
+}
+
+/* 10. Textos a blanco puro en Hover */
+.sat-seccion-contribuyentes .aio-icon-box:hover .aio-icon-title {
+    color: #FFFFFF !important;
+}
+.sat-seccion-contribuyentes .aio-icon-box:hover .aio-icon-description {
+    color: rgba(255, 255, 255, 0.92) !important;
+}]]></wp:meta_value>
     </wp:postmeta>
   </item>
   <item>
     <title>Regímenes tributarios</title>
-    <link>https://portal.sat.gob.gt/contribuyentes/contribuyente-general/regimenes-tributarios/</link>
-    <pubDate>Mon, 26 Oct 2026 19:00:00 +0000</pubDate>
+    <link>https://prototipo.sat.gob.gt/contribuyentes/contribuyente-general/regimenes-tributarios/</link>
+    <pubDate>Wed, 28 Oct 2026 02:27:43 +0000</pubDate>
     <dc:creator><![CDATA[admin]]></dc:creator>
-    <guid isPermaLink="false">https://portal.sat.gob.gt/?page_id=1033</guid>
+    <guid isPermaLink="false">https://portal.sat.gob.gt/?page_id=1033&amp;v=20261027202743</guid>
     <description></description>
-    <content:encoded><![CDATA[[vc_row gap="5px"][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-contribuyentes"][vc_column width="1/3"][bsf-info-box icon_type="none" title="Curso: Régimen Opcional Simplificado" read_more="box" link="url:https://sites.google.com/capacitacionessat.page/cultura-tributariad/cursos-virtuales-sat/impuesto-sobre-la-renta-isr/5-r%C3%A9gimen-sobre-los-ingresos-de-actividades-lucrativas||target:%20_blank|"]Capacitación virtual de la SAT sobre Régimen Opcional Simplificado.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Curso: Régimen General del Impuesto al Valor Agregado (IVA)" read_more="box" link="url:https://sites.google.com/capacitacionessat.page/cultura-tributariad/cursos-virtuales-sat/impuesto-al-valor-agregado/r%C3%A9gimen-general-del-iva||target:%20_blank|"]Capacitación virtual de la SAT sobre Régimen General del Impuesto al Valor Agregado (IVA).[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Curso: costos y gastos deducibles (régimen sobre utilidades)" read_more="box" link="url:https://sites.google.com/capacitacionessat.page/cultura-tributariad/cursos-virtuales-sat/impuesto-sobre-la-renta-isr/14-costos-y-gastos-deducibles-r%C3%A9gimen-sobre-las-utilidades-de-actividades||target:%20_blank|"]Capacitación virtual de la SAT sobre costos y gastos deducibles (régimen sobre utilidades).[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Curso: errores comunes en la declaración mensual del Impuesto al Valor Agregado (IVA)" read_more="box" link="url:https://sites.google.com/capacitacionessat.page/cultura-tributariad/cursos-virtuales-sat/impuesto-al-valor-agregado-iva/principales-errores-e-inconsistencias-detectadas-en-la-declaraci%C3%B3n-mensual||target:%20_blank|"]Capacitación virtual de la SAT sobre errores comunes en la declaración mensual del Impuesto al Valor Agregado (IVA).[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Curso: régimen sobre las utilidades" read_more="box" link="url:https://sites.google.com/capacitacionessat.page/cultura-tributariad/cursos-virtuales-sat/impuesto-sobre-la-renta-isr/12-r%C3%A9gimen-sobre-utilidades-de-rentas-de-actividades-lucrativa||target:%20_blank|"]Capacitación virtual de la SAT sobre régimen sobre las utilidades.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Curso: obligaciones del Régimen General del Impuesto al Valor Agregado (IVA)" read_more="box" link="url:https://sites.google.com/capacitacionessat.page/cultura-tributariad/cursos-virtuales-sat/impuesto-al-valor-agregado-iva/r%C3%A9gimen-general-del-iva-principales-obligaciones-tributarias||target:%20_blank|"]Capacitación virtual de la SAT sobre obligaciones del Régimen General del Impuesto al Valor Agregado (IVA).[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Pasar de Régimen General a Pequeño Contribuyente" read_more="box" link="url:https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/actualizacion-cambio-de-regimen-general-del-impuesto-al-valor-agregado-a-pequeno-contribuyente/||target:%20_blank|"]Requisitos, pasos y documentos para pasar de Régimen General a Pequeño Contribuyente.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Cambiar a ISR Opcional Simplificado con pago directo" read_more="box" link="url:https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/actualizacion-del-impuesto-sobre-la-renta-regimen-opcional-simplificado-opcion-pago-directo/||target:%20_blank|"]Requisitos, pasos y documentos para cambiar a Impuesto sobre la Renta (ISR) Opcional Simplificado con pago directo.[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
+    <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-contribuyentes"][vc_column width="1/3" offset="vc_col-xl-inherit vc_col-lg-inherit vc_col-md-4 vc_col-sm-inherit"][bsf-info-box icon_type="none" title="Curso: Régimen Opcional Simplificado" read_more="box" link="url:https://sites.google.com/capacitacionessat.page/cultura-tributariad/cursos-virtuales-sat/impuesto-sobre-la-renta-isr/5-r%C3%A9gimen-sobre-los-ingresos-de-actividades-lucrativas||target:%20_blank|"]Capacitación virtual de la SAT sobre Régimen Opcional Simplificado.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Curso: Régimen General del Impuesto al Valor Agregado (IVA)" read_more="box" link="url:https://sites.google.com/capacitacionessat.page/cultura-tributariad/cursos-virtuales-sat/impuesto-al-valor-agregado/r%C3%A9gimen-general-del-iva||target:%20_blank|"]Capacitación virtual de la SAT sobre Régimen General del Impuesto al Valor Agregado (IVA).[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Curso: costos y gastos deducibles (régimen sobre utilidades)" read_more="box" link="url:https://sites.google.com/capacitacionessat.page/cultura-tributariad/cursos-virtuales-sat/impuesto-sobre-la-renta-isr/14-costos-y-gastos-deducibles-r%C3%A9gimen-sobre-las-utilidades-de-actividades||target:%20_blank|"]Capacitación virtual de la SAT sobre costos y gastos deducibles (régimen sobre utilidades).[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Curso: errores comunes en la declaración mensual del Impuesto al Valor Agregado (IVA)" read_more="box" link="url:https://sites.google.com/capacitacionessat.page/cultura-tributariad/cursos-virtuales-sat/impuesto-al-valor-agregado-iva/principales-errores-e-inconsistencias-detectadas-en-la-declaraci%C3%B3n-mensual||target:%20_blank|"]Capacitación virtual de la SAT sobre errores comunes en la declaración mensual del Impuesto al Valor Agregado (IVA).[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Curso: régimen sobre las utilidades" read_more="box" link="url:https://sites.google.com/capacitacionessat.page/cultura-tributariad/cursos-virtuales-sat/impuesto-sobre-la-renta-isr/12-r%C3%A9gimen-sobre-utilidades-de-rentas-de-actividades-lucrativa||target:%20_blank|"]Capacitación virtual de la SAT sobre régimen sobre las utilidades.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Curso: obligaciones del Régimen General del Impuesto al Valor Agregado (IVA)" read_more="box" link="url:https://sites.google.com/capacitacionessat.page/cultura-tributariad/cursos-virtuales-sat/impuesto-al-valor-agregado-iva/r%C3%A9gimen-general-del-iva-principales-obligaciones-tributarias||target:%20_blank|"]Capacitación virtual de la SAT sobre obligaciones del Régimen General del Impuesto al Valor Agregado (IVA).[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Pasar de Régimen General a Pequeño Contribuyente" read_more="box" link="url:https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/actualizacion-cambio-de-regimen-general-del-impuesto-al-valor-agregado-a-pequeno-contribuyente/||target:%20_blank|"]Requisitos, pasos y documentos para pasar de Régimen General a Pequeño Contribuyente.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Cambiar a ISR Opcional Simplificado con pago directo" read_more="box" link="url:https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/actualizacion-del-impuesto-sobre-la-renta-regimen-opcional-simplificado-opcion-pago-directo/||target:%20_blank|"]Requisitos, pasos y documentos para cambiar a Impuesto sobre la Renta (ISR) Opcional Simplificado con pago directo.[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
     <excerpt:encoded><![CDATA[]]></excerpt:encoded>
     <wp:post_id>1033</wp:post_id>
-    <wp:post_date><![CDATA[2026-10-26 19:00:00]]></wp:post_date>
-    <wp:post_date_gmt><![CDATA[2026-10-26 19:00:00]]></wp:post_date_gmt>
+    <wp:post_date><![CDATA[2026-10-27 20:27:43]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-10-28 02:27:43]]></wp:post_date_gmt>
     <wp:comment_status><![CDATA[closed]]></wp:comment_status>
     <wp:ping_status><![CDATA[closed]]></wp:ping_status>
     <wp:post_name><![CDATA[regimenes-tributarios]]></wp:post_name>
@@ -197,22 +1092,201 @@
       <wp:meta_value><![CDATA[elementor_header_footer]]></wp:meta_value>
     </wp:postmeta>
     <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_sidebar_position]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_header_title]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
+      <wp:meta_value><![CDATA[true]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
       <wp:meta_key><![CDATA[_wpb_post_custom_css]]></wp:meta_key>
-      <wp:meta_value><![CDATA[.sat-seccion-contribuyentes.vc_row { display: flex !important; flex-wrap: wrap !important; align-items: stretch !important; margin-left: -8px !important; margin-right: -8px !important; } .sat-seccion-contribuyentes > .vc_column_container { display: flex !important; flex-direction: column !important; flex: 0 0 33.333333% !important; max-width: 33.333333% !important; width: 33.333333% !important; padding-left: 8px !important; padding-right: 8px !important; margin-bottom: 16px !important; box-sizing: border-box !important; } @media (max-width: 991px) { .sat-seccion-contribuyentes > .vc_column_container { flex: 0 0 50% !important; max-width: 50% !important; width: 50% !important; } } @media (max-width: 640px) { .sat-seccion-contribuyentes > .vc_column_container { flex: 0 0 100% !important; max-width: 100% !important; width: 100% !important; } } .sat-seccion-contribuyentes .vc_column-inner, .sat-seccion-contribuyentes .wpb_wrapper { display: flex !important; flex-direction: column !important; flex: 1 1 auto !important; width: 100% !important; height: 100% !important; padding: 0 !important; margin: 0 !important; } .sat-seccion-contribuyentes .aio-icon-component, .sat-seccion-contribuyentes .aio-icon-box-link { display: flex !important; flex: 1 1 auto !important; width: 100% !important; height: 100% !important; margin: 0 !important; padding: 0 !important; } .sat-seccion-contribuyentes .aio-icon-box { display: flex !important; flex-direction: column !important; justify-content: flex-start !important; position: relative !important; width: 100% !important; height: 100% !important; min-height: 140px !important; background-color: #F4F6F9 !important; border: none !important; border-radius: 12px !important; padding: 22px 24px !important; margin: 0 !important; box-sizing: border-box !important; cursor: pointer !important; user-select: none !important; transition: transform 0.35s ease, background-color 0.35s ease, box-shadow 0.35s ease !important; } .sat-seccion-contribuyentes .aio-icon-box:hover { background-color: #14649B !important; transform: translateY(-4px) !important; box-shadow: 0 12px 24px rgba(20, 100, 155, 0.22) !important; } .sat-seccion-contribuyentes .aio-icon-header { margin: 0 !important; padding-right: 24px !important; text-align: left !important; } .sat-seccion-contribuyentes .aio-icon-box::after { content: "" !important; position: absolute !important; top: 24px !important; right: 22px !important; width: 18px !important; height: 18px !important; background-repeat: no-repeat !important; background-position: center !important; background-size: contain !important; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2394A3B8' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18l6-6-6-6'/%3E%3C/svg%3E") !important; transition: background-image 0.2s ease !important; } .sat-seccion-contribuyentes .aio-icon-box:hover::after { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FFFFFF' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18l6-6-6-6'/%3E%3C/svg%3E") !important; } .sat-seccion-contribuyentes .aio-icon-title { margin: 0 !important; padding: 0 !important; text-align: left !important; font-family: "Gotham", "Montserrat", sans-serif, -apple-system !important; font-size: 16px !important; font-weight: 700 !important; line-height: 1.35 !important; color: #19324B !important; transition: color 0.25s ease !important; } .sat-seccion-contribuyentes .aio-icon-description { margin-top: 8px !important; padding: 0 !important; text-align: left !important; font-family: "Gotham", "Montserrat", sans-serif, -apple-system !important; font-size: 12.5px !important; line-height: 1.55 !important; color: #475569 !important; flex-grow: 1 !important; transition: color 0.25s ease !important; } .sat-seccion-contribuyentes .aio-icon-box:hover .aio-icon-title { color: #FFFFFF !important; } .sat-seccion-contribuyentes .aio-icon-box:hover .aio-icon-description { color: rgba(255, 255, 255, 0.92) !important; }]]></wp:meta_value>
+      <wp:meta_value><![CDATA[/* ==================================================
+   SECCIÓN CONTRIBUYENTES (AZUL SAT #14649B)
+   ================================================== */
+
+/* 0. Contenedor centrado idéntico al diseño original (independiente de Elementor Full Width) */
+.wpb-content-wrapper,
+.entry-content {
+    max-width: 1200px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+    box-sizing: border-box !important;
+}
+
+/* 1. La Fila: obliga a las 3 columnas a alinearse en una sola línea horizontal recta */
+.sat-seccion-contribuyentes.vc_row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: stretch !important;
+    margin-left: -8px !important;
+    margin-right: -8px !important;
+}
+
+/* 2. Cada Columna de WPBakery: 33.33% de ancho exacto (3 columnas por fila) */
+.sat-seccion-contribuyentes > .vc_column_container {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 0 0 33.333333% !important;
+    max-width: 33.333333% !important;
+    width: 33.333333% !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    margin-bottom: 16px !important;
+    box-sizing: border-box !important;
+}
+
+/* Responsivo: 2 columnas en Tablet */
+@media (max-width: 991px) {
+    .sat-seccion-contribuyentes > .vc_column_container {
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+        width: 50% !important;
+    }
+}
+
+/* Responsivo: 1 columna en Celular */
+@media (max-width: 640px) {
+    .sat-seccion-contribuyentes > .vc_column_container {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+}
+
+/* 3. Contenedores internos de WPBakery: estirar al 100% */
+.sat-seccion-contribuyentes .vc_column-inner,
+.sat-seccion-contribuyentes .wpb_wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1 1 auto !important;
+    width: 100% !important;
+    height: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* 4. Estructura de Info Box: ocupar todo el ancho disponible de la columna */
+.sat-seccion-contribuyentes .aio-icon-component,
+.sat-seccion-contribuyentes .aio-icon-box-link {
+    display: flex !important;
+    flex: 1 1 auto !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* 5. La Tarjeta SAT Oficial (Ancha, fondo gris suave, sin bordes) */
+.sat-seccion-contribuyentes .aio-icon-box {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    position: relative !important;
+
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 140px !important;
+
+    background-color: #F4F6F9 !important; /* Gris suave oficial */
+    border: none !important;              /* Cero bordes */
+    border-radius: 12px !important;       /* Esquinas redondas */
+    padding: 22px 24px !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+
+    cursor: pointer !important;
+    user-select: none !important;
+
+    /* Animación suave */
+    transition: transform 0.35s ease, background-color 0.35s ease, box-shadow 0.35s ease !important;
+}
+
+/* 6. Hover Azul Oficial de Contribuyentes (#14649B) */
+.sat-seccion-contribuyentes .aio-icon-box:hover {
+    background-color: #14649B !important; /* Azul SAT Oficial */
+    transform: translateY(-4px) !important;
+    box-shadow: 0 12px 24px rgba(20, 100, 155, 0.22) !important;
+}
+
+/* 7. Cabecera y Chevron Oficial a la derecha */
+.sat-seccion-contribuyentes .aio-icon-header {
+    margin: 0 !important;
+    padding-right: 24px !important;
+    text-align: left !important;
+}
+
+.sat-seccion-contribuyentes .aio-icon-box::after {
+    content: "" !important;
+    position: absolute !important;
+    top: 24px !important;
+    right: 22px !important;
+    width: 18px !important;
+    height: 18px !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: contain !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2394A3B8' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18l6-6-6-6'/%3E%3C/svg%3E") !important;
+    transition: background-image 0.2s ease !important;
+}
+
+.sat-seccion-contribuyentes .aio-icon-box:hover::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FFFFFF' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18l6-6-6-6'/%3E%3C/svg%3E") !important;
+}
+
+/* 8. Título Institucional */
+.sat-seccion-contribuyentes .aio-icon-title {
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: left !important;
+    font-family: "Gotham", "Montserrat", sans-serif, -apple-system !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    line-height: 1.35 !important;
+    color: #19324B !important;
+    transition: color 0.25s ease !important;
+}
+
+/* 9. Descripción en Lenguaje Claro */
+.sat-seccion-contribuyentes .aio-icon-description {
+    margin-top: 8px !important;
+    padding: 0 !important;
+    text-align: left !important;
+    font-family: "Gotham", "Montserrat", sans-serif, -apple-system !important;
+    font-size: 12.5px !important;
+    line-height: 1.55 !important;
+    color: #475569 !important;
+    flex-grow: 1 !important;
+    transition: color 0.25s ease !important;
+}
+
+/* 10. Textos a blanco puro en Hover */
+.sat-seccion-contribuyentes .aio-icon-box:hover .aio-icon-title {
+    color: #FFFFFF !important;
+}
+.sat-seccion-contribuyentes .aio-icon-box:hover .aio-icon-description {
+    color: rgba(255, 255, 255, 0.92) !important;
+}]]></wp:meta_value>
     </wp:postmeta>
   </item>
   <item>
     <title>Vehículos (como propietario)</title>
-    <link>https://portal.sat.gob.gt/contribuyentes/contribuyente-general/vehiculos-como-propietario/</link>
-    <pubDate>Mon, 26 Oct 2026 19:00:00 +0000</pubDate>
+    <link>https://prototipo.sat.gob.gt/contribuyentes/contribuyente-general/vehiculos-como-propietario/</link>
+    <pubDate>Wed, 28 Oct 2026 02:27:43 +0000</pubDate>
     <dc:creator><![CDATA[admin]]></dc:creator>
-    <guid isPermaLink="false">https://portal.sat.gob.gt/?page_id=1034</guid>
+    <guid isPermaLink="false">https://portal.sat.gob.gt/?page_id=1034&amp;v=20261027202743</guid>
     <description></description>
-    <content:encoded><![CDATA[[vc_row gap="5px"][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-contribuyentes"][vc_column width="1/3"][bsf-info-box icon_type="none" title="Autorizaciones, consultas y requisitos" read_more="box" link="url:/contribuyentes/contribuyente-general/vehiculos-como-propietario/autorizaciones-consultas-y-requisitos/|||"]Consultas del Registro Fiscal de Vehículos (RFV), historial de propiedad, solvencias vehiculares y autorizaciones para terceros.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Inscripción, distintivos y placas" read_more="box" link="url:/contribuyentes/contribuyente-general/vehiculos-como-propietario/inscripcion-distintivos-y-placas/|||"]Inscripción de vehículos nuevos o importados, asignación de primeras placas y reposición de tarjeta de circulación o calcomanía.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Bajas, inactivación y reactivación" read_more="box" link="url:/contribuyentes/contribuyente-general/vehiculos-como-propietario/bajas-inactivacion-y-reactivacion/|||"]Retiro temporal o definitivo de circulación por robo, hurto, pérdida total, exportación o desarme, y reactivación vehicular.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Impuesto de circulación (ISCV) y valores" read_more="box" link="url:/contribuyentes/contribuyente-general/vehiculos-como-propietario/impuesto-de-circulacion-iscv-y-valores/|||"]Consulta y pago anual del Impuesto Sobre Circulación de Vehículos (ISCV), tablas de valores imponibles y rebajas por antigüedad.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Modificaciones y rectificaciones" read_more="box" link="url:/contribuyentes/contribuyente-general/vehiculos-como-propietario/modificaciones-y-rectificaciones/|||"]Cambio de uso o tipo de vehículo, cambio de color, rectificación de número de motor o chasis y transformación de carrocería.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Traspasos de vehículos" read_more="box" link="url:/contribuyentes/contribuyente-general/vehiculos-como-propietario/traspasos-de-vehiculos/|||"]Transferencia de propiedad de vehículos por compraventa electrónica notarial, donación, sucesión hereditaria o subasta.[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
+    <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-contribuyentes"][vc_column width="1/3" offset="vc_col-xl-inherit vc_col-lg-inherit vc_col-md-4 vc_col-sm-inherit"][bsf-info-box icon_type="none" title="Autorizaciones, consultas y requisitos" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyente-general%2Fvehiculos-como-propietario%2Fautorizaciones-consultas-y-requisitos%2F"]Consultas del Registro Fiscal de Vehículos (RFV), historial de propiedad, solvencias vehiculares y autorizaciones para terceros.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Inscripción, distintivos y placas" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyente-general%2Fvehiculos-como-propietario%2Finscripcion-distintivos-y-placas%2F"]Inscripción de vehículos nuevos o importados, asignación de primeras placas y reposición de tarjeta de circulación o calcomanía.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Bajas, inactivación y reactivación" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyente-general%2Fvehiculos-como-propietario%2Fbajas-inactivacion-y-reactivacion%2F"]Retiro temporal o definitivo de circulación por robo, hurto, pérdida total, exportación o desarme, y reactivación vehicular.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Impuesto de circulación (ISCV) y valores" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyente-general%2Fvehiculos-como-propietario%2Fimpuesto-de-circulacion-iscv-y-valores%2F"]Consulta y pago anual del Impuesto Sobre Circulación de Vehículos (ISCV), tablas de valores imponibles y rebajas por antigüedad.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Modificaciones y rectificaciones" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyente-general%2Fvehiculos-como-propietario%2Fmodificaciones-y-rectificaciones%2F"]Cambio de uso o tipo de vehículo, cambio de color, rectificación de número de motor o chasis y transformación de carrocería.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Traspasos de vehículos" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyente-general%2Fvehiculos-como-propietario%2Ftraspasos-de-vehiculos%2F"]Transferencia de propiedad de vehículos por compraventa electrónica notarial, donación, sucesión hereditaria o subasta.[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
     <excerpt:encoded><![CDATA[]]></excerpt:encoded>
     <wp:post_id>1034</wp:post_id>
-    <wp:post_date><![CDATA[2026-10-26 19:00:00]]></wp:post_date>
-    <wp:post_date_gmt><![CDATA[2026-10-26 19:00:00]]></wp:post_date_gmt>
+    <wp:post_date><![CDATA[2026-10-27 20:27:43]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-10-28 02:27:43]]></wp:post_date_gmt>
     <wp:comment_status><![CDATA[closed]]></wp:comment_status>
     <wp:ping_status><![CDATA[closed]]></wp:ping_status>
     <wp:post_name><![CDATA[vehiculos-como-propietario]]></wp:post_name>
@@ -227,22 +1301,201 @@
       <wp:meta_value><![CDATA[elementor_header_footer]]></wp:meta_value>
     </wp:postmeta>
     <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_sidebar_position]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_header_title]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
+      <wp:meta_value><![CDATA[true]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
       <wp:meta_key><![CDATA[_wpb_post_custom_css]]></wp:meta_key>
-      <wp:meta_value><![CDATA[.sat-seccion-contribuyentes.vc_row { display: flex !important; flex-wrap: wrap !important; align-items: stretch !important; margin-left: -8px !important; margin-right: -8px !important; } .sat-seccion-contribuyentes > .vc_column_container { display: flex !important; flex-direction: column !important; flex: 0 0 33.333333% !important; max-width: 33.333333% !important; width: 33.333333% !important; padding-left: 8px !important; padding-right: 8px !important; margin-bottom: 16px !important; box-sizing: border-box !important; } @media (max-width: 991px) { .sat-seccion-contribuyentes > .vc_column_container { flex: 0 0 50% !important; max-width: 50% !important; width: 50% !important; } } @media (max-width: 640px) { .sat-seccion-contribuyentes > .vc_column_container { flex: 0 0 100% !important; max-width: 100% !important; width: 100% !important; } } .sat-seccion-contribuyentes .vc_column-inner, .sat-seccion-contribuyentes .wpb_wrapper { display: flex !important; flex-direction: column !important; flex: 1 1 auto !important; width: 100% !important; height: 100% !important; padding: 0 !important; margin: 0 !important; } .sat-seccion-contribuyentes .aio-icon-component, .sat-seccion-contribuyentes .aio-icon-box-link { display: flex !important; flex: 1 1 auto !important; width: 100% !important; height: 100% !important; margin: 0 !important; padding: 0 !important; } .sat-seccion-contribuyentes .aio-icon-box { display: flex !important; flex-direction: column !important; justify-content: flex-start !important; position: relative !important; width: 100% !important; height: 100% !important; min-height: 140px !important; background-color: #F4F6F9 !important; border: none !important; border-radius: 12px !important; padding: 22px 24px !important; margin: 0 !important; box-sizing: border-box !important; cursor: pointer !important; user-select: none !important; transition: transform 0.35s ease, background-color 0.35s ease, box-shadow 0.35s ease !important; } .sat-seccion-contribuyentes .aio-icon-box:hover { background-color: #14649B !important; transform: translateY(-4px) !important; box-shadow: 0 12px 24px rgba(20, 100, 155, 0.22) !important; } .sat-seccion-contribuyentes .aio-icon-header { margin: 0 !important; padding-right: 24px !important; text-align: left !important; } .sat-seccion-contribuyentes .aio-icon-box::after { content: "" !important; position: absolute !important; top: 24px !important; right: 22px !important; width: 18px !important; height: 18px !important; background-repeat: no-repeat !important; background-position: center !important; background-size: contain !important; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2394A3B8' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18l6-6-6-6'/%3E%3C/svg%3E") !important; transition: background-image 0.2s ease !important; } .sat-seccion-contribuyentes .aio-icon-box:hover::after { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FFFFFF' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18l6-6-6-6'/%3E%3C/svg%3E") !important; } .sat-seccion-contribuyentes .aio-icon-title { margin: 0 !important; padding: 0 !important; text-align: left !important; font-family: "Gotham", "Montserrat", sans-serif, -apple-system !important; font-size: 16px !important; font-weight: 700 !important; line-height: 1.35 !important; color: #19324B !important; transition: color 0.25s ease !important; } .sat-seccion-contribuyentes .aio-icon-description { margin-top: 8px !important; padding: 0 !important; text-align: left !important; font-family: "Gotham", "Montserrat", sans-serif, -apple-system !important; font-size: 12.5px !important; line-height: 1.55 !important; color: #475569 !important; flex-grow: 1 !important; transition: color 0.25s ease !important; } .sat-seccion-contribuyentes .aio-icon-box:hover .aio-icon-title { color: #FFFFFF !important; } .sat-seccion-contribuyentes .aio-icon-box:hover .aio-icon-description { color: rgba(255, 255, 255, 0.92) !important; }]]></wp:meta_value>
+      <wp:meta_value><![CDATA[/* ==================================================
+   SECCIÓN CONTRIBUYENTES (AZUL SAT #14649B)
+   ================================================== */
+
+/* 0. Contenedor centrado idéntico al diseño original (independiente de Elementor Full Width) */
+.wpb-content-wrapper,
+.entry-content {
+    max-width: 1200px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+    box-sizing: border-box !important;
+}
+
+/* 1. La Fila: obliga a las 3 columnas a alinearse en una sola línea horizontal recta */
+.sat-seccion-contribuyentes.vc_row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: stretch !important;
+    margin-left: -8px !important;
+    margin-right: -8px !important;
+}
+
+/* 2. Cada Columna de WPBakery: 33.33% de ancho exacto (3 columnas por fila) */
+.sat-seccion-contribuyentes > .vc_column_container {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 0 0 33.333333% !important;
+    max-width: 33.333333% !important;
+    width: 33.333333% !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    margin-bottom: 16px !important;
+    box-sizing: border-box !important;
+}
+
+/* Responsivo: 2 columnas en Tablet */
+@media (max-width: 991px) {
+    .sat-seccion-contribuyentes > .vc_column_container {
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+        width: 50% !important;
+    }
+}
+
+/* Responsivo: 1 columna en Celular */
+@media (max-width: 640px) {
+    .sat-seccion-contribuyentes > .vc_column_container {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+}
+
+/* 3. Contenedores internos de WPBakery: estirar al 100% */
+.sat-seccion-contribuyentes .vc_column-inner,
+.sat-seccion-contribuyentes .wpb_wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1 1 auto !important;
+    width: 100% !important;
+    height: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* 4. Estructura de Info Box: ocupar todo el ancho disponible de la columna */
+.sat-seccion-contribuyentes .aio-icon-component,
+.sat-seccion-contribuyentes .aio-icon-box-link {
+    display: flex !important;
+    flex: 1 1 auto !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* 5. La Tarjeta SAT Oficial (Ancha, fondo gris suave, sin bordes) */
+.sat-seccion-contribuyentes .aio-icon-box {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    position: relative !important;
+
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 140px !important;
+
+    background-color: #F4F6F9 !important; /* Gris suave oficial */
+    border: none !important;              /* Cero bordes */
+    border-radius: 12px !important;       /* Esquinas redondas */
+    padding: 22px 24px !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+
+    cursor: pointer !important;
+    user-select: none !important;
+
+    /* Animación suave */
+    transition: transform 0.35s ease, background-color 0.35s ease, box-shadow 0.35s ease !important;
+}
+
+/* 6. Hover Azul Oficial de Contribuyentes (#14649B) */
+.sat-seccion-contribuyentes .aio-icon-box:hover {
+    background-color: #14649B !important; /* Azul SAT Oficial */
+    transform: translateY(-4px) !important;
+    box-shadow: 0 12px 24px rgba(20, 100, 155, 0.22) !important;
+}
+
+/* 7. Cabecera y Chevron Oficial a la derecha */
+.sat-seccion-contribuyentes .aio-icon-header {
+    margin: 0 !important;
+    padding-right: 24px !important;
+    text-align: left !important;
+}
+
+.sat-seccion-contribuyentes .aio-icon-box::after {
+    content: "" !important;
+    position: absolute !important;
+    top: 24px !important;
+    right: 22px !important;
+    width: 18px !important;
+    height: 18px !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: contain !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2394A3B8' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18l6-6-6-6'/%3E%3C/svg%3E") !important;
+    transition: background-image 0.2s ease !important;
+}
+
+.sat-seccion-contribuyentes .aio-icon-box:hover::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FFFFFF' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18l6-6-6-6'/%3E%3C/svg%3E") !important;
+}
+
+/* 8. Título Institucional */
+.sat-seccion-contribuyentes .aio-icon-title {
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: left !important;
+    font-family: "Gotham", "Montserrat", sans-serif, -apple-system !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    line-height: 1.35 !important;
+    color: #19324B !important;
+    transition: color 0.25s ease !important;
+}
+
+/* 9. Descripción en Lenguaje Claro */
+.sat-seccion-contribuyentes .aio-icon-description {
+    margin-top: 8px !important;
+    padding: 0 !important;
+    text-align: left !important;
+    font-family: "Gotham", "Montserrat", sans-serif, -apple-system !important;
+    font-size: 12.5px !important;
+    line-height: 1.55 !important;
+    color: #475569 !important;
+    flex-grow: 1 !important;
+    transition: color 0.25s ease !important;
+}
+
+/* 10. Textos a blanco puro en Hover */
+.sat-seccion-contribuyentes .aio-icon-box:hover .aio-icon-title {
+    color: #FFFFFF !important;
+}
+.sat-seccion-contribuyentes .aio-icon-box:hover .aio-icon-description {
+    color: rgba(255, 255, 255, 0.92) !important;
+}]]></wp:meta_value>
     </wp:postmeta>
   </item>
   <item>
     <title>Servicios y gestiones al contribuyente</title>
-    <link>https://portal.sat.gob.gt/contribuyentes/contribuyente-general/servicios-y-gestiones-al-contribuyente/</link>
-    <pubDate>Mon, 26 Oct 2026 19:00:00 +0000</pubDate>
+    <link>https://prototipo.sat.gob.gt/contribuyentes/contribuyente-general/servicios-y-gestiones-al-contribuyente/</link>
+    <pubDate>Wed, 28 Oct 2026 02:27:43 +0000</pubDate>
     <dc:creator><![CDATA[admin]]></dc:creator>
-    <guid isPermaLink="false">https://portal.sat.gob.gt/?page_id=1041</guid>
+    <guid isPermaLink="false">https://portal.sat.gob.gt/?page_id=1041&amp;v=20261027202743</guid>
     <description></description>
-    <content:encoded><![CDATA[[vc_row gap="5px"][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-contribuyentes"][vc_column width="1/3"][bsf-info-box icon_type="none" title="Constancias y gestiones del RTU" read_more="box" link="url:/contribuyentes/contribuyente-general/servicios-y-gestiones-al-contribuyente/constancias-y-gestiones-del-rtu/|||"]Emisión de constancia de inscripción en el Registro Tributario Unificado (RTU), ratificación de datos, acreditación de imprentas y consultas del registro tributario.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Agencia Virtual y accesos" read_more="box" link="url:/contribuyentes/contribuyente-general/servicios-y-gestiones-al-contribuyente/agencia-virtual-y-accesos/|||"]Solicitud de usuario, recuperación de contraseña, desbloqueo de credenciales y configuración de accesos en Agencia Virtual.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Citas, estado y quejas" read_more="box" link="url:/contribuyentes/contribuyente-general/servicios-y-gestiones-al-contribuyente/citas-estado-y-quejas/|||"]Programación de citas previas para agencias tributarias, consulta de estado de expedientes y presentación de quejas o denuncias.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Orientación y constancias" read_more="box" link="url:/contribuyentes/contribuyente-general/servicios-y-gestiones-al-contribuyente/orientacion-y-constancias/|||"]Consultas tributarias, constancias de retención, certificaciones administrativas y asistencia técnica al contribuyente.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Otros servicios al contribuyente" read_more="box" link="url:/contribuyentes/contribuyente-general/servicios-y-gestiones-al-contribuyente/otros-servicios-al-contribuyente/|||"]Habilitación de libros contables, corrección de formularios, sistemas de retención de IVA e ISR y gestiones complementarias.[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
+    <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-contribuyentes"][vc_column width="1/3" offset="vc_col-xl-inherit vc_col-lg-inherit vc_col-md-4 vc_col-sm-inherit"][bsf-info-box icon_type="none" title="Constancias y gestiones del RTU" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyente-general%2Fservicios-y-gestiones-al-contribuyente%2Fconstancias-y-gestiones-del-rtu%2F"]Emisión de constancia de inscripción en el Registro Tributario Unificado (RTU), ratificación de datos, acreditación de imprentas y consultas del registro tributario.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Agencia Virtual y accesos" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyente-general%2Fservicios-y-gestiones-al-contribuyente%2Fagencia-virtual-y-accesos%2F"]Solicitud de usuario, recuperación de contraseña, desbloqueo de credenciales y configuración de accesos en Agencia Virtual.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Citas, estado y quejas" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyente-general%2Fservicios-y-gestiones-al-contribuyente%2Fcitas-estado-y-quejas%2F"]Programación de citas previas para agencias tributarias, consulta de estado de expedientes y presentación de quejas o denuncias.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Orientación y constancias" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyente-general%2Fservicios-y-gestiones-al-contribuyente%2Forientacion-y-constancias%2F"]Consultas tributarias, constancias de retención, certificaciones administrativas y asistencia técnica al contribuyente.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Otros servicios al contribuyente" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyente-general%2Fservicios-y-gestiones-al-contribuyente%2Fotros-servicios-al-contribuyente%2F"]Habilitación de libros contables, corrección de formularios, sistemas de retención de IVA e ISR y gestiones complementarias.[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
     <excerpt:encoded><![CDATA[]]></excerpt:encoded>
     <wp:post_id>1041</wp:post_id>
-    <wp:post_date><![CDATA[2026-10-26 19:00:00]]></wp:post_date>
-    <wp:post_date_gmt><![CDATA[2026-10-26 19:00:00]]></wp:post_date_gmt>
+    <wp:post_date><![CDATA[2026-10-27 20:27:43]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-10-28 02:27:43]]></wp:post_date_gmt>
     <wp:comment_status><![CDATA[closed]]></wp:comment_status>
     <wp:ping_status><![CDATA[closed]]></wp:ping_status>
     <wp:post_name><![CDATA[servicios-y-gestiones-al-contribuyente]]></wp:post_name>
@@ -257,22 +1510,201 @@
       <wp:meta_value><![CDATA[elementor_header_footer]]></wp:meta_value>
     </wp:postmeta>
     <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_sidebar_position]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_header_title]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
+      <wp:meta_value><![CDATA[true]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
       <wp:meta_key><![CDATA[_wpb_post_custom_css]]></wp:meta_key>
-      <wp:meta_value><![CDATA[.sat-seccion-contribuyentes.vc_row { display: flex !important; flex-wrap: wrap !important; align-items: stretch !important; margin-left: -8px !important; margin-right: -8px !important; } .sat-seccion-contribuyentes > .vc_column_container { display: flex !important; flex-direction: column !important; flex: 0 0 33.333333% !important; max-width: 33.333333% !important; width: 33.333333% !important; padding-left: 8px !important; padding-right: 8px !important; margin-bottom: 16px !important; box-sizing: border-box !important; } @media (max-width: 991px) { .sat-seccion-contribuyentes > .vc_column_container { flex: 0 0 50% !important; max-width: 50% !important; width: 50% !important; } } @media (max-width: 640px) { .sat-seccion-contribuyentes > .vc_column_container { flex: 0 0 100% !important; max-width: 100% !important; width: 100% !important; } } .sat-seccion-contribuyentes .vc_column-inner, .sat-seccion-contribuyentes .wpb_wrapper { display: flex !important; flex-direction: column !important; flex: 1 1 auto !important; width: 100% !important; height: 100% !important; padding: 0 !important; margin: 0 !important; } .sat-seccion-contribuyentes .aio-icon-component, .sat-seccion-contribuyentes .aio-icon-box-link { display: flex !important; flex: 1 1 auto !important; width: 100% !important; height: 100% !important; margin: 0 !important; padding: 0 !important; } .sat-seccion-contribuyentes .aio-icon-box { display: flex !important; flex-direction: column !important; justify-content: flex-start !important; position: relative !important; width: 100% !important; height: 100% !important; min-height: 140px !important; background-color: #F4F6F9 !important; border: none !important; border-radius: 12px !important; padding: 22px 24px !important; margin: 0 !important; box-sizing: border-box !important; cursor: pointer !important; user-select: none !important; transition: transform 0.35s ease, background-color 0.35s ease, box-shadow 0.35s ease !important; } .sat-seccion-contribuyentes .aio-icon-box:hover { background-color: #14649B !important; transform: translateY(-4px) !important; box-shadow: 0 12px 24px rgba(20, 100, 155, 0.22) !important; } .sat-seccion-contribuyentes .aio-icon-header { margin: 0 !important; padding-right: 24px !important; text-align: left !important; } .sat-seccion-contribuyentes .aio-icon-box::after { content: "" !important; position: absolute !important; top: 24px !important; right: 22px !important; width: 18px !important; height: 18px !important; background-repeat: no-repeat !important; background-position: center !important; background-size: contain !important; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2394A3B8' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18l6-6-6-6'/%3E%3C/svg%3E") !important; transition: background-image 0.2s ease !important; } .sat-seccion-contribuyentes .aio-icon-box:hover::after { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FFFFFF' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18l6-6-6-6'/%3E%3C/svg%3E") !important; } .sat-seccion-contribuyentes .aio-icon-title { margin: 0 !important; padding: 0 !important; text-align: left !important; font-family: "Gotham", "Montserrat", sans-serif, -apple-system !important; font-size: 16px !important; font-weight: 700 !important; line-height: 1.35 !important; color: #19324B !important; transition: color 0.25s ease !important; } .sat-seccion-contribuyentes .aio-icon-description { margin-top: 8px !important; padding: 0 !important; text-align: left !important; font-family: "Gotham", "Montserrat", sans-serif, -apple-system !important; font-size: 12.5px !important; line-height: 1.55 !important; color: #475569 !important; flex-grow: 1 !important; transition: color 0.25s ease !important; } .sat-seccion-contribuyentes .aio-icon-box:hover .aio-icon-title { color: #FFFFFF !important; } .sat-seccion-contribuyentes .aio-icon-box:hover .aio-icon-description { color: rgba(255, 255, 255, 0.92) !important; }]]></wp:meta_value>
+      <wp:meta_value><![CDATA[/* ==================================================
+   SECCIÓN CONTRIBUYENTES (AZUL SAT #14649B)
+   ================================================== */
+
+/* 0. Contenedor centrado idéntico al diseño original (independiente de Elementor Full Width) */
+.wpb-content-wrapper,
+.entry-content {
+    max-width: 1200px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+    box-sizing: border-box !important;
+}
+
+/* 1. La Fila: obliga a las 3 columnas a alinearse en una sola línea horizontal recta */
+.sat-seccion-contribuyentes.vc_row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: stretch !important;
+    margin-left: -8px !important;
+    margin-right: -8px !important;
+}
+
+/* 2. Cada Columna de WPBakery: 33.33% de ancho exacto (3 columnas por fila) */
+.sat-seccion-contribuyentes > .vc_column_container {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 0 0 33.333333% !important;
+    max-width: 33.333333% !important;
+    width: 33.333333% !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    margin-bottom: 16px !important;
+    box-sizing: border-box !important;
+}
+
+/* Responsivo: 2 columnas en Tablet */
+@media (max-width: 991px) {
+    .sat-seccion-contribuyentes > .vc_column_container {
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+        width: 50% !important;
+    }
+}
+
+/* Responsivo: 1 columna en Celular */
+@media (max-width: 640px) {
+    .sat-seccion-contribuyentes > .vc_column_container {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+}
+
+/* 3. Contenedores internos de WPBakery: estirar al 100% */
+.sat-seccion-contribuyentes .vc_column-inner,
+.sat-seccion-contribuyentes .wpb_wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1 1 auto !important;
+    width: 100% !important;
+    height: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* 4. Estructura de Info Box: ocupar todo el ancho disponible de la columna */
+.sat-seccion-contribuyentes .aio-icon-component,
+.sat-seccion-contribuyentes .aio-icon-box-link {
+    display: flex !important;
+    flex: 1 1 auto !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* 5. La Tarjeta SAT Oficial (Ancha, fondo gris suave, sin bordes) */
+.sat-seccion-contribuyentes .aio-icon-box {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    position: relative !important;
+
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 140px !important;
+
+    background-color: #F4F6F9 !important; /* Gris suave oficial */
+    border: none !important;              /* Cero bordes */
+    border-radius: 12px !important;       /* Esquinas redondas */
+    padding: 22px 24px !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+
+    cursor: pointer !important;
+    user-select: none !important;
+
+    /* Animación suave */
+    transition: transform 0.35s ease, background-color 0.35s ease, box-shadow 0.35s ease !important;
+}
+
+/* 6. Hover Azul Oficial de Contribuyentes (#14649B) */
+.sat-seccion-contribuyentes .aio-icon-box:hover {
+    background-color: #14649B !important; /* Azul SAT Oficial */
+    transform: translateY(-4px) !important;
+    box-shadow: 0 12px 24px rgba(20, 100, 155, 0.22) !important;
+}
+
+/* 7. Cabecera y Chevron Oficial a la derecha */
+.sat-seccion-contribuyentes .aio-icon-header {
+    margin: 0 !important;
+    padding-right: 24px !important;
+    text-align: left !important;
+}
+
+.sat-seccion-contribuyentes .aio-icon-box::after {
+    content: "" !important;
+    position: absolute !important;
+    top: 24px !important;
+    right: 22px !important;
+    width: 18px !important;
+    height: 18px !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: contain !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2394A3B8' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18l6-6-6-6'/%3E%3C/svg%3E") !important;
+    transition: background-image 0.2s ease !important;
+}
+
+.sat-seccion-contribuyentes .aio-icon-box:hover::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FFFFFF' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18l6-6-6-6'/%3E%3C/svg%3E") !important;
+}
+
+/* 8. Título Institucional */
+.sat-seccion-contribuyentes .aio-icon-title {
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: left !important;
+    font-family: "Gotham", "Montserrat", sans-serif, -apple-system !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    line-height: 1.35 !important;
+    color: #19324B !important;
+    transition: color 0.25s ease !important;
+}
+
+/* 9. Descripción en Lenguaje Claro */
+.sat-seccion-contribuyentes .aio-icon-description {
+    margin-top: 8px !important;
+    padding: 0 !important;
+    text-align: left !important;
+    font-family: "Gotham", "Montserrat", sans-serif, -apple-system !important;
+    font-size: 12.5px !important;
+    line-height: 1.55 !important;
+    color: #475569 !important;
+    flex-grow: 1 !important;
+    transition: color 0.25s ease !important;
+}
+
+/* 10. Textos a blanco puro en Hover */
+.sat-seccion-contribuyentes .aio-icon-box:hover .aio-icon-title {
+    color: #FFFFFF !important;
+}
+.sat-seccion-contribuyentes .aio-icon-box:hover .aio-icon-description {
+    color: rgba(255, 255, 255, 0.92) !important;
+}]]></wp:meta_value>
     </wp:postmeta>
   </item>
   <item>
     <title>Cultura tributaria y capacitación</title>
-    <link>https://portal.sat.gob.gt/contribuyentes/contribuyente-general/cultura-tributaria-y-capacitacion/</link>
-    <pubDate>Mon, 26 Oct 2026 19:00:00 +0000</pubDate>
+    <link>https://prototipo.sat.gob.gt/contribuyentes/contribuyente-general/cultura-tributaria-y-capacitacion/</link>
+    <pubDate>Wed, 28 Oct 2026 02:27:43 +0000</pubDate>
     <dc:creator><![CDATA[admin]]></dc:creator>
-    <guid isPermaLink="false">https://portal.sat.gob.gt/?page_id=1047</guid>
+    <guid isPermaLink="false">https://portal.sat.gob.gt/?page_id=1047&amp;v=20261027202743</guid>
     <description></description>
-    <content:encoded><![CDATA[[vc_row gap="5px"][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-contribuyentes"][vc_column width="1/3"][bsf-info-box icon_type="none" title="Programas de cultura tributaria" read_more="box" link="url:/contribuyentes/contribuyente-general/cultura-tributaria-y-capacitacion/programas-de-cultura-tributaria/|||"]Incluye gestiones como: Proyección educativa, Capacitaciones en idiomas mayas, Núcleos de Apoyo Contable y Fiscal (NAF).[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Cursos de herramientas y gestiones" read_more="box" link="url:/contribuyentes/contribuyente-general/cultura-tributaria-y-capacitacion/cursos-de-herramientas-y-gestiones/|||"]Incluye gestiones como: Curso: cancelación por prescripción en Agencia Virtual, Curso: Libros Electrónicos Tributarios (LET), Curso: funciones de la SAT.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Biblioteca virtual y descargas" read_more="box" link="url:/contribuyentes/contribuyente-general/cultura-tributaria-y-capacitacion/biblioteca-virtual-y-descargas/|||"]Incluye gestiones como: Biblioteca virtual, Presentaciones virtuales, Presentaciones virtuales.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Calendario y modalidades" read_more="box" link="url:/contribuyentes/contribuyente-general/cultura-tributaria-y-capacitacion/calendario-y-modalidades/|||"]Incluye gestiones como: Capacitaciones en vivo, Diplomados virtuales, Foros virtuales.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Cursos de ISR" read_more="box" link="url:/contribuyentes/contribuyente-general/cultura-tributaria-y-capacitacion/cursos-de-isr/|||"]Incluye gestiones como: Curso: retiros de fondos del dueño para gastos personales, Curso: regímenes del ISR para negocios, Curso: Impuesto Sobre la Renta (ISR).[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Cursos de IVA" read_more="box" link="url:/contribuyentes/contribuyente-general/cultura-tributaria-y-capacitacion/cursos-de-iva/|||"]Incluye gestiones como: Curso: Impuesto de Solidaridad (ISO), Curso: Impuesto al Valor Agregado (IVA), Curso: generalidades del IVA.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Cursos de otros impuestos y criterios" read_more="box" link="url:/contribuyentes/contribuyente-general/cultura-tributaria-y-capacitacion/cursos-de-otros-impuestos-y-criterios/|||"]Incluye gestiones como: Curso: criterios institucionales, Curso: impuesto a bebidas alcohólicas, Curso: impuesto a bebidas no alcohólicas.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Cursos por tipo de contribuyente" read_more="box" link="url:/contribuyentes/contribuyente-general/cultura-tributaria-y-capacitacion/cursos-por-tipo-de-contribuyente/|||"]Incluye gestiones como: Curso: beneficios de formalizarte si eres emprendedor, Curso: gestiones de las Organizaciones de Padres de Familia.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Información institucional" read_more="box" link="url:/contribuyentes/contribuyente-general/cultura-tributaria-y-capacitacion/informacion-institucional/|||"]Incluye gestiones como: Autoridades de la SAT, ¿Qué es la SAT?.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Leyes y normativa" read_more="box" link="url:/contribuyentes/contribuyente-general/cultura-tributaria-y-capacitacion/leyes-y-normativa/|||"]Incluye gestiones como: Leyes tributarias, Normativa de la SAT.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Preguntas frecuentes" read_more="box" link="url:/contribuyentes/contribuyente-general/cultura-tributaria-y-capacitacion/preguntas-frecuentes/|||"]Incluye gestiones como: Preguntas Frecuentes sobre Cumplimiento Tributario, Preguntas frecuentes: gestiones en línea, Preguntas frecuentes: información de contribuyentes.[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
+    <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-contribuyentes"][vc_column width="1/3" offset="vc_col-xl-inherit vc_col-lg-inherit vc_col-md-4 vc_col-sm-inherit"][bsf-info-box icon_type="none" title="Programas de cultura tributaria" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyente-general%2Fcultura-tributaria-y-capacitacion%2Fprogramas-de-cultura-tributaria%2F"]Incluye gestiones como: Proyección educativa, Capacitaciones en idiomas mayas, Núcleos de Apoyo Contable y Fiscal (NAF).[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Cursos de herramientas y gestiones" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyente-general%2Fcultura-tributaria-y-capacitacion%2Fcursos-de-herramientas-y-gestiones%2F"]Incluye gestiones como: Curso: cancelación por prescripción en Agencia Virtual, Curso: Libros Electrónicos Tributarios (LET), Curso: funciones de la SAT.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Biblioteca virtual y descargas" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyente-general%2Fcultura-tributaria-y-capacitacion%2Fbiblioteca-virtual-y-descargas%2F"]Incluye gestiones como: Biblioteca virtual, Presentaciones virtuales, Presentaciones virtuales.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Calendario y modalidades" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyente-general%2Fcultura-tributaria-y-capacitacion%2Fcalendario-y-modalidades%2F"]Incluye gestiones como: Capacitaciones en vivo, Diplomados virtuales, Foros virtuales.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Cursos de ISR" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyente-general%2Fcultura-tributaria-y-capacitacion%2Fcursos-de-isr%2F"]Incluye gestiones como: Curso: retiros de fondos del dueño para gastos personales, Curso: regímenes del ISR para negocios, Curso: Impuesto Sobre la Renta (ISR).[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Cursos de IVA" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyente-general%2Fcultura-tributaria-y-capacitacion%2Fcursos-de-iva%2F"]Incluye gestiones como: Curso: Impuesto de Solidaridad (ISO), Curso: Impuesto al Valor Agregado (IVA), Curso: generalidades del IVA.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Cursos de otros impuestos y criterios" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyente-general%2Fcultura-tributaria-y-capacitacion%2Fcursos-de-otros-impuestos-y-criterios%2F"]Incluye gestiones como: Curso: criterios institucionales, Curso: impuesto a bebidas alcohólicas, Curso: impuesto a bebidas no alcohólicas.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Cursos por tipo de contribuyente" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyente-general%2Fcultura-tributaria-y-capacitacion%2Fcursos-por-tipo-de-contribuyente%2F"]Incluye gestiones como: Curso: beneficios de formalizarte si eres emprendedor, Curso: gestiones de las Organizaciones de Padres de Familia.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Información institucional" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyente-general%2Fcultura-tributaria-y-capacitacion%2Finformacion-institucional%2F"]Incluye gestiones como: Autoridades de la SAT, ¿Qué es la SAT?.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Leyes y normativa" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyente-general%2Fcultura-tributaria-y-capacitacion%2Fleyes-y-normativa%2F"]Incluye gestiones como: Leyes tributarias, Normativa de la SAT.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Preguntas frecuentes" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyente-general%2Fcultura-tributaria-y-capacitacion%2Fpreguntas-frecuentes%2F"]Incluye gestiones como: Preguntas Frecuentes sobre Cumplimiento Tributario, Preguntas frecuentes: gestiones en línea, Preguntas frecuentes: información de contribuyentes.[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
     <excerpt:encoded><![CDATA[]]></excerpt:encoded>
     <wp:post_id>1047</wp:post_id>
-    <wp:post_date><![CDATA[2026-10-26 19:00:00]]></wp:post_date>
-    <wp:post_date_gmt><![CDATA[2026-10-26 19:00:00]]></wp:post_date_gmt>
+    <wp:post_date><![CDATA[2026-10-27 20:27:43]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-10-28 02:27:43]]></wp:post_date_gmt>
     <wp:comment_status><![CDATA[closed]]></wp:comment_status>
     <wp:ping_status><![CDATA[closed]]></wp:ping_status>
     <wp:post_name><![CDATA[cultura-tributaria-y-capacitacion]]></wp:post_name>
@@ -287,8 +1719,187 @@
       <wp:meta_value><![CDATA[elementor_header_footer]]></wp:meta_value>
     </wp:postmeta>
     <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_sidebar_position]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_header_title]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
+      <wp:meta_value><![CDATA[true]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
       <wp:meta_key><![CDATA[_wpb_post_custom_css]]></wp:meta_key>
-      <wp:meta_value><![CDATA[.sat-seccion-contribuyentes.vc_row { display: flex !important; flex-wrap: wrap !important; align-items: stretch !important; margin-left: -8px !important; margin-right: -8px !important; } .sat-seccion-contribuyentes > .vc_column_container { display: flex !important; flex-direction: column !important; flex: 0 0 33.333333% !important; max-width: 33.333333% !important; width: 33.333333% !important; padding-left: 8px !important; padding-right: 8px !important; margin-bottom: 16px !important; box-sizing: border-box !important; } @media (max-width: 991px) { .sat-seccion-contribuyentes > .vc_column_container { flex: 0 0 50% !important; max-width: 50% !important; width: 50% !important; } } @media (max-width: 640px) { .sat-seccion-contribuyentes > .vc_column_container { flex: 0 0 100% !important; max-width: 100% !important; width: 100% !important; } } .sat-seccion-contribuyentes .vc_column-inner, .sat-seccion-contribuyentes .wpb_wrapper { display: flex !important; flex-direction: column !important; flex: 1 1 auto !important; width: 100% !important; height: 100% !important; padding: 0 !important; margin: 0 !important; } .sat-seccion-contribuyentes .aio-icon-component, .sat-seccion-contribuyentes .aio-icon-box-link { display: flex !important; flex: 1 1 auto !important; width: 100% !important; height: 100% !important; margin: 0 !important; padding: 0 !important; } .sat-seccion-contribuyentes .aio-icon-box { display: flex !important; flex-direction: column !important; justify-content: flex-start !important; position: relative !important; width: 100% !important; height: 100% !important; min-height: 140px !important; background-color: #F4F6F9 !important; border: none !important; border-radius: 12px !important; padding: 22px 24px !important; margin: 0 !important; box-sizing: border-box !important; cursor: pointer !important; user-select: none !important; transition: transform 0.35s ease, background-color 0.35s ease, box-shadow 0.35s ease !important; } .sat-seccion-contribuyentes .aio-icon-box:hover { background-color: #14649B !important; transform: translateY(-4px) !important; box-shadow: 0 12px 24px rgba(20, 100, 155, 0.22) !important; } .sat-seccion-contribuyentes .aio-icon-header { margin: 0 !important; padding-right: 24px !important; text-align: left !important; } .sat-seccion-contribuyentes .aio-icon-box::after { content: "" !important; position: absolute !important; top: 24px !important; right: 22px !important; width: 18px !important; height: 18px !important; background-repeat: no-repeat !important; background-position: center !important; background-size: contain !important; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2394A3B8' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18l6-6-6-6'/%3E%3C/svg%3E") !important; transition: background-image 0.2s ease !important; } .sat-seccion-contribuyentes .aio-icon-box:hover::after { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FFFFFF' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18l6-6-6-6'/%3E%3C/svg%3E") !important; } .sat-seccion-contribuyentes .aio-icon-title { margin: 0 !important; padding: 0 !important; text-align: left !important; font-family: "Gotham", "Montserrat", sans-serif, -apple-system !important; font-size: 16px !important; font-weight: 700 !important; line-height: 1.35 !important; color: #19324B !important; transition: color 0.25s ease !important; } .sat-seccion-contribuyentes .aio-icon-description { margin-top: 8px !important; padding: 0 !important; text-align: left !important; font-family: "Gotham", "Montserrat", sans-serif, -apple-system !important; font-size: 12.5px !important; line-height: 1.55 !important; color: #475569 !important; flex-grow: 1 !important; transition: color 0.25s ease !important; } .sat-seccion-contribuyentes .aio-icon-box:hover .aio-icon-title { color: #FFFFFF !important; } .sat-seccion-contribuyentes .aio-icon-box:hover .aio-icon-description { color: rgba(255, 255, 255, 0.92) !important; }]]></wp:meta_value>
+      <wp:meta_value><![CDATA[/* ==================================================
+   SECCIÓN CONTRIBUYENTES (AZUL SAT #14649B)
+   ================================================== */
+
+/* 0. Contenedor centrado idéntico al diseño original (independiente de Elementor Full Width) */
+.wpb-content-wrapper,
+.entry-content {
+    max-width: 1200px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+    box-sizing: border-box !important;
+}
+
+/* 1. La Fila: obliga a las 3 columnas a alinearse en una sola línea horizontal recta */
+.sat-seccion-contribuyentes.vc_row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: stretch !important;
+    margin-left: -8px !important;
+    margin-right: -8px !important;
+}
+
+/* 2. Cada Columna de WPBakery: 33.33% de ancho exacto (3 columnas por fila) */
+.sat-seccion-contribuyentes > .vc_column_container {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 0 0 33.333333% !important;
+    max-width: 33.333333% !important;
+    width: 33.333333% !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    margin-bottom: 16px !important;
+    box-sizing: border-box !important;
+}
+
+/* Responsivo: 2 columnas en Tablet */
+@media (max-width: 991px) {
+    .sat-seccion-contribuyentes > .vc_column_container {
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+        width: 50% !important;
+    }
+}
+
+/* Responsivo: 1 columna en Celular */
+@media (max-width: 640px) {
+    .sat-seccion-contribuyentes > .vc_column_container {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+}
+
+/* 3. Contenedores internos de WPBakery: estirar al 100% */
+.sat-seccion-contribuyentes .vc_column-inner,
+.sat-seccion-contribuyentes .wpb_wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1 1 auto !important;
+    width: 100% !important;
+    height: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* 4. Estructura de Info Box: ocupar todo el ancho disponible de la columna */
+.sat-seccion-contribuyentes .aio-icon-component,
+.sat-seccion-contribuyentes .aio-icon-box-link {
+    display: flex !important;
+    flex: 1 1 auto !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* 5. La Tarjeta SAT Oficial (Ancha, fondo gris suave, sin bordes) */
+.sat-seccion-contribuyentes .aio-icon-box {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    position: relative !important;
+
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 140px !important;
+
+    background-color: #F4F6F9 !important; /* Gris suave oficial */
+    border: none !important;              /* Cero bordes */
+    border-radius: 12px !important;       /* Esquinas redondas */
+    padding: 22px 24px !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+
+    cursor: pointer !important;
+    user-select: none !important;
+
+    /* Animación suave */
+    transition: transform 0.35s ease, background-color 0.35s ease, box-shadow 0.35s ease !important;
+}
+
+/* 6. Hover Azul Oficial de Contribuyentes (#14649B) */
+.sat-seccion-contribuyentes .aio-icon-box:hover {
+    background-color: #14649B !important; /* Azul SAT Oficial */
+    transform: translateY(-4px) !important;
+    box-shadow: 0 12px 24px rgba(20, 100, 155, 0.22) !important;
+}
+
+/* 7. Cabecera y Chevron Oficial a la derecha */
+.sat-seccion-contribuyentes .aio-icon-header {
+    margin: 0 !important;
+    padding-right: 24px !important;
+    text-align: left !important;
+}
+
+.sat-seccion-contribuyentes .aio-icon-box::after {
+    content: "" !important;
+    position: absolute !important;
+    top: 24px !important;
+    right: 22px !important;
+    width: 18px !important;
+    height: 18px !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: contain !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2394A3B8' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18l6-6-6-6'/%3E%3C/svg%3E") !important;
+    transition: background-image 0.2s ease !important;
+}
+
+.sat-seccion-contribuyentes .aio-icon-box:hover::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FFFFFF' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18l6-6-6-6'/%3E%3C/svg%3E") !important;
+}
+
+/* 8. Título Institucional */
+.sat-seccion-contribuyentes .aio-icon-title {
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: left !important;
+    font-family: "Gotham", "Montserrat", sans-serif, -apple-system !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    line-height: 1.35 !important;
+    color: #19324B !important;
+    transition: color 0.25s ease !important;
+}
+
+/* 9. Descripción en Lenguaje Claro */
+.sat-seccion-contribuyentes .aio-icon-description {
+    margin-top: 8px !important;
+    padding: 0 !important;
+    text-align: left !important;
+    font-family: "Gotham", "Montserrat", sans-serif, -apple-system !important;
+    font-size: 12.5px !important;
+    line-height: 1.55 !important;
+    color: #475569 !important;
+    flex-grow: 1 !important;
+    transition: color 0.25s ease !important;
+}
+
+/* 10. Textos a blanco puro en Hover */
+.sat-seccion-contribuyentes .aio-icon-box:hover .aio-icon-title {
+    color: #FFFFFF !important;
+}
+.sat-seccion-contribuyentes .aio-icon-box:hover .aio-icon-description {
+    color: rgba(255, 255, 255, 0.92) !important;
+}]]></wp:meta_value>
     </wp:postmeta>
   </item>
 </channel>

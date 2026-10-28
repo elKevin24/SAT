@@ -7,6 +7,7 @@
      - `.agents/rules/sat-ia-governance.md`: Reglas taxonómicas N1–N5 numéricos, Ley de Miller ($7\pm2$), densidad ($A, A_1, A_2$), cero clics pasarela, guion largo `—`, código `SAT-GES-####`, orden ATO y matriz de 25 columnas.
      - `.agents/rules/sat-ui-ux-design.md`: Prohibición de *"trámite"* (uso de **"gestión"**), prohibición de modales/popovers (página dedicada `#/gestion/:id`), tarjetas compactas sin íconos/conteos, UX Writing con acrónimos expandidos, responsive y WCAG 2.2 AA.
      - `.agents/rules/sat-content-relationships.md`: Polijerarquía sin duplicación (`683` únicos / `715` proyecciones), relaciones secuenciales ATO y familias temáticas (`familias_ids`).
+     - `.agents/rules/sat-wordpress-wxr-import.md`: Estándar de importación XML nativa de WordPress (WXR 1.2), shortcodes WPBakery + The7 Classic (`0% [vc_raw_html]`), plantilla `elementor_header_footer` con contenedor centrado `1200px` en `_wpb_post_custom_css`, metadato `_wpb_vc_js_status=true` y encadenamiento automático de `post_parent` (N1–N5).
   3. La normativa visual y de navegación en `docs/diseno-normativa/DESIGN_RULES.md`.
   4. Las **Skills Especializadas en `.agents/skills/`** y sus documentos técnicos en `references/` según la tarea o rol a ejecutar:
      - **Skills de Dominio SAT:**
@@ -14,6 +15,7 @@
        - `sat-ia-governance` (`.agents/skills/sat-ia-governance/SKILL.md`): Clasificación y edición puntual del árbol jerárquico en `allTramites.json` y `categoryOrder.ts`.
        - `sat-ia-audit-sync` (`.agents/skills/sat-ia-audit-sync/SKILL.md` + `references/taxonomy-and-matrix-spec.md`): Ejecución del pipeline ETL en `scripts/`, validación de URLs (`HTTP 200 OK`) y sincronización de entregables Excel de 25 columnas.
        - `sat-content-relationships` (`.agents/skills/sat-content-relationships/SKILL.md` + `references/nosql-schema-queries.md`): Vinculación de gestiones relacionadas, ciclo ATO y modelado NoSQL en MongoDB.
+       - `sat-wordpress-wxr-importer` (`.agents/skills/sat-wordpress-wxr-importer/SKILL.md`): Generación, auditoría y sincronización de archivos XML de importación nativa de WordPress (WXR 1.2), shortcodes WPBakery + The7 Classic y generador en `WPBakeryBuilderPage.tsx`.
      - **Skills de Roles y Gobernanza Multi-Agente ($\text{Orquestador} \to \text{Senior} \rightleftarrows \text{Junior} \to \text{QA}$):**
        - `orchestrator-governance` (`.agents/skills/orchestrator-governance/SKILL.md`): Orquestador (Lead Architect & Manager); planifica, no edita código fuente directamente y coordina ciclos entre Senior y QA.
        - `senior-developer` (`.agents/skills/senior-developer/SKILL.md`): Programador Senior; diseña arquitectura/core, delega módulos acotados al Junior, revisa/integra y entrega a QA.
