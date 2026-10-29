@@ -8,13 +8,13 @@
 >
 <channel>
   <title>Portal SAT Guatemala — Olas 0, 1 y 2 (31 Páginas Base)</title>
-  <link>https://portal.sat.gob.gt</link>
+  <link>https://prototipo.sat.gob.gt</link>
   <description>Paquete de páginas jerárquicas WPBakery + The7 Classic (0% Raw HTML) — Portal SAT Guatemala</description>
-  <pubDate>Mon, 26 Oct 2026 19:00:00 +0000</pubDate>
+  <pubDate>Thu, 29 Oct 2026 03:06:00 +0000</pubDate>
   <language>es-GT</language>
   <wp:wxr_version>1.2</wp:wxr_version>
-  <wp:base_site_url>https://portal.sat.gob.gt</wp:base_site_url>
-  <wp:base_blog_url>https://portal.sat.gob.gt</wp:base_blog_url>
+  <wp:base_site_url>https://prototipo.sat.gob.gt</wp:base_site_url>
+  <wp:base_blog_url>https://prototipo.sat.gob.gt</wp:base_blog_url>
   <wp:author>
     <wp:author_id>1</wp:author_id>
     <wp:author_login><![CDATA[admin]]></wp:author_login>
@@ -23,10 +23,10 @@
   </wp:author>
   <item>
     <title>Inicio</title>
-    <link>https://portal.sat.gob.gt/</link>
-    <pubDate>Mon, 26 Oct 2026 19:00:00 +0000</pubDate>
+    <link>https://prototipo.sat.gob.gt/</link>
+    <pubDate>Thu, 29 Oct 2026 03:06:00 +0000</pubDate>
     <dc:creator><![CDATA[admin]]></dc:creator>
-    <guid isPermaLink="false">https://portal.sat.gob.gt/?page_id=1000</guid>
+    <guid isPermaLink="false">https://prototipo.sat.gob.gt/?page_id=1000&amp;v=20261028210600</guid>
     <description></description>
     <content:encoded><![CDATA[[vc_row full_width="stretch_row" el_class="sat-hero-section" css=".vc_custom_hero{background-color: #003865; padding: 45px 0;}"]
 [vc_column]
@@ -76,8 +76,8 @@
 [/vc_row]]]></content:encoded>
     <excerpt:encoded><![CDATA[]]></excerpt:encoded>
     <wp:post_id>1000</wp:post_id>
-    <wp:post_date><![CDATA[2026-10-26 19:00:00]]></wp:post_date>
-    <wp:post_date_gmt><![CDATA[2026-10-26 19:00:00]]></wp:post_date_gmt>
+    <wp:post_date><![CDATA[2026-10-28 21:06:00]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-10-29 03:06:00]]></wp:post_date_gmt>
     <wp:comment_status><![CDATA[closed]]></wp:comment_status>
     <wp:ping_status><![CDATA[closed]]></wp:ping_status>
     <wp:post_name><![CDATA[inicio]]></wp:post_name>
@@ -92,6 +92,14 @@
       <wp:meta_value><![CDATA[elementor_header_footer]]></wp:meta_value>
     </wp:postmeta>
     <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_sidebar_position]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_header_title]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
       <wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
       <wp:meta_value><![CDATA[true]]></wp:meta_value>
     </wp:postmeta>
@@ -102,12 +110,12 @@
   </item>
   <item>
     <title>Solicitar Número de Identificación Tributaria (NIT)</title>
-    <link>https://portal.sat.gob.gt/solicitar-nit/</link>
-    <pubDate>Mon, 26 Oct 2026 19:00:00 +0000</pubDate>
+    <link>https://prototipo.sat.gob.gt/solicitar-nit/</link>
+    <pubDate>Thu, 29 Oct 2026 03:06:00 +0000</pubDate>
     <dc:creator><![CDATA[admin]]></dc:creator>
-    <guid isPermaLink="false">https://portal.sat.gob.gt/?page_id=1001</guid>
+    <guid isPermaLink="false">https://prototipo.sat.gob.gt/?page_id=1001&amp;v=20261028210600</guid>
     <description></description>
-    <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row]
+    <content:encoded><![CDATA[[vc_row gap="5px"][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row]
 
 [vc_row el_class="sat-gestion-header"]
 [vc_column]
@@ -250,8 +258,8 @@
 [/vc_section]]]></content:encoded>
     <excerpt:encoded><![CDATA[]]></excerpt:encoded>
     <wp:post_id>1001</wp:post_id>
-    <wp:post_date><![CDATA[2026-10-26 19:00:00]]></wp:post_date>
-    <wp:post_date_gmt><![CDATA[2026-10-26 19:00:00]]></wp:post_date_gmt>
+    <wp:post_date><![CDATA[2026-10-28 21:06:00]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-10-29 03:06:00]]></wp:post_date_gmt>
     <wp:comment_status><![CDATA[closed]]></wp:comment_status>
     <wp:ping_status><![CDATA[closed]]></wp:ping_status>
     <wp:post_name><![CDATA[solicitar-nit]]></wp:post_name>
@@ -266,6 +274,14 @@
       <wp:meta_value><![CDATA[elementor_header_footer]]></wp:meta_value>
     </wp:postmeta>
     <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_sidebar_position]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_header_title]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
       <wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
       <wp:meta_value><![CDATA[true]]></wp:meta_value>
     </wp:postmeta>
@@ -276,12 +292,12 @@
   </item>
   <item>
     <title>Actualizar o Ratificar Datos en el Registro Tributario Unificado (RTU Digital)</title>
-    <link>https://portal.sat.gob.gt/actualizar-rtu/</link>
-    <pubDate>Mon, 26 Oct 2026 19:00:00 +0000</pubDate>
+    <link>https://prototipo.sat.gob.gt/actualizar-rtu/</link>
+    <pubDate>Thu, 29 Oct 2026 03:06:00 +0000</pubDate>
     <dc:creator><![CDATA[admin]]></dc:creator>
-    <guid isPermaLink="false">https://portal.sat.gob.gt/?page_id=1002</guid>
+    <guid isPermaLink="false">https://prototipo.sat.gob.gt/?page_id=1002&amp;v=20261028210600</guid>
     <description></description>
-    <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row]
+    <content:encoded><![CDATA[[vc_row gap="5px"][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row]
 
 [vc_row el_class="sat-gestion-header"]
 [vc_column]
@@ -438,8 +454,8 @@
 [/vc_section]]]></content:encoded>
     <excerpt:encoded><![CDATA[]]></excerpt:encoded>
     <wp:post_id>1002</wp:post_id>
-    <wp:post_date><![CDATA[2026-10-26 19:00:00]]></wp:post_date>
-    <wp:post_date_gmt><![CDATA[2026-10-26 19:00:00]]></wp:post_date_gmt>
+    <wp:post_date><![CDATA[2026-10-28 21:06:00]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-10-29 03:06:00]]></wp:post_date_gmt>
     <wp:comment_status><![CDATA[closed]]></wp:comment_status>
     <wp:ping_status><![CDATA[closed]]></wp:ping_status>
     <wp:post_name><![CDATA[actualizar-rtu]]></wp:post_name>
@@ -454,6 +470,14 @@
       <wp:meta_value><![CDATA[elementor_header_footer]]></wp:meta_value>
     </wp:postmeta>
     <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_sidebar_position]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_header_title]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
       <wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
       <wp:meta_value><![CDATA[true]]></wp:meta_value>
     </wp:postmeta>
@@ -464,12 +488,12 @@
   </item>
   <item>
     <title>Habilitación y Emisión de Factura Electrónica en Línea (FEL)</title>
-    <link>https://portal.sat.gob.gt/factura-electronica-fel/</link>
-    <pubDate>Mon, 26 Oct 2026 19:00:00 +0000</pubDate>
+    <link>https://prototipo.sat.gob.gt/factura-electronica-fel/</link>
+    <pubDate>Thu, 29 Oct 2026 03:06:00 +0000</pubDate>
     <dc:creator><![CDATA[admin]]></dc:creator>
-    <guid isPermaLink="false">https://portal.sat.gob.gt/?page_id=1003</guid>
+    <guid isPermaLink="false">https://prototipo.sat.gob.gt/?page_id=1003&amp;v=20261028210600</guid>
     <description></description>
-    <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row]
+    <content:encoded><![CDATA[[vc_row gap="5px"][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row]
 
 [vc_row el_class="sat-gestion-header"]
 [vc_column]
@@ -567,8 +591,8 @@
 [/vc_section]]]></content:encoded>
     <excerpt:encoded><![CDATA[]]></excerpt:encoded>
     <wp:post_id>1003</wp:post_id>
-    <wp:post_date><![CDATA[2026-10-26 19:00:00]]></wp:post_date>
-    <wp:post_date_gmt><![CDATA[2026-10-26 19:00:00]]></wp:post_date_gmt>
+    <wp:post_date><![CDATA[2026-10-28 21:06:00]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-10-29 03:06:00]]></wp:post_date_gmt>
     <wp:comment_status><![CDATA[closed]]></wp:comment_status>
     <wp:ping_status><![CDATA[closed]]></wp:ping_status>
     <wp:post_name><![CDATA[factura-electronica-fel]]></wp:post_name>
@@ -583,6 +607,14 @@
       <wp:meta_value><![CDATA[elementor_header_footer]]></wp:meta_value>
     </wp:postmeta>
     <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_sidebar_position]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_header_title]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
       <wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
       <wp:meta_value><![CDATA[true]]></wp:meta_value>
     </wp:postmeta>
@@ -593,12 +625,12 @@
   </item>
   <item>
     <title>Solicitud y Emisión de Solvencia Fiscal en Línea</title>
-    <link>https://portal.sat.gob.gt/solvencia-fiscal/</link>
-    <pubDate>Mon, 26 Oct 2026 19:00:00 +0000</pubDate>
+    <link>https://prototipo.sat.gob.gt/solvencia-fiscal/</link>
+    <pubDate>Thu, 29 Oct 2026 03:06:00 +0000</pubDate>
     <dc:creator><![CDATA[admin]]></dc:creator>
-    <guid isPermaLink="false">https://portal.sat.gob.gt/?page_id=1004</guid>
+    <guid isPermaLink="false">https://prototipo.sat.gob.gt/?page_id=1004&amp;v=20261028210600</guid>
     <description></description>
-    <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row]
+    <content:encoded><![CDATA[[vc_row gap="5px"][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row]
 
 [vc_row el_class="sat-gestion-header"]
 [vc_column]
@@ -668,8 +700,8 @@
 [/vc_section]]]></content:encoded>
     <excerpt:encoded><![CDATA[]]></excerpt:encoded>
     <wp:post_id>1004</wp:post_id>
-    <wp:post_date><![CDATA[2026-10-26 19:00:00]]></wp:post_date>
-    <wp:post_date_gmt><![CDATA[2026-10-26 19:00:00]]></wp:post_date_gmt>
+    <wp:post_date><![CDATA[2026-10-28 21:06:00]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-10-29 03:06:00]]></wp:post_date_gmt>
     <wp:comment_status><![CDATA[closed]]></wp:comment_status>
     <wp:ping_status><![CDATA[closed]]></wp:ping_status>
     <wp:post_name><![CDATA[solvencia-fiscal]]></wp:post_name>
@@ -684,6 +716,14 @@
       <wp:meta_value><![CDATA[elementor_header_footer]]></wp:meta_value>
     </wp:postmeta>
     <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_sidebar_position]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_header_title]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
       <wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
       <wp:meta_value><![CDATA[true]]></wp:meta_value>
     </wp:postmeta>
@@ -694,12 +734,12 @@
   </item>
   <item>
     <title>Traspaso Electrónico de Vehículos en Línea (e-Traspaso)</title>
-    <link>https://portal.sat.gob.gt/traspaso-vehiculos/</link>
-    <pubDate>Mon, 26 Oct 2026 19:00:00 +0000</pubDate>
+    <link>https://prototipo.sat.gob.gt/traspaso-vehiculos/</link>
+    <pubDate>Thu, 29 Oct 2026 03:06:00 +0000</pubDate>
     <dc:creator><![CDATA[admin]]></dc:creator>
-    <guid isPermaLink="false">https://portal.sat.gob.gt/?page_id=1005</guid>
+    <guid isPermaLink="false">https://prototipo.sat.gob.gt/?page_id=1005&amp;v=20261028210600</guid>
     <description></description>
-    <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row]
+    <content:encoded><![CDATA[[vc_row gap="5px"][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row]
 
 [vc_row el_class="sat-gestion-header"]
 [vc_column]
@@ -771,8 +811,8 @@
 [/vc_section]]]></content:encoded>
     <excerpt:encoded><![CDATA[]]></excerpt:encoded>
     <wp:post_id>1005</wp:post_id>
-    <wp:post_date><![CDATA[2026-10-26 19:00:00]]></wp:post_date>
-    <wp:post_date_gmt><![CDATA[2026-10-26 19:00:00]]></wp:post_date_gmt>
+    <wp:post_date><![CDATA[2026-10-28 21:06:00]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-10-29 03:06:00]]></wp:post_date_gmt>
     <wp:comment_status><![CDATA[closed]]></wp:comment_status>
     <wp:ping_status><![CDATA[closed]]></wp:ping_status>
     <wp:post_name><![CDATA[traspaso-vehiculos]]></wp:post_name>
@@ -787,6 +827,14 @@
       <wp:meta_value><![CDATA[elementor_header_footer]]></wp:meta_value>
     </wp:postmeta>
     <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_sidebar_position]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_header_title]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
       <wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
       <wp:meta_value><![CDATA[true]]></wp:meta_value>
     </wp:postmeta>
@@ -797,12 +845,12 @@
   </item>
   <item>
     <title>Inscripción y Activación en el Padrón de Importadores</title>
-    <link>https://portal.sat.gob.gt/padron-importadores/</link>
-    <pubDate>Mon, 26 Oct 2026 19:00:00 +0000</pubDate>
+    <link>https://prototipo.sat.gob.gt/padron-importadores/</link>
+    <pubDate>Thu, 29 Oct 2026 03:06:00 +0000</pubDate>
     <dc:creator><![CDATA[admin]]></dc:creator>
-    <guid isPermaLink="false">https://portal.sat.gob.gt/?page_id=1006</guid>
+    <guid isPermaLink="false">https://prototipo.sat.gob.gt/?page_id=1006&amp;v=20261028210600</guid>
     <description></description>
-    <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row]
+    <content:encoded><![CDATA[[vc_row gap="5px"][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row]
 
 [vc_row el_class="sat-gestion-header"]
 [vc_column]
@@ -892,8 +940,8 @@
 [/vc_section]]]></content:encoded>
     <excerpt:encoded><![CDATA[]]></excerpt:encoded>
     <wp:post_id>1006</wp:post_id>
-    <wp:post_date><![CDATA[2026-10-26 19:00:00]]></wp:post_date>
-    <wp:post_date_gmt><![CDATA[2026-10-26 19:00:00]]></wp:post_date_gmt>
+    <wp:post_date><![CDATA[2026-10-28 21:06:00]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-10-29 03:06:00]]></wp:post_date_gmt>
     <wp:comment_status><![CDATA[closed]]></wp:comment_status>
     <wp:ping_status><![CDATA[closed]]></wp:ping_status>
     <wp:post_name><![CDATA[padron-importadores]]></wp:post_name>
@@ -908,6 +956,14 @@
       <wp:meta_value><![CDATA[elementor_header_footer]]></wp:meta_value>
     </wp:postmeta>
     <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_sidebar_position]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_header_title]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
       <wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
       <wp:meta_value><![CDATA[true]]></wp:meta_value>
     </wp:postmeta>
@@ -918,16 +974,16 @@
   </item>
   <item>
     <title>Contribuyentes</title>
-    <link>https://portal.sat.gob.gt/contribuyentes/</link>
-    <pubDate>Mon, 26 Oct 2026 19:00:00 +0000</pubDate>
+    <link>https://prototipo.sat.gob.gt/contribuyentes/</link>
+    <pubDate>Thu, 29 Oct 2026 03:06:00 +0000</pubDate>
     <dc:creator><![CDATA[admin]]></dc:creator>
-    <guid isPermaLink="false">https://portal.sat.gob.gt/?page_id=1007</guid>
+    <guid isPermaLink="false">https://prototipo.sat.gob.gt/?page_id=1007&amp;v=20261028210600</guid>
     <description></description>
-    <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-contribuyentes"][vc_column width="1/3" offset="vc_col-xl-inherit vc_col-lg-inherit vc_col-md-4 vc_col-sm-inherit"][bsf-info-box icon_type="none" title="Sin Obligaciones" read_more="box" link="url:/contribuyentes/sin-obligaciones/|||"]Obtén tu primer Número de Identificación Tributaria (NIT), actualiza tus datos personales, emite tu Solvencia Fiscal o registra tu título universitario sin tener negocio activo.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Pequeños Contribuyentes" read_more="box" link="url:/contribuyentes/pequenos-contribuyentes/|||"]Factura Electrónica en Línea (FEL), declaraciones mensuales del 5%, régimen electrónico y facilidades para productores del sector primario.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Contribuyente General" read_more="box" link="url:/contribuyentes/contribuyente-general/|||"]Inscripción y actualización en el Registro Tributario Unificado (RTU), Factura Electrónica en Línea (FEL), declaraciones de IVA e ISR, vehículos y servicios al contribuyente.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Contribuyentes Especiales" read_more="box" link="url:/contribuyentes/contribuyentes-especiales/|||"]Atención especializada en gerencias diferenciadas, informes de precios de transferencia, estados financieros auditados y cumplimiento corporativo.[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
+    <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-contribuyentes"][vc_column width="1/2" offset="vc_col-xl-inherit vc_col-lg-inherit vc_col-md-6 vc_col-sm-inherit"][bsf-info-box icon_type="none" title="NIT sin Obligaciones" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fsin-obligaciones%2F"]Gestiones y servicios de identificación tributaria para personas sin actividad comercial.[/bsf-info-box][/vc_column][vc_column width="1/2"][bsf-info-box icon_size="32" title="Pequeños Contribuyentes" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fpequenos-contribuyentes%2F"]Información y obligaciones para pequeños negocios y régimen simplificado.[/bsf-info-box][/vc_column][vc_column width="1/2"][bsf-info-box icon_size="32" title="Contribuyente General" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyente-general%2F"]Declaración y pago de IVA General, pagos de ISR, RTU Digital, facturación FEL, libros contables y vehículos.[/bsf-info-box][/vc_column][vc_column width="1/2"][bsf-info-box icon_size="32" title="Contribuyentes Especiales" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyentes-especiales%2F"]Servicios y gestiones tributarias para empresas con atención diferenciada.[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
     <excerpt:encoded><![CDATA[]]></excerpt:encoded>
     <wp:post_id>1007</wp:post_id>
-    <wp:post_date><![CDATA[2026-10-26 19:00:00]]></wp:post_date>
-    <wp:post_date_gmt><![CDATA[2026-10-26 19:00:00]]></wp:post_date_gmt>
+    <wp:post_date><![CDATA[2026-10-28 21:06:00]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-10-29 03:06:00]]></wp:post_date_gmt>
     <wp:comment_status><![CDATA[closed]]></wp:comment_status>
     <wp:ping_status><![CDATA[closed]]></wp:ping_status>
     <wp:post_name><![CDATA[contribuyentes]]></wp:post_name>
@@ -942,6 +998,14 @@
       <wp:meta_value><![CDATA[elementor_header_footer]]></wp:meta_value>
     </wp:postmeta>
     <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_sidebar_position]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_header_title]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
       <wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
       <wp:meta_value><![CDATA[true]]></wp:meta_value>
     </wp:postmeta>
@@ -952,16 +1016,16 @@
   </item>
   <item>
     <title>Sin Obligaciones</title>
-    <link>https://portal.sat.gob.gt/contribuyentes/sin-obligaciones/</link>
-    <pubDate>Mon, 26 Oct 2026 19:00:00 +0000</pubDate>
+    <link>https://prototipo.sat.gob.gt/contribuyentes/sin-obligaciones/</link>
+    <pubDate>Thu, 29 Oct 2026 03:06:00 +0000</pubDate>
     <dc:creator><![CDATA[admin]]></dc:creator>
-    <guid isPermaLink="false">https://portal.sat.gob.gt/?page_id=1008</guid>
+    <guid isPermaLink="false">https://prototipo.sat.gob.gt/?page_id=1008&amp;v=20261028210600</guid>
     <description></description>
-    <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-contribuyentes"][vc_column width="1/3" offset="vc_col-xl-inherit vc_col-lg-inherit vc_col-md-4 vc_col-sm-inherit"][bsf-info-box icon_type="none" title="Solicitar Número de Identificación Tributaria (NIT)" read_more="box" link="url:/solicitar-nit/|||"]Cómo solicitar un Número de Identificación Tributaria (NIT), actualizar sus datos, consultar su NIT y qué hacer si ha sido utilizado de forma indebida.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Solicitud y Activación de Agencia Virtual" read_more="box" link="url:https://farm3.sat.gob.gt/menu/login.jsf||target:%20_blank|"]Acceso a la plataforma web de la SAT para consultar datos personales y descargar tu constancia del Registro Tributario Unificado (RTU).[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Cita Previa para Gestiones Presenciales" read_more="box" link="url:https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/cita-controlada/||target:%20_blank|"]Agenda electrónica para programar atención física en agencias tributarias de la SAT en casos especiales que requieran validación presencial.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Registrar tu título universitario para ejercer" read_more="box" link="url:https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/registro-y-habilitacion-de-titulos-para-ejercer-profesion/||target:%20_blank|"]Requisitos, pasos y documentos para registrar y habilitar tu título universitario ante la SAT y pagar los timbres correspondientes.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Solicitud de acceso a la información pública" read_more="box" link="url:https://portal.sat.gob.gt/portal/solicitud-informacion-publica/||target:%20_blank|"]Formulario en línea y requisitos para presentar solicitudes de información pública ante la Unidad de Información de la SAT (Decreto 57-2008).[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Portal de acceso a la información pública" read_more="box" link="url:https://portal.sat.gob.gt/portal/libre-acceso-la-informacion-publica/||target:%20_blank|"]Publicación de información pública de oficio de la SAT conforme al artículo 10 de la Ley de Acceso a la Información Pública.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Consulta de Estado de Gestión de Agencia Virtual" read_more="box" link="url:https://portal.sat.gob.gt/portal/consulta-de-gestion-del-contribuyente/||target:%20_blank|"]Herramienta de seguimiento en línea para verificar el estado de aprobación de tu usuario o solicitud en Agencia Virtual.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Solicitud y Emisión de Solvencia Fiscal en Línea" read_more="box" link="url:/solvencia-fiscal/|||"]Consulta, pago y descarga del certificado electrónico que acredita la ausencia de adeudos tributarios ante la SAT para fines laborales o personales.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Verificar títulos con código QR" read_more="box" link="url:https://portal.sat.gob.gt/portal/consulta-de-titulos-qr/||target:%20_blank|"]Servicio en línea para verificar la autenticidad y estado de registro de títulos universitarios mediante código QR.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Actualización de Datos y Transición de Régimen" read_more="box" link="url:/actualizar-rtu/|||"]Actualiza tus datos personales en el Registro Tributario Unificado (RTU) o solicita el paso formal al régimen con negocio cuando inicies actividades económicas.[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
+    <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-contribuyentes"][vc_column width="1/3" offset="vc_col-xl-inherit vc_col-lg-inherit vc_col-md-4 vc_col-sm-inherit"][bsf-info-box icon_type="none" title="Solicitar Número de Identificación Tributaria (NIT)" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fsolicitar-nit%2F"]Cómo solicitar un Número de Identificación Tributaria (NIT), actualizar sus datos, consultar su NIT y qué hacer si ha sido utilizado de forma indebida.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Solicitud y Activación de Agencia Virtual" read_more="box" link="url:https://farm3.sat.gob.gt/menu/login.jsf||target:%20_blank|"]Acceso a la plataforma web de la SAT para consultar datos personales y descargar tu constancia del Registro Tributario Unificado (RTU).[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Cita Previa para Gestiones Presenciales" read_more="box" link="url:https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/cita-controlada/||target:%20_blank|"]Agenda electrónica para programar atención física en agencias tributarias de la SAT en casos especiales que requieran validación presencial.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Registrar tu título universitario para ejercer" read_more="box" link="url:https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/registro-y-habilitacion-de-titulos-para-ejercer-profesion/||target:%20_blank|"]Requisitos, pasos y documentos para registrar y habilitar tu título universitario ante la SAT y pagar los timbres correspondientes.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Solicitud de acceso a la información pública" read_more="box" link="url:https://portal.sat.gob.gt/portal/solicitud-informacion-publica/||target:%20_blank|"]Formulario en línea y requisitos para presentar solicitudes de información pública ante la Unidad de Información de la SAT (Decreto 57-2008).[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Portal de acceso a la información pública" read_more="box" link="url:https://portal.sat.gob.gt/portal/libre-acceso-la-informacion-publica/||target:%20_blank|"]Publicación de información pública de oficio de la SAT conforme al artículo 10 de la Ley de Acceso a la Información Pública.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Consulta de Estado de Gestión de Agencia Virtual" read_more="box" link="url:https://portal.sat.gob.gt/portal/consulta-de-gestion-del-contribuyente/||target:%20_blank|"]Herramienta de seguimiento en línea para verificar el estado de aprobación de tu usuario o solicitud en Agencia Virtual.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Solicitud y Emisión de Solvencia Fiscal en Línea" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fsolvencia-fiscal%2F"]Consulta, pago y descarga del certificado electrónico que acredita la ausencia de adeudos tributarios ante la SAT para fines laborales o personales.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Verificar títulos con código QR" read_more="box" link="url:https://portal.sat.gob.gt/portal/consulta-de-titulos-qr/||target:%20_blank|"]Servicio en línea para verificar la autenticidad y estado de registro de títulos universitarios mediante código QR.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Actualización de Datos y Transición de Régimen" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Factualizar-rtu%2F"]Actualiza tus datos personales en el Registro Tributario Unificado (RTU) o solicita el paso formal al régimen con negocio cuando inicies actividades económicas.[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
     <excerpt:encoded><![CDATA[]]></excerpt:encoded>
     <wp:post_id>1008</wp:post_id>
-    <wp:post_date><![CDATA[2026-10-26 19:00:00]]></wp:post_date>
-    <wp:post_date_gmt><![CDATA[2026-10-26 19:00:00]]></wp:post_date_gmt>
+    <wp:post_date><![CDATA[2026-10-28 21:06:00]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-10-29 03:06:00]]></wp:post_date_gmt>
     <wp:comment_status><![CDATA[closed]]></wp:comment_status>
     <wp:ping_status><![CDATA[closed]]></wp:ping_status>
     <wp:post_name><![CDATA[sin-obligaciones]]></wp:post_name>
@@ -976,6 +1040,14 @@
       <wp:meta_value><![CDATA[elementor_header_footer]]></wp:meta_value>
     </wp:postmeta>
     <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_sidebar_position]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_header_title]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
       <wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
       <wp:meta_value><![CDATA[true]]></wp:meta_value>
     </wp:postmeta>
@@ -986,16 +1058,16 @@
   </item>
   <item>
     <title>Pequeños Contribuyentes</title>
-    <link>https://portal.sat.gob.gt/contribuyentes/pequenos-contribuyentes/</link>
-    <pubDate>Mon, 26 Oct 2026 19:00:00 +0000</pubDate>
+    <link>https://prototipo.sat.gob.gt/contribuyentes/pequenos-contribuyentes/</link>
+    <pubDate>Thu, 29 Oct 2026 03:06:00 +0000</pubDate>
     <dc:creator><![CDATA[admin]]></dc:creator>
-    <guid isPermaLink="false">https://portal.sat.gob.gt/?page_id=1009</guid>
+    <guid isPermaLink="false">https://prototipo.sat.gob.gt/?page_id=1009&amp;v=20261028210600</guid>
     <description></description>
-    <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-contribuyentes"][vc_column width="1/3" offset="vc_col-xl-inherit vc_col-lg-inherit vc_col-md-4 vc_col-sm-inherit"][bsf-info-box icon_type="none" title="Régimen de Pequeño Contribuyente" read_more="box" link="url:/contribuyentes/pequenos-contribuyentes/regimen-de-pequeno-contribuyente/|||"]Inscripción, cambio al régimen electrónico del 4% o general del 5%, Factura Electrónica en Línea (FEL) y declaraciones mensuales.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Régimen Agropecuario y Productores" read_more="box" link="url:/contribuyentes/pequenos-contribuyentes/regimen-agropecuario-y-productores/|||"]Inscripción, confirmación de datos, libros electrónicos y pago de impuestos para productores agropecuarios, artesanales y de reciclaje.[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
+    <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-contribuyentes"][vc_column width="1/3" offset="vc_col-xl-inherit vc_col-lg-inherit vc_col-md-4 vc_col-sm-inherit"][bsf-info-box icon_type="none" title="Régimen de Pequeño Contribuyente" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fpequenos-contribuyentes%2Fregimen-de-pequeno-contribuyente%2F"]Inscripción, cambio al régimen electrónico del 4% o general del 5%, Factura Electrónica en Línea (FEL) y declaraciones mensuales.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Régimen Agropecuario y Productores" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fpequenos-contribuyentes%2Fregimen-agropecuario-y-productores%2F"]Inscripción, confirmación de datos, libros electrónicos y pago de impuestos para productores agropecuarios, artesanales y de reciclaje.[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
     <excerpt:encoded><![CDATA[]]></excerpt:encoded>
     <wp:post_id>1009</wp:post_id>
-    <wp:post_date><![CDATA[2026-10-26 19:00:00]]></wp:post_date>
-    <wp:post_date_gmt><![CDATA[2026-10-26 19:00:00]]></wp:post_date_gmt>
+    <wp:post_date><![CDATA[2026-10-28 21:06:00]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-10-29 03:06:00]]></wp:post_date_gmt>
     <wp:comment_status><![CDATA[closed]]></wp:comment_status>
     <wp:ping_status><![CDATA[closed]]></wp:ping_status>
     <wp:post_name><![CDATA[pequenos-contribuyentes]]></wp:post_name>
@@ -1010,6 +1082,14 @@
       <wp:meta_value><![CDATA[elementor_header_footer]]></wp:meta_value>
     </wp:postmeta>
     <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_sidebar_position]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_header_title]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
       <wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
       <wp:meta_value><![CDATA[true]]></wp:meta_value>
     </wp:postmeta>
@@ -1020,16 +1100,16 @@
   </item>
   <item>
     <title>Contribuyente General</title>
-    <link>https://portal.sat.gob.gt/contribuyentes/contribuyente-general/</link>
-    <pubDate>Mon, 26 Oct 2026 19:00:00 +0000</pubDate>
+    <link>https://prototipo.sat.gob.gt/contribuyentes/contribuyente-general/</link>
+    <pubDate>Thu, 29 Oct 2026 03:06:00 +0000</pubDate>
     <dc:creator><![CDATA[admin]]></dc:creator>
-    <guid isPermaLink="false">https://portal.sat.gob.gt/?page_id=1015</guid>
+    <guid isPermaLink="false">https://prototipo.sat.gob.gt/?page_id=1015&amp;v=20261028210600</guid>
     <description></description>
-    <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-contribuyentes"][vc_column width="1/3" offset="vc_col-xl-inherit vc_col-lg-inherit vc_col-md-4 vc_col-sm-inherit"][bsf-info-box icon_type="none" title="Inscripción y actualización en el RTU" read_more="box" link="url:/contribuyentes/contribuyente-general/inscripcion-y-actualizacion-en-el-rtu/|||"]Inscripción de personas, sociedades, empresas mercantiles, representantes legales, actualización de datos y cierre de negocios en el Registro Tributario Unificado (RTU).[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Facturación electrónica y documentos tributarios" read_more="box" link="url:/contribuyentes/contribuyente-general/facturacion-electronica-y-documentos-tributarios/|||"]Habilitación en Factura Electrónica en Línea (FEL), autorización de documentos, imprentas, máquinas registradoras y constancias de exención.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Declaraciones, pagos y solvencias" read_more="box" link="url:/contribuyentes/contribuyente-general/declaraciones-pagos-y-solvencias/|||"]Presentación de formularios en Declaraguate, formas de pago bancario, convenios de pago a plazos y emisión de Solvencia Fiscal.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Devoluciones y créditos fiscales" read_more="box" link="url:/contribuyentes/contribuyente-general/devoluciones-y-creditos-fiscales/|||"]Solicitud de devolución de crédito fiscal del Impuesto al Valor Agregado (IVA), pagos en exceso o indebidos de ISR y acreditamiento de otros impuestos.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Regímenes tributarios" read_more="box" link="url:/contribuyentes/contribuyente-general/regimenes-tributarios/|||"]Inscripción, obligaciones, pagos trimestrales o mensuales y cambio de régimen en el Impuesto Sobre la Renta (ISR) e Impuesto al Valor Agregado (IVA).[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Vehículos (como propietario)" read_more="box" link="url:/contribuyentes/contribuyente-general/vehiculos-como-propietario/|||"]Primeras placas, traspasos de propiedad, pago anual del Impuesto Sobre Circulación de Vehículos (ISCV), reposición de distintivos, modificaciones y bajas.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Servicios y gestiones al contribuyente" read_more="box" link="url:/contribuyentes/contribuyente-general/servicios-y-gestiones-al-contribuyente/|||"]Constancias del Registro Tributario Unificado (RTU), Agencia Virtual, programación de citas previas, orientación tributaria y otros servicios de asistencia.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Cultura tributaria y capacitación" read_more="box" link="url:/contribuyentes/contribuyente-general/cultura-tributaria-y-capacitacion/|||"]Cursos virtuales gratuitos de IVA, ISR y herramientas electrónicas, calendario de capacitaciones, biblioteca virtual y normativa.[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
+    <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-contribuyentes"][vc_column width="1/3" offset="vc_col-xl-inherit vc_col-lg-inherit vc_col-md-4 vc_col-sm-inherit"][bsf-info-box icon_type="none" title="Inscripción y actualización en el RTU" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyente-general%2Finscripcion-y-actualizacion-en-el-rtu%2F"]Inscripción de personas, sociedades, empresas mercantiles, representantes legales, actualización de datos y cierre de negocios en el Registro Tributario Unificado (RTU).[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Facturación electrónica y documentos tributarios" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyente-general%2Ffacturacion-electronica-y-documentos-tributarios%2F"]Habilitación en Factura Electrónica en Línea (FEL), autorización de documentos, imprentas, máquinas registradoras y constancias de exención.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Declaraciones, pagos y solvencias" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyente-general%2Fdeclaraciones-pagos-y-solvencias%2F"]Presentación de formularios en Declaraguate, formas de pago bancario, convenios de pago a plazos y emisión de Solvencia Fiscal.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Devoluciones y créditos fiscales" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyente-general%2Fdevoluciones-y-creditos-fiscales%2F"]Solicitud de devolución de crédito fiscal del Impuesto al Valor Agregado (IVA), pagos en exceso o indebidos de ISR y acreditamiento de otros impuestos.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Regímenes tributarios" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyente-general%2Fregimenes-tributarios%2F"]Inscripción, obligaciones, pagos trimestrales o mensuales y cambio de régimen en el Impuesto Sobre la Renta (ISR) e Impuesto al Valor Agregado (IVA).[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Vehículos (como propietario)" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyente-general%2Fvehiculos-como-propietario%2F"]Primeras placas, traspasos de propiedad, pago anual del Impuesto Sobre Circulación de Vehículos (ISCV), reposición de distintivos, modificaciones y bajas.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Servicios y gestiones al contribuyente" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyente-general%2Fservicios-y-gestiones-al-contribuyente%2F"]Constancias del Registro Tributario Unificado (RTU), Agencia Virtual, programación de citas previas, orientación tributaria y otros servicios de asistencia.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Cultura tributaria y capacitación" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyente-general%2Fcultura-tributaria-y-capacitacion%2F"]Cursos virtuales gratuitos de IVA, ISR y herramientas electrónicas, calendario de capacitaciones, biblioteca virtual y normativa.[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
     <excerpt:encoded><![CDATA[]]></excerpt:encoded>
     <wp:post_id>1015</wp:post_id>
-    <wp:post_date><![CDATA[2026-10-26 19:00:00]]></wp:post_date>
-    <wp:post_date_gmt><![CDATA[2026-10-26 19:00:00]]></wp:post_date_gmt>
+    <wp:post_date><![CDATA[2026-10-28 21:06:00]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-10-29 03:06:00]]></wp:post_date_gmt>
     <wp:comment_status><![CDATA[closed]]></wp:comment_status>
     <wp:ping_status><![CDATA[closed]]></wp:ping_status>
     <wp:post_name><![CDATA[contribuyente-general]]></wp:post_name>
@@ -1044,6 +1124,14 @@
       <wp:meta_value><![CDATA[elementor_header_footer]]></wp:meta_value>
     </wp:postmeta>
     <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_sidebar_position]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_header_title]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
       <wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
       <wp:meta_value><![CDATA[true]]></wp:meta_value>
     </wp:postmeta>
@@ -1054,16 +1142,16 @@
   </item>
   <item>
     <title>Contribuyentes Especiales</title>
-    <link>https://portal.sat.gob.gt/contribuyentes/contribuyentes-especiales/</link>
-    <pubDate>Mon, 26 Oct 2026 19:00:00 +0000</pubDate>
+    <link>https://prototipo.sat.gob.gt/contribuyentes/contribuyentes-especiales/</link>
+    <pubDate>Thu, 29 Oct 2026 03:06:00 +0000</pubDate>
     <dc:creator><![CDATA[admin]]></dc:creator>
-    <guid isPermaLink="false">https://portal.sat.gob.gt/?page_id=1059</guid>
+    <guid isPermaLink="false">https://prototipo.sat.gob.gt/?page_id=1059&amp;v=20261028210600</guid>
     <description></description>
-    <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-contribuyentes"][vc_column width="1/3" offset="vc_col-xl-inherit vc_col-lg-inherit vc_col-md-4 vc_col-sm-inherit"][bsf-info-box icon_type="none" title="Gerencias Especiales y Control Tributario" read_more="box" link="url:/contribuyentes/contribuyentes-especiales/gerencias-especiales-y-control-tributario/|||"]Calificación en gerencias de grandes y medianos contribuyentes, solvencias, actualización registral y atención especializada.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Declaraciones e Informes Especiales" read_more="box" link="url:/contribuyentes/contribuyentes-especiales/declaraciones-e-informes-especiales/|||"]Estudio de precios de transferencia, estados financieros auditados, informe semestral de saldos de inventario y retenciones.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Capacitación y Orientación Diferenciada" read_more="box" link="url:/contribuyentes/contribuyentes-especiales/capacitacion-y-orientacion-diferenciada/|||"]Programas de formación especializada y boletines técnicos para grandes y medianos contribuyentes.[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
+    <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-contribuyentes"][vc_column width="1/3" offset="vc_col-xl-inherit vc_col-lg-inherit vc_col-md-4 vc_col-sm-inherit"][bsf-info-box icon_type="none" title="Gerencias Especiales y Control Tributario" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyentes-especiales%2Fgerencias-especiales-y-control-tributario%2F"]Calificación en gerencias de grandes y medianos contribuyentes, solvencias, actualización registral y atención especializada.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Declaraciones e Informes Especiales" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyentes-especiales%2Fdeclaraciones-e-informes-especiales%2F"]Estudio de precios de transferencia, estados financieros auditados, informe semestral de saldos de inventario y retenciones.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Capacitación y Orientación Diferenciada" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyentes-especiales%2Fcapacitacion-y-orientacion-diferenciada%2F"]Programas de formación especializada y boletines técnicos para grandes y medianos contribuyentes.[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
     <excerpt:encoded><![CDATA[]]></excerpt:encoded>
     <wp:post_id>1059</wp:post_id>
-    <wp:post_date><![CDATA[2026-10-26 19:00:00]]></wp:post_date>
-    <wp:post_date_gmt><![CDATA[2026-10-26 19:00:00]]></wp:post_date_gmt>
+    <wp:post_date><![CDATA[2026-10-28 21:06:00]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-10-29 03:06:00]]></wp:post_date_gmt>
     <wp:comment_status><![CDATA[closed]]></wp:comment_status>
     <wp:ping_status><![CDATA[closed]]></wp:ping_status>
     <wp:post_name><![CDATA[contribuyentes-especiales]]></wp:post_name>
@@ -1078,6 +1166,14 @@
       <wp:meta_value><![CDATA[elementor_header_footer]]></wp:meta_value>
     </wp:postmeta>
     <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_sidebar_position]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_header_title]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
       <wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
       <wp:meta_value><![CDATA[true]]></wp:meta_value>
     </wp:postmeta>
@@ -1088,16 +1184,16 @@
   </item>
   <item>
     <title>Operadores de Comercio Exterior</title>
-    <link>https://portal.sat.gob.gt/operadores-de-comercio-exterior/</link>
-    <pubDate>Mon, 26 Oct 2026 19:00:00 +0000</pubDate>
+    <link>https://prototipo.sat.gob.gt/operadores-de-comercio-exterior/</link>
+    <pubDate>Thu, 29 Oct 2026 03:06:00 +0000</pubDate>
     <dc:creator><![CDATA[admin]]></dc:creator>
-    <guid isPermaLink="false">https://portal.sat.gob.gt/?page_id=1063</guid>
+    <guid isPermaLink="false">https://prototipo.sat.gob.gt/?page_id=1063&amp;v=20261028210600</guid>
     <description></description>
-    <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-comercio-exterior"][vc_column width="1/3" offset="vc_col-xl-inherit vc_col-lg-inherit vc_col-md-4 vc_col-sm-inherit"][bsf-info-box icon_type="none" title="Importadores" read_more="box" link="url:/operadores-de-comercio-exterior/importadores/|||"]Inscripción en el padrón de importadores, Declaración Única Centroamericana (DUCA - Aduanas), despacho, levante e importación de vehículos.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Exportadores" read_more="box" link="url:/operadores-de-comercio-exterior/exportadores/|||"]Padrón de exportadores, declaraciones aduaneras de embarque y solicitud de devolución de crédito fiscal del Impuesto al Valor Agregado (IVA).[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Operador Económico Autorizado (OEA)" read_more="box" link="url:/operadores-de-comercio-exterior/operador-economico-autorizado-oea/|||"]Certificación en seguridad logística de la cadena de suministro y beneficios de facilitación aduanera.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Auxiliares de la Función Pública Aduanera (AFPA)" read_more="box" link="url:/operadores-de-comercio-exterior/auxiliares-de-la-funcion-publica-aduanera-afpa/|||"]Habilitación, carnés, fianzas y operaciones para agentes aduaneros, apoderados, depósitos, couriers y transportistas.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Regímenes Territoriales y Zonas Especiales" read_more="box" link="url:/operadores-de-comercio-exterior/regimenes-territoriales-y-zonas-especiales/|||"]Operación aduanera y fiscal para empresas calificadas bajo Maquilas (Decreto 29-89) y Zonas de Desarrollo Económico Especial Público (ZDEEP).[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Normativa y Operaciones Aduaneras Generales" read_more="box" link="url:/operadores-de-comercio-exterior/normativa-y-operaciones-aduaneras-generales/|||"]Consulta del Sistema Arancelario Centroamericano (SAC), acuerdos comerciales, prevención de contrabando, criterios técnicos y modernización aduanera.[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
+    <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-comercio-exterior"][vc_column width="1/3" offset="vc_col-xl-inherit vc_col-lg-inherit vc_col-md-4 vc_col-sm-inherit"][bsf-info-box icon_type="none" title="Importadores" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Foperadores-de-comercio-exterior%2Fimportadores%2F"]Inscripción en el padrón de importadores, Declaración Única Centroamericana (DUCA - Aduanas), despacho, levante e importación de vehículos.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Exportadores" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Foperadores-de-comercio-exterior%2Fexportadores%2F"]Padrón de exportadores, declaraciones aduaneras de embarque y solicitud de devolución de crédito fiscal del Impuesto al Valor Agregado (IVA).[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Operador Económico Autorizado (OEA)" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Foperadores-de-comercio-exterior%2Foperador-economico-autorizado-oea%2F"]Certificación en seguridad logística de la cadena de suministro y beneficios de facilitación aduanera.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Auxiliares de la Función Pública Aduanera (AFPA)" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Foperadores-de-comercio-exterior%2Fauxiliares-de-la-funcion-publica-aduanera-afpa%2F"]Habilitación, carnés, fianzas y operaciones para agentes aduaneros, apoderados, depósitos, couriers y transportistas.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Regímenes Territoriales y Zonas Especiales" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Foperadores-de-comercio-exterior%2Fregimenes-territoriales-y-zonas-especiales%2F"]Operación aduanera y fiscal para empresas calificadas bajo Maquilas (Decreto 29-89) y Zonas de Desarrollo Económico Especial Público (ZDEEP).[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Normativa y Operaciones Aduaneras Generales" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Foperadores-de-comercio-exterior%2Fnormativa-y-operaciones-aduaneras-generales%2F"]Consulta del Sistema Arancelario Centroamericano (SAC), acuerdos comerciales, prevención de contrabando, criterios técnicos y modernización aduanera.[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
     <excerpt:encoded><![CDATA[]]></excerpt:encoded>
     <wp:post_id>1063</wp:post_id>
-    <wp:post_date><![CDATA[2026-10-26 19:00:00]]></wp:post_date>
-    <wp:post_date_gmt><![CDATA[2026-10-26 19:00:00]]></wp:post_date_gmt>
+    <wp:post_date><![CDATA[2026-10-28 21:06:00]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-10-29 03:06:00]]></wp:post_date_gmt>
     <wp:comment_status><![CDATA[closed]]></wp:comment_status>
     <wp:ping_status><![CDATA[closed]]></wp:ping_status>
     <wp:post_name><![CDATA[operadores-de-comercio-exterior]]></wp:post_name>
@@ -1112,6 +1208,14 @@
       <wp:meta_value><![CDATA[elementor_header_footer]]></wp:meta_value>
     </wp:postmeta>
     <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_sidebar_position]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_header_title]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
       <wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
       <wp:meta_value><![CDATA[true]]></wp:meta_value>
     </wp:postmeta>
@@ -1122,16 +1226,16 @@
   </item>
   <item>
     <title>Importadores</title>
-    <link>https://portal.sat.gob.gt/operadores-de-comercio-exterior/importadores/</link>
-    <pubDate>Mon, 26 Oct 2026 19:00:00 +0000</pubDate>
+    <link>https://prototipo.sat.gob.gt/operadores-de-comercio-exterior/importadores/</link>
+    <pubDate>Thu, 29 Oct 2026 03:06:00 +0000</pubDate>
     <dc:creator><![CDATA[admin]]></dc:creator>
-    <guid isPermaLink="false">https://portal.sat.gob.gt/?page_id=1064</guid>
+    <guid isPermaLink="false">https://prototipo.sat.gob.gt/?page_id=1064&amp;v=20261028210600</guid>
     <description></description>
-    <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-comercio-exterior"][vc_column width="1/3" offset="vc_col-xl-inherit vc_col-lg-inherit vc_col-md-4 vc_col-sm-inherit"][bsf-info-box icon_type="none" title="Registro y Padrón de Importadores" read_more="box" link="url:/operadores-de-comercio-exterior/importadores/registro-y-padron-de-importadores/|||"]Incluye gestiones como: Inscripción y Habilitación en el Padrón de Importadores, Información general: Qué considerar al enviar por vía aérea, Información general: Qué considerar antes de comprar en el extranjero.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Declaraciones Aduaneras y DUCAs" read_more="box" link="url:/operadores-de-comercio-exterior/importadores/declaraciones-aduaneras-y-ducas/|||"]Incluye gestiones como: Declaración del Valor en Aduana de las Mercancías, Manual Operativo: Aduana sin Papeles y Digitalización de Documentos de Soporte, Información sobre  la declaración única centroamericana DUCA, declaración única aduanera, aduana sin papeles y su instructivo, codificación de documentos digitalizados y la declaración de valor..[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Despacho Aduanero, Levante y Selectivo" read_more="box" link="url:/operadores-de-comercio-exterior/importadores/despacho-aduanero-levante-y-selectivo/|||"]Incluye gestiones como: Requisitos, pasos y documentos para entregar documentos de envíos parciales., Requisitos, pasos y documentos para presentar la declaración para análisis de riesgo., Obtener distintivos de control de productos importados.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Importación y Nacionalización de Vehículos" read_more="box" link="url:/operadores-de-comercio-exterior/importadores/importacion-y-nacionalizacion-de-vehiculos/|||"]Incluye gestiones como: Requisitos, pasos y documentos para inscribir vehículos nuevos (importadores)., Permiso de Internación Temporal de Vehículos Turísticos / Extranjeros, Información sobre documentación a presentar ante la aduana de Vehículos, importación de vehículos y el alza de importación..[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Mercancías en Abandono, Depósitos y Franquicias" read_more="box" link="url:/operadores-de-comercio-exterior/importadores/mercancias-en-abandono-depositos-y-franquicias/|||"]Incluye gestiones como: Información sobre documentación técnica de orientación al usuario externo para solicitudes de Franquicia Electrónica y videos informativos., Declaración Jurada Regional de Viajero y Franquicia de Equipaje, Despacho de Importación Menor con Declaración de Oficio.[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
+    <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-comercio-exterior"][vc_column width="1/3" offset="vc_col-xl-inherit vc_col-lg-inherit vc_col-md-4 vc_col-sm-inherit"][bsf-info-box icon_type="none" title="Registro y Padrón de Importadores" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Foperadores-de-comercio-exterior%2Fimportadores%2Fregistro-y-padron-de-importadores%2F"]Inscripción y activación en el padrón de importadores, requisitos previos para importar mercancías y guías del Programa de Modernización Integral Aduanera (MIAD).[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Declaraciones Aduaneras y DUCAs" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Foperadores-de-comercio-exterior%2Fimportadores%2Fdeclaraciones-aduaneras-y-ducas%2F"]Preparación de documentos de soporte, transmisión de la Declaración Única Centroamericana (DUCA - Aduanas), pólizas con fianza y verificación de pago en línea.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Despacho Aduanero, Levante y Selectivo" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Foperadores-de-comercio-exterior%2Fimportadores%2Fdespacho-aduanero-levante-y-selectivo%2F"]Gestiones anticipadas, consulta del semáforo de selectivo aduanero, puestos de control interinstitucional (PCI) y operaciones de levante en recinto.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Importación y Nacionalización de Vehículos" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Foperadores-de-comercio-exterior%2Fimportadores%2Fimportacion-y-nacionalizacion-de-vehiculos%2F"]Requisitos para ingresar vehículos por aduana, permisos de internación temporal, consulta de tablas de valores imponibles y cálculo del Impuesto al Valor Agregado (IVA).[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Mercancías en Abandono, Depósitos y Franquicias" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Foperadores-de-comercio-exterior%2Fimportadores%2Fmercancias-en-abandono-depositos-y-franquicias%2F"]Solicitudes de franquicia electrónica, declaración regional de viajero, rescate de mercancías en abandono tácito y devolución de depósitos aduanales.[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
     <excerpt:encoded><![CDATA[]]></excerpt:encoded>
     <wp:post_id>1064</wp:post_id>
-    <wp:post_date><![CDATA[2026-10-26 19:00:00]]></wp:post_date>
-    <wp:post_date_gmt><![CDATA[2026-10-26 19:00:00]]></wp:post_date_gmt>
+    <wp:post_date><![CDATA[2026-10-28 21:06:00]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-10-29 03:06:00]]></wp:post_date_gmt>
     <wp:comment_status><![CDATA[closed]]></wp:comment_status>
     <wp:ping_status><![CDATA[closed]]></wp:ping_status>
     <wp:post_name><![CDATA[importadores]]></wp:post_name>
@@ -1146,6 +1250,14 @@
       <wp:meta_value><![CDATA[elementor_header_footer]]></wp:meta_value>
     </wp:postmeta>
     <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_sidebar_position]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_header_title]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
       <wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
       <wp:meta_value><![CDATA[true]]></wp:meta_value>
     </wp:postmeta>
@@ -1156,16 +1268,16 @@
   </item>
   <item>
     <title>Exportadores</title>
-    <link>https://portal.sat.gob.gt/operadores-de-comercio-exterior/exportadores/</link>
-    <pubDate>Mon, 26 Oct 2026 19:00:00 +0000</pubDate>
+    <link>https://prototipo.sat.gob.gt/operadores-de-comercio-exterior/exportadores/</link>
+    <pubDate>Thu, 29 Oct 2026 03:06:00 +0000</pubDate>
     <dc:creator><![CDATA[admin]]></dc:creator>
-    <guid isPermaLink="false">https://portal.sat.gob.gt/?page_id=1080</guid>
+    <guid isPermaLink="false">https://prototipo.sat.gob.gt/?page_id=1080&amp;v=20261028210600</guid>
     <description></description>
-    <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-comercio-exterior"][vc_column width="1/3" offset="vc_col-xl-inherit vc_col-lg-inherit vc_col-md-4 vc_col-sm-inherit"][bsf-info-box icon_type="none" title="Padrón y Registro de Exportadores" read_more="box" link="url:/operadores-de-comercio-exterior/exportadores/padron-y-registro-de-exportadores/|||"]Incluye gestiones como: Inscripción y Habilitación en el Registro de Exportadores (VUPE / SAT), Requisitos, pasos y documentos para inscribirte como exportador., Permiso Temporal de Exportación Ocasional.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Declaraciones Aduaneras y Embarques" read_more="box" link="url:/operadores-de-comercio-exterior/exportadores/declaraciones-aduaneras-y-embarques/|||"]Incluye gestiones como: Requisitos, pasos y documentos para presentar declaración complementaria de exportación., Declaración Simplificada de Exportación (DUCA-D / Aduana sin Papeles), Autorización y Control de Lista de Embarque en Aduana.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Devolución de Crédito Fiscal" read_more="box" link="url:/operadores-de-comercio-exterior/exportadores/devolucion-de-credito-fiscal/|||"]Incluye gestiones como: Inscripción al Régimen Especial de Devolución de Crédito Fiscal de IVA, Inscripción al Régimen Optativo de Devolución de Crédito Fiscal de IVA, Solicitud Electrónica Mensual de Devolución de Crédito Fiscal IVA.[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
+    <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-comercio-exterior"][vc_column width="1/3" offset="vc_col-xl-inherit vc_col-lg-inherit vc_col-md-4 vc_col-sm-inherit"][bsf-info-box icon_type="none" title="Padrón y Registro de Exportadores" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Foperadores-de-comercio-exterior%2Fexportadores%2Fpadron-y-registro-de-exportadores%2F"]Inscripción en el padrón de exportadores, permisos de exportación temporal u ocasional y registro ante la Ventanilla Única para las Exportaciones (VUPE).[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Declaraciones Aduaneras y Embarques" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Foperadores-de-comercio-exterior%2Fexportadores%2Fdeclaraciones-aduaneras-y-embarques%2F"]Transmisión de declaraciones simplificadas y complementarias de exportación (DUCA), control de listas de embarque y cierre de operaciones aduaneras.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Devolución de Crédito Fiscal" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Foperadores-de-comercio-exterior%2Fexportadores%2Fdevolucion-de-credito-fiscal%2F"]Inscripción y solicitud de devolución de crédito fiscal del Impuesto al Valor Agregado (IVA) para exportadores en régimen especial, optativo, general y en línea.[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
     <excerpt:encoded><![CDATA[]]></excerpt:encoded>
     <wp:post_id>1080</wp:post_id>
-    <wp:post_date><![CDATA[2026-10-26 19:00:00]]></wp:post_date>
-    <wp:post_date_gmt><![CDATA[2026-10-26 19:00:00]]></wp:post_date_gmt>
+    <wp:post_date><![CDATA[2026-10-28 21:06:00]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-10-29 03:06:00]]></wp:post_date_gmt>
     <wp:comment_status><![CDATA[closed]]></wp:comment_status>
     <wp:ping_status><![CDATA[closed]]></wp:ping_status>
     <wp:post_name><![CDATA[exportadores]]></wp:post_name>
@@ -1180,6 +1292,14 @@
       <wp:meta_value><![CDATA[elementor_header_footer]]></wp:meta_value>
     </wp:postmeta>
     <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_sidebar_position]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_header_title]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
       <wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
       <wp:meta_value><![CDATA[true]]></wp:meta_value>
     </wp:postmeta>
@@ -1190,16 +1310,16 @@
   </item>
   <item>
     <title>Operador Económico Autorizado (OEA)</title>
-    <link>https://portal.sat.gob.gt/operadores-de-comercio-exterior/operador-economico-autorizado-oea/</link>
-    <pubDate>Mon, 26 Oct 2026 19:00:00 +0000</pubDate>
+    <link>https://prototipo.sat.gob.gt/operadores-de-comercio-exterior/operador-economico-autorizado-oea/</link>
+    <pubDate>Thu, 29 Oct 2026 03:06:00 +0000</pubDate>
     <dc:creator><![CDATA[admin]]></dc:creator>
-    <guid isPermaLink="false">https://portal.sat.gob.gt/?page_id=1084</guid>
+    <guid isPermaLink="false">https://prototipo.sat.gob.gt/?page_id=1084&amp;v=20261028210600</guid>
     <description></description>
     <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-comercio-exterior"][vc_column width="1/3" offset="vc_col-xl-inherit vc_col-lg-inherit vc_col-md-4 vc_col-sm-inherit"][bsf-info-box icon_type="none" title="Habilitación y Certificación del Operador Económico Autorizado (OEA)" read_more="box" link="url:https://portal.sat.gob.gt/portal/operador-economico-autorizado/||target:%20_blank|"]Guía integral, requisitos de seguridad en la cadena logística y proceso de auditoría para obtener la certificación OEA en Guatemala.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Directorio y Catálogo de Beneficios de Actores Certificados como Operador Económico Autorizado (OEA)" read_more="box" link="url:https://portal.sat.gob.gt/portal/operador-economico-autorizado/||target:%20_blank|"]Listado oficial de empresas certificadas como OEA y manual de beneficios operativos en despacho aduanero y facilitación.[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
     <excerpt:encoded><![CDATA[]]></excerpt:encoded>
     <wp:post_id>1084</wp:post_id>
-    <wp:post_date><![CDATA[2026-10-26 19:00:00]]></wp:post_date>
-    <wp:post_date_gmt><![CDATA[2026-10-26 19:00:00]]></wp:post_date_gmt>
+    <wp:post_date><![CDATA[2026-10-28 21:06:00]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-10-29 03:06:00]]></wp:post_date_gmt>
     <wp:comment_status><![CDATA[closed]]></wp:comment_status>
     <wp:ping_status><![CDATA[closed]]></wp:ping_status>
     <wp:post_name><![CDATA[operador-economico-autorizado-oea]]></wp:post_name>
@@ -1214,6 +1334,14 @@
       <wp:meta_value><![CDATA[elementor_header_footer]]></wp:meta_value>
     </wp:postmeta>
     <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_sidebar_position]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_header_title]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
       <wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
       <wp:meta_value><![CDATA[true]]></wp:meta_value>
     </wp:postmeta>
@@ -1224,16 +1352,16 @@
   </item>
   <item>
     <title>Auxiliares de la Función Pública Aduanera (AFPA)</title>
-    <link>https://portal.sat.gob.gt/operadores-de-comercio-exterior/auxiliares-de-la-funcion-publica-aduanera-afpa/</link>
-    <pubDate>Mon, 26 Oct 2026 19:00:00 +0000</pubDate>
+    <link>https://prototipo.sat.gob.gt/operadores-de-comercio-exterior/auxiliares-de-la-funcion-publica-aduanera-afpa/</link>
+    <pubDate>Thu, 29 Oct 2026 03:06:00 +0000</pubDate>
     <dc:creator><![CDATA[admin]]></dc:creator>
-    <guid isPermaLink="false">https://portal.sat.gob.gt/?page_id=1085</guid>
+    <guid isPermaLink="false">https://prototipo.sat.gob.gt/?page_id=1085&amp;v=20261028210600</guid>
     <description></description>
-    <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-comercio-exterior"][vc_column width="1/3" offset="vc_col-xl-inherit vc_col-lg-inherit vc_col-md-4 vc_col-sm-inherit"][bsf-info-box icon_type="none" title="Agentes Aduaneros" read_more="box" link="url:/operadores-de-comercio-exterior/auxiliares-de-la-funcion-publica-aduanera-afpa/agentes-aduaneros/|||"]Incluye gestiones como: Inscripción y Habilitación de Auxiliares de la Función Pública (Agente Aduanero), Acreditación y Carné de Identificación para Agente Aduanero y Personal Subalterno, Instalador y Soporte de Firma Digital ActiveX PKI / DUA.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Apoderados Especiales Aduaneros" read_more="box" link="url:/operadores-de-comercio-exterior/auxiliares-de-la-funcion-publica-aduanera-afpa/apoderados-especiales-aduaneros/|||"]Incluye gestiones como: Autorización inicial y registro de mandato para apoderados especiales, Auxiliares de la función pública aduanera (Carné, componente ActiveX PKI/DUA), Recepción de seguro de caución importaciones y cauciones aduaneras.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Depósitos Aduaneros" read_more="box" link="url:/operadores-de-comercio-exterior/auxiliares-de-la-funcion-publica-aduanera-afpa/depositos-aduaneros/|||"]Incluye gestiones como: Requisitos para habilitación y delimitación de recintos aduaneros temporales (DAT), Auxiliares de la función pública aduanera (Carné, componente ActiveX PKI/DUA), Recepción de seguro de caución y pólizas de garantía operativa.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Empresas de Entrega Rápida o Courier" read_more="box" link="url:/operadores-de-comercio-exterior/auxiliares-de-la-funcion-publica-aduanera-afpa/empresas-de-entrega-rapida-o-courier/|||"]Incluye gestiones como: Registro y Recepción de Póliza de Fianza / Seguro de Caución Courier, Guía y Despacho Simplificado para Importación Courier, Sistema de Franquicias Electrónicas Aduaneras.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Transportistas Aduaneros" read_more="box" link="url:/operadores-de-comercio-exterior/auxiliares-de-la-funcion-publica-aduanera-afpa/transportistas-aduaneros/|||"]Incluye gestiones como: Registro y Habilitación de Equipo de Carga Terrestre (ATC), Ampliación de Plazo de Equipo de Carga en Admisión Temporal (ATC), Culminación de Admisión Temporal de Equipo de Carga (ATC).[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
+    <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-comercio-exterior"][vc_column width="1/3" offset="vc_col-xl-inherit vc_col-lg-inherit vc_col-md-4 vc_col-sm-inherit"][bsf-info-box icon_type="none" title="Agentes Aduaneros" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Foperadores-de-comercio-exterior%2Fauxiliares-de-la-funcion-publica-aduanera-afpa%2Fagentes-aduaneros%2F"]Autorización, actualización anual, fianzas de garantía, emisión de carné e instalación del componente de firma electrónica para agentes aduaneros.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Apoderados Especiales Aduaneros" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Foperadores-de-comercio-exterior%2Fauxiliares-de-la-funcion-publica-aduanera-afpa%2Fapoderados-especiales-aduaneros%2F"]Acreditación para representar a empresas e instituciones ante el servicio aduanero, constitución de garantías, operaciones de despacho y normativa técnica.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Depósitos Aduaneros" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Foperadores-de-comercio-exterior%2Fauxiliares-de-la-funcion-publica-aduanera-afpa%2Fdepositos-aduaneros%2F"]Habilitación y renovación de depósitos aduaneros públicos, privados y temporales, almacenes fiscales, control de inventarios, saldos afianzados y normativa.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Empresas de Entrega Rápida o Courier" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Foperadores-de-comercio-exterior%2Fauxiliares-de-la-funcion-publica-aduanera-afpa%2Fempresas-de-entrega-rapida-o-courier%2F"]Requisitos de habilitación, constitución de garantías y transmisión de manifiestos expresos para empresas de entrega rápida o courier.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Transportistas Aduaneros" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Foperadores-de-comercio-exterior%2Fauxiliares-de-la-funcion-publica-aduanera-afpa%2Ftransportistas-aduaneros%2F"]Registro de medios de transporte y contenedores bajo el Régimen de Admisión Temporal de Contenedores (ATC), manifiestos de carga (CUSCAR) y marchamo electrónico.[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
     <excerpt:encoded><![CDATA[]]></excerpt:encoded>
     <wp:post_id>1085</wp:post_id>
-    <wp:post_date><![CDATA[2026-10-26 19:00:00]]></wp:post_date>
-    <wp:post_date_gmt><![CDATA[2026-10-26 19:00:00]]></wp:post_date_gmt>
+    <wp:post_date><![CDATA[2026-10-28 21:06:00]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-10-29 03:06:00]]></wp:post_date_gmt>
     <wp:comment_status><![CDATA[closed]]></wp:comment_status>
     <wp:ping_status><![CDATA[closed]]></wp:ping_status>
     <wp:post_name><![CDATA[auxiliares-de-la-funcion-publica-aduanera-afpa]]></wp:post_name>
@@ -1248,6 +1376,14 @@
       <wp:meta_value><![CDATA[elementor_header_footer]]></wp:meta_value>
     </wp:postmeta>
     <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_sidebar_position]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_header_title]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
       <wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
       <wp:meta_value><![CDATA[true]]></wp:meta_value>
     </wp:postmeta>
@@ -1258,16 +1394,16 @@
   </item>
   <item>
     <title>Regímenes Territoriales y Zonas Especiales</title>
-    <link>https://portal.sat.gob.gt/operadores-de-comercio-exterior/regimenes-territoriales-y-zonas-especiales/</link>
-    <pubDate>Mon, 26 Oct 2026 19:00:00 +0000</pubDate>
+    <link>https://prototipo.sat.gob.gt/operadores-de-comercio-exterior/regimenes-territoriales-y-zonas-especiales/</link>
+    <pubDate>Thu, 29 Oct 2026 03:06:00 +0000</pubDate>
     <dc:creator><![CDATA[admin]]></dc:creator>
-    <guid isPermaLink="false">https://portal.sat.gob.gt/?page_id=1105</guid>
+    <guid isPermaLink="false">https://prototipo.sat.gob.gt/?page_id=1105&amp;v=20261028210600</guid>
     <description></description>
-    <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-comercio-exterior"][vc_column width="1/3" offset="vc_col-xl-inherit vc_col-lg-inherit vc_col-md-4 vc_col-sm-inherit"][bsf-info-box icon_type="none" title="Maquilas (Decreto 29-89)" read_more="box" link="url:/operadores-de-comercio-exterior/regimenes-territoriales-y-zonas-especiales/maquilas-decreto-29-89/|||"]Incluye gestiones como: Constitución y Validación de Póliza de Fianza / Seguro de Caución (Dto. 29-89), Habilitación y Registro de Cuenta Corriente de Insumos y Materias Primas, Inscripción y Registro de Resolución de Calificación MINECO (Decreto 29-89).[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Zonas de Desarrollo Económico Especial Público (ZDEEP)" read_more="box" link="url:/operadores-de-comercio-exterior/regimenes-territoriales-y-zonas-especiales/zonas-de-desarrollo-economico-especial-publico-zdeep/|||"]Incluye gestiones como: Registro y control de garitas aduaneras e infraestructura perimetral, Requisitos para habilitación y delimitación perimetral del polígono de Zonas Especiales (ZDEEP), Solvencia fiscal (Requisito institucional de cumplimiento).[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
+    <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-comercio-exterior"][vc_column width="1/3" offset="vc_col-xl-inherit vc_col-lg-inherit vc_col-md-4 vc_col-sm-inherit"][bsf-info-box icon_type="none" title="Maquilas (Decreto 29-89)" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Foperadores-de-comercio-exterior%2Fregimenes-territoriales-y-zonas-especiales%2Fmaquilas-decreto-29-89%2F"]Inscripción de resolución del Ministerio de Economía (MINECO), fianzas, operación de cuentas corrientes de insumos, descargos y tratamiento de desperdicios.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Zonas de Desarrollo Económico Especial Público (ZDEEP)" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Foperadores-de-comercio-exterior%2Fregimenes-territoriales-y-zonas-especiales%2Fzonas-de-desarrollo-economico-especial-publico-zdeep%2F"]Habilitación de zonas especiales y empresas usuarias, control de ingreso y egreso de carga en garita, operación en zonas francas y marco normativo.[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
     <excerpt:encoded><![CDATA[]]></excerpt:encoded>
     <wp:post_id>1105</wp:post_id>
-    <wp:post_date><![CDATA[2026-10-26 19:00:00]]></wp:post_date>
-    <wp:post_date_gmt><![CDATA[2026-10-26 19:00:00]]></wp:post_date_gmt>
+    <wp:post_date><![CDATA[2026-10-28 21:06:00]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-10-29 03:06:00]]></wp:post_date_gmt>
     <wp:comment_status><![CDATA[closed]]></wp:comment_status>
     <wp:ping_status><![CDATA[closed]]></wp:ping_status>
     <wp:post_name><![CDATA[regimenes-territoriales-y-zonas-especiales]]></wp:post_name>
@@ -1282,6 +1418,14 @@
       <wp:meta_value><![CDATA[elementor_header_footer]]></wp:meta_value>
     </wp:postmeta>
     <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_sidebar_position]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_header_title]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
       <wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
       <wp:meta_value><![CDATA[true]]></wp:meta_value>
     </wp:postmeta>
@@ -1292,16 +1436,16 @@
   </item>
   <item>
     <title>Normativa y Operaciones Aduaneras Generales</title>
-    <link>https://portal.sat.gob.gt/operadores-de-comercio-exterior/normativa-y-operaciones-aduaneras-generales/</link>
-    <pubDate>Mon, 26 Oct 2026 19:00:00 +0000</pubDate>
+    <link>https://prototipo.sat.gob.gt/operadores-de-comercio-exterior/normativa-y-operaciones-aduaneras-generales/</link>
+    <pubDate>Thu, 29 Oct 2026 03:06:00 +0000</pubDate>
     <dc:creator><![CDATA[admin]]></dc:creator>
-    <guid isPermaLink="false">https://portal.sat.gob.gt/?page_id=1116</guid>
+    <guid isPermaLink="false">https://prototipo.sat.gob.gt/?page_id=1116&amp;v=20261028210600</guid>
     <description></description>
-    <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-comercio-exterior"][vc_column width="1/3" offset="vc_col-xl-inherit vc_col-lg-inherit vc_col-md-4 vc_col-sm-inherit"][bsf-info-box icon_type="none" title="Arancel Centroamericano (SAC) y Permisos" read_more="box" link="url:/operadores-de-comercio-exterior/normativa-y-operaciones-aduaneras-generales/arancel-centroamericano-sac-y-permisos/|||"]Incluye gestiones como: Requisitos, pasos y documentos para habilitarte para emitir constancias CAIS., Sistema Arancelario Centroamericano (SAC) Vigente, Catálogo de Permisos No Arancelarios y Licencias de Importación.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Acuerdos Comerciales y Facilitación" read_more="box" link="url:/operadores-de-comercio-exterior/normativa-y-operaciones-aduaneras-generales/acuerdos-comerciales-y-facilitacion/|||"]Incluye gestiones como: Información sobre: Convenios de la SAT con otras instituciones., Información sobre: Estrategia centroamericana de facilitación de comercio., Información sobre: Información de comercio internacional..[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Prevención de Contrabando y Defraudación" read_more="box" link="url:/operadores-de-comercio-exterior/normativa-y-operaciones-aduaneras-generales/prevencion-de-contrabando-y-defraudacion/|||"]Incluye gestiones como: Denuncia Ciudadana de Contrabando y Defraudación Aduanera, Información sobre: Política nacional contra el contrabando., Capacitación virtual de la SAT sobre consecuencias de la defraudación y el contrabando..[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Consultas Técnicas, Recursos y Valoración" read_more="box" link="url:/operadores-de-comercio-exterior/normativa-y-operaciones-aduaneras-generales/consultas-tecnicas-recursos-y-valoracion/|||"]Incluye gestiones como: Requisitos, pasos y documentos para ampliar una consulta., Requisitos, pasos y documentos para enviar una consulta tributaria o aduanera., Requisitos, pasos y documentos para hacer una consulta tributaria o aduanera..[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Modernización e Infraestructura Aduanera" read_more="box" link="url:/operadores-de-comercio-exterior/normativa-y-operaciones-aduaneras-generales/modernizacion-e-infraestructura-aduanera/|||"]Incluye gestiones como: Información sobre: Complejo Lavarreda (Aduana Central)., Información sobre: Componente de infraestructura., Información sobre: Plan maestro Puerto Fronterizo El Ceibo..[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
+    <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-comercio-exterior"][vc_column width="1/3" offset="vc_col-xl-inherit vc_col-lg-inherit vc_col-md-4 vc_col-sm-inherit"][bsf-info-box icon_type="none" title="Arancel Centroamericano (SAC) y Permisos" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Foperadores-de-comercio-exterior%2Fnormativa-y-operaciones-aduaneras-generales%2Farancel-centroamericano-sac-y-permisos%2F"]Consulta del Sistema Arancelario Centroamericano (SAC) integrado, contingentes arancelarios, permisos no arancelarios y valoración de mercancías.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Acuerdos Comerciales y Facilitación" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Foperadores-de-comercio-exterior%2Fnormativa-y-operaciones-aduaneras-generales%2Facuerdos-comerciales-y-facilitacion%2F"]Tratados de libre comercio vigentes, certificación de origen de mercancías, resoluciones anticipadas y programas de facilitación del comercio exterior.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Prevención de Contrabando y Defraudación" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Foperadores-de-comercio-exterior%2Fnormativa-y-operaciones-aduaneras-generales%2Fprevencion-de-contrabando-y-defraudacion%2F"]Denuncias confidenciales, control en puestos interinstitucionales y acciones del Consejo Interinstitucional para la Prevención y Combate a la Defraudación Fiscal y al Contrabando Aduanero (COINCON).[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Consultas Técnicas, Recursos y Valoración" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Foperadores-de-comercio-exterior%2Fnormativa-y-operaciones-aduaneras-generales%2Fconsultas-tecnicas-recursos-y-valoracion%2F"]Consultas técnicas vinculantes sobre clasificación arancelaria y origen, seguimiento de expedientes aduaneros y presentación de recursos administrativos.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Modernización e Infraestructura Aduanera" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Foperadores-de-comercio-exterior%2Fnormativa-y-operaciones-aduaneras-generales%2Fmodernizacion-e-infraestructura-aduanera%2F"]Avances del Programa de Modernización Integral Aduanera (MIAD), puestos fronterizos integrados, tecnología de revisión no intrusiva y estadísticas de comercio exterior.[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
     <excerpt:encoded><![CDATA[]]></excerpt:encoded>
     <wp:post_id>1116</wp:post_id>
-    <wp:post_date><![CDATA[2026-10-26 19:00:00]]></wp:post_date>
-    <wp:post_date_gmt><![CDATA[2026-10-26 19:00:00]]></wp:post_date_gmt>
+    <wp:post_date><![CDATA[2026-10-28 21:06:00]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-10-29 03:06:00]]></wp:post_date_gmt>
     <wp:comment_status><![CDATA[closed]]></wp:comment_status>
     <wp:ping_status><![CDATA[closed]]></wp:ping_status>
     <wp:post_name><![CDATA[normativa-y-operaciones-aduaneras-generales]]></wp:post_name>
@@ -1316,6 +1460,14 @@
       <wp:meta_value><![CDATA[elementor_header_footer]]></wp:meta_value>
     </wp:postmeta>
     <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_sidebar_position]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_header_title]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
       <wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
       <wp:meta_value><![CDATA[true]]></wp:meta_value>
     </wp:postmeta>
@@ -1326,16 +1478,16 @@
   </item>
   <item>
     <title>Profesionales</title>
-    <link>https://portal.sat.gob.gt/profesionales/</link>
-    <pubDate>Mon, 26 Oct 2026 19:00:00 +0000</pubDate>
+    <link>https://prototipo.sat.gob.gt/profesionales/</link>
+    <pubDate>Thu, 29 Oct 2026 03:06:00 +0000</pubDate>
     <dc:creator><![CDATA[admin]]></dc:creator>
-    <guid isPermaLink="false">https://portal.sat.gob.gt/?page_id=1128</guid>
+    <guid isPermaLink="false">https://prototipo.sat.gob.gt/?page_id=1128&amp;v=20261028210600</guid>
     <description></description>
-    <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-profesionales"][vc_column width="1/3" offset="vc_col-xl-inherit vc_col-lg-inherit vc_col-md-4 vc_col-sm-inherit"][bsf-info-box icon_type="none" title="Abogados y Notarios" read_more="box" link="url:/profesionales/abogados-y-notarios/|||"]Habilitación notarial, compra de papel sellado de protocolo, timbres fiscales, traspaso electrónico vehicular (e-Traspaso) y avisos notariales.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Peritos Contadores" read_more="box" link="url:/profesionales/peritos-contadores/|||"]Inscripción y actualización en el registro de peritos contadores, autorización de libros contables y consultas de retenciones.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Auditores" read_more="box" link="url:/profesionales/auditores/|||"]Habilitación de Contador Público y Auditor (CPA), emisión de dictámenes de crédito fiscal y solvencia para auditorías tributarias.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Gestores Tributarios" read_more="box" link="url:/profesionales/gestores-tributarios/|||"]Acreditación oficial, emisión y renovación anual de carnés y gafetes para realizar gestiones en representación de terceros.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Servicios Profesionales" read_more="box" link="url:/profesionales/servicios-profesionales/|||"]Facturación electrónica por honorarios, actualización de actividad profesional en el Registro Tributario Unificado (RTU), consultas vinculantes y sistemas de retención.[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
+    <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-profesionales"][vc_column width="1/3" offset="vc_col-xl-inherit vc_col-lg-inherit vc_col-md-4 vc_col-sm-inherit"][bsf-info-box icon_type="none" title="Abogados y Notarios" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fprofesionales%2Fabogados-y-notarios%2F"]Habilitación notarial, compra de papel sellado de protocolo, timbres fiscales, traspaso electrónico vehicular (e-Traspaso) y avisos notariales.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Peritos Contadores" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fprofesionales%2Fperitos-contadores%2F"]Inscripción y actualización en el registro de peritos contadores, autorización de libros contables y consultas de retenciones.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Auditores" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fprofesionales%2Fauditores%2F"]Habilitación de Contador Público y Auditor (CPA), emisión de dictámenes de crédito fiscal y solvencia para auditorías tributarias.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Gestores Tributarios" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fprofesionales%2Fgestores-tributarios%2F"]Acreditación oficial, emisión y renovación anual de carnés y gafetes para realizar gestiones en representación de terceros.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Servicios Profesionales" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fprofesionales%2Fservicios-profesionales%2F"]Facturación electrónica por honorarios, actualización de actividad profesional en el Registro Tributario Unificado (RTU), consultas vinculantes y sistemas de retención.[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
     <excerpt:encoded><![CDATA[]]></excerpt:encoded>
     <wp:post_id>1128</wp:post_id>
-    <wp:post_date><![CDATA[2026-10-26 19:00:00]]></wp:post_date>
-    <wp:post_date_gmt><![CDATA[2026-10-26 19:00:00]]></wp:post_date_gmt>
+    <wp:post_date><![CDATA[2026-10-28 21:06:00]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-10-29 03:06:00]]></wp:post_date_gmt>
     <wp:comment_status><![CDATA[closed]]></wp:comment_status>
     <wp:ping_status><![CDATA[closed]]></wp:ping_status>
     <wp:post_name><![CDATA[profesionales]]></wp:post_name>
@@ -1350,6 +1502,14 @@
       <wp:meta_value><![CDATA[elementor_header_footer]]></wp:meta_value>
     </wp:postmeta>
     <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_sidebar_position]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_header_title]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
       <wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
       <wp:meta_value><![CDATA[true]]></wp:meta_value>
     </wp:postmeta>
@@ -1360,16 +1520,16 @@
   </item>
   <item>
     <title>Abogados y Notarios</title>
-    <link>https://portal.sat.gob.gt/profesionales/abogados-y-notarios/</link>
-    <pubDate>Mon, 26 Oct 2026 19:00:00 +0000</pubDate>
+    <link>https://prototipo.sat.gob.gt/profesionales/abogados-y-notarios/</link>
+    <pubDate>Thu, 29 Oct 2026 03:06:00 +0000</pubDate>
     <dc:creator><![CDATA[admin]]></dc:creator>
-    <guid isPermaLink="false">https://portal.sat.gob.gt/?page_id=1129</guid>
+    <guid isPermaLink="false">https://prototipo.sat.gob.gt/?page_id=1129&amp;v=20261028210600</guid>
     <description></description>
-    <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-profesionales"][vc_column width="1/3" offset="vc_col-xl-inherit vc_col-lg-inherit vc_col-md-4 vc_col-sm-inherit"][bsf-info-box icon_type="none" title="Habilitación y Registro Notarial" read_more="box" link="url:/profesionales/abogados-y-notarios/habilitacion-y-registro-notarial/|||"]Incluye gestiones como: Inscripción y actualización de Abogados y Notarios en el RTU, Activación de calidad de Abogado y Notario en Agencia Virtual, Registro y confirmación de huella dactilar biométrica notarial.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Timbres Fiscales y Papel Sellado de Protocolo" read_more="box" link="url:/profesionales/abogados-y-notarios/timbres-fiscales-y-papel-sellado-de-protocolo/|||"]Incluye gestiones como: Acreditación de procurador o tercero para retiro de especies fiscales, Adquisición de Papel Sellado Especial para Protocolos y Timbres Fiscales, Pago del Impuesto de Timbres Fiscales en línea con razón electrónica.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Traspaso Electrónico Vehicular (e-Traspaso)" read_more="box" link="url:/profesionales/abogados-y-notarios/traspaso-electronico-vehicular-e-traspaso/|||"]Incluye gestiones como: Habilitación de Notario para Traspaso Electrónico de Vehículos (TEV), Autorización notarial de tercera persona en el Registro Fiscal de Vehículos, Formalización notarial de traspaso electrónico de vehículos en línea.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Avisos Notariales y Fe Pública" read_more="box" link="url:/profesionales/abogados-y-notarios/avisos-notariales-y-fe-publica/|||"]Incluye gestiones como: Aviso notarial de legalización de firmas en título de propiedad vehicular, Aviso notarial de transferencia de dominio de vehículos terrestres, Atención preferencial y requisitos en ventanillas notariales.[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
+    <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-profesionales"][vc_column width="1/3" offset="vc_col-xl-inherit vc_col-lg-inherit vc_col-md-4 vc_col-sm-inherit"][bsf-info-box icon_type="none" title="Habilitación y Registro Notarial" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fprofesionales%2Fabogados-y-notarios%2Fhabilitacion-y-registro-notarial%2F"]Incluye gestiones como: Inscripción y actualización de Abogados y Notarios en el RTU, Activación de calidad de Abogado y Notario en Agencia Virtual, Registro y confirmación de huella dactilar biométrica notarial.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Timbres Fiscales y Papel Sellado de Protocolo" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fprofesionales%2Fabogados-y-notarios%2Ftimbres-fiscales-y-papel-sellado-de-protocolo%2F"]Incluye gestiones como: Acreditación de procurador o tercero para retiro de especies fiscales, Adquisición de Papel Sellado Especial para Protocolos y Timbres Fiscales, Pago del Impuesto de Timbres Fiscales en línea con razón electrónica.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Traspaso Electrónico Vehicular (e-Traspaso)" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fprofesionales%2Fabogados-y-notarios%2Ftraspaso-electronico-vehicular-e-traspaso%2F"]Incluye gestiones como: Habilitación de Notario para Traspaso Electrónico de Vehículos (TEV), Autorización notarial de tercera persona en el Registro Fiscal de Vehículos, Formalización notarial de traspaso electrónico de vehículos en línea.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Avisos Notariales y Fe Pública" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fprofesionales%2Fabogados-y-notarios%2Favisos-notariales-y-fe-publica%2F"]Incluye gestiones como: Aviso notarial de legalización de firmas en título de propiedad vehicular, Aviso notarial de transferencia de dominio de vehículos terrestres, Atención preferencial y requisitos en ventanillas notariales.[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
     <excerpt:encoded><![CDATA[]]></excerpt:encoded>
     <wp:post_id>1129</wp:post_id>
-    <wp:post_date><![CDATA[2026-10-26 19:00:00]]></wp:post_date>
-    <wp:post_date_gmt><![CDATA[2026-10-26 19:00:00]]></wp:post_date_gmt>
+    <wp:post_date><![CDATA[2026-10-28 21:06:00]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-10-29 03:06:00]]></wp:post_date_gmt>
     <wp:comment_status><![CDATA[closed]]></wp:comment_status>
     <wp:ping_status><![CDATA[closed]]></wp:ping_status>
     <wp:post_name><![CDATA[abogados-y-notarios]]></wp:post_name>
@@ -1384,6 +1544,14 @@
       <wp:meta_value><![CDATA[elementor_header_footer]]></wp:meta_value>
     </wp:postmeta>
     <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_sidebar_position]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_header_title]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
       <wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
       <wp:meta_value><![CDATA[true]]></wp:meta_value>
     </wp:postmeta>
@@ -1394,16 +1562,16 @@
   </item>
   <item>
     <title>Peritos Contadores</title>
-    <link>https://portal.sat.gob.gt/profesionales/peritos-contadores/</link>
-    <pubDate>Mon, 26 Oct 2026 19:00:00 +0000</pubDate>
+    <link>https://prototipo.sat.gob.gt/profesionales/peritos-contadores/</link>
+    <pubDate>Thu, 29 Oct 2026 03:06:00 +0000</pubDate>
     <dc:creator><![CDATA[admin]]></dc:creator>
-    <guid isPermaLink="false">https://portal.sat.gob.gt/?page_id=1134</guid>
+    <guid isPermaLink="false">https://prototipo.sat.gob.gt/?page_id=1134&amp;v=20261028210600</guid>
     <description></description>
-    <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-profesionales"][vc_column width="1/3" offset="vc_col-xl-inherit vc_col-lg-inherit vc_col-md-4 vc_col-sm-inherit"][bsf-info-box icon_type="none" title="Habilitación y Registro de Perito Contador" read_more="box" link="url:/profesionales/peritos-contadores/habilitacion-y-registro-de-perito-contador/|||"]Incluye gestiones como: Inscripción y habilitación como Perito Contador ante la SAT, Registro y habilitación de Contador en Agencia Virtual, Actualización de datos de Perito Contador en Agencia Virtual.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Consultas, Retenciones y Libros Contables" read_more="box" link="url:/profesionales/peritos-contadores/consultas-retenciones-y-libros-contables/|||"]Incluye gestiones como: Guía y administración del régimen de Factura Electrónica en Línea (FEL), Presentación de Planilla del Impuesto al Valor Agregado (IVA) en Factura Electrónica en Línea (FEL), Habilitación y administración del Libro Electrónico Tributario (LET).[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
+    <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-profesionales"][vc_column width="1/3" offset="vc_col-xl-inherit vc_col-lg-inherit vc_col-md-4 vc_col-sm-inherit"][bsf-info-box icon_type="none" title="Habilitación y Registro de Perito Contador" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fprofesionales%2Fperitos-contadores%2Fhabilitacion-y-registro-de-perito-contador%2F"]Incluye gestiones como: Inscripción y habilitación como Perito Contador ante la SAT, Registro y habilitación de Contador en Agencia Virtual, Actualización de datos de Perito Contador en Agencia Virtual.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Consultas, Retenciones y Libros Contables" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fprofesionales%2Fperitos-contadores%2Fconsultas-retenciones-y-libros-contables%2F"]Incluye gestiones como: Guía y administración del régimen de Factura Electrónica en Línea (FEL), Presentación de Planilla del Impuesto al Valor Agregado (IVA) en Factura Electrónica en Línea (FEL), Habilitación y administración del Libro Electrónico Tributario (LET).[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
     <excerpt:encoded><![CDATA[]]></excerpt:encoded>
     <wp:post_id>1134</wp:post_id>
-    <wp:post_date><![CDATA[2026-10-26 19:00:00]]></wp:post_date>
-    <wp:post_date_gmt><![CDATA[2026-10-26 19:00:00]]></wp:post_date_gmt>
+    <wp:post_date><![CDATA[2026-10-28 21:06:00]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-10-29 03:06:00]]></wp:post_date_gmt>
     <wp:comment_status><![CDATA[closed]]></wp:comment_status>
     <wp:ping_status><![CDATA[closed]]></wp:ping_status>
     <wp:post_name><![CDATA[peritos-contadores]]></wp:post_name>
@@ -1418,6 +1586,14 @@
       <wp:meta_value><![CDATA[elementor_header_footer]]></wp:meta_value>
     </wp:postmeta>
     <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_sidebar_position]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_header_title]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
       <wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
       <wp:meta_value><![CDATA[true]]></wp:meta_value>
     </wp:postmeta>
@@ -1428,16 +1604,16 @@
   </item>
   <item>
     <title>Auditores</title>
-    <link>https://portal.sat.gob.gt/profesionales/auditores/</link>
-    <pubDate>Mon, 26 Oct 2026 19:00:00 +0000</pubDate>
+    <link>https://prototipo.sat.gob.gt/profesionales/auditores/</link>
+    <pubDate>Thu, 29 Oct 2026 03:06:00 +0000</pubDate>
     <dc:creator><![CDATA[admin]]></dc:creator>
-    <guid isPermaLink="false">https://portal.sat.gob.gt/?page_id=1137</guid>
+    <guid isPermaLink="false">https://prototipo.sat.gob.gt/?page_id=1137&amp;v=20261028210600</guid>
     <description></description>
     <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-profesionales"][vc_column width="1/3" offset="vc_col-xl-inherit vc_col-lg-inherit vc_col-md-4 vc_col-sm-inherit"][bsf-info-box icon_type="none" title="Inscripción de Contador autorizado para emitir dictámenes de devolución de crédito fiscal" read_more="box" link="url:https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/inscripcion-de-contador-publico-y-auditor-emisor-de-dictamenes/||target:%20_blank|"]Registra tu habilitación como Contador Público y Auditor ante la SAT para emitir dictámenes profesionales en solicitudes de devolución de crédito fiscal a exportadores.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Inscripción y habilitación como Contador Público y Auditor (CPA)" read_more="box" link="url:https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/inscripcion-de-auditores/||target:%20_blank|"]Inscribe tu título profesional de Contador Público y Auditor (CPA) con constancia de colegiado activo del Colegio de CPA o Economistas para emitir informes técnicos.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Actualización de datos de Contador Público y Auditor (CPA)" read_more="box" link="url:https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/actualizacion-de-auditores/||target:%20_blank|"]Actualiza tu número de colegiado activo, constancia de vigencia gremial y datos de contacto en el Registro de CPA de la SAT.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Actualización de datos de Contador que emite dictámenes de devolución" read_more="box" link="url:https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/actualizacion-de-contador-publico-y-auditor-para-emision-de-dictamenes-de-devolucion-de-credito-fiscal-regimen-optativo/||target:%20_blank|"]Actualiza anualmente tu fianza y datos profesionales en el Registro de CPA Emisores de Dictámenes para continuar emitiendo dictámenes bajo el régimen optativo.[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
     <excerpt:encoded><![CDATA[]]></excerpt:encoded>
     <wp:post_id>1137</wp:post_id>
-    <wp:post_date><![CDATA[2026-10-26 19:00:00]]></wp:post_date>
-    <wp:post_date_gmt><![CDATA[2026-10-26 19:00:00]]></wp:post_date_gmt>
+    <wp:post_date><![CDATA[2026-10-28 21:06:00]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-10-29 03:06:00]]></wp:post_date_gmt>
     <wp:comment_status><![CDATA[closed]]></wp:comment_status>
     <wp:ping_status><![CDATA[closed]]></wp:ping_status>
     <wp:post_name><![CDATA[auditores]]></wp:post_name>
@@ -1452,6 +1628,14 @@
       <wp:meta_value><![CDATA[elementor_header_footer]]></wp:meta_value>
     </wp:postmeta>
     <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_sidebar_position]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_header_title]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
       <wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
       <wp:meta_value><![CDATA[true]]></wp:meta_value>
     </wp:postmeta>
@@ -1462,16 +1646,16 @@
   </item>
   <item>
     <title>Gestores Tributarios</title>
-    <link>https://portal.sat.gob.gt/profesionales/gestores-tributarios/</link>
-    <pubDate>Mon, 26 Oct 2026 19:00:00 +0000</pubDate>
+    <link>https://prototipo.sat.gob.gt/profesionales/gestores-tributarios/</link>
+    <pubDate>Thu, 29 Oct 2026 03:06:00 +0000</pubDate>
     <dc:creator><![CDATA[admin]]></dc:creator>
-    <guid isPermaLink="false">https://portal.sat.gob.gt/?page_id=1138</guid>
+    <guid isPermaLink="false">https://prototipo.sat.gob.gt/?page_id=1138&amp;v=20261028210600</guid>
     <description></description>
-    <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-profesionales"][vc_column width="1/3" offset="vc_col-xl-inherit vc_col-lg-inherit vc_col-md-4 vc_col-sm-inherit"][bsf-info-box icon_type="none" title="Acreditación y Carné Oficial de Gestor" read_more="box" link="url:/profesionales/gestores-tributarios/acreditacion-y-carne-oficial-de-gestor/|||"]Incluye gestiones como: Acreditación integral, carné y renovación de Gestor Tributario y Auxiliares, Acreditación de tercera persona autorizada para gestiones en el Registro Tributario Unificado (RTU), Requisitos de acreditación inicial para Gestor Tributario o Auxiliar.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Renovación y Gestión de Gafetes" read_more="box" link="url:/profesionales/gestores-tributarios/renovacion-y-gestion-de-gafetes/|||"]Incluye gestiones como: Reposición de gafete de identificación para Gestor Tributario, Consulta en línea del padrón de Gestores Tributarios y Auxiliares activos, Actualización de datos y renovación de gafete para Gestor Tributario.[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
+    <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-profesionales"][vc_column width="1/3" offset="vc_col-xl-inherit vc_col-lg-inherit vc_col-md-4 vc_col-sm-inherit"][bsf-info-box icon_type="none" title="Acreditación y Carné Oficial de Gestor" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fprofesionales%2Fgestores-tributarios%2Facreditacion-y-carne-oficial-de-gestor%2F"]Incluye gestiones como: Acreditación integral, carné y renovación de Gestor Tributario y Auxiliares, Acreditación de tercera persona autorizada para gestiones en el Registro Tributario Unificado (RTU), Requisitos de acreditación inicial para Gestor Tributario o Auxiliar.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Renovación y Gestión de Gafetes" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fprofesionales%2Fgestores-tributarios%2Frenovacion-y-gestion-de-gafetes%2F"]Incluye gestiones como: Reposición de gafete de identificación para Gestor Tributario, Consulta en línea del padrón de Gestores Tributarios y Auxiliares activos, Actualización de datos y renovación de gafete para Gestor Tributario.[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
     <excerpt:encoded><![CDATA[]]></excerpt:encoded>
     <wp:post_id>1138</wp:post_id>
-    <wp:post_date><![CDATA[2026-10-26 19:00:00]]></wp:post_date>
-    <wp:post_date_gmt><![CDATA[2026-10-26 19:00:00]]></wp:post_date_gmt>
+    <wp:post_date><![CDATA[2026-10-28 21:06:00]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-10-29 03:06:00]]></wp:post_date_gmt>
     <wp:comment_status><![CDATA[closed]]></wp:comment_status>
     <wp:ping_status><![CDATA[closed]]></wp:ping_status>
     <wp:post_name><![CDATA[gestores-tributarios]]></wp:post_name>
@@ -1486,6 +1670,14 @@
       <wp:meta_value><![CDATA[elementor_header_footer]]></wp:meta_value>
     </wp:postmeta>
     <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_sidebar_position]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_header_title]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
       <wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
       <wp:meta_value><![CDATA[true]]></wp:meta_value>
     </wp:postmeta>
@@ -1496,16 +1688,16 @@
   </item>
   <item>
     <title>Servicios Profesionales</title>
-    <link>https://portal.sat.gob.gt/profesionales/servicios-profesionales/</link>
-    <pubDate>Mon, 26 Oct 2026 19:00:00 +0000</pubDate>
+    <link>https://prototipo.sat.gob.gt/profesionales/servicios-profesionales/</link>
+    <pubDate>Thu, 29 Oct 2026 03:06:00 +0000</pubDate>
     <dc:creator><![CDATA[admin]]></dc:creator>
-    <guid isPermaLink="false">https://portal.sat.gob.gt/?page_id=1141</guid>
+    <guid isPermaLink="false">https://prototipo.sat.gob.gt/?page_id=1141&amp;v=20261028210600</guid>
     <description></description>
     <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-profesionales"][vc_column width="1/3" offset="vc_col-xl-inherit vc_col-lg-inherit vc_col-md-4 vc_col-sm-inherit"][bsf-info-box icon_type="none" title="Sistema de retenciones para servicios médicos y hospitalarios (Asiste Web)" read_more="box" link="url:https://portal.sat.gob.gt/portal/sistemas-web/asistehospitalesweb/||target:%20_blank|"]Opera el aplicativo Asiste Hospitales Web para gestionar y conciliar retenciones del ISR aplicables a servicios prestados por médicos en clínicas y sanatorios.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Catálogo general de formularios tributarios electrónicos en Declaraguate" read_more="box" link="url:https://portal.sat.gob.gt/portal/lista-general-de-formularios/||target:%20_blank|"]Consulta y genera todos los formularios electrónicos para la liquidación mensual, trimestral y anual de impuestos por honorarios y servicios técnicos.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Presentación de consultas técnico-tributarias vinculantes ante Asuntos Jurídicos" read_more="box" link="url:https://portal.sat.gob.gt/portal/contacto/consultas-legales/||target:%20_blank|"]Presenta consultas técnico-jurídicas formales sobre la aplicación de normas tributarias ante la Intendencia de Asuntos Jurídicos para obtener criterio vinculante.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Actualización de datos registrales de Servicios Profesionales en Agencia Virtual" read_more="box" link="url:https://farm3.sat.gob.gt/menu/login.jsf||target:%20_blank|"]Modifica o ratifica en el RTU Digital tus actividades económicas profesionales, régimen de afiliación (IVA/ISR) y datos de domicilio fiscal o clínica/oficina.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Recepción de propuestas y observaciones técnicas a criterios de Asuntos Jurídicos" read_more="box" link="url:https://portal.sat.gob.gt/portal/recepcion-de-objeciones-y-recomendaciones-procedimientos-de-la-sat/objeciones-y-recomendaciones-a-los-procedimientos-de-la-intendencia-de-asuntos-juridicos/||target:%20_blank|"]Envía observaciones técnicas, sugerencias o cuestionamientos fundamentados a los proyectos de criterios institucionales publicados por la Intendencia de Asuntos Jurídicos.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Documentación y herramientas del Programa de Cumplimiento Tributario Voluntario" read_more="box" link="url:https://portal.sat.gob.gt/portal/cumplimiento-tributario/||target:%20_blank|"]Accede a las guías metodológicas y herramientas de autoevaluación fiscal del Programa de Cumplimiento Voluntario de la SAT para mitigar riesgos de auditoría.[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
     <excerpt:encoded><![CDATA[]]></excerpt:encoded>
     <wp:post_id>1141</wp:post_id>
-    <wp:post_date><![CDATA[2026-10-26 19:00:00]]></wp:post_date>
-    <wp:post_date_gmt><![CDATA[2026-10-26 19:00:00]]></wp:post_date_gmt>
+    <wp:post_date><![CDATA[2026-10-28 21:06:00]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-10-29 03:06:00]]></wp:post_date_gmt>
     <wp:comment_status><![CDATA[closed]]></wp:comment_status>
     <wp:ping_status><![CDATA[closed]]></wp:ping_status>
     <wp:post_name><![CDATA[servicios-profesionales]]></wp:post_name>
@@ -1520,6 +1712,14 @@
       <wp:meta_value><![CDATA[elementor_header_footer]]></wp:meta_value>
     </wp:postmeta>
     <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_sidebar_position]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_header_title]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
       <wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
       <wp:meta_value><![CDATA[true]]></wp:meta_value>
     </wp:postmeta>
@@ -1530,16 +1730,16 @@
   </item>
   <item>
     <title>Entes Exentos</title>
-    <link>https://portal.sat.gob.gt/entes-exentos/</link>
-    <pubDate>Mon, 26 Oct 2026 19:00:00 +0000</pubDate>
+    <link>https://prototipo.sat.gob.gt/entes-exentos/</link>
+    <pubDate>Thu, 29 Oct 2026 03:06:00 +0000</pubDate>
     <dc:creator><![CDATA[admin]]></dc:creator>
-    <guid isPermaLink="false">https://portal.sat.gob.gt/?page_id=1142</guid>
+    <guid isPermaLink="false">https://prototipo.sat.gob.gt/?page_id=1142&amp;v=20261028210600</guid>
     <description></description>
-    <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-entes-exentos"][vc_column width="1/3" offset="vc_col-xl-inherit vc_col-lg-inherit vc_col-md-4 vc_col-sm-inherit"][bsf-info-box icon_type="none" title="Entidades del Estado" read_more="box" link="url:/entes-exentos/entidades-del-estado/|||"]Unidades ejecutoras estatales en el Registro Tributario Unificado (RTU), Factura Electrónica en Línea (FEL), retenciones en compras públicas, solvencias y parque vehicular oficial.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Constitucionales" read_more="box" link="url:/entes-exentos/constitucionales/|||"]Registro, exenciones de impuestos, constancias y vehículos para centros educativos, universidades, iglesias y confederaciones deportivas.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="No Lucrativos" read_more="box" link="url:/entes-exentos/no-lucrativos/|||"]Inscripción en el Registro Tributario Unificado (RTU), reconocimiento de exención de impuestos, constancias de exención del IVA (CIVA) y actualización de asociaciones.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Municipalidades" read_more="box" link="url:/entes-exentos/municipalidades/|||"]Registro de corporaciones municipales y autoridades ediles en el Registro Tributario Unificado (RTU), exención para flotillas municipales y solvencias institucionales.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Decreto" read_more="box" link="url:/entes-exentos/decreto/|||"]Exenciones y franquicias para misiones diplomáticas, organismos internacionales, cooperativas, partidos políticos y donaciones oficiales.[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
+    <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-entes-exentos"][vc_column width="1/3" offset="vc_col-xl-inherit vc_col-lg-inherit vc_col-md-4 vc_col-sm-inherit"][bsf-info-box icon_type="none" title="Entidades del Estado" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fentes-exentos%2Fentidades-del-estado%2F"]Unidades ejecutoras estatales en el Registro Tributario Unificado (RTU), Factura Electrónica en Línea (FEL), retenciones en compras públicas, solvencias y parque vehicular oficial.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Constitucionales" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fentes-exentos%2Fconstitucionales%2F"]Registro, exenciones de impuestos, constancias y vehículos para centros educativos, universidades, iglesias y confederaciones deportivas.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="No Lucrativos" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fentes-exentos%2Fno-lucrativos%2F"]Inscripción en el Registro Tributario Unificado (RTU), reconocimiento de exención de impuestos, constancias de exención del IVA (CIVA) y actualización de asociaciones.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Municipalidades" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fentes-exentos%2Fmunicipalidades%2F"]Registro de corporaciones municipales y autoridades ediles en el Registro Tributario Unificado (RTU), exención para flotillas municipales y solvencias institucionales.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Decreto" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fentes-exentos%2Fdecreto%2F"]Exenciones y franquicias para misiones diplomáticas, organismos internacionales, cooperativas, partidos políticos y donaciones oficiales.[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
     <excerpt:encoded><![CDATA[]]></excerpt:encoded>
     <wp:post_id>1142</wp:post_id>
-    <wp:post_date><![CDATA[2026-10-26 19:00:00]]></wp:post_date>
-    <wp:post_date_gmt><![CDATA[2026-10-26 19:00:00]]></wp:post_date_gmt>
+    <wp:post_date><![CDATA[2026-10-28 21:06:00]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-10-29 03:06:00]]></wp:post_date_gmt>
     <wp:comment_status><![CDATA[closed]]></wp:comment_status>
     <wp:ping_status><![CDATA[closed]]></wp:ping_status>
     <wp:post_name><![CDATA[entes-exentos]]></wp:post_name>
@@ -1554,6 +1754,14 @@
       <wp:meta_value><![CDATA[elementor_header_footer]]></wp:meta_value>
     </wp:postmeta>
     <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_sidebar_position]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_header_title]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
       <wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
       <wp:meta_value><![CDATA[true]]></wp:meta_value>
     </wp:postmeta>
@@ -1564,16 +1772,16 @@
   </item>
   <item>
     <title>Entidades del Estado</title>
-    <link>https://portal.sat.gob.gt/entes-exentos/entidades-del-estado/</link>
-    <pubDate>Mon, 26 Oct 2026 19:00:00 +0000</pubDate>
+    <link>https://prototipo.sat.gob.gt/entes-exentos/entidades-del-estado/</link>
+    <pubDate>Thu, 29 Oct 2026 03:06:00 +0000</pubDate>
     <dc:creator><![CDATA[admin]]></dc:creator>
-    <guid isPermaLink="false">https://portal.sat.gob.gt/?page_id=1143</guid>
+    <guid isPermaLink="false">https://prototipo.sat.gob.gt/?page_id=1143&amp;v=20261028210600</guid>
     <description></description>
-    <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-entes-exentos"][vc_column width="1/3" offset="vc_col-xl-inherit vc_col-lg-inherit vc_col-md-4 vc_col-sm-inherit"][bsf-info-box icon_type="none" title="Registro Institucional y RTU Estatal" read_more="box" link="url:/entes-exentos/entidades-del-estado/registro-institucional-y-rtu-estatal/|||"]Incluye gestiones como: Gestiones y servicios tributarios en Agencia Virtual para entidades del Estado, Cumplimiento tributario en el Sistema Nacional de Control Interno (SINACIG), Directorio de dependencias y servicios institucionales del Estado.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Facturación FEL, Retenciones y Operaciones" read_more="box" link="url:/entes-exentos/entidades-del-estado/facturacion-fel-retenciones-y-operaciones/|||"]Incluye gestiones como: Emisión de Factura Electrónica en Línea (FEL) para dependencias del Estado, Corrección de casillas, período y NIT en formularios de Declaraguate, Guía para autoliquidación y regularización de impuestos en el sector público.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Parque Vehicular Oficial y de Autoridad" read_more="box" link="url:/entes-exentos/entidades-del-estado/parque-vehicular-oficial-y-de-autoridad/|||"]Incluye gestiones como: Traspaso de vehículos a la Secretaría Nacional de Administración de Bienes en Extinción de Dominio (SENABED), Traslado y asignación vehicular entre dependencias de una Entidad del Estado, Activación e inactivación temporal de vehículos del Estado.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Control Interno, Solvencias y Normativa" read_more="box" link="url:/entes-exentos/entidades-del-estado/control-interno-solvencias-y-normativa/|||"]Incluye gestiones como: Solicitud de facilidades de pago en cuotas (en línea o presencial), Solicitud de acceso a la información pública de la SAT (Decreto 57-2008), Recepción de sugerencias sobre criterios técnicos y procedimientos jurídicos.[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
+    <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-entes-exentos"][vc_column width="1/3" offset="vc_col-xl-inherit vc_col-lg-inherit vc_col-md-4 vc_col-sm-inherit"][bsf-info-box icon_type="none" title="Registro Institucional y RTU Estatal" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fentes-exentos%2Fentidades-del-estado%2Fregistro-institucional-y-rtu-estatal%2F"]Incluye gestiones como: Gestiones y servicios tributarios en Agencia Virtual para entidades del Estado, Cumplimiento tributario en el Sistema Nacional de Control Interno (SINACIG), Directorio de dependencias y servicios institucionales del Estado.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Facturación FEL, Retenciones y Operaciones" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fentes-exentos%2Fentidades-del-estado%2Ffacturacion-fel-retenciones-y-operaciones%2F"]Incluye gestiones como: Emisión de Factura Electrónica en Línea (FEL) para dependencias del Estado, Corrección de casillas, período y NIT en formularios de Declaraguate, Guía para autoliquidación y regularización de impuestos en el sector público.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Parque Vehicular Oficial y de Autoridad" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fentes-exentos%2Fentidades-del-estado%2Fparque-vehicular-oficial-y-de-autoridad%2F"]Incluye gestiones como: Traspaso de vehículos a la Secretaría Nacional de Administración de Bienes en Extinción de Dominio (SENABED), Traslado y asignación vehicular entre dependencias de una Entidad del Estado, Activación e inactivación temporal de vehículos del Estado.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Control Interno, Solvencias y Normativa" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fentes-exentos%2Fentidades-del-estado%2Fcontrol-interno-solvencias-y-normativa%2F"]Incluye gestiones como: Solicitud de facilidades de pago en cuotas (en línea o presencial), Solicitud de acceso a la información pública de la SAT (Decreto 57-2008), Recepción de sugerencias sobre criterios técnicos y procedimientos jurídicos.[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
     <excerpt:encoded><![CDATA[]]></excerpt:encoded>
     <wp:post_id>1143</wp:post_id>
-    <wp:post_date><![CDATA[2026-10-26 19:00:00]]></wp:post_date>
-    <wp:post_date_gmt><![CDATA[2026-10-26 19:00:00]]></wp:post_date_gmt>
+    <wp:post_date><![CDATA[2026-10-28 21:06:00]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-10-29 03:06:00]]></wp:post_date_gmt>
     <wp:comment_status><![CDATA[closed]]></wp:comment_status>
     <wp:ping_status><![CDATA[closed]]></wp:ping_status>
     <wp:post_name><![CDATA[entidades-del-estado]]></wp:post_name>
@@ -1588,6 +1796,14 @@
       <wp:meta_value><![CDATA[elementor_header_footer]]></wp:meta_value>
     </wp:postmeta>
     <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_sidebar_position]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_header_title]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
       <wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
       <wp:meta_value><![CDATA[true]]></wp:meta_value>
     </wp:postmeta>
@@ -1598,16 +1814,16 @@
   </item>
   <item>
     <title>Constitucionales</title>
-    <link>https://portal.sat.gob.gt/entes-exentos/constitucionales/</link>
-    <pubDate>Mon, 26 Oct 2026 19:00:00 +0000</pubDate>
+    <link>https://prototipo.sat.gob.gt/entes-exentos/constitucionales/</link>
+    <pubDate>Thu, 29 Oct 2026 03:06:00 +0000</pubDate>
     <dc:creator><![CDATA[admin]]></dc:creator>
-    <guid isPermaLink="false">https://portal.sat.gob.gt/?page_id=1148</guid>
+    <guid isPermaLink="false">https://prototipo.sat.gob.gt/?page_id=1148&amp;v=20261028210600</guid>
     <description></description>
-    <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-entes-exentos"][vc_column width="1/3" offset="vc_col-xl-inherit vc_col-lg-inherit vc_col-md-4 vc_col-sm-inherit"][bsf-info-box icon_type="none" title="Centros Educativos y Universidades (Arts. 73 y 88)" read_more="box" link="url:/entes-exentos/constitucionales/centros-educativos-y-universidades-arts-73-y-88/|||"]Incluye gestiones como: Inscripción de Centro Educativo exento en el Registro Tributario Unificado (RTU), Inscripción de Universidad Privada en el Registro Tributario Unificado (RTU), Actualización de datos de Centro Educativo en el Registro Tributario Unificado (RTU).[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Iglesias y Deporte Federado (Arts. 37 y 92)" read_more="box" link="url:/entes-exentos/constitucionales/iglesias-y-deporte-federado-arts-37-y-92/|||"]Incluye gestiones como: Inscripción de entidad de la Iglesia Católica en el Registro Tributario Unificado (RTU), Gestiones tributarias y exenciones de la Confederación Deportiva Autónoma de Guatemala (CDAG), Actualización de datos de Federación o Asociación Deportiva (CDAG).[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Vehículos, Solvencias y Asistencia Institucional" read_more="box" link="url:/entes-exentos/constitucionales/vehiculos-solvencias-y-asistencia-institucional/|||"]Incluye gestiones como: Solicitud de actividades y talleres de Cultura Tributaria para centros educativos, Aviso notarial de transferencia de dominio y legalización de firmas vehiculares, Registro de marca y código de fabricante de vehículos ante el Registro Fiscal de Vehículos.[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
+    <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-entes-exentos"][vc_column width="1/3" offset="vc_col-xl-inherit vc_col-lg-inherit vc_col-md-4 vc_col-sm-inherit"][bsf-info-box icon_type="none" title="Centros Educativos y Universidades (Arts. 73 y 88)" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fentes-exentos%2Fconstitucionales%2Fcentros-educativos-y-universidades-arts-73-y-88%2F"]Incluye gestiones como: Inscripción de Centro Educativo exento en el Registro Tributario Unificado (RTU), Inscripción de Universidad Privada en el Registro Tributario Unificado (RTU), Actualización de datos de Centro Educativo en el Registro Tributario Unificado (RTU).[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Iglesias y Deporte Federado (Arts. 37 y 92)" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fentes-exentos%2Fconstitucionales%2Figlesias-y-deporte-federado-arts-37-y-92%2F"]Incluye gestiones como: Inscripción de entidad de la Iglesia Católica en el Registro Tributario Unificado (RTU), Gestiones tributarias y exenciones de la Confederación Deportiva Autónoma de Guatemala (CDAG), Actualización de datos de Federación o Asociación Deportiva (CDAG).[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Vehículos, Solvencias y Asistencia Institucional" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fentes-exentos%2Fconstitucionales%2Fvehiculos-solvencias-y-asistencia-institucional%2F"]Incluye gestiones como: Solicitud de actividades y talleres de Cultura Tributaria para centros educativos, Aviso notarial de transferencia de dominio y legalización de firmas vehiculares, Registro de marca y código de fabricante de vehículos ante el Registro Fiscal de Vehículos.[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
     <excerpt:encoded><![CDATA[]]></excerpt:encoded>
     <wp:post_id>1148</wp:post_id>
-    <wp:post_date><![CDATA[2026-10-26 19:00:00]]></wp:post_date>
-    <wp:post_date_gmt><![CDATA[2026-10-26 19:00:00]]></wp:post_date_gmt>
+    <wp:post_date><![CDATA[2026-10-28 21:06:00]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-10-29 03:06:00]]></wp:post_date_gmt>
     <wp:comment_status><![CDATA[closed]]></wp:comment_status>
     <wp:ping_status><![CDATA[closed]]></wp:ping_status>
     <wp:post_name><![CDATA[constitucionales]]></wp:post_name>
@@ -1622,6 +1838,14 @@
       <wp:meta_value><![CDATA[elementor_header_footer]]></wp:meta_value>
     </wp:postmeta>
     <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_sidebar_position]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_header_title]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
       <wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
       <wp:meta_value><![CDATA[true]]></wp:meta_value>
     </wp:postmeta>
@@ -1632,16 +1856,16 @@
   </item>
   <item>
     <title>No Lucrativos</title>
-    <link>https://portal.sat.gob.gt/entes-exentos/no-lucrativos/</link>
-    <pubDate>Mon, 26 Oct 2026 19:00:00 +0000</pubDate>
+    <link>https://prototipo.sat.gob.gt/entes-exentos/no-lucrativos/</link>
+    <pubDate>Thu, 29 Oct 2026 03:06:00 +0000</pubDate>
     <dc:creator><![CDATA[admin]]></dc:creator>
-    <guid isPermaLink="false">https://portal.sat.gob.gt/?page_id=1152</guid>
+    <guid isPermaLink="false">https://prototipo.sat.gob.gt/?page_id=1152&amp;v=20261028210600</guid>
     <description></description>
-    <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-entes-exentos"][vc_column width="1/3" offset="vc_col-xl-inherit vc_col-lg-inherit vc_col-md-4 vc_col-sm-inherit"][bsf-info-box icon_type="none" title="Inscripción y RTU de Organizaciones No Lucrativas" read_more="box" link="url:/entes-exentos/no-lucrativos/inscripcion-y-rtu-de-organizaciones-no-lucrativas/|||"]Incluye gestiones como: Inscripción de Organización No Gubernamental (ONG) registrada antes de agosto 2022, Inscripción de Organización No Gubernamental (ONG) registrada desde agosto 2022, Inscripción de fundación, asociación civil o entidad religiosa no católica.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Exenciones CIVA, Actualización y Cierre de Operaciones" read_more="box" link="url:/entes-exentos/no-lucrativos/exenciones-civa-actualizacion-y-cierre-de-operaciones/|||"]Incluye gestiones como: Habilitación para emisión de Constancias de Exención del IVA (CIVA) en Agencia Virtual, Generación de Constancias de Exención del IVA (CIVA) en Agencia Virtual y Factura Electrónica en Línea (FEL), Actualización de datos de Organización de Padres de Familia (OPF).[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
+    <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-entes-exentos"][vc_column width="1/3" offset="vc_col-xl-inherit vc_col-lg-inherit vc_col-md-4 vc_col-sm-inherit"][bsf-info-box icon_type="none" title="Inscripción y RTU de Organizaciones No Lucrativas" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fentes-exentos%2Fno-lucrativos%2Finscripcion-y-rtu-de-organizaciones-no-lucrativas%2F"]Incluye gestiones como: Inscripción de Organización No Gubernamental (ONG) registrada antes de agosto 2022, Inscripción de Organización No Gubernamental (ONG) registrada desde agosto 2022, Inscripción de fundación, asociación civil o entidad religiosa no católica.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Exenciones CIVA, Actualización y Cierre de Operaciones" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fentes-exentos%2Fno-lucrativos%2Fexenciones-civa-actualizacion-y-cierre-de-operaciones%2F"]Incluye gestiones como: Habilitación para emisión de Constancias de Exención del IVA (CIVA) en Agencia Virtual, Generación de Constancias de Exención del IVA (CIVA) en Agencia Virtual y Factura Electrónica en Línea (FEL), Actualización de datos de Organización de Padres de Familia (OPF).[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
     <excerpt:encoded><![CDATA[]]></excerpt:encoded>
     <wp:post_id>1152</wp:post_id>
-    <wp:post_date><![CDATA[2026-10-26 19:00:00]]></wp:post_date>
-    <wp:post_date_gmt><![CDATA[2026-10-26 19:00:00]]></wp:post_date_gmt>
+    <wp:post_date><![CDATA[2026-10-28 21:06:00]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-10-29 03:06:00]]></wp:post_date_gmt>
     <wp:comment_status><![CDATA[closed]]></wp:comment_status>
     <wp:ping_status><![CDATA[closed]]></wp:ping_status>
     <wp:post_name><![CDATA[no-lucrativos]]></wp:post_name>
@@ -1656,6 +1880,14 @@
       <wp:meta_value><![CDATA[elementor_header_footer]]></wp:meta_value>
     </wp:postmeta>
     <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_sidebar_position]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_header_title]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
       <wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
       <wp:meta_value><![CDATA[true]]></wp:meta_value>
     </wp:postmeta>
@@ -1666,16 +1898,16 @@
   </item>
   <item>
     <title>Municipalidades</title>
-    <link>https://portal.sat.gob.gt/entes-exentos/municipalidades/</link>
-    <pubDate>Mon, 26 Oct 2026 19:00:00 +0000</pubDate>
+    <link>https://prototipo.sat.gob.gt/entes-exentos/municipalidades/</link>
+    <pubDate>Thu, 29 Oct 2026 03:06:00 +0000</pubDate>
     <dc:creator><![CDATA[admin]]></dc:creator>
-    <guid isPermaLink="false">https://portal.sat.gob.gt/?page_id=1155</guid>
+    <guid isPermaLink="false">https://prototipo.sat.gob.gt/?page_id=1155&amp;v=20261028210600</guid>
     <description></description>
     <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-entes-exentos"][vc_column width="1/3" offset="vc_col-xl-inherit vc_col-lg-inherit vc_col-md-4 vc_col-sm-inherit"][bsf-info-box icon_type="none" title="Emisión de Constancias de Exención del Impuesto al Valor Agregado (CIVA) para municipalidades" read_more="box" link="url:https://portal.sat.gob.gt/portal/emision-constancias-de-exencion-de-iva-civa/||target:%20_blank|"]Gestionar y emitir Constancias de Exención del Impuesto al Valor Agregado (CIVA) para compras de bienes y servicios efectuadas por municipalidades.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Inscripción de Municipalidad y corporaciones municipales en el RTU" read_more="box" link="url:https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/inscripcion-de-municipalidad/||target:%20_blank|"]Inscribir corporaciones municipales, alcaldías y dependencias de los gobiernos locales de la República en el Registro Tributario Unificado.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Actualización de datos de Municipalidad y mancomunidades en el RTU Digital" read_more="box" link="url:https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/actualizacion-municipalidades/||target:%20_blank|"]Actualizar corporaciones municipales, alcaldes, concejales y mancomunidades de municipios en el Registro Tributario Unificado Digital.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Baja definitiva de vehículos municipales desmantelados o subastados como chatarra" read_more="box" link="url:https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/inactivacion-de-vehiculos-por-retiro-definitivo-por-subasta-de-municipalidades-para-vehiculos-de-desarme-y-o-chatarra/||target:%20_blank|"]Gestionar la baja definitiva en el Registro Fiscal de Vehículos de maquinaria y vehículos municipales dados de baja o subastados como chatarra.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Inscripción y traspaso de vehículos adjudicados o donados a Municipalidades" read_more="box" link="url:https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/traspaso-por-adjudicacion-a-favor-de-municipalidades/||target:%20_blank|"]Registrar automotores y maquinaria pesada adjudicada por juzgados o donada legalmente a favor de corporaciones municipales.[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
     <excerpt:encoded><![CDATA[]]></excerpt:encoded>
     <wp:post_id>1155</wp:post_id>
-    <wp:post_date><![CDATA[2026-10-26 19:00:00]]></wp:post_date>
-    <wp:post_date_gmt><![CDATA[2026-10-26 19:00:00]]></wp:post_date_gmt>
+    <wp:post_date><![CDATA[2026-10-28 21:06:00]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-10-29 03:06:00]]></wp:post_date_gmt>
     <wp:comment_status><![CDATA[closed]]></wp:comment_status>
     <wp:ping_status><![CDATA[closed]]></wp:ping_status>
     <wp:post_name><![CDATA[municipalidades]]></wp:post_name>
@@ -1690,6 +1922,14 @@
       <wp:meta_value><![CDATA[elementor_header_footer]]></wp:meta_value>
     </wp:postmeta>
     <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_sidebar_position]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_header_title]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
       <wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
       <wp:meta_value><![CDATA[true]]></wp:meta_value>
     </wp:postmeta>
@@ -1700,16 +1940,16 @@
   </item>
   <item>
     <title>Decreto</title>
-    <link>https://portal.sat.gob.gt/entes-exentos/decreto/</link>
-    <pubDate>Mon, 26 Oct 2026 19:00:00 +0000</pubDate>
+    <link>https://prototipo.sat.gob.gt/entes-exentos/decreto/</link>
+    <pubDate>Thu, 29 Oct 2026 03:06:00 +0000</pubDate>
     <dc:creator><![CDATA[admin]]></dc:creator>
-    <guid isPermaLink="false">https://portal.sat.gob.gt/?page_id=1156</guid>
+    <guid isPermaLink="false">https://prototipo.sat.gob.gt/?page_id=1156&amp;v=20261028210600</guid>
     <description></description>
-    <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-entes-exentos"][vc_column width="1/3" offset="vc_col-xl-inherit vc_col-lg-inherit vc_col-md-4 vc_col-sm-inherit"][bsf-info-box icon_type="none" title="Misiones Diplomáticas y Organismos Internacionales" read_more="box" link="url:/entes-exentos/decreto/misiones-diplomaticas-y-organismos-internacionales/|||"]Incluye gestiones como: Cambio de placas particulares a placas oficiales, diplomáticas o consulares, Traspaso vehicular con exención para miembros del Cuerpo Diplomático y Consular, Acreditación o cambio de representante de Misión Diplomática u Organismo Internacional.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Cooperativas, Partidos Políticos y Exenciones Especiales" read_more="box" link="url:/entes-exentos/decreto/cooperativas-partidos-politicos-y-exenciones-especiales/|||"]Incluye gestiones como: Registro de exenciones del Impuesto a la Distribución de Petróleo Crudo y Combustibles Derivados (IDP), Inscripción de cooperativa en el Registro Tributario Unificado (RTU), Inscripción de Comité Cívico Electoral o Comité Pro Formación de Partido Político.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Donaciones Oficiales y Despacho Aduanero" read_more="box" link="url:/entes-exentos/decreto/donaciones-oficiales-y-despacho-aduanero/|||"]Incluye gestiones como: Programa Aduana sin Papeles y despacho digital de donaciones oficiales, Certificación como Operador Económico Autorizado (OEA) para entidades públicas y cooperación, Operaciones de comercio exterior en el marco de la Unión Aduanera Centroamericana.[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
+    <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-entes-exentos"][vc_column width="1/3" offset="vc_col-xl-inherit vc_col-lg-inherit vc_col-md-4 vc_col-sm-inherit"][bsf-info-box icon_type="none" title="Misiones Diplomáticas y Organismos Internacionales" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fentes-exentos%2Fdecreto%2Fmisiones-diplomaticas-y-organismos-internacionales%2F"]Incluye gestiones como: Cambio de placas particulares a placas oficiales, diplomáticas o consulares, Traspaso vehicular con exención para miembros del Cuerpo Diplomático y Consular, Acreditación o cambio de representante de Misión Diplomática u Organismo Internacional.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Cooperativas, Partidos Políticos y Exenciones Especiales" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fentes-exentos%2Fdecreto%2Fcooperativas-partidos-politicos-y-exenciones-especiales%2F"]Incluye gestiones como: Registro de exenciones del Impuesto a la Distribución de Petróleo Crudo y Combustibles Derivados (IDP), Inscripción de cooperativa en el Registro Tributario Unificado (RTU), Inscripción de Comité Cívico Electoral o Comité Pro Formación de Partido Político.[/bsf-info-box][/vc_column][vc_column width="1/3"][bsf-info-box icon_type="none" title="Donaciones Oficiales y Despacho Aduanero" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fentes-exentos%2Fdecreto%2Fdonaciones-oficiales-y-despacho-aduanero%2F"]Incluye gestiones como: Programa Aduana sin Papeles y despacho digital de donaciones oficiales, Certificación como Operador Económico Autorizado (OEA) para entidades públicas y cooperación, Operaciones de comercio exterior en el marco de la Unión Aduanera Centroamericana.[/bsf-info-box][/vc_column][/vc_row][/vc_section]]]></content:encoded>
     <excerpt:encoded><![CDATA[]]></excerpt:encoded>
     <wp:post_id>1156</wp:post_id>
-    <wp:post_date><![CDATA[2026-10-26 19:00:00]]></wp:post_date>
-    <wp:post_date_gmt><![CDATA[2026-10-26 19:00:00]]></wp:post_date_gmt>
+    <wp:post_date><![CDATA[2026-10-28 21:06:00]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-10-29 03:06:00]]></wp:post_date_gmt>
     <wp:comment_status><![CDATA[closed]]></wp:comment_status>
     <wp:ping_status><![CDATA[closed]]></wp:ping_status>
     <wp:post_name><![CDATA[decreto]]></wp:post_name>
@@ -1722,6 +1962,14 @@
     <wp:postmeta>
       <wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
       <wp:meta_value><![CDATA[elementor_header_footer]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_sidebar_position]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_header_title]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
     </wp:postmeta>
     <wp:postmeta>
       <wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>

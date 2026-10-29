@@ -266,6 +266,10 @@ def collect_all_pages() -> list[dict]:
     return pages
 
 
+def collect_section(section_name: str) -> list[dict]:
+    """Return pages whose title starts with the given section name (e.g., "Entes Exentos" or "Profesionales")."""
+    return [p for p in pages if p["title"].startswith(section_name)]
+
 def main():
     pages = collect_all_pages()
     olas_012 = [p for p in pages if p["wave"] in (0, 1, 2)]
@@ -300,6 +304,31 @@ def main():
     save_both(
         "wordpress-import-comercio-exterior-restante.xml",
         build_wxr_xml(oce_restante, "Portal SAT Guatemala — Operadores de Comercio Exterior (Restante: 50 Páginas sin Importadores)"),
+    )
+
+    # Entes Exentos
+    exentos_all = [p for p in pages if p["url"].startswith("/entes-exentos/")]
+    save_both(
+        "wordpress-import-entes-exentos-completo.xml",
+        build_wxr_xml(exentos_all, "Portal SAT Guatemala — Entes Exentos (Completo)"),
+    )
+    # No exclusion needed, so restante = completo
+    exentos_restante = exentos_all
+    save_both(
+        "wordpress-import-entes-exentos-restante.xml",
+        build_wxr_xml(exentos_restante, "Portal SAT Guatemala — Entes Exentos (Restante)"),
+    )
+
+    # Profesionales
+    profesionales_all = [p for p in pages if p["url"].startswith("/profesionales/")]
+    save_both(
+        "wordpress-import-profesionales-completo.xml",
+        build_wxr_xml(profesionales_all, "Portal SAT Guatemala — Profesionales (Completo)"),
+    )
+    profesionales_restante = profesionales_all
+    save_both(
+        "wordpress-import-profesionales-restante.xml",
+        build_wxr_xml(profesionales_restante, "Portal SAT Guatemala — Profesionales (Restante)"),
     )
 
     print(
