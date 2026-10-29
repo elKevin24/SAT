@@ -107,6 +107,67 @@ CURATED_DESCRIPTIONS = {
     "Modificaciones y rectificaciones": "Cambio de uso o tipo de vehículo, cambio de color, rectificación de número de motor o chasis y transformación de carrocería.",
     "Bajas, inactivación y reactivación": "Retiro temporal o definitivo de circulación por robo, hurto, pérdida total, exportación o desarme, y reactivación vehicular.",
     "Autorizaciones, consultas y requisitos": "Consultas del Registro Fiscal de Vehículos (RFV), historial de propiedad, solvencias vehiculares y autorizaciones para terceros.",
+
+    # Nivel 3 — Operadores de Comercio Exterior
+    "Registro y Padrón de Importadores": "Inscripción y activación en el padrón de importadores, requisitos previos para importar mercancías y guías del Programa de Modernización Integral Aduanera (MIAD).",
+    "Declaraciones Aduaneras y DUCAs": "Preparación de documentos de soporte, transmisión de la Declaración Única Centroamericana (DUCA - Aduanas), pólizas con fianza y verificación de pago en línea.",
+    "Despacho Aduanero, Levante y Selectivo": "Gestiones anticipadas, consulta del semáforo de selectivo aduanero, puestos de control interinstitucional (PCI) y operaciones de levante en recinto.",
+    "Importación y Nacionalización de Vehículos": "Requisitos para ingresar vehículos por aduana, permisos de internación temporal, consulta de tablas de valores imponibles y cálculo del Impuesto al Valor Agregado (IVA).",
+    "Mercancías en Abandono, Depósitos y Franquicias": "Solicitudes de franquicia electrónica, declaración regional de viajero, rescate de mercancías en abandono tácito y devolución de depósitos aduanales.",
+    "Padrón y Registro de Exportadores": "Inscripción en el padrón de exportadores, permisos de exportación temporal u ocasional y registro ante la Ventanilla Única para las Exportaciones (VUPE).",
+    "Declaraciones Aduaneras y Embarques": "Transmisión de declaraciones simplificadas y complementarias de exportación (DUCA), control de listas de embarque y cierre de operaciones aduaneras.",
+    "Devolución de Crédito Fiscal": "Inscripción y solicitud de devolución de crédito fiscal del Impuesto al Valor Agregado (IVA) para exportadores en régimen especial, optativo, general y en línea.",
+    "Agentes Aduaneros": "Autorización, actualización anual, fianzas de garantía, emisión de carné e instalación del componente de firma electrónica para agentes aduaneros.",
+    "Apoderados Especiales Aduaneros": "Acreditación para representar a empresas e instituciones ante el servicio aduanero, constitución de garantías, operaciones de despacho y normativa técnica.",
+    "Depósitos Aduaneros": "Habilitación y renovación de depósitos aduaneros públicos, privados y temporales, almacenes fiscales, control de inventarios, saldos afianzados y normativa.",
+    "Empresas de Entrega Rápida o Courier": "Requisitos de habilitación, constitución de garantías y transmisión de manifiestos expresos para empresas de entrega rápida o courier.",
+    "Transportistas Aduaneros": "Registro de medios de transporte y contenedores bajo el Régimen de Admisión Temporal de Contenedores (ATC), manifiestos de carga (CUSCAR) y marchamo electrónico.",
+    "Maquilas (Decreto 29-89)": "Inscripción de resolución del Ministerio de Economía (MINECO), fianzas, operación de cuentas corrientes de insumos, descargos y tratamiento de desperdicios.",
+    "Zonas de Desarrollo Económico Especial Público (ZDEEP)": "Habilitación de zonas especiales y empresas usuarias, control de ingreso y egreso de carga en garita, operación en zonas francas y marco normativo.",
+    "Arancel Centroamericano (SAC) y Permisos": "Consulta del Sistema Arancelario Centroamericano (SAC) integrado, contingentes arancelarios, permisos no arancelarios y valoración de mercancías.",
+    "Acuerdos Comerciales y Facilitación": "Tratados de libre comercio vigentes, certificación de origen de mercancías, resoluciones anticipadas y programas de facilitación del comercio exterior.",
+    "Prevención de Contrabando y Defraudación": "Denuncias confidenciales, control en puestos interinstitucionales y acciones del Consejo Interinstitucional para la Prevención y Combate a la Defraudación Fiscal y al Contrabando Aduanero (COINCON).",
+    "Consultas Técnicas, Recursos y Valoración": "Consultas técnicas vinculantes sobre clasificación arancelaria y origen, seguimiento de expedientes aduaneros y presentación de recursos administrativos.",
+    "Modernización e Infraestructura Aduanera": "Avances del Programa de Modernización Integral Aduanera (MIAD), puestos fronterizos integrados, tecnología de revisión no intrusiva y estadísticas de comercio exterior.",
+
+    # Nivel 4 — Operadores de Comercio Exterior
+    "Preparación y Documentos de Soporte": "Declaración del valor en aduana de las mercancías y manual operativo para la digitalización de documentos de soporte bajo Aduana sin Papeles.",
+    "Transmisión de la Declaración de Mercancías": "Transmisión electrónica de la Declaración Única Centroamericana (DUCA), pólizas de importación general y declaraciones caucionadas con fianza.",
+    "Verificación y Seguimiento de Declaraciones": "Consulta en línea del estado de pago y validación de declaraciones centroamericanas (DUCA-F y FAUCA) en el país de destino.",
+    "Gestiones anticipadas": "Presentación anticipada de declaraciones para análisis de riesgo, entrega de documentos de envíos parciales y solicitud de distintivos de control.",
+    "Puestos de control, trazabilidad y facilitación": "Verificación de mercancías en Puestos de Control Interinstitucional (PCI), trazabilidad de despachos y medidas de facilitación operativa.",
+    "Operaciones en recinto, selectivo y levante": "Consulta en tiempo real del semáforo de selectivo aduanero, programación de revisión física en rampa y seguimiento de expedientes en aduana.",
+    "Gestiones de importación y registro": "Requisitos y documentos para importar vehículos nuevos o usados, liquidación de pólizas y permisos de internación temporal para turistas.",
+    "Tablas de valores y cálculo de impuestos": "Consulta en línea de las tablas oficiales de valores imponibles para vehículos usados y cálculo del Impuesto al Valor Agregado (IVA) de importación.",
+    "Franquicias y menor cuantía": "Solicitud de franquicias electrónicas exentas de tributos, Declaración Jurada Regional de Viajero y despacho simplificado de menor cuantía.",
+    "Rescate de mercancías y devoluciones": "Recuperación de mercancías en abandono tácito, recepción de seguros de caución y devolución de depósitos o tributos arancelarios pagados en exceso.",
+    "Acreditación, Garantías y Habilitación": "Autorización para actuar como apoderado especial aduanero, renovación de fianzas operativas, emisión de carné y solvencia fiscal anual.",
+    "Operaciones de Despacho y Consultas": "Transmisión de declaraciones aduaneras (DUCA), consulta de retenciones y liberaciones en rampa y seguimiento de expedientes en gestión aduanera.",
+    "Procedimientos, Normativa y Capacitación": "Guías operativas, legislación aduanera aplicable, programas de capacitación técnica y atención de audiencias o recursos administrativos.",
+    "Habilitación de recintos y garantías": "Requisitos para autorizar y delimitar recintos de depósito aduanero, constitución de seguros de caución, renovación anual y solvencia fiscal.",
+    "Habilitación y garantías": "Renovación de operaciones para almacenes generales de depósito, registro de títulos de crédito afianzados, pólizas de caución y carné de auxiliar.",
+    "Almacenes Fiscales": "Requisitos de autorización, control de inventarios y operación aduanera para almacenes fiscales vinculados a almacenes generales de depósito.",
+    "Normativa y asistencia": "Marco legal aplicable (CAUCA, RECAUCA y leyes especiales), guías operativas de aduanas, capacitaciones y resolución de dudas frecuentes.",
+    "Operación y control de mercancías": "Control de descarga y recepción de bultos, admisión temporal de contenedores, cobro por permanencia y consultas de selectivo y rampa.",
+    "Operación y saldos afianzados": "Reporte electrónico de saldos y existencias afianzadas, declaraciones DUCA, consulta de convenios de pago y requerimientos del Programa MIAD.",
+    "Equipo de Carga y Contenedores – Régimen ATC": "Registro y control de contenedores bajo el Régimen de Admisión Temporal de Contenedores (ATC), prórrogas de permanencia y solvencia de fianzas.",
+    "Despacho y Operaciones en Recintos": "Consultas operativas de arribo, retención y liberación en rampa, estado de sistemas informáticos de aduanas y seguimiento de expedientes.",
+    "Manifiestos de Carga y CUSCAR": "Transmisión electrónica del manifiesto de carga (CUSCAR), guías de tránsito internacional y lineamientos del Programa de Modernización Integral Aduanera (MIAD).",
+    "Monitoreo en Ruta y Marchamo Electrónico": "Control de tránsitos aduaneros mediante marchamo electrónico con GPS, rutas fiscales autorizadas y tiempos de recorrido entre aduanas.",
+    "Infracciones y Defensa Aduanera": "Legislación aduanera aplicable al transporte de carga y procedimientos para atender audiencias, sanciones y recursos administrativos.",
+    "Inscripción y garantías": "Registro de la resolución de calificación del Ministerio de Economía (MINECO), apertura de cuenta corriente de insumos y validación de pólizas de fianza.",
+    "Operación y descargos": "Transmisión de declaraciones de admisión temporal (DUCA), descargo periódico de cuentas corrientes insumo-producto y traspasos entre empresas calificadas.",
+    "Cierre, desperdicios y normativa": "Destrucción, donación o nacionalización de desperdicios de maquila, cancelación de cuenta corriente, liberación de fianzas y compendio del Decreto 29-89.",
+    "Habilitación e infraestructura": "Requisitos para delimitar y habilitar polígonos de Zonas de Desarrollo Económico Especial Público (ZDEEP), control de garitas y solvencia fiscal.",
+    "Registro y habilitación de empresas": "Inscripción de empresas usuarias calificadas en ZDEEP, habilitación en Factura Electrónica en Línea (FEL), solvencia fiscal y consulta de expedientes.",
+    "Operación y control de carga": "Control aduanero de ingreso y egreso de carga en garitas de ZDEEP, rutas fiscales, Puestos de Control Interinstitucional (PCI) y consultas de manifiestos.",
+    "Operación y control en zonas francas": "Declaraciones anticipadas y definitivas (DUCA), traslados de mercancías hacia y desde zonas especiales y control de inventarios de transformación.",
+    "Consultas técnicas y criterios vinculantes": "Solicitud de criterios técnicos vinculantes sobre clasificación arancelaria, valoración aduanera y normas de origen de las mercancías.",
+    "Gestiones generales del operador": "Servicios transversales de consulta de expedientes aduaneros, estado de declaraciones, facilidades de pago y monitoreo de sistemas informáticos.",
+    "Recursos administrativos y defensa aduanera": "Presentación de recursos de revisión y apelación, atención de audiencias de ajuste y defensa técnica ante la Intendencia de Aduanas.",
+    "Infraestructura y puestos fronterizos": "Operación en aduanas integradas y periféricas, Puestos de Control Interinstitucional (PCI) y modernización de infraestructura fronteriza.",
+    "Tecnología y revisión no intrusiva": "Equipos de inspección por rayos X y revisión no intrusiva, integración tecnológica en recintos y lineamientos del Programa MIAD.",
+    "Transparencia, repositorio y estadísticas": "Boletines estadísticos de recaudación y comercio exterior, repositorio documental de procedimientos aduaneros y portales de transparencia.",
 }
 
 
@@ -165,6 +226,9 @@ def get_node_desc(title: str, child_items: list[dict]) -> str:
 def encode_vc_link(url: str, target_blank: bool = False) -> str:
     if not url:
         return ""
+    if url.startswith("/") and not url.startswith("//") and not target_blank:
+        full_url = f"https://prototipo.sat.gob.gt{url}"
+        return f"url:{urllib.parse.quote(full_url, safe='')}"
     enc = urllib.parse.quote(url, safe=":/#?=&%-_.")
     target = "target:%20_blank|" if target_blank else "|"
     return f"url:{enc}||{target}"
@@ -180,19 +244,24 @@ def info_box(title: str, desc: str, url: str = "", target_blank: bool = False) -
     )
 
 
-def columna(content: str, width: str = "1/3") -> str:
-    return f'[vc_column width="{width}"]{content}[/vc_column]'
+def columna(content: str, width: str = "1/3", first: bool = False) -> str:
+    offset = ' offset="vc_col-xl-inherit vc_col-lg-inherit vc_col-md-4 vc_col-sm-inherit"' if first else ""
+    return f'[vc_column width="{width}"{offset}]{content}[/vc_column]'
 
 
 def wrap_page(items: list[dict], n1: str, heading: str = "", lead_text: str = "") -> str:
     breadcrumb = (
-        '[vc_row gap="5px"][vc_column]'
+        '[vc_row][vc_column]'
         '[dt_breadcrumbs font_style="italic:normal:none" alignment="left"]'
         '[vc_separator][/vc_column][/vc_row]'
     )
     cols = "".join(
-        columna(info_box(it["title"], it["desc"], it.get("url", ""), it.get("target_blank", False)), width="1/3")
-        for it in items
+        columna(
+            info_box(it["title"], it["desc"], it.get("url", ""), it.get("target_blank", False)),
+            width="1/3",
+            first=(idx == 0),
+        )
+        for idx, it in enumerate(items)
     )
     section = (
         f'[vc_section]'
@@ -959,8 +1028,6 @@ def main():
     with open(TRAMITES_JSON, "r", encoding="utf-8") as f:
         tramites = json.load(f)
 
-    if OUTPUT_DIR.exists():
-        shutil.rmtree(OUTPUT_DIR)
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
     tramites_sorted = sorted(
@@ -1036,7 +1103,13 @@ def main():
                 "target_blank": False,
             })
         n1_file = n1_dir / f"N1_{n1_slug}.txt"
-        n1_file.write_text(wrap_page(n1_cards, n1, heading=n1), encoding="utf-8")
+        if n1 == "Contribuyentes":
+            n1_file.write_text(
+                '[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-contribuyentes"][vc_column width="1/2" offset="vc_col-xl-inherit vc_col-lg-inherit vc_col-md-6 vc_col-sm-inherit"][bsf-info-box icon_type="none" title="NIT sin Obligaciones" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fsin-obligaciones%2F"]Gestiones y servicios de identificación tributaria para personas sin actividad comercial.[/bsf-info-box][/vc_column][vc_column width="1/2"][bsf-info-box icon_size="32" title="Pequeños Contribuyentes" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fpequenos-contribuyentes%2F"]Información y obligaciones para pequeños negocios y régimen simplificado.[/bsf-info-box][/vc_column][vc_column width="1/2"][bsf-info-box icon_size="32" title="Contribuyente General" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyente-general%2F"]Declaración y pago de IVA General, pagos de ISR, RTU Digital, facturación FEL, libros contables y vehículos.[/bsf-info-box][/vc_column][vc_column width="1/2"][bsf-info-box icon_size="32" title="Contribuyentes Especiales" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyentes-especiales%2F"]Servicios y gestiones tributarias para empresas con atención diferenciada.[/bsf-info-box][/vc_column][/vc_row][/vc_section]',
+                encoding="utf-8",
+            )
+        else:
+            n1_file.write_text(wrap_page(n1_cards, n1, heading=n1), encoding="utf-8")
         pages_count += 1
         index_lines.append(f"| `{n1_slug}/N1_{n1_slug}.txt` | Nivel 1 | **{n1}** | {len(n1_cards)} |\n")
 

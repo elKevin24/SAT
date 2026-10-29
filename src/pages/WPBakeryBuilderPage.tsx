@@ -31,6 +31,8 @@ import wpXmlOlas012Raw from '../../docs/plantillas-wpbakery/wordpress-import-ola
 import wpXmlAll160Raw from '../../docs/plantillas-wpbakery/wordpress-import-completo-160.xml?raw';
 import wpXmlCgN3Raw from '../../docs/plantillas-wpbakery/wordpress-import-contribuyente-general-n3.xml?raw';
 import wpXmlCgCompletoRaw from '../../docs/plantillas-wpbakery/wordpress-import-contribuyente-general-completo.xml?raw';
+import wpXmlOceRestanteRaw from '../../docs/plantillas-wpbakery/wordpress-import-comercio-exterior-restante.xml?raw';
+import wpXmlOceCompletoRaw from '../../docs/plantillas-wpbakery/wordpress-import-comercio-exterior-completo.xml?raw';
 
 const allTramites = assertTramites(rawTramites);
 
@@ -263,6 +265,63 @@ const CURATED_DESCRIPTIONS: Record<string, string> = {
   'No Lucrativos': 'Inscripción en el Registro Tributario Unificado (RTU), reconocimiento de exención de impuestos, constancias de exención del IVA (CIVA) y actualización de asociaciones.',
   Municipalidades: 'Registro de corporaciones municipales y autoridades ediles en el Registro Tributario Unificado (RTU), exención para flotillas municipales y solvencias institucionales.',
   Decreto: 'Exenciones y franquicias para misiones diplomáticas, organismos internacionales, cooperativas, partidos políticos y donaciones oficiales.',
+  'Registro y Padrón de Importadores': 'Inscripción y activación en el padrón de importadores, requisitos previos para importar mercancías y guías del Programa de Modernización Integral Aduanera (MIAD).',
+  'Declaraciones Aduaneras y DUCAs': 'Preparación de documentos de soporte, transmisión de la Declaración Única Centroamericana (DUCA - Aduanas), pólizas con fianza y verificación de pago en línea.',
+  'Despacho Aduanero, Levante y Selectivo': 'Gestiones anticipadas, consulta del semáforo de selectivo aduanero, puestos de control interinstitucional (PCI) y operaciones de levante en recinto.',
+  'Importación y Nacionalización de Vehículos': 'Requisitos para ingresar vehículos por aduana, permisos de internación temporal, consulta de tablas de valores imponibles y cálculo del Impuesto al Valor Agregado (IVA).',
+  'Mercancías en Abandono, Depósitos y Franquicias': 'Solicitudes de franquicia electrónica, declaración regional de viajero, rescate de mercancías en abandono tácito y devolución de depósitos aduanales.',
+  'Padrón y Registro de Exportadores': 'Inscripción en el padrón de exportadores, permisos de exportación temporal u ocasional y registro ante la Ventanilla Única para las Exportaciones (VUPE).',
+  'Declaraciones Aduaneras y Embarques': 'Transmisión de declaraciones simplificadas y complementarias de exportación (DUCA), control de listas de embarque y cierre de operaciones aduaneras.',
+  'Devolución de Crédito Fiscal': 'Inscripción y solicitud de devolución de crédito fiscal del Impuesto al Valor Agregado (IVA) para exportadores en régimen especial, optativo, general y en línea.',
+  'Agentes Aduaneros': 'Autorización, actualización anual, fianzas de garantía, emisión de carné e instalación del componente de firma electrónica para agentes aduaneros.',
+  'Apoderados Especiales Aduaneros': 'Acreditación para representar a empresas e instituciones ante el servicio aduanero, constitución de garantías, operaciones de despacho y normativa técnica.',
+  'Depósitos Aduaneros': 'Habilitación y renovación de depósitos aduaneros públicos, privados y temporales, almacenes fiscales, control de inventarios, saldos afianzados y normativa.',
+  'Empresas de Entrega Rápida o Courier': 'Requisitos de habilitación, constitución de garantías y transmisión de manifiestos expresos para empresas de entrega rápida o courier.',
+  'Transportistas Aduaneros': 'Registro de medios de transporte y contenedores bajo el Régimen de Admisión Temporal de Contenedores (ATC), manifiestos de carga (CUSCAR) y marchamo electrónico.',
+  'Maquilas (Decreto 29-89)': 'Inscripción de resolución del Ministerio de Economía (MINECO), fianzas, operación de cuentas corrientes de insumos, descargos y tratamiento de desperdicios.',
+  'Zonas de Desarrollo Económico Especial Público (ZDEEP)': 'Habilitación de zonas especiales y empresas usuarias, control de ingreso y egreso de carga en garita, operación en zonas francas y marco normativo.',
+  'Arancel Centroamericano (SAC) y Permisos': 'Consulta del Sistema Arancelario Centroamericano (SAC) integrado, contingentes arancelarios, permisos no arancelarios y valoración de mercancías.',
+  'Acuerdos Comerciales y Facilitación': 'Tratados de libre comercio vigentes, certificación de origen de mercancías, resoluciones anticipadas y programas de facilitación del comercio exterior.',
+  'Prevención de Contrabando y Defraudación': 'Denuncias confidenciales, control en puestos interinstitucionales y acciones del Consejo Interinstitucional para la Prevención y Combate a la Defraudación Fiscal y al Contrabando Aduanero (COINCON).',
+  'Consultas Técnicas, Recursos y Valoración': 'Consultas técnicas vinculantes sobre clasificación arancelaria y origen, seguimiento de expedientes aduaneros y presentación de recursos administrativos.',
+  'Modernización e Infraestructura Aduanera': 'Avances del Programa de Modernización Integral Aduanera (MIAD), puestos fronterizos integrados, tecnología de revisión no intrusiva y estadísticas de comercio exterior.',
+  'Preparación y Documentos de Soporte': 'Declaración del valor en aduana de las mercancías y manual operativo para la digitalización de documentos de soporte bajo Aduana sin Papeles.',
+  'Transmisión de la Declaración de Mercancías': 'Transmisión electrónica de la Declaración Única Centroamericana (DUCA), pólizas de importación general y declaraciones caucionadas con fianza.',
+  'Verificación y Seguimiento de Declaraciones': 'Consulta en línea del estado de pago y validación de declaraciones centroamericanas (DUCA-F y FAUCA) en el país de destino.',
+  'Gestiones anticipadas': 'Presentación anticipada de declaraciones para análisis de riesgo, entrega de documentos de envíos parciales y solicitud de distintivos de control.',
+  'Puestos de control, trazabilidad y facilitación': 'Verificación de mercancías en Puestos de Control Interinstitucional (PCI), trazabilidad de despachos y medidas de facilitación operativa.',
+  'Operaciones en recinto, selectivo y levante': 'Consulta en tiempo real del semáforo de selectivo aduanero, programación de revisión física en rampa y seguimiento de expedientes en aduana.',
+  'Gestiones de importación y registro': 'Requisitos y documentos para importar vehículos nuevos o usados, liquidación de pólizas y permisos de internación temporal para turistas.',
+  'Tablas de valores y cálculo de impuestos': 'Consulta en línea de las tablas oficiales de valores imponibles para vehículos usados y cálculo del Impuesto al Valor Agregado (IVA) de importación.',
+  'Franquicias y menor cuantía': 'Solicitud de franquicias electrónicas exentas de tributos, Declaración Jurada Regional de Viajero y despacho simplificado de menor cuantía.',
+  'Rescate de mercancías y devoluciones': 'Recuperación de mercancías en abandono tácito, recepción de seguros de caución y devolución de depósitos o tributos arancelarios pagados en exceso.',
+  'Acreditación, Garantías y Habilitación': 'Autorización para actuar como apoderado especial aduanero, renovación de fianzas operativas, emisión de carné y solvencia fiscal anual.',
+  'Operaciones de Despacho y Consultas': 'Transmisión de declaraciones aduaneras (DUCA), consulta de retenciones y liberaciones en rampa y seguimiento de expedientes en gestión aduanera.',
+  'Procedimientos, Normativa y Capacitación': 'Guías operativas, legislación aduanera aplicable, programas de capacitación técnica y atención de audiencias o recursos administrativos.',
+  'Habilitación de recintos y garantías': 'Requisitos para autorizar y delimitar recintos de depósito aduanero, constitución de seguros de caución, renovación anual y solvencia fiscal.',
+  'Habilitación y garantías': 'Renovación de operaciones para almacenes generales de depósito, registro de títulos de crédito afianzados, pólizas de caución y carné de auxiliar.',
+  'Almacenes Fiscales': 'Requisitos de autorización, control de inventarios y operación aduanera para almacenes fiscales vinculados a almacenes generales de depósito.',
+  'Normativa y asistencia': 'Marco legal aplicable (CAUCA, RECAUCA y leyes especiales), guías operativas de aduanas, capacitaciones y resolución de dudas frecuentes.',
+  'Operación y control de mercancías': 'Control de descarga y recepción de bultos, admisión temporal de contenedores, cobro por permanencia y consultas de selectivo y rampa.',
+  'Operación y saldos afianzados': 'Reporte electrónico de saldos y existencias afianzadas, declaraciones DUCA, consulta de convenios de pago y requerimientos del Programa MIAD.',
+  'Equipo de Carga y Contenedores – Régimen ATC': 'Registro y control de contenedores bajo el Régimen de Admisión Temporal de Contenedores (ATC), prórrogas de permanencia y solvencia de fianzas.',
+  'Despacho y Operaciones en Recintos': 'Consultas operativas de arribo, retención y liberación en rampa, estado de sistemas informáticos de aduanas y seguimiento de expedientes.',
+  'Manifiestos de Carga y CUSCAR': 'Transmisión electrónica del manifiesto de carga (CUSCAR), guías de tránsito internacional y lineamientos del Programa de Modernización Integral Aduanera (MIAD).',
+  'Monitoreo en Ruta y Marchamo Electrónico': 'Control de tránsitos aduaneros mediante marchamo electrónico con GPS, rutas fiscales autorizadas y tiempos de recorrido entre aduanas.',
+  'Infracciones y Defensa Aduanera': 'Legislación aduanera aplicable al transporte de carga y procedimientos para atender audiencias, sanciones y recursos administrativos.',
+  'Inscripción y garantías': 'Registro de la resolución de calificación del Ministerio de Economía (MINECO), apertura de cuenta corriente de insumos y validación de pólizas de fianza.',
+  'Operación y descargos': 'Transmisión de declaraciones de admisión temporal (DUCA), descargo periódico de cuentas corrientes insumo-producto y traspasos entre empresas calificadas.',
+  'Cierre, desperdicios y normativa': 'Destrucción, donación o nacionalización de desperdicios de maquila, cancelación de cuenta corriente, liberación de fianzas y compendio del Decreto 29-89.',
+  'Habilitación e infraestructura': 'Requisitos para delimitar y habilitar polígonos de Zonas de Desarrollo Económico Especial Público (ZDEEP), control de garitas y solvencia fiscal.',
+  'Registro y habilitación de empresas': 'Inscripción de empresas usuarias calificadas en ZDEEP, habilitación en Factura Electrónica en Línea (FEL), solvencia fiscal y consulta de expedientes.',
+  'Operación y control de carga': 'Control aduanero de ingreso y egreso de carga en garitas de ZDEEP, rutas fiscales, Puestos de Control Interinstitucional (PCI) y consultas de manifiestos.',
+  'Operación y control en zonas francas': 'Declaraciones anticipadas y definitivas (DUCA), traslados de mercancías hacia y desde zonas especiales y control de inventarios de transformación.',
+  'Consultas técnicas y criterios vinculantes': 'Solicitud de criterios técnicos vinculantes sobre clasificación arancelaria, valoración aduanera y normas de origen de las mercancías.',
+  'Gestiones generales del operador': 'Servicios transversales de consulta de expedientes aduaneros, estado de declaraciones, facilidades de pago y monitoreo de sistemas informáticos.',
+  'Recursos administrativos y defensa aduanera': 'Presentación de recursos de revisión y apelación, atención de audiencias de ajuste y defensa técnica ante la Intendencia de Aduanas.',
+  'Infraestructura y puestos fronterizos': 'Operación en aduanas integradas y periféricas, Puestos de Control Interinstitucional (PCI) y modernización de infraestructura fronteriza.',
+  'Tecnología y revisión no intrusiva': 'Equipos de inspección por rayos X y revisión no intrusiva, integración tecnológica en recintos y lineamientos del Programa MIAD.',
+  'Transparencia, repositorio y estadísticas': 'Boletines estadísticos de recaudación y comercio exterior, repositorio documental de procedimientos aduaneros y portales de transparencia.',
 };
 
 const SOLICITAR_NIT_IDS = new Set(['SAT-GES-0001', 'SAT-GES-0011', 'SAT-GES-0049', 'SAT-GES-0050', 'SAT-GES-0051']);
@@ -1763,10 +1822,59 @@ export const WPBakeryBuilderPage: React.FC = () => {
                       setTimeout(() => setCopiedType(null), 2500);
                     }}
                     className="inline-flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl border border-sky-300 bg-white hover:bg-sky-100 text-[#003865] font-bold text-xs cursor-pointer transition-colors"
-                    title="Copiar XML completo de Contribuyente General (44 páginas)"
+                    title="Copiar XML completo de Contribuyente General (77 páginas)"
                   >
                     {copiedType === 'xml' ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5" />}
                     <span>{copiedType === 'xml' ? '¡Copiado!' : 'Copiar XML (77 Págs)'}</span>
+                  </button>
+                </div>
+              </div>
+
+              {/* Rama Operadores de Comercio Exterior (Restante: 49 Páginas sin Importadores + Completo: 65 Páginas) */}
+              <div className="p-5 rounded-2xl border-2 border-[#0284C7] bg-sky-50/70 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 shadow-xs">
+                <div className="space-y-1">
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-[#0284C7] text-white">
+                      Operadores de Comercio Exterior (49 Páginas Restantes / 65 Completas)
+                    </span>
+                    <span className="text-xs font-bold text-[#0369A1]">
+                      Exportadores + OEA + AFPA + Zonas Especiales + Normativa (Excluye Importadores SAT-GES-0341..0394)
+                    </span>
+                  </div>
+                  <h4 className="text-base font-bold text-[#003865]">
+                    Paquete XML de Comercio Exterior (`wordpress-import-comercio-exterior-restante.xml`)
+                  </h4>
+                  <p className="text-xs text-slate-700 max-w-2xl leading-relaxed">
+                    Importa las <strong>49 páginas restantes de Comercio Exterior</strong> (Exportadores, OEA, Auxiliares AFPA, Maquilas/ZDEEP y Normativa) conectadas automáticamente bajo <em>«Operadores de Comercio Exterior»</em>, sin duplicar la rama ya construida de <em>Importadores</em> (`SAT-GES-0341` a `SAT-GES-0394`). Incluye contenedor centrado `1200px` y hover azul aduanas (`#0284C7`).
+                  </p>
+                </div>
+                <div className="flex flex-wrap items-center gap-2 w-full md:w-auto shrink-0">
+                  <button
+                    type="button"
+                    onClick={() =>
+                      handleDownloadXml(
+                        applyBasePathAndModeToShortcode(wpXmlOceRestanteRaw, basePath, cardMode),
+                        'wordpress-import-comercio-exterior-restante.xml'
+                      )
+                    }
+                    className="flex-1 md:flex-initial inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#0284C7] hover:bg-[#0369A1] text-white font-bold text-xs cursor-pointer transition-colors shadow-xs"
+                  >
+                    <Download className="w-4 h-4" />
+                    Descargar Restante sin Importadores (49 Págs)
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() =>
+                      handleDownloadXml(
+                        applyBasePathAndModeToShortcode(wpXmlOceCompletoRaw, basePath, cardMode),
+                        'wordpress-import-comercio-exterior-completo.xml'
+                      )
+                    }
+                    className="inline-flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl border border-sky-400 bg-white hover:bg-sky-100 text-[#003865] font-bold text-xs cursor-pointer transition-colors"
+                    title="Descargar árbol completo de Comercio Exterior (65 páginas incluyendo Importadores)"
+                  >
+                    <Download className="w-3.5 h-3.5" />
+                    <span>Completo (65 Págs)</span>
                   </button>
                 </div>
               </div>
