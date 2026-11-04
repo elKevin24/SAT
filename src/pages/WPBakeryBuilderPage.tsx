@@ -30,9 +30,8 @@ import wpPadronImpRaw from '../../docs/plantillas-wpbakery/procesos-conectados/G
 import wpXmlOlas012Raw from '../../docs/plantillas-wpbakery/wordpress-import-olas-0-1-2.xml?raw';
 import wpXmlAll160Raw from '../../docs/plantillas-wpbakery/wordpress-import-completo-160.xml?raw';
 import wpXmlCgN3Raw from '../../docs/plantillas-wpbakery/wordpress-import-contribuyente-general-n3.xml?raw';
-import wpXmlCgCompletoRaw from '../../docs/plantillas-wpbakery/wordpress-import-contribuyente-general-completo.xml?raw';
-import wpXmlOceRestanteRaw from '../../docs/plantillas-wpbakery/wordpress-import-comercio-exterior-restante.xml?raw';
-import wpXmlOceCompletoRaw from '../../docs/plantillas-wpbakery/wordpress-import-comercio-exterior-completo.xml?raw';
+import wpXmlProfesionalesRaw from '../../docs/plantillas-wpbakery/wordpress-import-profesionales.xml?raw';
+import wpXmlExentosRaw from '../../docs/plantillas-wpbakery/wordpress-import-entes-exentos.xml?raw';
 
 const allTramites = assertTramites(rawTramites);
 
@@ -57,7 +56,7 @@ const HOVER_COLOR_BY_N1: Record<string, string> = {
   'Entes Exentos': '#C25E00',
 };
 
-export function getPageSpecificCss(n1: string, _pageTitle?: string): string {
+export function getPageSpecificCss(n1: string, pageTitle: string): string {
   const hoverColor = HOVER_COLOR_BY_N1[n1] || '#14649B';
   const sectionClass = CSS_CLASS_BY_N1[n1] || 'sat-seccion-contribuyentes';
   const shadowColor =
@@ -69,25 +68,10 @@ export function getPageSpecificCss(n1: string, _pageTitle?: string): string {
       ? 'rgba(77, 128, 20, 0.22)'
       : 'rgba(194, 94, 0, 0.22)';
 
-  const headerTitle =
-    n1 === 'Contribuyentes'
-      ? 'SECCIÓN CONTRIBUYENTES (AZUL SAT #14649B)'
-      : `SECCIÓN ${n1.toUpperCase()} (${hoverColor})`;
-
   return `/* ==================================================
-   ${headerTitle}
+   SAT GUATEMALA — ESTÁNDAR OFICIAL WPBAKERY
+   Página: ${pageTitle} | Sección: ${n1} (${hoverColor})
    ================================================== */
-
-/* 0. Contenedor centrado idéntico al diseño original (independiente de Elementor Full Width) */
-.wpb-content-wrapper,
-.entry-content {
-    max-width: 1200px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    padding-left: 24px !important;
-    padding-right: 24px !important;
-    box-sizing: border-box !important;
-}
 
 /* 1. La Fila: obliga a las 3 columnas a alinearse en una sola línea horizontal recta */
 .${sectionClass}.vc_row {
@@ -177,9 +161,9 @@ export function getPageSpecificCss(n1: string, _pageTitle?: string): string {
     transition: transform 0.35s ease, background-color 0.35s ease, box-shadow 0.35s ease !important;
 }
 
-/* 6. Hover Azul Oficial de Contribuyentes (#14649B) */
+/* 6. Hover Oficial de la Sección (${hoverColor}) */
 .${sectionClass} .aio-icon-box:hover {
-    background-color: ${hoverColor} !important; /* Azul SAT Oficial */
+    background-color: ${hoverColor} !important;
     transform: translateY(-4px) !important;
     box-shadow: 0 12px 24px ${shadowColor} !important;
 }
@@ -265,63 +249,6 @@ const CURATED_DESCRIPTIONS: Record<string, string> = {
   'No Lucrativos': 'Inscripción en el Registro Tributario Unificado (RTU), reconocimiento de exención de impuestos, constancias de exención del IVA (CIVA) y actualización de asociaciones.',
   Municipalidades: 'Registro de corporaciones municipales y autoridades ediles en el Registro Tributario Unificado (RTU), exención para flotillas municipales y solvencias institucionales.',
   Decreto: 'Exenciones y franquicias para misiones diplomáticas, organismos internacionales, cooperativas, partidos políticos y donaciones oficiales.',
-  'Registro y Padrón de Importadores': 'Inscripción y activación en el padrón de importadores, requisitos previos para importar mercancías y guías del Programa de Modernización Integral Aduanera (MIAD).',
-  'Declaraciones Aduaneras y DUCAs': 'Preparación de documentos de soporte, transmisión de la Declaración Única Centroamericana (DUCA - Aduanas), pólizas con fianza y verificación de pago en línea.',
-  'Despacho Aduanero, Levante y Selectivo': 'Gestiones anticipadas, consulta del semáforo de selectivo aduanero, puestos de control interinstitucional (PCI) y operaciones de levante en recinto.',
-  'Importación y Nacionalización de Vehículos': 'Requisitos para ingresar vehículos por aduana, permisos de internación temporal, consulta de tablas de valores imponibles y cálculo del Impuesto al Valor Agregado (IVA).',
-  'Mercancías en Abandono, Depósitos y Franquicias': 'Solicitudes de franquicia electrónica, declaración regional de viajero, rescate de mercancías en abandono tácito y devolución de depósitos aduanales.',
-  'Padrón y Registro de Exportadores': 'Inscripción en el padrón de exportadores, permisos de exportación temporal u ocasional y registro ante la Ventanilla Única para las Exportaciones (VUPE).',
-  'Declaraciones Aduaneras y Embarques': 'Transmisión de declaraciones simplificadas y complementarias de exportación (DUCA), control de listas de embarque y cierre de operaciones aduaneras.',
-  'Devolución de Crédito Fiscal': 'Inscripción y solicitud de devolución de crédito fiscal del Impuesto al Valor Agregado (IVA) para exportadores en régimen especial, optativo, general y en línea.',
-  'Agentes Aduaneros': 'Autorización, actualización anual, fianzas de garantía, emisión de carné e instalación del componente de firma electrónica para agentes aduaneros.',
-  'Apoderados Especiales Aduaneros': 'Acreditación para representar a empresas e instituciones ante el servicio aduanero, constitución de garantías, operaciones de despacho y normativa técnica.',
-  'Depósitos Aduaneros': 'Habilitación y renovación de depósitos aduaneros públicos, privados y temporales, almacenes fiscales, control de inventarios, saldos afianzados y normativa.',
-  'Empresas de Entrega Rápida o Courier': 'Requisitos de habilitación, constitución de garantías y transmisión de manifiestos expresos para empresas de entrega rápida o courier.',
-  'Transportistas Aduaneros': 'Registro de medios de transporte y contenedores bajo el Régimen de Admisión Temporal de Contenedores (ATC), manifiestos de carga (CUSCAR) y marchamo electrónico.',
-  'Maquilas (Decreto 29-89)': 'Inscripción de resolución del Ministerio de Economía (MINECO), fianzas, operación de cuentas corrientes de insumos, descargos y tratamiento de desperdicios.',
-  'Zonas de Desarrollo Económico Especial Público (ZDEEP)': 'Habilitación de zonas especiales y empresas usuarias, control de ingreso y egreso de carga en garita, operación en zonas francas y marco normativo.',
-  'Arancel Centroamericano (SAC) y Permisos': 'Consulta del Sistema Arancelario Centroamericano (SAC) integrado, contingentes arancelarios, permisos no arancelarios y valoración de mercancías.',
-  'Acuerdos Comerciales y Facilitación': 'Tratados de libre comercio vigentes, certificación de origen de mercancías, resoluciones anticipadas y programas de facilitación del comercio exterior.',
-  'Prevención de Contrabando y Defraudación': 'Denuncias confidenciales, control en puestos interinstitucionales y acciones del Consejo Interinstitucional para la Prevención y Combate a la Defraudación Fiscal y al Contrabando Aduanero (COINCON).',
-  'Consultas Técnicas, Recursos y Valoración': 'Consultas técnicas vinculantes sobre clasificación arancelaria y origen, seguimiento de expedientes aduaneros y presentación de recursos administrativos.',
-  'Modernización e Infraestructura Aduanera': 'Avances del Programa de Modernización Integral Aduanera (MIAD), puestos fronterizos integrados, tecnología de revisión no intrusiva y estadísticas de comercio exterior.',
-  'Preparación y Documentos de Soporte': 'Declaración del valor en aduana de las mercancías y manual operativo para la digitalización de documentos de soporte bajo Aduana sin Papeles.',
-  'Transmisión de la Declaración de Mercancías': 'Transmisión electrónica de la Declaración Única Centroamericana (DUCA), pólizas de importación general y declaraciones caucionadas con fianza.',
-  'Verificación y Seguimiento de Declaraciones': 'Consulta en línea del estado de pago y validación de declaraciones centroamericanas (DUCA-F y FAUCA) en el país de destino.',
-  'Gestiones anticipadas': 'Presentación anticipada de declaraciones para análisis de riesgo, entrega de documentos de envíos parciales y solicitud de distintivos de control.',
-  'Puestos de control, trazabilidad y facilitación': 'Verificación de mercancías en Puestos de Control Interinstitucional (PCI), trazabilidad de despachos y medidas de facilitación operativa.',
-  'Operaciones en recinto, selectivo y levante': 'Consulta en tiempo real del semáforo de selectivo aduanero, programación de revisión física en rampa y seguimiento de expedientes en aduana.',
-  'Gestiones de importación y registro': 'Requisitos y documentos para importar vehículos nuevos o usados, liquidación de pólizas y permisos de internación temporal para turistas.',
-  'Tablas de valores y cálculo de impuestos': 'Consulta en línea de las tablas oficiales de valores imponibles para vehículos usados y cálculo del Impuesto al Valor Agregado (IVA) de importación.',
-  'Franquicias y menor cuantía': 'Solicitud de franquicias electrónicas exentas de tributos, Declaración Jurada Regional de Viajero y despacho simplificado de menor cuantía.',
-  'Rescate de mercancías y devoluciones': 'Recuperación de mercancías en abandono tácito, recepción de seguros de caución y devolución de depósitos o tributos arancelarios pagados en exceso.',
-  'Acreditación, Garantías y Habilitación': 'Autorización para actuar como apoderado especial aduanero, renovación de fianzas operativas, emisión de carné y solvencia fiscal anual.',
-  'Operaciones de Despacho y Consultas': 'Transmisión de declaraciones aduaneras (DUCA), consulta de retenciones y liberaciones en rampa y seguimiento de expedientes en gestión aduanera.',
-  'Procedimientos, Normativa y Capacitación': 'Guías operativas, legislación aduanera aplicable, programas de capacitación técnica y atención de audiencias o recursos administrativos.',
-  'Habilitación de recintos y garantías': 'Requisitos para autorizar y delimitar recintos de depósito aduanero, constitución de seguros de caución, renovación anual y solvencia fiscal.',
-  'Habilitación y garantías': 'Renovación de operaciones para almacenes generales de depósito, registro de títulos de crédito afianzados, pólizas de caución y carné de auxiliar.',
-  'Almacenes Fiscales': 'Requisitos de autorización, control de inventarios y operación aduanera para almacenes fiscales vinculados a almacenes generales de depósito.',
-  'Normativa y asistencia': 'Marco legal aplicable (CAUCA, RECAUCA y leyes especiales), guías operativas de aduanas, capacitaciones y resolución de dudas frecuentes.',
-  'Operación y control de mercancías': 'Control de descarga y recepción de bultos, admisión temporal de contenedores, cobro por permanencia y consultas de selectivo y rampa.',
-  'Operación y saldos afianzados': 'Reporte electrónico de saldos y existencias afianzadas, declaraciones DUCA, consulta de convenios de pago y requerimientos del Programa MIAD.',
-  'Equipo de Carga y Contenedores – Régimen ATC': 'Registro y control de contenedores bajo el Régimen de Admisión Temporal de Contenedores (ATC), prórrogas de permanencia y solvencia de fianzas.',
-  'Despacho y Operaciones en Recintos': 'Consultas operativas de arribo, retención y liberación en rampa, estado de sistemas informáticos de aduanas y seguimiento de expedientes.',
-  'Manifiestos de Carga y CUSCAR': 'Transmisión electrónica del manifiesto de carga (CUSCAR), guías de tránsito internacional y lineamientos del Programa de Modernización Integral Aduanera (MIAD).',
-  'Monitoreo en Ruta y Marchamo Electrónico': 'Control de tránsitos aduaneros mediante marchamo electrónico con GPS, rutas fiscales autorizadas y tiempos de recorrido entre aduanas.',
-  'Infracciones y Defensa Aduanera': 'Legislación aduanera aplicable al transporte de carga y procedimientos para atender audiencias, sanciones y recursos administrativos.',
-  'Inscripción y garantías': 'Registro de la resolución de calificación del Ministerio de Economía (MINECO), apertura de cuenta corriente de insumos y validación de pólizas de fianza.',
-  'Operación y descargos': 'Transmisión de declaraciones de admisión temporal (DUCA), descargo periódico de cuentas corrientes insumo-producto y traspasos entre empresas calificadas.',
-  'Cierre, desperdicios y normativa': 'Destrucción, donación o nacionalización de desperdicios de maquila, cancelación de cuenta corriente, liberación de fianzas y compendio del Decreto 29-89.',
-  'Habilitación e infraestructura': 'Requisitos para delimitar y habilitar polígonos de Zonas de Desarrollo Económico Especial Público (ZDEEP), control de garitas y solvencia fiscal.',
-  'Registro y habilitación de empresas': 'Inscripción de empresas usuarias calificadas en ZDEEP, habilitación en Factura Electrónica en Línea (FEL), solvencia fiscal y consulta de expedientes.',
-  'Operación y control de carga': 'Control aduanero de ingreso y egreso de carga en garitas de ZDEEP, rutas fiscales, Puestos de Control Interinstitucional (PCI) y consultas de manifiestos.',
-  'Operación y control en zonas francas': 'Declaraciones anticipadas y definitivas (DUCA), traslados de mercancías hacia y desde zonas especiales y control de inventarios de transformación.',
-  'Consultas técnicas y criterios vinculantes': 'Solicitud de criterios técnicos vinculantes sobre clasificación arancelaria, valoración aduanera y normas de origen de las mercancías.',
-  'Gestiones generales del operador': 'Servicios transversales de consulta de expedientes aduaneros, estado de declaraciones, facilidades de pago y monitoreo de sistemas informáticos.',
-  'Recursos administrativos y defensa aduanera': 'Presentación de recursos de revisión y apelación, atención de audiencias de ajuste y defensa técnica ante la Intendencia de Aduanas.',
-  'Infraestructura y puestos fronterizos': 'Operación en aduanas integradas y periféricas, Puestos de Control Interinstitucional (PCI) y modernización de infraestructura fronteriza.',
-  'Tecnología y revisión no intrusiva': 'Equipos de inspección por rayos X y revisión no intrusiva, integración tecnológica en recintos y lineamientos del Programa MIAD.',
-  'Transparencia, repositorio y estadísticas': 'Boletines estadísticos de recaudación y comercio exterior, repositorio documental de procedimientos aduaneros y portales de transparencia.',
 };
 
 const SOLICITAR_NIT_IDS = new Set(['SAT-GES-0001', 'SAT-GES-0011', 'SAT-GES-0049', 'SAT-GES-0050', 'SAT-GES-0051']);
@@ -392,14 +319,11 @@ function getNodeDesc(title: string, children: TramiteItem[]): string {
 function encodeVcLink(url: string, targetBlank: boolean, basePath = ''): string {
   if (!url) return '';
   const cleanBase = basePath.trim().replace(/\/+$/, '');
-  const isInternal = url.startsWith('/') && !url.startsWith('//');
-  const fullUrl = isInternal
-    ? `https://prototipo.sat.gob.gt${cleanBase}${url}`
-    : url;
-  if (isInternal && !targetBlank) {
-    return `url:${encodeURIComponent(fullUrl)}`;
-  }
-  const enc = encodeURIComponent(fullUrl);
+  const fullUrl =
+    cleanBase && url.startsWith('/') && !url.startsWith('//')
+      ? `${cleanBase}${url}`
+      : url;
+  const enc = encodeURI(fullUrl);
   return `url:${enc}||${targetBlank ? 'target:%20_blank|' : '|'}`;
 }
 
@@ -451,13 +375,12 @@ function buildPageShortcode(
   cardMode: CardShortcodeMode = 'bsf'
 ): string {
   const breadcrumb =
-    '[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row]';
+    '[vc_row gap="5px"][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row]';
 
   const cols = cards
-    .map((c, idx) => {
+    .map(c => {
       const linkVal = includeUrls && c.url ? encodeVcLink(c.url, c.targetBlank, basePath) : '';
-      const offsetAttr = idx === 0 ? ' offset="vc_col-xl-inherit vc_col-lg-inherit vc_col-md-4 vc_col-sm-inherit"' : '';
-      return `[vc_column width="1/3"${offsetAttr}][bsf-info-box icon_size="32" title="${cleanText(c.title)}" read_more="box" link="${linkVal}"]${cleanText(c.desc)}[/bsf-info-box][/vc_column]`;
+      return `[vc_column width="1/3"][bsf-info-box icon_type="none" title="${cleanText(c.title)}" read_more="box" link="${linkVal}"]${cleanText(c.desc)}[/bsf-info-box][/vc_column]`;
     })
     .join('');
 
@@ -466,7 +389,7 @@ function buildPageShortcode(
   return applyBasePathAndModeToShortcode(raw, '', cardMode);
 }
 
-export type OlaId = 'Todas' | 'Ola 0 (Portada + Universales)' | 'Ola 1 (Nivel 1)' | 'Ola 2 (Nivel 2)' | 'Ola 3 (Nivel 3)' | 'Ola 4 (Nivel 4)' | 'Ola 5 (Nivel 5)';
+export type OlaId = 'Todas' | 'Ola 0 (Portada + Universales)' | 'Ola 1 (Nivel 1)' | 'Ola 2 (Nivel 2)' | 'Ola 3 (Nivel 3)' | 'Ola 4 (Nivel 4)';
 
 export interface WpPageTemplate {
   id: string;
@@ -474,7 +397,7 @@ export interface WpPageTemplate {
   waveOrder: number;
   title: string;
   wpSlugOnly: string;
-  levelLabel: 'Portada' | 'Proceso Conectado' | 'Nivel 1' | 'Nivel 2' | 'Nivel 3' | 'Nivel 4' | 'Nivel 5';
+  levelLabel: 'Portada' | 'Proceso Conectado' | 'Nivel 1' | 'Nivel 2' | 'Nivel 3' | 'Nivel 4';
   n1: string;
   wpPath: string;
   parentPage: string;
@@ -668,10 +591,6 @@ function buildAllWpPages(items: TramiteItem[]): WpPageTemplate[] {
       filePath: `docs/plantillas-wpbakery/${n1Slug}/N1_${n1Slug}.txt`,
       leadText: `Selecciona una opción de Nivel 2 dentro de ${n1}.`,
       cards: n1Cards,
-      staticShortcode:
-        n1 === 'Contribuyentes'
-          ? '[vc_row gap="5px"][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section][vc_row gap="0px" el_class="sat-seccion-contribuyentes"][vc_column width="1/2" offset="vc_col-xl-inherit vc_col-lg-inherit vc_col-md-6 vc_col-sm-inherit"][bsf-info-box icon_type="none" title="NIT sin Obligaciones" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fsin-obligaciones%2F"]Gestiones y servicios de identificación tributaria para personas sin actividad comercial.[/bsf-info-box][/vc_column][vc_column width="1/2"][bsf-info-box icon_size="32" title="Pequeños Contribuyentes" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fpequenos-contribuyentes%2F"]Información y obligaciones para pequeños negocios y régimen simplificado.[/bsf-info-box][/vc_column][vc_column width="1/2"][bsf-info-box icon_size="32" title="Contribuyente General" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyente-general%2F"]Declaración y pago de IVA General, pagos de ISR, RTU Digital, facturación FEL, libros contables y vehículos.[/bsf-info-box][/vc_column][vc_column width="1/2"][bsf-info-box icon_size="32" title="Contribuyentes Especiales" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Fcontribuyentes%2Fcontribuyentes-especiales%2F"]Servicios y gestiones tributarias para empresas con atención diferenciada.[/bsf-info-box][/vc_column][/vc_row][/vc_section]'
-          : undefined,
     });
 
     n2Map.forEach((n2Items, n2) => {
@@ -798,96 +717,31 @@ function buildAllWpPages(items: TramiteItem[]): WpPageTemplate[] {
 
             n4Map.forEach((n4Items, n4) => {
               const n4Slug = toSlug(n4);
-              const n5Map = new Map<string, TramiteItem[]>();
-              n4Items.forEach(t => {
-                if (!isEmptyLevel(t.nivel5)) {
-                  const n5 = t.nivel5!.trim();
-                  if (!n5Map.has(n5)) n5Map.set(n5, []);
-                  n5Map.get(n5)!.push(t);
-                }
+              const leafCards = n4Items.map(t => {
+                const { url, targetBlank } = resolveLeafCardUrl(t);
+                return {
+                  title: t.gestion || t.nombreActual || '',
+                  desc: t.descripcion || '',
+                  url,
+                  targetBlank,
+                };
               });
 
-              const useN5 = n4Items.length >= 11 && n5Map.size >= 2;
-
-              if (!useN5) {
-                const leafCards = n4Items.map(t => {
-                  const { url, targetBlank } = resolveLeafCardUrl(t);
-                  return {
-                    title: t.gestion || t.nombreActual || '',
-                    desc: t.descripcion || '',
-                    url,
-                    targetBlank,
-                  };
-                });
-
-                pages.push({
-                  id: `n4-${n1Slug}-${n2Slug}-${n3Slug}-${n4Slug}`,
-                  wave: 'Ola 4 (Nivel 4)',
-                  waveOrder: 4,
-                  title: n4,
-                  wpSlugOnly: n4Slug,
-                  levelLabel: 'Nivel 4',
-                  n1,
-                  wpPath: `/${n1Slug}/${n2Slug}/${n3Slug}/${n4Slug}/`,
-                  parentPage: n3,
-                  breadcrumbTrail: `Inicio › ${n1} › ${n2} › ${n3} › ${n4}`,
-                  filePath: `docs/plantillas-wpbakery/${n1Slug}/${n2Slug}/${n3Slug}/N4_${n4Slug}.txt`,
-                  leadText: getNodeDesc(n4, n4Items),
-                  cards: leafCards,
-                });
-              } else {
-                const n4Cards = Array.from(n5Map.entries()).map(([n5, n5Items]) => ({
-                  title: n5,
-                  desc: getNodeDesc(n5, n5Items),
-                  url: `/${n1Slug}/${n2Slug}/${n3Slug}/${n4Slug}/${toSlug(n5)}/`,
-                  targetBlank: false,
-                }));
-
-                pages.push({
-                  id: `n4-${n1Slug}-${n2Slug}-${n3Slug}-${n4Slug}`,
-                  wave: 'Ola 4 (Nivel 4)',
-                  waveOrder: 4,
-                  title: n4,
-                  wpSlugOnly: n4Slug,
-                  levelLabel: 'Nivel 4',
-                  n1,
-                  wpPath: `/${n1Slug}/${n2Slug}/${n3Slug}/${n4Slug}/`,
-                  parentPage: n3,
-                  breadcrumbTrail: `Inicio › ${n1} › ${n2} › ${n3} › ${n4}`,
-                  filePath: `docs/plantillas-wpbakery/${n1Slug}/${n2Slug}/${n3Slug}/N4_${n4Slug}.txt`,
-                  leadText: getNodeDesc(n4, n4Items),
-                  cards: n4Cards,
-                });
-
-                n5Map.forEach((n5Items, n5) => {
-                  const n5Slug = toSlug(n5);
-                  const leafCards = n5Items.map(t => {
-                    const { url, targetBlank } = resolveLeafCardUrl(t);
-                    return {
-                      title: t.gestion || t.nombreActual || '',
-                      desc: t.descripcion || '',
-                      url,
-                      targetBlank,
-                    };
-                  });
-
-                  pages.push({
-                    id: `n5-${n1Slug}-${n2Slug}-${n3Slug}-${n4Slug}-${n5Slug}`,
-                    wave: 'Ola 5 (Nivel 5)',
-                    waveOrder: 5,
-                    title: n5,
-                    wpSlugOnly: n5Slug,
-                    levelLabel: 'Nivel 5',
-                    n1,
-                    wpPath: `/${n1Slug}/${n2Slug}/${n3Slug}/${n4Slug}/${n5Slug}/`,
-                    parentPage: n4,
-                    breadcrumbTrail: `Inicio › ${n1} › ${n2} › ${n3} › ${n4} › ${n5}`,
-                    filePath: `docs/plantillas-wpbakery/${n1Slug}/${n2Slug}/${n3Slug}/${n4Slug}/N5_${n5Slug}.txt`,
-                    leadText: getNodeDesc(n5, n5Items),
-                    cards: leafCards,
-                  });
-                });
-              }
+              pages.push({
+                id: `n4-${n1Slug}-${n2Slug}-${n3Slug}-${n4Slug}`,
+                wave: 'Ola 4 (Nivel 4)',
+                waveOrder: 4,
+                title: n4,
+                wpSlugOnly: n4Slug,
+                levelLabel: 'Nivel 4',
+                n1,
+                wpPath: `/${n1Slug}/${n2Slug}/${n3Slug}/${n4Slug}/`,
+                parentPage: n3,
+                breadcrumbTrail: `Inicio › ${n1} › ${n2} › ${n3} › ${n4}`,
+                filePath: `docs/plantillas-wpbakery/${n1Slug}/${n2Slug}/${n3Slug}/N4_${n4Slug}.txt`,
+                leadText: getNodeDesc(n4, n4Items),
+                cards: leafCards,
+              });
             });
           }
         });
@@ -910,7 +764,7 @@ export const WPBakeryBuilderPage: React.FC = () => {
   const [cardMode, setCardMode] = useState<CardShortcodeMode>('bsf');
   const [basePath, setBasePath] = useState<string>(() => {
     try {
-      return localStorage.getItem('sat_wpbakery_base_path_v3') ?? '';
+      return localStorage.getItem('sat_wpbakery_base_path_v1') || '';
     } catch {
       return '';
     }
@@ -918,16 +772,8 @@ export const WPBakeryBuilderPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'shortcode' | 'preview' | 'css' | 'xml'>('shortcode');
   const [cssMode, setCssMode] = useState<'page' | 'global'>('page');
   const [showXmlCode, setShowXmlCode] = useState(false);
-  const cgPages = useMemo(
-    () => allPages.filter(p => p.wpPath.startsWith('/contribuyentes/contribuyente-general/')),
-    [allPages]
-  );
-  const [selectedCgPageId, setSelectedCgPageId] = useState<string>(
-    () => allPages.find(p => p.wpSlugOnly === 'declaraciones-pagos-y-solvencias')?.id || allPages[0].id
-  );
-  const [avoidDuplicateDate, setAvoidDuplicateDate] = useState(true);
   const [copiedType, setCopiedType] = useState<
-    'shortcode' | 'css' | 'slug' | 'title' | 'parent' | 'template' | 'xml' | null
+    'shortcode' | 'css' | 'slug' | 'title' | 'parent' | 'template' | 'xml' | 'xml-prof' | 'xml-exentos' | null
   >(null);
   const [completedIds, setCompletedIds] = useState<Set<string>>(() => {
     try {
@@ -948,7 +794,7 @@ export const WPBakeryBuilderPage: React.FC = () => {
 
   useEffect(() => {
     try {
-      localStorage.setItem('sat_wpbakery_base_path_v3', basePath);
+      localStorage.setItem('sat_wpbakery_base_path_v1', basePath);
     } catch {
       // ignore storage errors
     }
@@ -1014,94 +860,6 @@ export const WPBakeryBuilderPage: React.FC = () => {
     return getPageSpecificCss(currentPage.n1, currentPage.title);
   }, [currentPage.n1, currentPage.title]);
 
-  const selectedCgPage = useMemo(
-    () => cgPages.find(p => p.id === selectedCgPageId) || cgPages[0] || currentPage,
-    [cgPages, selectedCgPageId, currentPage]
-  );
-
-  const currentPageSingleXml = useMemo(() => {
-    const page = selectedCgPage;
-    const shortcode = page.staticShortcode
-      ? applyBasePathAndModeToShortcode(page.staticShortcode, basePath, cardMode)
-      : buildPageShortcode(page.cards, page.n1, page.title, page.leadText, includeUrls, basePath, cardMode);
-    const pageCss = getPageSpecificCss(page.n1, page.title);
-    // Unique timestamp avoids WordPress "Page already exists" check (which matches title + post_date)
-    const now = new Date();
-    const pad = (n: number) => String(n).padStart(2, '0');
-    const localDateStr = `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())} ${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(now.getSeconds())}`;
-    const gmtDateStr = now.toISOString().replace('T', ' ').substring(0, 19);
-    const pubDateStr = now.toUTCString();
-    const postDateLocal = avoidDuplicateDate ? localDateStr : '2026-10-27 19:56:41';
-    const postDateGmt = avoidDuplicateDate ? gmtDateStr : '2026-10-28 01:56:41';
-    return `<?xml version="1.0" encoding="UTF-8" ?>
-<rss version="2.0"
-  xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/"
-  xmlns:content="http://purl.org/rss/1.0/modules/content/"
-  xmlns:wfw="http://wellformedweb.org/CommentAPI/"
-  xmlns:dc="http://purl.org/dc/elements/1.1/"
-  xmlns:wp="http://wordpress.org/export/1.2/"
->
-<channel>
-  <title>Portal SAT Guatemala — Prueba 1 Página Contribuyente General (${page.title})</title>
-  <link>https://prototipo.sat.gob.gt</link>
-  <description>Prueba unitaria de importación WPBakery + The7 Classic (1 sola página de Contribuyente General)</description>
-  <pubDate>${pubDateStr}</pubDate>
-  <language>es-GT</language>
-  <wp:wxr_version>1.2</wp:wxr_version>
-  <wp:base_site_url>https://prototipo.sat.gob.gt</wp:base_site_url>
-  <wp:base_blog_url>https://prototipo.sat.gob.gt</wp:base_blog_url>
-  <wp:author>
-    <wp:author_id>1</wp:author_id>
-    <wp:author_login><![CDATA[admin]]></wp:author_login>
-    <wp:author_email><![CDATA[webmaster@sat.gob.gt]]></wp:author_email>
-    <wp:author_display_name><![CDATA[SAT Guatemala]]></wp:author_display_name>
-  </wp:author>
-  <item>
-    <title>${page.title}</title>
-    <link>https://prototipo.sat.gob.gt${basePath}${page.wpPath}</link>
-    <pubDate>${pubDateStr}</pubDate>
-    <dc:creator><![CDATA[admin]]></dc:creator>
-    <guid isPermaLink="false">https://prototipo.sat.gob.gt/?page_slug=${page.wpSlugOnly}-${postDateLocal.replace(/[^0-9]/g, '')}</guid>
-    <description></description>
-    <content:encoded><![CDATA[${shortcode}]]></content:encoded>
-    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
-    <wp:post_id>0</wp:post_id>
-    <wp:post_date><![CDATA[${postDateLocal}]]></wp:post_date>
-    <wp:post_date_gmt><![CDATA[${postDateGmt}]]></wp:post_date_gmt>
-    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
-    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
-    <wp:post_name><![CDATA[${page.wpSlugOnly}]]></wp:post_name>
-    <wp:status><![CDATA[publish]]></wp:status>
-    <wp:post_parent>0</wp:post_parent>
-    <wp:menu_order>1</wp:menu_order>
-    <wp:post_type><![CDATA[page]]></wp:post_type>
-    <wp:post_password><![CDATA[]]></wp:post_password>
-    <wp:is_sticky>0</wp:is_sticky>
-    <wp:postmeta>
-      <wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
-      <wp:meta_value><![CDATA[elementor_header_footer]]></wp:meta_value>
-    </wp:postmeta>
-    <wp:postmeta>
-      <wp:meta_key><![CDATA[_dt_sidebar_position]]></wp:meta_key>
-      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
-    </wp:postmeta>
-    <wp:postmeta>
-      <wp:meta_key><![CDATA[_dt_header_title]]></wp:meta_key>
-      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
-    </wp:postmeta>
-    <wp:postmeta>
-      <wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
-      <wp:meta_value><![CDATA[true]]></wp:meta_value>
-    </wp:postmeta>
-    <wp:postmeta>
-      <wp:meta_key><![CDATA[_wpb_post_custom_css]]></wp:meta_key>
-      <wp:meta_value><![CDATA[${pageCss}]]></wp:meta_value>
-    </wp:postmeta>
-  </item>
-</channel>
-</rss>`;
-  }, [selectedCgPage, includeUrls, basePath, cardMode, avoidDuplicateDate]);
-
   const handleCopy = (text: string, type: 'shortcode' | 'css' | 'slug' | 'title' | 'parent' | 'template') => {
     navigator.clipboard.writeText(text);
     setCopiedType(type);
@@ -1129,7 +887,6 @@ export const WPBakeryBuilderPage: React.FC = () => {
     { wave: 'Ola 2 (Nivel 2)', label: 'Ola 2: Nivel 2 (20)', total: 20 },
     { wave: 'Ola 3 (Nivel 3)', label: 'Ola 3: Nivel 3 (53)', total: 53 },
     { wave: 'Ola 4 (Nivel 4)', label: 'Ola 4: Nivel 4 (76)', total: 76 },
-    { wave: 'Ola 5 (Nivel 5)', label: `Ola 5: Nivel 5 (${allPages.filter(p => p.wave === 'Ola 5 (Nivel 5)').length})`, total: allPages.filter(p => p.wave === 'Ola 5 (Nivel 5)').length },
   ];
 
   return (
@@ -1441,14 +1198,14 @@ export const WPBakeryBuilderPage: React.FC = () => {
                     </span>
                     <button
                       type="button"
-                      onClick={() => handleCopy('Elementor Full Width', 'template')}
+                      onClick={() => handleCopy('Elementor Ancho Completo', 'template')}
                       className="text-[11px] font-semibold text-indigo-700 hover:underline cursor-pointer"
                     >
                       {copiedType === 'template' ? 'Copiado' : 'Copiar'}
                     </button>
                   </div>
                   <div className="mt-1 font-bold text-indigo-950">
-                    Elementor Full Width
+                    Elementor Ancho Completo
                   </div>
                 </div>
                 <div className="flex items-center justify-between text-[10px] text-indigo-800 mt-1 font-medium">
@@ -1504,7 +1261,7 @@ export const WPBakeryBuilderPage: React.FC = () => {
                 </span>
               </div>
               <span className="text-[11px] text-sky-950 font-medium bg-sky-100/80 px-2 py-1 rounded-lg">
-                Encadenado por <strong>Página Superior</strong> con plantilla <strong>Elementor Full Width</strong> (100% full-width sin barra lateral)
+                Encadenado por <strong>Página Superior</strong> con plantilla <strong>Elementor Ancho Completo</strong> (100% full-width sin barra lateral)
               </span>
             </div>
 
@@ -1688,195 +1445,8 @@ export const WPBakeryBuilderPage: React.FC = () => {
                   Opción Aceleradora: Paquetes XML de Importación Nativa de WordPress (WXR 1.2)
                 </h3>
                 <p className="text-xs text-slate-600 mt-1 leading-relaxed">
-                  Si en el menú izquierdo de tu WordPress tienes acceso a <strong>Herramientas › Importar › WordPress</strong>, puedes subir cualquiera de estos archivos XML oficiales. Ya traen preconfigurados de fábrica la <strong>Página Superior (`post_parent`)</strong>, la <strong>Plantilla Elementor Full Width (`elementor_header_footer`)</strong>, el <strong>CSS de WPBakery (`_wpb_post_custom_css`)</strong>, el <strong>Slug (`post_name`)</strong>, el <strong>Breadcrumb (`[dt_breadcrumbs]`)</strong> y los <strong>Shortcodes WPBakery (0% `[vc_raw_html]`)</strong> en un solo paso. Si no usas el importador, el planificador superior te indica exactamente qué valores elegir en cada página.
+                  Si en el menú izquierdo de tu WordPress tienes acceso a <strong>Herramientas › Importar › WordPress</strong>, puedes subir cualquiera de estos archivos XML oficiales. Ya traen preconfigurados de fábrica la <strong>Página Superior (`post_parent`)</strong>, la <strong>Plantilla Elementor Ancho Completo (`elementor_header_footer`)</strong>, el <strong>CSS de WPBakery (`_wpb_post_custom_css`)</strong>, el <strong>Slug (`post_name`)</strong>, el <strong>Breadcrumb (`[dt_breadcrumbs]`)</strong> y los <strong>Shortcodes WPBakery (0% `[vc_raw_html]`)</strong> en un solo paso. Si no usas el importador, el planificador superior te indica exactamente qué valores elegir en cada página.
                 </p>
-              </div>
-
-              {/* Prueba Unitaria: 1 Sola Página bajo Contribuyente General */}
-              <div className="p-5 rounded-2xl border-2 border-emerald-600 bg-emerald-50/70 space-y-4 shadow-xs">
-                <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-                  <div className="space-y-1">
-                    <div className="flex flex-wrap items-center gap-2">
-                      <span className="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-700 text-white">
-                        Prueba de 1 Sola Página (Rama Contribuyente General)
-                      </span>
-                      <span className="text-xs font-bold text-emerald-950 font-mono">
-                        Slug: {selectedCgPage.wpSlugOnly}
-                      </span>
-                      <span className="text-xs font-semibold text-slate-600">
-                        Superior en WP: <strong>{selectedCgPage.parentPage}</strong>
-                      </span>
-                    </div>
-                    <h4 className="text-base font-bold text-emerald-950">
-                      Elige 1 página de Contribuyente General para probar la importación:
-                    </h4>
-                  </div>
-
-                  <div className="flex items-center gap-2 w-full md:w-auto shrink-0">
-                    <button
-                      type="button"
-                      onClick={() =>
-                        handleDownloadXml(
-                          currentPageSingleXml,
-                          `wordpress-import-1-pagina-${selectedCgPage.wpSlugOnly}.xml`
-                        )
-                      }
-                      className="flex-1 md:flex-initial inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs cursor-pointer transition-colors shadow-xs"
-                    >
-                      <Download className="w-4 h-4" />
-                      Descargar XML (1 Página)
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => {
-                        navigator.clipboard.writeText(currentPageSingleXml);
-                        setCopiedType('xml');
-                        setTimeout(() => setCopiedType(null), 2500);
-                      }}
-                      className="inline-flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl border border-emerald-300 bg-white hover:bg-emerald-100 text-emerald-950 font-bold text-xs cursor-pointer transition-colors"
-                      title="Copiar XML de 1 sola página al portapapeles"
-                    >
-                      {copiedType === 'xml' ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5" />}
-                      <span>{copiedType === 'xml' ? '¡Copiado!' : 'Copiar XML (1 Pág)'}</span>
-                    </button>
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-12 gap-3 items-center pt-2 border-t border-emerald-200/80">
-                  <div className="md:col-span-7">
-                    <label className="block text-[11px] font-bold text-emerald-950 mb-1">
-                      Página de «Contribuyente General» a incluir en el XML ({cgPages.length} disponibles):
-                    </label>
-                    <select
-                      value={selectedCgPage.id}
-                      onChange={e => {
-                        setSelectedCgPageId(e.target.value);
-                        setSelectedPageId(e.target.value);
-                      }}
-                      aria-label="Seleccionar página de Contribuyente General para exportar en XML"
-                      className="w-full px-3 py-2 text-xs font-bold bg-white border border-emerald-400 rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-600"
-                    >
-                      {cgPages.map(p => (
-                        <option key={p.id} value={p.id}>
-                          [{p.levelLabel}] {p.title} ({p.cards.length} tarjetas) — Superior: {p.parentPage}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                  <div className="md:col-span-5 flex flex-col gap-1.5 text-xs text-emerald-950">
-                    <label className="inline-flex items-center gap-2 font-semibold cursor-pointer">
-                      <input
-                        type="checkbox"
-                        checked={avoidDuplicateDate}
-                        onChange={e => setAvoidDuplicateDate(e.target.checked)}
-                        className="rounded border-emerald-400 text-emerald-700 focus:ring-emerald-600"
-                      />
-                      <span>Evitar bloqueo «already exists» (fecha única)</span>
-                    </label>
-                    <span className="text-[11px] text-slate-600">
-                      Prefijo de enlaces actual: <code className="font-mono font-bold text-emerald-900">{basePath || '/'}</code> (ajustado para <code className="font-mono">prototipo.sat.gob.gt/portal</code>)
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Rama Completa: Contribuyente General (44 Páginas: Nivel 2 + 8 Nivel 3 + 35 Nivel 4) */}
-              <div className="p-5 rounded-2xl border-2 border-[#003865] bg-sky-50/90 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 shadow-xs">
-                <div className="space-y-1">
-                  <div className="flex flex-wrap items-center gap-2">
-                    <span className="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-[#003865] text-white">
-                      Menú Completo de Contribuyente General (77 Páginas: N2 + N3 + N4 + N5)
-                    </span>
-                    <span className="text-xs font-bold text-[#14649B]">
-                      1 Nivel 2 + 8 Nivel 3 + 35 Nivel 4 + 33 Nivel 5 (298 gestiones conectadas)
-                    </span>
-                  </div>
-                  <h4 className="text-base font-bold text-[#003865]">
-                    Paquete XML Completo de Contribuyente General (`wordpress-import-contribuyente-general-completo.xml`)
-                  </h4>
-                  <p className="text-xs text-slate-700 max-w-2xl leading-relaxed">
-                    Importa de una sola vez <strong>todo el árbol de Contribuyente General</strong> con su jerarquía padre-hijo (`post_parent`) ya enlazada entre las 8 subcategorías de Nivel 3 y sus 35 páginas de Nivel 4, con el contenedor centrado `1200px` y el CSS aprobado.
-                  </p>
-                </div>
-                <div className="flex items-center gap-2 w-full md:w-auto shrink-0">
-                  <button
-                    type="button"
-                    onClick={() =>
-                      handleDownloadXml(
-                        applyBasePathAndModeToShortcode(wpXmlCgCompletoRaw, basePath, cardMode),
-                        'wordpress-import-contribuyente-general-completo.xml'
-                      )
-                    }
-                    className="flex-1 md:flex-initial inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#003865] hover:bg-[#14649B] text-white font-bold text-xs cursor-pointer transition-colors shadow-xs"
-                  >
-                    <Download className="w-4 h-4" />
-                    Descargar Menú Completo CG (77 Págs: N2 a N5)
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      navigator.clipboard.writeText(
-                        applyBasePathAndModeToShortcode(wpXmlCgCompletoRaw, basePath, cardMode)
-                      );
-                      setCopiedType('xml');
-                      setTimeout(() => setCopiedType(null), 2500);
-                    }}
-                    className="inline-flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl border border-sky-300 bg-white hover:bg-sky-100 text-[#003865] font-bold text-xs cursor-pointer transition-colors"
-                    title="Copiar XML completo de Contribuyente General (77 páginas)"
-                  >
-                    {copiedType === 'xml' ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5" />}
-                    <span>{copiedType === 'xml' ? '¡Copiado!' : 'Copiar XML (77 Págs)'}</span>
-                  </button>
-                </div>
-              </div>
-
-              {/* Rama Operadores de Comercio Exterior (Restante: 49 Páginas sin Importadores + Completo: 65 Páginas) */}
-              <div className="p-5 rounded-2xl border-2 border-[#0284C7] bg-sky-50/70 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 shadow-xs">
-                <div className="space-y-1">
-                  <div className="flex flex-wrap items-center gap-2">
-                    <span className="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-[#0284C7] text-white">
-                      Operadores de Comercio Exterior (49 Páginas Restantes / 65 Completas)
-                    </span>
-                    <span className="text-xs font-bold text-[#0369A1]">
-                      Exportadores + OEA + AFPA + Zonas Especiales + Normativa (Excluye Importadores SAT-GES-0341..0394)
-                    </span>
-                  </div>
-                  <h4 className="text-base font-bold text-[#003865]">
-                    Paquete XML de Comercio Exterior (`wordpress-import-comercio-exterior-restante.xml`)
-                  </h4>
-                  <p className="text-xs text-slate-700 max-w-2xl leading-relaxed">
-                    Importa las <strong>49 páginas restantes de Comercio Exterior</strong> (Exportadores, OEA, Auxiliares AFPA, Maquilas/ZDEEP y Normativa) conectadas automáticamente bajo <em>«Operadores de Comercio Exterior»</em>, sin duplicar la rama ya construida de <em>Importadores</em> (`SAT-GES-0341` a `SAT-GES-0394`). Incluye contenedor centrado `1200px` y hover azul aduanas (`#0284C7`).
-                  </p>
-                </div>
-                <div className="flex flex-wrap items-center gap-2 w-full md:w-auto shrink-0">
-                  <button
-                    type="button"
-                    onClick={() =>
-                      handleDownloadXml(
-                        applyBasePathAndModeToShortcode(wpXmlOceRestanteRaw, basePath, cardMode),
-                        'wordpress-import-comercio-exterior-restante.xml'
-                      )
-                    }
-                    className="flex-1 md:flex-initial inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#0284C7] hover:bg-[#0369A1] text-white font-bold text-xs cursor-pointer transition-colors shadow-xs"
-                  >
-                    <Download className="w-4 h-4" />
-                    Descargar Restante sin Importadores (49 Págs)
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() =>
-                      handleDownloadXml(
-                        applyBasePathAndModeToShortcode(wpXmlOceCompletoRaw, basePath, cardMode),
-                        'wordpress-import-comercio-exterior-completo.xml'
-                      )
-                    }
-                    className="inline-flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl border border-sky-400 bg-white hover:bg-sky-100 text-[#003865] font-bold text-xs cursor-pointer transition-colors"
-                    title="Descargar árbol completo de Comercio Exterior (65 páginas incluyendo Importadores)"
-                  >
-                    <Download className="w-3.5 h-3.5" />
-                    <span>Completo (65 Págs)</span>
-                  </button>
-                </div>
               </div>
 
               {/* Prueba Controlada: Contribuyente General */}
@@ -1955,6 +1525,95 @@ export const WPBakeryBuilderPage: React.FC = () => {
                   />
                 </div>
               )}
+
+              {/* Paquetes Segmentados: Profesionales y Entes Exentos */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="p-5 rounded-xl border border-emerald-300 bg-emerald-50/60 flex flex-col justify-between gap-4">
+                  <div>
+                    <span className="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-[#4D8014] text-white mb-2">
+                      Segmento: Profesionales (14 Páginas)
+                    </span>
+                    <h4 className="text-sm font-bold text-slate-900">
+                      Paquete Profesionales (`wordpress-import-profesionales.xml`)
+                    </h4>
+                    <p className="text-xs text-slate-600 mt-1 leading-relaxed">
+                      Crea la página madre `/profesionales/` (N1), sus 5 categorías N2 (Abogados y Notarios, Peritos Contadores, Auditores, Gestores Tributarios y Servicios Profesionales) y sus 8 subcategorías N3 con su CSS verde oficial (#4D8014).
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <button
+                      type="button"
+                      onClick={() =>
+                        handleDownloadXml(
+                          applyBasePathAndModeToShortcode(wpXmlProfesionalesRaw, basePath, cardMode),
+                          'wordpress-import-profesionales.xml'
+                        )
+                      }
+                      className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#4D8014] hover:bg-[#3D6610] text-white font-bold text-xs cursor-pointer transition-colors shadow-xs"
+                    >
+                      <Download className="w-4 h-4" />
+                      Descargar XML Profesionales (14 págs)
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        navigator.clipboard.writeText(
+                          applyBasePathAndModeToShortcode(wpXmlProfesionalesRaw, basePath, cardMode)
+                        );
+                        setCopiedType('xml-prof');
+                        setTimeout(() => setCopiedType(null), 2500);
+                      }}
+                      className="px-3 py-2.5 rounded-xl border border-slate-300 bg-white hover:bg-slate-100 text-slate-700 font-bold text-xs cursor-pointer transition-colors"
+                      title="Copiar XML al portapapeles"
+                    >
+                      {copiedType === 'xml-prof' ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5" />}
+                    </button>
+                  </div>
+                </div>
+
+                <div className="p-5 rounded-xl border border-amber-300 bg-amber-50/60 flex flex-col justify-between gap-4">
+                  <div>
+                    <span className="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-[#C25E00] text-white mb-2">
+                      Segmento: Entes Exentos (18 Páginas)
+                    </span>
+                    <h4 className="text-sm font-bold text-slate-900">
+                      Paquete Entes Exentos (`wordpress-import-entes-exentos.xml`)
+                    </h4>
+                    <p className="text-xs text-slate-600 mt-1 leading-relaxed">
+                      Crea la página madre `/entes-exentos/` (N1), sus 5 ramas N2 (Entidades del Estado, Constitucionales, No Lucrativos, Municipalidades y Decreto) y sus 12 subcategorías N3 con su CSS naranja oficial (#C25E00).
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <button
+                      type="button"
+                      onClick={() =>
+                        handleDownloadXml(
+                          applyBasePathAndModeToShortcode(wpXmlExentosRaw, basePath, cardMode),
+                          'wordpress-import-entes-exentos.xml'
+                        )
+                      }
+                      className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#C25E00] hover:bg-[#A34E00] text-white font-bold text-xs cursor-pointer transition-colors shadow-xs"
+                    >
+                      <Download className="w-4 h-4" />
+                      Descargar XML Entes Exentos (18 págs)
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        navigator.clipboard.writeText(
+                          applyBasePathAndModeToShortcode(wpXmlExentosRaw, basePath, cardMode)
+                        );
+                        setCopiedType('xml-exentos');
+                        setTimeout(() => setCopiedType(null), 2500);
+                      }}
+                      className="px-3 py-2.5 rounded-xl border border-slate-300 bg-white hover:bg-slate-100 text-slate-700 font-bold text-xs cursor-pointer transition-colors"
+                      title="Copiar XML al portapapeles"
+                    >
+                      {copiedType === 'xml-exentos' ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5" />}
+                    </button>
+                  </div>
+                </div>
+              </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="p-5 rounded-xl border border-slate-200 bg-slate-50 flex flex-col justify-between gap-4">

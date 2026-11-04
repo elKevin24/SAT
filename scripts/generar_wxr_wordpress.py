@@ -40,13 +40,13 @@ def build_wxr_xml(items: list[dict], title: str) -> str:
 >
 <channel>
   <title>{html.escape(title)}</title>
-  <link>https://prototipo.sat.gob.gt</link>
+  <link>https://portal.sat.gob.gt</link>
   <description>Paquete de páginas jerárquicas WPBakery + The7 Classic (0% Raw HTML) — Portal SAT Guatemala</description>
-  <pubDate>Thu, 29 Oct 2026 03:06:00 +0000</pubDate>
+  <pubDate>Mon, 26 Oct 2026 19:00:00 +0000</pubDate>
   <language>es-GT</language>
   <wp:wxr_version>1.2</wp:wxr_version>
-  <wp:base_site_url>https://prototipo.sat.gob.gt</wp:base_site_url>
-  <wp:base_blog_url>https://prototipo.sat.gob.gt</wp:base_blog_url>
+  <wp:base_site_url>https://portal.sat.gob.gt</wp:base_site_url>
+  <wp:base_blog_url>https://portal.sat.gob.gt</wp:base_blog_url>
   <wp:author>
     <wp:author_id>1</wp:author_id>
     <wp:author_login><![CDATA[admin]]></wp:author_login>
@@ -59,16 +59,16 @@ def build_wxr_xml(items: list[dict], title: str) -> str:
         content_safe = it["content"].replace("]]>", "]]]]><![CDATA[>")
         body_parts.append(f"""  <item>
     <title>{html.escape(it["title"])}</title>
-    <link>https://prototipo.sat.gob.gt{html.escape(it["url"])}</link>
-    <pubDate>Thu, 29 Oct 2026 03:06:00 +0000</pubDate>
+    <link>https://portal.sat.gob.gt{html.escape(it["url"])}</link>
+    <pubDate>Mon, 26 Oct 2026 19:00:00 +0000</pubDate>
     <dc:creator><![CDATA[admin]]></dc:creator>
-    <guid isPermaLink="false">https://prototipo.sat.gob.gt/?page_id={it["post_id"]}&amp;v=20261028210600</guid>
+    <guid isPermaLink="false">https://portal.sat.gob.gt/?page_id={it["post_id"]}</guid>
     <description></description>
     <content:encoded><![CDATA[{content_safe}]]></content:encoded>
     <excerpt:encoded><![CDATA[]]></excerpt:encoded>
     <wp:post_id>{it["post_id"]}</wp:post_id>
-    <wp:post_date><![CDATA[2026-10-28 21:06:00]]></wp:post_date>
-    <wp:post_date_gmt><![CDATA[2026-10-29 03:06:00]]></wp:post_date_gmt>
+    <wp:post_date><![CDATA[2026-10-26 19:00:00]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-10-26 19:00:00]]></wp:post_date_gmt>
     <wp:comment_status><![CDATA[closed]]></wp:comment_status>
     <wp:ping_status><![CDATA[closed]]></wp:ping_status>
     <wp:post_name><![CDATA[{it["slug"]}]]></wp:post_name>
@@ -81,18 +81,6 @@ def build_wxr_xml(items: list[dict], title: str) -> str:
     <wp:postmeta>
       <wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
       <wp:meta_value><![CDATA[elementor_header_footer]]></wp:meta_value>
-    </wp:postmeta>
-    <wp:postmeta>
-      <wp:meta_key><![CDATA[_dt_sidebar_position]]></wp:meta_key>
-      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
-    </wp:postmeta>
-    <wp:postmeta>
-      <wp:meta_key><![CDATA[_dt_header_title]]></wp:meta_key>
-      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
-    </wp:postmeta>
-    <wp:postmeta>
-      <wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
-      <wp:meta_value><![CDATA[true]]></wp:meta_value>
     </wp:postmeta>
     <wp:postmeta>
       <wp:meta_key><![CDATA[_wpb_post_custom_css]]></wp:meta_key>
@@ -148,7 +136,7 @@ def collect_all_pages() -> list[dict]:
         col = HOVER_COLORS.get(n1, "#14649B")
         shd = SHADOW_COLORS.get(n1, "rgba(20, 100, 155, 0.22)")
         return (
-            f".wpb-content-wrapper, .entry-content {{ max-width: 1200px !important; margin-left: auto !important; margin-right: auto !important; padding-left: 24px !important; padding-right: 24px !important; box-sizing: border-box !important; }} .{sec}.vc_row {{ display: flex !important; flex-wrap: wrap !important; align-items: stretch !important; margin-left: -8px !important; margin-right: -8px !important; }} "
+            f".{sec}.vc_row {{ display: flex !important; flex-wrap: wrap !important; align-items: stretch !important; margin-left: -8px !important; margin-right: -8px !important; }} "
             f".{sec} > .vc_column_container {{ display: flex !important; flex-direction: column !important; flex: 0 0 33.333333% !important; max-width: 33.333333% !important; width: 33.333333% !important; padding-left: 8px !important; padding-right: 8px !important; margin-bottom: 16px !important; box-sizing: border-box !important; }} "
             f"@media (max-width: 991px) {{ .{sec} > .vc_column_container {{ flex: 0 0 50% !important; max-width: 50% !important; width: 50% !important; }} }} "
             f"@media (max-width: 640px) {{ .{sec} > .vc_column_container {{ flex: 0 0 100% !important; max-width: 100% !important; width: 100% !important; }} }} "
@@ -266,75 +254,60 @@ def collect_all_pages() -> list[dict]:
     return pages
 
 
-def collect_section(section_name: str) -> list[dict]:
-    """Return pages whose title starts with the given section name (e.g., "Entes Exentos" or "Profesionales")."""
-    return [p for p in pages if p["title"].startswith(section_name)]
-
 def main():
     pages = collect_all_pages()
     olas_012 = [p for p in pages if p["wave"] in (0, 1, 2)]
-    public_dir = BASE_DIR / "public" / "downloads"
-    public_dir.mkdir(parents=True, exist_ok=True)
 
-    def save_both(filename: str, xml_content: str):
-        (OUTPUT_DIR / filename).write_text(xml_content, encoding="utf-8")
-        (public_dir / filename).write_text(xml_content, encoding="utf-8")
+    xml_012_path = OUTPUT_DIR / "wordpress-import-olas-0-1-2.xml"
+    xml_all_path = OUTPUT_DIR / "wordpress-import-completo-160.xml"
+    xml_cg_n3_path = OUTPUT_DIR / "wordpress-import-contribuyente-general-n3.xml"
+    xml_cg_all_path = OUTPUT_DIR / "wordpress-import-contribuyente-general-completo.xml"
 
-    save_both(
-        "wordpress-import-olas-0-1-2.xml",
+    xml_012_path.write_text(
         build_wxr_xml(olas_012, "Portal SAT Guatemala — Olas 0, 1 y 2 (31 Páginas Base)"),
+        encoding="utf-8",
     )
-    save_both(
-        "wordpress-import-completo-160.xml",
+    xml_all_path.write_text(
         build_wxr_xml(pages, "Portal SAT Guatemala — Árbol Completo (160 Páginas)"),
+        encoding="utf-8",
     )
 
-    # Paquete completo de Operadores de Comercio Exterior (65 páginas: N1 + 6 N2 + 20 N3 + 38 N4)
-    oce_all = [p for p in pages if p["url"].startswith("/operadores-de-comercio-exterior/")]
-    save_both(
-        "wordpress-import-comercio-exterior-completo.xml",
-        build_wxr_xml(oce_all, "Portal SAT Guatemala — Operadores de Comercio Exterior Completo (65 Páginas)"),
+    # Paquete controlado: Contribuyente General + 8 Subcategorías N3
+    cg_page = [p for p in pages if p["url"] == "/contribuyentes/contribuyente-general/"]
+    cg_n3 = [p for p in pages if p["url"].startswith("/contribuyentes/contribuyente-general/") and p["wave"] == 3]
+    xml_cg_n3_path.write_text(
+        build_wxr_xml(cg_page + cg_n3, "Portal SAT Guatemala — Contribuyente General (8 Subcategorías N3)"),
+        encoding="utf-8",
     )
 
-    # Paquete restante de Operadores de Comercio Exterior (50 páginas: sin Importadores SAT-GES-0341..0394)
-    oce_restante = [
-        p for p in oce_all
-        if not p["url"].startswith("/operadores-de-comercio-exterior/importadores/")
-    ]
-    save_both(
-        "wordpress-import-comercio-exterior-restante.xml",
-        build_wxr_xml(oce_restante, "Portal SAT Guatemala — Operadores de Comercio Exterior (Restante: 50 Páginas sin Importadores)"),
+    # Paquete completo de Contribuyente General (N2 + N3 + N4)
+    cg_all = [p for p in pages if p["url"].startswith("/contribuyentes/contribuyente-general/")]
+    xml_cg_all_path.write_text(
+        build_wxr_xml(cg_all, "Portal SAT Guatemala — Contribuyente General Completo"),
+        encoding="utf-8",
     )
 
-    # Entes Exentos
-    exentos_all = [p for p in pages if p["url"].startswith("/entes-exentos/")]
-    save_both(
-        "wordpress-import-entes-exentos-completo.xml",
-        build_wxr_xml(exentos_all, "Portal SAT Guatemala — Entes Exentos (Completo)"),
-    )
-    # No exclusion needed, so restante = completo
-    exentos_restante = exentos_all
-    save_both(
-        "wordpress-import-entes-exentos-restante.xml",
-        build_wxr_xml(exentos_restante, "Portal SAT Guatemala — Entes Exentos (Restante)"),
+    # Paquete de Profesionales (14 páginas: N1 + N2 + N3)
+    profesionales = [p for p in pages if p["url"].startswith("/profesionales/")]
+    xml_profesionales_path = OUTPUT_DIR / "wordpress-import-profesionales.xml"
+    xml_profesionales_path.write_text(
+        build_wxr_xml(profesionales, "Portal SAT Guatemala — Profesionales (14 Páginas)"),
+        encoding="utf-8",
     )
 
-    # Profesionales
-    profesionales_all = [p for p in pages if p["url"].startswith("/profesionales/")]
-    save_both(
-        "wordpress-import-profesionales-completo.xml",
-        build_wxr_xml(profesionales_all, "Portal SAT Guatemala — Profesionales (Completo)"),
-    )
-    profesionales_restante = profesionales_all
-    save_both(
-        "wordpress-import-profesionales-restante.xml",
-        build_wxr_xml(profesionales_restante, "Portal SAT Guatemala — Profesionales (Restante)"),
+    # Paquete de Entes Exentos (18 páginas: N1 + N2 + N3)
+    exentos = [p for p in pages if p["url"].startswith("/entes-exentos/")]
+    xml_exentos_path = OUTPUT_DIR / "wordpress-import-entes-exentos.xml"
+    xml_exentos_path.write_text(
+        build_wxr_xml(exentos, "Portal SAT Guatemala — Entes Exentos (18 Páginas)"),
+        encoding="utf-8",
     )
 
     print(
-        f"Archivos WXR XML generados con éxito: "
-        f"oce_restante={len(oce_restante)}, oce_completo={len(oce_all)}, "
-        f"olas_012={len(olas_012)}, total={len(pages)}"
+        f"Archivos WXR XML generados: {len(olas_012)} (0-1-2), {len(pages)} (160), "
+        f"{len(cg_page + cg_n3)} (CG N3), {len(cg_all)} (CG All), "
+        f"{len(profesionales)} en {xml_profesionales_path.name}, "
+        f"{len(exentos)} en {xml_exentos_path.name}"
     )
 
 
