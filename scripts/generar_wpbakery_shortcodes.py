@@ -454,7 +454,7 @@ def build_solicitar_nit_shortcode() -> str:
 [bsf-info-box icon_type="none" title="Programar Cita en el Sistema Oficial de Cita Validada SAT" read_more="box" link="url:https://cdn.c.sat.gob.gt/cita-validada/cita-validada-portal/portal||target:%20_blank|"]Ingresa tu CUI (DPI) y el correo electrónico registrado en tu solicitud para elegir agencia, fecha y hora de atención.[/bsf-info-box]
 [/vc_column]
 [vc_column width="1/2"]
-[bsf-info-box icon_type="none" title="Descargar Manual Oficial de Cita Validada (PDF)" read_more="box" link="url:https://portal.sat.gob.gt/portal/descarga/15389/cita-controlada/96248/manual-usuario-portal-2||target:%20_blank|"]Guía paso a paso ilustrada sobre cómo validar tu correo y confirmar tu cita para finalizar la inscripción de tu NIT.[/bsf-info-box]
+[bsf-info-box icon_type="none" title="Descargar Manual Oficial de Cita Validada (PDF)" read_more="box" link="url:https://portal.sat.gob.gt/descarga/15389/cita-controlada/96248/manual-usuario-portal-2||target:%20_blank|"]Guía paso a paso ilustrada sobre cómo validar tu correo y confirmar tu cita para finalizar la inscripción de tu NIT.[/bsf-info-box]
 [/vc_column]
 [/vc_row]
 [/vc_tta_section]
@@ -587,10 +587,10 @@ def build_actualizar_rtu_shortcode() -> str:
 
 [vc_row equal_height="yes" gap="15px" el_class="sat-seccion-contribuyentes"]
 [vc_column width="1/2"]
-[bsf-info-box icon_type="none" title="Descargar Guía Paso a Paso de Actualización en el RTU Digital (PDF)" read_more="box" link="url:https://portal.sat.gob.gt/portal/descarga/14366/rtu-digital/43540/actualizacion-rtu-digital.pdf||target:%20_blank|"]Manual ilustrado oficial de la SAT con las pantallas paso a paso para completar tu actualización de datos dentro de Agencia Virtual.[/bsf-info-box]
+[bsf-info-box icon_type="none" title="Descargar Guía Paso a Paso de Actualización en el RTU Digital (PDF)" read_more="box" link="url:https://portal.sat.gob.gt/descarga/14366/rtu-digital/43540/actualizacion-rtu-digital.pdf||target:%20_blank|"]Manual ilustrado oficial de la SAT con las pantallas paso a paso para completar tu actualización de datos dentro de Agencia Virtual.[/bsf-info-box]
 [/vc_column]
 [vc_column width="1/2"]
-[bsf-info-box icon_type="none" title="Descargar Manual de Comprobante de Domicilio (PDF)" read_more="box" link="url:https://portal.sat.gob.gt/portal/descarga/14366/rtu-digital/80676/manual-comprobante-de-domicilio-actualizacion-2.pdf||target:%20_blank|"]Guía oficial sobre cómo registrar tu Factura de Servicios (serie y número) o adjuntar otro tipo de comprobante de domicilio.[/bsf-info-box]
+[bsf-info-box icon_type="none" title="Descargar Manual de Comprobante de Domicilio (PDF)" read_more="box" link="url:https://portal.sat.gob.gt/descarga/14366/rtu-digital/80676/manual-comprobante-de-domicilio-actualizacion-2.pdf||target:%20_blank|"]Guía oficial sobre cómo registrar tu Factura de Servicios (serie y número) o adjuntar otro tipo de comprobante de domicilio.[/bsf-info-box]
 [/vc_column]
 [/vc_row]
 [/vc_tta_section]
@@ -700,7 +700,7 @@ def build_fel_shortcode() -> str:
 [bsf-info-box icon_type="none" title="Ingresar a Agencia Virtual SAT (Habilitación y Emisión FEL)" read_more="box" link="url:https://farm3.sat.gob.gt/menu/login.jsf||target:%20_blank|"]Accede con tu NIT y contraseña a Agencia Virtual para habilitarte como emisor y certificar facturas electrónicas.[/bsf-info-box]
 [/vc_column]
 [vc_column width="1/2"]
-[bsf-info-box icon_type="none" title="Portal Informativo y Manuales Oficiales de Factura Electrónica (FEL)" read_more="box" link="url:https://portal.sat.gob.gt/portal/efactura/||target:%20_blank|"]Consulta guías técnicas, reglas de anulación de DTE, listado de certificadores autorizados y preguntas frecuentes.[/bsf-info-box]
+[bsf-info-box icon_type="none" title="Portal Informativo y Manuales Oficiales de Factura Electrónica (FEL)" read_more="box" link="url:https://portal.sat.gob.gt/efactura/||target:%20_blank|"]Consulta guías técnicas, reglas de anulación de DTE, listado de certificadores autorizados y preguntas frecuentes.[/bsf-info-box]
 [/vc_column]
 [/vc_row]
 [/vc_tta_section]
@@ -708,10 +708,10 @@ def build_fel_shortcode() -> str:
 [vc_tta_section title="3. Verificar DTE y Consultas" tab_id="paso-3-verificar-dte-fel"]
 [vc_row equal_height="yes" gap="15px" el_class="sat-seccion-contribuyentes"]
 [vc_column width="1/2"]
-[bsf-info-box icon_type="none" title="Verificador Público de Documentos Tributarios Electrónicos (DTE)" read_more="box" link="url:https://portal.sat.gob.gt/portal/verificador-integrado/||target:%20_blank|"]Comprueba la validez y vigencia de cualquier factura electrónica ingresando el Número de Autorización, Serie, Número de DTE y NIT del emisor.[/bsf-info-box]
+[bsf-info-box icon_type="none" title="Verificador Público de Documentos Tributarios Electrónicos (DTE)" read_more="box" link="url:https://portal.sat.gob.gt/verificador-integrado/||target:%20_blank|"]Comprueba la validez y vigencia de cualquier factura electrónica ingresando el Número de Autorización, Serie, Número de DTE y NIT del emisor.[/bsf-info-box]
 [/vc_column]
 [vc_column width="1/2"]
-[bsf-info-box icon_type="none" title="Presentación de Planilla de IVA-FEL (Asalariados)" read_more="box" link="url:https://portal.sat.gob.gt/portal/planilla-iva-fel/||target:%20_blank|"]Información sobre cómo el sistema consolida automáticamente tus facturas electrónicas recibidas para el crédito del Impuesto Sobre la Renta (ISR).[/bsf-info-box]
+[bsf-info-box icon_type="none" title="Presentación de Planilla de IVA-FEL (Asalariados)" read_more="box" link="url:https://portal.sat.gob.gt/planilla-iva-fel/||target:%20_blank|"]Información sobre cómo el sistema consolida automáticamente tus facturas electrónicas recibidas para el crédito del Impuesto Sobre la Renta (ISR).[/bsf-info-box]
 [/vc_column]
 [/vc_row]
 [/vc_tta_section]
@@ -751,7 +751,7 @@ def build_solvencia_fiscal_shortcode() -> str:
 [bsf-info-box icon_type="none" title="Consultar Incumplimientos u Omisos en Agencia Virtual" read_more="box" link="url:https://farm3.sat.gob.gt/menu/login.jsf||target:%20_blank|"]Ingresa a tu Agencia Virtual para verificar que todas tus declaraciones mensuales, trimestrales o anuales estén presentadas al día.[/bsf-info-box]
 [/vc_column]
 [vc_column width="1/2"]
-[bsf-info-box icon_type="none" title="Requisitos y Motivos de Rechazo de Solvencia Fiscal" read_more="box" link="url:https://portal.sat.gob.gt/portal/solvencia-fiscal/||target:%20_blank|"]Consulta la guía oficial sobre cómo solventar inconsistencias en el RTU, adeudos en cobranza o declaraciones pendientes.[/bsf-info-box]
+[bsf-info-box icon_type="none" title="Requisitos y Motivos de Rechazo de Solvencia Fiscal" read_more="box" link="url:https://portal.sat.gob.gt/solvencia-fiscal/||target:%20_blank|"]Consulta la guía oficial sobre cómo solventar inconsistencias en el RTU, adeudos en cobranza o declaraciones pendientes.[/bsf-info-box]
 [/vc_column]
 [/vc_row]
 [/vc_tta_section]
@@ -779,10 +779,10 @@ def build_solvencia_fiscal_shortcode() -> str:
 [vc_tta_section title="3. Descargar Solvencia Fiscal" tab_id="paso-3-descargar-solvencia"]
 [vc_row equal_height="yes" gap="15px" el_class="sat-seccion-contribuyentes"]
 [vc_column width="1/2"]
-[bsf-info-box icon_type="none" title="Descargar e Imprimir Solvencia Fiscal en PDF" read_more="box" link="url:https://portal.sat.gob.gt/portal/solvencia-fiscal/||target:%20_blank|"]Una vez pagada la boleta SAT-2000, descarga tu Solvencia Fiscal oficial firmada electrónicamente con código QR.[/bsf-info-box]
+[bsf-info-box icon_type="none" title="Descargar e Imprimir Solvencia Fiscal en PDF" read_more="box" link="url:https://portal.sat.gob.gt/solvencia-fiscal/||target:%20_blank|"]Una vez pagada la boleta SAT-2000, descarga tu Solvencia Fiscal oficial firmada electrónicamente con código QR.[/bsf-info-box]
 [/vc_column]
 [vc_column width="1/2"]
-[bsf-info-box icon_type="none" title="Verificar Autenticidad de Solvencia Fiscal emitida" read_more="box" link="url:https://portal.sat.gob.gt/portal/verificador-integrado/||target:%20_blank|"]Valida en línea la autenticidad de una Solvencia Fiscal presentada ante entidades públicas o privadas.[/bsf-info-box]
+[bsf-info-box icon_type="none" title="Verificar Autenticidad de Solvencia Fiscal emitida" read_more="box" link="url:https://portal.sat.gob.gt/verificador-integrado/||target:%20_blank|"]Valida en línea la autenticidad de una Solvencia Fiscal presentada ante entidades públicas o privadas.[/bsf-info-box]
 [/vc_column]
 [/vc_row]
 [/vc_tta_section]
@@ -833,7 +833,7 @@ def build_traspaso_vehiculos_shortcode() -> str:
 [/vc_column]
 
 [vc_column width="1/2"]
-[bsf-info-box icon_type="none" title="Consultar Impuesto de Circulación (ISCV) y Estado del Vehículo" read_more="box" link="url:https://portal.sat.gob.gt/portal/impuesto-de-circulacion-de-vehiculos/||target:%20_blank|"]Verifica que el vehículo tenga solvente el Impuesto Sobre Circulación de Vehículos (ISCV) antes de iniciar el traspaso.[/bsf-info-box]
+[bsf-info-box icon_type="none" title="Consultar Impuesto de Circulación (ISCV) y Estado del Vehículo" read_more="box" link="url:https://portal.sat.gob.gt/impuesto-de-circulacion-de-vehiculos/||target:%20_blank|"]Verifica que el vehículo tenga solvente el Impuesto Sobre Circulación de Vehículos (ISCV) antes de iniciar el traspaso.[/bsf-info-box]
 [/vc_column]
 [/vc_row]
 [/vc_tta_section]
@@ -855,7 +855,7 @@ def build_traspaso_vehiculos_shortcode() -> str:
 [bsf-info-box icon_type="none" title="Imprimir Nueva Tarjeta de Circulación y Certificado de Propiedad" read_more="box" link="url:https://farm3.sat.gob.gt/menu/login.jsf||target:%20_blank|"]El nuevo propietario ingresa a su Agencia Virtual › Servicios › Vehículos › Distintivos Electrónicos para descargar su Tarjeta de Circulación y Certificado a su nombre.[/bsf-info-box]
 [/vc_column]
 [vc_column width="1/2"]
-[bsf-info-box icon_type="none" title="Requisitos y Guía Completa del Registro Fiscal de Vehículos (RFV)" read_more="box" link="url:https://portal.sat.gob.gt/portal/requisitos-de-vehiculos/||target:%20_blank|"]Consulta casos especiales de traspaso en agencia tributaria por declaración jurada, donación, sucesión hereditaria o mandato.[/bsf-info-box]
+[bsf-info-box icon_type="none" title="Requisitos y Guía Completa del Registro Fiscal de Vehículos (RFV)" read_more="box" link="url:https://portal.sat.gob.gt/requisitos-de-vehiculos/||target:%20_blank|"]Consulta casos especiales de traspaso en agencia tributaria por declaración jurada, donación, sucesión hereditaria o mandato.[/bsf-info-box]
 [/vc_column]
 [/vc_row]
 [/vc_tta_section]
@@ -943,7 +943,7 @@ def build_padron_importadores_shortcode() -> str:
 [vc_tta_section title="3. Consultas y Agentes Aduaneros" tab_id="paso-3-consulta-importador"]
 [vc_row equal_height="yes" gap="15px" el_class="sat-seccion-comercio-exterior"]
 [vc_column width="1/2"]
-[bsf-info-box icon_type="none" title="Requisitos y Manuales Oficiales del Padrón de Importadores" read_more="box" link="url:https://portal.sat.gob.gt/portal/requisitos-de-aduanas/||target:%20_blank|"]Descarga los manuales paso a paso para inscripción, confirmación anual de datos y asociación de Agentes Aduaneros en Agencia Virtual.[/bsf-info-box]
+[bsf-info-box icon_type="none" title="Requisitos y Manuales Oficiales del Padrón de Importadores" read_more="box" link="url:https://portal.sat.gob.gt/requisitos-de-aduanas/||target:%20_blank|"]Descarga los manuales paso a paso para inscripción, confirmación anual de datos y asociación de Agentes Aduaneros en Agencia Virtual.[/bsf-info-box]
 [/vc_column]
 [vc_column width="1/2"]
 [bsf-info-box icon_type="none" title="Ir al Catálogo de Gestiones para Importadores" read_more="box" link="url:/operadores-de-comercio-exterior/importadores/|||"]Explora todas las gestiones de Declaración Única Centroamericana (DUCA), despacho, levante e importación de vehículos.[/bsf-info-box]
@@ -1020,7 +1020,7 @@ def resolve_card_link(t: dict) -> tuple[str, bool]:
         return "/traspaso-vehiculos/", False
     if cid in PADRON_IMPORTADORES_IDS:
         return "/padron-importadores/", False
-    url = t.get("url") or ""
+    url = t.get("nueva_url") or t.get("url") or ""
     return url, bool(url)
 
 

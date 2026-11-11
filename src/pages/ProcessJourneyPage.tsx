@@ -314,9 +314,9 @@ export const ProcessJourneyPage: React.FC<ProcessJourneyPageProps> = ({
                           <span className="text-[11px] text-slate-500 block">
                             Ubicación oficial: {paso.ubicacion}
                           </span>
-                          {paso.url && (
+                          {(paso.nueva_url || paso.url) && (
                             <a
-                              href={paso.url}
+                              href={paso.nueva_url || paso.url}
                               target="_blank"
                               rel="noopener noreferrer"
                               className="inline-flex items-center gap-1 text-xs font-bold text-sky-700 hover:underline pt-1"
@@ -387,9 +387,9 @@ export const ProcessJourneyPage: React.FC<ProcessJourneyPageProps> = ({
                           <span className="text-[11px] text-slate-500 block">
                             Módulo: {paso.ubicacion}
                           </span>
-                          {paso.url && (
+                          {(paso.nueva_url || paso.url) && (
                             <a
-                              href={paso.url}
+                              href={paso.nueva_url || paso.url}
                               target="_blank"
                               rel="noopener noreferrer"
                               className="inline-flex items-center gap-1 text-xs font-bold text-sky-700 hover:underline pt-1"
@@ -488,9 +488,9 @@ export const ProcessJourneyPage: React.FC<ProcessJourneyPageProps> = ({
                           <span className="text-[11px] text-slate-500 block">
                             Ubicación: {paso.ubicacion}
                           </span>
-                          {paso.url && (
+                          {(paso.nueva_url || paso.url) && (
                             <a
-                              href={paso.url}
+                              href={paso.nueva_url || paso.url}
                               target="_blank"
                               rel="noopener noreferrer"
                               className="inline-flex items-center gap-1 text-xs font-bold text-sky-700 hover:underline pt-1"

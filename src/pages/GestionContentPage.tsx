@@ -12,11 +12,16 @@ import {
   BookmarkCheck,
   Phone,
   Building,
-  HelpCircle
+  HelpCircle,
+  AlertTriangle,
+  CheckCircle2,
+  Coins,
+  FileText
 } from 'lucide-react';
 import { Breadcrumbs } from '../components/ui/Breadcrumbs';
 import { SolicitarNitPage } from './SolicitarNitPage';
 import { ActualizarRtuPage, CasoActualizacionId } from './ActualizarRtuPage';
+import { AlzaImportacionVehiculosPage } from './AlzaImportacionVehiculosPage';
 import type { TramiteItem } from '../data/schema';
 import type { SegmentId } from '../components/UserSegmentCards';
 
@@ -82,11 +87,22 @@ export const GestionContentPage: React.FC<GestionContentPageProps> = ({
     );
   }
 
-  const urlValido = typeof tramite.url === 'string' && /^https?:\/\/\S+$/i.test(tramite.url.trim());
+  // Página Oficial para Alza e Importación de Vehículos (SAT-GES-0384 y SAT-GES-0383)
+  if (canonicalId === 'SAT-GES-0384' || canonicalId === 'SAT-GES-0383') {
+    return (
+      <AlzaImportacionVehiculosPage
+        onBackToHome={onBackToCatalog}
+        initialTab={canonicalId === 'SAT-GES-0383' ? 'alzas' : 'importacion'}
+      />
+    );
+  }
+
+  const targetUrl = tramite.nueva_url || tramite.url;
+  const urlValido = typeof targetUrl === 'string' && /^https?:\/\/\S+$/i.test(targetUrl.trim());
 
   const handleCopyLink = () => {
     if (urlValido) {
-      navigator.clipboard.writeText(tramite.url);
+      navigator.clipboard.writeText(targetUrl);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     }
@@ -122,7 +138,7 @@ export const GestionContentPage: React.FC<GestionContentPageProps> = ({
     return 'Portal Oficial SAT';
   };
 
-  const plataformaDestino = urlValido ? getPlataformaSugerida(tramite.url) : 'Agencia u Oficina Tributaria Presencial';
+  const plataformaDestino = urlValido ? getPlataformaSugerida(targetUrl) : 'Agencia u Oficina Tributaria Presencial';
 
   return (
     <div className="pt-2.5 sm:pt-3.5 pb-8 bg-white min-h-[80vh]">
@@ -209,7 +225,29 @@ export const GestionContentPage: React.FC<GestionContentPageProps> = ({
               <Clock className="w-4 h-4 text-sky-600" />
               <span>Modalidad: <strong className="text-slate-800">{urlValido ? 'En Línea' : 'Presencial en Agencias'}</strong></span>
             </span>
+            {tramite.tiempoEstimado && (
+              <span className="inline-flex items-center gap-1.5">
+                <Clock className="w-4 h-4 text-emerald-600" />
+                <span>Tiempo de respuesta: <strong className="text-slate-800">{tramite.tiempoEstimado}</strong></span>
+              </span>
+            )}
+            {tramite.costo && (
+              <span className="inline-flex items-center gap-1.5">
+                <Coins className="w-4 h-4 text-amber-600" />
+                <span>Costo: <strong className="text-slate-800">{tramite.costo}</strong></span>
+              </span>
+            )}
           </div>
+
+          {tramite.advertencia && (
+            <div className="mt-3 p-3.5 rounded-xl bg-amber-50/90 border border-amber-200/90 text-amber-950 flex items-start gap-3">
+              <AlertTriangle className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
+              <div className="text-xs sm:text-sm leading-relaxed">
+                <strong className="font-bold text-amber-900 mr-1.5">Recomendación clave:</strong>
+                <span>{tramite.advertencia}</span>
+              </div>
+            </div>
+          )}
         </header>
 
         {/* Tarjeta de Acción Primaria */}
@@ -251,7 +289,7 @@ export const GestionContentPage: React.FC<GestionContentPageProps> = ({
 
             {urlValido && (
               <a
-                href={tramite.url}
+                href={targetUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-5 py-2.5 bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold text-xs sm:text-sm rounded-xl transition-all shadow-sm inline-flex items-center gap-2"
@@ -299,7 +337,7 @@ export const GestionContentPage: React.FC<GestionContentPageProps> = ({
                     1
                   </span>
                   <h2 className="text-sm sm:text-base font-bold text-slate-900">
-                    Paso 1: Reúne los Requisitos Previos
+                    Paso 1: Qué necesitas (Requisitos Previos)
                   </h2>
                 </div>
                 <span className="text-[11px] text-slate-600">
@@ -332,6 +370,23 @@ export const GestionContentPage: React.FC<GestionContentPageProps> = ({
                   );
                 })}
               </div>
+
+              {tramite.documentos && tramite.documentos.length > 0 && (
+                <div className="mt-3 pt-3 border-t border-slate-100">
+                  <span className="text-xs font-bold text-slate-700 block mb-2 flex items-center gap-1.5">
+                    <FileText className="w-3.5 h-3.5 text-sky-700" />
+                    Documentos de soporte obligatorios:
+                  </span>
+                  <ul className="space-y-1.5 text-xs text-slate-600 pl-2">
+                    {tramite.documentos.map((doc, dIdx) => (
+                      <li key={dIdx} className="flex items-start gap-2">
+                        <span className="text-sky-600 font-bold">•</span>
+                        <span>{doc}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </section>
 
             {/* Paso 2: Procedimiento de Ingreso y Carga */}
@@ -341,23 +396,39 @@ export const GestionContentPage: React.FC<GestionContentPageProps> = ({
                   2
                 </span>
                 <h2 className="text-sm sm:text-base font-bold text-slate-900">
-                  Paso 2: Realiza la Gestión en el Canal Correspondiente
+                  Paso 2: Cómo realizar la gestión (Paso a Paso)
                 </h2>
               </div>
 
-              <div className="space-y-3 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                <p>
-                  1. Ingresa a la plataforma oficial ({plataformaDestino}) con tu usuario de Agencia Virtual o credenciales autorizadas.
-                </p>
-                <p>
-                  2. Localiza el formulario digital correspondiente a esta gestión y completa los datos requeridos sin abreviaturas.
-                </p>
-                <p>
-                  3. Adjunta los documentos verificados en el Paso 1 en formato PDF o imagen legible, según las especificaciones del sistema.
-                </p>
-                <p>
-                  4. Confirma el envío y guarda el número de expediente o gestión generado para consultas posteriores.
-                </p>
+              <div className="space-y-2.5 pt-1">
+                {tramite.pasos && tramite.pasos.length > 0 ? (
+                  tramite.pasos.map((paso, idx) => (
+                    <div
+                      key={idx}
+                      className="flex items-start gap-3 p-3 rounded-xl bg-slate-50/70 border border-slate-200/70 text-xs sm:text-sm text-slate-700 leading-relaxed"
+                    >
+                      <span className="w-6 h-6 rounded-full bg-sky-700 text-white font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">
+                        {idx + 1}
+                      </span>
+                      <p className="flex-1">{paso}</p>
+                    </div>
+                  ))
+                ) : (
+                  <div className="space-y-3 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    <p>
+                      1. Ingresa a la plataforma oficial ({plataformaDestino}) con tu usuario de Agencia Virtual o credenciales autorizadas.
+                    </p>
+                    <p>
+                      2. Localiza el formulario digital correspondiente a esta gestión y completa los datos requeridos sin abreviaturas.
+                    </p>
+                    <p>
+                      3. Adjunta los documentos verificados en el Paso 1 en formato PDF o imagen legible, según las especificaciones del sistema.
+                    </p>
+                    <p>
+                      4. Confirma el envío y guarda el número de expediente o gestión generado para consultas posteriores.
+                    </p>
+                  </div>
+                )}
               </div>
             </section>
 
@@ -368,13 +439,23 @@ export const GestionContentPage: React.FC<GestionContentPageProps> = ({
                   3
                 </span>
                 <h2 className="text-sm sm:text-base font-bold text-slate-900">
-                  Paso 3: Obtén tu Constancia o Documento Oficial
+                  Paso 3: Qué obtienes al finalizar
                 </h2>
               </div>
 
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                Una vez procesada la gestión por el área técnica de la SAT, recibirás la notificación electrónica con tu constancia, resolución o distintivo digital habilitante en tu buzón de Agencia Virtual y correo registrado.
-              </p>
+              {tramite.resultadoObtenido ? (
+                <div className="p-3.5 rounded-xl bg-emerald-50/80 border border-emerald-200 text-emerald-950 flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+                  <div className="space-y-0.5 text-xs sm:text-sm">
+                    <strong className="font-bold text-emerald-900 block">Documento o resolución oficial:</strong>
+                    <p className="text-emerald-800 leading-relaxed">{tramite.resultadoObtenido}</p>
+                  </div>
+                </div>
+              ) : (
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  Una vez procesada la gestión por el área técnica de la SAT, recibirás la notificación electrónica con tu constancia, resolución o distintivo digital habilitante en tu buzón de Agencia Virtual y correo registrado.
+                </p>
+              )}
             </section>
 
             {/* Base Legal y Normativa */}
@@ -395,13 +476,18 @@ export const GestionContentPage: React.FC<GestionContentPageProps> = ({
 
               {isLegalExpanded ? (
                 <div className="pt-2 border-t border-slate-200 text-xs text-slate-600 space-y-1.5 leading-relaxed">
+                  {tramite.baseLegal ? (
+                    <p>• <strong>Fundamento específico:</strong> {tramite.baseLegal}</p>
+                  ) : null}
+                  <p>• <strong>Código Aduanero Uniforme Centroamericano (CAUCA IV) y su Reglamento (RECAUCA IV):</strong> Régimen aduanero y operaciones de comercio exterior.</p>
                   <p>• <strong>Código Tributario (Decreto 6-91):</strong> Normas generales y derechos de los contribuyentes.</p>
                   <p>• <strong>Ley Orgánica de la SAT (Decreto 1-98):</strong> Competencias y facultades de administración tributaria y aduanera.</p>
-                  <p>• <strong>Resoluciones de Directorio SAT:</strong> Normativa específica aplicable a {tramite.categoria}.</p>
                 </div>
               ) : (
                 <p className="text-xs text-slate-500">
-                  Regulada bajo el marco de la legislación tributaria y aduanera vigente en la República de Guatemala.
+                  {tramite.baseLegal
+                    ? `Regulado bajo: ${tramite.baseLegal}`
+                    : 'Regulada bajo el marco de la legislación tributaria y aduanera vigente en la República de Guatemala.'}
                 </p>
               )}
             </section>

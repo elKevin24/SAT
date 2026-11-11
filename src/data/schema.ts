@@ -43,6 +43,8 @@ export interface TramiteItem {
   nombreActual?: string;
   descripcion: string;
   url: string;
+  nueva_url?: string;
+  nuevaUrl?: string;
 
   // Compatibilidad legacy e hidratación en runtime
   tramite?: string;
@@ -76,6 +78,11 @@ export interface TramiteItem {
   formulario?: string;
   requisitos?: string[];
   pasos?: string[];
+  resultadoObtenido?: string;
+  tiempoEstimado?: string;
+  costo?: string;
+  advertencia?: string;
+  documentos?: string[];
   familias_ids?: string[];
   familiaTematica?: string;
   rutasProceso?: {
@@ -93,6 +100,8 @@ export interface ProcesoPaso {
   pagina?: string;
   ubicacion?: string;
   url?: string;
+  nueva_url?: string;
+  nuevaUrl?: string;
 }
 
 export interface ProcesoGuiado {
@@ -140,6 +149,8 @@ export interface ContenidoUnicoItem {
   nombreActual?: string;
   descripcion: string;
   url: string;
+  nueva_url?: string;
+  nuevaUrl?: string;
   tipoInteraccion?: TipoInteraccionId;
   tipoInteraccionLabel?: string;
   tipologiaContenido?: TipologiaContenidoId;

@@ -5,12 +5,15 @@ export default defineConfig({
   timeout: 45000,
   fullyParallel: true,
   use: {
-    baseURL: 'http://localhost:3000',
+    baseURL: 'http://localhost:3005',
   },
   webServer: {
     command: 'npm run dev',
-    url: 'http://localhost:3000',
-    reuseExistingServer: !process.env.CI,
+    url: 'http://localhost:3005',
+    env: {
+      PORT: '3005',
+    },
+    reuseExistingServer: false,
     timeout: 60000,
   },
   projects: [{ name: 'chromium', use: { browserName: 'chromium' } }],

@@ -196,6 +196,19 @@ export default function App() {
           );
         });
         window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else if (
+        hash.startsWith('#/alza-e-importacion-vehiculos') ||
+        hash.startsWith('#/alza-importacion-vehiculos')
+      ) {
+        setCurrentView('gestion');
+        const found = allTramites.find(t => t.id === 'SAT-GES-0384' || t.codigo === 'SAT-GES-0384');
+        if (found) {
+          setSelectedTramite(found);
+          setActiveSegment('comercio_exterior');
+          setActiveCategory('Importadores');
+          setActiveSubcategory('Importación y Nacionalización de Vehículos');
+        }
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       } else if (hash.startsWith('#/gestion/') || hash.startsWith('#/tramite/')) {
         setCurrentView('gestion');
         const param = hash.split('?')[0].replace('#/gestion/', '').replace('#/tramite/', '').trim();

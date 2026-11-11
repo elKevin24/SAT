@@ -1,0 +1,326 @@
+{
+  "importaciones": [
+    {
+      "id": "97688",
+      "nombre": "importación_de_vehiculos_2026_octubre",
+      "mes": "Octubre",
+      "anio": 2026,
+      "url": "https://portal.sat.gob.gt/portal/descarga/5030/importacion-de-vehiculos/97688/importacion_de_vehiculos_2026_octubre",
+      "formato": "ZIP (archivo TXT delimitado por |)"
+    },
+    {
+      "id": "97304",
+      "nombre": "importación_de_vehiculos_2026_septiembre",
+      "mes": "Septiembre",
+      "anio": 2026,
+      "url": "https://portal.sat.gob.gt/portal/descarga/5030/importacion-de-vehiculos/97304/importacion_de_vehiculos_2026_septiembre",
+      "formato": "ZIP (archivo TXT delimitado por |)"
+    },
+    {
+      "id": "96446",
+      "nombre": "importación_de_vehiculos_2026_agosto",
+      "mes": "Agosto",
+      "anio": 2026,
+      "url": "https://portal.sat.gob.gt/portal/descarga/5030/importacion-de-vehiculos/96446/importacion_de_vehiculos_2026_agosto",
+      "formato": "ZIP (archivo TXT delimitado por |)"
+    },
+    {
+      "id": "96077",
+      "nombre": "importación_de_vehiculos_2026_julio",
+      "mes": "Julio",
+      "anio": 2026,
+      "url": "https://portal.sat.gob.gt/portal/descarga/5030/importacion-de-vehiculos/96077/importacion_de_vehiculos_2026_julio",
+      "formato": "ZIP (archivo TXT delimitado por |)"
+    },
+    {
+      "id": "95529",
+      "nombre": "importación_de_vehiculos_2026_junio",
+      "mes": "Junio",
+      "anio": 2026,
+      "url": "https://portal.sat.gob.gt/portal/descarga/5030/importacion-de-vehiculos/95529/importacion_de_vehiculos_2026_junio",
+      "formato": "ZIP (archivo TXT delimitado por |)"
+    },
+    {
+      "id": "95111",
+      "nombre": "importación_de_vehiculos_2026_mayo",
+      "mes": "Mayo",
+      "anio": 2026,
+      "url": "https://portal.sat.gob.gt/portal/descarga/5030/importacion-de-vehiculos/95111/importacion_de_vehiculos_2026_mayo",
+      "formato": "ZIP (archivo TXT delimitado por |)"
+    },
+    {
+      "id": "94735",
+      "nombre": "importación_de_vehiculos_2026_abril",
+      "mes": "Abril",
+      "anio": 2026,
+      "url": "https://portal.sat.gob.gt/portal/descarga/5030/importacion-de-vehiculos/94735/importacion_de_vehiculos_2026_abril",
+      "formato": "ZIP (archivo TXT delimitado por |)"
+    },
+    {
+      "id": "94099",
+      "nombre": "importación_de_vehiculos_2026_marzo",
+      "mes": "Marzo",
+      "anio": 2026,
+      "url": "https://portal.sat.gob.gt/portal/descarga/5030/importacion-de-vehiculos/94099/importacion_de_vehiculos_2026_marzo",
+      "formato": "ZIP (archivo TXT delimitado por |)"
+    },
+    {
+      "id": "93616",
+      "nombre": "importación_de_vehiculos_2026_febrero",
+      "mes": "Febrero",
+      "anio": 2026,
+      "url": "https://portal.sat.gob.gt/portal/descarga/5030/importacion-de-vehiculos/93616/importacion_de_vehiculos_2026_febrero",
+      "formato": "ZIP (archivo TXT delimitado por |)"
+    },
+    {
+      "id": "92970",
+      "nombre": "importación_de_vehiculos_2026_enero",
+      "mes": "Enero",
+      "anio": 2026,
+      "url": "https://portal.sat.gob.gt/portal/descarga/5030/importacion-de-vehiculos/92970/importacion_de_vehiculos_2026_enero",
+      "formato": "ZIP (archivo TXT delimitado por |)"
+    },
+    {
+      "id": "92286",
+      "nombre": "importación_de_vehiculos_2025_diciembre",
+      "mes": "Diciembre",
+      "anio": 2025,
+      "url": "https://portal.sat.gob.gt/portal/descarga/5030/importacion-de-vehiculos/92286/importacion_de_vehiculos_2025_diciembre",
+      "formato": "ZIP (archivo TXT delimitado por |)"
+    },
+    {
+      "id": "91804",
+      "nombre": "importación_de_vehiculos_2025_noviembre",
+      "mes": "Noviembre",
+      "anio": 2025,
+      "url": "https://portal.sat.gob.gt/portal/descarga/5030/importacion-de-vehiculos/91804/importacion_de_vehiculos_2025_noviembre",
+      "formato": "ZIP (archivo TXT delimitado por |)"
+    },
+    {
+      "id": "91306",
+      "nombre": "importación_de_vehiculos_2025_octubre",
+      "mes": "Octubre",
+      "anio": 2025,
+      "url": "https://portal.sat.gob.gt/portal/descarga/5030/importacion-de-vehiculos/91306/importacion_de_vehiculos_2025_octubre",
+      "formato": "ZIP (archivo TXT delimitado por |)"
+    },
+    {
+      "id": "90819",
+      "nombre": "importación_de_vehiculos_2025_septiembre",
+      "mes": "Septiembre",
+      "anio": 2025,
+      "url": "https://portal.sat.gob.gt/portal/descarga/5030/importacion-de-vehiculos/90819/importacion_de_vehiculos_2025_septiembre",
+      "formato": "ZIP (archivo TXT delimitado por |)"
+    },
+    {
+      "id": "90410",
+      "nombre": "importación_de_vehiculos_2025_agosto",
+      "mes": "Agosto",
+      "anio": 2025,
+      "url": "https://portal.sat.gob.gt/portal/descarga/5030/importacion-de-vehiculos/90410/importacion_de_vehiculos_2025_agosto",
+      "formato": "ZIP (archivo TXT delimitado por |)"
+    },
+    {
+      "id": "89721",
+      "nombre": "importación_de_vehiculos_2025_julio",
+      "mes": "Julio",
+      "anio": 2025,
+      "url": "https://portal.sat.gob.gt/portal/descarga/5030/importacion-de-vehiculos/89721/importacion_de_vehiculos_2025_julio",
+      "formato": "ZIP (archivo TXT delimitado por |)"
+    },
+    {
+      "id": "88664",
+      "nombre": "importación_de_vehiculos_2025_junio",
+      "mes": "Junio",
+      "anio": 2025,
+      "url": "https://portal.sat.gob.gt/portal/descarga/5030/importacion-de-vehiculos/88664/importacion_de_vehiculos_2025_junio",
+      "formato": "ZIP (archivo TXT delimitado por |)"
+    },
+    {
+      "id": "87242",
+      "nombre": "importación_de_vehiculos_2025_mayo",
+      "mes": "Mayo",
+      "anio": 2025,
+      "url": "https://portal.sat.gob.gt/portal/descarga/5030/importacion-de-vehiculos/87242/importacion_de_vehiculos_2025_mayo",
+      "formato": "ZIP (archivo TXT delimitado por |)"
+    },
+    {
+      "id": "86197",
+      "nombre": "importación_de_vehiculos_2025_abril",
+      "mes": "Abril",
+      "anio": 2025,
+      "url": "https://portal.sat.gob.gt/portal/descarga/5030/importacion-de-vehiculos/86197/importacion_de_vehiculos_2025_abril",
+      "formato": "ZIP (archivo TXT delimitado por |)"
+    },
+    {
+      "id": "85782",
+      "nombre": "importación_de_vehiculos_2025_marzo",
+      "mes": "Marzo",
+      "anio": 2025,
+      "url": "https://portal.sat.gob.gt/portal/descarga/5030/importacion-de-vehiculos/85782/importacion_de_vehiculos_2025_marzo",
+      "formato": "ZIP (archivo TXT delimitado por |)"
+    }
+  ],
+  "alzas": [
+    {
+      "id": "97689",
+      "nombre": "alza_de_vehiculos_2026_octubre",
+      "mes": "Octubre",
+      "anio": 2026,
+      "url": "https://portal.sat.gob.gt/portal/descarga/1683/alza-de-importacion-de-vehiculos/97689/alza_de_vehiculos_2026_octubre",
+      "formato": "ZIP (archivo TXT delimitado por |)"
+    },
+    {
+      "id": "97305",
+      "nombre": "alza_de_vehiculos_2026_septiembre",
+      "mes": "Septiembre",
+      "anio": 2026,
+      "url": "https://portal.sat.gob.gt/portal/descarga/1683/alza-de-importacion-de-vehiculos/97305/alza_de_vehiculos_2026_septiembre",
+      "formato": "ZIP (archivo TXT delimitado por |)"
+    },
+    {
+      "id": "96447",
+      "nombre": "alza_de_vehiculos_2026_agosto",
+      "mes": "Agosto",
+      "anio": 2026,
+      "url": "https://portal.sat.gob.gt/portal/descarga/1683/alza-de-importacion-de-vehiculos/96447/alza_de_vehiculos_2026_agosto",
+      "formato": "ZIP (archivo TXT delimitado por |)"
+    },
+    {
+      "id": "96078",
+      "nombre": "alza_de_vehiculos_2026_julio",
+      "mes": "Julio",
+      "anio": 2026,
+      "url": "https://portal.sat.gob.gt/portal/descarga/1683/alza-de-importacion-de-vehiculos/96078/alza_de_vehiculos_2026_julio",
+      "formato": "ZIP (archivo TXT delimitado por |)"
+    },
+    {
+      "id": "95530",
+      "nombre": "alza_de_vehiculos_2026_junio",
+      "mes": "Junio",
+      "anio": 2026,
+      "url": "https://portal.sat.gob.gt/portal/descarga/1683/alza-de-importacion-de-vehiculos/95530/alza_de_vehiculos_2026_junio",
+      "formato": "ZIP (archivo TXT delimitado por |)"
+    },
+    {
+      "id": "95112",
+      "nombre": "alza_de_vehiculos_2026_mayo",
+      "mes": "Mayo",
+      "anio": 2026,
+      "url": "https://portal.sat.gob.gt/portal/descarga/1683/alza-de-importacion-de-vehiculos/95112/alza_de_vehiculos_2026_mayo",
+      "formato": "ZIP (archivo TXT delimitado por |)"
+    },
+    {
+      "id": "94736",
+      "nombre": "alza_de_vehiculos_2026_abril",
+      "mes": "Abril",
+      "anio": 2026,
+      "url": "https://portal.sat.gob.gt/portal/descarga/1683/alza-de-importacion-de-vehiculos/94736/alza_de_vehiculos_2026_abril",
+      "formato": "ZIP (archivo TXT delimitado por |)"
+    },
+    {
+      "id": "94098",
+      "nombre": "alza_de_vehiculos_2026_marzo",
+      "mes": "Marzo",
+      "anio": 2026,
+      "url": "https://portal.sat.gob.gt/portal/descarga/1683/alza-de-importacion-de-vehiculos/94098/alza_de_vehiculos_2026_marzo",
+      "formato": "ZIP (archivo TXT delimitado por |)"
+    },
+    {
+      "id": "93617",
+      "nombre": "alza_de_vehiculos_2026_febrero",
+      "mes": "Febrero",
+      "anio": 2026,
+      "url": "https://portal.sat.gob.gt/portal/descarga/1683/alza-de-importacion-de-vehiculos/93617/alza_de_vehiculos_2026_febrero",
+      "formato": "ZIP (archivo TXT delimitado por |)"
+    },
+    {
+      "id": "92971",
+      "nombre": "alza_de_vehiculos_2026_enero",
+      "mes": "Enero",
+      "anio": 2026,
+      "url": "https://portal.sat.gob.gt/portal/descarga/1683/alza-de-importacion-de-vehiculos/92971/alza_de_vehiculos_2026_enero",
+      "formato": "ZIP (archivo TXT delimitado por |)"
+    },
+    {
+      "id": "92287",
+      "nombre": "alza_de_vehiculos_2025_diciembre",
+      "mes": "Diciembre",
+      "anio": 2025,
+      "url": "https://portal.sat.gob.gt/portal/descarga/1683/alza-de-importacion-de-vehiculos/92287/alza_de_vehiculos_2025_diciembre",
+      "formato": "ZIP (archivo TXT delimitado por |)"
+    },
+    {
+      "id": "91805",
+      "nombre": "alza_de_vehiculos_2025_noviembre",
+      "mes": "Noviembre",
+      "anio": 2025,
+      "url": "https://portal.sat.gob.gt/portal/descarga/1683/alza-de-importacion-de-vehiculos/91805/alza_de_vehiculos_2025_noviembre",
+      "formato": "ZIP (archivo TXT delimitado por |)"
+    },
+    {
+      "id": "91307",
+      "nombre": "alza_de_vehiculos_2025_octubre",
+      "mes": "Octubre",
+      "anio": 2025,
+      "url": "https://portal.sat.gob.gt/portal/descarga/1683/alza-de-importacion-de-vehiculos/91307/alza_de_vehiculos_2025_octubre",
+      "formato": "ZIP (archivo TXT delimitado por |)"
+    },
+    {
+      "id": "90820",
+      "nombre": "alza_de_vehiculos_2025_septiembre",
+      "mes": "Septiembre",
+      "anio": 2025,
+      "url": "https://portal.sat.gob.gt/portal/descarga/1683/alza-de-importacion-de-vehiculos/90820/alza_de_vehiculos_2025_septiembre",
+      "formato": "ZIP (archivo TXT delimitado por |)"
+    },
+    {
+      "id": "90411",
+      "nombre": "alza_de_vehiculos_2025_agosto",
+      "mes": "Agosto",
+      "anio": 2025,
+      "url": "https://portal.sat.gob.gt/portal/descarga/1683/alza-de-importacion-de-vehiculos/90411/alza_de_vehiculos_2025_agosto",
+      "formato": "ZIP (archivo TXT delimitado por |)"
+    },
+    {
+      "id": "89722",
+      "nombre": "alza_de_vehiculos_2025_julio",
+      "mes": "Julio",
+      "anio": 2025,
+      "url": "https://portal.sat.gob.gt/portal/descarga/1683/alza-de-importacion-de-vehiculos/89722/alza_de_vehiculos_2025_julio",
+      "formato": "ZIP (archivo TXT delimitado por |)"
+    },
+    {
+      "id": "88663",
+      "nombre": "alza_de_vehiculos_2025_junio",
+      "mes": "Junio",
+      "anio": 2025,
+      "url": "https://portal.sat.gob.gt/portal/descarga/1683/alza-de-importacion-de-vehiculos/88663/alza_de_vehiculos_2025_junio",
+      "formato": "ZIP (archivo TXT delimitado por |)"
+    },
+    {
+      "id": "87241",
+      "nombre": "alza_de_vehiculos_2025_mayo",
+      "mes": "Mayo",
+      "anio": 2025,
+      "url": "https://portal.sat.gob.gt/portal/descarga/1683/alza-de-importacion-de-vehiculos/87241/alza_de_vehiculos_2025_mayo",
+      "formato": "ZIP (archivo TXT delimitado por |)"
+    },
+    {
+      "id": "86198",
+      "nombre": "alza_de_vehiculos_2025_abril",
+      "mes": "Abril",
+      "anio": 2025,
+      "url": "https://portal.sat.gob.gt/portal/descarga/1683/alza-de-importacion-de-vehiculos/86198/alza_de_vehiculos_2025_abril",
+      "formato": "ZIP (archivo TXT delimitado por |)"
+    },
+    {
+      "id": "85781",
+      "nombre": "alza_de_vehiculos_2025_marzo",
+      "mes": "Marzo",
+      "anio": 2025,
+      "url": "https://portal.sat.gob.gt/portal/descarga/1683/alza-de-importacion-de-vehiculos/85781/alza_de_vehiculos_2025_marzo",
+      "formato": "ZIP (archivo TXT delimitado por |)"
+    }
+  ]
+}

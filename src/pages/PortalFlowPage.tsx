@@ -411,7 +411,7 @@ export const PortalFlowPage: React.FC = () => {
         descripcion: t.descripcion || 'Procedimiento del Portal SAT.',
         baseLegal: t.baseLegal || 'Normativa tributaria y aduanera vigente.',
         perfilDestinatario: t.perfilDestinatario || '',
-        url: t.url || ''
+        url: t.nueva_url || t.url || ''
       };
 
       tree[segId].total++;

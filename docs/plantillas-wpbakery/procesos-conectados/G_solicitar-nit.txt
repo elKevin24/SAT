@@ -130,7 +130,7 @@
 [bsf-info-box icon_type="none" title="Programar Cita en el Sistema Oficial de Cita Validada SAT" read_more="box" link="url:https://cdn.c.sat.gob.gt/cita-validada/cita-validada-portal/portal||target:%20_blank|"]Ingresa tu CUI (DPI) y el correo electrónico registrado en tu solicitud para elegir agencia, fecha y hora de atención.[/bsf-info-box]
 [/vc_column]
 [vc_column width="1/2"]
-[bsf-info-box icon_type="none" title="Descargar Manual Oficial de Cita Validada (PDF)" read_more="box" link="url:https://portal.sat.gob.gt/portal/descarga/15389/cita-controlada/96248/manual-usuario-portal-2||target:%20_blank|"]Guía paso a paso ilustrada sobre cómo validar tu correo y confirmar tu cita para finalizar la inscripción de tu NIT.[/bsf-info-box]
+[bsf-info-box icon_type="none" title="Descargar Manual Oficial de Cita Validada (PDF)" read_more="box" link="url:https://portal.sat.gob.gt/descarga/15389/cita-controlada/96248/manual-usuario-portal-2||target:%20_blank|"]Guía paso a paso ilustrada sobre cómo validar tu correo y confirmar tu cita para finalizar la inscripción de tu NIT.[/bsf-info-box]
 [/vc_column]
 [/vc_row]
 [/vc_tta_section]

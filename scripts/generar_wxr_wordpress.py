@@ -257,57 +257,77 @@ def collect_all_pages() -> list[dict]:
 def main():
     pages = collect_all_pages()
     olas_012 = [p for p in pages if p["wave"] in (0, 1, 2)]
+    public_dir = BASE_DIR / "public" / "downloads"
+    public_dir.mkdir(parents=True, exist_ok=True)
 
-    xml_012_path = OUTPUT_DIR / "wordpress-import-olas-0-1-2.xml"
-    xml_all_path = OUTPUT_DIR / "wordpress-import-completo-160.xml"
-    xml_cg_n3_path = OUTPUT_DIR / "wordpress-import-contribuyente-general-n3.xml"
-    xml_cg_all_path = OUTPUT_DIR / "wordpress-import-contribuyente-general-completo.xml"
+    def save_both(filename: str, xml_content: str):
+        (OUTPUT_DIR / filename).write_text(xml_content, encoding="utf-8")
+        (public_dir / filename).write_text(xml_content, encoding="utf-8")
 
-    xml_012_path.write_text(
+    # 1. Olas 0, 1 y 2 (31 Páginas Base)
+    save_both(
+        "wordpress-import-olas-0-1-2.xml",
         build_wxr_xml(olas_012, "Portal SAT Guatemala — Olas 0, 1 y 2 (31 Páginas Base)"),
-        encoding="utf-8",
-    )
-    xml_all_path.write_text(
-        build_wxr_xml(pages, "Portal SAT Guatemala — Árbol Completo (160 Páginas)"),
-        encoding="utf-8",
     )
 
-    # Paquete controlado: Contribuyente General + 8 Subcategorías N3
+    # 2. Árbol Completo (160 Páginas)
+    save_both(
+        "wordpress-import-completo-160.xml",
+        build_wxr_xml(pages, "Portal SAT Guatemala — Árbol Completo (160 Páginas)"),
+    )
+
+    # 3. Paquete controlado: Contribuyente General + 8 Subcategorías N3
     cg_page = [p for p in pages if p["url"] == "/contribuyentes/contribuyente-general/"]
     cg_n3 = [p for p in pages if p["url"].startswith("/contribuyentes/contribuyente-general/") and p["wave"] == 3]
-    xml_cg_n3_path.write_text(
+    save_both(
+        "wordpress-import-contribuyente-general-n3.xml",
         build_wxr_xml(cg_page + cg_n3, "Portal SAT Guatemala — Contribuyente General (8 Subcategorías N3)"),
-        encoding="utf-8",
     )
 
-    # Paquete completo de Contribuyente General (N2 + N3 + N4)
+    # 4. Paquete completo de Contribuyente General (N2 + N3 + N4)
     cg_all = [p for p in pages if p["url"].startswith("/contribuyentes/contribuyente-general/")]
-    xml_cg_all_path.write_text(
+    save_both(
+        "wordpress-import-contribuyente-general-completo.xml",
         build_wxr_xml(cg_all, "Portal SAT Guatemala — Contribuyente General Completo"),
-        encoding="utf-8",
     )
 
-    # Paquete de Profesionales (14 páginas: N1 + N2 + N3)
+    # 5. Paquete completo de Operadores de Comercio Exterior (65 páginas)
+    oce_all = [p for p in pages if p["url"].startswith("/operadores-de-comercio-exterior/")]
+    save_both(
+        "wordpress-import-comercio-exterior-completo.xml",
+        build_wxr_xml(oce_all, "Portal SAT Guatemala — Operadores de Comercio Exterior Completo (65 Páginas)"),
+    )
+
+    # 6. Paquete restante de Operadores de Comercio Exterior (50 páginas sin Importadores)
+    oce_restante = [
+        p for p in oce_all
+        if not p["url"].startswith("/operadores-de-comercio-exterior/importadores/")
+    ]
+    save_both(
+        "wordpress-import-comercio-exterior-restante.xml",
+        build_wxr_xml(oce_restante, "Portal SAT Guatemala — Operadores de Comercio Exterior (Restante: 50 Páginas sin Importadores)"),
+    )
+
+    # 7. Paquete de Profesionales (14 páginas: N1 + N2 + N3)
     profesionales = [p for p in pages if p["url"].startswith("/profesionales/")]
-    xml_profesionales_path = OUTPUT_DIR / "wordpress-import-profesionales.xml"
-    xml_profesionales_path.write_text(
+    save_both(
+        "wordpress-import-profesionales.xml",
         build_wxr_xml(profesionales, "Portal SAT Guatemala — Profesionales (14 Páginas)"),
-        encoding="utf-8",
     )
 
-    # Paquete de Entes Exentos (18 páginas: N1 + N2 + N3)
+    # 8. Paquete de Entes Exentos (18 páginas: N1 + N2 + N3)
     exentos = [p for p in pages if p["url"].startswith("/entes-exentos/")]
-    xml_exentos_path = OUTPUT_DIR / "wordpress-import-entes-exentos.xml"
-    xml_exentos_path.write_text(
+    save_both(
+        "wordpress-import-entes-exentos.xml",
         build_wxr_xml(exentos, "Portal SAT Guatemala — Entes Exentos (18 Páginas)"),
-        encoding="utf-8",
     )
 
     print(
-        f"Archivos WXR XML generados: {len(olas_012)} (0-1-2), {len(pages)} (160), "
-        f"{len(cg_page + cg_n3)} (CG N3), {len(cg_all)} (CG All), "
-        f"{len(profesionales)} en {xml_profesionales_path.name}, "
-        f"{len(exentos)} en {xml_exentos_path.name}"
+        f"Archivos WXR XML generados en docs/plantillas-wpbakery y public/downloads: "
+        f"olas_012={len(olas_012)}, total_160={len(pages)}, "
+        f"cg_n3={len(cg_page + cg_n3)}, cg_all={len(cg_all)}, "
+        f"oce_completo={len(oce_all)}, oce_restante={len(oce_restante)}, "
+        f"profesionales={len(profesionales)}, exentos={len(exentos)}"
     )
 
 

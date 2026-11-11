@@ -270,7 +270,7 @@ function resolveLeafCardUrl(t: TramiteItem): { url: string; targetBlank: boolean
   if (SOLVENCIA_FISCAL_IDS.has(cid)) return { url: '/solvencia-fiscal/', targetBlank: false };
   if (TRASPASO_VEHICULOS_IDS.has(cid)) return { url: '/traspaso-vehiculos/', targetBlank: false };
   if (PADRON_IMPORTADORES_IDS.has(cid)) return { url: '/padron-importadores/', targetBlank: false };
-  const url = t.url || '';
+  const url = t.nueva_url || t.url || '';
   return { url, targetBlank: Boolean(url) };
 }
 

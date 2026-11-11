@@ -37,7 +37,7 @@
 [/vc_column]
 
 [vc_column width="1/2"]
-[bsf-info-box icon_type="none" title="Consultar Impuesto de Circulación (ISCV) y Estado del Vehículo" read_more="box" link="url:https://portal.sat.gob.gt/portal/impuesto-de-circulacion-de-vehiculos/||target:%20_blank|"]Verifica que el vehículo tenga solvente el Impuesto Sobre Circulación de Vehículos (ISCV) antes de iniciar el traspaso.[/bsf-info-box]
+[bsf-info-box icon_type="none" title="Consultar Impuesto de Circulación (ISCV) y Estado del Vehículo" read_more="box" link="url:https://portal.sat.gob.gt/impuesto-de-circulacion-de-vehiculos/||target:%20_blank|"]Verifica que el vehículo tenga solvente el Impuesto Sobre Circulación de Vehículos (ISCV) antes de iniciar el traspaso.[/bsf-info-box]
 [/vc_column]
 [/vc_row]
 [/vc_tta_section]
@@ -59,7 +59,7 @@
 [bsf-info-box icon_type="none" title="Imprimir Nueva Tarjeta de Circulación y Certificado de Propiedad" read_more="box" link="url:https://farm3.sat.gob.gt/menu/login.jsf||target:%20_blank|"]El nuevo propietario ingresa a su Agencia Virtual › Servicios › Vehículos › Distintivos Electrónicos para descargar su Tarjeta de Circulación y Certificado a su nombre.[/bsf-info-box]
 [/vc_column]
 [vc_column width="1/2"]
-[bsf-info-box icon_type="none" title="Requisitos y Guía Completa del Registro Fiscal de Vehículos (RFV)" read_more="box" link="url:https://portal.sat.gob.gt/portal/requisitos-de-vehiculos/||target:%20_blank|"]Consulta casos especiales de traspaso en agencia tributaria por declaración jurada, donación, sucesión hereditaria o mandato.[/bsf-info-box]
+[bsf-info-box icon_type="none" title="Requisitos y Guía Completa del Registro Fiscal de Vehículos (RFV)" read_more="box" link="url:https://portal.sat.gob.gt/requisitos-de-vehiculos/||target:%20_blank|"]Consulta casos especiales de traspaso en agencia tributaria por declaración jurada, donación, sucesión hereditaria o mandato.[/bsf-info-box]
 [/vc_column]
 [/vc_row]
 [/vc_tta_section]

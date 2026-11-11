@@ -74,7 +74,7 @@
 [vc_tta_section title="3. Consultas y Agentes Aduaneros" tab_id="paso-3-consulta-importador"]
 [vc_row equal_height="yes" gap="15px" el_class="sat-seccion-comercio-exterior"]
 [vc_column width="1/2"]
-[bsf-info-box icon_type="none" title="Requisitos y Manuales Oficiales del Padrón de Importadores" read_more="box" link="url:https://portal.sat.gob.gt/portal/requisitos-de-aduanas/||target:%20_blank|"]Descarga los manuales paso a paso para inscripción, confirmación anual de datos y asociación de Agentes Aduaneros en Agencia Virtual.[/bsf-info-box]
+[bsf-info-box icon_type="none" title="Requisitos y Manuales Oficiales del Padrón de Importadores" read_more="box" link="url:https://portal.sat.gob.gt/requisitos-de-aduanas/||target:%20_blank|"]Descarga los manuales paso a paso para inscripción, confirmación anual de datos y asociación de Agentes Aduaneros en Agencia Virtual.[/bsf-info-box]
 [/vc_column]
 [vc_column width="1/2"]
 [bsf-info-box icon_type="none" title="Ir al Catálogo de Gestiones para Importadores" read_more="box" link="url:/operadores-de-comercio-exterior/importadores/|||"]Explora todas las gestiones de Declaración Única Centroamericana (DUCA), despacho, levante e importación de vehículos.[/bsf-info-box]

@@ -397,10 +397,11 @@ headers_unified = [
     "Ruta de Procesos Asociada",
     "Estado Normativo",
     "URL Portal SAT",
+    "Nueva URL Portal SAT",
     "Familia Temática"
 ]
 
-unified_widths = [8, 18, 10, 24, 10, 28, 10, 28, 10, 28, 10, 28, 12, 38, 55, 24, 24, 24, 20, 16, 24, 48, 50, 28, 16, 42, 34]
+unified_widths = [8, 18, 10, 24, 10, 28, 10, 28, 10, 28, 10, 28, 12, 38, 55, 24, 24, 24, 20, 16, 24, 48, 50, 28, 16, 42, 42, 34]
 
 def populate_unified_sheet(ws, dataset):
     ws.views.sheetView[0].showGridLines = True
@@ -515,21 +516,28 @@ def populate_unified_sheet(ws, dataset):
         if item.get('esBrecha'):
             c_brecha.font = Font(name='Segoe UI', size=9, bold=True, color='C25E00')
             c_brecha.fill = PatternFill(start_color='FFEDD5', end_color='FFEDD5', fill_type='solid')
-        # Col 26: URL Oficial
+        # Col 26: URL Oficial (Anterior)
         raw_url = str(item.get('url', '')).strip()
         c_url = ws.cell(row=r_idx, column=26, value=raw_url)
         if raw_url.startswith('http'):
             c_url.font = font_link
             c_url.hyperlink = raw_url
 
-        # Col 27: Familia Temática
+        # Col 27: Nueva URL Portal SAT
+        nueva_url_val = str(item.get('nueva_url', '')).strip()
+        c_nurl = ws.cell(row=r_idx, column=27, value=nueva_url_val)
+        if nueva_url_val.startswith('http'):
+            c_nurl.font = font_link
+            c_nurl.hyperlink = nueva_url_val
+
+        # Col 28: Familia Temática
         fam_val = item.get('familiaTematica', 'Normativa y Gestiones Generales')
-        ws.cell(row=r_idx, column=27, value=fam_val)
+        ws.cell(row=r_idx, column=28, value=fam_val)
 
         fill_color = ZEBRA_FILL if r_idx % 2 == 0 else 'FFFFFF'
-        for c_idx in range(1, 28):
+        for c_idx in range(1, 29):
             cell = ws.cell(row=r_idx, column=c_idx)
-            if c_idx not in [3, 4, 5, 7, 9, 11, 13, 14, 15, 16, 21, 23, 24, 25, 26]: cell.font = font_body
+            if c_idx not in [3, 4, 5, 7, 9, 11, 13, 14, 15, 16, 21, 23, 24, 25, 26, 27]: cell.font = font_body
             if not ((c_idx in [21, 25]) and item.get('esBrecha')):
                 cell.fill = PatternFill(start_color=fill_color, end_color=fill_color, fill_type='solid')
             cell.border = thin_border
@@ -539,7 +547,7 @@ def populate_unified_sheet(ws, dataset):
         ws.column_dimensions[get_column_letter(idx)].width = w
 
     ws.freeze_panes = 'E2'
-    ws.auto_filter.ref = f"A1:AA{len(dataset)+1}"
+    ws.auto_filter.ref = f"A1:AB{len(dataset)+1}"
 
 # HOJA 2: MATRIZ MAESTRA (716)
 ws_master = wb.create_sheet(title=SHEET_MASTER_NAME)
