@@ -312,47 +312,47 @@ export const FelPage: React.FC<FelPageProps> = ({ onBackToHome, initialTab = 'hu
               </div>
             </section>
 
-            {/* 2. ATO "STEP-BY-STEP": Pasos Secuenciales de Habilitación */}
+            {/* 2. ATO "STEP-BY-STEP": Pasos Secuenciales Oficiales de la Infografía SAT */}
             <section aria-labelledby="pasos-heading" className="bg-sat-blanco rounded-2xl border border-sat-gris p-6 sm:p-8 shadow-sat-sm space-y-6">
               <div className="space-y-1">
                 <span className="text-xs font-bold text-sat-azul uppercase tracking-wider">
-                  Paso a paso (Step-by-step navigation)
+                  Paso a paso oficial (Infografía SAT)
                 </span>
                 <h2 id="pasos-heading" className="text-lg sm:text-xl font-bold text-sat-azul-oscuro">
-                  Cómo habilitarte como emisor en 3 pasos
+                  Pasos para habilitarte desde Agencia Virtual
                 </h2>
                 <p className="text-xs sm:text-sm text-sat-texto-suave">
-                  Sigue esta secuencia en tu Agencia Virtual. Al finalizar, tu certificado estará activo de inmediato.
+                  Proceso oficial de 5 etapas para emitir Documentos Tributarios Electrónicos (DTE):
                 </p>
               </div>
 
-              <div className="space-y-4">
+              <div className="space-y-3.5">
                 
                 {/* Paso 1 */}
-                <div className="border border-sat-gris rounded-xl p-5 bg-sat-fondo-tenue space-y-2">
+                <div className="border border-sat-gris rounded-xl p-5 bg-sat-fondo-tenue space-y-1.5">
                   <div className="flex items-center justify-between">
                     <span className="text-xs font-bold px-2 py-0.5 rounded-md bg-[#14649B] text-white">Paso 01</span>
-                    <span className="text-xs text-sat-texto-suave font-medium">Ubicación: Menú Servicios</span>
+                    <span className="text-xs text-sat-texto-suave font-medium">Ubicación: Menú Principal</span>
                   </div>
-                  <h3 className="text-base font-bold text-sat-azul-oscuro">
-                    Ingresar a la sección Factura Electrónica en Agencia Virtual
+                  <h3 className="text-sm sm:text-base font-bold text-sat-azul-oscuro">
+                    Ingresar a tu Agencia Virtual y seleccionar Servicios Tributarios
                   </h3>
                   <p className="text-xs text-sat-texto-suave leading-relaxed">
-                    Inicia sesión en tu <strong>Agencia Virtual</strong>. En el menú superior izquierdo, haz clic en <strong>Servicios Tributarios</strong>, busca el módulo <strong>Factura Electrónica en Línea (FEL)</strong> y selecciona la opción <strong>Habilitarse como Emisor</strong>.
+                    Inicia sesión en tu cuenta de Agencia Virtual SAT con tu usuario y contraseña. En el menú superior izquierdo, haz clic en la sección <strong>Servicios Tributarios</strong>.
                   </p>
                 </div>
 
                 {/* Paso 2 */}
-                <div className="border border-sat-gris rounded-xl p-5 bg-sat-fondo-tenue space-y-2">
+                <div className="border border-sat-gris rounded-xl p-5 bg-sat-fondo-tenue space-y-1.5">
                   <div className="flex items-center justify-between">
                     <span className="text-xs font-bold px-2 py-0.5 rounded-md bg-[#14649B] text-white">Paso 02</span>
-                    <span className="text-xs text-sat-texto-suave font-medium">Acción: Generación de Llaves</span>
+                    <span className="text-xs text-sat-texto-suave font-medium">Módulo: Factura Electrónica</span>
                   </div>
-                  <h3 className="text-base font-bold text-sat-azul-oscuro">
-                    Aceptar los términos y generar tu firma electrónica gratuita
+                  <h3 className="text-sm sm:text-base font-bold text-sat-azul-oscuro">
+                    Dirigirte a Factura Electrónica en Línea (FEL) y hacer clic en "Habilitarse como emisor"
                   </h3>
                   <p className="text-xs text-sat-texto-suave leading-relaxed">
-                    Acepta las condiciones del régimen FEL. El sistema te pedirá definir una <strong>contraseña para tu firma digital</strong>. Esta clave es privada y servirá para certificar cada factura que emitas desde cualquier dispositivo.
+                    Dentro de Servicios Tributarios, busca el apartado <strong>Factura Electrónica en Línea (FEL)</strong> y haz clic sobre la opción <strong>Habilitarse como emisor</strong>.
                   </p>
                 </div>
 
@@ -360,20 +360,62 @@ export const FelPage: React.FC<FelPageProps> = ({ onBackToHome, initialTab = 'hu
                 <div className="border border-sat-gris rounded-xl p-5 bg-sat-fondo-tenue space-y-2">
                   <div className="flex items-center justify-between">
                     <span className="text-xs font-bold px-2 py-0.5 rounded-md bg-[#14649B] text-white">Paso 03</span>
-                    <span className="text-xs text-sat-texto-suave font-medium">Resultado: Certificado Emitido</span>
+                    <span className="text-xs text-sat-texto-suave font-medium">Validación Automática del Sistema</span>
                   </div>
-                  <h3 className="text-base font-bold text-sat-azul-oscuro">
-                    Confirmación de acreditación y descarga de constancia
+                  <h3 className="text-sm sm:text-base font-bold text-sat-azul-oscuro">
+                    El sistema validará que cumplas con los requisitos necesarios
                   </h3>
                   <p className="text-xs text-sat-texto-suave leading-relaxed">
-                    Haz clic en <strong>Confirmar Habilitación</strong>. La SAT generará tu certificado de emisor al instante. Guarda tu constancia en PDF para tu registro contable.
+                    La plataforma revisará automáticamente tu historial tributario y te mostrará la pantalla de confirmación con los tres indicadores en verde:
+                  </p>
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 pt-1 text-xs font-semibold">
+                    <div className="p-2.5 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-900 flex items-center justify-between">
+                      <span>NIT Activo</span>
+                      <span className="font-bold">¿Cumple? Sí</span>
+                    </div>
+                    <div className="p-2.5 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-900 flex items-center justify-between">
+                      <span>Sin Omisos</span>
+                      <span className="font-bold">¿Cumple? Sí</span>
+                    </div>
+                    <div className="p-2.5 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-900 flex items-center justify-between">
+                      <span>RTU Actualizado</span>
+                      <span className="font-bold">¿Cumple? Sí</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Paso 4 */}
+                <div className="border border-sat-gris rounded-xl p-5 bg-sat-fondo-tenue space-y-1.5">
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-bold px-2 py-0.5 rounded-md bg-[#14649B] text-white">Paso 04</span>
+                    <span className="text-xs text-sat-texto-suave font-medium">Seguridad y Firma</span>
+                  </div>
+                  <h3 className="text-sm sm:text-base font-bold text-sat-azul-oscuro">
+                    Asignar una contraseña para tu firma electrónica digital
+                  </h3>
+                  <p className="text-xs text-sat-texto-suave leading-relaxed">
+                    Define una contraseña segura para tu firma digital gratuita. Esta clave certificará legalmente cada factura o comprobante emitido a tus clientes.
+                  </p>
+                </div>
+
+                {/* Paso 5 */}
+                <div className="border border-sat-gris rounded-xl p-5 bg-sat-fondo-tenue space-y-1.5">
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-bold px-2 py-0.5 rounded-md bg-[#14649B] text-white">Paso 05</span>
+                    <span className="text-xs text-sat-texto-suave font-medium">Aprobación Final</span>
+                  </div>
+                  <h3 className="text-sm sm:text-base font-bold text-sat-azul-oscuro">
+                    Hacer clic en "Acepto los términos y condiciones"
+                  </h3>
+                  <p className="text-xs text-sat-texto-suave leading-relaxed">
+                    Confirma la aceptación de términos y condiciones. ¡Listo! Tu certificado queda emitido y ya puedes generar Documentos Tributarios Electrónicos (DTE).
                   </p>
                 </div>
 
               </div>
 
               {/* Botón de Inicio Inmediato */}
-              <div className="pt-2">
+              <div className="pt-2 flex flex-wrap items-center gap-3">
                 <Button 
                   variant="primary" 
                   size="md"
@@ -381,6 +423,13 @@ export const FelPage: React.FC<FelPageProps> = ({ onBackToHome, initialTab = 'hu
                 >
                   <ExternalLink className="w-4 h-4 mr-2" />
                   <span>Iniciar habilitación en Agencia Virtual</span>
+                </Button>
+                <Button 
+                  variant="outline" 
+                  size="md"
+                  onClick={() => window.open('/downloads/FEL-capsula-HABILITACION-FEL-DTE-2026-1.jpg', '_blank')}
+                >
+                  <span>Ver infografía oficial original (JPG)</span>
                 </Button>
               </div>
             </section>
