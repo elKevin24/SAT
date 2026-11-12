@@ -100,13 +100,35 @@ export const FelPage: React.FC<FelPageProps> = ({ onBackToHome }) => {
 
         {/* 2. Hero Principal */}
         <header className="bg-sat-blanco rounded-xl border border-sat-gris p-6 sm:p-8 shadow-sat-sm relative overflow-hidden">
-          <div className="max-w-3xl space-y-3 relative z-10">
+          <div className="max-w-3xl space-y-4 relative z-10">
+            <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-sat-azul/10 text-sat-azul text-xs font-bold">
+              <span>Servicio Público Gratuito</span>
+              <span>•</span>
+              <span>Régimen FEL</span>
+            </div>
             <h1 className="text-2xl sm:text-4xl font-black text-sat-azul-oscuro tracking-tight leading-tight">
-              Factura Electrónica en Línea (FEL)
+              Emitir Factura Electrónica (FEL)
             </h1>
             <p className="text-sm sm:text-base text-sat-texto-suave leading-relaxed">
-              El régimen FEL moderniza la emisión, transmisión y certificación de documentos tributarios en Guatemala. Emite comprobantes electrónicos de forma 100% gratuita y segura desde la web o tu teléfono móvil.
+              Emite tus facturas, recibos y notas de crédito por internet de forma 100% gratuita desde tu computadora o teléfono celular. No necesitas comprar talonarios de papel ni contratar a proveedores privados.
             </p>
+            <div className="flex flex-wrap items-center gap-3 pt-1">
+              <Button 
+                variant="primary" 
+                size="md"
+                onClick={() => window.open('https://agenciavirtual.sat.gob.gt/', '_blank')}
+              >
+                <ExternalLink className="w-4 h-4 mr-2" />
+                <span>Emitir factura desde Agencia Virtual</span>
+              </Button>
+              <Button 
+                variant="outline" 
+                size="md"
+                onClick={() => window.open('https://portal.sat.gob.gt/portal/factura-electronica-fel/#pasos', '_blank')}
+              >
+                <span>Habilitarme como emisor</span>
+              </Button>
+            </div>
           </div>
         </header>
 
@@ -488,6 +510,35 @@ export const FelPage: React.FC<FelPageProps> = ({ onBackToHome }) => {
               </div>
             ))}
           </div>
+        </section>
+
+        {/* 9. Capa 3: Certeza Jurídica (Base Legal y Acuerdos Colapsables - Metodología ATO) */}
+        <section aria-labelledby="base-legal-heading" className="bg-sat-blanco rounded-xl border border-sat-gris p-5 sm:p-7 shadow-sat-sm">
+          <details className="group">
+            <summary className="cursor-pointer list-none flex items-center justify-between font-bold text-sm text-sat-azul-oscuro focus:outline-none focus-visible:ring-2 focus-visible:ring-sat-azul rounded-lg py-1">
+              <span id="base-legal-heading" className="flex items-center gap-2">
+                <BookOpen className="w-4 h-4 text-sat-azul" />
+                <span>Base legal y acuerdos ministeriales del Régimen FEL</span>
+              </span>
+              <span className="text-xs font-semibold text-sat-azul group-open:rotate-180 transition-transform">
+                ▼
+              </span>
+            </summary>
+            <div className="pt-3 mt-3 border-t border-sat-gris text-xs text-sat-texto-suave space-y-2 leading-relaxed">
+              <p>
+                • <strong>Acuerdo de Directorio Número 13-2018:</strong> Creación del Régimen de Factura Electrónica en Línea (FEL) de la República de Guatemala.
+              </p>
+              <p>
+                • <strong>Acuerdo de Directorio Número 26-2019:</strong> Incorporación progresiva de segmentos y sectores económicos al régimen FEL.
+              </p>
+              <p>
+                • <strong>Acuerdo de Directorio Número 15-2020:</strong> Disposiciones complementarias para pequeños contribuyentes y prestadores de servicios profesionales.
+              </p>
+              <p>
+                • <strong>Ley del Impuesto al Valor Agregado (Decreto 27-92):</strong> Marco general de facturación y acreditamiento de crédito fiscal.
+              </p>
+            </div>
+          </details>
         </section>
 
       </div>
