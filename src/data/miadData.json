@@ -1,0 +1,260 @@
+{
+  "aereo_courier": [
+    {
+      "id": "MIAD-AER-01",
+      "codigo_normativo": "GU-IAD/DNO-ADU-GCA-39",
+      "titulo_ciudadano": "Liberar paquetes y mercancías retenidas en aduanas",
+      "descripcion": "Guía operativa paso a paso para gestionar el levantamiento de retención tras subsanar inconsistencias o pagar tributos en aduana aérea o courier.",
+      "tipo": "Guía",
+      "tipo_id": "guia",
+      "via": "Aérea / Courier",
+      "url_pdf": "https://portal.sat.gob.gt/portal/descarga/15356/documentos-guia-u-orientacion/77510/gu-iad-dno-adu-gca-39-guia-para-registrar-liberacion-de-las-mercancias-retenidas-nuevo-modelo-de-despacho.pdf"
+    },
+    {
+      "id": "MIAD-AER-02",
+      "codigo_normativo": "GU-IAD/DNO-ADU-GCA-40",
+      "titulo_ciudadano": "Registrar retención de mercancías en aduana aérea o courier",
+      "descripcion": "Guía de procedimiento para que operadores registren notificaciones de retención de paquetes cuando se requiere documentación complementaria.",
+      "tipo": "Guía",
+      "tipo_id": "guia",
+      "via": "Aérea / Courier",
+      "url_pdf": "https://portal.sat.gob.gt/portal/descarga/15356/documentos-guia-u-orientacion/77498/gu-iad-dno-adu-gca-40-guia-para-registrar-retencion-de-las-mercancias-nuevo-modelo-de-despacho.pdf"
+    },
+    {
+      "id": "MIAD-AER-03",
+      "codigo_normativo": "GU-IAD/DNO-ADU-GCA-35",
+      "titulo_ciudadano": "Consultar estado de retención y liberación de mercancías",
+      "descripcion": "Instrucciones para consultar en línea el estatus de paquetes aéreos retenidos y verificar si ya cuentan con visto bueno para entrega.",
+      "tipo": "Guía",
+      "tipo_id": "guia",
+      "via": "Aérea / Courier",
+      "url_pdf": "https://portal.sat.gob.gt/portal/descarga/15356/documentos-guia-u-orientacion/77508/gu-iad-dno-adu-gca-35-guia-para-consultar-la-retencion-y-liberacion-de-las-mercancias-nuevo-modelo-de-despacho.pdf"
+    },
+    {
+      "id": "MIAD-AER-04",
+      "codigo_normativo": "IN-IAD/DNO-ADU-GCA-28",
+      "titulo_ciudadano": "Procedimiento oficial para embarque y salida de carga aérea",
+      "descripcion": "Instructivo técnico regulatorio para la salida de mercancías y despacho de exportaciones por el Aeropuerto Internacional La Aurora.",
+      "tipo": "Instructivo",
+      "tipo_id": "instructivo",
+      "via": "Aérea",
+      "url_pdf": "https://portal.sat.gob.gt/portal/descarga/13741/instructivos/77537/in-iad-dno-adu-gca-28-instructivo-para-el-embarque.pdf"
+    },
+    {
+      "id": "MIAD-AER-05",
+      "codigo_normativo": "IN-IAD/DNO-ADU-GCA-26",
+      "titulo_ciudadano": "Transmisión electrónica de manifiesto aéreo en depósitos temporales",
+      "descripcion": "Especificaciones normativas para que líneas aéreas y bodegas aduaneras transmitan el manifiesto de carga anticipado.",
+      "tipo": "Instructivo",
+      "tipo_id": "instructivo",
+      "via": "Aérea",
+      "url_pdf": "https://portal.sat.gob.gt/portal/descarga/13741/instructivos/77536/in-iad-dno-adu-gca-27-instructivo-para-la-recepcion.pdf"
+    },
+    {
+      "id": "MIAD-AER-06",
+      "codigo_normativo": "IN-IAD/DNO-ADU-GCA-27",
+      "titulo_ciudadano": "Recepción y descarga de mercancías por vía aérea",
+      "descripcion": "Protocolo técnico para verificar bultos, guías aéreas y descargar carga en rampa y bodegas temporales.",
+      "tipo": "Instructivo",
+      "tipo_id": "instructivo",
+      "via": "Aérea",
+      "url_pdf": "https://portal.sat.gob.gt/portal/descarga/13741/instructivos/77534/in-iad-dno-adu-gca-26-instructivo-proceso-transmision.pdf"
+    },
+    {
+      "id": "MIAD-AER-07",
+      "codigo_normativo": "IN-IAD/DNO-ADU-GDE-38",
+      "titulo_ciudadano": "Verificación física y documental inmediata en aduana aérea",
+      "descripcion": "Criterios y actuaciones aduaneras durante la inspección de paquetes y mercancías con selectivo rojo.",
+      "tipo": "Instructivo",
+      "tipo_id": "instructivo",
+      "via": "Aérea",
+      "url_pdf": "https://portal.sat.gob.gt/portal/descarga/13741/instructivos/77526/1-instructivo-para-la-verificacion-inmediata-de-las-mercancias-por-via-aerea-in-iad-dno-adu-gde-38.pdf"
+    },
+    {
+      "id": "MIAD-AER-08",
+      "codigo_normativo": "IN-IAD/DNO-ADU-GDE-37",
+      "titulo_ciudadano": "Control de egreso de mercancías nacionales por vía aérea",
+      "descripcion": "Regulación sobre formalidades aduaneras al momento en que las mercancías abandonan el territorio nacional vía avión.",
+      "tipo": "Instructivo",
+      "tipo_id": "instructivo",
+      "via": "Aérea",
+      "url_pdf": "https://portal.sat.gob.gt/portal/descarga/13741/instructivos/77525/2-instructivo-para-el-egreso-de-mercancias-del-territorio-nacional-por-via-aerea-in-iad-dno-adu-gde-37_pagenumber-1_watermark_watermark.pdf"
+    },
+    {
+      "id": "MIAD-AER-09",
+      "codigo_normativo": "GU-IAD/DNO-ADU-GCA-38",
+      "titulo_ciudadano": "Traslado de carga aérea entre DHL y COMBEX-IM",
+      "descripcion": "Guía para emitir la boleta de autorización de traslado interno entre recintos y depósitos aduaneros temporales.",
+      "tipo": "Guía",
+      "tipo_id": "guia",
+      "via": "Aérea / Courier",
+      "url_pdf": "https://portal.sat.gob.gt/portal/descarga/15356/documentos-guia-u-orientacion/77509/gu-iad-dno-adu-gca-38-guia-para-la-solicitud-de-autorizacion-de-boleta-de-traslado-de-mercancias-de-dhl-a-combex-im-o-viceversa-nuevo-modelo-de-despa.pdf"
+    },
+    {
+      "id": "MIAD-AER-10",
+      "codigo_normativo": "GU-IAD/DNO-ADU-GCA-26",
+      "titulo_ciudadano": "Autorización de embarque para líneas aéreas",
+      "descripcion": "Procedimiento digital para que compañías aéreas soliciten permiso de embarque final de carga comercial.",
+      "tipo": "Guía",
+      "tipo_id": "guia",
+      "via": "Aérea",
+      "url_pdf": "https://portal.sat.gob.gt/portal/descarga/15356/documentos-guia-u-orientacion/77506/gu-iad-dno-adu-gca-26-guia-para-la-solicitud-de-autorizacion-de-embarques-por-parte-de-las-lineas-aereas-nuevo-modelo-de-despacho.pdf"
+    },
+    {
+      "id": "MIAD-AER-11",
+      "codigo_normativo": "GU-IAD/DNO-ADU-GCA-23",
+      "titulo_ciudadano": "Rectificar manifiesto de carga aérea ante aduanas",
+      "descripcion": "Instrucciones para corregir datos erróneos de peso, cantidad de bultos o consignatario en manifiestos aéreos.",
+      "tipo": "Guía",
+      "tipo_id": "guia",
+      "via": "Aérea",
+      "url_pdf": "https://portal.sat.gob.gt/portal/descarga/15356/documentos-guia-u-orientacion/77504/gu-iad-dno-adu-gca-23-guia-para-la-solicitud-de-rectificacion-de-manifiesto-nuevo-modelo-de-despacho.pdf"
+    },
+    {
+      "id": "MIAD-AER-12",
+      "codigo_normativo": "GU-IAD/DNO-ADU-GCA-22",
+      "titulo_ciudadano": "Reportar sobrantes y faltantes de carga en recinto DHL",
+      "descripcion": "Guía para declarar diferencias de bultos recibidos frente al manifiesto electrónico en paquetería express.",
+      "tipo": "Guía",
+      "tipo_id": "guia",
+      "via": "Aérea / Courier",
+      "url_pdf": "https://portal.sat.gob.gt/portal/descarga/15356/documentos-guia-u-orientacion/77502/gu-iad-dno-adu-gca-22-guia-para-el-traslado-de-reporte-de-sobrantes-y-faltantes-recinto-dhl-nuevo-modelo-de-despacho.pdf"
+    },
+    {
+      "id": "MIAD-AER-13",
+      "codigo_normativo": "GU-IAD/DNO-ADU-GCA-14",
+      "titulo_ciudadano": "Justificar sobrantes y faltantes ante la autoridad aduanera",
+      "descripcion": "Requisitos y plazos legales para sustentar discrepancias de inventario de carga sin incurrir en sanciones.",
+      "tipo": "Guía",
+      "tipo_id": "guia",
+      "via": "Aérea",
+      "url_pdf": "https://portal.sat.gob.gt/portal/descarga/15356/documentos-guia-u-orientacion/77500/gu-iad-dno-adu-gca-14-guia-para-la-solicitud-de-justificacion-de-sobrantes-y-faltantes-nuevo-modelo-de-despacho.pdf"
+    },
+    {
+      "id": "MIAD-AER-14",
+      "codigo_normativo": "GU-IAD/DNO-ADU-GDE-07",
+      "titulo_ciudadano": "Bandeja electrónica del contribuyente para exportaciones aéreas",
+      "descripcion": "Tutorial operativo para monitorear el estatus de declaraciones DUCA de exportación desde la plataforma de SAT.",
+      "tipo": "Guía",
+      "tipo_id": "guia",
+      "via": "Aérea",
+      "url_pdf": "https://portal.sat.gob.gt/portal/descarga/15356/documentos-guia-u-orientacion/77511/gu-iad-dno-adu-gde-07-guia-para-bandeja-del-contribuyente-exportaciones-nuevo-modelo-de-despacho.pdf"
+    }
+  ],
+  "maritimo_vumar": [
+    {
+      "id": "MIAD-MAR-01",
+      "codigo_normativo": "VUMARGT-OPS-01",
+      "titulo_ciudadano": "Manual de usuario y operaciones de la Ventanilla Única Marítima (VUMAR)",
+      "descripcion": "Manual integral para la gestión electrónica de recepción, permanencia y despacho de buques en puertos guatemaltecos.",
+      "tipo": "Manual",
+      "tipo_id": "manual",
+      "via": "Marítima",
+      "url_pdf": "https://portal.sat.gob.gt/portal/descarga/15320/componente-de-procesos/78054/manual-de-usuario-operaciones-vumargt.pdf"
+    },
+    {
+      "id": "MIAD-MAR-02",
+      "codigo_normativo": "PROT-VUMAR-2024",
+      "titulo_ciudadano": "Protocolo interinstitucional de llegada y estancia de embarcaciones",
+      "descripcion": "Acuerdo operativo entre SAT, Autoridad Portuaria, Migración y Salud para la atención ágil de naves marítimas.",
+      "tipo": "Protocolo",
+      "tipo_id": "protocolo",
+      "via": "Marítima",
+      "url_pdf": "https://portal.sat.gob.gt/portal/descarga/15320/componente-de-procesos/78053/protocolo-interinstitucional-sistematizacion-proc-llega-estancia-en-pto-salida-embarcaciones.pdf"
+    },
+    {
+      "id": "MIAD-MAR-03",
+      "codigo_normativo": "CONV-VUMAR-OFICIAL",
+      "titulo_ciudadano": "Convenio marco de cooperación interinstitucional VUMAR",
+      "descripcion": "Base legal y compromisos de interoperabilidad digital entre las entidades del sector portuario nacional.",
+      "tipo": "Convenio",
+      "tipo_id": "convenio",
+      "via": "Marítima",
+      "url_pdf": "https://portal.sat.gob.gt/portal/descarga/15320/componente-de-procesos/78052/convenio-vumar-firmado.pdf"
+    }
+  ],
+  "infraestructura_fronteras": [
+    {
+      "id": "MIAD-INF-01",
+      "codigo_normativo": "MIAD-INFRA-LAV",
+      "titulo_ciudadano": "Modernización del Complejo Lavarreda (Aduana Central)",
+      "descripcion": "Detalles de infraestructura, áreas de aforo climatizadas y carriles automatizados para agilizar el despacho terrestre.",
+      "tipo": "Plan Maestro",
+      "tipo_id": "plan",
+      "via": "Terrestre / Central",
+      "url_pdf": "https://portal.sat.gob.gt/portal/programa-miad/componente-de-infraestructura/complejo-lavarreda-aduana-central/"
+    },
+    {
+      "id": "MIAD-INF-02",
+      "codigo_normativo": "MIAD-INFRA-CEI",
+      "titulo_ciudadano": "Plan maestro del Puesto Fronterizo El Ceibo (Frontera con México)",
+      "descripcion": "Infraestructura binacional integrada para agilizar el tránsito turístico y de carga en Petén.",
+      "tipo": "Plan Maestro",
+      "tipo_id": "plan",
+      "via": "Terrestre",
+      "url_pdf": "https://portal.sat.gob.gt/portal/programa-miad/componente-de-infraestructura/plan-maestro-puerto-fronterizo-el-ceibo/"
+    },
+    {
+      "id": "MIAD-INF-03",
+      "codigo_normativo": "MIAD-INFRA-ALV",
+      "titulo_ciudadano": "Plan maestro del Puesto Fronterizo Pedro de Alvarado (Frontera El Salvador)",
+      "descripcion": "Diseño del nuevo modelo de control unificado y carriles exprés para el transporte de mercancías en el corredor pacífico.",
+      "tipo": "Plan Maestro",
+      "tipo_id": "plan",
+      "via": "Terrestre",
+      "url_pdf": "https://portal.sat.gob.gt/portal/programa-miad/componente-de-infraestructura/plan-maestro-puesto-fronterizo-pedro-de-alvarado/"
+    },
+    {
+      "id": "MIAD-INF-04",
+      "codigo_normativo": "MIAD-INFRA-TEC",
+      "titulo_ciudadano": "Plan maestro de modernización Tecún Umán I (San Marcos)",
+      "descripcion": "Reingeniería de patios aduaneros, básculas automatizadas y sistemas de inspección de vehículos pesados.",
+      "tipo": "Plan Maestro",
+      "tipo_id": "plan",
+      "via": "Terrestre",
+      "url_pdf": "https://portal.sat.gob.gt/portal/programa-miad/componente-de-infraestructura/plan-maestro-tecun-uman-i/"
+    },
+    {
+      "id": "MIAD-INF-05",
+      "codigo_normativo": "MIAD-INFRA-LIZ",
+      "titulo_ciudadano": "Plan maestro Puesto Fronterizo Ingeniero Juan Luis Lizarralde Arrillaga",
+      "descripcion": "Modernización de instalaciones aduaneras y áreas de control cuarentenario en Agua Caliente.",
+      "tipo": "Plan Maestro",
+      "tipo_id": "plan",
+      "via": "Terrestre",
+      "url_pdf": "https://portal.sat.gob.gt/portal/programa-miad/componente-de-infraestructura/plan-maestro-de-desarrollo-del-puerto-fronterizo-ingeniero-juan-luis-lizarralde-arrillaga/"
+    }
+  ],
+  "tecnologia_inspeccion": [
+    {
+      "id": "MIAD-TEC-01",
+      "codigo_normativo": "MIAD-TEC-SCAN",
+      "titulo_ciudadano": "Sistemas de inspección no intrusiva (Rayos X y Escáneres)",
+      "descripcion": "Especificaciones técnicas sobre la revisión automatizada de contenedores en puertos marítimos y fronteras terrestres.",
+      "tipo": "Tecnología",
+      "tipo_id": "tecnologia",
+      "via": "Multimodal",
+      "url_pdf": "https://portal.sat.gob.gt/portal/programa-miad/componente-de-tecnologia/equipos-no-intrusivos/"
+    },
+    {
+      "id": "MIAD-TEC-02",
+      "codigo_normativo": "MIAD-TEC-RFID",
+      "titulo_ciudadano": "Identificación por radiofrecuencia (RFID) y Marchamos Electrónicos",
+      "descripcion": "Trazabilidad satelital en tiempo real para tránsitos aduaneros internacionales y prevención de desvíos de ruta.",
+      "tipo": "Tecnología",
+      "tipo_id": "tecnologia",
+      "via": "Terrestre",
+      "url_pdf": "https://portal.sat.gob.gt/portal/programa-miad/componente-de-tecnologia/rfid/"
+    },
+    {
+      "id": "MIAD-TEC-03",
+      "codigo_normativo": "MIAD-SEC-CCTV",
+      "titulo_ciudadano": "Especificaciones técnicas de videovigilancia y CCTV para recintos aduaneros",
+      "descripcion": "Estándares mínimos de cámaras, resolución y retención de grabaciones obligatorios para depósitos aduaneros y operadores.",
+      "tipo": "Seguridad",
+      "tipo_id": "seguridad",
+      "via": "Recintos Aduaneros",
+      "url_pdf": "https://portal.sat.gob.gt/portal/programa-miad/sistemas-de-video-vigilancia-cctv/"
+    }
+  ]
+}

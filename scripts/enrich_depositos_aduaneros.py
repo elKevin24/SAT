@@ -559,6 +559,29 @@ def enrich_depositos():
             "costo": "Gratuito (Q0.00)",
             "advertencia": "La interconexión informática es obligatoria para garantizar la trazabilidad permanente de mercancías afianzadas bajo control de la administración.",
             "normativa": "Ley Orgánica de la SAT Artículo 3; RECAUCA Artículo 117."
+        },
+        "SAT-GES-0452": {
+            "nombreActual": "Consultar rampa de inspección, revisores y retenciones aduaneras",
+            "descripcion": "Consulta en línea la asignación de andenes, el inspector aduanero y las posibles medidas de retención aplicadas a cargamentos en depósitos aduaneros. Facilita la coordinación de rampas y el flujo ágil de mercancías dentro del recinto fiscal.",
+            "requisitos": [
+                "Número de Declaración Única Centroamericana (DUCA) o número de contenedor.",
+                "Acceso a internet para consultar el portal de Aduanas de la SAT."
+            ],
+            "documentos": [
+                "Declaración de mercancías DUCA pagada y validada en el sistema.",
+                "Acta de recepción DAT o documento de transporte asociado."
+            ],
+            "pasos": [
+                "Ingresa al módulo de consultas aduaneras en el Portal SAT.",
+                "Introduce el número de la declaración aduanera o el número de contenedor de 11 dígitos.",
+                "Verifica la rampa asignada, el nombre del técnico de aduanas y si existe orden de retención preventiva.",
+                "Coordina el posicionamiento de la unidad en la rampa indicada para la inspección física."
+            ],
+            "resultadoObtenido": "Pantalla oficial con el andén de rampa asignado y estatus de reconocimiento aduanero.",
+            "tiempoEstimado": "Inmediato (consulta pública)",
+            "costo": "Gratuito (Q0.00)",
+            "advertencia": "Si la mercancía presenta orden de retención emitida por una unidad de fiscalización, no podrá ser posicionada para levante hasta que la medida sea levantada formalmente.",
+            "normativa": "RECAUCA Artículos 338 y 339; Procedimiento PR-IAD/DNO-DE-01."
         }
     }
 
@@ -844,7 +867,7 @@ def enrich_depositos():
                 "Accede a la herramienta de consulta de expedientes en el Portal SAT.",
                 "Introduce el número de expediente y selecciona la unidad de gestión aduanera.",
                 "Revisa las actuaciones y la fecha de última providencia emitida.",
-                "Descarga o consulta las notificaciones electrónicas asociadas al trámite."
+                "Descarga o consulta las notificaciones electrónicas asociadas a la gestión."
             ],
             "resultadoObtenido": "Información detallada de la ubicación procesal y avance del expediente de depósito temporal.",
             "tiempoEstimado": "Inmediato (en línea)",

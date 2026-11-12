@@ -116,7 +116,7 @@ def enrich_afpa():
         },
         "SAT-GES-0422": {
             "nombreActual": "Consultar estado o actuaciones de expedientes en gestión aduanera",
-            "descripcion": "Solicita de forma presencial información verbal sobre la etapa procesal o actuaciones administrativas de expedientes aduaneros en trámite. Permite conocer el estatus de recursos, solicitudes de auxiliares, franquicias o regímenes especiales.",
+            "descripcion": "Solicita de forma presencial información verbal sobre la etapa procesal o actuaciones administrativas de expedientes aduaneros en curso. Permite conocer el estatus de recursos, solicitudes de auxiliares, franquicias o regímenes especiales.",
             "requisitos": [
                 "Presentar Documento Personal de Identificación (DPI) original del solicitante o pasaporte vigente en caso de extranjeros.",
                 "En caso de mandatarios o representantes legales, presentar documento que acredite la personería jurídica vigente.",
@@ -417,7 +417,7 @@ def enrich_afpa():
         },
         "SAT-GES-0426": {
             "nombreActual": "Consultar expedientes de auxiliares aduaneros en gestión técnica",
-            "descripcion": "Verifica el estado de dictámenes, solicitudes de autorización y trámites administrativos ingresados ante las dependencias de la Intendencia de Aduanas. Permite dar seguimiento oportuno a expedientes sin necesidad de desplazamientos físicos.",
+            "descripcion": "Verifica el estado de dictámenes, solicitudes de autorización y requerimientos administrativos ingresados ante las dependencias de la Intendencia de Aduanas. Permite dar seguimiento oportuno a expedientes sin necesidad de desplazamientos físicos.",
             "requisitos": [
                 "Número de expediente o código de gestión otorgado por la ventanilla de recepción aduanera.",
                 "Identificación del auxiliar o personero legal que promovió la solicitud."
