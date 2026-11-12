@@ -1,0 +1,42 @@
+[
+  {
+    "nombre": "Sistemas Aplicativos, S.A.",
+    "nit": "12513687",
+    "web": "https://www.sisap.com",
+    "direccion": "3a. Calle «A» 6-50 Zona 10. Guatemala, Guatemala.",
+    "contacto": "Ventas | Tel: (502) 2410 4300 | Email: | [email protected] | Soporte | Tel: (502) 2410 4329 | (502) 2410 4328 | Email: | [email protected]",
+    "fecha_reg": "08/08/2018"
+  },
+  {
+    "nombre": "Sistemas Eficientes, S.A.",
+    "nit": "7067356",
+    "web": "https://www.sefisa.com",
+    "direccion": "Avenida Reforma 6-64 zona 9 Plaza Corporativa Reforma Torre III, Nivel 5. Guatemala, Guatemala.",
+    "contacto": "Ventas | Tel: (502) 2383 6666 | Email: | [email protected] | Soporte | Tel: (502) 2383 6666 | Email: | [email protected]",
+    "fecha_reg": "08/08/2018"
+  },
+  {
+    "nombre": "Deloitte Consulting de Guatemala, S.A.",
+    "nit": "34333061",
+    "web": "https://www.deloitte.com/gt",
+    "direccion": "5 Avenida 5-55 zona 14 Edificio Europlaza World Business Center Nivel 15 Torre 4 Oficinas 1501 y 1502 Guatemala, Guatemala",
+    "contacto": "Ventas | Tel: (502) 2384 6500 | Email: | [email protected] | Soporte | Tel: (502) 2384 6500 | Email: | [email protected]",
+    "fecha_reg": "13/09/2018"
+  },
+  {
+    "nombre": "Devel Security, S.A.",
+    "nit": "76808548",
+    "web": "https://www.devel.group",
+    "direccion": "7 Avenida 5-45, Zona 4, Edificio XPO I Nivel 9, Guatemala, Guatemala",
+    "contacto": "Ventas | Tel.: (502) 2307 5700 | Email: | [email protected] | Soporte | Tel.: (502) 2307 5757 | Email: | [email protected]",
+    "fecha_reg": "17/12/2018"
+  },
+  {
+    "nombre": "PAKAL SECURITY LABS, S. A.",
+    "nit": "",
+    "web": "",
+    "direccion": "Ruta 4 6-32, Zona 4 Guatemala, Guatemala",
+    "contacto": "Ventas | Tel: (502) 2375 7765 | Email: | [email protected] | Soporte | Tel: (502) 2375 7765 | Email: | [email protected]",
+    "fecha_reg": "22/08/2022"
+  }
+]

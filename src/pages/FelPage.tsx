@@ -3,6 +3,7 @@ import { ArrowLeft, ExternalLink, FileText, CheckCircle2 } from 'lucide-react';
 import { Breadcrumbs } from '../components/ui/Breadcrumbs';
 import { Button } from '../components/ui/Button';
 import { FelSubnav, FelTabId } from '../components/FelSubnav';
+import { FEL_CERTIFICADORES, FEL_AUDITORES, FEL_TECNICA_DOCS, FEL_FAQS } from '../data/felEcosystemData';
 
 interface FelPageProps {
   onBackToHome: () => void;
@@ -573,157 +574,399 @@ export const FelPage: React.FC<FelPageProps> = ({ onBackToHome, initialTab = 'hu
         {/* VISTA 3: CERTIFICADORES (/portal/certificador-de-dte/)   */}
         {/* ======================================================== */}
         {currentTab === 'certificadores' && (
-          <section className="space-y-6">
-            <header className="bg-sat-blanco rounded-2xl border border-sat-gris p-6 sm:p-8 shadow-sat-sm space-y-3">
-              <h1 className="text-2xl sm:text-3xl font-black text-sat-azul-oscuro">
-                Certificadores de facturas autorizados
+          <div className="space-y-8">
+            {/* CAPA 1 ATO: Resumen, orientación y acción primaria */}
+            <header className="bg-sat-blanco rounded-2xl border border-sat-gris p-6 sm:p-8 shadow-sat-sm space-y-4">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sat-azul/10 text-sat-azul text-xs font-bold">
+                <span>Directorio Oficial</span>
+                <span>•</span>
+                <span>Certificadores Autorizados</span>
+              </div>
+              <h1 className="text-2xl sm:text-3xl font-black text-sat-azul-oscuro tracking-tight">
+                Certificadores de Facturas Electrónicas (DTE)
               </h1>
               <p className="text-sm text-sat-texto-suave leading-relaxed max-w-3xl">
-                La SAT es el certificador público oficial y gratuito. Si tu empresa maneja facturación masiva integrada por API a tu sistema contable, puedes contratar a uno de los certificadores autorizados.
+                La SAT es el certificador público oficial y gratuito para todos los contribuyentes. Si tu negocio maneja facturación masiva integrada a tu propio sistema ERP o software contable, puedes contratar los servicios de una de las 18 empresas privadas autorizadas por la SAT.
               </p>
+              <div className="flex flex-wrap items-center gap-3 pt-2">
+                <a
+                  href="https://portal.sat.gob.gt/portal/descarga/6524/factura-electronica-fel/80213/procedimiento-de-autorizacion-de-certificador.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-sat-azul text-white font-bold text-xs sm:text-sm px-4 py-2.5 rounded-sat-sm hover:bg-sat-azul-oscuro transition-colors shadow-sat-sm min-h-[44px]"
+                >
+                  <span>Procedimiento para autorizarse como certificador (PDF)</span>
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+              </div>
             </header>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
-              {[
-                { nombre: 'SAT (Superintendencia de Administración Tributaria)', tipo: 'Certificador Público Oficial', costo: 'Gratuito', url: 'https://portal.sat.gob.gt/portal/emisor-de-dte/' },
-                { nombre: 'Infile, S.A.', tipo: 'Certificador Autorizado', costo: 'Comercial / API', url: 'https://portal.sat.gob.gt/portal/certificador-de-dte/' },
-                { nombre: 'Guatefacturas, S.A.', tipo: 'Certificador Autorizado', costo: 'Comercial / API', url: 'https://portal.sat.gob.gt/portal/certificador-de-dte/' },
-                { nombre: 'Megaprint, S.A.', tipo: 'Certificador Autorizado', costo: 'Comercial / API', url: 'https://portal.sat.gob.gt/portal/certificador-de-dte/' },
-                { nombre: 'CODISA, S.A.', tipo: 'Certificador Autorizado', costo: 'Comercial / API', url: 'https://portal.sat.gob.gt/portal/certificador-de-dte/' },
-                { nombre: 'Soluciones Digitales (Digifact)', tipo: 'Certificador Autorizado', costo: 'Comercial / API', url: 'https://portal.sat.gob.gt/portal/certificador-de-dte/' },
-              ].map(cert => (
-                <div 
-                  key={cert.nombre} 
-                  onClick={() => window.open(cert.url, '_blank')}
-                  className="group bg-sat-blanco border border-sat-gris rounded-2xl p-6 hover:bg-[#14649B] hover:-translate-y-1 hover:shadow-sat-md transition-all cursor-pointer flex flex-col justify-between"
+            {/* CAPA 2 ATO: Antes de empezar / Explicación del rol */}
+            <section aria-labelledby="rol-certificador-heading" className="bg-sat-blanco rounded-2xl border border-sat-gris p-6 sm:p-8 shadow-sat-sm space-y-4">
+              <h2 id="rol-certificador-heading" className="text-lg sm:text-xl font-black text-sat-azul-oscuro">
+                ¿Qué hace un Certificador de Factura Electrónica?
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs sm:text-sm text-sat-texto-suave leading-relaxed">
+                <div className="p-4 rounded-xl bg-sat-fondo-tenue border border-sat-gris/60 space-y-2">
+                  <strong className="block font-bold text-sat-azul-oscuro text-sm">1. Valida las reglas tributarias</strong>
+                  <p>Revisa en tiempo real que el archivo XML cumpla estrictamente con la estructura técnica y cálculos normados por la SAT.</p>
+                </div>
+                <div className="p-4 rounded-xl bg-sat-fondo-tenue border border-sat-gris/60 space-y-2">
+                  <strong className="block font-bold text-sat-azul-oscuro text-sm">2. Asigna la autorización y firma</strong>
+                  <p>Incorpora el Número de Autorización (UUID), serie y correlativo, aplicando su firma electrónica avanzada vinculante.</p>
+                </div>
+                <div className="p-4 rounded-xl bg-sat-fondo-tenue border border-sat-gris/60 space-y-2">
+                  <strong className="block font-bold text-sat-azul-oscuro text-sm">3. Transmite a la SAT de inmediato</strong>
+                  <p>Devuelve el comprobante certificado al emisor para su cliente y lo envía en milisegundos a los servidores de la SAT.</p>
+                </div>
+              </div>
+            </section>
+
+            {/* CAPA 3 ATO: Directorio oficial completo (18 Certificadores) */}
+            <section aria-labelledby="directorio-cert-heading" className="space-y-4">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                <div>
+                  <h2 id="directorio-cert-heading" className="text-lg sm:text-xl font-black text-sat-azul-oscuro">
+                    Directorio oficial de entidades autorizadas ({FEL_CERTIFICADORES.length + 1})
+                  </h2>
+                  <p className="text-xs text-sat-texto-suave">
+                    Listado oficial fiscalizado por la Intendencia de Recaudación de la SAT.
+                  </p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
+                {/* Opción 1: SAT Pública Gratuita */}
+                <div
+                  onClick={() => setCurrentTab('emisor')}
+                  className="group bg-sat-blanco border-2 border-sat-azul/40 rounded-2xl p-5 hover:bg-[#14649B] hover:-translate-y-1 hover:shadow-sat-md transition-all cursor-pointer flex flex-col justify-between"
                 >
                   <div className="space-y-2">
                     <div className="flex items-center justify-between">
-                      <span className="text-xs font-bold px-2 py-0.5 rounded-md bg-sat-fondo-tenue text-sat-azul group-hover:bg-white/20 group-hover:text-white transition-colors">{cert.costo}</span>
+                      <span className="text-[11px] font-bold px-2 py-0.5 rounded bg-sat-azul/10 text-sat-azul group-hover:bg-white/20 group-hover:text-white transition-colors">
+                        Público Oficial • 100% Gratuito
+                      </span>
                     </div>
                     <h3 className="text-base font-bold text-sat-azul-oscuro group-hover:text-white transition-colors">
-                      {cert.nombre}
+                      SAT (Superintendencia de Administración Tributaria)
                     </h3>
                     <p className="text-xs text-sat-texto-suave group-hover:text-white/90 leading-relaxed transition-colors">
-                      {cert.tipo}. Consulta los términos de integración técnica y resoluciones de autorización en el portal.
+                      Certificador público disponible para todos los contribuyentes desde Agencia Virtual y App FEL. Sin costo ni contratos.
                     </p>
                   </div>
+                  <div className="pt-3 mt-3 border-t border-sat-gris/60 group-hover:border-white/20 text-[11px] text-sat-texto-suave group-hover:text-white/80">
+                    <span>Acceso libre con tu usuario y contraseña de Agencia Virtual</span>
+                  </div>
                 </div>
-              ))}
-            </div>
-          </section>
+
+                {/* 18 Certificadores Privados Oficiales */}
+                {FEL_CERTIFICADORES.map((cert) => (
+                  <div
+                    key={cert.nombre}
+                    onClick={() => {
+                      if (cert.web) window.open(cert.web, '_blank', 'noopener,noreferrer');
+                    }}
+                    className="group bg-sat-blanco border border-sat-gris rounded-2xl p-5 hover:bg-[#14649B] hover:-translate-y-1 hover:shadow-sat-md transition-all cursor-pointer flex flex-col justify-between"
+                  >
+                    <div className="space-y-2">
+                      <div className="flex items-center justify-between gap-2">
+                        <span className="text-[11px] font-bold px-2 py-0.5 rounded bg-sat-fondo-tenue text-sat-texto-suave group-hover:bg-white/20 group-hover:text-white transition-colors">
+                          NIT: {cert.nit || 'Registrado'}
+                        </span>
+                        <span className="text-[11px] text-sat-texto-suave group-hover:text-white/80 transition-colors">
+                          Vence: {cert.renovacion}
+                        </span>
+                      </div>
+                      <h3 className="text-base font-bold text-sat-azul-oscuro group-hover:text-white transition-colors leading-snug">
+                        {cert.nombre}
+                      </h3>
+                      <p className="text-xs text-sat-texto-suave group-hover:text-white/90 leading-relaxed transition-colors line-clamp-3">
+                        {cert.direccion}
+                      </p>
+                    </div>
+
+                    <div className="pt-3 mt-3 border-t border-sat-gris/60 group-hover:border-white/20 text-[11px] text-sat-texto-suave group-hover:text-white/80 space-y-1">
+                      <p className="truncate"><strong>Contacto:</strong> {cert.contacto.replace(/\|/g, ' • ')}</p>
+                      {cert.web && (
+                        <p className="text-sat-azul group-hover:text-white font-semibold underline truncate">
+                          {cert.web.replace('https://', '').replace('http://', '')}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </section>
+          </div>
         )}
 
         {/* ======================================================== */}
         {/* VISTA 4: DOCUMENTACIÓN TÉCNICA (/portal/documentacion-tecnica/) */}
         {/* ======================================================== */}
         {currentTab === 'tecnica' && (
-          <section className="space-y-6">
-            <header className="bg-sat-blanco rounded-2xl border border-sat-gris p-6 sm:p-8 shadow-sat-sm space-y-3">
-              <h1 className="text-2xl sm:text-3xl font-black text-sat-azul-oscuro">
-                Documentación técnica e integración del Régimen FEL
+          <div className="space-y-8">
+            {/* CAPA 1 ATO: Resumen, propósito y enlaces clave */}
+            <header className="bg-sat-blanco rounded-2xl border border-sat-gris p-6 sm:p-8 shadow-sat-sm space-y-4">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sat-azul/10 text-sat-azul text-xs font-bold">
+                <span>Desarrolladores y TI</span>
+                <span>•</span>
+                <span>Especificaciones Técnicas</span>
+              </div>
+              <h1 className="text-2xl sm:text-3xl font-black text-sat-azul-oscuro tracking-tight">
+                Documentación Técnica del Régimen FEL
               </h1>
               <p className="text-sm text-sat-texto-suave leading-relaxed max-w-3xl">
-                Especificaciones para desarrolladores, casas de software y áreas de tecnología encargadas de conectar sistemas ERP con el régimen de facturación electrónica.
+                Especificaciones oficiales, esquemas XSD, casos de prueba y servicios web para desarrolladores, casas de software y áreas de tecnología encargadas de conectar sistemas informáticos y ERP al régimen de facturación electrónica.
               </p>
+              <div className="flex flex-wrap items-center gap-3 pt-2">
+                <a
+                  href="https://portal.sat.gob.gt/portal/descarga/6524/factura-electronica-fel/25545/fel-casos-de-prueba.zip"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-sat-azul text-white font-bold text-xs sm:text-sm px-4 py-2.5 rounded-sat-sm hover:bg-sat-azul-oscuro transition-colors shadow-sat-sm min-h-[44px]"
+                >
+                  <span>Descargar casos de prueba (ZIP)</span>
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+                <a
+                  href="https://portal.sat.gob.gt/portal/descarga/14852/reglas-y-validaciones/97423/fel_reglas_y_validaciones-3"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-white text-sat-azul border border-sat-azul font-bold text-xs sm:text-sm px-4 py-2.5 rounded-sat-sm hover:bg-sat-azul/5 transition-colors min-h-[44px]"
+                >
+                  <span>Reglas y validaciones oficiales</span>
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+              </div>
             </header>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div 
-                onClick={() => window.open('https://portal.sat.gob.gt/portal/documentacion-tecnica-del-regimen-fel/', '_blank')}
-                className="group bg-sat-blanco border border-sat-gris rounded-2xl p-6 hover:bg-[#14649B] hover:-translate-y-1 hover:shadow-sat-md transition-all cursor-pointer flex flex-col justify-between"
-              >
-                <div className="space-y-2">
-                  <h3 className="text-base font-bold text-sat-azul-oscuro group-hover:text-white transition-colors">
-                    Esquemas de validación XSD y XML
-                  </h3>
-                  <p className="text-xs text-sat-texto-suave group-hover:text-white/90 leading-relaxed transition-colors">
-                    Estructuras oficiales para facturas comerciales, facturas especiales, notas de crédito, recibos y complementos de retención.
-                  </p>
+            {/* CAPA 2 ATO: Antes de empezar / Arquitectura del sistema */}
+            <section aria-labelledby="arquitectura-heading" className="bg-sat-blanco rounded-2xl border border-sat-gris p-6 sm:p-8 shadow-sat-sm space-y-4">
+              <h2 id="arquitectura-heading" className="text-lg sm:text-xl font-black text-sat-azul-oscuro">
+                Arquitectura de integración del servicio
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs sm:text-sm text-sat-texto-suave leading-relaxed">
+                <div className="p-4 rounded-xl bg-sat-fondo-tenue border border-sat-gris/60 space-y-2">
+                  <strong className="block font-bold text-sat-azul-oscuro text-sm">1. Formato XML y firma electrónica</strong>
+                  <p>Todos los documentos tributarios se generan en XML estructurado bajo el estándar UBL / SAT con codificación UTF-8 y firma digital con certificado X.509.</p>
                 </div>
+                <div className="p-4 rounded-xl bg-sat-fondo-tenue border border-sat-gris/60 space-y-2">
+                  <strong className="block font-bold text-sat-azul-oscuro text-sm">2. Servicios Web SOAP y REST</strong>
+                  <p>Protocolos seguros HTTPS con autenticación mutua TLS para el envío, certificación y consulta de documentos tributarios autorizados.</p>
+                </div>
+                <div className="p-4 rounded-xl bg-sat-fondo-tenue border border-sat-gris/60 space-y-2">
+                  <strong className="block font-bold text-sat-azul-oscuro text-sm">3. Asignación de UUID</strong>
+                  <p>Cada documento recibe un Identificador Universal Único (UUID) de 32 caracteres hexadecimales que garantiza su inalterabilidad y validez fiscal.</p>
+                </div>
+              </div>
+            </section>
+
+            {/* CAPA 3 ATO: Catálogo completo de documentos y esquemas XSD */}
+            <section aria-labelledby="docs-tecnicos-heading" className="space-y-4">
+              <div>
+                <h2 id="docs-tecnicos-heading" className="text-lg sm:text-xl font-black text-sat-azul-oscuro">
+                  Documentos técnicos, guías y esquemas oficiales ({FEL_TECNICA_DOCS.length})
+                </h2>
+                <p className="text-xs text-sat-texto-suave">
+                  Selecciona cualquier documento para descargar la versión oficial desde el repositorio de la SAT.
+                </p>
               </div>
 
-              <div 
-                onClick={() => window.open('https://portal.sat.gob.gt/portal/documentacion-tecnica-del-regimen-fel/', '_blank')}
-                className="group bg-sat-blanco border border-sat-gris rounded-2xl p-6 hover:bg-[#14649B] hover:-translate-y-1 hover:shadow-sat-md transition-all cursor-pointer flex flex-col justify-between"
-              >
-                <div className="space-y-2">
-                  <h3 className="text-base font-bold text-sat-azul-oscuro group-hover:text-white transition-colors">
-                    Servicios Web (Web Services) y Certificación
-                  </h3>
-                  <p className="text-xs text-sat-texto-suave group-hover:text-white/90 leading-relaxed transition-colors">
-                    Protocolos SOAP y REST para transmisión, firma digital de comprobantes y recepción de autorizaciones de la SAT.
-                  </p>
-                </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
+                {FEL_TECNICA_DOCS.map((doc) => (
+                  <a
+                    key={doc.num}
+                    href={doc.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group bg-sat-blanco border border-sat-gris rounded-2xl p-5 hover:bg-[#14649B] hover:-translate-y-1 hover:shadow-sat-md transition-all cursor-pointer flex flex-col justify-between"
+                  >
+                    <div className="space-y-2">
+                      <div className="flex items-center justify-between">
+                        <span className="text-[11px] font-bold px-2 py-0.5 rounded bg-sat-fondo-tenue text-sat-azul group-hover:bg-white/20 group-hover:text-white transition-colors">
+                          Documento #{doc.num}
+                        </span>
+                        <span className="text-[11px] font-semibold text-sat-texto-suave group-hover:text-white/80 transition-colors">
+                          {doc.link.includes('github') ? 'Esquema XSD' : (doc.link.includes('.zip') ? 'Archivo ZIP' : 'Guía Técnica')}
+                        </span>
+                      </div>
+                      <h3 className="text-base font-bold text-sat-azul-oscuro group-hover:text-white transition-colors leading-snug">
+                        {doc.name}
+                      </h3>
+                      <p className="text-xs text-sat-texto-suave group-hover:text-white/90 leading-relaxed transition-colors">
+                        {doc.link.includes('github') 
+                          ? 'Estructura formal de etiquetas XML, validaciones de tipo de dato y restricciones para este tipo de comprobante.'
+                          : 'Manual técnico oficial y especificaciones de comunicación para emisión en el régimen FEL.'}
+                      </p>
+                    </div>
+
+                    <div className="pt-3 mt-3 border-t border-sat-gris/60 group-hover:border-white/20 text-xs text-sat-azul group-hover:text-white font-semibold flex items-center justify-between">
+                      <span>Abrir especificación</span>
+                      <ExternalLink className="w-3.5 h-3.5" />
+                    </div>
+                  </a>
+                ))}
               </div>
-            </div>
-          </section>
+            </section>
+          </div>
         )}
 
         {/* ======================================================== */}
         {/* VISTA 5: AUDITOR DE SEGURIDAD (/portal/auditor-de-seguridad...) */}
         {/* ======================================================== */}
         {currentTab === 'auditor' && (
-          <section className="space-y-6">
-            <header className="bg-sat-blanco rounded-2xl border border-sat-gris p-6 sm:p-8 shadow-sat-sm space-y-3">
-              <h1 className="text-2xl sm:text-3xl font-black text-sat-azul-oscuro">
-                Auditor de seguridad de certificadores FEL
+          <div className="space-y-8">
+            {/* CAPA 1 ATO: Resumen, orientación y acción primaria */}
+            <header className="bg-sat-blanco rounded-2xl border border-sat-gris p-6 sm:p-8 shadow-sat-sm space-y-4">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sat-azul/10 text-sat-azul text-xs font-bold">
+                <span>Acreditación Oficial</span>
+                <span>•</span>
+                <span>Seguridad de la Información</span>
+              </div>
+              <h1 className="text-2xl sm:text-3xl font-black text-sat-azul-oscuro tracking-tight">
+                Auditor de Seguridad de la Información
               </h1>
               <p className="text-sm text-sat-texto-suave leading-relaxed max-w-3xl">
-                Pautas y requisitos de acreditación para profesionales y firmas de auditoría de seguridad que evalúan los controles de las empresas certificadoras autorizadas.
+                Es la entidad o firma especializada autorizada por la SAT para auditar y certificar los procesos de seguridad, infraestructura tecnológica y controles de confidencialidad de las empresas certificadoras de DTE, garantizando la integridad de los datos fiscales del país.
               </p>
+              <div className="flex flex-wrap items-center gap-3 pt-2">
+                <a
+                  href="https://portal.sat.gob.gt/portal/descarga/6524/factura-electronica-fel/80050/fel-procedimiento-de-autorizacion-del-auditor-4.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-sat-azul text-white font-bold text-xs sm:text-sm px-4 py-2.5 rounded-sat-sm hover:bg-sat-azul-oscuro transition-colors shadow-sat-sm min-h-[44px]"
+                >
+                  <span>Procedimiento de autorización del auditor (PDF)</span>
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+              </div>
             </header>
 
-            <div className="bg-sat-blanco rounded-2xl border border-sat-gris p-6 sm:p-8 space-y-4">
-              <h2 className="text-lg font-bold text-sat-azul-oscuro">Normas y requisitos de evaluación</h2>
-              <div className="space-y-3 text-xs text-sat-texto-suave leading-relaxed">
-                <p>• Los auditores deben acreditar experiencia comprobable en estándares de ciberseguridad (ISO 27001 o equivalentes).</p>
-                <p>• Se requiere la presentación de informes periódicos de auditoría de infraestructura, respaldo y confidencialidad de datos fiscales.</p>
-                <p>• La acreditación se renueva anualmente ante la Gerencia de Tecnologías de la Información de la SAT.</p>
+            {/* CAPA 2 ATO: Antes de empezar / Requisitos de acreditación */}
+            <section aria-labelledby="requisitos-auditor-heading" className="bg-sat-blanco rounded-2xl border border-sat-gris p-6 sm:p-8 shadow-sat-sm space-y-4">
+              <h2 id="requisitos-auditor-heading" className="text-lg sm:text-xl font-black text-sat-azul-oscuro">
+                Requisitos y alcances de la auditoría técnica
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs sm:text-sm text-sat-texto-suave leading-relaxed">
+                <div className="p-4 rounded-xl bg-sat-fondo-tenue border border-sat-gris/60 space-y-2">
+                  <strong className="block font-bold text-sat-azul-oscuro text-sm">1. Certificaciones internacionales</strong>
+                  <p>Acreditar personal certificado en seguridad de la información (CISA, CISM, CISSP, CEH o ISO/IEC 27001 Lead Auditor).</p>
+                </div>
+                <div className="p-4 rounded-xl bg-sat-fondo-tenue border border-sat-gris/60 space-y-2">
+                  <strong className="block font-bold text-sat-azul-oscuro text-sm">2. Evaluación de infraestructura</strong>
+                  <p>Ejecutar pruebas periódicas de penetración (pentesting), análisis de vulnerabilidades y verificación de cifrado de llaves criptográficas.</p>
+                </div>
+                <div className="p-4 rounded-xl bg-sat-fondo-tenue border border-sat-gris/60 space-y-2">
+                  <strong className="block font-bold text-sat-azul-oscuro text-sm">3. Dictamen anual vinculante</strong>
+                  <p>Emitir el informe técnico anual de auditoría requerido por la SAT para la renovación de licencias a certificadores privados.</p>
+                </div>
               </div>
-              <Button
-                variant="outline"
-                size="md"
-                onClick={() => window.open('https://portal.sat.gob.gt/portal/auditor-de-seguridad-de-la-informacion/', '_blank')}
-              >
-                <span>Consultar requisitos completos en el portal</span>
-              </Button>
-            </div>
-          </section>
+            </section>
+
+            {/* CAPA 3 ATO: Directorio oficial de auditores acreditados */}
+            <section aria-labelledby="directorio-auditor-heading" className="space-y-4">
+              <div>
+                <h2 id="directorio-auditor-heading" className="text-lg sm:text-xl font-black text-sat-azul-oscuro">
+                  Firmas de auditoría autorizadas por la SAT ({FEL_AUDITORES.length})
+                </h2>
+                <p className="text-xs text-sat-texto-suave">
+                  Entidades registradas oficialmente ante la SAT para auditar la seguridad de certificadores FEL.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
+                {FEL_AUDITORES.map((aud) => (
+                  <div
+                    key={aud.nombre}
+                    onClick={() => {
+                      if (aud.web) window.open(aud.web, '_blank', 'noopener,noreferrer');
+                    }}
+                    className="group bg-sat-blanco border border-sat-gris rounded-2xl p-5 hover:bg-[#14649B] hover:-translate-y-1 hover:shadow-sat-md transition-all cursor-pointer flex flex-col justify-between"
+                  >
+                    <div className="space-y-2">
+                      <div className="flex items-center justify-between gap-2">
+                        <span className="text-[11px] font-bold px-2 py-0.5 rounded bg-sat-fondo-tenue text-sat-texto-suave group-hover:bg-white/20 group-hover:text-white transition-colors">
+                          NIT: {aud.nit || 'Registrado'}
+                        </span>
+                        <span className="text-[11px] text-sat-texto-suave group-hover:text-white/80 transition-colors">
+                          Registro: {aud.fecha_reg}
+                        </span>
+                      </div>
+                      <h3 className="text-base font-bold text-sat-azul-oscuro group-hover:text-white transition-colors leading-snug">
+                        {aud.nombre}
+                      </h3>
+                      <p className="text-xs text-sat-texto-suave group-hover:text-white/90 leading-relaxed transition-colors">
+                        {aud.direccion}
+                      </p>
+                    </div>
+
+                    <div className="pt-3 mt-3 border-t border-sat-gris/60 group-hover:border-white/20 text-[11px] text-sat-texto-suave group-hover:text-white/80 space-y-1">
+                      <p className="truncate"><strong>Contacto:</strong> {aud.contacto.replace(/\|/g, ' • ')}</p>
+                      {aud.web && (
+                        <p className="text-sat-azul group-hover:text-white font-semibold underline truncate">
+                          {aud.web.replace('https://', '').replace('http://', '')}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </section>
+          </div>
         )}
 
         {/* ======================================================== */}
         {/* VISTA 6: PREGUNTAS FRECUENTES (/portal/preguntas-frecuentes/) */}
         {/* ======================================================== */}
         {currentTab === 'faq' && (
-          <section className="space-y-6">
+          <div className="space-y-8">
+            {/* CAPA 1 ATO: Resumen y orientación */}
             <header className="bg-sat-blanco rounded-2xl border border-sat-gris p-6 sm:p-8 shadow-sat-sm space-y-3">
-              <h1 className="text-2xl sm:text-3xl font-black text-sat-azul-oscuro">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sat-azul/10 text-sat-azul text-xs font-bold">
+                <span>Ayuda al Ciudadano</span>
+                <span>•</span>
+                <span>Lenguaje Claro</span>
+              </div>
+              <h1 className="text-2xl sm:text-3xl font-black text-sat-azul-oscuro tracking-tight">
                 Preguntas frecuentes sobre Factura Electrónica
               </h1>
               <p className="text-sm text-sat-texto-suave leading-relaxed max-w-3xl">
-                Respuestas claras en lenguaje cotidiano a las dudas más comunes sobre la emisión, anulación y plazos de tus comprobantes fiscales.
+                Respuestas oficiales en lenguaje claro a las dudas más comunes sobre la emisión gratuita, plazos de anulación, uso de la App FEL y obligaciones tributarias.
               </p>
             </header>
 
-            <div className="bg-sat-blanco rounded-2xl border border-sat-gris p-6 sm:p-8 space-y-4">
-              <div className="space-y-4">
-                <div className="border-b border-sat-gris pb-3 space-y-1">
-                  <h3 className="text-sm font-bold text-sat-azul-oscuro">¿Tiene algún costo emitir facturas electrónicas?</h3>
-                  <p className="text-xs text-sat-texto-suave leading-relaxed">No. La emisión desde la Agencia Virtual de la SAT y desde la aplicación móvil FEL es 100% gratuita y sin límite de documentos.</p>
-                </div>
-                <div className="border-b border-sat-gris pb-3 space-y-1">
-                  <h3 className="text-sm font-bold text-sat-azul-oscuro">¿Cómo puedo anular una factura con error?</h3>
-                  <p className="text-xs text-sat-texto-suave leading-relaxed">Puedes anular la factura desde la Agencia Virtual durante el mismo mes en que la emitiste. Si el mes ya cerró, debes emitir una Nota de Crédito Electrónica vinculada.</p>
-                </div>
-                <div className="space-y-1">
-                  <h3 className="text-sm font-bold text-sat-azul-oscuro">¿Qué hago si no tengo internet en el momento de la venta?</h3>
-                  <p className="text-xs text-sat-texto-suave leading-relaxed">Puedes emitir comprobantes de contingencia y certificarlos en el sistema en un plazo máximo de 15 días posteriores a la operación.</p>
-                </div>
-              </div>
+            {/* CAPA 2 y 3 ATO: Acordeones categorizados con todas las dudas oficiales */}
+            <div className="space-y-6">
+              {Object.entries(FEL_FAQS).map(([categoria, items], idxCat) => (
+                <section key={categoria} aria-labelledby={`cat-heading-${idxCat}`} className="bg-sat-blanco rounded-2xl border border-sat-gris p-6 sm:p-8 shadow-sat-sm space-y-4">
+                  <h2 id={`cat-heading-${idxCat}`} className="text-lg font-black text-sat-azul-oscuro border-b border-sat-gris pb-3">
+                    {categoria} ({items.length})
+                  </h2>
+
+                  <div className="space-y-3">
+                    {items.map((item, idx) => (
+                      <details
+                        key={idx}
+                        className="group border border-sat-gris/70 rounded-xl p-4 hover:border-sat-azul/50 transition-colors"
+                      >
+                        <summary className="cursor-pointer list-none flex items-center justify-between font-bold text-sm text-sat-azul-oscuro group-hover:text-sat-azul focus:outline-none focus-visible:ring-2 focus-visible:ring-sat-azul rounded-lg py-1">
+                          <span className="pr-4">{item.q}</span>
+                          <span className="text-xs font-bold text-sat-azul group-open:rotate-180 transition-transform shrink-0">
+                            ▼
+                          </span>
+                        </summary>
+                        <div className="pt-3 mt-3 border-t border-sat-gris/50 text-xs sm:text-sm text-sat-texto-suave leading-relaxed space-y-2">
+                          <p>{item.a}</p>
+                        </div>
+                      </details>
+                    ))}
+                  </div>
+                </section>
+              ))}
             </div>
-          </section>
+          </div>
         )}
+
 
         {/* ======================================================== */}
         {/* CAPA 3 ATO: CERTEZA JURÍDICA COMÚN AL PIE DE PÁGINA     */}
