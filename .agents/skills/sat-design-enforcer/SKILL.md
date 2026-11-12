@@ -48,11 +48,11 @@ Antes de escribir o modificar cualquier componente visual, inspecciona:
   1. Cada enlace interno debe resolver a su propia página completa en el prototipo, nunca a modales flotantes.
   2. Implementar una barra de navegación transversal (`Subnav`) entre las páginas del ecosistema para evitar volver al Home para cambiar de módulo.
   3. Toda URL externa de soporte o descarga oficial debe responder `HTTP 200 OK` comprobado.
-- **Estructura ATO Obligatoria para Páginas de Inicio de Gestión ("Before you start" + "Step-by-step" + "What happens next"):**
-  1. **Ficha Resumen ATO en Cabecera:** Mostrar explícitamente **Costo** (ej. *Gratuito Q 0.00*), **Tiempo estimado** (ej. *Menos de 5 minutos*) y **Vigencia/Requisitos clave**.
-  2. **Bloque "Antes de empezar (Before you start)":** Sección previa que filtra qué necesita el usuario antes de iniciar (NIT activo, Agencia Virtual, RTU) y enlaces a guías previas.
-  3. **Línea de Paso a Paso Secuencial:** Pasos numerados donde cada etapa describe: **Ubicación en sistema**, **Acción concreta** y **Criterio de éxito visible** (con soporte de validaciones automáticas del sistema, ej. indicadores verdes de "¿Cumple? Sí").
-  4. **Bloque "Qué pasa después (What happens next)":** Instrucciones directas de continuidad operativa (ej. cómo facturar inmediatamente en Web vs Móvil).
+- **Estructura Canónica de 4 Capas ATO para Páginas de Gestión:**
+  1. **Capa 1: Acción Directa (Start now):** Cabecera con verbo en infinitivo, resumen de **Costo** (*Gratuito Q 0.00*), **Tiempo estimado** (*Menos de 5 minutos*), vigencia y botón primario ejecutable.
+  2. **Capa 2: Elegibilidad y Preparación (Before you start):** Bloque previo que filtra quién califica, requisitos indispensables (NIT activo, Agencia Virtual, RTU) y enlaces a guías previas.
+  3. **Capa 3: Flujo Operativo y Continuidad (Step-by-step & What happens next):** Línea de tiempo con pasos numerados (**Ubicación**, **Acción** y **Criterio de éxito visible** con validaciones automáticas "¿Cumple? Sí"), bloque de qué hacer al finalizar y biblioteca oficial de manuales.
+  4. **Capa 4: Certeza Jurídica y Auditoría (Legal basis & Governance):** Acuerdos de Directorio, Decretos y Resoluciones colapsadas al pie con enlaces a PDFs oficiales (`HTTP 200 OK`).
   5. **Fidelidad Absoluta de Contenido:** Prohibido borrar u omitir contenido oficial del portal SAT. Si la página original contiene infografías o manuales, deben transcribirse a componentes HTML accesibles y preservar la descarga del archivo original.
 - **Breadcrumb adaptable:** Ruta completa en Desktop (`>= 1024px`) y compactación elíptica con `[…]` desplegable en Mobile (`< 1024px`).
 

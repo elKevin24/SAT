@@ -23,10 +23,11 @@ El agente opera bajo la síntesis de 4 estándares internacionales:
 
 1. **ATO (Australian Taxation Office) — *"Lead with the need, not the law"*:**
    - La intención del usuario manda. La ley respalda, pero no entorpece la acción.
-   - **Layered Content (3 Capas):**
-     - *Capa 1:* Instrucción directa de qué hacer hoy y plazos.
-     - *Capa 2:* Requisitos en viñetas y ejemplos prácticos.
-     - *Capa 3:* Artículos, decretos y base legal aislados al pie o colapsados.
+   - **Layered Content (Modelo de 4 Capas ATO):**
+     - *Capa 1: Acción Directa (Start now):* Titular en infinitivo, resumen de costo/tiempo y botón principal ejecutable.
+     - *Capa 2: Elegibilidad y Preparación (Before you start):* Criterios de quién califica, requisitos indispensables y guías previas.
+     - *Capa 3: Flujo Operativo y Continuidad (Step-by-step & What happens next):* Pasos secuenciales con ubicación, acción y éxito visible, más biblioteca oficial de manuales.
+     - *Capa 4: Certeza Jurídica y Auditoría (Legal basis & Governance):* Acuerdos de Directorio, Decretos y Resoluciones aisladas al pie o colapsadas.
 2. **Nielsen Norman Group (NN/g) — Ciencia de Usabilidad y Escaneo:**
    - **Regla del 79%:** El usuario escanea; cero párrafos densos o bloques de texto corrido.
    - **Corte del 50%:** Eliminar cortesía burocrática y palabras de relleno administrativo.
@@ -117,7 +118,7 @@ El texto del botón debe predecir la acción:
 
 ### E. Reingeniería y Migración de Ecosistemas Multinivel
 Al migrar un ecosistema de páginas (ej. Facturación Electrónica con sus módulos de emisor, certificadores, técnica, auditoría y preguntas frecuentes):
-1. **Separación temática en Capas ATO:** El Hub principal ofrece la acción directa (Capa 1) y el menú de acceso al ecosistema (Capa 2), con leyes colapsables al pie (Capa 3).
+1. **Separación temática en las 4 Capas ATO:** El Hub principal y cada módulo aplican: Capa 1 (Acción directa), Capa 2 (Elegibilidad y Before you start), Capa 3 (Paso a paso, continuidad y manuales) y Capa 4 (Leyes colapsables al pie).
 2. **Cero tarjetas con íconos o botones redundantes:** Título claro y descripción concisa en 100% de las tarjetas del ecosistema.
 3. **Mapeo exacto de enlaces reales:** Todo enlace a documentos (.pdf, .xsd, normativas) o subpáginas debe responder `HTTP 200 OK` antes de publicarse.
 

@@ -49,10 +49,11 @@ Para lograr un portal con rigurosa certeza jurídica pero con usabilidad ciudada
 ### B. El Núcleo ATO (Australian Taxation Office)
 1. **"Lead with the need, not the law" (Empezar por la necesidad):**  
    El ciudadano entra a resolver una tarea concreta (*pagar, inscribirse, facturar, consultar*), no a estudiar leyes. El texto se organiza según el viaje del usuario, no según el organigrama ni los capítulos del código tributario.
-2. **Layered Content (Contenido en 3 capas):**
-   - **Capa 1 (Acción inmediata):** Lo esencial para actuar hoy (pasos directos, plazos y requisitos).
-   - **Capa 2 (Soporte contextual):** Preguntas frecuentes, qué hacer si cambian los datos y ejemplos prácticos.
-   - **Capa 3 (Certeza jurídica):** Acuerdos, leyes y decretos aislados al pie bajo la sección colapsable *"Base legal y normativa asociada"*.
+2. **Layered Content (Modelo Canónico de 4 Capas ATO):**
+   - **Capa 1: Acción Directa (Start now):** Cabecera con verbo en infinitivo, ficha de metadatos rápidos (**Costo: Q 0.00** y **Tiempo estimado: < 5 min**) y botón principal ejecutable.
+   - **Capa 2: Elegibilidad y Preparación (Before you start):** Criterios de quién califica, requisitos indispensables (NIT activo, Agencia Virtual, RTU) y descargas previas.
+   - **Capa 3: Flujo Operativo y Continuidad (Step-by-step & What happens next):** Línea de tiempo con pasos numerados (**Ubicación**, **Acción** y **Criterio de éxito visible**), bloque de qué hacer al finalizar y biblioteca oficial de manuales.
+   - **Capa 4: Certeza Jurídica y Auditoría (Legal basis & Governance):** Acuerdos de Directorio, Decretos y Resoluciones colapsadas al pie con enlaces a PDFs oficiales (`HTTP 200 OK`).
 
 ### C. Los Aportes de Microsoft (Microsoft Writing Style Guide)
 1. **Tono Cálido, Claro y Disposición de Ayuda:** Hablar con naturalidad, eliminando la frialdad judicial.
