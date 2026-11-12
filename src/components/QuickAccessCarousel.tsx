@@ -25,7 +25,7 @@ const QUICK_ITEMS: QuickAccessItem[] = [
     id: 'imprimir-rtu',
     title: 'Descargar Constancia de RTU',
     desc: 'Obtén en formato digital la constancia oficial de tus datos actualizados en el Registro Tributario Unificado.',
-    url: 'https://portal.sat.gob.gt/portal/constancia-rtu/'
+    url: '#/actualizar-rtu'
   },
   {
     id: 'fel',
@@ -55,7 +55,7 @@ const QUICK_ITEMS: QuickAccessItem[] = [
     id: 'solvencia-fiscal',
     title: 'Solvencia Fiscal en Línea (SOFI)',
     desc: 'Genera el certificado oficial que comprueba que estás solvente y al día con todas tus obligaciones.',
-    url: 'https://portal.sat.gob.gt/portal/solvencia-fiscal/'
+    url: '#/gestion/SAT-GES-0336'
   },
   {
     id: 'validar-documentos',

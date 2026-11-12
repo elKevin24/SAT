@@ -25,7 +25,7 @@ const BANNERS: BannerItem[] = [
     title: 'Emite tus facturas FEL sin costo desde tu celular',
     description: 'Genera y anula DTEs gratis con la App SAT FEL disponible para Android e iOS en pocos clics.',
     ctaLabel: 'Conoce SAT FEL',
-    ctaUrl: 'https://portal.sat.gob.gt/portal/factura-electronica-fel/'
+    ctaUrl: '#/fel'
   },
   {
     id: 3,
@@ -33,7 +33,7 @@ const BANNERS: BannerItem[] = [
     title: 'Mantén tus datos actualizados en RTU Digital',
     description: 'Realiza tu actualización anual obligatoria en línea sin hacer filas ni presentar copias en papel.',
     ctaLabel: 'Ir al RTU',
-    ctaUrl: 'https://portal.sat.gob.gt/portal/rtu-digital/'
+    ctaUrl: '#/actualizar-rtu'
   }
 ];
 
@@ -101,7 +101,7 @@ export const RotaryBanner: React.FC = () => {
           <div className="flex items-center gap-3 shrink-0">
             <a
               href={current.ctaUrl}
-              target="_blank"
+              target={current.ctaUrl.startsWith('#') ? undefined : '_blank'}
               rel="noopener noreferrer"
               className="px-3.5 py-2 bg-sat-azul hover:bg-sat-azul-oscuro active:bg-sat-azul-oscuro text-white text-xs font-bold rounded-sat-sm shadow-sat-sm transition flex items-center gap-1.5"
             >

@@ -36,7 +36,7 @@ const TOPICS_BY_SEGMENT: Record<SegmentId, { label: string; primaryColor: string
         id: 'con-rtu',
         title: 'Número de Identificación Tributaria (NIT)',
         desc: 'Cómo solicitar un Número de Identificación Tributaria (NIT), actualizar sus datos, consultar su NIT y qué hacer si ha sido utilizado de forma indebida.',
-        url: 'https://portal.sat.gob.gt/portal/rtu-digital/'
+        url: '#/solicitar-nit'
       },
       {
         id: 'con-fel',
@@ -76,37 +76,37 @@ const TOPICS_BY_SEGMENT: Record<SegmentId, { label: string; primaryColor: string
         title: 'Consultas de Aduanas y Declaraciones (DUCA)',
         desc: 'Verifica el estado de tus declaraciones de aduanas, consulta aranceles vigentes y da seguimiento a tránsitos de mercancías.',
         isPermanentConsultas: true,
-        url: 'https://portal.sat.gob.gt/portal/aduanas/'
+        url: '#/gestion/SAT-GES-0480'
       },
       {
         id: 'ce-conceptos',
         title: 'Arancel e Impuestos de Importación',
         desc: 'Conoce los códigos arancelarios y el porcentaje de impuestos que aplican a tus productos según el Sistema Arancelario Centroamericano.',
-        url: 'https://portal.sat.gob.gt/portal/arancel-integrado/'
+        url: '#/gestion/SAT-GES-0513'
       },
       {
         id: 'ce-facilitacion',
         title: 'Paso Ágil y Facilitación de Comercio',
         desc: 'Descubre los procesos de despacho aduanero conjunto entre aduanas de Guatemala y países vecinos para agilizar tus envíos.',
-        url: 'https://portal.sat.gob.gt/portal/facilitacion-comercio/'
+        url: '#/catalogo?segmento=comercio_exterior'
       },
       {
         id: 'ce-miad',
         title: 'Mesa Integral de Atención en Aduanas (MIAD)',
         desc: 'Atención personalizada para importadores, exportadores y agentes que necesiten soporte técnico sobre procesos aduaneros.',
-        url: 'https://portal.sat.gob.gt/portal/miad/'
+        url: '#/catalogo?segmento=comercio_exterior'
       },
       {
         id: 'ce-oea',
         title: 'Certificación de Empresa Segura (OEA)',
         desc: 'Requisitos y beneficios para certificar tu empresa como Operador Económico Autorizado y obtener paso prioritario en aduanas.',
-        url: 'https://portal.sat.gob.gt/portal/oea/'
+        url: '#/gestion/SAT-GES-0417'
       },
       {
         id: 'ce-defraudacion',
         title: 'Lucha contra el Contrabando y Denuncias',
         desc: 'Reporta de forma confidencial el ingreso ilegal de mercancías ante el Consejo Interinstitucional contra el Contrabando (COINCON).',
-        url: 'https://portal.sat.gob.gt/portal/lucha-contra-el-contrabando/'
+        url: '#/gestion/SAT-GES-0505'
       }
     ]
   },
@@ -122,37 +122,37 @@ const TOPICS_BY_SEGMENT: Record<SegmentId, { label: string; primaryColor: string
         title: 'Consultas y Verificación Profesional',
         desc: 'Comprueba el registro de colegiados activos, pago de timbres fiscales y vigencia de poderes legales de representación.',
         isPermanentConsultas: true,
-        url: 'https://portal.sat.gob.gt/portal/consultas-profesionales/'
+        url: '#/catalogo?segmento=profesionales'
       },
       {
         id: 'prof-contadores',
         title: 'Inscripción de Peritos Contadores y Auditores',
         desc: 'Habilítate ante la SAT para llevar la contabilidad de empresas, autorizar libros contables y firmar estados financieros.',
-        url: 'https://portal.sat.gob.gt/portal/peritos-contadores/'
+        url: '#/gestion/SAT-GES-0576'
       },
       {
         id: 'prof-titulos',
         title: 'Registro de Título Universitario y Timbres',
         desc: 'Acredita tu licenciatura o grado superior ante la SAT pagando la tarifa única de timbres fiscales para poder ejercer tu profesión.',
-        url: 'https://portal.sat.gob.gt/portal/habilitacion-titulos/'
+        url: '#/gestion/SAT-GES-0007'
       },
       {
         id: 'prof-gestores',
         title: 'Acreditación de Gestores Tributarios',
         desc: 'Registra tus poderes y autorizaciones notariales para realizar gestiones presenciales en nombre de tus clientes.',
-        url: 'https://portal.sat.gob.gt/portal/gestores-tributarios/'
+        url: '#/gestion/SAT-GES-0591'
       },
       {
         id: 'prof-etraspaso',
         title: 'Traspaso Electrónico Notarial (e-Traspaso)',
         desc: 'Autenticación digital de firmas y traspaso inmediato de vehículos en Agencia Virtual Notarial con firma electrónica avanzada.',
-        url: 'https://portal.sat.gob.gt/portal/traspaso-electronico-notarial/'
+        url: '#/gestion/SAT-GES-0318'
       },
       {
         id: 'prof-criterios',
         title: 'Criterios Legales e Interpretaciones de SAT',
         desc: 'Consulta resoluciones y directrices técnicas oficiales aprobadas por el Directorio de SAT.',
-        url: 'https://portal.sat.gob.gt/portal/criterios-tributarios/'
+        url: '#/gestion/SAT-GES-0240'
       }
     ]
   },
@@ -168,25 +168,25 @@ const TOPICS_BY_SEGMENT: Record<SegmentId, { label: string; primaryColor: string
         title: 'Verificación de Exenciones y Constancias',
         desc: 'Consulta la vigencia de resoluciones de exención y valida constancias electrónicas emitidas para compras sin impuestos.',
         isPermanentConsultas: true,
-        url: 'https://portal.sat.gob.gt/portal/consultas-exenciones/'
+        url: '#/catalogo?segmento=entes_exentos'
       },
       {
         id: 'org-exenciones',
         title: 'Reconocimiento de Exención de Impuestos',
         desc: 'Guía para solicitar el reconocimiento fiscal si eres una ONG, iglesia, cooperativa, universidad o entidad diplomática.',
-        url: 'https://portal.sat.gob.gt/portal/entes-exentos/'
+        url: '#/gestion/SAT-GES-0564'
       },
       {
         id: 'org-constancias',
         title: 'Constancia para Compras sin IVA',
         desc: 'Genera las constancias oficiales que debes entregar a tus proveedores para adquirir insumos y bienes libres de IVA.',
-        url: 'https://portal.sat.gob.gt/portal/constancias-exencion/'
+        url: '#/gestion/SAT-GES-0131'
       },
       {
         id: 'org-estado',
         title: 'Sector Público y Municipalidades',
         desc: 'Gestiones de retenciones de impuestos y rendición de cuentas para ministerios, secretarías y municipalidades de Guatemala.',
-        url: 'https://portal.sat.gob.gt/portal/sector-publico/'
+        url: '#/gestion/SAT-GES-0663'
       }
     ]
   }
@@ -263,7 +263,7 @@ export const PopularTopicsTabs: React.FC<PopularTopicsTabsProps> = ({
                   } else if (onSelectTopicUrl) {
                     onSelectTopicUrl(topic.url);
                   } else {
-                    window.open(topic.url, '_blank');
+                    if (topic.url.startsWith('#')) { window.location.hash = topic.url; } else { window.open(topic.url, '_blank'); }
                   }
                 }}
               />

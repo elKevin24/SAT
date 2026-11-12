@@ -44,7 +44,7 @@ const TRANSPARENCY_BUTTONS = [
   {
     title: 'Marco Legal',
     desc: 'Leyes, decretos y acuerdos gubernativos en materia tributaria.',
-    url: 'https://portal.sat.gob.gt/portal/leyes-tributarias/'
+    url: '#/catalogo?segmento=contribuyentes&categoria=leyes'
   },
   {
     title: 'Transparencia',

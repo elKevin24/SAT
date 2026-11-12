@@ -23,7 +23,7 @@ import { SolicitarNitPage } from './SolicitarNitPage';
 import { ActualizarRtuPage, CasoActualizacionId } from './ActualizarRtuPage';
 import { AlzaImportacionVehiculosPage } from './AlzaImportacionVehiculosPage';
 import { ProgramaMiadPage } from './ProgramaMiadPage';
-import { FelPage } from './FelPage';
+import { FelPage, FelTabId } from './FelPage';
 import type { TramiteItem } from '../data/schema';
 import type { SegmentId } from '../components/UserSegmentCards';
 
@@ -91,6 +91,8 @@ interface GestionContentPageProps {
   onBackToCatalog: () => void;
   onGoHome: () => void;
   onSelectSegment?: (segId: SegmentId, category?: string) => void;
+  felTab?: FelTabId;
+  onFelTabChange?: (tab: FelTabId) => void;
 }
 
 export const GestionContentPage: React.FC<GestionContentPageProps> = ({
@@ -99,7 +101,9 @@ export const GestionContentPage: React.FC<GestionContentPageProps> = ({
   onSelectTramite,
   onBackToCatalog,
   onGoHome,
-  onSelectSegment
+  onSelectSegment,
+  felTab,
+  onFelTabChange
 }) => {
   const [copied, setCopied] = useState(false);
   const [checkedReqs, setCheckedReqs] = useState<Record<string, boolean>>({});
@@ -162,7 +166,13 @@ export const GestionContentPage: React.FC<GestionContentPageProps> = ({
 
   // Página Oficial Canónica para Factura Electrónica en Línea (FEL)
   if (FEL_CANONICAL_IDS.has(canonicalId)) {
-    return <FelPage onBackToHome={onBackToCatalog} />;
+    return (
+      <FelPage
+        onBackToHome={onBackToCatalog}
+        activeTab={felTab}
+        onTabChange={onFelTabChange}
+      />
+    );
   }
 
   const targetUrl = tramite.nueva_url || tramite.url;

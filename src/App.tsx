@@ -8,15 +8,16 @@ import { NewsAndTransparencySection } from './components/NewsAndTransparencySect
 import { InstitutionalFooter } from './components/InstitutionalFooter';
 import { UserWayAccessibilityModal } from './components/UserWayAccessibilityModal';
 import { DirectConsultasModal } from './components/DirectConsultasModal';
-import { GestionContentPage, SOLICITAR_NIT_IDS, ACTUALIZAR_RTU_CASO_BY_ID } from './pages/GestionContentPage';
+import { GestionContentPage, SOLICITAR_NIT_IDS, ACTUALIZAR_RTU_CASO_BY_ID, FEL_CANONICAL_IDS } from './pages/GestionContentPage';
 import { VirtualAssistantModal } from './components/VirtualAssistantModal';
 import { SegmentTramitesCatalog } from './components/SegmentTramitesCatalog';
 import { QuickAccessCarousel } from './components/QuickAccessCarousel';
 import { SolicitarNitPage } from './pages/SolicitarNitPage';
-import { FelPage } from './pages/FelPage';
+import { FelPage, FelTabId } from './pages/FelPage';
 import { GuidedAssistantPage } from './pages/GuidedAssistantPage';
 import { ProcessJourneyPage } from './pages/ProcessJourneyPage';
 import { WPBakeryBuilderPage } from './pages/WPBakeryBuilderPage';
+import { UrlAuditResultsPage } from './pages/UrlAuditResultsPage';
 import { EtapaAtoId, TipoInteraccionId, TramiteItem, ProcesoGuiado, assertTramites } from './data/schema';
 import { OFFICIAL_CATEGORY_ORDER, subcategoryOrderFor, compareByCategoryOrder, compareCanonicalTramiteOrder } from './data/categoryOrder';
 import { buildTaxonomy, resolveCategoria, categoriaId, subcategoriaId } from './data/taxonomy';
@@ -113,7 +114,7 @@ const DEFAULT_ACCESSIBILITY: AccessibilitySettings = {
 };
 
 export default function App() {
-  const [currentView, setCurrentView] = useState<'home' | 'catalog' | 'solicitar-nit' | 'fel' | 'gestion' | 'asistente' | 'proceso' | 'wpbakery'>('home');
+  const [currentView, setCurrentView] = useState<'home' | 'catalog' | 'solicitar-nit' | 'fel' | 'gestion' | 'asistente' | 'proceso' | 'wpbakery' | 'auditoria-urls'>('home');
   const [selectedAssistantId, setSelectedAssistantId] = useState<string>('primer-nit');
   const [selectedProcessNo, setSelectedProcessNo] = useState<number>(1);
   const [activeSegment, setActiveSegment] = useState<SegmentId>('contribuyentes');
@@ -122,6 +123,7 @@ export default function App() {
   const [activeEtapaAto, setActiveEtapaAto] = useState<EtapaAtoId | 'todas'>('todas');
   const [activeTipoInteraccion, setActiveTipoInteraccion] = useState<TipoInteraccionId | 'todos'>('todos');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [felTab, setFelTab] = useState<FelTabId>('hub');
 
   // Search query in Header
   const [searchQuery, setSearchQuery] = useState('');
@@ -328,8 +330,12 @@ export default function App() {
       } else if (hash.startsWith('#/wpbakery') || hash.startsWith('#wpbakery')) {
         setCurrentView('wpbakery');
         window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else if (hash.startsWith('#/auditoria-urls') || hash.startsWith('#/auditoria') || hash.startsWith('#/404')) {
+        setCurrentView('auditoria-urls');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       } else if (hash.startsWith('#/fel') || hash.startsWith('#/factura-electronica-fel') || hash.startsWith('#/facturacion-electronica')) {
         setCurrentView('fel');
+        setFelTab('hub');
         window.scrollTo({ top: 0, behavior: 'smooth' });
       } else if (!hash || hash === '#' || hash === '#/') {
         setCurrentView('home');
@@ -515,6 +521,33 @@ export default function App() {
   const contextualMenuOptions = React.useMemo<
     { id: string; label: string; isActive?: boolean; onClick: () => void }[]
   >(() => {
+    // 0. Ecosistema FEL: secciones verticales de Factura Electrónica en Línea
+    const isFelContext =
+      currentView === 'fel' ||
+      (currentView === 'gestion' &&
+        selectedTramite != null &&
+        FEL_CANONICAL_IDS.has(selectedTramite.id || selectedTramite.codigo || ''));
+
+    if (isFelContext) {
+      const felSections: { id: FelTabId; label: string }[] = [
+        { id: 'hub', label: 'Inicio FEL' },
+        { id: 'emisor', label: 'Habilitación de Emisores' },
+        { id: 'certificadores', label: 'Certificadores Autorizados' },
+        { id: 'tecnica', label: 'Documentación Técnica' },
+        { id: 'auditor', label: 'Auditor de Seguridad' },
+        { id: 'faq', label: 'Preguntas Frecuentes' }
+      ];
+      return felSections.map((sec) => ({
+        id: `fel-${sec.id}`,
+        label: sec.label,
+        isActive: felTab === sec.id,
+        onClick: () => {
+          setFelTab(sec.id);
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      }));
+    }
+
     // 1. Nivel de contenido (gestión abierta o listado final de gestiones de un nivel)
     if (isContentLevel && contentLevelItems.length > 0) {
       return contentLevelItems.map((item) => ({
@@ -627,7 +660,8 @@ export default function App() {
     selectedProcessNo,
     activeSegment,
     activeCategory,
-    activeSubcategory
+    activeSubcategory,
+    felTab
   ]);
 
   if (currentView === 'wpbakery') {
@@ -840,6 +874,8 @@ export default function App() {
               }}
               onGoHome={handleGoHome}
               onSelectSegment={handleSelectSegment}
+              felTab={felTab}
+              onFelTabChange={setFelTab}
             />
           </main>
         )}
@@ -858,7 +894,11 @@ export default function App() {
 
         {currentView === 'fel' && (
           <main id="main-content" tabIndex={-1} className="focus:outline-hidden">
-            <FelPage onBackToHome={handleGoHome} />
+            <FelPage
+              onBackToHome={handleGoHome}
+              activeTab={felTab}
+              onTabChange={setFelTab}
+            />
           </main>
         )}
 
@@ -889,6 +929,11 @@ export default function App() {
               }}
               onSelectSegment={handleSelectSegment}
             />
+          </main>
+        )}
+        {currentView === 'auditoria-urls' && (
+          <main id="main-content" tabIndex={-1} className="focus:outline-hidden">
+            <UrlAuditResultsPage />
           </main>
         )}
         </div>

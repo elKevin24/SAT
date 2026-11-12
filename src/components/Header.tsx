@@ -15,7 +15,8 @@ import {
   ArrowRight,
   Palette,
   Menu as MenuIcon,
-  Home
+  Home,
+  AlertCircle
 } from 'lucide-react';
 import { SatIsologotipo } from './SatIsologotipo';
 import type { TramiteItem, ProcesoGuiado } from '../data/schema';
@@ -33,7 +34,7 @@ interface HeaderProps {
   allProcesos: ProcesoGuiado[];
 
   // Props para Barra de Navegación Principal y Menú Contextual Acoplado
-  currentView?: 'home' | 'catalog' | 'solicitar-nit' | 'fel' | 'gestion' | 'asistente' | 'proceso';
+  currentView?: 'home' | 'catalog' | 'solicitar-nit' | 'fel' | 'gestion' | 'asistente' | 'proceso' | 'wpbakery' | 'auditoria-urls';
   activeSegment?: SegmentId | null;
   activeCategory?: string;
   activeSubcategory?: string | null;
@@ -259,7 +260,16 @@ export const Header: React.FC<HeaderProps> = ({
                 title="Abrir Centro de Descargas XML y Constructor WPBakery"
               >
                 <BookOpen className="w-3 h-3 text-emerald-200" />
-                <span>WPBakery & Descarga XML</span>
+                <span>WPBakery & XML</span>
+              </a>
+
+              <a
+                href="#/auditoria-urls"
+                className="inline-flex items-center gap-1.5 px-2.5 py-0.5 my-1 text-amber-200 bg-amber-950/60 hover:bg-amber-900/80 border border-amber-500/40 rounded-sat-sm text-[11px] font-bold transition-colors"
+                title="Ver Auditoría de URLs, 404 detectados y páginas ómnibus"
+              >
+                <AlertCircle className="w-3 h-3 text-amber-300" />
+                <span>Auditoría URLs & 404</span>
               </a>
             </div>
 

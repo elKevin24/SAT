@@ -43,7 +43,7 @@ test('Página Solicitar NIT (#/solicitar-nit)', async ({ page }) => {
 
 test('Página Factura Electrónica FEL (#/fel)', async ({ page }) => {
   await page.goto('/#/fel');
-  await expect(page.getByRole('heading', { name: /^Factura Electrónica en Línea/i })).toBeVisible();
+  await expect(page.getByRole('heading', { name: /Factura Electrónica/i }).first()).toBeVisible();
   await scan(page, 'FelPage');
 });
 

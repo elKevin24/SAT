@@ -2,22 +2,38 @@ import React, { useState } from 'react';
 import { ArrowLeft, ExternalLink, FileText, CheckCircle2 } from 'lucide-react';
 import { Breadcrumbs } from '../components/ui/Breadcrumbs';
 import { Button } from '../components/ui/Button';
-import { FelSubnav, FelTabId } from '../components/FelSubnav';
+import type { FelTabId } from '../components/FelSubnav';
 import { FEL_CERTIFICADORES, FEL_AUDITORES, FEL_TECNICA_DOCS, FEL_FAQS } from '../data/felEcosystemData';
+
+export type { FelTabId };
 
 interface FelPageProps {
   onBackToHome: () => void;
   initialTab?: FelTabId;
+  activeTab?: FelTabId;
+  onTabChange?: (tab: FelTabId) => void;
 }
 
-export const FelPage: React.FC<FelPageProps> = ({ onBackToHome, initialTab = 'hub' }) => {
-  const [currentTab, setCurrentTab] = useState<FelTabId>(initialTab);
+export const FelPage: React.FC<FelPageProps> = ({
+  onBackToHome,
+  initialTab = 'hub',
+  activeTab,
+  onTabChange,
+}) => {
+  const [internalTab, setInternalTab] = useState<FelTabId>(initialTab);
+  const currentTab = activeTab ?? internalTab;
+
+  const setCurrentTab = (nextTab: FelTabId) => {
+    setInternalTab(nextTab);
+    onTabChange?.(nextTab);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   return (
-    <div className="bg-sat-fondo-tenue min-h-screen pb-20 text-sat-texto antialiased">
-      {/* 1. Miga de pan y control de retorno */}
-      <div className="bg-sat-blanco border-b border-sat-gris pt-4 pb-3">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+    <div className="bg-sat-fondo-tenue min-h-screen pb-10 text-sat-texto antialiased">
+      {/* 1. Miga de pan y control de retorno (sin barra horizontal extra) */}
+      <div className="bg-sat-blanco border-b border-sat-gris py-2.5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
           <Breadcrumbs
             items={[
               { label: 'Gestiones', onClick: onBackToHome },
@@ -30,21 +46,17 @@ export const FelPage: React.FC<FelPageProps> = ({ onBackToHome, initialTab = 'hu
 
           <button
             type="button"
-            onClick={onBackToHome}
-            className="inline-flex items-center gap-1.5 text-xs font-semibold text-sat-azul hover:text-sat-azul-oscuro transition-colors py-1.5 px-3 rounded-sat-sm hover:bg-sat-fondo-medio focus:outline-none focus-visible:ring-2 focus-visible:ring-sat-azul min-h-[32px] self-start sm:self-auto"
-            aria-label="Volver al inicio"
+            onClick={() => (currentTab !== 'hub' ? setCurrentTab('hub') : onBackToHome())}
+            className="inline-flex items-center gap-1.5 text-xs font-semibold text-sat-azul hover:text-sat-azul-oscuro transition-colors py-1 px-2.5 rounded-sat-sm hover:bg-sat-fondo-medio focus:outline-none focus-visible:ring-2 focus-visible:ring-sat-azul min-h-[30px] self-start sm:self-auto"
           >
             <ArrowLeft className="w-3.5 h-3.5" />
-            <span>Volver al catálogo</span>
+            <span>{currentTab !== 'hub' ? 'Volver a Inicio FEL' : 'Volver al catálogo'}</span>
           </button>
         </div>
       </div>
 
-      {/* 2. Subnavegación del Ecosistema FEL */}
-      <FelSubnav activeTab={currentTab} onSelectTab={setCurrentTab} />
-
-      {/* 3. Contenedor Dinámico del Ecosistema */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 space-y-8">
+      {/* 2. Contenedor Dinámico del Ecosistema */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 space-y-5">
         
         {/* ======================================================== */}
         {/* VISTA 1: HUB PRINCIPAL FEL                               */}
@@ -52,22 +64,22 @@ export const FelPage: React.FC<FelPageProps> = ({ onBackToHome, initialTab = 'hu
         {currentTab === 'hub' && (
           <>
             {/* CAPA 1 ATO: Hero y Acción Inmediata */}
-            <header className="bg-sat-blanco rounded-2xl border border-sat-gris p-6 sm:p-10 shadow-sat-sm space-y-5">
-              <div className="max-w-3xl space-y-3">
+            <header className="bg-sat-blanco rounded-2xl border border-sat-gris p-5 sm:p-6 shadow-sat-sm space-y-4">
+              <div className="max-w-3xl space-y-2">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sat-azul/10 text-sat-azul text-xs font-bold">
                   <span>Servicio Público Gratuito</span>
                   <span>•</span>
                   <span>Régimen FEL</span>
                 </div>
-                <h1 className="text-2xl sm:text-4xl font-black text-sat-azul-oscuro tracking-tight leading-tight">
+                <h1 className="text-2xl sm:text-3xl font-black text-sat-azul-oscuro tracking-tight leading-tight">
                   Emitir Factura Electrónica (FEL)
                 </h1>
-                <p className="text-sm sm:text-base text-sat-texto-suave leading-relaxed">
+                <p className="text-sm text-sat-texto-suave leading-relaxed">
                   Emite tus facturas, recibos y notas de crédito de forma gratuita y con validez legal desde tu computadora o celular. No necesitas comprar talonarios de papel ni contratar a proveedores privados.
                 </p>
               </div>
 
-              <div className="flex flex-wrap items-center gap-3 pt-2">
+              <div className="flex flex-wrap items-center gap-3 pt-1">
                 <Button 
                   variant="primary" 
                   size="md"
@@ -103,11 +115,12 @@ export const FelPage: React.FC<FelPageProps> = ({ onBackToHome, initialTab = 'hu
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
                 
                 {/* 1. Habilitación de Emisores */}
-                <div 
+                <button
+                  type="button"
                   onClick={() => setCurrentTab('emisor')}
-                  className="group bg-sat-blanco border border-sat-gris rounded-2xl p-6 hover:bg-[#14649B] hover:-translate-y-1 hover:shadow-sat-md transition-all cursor-pointer flex flex-col justify-between"
+                  className="group bg-sat-blanco border border-sat-gris rounded-2xl p-5 hover:bg-[#14649B] hover:-translate-y-1 hover:shadow-sat-md transition-all cursor-pointer flex flex-col justify-between text-left"
                 >
-                  <div className="space-y-2">
+                  <div className="space-y-1.5">
                     <h3 className="text-base font-bold text-sat-azul-oscuro group-hover:text-white transition-colors">
                       Habilitarme como emisor de facturas
                     </h3>
@@ -115,14 +128,15 @@ export const FelPage: React.FC<FelPageProps> = ({ onBackToHome, initialTab = 'hu
                       Acredítate en el régimen FEL, obtén tu firma electrónica gratuita y conoce las opciones para facturar desde la web o el móvil.
                     </p>
                   </div>
-                </div>
+                </button>
 
                 {/* 2. Certificadores */}
-                <div 
+                <button
+                  type="button"
                   onClick={() => setCurrentTab('certificadores')}
-                  className="group bg-sat-blanco border border-sat-gris rounded-2xl p-6 hover:bg-[#14649B] hover:-translate-y-1 hover:shadow-sat-md transition-all cursor-pointer flex flex-col justify-between"
+                  className="group bg-sat-blanco border border-sat-gris rounded-2xl p-5 hover:bg-[#14649B] hover:-translate-y-1 hover:shadow-sat-md transition-all cursor-pointer flex flex-col justify-between text-left"
                 >
-                  <div className="space-y-2">
+                  <div className="space-y-1.5">
                     <h3 className="text-base font-bold text-sat-azul-oscuro group-hover:text-white transition-colors">
                       Certificadores de facturas autorizados
                     </h3>
@@ -130,14 +144,15 @@ export const FelPage: React.FC<FelPageProps> = ({ onBackToHome, initialTab = 'hu
                       Consulta el listado oficial de empresas certificadoras autorizadas por la SAT para emisión masiva o integración contable.
                     </p>
                   </div>
-                </div>
+                </button>
 
                 {/* 3. Documentación Técnica */}
-                <div 
+                <button
+                  type="button"
                   onClick={() => setCurrentTab('tecnica')}
-                  className="group bg-sat-blanco border border-sat-gris rounded-2xl p-6 hover:bg-[#14649B] hover:-translate-y-1 hover:shadow-sat-md transition-all cursor-pointer flex flex-col justify-between"
+                  className="group bg-sat-blanco border border-sat-gris rounded-2xl p-5 hover:bg-[#14649B] hover:-translate-y-1 hover:shadow-sat-md transition-all cursor-pointer flex flex-col justify-between text-left"
                 >
-                  <div className="space-y-2">
+                  <div className="space-y-1.5">
                     <h3 className="text-base font-bold text-sat-azul-oscuro group-hover:text-white transition-colors">
                       Documentación técnica e integración
                     </h3>
@@ -145,14 +160,15 @@ export const FelPage: React.FC<FelPageProps> = ({ onBackToHome, initialTab = 'hu
                       Especificaciones XML, esquemas XSD, servicios web y manuales para integradores de sistemas y departamentos de tecnología.
                     </p>
                   </div>
-                </div>
+                </button>
 
                 {/* 4. Auditor de Seguridad */}
-                <div 
+                <button
+                  type="button"
                   onClick={() => setCurrentTab('auditor')}
-                  className="group bg-sat-blanco border border-sat-gris rounded-2xl p-6 hover:bg-[#14649B] hover:-translate-y-1 hover:shadow-sat-md transition-all cursor-pointer flex flex-col justify-between"
+                  className="group bg-sat-blanco border border-sat-gris rounded-2xl p-5 hover:bg-[#14649B] hover:-translate-y-1 hover:shadow-sat-md transition-all cursor-pointer flex flex-col justify-between text-left"
                 >
-                  <div className="space-y-2">
+                  <div className="space-y-1.5">
                     <h3 className="text-base font-bold text-sat-azul-oscuro group-hover:text-white transition-colors">
                       Auditor de seguridad de certificadores
                     </h3>
@@ -160,14 +176,15 @@ export const FelPage: React.FC<FelPageProps> = ({ onBackToHome, initialTab = 'hu
                       Requisitos y normas de acreditación para auditores independientes de seguridad de la información de empresas certificadoras.
                     </p>
                   </div>
-                </div>
+                </button>
 
                 {/* 5. Preguntas Frecuentes */}
-                <div 
+                <button
+                  type="button"
                   onClick={() => setCurrentTab('faq')}
-                  className="group bg-sat-blanco border border-sat-gris rounded-2xl p-6 hover:bg-[#14649B] hover:-translate-y-1 hover:shadow-sat-md transition-all cursor-pointer flex flex-col justify-between"
+                  className="group bg-sat-blanco border border-sat-gris rounded-2xl p-5 hover:bg-[#14649B] hover:-translate-y-1 hover:shadow-sat-md transition-all cursor-pointer flex flex-col justify-between text-left"
                 >
-                  <div className="space-y-2">
+                  <div className="space-y-1.5">
                     <h3 className="text-base font-bold text-sat-azul-oscuro group-hover:text-white transition-colors">
                       Preguntas frecuentes sobre facturación
                     </h3>
@@ -175,14 +192,15 @@ export const FelPage: React.FC<FelPageProps> = ({ onBackToHome, initialTab = 'hu
                       Respuestas oficiales a dudas comunes sobre emisión de facturas, anulación de documentos, plazos y casos especiales.
                     </p>
                   </div>
-                </div>
+                </button>
 
                 {/* 6. Lista de Renuentes */}
-                <div 
+                <button
+                  type="button"
                   onClick={() => window.open('https://portal.sat.gob.gt/portal/descarga/15595/renuentes-fel/96588/renuentes-pequenos-contribuyentes-31-08-2026', '_blank')}
-                  className="group bg-sat-blanco border border-sat-gris rounded-2xl p-6 hover:bg-[#14649B] hover:-translate-y-1 hover:shadow-sat-md transition-all cursor-pointer flex flex-col justify-between"
+                  className="group bg-sat-blanco border border-sat-gris rounded-2xl p-5 hover:bg-[#14649B] hover:-translate-y-1 hover:shadow-sat-md transition-all cursor-pointer flex flex-col justify-between text-left"
                 >
-                  <div className="space-y-2">
+                  <div className="space-y-1.5">
                     <h3 className="text-base font-bold text-sat-azul-oscuro group-hover:text-white transition-colors">
                       Lista de contribuyentes pendientes de migración
                     </h3>
@@ -190,7 +208,7 @@ export const FelPage: React.FC<FelPageProps> = ({ onBackToHome, initialTab = 'hu
                       Listado oficial de personas y empresas pendientes de incorporarse al Régimen FEL conforme a las disposiciones legales.
                     </p>
                   </div>
-                </div>
+                </button>
 
               </div>
             </section>
@@ -637,9 +655,10 @@ export const FelPage: React.FC<FelPageProps> = ({ onBackToHome, initialTab = 'hu
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
                 {/* Opción 1: SAT Pública Gratuita */}
-                <div
+                <button
+                  type="button"
                   onClick={() => setCurrentTab('emisor')}
-                  className="group bg-sat-blanco border-2 border-sat-azul/40 rounded-2xl p-5 hover:bg-[#14649B] hover:-translate-y-1 hover:shadow-sat-md transition-all cursor-pointer flex flex-col justify-between"
+                  className="group bg-sat-blanco border-2 border-sat-azul/40 rounded-2xl p-5 hover:bg-[#14649B] hover:-translate-y-1 hover:shadow-sat-md transition-all cursor-pointer flex flex-col justify-between text-left"
                 >
                   <div className="space-y-2">
                     <div className="flex items-center justify-between">
@@ -657,18 +676,19 @@ export const FelPage: React.FC<FelPageProps> = ({ onBackToHome, initialTab = 'hu
                   <div className="pt-3 mt-3 border-t border-sat-gris/60 group-hover:border-white/20 text-[11px] text-sat-texto-suave group-hover:text-white/80">
                     <span>Acceso libre con tu usuario y contraseña de Agencia Virtual</span>
                   </div>
-                </div>
+                </button>
 
                 {/* 18 Certificadores Privados Oficiales */}
                 {FEL_CERTIFICADORES.map((cert) => (
-                  <div
+                  <button
+                    type="button"
                     key={cert.nombre}
                     onClick={() => {
                       if (cert.web) window.open(cert.web, '_blank', 'noopener,noreferrer');
                     }}
-                    className="group bg-sat-blanco border border-sat-gris rounded-2xl p-5 hover:bg-[#14649B] hover:-translate-y-1 hover:shadow-sat-md transition-all cursor-pointer flex flex-col justify-between"
+                    className="group bg-sat-blanco border border-sat-gris rounded-2xl p-5 hover:bg-[#14649B] hover:-translate-y-1 hover:shadow-sat-md transition-all cursor-pointer flex flex-col justify-between text-left"
                   >
-                    <div className="space-y-2">
+                    <div className="space-y-2 w-full">
                       <div className="flex items-center justify-between gap-2">
                         <span className="text-[11px] font-bold px-2 py-0.5 rounded bg-sat-fondo-tenue text-sat-texto-suave group-hover:bg-white/20 group-hover:text-white transition-colors">
                           NIT: {cert.nit || 'Registrado'}
@@ -685,7 +705,7 @@ export const FelPage: React.FC<FelPageProps> = ({ onBackToHome, initialTab = 'hu
                       </p>
                     </div>
 
-                    <div className="pt-3 mt-3 border-t border-sat-gris/60 group-hover:border-white/20 text-[11px] text-sat-texto-suave group-hover:text-white/80 space-y-1">
+                    <div className="pt-3 mt-3 border-t border-sat-gris/60 group-hover:border-white/20 text-[11px] text-sat-texto-suave group-hover:text-white/80 space-y-1 w-full">
                       <p className="truncate"><strong>Contacto:</strong> {cert.contacto.replace(/\|/g, ' • ')}</p>
                       {cert.web && (
                         <p className="text-sat-azul group-hover:text-white font-semibold underline truncate">
@@ -693,7 +713,7 @@ export const FelPage: React.FC<FelPageProps> = ({ onBackToHome, initialTab = 'hu
                         </p>
                       )}
                     </div>
-                  </div>
+                  </button>
                 ))}
               </div>
             </section>
@@ -876,14 +896,15 @@ export const FelPage: React.FC<FelPageProps> = ({ onBackToHome, initialTab = 'hu
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
                 {FEL_AUDITORES.map((aud) => (
-                  <div
+                  <button
+                    type="button"
                     key={aud.nombre}
                     onClick={() => {
                       if (aud.web) window.open(aud.web, '_blank', 'noopener,noreferrer');
                     }}
-                    className="group bg-sat-blanco border border-sat-gris rounded-2xl p-5 hover:bg-[#14649B] hover:-translate-y-1 hover:shadow-sat-md transition-all cursor-pointer flex flex-col justify-between"
+                    className="group bg-sat-blanco border border-sat-gris rounded-2xl p-5 hover:bg-[#14649B] hover:-translate-y-1 hover:shadow-sat-md transition-all cursor-pointer flex flex-col justify-between text-left"
                   >
-                    <div className="space-y-2">
+                    <div className="space-y-2 w-full">
                       <div className="flex items-center justify-between gap-2">
                         <span className="text-[11px] font-bold px-2 py-0.5 rounded bg-sat-fondo-tenue text-sat-texto-suave group-hover:bg-white/20 group-hover:text-white transition-colors">
                           NIT: {aud.nit || 'Registrado'}
@@ -900,7 +921,7 @@ export const FelPage: React.FC<FelPageProps> = ({ onBackToHome, initialTab = 'hu
                       </p>
                     </div>
 
-                    <div className="pt-3 mt-3 border-t border-sat-gris/60 group-hover:border-white/20 text-[11px] text-sat-texto-suave group-hover:text-white/80 space-y-1">
+                    <div className="pt-3 mt-3 border-t border-sat-gris/60 group-hover:border-white/20 text-[11px] text-sat-texto-suave group-hover:text-white/80 space-y-1 w-full">
                       <p className="truncate"><strong>Contacto:</strong> {aud.contacto.replace(/\|/g, ' • ')}</p>
                       {aud.web && (
                         <p className="text-sat-azul group-hover:text-white font-semibold underline truncate">
@@ -908,7 +929,7 @@ export const FelPage: React.FC<FelPageProps> = ({ onBackToHome, initialTab = 'hu
                         </p>
                       )}
                     </div>
-                  </div>
+                  </button>
                 ))}
               </div>
             </section>
@@ -1025,7 +1046,7 @@ export const FelPage: React.FC<FelPageProps> = ({ onBackToHome, initialTab = 'hu
           </details>
         </section>
 
-      </main>
+      </div>
     </div>
   );
 };
