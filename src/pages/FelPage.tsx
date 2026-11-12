@@ -1,15 +1,5 @@
 import React from 'react';
-import { 
-  ArrowLeft, 
-  ExternalLink, 
-  FileText, 
-  BookOpen, 
-  UserCheck, 
-  ShieldCheck, 
-  Code2, 
-  HelpCircle, 
-  AlertCircle
-} from 'lucide-react';
+import { ArrowLeft, ExternalLink } from 'lucide-react';
 import { Breadcrumbs } from '../components/ui/Breadcrumbs';
 import { Button } from '../components/ui/Button';
 
@@ -79,7 +69,7 @@ export const FelPage: React.FC<FelPageProps> = ({ onBackToHome }) => {
           </div>
         </header>
 
-        {/* 3. CAPA 2 ATO: Módulos de Gestión de la Página Oficial efactura */}
+        {/* 3. CAPA 2 ATO: Módulos de Gestión Oficiales (Regla Estricta: Cero Íconos en Tarjetas) */}
         <section aria-labelledby="secciones-fel-heading" className="space-y-4">
           <div className="space-y-1">
             <span className="text-xs font-bold text-sat-azul uppercase tracking-wider">
@@ -93,17 +83,14 @@ export const FelPage: React.FC<FelPageProps> = ({ onBackToHome }) => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
             
             {/* Card 1: Emisor de DTE */}
             <div 
               onClick={() => window.open('https://portal.sat.gob.gt/portal/emisor-de-dte/', '_blank')}
-              className="group bg-sat-blanco border border-sat-gris rounded-2xl p-5 hover:bg-[#14649B] hover:-translate-y-1 hover:shadow-sat-md transition-all cursor-pointer flex flex-col justify-between space-y-3"
+              className="group bg-sat-blanco border border-sat-gris rounded-2xl p-6 hover:bg-[#14649B] hover:-translate-y-1 hover:shadow-sat-md transition-all cursor-pointer flex flex-col justify-between"
             >
               <div className="space-y-2">
-                <div className="w-9 h-9 rounded-xl bg-sat-azul/10 text-sat-azul flex items-center justify-center group-hover:bg-white/20 group-hover:text-white transition-colors">
-                  <UserCheck className="w-5 h-5" />
-                </div>
                 <h3 className="text-base font-bold text-sat-azul-oscuro group-hover:text-white transition-colors">
                   Habilitarme como emisor de facturas
                 </h3>
@@ -111,21 +98,14 @@ export const FelPage: React.FC<FelPageProps> = ({ onBackToHome }) => {
                   Acredítate como emisor en el régimen FEL, obtén tu firma electrónica gratuita y conoce las opciones para facturar desde la web o el móvil.
                 </p>
               </div>
-              <div className="pt-2 flex items-center justify-between text-xs font-semibold text-sat-azul group-hover:text-white">
-                <span>Ver requisitos de emisor</span>
-                <ExternalLink className="w-3.5 h-3.5" />
-              </div>
             </div>
 
             {/* Card 2: Certificador de DTE */}
             <div 
               onClick={() => window.open('https://portal.sat.gob.gt/portal/certificador-de-dte/', '_blank')}
-              className="group bg-sat-blanco border border-sat-gris rounded-2xl p-5 hover:bg-[#14649B] hover:-translate-y-1 hover:shadow-sat-md transition-all cursor-pointer flex flex-col justify-between space-y-3"
+              className="group bg-sat-blanco border border-sat-gris rounded-2xl p-6 hover:bg-[#14649B] hover:-translate-y-1 hover:shadow-sat-md transition-all cursor-pointer flex flex-col justify-between"
             >
               <div className="space-y-2">
-                <div className="w-9 h-9 rounded-xl bg-sat-azul/10 text-sat-azul flex items-center justify-center group-hover:bg-white/20 group-hover:text-white transition-colors">
-                  <ShieldCheck className="w-5 h-5" />
-                </div>
                 <h3 className="text-base font-bold text-sat-azul-oscuro group-hover:text-white transition-colors">
                   Certificadores de facturas autorizados
                 </h3>
@@ -133,21 +113,14 @@ export const FelPage: React.FC<FelPageProps> = ({ onBackToHome }) => {
                   Conoce el listado oficial de empresas certificadoras de facturas acreditadas por la SAT para emisión masiva o integración contable.
                 </p>
               </div>
-              <div className="pt-2 flex items-center justify-between text-xs font-semibold text-sat-azul group-hover:text-white">
-                <span>Consultar certificadores</span>
-                <ExternalLink className="w-3.5 h-3.5" />
-              </div>
             </div>
 
             {/* Card 3: Documentación Técnica */}
             <div 
               onClick={() => window.open('https://portal.sat.gob.gt/portal/documentacion-tecnica-del-regimen-fel/', '_blank')}
-              className="group bg-sat-blanco border border-sat-gris rounded-2xl p-5 hover:bg-[#14649B] hover:-translate-y-1 hover:shadow-sat-md transition-all cursor-pointer flex flex-col justify-between space-y-3"
+              className="group bg-sat-blanco border border-sat-gris rounded-2xl p-6 hover:bg-[#14649B] hover:-translate-y-1 hover:shadow-sat-md transition-all cursor-pointer flex flex-col justify-between"
             >
               <div className="space-y-2">
-                <div className="w-9 h-9 rounded-xl bg-sat-azul/10 text-sat-azul flex items-center justify-center group-hover:bg-white/20 group-hover:text-white transition-colors">
-                  <Code2 className="w-5 h-5" />
-                </div>
                 <h3 className="text-base font-bold text-sat-azul-oscuro group-hover:text-white transition-colors">
                   Documentación técnica y reglas de esquema
                 </h3>
@@ -155,21 +128,14 @@ export const FelPage: React.FC<FelPageProps> = ({ onBackToHome }) => {
                   Especificaciones XML, esquemas XSD, servicios web y manuales para integradores de software y departamentos de tecnología.
                 </p>
               </div>
-              <div className="pt-2 flex items-center justify-between text-xs font-semibold text-sat-azul group-hover:text-white">
-                <span>Descargar manuales técnicos</span>
-                <ExternalLink className="w-3.5 h-3.5" />
-              </div>
             </div>
 
             {/* Card 4: Auditor de Seguridad */}
             <div 
               onClick={() => window.open('https://portal.sat.gob.gt/portal/auditor-de-seguridad-de-la-informacion/', '_blank')}
-              className="group bg-sat-blanco border border-sat-gris rounded-2xl p-5 hover:bg-[#14649B] hover:-translate-y-1 hover:shadow-sat-md transition-all cursor-pointer flex flex-col justify-between space-y-3"
+              className="group bg-sat-blanco border border-sat-gris rounded-2xl p-6 hover:bg-[#14649B] hover:-translate-y-1 hover:shadow-sat-md transition-all cursor-pointer flex flex-col justify-between"
             >
               <div className="space-y-2">
-                <div className="w-9 h-9 rounded-xl bg-sat-azul/10 text-sat-azul flex items-center justify-center group-hover:bg-white/20 group-hover:text-white transition-colors">
-                  <BookOpen className="w-5 h-5" />
-                </div>
                 <h3 className="text-base font-bold text-sat-azul-oscuro group-hover:text-white transition-colors">
                   Auditor de seguridad de certificadores
                 </h3>
@@ -177,21 +143,14 @@ export const FelPage: React.FC<FelPageProps> = ({ onBackToHome }) => {
                   Requisitos y normas de acreditación para auditores independientes de seguridad de la información de empresas certificadoras.
                 </p>
               </div>
-              <div className="pt-2 flex items-center justify-between text-xs font-semibold text-sat-azul group-hover:text-white">
-                <span>Ver requisitos de auditoría</span>
-                <ExternalLink className="w-3.5 h-3.5" />
-              </div>
             </div>
 
             {/* Card 5: Preguntas Frecuentes */}
             <div 
               onClick={() => window.open('https://portal.sat.gob.gt/portal/preguntas-frecuentes/cumplimiento-tributario/#1674938805376-f6c4abc5-cfda', '_blank')}
-              className="group bg-sat-blanco border border-sat-gris rounded-2xl p-5 hover:bg-[#14649B] hover:-translate-y-1 hover:shadow-sat-md transition-all cursor-pointer flex flex-col justify-between space-y-3"
+              className="group bg-sat-blanco border border-sat-gris rounded-2xl p-6 hover:bg-[#14649B] hover:-translate-y-1 hover:shadow-sat-md transition-all cursor-pointer flex flex-col justify-between"
             >
               <div className="space-y-2">
-                <div className="w-9 h-9 rounded-xl bg-sat-azul/10 text-sat-azul flex items-center justify-center group-hover:bg-white/20 group-hover:text-white transition-colors">
-                  <HelpCircle className="w-5 h-5" />
-                </div>
                 <h3 className="text-base font-bold text-sat-azul-oscuro group-hover:text-white transition-colors">
                   Preguntas frecuentes sobre facturación
                 </h3>
@@ -199,31 +158,20 @@ export const FelPage: React.FC<FelPageProps> = ({ onBackToHome }) => {
                   Respuestas oficiales a dudas sobre emisión de facturas electrónicas, anulación de documentos, plazos y casos especiales.
                 </p>
               </div>
-              <div className="pt-2 flex items-center justify-between text-xs font-semibold text-sat-azul group-hover:text-white">
-                <span>Consultar preguntas frecuentes</span>
-                <ExternalLink className="w-3.5 h-3.5" />
-              </div>
             </div>
 
             {/* Card 6: Reporte de Cumplimiento (Renuentes) */}
             <div 
               onClick={() => window.open('https://portal.sat.gob.gt/portal/descarga/15595/renuentes-fel/96588/renuentes-pequenos-contribuyentes-31-08-2026', '_blank')}
-              className="group bg-sat-blanco border border-sat-gris rounded-2xl p-5 hover:bg-[#14649B] hover:-translate-y-1 hover:shadow-sat-md transition-all cursor-pointer flex flex-col justify-between space-y-3"
+              className="group bg-sat-blanco border border-sat-gris rounded-2xl p-6 hover:bg-[#14649B] hover:-translate-y-1 hover:shadow-sat-md transition-all cursor-pointer flex flex-col justify-between"
             >
               <div className="space-y-2">
-                <div className="w-9 h-9 rounded-xl bg-sat-azul/10 text-sat-azul flex items-center justify-center group-hover:bg-white/20 group-hover:text-white transition-colors">
-                  <AlertCircle className="w-5 h-5" />
-                </div>
                 <h3 className="text-base font-bold text-sat-azul-oscuro group-hover:text-white transition-colors">
                   Lista de contribuyentes pendientes de migración
                 </h3>
                 <p className="text-xs text-sat-texto-suave group-hover:text-white/90 leading-relaxed transition-colors">
                   Listado público de personas y empresas pendientes de incorporarse al Régimen FEL conforme a las disposiciones legales.
                 </p>
-              </div>
-              <div className="pt-2 flex items-center justify-between text-xs font-semibold text-sat-azul group-hover:text-white">
-                <span>Descargar listado oficial</span>
-                <ExternalLink className="w-3.5 h-3.5" />
               </div>
             </div>
 
@@ -246,7 +194,6 @@ export const FelPage: React.FC<FelPageProps> = ({ onBackToHome }) => {
             onClick={() => window.open('https://portal.sat.gob.gt/portal/descarga/6524/factura-electronica-fel/92802/proceso-de-factura-electronica-en-linea-2026-2', '_blank')}
             className="self-start sm:self-auto shrink-0"
           >
-            <FileText className="w-4 h-4 mr-2" />
             <span>Descargar presentación (PDF)</span>
           </Button>
         </section>
@@ -255,9 +202,8 @@ export const FelPage: React.FC<FelPageProps> = ({ onBackToHome }) => {
         <section aria-labelledby="base-legal-heading" className="bg-sat-blanco rounded-2xl border border-sat-gris p-5 sm:p-7 shadow-sat-sm">
           <details className="group">
             <summary className="cursor-pointer list-none flex items-center justify-between font-bold text-sm text-sat-azul-oscuro focus:outline-none focus-visible:ring-2 focus-visible:ring-sat-azul rounded-lg py-1">
-              <span id="base-legal-heading" className="flex items-center gap-2">
-                <BookOpen className="w-4 h-4 text-sat-azul" />
-                <span>Base legal y acuerdos del Régimen FEL</span>
+              <span id="base-legal-heading">
+                Base legal y acuerdos del Régimen FEL
               </span>
               <span className="text-xs font-semibold text-sat-azul group-open:rotate-180 transition-transform">
                 ▼

@@ -25,7 +25,8 @@ Antes de escribir o modificar cualquier componente visual, inspecciona:
 ## 2. Reglas de Diseño Inquebrantables (Grado de Libertad Bajo)
 
 ### A. Tarjetas Compactas (Cards)
-- **Cero elementos parásitos:** Prohibido incluir íconos decorativos, conteos numéricos (`X gestiones`, `N grupos`) o botones/textos de pie redundantes (`Ver gestiones`, `Ver más`).
+- **Cero íconos decorativos:** Prohibido de forma absoluta incluir íconos gráficos (Lucide, SVG, FontAwesome o imágenes) dentro de las tarjetas de contenido o gestiones. Toda la atención visual debe concentrarse en la tipografía y el contenido.
+- **Cero elementos parásitos:** Prohibido incluir conteos numéricos (`X gestiones`, `N grupos`) o botones/textos redundantes de pie (`Ver gestiones`, `Ver más`).
 - **Contenido exclusivo:** Solo **Título en lenguaje claro** y **Descripción concisa** (máximo 2 oraciones).
 - **Área 100% interactiva:** Toda la tarjeta es un enlace o botón completo con `group`, `bg-white`, `border border-[#DCDCDC]`, `rounded-[14px]` o `rounded-[16px]`, y espaciado `gap-3` o `gap-3.5` en grillas.
 - **Hover institucional sólido:**

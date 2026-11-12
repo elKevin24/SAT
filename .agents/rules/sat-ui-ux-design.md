@@ -15,7 +15,8 @@ Esta regla es de cumplimiento obligatorio antes de crear o editar componentes Re
 - **Página Completa Dedicada:** Toda gestión debe abrirse en su propia página completa con URL canónica e indexable (`#/gestion/:id`), soporte íntegro del botón Atrás/Adelante del navegador, miga de pan (*breadcrumb*) clickeable y módulo de gestiones relacionadas (*"En esta sección"*).
 
 ## 3. Tarjetas Compactas (Cards) del Design System SAT
-- **Cero elementos parásitos:** Prohibido incluir íconos decorativos, conteos numéricos (`4 Grupos`, `350 Gestiones`) o textos/botones redundantes de pie (`Ver gestiones`, `Ver más`).
+- **Cero íconos decorativos:** Prohibido de forma absoluta incluir íconos gráficos (Lucide, SVG o imágenes) dentro de las tarjetas de contenido o gestiones. Toda la atención visual debe concentrarse en la tipografía y el contenido.
+- **Cero elementos parásitos:** Prohibido incluir conteos numéricos (`4 Grupos`, `350 Gestiones`) o textos/botones redundantes de pie (`Ver gestiones`, `Ver más`).
 - **Contenido y estructura:** Presentan únicamente **Título en lenguaje claro** y **Descripción concisa** (máx. 2 oraciones). Toda la tarjeta es clickeable (`bg-white`, `border border-[#DCDCDC]`, `rounded-[14px]` o `rounded-[16px]`, grilla compacta con `gap-3` o `gap-3.5`).
 - **Hover institucional sólido:** Al hacer `hover`, cambia al color del Nivel 1 (`hover:bg-[#14649B]`, `hover:bg-[#0284C7]`, `hover:bg-[#4D8014]`, `hover:bg-[#C25E00]`), aplica `hover:-translate-y-1 hover:shadow-[0_14px_30px_rgba(0,0,0,0.08)]` y convierte todos los textos internos a blanco (`group-hover:text-white`).
 
