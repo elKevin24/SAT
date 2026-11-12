@@ -1,0 +1,67 @@
+[
+  {
+    "num": "1",
+    "name": "Proceso de factura electrónica en línea",
+    "link": "https://portal.sat.gob.gt/portal/descarga/6524/factura-electronica-fel/92802/proceso-de-factura-electronica-en-linea-2026-2"
+  },
+  {
+    "num": "2",
+    "name": "Reglas y validaciones",
+    "link": "https://portal.sat.gob.gt/portal/descarga/14852/reglas-y-validaciones/97423/fel_reglas_y_validaciones-3"
+  },
+  {
+    "num": "3",
+    "name": "Procedimiento de autorización del certificador",
+    "link": "https://portal.sat.gob.gt/portal/descarga/6524/factura-electronica-fel/80213/procedimiento-de-autorizacion-de-certificador.pdf"
+  },
+  {
+    "num": "4",
+    "name": "Procedimiento de autorización del auditor de seguridad de la información",
+    "link": "https://portal.sat.gob.gt/portal/descarga/6524/factura-electronica-fel/80050/fel-procedimiento-de-autorizacion-del-auditor-4.pdf"
+  },
+  {
+    "num": "5",
+    "name": "Casos de prueba para certificación",
+    "link": "https://portal.sat.gob.gt/portal/descarga/6524/factura-electronica-fel/25545/fel-casos-de-prueba.zip"
+  },
+  {
+    "num": "6",
+    "name": "Documento Técnico Servicios",
+    "link": "https://portal.sat.gob.gt/portal/descarga/6524/factura-electronica-fel/25830/documento-tecnico-servicios-sat.pdf"
+  },
+  {
+    "num": "7",
+    "name": "Presentación FEL-Tecnológica",
+    "link": "https://portal.sat.gob.gt/portal/descarga/6524/factura-electronica-fel/92805/fel-tecnologia-1-3-vf-2026-2"
+  },
+  {
+    "num": "8",
+    "name": "Esquema principal del DTE",
+    "link": "https://github.com/notificacioneselectfel/Catalogo-FEL/tree/main/XSD"
+  },
+  {
+    "num": "9",
+    "name": "Esquema del complemento: Exportaciones",
+    "link": "https://github.com/notificacioneselectfel/Catalogo-FEL/tree/main/XSD"
+  },
+  {
+    "num": "10",
+    "name": "Esquema del complemento: Facturas Cambiarias",
+    "link": "https://github.com/notificacioneselectfel/Catalogo-FEL/tree/main/XSD"
+  },
+  {
+    "num": "11",
+    "name": "Esquema del complemento: Facturas Especiales",
+    "link": "https://github.com/notificacioneselectfel/Catalogo-FEL/tree/main/XSD"
+  },
+  {
+    "num": "12",
+    "name": "Esquema del complemento: Referencias a las Notas de Crédito o Débito",
+    "link": "https://github.com/notificacioneselectfel/Catalogo-FEL/tree/main/XSD"
+  },
+  {
+    "num": "13",
+    "name": "Esquema para Anulación de DTE",
+    "link": "https://github.com/notificacioneselectfel/Catalogo-FEL/tree/main/XSD"
+  }
+]

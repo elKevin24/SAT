@@ -1,0 +1,654 @@
+[
+  {
+    "q": "¿Qué es el Régimen de Factura Electrónica en Línea (FEL)?",
+    "a": "Es el modelo operativo establecido por la Administración Tributaria para la emisión de Documentos Tributarios Electrónicos (DTE) de forma segura y con autorización en línea."
+  },
+  {
+    "q": "¿Qué es un Documento Tributario Electrónico (DTE)?",
+    "a": "Es un archivo electrónico en formato XML, certificado de acuerdo con las disposiciones del Régimen FEL autorizadas por la SAT.Actualmente se encuentran disponibles los siguientes DTE:"
+  },
+  {
+    "q": "¿Quiénes son los involucrados en el proceso de emisión de Factura Electrónica en Línea?",
+    "a": "Emisor: Certificador: Receptor: SAT:"
+  },
+  {
+    "q": "¿Es obligatorio imprimir las facturas electrónicas?",
+    "a": "Para entrega de facturas u otros Documentos Tributarios Electrónicos (DTE), el emisor cuenta con las opciones siguientes: Digital: Papel:"
+  },
+  {
+    "q": "¿Qué contribuyentes pueden emitir facturas y otros Documentos Tributarios Electrónicos (DTE) en el Régimen FEL?",
+    "a": "Actualmente todos los contribuyentes afiliados al Régimen General del IVA y Régimen de Pequeños Contribuyente, así como los que se afilien al Régimen Primario y Pecuario, deben emitir Documentos Tributarios Electrónicos (DTE) en el Régimen FEL, asimismo, está disponible para las entidades exentas o no lucrativas y las entidades del Estado."
+  },
+  {
+    "q": "¿Cómo me habilito para emitir Documentos Tributarios Electrónicos -DTE?",
+    "a": "A través de la opción “Habilitarse como emisor”, disponible en Agencia Virtual y App FEL, la gestión se realiza en línea.Ver manual:https://portal.sat.gob.gt/portal/emisor-de-dte/"
+  },
+  {
+    "q": "¿Cómo obtengo las autorizaciones de los Documentos Tributarios Electrónicos -DTE-?",
+    "a": "La autorización se asigna de forma aleatoria y automática a cada Documento Tributario Electrónico (DTE) emitido en el momento de la certificación, por lo cual no existen rangos preautorizados."
+  },
+  {
+    "q": "¿Dónde puedo encontrar el aplicativo gratuito FEL de la Agencia Virtual y App FEL?",
+    "a": "El aplicativo FEL está disponible en la Agencia Virtual de SAT, para ello ingresa con el usuario que corresponde al NIT, desde el siguiente enlace:https://portal.sat.gob.gt/portal/La App FEL se descarga de forma gratuita desde las tiendas de aplicaciones App Store -IOS-, Play Store -Android- y App Gallery -Huawei-, desde un teléfono celular o tablet."
+  },
+  {
+    "q": "¿Cuáles son los requisitos para habilitarse como emisor de Documentos Tributarios Electrónicos -DTE-?",
+    "a": "*Cuando corresponda. Ver manual:https://portal.sat.gob.gt/portal/emisor-de-dte/"
+  },
+  {
+    "q": "¿Tiene algún costo la emisión de Documentos Tributarios Electrónicos DTE- en los sistemas de SAT?",
+    "a": "No, si el contribuyente utiliza el aplicativo web en la Agencia Virtual de SAT o la App FEL."
+  },
+  {
+    "q": "¿Tiene algún costo el certificado de firma electrónica para el emisor?",
+    "a": "El certificado de firma electrónica se proporciona al contribuyente cuando se habilita como emisor en el Régimen FEL, el cual no tiene costo."
+  },
+  {
+    "q": "¿Cómo puedo saber quiénes son los certificadores autorizados por la SAT?",
+    "a": "Para el efecto se puede consultar el listado de certificadores que se encuentran autorizados en el siguiente enlace:https://portal.sat.gob.gt/portal/certificador-de-dte/"
+  },
+  {
+    "q": "¿Qué seguridad tiene el contribuyente de que está recibiendo un Documento Tributario Electrónico -DTE- válido?",
+    "a": "Los Documentos Tributarios Electrónicos (DTE), pueden ser validados en las siguientes opciones:"
+  },
+  {
+    "q": "¿Qué debo hacer cuando me muestra error al ingresar la contraseña asociada en la emisión de mis Documentos Tributarios Electrónicos -DTE-?",
+    "a": "Debe generar una nueva contraseña asociada ingresando a la Agencia Virtual en las siguientes opciones: También puede generar una nueva contraseña desde la App FEL. Dicho cambio debe realizarse como mínimo una vez año. Ver manual:https://portal.sat.gob.gt/portal/emisor-de-dte/"
+  },
+  {
+    "q": "¿Puedo anular documentos en el aplicativo FEL y App FEL?",
+    "a": "Si, la transacción de anulación se realiza desde el módulo “Anular DTE” o desde la opción directa en la consulta de DTE emitidos, ambos de la Agencia Virtual, considerando el plazo de presentación de la declaración mensual del IVA.Ver manual:https://portal.sat.gob.gt/portal/emisor-de-dte/"
+  },
+  {
+    "q": "¿Debo acreditar a SAT como mi certificador en el módulo “Acreditación de Certificadores?",
+    "a": "No, este proceso es automático cuando el contribuyente se habilita como emisor del Régimen FEL."
+  },
+  {
+    "q": "¿Tienen vencimiento los Documentos Tributarios Electrónicos -DTE- emitidos en el Régimen FEL?",
+    "a": "No, debido a que su autorización es única para cada documento en el momento de la emisión y certificación."
+  },
+  {
+    "q": "¿Cómo me entero si me emitieron o me anularon un Documento Tributario Electrónico -DTE-?",
+    "a": "Los contribuyentes podrán configurar un correo electrónico, donde la SAT le informará automáticamente cada vez que le emitan o anulen un DTE, para ello: Asimismo, en la App FEL pueden activar las notificaciones en las que también se les informará cuando les emitan o anulen un DTE.Las anulaciones de DTE se notifican en todos los casos al correo registrado en RTU."
+  },
+  {
+    "q": "¿Quiénes están obligados a incorporarse en el Régimen FEL?",
+    "a": "Actualmente todos los contribuyentes afiliados al Régimen General del IVA y Régimen de Pequeños Contribuyente, así como los que se afilien al Régimen Primario y Pecuario, deben emitir Documentos Tributarios Electrónicos (DTE) en el Régimen FEL, asimismo, está disponible para las entidades exentas o no lucrativas y las entidades del Estado."
+  },
+  {
+    "q": "¿Puedo delegar para que emitan Documentos Tributarios Electrónicos DTE- en mi nombre?",
+    "a": "Sí, a través de la Agencia Virtual puede delegar permisos para que otras personas emitan, anulen o consulten DTE. La persona que cuente con el permiso delegado podrá hacer uso del mismo en la Agencia Virtual y App FEL.Ver manual:https://portal.sat.gob.gt/portal/emisor-de-dte/"
+  },
+  {
+    "q": "¿Es necesario acreditar certificadores en el Régimen FEL?",
+    "a": "El Certificador SAT no es necesario acreditarlo, ya que queda registrado de forma automática en el momento de la habilitación como emisor, si se requieren los servicios de los otros Certificadores, si se debe acreditarlo(s) a través de la opción disponible en la Agencia Virtual.Consulta los Certificadores autorizados en el enlace siguiente:https://portal.sat.gob.gt/portal/certificador-de-dte/"
+  },
+  {
+    "q": "¿Dónde puedo ver información estadística del Régimen FEL?",
+    "a": "Para consultar la información estadística del Régimen FEL ingresa al siguiente enlace: Portal SAT | SatData+ – Guatemala"
+  },
+  {
+    "q": "¿Existen manuales o instructivos del aplicativo FEL de la Agencia Virtual y App FEL?",
+    "a": "Sí, en el portal SAT se encuentran publicados los manuales de usuario para utilizar las diferentes opciones disponibles del Régimen FEL, en la Agencia Virtual y App FEL, siguiendo el siguiente enlace:https://portal.sat.gob.gt/portal/emisorde-dte/"
+  },
+  {
+    "q": "¿Si emito facturas por Q2,500.00 o más, qué debo colocar como identificación del receptor o comprador?",
+    "a": "NIT, si no cuenta y es persona individual podrá colocarse el Código Único de Identificación (CUI), y si es persona extranjera, podrá colocarse el número de pasaporte o el código tributario de su país de origen. Artículo 30, numeral 9, Reglamento de la Ley del IVA (reformado por el Acuerdo Gubernativo 12-2023)."
+  },
+  {
+    "q": "¿Puedo emitir facturas a consumidor final?",
+    "a": "Solo en montos menores a Q2,500.00 podrás colocar en las facturas “Consumidor Final” en la identificación del receptor o comprador. Artículo 30, numeral 9, Reglamento de la Ley del IVA (reformado por el Acuerdo Gubernativo 12-2023)."
+  },
+  {
+    "q": "¿Si emito facturas de exportación, que debo colocar como identificación del receptor o comprador?",
+    "a": "El número de pasaporte o código tributario de su país de origen, según corresponda, o el número de identificación de otra índole que proporcione el receptor. Artículo 30, numeral 9, Reglamento de la Ley del IVA (reformado por el Acuerdo Gubernativo 12-2023)."
+  },
+  {
+    "q": "¿Están los Pequeños Contribuyentes obligados a emitir Documentos Tributarios Electrónicos -DTE- en el Régimen FEL?",
+    "a": "De acuerdo con lo establecido en la Resolución SAT-DSI-1350-2022, todos los Pequeños Contribuyentes deben incorporarse al Régimen FEL."
+  },
+  {
+    "q": "¿Si anulé un Documento Tributario Electrónico -DTE- por error, puedo revertir la anulación?",
+    "a": "Si, a través de la opción disponible en la Agencia Virtual en el apartado Servicios Tributarios, Factura Electrónica, podrás ingresar tu solicitud de reversión de anulación. También en la App FEL por medio de la opción disponible.Ver manual:https://portal.sat.gob.gt/portal/emisor-de-dte/"
+  },
+  {
+    "q": "¿Dónde debo reportar los inconvenientes o consultas del Régimen FEL?",
+    "a": "Para orientación en general es a través del buzón[email protected], y si es necesario soporte técnico por el uso de los sistemas FEL, es a través del buzón[email protected]"
+  },
+  {
+    "q": "¿Si por error rechacé un Documento Tributario Electrónico -DTE-, puedo solicitar la reversión?",
+    "a": "Sí, únicamente el contribuyente receptor lo puede realizar por medio de la agencia virtual en Servicios tributarios, Factura Electrónica en Línea FEL, Solicitud de reversión de Rechazo de DTE.Ver manual:https://portal.sat.gob.gt/portal/emisor-de-dte/"
+  },
+  {
+    "q": "¿Sí emiten un Documento Tributario Electrónico -DTE-, a mi nombre y no realicé la compra puedo rechazar el documento?",
+    "a": "Sí se puede realizar por medio de la Agencia Virtual, ingresando al apartado de Servicios Tributarios, Factura Electrónica en Línea FEL, Consultar DTE, opción “Rechazar DTE”.El DTE rechazado no se visualizará en las consultas del contribuyente receptor.Ver manual:https://portal.sat.gob.gt/portal/emisor-de-dte/"
+  },
+  {
+    "q": "¿El emisor puede solicitar la reversión de rechazo de Documentos Tributarios Electrónicos -DTE-?",
+    "a": "No, solamente puede ser solicitada por el receptor del DTE."
+  },
+  {
+    "q": "¿Cuáles son los tipos de formato de impresión de los Documentos Tributarios Electrónicos (DTE), que se pueden generar desde la APP FEL?",
+    "a": "Formato tamaño cartaFormato tipo ticket"
+  },
+  {
+    "q": "¿Quiénes pueden hacer uso de la emisión por voz desde la APP FEL?",
+    "a": "Únicamente los Pequeños Contribuyentes."
+  },
+  {
+    "q": "¿Qué tipo de Documento Tributario Electrónico (DTE), puedo emitir por medio de voz en la APP FEL?",
+    "a": "DTE tipo Factura de Pequeño Contribuyente."
+  },
+  {
+    "q": "¿Qué datos se deben dictar para realizar la emisión por voz desde la APP FEL?",
+    "a": "¿Cuáles son las formas en que los pequeños contribuyentes pueden realizar la emisión de Documentos Tributarios Electrónicos (DTE) a través de la APP FEL? Digitando los datos o por medio de voz."
+  },
+  {
+    "q": "¿Cuál es el plazo para anular Documentos Tributarios Electrónicos -DTE- en el Régimen FEL?",
+    "a": "El mes de emisión y como máximo hasta el vencimiento de la declaración mensual del IVA."
+  },
+  {
+    "q": "¿Qué debo hacer si necesito anular Documentos Tributarios Electrónicos -DTE- en el Régimen FEL fuera del plazo establecido?",
+    "a": "Es importante recordar que el plazo de anulación establecido es el mes de emisión y como máximo hasta el vencimiento de la declaración mensual del IVA.Sin embargo, para casos justificados existe la opción para solicitar la anulación extemporánea de DTE, la cual es analizada por la SAT y de ser procedente se aprueba.Ver manual:https://portal.sat.gob.gt/portal/emisor-de-dte/"
+  },
+  {
+    "q": "¿Cómo puedo reportar una anulación de un Documento Tributario Electrónico (DTE) realizada sin mi consentimiento?",
+    "a": "Ver manual:https://portal.sat.gob.gt/portal/emisor-de-dte/"
+  },
+  {
+    "q": "¿Cuáles son las opciones directas que se encuentran en la consulta de Documentos Tributarios Electrónicos -DTE- en la Agencia Virtual y App FEL?",
+    "a": "Desde la consulta de documentos emitidos: Desde la consulta de documentos emitidos: Desde la consulta de documentos recibidos: Desde la consulta de documentos recibidos: Ver manual:https://portal.sat.gob.gt/portal/emisor-de-dte/"
+  },
+  {
+    "q": "¿Qué es la factura provisional?",
+    "a": "Es el documento que respalda las transacciones de exportación realizadas con la clase de “Duca 54”, a efecto de emitir un documento previo a realizar la exportación definitiva.Ver manual:https://portal.sat.gob.gt/portal/emisor-de-dte/"
+  },
+  {
+    "q": "¿Es obligatorio colocar la dirección del receptor en los Documentos Tributarios Electrónicos (DTE)?",
+    "a": "Es opcional, ya que no es requerido según el Reglamento de la Ley del IVA. La información consignada es la proporciona por el receptor del documento. ¿Por qué medio puedo notificar a la Administración Tributaria para la emisión de Documentos Tributarios Electrónicos (DTE) en establecimiento con ubicación temporal? Se puede realizar a través de la agencia virtual, por medio del módulo de “Aviso de emisión de DTE en establecimiento temporal”. Dirigido a contribuyentes que realizan eventos temporales en un lugar distinto al domicilio comercial registrado en RTU.Ver manual:https://portal.sat.gob.gt/portal/emisor-de-dte/ ¿Cómo notifico a la Administración Tributaria, en los casos que no pueda emitir Documentos Tributarios Electrónicos (DTE) de manera inmediata por fallas de conectividad con mi certificador? Se puede realizar a través de la agencia virtual, por medio del módulo de “Notificación de contingencia”.Ver manual:https://portal.sat.gob.gt/portal/emisor-de-dte/"
+  },
+  {
+    "q": "¿Cuál es el período máximo para emitir Documentos Tributarios Electrónicos (DTE) en un establecimiento con ubicación temporal?",
+    "a": "El plazo establecido es de 3 meses para la emisión de DTE en un establecimiento con ubicación temporal. Si el contribuyente requiere un período mayor, deberá presentar un nuevo aviso para la ampliación correspondiente."
+  },
+  {
+    "q": "¿Cuál es el máximo de Documentos Tributarios Electrónicos (DTE), que puedo descargar desde la consulta de DTE, emitidos o recibidos?",
+    "a": "El máximo permitido es de 10,000 documentos por cada consulta. ¿Cuál es el proceso que debo realizar para descargar Documentos Tributarios Electrónicos (DTE) desde la consulta de DTE, cuando la cantidad de documentos sea mayor 10,000? Para ello se habilitará en pantalla el campo para que el contribuyente consigne un correo electrónico al que posteriormente se enviará un archivo en formato CSV con un máximo de 500,000 DTE, si la consulta excede el máximo permitido se sugiere realizarla por un período menor.Ver manual:https://portal.sat.gob.gt/portal/emisor-de-dte/"
+  },
+  {
+    "q": "¿Cuál es el límite de facturación anual para aplicar al Régimen de Pequeño Contribuyente?",
+    "a": "125 salarios mínimos (vigente) mensuales no agrícolas, según el Decreto No. 312024."
+  },
+  {
+    "q": "¿Qué es el Régimen Primario según el Decreto 31-2024?",
+    "a": "Es un régimen especial de producción y comercialización de productos agrícolas y artesanías producidos en Guatemala."
+  },
+  {
+    "q": "¿Cuál es el límite de ventas brutas anuales para aplicar al Régimen Primario?",
+    "a": "3,500 salarios mínimos (vigente) mensuales no agrícolas."
+  },
+  {
+    "q": "¿En qué lugares deben comercializar sus productos quienes pertenecen al Régimen Primario y Pecuario?",
+    "a": "Según el Decreto 31-2024, lo pueden realizar en supermercados, mercados cantonales, municipales y centros de acopio."
+  },
+  {
+    "q": "¿Cuáles son los tipos de DTE que puede emitir los contribuyentes del Régimen Primario en el Régimen FEL?",
+    "a": "Factura Contribuyente Régimen Primario (FARP)Factura Cambiaria Contribuyente Régimen Primario (FCRP)Factura Específica (FEPE) Ver manual:https://portal.sat.gob.gt/portal/emisor-de-dte/"
+  },
+  {
+    "q": "¿Qué es el Régimen Pecuario según el Decreto 31-2024?",
+    "a": "Es un régimen especial de tributación simplificada que incluye la producción y comercialización de productos del sector pecuario, hidrobiológico y apícola."
+  },
+  {
+    "q": "¿Cuál es el límite de ventas brutas anuales para aplicar al Régimen Pecuario?",
+    "a": "De acuerdo al Decreto No. 31-2024 no se establece límite para este régimen."
+  },
+  {
+    "q": "¿Cuáles son los tipos de DTE que puede emitir el Régimen Pecuario en el Régimen FEL?",
+    "a": "Factura Contribuyente Régimen Pecuario (FPEC)Factura Cambiaria Contribuyente Régimen Pecuario (FCPC)Factura Específica (FEPE) Ver manual:https://portal.sat.gob.gt/portal/emisor-de-dte/ ¿Cuándo se derogaron los regímenes Electrónicos de Pequeño Contribuyente, Régimen de Contribuyente Agropecuario y Régimen electrónico especial de Contribuyente Agropecuario? A partir del 31 de julio de 2025 según el Decreto No. 31-2024. ¿Si necesito consultar los documentos emitidos en los regímenes Electrónicos de Pequeño Contribuyente, Régimen Especial de Contribuyente Agropecuario y Régimen Electrónico Especial de Contribuyente Agropecuario, puedo realizarlo? Sí, desde la consulta de DTE emitidos en Agencia virtual, App FEL y Verificador Integrado. SOFI"
+  },
+  {
+    "q": "¿Cuál es la base legal de la Solvencia Fiscal?",
+    "a": "El Artículo 57 “A” del Código Tributario."
+  },
+  {
+    "q": "¿En cuánto tiempo se emite la Solvencia Fiscal?",
+    "a": "El plazo para la emisión de la Solvencia Fiscal es de 3 días hábiles, contados a partir del día siguiente de haber realizado el pago del formulario SAT‑2000.Base legal: Decreto 6-91 artículo 57 “A”. Si pasan 3 días hábiles y aun no has recibido tu solvencia fiscal, puedes hacer lo siguiente: Consulta el estado de tu trámite aquí: https://portal.sat.gob.gt/portal/bitacora-de-solvencia-fiscal/ En la bitácora verás el avance del proceso: 100% = la revisión ya fue concluida y la solvencia está disponible para descargar."
+  },
+  {
+    "q": "¿Cómo puedo obtener una Solvencia Fiscal ?",
+    "a": "Puedes ingresar a Declaraguate y llenar el formulario SAT-8421 en el siguiente enlacehttps://declaraguate.sat.gob.gt/declaraguate-web/de igual forma puedes consultar los requisitos sobre el proceso de solicitud de solvencia fiscal en el siguiente enlacehttps://portal.sat.gob.gt/portal/requisitos-sofi/"
+  },
+  {
+    "q": "¿Cuánto cuesta una Solvencia Fiscal?",
+    "a": "El costo que tienes que cancelar por tu solvencia fiscal es de Q30, para generar la boleta de pago ingresa a Declaraguate, selecciona y llena el Formulario SAT-8421.https://declaraguate.sat.gob.gt/declaraguate-web/"
+  },
+  {
+    "q": "¿Cuál es el formulario de solicitud de Solvencia Fiscal?",
+    "a": "Para generar la boleta de pago de una Solvencia Fiscal  ingresa a Declaraguate, selecciona y llena el Formulario SAT-8421 y realiza el pago de Q30 en cualquier banco del sistemahttps://declaraguate.sat.gob.gt/declaraguate-web/"
+  },
+  {
+    "q": "¿Quiénes pueden solicitar Solvencia Fiscal?",
+    "a": "Cualquier contribuyente inscrito en la Administración Tributaria (Empleados en relación de dependencia, Auxiliares de la función pública aduanera y tributaria, contribuyentes exentos, contribuyentes que participan en cotizaciones o licitaciones públicas, contribuyentes que tienen prestación de servicios públicos, etc.)"
+  },
+  {
+    "q": "¿Cuáles son las obligaciones que analizan para emitir Solvencia Fiscal?",
+    "a": "Para Nit Administrativo o Contribuyente sin Establecimiento Activo ni Afiliación: Para Nit con Establecimiento Activo y Afilición al IVA General, Pequeño Contribuyente y Sociedad: Para NIT de Contribuyente Especial:"
+  },
+  {
+    "q": "¿Cómo valido la Solvencia Fiscal?",
+    "a": "Ingresa a Declaraguate, opción buscar, ingresa número de formulario y acceso, el formulario desplegará el botón imprimir SOLVENCIA. O bién escaneando el código QR que aparece en la parte inferior de la solvencia.También puedes buscar tu solvencia fiscal desde la consulta de solvencias ver.https://declaraguate.sat.gob.gt/declaraguate-web/"
+  },
+  {
+    "q": "¿En dónde puedo ver mis obligaciones pendientes?",
+    "a": "Previo a realizar tu pago, en Declaraguate- Formulario SAT 8421, el sistema despliega las omisiones y obligaciones pendientes.https://declaraguate.sat.gob.gt/declaraguate-web/"
+  },
+  {
+    "q": "¿En dónde puedo ver si tengo omisos pendientes?",
+    "a": "Al momento de ingresar a Declaraguate,https://declaraguate.sat.gob.gt/declaraguate-web/Formulario 8421, el sistema desplegará tus obligaciones pendientes"
+  },
+  {
+    "q": "¿Puedo obtener mi Solvencia Fiscal si no tengo NIT actualizado?",
+    "a": "No puedes obtener tu Solvencia Fiscal con omisiones y obligaciones pendientes, el Formulario SAT 8421 despliega las omisiones y obligaciones pendientes, para mayor información ingresa al linkhttps://portal.sat.gob.gt/portal/requisitos-sofi/"
+  },
+  {
+    "q": "¿Puedo obtener mi solvencia fiscal si no tengo libros habilitados y documentos autorizados?",
+    "a": "No puedes obtener tu Solvencia Fiscal con omisiones y obligaciones pendientes, el Formulario SAT 8421 despliega las omisiones y obligaciones pendientes, para mayor información ingresa al linkhttps://portal.sat.gob.gt/portal/requisitos-sofi/"
+  },
+  {
+    "q": "¿Puedo obtener mi solvencia fiscal si no tengo facturas?",
+    "a": "No puedes obtener tu Solvencia Fiscal con omisiones y obligaciones pendientes, el Formulario SAT 8421 despliega las omisiones y obligaciones pendientes, para mayor información ingresa al linkhttps://portal.sat.gob.gt/portal/requisitos-sofi/"
+  },
+  {
+    "q": "¿Puedo obtener mi solvencia fiscal si no tengo Representante Legal vigente y actualizado?",
+    "a": "No puedes obtener tu Solvencia Fiscal con omisiones y obligaciones pendientes, el Formulario SAT 8421 despliega las omisiones y obligaciones pendientes, para mayor información ingresa al linkhttps://portal.sat.gob.gt/portal/requisitos-sofi/"
+  },
+  {
+    "q": "¿Puedo obtener mi solvencia fiscal si tengo mi NIT Inactivo?",
+    "a": "No puedes obtener tu Solvencia Fiscal con omisiones y obligaciones pendientes, el Formulario SAT 8421 despliega las omisiones y obligaciones pendientes, para mayor información ingresa al linkhttps://portal.sat.gob.gt/portal/requisitos-sofi/"
+  },
+  {
+    "q": "¿Puedo obtener mi solvencia fiscal si tengo cuotas vencidas de convenios de pago?",
+    "a": "No puedes obtener tu Solvencia Fiscal con omisiones y obligaciones pendientes, el Formulario SAT 8421 despliega las omisiones y obligaciones pendientes, para mayor información ingresa al linkhttps://portal.sat.gob.gt/portal/requisitos-sofi/"
+  },
+  {
+    "q": "¿Puedo obtener mi solvencia fiscal si estoy moroso del Impuesto de Circulación de Vehículos?",
+    "a": "No puedes obtener tu Solvencia Fiscal con omisiones y obligaciones pendientes, el Formulario SAT 8421 despliega las omisiones y obligaciones pendientes, para mayor información ingresa al linkhttps://portal.sat.gob.gt/portal/requisitos-sofi/"
+  },
+  {
+    "q": "¿Puedo obtener mi solvencia fiscal si tengo expedientes en Económico Coactivo?",
+    "a": "No puedes obtener tu Solvencia Fiscal con omisiones y obligaciones pendientes, el Formulario SAT 8421 despliega las omisiones y obligaciones pendientes, para mayor información ingresa al linkhttps://portal.sat.gob.gt/portal/requisitos-sofi/ Facilidades de Pago"
+  },
+  {
+    "q": "¿Cuál es la base legal de la Facilidad de Pago?",
+    "a": "Artículo 40 Código Tributario"
+  },
+  {
+    "q": "¿Cómo puedo obtener una Facilidad de Pago?",
+    "a": "Puede realizar su solicitud a través del Portal SAT o por medio de su Agencia Virtual, el cual te indica los requisitos que debes adjuntar, o bien consultar al Call Center 1550."
+  },
+  {
+    "q": "¿Cuál es el plazo para emitir una Facilidad de Pago?",
+    "a": "Si corresponde a la Región Central 10 días hábiles, para el resto de regionales 5 días hábiles."
+  },
+  {
+    "q": "¿Cuál es el formulario de solicitud de una Facilidad de Pago?",
+    "a": "Formulario SAT-821"
+  },
+  {
+    "q": "¿Quiénes pueden solicitar una Facilidad de Pago?",
+    "a": "Cualquier persona individual o jurídica con adeudos tributarios"
+  },
+  {
+    "q": "¿Porqué impuesto puedo solicitar Facilidades de Pago?",
+    "a": "Todos menos Impuesto al Valor Agregado, retenciones del Impuesto Sobre la Renta e Impuesto al Valor Agregado, Impuesto Sobre Circulación de Vehículos."
+  },
+  {
+    "q": "¿Que me entrega la SAT como parte de mis obligaciones tributarias?",
+    "a": "Un Reconocimiento Unilateral de Adeudo Tributario. ISO"
+  },
+  {
+    "q": "¿Qué otros formularios debo presentar?",
+    "a": "Debes presentar los formularios SAT-1361 Pago del ISR Trimestral y SAT-1411 ISR Anual."
+  },
+  {
+    "q": "¿Qué pago realizas con el formulario SAT-1608?",
+    "a": "El Impuesto de Solidaridad"
+  },
+  {
+    "q": "¿Qué otros formularios debo presentar?",
+    "a": "Debes presentar los formularios SAT-1361 Pago del ISR Trimestral y SAT-1411 ISR Anual."
+  },
+  {
+    "q": "¿Cada cuánto presento el formulario SAT-1608?",
+    "a": "El pago del impuesto se realiza dentro del mes siguiente a la finalización del trimestre calendario que corresponda."
+  },
+  {
+    "q": "¿Qué otros formularios debo presentar?",
+    "a": "Debes presentar los formularios SAT-1361 Pago del ISR Trimestral y SAT-1411 ISR Anual."
+  },
+  {
+    "q": "¿Quiénes pueden utilizar el formulario SAT-1608?",
+    "a": "Los contribuyentes que estén afiliados al Impuesto Sobre la Renta en el Régimen sobre Utilidades de Actividades Lucrativas que realicen actividades mercantiles o agropecuarias en el territorio nacional y tengan un margen bruto superior al 4% de sus ingresos brutos. Declaración de ISR pago Mensual"
+  },
+  {
+    "q": "¿Qué otros formularios debo presentar?",
+    "a": "Debes presentar los formularios SAT-1361 Pago del ISR Trimestral y SAT-1411 ISR Anual."
+  },
+  {
+    "q": "¿Qué pago realizas con el formulario SAT-1608?",
+    "a": "Debes presentar los formularios del Impuesto al Valor Agregado: SAT-2237 Pago Mensual y SAT-1411 Declaración Informativa Anual del ISR. Para saber el régimen al cual estas inscrito puedes consultarlo en tu constancia del RTU, haciendoclic AQUÍ."
+  },
+  {
+    "q": "¿Qué pago realizas con el formulario SAT-1311?",
+    "a": "Impuesto Sobre la Renta del Régimen Opcional Simplificado sobre ingresos de actividades lucrativas."
+  },
+  {
+    "q": "¿Qué otros formularios debo presentar?",
+    "a": "Debes presentar los formularios del Impuesto al Valor Agregado: SAT-2237 Pago Mensual y SAT-1411 Declaración Informativa Anual del ISR. Para saber el régimen al cual estas inscrito puedes consultarlo en tu constancia del RTU, haciendoclic AQUÍ."
+  },
+  {
+    "q": "¿Cada cuánto presento el formulario SAT-1311?",
+    "a": "Se debe presentar en los primeros 10 días hábiles del mes calendario siguiente al vencimiento de cada período impositivo. Nota:Recuerda que, si tienes una constancia de retención del ISR recibida en el mes de la declaración, la deberás reportar dentro del formulario. Nota:"
+  },
+  {
+    "q": "¿Qué otros formularios debo presentar?",
+    "a": "Debes presentar los formularios del Impuesto al Valor Agregado: SAT-2237 Pago Mensual y SAT-1411 Declaración Informativa Anual del ISR. Para saber el régimen al cual estas inscrito puedes consultarlo en tu constancia del RTU, haciendoclic AQUÍ. Declaración de ISR Anual"
+  },
+  {
+    "q": "¿Qué otros formularios debo presentar?",
+    "a": "Si estas afiliado al ISR en el Régimen Opcional Simplificado sobre ingresos de actividades lucrativas debes presentar los formularios SAT-1311 Pago Mensual y SAT-2237 Pago del IVA del Régimen General. Si estas afiliado al ISR en el Régimen sobre utilidades de actividades lucrativas deberás presentar los formularios SAT-1361 Pago Trimestral y SAT-2237 Pago del IVA del Régimen General. Cuando corresponda deberás presentar el formulario SAT-1608 Pago Trimestral del ISO. Para saber el régimen al cual estas inscrito puedes consultarlo en tu constancia del RTU, haciendo clicAQUÍ."
+  },
+  {
+    "q": "¿Qué pago realizas con el formulario SAT-1411?",
+    "a": "Impuesto Sobre la Renta para los Regímenes Sobre las Utilidades de Actividades Lucrativas, Opcional Simplificado Sobre Ingresos de Actividades Lucrativas y Contribuyentes Exentos."
+  },
+  {
+    "q": "¿Qué otros formularios debo presentar?",
+    "a": "Si estas afiliado al ISR en el Régimen Opcional Simplificado sobre ingresos de actividades lucrativas debes presentar los formularios SAT-1311 Pago Mensual y SAT-2237 Pago del IVA del Régimen General. Si estas afiliado al ISR en el Régimen sobre utilidades de actividades lucrativas deberás presentar los formularios SAT-1361 Pago Trimestral y SAT-2237 Pago del IVA del Régimen General. Cuando corresponda deberás presentar el formulario SAT-1608 Pago Trimestral del ISO. Para saber el régimen al cual estas inscrito puedes consultarlo en tu constancia del RTU, haciendo clicAQUÍ."
+  },
+  {
+    "q": "¿Cada cuánto presento el formulario SAT-1411?",
+    "a": "Se paga en los primeros tres meses del año siguiente al periodo que se liquida (01 enero al 31 de marzo). Declaración de ISR Pago Mensual"
+  },
+  {
+    "q": "¿Qué pago realizas con el formulario SAT-1321?",
+    "a": "Impuesto Sobre la Renta del capital inmobiliario, mobiliario, ganancias y pérdidas de capital."
+  },
+  {
+    "q": "¿Cada cuánto presento el formulario SAT-1321?",
+    "a": "Se debe presentar en los primeros 10 días hábiles del mes calendario siguiente al vencimiento de cada período impositivo."
+  },
+  {
+    "q": "¿Quiénes pueden utilizar el formulario SAT-1321?",
+    "a": "Los contribuyentes que paguen el Impuesto Sobre la Renta sobre capital inmobiliario, mobiliario, ganancias y pérdidas de capital. Declaración de ISR No Residentes"
+  },
+  {
+    "q": "¿Qué pago realizas con el formulario SAT-1352?",
+    "a": "Impuesto Sobre la Renta de la Retención efectuada a no residentes sin establecimiento permanente."
+  },
+  {
+    "q": "¿Cada cuánto presento el formulario SAT-1352?",
+    "a": "Se debe presentar en los primeros 10 días hábiles del mes calendario siguiente al vencimiento de cada período impositivo."
+  },
+  {
+    "q": "¿Quiénes pueden utilizar el formulario SAT-1352?",
+    "a": "Los contribuyentes que efectúen retenciones a no residentes sin establecimiento permanente. ISR Sorteos"
+  },
+  {
+    "q": "¿Qué pago realizas con el formulario SAT-1341?",
+    "a": "Impuesto Sobre la Renta de las rentas provenientes de loterías, rifas, sorteos, bingos o eventos similares."
+  },
+  {
+    "q": "¿Qué otros formularios debo presentar?",
+    "a": "Cuando corresponda deberás presentar el formulario SAT-7130 Impuesto del Timbre. Declaracion de ISR Retenciones"
+  },
+  {
+    "q": "¿Qué pago realizas con el formulario SAT-1331?",
+    "a": "Retenciones efectuadas del Impuesto Sobre la Renta a residentes y no residentes con establecimiento permanente."
+  },
+  {
+    "q": "¿Cada cuánto presento el formulario SAT-1331?",
+    "a": "Se debe presentar en los primeros 10 días hábiles del mes calendario siguiente al vencimiento de cada período impositivo."
+  },
+  {
+    "q": "¿Quiénes pueden utilizar el formulario SAT-1331?",
+    "a": "Quienes retengan el Impuesto sobre la Renta a contribuyentes que realicen Actividades Lucrativas, o bien que emitan Facturas Especiales, así como a quienes generen rentas del trabajo y de capital. ISR Pago Trimestral"
+  },
+  {
+    "q": "¿Qué otros formularios debo presentar?",
+    "a": "Debes presentar los formularios del Impuesto al Valor Agregado: SAT-2237 Pago Mensual y SAT-1411 Declaración Informativa Anual del ISR. Cuando corresponda deberás presentar el formulario SAT-1608 Pago Trimestral del ISO. Para saber el régimen al cual estas inscrito puedes consultarlo en tu constancia del RTU, haciendo clicAQUÍ."
+  },
+  {
+    "q": "¿Qué pago realizas con el formulario SAT-1361?",
+    "a": "Impuesto Sobre la Renta del Régimen sobre las Utilidades de Actividades Lucrativas."
+  },
+  {
+    "q": "¿Quiénes pueden utilizar el formulario SAT-1331?",
+    "a": "Quienes retengan el Impuesto sobre la Renta a contribuyentes que realicen Actividades Lucrativas, o bien que emitan Facturas Especiales, así como a quienes generen rentas del trabajo y de capital."
+  },
+  {
+    "q": "¿Qué otros formularios debo presentar?",
+    "a": "Debes presentar los formularios del Impuesto al Valor Agregado: SAT-2237 Pago Mensual y SAT-1411 Declaración Informativa Anual del ISR. Cuando corresponda deberás presentar el formulario SAT-1608 Pago Trimestral del ISO. Para saber el régimen al cual estas inscrito puedes consultarlo en tu constancia del RTU, haciendo clicAQUÍ."
+  },
+  {
+    "q": "¿Cada cuánto presento el formulario SAT-1361?",
+    "a": "El pago del impuesto trimestral se realiza dentro del mes siguiente a la finalización del trimestre que corresponda. Nota:El pago del cuarto trimestre se realizará juntamente con la Declaración Anual SAT-1411. Nota:"
+  },
+  {
+    "q": "¿Quiénes pueden utilizar el formulario SAT-1361?",
+    "a": "Los contribuyentes inscritos al Impuesto Sobre la Renta en el Régimen sobre las Utilidades de Actividades Lucrativas."
+  },
+  {
+    "q": "¿Qué otros formularios debo presentar?",
+    "a": "Debes presentar los formularios del Impuesto al Valor Agregado: SAT-2237 Pago Mensual y SAT-1411 Declaración Informativa Anual del ISR. Cuando corresponda deberás presentar el formulario SAT-1608 Pago Trimestral del ISO. Para saber el régimen al cual estas inscrito puedes consultarlo en tu constancia del RTU, haciendo clicAQUÍ. ISR en Relación de Dependencia"
+  },
+  {
+    "q": "¿Quiénes pueden utilizar el formulario SAT-1431?",
+    "a": "Empleados en relación de dependencia cuando el patrono no le efectuó retención o cuando el patrono le efectuó retenciones menores a las correspondientes."
+  },
+  {
+    "q": "Se puede incluir el traspaso de un vehículo en la planilla de SAT?",
+    "a": "No se puede incluir dentro de la planilla del IVA este dato. Retenciones Pago Directo"
+  },
+  {
+    "q": "¿Qué pago realizas con el formulario SAT-1371?",
+    "a": "Impuesto Sobre la Renta de Personas No Residentes Sin Establecimiento Permanente en Guatemala que no fueron objeto de Retención."
+  },
+  {
+    "q": "¿Cada cuánto presento el formulario SAT-1371?",
+    "a": "Se debe presentar en los primeros 10 días hábiles del mes calendario siguiente en que ocurra el pago o acreditamiento bancario."
+  },
+  {
+    "q": "¿Quiénes pueden utilizar el formulario SAT-1371?",
+    "a": "Contribuyentes no residentes sin establecimiento permanente que perciban rentas gravadas en el territorio guatemalteco y que no fueron objeto de retención. Pago de IVA Mensual"
+  },
+  {
+    "q": "¿Cómo saber que tipo de IVA debo pagar?",
+    "a": "Puedes consultar si estás inscrito en el Régimen de IVA, ingresandoAQUÍ."
+  },
+  {
+    "q": "¿Cómo presento un formulario con valor cero (Q0.00)?",
+    "a": "Cuando concluyas de llenar el formulario deberás validarlo y congelarlo, y se habilitará la opción «Presentar Formulario», si eres persona individual ingresa fecha de nacimiento y si eres persona jurídica ingresa la fecha de constitución de la empresa."
+  },
+  {
+    "q": "¿Cómo rectificó un formulario ya presentado?",
+    "a": "Si necesitas corregir o modificar información de una declaración ya presentada, debes llenar un nuevo formulario con los datos modificados y en el apartado de «Rectificación» deberás colocar el número de formulario que presentaste anteriormente."
+  },
+  {
+    "q": "¿Cómo lleno el formulario SAT-2085?",
+    "a": "Nota:No olvides pagar la retención del ISR utilizando el formulario SAT-1331. Nota:"
+  },
+  {
+    "q": "¿Qué pago realizas con el formulario SAT-2085?",
+    "a": "Impuesto al Valor Agregado de las retenciones efectuadas al emitir facturas especiales."
+  },
+  {
+    "q": "¿Qué otros formularios debo presentar?",
+    "a": "Debes presentar el formulario SAT-1331 para el pago de la retención del ISR en facturas especiales, en los primeros 10 días hábiles del mes calendario siguiente al vencimiento de cada período impositivo."
+  },
+  {
+    "q": "¿Cada cuánto presento el formulario SAT-2085?",
+    "a": "Se debe presentar dentro del mes calendario siguiente al del vencimiento de cada período impositivo en el caso que hayas realizado una retención del IVA."
+  },
+  {
+    "q": "¿Qué otros formularios debo presentar?",
+    "a": "Debes presentar el formulario SAT-1331 para el pago de la retención del ISR en facturas especiales, en los primeros 10 días hábiles del mes calendario siguiente al vencimiento de cada período impositivo."
+  },
+  {
+    "q": "¿Quiénes pueden utilizar el formulario SAT-2085?",
+    "a": "Los contribuyentes que retengan impuesto del IVA en facturas especiales. Pago de IVA Pequeño Contribuyente"
+  },
+  {
+    "q": "¿Cada cuánto presento el formulario SAT-2046?",
+    "a": "Se debe presentar dentro del mes calendario siguiente al del vencimiento de cada período impositivo. Ejemplo:la declaración mensual de enero la presentaras en febrero. Ejemplo:"
+  },
+  {
+    "q": "¿Cómo lleno el formulario SAT-2046?",
+    "a": "Nota:Recuerda que, si tienes una constancia de retención del IVA recibida en el mes de la declaración, la deberás reportar dentro del formulario. Nota:"
+  },
+  {
+    "q": "¿Qué pago realizas con el formulario SAT-2046?",
+    "a": "Impuesto al Valor Agregado del Régimen de Pequeño Contribuyente. Conoce la guía de pequeño contribuyente Puedes conocer la guía del pequeño contribuyente haciendoclic AQUÍ."
+  },
+  {
+    "q": "¿Quiénes pueden utilizar el formulario SAT-2046?",
+    "a": "Los contribuyentes inscritos en el Régimen de Pequeño Contribuyente, que en un período fiscal (de enero a diciembre) facturan menos de Q500,285.00 Pago de IVA Pequeño Contribuyente Formulario 2241"
+  },
+  {
+    "q": "¿Qué pago realizas con el formulario SAT-2241?",
+    "a": "Impuesto al Valor Agregado del Régimen Electrónico de Pequeño Contribuyente."
+  },
+  {
+    "q": "¿Cada cuánto presento el formulario SAT-2241?",
+    "a": "Se debe presentar dentro del mes calendario siguiente al vencimiento de cada período impositivo.Ejemplo:la declaración mensual de enero la presentaras en febrero. Ejemplo: Nota:Para que se aplique la tarifa del 4% debes presentar el formulario en los primeros 10 días hábiles del mes calendario siguiente al vencimiento de cada período impositivo, de lo contrario se aplicará la tarifa del 5%. Nota:"
+  },
+  {
+    "q": "¿Quiénes pueden utilizar el formulario SAT-2241?",
+    "a": "Los contribuyentes que estén registrados al Régimen Electrónico de Pequeño Contribuyente, que en un período fiscal (de enero a diciembre) facturan menos de Q150,000 Pago de IVA Pequeño Contribuyente Regimen Especial Agropecuario Electronico"
+  },
+  {
+    "q": "¿Qué pago realizas con el formulario SAT-2290?",
+    "a": "Impuesto al Valor Agregado del Régimen Electrónico Especial de Contribuyente Agropecuario."
+  },
+  {
+    "q": "¿Cada cuánto presento el formulario SAT-2290?",
+    "a": "Se debe presentar dentro del mes calendario siguiente al vencimiento de cada período impositivo.Ejemplo:la declaración mensual de enero la presentaras en febrero. Ejemplo: Nota:Para que se aplique la tarifa del 4% debes presentar el formulario en los primeros 10 días hábiles del mes calendario siguiente al vencimiento de cada período impositivo, de lo contrario se aplicará la tarifa del 5%. Nota:"
+  },
+  {
+    "q": "¿Quiénes pueden utilizar el formulario SAT-2290?",
+    "a": "Los contribuyentes que se dedican a la crianza, compra, venta o engorde de ganado vacuno, equino, porcino y caprino y estén afiliados al Régimen Electrónico Especial de Contribuyente Agropecuario. Pago de IVA Pequeño Contribuyente Regimen Especial Agropecuario"
+  },
+  {
+    "q": "¿Cómo se lleno el formulario SAT-2280?",
+    "a": "Nota: Nota:"
+  },
+  {
+    "q": "¿Qué pago realizas con el formulario SAT-2280?",
+    "a": "Impuesto al Valor Agregado del Régimen Especial de Contribuyente Agropecuario."
+  },
+  {
+    "q": "¿Cada cuánto presento el formulario SAT-2280?",
+    "a": "Se debe presentar dentro del mes calendario siguiente al vencimiento de cada período impositivo. <b> Ejemplo:</b> la declaración mensual de enero la presentaras en febrero."
+  },
+  {
+    "q": "¿Quiénes pueden utilizar el formulario SAT-2280?",
+    "a": "Los contribuyentes que se dedican a la crianza, compra, venta o engorde de ganado vacuno, equino, porcino y caprino, y registrados en el Régimen Especial de Contribuyente Agropecuario. Planilla IVA FEL"
+  },
+  {
+    "q": "¿Qué es Planilla IVA-FEL?",
+    "a": "Planilla IVA-FEL es una herramienta dirigida a las personas individuales en relación de dependencia que desean realizar la presentación de la planilla, conteniendo el detalle de facturas, que les permite optar por la deducción de la renta neta y acreditar hasta Q12,000.00 por el Impuesto al Valor Agregado pagado en gastos personales, por compras de bienes o adquisición de servicios, durante el período de liquidación definitiva anual y se debe presentar dentro de los primeros diez (10) días hábiles del mes de enero de cada año, tiene como insumo principal la Factura Electrónica en Línea (FEL) y se encuentra disponible en la Agencia Virtual. Base Legal:Artículo 72 del Decreto Número 10-2012 del Congreso de la República de Guatemala, Ley de Actualización Tributaria. Base Legal:"
+  },
+  {
+    "q": "¿Para qué sirve Planilla IVA-FEL?",
+    "a": "Planilla IVA-FEL tiene como insumo principal la Factura Electrónica en Línea (FEL) y se encuentra disponible en la Agencia Virtual. Dirigido a las personas individuales en relación de dependencia que desean realizar la presentación de la planilla, conteniendo el detalle de facturas, que les permite optar por la deducción de la renta neta y acreditar hasta Q12,000.00 por el Impuesto al Valor Agregado pagado en gastos personales, por compras de bienes o adquisición de servicios, durante el período de liquidación definitiva anual y que deberán de presentarse dentro de los primeros diez (10) días hábiles del mes de enero de cada año. Base Legal:Artículo 72 del Decreto Número 10-2012 del Congreso de la República de Guatemala, Ley de Actualización Tributaria. Base Legal:"
+  },
+  {
+    "q": "Puedo ingresar facturas en papel en mi Planilla IVA-FEL?",
+    "a": "Ahora las Facturas Electrónicas en Línea (FEL) que solicite con su NIT o CUI se cargarán de forma automática."
+  },
+  {
+    "q": "¿Puedo incluir el formulario de IVA traspaso en la Planilla IVA-FEL?",
+    "a": "Los siguientes formularios se muestran automáticos:"
+  },
+  {
+    "q": "¿Puedo ingresas Facturas de Pequeño Contribuyente a Planilla IVA-FEL?",
+    "a": "Las facturas de los siguientes Regímenes no están incluidas dentro de Planilla IVA-FEL: – Facturas de Pequeño Contribuyente– Facturas Régimen Electrónico de Pequeño Contribuyente– Facturas Régimen Especial de Contribuyente Agropecuario– Facturas Régimen Electrónico de Pequeño Contribuyente– Facturas Régimen Electrónico Especial de Contribuyente Agropecuario En virtud, que los documentos anteriores no generan derecho a Crédito Fiscal, Artículos 49, 54 “C” y 54 “E” del Decreto Número 27-92 del Congreso de la República de Guatemala, Ley del Impuesto al Valor Agregado."
+  },
+  {
+    "q": "¿Cómo presento la Planilla del IVA?",
+    "a": "Ingresa a tu Agencia Virtual, selecciona el menú Servicios Tributarios > Planilla IVA-FEL puedes encontrar el manualaquí La opción “Presentar planilla” se habilitará automáticamente a partir del 1 de enero y se inhabilita el décimo día hábil de enero de cada año."
+  },
+  {
+    "q": "¿Qué necesito para utilizar Planilla IVA-FEL?",
+    "a": "Requisitos para acceder a Planilla IVA-FEL: Se recomienda actualizar o ratificar datos cada año en el RTU Digital, antes de la fecha de presentación de la planilla."
+  },
+  {
+    "q": "¿Cuándo se presenta Planilla IVA-FEL?",
+    "a": "Deberá presentarse ante la Administración Tributaria a través de Planilla IVA-FEL, dentro de los primeros diez (10) días hábiles del mes de enero de cada año.Base Legal: Artículo 72 del Decreto Número 10-2012 del Congreso de la República de Guatemala, Ley de Actualización Tributaria."
+  },
+  {
+    "q": "¿Todas las facturas recibidas estarán dentro de mi Planilla IVA-FEL?",
+    "a": "Es correcto todas las facturas solicitadas con CUI o NIT, se cargarán de forma automática a tu Planilla IVA-FEL.A excepción de las facturas de pequeño contribuyente las cuales no generan derecho a crédito fiscal, por lo tanto no se incluyen en Planilla IVA-FEL. Base Legal:Artículos 49, 54 “C” y 54 “E” del Decreto Número 27-92 del Congreso de la República de Guatemala, Ley del Impuesto al Valor Agregado. Base Legal:"
+  },
+  {
+    "q": "¿Qué pasa si no presento la Planilla del IVA?",
+    "a": "La no presentación en la fecha indicada por la ley, hacen improcedente el acreditamiento al Impuesto al Valor Agregado pagado en gastos personales, por compra de bienes y adquisición de servicios como deducción al Impuesto Sobre la Renta."
+  },
+  {
+    "q": "¿Qué beneficios obtengo al presentar Planilla IVA-FEL?",
+    "a": "La herramienta tiene como insumo principal las Facturas Electrónicas en Línea, que permite visualizar de forma automática el IVA pagado, así como los formularios de Declaraguate, por lo que facilita la presentación de la planilla del IVA."
+  },
+  {
+    "q": "¿Qué comprobante le queda al contribuyente presentar Planilla IVA-FEL por medio de la Agencia Virtual?",
+    "a": "Recibirá la notificación electrónica de recepción de Planilla IVA-FEL al correo electrónico registrado, la cual deberá presentar al patrono."
+  },
+  {
+    "q": "¿Quiénes pueden presentar Planilla IVA-FEL?",
+    "a": "Todas las personas individuales que presten servicios en relación de dependencia podrán deducir a la renta neta, el Impuesto al Valor Agregado pagado en gastos personales por la compra de bienes y adquisición de servicios. Después de afiliarme al régimen asalariado de ISR. ¿Cuánto tiempo debo esperar para visualizar mis Documentos Tributarios Electrónicos en la planilla IVA-FEL? En un lapso de 24 horas posteriores a su afiliación, el sistema realizará la carga de los Documentos Tributarios Electrónicos que ha solicitado con su NIT o CUI. IVA Regimén General Anexo al formulario SAT-2237 Este Anexo es un detalle de las facturas especiales emitidas por los contribuyentes que realizan exportaciones y emiten facturas especiales."
+  },
+  {
+    "q": "¿Qué otros formularios debo presentar?",
+    "a": "Si estas afiliado al ISR en el Régimen Opcional Simplificado sobre ingresos de actividades lucrativas debes presentar los formularios SAT-1311 Pago Mensual y SAT-1411 Declaración Informativa Anual. Si estas afiliado al ISR en el Régimen sobre utilidades de actividades lucrativas deberás presentar los formularios SAT-1361 Pago Trimestral y SAT-1411 Declaración Anual. Cuando corresponda deberás presentar el formulario SAT-1608 Pago Trimestral del ISO. Para saber el régimen al cual estas inscrito puedes consultarlo en tu constancia del RTU, haciendoclic AQUÍ. Archivo en Excel del Anexo SAT-2237 Al llenar el Anexo SAT-2237 ten en cuenta que deberás cargar un archivo en formato Excel 2003 (.xls). El archivo debe contener las siguientes columnas: 1) Tipo de identificación2) Número de identificación3) Apellidos y nombres,4) Serie5) Número de documento6) Monto facturado7) Total retención"
+  },
+  {
+    "q": "¿Qué otros formularios debo presentar?",
+    "a": "Si estas afiliado al ISR en el Régimen Opcional Simplificado sobre ingresos de actividades lucrativas debes presentar los formularios SAT-1311 Pago Mensual y SAT-1411 Declaración Informativa Anual. Si estas afiliado al ISR en el Régimen sobre utilidades de actividades lucrativas deberás presentar los formularios SAT-1361 Pago Trimestral y SAT-1411 Declaración Anual. Cuando corresponda deberás presentar el formulario SAT-1608 Pago Trimestral del ISO. Para saber el régimen al cual estas inscrito puedes consultarlo en tu constancia del RTU, haciendoclic AQUÍ."
+  },
+  {
+    "q": "¿Cómo lleno el formulario SAT-2237?",
+    "a": "Nota:si eres exportador y emitiste facturas especiales, no olvides llenar el Anexo SAT-2237 previamente. Nota:"
+  },
+  {
+    "q": "¿Qué otros formularios debo presentar?",
+    "a": "Si estas afiliado al ISR en el Régimen Opcional Simplificado sobre ingresos de actividades lucrativas debes presentar los formularios SAT-1311 Pago Mensual y SAT-1411 Declaración Informativa Anual. Si estas afiliado al ISR en el Régimen sobre utilidades de actividades lucrativas deberás presentar los formularios SAT-1361 Pago Trimestral y SAT-1411 Declaración Anual. Cuando corresponda deberás presentar el formulario SAT-1608 Pago Trimestral del ISO. Para saber el régimen al cual estas inscrito puedes consultarlo en tu constancia del RTU, haciendoclic AQUÍ."
+  },
+  {
+    "q": "¿Cómo ingresar la información de proveedores?",
+    "a": "El apartado de proveedores que se encuentra en el formulario SAT-2237, es para períodos de enero 2019 a mayo 2022. Para más información descarga el instructivo haciendoclic AQUÍ."
+  },
+  {
+    "q": "¿Sí extravié el número de acceso del formulario?",
+    "a": "Ingresa a tu Agencia Virtual y selecciona las siguientes opciones: 1. El botón de “Consultas” en el menú izquierdo de la pantalla 2. La sección “Declaraciones Tributarias” 3. La opción “Formularios presentados/pagados” Nota:El sistema mostrará los formularios que se presentaron en el rango de fechas que ingresaste. Nota:"
+  },
+  {
+    "q": "¿Qué pago realizas con el formulario SAT-2237?",
+    "a": "Con este formulario cancelaras el Impuesto al Valor Agregado del Régimen General."
+  },
+  {
+    "q": "¿Qué otros formularios debo presentar?",
+    "a": "Si estas afiliado al ISR en el Régimen Opcional Simplificado sobre ingresos de actividades lucrativas debes presentar los formularios SAT-1311 Pago Mensual y SAT-1411 Declaración Informativa Anual. Si estas afiliado al ISR en el Régimen sobre utilidades de actividades lucrativas deberás presentar los formularios SAT-1361 Pago Trimestral y SAT-1411 Declaración Anual. Cuando corresponda deberás presentar el formulario SAT-1608 Pago Trimestral del ISO. Para saber el régimen al cual estas inscrito puedes consultarlo en tu constancia del RTU, haciendoclic AQUÍ."
+  },
+  {
+    "q": "¿Quiénes pueden utilizar el formulario SAT-2237?",
+    "a": "Los contribuyentes inscritos al Régimen General del Impuesto al Valor Agregado que realizan operaciones locales, de exportación y/o transferencia que facturan en un período fiscal (de enero a diciembre) más de Q150,000"
+  },
+  {
+    "q": "¿Qué otros formularios debo presentar?",
+    "a": "Si estas afiliado al ISR en el Régimen Opcional Simplificado sobre ingresos de actividades lucrativas debes presentar los formularios SAT-1311 Pago Mensual y SAT-1411 Declaración Informativa Anual. Si estas afiliado al ISR en el Régimen sobre utilidades de actividades lucrativas deberás presentar los formularios SAT-1361 Pago Trimestral y SAT-1411 Declaración Anual. Cuando corresponda deberás presentar el formulario SAT-1608 Pago Trimestral del ISO. Para saber el régimen al cual estas inscrito puedes consultarlo en tu constancia del RTU, haciendoclic AQUÍ. IPRIMA"
+  },
+  {
+    "q": "Como pago el IPRIMA?",
+    "a": "Formulario SAT-4041 IPRIMA Unitario o Formulario SAT-4081 IPRIMA Múltiple. Nota:Al realizar la gestión en la ventanilla se te entregará la contraseña para el pago del Impuesto de Circulación de vehículos. Nota:"
+  }
+]
