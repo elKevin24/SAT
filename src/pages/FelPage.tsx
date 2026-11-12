@@ -218,64 +218,306 @@ export const FelPage: React.FC<FelPageProps> = ({ onBackToHome, initialTab = 'hu
 
         {/* ======================================================== */}
         {/* VISTA 2: HABILITACIÓN DE EMISORES (/portal/emisor-de-dte/) */}
+        {/* Estándar ATO: "Before you start" + "Step-by-step" +       */}
+        {/* "What happens next" + 100% Contenido Real del Portal SAT  */}
         {/* ======================================================== */}
         {currentTab === 'emisor' && (
-          <section className="space-y-6">
-            <header className="bg-sat-blanco rounded-2xl border border-sat-gris p-6 sm:p-8 shadow-sat-sm space-y-3">
-              <h1 className="text-2xl sm:text-3xl font-black text-sat-azul-oscuro">
-                Habilitarme como emisor de facturas (FEL)
-              </h1>
-              <p className="text-sm text-sat-texto-suave leading-relaxed max-w-3xl">
-                Cualquier persona individual o empresa puede habilitarse como emisor de facturas de forma gratuita. La SAT te proporciona la firma digital y el facturador web sin costo alguno.
-              </p>
+          <div className="space-y-8">
+            
+            {/* Encabezado Principal con Metadatos ATO (Costo y Tiempo) */}
+            <header className="bg-sat-blanco rounded-2xl border border-sat-gris p-6 sm:p-8 shadow-sat-sm space-y-4">
+              <div className="space-y-2">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sat-azul/10 text-sat-azul text-xs font-bold">
+                  <span>Habilitación Oficial en Línea</span>
+                  <span>•</span>
+                  <span>100% Gratuito</span>
+                </div>
+                <h1 className="text-2xl sm:text-3xl font-black text-sat-azul-oscuro">
+                  Habilitarme como emisor de facturas (FEL)
+                </h1>
+                <p className="text-sm text-sat-texto-suave leading-relaxed max-w-3xl">
+                  Un emisor es la persona o empresa facultada para emitir y entregar facturas, recibos y notas de crédito electrónicas (DTE) a sus clientes desde la Agencia Virtual, la App FEL o sus propios sistemas contables.
+                </p>
+              </div>
+
+              {/* Ficha Resumen Rápida ATO */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 border-t border-sat-gris text-xs">
+                <div>
+                  <span className="text-sat-texto-suave block">Costo de la gestión:</span>
+                  <strong className="text-sat-azul-oscuro text-sm font-black">Gratuito (Q 0.00)</strong>
+                </div>
+                <div>
+                  <span className="text-sat-texto-suave block">Tiempo estimado:</span>
+                  <strong className="text-sat-azul-oscuro text-sm font-black">Menos de 5 minutos</strong>
+                </div>
+                <div>
+                  <span className="text-sat-texto-suave block">Vigencia de firma digital:</span>
+                  <strong className="text-sat-azul-oscuro text-sm font-black">Indefinida (Renovación web)</strong>
+                </div>
+              </div>
             </header>
 
-            {/* 3 Pasos con Visual Chunking */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div className="bg-sat-blanco border border-sat-gris rounded-2xl p-6 space-y-3">
-                <span className="text-xs font-bold text-sat-azul uppercase tracking-wider block">Paso 1</span>
-                <h3 className="text-base font-bold text-sat-azul-oscuro">Tener usuario de Agencia Virtual</h3>
-                <p className="text-xs text-sat-texto-suave leading-relaxed">
-                  Ingresa con tu usuario y contraseña a la Agencia Virtual de la SAT. Si aún no tienes usuario, solicítalo en línea con tu DPI.
+            {/* 1. ATO "BEFORE YOU START": Requisitos Mínimos Indispensables */}
+            <section aria-labelledby="before-start-heading" className="bg-sat-blanco rounded-2xl border border-sat-gris p-6 sm:p-8 shadow-sat-sm space-y-4">
+              <div className="space-y-1">
+                <span className="text-xs font-bold text-sat-azul uppercase tracking-wider">
+                  Antes de empezar (Before you start)
+                </span>
+                <h2 id="before-start-heading" className="text-lg sm:text-xl font-bold text-sat-azul-oscuro">
+                  ¿Qué necesitas tener listo antes de iniciar la gestión?
+                </h2>
+                <p className="text-xs sm:text-sm text-sat-texto-suave">
+                  Verifica que cumples con estos tres requisitos previos para completar tu habilitación sin contratiempos:
                 </p>
               </div>
-              <div className="bg-sat-blanco border border-sat-gris rounded-2xl p-6 space-y-3">
-                <span className="text-xs font-bold text-sat-azul uppercase tracking-wider block">Paso 2</span>
-                <h3 className="text-base font-bold text-sat-azul-oscuro">Generar tu firma electrónica gratuita</h3>
-                <p className="text-xs text-sat-texto-suave leading-relaxed">
-                  En el menú de Servicios Tributarios, ingresa a Factura Electrónica y genera tu contraseña para firmar tus comprobantes digitales.
-                </p>
-              </div>
-              <div className="bg-sat-blanco border border-sat-gris rounded-2xl p-6 space-y-3">
-                <span className="text-xs font-bold text-sat-azul uppercase tracking-wider block">Paso 3</span>
-                <h3 className="text-base font-bold text-sat-azul-oscuro">Emitir tu primera factura</h3>
-                <p className="text-xs text-sat-texto-suave leading-relaxed">
-                  Escribe el NIT de tu cliente, ingresa el producto o servicio y emite de inmediato desde tu computadora o la app móvil.
-                </p>
-              </div>
-            </div>
 
-            {/* Canales Oficiales */}
-            <div className="bg-sat-blanco rounded-2xl border border-sat-gris p-6 sm:p-8 space-y-4">
-              <h2 className="text-lg font-bold text-sat-azul-oscuro">Canales disponibles para emitir</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5">
+                <div className="p-4 rounded-xl border border-sat-gris bg-sat-fondo-tenue space-y-1.5">
+                  <h3 className="text-sm font-bold text-sat-azul-oscuro">1. NIT Activo</h3>
+                  <p className="text-xs text-sat-texto-suave leading-relaxed">
+                    Tener tu Número de Identificación Tributaria (NIT) en estado activo y sin declaraciones pendientes u omisos en la SAT.
+                  </p>
+                </div>
+                <div className="p-4 rounded-xl border border-sat-gris bg-sat-fondo-tenue space-y-1.5">
+                  <h3 className="text-sm font-bold text-sat-azul-oscuro">2. Usuario de Agencia Virtual</h3>
+                  <p className="text-xs text-sat-texto-suave leading-relaxed">
+                    Contar con acceso activo a la Agencia Virtual. Si no tienes usuario, puedes solicitarlo en línea con tu DPI vigente.
+                  </p>
+                </div>
+                <div className="p-4 rounded-xl border border-sat-gris bg-sat-fondo-tenue space-y-1.5">
+                  <h3 className="text-sm font-bold text-sat-azul-oscuro">3. Datos de RTU al Día</h3>
+                  <p className="text-xs text-sat-texto-suave leading-relaxed">
+                    Información actualizada en el Registro Tributario Unificado (RTU) con un negocio o actividad económica registrada.
+                  </p>
+                </div>
+              </div>
+
+              <div className="pt-2 flex flex-wrap gap-3">
+                <Button 
+                  variant="outline" 
+                  size="sm"
+                  onClick={() => window.open('https://portal.sat.gob.gt/portal/descarga/15746/emisores-dte/77271/guia-de-requisitos-minimos-dte-3.pdf', '_blank')}
+                >
+                  <ExternalLink className="w-3.5 h-3.5 mr-1.5" />
+                  <span>Descargar guía oficial de requisitos mínimos DTE (PDF)</span>
+                </Button>
+                <Button 
+                  variant="outline" 
+                  size="sm"
+                  onClick={() => window.open('https://portal.sat.gob.gt/portal/descarga/14792/registro-de-emisores-fel/96594/habilitados-al-31-08-2026', '_blank')}
+                >
+                  <ExternalLink className="w-3.5 h-3.5 mr-1.5" />
+                  <span>Consultar Registro de Emisores Habilitados (XLSX)</span>
+                </Button>
+              </div>
+            </section>
+
+            {/* 2. ATO "STEP-BY-STEP": Pasos Secuenciales de Habilitación */}
+            <section aria-labelledby="pasos-heading" className="bg-sat-blanco rounded-2xl border border-sat-gris p-6 sm:p-8 shadow-sat-sm space-y-6">
+              <div className="space-y-1">
+                <span className="text-xs font-bold text-sat-azul uppercase tracking-wider">
+                  Paso a paso (Step-by-step navigation)
+                </span>
+                <h2 id="pasos-heading" className="text-lg sm:text-xl font-bold text-sat-azul-oscuro">
+                  Cómo habilitarte como emisor en 3 pasos
+                </h2>
+                <p className="text-xs sm:text-sm text-sat-texto-suave">
+                  Sigue esta secuencia en tu Agencia Virtual. Al finalizar, tu certificado estará activo de inmediato.
+                </p>
+              </div>
+
+              <div className="space-y-4">
+                
+                {/* Paso 1 */}
+                <div className="border border-sat-gris rounded-xl p-5 bg-sat-fondo-tenue space-y-2">
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-bold px-2 py-0.5 rounded-md bg-[#14649B] text-white">Paso 01</span>
+                    <span className="text-xs text-sat-texto-suave font-medium">Ubicación: Menú Servicios</span>
+                  </div>
+                  <h3 className="text-base font-bold text-sat-azul-oscuro">
+                    Ingresar a la sección Factura Electrónica en Agencia Virtual
+                  </h3>
+                  <p className="text-xs text-sat-texto-suave leading-relaxed">
+                    Inicia sesión en tu <strong>Agencia Virtual</strong>. En el menú superior izquierdo, haz clic en <strong>Servicios Tributarios</strong>, busca el módulo <strong>Factura Electrónica en Línea (FEL)</strong> y selecciona la opción <strong>Habilitarse como Emisor</strong>.
+                  </p>
+                </div>
+
+                {/* Paso 2 */}
+                <div className="border border-sat-gris rounded-xl p-5 bg-sat-fondo-tenue space-y-2">
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-bold px-2 py-0.5 rounded-md bg-[#14649B] text-white">Paso 02</span>
+                    <span className="text-xs text-sat-texto-suave font-medium">Acción: Generación de Llaves</span>
+                  </div>
+                  <h3 className="text-base font-bold text-sat-azul-oscuro">
+                    Aceptar los términos y generar tu firma electrónica gratuita
+                  </h3>
+                  <p className="text-xs text-sat-texto-suave leading-relaxed">
+                    Acepta las condiciones del régimen FEL. El sistema te pedirá definir una <strong>contraseña para tu firma digital</strong>. Esta clave es privada y servirá para certificar cada factura que emitas desde cualquier dispositivo.
+                  </p>
+                </div>
+
+                {/* Paso 3 */}
+                <div className="border border-sat-gris rounded-xl p-5 bg-sat-fondo-tenue space-y-2">
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-bold px-2 py-0.5 rounded-md bg-[#14649B] text-white">Paso 03</span>
+                    <span className="text-xs text-sat-texto-suave font-medium">Resultado: Certificado Emitido</span>
+                  </div>
+                  <h3 className="text-base font-bold text-sat-azul-oscuro">
+                    Confirmación de acreditación y descarga de constancia
+                  </h3>
+                  <p className="text-xs text-sat-texto-suave leading-relaxed">
+                    Haz clic en <strong>Confirmar Habilitación</strong>. La SAT generará tu certificado de emisor al instante. Guarda tu constancia en PDF para tu registro contable.
+                  </p>
+                </div>
+
+              </div>
+
+              {/* Botón de Inicio Inmediato */}
+              <div className="pt-2">
+                <Button 
+                  variant="primary" 
+                  size="md"
+                  onClick={() => window.open('https://agenciavirtual.sat.gob.gt/', '_blank')}
+                >
+                  <ExternalLink className="w-4 h-4 mr-2" />
+                  <span>Iniciar habilitación en Agencia Virtual</span>
+                </Button>
+              </div>
+            </section>
+
+            {/* 3. ATO "WHAT HAPPENS NEXT": ¿Qué pasa después? */}
+            <section aria-labelledby="next-heading" className="bg-sat-blanco rounded-2xl border border-sat-gris p-6 sm:p-8 shadow-sat-sm space-y-4">
+              <div className="space-y-1">
+                <span className="text-xs font-bold text-sat-azul uppercase tracking-wider">
+                  Continuidad (What happens next)
+                </span>
+                <h2 id="next-heading" className="text-lg sm:text-xl font-bold text-sat-azul-oscuro">
+                  ¿Qué debes hacer una vez habilitado?
+                </h2>
+                <p className="text-xs sm:text-sm text-sat-texto-suave">
+                  Tu estado de emisor queda activo inmediatamente. Ya puedes elegir cómo facturar:
+                </p>
+              </div>
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="p-5 rounded-xl border border-sat-gris bg-sat-fondo-tenue space-y-2">
-                  <h3 className="text-sm font-bold text-sat-azul-oscuro">Agencia Virtual Web</h3>
-                  <p className="text-xs text-sat-texto-suave">Ideal para computadoras de escritorio, negocios con inventario o emisión con múltiples líneas de detalle.</p>
-                  <Button variant="primary" size="sm" onClick={() => window.open('https://agenciavirtual.sat.gob.gt/', '_blank')}>
-                    <span>Ir a Agencia Virtual</span>
-                  </Button>
+                  <h3 className="text-sm font-bold text-sat-azul-oscuro">Opción A: Facturar desde la Web</h3>
+                  <p className="text-xs text-sat-texto-suave">
+                    Ingresa nuevamente a tu Agencia Virtual y haz clic en <strong>Emitir DTE</strong>. Podrás desglosar ítems, aplicar descuentos y guardar clientes frecuentes.
+                  </p>
                 </div>
                 <div className="p-5 rounded-xl border border-sat-gris bg-sat-fondo-tenue space-y-2">
-                  <h3 className="text-sm font-bold text-sat-azul-oscuro">App Móvil FEL (Celulares)</h3>
-                  <p className="text-xs text-sat-texto-suave">Facturación al instante desde tu teléfono Android o iPhone. Comparte comprobantes por WhatsApp o correo.</p>
-                  <Button variant="outline" size="sm" onClick={() => window.open('https://portal.sat.gob.gt/portal/emisor-de-dte/', '_blank')}>
-                    <span>Ver instructivo de instalación</span>
-                  </Button>
+                  <h3 className="text-sm font-bold text-sat-azul-oscuro">Opción B: Facturar desde el Celular</h3>
+                  <p className="text-xs text-sat-texto-suave">
+                    Descarga la aplicación <strong>App FEL</strong> en tu teléfono Android o iOS. Ingresa con tu NIT y contraseña de Agencia Virtual para facturar en tu negocio.
+                  </p>
                 </div>
               </div>
-            </div>
-          </section>
+            </section>
+
+            {/* 4. REPOSITORIO COMPLETO DE MANUALES OFICIALES SAT (Organizados por Categoría) */}
+            <section aria-labelledby="manuales-heading" className="bg-sat-blanco rounded-2xl border border-sat-gris p-6 sm:p-8 shadow-sat-sm space-y-5">
+              <div className="space-y-1">
+                <span className="text-xs font-bold text-sat-azul uppercase tracking-wider">
+                  Biblioteca Oficial de Manuales
+                </span>
+                <h2 id="manuales-heading" className="text-lg sm:text-xl font-bold text-sat-azul-oscuro">
+                  Manuales oficiales para emisores de facturas
+                </h2>
+                <p className="text-xs sm:text-sm text-sat-texto-suave">
+                  Guías paso a paso descargables en formato PDF publicadas por la SAT:
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                {/* Grupo A: Habilitación y Permisos */}
+                <div className="space-y-3">
+                  <h3 className="text-xs font-bold text-sat-azul-oscuro uppercase tracking-wider border-b border-sat-gris pb-1">
+                    Habilitación, Consulta y Permisos
+                  </h3>
+                  <ul className="text-xs text-sat-texto-suave space-y-2 leading-relaxed">
+                    <li>
+                      • <a href="https://portal.sat.gob.gt/portal/descarga/15747/manuales/85784/1-manual-de-usuario-fel-habilitacion-acreditacion-descarga-de-firma-electronica-2.pdf" target="_blank" rel="noopener noreferrer" className="text-sat-azul hover:underline font-medium">Manual de Habilitación, Acreditación y Descarga de Firma</a>
+                    </li>
+                    <li>
+                      • <a href="https://portal.sat.gob.gt/portal/descarga/15747/manuales/92749/manual-de-usuario-app-fel-3" target="_blank" rel="noopener noreferrer" className="text-sat-azul hover:underline font-medium">Manual de Usuario APP Móvil FEL</a>
+                    </li>
+                    <li>
+                      • <a href="https://portal.sat.gob.gt/portal/descarga/15747/manuales/85785/3-manual-de-consulta-de-documentos-tributarios-electronicos-dte.pdf" target="_blank" rel="noopener noreferrer" className="text-sat-azul hover:underline font-medium">Manual de Consulta de Facturas y Comprobantes (DTE)</a>
+                    </li>
+                    <li>
+                      • <a href="https://portal.sat.gob.gt/portal/descarga/15747/manuales/92747/4-manual-de-usuario-fel-permisos-delegados-a-terceros" target="_blank" rel="noopener noreferrer" className="text-sat-azul hover:underline font-medium">Manual de Permisos Delegados a Terceros</a>
+                    </li>
+                    <li>
+                      • <a href="https://portal.sat.gob.gt/portal/descarga/15747/manuales/92759/manual-de-usuario-para-activar-el-servicio-de-notificaciones-fel" target="_blank" rel="noopener noreferrer" className="text-sat-azul hover:underline font-medium">Manual para Activar Notificaciones por Correo Electrónico</a>
+                    </li>
+                    <li>
+                      • <a href="https://portal.sat.gob.gt/portal/descarga/15747/manuales/92765/manuel-de-usuario-aviso-de-notificaciones-en-contingencia-fel" target="_blank" rel="noopener noreferrer" className="text-sat-azul hover:underline font-medium">Manual de Notificaciones de Contingencia (Sin Internet)</a>
+                    </li>
+                    <li>
+                      • <a href="https://portal.sat.gob.gt/portal/descarga/15747/manuales/92771/manual-de-usuario-aviso-de-emision-de-dte-en-establecimiento-temporal-4" target="_blank" rel="noopener noreferrer" className="text-sat-azul hover:underline font-medium">Manual de Emisión en Establecimientos Temporales o Ferias</a>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Grupo B: Emisión de Documentos Especiales */}
+                <div className="space-y-3">
+                  <h3 className="text-xs font-bold text-sat-azul-oscuro uppercase tracking-wider border-b border-sat-gris pb-1">
+                    Emisión y Operaciones Especiales
+                  </h3>
+                  <ul className="text-xs text-sat-texto-suave space-y-2 leading-relaxed">
+                    <li>
+                      • <a href="https://portal.sat.gob.gt/portal/descarga/15747/manuales/97342/manual-de-emision-de-documentos-tributarios-electronicos-dte-2" target="_blank" rel="noopener noreferrer" className="text-sat-azul hover:underline font-medium">Manual General de Emisión de Facturas y DTE</a>
+                    </li>
+                    <li>
+                      • <a href="https://portal.sat.gob.gt/portal/descarga/15747/manuales/93106/manual-emision-masiva-de-dte" target="_blank" rel="noopener noreferrer" className="text-sat-azul hover:underline font-medium">Manual de Emisión Masiva de Documentos</a>
+                    </li>
+                    <li>
+                      • <a href="https://portal.sat.gob.gt/portal/descarga/15747/manuales/93102/manual-de-emision-constancias-de-exension-de-iva-civa" target="_blank" rel="noopener noreferrer" className="text-sat-azul hover:underline font-medium">Manual de Constancias de Exención de IVA (CIVA)</a>
+                    </li>
+                    <li>
+                      • <a href="https://portal.sat.gob.gt/portal/descarga/15747/manuales/77266/manual-de-emision-de-constancias-de-adquisicion-de-insumos-y-servicios-cais.pdf" target="_blank" rel="noopener noreferrer" className="text-sat-azul hover:underline font-medium">Manual de Constancias de Compra Libre de Impuestos (CAIS)</a>
+                    </li>
+                    <li>
+                      • <a href="https://portal.sat.gob.gt/portal/descarga/15747/manuales/93108/manual-para-emision-de-factura-provisional" target="_blank" rel="noopener noreferrer" className="text-sat-azul hover:underline font-medium">Manual de Emisión de Factura Provisional</a>
+                    </li>
+                    <li>
+                      • <a href="https://portal.sat.gob.gt/portal/descarga/15747/manuales/97344/manual-de-anulacion-de-documentos-tributarios-electronicos-dte-3" target="_blank" rel="noopener noreferrer" className="text-sat-azul hover:underline font-medium">Manual de Anulación de Documentos Tributarios</a>
+                    </li>
+                    <li>
+                      • <a href="https://portal.sat.gob.gt/portal/descarga/15747/manuales/97346/manual-para-solicitar-reversion-de-anulacion-de-dte" target="_blank" rel="noopener noreferrer" className="text-sat-azul hover:underline font-medium">Manual para Reversión de Anulaciones de DTE</a>
+                    </li>
+                  </ul>
+                </div>
+
+              </div>
+            </section>
+
+            {/* 5. RESOLUCIONES DE INCORPORACIÓN POR SECTOR (Certeza Jurídica en Acordeón) */}
+            <section aria-labelledby="resoluciones-heading" className="bg-sat-blanco rounded-2xl border border-sat-gris p-5 sm:p-7 shadow-sat-sm">
+              <details className="group">
+                <summary className="cursor-pointer list-none flex items-center justify-between font-bold text-sm text-sat-azul-oscuro focus:outline-none focus-visible:ring-2 focus-visible:ring-sat-azul rounded-lg py-1">
+                  <span id="resoluciones-heading">
+                    Resoluciones oficiales de incorporación al Régimen FEL por sector
+                  </span>
+                  <span className="text-xs font-semibold text-sat-azul group-open:rotate-180 transition-transform">
+                    ▼
+                  </span>
+                </summary>
+                <div className="pt-3 mt-3 border-t border-sat-gris text-xs text-sat-texto-suave space-y-2 leading-relaxed">
+                  <p>• <a href="https://portal.sat.gob.gt/portal/descarga/1897/normativa-sat/46321/resolucion-sat-dsi-243-2019-incorporacion-de-proveedores-del-estado-al-regimen-de-factura-electronica-en-linea-fel-2.pdf" target="_blank" rel="noopener noreferrer" className="text-sat-azul hover:underline">Resolución SAT-DSI-243-2019: Proveedores del Estado</a></p>
+                  <p>• <a href="https://portal.sat.gob.gt/portal/descarga/1897/normativa-sat/39867/resolucion-de-superintendencia-sat-dsi-838-2019-regimen-de-factura-electronica-en-linea-fel-incorpora-a-los-contribuyentes-que-proveen-servicios-profesionales-individuales-en-general.pdf" target="_blank" rel="noopener noreferrer" className="text-sat-azul hover:underline">Resolución SAT-DSI-838-2019: Servicios Profesionales</a></p>
+                  <p>• <a href="https://portal.sat.gob.gt/portal/descarga/1897/normativa-sat/46215/resolucion-sat-dsi-640-2020-incorporacion-fel-emisores-face.pdf" target="_blank" rel="noopener noreferrer" className="text-sat-azul hover:underline">Resolución SAT-DSI-640-2020: Emisores FACE (Migración)</a></p>
+                  <p>• <a href="https://portal.sat.gob.gt/portal/descarga/1897/normativa-sat/57856/resolucion-r-sat-dsi-1218-2021-incorporacion-fel-contadores-auditores-y-firmas.pdf" target="_blank" rel="noopener noreferrer" className="text-sat-azul hover:underline">Resolución SAT-DSI-1218-2021: Peritos Contadores, Auditores y Firmas Contables</a></p>
+                  <p>• <a href="https://portal.sat.gob.gt/portal/descarga/1897/normativa-sat/57855/resolucion-r-sat-dsi-1240-2021-incorporacion-fel-contribuyentes-del-regimen-general-del-iva.pdf" target="_blank" rel="noopener noreferrer" className="text-sat-azul hover:underline">Resolución SAT-DSI-1240-2021: Contribuyentes del Régimen General del IVA</a></p>
+                  <p>• <a href="https://portal.sat.gob.gt/portal/descarga/1897/normativa-sat/66005/resolucion-sat-dsi-1350-2022-incorporacion-fel-de-pequenos-contribuyentes.pdf" target="_blank" rel="noopener noreferrer" className="text-sat-azul hover:underline">Resolución SAT-DSI-1350-2022: Pequeños Contribuyentes del IVA</a></p>
+                  <p>• <a href="https://portal.sat.gob.gt/portal/descarga/1897/normativa-sat/69739/resolucion-sat-dsi-400-2023-ampliacion-para-incorporacion-a-fel-de-pequenos-contribuyentes-del-iva.pdf" target="_blank" rel="noopener noreferrer" className="text-sat-azul hover:underline">Resolución SAT-DSI-400-2023: Ampliación de Plazos para Pequeños Contribuyentes</a></p>
+                </div>
+              </details>
+            </section>
+
+          </div>
         )}
 
         {/* ======================================================== */}
