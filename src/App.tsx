@@ -46,8 +46,43 @@ function toGestionSlug(t: TramiteItem): string {
   if (cid in ACTUALIZAR_RTU_CASO_BY_ID) {
     return 'actualizar-rtu';
   }
+  if (cid === 'SAT-GES-0384') {
+    return 'alza-e-importacion-vehiculos';
+  }
+  if (cid === 'SAT-GES-0383') {
+    return 'alzas-de-vehiculos';
+  }
+  if (cid === 'SAT-GES-0348') {
+    return 'programa-miad';
+  }
+  if (cid === 'SAT-GES-0319' || cid === 'SAT-GES-0321') {
+    return 'factura-electronica-fel';
+  }
   return toSlug(t.gestion || t.tramite || t.id);
 }
+
+const GESTION_ALIASES: Record<string, string> = {
+  'factura-electronica-fel': 'SAT-GES-0319',
+  'factura-electronica': 'SAT-GES-0319',
+  'efactura': 'SAT-GES-0319',
+  'fel': 'SAT-GES-0319',
+  'alza-e-importacion-vehiculos': 'SAT-GES-0384',
+  'alza-importacion-vehiculos': 'SAT-GES-0384',
+  'importar-y-nacionalizar-un-vehiculo-automotor': 'SAT-GES-0384',
+  'importacion-de-vehiculos': 'SAT-GES-0384',
+  'descargar-reportes-mensuales-de-importacion-de-vehiculos': 'SAT-GES-0384',
+  'alza': 'SAT-GES-0383',
+  'alzas': 'SAT-GES-0383',
+  'alzas-de-vehiculos': 'SAT-GES-0383',
+  'alza-de-vehiculos': 'SAT-GES-0383',
+  'descargar-reportes-mensuales-de-alzas-de-vehiculos': 'SAT-GES-0383',
+  'inscribir-vehiculos-nuevos-para-importadores': 'SAT-GES-0377',
+  'inscripcion-de-vehiculos-nuevos-importadores': 'SAT-GES-0377',
+  'programa-miad': 'SAT-GES-0348',
+  'miad': 'SAT-GES-0348',
+  'modernizacion-aduanera': 'SAT-GES-0348',
+  'modernizacion-integral-aduanera': 'SAT-GES-0348',
+};
 
 function toProcesoSlug(p: ProcesoGuiado): string {
   if (p.no === 1) return 'solicitar-nit';
@@ -209,11 +244,30 @@ export default function App() {
           setActiveSubcategory('Importación y Nacionalización de Vehículos');
         }
         window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else if (
+        hash.startsWith('#/programa-miad') ||
+        hash.startsWith('#/miad')
+      ) {
+        setCurrentView('gestion');
+        const found = allTramites.find(t => t.id === 'SAT-GES-0348' || t.codigo === 'SAT-GES-0348');
+        if (found) {
+          setSelectedTramite(found);
+          setActiveSegment('comercio_exterior');
+          setActiveCategory('Importadores');
+          setActiveSubcategory('Registro y Padrón de Importadores');
+        }
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       } else if (hash.startsWith('#/gestion/') || hash.startsWith('#/tramite/')) {
         setCurrentView('gestion');
-        const param = hash.split('?')[0].replace('#/gestion/', '').replace('#/tramite/', '').trim();
+        const rawParam = hash.split('?')[0].replace('#/gestion/', '').replace('#/tramite/', '').trim();
+        const aliasTargetId = GESTION_ALIASES[rawParam];
         const found = allTramites.find(
-          t => t.id === param || (t.codigo && t.codigo === param) || toGestionSlug(t) === param
+          t =>
+            (aliasTargetId && (t.id === aliasTargetId || t.codigo === aliasTargetId)) ||
+            t.id === rawParam ||
+            (t.codigo && t.codigo === rawParam) ||
+            toGestionSlug(t) === rawParam ||
+            toSlug(t.gestion || t.tramite || '') === rawParam
         );
         if (found) {
           const cleanSlug = toGestionSlug(found);
@@ -222,7 +276,11 @@ export default function App() {
               ? '#/solicitar-nit'
               : cleanSlug === 'actualizar-rtu'
                 ? '#/actualizar-rtu'
-                : `#/gestion/${cleanSlug}`;
+                : cleanSlug === 'alza-e-importacion-vehiculos'
+                  ? '#/alza-e-importacion-vehiculos'
+                  : cleanSlug === 'programa-miad'
+                    ? '#/programa-miad'
+                    : `#/gestion/${cleanSlug}`;
           window.history.replaceState(null, '', targetHash);
           setSelectedTramite(found);
           if (found.pillar) setActiveSegment(found.pillar as SegmentId);
@@ -232,6 +290,11 @@ export default function App() {
           } else {
             setActiveSubcategory(null);
           }
+        } else {
+          // Redirección segura para evitar pantalla en blanco si el slug no existe
+          window.history.replaceState(null, '', '#/catalogo?segmento=comercio_exterior');
+          setCurrentView('catalog');
+          setActiveSegment('comercio_exterior');
         }
         window.scrollTo({ top: 0, behavior: 'smooth' });
       } else if (hash.startsWith('#/asistente/')) {

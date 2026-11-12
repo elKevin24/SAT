@@ -22,8 +22,43 @@ import { Breadcrumbs } from '../components/ui/Breadcrumbs';
 import { SolicitarNitPage } from './SolicitarNitPage';
 import { ActualizarRtuPage, CasoActualizacionId } from './ActualizarRtuPage';
 import { AlzaImportacionVehiculosPage } from './AlzaImportacionVehiculosPage';
+import { ProgramaMiadPage } from './ProgramaMiadPage';
+import { FelPage } from './FelPage';
 import type { TramiteItem } from '../data/schema';
 import type { SegmentId } from '../components/UserSegmentCards';
+
+export const FEL_CANONICAL_IDS = new Set([
+  'SAT-GES-0319',
+  'SAT-GES-0321',
+  'SAT-GES-0581',
+  'SAT-GES-0616',
+]);
+
+export const PROGRAMA_MIAD_IDS = new Set([
+  'SAT-GES-0348',
+  'SAT-GES-0347',
+  'SAT-GES-0341',
+  'SAT-GES-0342',
+  'SAT-GES-0343',
+  'SAT-GES-0349',
+  'SAT-GES-0459',
+  'SAT-GES-0423',
+  'SAT-GES-0713',
+  'SAT-GES-0701',
+  'SAT-GES-0445',
+  'SAT-GES-0541',
+  'SAT-GES-0542',
+  'SAT-GES-0543',
+  'SAT-GES-0544',
+  'SAT-GES-0545',
+  'SAT-GES-0546',
+  'SAT-GES-0548',
+  'SAT-GES-0549',
+  'SAT-GES-0550',
+  'SAT-GES-0551',
+  'SAT-GES-0556',
+  'SAT-GES-0557'
+]);
 
 export const SOLICITAR_NIT_IDS = new Set([
   'SAT-GES-0001',
@@ -95,6 +130,39 @@ export const GestionContentPage: React.FC<GestionContentPageProps> = ({
         initialTab={canonicalId === 'SAT-GES-0383' ? 'alzas' : 'importacion'}
       />
     );
+  }
+
+  // Página Oficial para Programa MIAD (Modernización Integral Aduanera)
+  if (PROGRAMA_MIAD_IDS.has(canonicalId)) {
+    const tabMap: Record<string, 'aereo' | 'maritimo' | 'fronteras' | 'tecnologia'> = {
+      'SAT-GES-0341': 'aereo',
+      'SAT-GES-0342': 'aereo',
+      'SAT-GES-0343': 'aereo',
+      'SAT-GES-0349': 'aereo',
+      'SAT-GES-0459': 'aereo',
+      'SAT-GES-0423': 'tecnologia',
+      'SAT-GES-0541': 'fronteras',
+      'SAT-GES-0542': 'fronteras',
+      'SAT-GES-0543': 'fronteras',
+      'SAT-GES-0544': 'fronteras',
+      'SAT-GES-0545': 'fronteras',
+      'SAT-GES-0546': 'fronteras',
+      'SAT-GES-0548': 'tecnologia',
+      'SAT-GES-0549': 'tecnologia',
+      'SAT-GES-0550': 'tecnologia',
+      'SAT-GES-0551': 'tecnologia'
+    };
+    return (
+      <ProgramaMiadPage
+        onBackToHome={onBackToCatalog}
+        initialTab={tabMap[canonicalId] || 'aereo'}
+      />
+    );
+  }
+
+  // Página Oficial Canónica para Factura Electrónica en Línea (FEL)
+  if (FEL_CANONICAL_IDS.has(canonicalId)) {
+    return <FelPage onBackToHome={onBackToCatalog} />;
   }
 
   const targetUrl = tramite.nueva_url || tramite.url;
