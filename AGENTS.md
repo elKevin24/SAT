@@ -16,6 +16,7 @@
        - `sat-ia-audit-sync` (`.agents/skills/sat-ia-audit-sync/SKILL.md` + `references/taxonomy-and-matrix-spec.md`): Ejecución del pipeline ETL en `scripts/`, validación de URLs (`HTTP 200 OK`) y sincronización de entregables Excel de 25 columnas.
        - `sat-content-relationships` (`.agents/skills/sat-content-relationships/SKILL.md` + `references/nosql-schema-queries.md`): Vinculación de gestiones relacionadas, ciclo ATO y modelado NoSQL en MongoDB.
        - `sat-wordpress-wxr-importer` (`.agents/skills/sat-wordpress-wxr-importer/SKILL.md`): Generación, auditoría y sincronización de archivos XML de importación nativa de WordPress (WXR 1.2), shortcodes WPBakery + The7 Classic y generador en `WPBakeryBuilderPage.tsx`.
+       - `sat-plain-language` (`.agents/skills/sat-plain-language/SKILL.md`): Auditoría, redacción y estandarización en Lenguaje Claro, UX Writing ciudadano, expansión obligatoria de acrónimos en primera mención, títulos con verbos de acción y eliminación estricta de "trámite" y jerga burocrática.
      - **Skills de Roles y Gobernanza Multi-Agente ($\text{Orquestador} \to \text{Senior} \rightleftarrows \text{Junior} \to \text{QA}$):**
        - `orchestrator-governance` (`.agents/skills/orchestrator-governance/SKILL.md`): Orquestador (Lead Architect & Manager); planifica, no edita código fuente directamente y coordina ciclos entre Senior y QA.
        - `senior-developer` (`.agents/skills/senior-developer/SKILL.md`): Programador Senior; diseña arquitectura/core, delega módulos acotados al Junior, revisa/integra y entrega a QA.
