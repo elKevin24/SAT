@@ -115,6 +115,12 @@ El texto del botón debe predecir la acción:
 - ❌ *Aceptar*, *Continuar*, *Enviar*, *Clic aquí*.
 - ✅ **Descargar calcomanía vehicular**, **Pagar en Declaraguate**, **Solicitar cita**.
 
+### E. Reingeniería y Migración de Ecosistemas Multinivel
+Al migrar un ecosistema de páginas (ej. Facturación Electrónica con sus módulos de emisor, certificadores, técnica, auditoría y preguntas frecuentes):
+1. **Separación temática en Capas ATO:** El Hub principal ofrece la acción directa (Capa 1) y el menú de acceso al ecosistema (Capa 2), con leyes colapsables al pie (Capa 3).
+2. **Cero tarjetas con íconos o botones redundantes:** Título claro y descripción concisa en 100% de las tarjetas del ecosistema.
+3. **Mapeo exacto de enlaces reales:** Todo enlace a documentos (.pdf, .xsd, normativas) o subpáginas debe responder `HTTP 200 OK` antes de publicarse.
+
 ---
 
 ## 5. Bucle de Verificación Automatizado para el Agente (Verification Loop)

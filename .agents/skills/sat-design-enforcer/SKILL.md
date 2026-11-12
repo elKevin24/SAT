@@ -41,9 +41,13 @@ Antes de escribir o modificar cualquier componente visual, inspecciona:
   - `Registro Tributario Unificado (RTU)` | `Factura Electrónica (FEL)` | `Declaración Única Centroamericana (DUCA - Aduanas)` | `Impuesto de Circulación de Vehículos (ISCV)`.
 - **Fórmula de descripción (máx. 2 oraciones):** 1) Qué es o para qué sirve + 2) Qué beneficio obtiene o qué necesita.
 
-### C. Navegación en Página Completa Dedicada (Cero Modales)
+### C. Navegación en Página Completa Dedicada (Cero Modales) y Migración de Ecosistemas
 - **Prohibición absoluta de overlays para contenido:** Queda prohibido usar modales (`<dialog>`, overlays fijos), popovers o popups para mostrar fichas de gestiones, requisitos, pasos o menús jerárquicos.
 - **Patrón de página dedicada:** Toda gestión se abre en su propia vista completa con URL canónica (`#/gestion/:id`), soporte de botón Atrás/Adelante del navegador, miga de pan (*breadcrumb*) clickeable y bloque lateral/inferior *"En esta sección"*.
+- **Migración Integral de Ecosistemas:** Al migrar o construir páginas padre (Hubs) que conectan con subpáginas (ej. `#/fel` y sus módulos `#/fel/emisor`, `#/fel/certificadores`, etc.):
+  1. Cada enlace interno debe resolver a su propia página completa en el prototipo, nunca a modales flotantes.
+  2. Implementar una barra de navegación transversal (`Subnav`) entre las páginas del ecosistema para evitar volver al Home para cambiar de módulo.
+  3. Toda URL externa de soporte o descarga oficial debe responder `HTTP 200 OK` comprobado.
 - **Breadcrumb adaptable:** Ruta completa en Desktop (`>= 1024px`) y compactación elíptica con `[…]` desplegable en Mobile (`< 1024px`).
 
 ### D. Mobile-First, Responsive y Accesibilidad WCAG 2.2 AA
