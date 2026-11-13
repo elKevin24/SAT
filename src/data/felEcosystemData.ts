@@ -308,158 +308,224 @@ export const FEL_TECNICA_DOCS: TecnicaDocData[] = [
 ];
 
 export const FEL_FAQS: Record<string, FaqItem[]> = {
-  "Generalidades y Conceptos Básicos": [
+  "Conceptos generales del Régimen FEL": [
     {
       "q": "¿Qué es el Régimen de Factura Electrónica en Línea (FEL)?",
       "a": "Es el modelo operativo establecido por la Administración Tributaria para la emisión de Documentos Tributarios Electrónicos (DTE) de forma segura y con autorización en línea."
     },
     {
       "q": "¿Qué es un Documento Tributario Electrónico (DTE)?",
-      "a": "Es un archivo electrónico en formato XML, certificado de acuerdo con las disposiciones del Régimen FEL autorizadas por la SAT.Actualmente se encuentran disponibles los siguientes DTE:"
+      "a": "Es un archivo electrónico en formato XML, certificado de acuerdo con las disposiciones del Régimen FEL autorizadas por la SAT.\nActualmente se encuentran disponibles los siguientes DTE:\n• Factura\n• Factura Cambiaria\n• Factura de Pequeño Contribuyente\n• Factura Cambiaria Pequeño Contribuyente\n• Factura Especial\n• Nota de Abono\n• Recibo por Donación\n• Recibo\n• Factura Específica\n• Nota de Débito\n• Nota de Crédito\n• Factura Contribuyente Régimen Primario\n• Factura Cambiaria Contribuyente Régimen Primario\n• Factura Contribuyente Régimen Pecuario\n• Factura Cambiaria Contribuyente Régimen Pecuario\n• Constancia de Exención del IVA\n• Constancia de Adquisición de Insumos y Servicios\n• Nota de Envío\n• Recibo de Anticipos\n• Factura Provisional"
     },
     {
-      "q": "¿Quiénes son los involucrados en el proceso de emisión de Factura Electrónica en Línea?",
-      "a": "Emisor: Certificador: Receptor: SAT:"
+      "q": "¿Quiénes son los involucrados en el proceso de emisión de Factura Electrónica en Línea (FEL)?",
+      "a": "• Emisor: es el contribuyente que emite los Documentos Tributarios Electrónicos (DTE).\n• Certificador: es la persona individual o jurídica que realiza la certificación y el almacenamiento de los DTE transmitidos por los emisores.\n• Receptor: es la persona individual o jurídica a nombre de quien se emite el DTE.\n• SAT: es la administradora del Régimen FEL, por lo que verifica y recibe los DTE certificados para darles validez y colocarlos a disposición de los contribuyentes y público en general por medio de consultas."
+    },
+    {
+      "q": "¿Cuál es el proceso de emisión de Factura Electrónica en Línea (FEL)?",
+      "a": "1. El contribuyente emite el documento con firma electrónica y lo envía al certificador de manera automática.\n2. El certificador recibe, valida y asigna número de autorización a cada Documento Tributario Electrónico (DTE), y lo envía automáticamente al emisor y a la SAT.\n3. El emisor entrega el DTE al receptor o cliente.\n4. La SAT verifica cada DTE y lo pone a disposición del emisor y receptor para consulta y verificación."
     },
     {
       "q": "¿Es obligatorio imprimir las facturas electrónicas?",
-      "a": "Para entrega de facturas u otros Documentos Tributarios Electrónicos (DTE), el emisor cuenta con las opciones siguientes: Digital: Papel:"
+      "a": "Para entrega de facturas u otros Documentos Tributarios Electrónicos (DTE), el emisor cuenta con las opciones siguientes:\n• Digital: entrega a través de medios electrónicos como correo electrónico, mensajes instantáneos, hipervínculos, mensaje de texto, entre otros.\n• Papel: cuando el receptor así lo desee."
     },
     {
       "q": "¿Qué contribuyentes pueden emitir facturas y otros Documentos Tributarios Electrónicos (DTE) en el Régimen FEL?",
-      "a": "Actualmente todos los contribuyentes afiliados al Régimen General del IVA y Régimen de Pequeños Contribuyente, así como los que se afilien al Régimen Primario y Pecuario, deben emitir Documentos Tributarios Electrónicos (DTE) en el Régimen FEL, asimismo, está disponible para las entidades exentas o no lucrativas y las entidades del Estado."
+      "a": "Actualmente todos los contribuyentes afiliados al Régimen General del Impuesto al Valor Agregado (IVA) y Régimen de Pequeño Contribuyente, así como los que se afilien al Régimen Primario y Pecuario, deben emitir Documentos Tributarios Electrónicos (DTE) en el Régimen FEL. Asimismo, está disponible para las entidades exentas o no lucrativas y las entidades del Estado."
     },
     {
-      "q": "¿Cómo me habilito para emitir Documentos Tributarios Electrónicos -DTE?",
-      "a": "A través de la opción “Habilitarse como emisor”, disponible en Agencia Virtual y App FEL, la gestión se realiza en línea.Ver manual:https://portal.sat.gob.gt/portal/emisor-de-dte/"
+      "q": "¿Quiénes están obligados a incorporarse en el Régimen FEL?",
+      "a": "Actualmente todos los contribuyentes afiliados al Régimen General del IVA y Régimen de Pequeño Contribuyente, así como los que se afilien al Régimen Primario y Pecuario, deben emitir Documentos Tributarios Electrónicos (DTE) en el Régimen FEL. Asimismo, está disponible para las entidades exentas o no lucrativas y las entidades del Estado."
     },
     {
-      "q": "¿Cómo obtengo las autorizaciones de los Documentos Tributarios Electrónicos -DTE-?",
+      "q": "¿Cuáles son los beneficios de utilizar el Régimen FEL?",
+      "a": "• Fácil habilitación por medio de la Agencia Virtual SAT y la App FEL.\n• Autorización inmediata de cada documento.\n• Confiabilidad de la información.\n• Reducción del uso de papel y otros recursos.\n• Verificación de la validez de los DTE a través del Portal SAT (Verificador Integrado), Agencia Virtual, App FEL y notificaciones electrónicas.\n• Consulta y descarga de los DTE emitidos y recibidos en la Agencia Virtual, App FEL y Verificador Integrado de la SAT."
+    },
+    {
+      "q": "¿Qué seguridad tiene el contribuyente de que está recibiendo un Documento Tributario Electrónico (DTE) válido?",
+      "a": "Los Documentos Tributarios Electrónicos (DTE) pueden ser validados en las siguientes opciones:\n• Verificador público de documentos: portal.sat.gob.gt/portal/verificador-integrado/\n• Consulta personalizada de documentos disponible en la Agencia Virtual de SAT y App FEL.\n• Notificaciones por correo electrónico."
+    },
+    {
+      "q": "¿Dónde puedo ver información estadística del Régimen FEL?",
+      "a": "Para consultar la información estadística del Régimen FEL ingresa a SatData+ en el Portal SAT."
+    }
+  ],
+  "Habilitación, requisitos y medios de emisión": [
+    {
+      "q": "¿Cómo me habilito para emitir Documentos Tributarios Electrónicos (DTE)?",
+      "a": "A través de la opción «Habilitarse como emisor», disponible en Agencia Virtual y App FEL. La gestión se realiza en línea (consulta los manuales en la sección Habilitarse como emisor FEL)."
+    },
+    {
+      "q": "¿Cuáles son los requisitos para habilitarse como emisor de Documentos Tributarios Electrónicos (DTE)?",
+      "a": "• Acceso a la Agencia Virtual de la SAT.\n• Datos actualizados en el Registro Tributario Unificado (RTU).\n• Tener como mínimo un establecimiento activo en el RTU.\n• Estar afiliado al Impuesto al Valor Agregado (IVA) o al Impuesto a la Confianza Tributaria (ICT, para Régimen Primario y Pecuario), cuando corresponda.\n• Tener su domicilio fiscal localizado."
+    },
+    {
+      "q": "¿Por qué medios puedo emitir y certificar mis Documentos Tributarios Electrónicos (DTE)?",
+      "a": "• Emisión gratuita a través de la Agencia Virtual y App FEL, donde la SAT es el certificador.\n• Por medio de Certificadores autorizados (con costo)."
+    },
+    {
+      "q": "¿Cómo obtengo las autorizaciones de los Documentos Tributarios Electrónicos (DTE)?",
       "a": "La autorización se asigna de forma aleatoria y automática a cada Documento Tributario Electrónico (DTE) emitido en el momento de la certificación, por lo cual no existen rangos preautorizados."
     },
     {
-      "q": "¿Tiene algún costo la emisión de Documentos Tributarios Electrónicos DTE- en los sistemas de SAT?",
-      "a": "No, si el contribuyente utiliza el aplicativo web en la Agencia Virtual de SAT o la App FEL."
-    }
-  ],
-  "Habilitación y Medios de Emisión": [
-    {
-      "q": "¿Dónde puedo encontrar el aplicativo gratuito FEL de la Agencia Virtual y App FEL?",
-      "a": "El aplicativo FEL está disponible en la Agencia Virtual de SAT, para ello ingresa con el usuario que corresponde al NIT, desde el siguiente enlace:https://portal.sat.gob.gt/portal/La App FEL se descarga de forma gratuita desde las tiendas de aplicaciones App Store -IOS-, Play Store -Android- y App Gallery -Huawei-, desde un teléfono celular o tablet."
+      "q": "¿Tienen vencimiento los Documentos Tributarios Electrónicos (DTE) emitidos en el Régimen FEL?",
+      "a": "No, debido a que su autorización es única para cada documento en el momento de la emisión y certificación."
     },
     {
-      "q": "¿Cuáles son los requisitos para habilitarse como emisor de Documentos Tributarios Electrónicos -DTE-?",
-      "a": "*Cuando corresponda. Ver manual:https://portal.sat.gob.gt/portal/emisor-de-dte/"
+      "q": "¿Cuáles son las características del aplicativo gratuito FEL de la Agencia Virtual SAT y App FEL?",
+      "a": "• Cada Documento Tributario Electrónico (DTE) se llena mediante un formulario web.\n• Al completar el formulario se genera el DTE certificado que puede ser descargado por el emisor para su entrega.\n• Las descripciones de productos o servicios se ingresan de forma manual.\n• Desde la Agencia Virtual se puede efectuar emisión masiva de DTE a través de un archivo de carga (Excel).\n• Desde la App FEL puede generar facturas por medio de voz (disponible para pequeños contribuyentes)."
+    },
+    {
+      "q": "¿Dónde puedo encontrar el aplicativo gratuito FEL de la Agencia Virtual y App FEL?",
+      "a": "El aplicativo FEL está disponible en la Agencia Virtual de SAT ingresando con el usuario correspondiente al NIT desde portal.sat.gob.gt/portal/. La App FEL se descarga de forma gratuita desde App Store (iOS), Play Store (Android) y App Gallery (Huawei) en teléfono celular o tableta."
+    },
+    {
+      "q": "¿Tiene algún costo la emisión de Documentos Tributarios Electrónicos (DTE) en los sistemas de SAT?",
+      "a": "No, si el contribuyente utiliza el aplicativo web en la Agencia Virtual de SAT o la App FEL."
+    },
+    {
+      "q": "¿Tiene algún costo el certificado de firma electrónica para el emisor?",
+      "a": "El certificado de firma electrónica se proporciona al contribuyente cuando se habilita como emisor en el Régimen FEL, el cual no tiene costo."
+    },
+    {
+      "q": "¿Cómo puedo saber quiénes son los certificadores autorizados por la SAT?",
+      "a": "Puedes consultar el listado oficial en la sección Certificadores autorizados de Factura Electrónica (FEL) de este portal."
+    },
+    {
+      "q": "¿Debo acreditar a SAT como mi certificador en el módulo «Acreditación de Certificadores»?",
+      "a": "No, este proceso es automático cuando el contribuyente se habilita como emisor del Régimen FEL."
+    },
+    {
+      "q": "¿Es necesario acreditar certificadores en el Régimen FEL?",
+      "a": "El Certificador SAT no es necesario acreditarlo, ya que queda registrado de forma automática en el momento de la habilitación como emisor. Si se requieren los servicios de otros certificadores autorizados, sí se debe acreditarlos a través de la opción disponible en la Agencia Virtual."
     },
     {
       "q": "¿Existen manuales o instructivos del aplicativo FEL de la Agencia Virtual y App FEL?",
-      "a": "Sí, en el portal SAT se encuentran publicados los manuales de usuario para utilizar las diferentes opciones disponibles del Régimen FEL, en la Agencia Virtual y App FEL, siguiendo el siguiente enlace:https://portal.sat.gob.gt/portal/emisorde-dte/"
+      "a": "Sí, todos los manuales de usuario para utilizar las diferentes opciones disponibles del Régimen FEL en la Agencia Virtual y App FEL están publicados en la sección Habilitarse como emisor FEL."
     },
     {
-      "q": "¿Cuáles son los tipos de formato de impresión de los Documentos Tributarios Electrónicos (DTE), que se pueden generar desde la APP FEL?",
-      "a": "Formato tamaño cartaFormato tipo ticket"
+      "q": "¿Puedo delegar para que emitan Documentos Tributarios Electrónicos (DTE) en mi nombre?",
+      "a": "Sí, a través de la Agencia Virtual puedes delegar permisos para que otras personas emitan, anulen o consulten DTE. La persona que cuente con el permiso delegado podrá hacer uso del mismo en la Agencia Virtual y App FEL."
     },
     {
-      "q": "¿Quiénes pueden hacer uso de la emisión por voz desde la APP FEL?",
-      "a": "Únicamente los Pequeños Contribuyentes."
+      "q": "¿Si emito facturas por Q2,500.00 o más, qué debo colocar como identificación del receptor o comprador?",
+      "a": "Número de Identificación Tributaria (NIT). Si no cuenta con NIT y es persona individual, podrá colocarse el Código Único de Identificación (CUI), y si es persona extranjera, el número de pasaporte o el código tributario de su país de origen (Artículo 30, numeral 9, Reglamento de la Ley del IVA, reformado por el Acuerdo Gubernativo 12-2023)."
     },
     {
-      "q": "¿Qué tipo de Documento Tributario Electrónico (DTE), puedo emitir por medio de voz en la APP FEL?",
-      "a": "DTE tipo Factura de Pequeño Contribuyente."
+      "q": "¿Puedo emitir facturas a consumidor final?",
+      "a": "Solo en montos menores a Q2,500.00 podrás colocar «Consumidor Final» en la identificación del receptor o comprador (Artículo 30, numeral 9, Reglamento de la Ley del IVA, reformado por el Acuerdo Gubernativo 12-2023)."
     },
     {
-      "q": "¿Qué datos se deben dictar para realizar la emisión por voz desde la APP FEL?",
-      "a": "¿Cuáles son las formas en que los pequeños contribuyentes pueden realizar la emisión de Documentos Tributarios Electrónicos (DTE) a través de la APP FEL? Digitando los datos o por medio de voz."
+      "q": "¿Si emito facturas de exportación, qué debo colocar como identificación del receptor o comprador?",
+      "a": "El número de pasaporte o código tributario de su país de origen, según corresponda, o el número de identificación de otra índole que proporcione el receptor (Artículo 30, numeral 9, Reglamento de la Ley del IVA, reformado por el Acuerdo Gubernativo 12-2023)."
     },
     {
-      "q": "¿Cuáles son las opciones directas que se encuentran en la consulta de Documentos Tributarios Electrónicos -DTE- en la Agencia Virtual y App FEL?",
-      "a": "Desde la consulta de documentos emitidos: Desde la consulta de documentos emitidos: Desde la consulta de documentos recibidos: Desde la consulta de documentos recibidos: Ver manual:https://portal.sat.gob.gt/portal/emisor-de-dte/"
+      "q": "¿Es obligatorio colocar la dirección del receptor en los Documentos Tributarios Electrónicos (DTE)?",
+      "a": "Es opcional, ya que no es requerido según el Reglamento de la Ley del IVA. La información consignada es la proporcionada por el receptor del documento."
+    },
+    {
+      "q": "¿Qué es la factura provisional?",
+      "a": "Es el documento que respalda las transacciones de exportación realizadas con la clase de «DUCA 54» (Declaración Única Centroamericana), a efecto de emitir un documento previo a realizar la exportación definitiva."
     }
   ],
-  "Anulación, Notas de Crédito y Contingencias": [
+  "Consulta, anulación, rechazo y contingencias": [
     {
-      "q": "¿Qué debo hacer cuando me muestra error al ingresar la contraseña asociada en la emisión de mis Documentos Tributarios Electrónicos -DTE-?",
-      "a": "Debe generar una nueva contraseña asociada ingresando a la Agencia Virtual en las siguientes opciones: También puede generar una nueva contraseña desde la App FEL. Dicho cambio debe realizarse como mínimo una vez año. Ver manual:https://portal.sat.gob.gt/portal/emisor-de-dte/"
+      "q": "¿Qué debo hacer cuando me muestra error al ingresar la contraseña asociada en la emisión de mis Documentos Tributarios Electrónicos (DTE)?",
+      "a": "Debes generar una nueva contraseña asociada ingresando a la Agencia Virtual en: Servicios Tributarios > Factura Electrónica en Línea > Generar Firma Electrónica o restablecer contraseña. También puedes generarla desde la App FEL. Dicho cambio debe realizarse como mínimo una vez al año."
     },
     {
       "q": "¿Puedo anular documentos en el aplicativo FEL y App FEL?",
-      "a": "Si, la transacción de anulación se realiza desde el módulo “Anular DTE” o desde la opción directa en la consulta de DTE emitidos, ambos de la Agencia Virtual, considerando el plazo de presentación de la declaración mensual del IVA.Ver manual:https://portal.sat.gob.gt/portal/emisor-de-dte/"
+      "a": "Sí, la anulación se realiza desde el módulo «Anular DTE» o desde la opción directa en la consulta de DTE emitidos en la Agencia Virtual, considerando el plazo de presentación de la declaración mensual del IVA."
     },
     {
-      "q": "¿Cómo me entero si me emitieron o me anularon un Documento Tributario Electrónico -DTE-?",
-      "a": "Los contribuyentes podrán configurar un correo electrónico, donde la SAT le informará automáticamente cada vez que le emitan o anulen un DTE, para ello: Asimismo, en la App FEL pueden activar las notificaciones en las que también se les informará cuando les emitan o anulen un DTE.Las anulaciones de DTE se notifican en todos los casos al correo registrado en RTU."
-    },
-    {
-      "q": "¿Si anulé un Documento Tributario Electrónico -DTE- por error, puedo revertir la anulación?",
-      "a": "Si, a través de la opción disponible en la Agencia Virtual en el apartado Servicios Tributarios, Factura Electrónica, podrás ingresar tu solicitud de reversión de anulación. También en la App FEL por medio de la opción disponible.Ver manual:https://portal.sat.gob.gt/portal/emisor-de-dte/"
-    },
-    {
-      "q": "¿Si por error rechacé un Documento Tributario Electrónico -DTE-, puedo solicitar la reversión?",
-      "a": "Sí, únicamente el contribuyente receptor lo puede realizar por medio de la agencia virtual en Servicios tributarios, Factura Electrónica en Línea FEL, Solicitud de reversión de Rechazo de DTE.Ver manual:https://portal.sat.gob.gt/portal/emisor-de-dte/"
-    },
-    {
-      "q": "¿Cuál es el plazo para anular Documentos Tributarios Electrónicos -DTE- en el Régimen FEL?",
+      "q": "¿Cuál es el plazo para anular Documentos Tributarios Electrónicos (DTE) en el Régimen FEL?",
       "a": "El mes de emisión y como máximo hasta el vencimiento de la declaración mensual del IVA."
     },
     {
-      "q": "¿Qué debo hacer si necesito anular Documentos Tributarios Electrónicos -DTE- en el Régimen FEL fuera del plazo establecido?",
-      "a": "Es importante recordar que el plazo de anulación establecido es el mes de emisión y como máximo hasta el vencimiento de la declaración mensual del IVA.Sin embargo, para casos justificados existe la opción para solicitar la anulación extemporánea de DTE, la cual es analizada por la SAT y de ser procedente se aprueba.Ver manual:https://portal.sat.gob.gt/portal/emisor-de-dte/"
+      "q": "¿Qué debo hacer si necesito anular Documentos Tributarios Electrónicos (DTE) fuera del plazo establecido?",
+      "a": "Para casos justificados existe la opción para solicitar la anulación extemporánea de DTE en la Agencia Virtual, la cual es analizada por la SAT y, de ser procedente, se aprueba."
+    },
+    {
+      "q": "¿Si anulé un Documento Tributario Electrónico (DTE) por error, puedo revertir la anulación?",
+      "a": "Sí, a través de la opción disponible en la Agencia Virtual en Servicios Tributarios > Factura Electrónica, podrás ingresar tu solicitud de reversión de anulación. También está disponible en la App FEL."
+    },
+    {
+      "q": "¿Cómo me entero si me emitieron o me anularon un Documento Tributario Electrónico (DTE)?",
+      "a": "Puedes configurar un correo electrónico para recibir notificaciones automáticas ingresando a: Agencia Virtual > Servicios Tributarios > Factura Electrónica FEL > Configuración FEL. En la App FEL también puedes activar notificaciones. Las anulaciones de DTE se notifican en todos los casos al correo registrado en el RTU."
     },
     {
       "q": "¿Cómo puedo reportar una anulación de un Documento Tributario Electrónico (DTE) realizada sin mi consentimiento?",
-      "a": "Ver manual:https://portal.sat.gob.gt/portal/emisor-de-dte/"
+      "a": "Se reporta en un lapso de 72 horas utilizando el enlace disponible en el correo de notificación que se recibe de la SAT, o desde la consulta de documentos recibidos presionando los 3 puntos ubicados del lado derecho, opción «Reportar anulación», tanto en la Agencia Virtual como en la App FEL."
+    },
+    {
+      "q": "¿Si emiten un Documento Tributario Electrónico (DTE) a mi nombre y no realicé la compra, puedo rechazar el documento?",
+      "a": "Sí, puedes realizarlo en la Agencia Virtual ingresando a: Servicios Tributarios > Factura Electrónica en Línea FEL > Consultar DTE > opción «Rechazar DTE». El DTE rechazado no se visualizará en las consultas del contribuyente receptor."
+    },
+    {
+      "q": "¿Si por error rechacé un Documento Tributario Electrónico (DTE), puedo solicitar la reversión?",
+      "a": "Sí, únicamente el contribuyente receptor puede solicitarla en la Agencia Virtual ingresando a: Servicios Tributarios > Factura Electrónica en Línea FEL > Solicitud de reversión de Rechazo de DTE."
+    },
+    {
+      "q": "¿El emisor puede solicitar la reversión de rechazo de Documentos Tributarios Electrónicos (DTE)?",
+      "a": "No, solamente puede ser solicitada por el receptor del DTE."
+    },
+    {
+      "q": "¿Cuáles son las opciones directas en la consulta de Documentos Tributarios Electrónicos (DTE) en la Agencia Virtual y App FEL?",
+      "a": "Desde la consulta de documentos emitidos:\n• Emisión de notas de crédito (cuando corresponda)\n• Emisión de nota de débito (cuando corresponda)\n• Anulación (cuando corresponda)\n• Reversión de anulación (cuando el documento se encuentre anulado)\n\nDesde la consulta de documentos recibidos:\n• Emisión de constancia de exención de IVA (CIVA, cuando corresponda)\n• Emisión de constancia de adquisición de insumos (CAIS, cuando corresponda)\n• Reportar anulación (en caso el documento haya sido anulado sin su consentimiento)\n• Rechazar DTE (en caso el documento haya sido emitido sin su consentimiento)"
+    },
+    {
+      "q": "¿Cuál es el máximo de Documentos Tributarios Electrónicos (DTE) que puedo descargar desde la consulta de DTE emitidos o recibidos?",
+      "a": "El máximo permitido es de 10,000 documentos por cada consulta. Si la cantidad de documentos es mayor a 10,000, se habilitará en pantalla el campo para consignar un correo electrónico al que posteriormente se enviará un archivo en formato CSV con un máximo de 500,000 DTE."
+    },
+    {
+      "q": "¿Por qué medio puedo notificar la emisión de DTE en un establecimiento con ubicación temporal?",
+      "a": "A través de la Agencia Virtual en el módulo «Aviso de emisión de DTE en establecimiento temporal», dirigido a contribuyentes que realizan eventos temporales en un lugar distinto al domicilio comercial registrado en el RTU. El plazo establecido es de 3 meses; si requieres un período mayor, debes presentar un nuevo aviso."
+    },
+    {
+      "q": "¿Cómo notifico a la SAT si no puedo emitir DTE de manera inmediata por fallas de conectividad con mi certificador?",
+      "a": "A través de la Agencia Virtual por medio del módulo «Notificación de contingencia»."
+    },
+    {
+      "q": "¿Dónde debo reportar los inconvenientes o consultas del Régimen FEL?",
+      "a": "Para orientación general escribe al buzón ayuda@sat.gob.gt y, para soporte técnico por el uso de los sistemas FEL, al buzón efactura@sat.gob.gt."
     }
   ],
-  "Pequeño Contribuyente y Regímenes Especiales": [
+  "Pequeño Contribuyente, Régimen Primario y Pecuario (Decreto 31-2024)": [
     {
-      "q": "¿Pueden los Pequeños Contribuyentes emitir facturas en el Régimen FEL de forma gratuita?",
-      "a": "Sí. Todos los contribuyentes inscritos en el Régimen de Pequeño Contribuyente pueden emitir sus facturas electrónicas de forma totalmente gratuita e ilimitada a través de la Agencia Virtual en el portal web de la SAT o desde la aplicación móvil oficial APP FEL."
+      "q": "¿Están los Pequeños Contribuyentes obligados a emitir Documentos Tributarios Electrónicos (DTE) en el Régimen FEL?",
+      "a": "Sí. De acuerdo con la Resolución SAT-DSI-1350-2022, todos los Pequeños Contribuyentes deben incorporarse al Régimen FEL."
     },
     {
-      "q": "¿Qué tarifa de impuesto aplica para las facturas de Pequeño Contribuyente?",
-      "a": "Aplica una tarifa única y definitiva del 5% sobre el total de los ingresos facturados en el mes, pagadera mediante el formulario SAT-2046 en Declaraguate dentro del mes siguiente calendario."
+      "q": "¿Cuál es el límite de facturación anual para aplicar al Régimen de Pequeño Contribuyente?",
+      "a": "125 salarios mínimos mensuales vigentes no agrícolas, según el Decreto Número 31-2024."
     },
     {
-      "q": "¿Cuál es el límite máximo de facturación anual para el Pequeño Contribuyente en FEL?",
-      "a": "El monto máximo legal de ventas o prestación de servicios es de Q 150,000.00 en un año calendario. Si supera dicho límite, la SAT promoverá su pase automático al Régimen General del IVA."
+      "q": "¿Cuáles son los tipos de formato de impresión de los DTE que se pueden generar desde la App FEL?",
+      "a": "• Formato tamaño carta.\n• Formato tipo ticket."
     },
     {
-      "q": "¿Deben los contribuyentes del Sector Primario y Agropecuario (Decreto 31-2024) emitir FEL?",
-      "a": "Sí, los productores del régimen especial agropecuario emiten facturas electrónicas bajo las tarifas diferenciadas normadas en el Decreto 31-2024, contando con formularios y plantillas habilitadas en el sistema de la SAT."
-    }
-  ],
-  "Planilla IVA-FEL y Empleados": [
-    {
-      "q": "Se puede incluir el traspaso de un vehículo en la planilla de SAT?",
-      "a": "No se puede incluir dentro de la planilla del IVA este dato. Retenciones Pago Directo"
+      "q": "¿Quiénes pueden hacer uso de la emisión por voz desde la App FEL?",
+      "a": "Únicamente los Pequeños Contribuyentes, para emitir DTE tipo Factura de Pequeño Contribuyente (pueden digitar los datos o dictarlos por voz)."
     },
     {
-      "q": "¿Qué es Planilla IVA-FEL?",
-      "a": "Planilla IVA-FEL es una herramienta dirigida a las personas individuales en relación de dependencia que desean realizar la presentación de la planilla, conteniendo el detalle de facturas, que les permite optar por la deducción de la renta neta y acreditar hasta Q12,000.00 por el Impuesto al Valor Agregado pagado en gastos personales, por compras de bienes o adquisición de servicios, durante el período de liquidación definitiva anual y se debe presentar dentro de los primeros diez (10) días hábiles del mes de enero de cada año, tiene como insumo principal la Factura Electrónica en Línea (FEL) y se encuentra disponible en la Agencia Virtual. Base Legal:Artículo 72 del Decreto Número 10-2012 del Congreso de la República de Guatemala, Ley de Actualización Tributaria. Base Legal:"
+      "q": "¿Qué datos se deben dictar para realizar la emisión por voz desde la App FEL?",
+      "a": "• NIT del receptor (si no se indica, se coloca Consumidor Final automáticamente).\n• Descripción del bien o servicio.\n• Cantidad de unidades.\n• Precio en quetzales."
     },
     {
-      "q": "¿Para qué sirve Planilla IVA-FEL?",
-      "a": "Planilla IVA-FEL tiene como insumo principal la Factura Electrónica en Línea (FEL) y se encuentra disponible en la Agencia Virtual. Dirigido a las personas individuales en relación de dependencia que desean realizar la presentación de la planilla, conteniendo el detalle de facturas, que les permite optar por la deducción de la renta neta y acreditar hasta Q12,000.00 por el Impuesto al Valor Agregado pagado en gastos personales, por compras de bienes o adquisición de servicios, durante el período de liquidación definitiva anual y que deberán de presentarse dentro de los primeros diez (10) días hábiles del mes de enero de cada año. Base Legal:Artículo 72 del Decreto Número 10-2012 del Congreso de la República de Guatemala, Ley de Actualización Tributaria. Base Legal:"
+      "q": "¿Qué es el Régimen Primario según el Decreto 31-2024?",
+      "a": "Es un régimen especial de producción y comercialización de productos agrícolas y artesanías producidos en Guatemala. El límite de ventas brutas anuales para aplicar es de 3,500 salarios mínimos mensuales vigentes no agrícolas."
     },
     {
-      "q": "Puedo ingresar facturas en papel en mi Planilla IVA-FEL?",
-      "a": "Ahora las Facturas Electrónicas en Línea (FEL) que solicite con su NIT o CUI se cargarán de forma automática."
+      "q": "¿Qué es el Régimen Pecuario según el Decreto 31-2024?",
+      "a": "Es un régimen especial de tributación simplificada que incluye la producción y comercialización de productos del sector pecuario, hidrobiológico y apícola. De acuerdo con el Decreto Número 31-2024, no se establece límite anual de ventas para este régimen."
     },
     {
-      "q": "¿Puedo incluir el formulario de IVA traspaso en la Planilla IVA-FEL?",
-      "a": "Los siguientes formularios se muestran automáticos:"
+      "q": "¿En qué lugares deben comercializar sus productos quienes pertenecen al Régimen Primario y Pecuario?",
+      "a": "Según el Decreto 31-2024, lo pueden realizar en supermercados, mercados cantonales, municipales y centros de acopio."
     },
     {
-      "q": "¿Puedo ingresas Facturas de Pequeño Contribuyente a Planilla IVA-FEL?",
-      "a": "Las facturas de los siguientes Regímenes no están incluidas dentro de Planilla IVA-FEL: – Facturas de Pequeño Contribuyente– Facturas Régimen Electrónico de Pequeño Contribuyente– Facturas Régimen Especial de Contribuyente Agropecuario– Facturas Régimen Electrónico de Pequeño Contribuyente– Facturas Régimen Electrónico Especial de Contribuyente Agropecuario En virtud, que los documentos anteriores no generan derecho a Crédito Fiscal, Artículos 49, 54 “C” y 54 “E” del Decreto Número 27-92 del Congreso de la República de Guatemala, Ley del Impuesto al Valor Agregado."
-    },
-    {
-      "q": "¿Cómo presento la Planilla del IVA?",
-      "a": "Ingresa a tu Agencia Virtual, selecciona el menú Servicios Tributarios > Planilla IVA-FEL puedes encontrar el manualaquí La opción “Presentar planilla” se habilitará automáticamente a partir del 1 de enero y se inhabilita el décimo día hábil de enero de cada año."
-    },
-    {
-      "q": "¿Qué necesito para utilizar Planilla IVA-FEL?",
-      "a": "Requisitos para acceder a Planilla IVA-FEL: Se recomienda actualizar o ratificar datos cada año en el RTU Digital, antes de la fecha de presentación de la planilla."
+      "q": "¿Cuáles son los tipos de DTE que pueden emitir los contribuyentes del Régimen Primario en el Régimen FEL?",
+      "a": "• Factura Contribuyente Régimen Primario (FARP).\n• Factura Cambiaria Contribuyente Régimen Primario (FCRP).\n• Factura Específica (FEPE)."
     }
   ]
 };
