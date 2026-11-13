@@ -59,38 +59,33 @@ export const FelPage: React.FC<FelPageProps> = ({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 space-y-5">
         
         {/* ======================================================== */}
-        {/* VISTA 1: HUB PRINCIPAL FEL                               */}
+        {/* VISTA 1: HUB PRINCIPAL FEL (ORDENADO POR CICLO ATO)      */}
         {/* ======================================================== */}
         {currentTab === 'hub' && (
-          <>
+          <div className="space-y-4">
             {/* CAPA 1 ATO: Hero y Acción Inmediata */}
-            <header className="bg-sat-blanco rounded-2xl border border-sat-gris p-5 sm:p-6 shadow-sat-sm space-y-4">
-              <div className="max-w-3xl space-y-2">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sat-azul/10 text-sat-azul text-xs font-bold">
-                  <span>Servicio Público Gratuito</span>
-                  <span>•</span>
-                  <span>Régimen FEL</span>
-                </div>
-                <h1 className="text-2xl sm:text-3xl font-black text-sat-azul-oscuro tracking-tight leading-tight">
+            <header className="bg-sat-blanco rounded-xl border border-sat-gris p-4 sm:p-5 shadow-sat-sm flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+              <div className="max-w-2xl space-y-1.5">
+                <h1 className="text-xl sm:text-2xl font-black text-sat-azul-oscuro tracking-tight leading-tight">
                   Emitir Factura Electrónica (FEL)
                 </h1>
-                <p className="text-sm text-sat-texto-suave leading-relaxed">
-                  Emite tus facturas, recibos y notas de crédito de forma gratuita y con validez legal desde tu computadora o celular. No necesitas comprar talonarios de papel ni contratar a proveedores privados.
+                <p className="text-xs sm:text-sm text-sat-texto-suave leading-relaxed">
+                  Emite facturas, recibos y notas de crédito gratuitas con validez legal desde tu computadora o celular, organizadas según tu etapa en el régimen.
                 </p>
               </div>
 
-              <div className="flex flex-wrap items-center gap-3 pt-1">
+              <div className="flex flex-wrap items-center gap-2.5 shrink-0">
                 <Button 
                   variant="primary" 
-                  size="md"
+                  size="sm"
                   onClick={() => window.open('https://agenciavirtual.sat.gob.gt/', '_blank')}
                 >
-                  <ExternalLink className="w-4 h-4 mr-2" />
-                  <span>Emitir factura en Agencia Virtual</span>
+                  <ExternalLink className="w-3.5 h-3.5 mr-1.5" />
+                  <span>Emitir en Agencia Virtual</span>
                 </Button>
                 <Button 
                   variant="outline" 
-                  size="md"
+                  size="sm"
                   onClick={() => setCurrentTab('emisor')}
                 >
                   <span>Habilitarme como emisor</span>
@@ -98,141 +93,244 @@ export const FelPage: React.FC<FelPageProps> = ({
               </div>
             </header>
 
-            {/* CAPA 2 ATO: Módulos de Gestión Oficiales (CERO ÍCONOS en tarjetas) */}
-            <section aria-labelledby="modulos-fel-heading" className="space-y-4">
-              <div className="space-y-1">
-                <span className="text-xs font-bold text-sat-azul uppercase tracking-wider">
-                  Ecosistema del Régimen FEL
+            {/* CICLO ATO — ETAPA 1: EMPEZAR Y REGISTRARSE */}
+            <section aria-labelledby="ato-empezar-heading" className="bg-sat-blanco rounded-xl border border-sat-gris p-4 sm:p-5 shadow-sat-sm space-y-3">
+              <div className="border-b border-sat-gris pb-2">
+                <span className="text-[11px] font-bold text-sat-azul uppercase tracking-wider">
+                  Empezar y registrarse
                 </span>
-                <h2 id="modulos-fel-heading" className="text-xl sm:text-2xl font-black text-sat-azul-oscuro tracking-tight">
-                  ¿Qué necesitas gestionar en Factura Electrónica?
+                <h2 id="ato-empezar-heading" className="text-sm sm:text-base font-black text-sat-azul-oscuro">
+                  Inscripción y acreditación en el régimen FEL
                 </h2>
-                <p className="text-xs sm:text-sm text-sat-texto-suave">
-                  Explora las guías oficiales, normas técnicas y opciones del régimen para emisores y empresas.
-                </p>
               </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
-                
-                {/* 1. Habilitación de Emisores */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 <button
                   type="button"
                   onClick={() => setCurrentTab('emisor')}
-                  className="group bg-sat-blanco border border-sat-gris rounded-2xl p-5 hover:bg-[#14649B] hover:-translate-y-1 hover:shadow-sat-md transition-all cursor-pointer flex flex-col justify-between text-left"
+                  className="group bg-sat-fondo-tenue border border-sat-gris rounded-xl p-4 hover:bg-[#14649B] hover:border-[#14649B] transition-all cursor-pointer text-left space-y-1"
                 >
-                  <div className="space-y-1.5">
-                    <h3 className="text-base font-bold text-sat-azul-oscuro group-hover:text-white transition-colors">
-                      Habilitarme como emisor de facturas
-                    </h3>
-                    <p className="text-xs text-sat-texto-suave group-hover:text-white/90 leading-relaxed transition-colors">
-                      Acredítate en el régimen FEL, obtén tu firma electrónica gratuita y conoce las opciones para facturar desde la web o el móvil.
-                    </p>
-                  </div>
+                  <h3 className="text-sm font-bold text-sat-azul-oscuro group-hover:text-white transition-colors">
+                    Habilitarme como emisor de facturas
+                  </h3>
+                  <p className="text-xs text-sat-texto-suave group-hover:text-white/90 leading-relaxed transition-colors">
+                    Requisitos previos, activación en Agencia Virtual y obtención de firma electrónica gratuita en cinco pasos.
+                  </p>
                 </button>
-
-                {/* 2. Certificadores */}
                 <button
                   type="button"
                   onClick={() => setCurrentTab('certificadores')}
-                  className="group bg-sat-blanco border border-sat-gris rounded-2xl p-5 hover:bg-[#14649B] hover:-translate-y-1 hover:shadow-sat-md transition-all cursor-pointer flex flex-col justify-between text-left"
+                  className="group bg-sat-fondo-tenue border border-sat-gris rounded-xl p-4 hover:bg-[#14649B] hover:border-[#14649B] transition-all cursor-pointer text-left space-y-1"
                 >
-                  <div className="space-y-1.5">
-                    <h3 className="text-base font-bold text-sat-azul-oscuro group-hover:text-white transition-colors">
-                      Certificadores de facturas autorizados
-                    </h3>
-                    <p className="text-xs text-sat-texto-suave group-hover:text-white/90 leading-relaxed transition-colors">
-                      Consulta el listado oficial de empresas certificadoras autorizadas por la SAT para emisión masiva o integración contable.
-                    </p>
-                  </div>
+                  <h3 className="text-sm font-bold text-sat-azul-oscuro group-hover:text-white transition-colors">
+                    Elegir certificador autorizado de facturas
+                  </h3>
+                  <p className="text-xs text-sat-texto-suave group-hover:text-white/90 leading-relaxed transition-colors">
+                    Usa el certificador público gratuito de la SAT o consulta las empresas autorizadas para facturación masiva.
+                  </p>
                 </button>
+              </div>
+            </section>
 
-                {/* 3. Documentación Técnica */}
+            {/* CICLO ATO — ETAPA 2: OPERAR Y DECLARAR */}
+            <section aria-labelledby="ato-operar-heading" className="bg-sat-blanco rounded-xl border border-sat-gris p-4 sm:p-5 shadow-sat-sm space-y-3">
+              <div className="border-b border-sat-gris pb-2">
+                <span className="text-[11px] font-bold text-sat-azul uppercase tracking-wider">
+                  Operar y facturar
+                </span>
+                <h2 id="ato-operar-heading" className="text-sm sm:text-base font-black text-sat-azul-oscuro">
+                  Emisión diaria de facturas y comprobantes (DTE)
+                </h2>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
                 <button
                   type="button"
-                  onClick={() => setCurrentTab('tecnica')}
-                  className="group bg-sat-blanco border border-sat-gris rounded-2xl p-5 hover:bg-[#14649B] hover:-translate-y-1 hover:shadow-sat-md transition-all cursor-pointer flex flex-col justify-between text-left"
+                  onClick={() => window.open('https://agenciavirtual.sat.gob.gt/', '_blank')}
+                  className="group bg-sat-fondo-tenue border border-sat-gris rounded-xl p-4 hover:bg-[#14649B] hover:border-[#14649B] transition-all cursor-pointer text-left space-y-1"
                 >
-                  <div className="space-y-1.5">
-                    <h3 className="text-base font-bold text-sat-azul-oscuro group-hover:text-white transition-colors">
-                      Documentación técnica e integración
-                    </h3>
-                    <p className="text-xs text-sat-texto-suave group-hover:text-white/90 leading-relaxed transition-colors">
-                      Especificaciones XML, esquemas XSD, servicios web y manuales para integradores de sistemas y departamentos de tecnología.
-                    </p>
-                  </div>
+                  <h3 className="text-sm font-bold text-sat-azul-oscuro group-hover:text-white transition-colors">
+                    Emitir factura electrónica en Agencia Virtual
+                  </h3>
+                  <p className="text-xs text-sat-texto-suave group-hover:text-white/90 leading-relaxed transition-colors">
+                    Genera facturas, recibos por honorarios, facturas especiales y notas de crédito o débito desde el navegador.
+                  </p>
                 </button>
-
-                {/* 4. Auditor de Seguridad */}
                 <button
                   type="button"
-                  onClick={() => setCurrentTab('auditor')}
-                  className="group bg-sat-blanco border border-sat-gris rounded-2xl p-5 hover:bg-[#14649B] hover:-translate-y-1 hover:shadow-sat-md transition-all cursor-pointer flex flex-col justify-between text-left"
+                  onClick={() => window.open('https://portal.sat.gob.gt/portal/descarga/15747/manuales/92749/manual-de-usuario-app-fel-3', '_blank')}
+                  className="group bg-sat-fondo-tenue border border-sat-gris rounded-xl p-4 hover:bg-[#14649B] hover:border-[#14649B] transition-all cursor-pointer text-left space-y-1"
                 >
-                  <div className="space-y-1.5">
-                    <h3 className="text-base font-bold text-sat-azul-oscuro group-hover:text-white transition-colors">
-                      Auditor de seguridad de certificadores
-                    </h3>
-                    <p className="text-xs text-sat-texto-suave group-hover:text-white/90 leading-relaxed transition-colors">
-                      Requisitos y normas de acreditación para auditores independientes de seguridad de la información de empresas certificadoras.
-                    </p>
-                  </div>
+                  <h3 className="text-sm font-bold text-sat-azul-oscuro group-hover:text-white transition-colors">
+                    Facturar desde el celular con la aplicación móvil FEL
+                  </h3>
+                  <p className="text-xs text-sat-texto-suave group-hover:text-white/90 leading-relaxed transition-colors">
+                    Guía operativa para emitir comprobantes electrónicos desde teléfonos Android o iOS con tu usuario de Agencia Virtual.
+                  </p>
                 </button>
-
-                {/* 5. Preguntas Frecuentes */}
                 <button
                   type="button"
-                  onClick={() => setCurrentTab('faq')}
-                  className="group bg-sat-blanco border border-sat-gris rounded-2xl p-5 hover:bg-[#14649B] hover:-translate-y-1 hover:shadow-sat-md transition-all cursor-pointer flex flex-col justify-between text-left"
+                  onClick={() => window.open('https://portal.sat.gob.gt/portal/descarga/15747/manuales/97342/manual-de-emision-de-documentos-tributarios-electronicos-dte-2', '_blank')}
+                  className="group bg-sat-fondo-tenue border border-sat-gris rounded-xl p-4 hover:bg-[#14649B] hover:border-[#14649B] transition-all cursor-pointer text-left space-y-1"
                 >
-                  <div className="space-y-1.5">
-                    <h3 className="text-base font-bold text-sat-azul-oscuro group-hover:text-white transition-colors">
-                      Preguntas frecuentes sobre facturación
-                    </h3>
-                    <p className="text-xs text-sat-texto-suave group-hover:text-white/90 leading-relaxed transition-colors">
-                      Respuestas oficiales a dudas comunes sobre emisión de facturas, anulación de documentos, plazos y casos especiales.
-                    </p>
-                  </div>
+                  <h3 className="text-sm font-bold text-sat-azul-oscuro group-hover:text-white transition-colors">
+                    Emitir constancias de exención y documentos especiales
+                  </h3>
+                  <p className="text-xs text-sat-texto-suave group-hover:text-white/90 leading-relaxed transition-colors">
+                    Manual oficial para emisión masiva, constancias de exención de Impuesto al Valor Agregado (IVA) y contingencia.
+                  </p>
                 </button>
+              </div>
+            </section>
 
-                {/* 6. Lista de Renuentes */}
+            {/* CICLO ATO — ETAPA 3: CONSULTAR Y VERIFICAR */}
+            <section aria-labelledby="ato-consultar-heading" className="bg-sat-blanco rounded-xl border border-sat-gris p-4 sm:p-5 shadow-sat-sm space-y-3">
+              <div className="border-b border-sat-gris pb-2">
+                <span className="text-[11px] font-bold text-sat-azul uppercase tracking-wider">
+                  Consultar y verificar
+                </span>
+                <h2 id="ato-consultar-heading" className="text-sm sm:text-base font-black text-sat-azul-oscuro">
+                  Validación de documentos y consultas del régimen
+                </h2>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+                <button
+                  type="button"
+                  onClick={() => window.open('https://portal.sat.gob.gt/portal/verificador-integrado/', '_blank')}
+                  className="group bg-sat-fondo-tenue border border-sat-gris rounded-xl p-4 hover:bg-[#14649B] hover:border-[#14649B] transition-all cursor-pointer text-left space-y-1"
+                >
+                  <h3 className="text-sm font-bold text-sat-azul-oscuro group-hover:text-white transition-colors">
+                    Verificar validez de una factura electrónica
+                  </h3>
+                  <p className="text-xs text-sat-texto-suave group-hover:text-white/90 leading-relaxed transition-colors">
+                    Comprueba con el número de autorización, serie y correlativo si un Documento Tributario Electrónico (DTE) está vigente.
+                  </p>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => window.open('https://portal.sat.gob.gt/portal/descarga/14792/registro-de-emisores-fel/96594/habilitados-al-31-08-2026', '_blank')}
+                  className="group bg-sat-fondo-tenue border border-sat-gris rounded-xl p-4 hover:bg-[#14649B] hover:border-[#14649B] transition-all cursor-pointer text-left space-y-1"
+                >
+                  <h3 className="text-sm font-bold text-sat-azul-oscuro group-hover:text-white transition-colors">
+                    Consultar registro de emisores habilitados
+                  </h3>
+                  <p className="text-xs text-sat-texto-suave group-hover:text-white/90 leading-relaxed transition-colors">
+                    Descarga el padrón oficial actualizado de contribuyentes activos como emisores de Factura Electrónica en Línea.
+                  </p>
+                </button>
                 <button
                   type="button"
                   onClick={() => window.open('https://portal.sat.gob.gt/portal/descarga/15595/renuentes-fel/96588/renuentes-pequenos-contribuyentes-31-08-2026', '_blank')}
-                  className="group bg-sat-blanco border border-sat-gris rounded-2xl p-5 hover:bg-[#14649B] hover:-translate-y-1 hover:shadow-sat-md transition-all cursor-pointer flex flex-col justify-between text-left"
+                  className="group bg-sat-fondo-tenue border border-sat-gris rounded-xl p-4 hover:bg-[#14649B] hover:border-[#14649B] transition-all cursor-pointer text-left space-y-1"
                 >
-                  <div className="space-y-1.5">
-                    <h3 className="text-base font-bold text-sat-azul-oscuro group-hover:text-white transition-colors">
-                      Lista de contribuyentes pendientes de migración
-                    </h3>
-                    <p className="text-xs text-sat-texto-suave group-hover:text-white/90 leading-relaxed transition-colors">
-                      Listado oficial de personas y empresas pendientes de incorporarse al Régimen FEL conforme a las disposiciones legales.
-                    </p>
-                  </div>
+                  <h3 className="text-sm font-bold text-sat-azul-oscuro group-hover:text-white transition-colors">
+                    Consultar lista de contribuyentes pendientes de migración
+                  </h3>
+                  <p className="text-xs text-sat-texto-suave group-hover:text-white/90 leading-relaxed transition-colors">
+                    Listado oficial de personas y empresas pendientes de incorporarse al régimen conforme a las resoluciones vigentes.
+                  </p>
                 </button>
-
               </div>
             </section>
 
-            {/* Material Didáctico */}
-            <section aria-labelledby="didactico-heading" className="bg-sat-blanco rounded-2xl border border-sat-gris p-6 sm:p-7 shadow-sat-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-              <div className="space-y-1 max-w-2xl">
-                <h3 id="didactico-heading" className="text-base font-bold text-sat-azul-oscuro">
-                  Presentación interactiva: Generalidades del Régimen FEL
-                </h3>
-                <p className="text-xs text-sat-texto-suave leading-relaxed">
-                  Descarga la guía didáctica oficial de la SAT con el paso a paso gráfico para conocer cómo funciona el sistema de Factura Electrónica.
-                </p>
+            {/* CICLO ATO — ETAPA 4: MODIFICAR, ACTUALIZAR O CERRAR */}
+            <section aria-labelledby="ato-modificar-heading" className="bg-sat-blanco rounded-xl border border-sat-gris p-4 sm:p-5 shadow-sat-sm space-y-3">
+              <div className="border-b border-sat-gris pb-2">
+                <span className="text-[11px] font-bold text-sat-azul uppercase tracking-wider">
+                  Modificar, actualizar o anular
+                </span>
+                <h2 id="ato-modificar-heading" className="text-sm sm:text-base font-black text-sat-azul-oscuro">
+                  Anulación de comprobantes, permisos y firma electrónica
+                </h2>
               </div>
-              <Button
-                variant="outline"
-                size="md"
-                onClick={() => window.open('https://portal.sat.gob.gt/portal/descarga/6524/factura-electronica-fel/92802/proceso-de-factura-electronica-en-linea-2026-2', '_blank')}
-                className="self-start sm:self-auto shrink-0"
-              >
-                <span>Descargar presentación (PDF)</span>
-              </Button>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+                <button
+                  type="button"
+                  onClick={() => window.open('https://portal.sat.gob.gt/portal/descarga/15747/manuales/97344/manual-de-anulacion-de-documentos-tributarios-electronicos-dte-3', '_blank')}
+                  className="group bg-sat-fondo-tenue border border-sat-gris rounded-xl p-4 hover:bg-[#14649B] hover:border-[#14649B] transition-all cursor-pointer text-left space-y-1"
+                >
+                  <h3 className="text-sm font-bold text-sat-azul-oscuro group-hover:text-white transition-colors">
+                    Anular un Documento Tributario Electrónico (DTE)
+                  </h3>
+                  <p className="text-xs text-sat-texto-suave group-hover:text-white/90 leading-relaxed transition-colors">
+                    Pasos para dejar sin efecto una factura emitida con error desde Agencia Virtual dentro del plazo legal permitido.
+                  </p>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => window.open('https://portal.sat.gob.gt/portal/descarga/15747/manuales/97346/manual-para-solicitar-reversion-de-anulacion-de-dte', '_blank')}
+                  className="group bg-sat-fondo-tenue border border-sat-gris rounded-xl p-4 hover:bg-[#14649B] hover:border-[#14649B] transition-all cursor-pointer text-left space-y-1"
+                >
+                  <h3 className="text-sm font-bold text-sat-azul-oscuro group-hover:text-white transition-colors">
+                    Solicitar reversión de anulación de factura
+                  </h3>
+                  <p className="text-xs text-sat-texto-suave group-hover:text-white/90 leading-relaxed transition-colors">
+                    Procedimiento para reactivar un Documento Tributario Electrónico que fue anulado por equivocación.
+                  </p>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => window.open('https://portal.sat.gob.gt/portal/descarga/15747/manuales/92747/4-manual-de-usuario-fel-permisos-delegados-a-terceros', '_blank')}
+                  className="group bg-sat-fondo-tenue border border-sat-gris rounded-xl p-4 hover:bg-[#14649B] hover:border-[#14649B] transition-all cursor-pointer text-left space-y-1"
+                >
+                  <h3 className="text-sm font-bold text-sat-azul-oscuro group-hover:text-white transition-colors">
+                    Delegar permisos a terceros o actualizar firma
+                  </h3>
+                  <p className="text-xs text-sat-texto-suave group-hover:text-white/90 leading-relaxed transition-colors">
+                    Autoriza o revoca permisos a contadores y auxiliares para emitir o consultar facturas en tus establecimientos.
+                  </p>
+                </button>
+              </div>
             </section>
-          </>
+
+            {/* CICLO ATO — ETAPA 5: NORMATIVA Y SOPORTE TÉCNICO */}
+            <section aria-labelledby="ato-normativa-heading" className="bg-sat-blanco rounded-xl border border-sat-gris p-4 sm:p-5 shadow-sat-sm space-y-3">
+              <div className="border-b border-sat-gris pb-2">
+                <span className="text-[11px] font-bold text-sat-azul uppercase tracking-wider">
+                  Normativa y soporte técnico
+                </span>
+                <h2 id="ato-normativa-heading" className="text-sm sm:text-base font-black text-sat-azul-oscuro">
+                  Especificaciones técnicas, auditoría y preguntas frecuentes
+                </h2>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+                <button
+                  type="button"
+                  onClick={() => setCurrentTab('tecnica')}
+                  className="group bg-sat-fondo-tenue border border-sat-gris rounded-xl p-4 hover:bg-[#14649B] hover:border-[#14649B] transition-all cursor-pointer text-left space-y-1"
+                >
+                  <h3 className="text-sm font-bold text-sat-azul-oscuro group-hover:text-white transition-colors">
+                    Documentación técnica e integración XML y XSD
+                  </h3>
+                  <p className="text-xs text-sat-texto-suave group-hover:text-white/90 leading-relaxed transition-colors">
+                    Reglas y validaciones, esquemas técnicos y servicios web para integradores de sistemas y certificadores.
+                  </p>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setCurrentTab('auditor')}
+                  className="group bg-sat-fondo-tenue border border-sat-gris rounded-xl p-4 hover:bg-[#14649B] hover:border-[#14649B] transition-all cursor-pointer text-left space-y-1"
+                >
+                  <h3 className="text-sm font-bold text-sat-azul-oscuro group-hover:text-white transition-colors">
+                    Auditor de seguridad de certificadores
+                  </h3>
+                  <p className="text-xs text-sat-texto-suave group-hover:text-white/90 leading-relaxed transition-colors">
+                    Requisitos de acreditación y firmas registradas ante la SAT para auditar la seguridad de certificadores.
+                  </p>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setCurrentTab('faq')}
+                  className="group bg-sat-fondo-tenue border border-sat-gris rounded-xl p-4 hover:bg-[#14649B] hover:border-[#14649B] transition-all cursor-pointer text-left space-y-1"
+                >
+                  <h3 className="text-sm font-bold text-sat-azul-oscuro group-hover:text-white transition-colors">
+                    Preguntas frecuentes sobre facturación
+                  </h3>
+                  <p className="text-xs text-sat-texto-suave group-hover:text-white/90 leading-relaxed transition-colors">
+                    Respuestas directas sobre emisión gratuita, plazos de anulación, uso de la aplicación móvil y obligaciones.
+                  </p>
+                </button>
+              </div>
+            </section>
+          </div>
         )}
 
         {/* ======================================================== */}
@@ -243,37 +341,19 @@ export const FelPage: React.FC<FelPageProps> = ({
         {currentTab === 'emisor' && (
           <div className="space-y-8">
             
-            {/* Encabezado Principal con Metadatos ATO (Costo y Tiempo) */}
-            <header className="bg-sat-blanco rounded-2xl border border-sat-gris p-6 sm:p-8 shadow-sat-sm space-y-4">
-              <div className="space-y-2">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sat-azul/10 text-sat-azul text-xs font-bold">
-                  <span>Habilitación Oficial en Línea</span>
-                  <span>•</span>
-                  <span>100% Gratuito</span>
-                </div>
-                <h1 className="text-2xl sm:text-3xl font-black text-sat-azul-oscuro">
-                  Habilitarme como emisor de facturas (FEL)
-                </h1>
-                <p className="text-sm text-sat-texto-suave leading-relaxed max-w-3xl">
-                  Un emisor es la persona o empresa facultada para emitir y entregar facturas, recibos y notas de crédito electrónicas (DTE) a sus clientes desde la Agencia Virtual, la App FEL o sus propios sistemas contables.
-                </p>
+            {/* Encabezado Principal */}
+            <header className="bg-sat-blanco rounded-2xl border border-sat-gris p-5 sm:p-6 shadow-sat-sm space-y-2">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sat-azul/10 text-sat-azul text-xs font-bold">
+                <span>Habilitación Oficial en Línea</span>
+                <span>•</span>
+                <span>100% Gratuito</span>
               </div>
-
-              {/* Ficha Resumen Rápida ATO */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 border-t border-sat-gris text-xs">
-                <div>
-                  <span className="text-sat-texto-suave block">Costo de la gestión:</span>
-                  <strong className="text-sat-azul-oscuro text-sm font-black">Gratuito (Q 0.00)</strong>
-                </div>
-                <div>
-                  <span className="text-sat-texto-suave block">Tiempo estimado:</span>
-                  <strong className="text-sat-azul-oscuro text-sm font-black">Menos de 5 minutos</strong>
-                </div>
-                <div>
-                  <span className="text-sat-texto-suave block">Vigencia de firma digital:</span>
-                  <strong className="text-sat-azul-oscuro text-sm font-black">Indefinida (Renovación web)</strong>
-                </div>
-              </div>
+              <h1 className="text-2xl sm:text-3xl font-black text-sat-azul-oscuro">
+                Habilitarme como emisor de facturas (FEL)
+              </h1>
+              <p className="text-sm text-sat-texto-suave leading-relaxed max-w-3xl">
+                Un emisor es la persona o empresa facultada para emitir y entregar facturas, recibos y notas de crédito electrónicas (DTE) a sus clientes desde la Agencia Virtual, la App FEL o sus propios sistemas contables.
+              </p>
             </header>
 
             {/* 1. ATO "BEFORE YOU START": Requisitos Mínimos Indispensables */}
@@ -940,48 +1020,44 @@ export const FelPage: React.FC<FelPageProps> = ({
         {/* VISTA 6: PREGUNTAS FRECUENTES (/portal/preguntas-frecuentes/) */}
         {/* ======================================================== */}
         {currentTab === 'faq' && (
-          <div className="space-y-8">
+          <div className="space-y-4">
             {/* CAPA 1 ATO: Resumen y orientación */}
-            <header className="bg-sat-blanco rounded-2xl border border-sat-gris p-6 sm:p-8 shadow-sat-sm space-y-3">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sat-azul/10 text-sat-azul text-xs font-bold">
-                <span>Ayuda al Ciudadano</span>
-                <span>•</span>
-                <span>Lenguaje Claro</span>
-              </div>
-              <h1 className="text-2xl sm:text-3xl font-black text-sat-azul-oscuro tracking-tight">
+            <header className="bg-sat-blanco rounded-xl border border-sat-gris p-4 sm:p-5 shadow-sat-sm space-y-1.5">
+              <h1 className="text-xl sm:text-2xl font-black text-sat-azul-oscuro tracking-tight">
                 Preguntas frecuentes sobre Factura Electrónica
               </h1>
-              <p className="text-sm text-sat-texto-suave leading-relaxed max-w-3xl">
-                Respuestas oficiales en lenguaje claro a las dudas más comunes sobre la emisión gratuita, plazos de anulación, uso de la App FEL y obligaciones tributarias.
+              <p className="text-xs sm:text-sm text-sat-texto-suave leading-relaxed max-w-3xl">
+                Respuestas directas sobre emisión gratuita, anulación, uso de la aplicación móvil y obligaciones del régimen.
               </p>
             </header>
 
-            {/* CAPA 2 y 3 ATO: Acordeones categorizados con todas las dudas oficiales */}
-            <div className="space-y-6">
+            {/* CAPA 2 y 3 ATO: Listado minimalista de preguntas y respuestas visibles de inmediato */}
+            <div className="space-y-4">
               {Object.entries(FEL_FAQS).map(([categoria, items], idxCat) => (
-                <section key={categoria} aria-labelledby={`cat-heading-${idxCat}`} className="bg-sat-blanco rounded-2xl border border-sat-gris p-6 sm:p-8 shadow-sat-sm space-y-4">
-                  <h2 id={`cat-heading-${idxCat}`} className="text-lg font-black text-sat-azul-oscuro border-b border-sat-gris pb-3">
-                    {categoria} ({items.length})
+                <section
+                  key={categoria}
+                  aria-labelledby={`cat-heading-${idxCat}`}
+                  className="bg-sat-blanco rounded-xl border border-sat-gris p-4 sm:p-5 shadow-sat-sm"
+                >
+                  <h2
+                    id={`cat-heading-${idxCat}`}
+                    className="text-sm sm:text-base font-black text-sat-azul-oscuro border-b border-sat-gris pb-2.5 mb-3"
+                  >
+                    {categoria}
                   </h2>
 
-                  <div className="space-y-3">
+                  <dl className="divide-y divide-sat-gris/60">
                     {items.map((item, idx) => (
-                      <details
-                        key={idx}
-                        className="group border border-sat-gris/70 rounded-xl p-4 hover:border-sat-azul/50 transition-colors"
-                      >
-                        <summary className="cursor-pointer list-none flex items-center justify-between font-bold text-sm text-sat-azul-oscuro group-hover:text-sat-azul focus:outline-none focus-visible:ring-2 focus-visible:ring-sat-azul rounded-lg py-1">
-                          <span className="pr-4">{item.q}</span>
-                          <span className="text-xs font-bold text-sat-azul group-open:rotate-180 transition-transform shrink-0">
-                            ▼
-                          </span>
-                        </summary>
-                        <div className="pt-3 mt-3 border-t border-sat-gris/50 text-xs sm:text-sm text-sat-texto-suave leading-relaxed space-y-2">
-                          <p>{item.a}</p>
-                        </div>
-                      </details>
+                      <div key={idx} className="py-3 first:pt-0 last:pb-0 space-y-1">
+                        <dt className="font-bold text-xs sm:text-sm text-sat-azul-oscuro leading-snug">
+                          {item.q}
+                        </dt>
+                        <dd className="text-xs sm:text-sm text-sat-texto-suave leading-relaxed">
+                          {item.a}
+                        </dd>
+                      </div>
                     ))}
-                  </div>
+                  </dl>
                 </section>
               ))}
             </div>
