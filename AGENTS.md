@@ -8,6 +8,7 @@
      - `.agents/rules/sat-ui-ux-design.md`: Prohibición de *"trámite"* (uso de **"gestión"**), prohibición de modales/popovers (página dedicada `#/gestion/:id`), tarjetas compactas sin íconos/conteos, UX Writing con acrónimos expandidos, responsive y WCAG 2.2 AA.
      - `.agents/rules/sat-content-relationships.md`: Polijerarquía sin duplicación (`683` únicos / `715` proyecciones), relaciones secuenciales ATO y familias temáticas (`familias_ids`).
      - `.agents/rules/sat-wordpress-wxr-import.md`: Estándar de importación XML nativa de WordPress (WXR 1.2), shortcodes WPBakery + The7 Classic (`0% [vc_raw_html]`), plantilla `elementor_header_footer` con contenedor centrado `1200px` en `_wpb_post_custom_css`, metadato `_wpb_vc_js_status=true` y encadenamiento automático de `post_parent` (N1–N5).
+     - `.agents/rules/sat-page-migration-ato.md`: Metodología oficial de migración y estructuración de páginas del Portal SAT bajo el modelo ATO + Design System SAT (inventario fiel sin invención, regla del 50%, separación de archivos sueltos, menú lateral 1:1, reemplazo accesible de diagramas, tablas semánticas y FAQs colapsables con filtro).
   3. La normativa visual y de navegación en `docs/diseno-normativa/DESIGN_RULES.md`.
   4. Las **Skills Especializadas en `.agents/skills/`** y sus documentos técnicos en `references/` según la tarea o rol a ejecutar:
      - **Skills de Dominio SAT:**
