@@ -40,7 +40,17 @@ Organizar cada página respetando esta jerarquía visual y funcional:
 
 ---
 
-## 4. Decisiones Estructurales por Elemento al Migrar
+## 4. Convenciones de Datos, Formularios y Citas (*Australian Government Style Manual*)
+- **Números en texto y encabezados:** Escribir *cero* y *uno/una* con palabras en texto corrido y títulos, y usar cifras a partir de `2` (`3 opciones`, `2 requisitos`). **Nunca** iniciar una oración con un dígito (escribir el número en palabras o reordenar la frase). Usar separador de miles en cifras de 4 o más dígitos (`1,000`).
+- **Fechas, horas y rangos accesibles:**
+  - Escribir fechas en secuencia `día mes año` sin comas ni ordinales (`1 de mayo de 1997`, nunca `1.º de mayo` ni `Mayo 1, 1997`).
+  - En texto corrido, expresar rangos numéricos, horarios o de fechas con palabras (**«de … a …»**, **«entre … y …»**) y **nunca** con guiones (`10–28`), ya que los lectores de pantalla suelen omitir los guiones al leer en voz alta.
+- **Formularios (*Forms*):** Antes de diseñar o migrar un formulario, aplicar un *protocolo de preguntas* (documentar por qué se pide cada dato y eliminar campos innecesarios) y priorizar **una pregunta o unidad conceptual por paso/pantalla** (ej. agrupar Día/Mes/Año solo para fecha de nacimiento).
+- **Citas legales y atribución (*Referencing and attribution*):** Mantener un único formato consistente para citar leyes, decretos, acuerdos y fuentes estadísticas; incluir la atribución completa de forma secundaria en la Capa 3 cuando aplique.
+
+---
+
+## 5. Decisiones Estructurales por Elemento al Migrar
 - **Menú lateral (`lg:w-64`) y tarjetas del Hub (Simetría 1:1):**
   - El menú `"En esta sección"` (barra activa izquierda en escritorio y acordeón `< 1024px`) enlaza únicamente a `Inicio` + las subpáginas reales con contenido propio.
   - Las tarjetas del Hub muestran solo Título + Descripción concisa (cero íconos, cero conteos, cero botones internos), ajustando columnas (`md:grid-cols-2` / `lg:grid-cols-3` / `md:col-span-2`) para evitar huecos visuales.
@@ -51,6 +61,6 @@ Organizar cada página respetando esta jerarquía visual y funcional:
 
 ---
 
-## 5. Verificación Obligatoria al Cerrar
+## 6. Verificación Obligatoria al Cerrar
 - Ejecutar `npm run build` (**exit code 0**).
 - Ejecutar `npx playwright test` confirmando **0 violaciones Axe (WCAG 2.2 AA)**, reflow móvil `320px` y contratos de datos.

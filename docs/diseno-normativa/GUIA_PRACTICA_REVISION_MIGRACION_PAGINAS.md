@@ -1,6 +1,6 @@
 # Guía Paso a Paso: Cómo Revisar y Migrar una Página a WordPress (Modelo ATO + NN/g + SAT)
 
-> **Para quién es esta guía:** Para cualquier persona del equipo que ya conoce la normativa SAT y va a tomar una página actual de `portal.sat.gob.gt` para reescribirla y armarla en WordPress. No necesitas conocimientos técnicos ni de programación: solo sigue los **5 pasos en orden** y no te saltarás nada.
+> **Para quién es esta guía:** Para cualquier persona del equipo que ya conoce la normativa de la **Superintendencia de Administración Tributaria (SAT)** y va a tomar una página actual de `portal.sat.gob.gt` para reescribirla y armarla en WordPress. No necesitas conocimientos técnicos ni de programación: solo sigue los **5 pasos en orden** y no te saltarás nada.
 
 ---
 
@@ -26,8 +26,8 @@ Por eso, toda página operativa se ordena de arriba hacia abajo en **5 bloques**
 Antes de tocar WordPress, abre la página vieja en `portal.sat.gob.gt` y haz una lista rápida de lo que ves:
 
 1. **¿Es una página suelta o tiene subpáginas?**
-   - *Ejemplo de página suelta:* *Solicitar NIT* (solo explica cómo hacer una gestión).
-   - *Ejemplo de ecosistema (Hub + subpáginas):* *Factura Electrónica (FEL)*, que tiene portada + *Emisor*, *Certificadores*, *Documentación Técnica*, *Auditor* y *Preguntas frecuentes*.
+   - *Ejemplo de página suelta:* *Solicitar Número de Identificación Tributaria (NIT)* (solo explica cómo hacer una gestión).
+   - *Ejemplo de ecosistema (Hub + subpáginas):* *Factura Electrónica en Línea (FEL)*, que tiene portada + *Emisor*, *Certificadores*, *Documentación Técnica*, *Auditor* y *Preguntas frecuentes*.
 2. **Anota todo lo que aparece en la pantalla:**
    - Título, texto de bienvenida ("la historia"), requisitos, pasos, tablas, manuales, acuerdos/resoluciones, imágenes o diagramas, enlaces a otros lados y preguntas frecuentes.
 3. **Aplica las 3 reglas para no meter cosas de más:**
@@ -57,7 +57,7 @@ Antes de redactar o maquetar, decide dónde vive cada cosa que encontraste en el
 
 Aquí aplicamos las reglas de **Nielsen Norman Group (NN/g)** y **SAT** para que la gente entienda rápido sin ser contadora ni abogada:
 
-### 1. El Título (`H1`)
+### 1. El Título principal
 - Si es una **gestión** (algo que el ciudadano hace): empieza con **verbo en infinitivo en las primeras 3 palabras** (*Front-Loading*).
   - ❌ *Procedimiento para la habilitación de emisores de DTE*
   - ✅ **Habilitarme como emisor de facturas (FEL)**
@@ -74,10 +74,34 @@ Aquí aplicamos las reglas de **Nielsen Norman Group (NN/g)** y **SAT** para que
 > - **Después:** *"Emite, transmite y conserva facturas, recibos, notas de crédito, notas de débito y otros Documentos Tributarios Electrónicos (DTE) de forma gratuita y con validez legal desde la Agencia Virtual o la App FEL."*
 
 ### 3. Reglas rápidas de redacción (Checklist mientras escribes)
-- **Habla directo y en voz activa (ATO / Microsoft Style Guide):** usa *"tú"* o *"usted"* de forma consistente y evita la tercera persona fría (*«Ingresa a tu Agencia Virtual»* en lugar de *«El contribuyente deberá ingresar»*).
+
+**A. Cómo escribir las frases**
+- **Habla directo, en positivo y en voz activa (ATO / Microsoft Style Guide):** usa *"tú"* o *"usted"* de forma consistente y di qué hacer en lugar de usar dobles negaciones o prohibiciones (*«Adjunta tu DPI al enviar»* en vez de *«No podrás enviar si no adjuntas...»* o *«El contribuyente deberá...»*).
+- **Oraciones cortas (máximo 15–20 palabras, 1 idea por oración):** si una frase pasa de 20 palabras o tiene varias comas, divídela en dos oraciones o en viñetas.
+- **Verbo directo en lugar de frases infladas (*Nominalisations*):** evita *"realizar la emisión"*, *"efectuar el pago"* o *"proceder a la anulación"* → escribe directo **emitir**, **pagar** o **anular**.
+- **Condicionales claros («Si… entonces»):** para excepciones o límites, evita *"salvo en los casos previstos..."* y escribe directo: *«Si facturas Q2,500.00 o más, coloca el NIT o CUI del comprador»*.
+- **Listas en paralelo con verbo en infinitivo (*Lists* — Style Manual):** cuando escribas una lista de requisitos o acciones, empieza todos los puntos igual (idealmente con verbo en infinitivo) y asegúrate de que completen la frase inicial:
+  - ✅ *Para emitir facturas debes:* **habilitar** tu usuario / **actualizar** tu domicilio / **tener** un establecimiento activo.
+  - ❌ *No mezcles verbos con adjetivos o gerundios:* *habilitando tu usuario / actualizando tu domicilio / activo en un establecimiento.*
 - **Regla del 79% (*Scanning*):** la gente en internet escanea, no lee párrafos largos. Divide todo en bloques cortos y listas con **negrita al inicio** (*Chunking*).
-- **Expande todas las siglas la 1.ª vez que aparecen en la página:**
-  - `Documentos Tributarios Electrónicos (DTE)`, `Registro Tributario Unificado (RTU)`, `Número de Identificación Tributaria (NIT)`.
+
+**B. Números, siglas y enlaces**
+- **Números, monedas, porcentajes y rangos (Guatemala):**
+  - Escribe los números en cifras (`5`, `3 meses`, `72 horas`, `10 días hábiles`), salvo `cero` y `uno/una` en texto corrido, y nunca empieces una oración con un dígito.
+  - Escribe monedas y porcentajes **pegados al número, sin espacio** y con coma en miles (`Q2,500.00`, `5%`, `10,000`).
+  - Escribe rangos con palabras (**«de … a …» / «entre … y …»**): *«del 1 al 10 de enero»*, *«de 8:00 a 16:00»* (nunca `8:00–16:00`, porque los lectores de pantalla omiten el guion).
+- **Puntuación mínima:** sin punto final en títulos ni en ítems cortos de lista; sin puntos dentro de siglas (`SAT`, `FEL`, `RTU`, nunca `S.A.T.`).
+- **Expande todas las siglas la 1.ª vez que aparecen en la página** (nunca dejes una sigla suelta sin explicar):
+  - `FEL` → **Factura Electrónica en Línea (FEL)**
+  - `DTE` → **Documentos Tributarios Electrónicos (DTE)**
+  - `NIT` → **Número de Identificación Tributaria (NIT)**
+  - `RTU` → **Registro Tributario Unificado (RTU)**
+  - `ISCV` → **Impuesto de Circulación de Vehículos (ISCV)**
+  - `DUCA` → **Declaración Única Centroamericana (DUCA - Aduanas)**
+  - `RFV` → **Registro Fiscal de Vehículos (RFV)**
+  - `AFPA` → **Auxiliares de la Función Pública Aduanera (AFPA)**
+  - `SOFI` → **Solvencia Fiscal en Línea (SOFI)**
+  - `DPI / CUI` → **Documento Personal de Identificación (DPI) / Código Único de Identificación (CUI)**
 - **Enlaces y botones claros:** nunca pongas *"clic aquí"* o *"ver más"*; di qué hace y qué formato abre (*Descargar manual de emisión (PDF)*).
 
 ### Mini diccionario rápido (Qué evitar → Qué escribir)
@@ -87,6 +111,7 @@ Aquí aplicamos las reglas de **Nielsen Norman Group (NN/g)** y **SAT** para que
 | *Trámite / trámites* | **Gestión / gestiones** (o el verbo directo: *solicitar*, *actualizar*, *consultar*) |
 | *Sujeto pasivo / contribuyente afecto* | **Personas y empresas** |
 | *Omisos tributarios* | **Declaraciones o pagos pendientes** |
+| *Realizar la emisión / efectuar el pago* | **Emitir / pagar** |
 | *Clic aquí / Ver más* | **Acción + destino o formato** (ej. *Descargar listado oficial (XLSX)*) |
 | *En virtud de / conforme a derecho* | *(Quítalo o dilo en palabras cotidianas)* |
 
@@ -106,7 +131,7 @@ La guía oficial de Australia (*Structuring content*) define qué formato usar s
 | **Requisitos o pasos de un proceso** | **Lista numerada (*Ordered list*):** `1, 2, 3...` nunca en párrafo corrido. |
 | **Directorios, documentos o resoluciones** | **Tabla (*Table*)** con encabezados claros. En celular, asegúrate de que la tabla tenga desplazamiento horizontal o se apile por bloques para que no se corte la pantalla. |
 | **Preguntas frecuentes (+15 preguntas)** | **Buscador rápido + Acordeones colapsables (*Accordions*)** agrupados por tema, para que la persona vea primero solo las preguntas y abra únicamente la que necesita. |
-| **Leyes, acuerdos y resoluciones** | **Acordeón colapsable al final de la página** (*Base legal*), únicamente en las vistas que sí los traen en el portal original. |
+| **Leyes, acuerdos y resoluciones** | **Acordeón colapsable al final de la página** (*Base legal*), únicamente en las vistas que sí los traen en el portal original. Cita siempre normativa vigente colocando **primero el nombre de la ley o acuerdo y después el artículo** (*«Reglamento de la Ley del IVA, Artículo 30, numeral 9»*). |
 
 ### Ejemplo de orden real en una página cargada (Caso *Habilitarme como emisor*)
 Cuando una página original mezcla requisitos, pasos, muchos manuales y resoluciones, ordénala exactamente así de arriba hacia abajo:
@@ -117,6 +142,8 @@ Cuando una página original mezcla requisitos, pasos, muchos manuales y resoluci
 5. ***Legislation (al pie):*** Acordeón colapsable con las 11 resoluciones de incorporación obligatoria.
 
 ### Reglas fijas al armar en WordPress / WPBakery
+- **Contenido en la página antes que en PDF:** si la información es texto operativo (requisitos, pasos, preguntas), publícala directo en WordPress; deja el PDF solo para formularios oficiales o manuales extensos.
+- **Dirección web (URL) y resumen para Google:** usa direcciones web cortas (menos de 100 caracteres) con palabras clave separadas por guion medio (`-`, nunca `_`); título en buscadores de máximo **70 caracteres** y descripción de máximo **160 caracteres**.
 - **Sin ventanas emergentes:** todo contenido se abre en su propia página completa (nunca en *popups* o cuadros flotantes).
 - **Plantilla limpia:** usar **Elementor Full Width**, con la barra lateral de The7 desactivada y sin duplicar el título de cabecera.
 - **Sin HTML crudo:** usar módulos nativos de WPBakery / The7 Classic y dejar el *breadcrumb* automático arriba.
@@ -125,14 +152,12 @@ Cuando una página original mezcla requisitos, pasos, muchos manuales y resoluci
 
 ---
 
-## Paso 5: Checklist final antes de publicar
+## Paso 5: Revisión final en 3 pasadas antes de publicar
 
-Revisa tu página terminada en computadora y en celular:
-- [ ] **¿Está todo lo del original?** Sin textos inventados y sin leyes pegadas en páginas donde no iban.
-- [ ] **¿Se entiende en 5 segundos?** Título claro, máximo 2 oraciones de entrada y nada de «trámite» ni siglas sin explicar.
-- [ ] **¿Es fácil de escanear?** Pasos en lista numerada, directorios en tabla, preguntas frecuentes en acordeones y cero párrafos gigantes.
-- [ ] **¿Tiene cierre claro?** En páginas operativas, se indica qué sigue después (*What happens next*).
-- [ ] **¿Funciona bien en celular?** Sin textos cortados, sin desplazamiento horizontal roto y con botones fáciles de pulsar con el dedo.
+Revisa tu página terminada en computadora y en celular en este orden:
+1. **Estructura y fidelidad:** ¿Está todo lo del original sin textos inventados ni leyes pegadas en páginas donde no iban? ¿Tiene cierre claro (*What happens next*)?
+2. **Estilo y lenguaje claro:** ¿Se entiende en 5 segundos? ¿Cero «trámite», siglas expandidas, listas en paralelo con infinitivo, cifras (`Q2,500.00`, `5%`) y rangos con palabras (*de 8:00 a 16:00*)?
+3. **Vista previa y celular:** ¿Pasos en lista numerada, tablas legibles sin corte horizontal, URL limpia y botones fáciles de pulsar con el dedo?
 
 ---
 

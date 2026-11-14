@@ -136,3 +136,32 @@ Antes de dar por completada cualquier tarea de redacción, edición de JSON o mo
    Validar que los títulos comiencen con verbos en infinitivo y que las oraciones no superen las 20 palabras.
 4. **Verificación de Tono:**  
    Asegurar voz activa en segunda persona, tono facilitador y eliminación de jerga sancionatoria.
+
+---
+
+## 6. Estándar Editorial Completo — Australian Government Style Manual (Sin Diseño Visual)
+
+Reglas operativas de contenido, estructura, accesibilidad textual y gramática adoptadas del *Australian Government Style Manual* (`stylemanual.gov.au`):
+
+### A. Redacción y Lenguaje Claro (*Writing content*)
+- **Necesidad real y *Findable content*:** Crear contenido solo si responde a una necesidad del usuario; usar en títulos y texto las palabras clave exactas con las que busca el ciudadano.
+- **Nivel de lectura objetivo:** Redactar a nivel equivalente a **Year 7** (~12–13 años de escolaridad) para maximizar la comprensión.
+- **Voz activa y oraciones simples:** Orden SVO, voz activa, promedio de **15 palabras** y máximo **25 palabras** por oración, tono *estándar* (`we`/`you`). Editar en 3 niveles (*sustantiva*, *copyediting*, *proofreading*).
+- **Referencia granular:** [`references/writing-and-findability.md`](references/writing-and-findability.md) (elección de palabras, nivel Year 7 / 12–14 años, modificadores, 3 niveles de formalidad, SEO *on-page* `<title>` ≤ 70 / URL < 100 chars y edición IPEd).
+
+### B. Estructura del Contenido (*Structuring content*)
+- **Patrón estructural:** Elegir **pirámide invertida** (conclusión/acción al frente), **secuencial** (pasos ordenados), **jerárquica** o **narrativa** según el propósito.
+- **Encabezados y párrafos:** Jerarquía estricta (`H1` → `H2` → `H3`) sin saltar niveles, iniciando cada título con palabras clave. Un tema por párrafo, abriendo con *topic sentence*.
+- **Listas, enlaces y tablas:** Listas con frase introductoria (*lead-in*) y paralelismo gramatical; enlaces descriptivos del destino; tablas solo para datos comparables con encabezados semánticos.
+
+### C. Accesibilidad e Inclusión Textual (*Accessible & inclusive content*)
+- **WCAG y formatos:** Cumplir criterios WCAG (perceptible, operable, comprensible, robusto). Priorizar contenido web HTML sobre PDF (usar PDF solo si existe necesidad específica y en formato accesible).
+- **Equivalentes no textuales:** *Alt text* en imágenes informativas; subtítulos o transcripciones en audio y video.
+- **Lenguaje inclusivo:** Libre de sesgos y respetuoso respecto a edad, género, discapacidad, neurodiversidad y origen cultural o lingüístico.
+
+### D. Gramática, Convenciones, Formularios y Citas (Guía Rápida y Referencias Granulares)
+- **Reglas base:** Puntuación y mayúsculas mínimas; un único diccionario; cursivas al mínimo; números (*cero/uno* en palabras vs. `2+` en cifras, nunca iniciar oración con dígito); fechas `día mes año` sin comas; rangos con *«de … a …»* / *«entre … y …»* sin guiones; una pregunta por paso en formularios; y citas legales consistentes.
+- **Referencias granulares (carga bajo demanda):**
+  - [`references/grammar-and-conventions.md`](references/grammar-and-conventions.md): Puntuación, mayúsculas, comas, apóstrofos, guiones (*en dash*), números vs. palabras, fechas/horas, monedas y porcentajes.
+  - [`references/content-types-and-forms.md`](references/content-types-and-forms.md): Reglas detalladas para formularios (*question protocol*), correos y cartas, Lectura Fácil (*Easy Read*), reportes y redes sociales (hashtags CamelCase).
+  - [`references/referencing-and-attribution.md`](references/referencing-and-attribution.md): Sistemas *Author–date* y *Documentary–note*, abreviaturas latinas y citación de material legal.
