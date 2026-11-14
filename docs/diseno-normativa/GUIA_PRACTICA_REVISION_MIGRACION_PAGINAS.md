@@ -63,7 +63,7 @@ Aquí aplicamos las reglas de **Nielsen Norman Group (NN/g)** y **SAT** para que
   - ✅ **Habilitarme como emisor de facturas (FEL)**
 - Si es una **portada (*Hub*) o catálogo**: usa el nombre claro del servicio.
   - ✅ **Régimen de Factura Electrónica en Línea (FEL)**
-- Escribe en **Sentence Case** (mayúscula solo al inicio, nombres propios y siglas) y **sin etiquetas decorativas** encima del título.
+- Escribe en **Sentence Case** (mayúscula solo al inicio, nombres propios y siglas), **sin MAYÚSCULAS sostenidas**, **sin números quemados** en títulos de tarjetas/menús (`1. Emisor`) y **sin etiquetas decorativas** encima del título.
 
 ### 2. La "historia" del principio → Regla del 50% (*50% Cut Rule* + *Inverted Pyramid*)
 - En el portal viejo casi todas las páginas empiezan contando cuándo se creó el acuerdo o citando leyes. **Corta la mitad o más de ese texto:** saca fechas de creación y números de acuerdo de la entrada (eso va al pie en *Base legal*).
@@ -74,6 +74,7 @@ Aquí aplicamos las reglas de **Nielsen Norman Group (NN/g)** y **SAT** para que
 > - **Después:** *"Emite, transmite y conserva facturas, recibos, notas de crédito, notas de débito y otros Documentos Tributarios Electrónicos (DTE) de forma gratuita y con validez legal desde la Agencia Virtual o la App FEL."*
 
 ### 3. Reglas rápidas de redacción (Checklist mientras escribes)
+- **Habla directo y en voz activa (ATO / Microsoft Style Guide):** usa *"tú"* o *"usted"* de forma consistente y evita la tercera persona fría (*«Ingresa a tu Agencia Virtual»* en lugar de *«El contribuyente deberá ingresar»*).
 - **Regla del 79% (*Scanning*):** la gente en internet escanea, no lee párrafos largos. Divide todo en bloques cortos y listas con **negrita al inicio** (*Chunking*).
 - **Expande todas las siglas la 1.ª vez que aparecen en la página:**
   - `Documentos Tributarios Electrónicos (DTE)`, `Registro Tributario Unificado (RTU)`, `Número de Identificación Tributaria (NIT)`.
@@ -106,6 +107,14 @@ La guía oficial de Australia (*Structuring content*) define qué formato usar s
 | **Directorios, documentos o resoluciones** | **Tabla (*Table*)** con encabezados claros. En celular, asegúrate de que la tabla tenga desplazamiento horizontal o se apile por bloques para que no se corte la pantalla. |
 | **Preguntas frecuentes (+15 preguntas)** | **Buscador rápido + Acordeones colapsables (*Accordions*)** agrupados por tema, para que la persona vea primero solo las preguntas y abra únicamente la que necesita. |
 | **Leyes, acuerdos y resoluciones** | **Acordeón colapsable al final de la página** (*Base legal*), únicamente en las vistas que sí los traen en el portal original. |
+
+### Ejemplo de orden real en una página cargada (Caso *Habilitarme como emisor*)
+Cuando una página original mezcla requisitos, pasos, muchos manuales y resoluciones, ordénala exactamente así de arriba hacia abajo:
+1. ***Summary / Start now:*** Título + 2 oraciones + botones principales (*Ir a Agencia Virtual* / *Registro de Emisores*).
+2. ***Before you start:*** Lista numerada de requisitos mínimos (`1` al `5`).
+3. ***Step-by-step:*** Pasos para habilitarse en orden + los 23 manuales agrupados en 4 categorías por tema.
+4. ***What happens next:*** Enlace al siguiente paso (*Elegir certificador* o *Emitir facturas*).
+5. ***Legislation (al pie):*** Acordeón colapsable con las 11 resoluciones de incorporación obligatoria.
 
 ### Reglas fijas al armar en WordPress / WPBakery
 - **Sin ventanas emergentes:** todo contenido se abre en su propia página completa (nunca en *popups* o cuadros flotantes).
