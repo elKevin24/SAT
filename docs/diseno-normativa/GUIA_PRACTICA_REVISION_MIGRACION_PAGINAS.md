@@ -6,7 +6,10 @@
 
 ## Antes de empezar: ¿Cómo funciona el modelo ATO?
 
-La **ATO** (*Australian Taxation Office*, autoridad tributaria de Australia) sigue una regla de oro: ***"Lead with the need, not the law"*** (empieza por lo que la persona necesita hacer, no por la ley).
+La **ATO** (*Australian Taxation Office*) parte de una idea muy simple: **la gente entra al portal a hacer una tarea, no a leer legislación** (*Lead with the need / task, not the law*).
+
+- ❌ **Enfoque legislación (lo que hay que quitar del inicio):** empezar citando acuerdos, artículos o la historia de cuándo se creó la ley.
+- ✅ **Enfoque tarea (modelo ATO):** decirle de inmediato a la persona qué puede hacer, qué necesita tener listo y cuáles son los pasos para lograrlo. *La ley respalda al final, nunca estorba al principio.*
 
 Por eso, toda página operativa se ordena de arriba hacia abajo en **5 bloques** (en inglés se llaman *Layered Content*):
 
