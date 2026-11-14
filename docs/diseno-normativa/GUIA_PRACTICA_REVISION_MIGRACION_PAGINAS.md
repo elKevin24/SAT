@@ -54,6 +54,15 @@ Reescribe todo el contenido de la página aplicando estas reglas en orden:
    - **Regla del 79% (escaneo NN/g):** elimina párrafos largos; usa bloques cortos y viñetas con **negrita inicial**.
    - **Enlaces y botones predictivos:** prohíbe *"clic aquí"* o *"ver más"*; usa acciones concretas con formato (`Descargar manual (PDF)`) y asegúrate de que URLs y correos sean enlaces reales.
 
+### Mini diccionario rápido de reemplazos
+| No usar en el texto | Usar en su lugar |
+| :--- | :--- |
+| *Trámite / trámites* | **Gestión / gestiones** (o verbo directo: *solicitar*, *actualizar*) |
+| *Sujeto pasivo / contribuyente afecto* | **Personas y empresas** |
+| *Omisos tributarios* | **Declaraciones o pagos pendientes** |
+| *Clic aquí / Ver más* | **Acción + destino o formato** (ej. *Descargar manual (PDF)*) |
+| *En virtud de / conforme a derecho* | *(Eliminar o resumir en lenguaje directo)* |
+
 ### Ejemplo rápido: Antes vs. Después (Caso FEL)
 - **Antes (portal original):** *"Creado a través del Acuerdo de Directorio Número 13-2018, vigente desde el 23 de mayo del año 2018. El Régimen FEL es el modelo operativo... el cual comprende la emisión, transmisión certificación... a los que se les denomina DTE, el cual tiene por objetivo la facilitación del cumplimiento..."*
 - **Después (regla del 50% + siglas expandidas):** *"Emite, transmite y conserva facturas, recibos, notas de crédito, notas de débito y otros Documentos Tributarios Electrónicos (DTE) de forma gratuita y con validez legal desde la Agencia Virtual o la App FEL."* *(Y el Acuerdo 13-2018 pasa al acordeón de base legal al pie).*
@@ -72,8 +81,9 @@ Ordena la página en **3 capas ATO** (*Lead with the need, not the law*) y elige
 | **Listas largas (más de 10 manuales o enlaces)** | **Agrupa por tema o etapa** (Ley de Miller $7\pm 2$): ejemplo, dividir 23 manuales en 4 categorías (*Inicio*, *Emisión*, *Consultas*, *Regímenes especiales*). |
 | **Diagramas o flujos en imagen** | **Reemplázalos por texto accesible:** lista numerada paso a paso para que se lea bien en móvil y en lectores de pantalla. |
 | **Requisitos o procedimientos** | Lista numerada (ejemplo: 1 a 5), nunca párrafos corridos. |
-| **Directorios, documentos o resoluciones** | Tabla estructurada con encabezados claros en escritorio y vista apilada legible en móvil. |
+| **Directorios, documentos o resoluciones** | Tabla estructurada con encabezados claros en escritorio; en móvil usar contenedor con desplazamiento horizontal o bloques apilados para que no se corte la pantalla. |
 | **Preguntas frecuentes (+15 ítems)** | **Buscador o filtro rápido** + **acordeones colapsables** agrupados por tema, con enlaces reales dentro de las respuestas. |
+| **Cierre operativo (*Qué sigue después*)** | En páginas operativas (ej. *Emisor FEL*), cerrar con 1–2 enlaces al siguiente paso lógico (ej. *Elegir certificador* o *Preguntas frecuentes*) para evitar callejones sin salida. |
 | **Leyes, acuerdos y resoluciones** | **Al pie de la página** dentro de un acordeón colapsable secundario, **solo** en las páginas que sí tienen base legal en el original. |
 
 ### Reglas clave al armar en WordPress / WPBakery
