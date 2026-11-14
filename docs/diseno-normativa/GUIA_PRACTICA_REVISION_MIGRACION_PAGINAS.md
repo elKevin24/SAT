@@ -2,6 +2,13 @@
 
 > **Para quién es esta guía:** Para cualquier persona del equipo que ya conoce la normativa SAT y va a tomar una página actual de `portal.sat.gob.gt` para reescribirla y armarla en WordPress. No necesitas conocimientos técnicos ni de programación: solo sigue los **5 pasos en orden** y no te saltarás nada.
 
+### Resumen en 30 segundos (El camino completo)
+1. **Mira qué hay:** abre la página vieja y anota todo (sin inventar nada nuevo).
+2. **Ordena la casa:** separa portada (*Hub*), subpáginas y archivos sueltos.
+3. **Limpia el texto:** corta la "historia" legal del inicio, explica siglas y habla claro.
+4. **Arma los bloques:** pasos en lista numerada, directorios en tabla y leyes al pie.
+5. **Revisa y publica:** confirma que se entienda en 5 segundos y se lea bien en celular.
+
 ---
 
 ## Antes de empezar: ¿Cómo funciona el modelo ATO?
