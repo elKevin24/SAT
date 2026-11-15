@@ -1,0 +1,54 @@
+/* SAT · Certificador de DTE (FEL) — WPBakery > Configuración de página > CSS personalizado
+   Base: SAT Design System Web v1.0 (Manual de Imagen y Normas Gráficas SAT V.5)
+   Colores institucionales: celeste #19AFE1 · azul SAT #14649B · azul oscuro #19324B · gris #DCDCDC · blanco #FFFFFF
+   Sin fondo de página (usa el del tema / plantilla Portfolio - list). Cajas con relleno gris tenue #F4F6F9 sin bordes. */
+.sat-fel{--celeste:#19afe1;--azul:#14649b;--azul-osc:#19324b;--gris:#dcdcdc;--blanco:#fff;--suave:#475569;--tenue:#f4f6f9;
+  padding:24px 0 48px!important;font-family:"Gotham","Montserrat",-apple-system,"Segoe UI",sans-serif;color:var(--azul-osc)}
+.sat-fel a:focus-visible,.sat-fel .vc_btn3:focus-visible{outline:3px solid var(--azul)!important;outline-offset:2px}
+
+/* Títulos y texto */
+.sat-fel .sat-fel-h1,.sat-fel .sat-fel-h1 h1{font-size:32px!important;line-height:1.2!important;font-weight:900!important;color:var(--azul-osc)!important;margin:0 0 12px!important;letter-spacing:-.01em}
+.sat-fel .sat-fel-h2,.sat-fel .sat-fel-h2 h2{font-size:21px!important;line-height:1.3!important;font-weight:800!important;color:var(--azul-osc)!important;margin:0 0 6px!important}
+.sat-fel .sat-fel-eyebrow,.sat-fel .sat-fel-eyebrow p{font-size:12px!important;font-weight:800!important;color:var(--azul)!important;text-transform:uppercase;letter-spacing:.07em;margin:0 0 6px!important}
+.sat-fel .sat-fel-section{margin-top:40px!important;padding-top:28px!important;border-top:1px solid rgba(25,50,75,.15)}
+.sat-fel .sat-fel-lead{margin-bottom:20px!important}
+.sat-fel .sat-fel-lead p{font-size:17px!important;line-height:1.6!important;color:var(--azul-osc)!important;margin:0!important}
+.sat-fel .sat-fel-text{margin-bottom:16px!important}
+.sat-fel .sat-fel-text p{font-size:15px!important;line-height:1.55!important;color:var(--suave)!important;margin:0!important}
+
+/* Botones y enlaces limpios */
+.sat-fel .sat-fel-btn{display:inline-block!important;margin:0 8px 8px 0!important}
+.sat-fel .sat-fel-btn .vc_btn3{min-height:48px!important;padding:13px 22px!important;border-radius:10px!important;font-size:14px!important;font-weight:700!important;border:0!important;box-shadow:none!important;white-space:normal!important;background-image:none!important}
+.sat-fel .sat-fel-btn.sat-fel-btn-primary .vc_btn3{background-color:var(--azul)!important;color:var(--blanco)!important}
+.sat-fel .sat-fel-btn.sat-fel-btn-primary .vc_btn3:hover{background-color:var(--azul-osc)!important;color:var(--blanco)!important}
+.sat-fel .sat-fel-btn.sat-fel-btn-link .vc_btn3{min-height:44px!important;padding:8px 4px!important;background-color:transparent!important;color:var(--azul)!important;box-shadow:none!important;font-size:13px!important;font-weight:600!important;border-radius:6px!important;display:inline-flex!important;align-items:center!important;text-align:left!important}
+.sat-fel .sat-fel-btn.sat-fel-btn-link .vc_btn3:hover{background-color:transparent!important;color:var(--azul-osc)!important;text-decoration:underline!important}
+.sat-fel .sat-fel-actions{margin:0!important}
+.sat-fel .sat-fel-actions>.vc_column_container,.sat-fel .sat-fel-actions .vc_column-inner{padding:0!important}
+.sat-fel .sat-fel-anchor-row{margin:0!important;scroll-margin-top:96px}
+.sat-fel .sat-fel-anchor-row>.vc_column_container,.sat-fel .sat-fel-anchor-row .vc_column-inner{padding:0!important}
+
+/* Bloque único de pasos (sin tarjetas separadas) */
+.sat-fel .sat-fel-panel{background:var(--tenue)!important;border-radius:14px!important;padding:24px 28px!important;margin:0!important;box-sizing:border-box!important}
+.sat-fel .sat-fel-panel>.vc_column_container,.sat-fel .sat-fel-panel .vc_column-inner{padding:0!important}
+.sat-fel .sat-fel-step-line{margin-bottom:12px!important;padding-left:12px!important;border-left:3px solid var(--azul)!important}
+.sat-fel .sat-fel-step-line.sat-fel-step-last{margin-bottom:0!important}
+.sat-fel .sat-fel-step-line p{font-size:14px!important;line-height:1.6!important;color:var(--suave)!important;margin:0!important}
+
+/* Tabla semántica oficial de certificadores */
+.sat-fel .sat-fel-table-box{margin:0!important}
+.sat-fel .sat-fel-table-box .wpb_wrapper{width:100%;overflow-x:auto;border:1px solid var(--gris);border-radius:14px;background:var(--blanco)}
+.sat-fel .sat-fel-table-box table,.sat-fel .sat-fel-table{width:100%;min-width:720px;border-collapse:collapse;text-align:left;font-size:13px;line-height:1.55;margin:0}
+.sat-fel .sat-fel-table-box thead,.sat-fel .sat-fel-table thead{background:var(--tenue);border-bottom:1px solid var(--gris)}
+.sat-fel .sat-fel-table-box th,.sat-fel .sat-fel-table th{padding:12px 16px;font-weight:700;color:var(--azul-osc);vertical-align:top}
+.sat-fel .sat-fel-table-box td,.sat-fel .sat-fel-table td{padding:14px 16px;color:var(--suave);vertical-align:top;border-top:1px solid rgba(25,50,75,.1)}
+.sat-fel .sat-fel-table-box tbody tr:hover,.sat-fel .sat-fel-table tbody tr:hover{background:rgba(244,246,249,.65)}
+.sat-fel .sat-fel-table-box td strong,.sat-fel .sat-fel-table td strong{color:var(--azul-osc);font-weight:700}
+.sat-fel .sat-fel-table-box td a,.sat-fel .sat-fel-table td a{color:var(--azul);font-weight:600;text-decoration:none}
+.sat-fel .sat-fel-table-box td a:hover,.sat-fel .sat-fel-table td a:hover{color:var(--azul-osc);text-decoration:underline}
+.sat-fel .sat-fel-td-nowrap{white-space:nowrap}
+
+@media(max-width:767px){
+  .sat-fel .sat-fel-panel{padding:20px!important}
+}
+@media(prefers-reduced-motion:reduce){.sat-fel *{transition:none!important;transform:none!important}}

@@ -1,0 +1,28 @@
+/* SAT · Preguntas frecuentes (FEL) — WPBakery > Configuración de página > CSS personalizado
+   Base: SAT Design System Web v1.0 (Manual de Imagen y Normas Gráficas SAT V.5)
+   Colores institucionales: celeste #19AFE1 · azul SAT #14649B · azul oscuro #19324B · gris #DCDCDC · blanco #FFFFFF
+   Sin fondo de página (usa el del tema / plantilla Portfolio - list). Acordeones con relleno gris tenue #F4F6F9 sin bordes. */
+.sat-fel{--celeste:#19afe1;--azul:#14649b;--azul-osc:#19324b;--gris:#dcdcdc;--blanco:#fff;--suave:#475569;--tenue:#f4f6f9;
+  padding:24px 0 48px!important;font-family:"Gotham","Montserrat",-apple-system,"Segoe UI",sans-serif;color:var(--azul-osc)}
+.sat-fel a:focus-visible,.sat-fel .vc_tta-panel-title>a:focus-visible{outline:3px solid var(--azul)!important;outline-offset:2px}
+
+/* Títulos y texto */
+.sat-fel .sat-fel-h1,.sat-fel .sat-fel-h1 h1{font-size:32px!important;line-height:1.2!important;font-weight:900!important;color:var(--azul-osc)!important;margin:0 0 12px!important;letter-spacing:-.01em}
+.sat-fel .sat-fel-h2,.sat-fel .sat-fel-h2 h2{font-size:21px!important;line-height:1.3!important;font-weight:800!important;color:var(--azul-osc)!important;margin:0 0 12px!important}
+.sat-fel .sat-fel-eyebrow,.sat-fel .sat-fel-eyebrow p{font-size:12px!important;font-weight:800!important;color:var(--azul)!important;text-transform:uppercase;letter-spacing:.07em;margin:0 0 6px!important}
+.sat-fel .sat-fel-section{margin-top:40px!important;padding-top:28px!important;border-top:1px solid rgba(25,50,75,.15)}
+.sat-fel .sat-fel-lead{margin-bottom:8px!important}
+.sat-fel .sat-fel-lead p{font-size:17px!important;line-height:1.6!important;color:var(--azul-osc)!important;margin:0!important}
+
+/* Acordeones de preguntas frecuentes */
+.sat-fel-acc{margin:8px 0 0!important}
+.sat-fel-acc .vc_tta-panel{background:var(--tenue)!important;border:0!important;border-radius:14px!important;margin-bottom:10px!important;overflow:hidden}
+.sat-fel-acc .vc_tta-panel-heading,.sat-fel-acc .vc_tta-panel-body{background:var(--tenue)!important;border:0!important}
+.sat-fel-acc .vc_tta-panel-title>a{min-height:48px;display:flex!important;align-items:center;padding:14px 20px!important;font-weight:700!important;font-size:15px!important;line-height:1.4!important;color:var(--azul-osc)!important}
+.sat-fel-acc .vc_tta-controls-icon::before,.sat-fel-acc .vc_tta-controls-icon::after{border-color:var(--azul)!important}
+.sat-fel-acc .vc_tta-panel-body{padding:0 20px 18px!important}
+.sat-fel .sat-fel-faq-ans{margin:0!important}
+.sat-fel .sat-fel-faq-ans p{font-size:14px!important;line-height:1.65!important;color:var(--suave)!important;margin:0 0 8px 0!important}
+.sat-fel .sat-fel-faq-ans p:last-child{margin-bottom:0!important}
+
+@media(prefers-reduced-motion:reduce){.sat-fel *{transition:none!important;transform:none!important}}

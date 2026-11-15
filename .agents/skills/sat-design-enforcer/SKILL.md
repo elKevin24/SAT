@@ -55,6 +55,7 @@ Antes de escribir o modificar cualquier componente visual, inspecciona:
   4. **Capa 4: Certeza Jurídica y Auditoría (Legal basis & Governance):** Acuerdos de Directorio, Decretos y Resoluciones colapsadas al pie con enlaces a PDFs oficiales (`HTTP 200 OK`).
   5. **Fidelidad Absoluta de Contenido:** Prohibido borrar u omitir contenido oficial del portal SAT. Si la página original contiene infografías o manuales, deben transcribirse a componentes HTML accesibles y preservar la descarga del archivo original.
 - **Breadcrumb adaptable:** Ruta completa en Desktop (`>= 1024px`) y compactación elíptica con `[…]` desplegable en Mobile (`< 1024px`).
+- **Paridad al trasladar a WordPress / WPBakery (`Portfolio - list`):** Al documentar o exportar vistas de diseño/estructura ATO para pegado directo en WPBakery, seguir el estándar nativo sin HTML crudo (CSS Grid `gap: 14px` anulando `::before`/`::after`, pasos en panel único sin tarjetas, enlaces de descarga `.sat-*-btn-link` con formato `(PDF)` y base legal en `[vc_tta_accordion]` cerrado) definido en [`sat-wordpress-wxr-importer`](../sat-wordpress-wxr-importer/SKILL.md#6-estándar-wpbakery-nativo-para-páginas-de-contenido-pegado-directo--portfolio---list).
 
 ### D. Mobile-First, Responsive y Accesibilidad WCAG 2.2 AA
 - **Breakpoints SAT:** Mobile (`< 768px`, 1 col, Drawer), Tablet (`768–1023px`, 2 cols), Desktop (`1024–1439px`, 3–4 cols, Sidebar fijo), Wide (`>= 1440px`, `max-w-7xl mx-auto`).

@@ -155,3 +155,20 @@ Después de modificar cualquier script generador, archivo `.xml` o [`src/pages/W
 1. Verificar que todo `<item>` en los `.xml` contenga `<wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>` con `elementor_header_footer`, `_wpb_vc_js_status` en `true` y la regla `.wpb-content-wrapper` con `max-width: 1200px !important;` dentro de `_wpb_post_custom_css`.
 2. Verificar que existan `0` ocurrencias de `[vc_raw_html]` y `0` ocurrencias de la palabra prohibida *"trámite"* en títulos visibles.
 3. Ejecutar `npm run build` para confirmar que TypeScript y el empaquetado de recursos `?raw` en Vite compilen sin errores.
+
+---
+
+## 6. Estándar WPBakery Nativo para Páginas de Contenido (Pegado Directo / `Portfolio - list`)
+
+Cuando una vista de contenido o *Hub* (ej. `FEL`, `Solvencia Fiscal`) se entrega para **pegado directo en Modo Clásico › Texto** (sin importación XML) sobre la plantilla **`Portfolio - list`** de The7, aplicar obligatoriamente este estándar:
+
+1. **Cero HTML crudo dentro de `[vc_column_text]`:** No usar `<h1..3>`, `<ol>`, `<li>`, `<a>` ni `<strong>` dentro de `[vc_column_text]`, para evitar que WordPress escape etiquetas o convierta comillas rectas `"` en tipográficas `”`. Usar `[vc_custom_heading]` para títulos y *eyebrows*, `[vc_column_text]` en texto plano y `[vc_btn]` para todo enlace o descarga.
+2. **Plantilla `Portfolio - list` y Breadcrumb limpio:** No forzar fondo de página ni `max-width: 1200px`; iniciar directo con `[vc_row][vc_column][dt_breadcrumbs ...][vc_separator][/vc_column][/vc_row]` (sin separadores blancos arriba). Permitir `h1` centrado (`text_align:center`) cuando el diseño de página de contenido lo requiera.
+3. **Grilla simétrica (`gap: 14px`) con CSS Grid:** Colocar todas las tarjetas `[bsf-info-box]` en **un solo `[vc_row_inner]`** con `display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px;`, desactivando `::before` y `::after` (`display: none !important; content: none !important;`) y reseteando el `padding` de `.vc_column-inner`. Si hay tarjeta destacada de ancho completo, usar `:first-child { grid-column: 1 / -1; }`.
+4. **Pasos secuenciales en bloque único (no tarjetas):** Los flujos paso a paso van dentro de un único panel gris tenue (`#F4F6F9`, `.sat-*-panel`) con líneas numeradas en `[vc_column_text]` y borde izquierdo azul SAT (`#14649B`), reservando `[bsf-info-box]` con hover `#14649B` solo para tarjetas navegables.
+5. **Botones vs. enlaces de descarga (`[vc_btn]` + `target:%20_blank|`):**
+   - Reservar botones sólidos/contorno (`min-height: 48px`) para acciones transaccionales principales.
+   - Estilizar descargas secundarias, tiendas de apps y enlaces legales con `.sat-*-btn-link` (fondo transparente, `min-height: 44px`, subrayado en hover).
+   - Todo enlace de descarga debe tener texto único (WCAG 2.4.4) y formato explícito al final (ej. `Descargar Acuerdo 13-2018 (PDF)`).
+6. **Capa 3 ATO (Base legal al pie):** Usar `[vc_tta_accordion style="flat" collapsible_all="true" active_section="0"]` con filas `equal_height="yes" content_placement="middle"`.
+7. **Respaldos versionados:** Guardar siempre el par `<PREFIJO>_<pagina>_wpbakery.txt` y `<PREFIJO>_<pagina>_custom.css` en `docs/plantillas-wpbakery/` (referencia base: `FEL_hub-principal_wpbakery.txt` y `FEL_hub-principal_custom.css`).

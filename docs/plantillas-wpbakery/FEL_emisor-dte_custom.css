@@ -1,0 +1,71 @@
+/* SAT · Emisor de DTE (FEL) — WPBakery > Configuración de página > CSS personalizado
+   Base: SAT Design System Web v1.0 (Manual de Imagen y Normas Gráficas SAT V.5)
+   Colores institucionales: celeste #19AFE1 · azul SAT #14649B · azul oscuro #19324B · gris #DCDCDC · blanco #FFFFFF
+   Sin fondo de página (usa el del tema / plantilla Portfolio - list). Cajas con relleno gris tenue #F4F6F9 sin bordes. */
+.sat-fel{--celeste:#19afe1;--azul:#14649b;--azul-osc:#19324b;--gris:#dcdcdc;--blanco:#fff;--suave:#475569;--tenue:#f4f6f9;
+  padding:24px 0 48px!important;font-family:"Gotham","Montserrat",-apple-system,"Segoe UI",sans-serif;color:var(--azul-osc)}
+.sat-fel a:focus-visible,.sat-fel .vc_btn3:focus-visible{outline:3px solid var(--azul)!important;outline-offset:2px}
+
+/* Títulos y texto */
+.sat-fel .sat-fel-h1,.sat-fel .sat-fel-h1 h1{font-size:32px!important;line-height:1.2!important;font-weight:900!important;color:var(--azul-osc)!important;margin:0 0 12px!important;letter-spacing:-.01em}
+.sat-fel .sat-fel-h2,.sat-fel .sat-fel-h2 h2{font-size:21px!important;line-height:1.3!important;font-weight:800!important;color:var(--azul-osc)!important;margin:0 0 6px!important}
+.sat-fel .sat-fel-h3,.sat-fel .sat-fel-h3 h3{font-size:15px!important;line-height:1.35!important;font-weight:700!important;color:var(--azul-osc)!important;margin:0 0 4px!important}
+.sat-fel .sat-fel-eyebrow,.sat-fel .sat-fel-eyebrow p{font-size:12px!important;font-weight:800!important;color:var(--azul)!important;text-transform:uppercase;letter-spacing:.07em;margin:0 0 6px!important}
+.sat-fel .sat-fel-section{margin-top:40px!important;padding-top:28px!important;border-top:1px solid rgba(25,50,75,.15)}
+.sat-fel .sat-fel-lead{margin-bottom:20px!important}
+.sat-fel .sat-fel-lead p{font-size:17px!important;line-height:1.6!important;color:var(--azul-osc)!important;margin:0!important}
+.sat-fel .sat-fel-text{margin-bottom:16px!important}
+.sat-fel .sat-fel-text p{font-size:15px!important;line-height:1.55!important;color:var(--suave)!important;margin:0!important}
+
+/* Botones y enlaces limpios */
+.sat-fel .sat-fel-btn{display:inline-block!important;margin:0 8px 8px 0!important}
+.sat-fel .sat-fel-btn .vc_btn3{min-height:48px!important;padding:13px 22px!important;border-radius:10px!important;font-size:14px!important;font-weight:700!important;border:0!important;box-shadow:none!important;white-space:normal!important;background-image:none!important}
+.sat-fel .sat-fel-btn.sat-fel-btn-primary .vc_btn3{background-color:var(--azul)!important;color:var(--blanco)!important}
+.sat-fel .sat-fel-btn.sat-fel-btn-primary .vc_btn3:hover{background-color:var(--azul-osc)!important;color:var(--blanco)!important}
+.sat-fel .sat-fel-btn.sat-fel-btn-link .vc_btn3{min-height:44px!important;padding:8px 4px!important;background-color:transparent!important;color:var(--azul)!important;box-shadow:none!important;font-size:13px!important;font-weight:600!important;border-radius:6px!important;display:inline-flex!important;align-items:center!important;text-align:left!important}
+.sat-fel .sat-fel-btn.sat-fel-btn-link .vc_btn3:hover{background-color:transparent!important;color:var(--azul-osc)!important;text-decoration:underline!important}
+.sat-fel .sat-fel-btn.sat-fel-link-block{display:block!important;margin:0 0 2px 0!important}
+
+/* Grilla 3 columnas simétrica (gap: 14px) para Requisitos y Qué sigue */
+.sat-fel .sat-fel-boxes-3{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:14px!important;margin:0 0 14px 0!important}
+.sat-fel .sat-fel-boxes-3::before,.sat-fel .sat-fel-boxes-3::after{display:none!important;content:none!important}
+.sat-fel .sat-fel-boxes-3>.vc_column_container{width:100%!important;max-width:100%!important;padding:0!important;margin:0!important;float:none!important}
+.sat-fel .sat-fel-boxes-3 .vc_column-inner,.sat-fel .sat-fel-boxes-3 .wpb_wrapper{padding:0!important;margin:0!important;height:100%!important}
+.sat-fel .sat-fel-boxes-3 .aio-icon-component{margin:0!important;height:100%!important}
+.sat-fel-boxes-3 .aio-icon-left,.sat-fel-boxes-3 .aio-icon-top{display:none!important}
+.sat-fel-boxes-3 .aio-icon-box{height:100%;padding:20px!important;background:var(--tenue)!important;border:0!important;border-radius:14px!important;box-shadow:none!important;text-align:left!important}
+.sat-fel-boxes-3 .aio-icon-title{font-size:15px!important;font-weight:700!important;color:var(--azul-osc)!important;margin:0 0 6px!important;text-align:left!important}
+.sat-fel-boxes-3 .aio-icon-description{font-size:14px!important;line-height:1.55!important;color:var(--suave)!important;text-align:left!important}
+
+/* Aviso (tono alerta del Design System): sin bordes */
+.sat-fel .sat-fel-note{background:#fff8e6!important;border:0!important;border-radius:14px!important;box-shadow:none!important;color:var(--azul-osc)!important;font-size:14px!important;margin:0 0 14px 0!important}
+.sat-fel .sat-fel-note .vc_message_box-icon,.sat-fel .sat-fel-note .vc_message_box-icon i{color:#92400e!important}
+
+/* Bloque único de pasos (sin tarjetas separadas) */
+.sat-fel .sat-fel-panel{background:var(--tenue)!important;border-radius:14px!important;padding:24px 28px!important;margin:0 0 16px 0!important;box-sizing:border-box!important}
+.sat-fel .sat-fel-panel>.vc_column_container,.sat-fel .sat-fel-panel .vc_column-inner{padding:0!important}
+.sat-fel .sat-fel-step-line{margin-bottom:12px!important;padding-left:12px!important;border-left:3px solid var(--azul)!important}
+.sat-fel .sat-fel-step-line.sat-fel-step-last{margin-bottom:0!important}
+.sat-fel .sat-fel-step-line p{font-size:14px!important;line-height:1.6!important;color:var(--suave)!important;margin:0!important}
+.sat-fel .sat-fel-actions{margin:0!important}
+.sat-fel .sat-fel-actions>.vc_column_container,.sat-fel .sat-fel-actions .vc_column-inner{padding:0!important}
+
+/* Acordeones (Manuales, Resoluciones y Base Legal): gris tenue, sin bordes */
+.sat-fel-acc{margin:8px 0 0!important}
+.sat-fel-acc .vc_tta-panel{background:var(--tenue)!important;border:0!important;border-radius:14px!important;margin-bottom:10px!important;overflow:hidden}
+.sat-fel-acc .vc_tta-panel-heading,.sat-fel-acc .vc_tta-panel-body{background:var(--tenue)!important;border:0!important}
+.sat-fel-acc .vc_tta-panel-title>a{min-height:48px;display:flex!important;align-items:center;padding:14px 20px!important;font-weight:700!important;font-size:15px!important;color:var(--azul-osc)!important}
+.sat-fel-acc .vc_tta-controls-icon::before,.sat-fel-acc .vc_tta-controls-icon::after{border-color:var(--azul)!important}
+.sat-fel-acc .vc_tta-panel-body{padding:0 20px 18px!important}
+.sat-fel-legal{margin-top:8px!important}
+.sat-fel .sat-fel-legal-row{padding:10px 0!important;border-top:1px solid rgba(25,50,75,.12)!important;margin:0!important}
+.sat-fel .sat-fel-legal-text{margin-bottom:0!important}
+.sat-fel .sat-fel-legal-text p{font-size:13.5px!important;line-height:1.55!important;color:var(--suave)!important;margin:0!important}
+.sat-fel .sat-fel-legal-row .sat-fel-btn{display:block!important;text-align:right!important;margin:0!important}
+
+@media(max-width:767px){
+  .sat-fel .sat-fel-boxes-3{grid-template-columns:1fr!important}
+  .sat-fel .sat-fel-panel{padding:20px!important}
+  .sat-fel .sat-fel-legal-row .sat-fel-btn{text-align:left!important;margin-top:10px!important}
+}
+@media(prefers-reduced-motion:reduce){.sat-fel *{transition:none!important;transform:none!important}}

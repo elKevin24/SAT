@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0"
+  xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:wp="http://wordpress.org/export/1.2/"
+>
+<channel>
+  <title>Portal SAT Guatemala — Factura Electrónica en Línea (FEL) Hub Principal</title>
+  <link>https://prototipo.sat.gob.gt</link>
+  <description>Importación nativa WPBakery + The7 Classic para la página principal (Hub) del Régimen de Factura Electrónica en Línea (FEL) — Portal SAT Guatemala</description>
+  <pubDate>Sat, 14 Nov 2026 16:49:00 +0000</pubDate>
+  <language>es-GT</language>
+  <wp:wxr_version>1.2</wp:wxr_version>
+  <wp:base_site_url>https://prototipo.sat.gob.gt</wp:base_site_url>
+  <wp:base_blog_url>https://prototipo.sat.gob.gt</wp:base_blog_url>
+  <wp:author>
+    <wp:author_id>1</wp:author_id>
+    <wp:author_login><![CDATA[admin]]></wp:author_login>
+    <wp:author_email><![CDATA[webmaster@sat.gob.gt]]></wp:author_email>
+    <wp:author_display_name><![CDATA[SAT Guatemala]]></wp:author_display_name>
+  </wp:author>
+  <item>
+    <title>Régimen de Factura Electrónica en Línea (FEL)</title>
+    <link>https://prototipo.sat.gob.gt/factura-electronica-fel/</link>
+    <pubDate>Sat, 14 Nov 2026 16:49:00 +0000</pubDate>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <guid isPermaLink="false">https://prototipo.sat.gob.gt/?page_slug=factura-electronica-fel&amp;v=20261114104900</guid>
+    <description></description>
+    <content:encoded><![CDATA[[vc_row][vc_column][dt_breadcrumbs font_style="italic:normal:none" alignment="left"][vc_separator][/vc_column][/vc_row][vc_section el_class="sat-fel-page"][vc_row el_class="sat-fel-card-box"][vc_column][vc_column_text]<h1 class="sat-fel-h1">Régimen de Factura Electrónica en Línea (FEL)</h1>
+<p class="sat-fel-lead">Emite, transmite y conserva facturas, recibos, notas de crédito, notas de débito y otros Documentos Tributarios Electrónicos (DTE) de forma gratuita y con validez legal desde la Agencia Virtual o la App FEL.</p>
+<div class="sat-fel-app-links"><strong>Descargar App FEL gratuita:</strong> <a href="https://play.google.com/store/apps/details?id=gob.sat.fel" target="_blank" rel="noopener noreferrer">Google Play (Android)</a> · <a href="https://apps.apple.com/gt/app/fel/id1555900357" target="_blank" rel="noopener noreferrer">App Store (iOS)</a> · <a href="https://appgallery.cloud.huawei.com/ag/n/app/C104282259?locale=en_US&amp;source=appshare&amp;subsource=C104282259" target="_blank" rel="noopener noreferrer">AppGallery (Huawei)</a></div>[/vc_column_text][/vc_column][/vc_row][vc_row el_class="sat-fel-section-header"][vc_column][vc_column_text]<h2 class="sat-fel-h2">¿Qué necesitas gestionar en Factura Electrónica (FEL)?</h2>
+<p class="sat-fel-sublead">Explora las guías oficiales, normas técnicas y opciones para emisores y empresas.</p>[/vc_column_text][/vc_column][/vc_row][vc_row gap="0px" el_class="sat-seccion-contribuyentes sat-fel-grid-1col"][vc_column width="1/1"][bsf-info-box icon_type="none" title="Habilitarme como emisor de facturas (FEL)" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Ffactura-electronica-fel%2Femisor%2F"]Activa tu usuario en Factura Electrónica (FEL), obtén tu firma electrónica gratuita, consulta las resoluciones de incorporación y descarga los manuales de usuario.[/bsf-info-box][/vc_column][/vc_row][vc_row gap="0px" el_class="sat-seccion-contribuyentes sat-fel-grid-2col"][vc_column width="1/2" offset="vc_col-xl-inherit vc_col-lg-inherit vc_col-md-6 vc_col-sm-inherit"][bsf-info-box icon_type="none" title="Elegir certificador de facturas autorizado" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Ffactura-electronica-fel%2Fcertificadores%2F"]Usa el servicio gratuito de la SAT o consulta la lista oficial de empresas autorizadas para facturación masiva.[/bsf-info-box][/vc_column][vc_column width="1/2"][bsf-info-box icon_type="none" title="Integrar sistemas contables (XML y XSD)" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Ffactura-electronica-fel%2Fdocumentacion-tecnica%2F"]Especificaciones XML, esquemas de validación (XSD), servicios web y guías para desarrolladores y equipos de tecnología.[/bsf-info-box][/vc_column][/vc_row][vc_row gap="0px" el_class="sat-seccion-contribuyentes sat-fel-grid-2col"][vc_column width="1/2" offset="vc_col-xl-inherit vc_col-lg-inherit vc_col-md-6 vc_col-sm-inherit"][bsf-info-box icon_type="none" title="Consultar o acreditarse como auditor de seguridad" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Ffactura-electronica-fel%2Fauditor-seguridad%2F"]Requisitos de acreditación y firmas registradas para auditar la seguridad informática de empresas certificadoras.[/bsf-info-box][/vc_column][vc_column width="1/2"][bsf-info-box icon_type="none" title="Resolver dudas frecuentes sobre facturación" read_more="box" link="url:https%3A%2F%2Fprototipo.sat.gob.gt%2Ffactura-electronica-fel%2Fpreguntas-frecuentes%2F"]Respuestas directas sobre emisión gratuita, anulación de facturas, plazos y uso de la aplicación móvil.[/bsf-info-box][/vc_column][/vc_row][vc_row el_class="sat-fel-card-box"][vc_column][vc_column_text]<h2 class="sat-fel-h2">Cómo funciona la emisión de Factura Electrónica (FEL)</h2>
+<p class="sat-fel-sublead">Cada Documento Tributario Electrónico (DTE) sigue cuatro pasos automáticos de validación en línea:</p>
+<ol class="sat-fel-steps">
+<li><strong>Emisión:</strong> El contribuyente genera el documento con su firma electrónica desde la Agencia Virtual, la App FEL o su sistema contable y lo envía al certificador.</li>
+<li><strong>Certificación:</strong> El certificador (la SAT de forma gratuita o un certificador privado autorizado) valida la estructura y asigna el número de autorización único.</li>
+<li><strong>Recepción y validez en la SAT:</strong> El certificador transmite el documento a la SAT para su verificación y resguardo, dejándolo disponible para consulta inmediata.</li>
+<li><strong>Entrega al receptor:</strong> El emisor entrega el documento certificado al comprador por medio digital (correo, enlace o mensajería) o impreso si el receptor lo solicita.</li>
+</ol>[/vc_column_text][/vc_column][/vc_row][vc_row el_class="sat-fel-card-box sat-fel-docs-box"][vc_column][vc_column_text]<h2 class="sat-fel-h2">Documentos de consulta directa</h2>[/vc_column_text][vc_row_inner el_class="sat-fel-doc-row"][vc_column_inner width="2/3"][vc_column_text]<h3 class="sat-fel-h3">Presentación interactiva: Generalidades de Factura Electrónica (FEL)</h3>
+<p class="sat-fel-desc">Guía didáctica oficial de la SAT con el paso a paso gráfico para conocer cómo funciona el sistema.</p>[/vc_column_text][/vc_column_inner][vc_column_inner width="1/3"][vc_btn title="Descargar presentación (PDF)" style="outline" shape="rounded" color="primary" size="sm" align="right" link="url:https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fdescarga%2F6524%2Ffactura-electronica-fel%2F92802%2Fproceso-de-factura-electronica-en-linea-2026-2||target:%20_blank|rel:noopener%20noreferrer"][/vc_column_inner][/vc_row_inner][vc_row_inner el_class="sat-fel-doc-row sat-fel-doc-row-last"][vc_column_inner width="2/3"][vc_column_text]<h3 class="sat-fel-h3">Lista de contribuyentes pendientes de migración (Renuentes FEL)</h3>
+<p class="sat-fel-desc">Listado oficial vigente al 31 de octubre de 2026 de personas y empresas que aún deben incorporarse al Régimen de Factura Electrónica en Línea (FEL).</p>[/vc_column_text][/vc_column_inner][vc_column_inner width="1/3"][vc_btn title="Descargar listado oficial" style="outline" shape="rounded" color="primary" size="sm" align="right" link="url:https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fdescarga%2F15595%2Frenuentes-fel%2F98108%2Frenuentes-pequenos-contribuyentes-31-10-2026||target:%20_blank|rel:noopener%20noreferrer"][/vc_column_inner][/vc_row_inner][/vc_column][/vc_row][/vc_section]]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>0</wp:post_id>
+    <wp:post_date><![CDATA[2026-11-14 10:49:00]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-11-14 16:49:00]]></wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name><![CDATA[factura-electronica-fel]]></wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>1</wp:menu_order>
+    <wp:post_type><![CDATA[page]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
+      <wp:meta_value><![CDATA[elementor_header_footer]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_sidebar_position]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_dt_header_title]]></wp:meta_key>
+      <wp:meta_value><![CDATA[disabled]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
+      <wp:meta_value><![CDATA[true]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_wpb_post_custom_css]]></wp:meta_key>
+      <wp:meta_value><![CDATA[/* ==================================================
+   HUB FACTURA ELECTRÓNICA EN LÍNEA (FEL) — AZUL SAT #14649B
+   ================================================== */
+
+/* 0. Contenedor centrado idéntico al diseño original (independiente de Elementor Full Width) */
+.wpb-content-wrapper,
+.entry-content {
+    max-width: 1200px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+    box-sizing: border-box !important;
+}
+
+/* Bloques blancos con borde suave (Hero, Proceso y Documentos) */
+.sat-fel-card-box {
+    background-color: #FFFFFF !important;
+    border: 1px solid #DCDCDC !important;
+    border-radius: 16px !important;
+    padding: 28px 32px !important;
+    margin-bottom: 24px !important;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04) !important;
+}
+
+.sat-fel-section-header {
+    margin-top: 8px !important;
+    margin-bottom: 14px !important;
+}
+
+.sat-fel-h1 {
+    font-family: "Gotham", "Montserrat", sans-serif, -apple-system !important;
+    font-size: 28px !important;
+    font-weight: 900 !important;
+    color: #19324B !important;
+    line-height: 1.2 !important;
+    margin: 0 0 12px 0 !important;
+}
+
+.sat-fel-h2 {
+    font-family: "Gotham", "Montserrat", sans-serif, -apple-system !important;
+    font-size: 20px !important;
+    font-weight: 900 !important;
+    color: #19324B !important;
+    line-height: 1.3 !important;
+    margin: 0 0 6px 0 !important;
+}
+
+.sat-fel-h3 {
+    font-family: "Gotham", "Montserrat", sans-serif, -apple-system !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    color: #19324B !important;
+    margin: 0 0 4px 0 !important;
+}
+
+.sat-fel-lead,
+.sat-fel-sublead {
+    font-family: "Gotham", "Montserrat", sans-serif, -apple-system !important;
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    color: #475569 !important;
+    margin: 0 !important;
+    max-width: 780px !important;
+}
+
+.sat-fel-desc {
+    font-family: "Gotham", "Montserrat", sans-serif, -apple-system !important;
+    font-size: 12.5px !important;
+    line-height: 1.55 !important;
+    color: #475569 !important;
+    margin: 0 !important;
+}
+
+.sat-fel-app-links {
+    margin-top: 16px !important;
+    padding-top: 14px !important;
+    border-top: 1px solid #E2E8F0 !important;
+    font-size: 12.5px !important;
+    color: #475569 !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    align-items: center !important;
+}
+
+.sat-fel-app-links strong {
+    color: #19324B !important;
+}
+
+.sat-fel-app-links a {
+    color: #14649B !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+}
+
+.sat-fel-app-links a:hover {
+    text-decoration: underline !important;
+}
+
+/* Pasos del proceso de emisión */
+.sat-fel-steps {
+    margin: 16px 0 0 0 !important;
+    padding-left: 20px !important;
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    color: #475569 !important;
+}
+
+.sat-fel-steps li {
+    margin-bottom: 10px !important;
+}
+
+.sat-fel-steps li:last-child {
+    margin-bottom: 0 !important;
+}
+
+.sat-fel-steps strong {
+    color: #19324B !important;
+}
+
+/* Filas de documentos de consulta directa */
+.sat-fel-doc-row {
+    padding: 14px 0 !important;
+    border-bottom: 1px solid #E2E8F0 !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.sat-fel-doc-row-last {
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+}
+
+/* 1. Grilla de Tarjetas FEL (1 columna destacada + 2 columnas) */
+.sat-seccion-contribuyentes.vc_row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: stretch !important;
+    margin-left: -8px !important;
+    margin-right: -8px !important;
+}
+
+.sat-seccion-contribuyentes.sat-fel-grid-1col > .vc_column_container {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    margin-bottom: 16px !important;
+    box-sizing: border-box !important;
+}
+
+.sat-seccion-contribuyentes.sat-fel-grid-2col > .vc_column_container {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+    width: 50% !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    margin-bottom: 16px !important;
+    box-sizing: border-box !important;
+}
+
+@media (max-width: 767px) {
+    .sat-seccion-contribuyentes.sat-fel-grid-2col > .vc_column_container {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+    .sat-fel-card-box {
+        padding: 20px !important;
+    }
+    .sat-fel-doc-row {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 10px !important;
+    }
+}
+
+/* 3. Contenedores internos de WPBakery: estirar al 100% */
+.sat-seccion-contribuyentes .vc_column-inner,
+.sat-seccion-contribuyentes .wpb_wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1 1 auto !important;
+    width: 100% !important;
+    height: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* 4. Estructura de Info Box: ocupar todo el ancho disponible de la columna */
+.sat-seccion-contribuyentes .aio-icon-component,
+.sat-seccion-contribuyentes .aio-icon-box-link {
+    display: flex !important;
+    flex: 1 1 auto !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* 5. La Tarjeta SAT Oficial */
+.sat-seccion-contribuyentes .aio-icon-box {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    position: relative !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 120px !important;
+    background-color: #FFFFFF !important;
+    border: 1px solid #DCDCDC !important;
+    border-radius: 14px !important;
+    padding: 22px 24px !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    cursor: pointer !important;
+    user-select: none !important;
+    transition: transform 0.35s ease, background-color 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease !important;
+}
+
+/* 6. Hover Azul Oficial de Contribuyentes (#14649B) */
+.sat-seccion-contribuyentes .aio-icon-box:hover {
+    background-color: #14649B !important;
+    border-color: #14649B !important;
+    transform: translateY(-4px) !important;
+    box-shadow: 0 12px 24px rgba(20, 100, 155, 0.22) !important;
+}
+
+/* 7. Cabecera y Chevron Oficial a la derecha */
+.sat-seccion-contribuyentes .aio-icon-header {
+    margin: 0 !important;
+    padding-right: 24px !important;
+    text-align: left !important;
+}
+
+.sat-seccion-contribuyentes .aio-icon-box::after {
+    content: "" !important;
+    position: absolute !important;
+    top: 24px !important;
+    right: 22px !important;
+    width: 18px !important;
+    height: 18px !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: contain !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2394A3B8' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18l6-6-6-6'/%3E%3C/svg%3E") !important;
+    transition: background-image 0.2s ease !important;
+}
+
+.sat-seccion-contribuyentes .aio-icon-box:hover::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FFFFFF' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18l6-6-6-6'/%3E%3C/svg%3E") !important;
+}
+
+/* 8. Título Institucional */
+.sat-seccion-contribuyentes .aio-icon-title {
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: left !important;
+    font-family: "Gotham", "Montserrat", sans-serif, -apple-system !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    line-height: 1.35 !important;
+    color: #19324B !important;
+    transition: color 0.25s ease !important;
+}
+
+/* 9. Descripción en Lenguaje Claro */
+.sat-seccion-contribuyentes .aio-icon-description {
+    margin-top: 8px !important;
+    padding: 0 !important;
+    text-align: left !important;
+    font-family: "Gotham", "Montserrat", sans-serif, -apple-system !important;
+    font-size: 12.5px !important;
+    line-height: 1.55 !important;
+    color: #475569 !important;
+    flex-grow: 1 !important;
+    transition: color 0.25s ease !important;
+}
+
+/* 10. Textos a blanco puro en Hover */
+.sat-seccion-contribuyentes .aio-icon-box:hover .aio-icon-title {
+    color: #FFFFFF !important;
+}
+.sat-seccion-contribuyentes .aio-icon-box:hover .aio-icon-description {
+    color: rgba(255, 255, 255, 0.92) !important;
+}]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+</channel>
+</rss>

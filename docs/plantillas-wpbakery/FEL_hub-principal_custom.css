@@ -1,0 +1,79 @@
+/* SAT · Factura Electrónica en Línea (FEL) Hub Principal — WPBakery > Configuración de página > CSS personalizado
+   Base: SAT Design System Web v1.0 (Manual de Imagen y Normas Gráficas SAT V.5)
+   Colores institucionales: celeste #19AFE1 · azul SAT #14649B · azul oscuro #19324B · gris #DCDCDC · blanco #FFFFFF
+   Sin fondo de página (usa el del tema / plantilla Portfolio - list). Cajas con relleno gris tenue #F4F6F9 sin bordes. */
+.sat-fel{--celeste:#19afe1;--azul:#14649b;--azul-osc:#19324b;--gris:#dcdcdc;--blanco:#fff;--suave:#475569;--tenue:#f4f6f9;
+  padding:24px 0 48px!important;font-family:"Gotham","Montserrat",-apple-system,"Segoe UI",sans-serif;color:var(--azul-osc)}
+.sat-fel a:focus-visible,.sat-fel .vc_btn3:focus-visible{outline:3px solid var(--azul)!important;outline-offset:2px}
+
+/* Títulos y texto (apunta al wrapper y al tag interno de [vc_custom_heading]) */
+.sat-fel .sat-fel-h1,.sat-fel .sat-fel-h1 h1{font-size:32px!important;line-height:1.2!important;font-weight:900!important;color:var(--azul-osc)!important;margin:0 0 12px!important;letter-spacing:-.01em}
+.sat-fel .sat-fel-h2,.sat-fel .sat-fel-h2 h2{font-size:21px!important;line-height:1.3!important;font-weight:800!important;color:var(--azul-osc)!important;margin:0 0 6px!important}
+.sat-fel .sat-fel-h3,.sat-fel .sat-fel-h3 h3{font-size:15px!important;line-height:1.35!important;font-weight:700!important;color:var(--azul-osc)!important;margin:0 0 4px!important}
+.sat-fel .sat-fel-eyebrow,.sat-fel .sat-fel-eyebrow p{font-size:12px!important;font-weight:800!important;color:var(--azul)!important;text-transform:uppercase;letter-spacing:.07em;margin:0 0 6px!important}
+.sat-fel .sat-fel-section{margin-top:40px!important;padding-top:28px!important;border-top:1px solid rgba(25,50,75,.15)}
+.sat-fel .sat-fel-lead{margin-bottom:20px!important}
+.sat-fel .sat-fel-lead p{font-size:17px!important;line-height:1.6!important;color:var(--azul-osc)!important;margin:0!important}
+.sat-fel .sat-fel-text{margin-bottom:16px!important}
+.sat-fel .sat-fel-text p{font-size:15px!important;line-height:1.55!important;color:var(--suave)!important;margin:0!important}
+
+/* Botones: primario azul SAT · secundario contorno azul */
+.sat-fel .sat-fel-btn{display:inline-block!important;margin:0 8px 8px 0!important}
+.sat-fel .sat-fel-btn .vc_btn3{min-height:48px!important;padding:13px 22px!important;border-radius:10px!important;font-size:14px!important;font-weight:700!important;border:0!important;box-shadow:none!important;white-space:normal!important;background-image:none!important}
+.sat-fel .sat-fel-btn.sat-fel-btn-compact .vc_btn3{min-height:36px!important;padding:7px 14px!important;border-radius:8px!important;font-size:12.5px!important;font-weight:600!important}
+.sat-fel .sat-fel-btn.sat-fel-btn-primary .vc_btn3{background-color:var(--azul)!important;color:var(--blanco)!important}
+.sat-fel .sat-fel-btn.sat-fel-btn-primary .vc_btn3:hover{background-color:var(--azul-osc)!important;color:var(--blanco)!important}
+.sat-fel .sat-fel-btn.sat-fel-btn-outline .vc_btn3{background-color:var(--blanco)!important;color:var(--azul)!important;box-shadow:inset 0 0 0 1.5px var(--azul)!important}
+.sat-fel .sat-fel-btn.sat-fel-btn-outline .vc_btn3:hover{background-color:var(--azul)!important;color:var(--blanco)!important}
+.sat-fel .sat-fel-btn.sat-fel-btn-link .vc_btn3{min-height:44px!important;padding:8px 4px!important;background-color:transparent!important;color:var(--azul)!important;box-shadow:none!important;font-size:13px!important;font-weight:600!important;border-radius:6px!important;display:inline-flex!important;align-items:center!important}
+.sat-fel .sat-fel-btn.sat-fel-btn-link .vc_btn3:hover{background-color:transparent!important;color:var(--azul-osc)!important;text-decoration:underline!important}
+
+/* Gap 100% simétrico con CSS Grid (14px horizontal y vertical, igual a gap-3.5 del prototipo) */
+.sat-fel .sat-fel-cards{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:14px!important;margin:0!important}
+.sat-fel .sat-fel-cards::before,.sat-fel .sat-fel-cards::after{display:none!important;content:none!important}
+.sat-fel .sat-fel-cards>.vc_column_container{width:100%!important;max-width:100%!important;padding:0!important;margin:0!important;float:none!important}
+.sat-fel .sat-fel-cards>.vc_column_container:first-child{grid-column:1 / -1!important}
+.sat-fel .sat-fel-cards .vc_column-inner{padding:0!important;margin:0!important;height:100%!important}
+.sat-fel .sat-fel-cards .wpb_wrapper{height:100%!important}
+.sat-fel .sat-fel-cards .aio-icon-component{margin:0!important;height:100%!important}
+
+/* Tarjetas de módulos FEL: gris tenue, sin bordes, hover azul SAT con texto blanco */
+.sat-fel-cards .aio-icon-left,.sat-fel-cards .aio-icon-top,.sat-fel-cards .aio-icon-read{display:none!important}
+.sat-fel-cards .aio-icon-component,.sat-fel-cards .aio-icon-box-link{display:block;height:100%;text-decoration:none!important}
+.sat-fel-cards .aio-icon-box{height:100%;min-height:120px;padding:22px 24px!important;background:var(--tenue)!important;border:0!important;border-radius:14px!important;box-shadow:none!important;text-align:left!important;transition:transform .3s,background-color .3s,box-shadow .3s}
+.sat-fel-cards .aio-icon-title{font-size:16px!important;font-weight:700!important;color:var(--azul-osc)!important;margin:0 0 6px!important;text-align:left!important}
+.sat-fel-cards .aio-icon-description{font-size:14px!important;line-height:1.55!important;color:var(--suave)!important;text-align:left!important}
+.sat-fel-cards .aio-icon-box:hover{background:var(--azul)!important;transform:translateY(-4px);box-shadow:0 14px 30px rgba(0,0,0,.08)!important}
+.sat-fel-cards .aio-icon-box:hover .aio-icon-title,.sat-fel-cards .aio-icon-box:hover .aio-icon-description,.sat-fel-cards .aio-icon-box:hover p{color:var(--blanco)!important}
+
+/* Bloque único de pasos (como el prototipo local, sin tarjetas separadas) */
+.sat-fel .sat-fel-panel{background:var(--tenue)!important;border-radius:14px!important;padding:24px 28px!important;margin:0!important;box-sizing:border-box!important}
+.sat-fel .sat-fel-panel>.vc_column_container{padding:0!important}
+.sat-fel .sat-fel-panel .vc_column-inner{padding:0!important}
+.sat-fel .sat-fel-step-line{margin-bottom:10px!important;padding-left:12px!important;border-left:3px solid var(--azul)!important}
+.sat-fel .sat-fel-step-line.sat-fel-step-last{margin-bottom:0!important}
+.sat-fel .sat-fel-step-line p{font-size:14px!important;line-height:1.6!important;color:var(--suave)!important;margin:0!important}
+
+/* Documentos de consulta directa */
+.sat-fel .sat-fel-doc-card{background:var(--tenue)!important;border-radius:14px!important;padding:18px 22px!important;margin:0 0 14px 0!important;box-sizing:border-box!important}
+.sat-fel .sat-fel-doc-card .sat-fel-text{margin-bottom:0!important}
+.sat-fel .sat-fel-doc-card .sat-fel-btn{display:block!important;text-align:right!important;margin:0!important}
+
+/* Acordeón de Base Legal (Capa 3 ATO, igual al prototipo local) */
+.sat-fel-acc{margin:32px 0 0!important}
+.sat-fel-acc .vc_tta-panel{background:var(--tenue)!important;border:0!important;border-radius:14px!important;margin-bottom:0!important;overflow:hidden}
+.sat-fel-acc .vc_tta-panel-heading,.sat-fel-acc .vc_tta-panel-body{background:var(--tenue)!important;border:0!important}
+.sat-fel-acc .vc_tta-panel-title>a{min-height:48px;display:flex!important;align-items:center;padding:14px 20px!important;font-weight:700!important;font-size:15px!important;color:var(--azul-osc)!important}
+.sat-fel-acc .vc_tta-controls-icon::before,.sat-fel-acc .vc_tta-controls-icon::after{border-color:var(--azul)!important}
+.sat-fel-acc .vc_tta-panel-body{padding:0 20px 18px!important}
+.sat-fel .sat-fel-legal-row{padding:10px 0!important;border-top:1px solid rgba(25,50,75,.12)!important;margin:0!important}
+.sat-fel .sat-fel-legal-text{margin-bottom:0!important}
+.sat-fel .sat-fel-legal-text p{font-size:13.5px!important;line-height:1.55!important;color:var(--suave)!important;margin:0!important}
+.sat-fel .sat-fel-legal-row .sat-fel-btn{display:block!important;text-align:right!important;margin:0!important}
+
+@media(max-width:767px){
+  .sat-fel .sat-fel-cards{grid-template-columns:1fr!important}
+  .sat-fel .sat-fel-panel{padding:20px!important}
+  .sat-fel .sat-fel-doc-card .sat-fel-btn,.sat-fel .sat-fel-legal-row .sat-fel-btn{text-align:left!important;margin-top:10px!important}
+}
+@media(prefers-reduced-motion:reduce){.sat-fel *{transition:none!important;transform:none!important}}
