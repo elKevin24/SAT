@@ -1,0 +1,116 @@
+/* SAT · Comercio Exterior · Habilitarse para emitir Constancias de Adquisición de Insumos y Servicios (CAIS) (TIPO-1) */
+/* SAT · Comercio Exterior — Hoja CSS Base Modular de Maquila (WPBakery > Configuración de página > CSS personalizado)
+   Base: SAT Design System Web v1.0 (Manual de Imagen y Normas Gráficas SAT V.5) + Patrones validados FEL_*
+   Paleta Comercio Exterior: acento #0284C7 · acento contraste texto #0369A1 · celeste #19AFE1 · azul oscuro #19324B · gris #DCDCDC · tenue #F4F6F9 · blanco #FFFFFF
+   Sin fondo de página (usa el del tema / plantilla Portfolio - list). */
+.sat-mq{--celeste:#19afe1;--acento:#0284c7;--acento-osc:#0369a1;--azul-osc:#19324b;--gris:#dcdcdc;--blanco:#fff;--suave:#475569;--tenue:#f4f6f9;
+  padding:24px 0 48px!important;font-family:"Gotham","Montserrat",-apple-system,"Segoe UI",sans-serif;color:var(--azul-osc)}
+.sat-mq a:focus-visible,.sat-mq .vc_btn3:focus-visible,.sat-mq .vc_tta-panel-title>a:focus-visible,.sat-mq button:focus-visible{outline:3px solid var(--acento)!important;outline-offset:2px}
+
+/* Títulos, secciones y texto (apunta al wrapper y al tag interno de [vc_custom_heading]) */
+.sat-mq .sat-mq-h1,.sat-mq .sat-mq-h1 h1{font-size:32px!important;line-height:1.2!important;font-weight:900!important;color:var(--azul-osc)!important;margin:0 0 12px!important;letter-spacing:-.01em}
+.sat-mq .sat-mq-h2,.sat-mq .sat-mq-h2 h2{font-size:21px!important;line-height:1.3!important;font-weight:800!important;color:var(--azul-osc)!important;margin:0 0 6px!important}
+.sat-mq .sat-mq-h3,.sat-mq .sat-mq-h3 h3{font-size:15px!important;line-height:1.35!important;font-weight:700!important;color:var(--azul-osc)!important;margin:0 0 4px!important}
+.sat-mq .sat-mq-eyebrow,.sat-mq .sat-mq-eyebrow p{font-size:12px!important;font-weight:800!important;color:var(--acento-osc)!important;text-transform:uppercase;letter-spacing:.07em;margin:0 0 6px!important}
+.sat-mq .sat-mq-section{margin-top:40px!important;padding-top:28px!important;border-top:1px solid rgba(25,50,75,.15)}
+.sat-mq .sat-mq-lead{margin-bottom:20px!important}
+.sat-mq .sat-mq-lead p{font-size:17px!important;line-height:1.6!important;color:var(--azul-osc)!important;margin:0!important}
+.sat-mq .sat-mq-text{margin-bottom:16px!important}
+.sat-mq .sat-mq-text p{font-size:15px!important;line-height:1.55!important;color:var(--suave)!important;margin:0!important}
+
+/* Botones y enlaces accesibles */
+.sat-mq .sat-mq-btn{display:inline-block!important;margin:0 8px 8px 0!important}
+.sat-mq .sat-mq-btn .vc_btn3{min-height:48px!important;padding:13px 22px!important;border-radius:10px!important;font-size:14px!important;font-weight:700!important;border:0!important;box-shadow:none!important;white-space:normal!important;background-image:none!important}
+.sat-mq .sat-mq-btn.sat-mq-btn-compact .vc_btn3{min-height:36px!important;padding:7px 14px!important;border-radius:8px!important;font-size:12.5px!important;font-weight:600!important}
+.sat-mq .sat-mq-btn.sat-mq-btn-primary .vc_btn3{background-color:var(--acento-osc)!important;color:var(--blanco)!important}
+.sat-mq .sat-mq-btn.sat-mq-btn-primary .vc_btn3:hover{background-color:var(--azul-osc)!important;color:var(--blanco)!important}
+.sat-mq .sat-mq-btn.sat-mq-btn-outline .vc_btn3{background-color:var(--blanco)!important;color:var(--acento-osc)!important;box-shadow:inset 0 0 0 1.5px var(--acento)!important}
+.sat-mq .sat-mq-btn.sat-mq-btn-outline .vc_btn3:hover{background-color:var(--acento)!important;color:var(--blanco)!important}
+.sat-mq .sat-mq-btn.sat-mq-btn-link .vc_btn3{min-height:44px!important;padding:8px 4px!important;background-color:transparent!important;color:var(--acento-osc)!important;box-shadow:none!important;font-size:13px!important;font-weight:600!important;border-radius:6px!important;display:inline-flex!important;align-items:center!important;text-align:left!important}
+.sat-mq .sat-mq-btn.sat-mq-btn-link .vc_btn3:hover{background-color:transparent!important;color:var(--azul-osc)!important;text-decoration:underline!important}
+.sat-mq .sat-mq-btn.sat-mq-link-block{display:block!important;margin:0 0 2px 0!important}
+.sat-mq .sat-mq-actions,.sat-mq .sat-mq-anchor-row{margin:0!important}
+.sat-mq .sat-mq-actions>.vc_column_container,.sat-mq .sat-mq-actions .vc_column-inner,.sat-mq .sat-mq-anchor-row>.vc_column_container,.sat-mq .sat-mq-anchor-row .vc_column-inner{padding:0!important}
+.sat-mq .sat-mq-anchor-row{scroll-margin-top:96px}
+
+/* Tarjetas interactivas de Hub (Tipo 3): CSS Grid 2 columnas, hover acento Comercio Exterior (#0284C7) */
+.sat-mq .sat-mq-cards{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:14px!important;margin:0!important}
+.sat-mq .sat-mq-cards::before,.sat-mq .sat-mq-cards::after{display:none!important;content:none!important}
+.sat-mq .sat-mq-cards>.vc_column_container{width:100%!important;max-width:100%!important;padding:0!important;margin:0!important;float:none!important}
+.sat-mq .sat-mq-cards>.vc_column_container:first-child{grid-column:1 / -1!important}
+.sat-mq .sat-mq-cards.sat-mq-cards-even>.vc_column_container:first-child{grid-column:auto!important}
+.sat-mq .sat-mq-cards .vc_column-inner,.sat-mq .sat-mq-cards .wpb_wrapper{padding:0!important;margin:0!important;height:100%!important}
+.sat-mq .sat-mq-cards .aio-icon-component{margin:0!important;height:100%!important}
+.sat-mq-cards .aio-icon-left,.sat-mq-cards .aio-icon-top,.sat-mq-cards .aio-icon-read{display:none!important}
+.sat-mq-cards .aio-icon-component,.sat-mq-cards .aio-icon-box-link{display:block;height:100%;text-decoration:none!important}
+.sat-mq-cards .aio-icon-box{height:100%;min-height:120px;padding:22px 24px!important;background:var(--tenue)!important;border:0!important;border-radius:14px!important;box-shadow:none!important;text-align:left!important;transition:transform .3s,background-color .3s,box-shadow .3s}
+.sat-mq-cards .aio-icon-title{font-size:16px!important;font-weight:700!important;color:var(--azul-osc)!important;margin:0 0 6px!important;text-align:left!important}
+.sat-mq-cards .aio-icon-description{font-size:14px!important;line-height:1.55!important;color:var(--suave)!important;text-align:left!important}
+.sat-mq-cards .aio-icon-box:hover{background:var(--acento)!important;transform:translateY(-4px);box-shadow:0 14px 30px rgba(2,132,199,.18)!important}
+.sat-mq-cards .aio-icon-box:hover .aio-icon-title,.sat-mq-cards .aio-icon-box:hover .aio-icon-description,.sat-mq-cards .aio-icon-box:hover p{color:var(--blanco)!important}
+
+/* Grillas informativas de 2 y 3 columnas (Requisitos, Datos previos, Qué sigue) */
+.sat-mq .sat-mq-boxes-3{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:14px!important;margin:0 0 14px 0!important}
+.sat-mq .sat-mq-boxes-2{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:14px!important;margin:0 0 14px 0!important}
+.sat-mq .sat-mq-boxes-3::before,.sat-mq .sat-mq-boxes-3::after,.sat-mq .sat-mq-boxes-2::before,.sat-mq .sat-mq-boxes-2::after{display:none!important;content:none!important}
+.sat-mq .sat-mq-boxes-3>.vc_column_container,.sat-mq .sat-mq-boxes-2>.vc_column_container{width:100%!important;max-width:100%!important;padding:0!important;margin:0!important;float:none!important}
+.sat-mq .sat-mq-boxes-3 .vc_column-inner,.sat-mq .sat-mq-boxes-3 .wpb_wrapper,.sat-mq .sat-mq-boxes-2 .vc_column-inner,.sat-mq .sat-mq-boxes-2 .wpb_wrapper{padding:0!important;margin:0!important;height:100%!important}
+.sat-mq .sat-mq-boxes-3 .aio-icon-component,.sat-mq .sat-mq-boxes-2 .aio-icon-component{margin:0!important;height:100%!important}
+.sat-mq-boxes-3 .aio-icon-left,.sat-mq-boxes-3 .aio-icon-top,.sat-mq-boxes-2 .aio-icon-left,.sat-mq-boxes-2 .aio-icon-top{display:none!important}
+.sat-mq-boxes-3 .aio-icon-box,.sat-mq-boxes-2 .aio-icon-box{height:100%;padding:20px!important;background:var(--tenue)!important;border:0!important;border-radius:14px!important;box-shadow:none!important;text-align:left!important}
+.sat-mq-boxes-3 .aio-icon-title,.sat-mq-boxes-2 .aio-icon-title{font-size:15px!important;font-weight:700!important;color:var(--azul-osc)!important;margin:0 0 6px!important;text-align:left!important}
+.sat-mq-boxes-3 .aio-icon-description,.sat-mq-boxes-2 .aio-icon-description{font-size:14px!important;line-height:1.55!important;color:var(--suave)!important;text-align:left!important}
+
+/* Aviso / alerta ciudadana sin bordes */
+.sat-mq .sat-mq-note{background:#fff8e6!important;border:0!important;border-radius:14px!important;box-shadow:none!important;color:var(--azul-osc)!important;font-size:14px!important;margin:0 0 14px 0!important}
+.sat-mq .sat-mq-note .vc_message_box-icon,.sat-mq .sat-mq-note .vc_message_box-icon i{color:#92400e!important}
+
+/* Bloque único de pasos o síntesis operativa */
+.sat-mq .sat-mq-panel{background:var(--tenue)!important;border-radius:14px!important;padding:24px 28px!important;margin:0 0 16px 0!important;box-sizing:border-box!important}
+.sat-mq .sat-mq-panel>.vc_column_container,.sat-mq .sat-mq-panel .vc_column-inner{padding:0!important}
+.sat-mq .sat-mq-step-line{margin-bottom:12px!important;padding-left:12px!important;border-left:3px solid var(--acento)!important}
+.sat-mq .sat-mq-step-line.sat-mq-step-last{margin-bottom:0!important}
+.sat-mq .sat-mq-step-line p{font-size:14px!important;line-height:1.6!important;color:var(--suave)!important;margin:0!important}
+
+/* Documentos de consulta directa */
+.sat-mq .sat-mq-doc-card{background:var(--tenue)!important;border-radius:14px!important;padding:18px 22px!important;margin:0 0 14px 0!important;box-sizing:border-box!important}
+.sat-mq .sat-mq-doc-card .sat-mq-text{margin-bottom:0!important}
+.sat-mq .sat-mq-doc-card .sat-mq-btn{display:block!important;text-align:right!important;margin:0!important}
+
+/* Acordeones (Manuales, Base Legal y Preguntas Frecuentes) */
+.sat-mq-acc{margin:8px 0 0!important}
+.sat-mq-acc .vc_tta-panel{background:var(--tenue)!important;border:0!important;border-radius:14px!important;margin-bottom:10px!important;overflow:hidden}
+.sat-mq-acc .vc_tta-panel-heading,.sat-mq-acc .vc_tta-panel-body{background:var(--tenue)!important;border:0!important}
+.sat-mq-acc .vc_tta-panel-title>a{min-height:48px;display:flex!important;align-items:center;padding:14px 20px!important;font-weight:700!important;font-size:15px!important;line-height:1.4!important;color:var(--azul-osc)!important}
+.sat-mq-acc .vc_tta-controls-icon::before,.sat-mq-acc .vc_tta-controls-icon::after{border-color:var(--acento)!important}
+.sat-mq-acc .vc_tta-panel-body{padding:0 20px 18px!important}
+.sat-mq-legal{margin-top:8px!important}
+.sat-mq .sat-mq-legal-row{padding:10px 0!important;border-top:1px solid rgba(25,50,75,.12)!important;margin:0!important}
+.sat-mq .sat-mq-legal-text{margin-bottom:0!important}
+.sat-mq .sat-mq-legal-text p{font-size:13.5px!important;line-height:1.55!important;color:var(--suave)!important;margin:0!important}
+.sat-mq .sat-mq-legal-row .sat-mq-btn{display:block!important;text-align:right!important;margin:0!important}
+.sat-mq .sat-mq-faq-ans{margin:0!important}
+.sat-mq .sat-mq-faq-ans p{font-size:14px!important;line-height:1.65!important;color:var(--suave)!important;margin:0 0 8px 0!important}
+.sat-mq .sat-mq-faq-ans p:last-child{margin-bottom:0!important}
+
+/* Tablas semánticas sin plugin (resistentes a TinyMCE Text -> Code mediante selector .sat-mq-table-box table) */
+.sat-mq .sat-mq-table-box{margin:0 0 16px 0!important}
+.sat-mq .sat-mq-table-box .wpb_wrapper{width:100%;overflow-x:auto;border:1px solid var(--gris);border-radius:14px;background:var(--blanco)}
+.sat-mq .sat-mq-table-box table,.sat-mq .sat-mq-table{width:100%;min-width:600px;border-collapse:collapse;text-align:left;font-size:13px;line-height:1.55;margin:0}
+.sat-mq .sat-mq-table-box caption,.sat-mq .sat-mq-table caption{text-align:left;padding:12px 16px;font-size:13px;font-weight:700;color:var(--azul-osc);background:var(--tenue);border-bottom:1px solid var(--gris)}
+.sat-mq .sat-mq-table-box thead,.sat-mq .sat-mq-table thead{background:var(--tenue);border-bottom:1px solid var(--gris)}
+.sat-mq .sat-mq-table-box th,.sat-mq .sat-mq-table th{padding:12px 16px;font-weight:700;color:var(--azul-osc);vertical-align:top}
+.sat-mq .sat-mq-table-box td,.sat-mq .sat-mq-table td{padding:14px 16px;color:var(--suave);vertical-align:top;border-top:1px solid rgba(25,50,75,.1)}
+.sat-mq .sat-mq-table-box tbody tr:hover,.sat-mq .sat-mq-table tbody tr:hover{background:rgba(244,246,249,.65)}
+.sat-mq .sat-mq-table-box td strong,.sat-mq .sat-mq-table td strong{color:var(--azul-osc);font-weight:700}
+.sat-mq .sat-mq-table-box td a,.sat-mq .sat-mq-table td a{color:var(--acento-osc);font-weight:600;text-decoration:none}
+.sat-mq .sat-mq-table-box td a:hover,.sat-mq .sat-mq-table td a:hover{color:var(--azul-osc);text-decoration:underline}
+.sat-mq .sat-mq-td-num{width:48px}
+.sat-mq .sat-mq-td-nowrap{white-space:nowrap}
+
+@media(max-width:767px){
+  .sat-mq .sat-mq-cards,.sat-mq .sat-mq-boxes-3,.sat-mq .sat-mq-boxes-2{grid-template-columns:1fr!important}
+  .sat-mq .sat-mq-panel{padding:20px!important}
+  .sat-mq .sat-mq-doc-card .sat-mq-btn,.sat-mq .sat-mq-legal-row .sat-mq-btn{text-align:left!important;margin-top:10px!important}
+}
+@media(prefers-reduced-motion:reduce){.sat-mq *{transition:none!important;transform:none!important}}

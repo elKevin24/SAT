@@ -1,0 +1,573 @@
+{
+  "lote": "ola-1b",
+  "descripcion": "Sub-lote 1B (5 URLs prioritarias FEL y MIAD de Ola 1) — Comercio Exterior SAT Guatemala.",
+  "total_paginas": 5,
+  "paginas": [
+    {
+      "slug": "programa-miad",
+      "arquetipo": "TIPO-3",
+      "titulo_h1": "Programa de Modernización Integral Aduanera (MIAD)",
+      "bajada_lead": "Conoce los cinco componentes con los que la Superintendencia de Administración Tributaria (SAT) fortalece la facilitación del comercio, la trazabilidad de la carga en zonas primarias y la automatización del despacho aduanero en Guatemala.",
+      "eyebrow_previos": "Visión general del programa",
+      "h2_previos": "Qué abarca la modernización aduanera",
+      "intro_previos": "El programa articula procesos operativos, infraestructura física, soluciones tecnológicas, seguridad y talento humano en las aduanas del país.",
+      "datos_previos": [
+        {
+          "titulo": "Facilitación y control",
+          "descripcion": "Impulsa el despacho ágil de mercancías y asegura la trazabilidad de la carga desde el ingreso hasta la salida en zonas primarias."
+        },
+        {
+          "titulo": "Instalaciones y terceros",
+          "descripcion": "Aplica tanto en instalaciones administradas por la SAT como en recintos autorizados a terceros donde opera personal aduanero."
+        },
+        {
+          "titulo": "Automatización integral",
+          "descripcion": "Integra sistemas informáticos, dispositivos de inspección y protocolos coordinados para reducir gestiones y decisiones manuales."
+        }
+      ],
+      "eyebrow_modulos": "Componentes del programa",
+      "h2_modulos": "Explora cada área del Programa MIAD",
+      "intro_modulos": "Selecciona el componente que deseas consultar para acceder a sus instructivos, guías, manuales técnicos o lineamientos vigentes.",
+      "tarjetas_pares": false,
+      "tarjetas": [
+        {
+          "titulo": "Componente de Procesos",
+          "descripcion": "Consulta los instructivos vigentes del despacho aéreo, las guías del Nuevo Modelo de Despacho y los documentos de la Ventanilla Única Marítima (VUMAR).",
+          "url": "https://portal.sat.gob.gt/portal/programa-miad/componente-procesos/",
+          "externo": true
+        },
+        {
+          "titulo": "Componente de Infraestructura",
+          "descripcion": "Revisa los lineamientos de readecuación, rediseño y construcción de recintos aduaneros, incluido el Manual de Estandarización de Aduanas y Delegaciones.",
+          "url": "https://portal.sat.gob.gt/portal/programa-miad/componente-de-infraestructura/",
+          "externo": true
+        },
+        {
+          "titulo": "Componente de Tecnología",
+          "descripcion": "Conoce las soluciones informáticas, dispositivos periféricos y servicios automatizados para atención desasistida e interconexión de sistemas aduaneros.",
+          "url": "https://portal.sat.gob.gt/portal/programa-miad/componente-de-tecnologia/",
+          "externo": true
+        },
+        {
+          "titulo": "Componente de Seguridad",
+          "descripcion": "Accede a los protocolos de resguardo físico e informático, el Plan Integral de Control de Carga (PICCA) y los sistemas de videovigilancia mediante circuito cerrado de televisión (CCTV).",
+          "url": "https://portal.sat.gob.gt/portal/programa-miad/Componente-de-Seguridad/",
+          "externo": true
+        },
+        {
+          "titulo": "Componente de Recursos",
+          "descripcion": "Infórmate sobre el fortalecimiento de capacidades, adecuación de funciones y principios de integridad ética y moral del personal que opera los procesos modernizados.",
+          "url": "https://portal.sat.gob.gt/portal/programa-miad/componente-de-recursos/",
+          "externo": true
+        }
+      ],
+      "cta_principal": {
+        "texto": "Explorar procesos, instructivos y guías",
+        "url": "https://portal.sat.gob.gt/portal/programa-miad/componente-procesos/",
+        "externo": true
+      }
+    },
+    {
+      "slug": "programa-miad-componente-procesos",
+      "arquetipo": "TIPO-3",
+      "titulo_h1": "Procesos aduaneros del Programa de Modernización Integral Aduanera (MIAD)",
+      "bajada_lead": "Consulta los instructivos y guías con los que la Superintendencia de Administración Tributaria (SAT) automatiza el despacho aduanero aéreo, fortalece el control y trazabilidad de la carga en zonas primarias y organiza en una sección independiente los documentos de la Ventanilla Única Marítima (VUMAR).",
+      "eyebrow_previos": "Estructura operativa",
+      "h2_previos": "Dos ámbitos de consulta separados por modalidad",
+      "intro_previos": "Para agilizar tu búsqueda, se diferenciaron los documentos del despacho aéreo respecto de la documentación marítima de VUMAR.",
+      "datos_previos": [
+        {
+          "titulo": "Despacho aéreo (Nuevo Modelo de Despacho)",
+          "descripcion": "Reúne 5 instructivos vigentes desde el 21 de abril de 2024 y 9 guías prácticas para manifiesto electrónico, embarque, verificación, traslado, retención y liberación por vía aérea."
+        },
+        {
+          "titulo": "Operaciones marítimas (VUMAR)",
+          "descripcion": "Agrupa en un bloque independiente el protocolo interinstitucional, el convenio vigente y el manual de usuario del sistema Ventanilla Única Marítima de Guatemala (VUMARGT) para llegada, estancia y salida de embarcaciones."
+        }
+      ],
+      "eyebrow_grupos_documentos": "Operaciones por vía aérea",
+      "h2_grupos_documentos": "Instructivos y guías del Nuevo Modelo de Despacho",
+      "intro_grupos_documentos": "Abre únicamente la categoría que necesitas consultar. Todos los acordeones inician cerrados.",
+      "grupos_documentos": [
+        {
+          "titulo": "Instructivos para el despacho de mercancías por vía aérea (5)",
+          "tab_id": "1679678084607-ad3d0326-b0fc",
+          "items": [
+            {
+              "descripcion": "IN-IAD/DNO-ADU-GCA-28 Instructivo para el embarque de mercancías por vía aérea (vigente a partir del 21 de abril de 2024) · Documento oficial (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/13741/instructivos/77537/in-iad-dno-adu-gca-28-instructivo-para-el-embarque.pdf",
+              "boton_texto": "Descargar (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "IN-IAD/DNO-ADU-GCA-26 Instructivo para el proceso de transmisión del manifiesto electrónico de carga aéreo en los depósitos aduaneros temporales (vigente a partir del 21 de abril de 2024) · Documento oficial (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/13741/instructivos/77536/in-iad-dno-adu-gca-27-instructivo-para-la-recepcion.pdf",
+              "boton_texto": "Descargar (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "IN-IAD/DNO-ADU-GCA-27 Instructivo para la recepción de mercancías por vía aérea (vigente a partir del 21 de abril de 2024) · Documento oficial (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/13741/instructivos/77534/in-iad-dno-adu-gca-26-instructivo-proceso-transmision.pdf",
+              "boton_texto": "Descargar (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "IN-IAD/DNO-ADU-GDE-38 Instructivo para la Verificación Inmediata de las Mercancías por Vía Aérea Versión I (vigente a partir del 21 de abril de 2024) · Documento oficial (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/13741/instructivos/77526/1-instructivo-para-la-verificacion-inmediata-de-las-mercancias-por-via-aerea-in-iad-dno-adu-gde-38.pdf",
+              "boton_texto": "Descargar (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "IN-IAD/DNO-ADU-GDE-37 Instructivo para el egreso de mercancías del territorio nacional por vía aérea (vigente a partir del 21 de abril de 2024) · Documento oficial (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/13741/instructivos/77525/2-instructivo-para-el-egreso-de-mercancias-del-territorio-nacional-por-via-aerea-in-iad-dno-adu-gde-37_pagenumber-1_watermark_watermark.pdf",
+              "boton_texto": "Descargar (PDF)",
+              "externo": true
+            }
+          ]
+        },
+        {
+          "titulo": "Guías operativas del Nuevo Modelo de Despacho (9)",
+          "tab_id": "1715185915765-17817887-95cc",
+          "items": [
+            {
+              "descripcion": "Guía para Registrar Retención de las Mercancías del Nuevo Modelo de Despacho GU-IAD/DNO-ADU-GCA-40 Versión I · Documento oficial (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/15356/documentos-guia-u-orientacion/77498/gu-iad-dno-adu-gca-40-guia-para-registrar-retencion-de-las-mercancias-nuevo-modelo-de-despacho.pdf",
+              "boton_texto": "Descargar (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Guía para Registrar Liberación de las Mercancías Retenidas del Nuevo Modelo de Despacho GU-IAD/DNO-ADU-GCA-39 Versión I · Documento oficial (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/15356/documentos-guia-u-orientacion/77510/gu-iad-dno-adu-gca-39-guia-para-registrar-liberacion-de-las-mercancias-retenidas-nuevo-modelo-de-despacho.pdf",
+              "boton_texto": "Descargar (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Guía para la Solicitud de Autorización de Boleta de Traslado de Mercancías de DHL a COMBEX-IM o viceversa del Nuevo Modelo de Despacho GU-IAD/DNO-ADU-GCA-38 Versión I · Documento oficial (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/15356/documentos-guia-u-orientacion/77509/gu-iad-dno-adu-gca-38-guia-para-la-solicitud-de-autorizacion-de-boleta-de-traslado-de-mercancias-de-dhl-a-combex-im-o-viceversa-nuevo-modelo-de-despa.pdf",
+              "boton_texto": "Descargar (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Guía para Consultar la Retención y Liberación de las Mercancías del Nuevo Modelo de Despacho GU-IAD/DNO-ADU-GCA-35 Versión I · Documento oficial (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/15356/documentos-guia-u-orientacion/77508/gu-iad-dno-adu-gca-35-guia-para-consultar-la-retencion-y-liberacion-de-las-mercancias-nuevo-modelo-de-despacho.pdf",
+              "boton_texto": "Descargar (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Guía para la Solicitud de Autorización de Embarques por parte de las Líneas Aéreas del Nuevo Modelo de Despacho GU-IAD/DNO-ADU-GCA-26 Versión I · Documento oficial (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/15356/documentos-guia-u-orientacion/77506/gu-iad-dno-adu-gca-26-guia-para-la-solicitud-de-autorizacion-de-embarques-por-parte-de-las-lineas-aereas-nuevo-modelo-de-despacho.pdf",
+              "boton_texto": "Descargar (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Guía para la Solicitud de Rectificación de Manifiesto del Nuevo Modelo de Despacho GU-IAD/DNO-ADU-GCA-23 Versión I · Documento oficial (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/15356/documentos-guia-u-orientacion/77504/gu-iad-dno-adu-gca-23-guia-para-la-solicitud-de-rectificacion-de-manifiesto-nuevo-modelo-de-despacho.pdf",
+              "boton_texto": "Descargar (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Guía para el Traslado de Reporte de Sobrantes y Faltantes Recinto DHL del Nuevo Modelo de Despacho GU-IAD/DNO-ADU-GCA-22 Versión I · Documento oficial (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/15356/documentos-guia-u-orientacion/77502/gu-iad-dno-adu-gca-22-guia-para-el-traslado-de-reporte-de-sobrantes-y-faltantes-recinto-dhl-nuevo-modelo-de-despacho.pdf",
+              "boton_texto": "Descargar (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Guía para la Solicitud de Justificación de Sobrantes y Faltantes del Nuevo Modelo de Despacho GU-IAD/DNO-ADU-GCA-14 Versión I · Documento oficial (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/15356/documentos-guia-u-orientacion/77500/gu-iad-dno-adu-gca-14-guia-para-la-solicitud-de-justificacion-de-sobrantes-y-faltantes-nuevo-modelo-de-despacho.pdf",
+              "boton_texto": "Descargar (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Guía para bandeja del contribuyente (exportaciones) del Nuevo Modelo de Despacho GU-IAD/DNO-ADU-GDE-07 versión I · Documento oficial (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/15356/documentos-guia-u-orientacion/77511/gu-iad-dno-adu-gde-07-guia-para-bandeja-del-contribuyente-exportaciones-nuevo-modelo-de-despacho.pdf",
+              "boton_texto": "Descargar (PDF)",
+              "externo": true
+            }
+          ]
+        }
+      ],
+      "eyebrow_documentos": "Operaciones marítimas",
+      "h2_documentos": "Ventanilla Única Marítima (VUMAR)",
+      "intro_documentos": "Documentación técnica y operativa dedicada exclusivamente al control portuario de embarcaciones en la Ventanilla Única Marítima de Guatemala (VUMARGT).",
+      "documentos": [
+        {
+          "titulo": "Protocolo interinstitucional para operaciones de embarcaciones (VUMAR)",
+          "descripcion": "Sistematización interinstitucional de los procedimientos de llegada, estancia en puerto y salida de embarcaciones (PDF).",
+          "url": "https://portal.sat.gob.gt/portal/descarga/15320/componente-de-procesos/78053/protocolo-interinstitucional-sistematizacion-proc-llega-estancia-en-pto-salida-embarcaciones.pdf",
+          "boton_texto": "Descargar (PDF)",
+          "externo": true
+        },
+        {
+          "titulo": "Convenio interinstitucional VUMAR",
+          "descripcion": "Convenio oficial suscrito para la operación coordinada de la Ventanilla Única Marítima (PDF).",
+          "url": "https://portal.sat.gob.gt/portal/descarga/15320/componente-de-procesos/78052/convenio-vumar-firmado.pdf",
+          "boton_texto": "Descargar (PDF)",
+          "externo": true
+        },
+        {
+          "titulo": "Manual de usuario para operaciones en VUMARGT",
+          "descripcion": "Guía operativa para usuarios del sistema electrónico Ventanilla Única Marítima de Guatemala (VUMARGT) (PDF).",
+          "url": "https://portal.sat.gob.gt/portal/descarga/15320/componente-de-procesos/78054/manual-de-usuario-operaciones-vumargt.pdf",
+          "boton_texto": "Descargar (PDF)",
+          "externo": true
+        }
+      ],
+      "enlace_retorno_hub": {
+        "texto": "Volver al Programa de Modernización Integral Aduanera (MIAD)",
+        "url": "https://portal.sat.gob.gt/portal/programa-miad/",
+        "externo": true
+      }
+    },
+    {
+      "slug": "declaracion-jurada-regional-de-viajero",
+      "arquetipo": "TIPO-3",
+      "titulo_h1": "Declaración Jurada Regional de Viajero (DJRV)",
+      "bajada_lead": "Completa en línea tu Declaración Jurada Regional de Viajero (DJRV) ante la Superintendencia de Administración Tributaria (SAT), disponible 24/7 desde cualquier dispositivo con internet. El llenado toma alrededor de 4 minutos en lugar de 10 minutos, previo al arribo del vuelo.",
+      "eyebrow_previos": "Antes de iniciar",
+      "h2_previos": "Qué debes tener en cuenta",
+      "datos_previos": [
+        {
+          "titulo": "Disponibilidad 24/7 en línea",
+          "descripcion": "Accede al formulario electrónico las 24 horas desde cualquier dispositivo con conexión a internet."
+        },
+        {
+          "titulo": "Tiempo aproximado de llenado",
+          "descripcion": "El registro digital reduce el tiempo de llenado de 10 a 4 minutos."
+        },
+        {
+          "titulo": "Cuándo y dónde llenarla",
+          "descripcion": "Completa tu declaración previo al arribo del vuelo desde la plataforma web oficial o la aplicación móvil."
+        }
+      ],
+      "eyebrow_documentos": "Documento de orientación",
+      "h2_documentos": "Guías oficiales de llenado",
+      "intro_documentos": "Consulta las guías publicadas por la SAT para llenar tu declaración en línea o desde la aplicación móvil.",
+      "documentos": [
+        {
+          "titulo": "Guía Declaración Jurada Regional de Viajero",
+          "descripcion": "Documento de orientación general sobre la Declaración Jurada Regional de Viajero (DJRV).",
+          "boton_texto": "Descargar guía (PDF)",
+          "url": "https://portal.sat.gob.gt/portal/descarga/16236/documento-de-orientacion/90587/guia-declaracion-jurada-regional-de-viajero-2.pdf",
+          "externo": true
+        },
+        {
+          "titulo": "Guía para el uso de la aplicación móvil (GU-IAD/DNO-ADU-GDE-18)",
+          "descripcion": "Guía para el uso de la aplicación móvil en el llenado de la Declaración Jurada Regional de Viajero electrónica para usuarios internos y externos.",
+          "boton_texto": "Descargar guía oficial",
+          "url": "https://portal.sat.gob.gt/portal/descarga/16236/documento-de-orientacion/91710/gu-iad_dno-adu-gde-18-guia-para-el-uso-de-la-app-movil-en-el-llenado-de-la-declaracion-jurada-regional-de-viajero-electronica",
+          "externo": true
+        },
+        {
+          "titulo": "Guía para el llenado electrónico (GU-IAD/DNO-ADU-GDE-19)",
+          "descripcion": "Guía para el llenado de la Declaración Jurada Regional de Viajero de manera electrónica para usuarios internos y externos.",
+          "boton_texto": "Descargar guía (PDF)",
+          "url": "https://portal.sat.gob.gt/portal/descarga/16236/documento-de-orientacion/90589/gu-iaddno-adu-gde-19-guia-para-el-llenado-de-la-declaracion-jurada-regional-de-viajero-de-manera-electronica-para-usuarios-int.pdf",
+          "externo": true
+        }
+      ],
+      "eyebrow_grupos_documentos": "Biblioteca oficial",
+      "h2_grupos_documentos": "Marco legal y material informativo",
+      "intro_grupos_documentos": "Despliega cada sección para descargar las resoluciones vigentes o abrir las infografías oficiales.",
+      "grupos_documentos": [
+        {
+          "titulo": "Marco legal vigente (3)",
+          "tab_id": "djrv-marco-legal",
+          "items": [
+            {
+              "descripcion": "Resolución del Consejo de Ministros de Integración Económica (COMIECO) No. 393-2017 (COMIECO-LXXXII).",
+              "boton_texto": "Descargar resolución (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/16235/marco-legal/77893/resolucion-no-393-2017-comieco-lxxxii.pdf",
+              "externo": true
+            },
+            {
+              "descripcion": "Resolución del Consejo de Ministros de Integración Económica (COMIECO) No. 477-2023 (COMIECO-CIV).",
+              "boton_texto": "Descargar resolución (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/16235/marco-legal/77892/resolucion-no-477-2023-comieco-civ.pdf",
+              "externo": true
+            },
+            {
+              "descripcion": "Resolución de Superintendencia Número SAT-DSI-1049-2023: Declaración Jurada Regional de Viajero de manera electrónica.",
+              "boton_texto": "Descargar resolución (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/1895/legislacion-aduanera/71623/resolucion-de-superintendencia-numero-sat-dsi-1049-2023-declaracion-jurada-regional-de-viajero-de-manera-electronica.pdf",
+              "externo": true
+            }
+          ]
+        },
+        {
+          "titulo": "Infografías y material informativo oficial (18)",
+          "tab_id": "djrv-informacion-general",
+          "items": [
+            {
+              "descripcion": "Banner informativo sobre la Declaración Jurada Regional de Viajero (imagen JPG).",
+              "boton_texto": "Abrir imagen",
+              "url": "https://portal.sat.gob.gt/portal/wp-content/uploads/2025/09/banner.jpg",
+              "externo": true
+            },
+            {
+              "descripcion": "Instructivo visual número 2 sobre la Declaración Jurada Regional de Viajero (imagen JPG).",
+              "boton_texto": "Abrir imagen",
+              "url": "https://portal.sat.gob.gt/portal/wp-content/uploads/2025/09/INSTRUCTIVO-2-DJRV.jpg",
+              "externo": true
+            },
+            {
+              "descripcion": "Material informativo para redes sociales sobre la aplicación móvil de la Declaración Jurada Regional de Viajero electrónica (imagen JPG).",
+              "boton_texto": "Abrir imagen",
+              "url": "https://portal.sat.gob.gt/portal/wp-content/uploads/2025/12/APP-DJRVE-Redes.jpg",
+              "externo": true
+            },
+            {
+              "descripcion": "Infografía sobre la aplicación móvil de la Declaración Jurada Regional de Viajero electrónica (imagen JPG).",
+              "boton_texto": "Abrir imagen",
+              "url": "https://portal.sat.gob.gt/portal/wp-content/uploads/2025/12/APP-DJRVE.jpg",
+              "externo": true
+            },
+            {
+              "descripcion": "Pieza informativa 1 sobre la Declaración Jurada Regional de Viajero (imagen JPG).",
+              "boton_texto": "Abrir imagen",
+              "url": "https://portal.sat.gob.gt/portal/wp-content/uploads/2025/10/Declaración-Jurada-1.jpg",
+              "externo": true
+            },
+            {
+              "descripcion": "Pieza informativa 2 sobre la Declaración Jurada Regional de Viajero (imagen JPG).",
+              "boton_texto": "Abrir imagen",
+              "url": "https://portal.sat.gob.gt/portal/wp-content/uploads/2025/10/Declaración-Jurada-2.jpg",
+              "externo": true
+            },
+            {
+              "descripcion": "Pieza informativa 3 sobre la Declaración Jurada Regional de Viajero (imagen JPG).",
+              "boton_texto": "Abrir imagen",
+              "url": "https://portal.sat.gob.gt/portal/wp-content/uploads/2025/10/Declaración-Jurada-3.jpg",
+              "externo": true
+            },
+            {
+              "descripcion": "Afiche informativo sobre cómo ahora es más fácil llenar la Declaración Jurada Regional de Viajero (imagen JPG).",
+              "boton_texto": "Abrir imagen",
+              "url": "https://portal.sat.gob.gt/portal/wp-content/uploads/2025/10/DJRV_Ahora-es-màE_s-fàE_cil.jpg",
+              "externo": true
+            },
+            {
+              "descripcion": "Material multimedia informativo 15 sobre la Declaración Jurada Regional de Viajero (imagen JPG).",
+              "boton_texto": "Abrir imagen",
+              "url": "https://portal.sat.gob.gt/portal/wp-content/uploads/2025/05/Multimedia-15.jpg",
+              "externo": true
+            },
+            {
+              "descripcion": "Material multimedia informativo 16 sobre la Declaración Jurada Regional de Viajero (imagen JPG).",
+              "boton_texto": "Abrir imagen",
+              "url": "https://portal.sat.gob.gt/portal/wp-content/uploads/2025/05/Multimedia-16.jpg",
+              "externo": true
+            },
+            {
+              "descripcion": "Infografía sobre los beneficios de utilizar la Declaración Jurada Regional de Viajero (imagen JPG).",
+              "boton_texto": "Abrir imagen",
+              "url": "https://portal.sat.gob.gt/portal/wp-content/uploads/2023/07/Beneficios.jpg",
+              "externo": true
+            },
+            {
+              "descripcion": "Afiche informativo sobre cómo llenar la Declaración Jurada Regional de Viajero (imagen JPG).",
+              "boton_texto": "Abrir imagen",
+              "url": "https://portal.sat.gob.gt/portal/wp-content/uploads/2023/07/Como-llenar-la-Declaracion-Jurada.jpg",
+              "externo": true
+            },
+            {
+              "descripcion": "Infografía sobre qué productos debes declarar al viajar (imagen JPG).",
+              "boton_texto": "Abrir imagen",
+              "url": "https://portal.sat.gob.gt/portal/wp-content/uploads/2023/07/Que-productos-debes-declarar.jpg",
+              "externo": true
+            },
+            {
+              "descripcion": "Imagen informativa sobre la Declaración Jurada Regional de Viajero (imagen PNG).",
+              "boton_texto": "Abrir imagen",
+              "url": "https://portal.sat.gob.gt/portal/wp-content/uploads/2023/07/DJRV.png",
+              "externo": true
+            },
+            {
+              "descripcion": "Afiche informativo sobre la Declaración de Viajero electrónica (imagen JPG).",
+              "boton_texto": "Abrir imagen",
+              "url": "https://portal.sat.gob.gt/portal/wp-content/uploads/2023/09/Declaracion-de-viajero-electronica.jpg",
+              "externo": true
+            },
+            {
+              "descripcion": "Material promocional 1 con código de respuesta rápida (QR) de la Declaración Jurada Regional de Viajero (imagen JPG).",
+              "boton_texto": "Abrir imagen",
+              "url": "https://portal.sat.gob.gt/portal/wp-content/uploads/2025/09/DJRV-QR-CODE-promo-01.jpg",
+              "externo": true
+            },
+            {
+              "descripcion": "Material promocional 2 con código de respuesta rápida (QR) de la Declaración Jurada Regional de Viajero (imagen JPG).",
+              "boton_texto": "Abrir imagen",
+              "url": "https://portal.sat.gob.gt/portal/wp-content/uploads/2025/09/DJRV-QR-CODE-promo-02.jpg",
+              "externo": true
+            },
+            {
+              "descripcion": "Infografía sobre nuevas funciones de la Declaración Jurada Regional de Viajero (imagen JPG).",
+              "boton_texto": "Abrir imagen",
+              "url": "https://portal.sat.gob.gt/portal/wp-content/uploads/2025/09/Nuevas-funciones-DJRV_4.jpg",
+              "externo": true
+            }
+          ]
+        }
+      ],
+      "cta_principal": {
+        "texto": "Llenar declaración en línea",
+        "url": "https://farm2.sat.gob.gt/declaDelViajeroGt-web/pages/public/declaracionJuradaDelViajero.html",
+        "externo": true
+      },
+      "enlaces_secundarios": [
+        {
+          "texto": "Ver video: Nueva Declaración Jurada Regional de Viajero (YouTube)",
+          "url": "https://www.youtube.com/watch?v=aY5ftZf4qfk",
+          "externo": true
+        },
+        {
+          "texto": "Ver video: Qué debo declarar y dónde encuentro la Declaración Jurada Regional de Viajero (YouTube)",
+          "url": "https://www.youtube.com/watch?v=_oUVZ3_myQw",
+          "externo": true
+        }
+      ]
+    },
+    {
+      "slug": "solvencia-fiscal",
+      "arquetipo": "TIPO-3",
+      "titulo_h1": "Solvencia fiscal",
+      "bajada_lead": "Documento emitido por la Superintendencia de Administración Tributaria (SAT) conforme al Artículo 57 “A” del Código Tributario. Certifica el cumplimiento de deberes tributarios formales y el pago de adeudos tributarios líquidos y exigibles a la fecha de expedición, sin limitar facultades de fiscalización.",
+      "eyebrow_previos": "Antes de iniciar",
+      "h2_previos": "Qué debes tener en cuenta",
+      "datos_previos": [
+        {
+          "titulo": "Emisión automática",
+          "descripcion": "El documento se emite en forma automática si estás al día en el cumplimiento de tus obligaciones tributarias, según tu tipo de contribuyente."
+        },
+        {
+          "titulo": "Pago y descarga en Declaraguate",
+          "descripcion": "La solicitud requiere pagar el servicio desde el formulario SAT 8421 en Declaraguate, donde también puedes descargar la solvencia."
+        },
+        {
+          "titulo": "Alcance de fiscalización",
+          "descripcion": "Esta constancia no prejuzga si determinaste tu obligación tributaria en forma correcta ni limita que la SAT fiscalice dichos períodos."
+        }
+      ],
+      "eyebrow_modulos": "Opciones de gestión",
+      "h2_modulos": "Qué puedes gestionar en esta sección",
+      "intro_modulos": "Consulta los requisitos previos, realiza el pago en Declaraguate, revisa la bitácora de seguimiento o aclara dudas frecuentes.",
+      "tarjetas_pares": true,
+      "tarjetas": [
+        {
+          "titulo": "Requisitos para obtener la solvencia fiscal",
+          "descripcion": "Revisa los requisitos vigentes según tu tipo de contribuyente antes de iniciar tu solicitud.",
+          "url": "https://portal.sat.gob.gt/portal/requisitos-sofi/",
+          "externo": true
+        },
+        {
+          "titulo": "Pagar y descargar en Declaraguate (formulario SAT 8421)",
+          "descripcion": "Ingresa a Declaraguate para pagar el servicio y descargar tu solvencia fiscal mediante el formulario SAT 8421.",
+          "url": "https://declaraguate.sat.gob.gt/declaraguate-web/",
+          "externo": true
+        },
+        {
+          "titulo": "Consultar estado de tu gestión",
+          "descripcion": "Accede a la bitácora de solvencia fiscal para verificar el seguimiento y estado de tu solicitud.",
+          "url": "https://portal.sat.gob.gt/portal/bitacora-de-solvencia-fiscal/",
+          "externo": true
+        },
+        {
+          "titulo": "Preguntas frecuentes sobre cumplimiento tributario",
+          "descripcion": "Consulta respuestas oficiales sobre la solicitud, emisión automática y descarga de la solvencia fiscal.",
+          "url": "https://portal.sat.gob.gt/portal/preguntas-frecuentes/cumplimiento-tributario/#1652906579852-40d8e272-35bb",
+          "externo": true
+        }
+      ],
+      "eyebrow_pasos": "Paso a paso",
+      "h2_pasos": "Cómo solicitar y descargar tu solvencia fiscal",
+      "pasos": [
+        "Paso 1 — Verifica los requisitos aplicables según tu perfil de contribuyente.",
+        "Paso 2 — Ingresa a Declaraguate y paga el servicio mediante el formulario SAT 8421.",
+        "Paso 3 — Descarga tu solvencia fiscal desde el mismo formulario SAT 8421 o revisa la bitácora de seguimiento."
+      ],
+      "cta_principal": {
+        "texto": "Solicitar y pagar en Declaraguate (formulario SAT 8421)",
+        "url": "https://declaraguate.sat.gob.gt/declaraguate-web/",
+        "externo": true
+      }
+    },
+    {
+      "slug": "consulta-movimiento-convenio",
+      "arquetipo": "TIPO-3",
+      "titulo_h1": "Facilidades de pago y consulta de convenios",
+      "bajada_lead": "Solicita ante la Superintendencia de Administración Tributaria (SAT) facilidades para pagar tus impuestos hasta por 18 meses, conforme al Artículo 40 del Código Tributario. También puedes consultar los requisitos vigentes y dar seguimiento en línea a los movimientos de tu convenio.",
+      "eyebrow_previos": "Antes de iniciar",
+      "h2_previos": "Qué debes tener en cuenta",
+      "datos_previos": [
+        {
+          "titulo": "Plazo máximo",
+          "descripcion": "La SAT puede otorgar facilidades en el pago del impuesto hasta por un máximo de 18 meses."
+        },
+        {
+          "titulo": "Cuándo y dónde solicitar",
+          "descripcion": "Presenta tu solicitud antes del vencimiento del plazo de pago, justificando las causas que impiden cumplir, mediante el Portal SAT o Agencia Virtual."
+        },
+        {
+          "titulo": "Documento de respaldo",
+          "descripcion": "El Reconocimiento de Adeudo Tributario (RUAT) es el documento que emite la Administración Tributaria para establecer el cumplimiento de tus obligaciones."
+        }
+      ],
+      "eyebrow_modulos": "Opciones de gestión",
+      "h2_modulos": "Qué puedes gestionar en esta sección",
+      "intro_modulos": "Consulta el estado y movimientos de tu convenio, verifica los requisitos vigentes o revisa las preguntas frecuentes.",
+      "tarjetas_pares": false,
+      "tarjetas": [
+        {
+          "titulo": "Consultar movimientos y estado de tu convenio",
+          "descripcion": "Accede a la bitácora de facilidades de pago para consultar los movimientos y el estado de tu convenio.",
+          "url": "https://portal.sat.gob.gt/portal/consulta-movimiento-convenio/bitacora-de-facilidades-de-pago/",
+          "externo": true
+        },
+        {
+          "titulo": "Requisitos para solicitar facilidades de pago",
+          "descripcion": "Consulta los requisitos vigentes para personas y empresas antes de presentar tu solicitud.",
+          "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1606494573178-22f9effd-91cc",
+          "externo": true
+        },
+        {
+          "titulo": "Preguntas frecuentes sobre facilidades de pago",
+          "descripcion": "Resuelve dudas frecuentes sobre cumplimiento tributario, plazos y condiciones de las facilidades de pago.",
+          "url": "https://portal.sat.gob.gt/portal/preguntas-frecuentes/cumplimiento-tributario/#1528240031207-3ce9866a-9863",
+          "externo": true
+        }
+      ],
+      "eyebrow_tabla": "Alcance normativo",
+      "h2_tabla": "Impuestos y retenciones excluidos",
+      "intro_tabla": "Las facilidades de pago se otorgan por todos los impuestos, a excepción de los siguientes:",
+      "tabla": {
+        "caption": "Tabla 1. Impuestos y retenciones excluidos de facilidades de pago",
+        "columnas": [
+          "Impuesto o retención excluida",
+          "Condición según normativa vigente"
+        ],
+        "filas": [
+          [
+            "Impuesto al Valor Agregado (IVA)",
+            "Excluido del otorgamiento de facilidades de pago."
+          ],
+          [
+            "Retenciones del Impuesto Sobre la Renta (ISR)",
+            "Excluidas del otorgamiento de facilidades de pago."
+          ],
+          [
+            "Retenciones del Impuesto al Valor Agregado (IVA)",
+            "Excluidas del otorgamiento de facilidades de pago."
+          ],
+          [
+            "Impuesto Sobre Circulación de Vehículos (ISCV) no vencido",
+            "Excluido mientras no se encuentre vencido."
+          ]
+        ]
+      },
+      "cta_principal": {
+        "texto": "Consultar movimiento de convenio en línea",
+        "url": "https://portal.sat.gob.gt/portal/consulta-movimiento-convenio/bitacora-de-facilidades-de-pago/",
+        "externo": true
+      }
+    }
+  ]
+}

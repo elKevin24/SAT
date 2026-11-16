@@ -1,0 +1,1209 @@
+{
+  "lote": "ola-4a",
+  "descripcion": "Borrador estructural Sub-lote 4A (primeras 14 URLs de Ola 4 — Exportadores y Regímenes de Devolución) — Comercio Exterior SAT Guatemala.",
+  "total_paginas": 14,
+  "paginas": [
+    {
+      "slug": "inscripcion-al-regimen-habitual-de-exportaciones",
+      "arquetipo": "TIPO-1",
+      "titulo_h1": "Inscribirse al Régimen Habitual de Exportaciones",
+      "bajada_lead": "Realiza tu inscripción como exportador habitual ante la Superintendencia de Administración Tributaria (SAT) a través de tu Agencia Virtual utilizando el código emitido por la Ventanilla Única para las Exportaciones (VUPE).",
+      "menu_lateral": [
+        {
+          "id": "seccion-requisitos",
+          "label": "Requisitos previos"
+        },
+        {
+          "id": "seccion-pasos",
+          "label": "Paso a paso en Agencia Virtual"
+        },
+        {
+          "id": "seccion-enlaces",
+          "label": "VUPE y Agencia Virtual"
+        }
+      ],
+      "eyebrow_requisitos": "Antes de empezar",
+      "h2_requisitos": "¿Qué necesitas para inscribirte?",
+      "intro_requisitos": "Los mismos requisitos aplican tanto para Persona Individual como para Persona Jurídica.",
+      "requisitos": [
+        {
+          "titulo": "Código de exportador en VUPE",
+          "descripcion": "Contar con el código de exportador activo obtenido previamente ante la VUPE."
+        },
+        {
+          "titulo": "Acceso activo a Agencia Virtual",
+          "descripcion": "Contar con usuario y contraseña activos en el Sistema Agencia Virtual de la SAT con tu Número de Identificación Tributaria (NIT)."
+        }
+      ],
+      "eyebrow_pasos": "Paso a paso",
+      "h2_pasos": "Cómo completar la inscripción desde Agencia Virtual",
+      "intro_pasos": "El registro se efectúa en línea sin acudir a una agencia tributaria.",
+      "pasos": [
+        "Paso 1 — Ingresa al Portal SAT y selecciona el acceso a Agencia Virtual.",
+        "Paso 2 — Dentro de Agencia Virtual elige “Sistema Agencia Virtual”, digita tu usuario (NIT sin guiones) y contraseña.",
+        "Paso 3 — Abre el “Menú”, busca la sección “Servicios”, selecciona “Datos del Contribuyente” y haz clic en “Inscripción y Actualización de Exportadores” (o en el Registro Tributario Unificado (RTU) > Otros Registros de SAT > Registro de Exportadores).",
+        "Paso 4 — Verifica en pantalla tu NIT, nombre o razón social y dirección fiscal en el formulario SAT-0471, ingresa tu código de exportador de la VUPE y presiona “Enviar”."
+      ],
+      "cta_principal": {
+        "texto": "Gestionar código de exportador en VUPE",
+        "url": "http://vupe.export.com.gt/",
+        "externo": true
+      },
+      "enlaces_secundarios": [
+        {
+          "texto": "Solicitar usuario de Agencia Virtual SAT",
+          "url": "https://portal.sat.gob.gt/portal/solicitud-usuario-agencia-virtual",
+          "externo": true
+        }
+      ]
+    },
+    {
+      "slug": "requisitos-para-la-inactivacion-en-el-registro",
+      "arquetipo": "TIPO-1",
+      "titulo_h1": "Solicitar la inactivación en el Registro de Exportadores",
+      "bajada_lead": "Gestiona en línea desde tu Agencia Virtual la inactivación de la característica especial de Exportador en el Registro Tributario Unificado (RTU) Digital de la Superintendencia de Administración Tributaria (SAT).",
+      "menu_lateral": [
+        {
+          "id": "seccion-requisitos",
+          "label": "8 requisitos de cumplimiento"
+        },
+        {
+          "id": "seccion-pasos",
+          "label": "Paso a paso en Agencia Virtual"
+        },
+        {
+          "id": "seccion-resultado",
+          "label": "Constancia de RTU actualizada"
+        }
+      ],
+      "eyebrow_requisitos": "Antes de empezar",
+      "h2_requisitos": "¿Qué condiciones debes cumplir para inactivar el registro?",
+      "intro_requisitos": "Aplica para personas individuales y jurídicas inscritas en el Registro de Exportadores.",
+      "requisitos": [
+        {
+          "titulo": "Inscripción vigente y RTU Digital ratificado",
+          "descripcion": "1) Estar inscrito como Exportador; 2) Estar ratificado o actualizado en el RTU Digital con teléfono celular o línea fija en el domicilio fiscal y correo electrónico para notificaciones; y 3) En personas jurídicas, contar con representante legal activo, vigente y actualizado en RTU Digital."
+        },
+        {
+          "titulo": "Solvencia tributaria, aduanera y contador activo",
+          "descripcion": "4) Estar solvente en obligaciones tributarias y aduaneras (incluyendo vehículos); y 5) Tener registrado un contador activo y solvente en sus obligaciones tributarias."
+        },
+        {
+          "titulo": "Sin requerimientos, marcas ni cuotas vencidas",
+          "descripcion": "6) No tener requerimientos pendientes ante la SAT (plan operativo); 7) No tener marca de dirección inválida (no localizado); y 8) No contar con cuotas vencidas de convenio de pago."
+        }
+      ],
+      "eyebrow_pasos": "Paso a paso",
+      "h2_pasos": "Cómo realizar la inactivación en Agencia Virtual",
+      "intro_pasos": "Toda la gestión se realiza de forma electrónica.",
+      "pasos": [
+        "Paso 1 — Inicia sesión en tu Agencia Virtual con tu usuario y contraseña.",
+        "Paso 2 — Abre el menú “Servicios al Contribuyente” y dentro del apartado “RTU” selecciona la opción “Otros Registros de SAT” > “Registro de Exportadores”.",
+        "Paso 3 — Elige la opción “Inactivación Exportador” y confirma el envío de la solicitud.",
+        "Paso 4 — Descarga e imprime desde Agencia Virtual tu “Constancia de Inscripción y Actualización de Datos al RTU” para verificar la baja de la característica."
+      ],
+      "eyebrow_continuidad": "Resultado de la gestión",
+      "h2_continuidad": "¿Qué obtienes al finalizar?",
+      "que_sigue": [
+        {
+          "titulo": "Baja de la característica especial de Exportador",
+          "descripcion": "Tu Constancia de Inscripción y Actualización de Datos al RTU reflejará de inmediato que ya no cuentas con la característica especial de Exportador."
+        }
+      ]
+    },
+    {
+      "slug": "requisitos-para-solicitud-de-permiso-temporal",
+      "arquetipo": "TIPO-1",
+      "titulo_h1": "Solicitar permiso temporal en el Registro de Exportadores",
+      "bajada_lead": "Obtén desde tu Agencia Virtual un permiso temporal de exportación ante la Superintendencia de Administración Tributaria (SAT) cuando tus exportaciones no superen los 10,000 pesos centroamericanos (equivalente a USD 10,000.00) de valor libre a bordo (Free On Board - FOB) en un período de 365 días más un día.",
+      "menu_lateral": [
+        {
+          "id": "seccion-requisitos",
+          "label": "Requisitos y límites FOB"
+        },
+        {
+          "id": "seccion-pasos",
+          "label": "Paso a paso en Agencia Virtual"
+        },
+        {
+          "id": "seccion-resultado",
+          "label": "Constancia de permiso temporal"
+        }
+      ],
+      "eyebrow_requisitos": "Antes de empezar",
+      "h2_requisitos": "¿Qué condiciones aplican para el permiso temporal?",
+      "intro_requisitos": "No es obligatorio contar con un establecimiento activo; sin embargo, si tienes establecimiento activo debes cumplir las obligaciones formales asociadas.",
+      "requisitos": [
+        {
+          "titulo": "RTU Digital actualizado y solvencia integral",
+          "descripcion": "1) Estar ratificado o actualizado en el Registro Tributario Unificado (RTU) Digital con teléfono y correo para notificaciones; 2) En personas jurídicas, contar con representante legal activo y actualizado en RTU Digital; y 3) Estar solvente en obligaciones tributarias, aduaneras y de vehículos, sin requerimientos pendientes, sin marca de dirección inválida y sin cuotas vencidas de convenio de pago."
+        },
+        {
+          "titulo": "Condiciones si cuentas con establecimiento activo",
+          "descripcion": "Si posees establecimiento activo, debes contar con: a) Afiliación activa al Impuesto al Valor Agregado (IVA); b) Habilitación en el Régimen de Factura Electrónica en Línea (FEL); c) Libros habilitados activos según tu régimen fiscal; y d) Contador registrado activo y solvente."
+        },
+        {
+          "titulo": "Límite de USD 10,000.00 FOB y máximo 3 permisos al año",
+          "descripcion": "La suma del valor FOB no debe sobrepasar los 10,000.00 pesos centroamericanos (equivalente a USD 10,000.00) durante el período de 365 días más un día desde la última declaración de mercancías transmitida, y no debes contar con más de 3 solicitudes autorizadas en dicho período."
+        }
+      ],
+      "eyebrow_pasos": "Paso a paso",
+      "h2_pasos": "Cómo solicitar el Permiso Temporal Exportador en Agencia Virtual",
+      "intro_pasos": "Realiza la solicitud en línea desde el módulo de RTU en Agencia Virtual.",
+      "pasos": [
+        "Paso 1 — Inicia sesión en tu Agencia Virtual con tu Número de Identificación Tributaria (NIT) y contraseña.",
+        "Paso 2 — Selecciona el menú “Servicios al Contribuyente” > “RTU” > “Otros Registros de SAT” > “Registro de Exportadores”.",
+        "Paso 3 — Elige la opción “Permiso Temporal de Exportador”, completa la declaración y envía la solicitud en línea.",
+        "Paso 4 — Recibe la resolución electrónica y descarga la autorización en tu Agencia Virtual."
+      ],
+      "eyebrow_continuidad": "Resultado de la gestión",
+      "h2_continuidad": "¿Qué obtienes al finalizar?",
+      "que_sigue": [
+        {
+          "titulo": "Emisión y vigencia del permiso temporal",
+          "descripcion": "El sistema genera la autorización digital que te permite operar aduaneramente dentro del límite de valor y plazo autorizado."
+        }
+      ]
+    },
+    {
+      "slug": "requisitos-para-la-actualizacion-en-el-registro",
+      "arquetipo": "TIPO-1",
+      "titulo_h1": "Actualizar datos en el Registro de Exportadores",
+      "bajada_lead": "Mantén vigente tu inscripción en el Registro de Exportadores realizando la actualización electrónica desde el módulo del Registro Tributario Unificado (RTU) en la Agencia Virtual de la Superintendencia de Administración Tributaria (SAT).",
+      "menu_lateral": [
+        {
+          "id": "seccion-requisitos",
+          "label": "12 requisitos de actualización"
+        },
+        {
+          "id": "seccion-pasos",
+          "label": "Paso a paso en Agencia Virtual"
+        },
+        {
+          "id": "seccion-resultado",
+          "label": "Constancia de RTU"
+        }
+      ],
+      "eyebrow_requisitos": "Antes de empezar",
+      "h2_requisitos": "¿Qué requisitos se verifican para actualizar tu registro?",
+      "intro_requisitos": "Aplica para personas individuales y jurídicas inscritas como exportadores.",
+      "requisitos": [
+        {
+          "titulo": "Estar inscrito y con RTU Digital ratificado",
+          "descripcion": "1) Estar inscrito como Exportador; 2) Estar ratificado o actualizado en el RTU Digital con teléfono y correo electrónico; y 3) En personas jurídicas, representante legal activo y actualizado en RTU Digital."
+        },
+        {
+          "titulo": "Cumplimiento tributario, aduanero y formal",
+          "descripcion": "4) Estar solvente en obligaciones tributarias, aduaneras y de vehículos; 5) Tener afiliación activa al Impuesto al Valor Agregado (IVA); 6) Estar habilitado en el Régimen de Factura Electrónica en Línea (FEL); 7) Contar con libros habilitados en estado activo según tu régimen; y 8) Tener contador activo y solvente."
+        },
+        {
+          "titulo": "Sin requerimientos ni marcas de control",
+          "descripcion": "9) No tener requerimientos pendientes ante la SAT (plan operativo); 10) No contar con marca de dirección inválida; y 11) No registrar cuotas vencidas de convenio de pago."
+        }
+      ],
+      "eyebrow_pasos": "Paso a paso",
+      "h2_pasos": "Cómo actualizar tu Registro de Exportadores en Agencia Virtual",
+      "intro_pasos": "La gestión es 100% en línea a través de Agencia Virtual.",
+      "pasos": [
+        "Paso 1 — Inicia sesión en tu Agencia Virtual con tu Número de Identificación Tributaria (NIT) y contraseña.",
+        "Paso 2 — Ingresa a “Servicios al Contribuyente” > “RTU” > “Otros Registros de SAT” > “Registro de Exportadores”.",
+        "Paso 3 — Selecciona la opción “Actualización Exportador”, revisa y confirma tus datos registrados.",
+        "Paso 4 — Envía la solicitud y descarga tu constancia actualizada desde Agencia Virtual."
+      ],
+      "eyebrow_continuidad": "Resultado de la gestión",
+      "h2_continuidad": "¿Qué obtienes al finalizar?",
+      "que_sigue": [
+        {
+          "titulo": "Vigencia de la actualización",
+          "descripcion": "Tus datos actualizados quedan registrados de inmediato en los sistemas de la SAT y conservas tu estado activo en el registro."
+        }
+      ]
+    },
+    {
+      "slug": "requisitos-para-la-inscripcion-en-el-registro",
+      "arquetipo": "TIPO-1",
+      "titulo_h1": "Inscribirse en el Registro de Exportadores en Agencia Virtual",
+      "bajada_lead": "Conoce los 11 requisitos obligatorios para inscribirte por primera vez en el Registro de Exportadores desde el módulo del Registro Tributario Unificado (RTU) en la Agencia Virtual de la Superintendencia de Administración Tributaria (SAT).",
+      "menu_lateral": [
+        {
+          "id": "seccion-requisitos",
+          "label": "11 requisitos de inscripción"
+        },
+        {
+          "id": "seccion-pasos",
+          "label": "Paso a paso en Agencia Virtual"
+        },
+        {
+          "id": "seccion-resultado",
+          "label": "Constancia de Exportador"
+        }
+      ],
+      "eyebrow_requisitos": "Antes de empezar",
+      "h2_requisitos": "¿Qué requisitos debes cumplir para inscribirte como exportador?",
+      "intro_requisitos": "El sistema valida automáticamente el cumplimiento de estos 11 requisitos en línea.",
+      "requisitos": [
+        {
+          "titulo": "RTU Digital ratificado y establecimiento activo",
+          "descripcion": "1) Estar ratificado o actualizado en el RTU Digital con teléfono celular o línea fija en el domicilio fiscal y correo para notificaciones; 2) En personas jurídicas, representante legal activo y actualizado en RTU Digital; y 3) Contar con al menos un establecimiento comercial activo."
+        },
+        {
+          "titulo": "Obligaciones tributarias y facturación electrónica",
+          "descripcion": "4) Tener afiliación activa al Impuesto al Valor Agregado (IVA); 5) Estar habilitado en el Régimen de Factura Electrónica en Línea (FEL); 6) Contar con libros habilitados activos conforme a tu régimen fiscal; y 7) Registrar un contador activo y solvente."
+        },
+        {
+          "titulo": "Solvencia y ausencia de marcas de control",
+          "descripcion": "8) Estar solvente en obligaciones tributarias, aduaneras y de vehículos; 9) No tener requerimientos pendientes ante la SAT (plan operativo); 10) No tener marca de dirección inválida (no localizado); y 11) No contar con cuotas vencidas de convenio de pago."
+        }
+      ],
+      "eyebrow_pasos": "Paso a paso",
+      "h2_pasos": "Cómo inscribirte en el Registro de Exportadores desde Agencia Virtual",
+      "intro_pasos": "Completa tu inscripción en minutos desde el apartado de RTU.",
+      "pasos": [
+        "Paso 1 — Inicia sesión en tu Agencia Virtual con tu Número de Identificación Tributaria (NIT) y contraseña.",
+        "Paso 2 — Selecciona el menú “Servicios al Contribuyente” > “RTU” > “Otros Registros de SAT” > “Registro de Exportadores”.",
+        "Paso 3 — Elige la opción “Inscripción de Exportador”, completa el formulario y adjunta los datos solicitados.",
+        "Paso 4 — Envía la solicitud en línea y descarga tu constancia de exportador activo."
+      ],
+      "eyebrow_continuidad": "Resultado de la gestión",
+      "h2_continuidad": "¿Qué obtienes al finalizar?",
+      "que_sigue": [
+        {
+          "titulo": "Habilitación inmediata como exportador",
+          "descripcion": "Al finalizar la gestión, el sistema activa la característica de Exportador en tu RTU Digital para iniciar operaciones de exportación."
+        }
+      ]
+    },
+    {
+      "slug": "registro-de-exportadores-en-agencia-virtual",
+      "arquetipo": "TIPO-3",
+      "titulo_h1": "Registro de Exportadores en Agencia Virtual: inscripción, actualización, inactivación y permiso temporal",
+      "bajada_lead": "Gestiona en línea tu inscripción, actualización, inactivación o permiso temporal como exportador desde el módulo del Registro de Exportadores en la Agencia Virtual de la Superintendencia de Administración Tributaria (SAT), vigente desde el 4 de marzo de 2025 en sustitución del formulario SAT-0471.",
+      "menu_lateral": [
+        {
+          "id": "seccion-alcance",
+          "label": "Sustitución del formulario SAT-0471"
+        },
+        {
+          "id": "seccion-tabla",
+          "label": "Fichas de requisitos por gestión"
+        },
+        {
+          "id": "seccion-manuales",
+          "label": "Guías paso a paso (PDF)"
+        },
+        {
+          "id": "seccion-catalogo",
+          "label": "Directorios de requisitos SAT"
+        }
+      ],
+      "eyebrow_previos": "Modernización y automatización",
+      "h2_previos": "Qué cambia con el Registro de Exportadores en Agencia Virtual",
+      "intro_previos": "A partir del 4 de marzo de 2025, la gestión de exportadores se realiza en Agencia Virtual dentro del menú Servicios al Contribuyente > Registro Tributario Unificado (RTU) > Otros Registros de SAT > Registro de Exportadores.",
+      "datos_previos": [
+        {
+          "titulo": "Nuevo módulo electrónico en Agencia Virtual",
+          "descripcion": "A partir del 4 de marzo de 2025, el formulario físico SAT-0471 quedó sustituido por el nuevo sistema de exportadores dentro del menú Servicios al Contribuyente > RTU > Otros Registros de SAT > Registro de Exportadores. La inscripción, actualización, inactivación y solicitud de permiso temporal se efectúan 100% en línea."
+        },
+        {
+          "titulo": "Validación automática de requisitos",
+          "descripcion": "El sistema en línea verifica de forma inmediata el estado del RTU Digital, la afiliación activa al Impuesto al Valor Agregado (IVA), la habilitación en Factura Electrónica en Línea (FEL), la solvencia tributaria y aduanera, y la ausencia de cuotas vencidas."
+        },
+        {
+          "titulo": "Manuales ilustrados de usuario",
+          "descripcion": "Cuenta con 4 guías descargables en formato PDF que explican pantalla por pantalla cómo completar cada solicitud en Agencia Virtual."
+        }
+      ],
+      "eyebrow_tabla": "Equivalencia y requisitos",
+      "h2_tabla": "Gestiones disponibles en Agencia Virtual y enlaces a sus requisitos",
+      "intro_tabla": "Consulta la ruta exacta dentro de Agencia Virtual y abre la ficha de requisitos de la gestión que necesitas realizar.",
+      "tabla": {
+        "caption": "Módulos del Registro de Exportadores en Agencia Virtual",
+        "columnas": [
+          "Tipo de gestión",
+          "Ruta de acceso en Agencia Virtual",
+          "Requisitos y procedimiento"
+        ],
+        "filas": [
+          [
+            "Inscripción de Exportador Habitual (sustituye al formulario SAT-0471)",
+            "Sección RTU > Menú Otros Registros de SAT > Opción Registro de Exportadores",
+            {
+              "texto": "Ver requisitos de inscripción",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-para-la-inscripcion-en-el-registro-de-exportadores/"
+            }
+          ],
+          [
+            "Actualización de Exportador",
+            "Sección RTU > Menú Otros Registros de SAT > Opción Registro de Exportadores",
+            {
+              "texto": "Ver requisitos de actualización",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-para-la-actualizacion-en-el-registro-de-exportadores/"
+            }
+          ],
+          [
+            "Inactivación de Exportador",
+            "Sección RTU > Menú Otros Registros de SAT > Opción Registro de Exportadores",
+            {
+              "texto": "Ver requisitos de inactivación",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-para-la-inactivacion-en-el-registro-de-exportadores/"
+            }
+          ],
+          [
+            "Permiso Temporal de Exportador",
+            "Sección RTU > Menú Otros Registros de SAT > Opción Registro de Exportadores",
+            {
+              "texto": "Ver requisitos de permiso temporal",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-para-solicitud-de-permiso-temporal-en-el-registro-de-exportadores/"
+            }
+          ]
+        ]
+      },
+      "eyebrow_documentos": "Guías para el llenado de solicitudes",
+      "h2_documentos": "Manuales de usuario en Agencia Virtual (PDF)",
+      "intro_documentos": "Descarga el manual correspondiente a la gestión que vas a realizar.",
+      "documentos": [
+        {
+          "titulo": "Manual de Inscripción de Exportadores en Agencia Virtual",
+          "descripcion": "Guía paso a paso para solicitar la inscripción en el Registro de Exportadores (PDF).",
+          "url": "https://portal.sat.gob.gt/portal/descarga/16682/registro-de-contadores-en-agencia-virtual/84781/manual-de-inscripcion-exportadores.pdf",
+          "boton_texto": "Descargar manual de inscripción (PDF)",
+          "externo": true
+        },
+        {
+          "titulo": "Manual de Actualización de Exportadores en Agencia Virtual",
+          "descripcion": "Guía paso a paso para actualizar datos en el Registro de Exportadores (PDF).",
+          "url": "https://portal.sat.gob.gt/portal/descarga/16682/registro-de-contadores-en-agencia-virtual/84783/manual-de-actualizacion-exportadores.pdf",
+          "boton_texto": "Descargar manual de actualización (PDF)",
+          "externo": true
+        },
+        {
+          "titulo": "Manual de Inactivación en el Registro de Exportadores",
+          "descripcion": "Guía paso a paso para dar de baja la característica especial de Exportador (PDF).",
+          "url": "https://portal.sat.gob.gt/portal/descarga/16682/registro-de-contadores-en-agencia-virtual/84782/manual-de-inactivacion.pdf",
+          "boton_texto": "Descargar manual de inactivación (PDF)",
+          "externo": true
+        },
+        {
+          "titulo": "Manual de Permiso Temporal de Exportadores",
+          "descripcion": "Guía paso a paso para solicitar un permiso temporal de exportación (PDF).",
+          "url": "https://portal.sat.gob.gt/portal/descarga/16682/registro-de-contadores-en-agencia-virtual/84784/manual-de-permiso-temporal-exportadores.pdf",
+          "boton_texto": "Descargar manual de permiso temporal (PDF)",
+          "externo": true
+        }
+      ],
+      "eyebrow_grupos_documentos": "Directorios complementarios de requisitos",
+      "h2_grupos_documentos": "Otros requisitos de Personas/Empresas, Vehículos y Aduanas",
+      "intro_grupos_documentos": "Explora las demás fichas de requisitos del portal institucional.",
+      "grupos_documentos": [
+        {
+          "titulo": "Personas / Empresas (28)",
+          "tab_id": "1505762844966-e1d952eb-40fd",
+          "items": [
+            {
+              "descripcion": "Cita Controlada",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1541621044137-760c94bf-b56c",
+              "boton_texto": "Agendar en Cita Controlada",
+              "externo": true
+            },
+            {
+              "descripcion": "Inscripción RTU",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1615485066841-639e67c5-51e3",
+              "boton_texto": "Consultar gestión de RTU",
+              "externo": true
+            },
+            {
+              "descripcion": "Actualización RTU",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1541621044169-4198d06d-693f",
+              "boton_texto": "Consultar gestión de RTU",
+              "externo": true
+            },
+            {
+              "descripcion": "Cancelación de Negocios",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1541698042332-5a32c823-6bb4",
+              "boton_texto": "Consultar servicio en línea",
+              "externo": true
+            },
+            {
+              "descripcion": "Tercera Persona Autorizada en Gestiones de RTU",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1541718919329-b32e6928-0a05",
+              "boton_texto": "Consultar gestión de RTU",
+              "externo": true
+            },
+            {
+              "descripcion": "Facilidades de Pago",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1606494573178-22f9effd-91cc",
+              "boton_texto": "Consultar servicio en línea",
+              "externo": true
+            },
+            {
+              "descripcion": "Registro de Productores",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1672421718793-730bbcd0-8130",
+              "boton_texto": "Consultar servicio en línea",
+              "externo": true
+            },
+            {
+              "descripcion": "Solvencia Fiscal",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1541698952183-d90ed325-d915",
+              "boton_texto": "Consultar solvencia",
+              "externo": true
+            },
+            {
+              "descripcion": "Entidades Exentas",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1541711155323-6e281078-3daf",
+              "boton_texto": "Consultar servicio en línea",
+              "externo": true
+            },
+            {
+              "descripcion": "gestiones en Gerencias Especiales",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1541695993129-3a5733fd-bd87",
+              "boton_texto": "Consultar servicio en línea",
+              "externo": true
+            },
+            {
+              "descripcion": "Operaciones a través de la Agencia Virtual",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1544737166940-7b221c49-789f",
+              "boton_texto": "Consultar servicio en línea",
+              "externo": true
+            },
+            {
+              "descripcion": "Registro Fiscal de Imprentas en Agencia Virtual",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1544757949626-63b98f1e-c5df",
+              "boton_texto": "Consultar servicio en línea",
+              "externo": true
+            },
+            {
+              "descripcion": "Autorizaciones y Habilitaciones",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1541695409144-7032754f-f93a",
+              "boton_texto": "Consultar servicio en línea",
+              "externo": true
+            },
+            {
+              "descripcion": "Autorización de Fabricas de Alcohol y Bebidas Alcohólicas",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1579811504227-cd799de1-5751",
+              "boton_texto": "Consultar servicio en línea",
+              "externo": true
+            },
+            {
+              "descripcion": "Solicitud de Alcoholes, Bebidas Alcohólicas y Fermentadas",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1610574994900-e9efee21-f878",
+              "boton_texto": "Consultar servicio en línea",
+              "externo": true
+            },
+            {
+              "descripcion": "Cambio de Regímenes",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1541710775060-c48ed303-d21d",
+              "boton_texto": "Consultar servicio en línea",
+              "externo": true
+            },
+            {
+              "descripcion": "Requisitos de Correcciones por errores en Declaraciones",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1541721863086-9194f94d-dd70",
+              "boton_texto": "Consultar servicio en línea",
+              "externo": true
+            },
+            {
+              "descripcion": "Registro de Contadores",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1716843898760-3ebbb433-f083",
+              "boton_texto": "Consultar servicio en línea",
+              "externo": true
+            },
+            {
+              "descripcion": "Abogados y Notarios",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1541715112091-e300506b-54b6",
+              "boton_texto": "Consultar servicio en línea",
+              "externo": true
+            },
+            {
+              "descripcion": "Planilla de IVA",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1541695403691-42e37d8c-5c14",
+              "boton_texto": "Consultar servicio en línea",
+              "externo": true
+            },
+            {
+              "descripcion": "Gestión de devolución por pagos indebidos",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1544742215300-58052f9f-10b1",
+              "boton_texto": "Consultar servicio en línea",
+              "externo": true
+            },
+            {
+              "descripcion": "Devolución o Compensación de Pagos en Exceso del Impuesto Sobre la Renta Anual",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1567533858813-166b89e0-9449",
+              "boton_texto": "Consultar servicio en línea",
+              "externo": true
+            },
+            {
+              "descripcion": "Formularios Electrónicos Solicitud Dev. C.F. Régimen Especial Electrónico y Régimen General",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1573597244944-61668ad5-acf7",
+              "boton_texto": "Abrir Declaraguate",
+              "externo": true
+            },
+            {
+              "descripcion": "Distintivos y sus requisitos",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1715356603270-207da69d-8699",
+              "boton_texto": "Consultar servicio en línea",
+              "externo": true
+            },
+            {
+              "descripcion": "Agentes de Retención del IVA",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1580160685000-92f05ffc-54c3",
+              "boton_texto": "Consultar servicio en línea",
+              "externo": true
+            },
+            {
+              "descripcion": "Remanentes por Retenciones de IVA",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1561561637360-f7d03262-922b",
+              "boton_texto": "Consultar servicio en línea",
+              "externo": true
+            },
+            {
+              "descripcion": "Gestores Tributarios",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1544743843603-94d9dcb9-d83e",
+              "boton_texto": "Consultar servicio en línea",
+              "externo": true
+            },
+            {
+              "descripcion": "Listado de Formularios",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1544743943508-2272c2f0-3b39",
+              "boton_texto": "Abrir Declaraguate",
+              "externo": true
+            }
+          ]
+        },
+        {
+          "titulo": "Vehículos (12)",
+          "tab_id": "1505762845070-f56e7dc0-cbe2",
+          "items": [
+            {
+              "descripcion": "Inscripción",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-vehiculos/#1541722263760-bed533a1-d75d",
+              "boton_texto": "Consultar servicio en línea",
+              "externo": true
+            },
+            {
+              "descripcion": "Autorización de Carpetas",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-vehiculos/#1764787533600-5f808581-2d8a",
+              "boton_texto": "Consultar servicio en línea",
+              "externo": true
+            },
+            {
+              "descripcion": "Registro de Marca y Código de Fabricante",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-vehiculos/#1642106578727-c83d17c4-34da",
+              "boton_texto": "Consultar servicio en línea",
+              "externo": true
+            },
+            {
+              "descripcion": "Traspaso de Vehículos ante la SAT",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-vehiculos/#1541722263997-e0d7cba3-7daf",
+              "boton_texto": "Consultar gestión vehicular",
+              "externo": true
+            },
+            {
+              "descripcion": "Traspaso Electrónico de Vehículos a través de Notarios",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-vehiculos/#1541780077723-c74e470e-b935",
+              "boton_texto": "Consultar gestión vehicular",
+              "externo": true
+            },
+            {
+              "descripcion": "Cambios, Rectificaciones o Transformaciones en Datos de Vehículos",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-vehiculos/#1541722264551-ab829ede-22f8",
+              "boton_texto": "Consultar gestión vehicular",
+              "externo": true
+            },
+            {
+              "descripcion": "Reposición de Distintivos (Certificado de Propiedad, Tarjeta y Placas de Circulación)",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-vehiculos/#1541722264271-487e21fd-d904",
+              "boton_texto": "Consultar gestión vehicular",
+              "externo": true
+            },
+            {
+              "descripcion": "Cambio de Placas Temporales",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-vehiculos/#1662393570133-d90819b2-32d3",
+              "boton_texto": "Consultar gestión vehicular",
+              "externo": true
+            },
+            {
+              "descripcion": "Reposiciones con Formularios en Papel",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-vehiculos/#1541776381173-61f2f55a-46dc",
+              "boton_texto": "Abrir Declaraguate",
+              "externo": true
+            },
+            {
+              "descripcion": "Activación o inactivación",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-vehiculos/#1541777125986-97d04375-37ee",
+              "boton_texto": "Consultar servicio en línea",
+              "externo": true
+            },
+            {
+              "descripcion": "Gestores Tributarios",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-vehiculos/#1541776888584-73400ddd-b78d",
+              "boton_texto": "Consultar servicio en línea",
+              "externo": true
+            },
+            {
+              "descripcion": "Tercera Persona",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-vehiculos/#1666628292136-94f65fcc-f79f",
+              "boton_texto": "Consultar servicio en línea",
+              "externo": true
+            }
+          ]
+        },
+        {
+          "titulo": "Aduanas (6)",
+          "tab_id": "1505784290624-8a1692b9-c4fe",
+          "items": [
+            {
+              "descripcion": "Consulta de Expedientes",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-aduanas/#1542142398181-8db4844a-6760",
+              "boton_texto": "Consultar servicio aduanero",
+              "externo": true
+            },
+            {
+              "descripcion": "Documentos para importación y admisión temporal",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-aduanas/#1542142298663-bee160b4-5362",
+              "boton_texto": "Consultar servicio en línea",
+              "externo": true
+            },
+            {
+              "descripcion": "Importación y Exportación",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-aduanas/#1542209620324-5bd6722c-fbd7",
+              "boton_texto": "Consultar servicio aduanero",
+              "externo": true
+            },
+            {
+              "descripcion": "Reexportación",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-aduanas/#1542142298723-7d324078-07a5",
+              "boton_texto": "Consultar servicio en línea",
+              "externo": true
+            },
+            {
+              "descripcion": "Renovación de operación de auxiliares de la función pública",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-aduanas/#1608063945646-f9ebd644-65ff",
+              "boton_texto": "Consultar servicio en línea",
+              "externo": true
+            },
+            {
+              "descripcion": "Documento Compromisorio",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-aduanas/#1738949698794-09454143-7939",
+              "boton_texto": "Consultar servicio en línea",
+              "externo": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "requisitos-formulario-sat-2125",
+      "arquetipo": "TIPO-1",
+      "titulo_h1": "Presentar solicitud de devolución de crédito fiscal en el Régimen General (Formulario Electrónico 2125)",
+      "bajada_lead": "Solicita ante la Superintendencia de Administración Tributaria (SAT) la devolución trimestral o semestral de crédito fiscal del Impuesto al Valor Agregado (IVA) en el Régimen General mediante el formulario electrónico SAT-2125 disponible en Agencia Virtual.",
+      "menu_lateral": [
+        {
+          "id": "seccion-requisitos",
+          "label": "Requisitos y anexos CSV"
+        },
+        {
+          "id": "seccion-documentos",
+          "label": "Guía, instrucciones CSV y plantilla Excel"
+        },
+        {
+          "id": "seccion-pasos",
+          "label": "Paso a paso en Agencia Virtual"
+        }
+      ],
+      "eyebrow_requisitos": "Antes de empezar",
+      "h2_requisitos": "¿Qué requisitos debes cumplir según tu perfil?",
+      "intro_requisitos": "Lee cuidadosamente la guía de usuario y las instrucciones de carga de archivos CSV antes de iniciar tu solicitud.",
+      "requisitos": [
+        {
+          "titulo": "Agencia Virtual, establecimiento activo y registro de exportador",
+          "descripcion": "1) Contar con usuario y contraseña de Agencia Virtual; 2) Tener un establecimiento activo; y 3) Ser exportador registrado en alguno de los regímenes establecidos."
+        },
+        {
+          "titulo": "Representante legal al día (Personas Jurídicas)",
+          "descripcion": "En el caso de personas jurídicas, contar con un representante legal inscrito que se encuentre al día en sus obligaciones tributarias, localizado y en estado activo (color verde)."
+        },
+        {
+          "titulo": "Períodos no prescritos y libros en formato CSV",
+          "descripcion": "Las solicitudes pueden presentarse de forma trimestral o semestral sobre períodos no prescritos (hasta 4 años atrás desde la fecha de presentación), anexando los archivos en formato de valores separados por comas (CSV) de los libros de compras y ventas del período solicitado."
+        }
+      ],
+      "documentos_previos": [
+        {
+          "texto": "Descargar Guía del Usuario del Formulario Electrónico SAT-2125 (PDF)",
+          "url": "https://portal.sat.gob.gt/portal/descarga/15345/devoluciones-de-credito-fiscal/41601/guia-del-usuario-para-la-utilizacion-del-formulario-electronico-sat2125.pdf",
+          "externo": true
+        },
+        {
+          "texto": "Descargar instrucciones previas para cargar anexos CSV del SAT-2125 (PDF)",
+          "url": "https://portal.sat.gob.gt/portal/descarga/15345/devoluciones-de-credito-fiscal/73971/instruccionescsv-formulario-sat-2125-05_12_2023.pdf",
+          "externo": true
+        },
+        {
+          "texto": "Descargar plantilla de libros de compras y ventas SAT-2125 (XLSX)",
+          "url": "https://portal.sat.gob.gt/portal/descarga/15345/devoluciones-de-credito-fiscal/41603/libros-2125.xlsx",
+          "externo": true
+        }
+      ],
+      "eyebrow_pasos": "Paso a paso",
+      "h2_pasos": "Cómo llenar y presentar el formulario electrónico SAT-2125",
+      "intro_pasos": "Prepara tus libros de compras y ventas utilizando la plantilla Excel y conviértelos a formato CSV siguiendo el instructivo.",
+      "pasos": [
+        "Paso 1 — Descarga la plantilla de libros (XLSX), estructura la información del período trimestral o semestral y genera los archivos CSV conforme al instructivo oficial.",
+        "Paso 2 — Ingresa a tu Agencia Virtual y selecciona el formulario electrónico SAT-2125 “Solicitud de Devolución de Crédito Fiscal Régimen General”.",
+        "Paso 3 — Completa el formulario SAT-2125, adjunta los anexos en formato CSV y preséntalo de forma electrónica dentro de Agencia Virtual.",
+        "Paso 4 — Revisa el correo electrónico registrado en el formulario, donde recibirás la confirmación de aceptación junto con el número de documento SAT asignado para consultas (o los motivos de rechazo para subsanarlos y volver a presentar)."
+      ],
+      "cta_principal": {
+        "texto": "Solicitar usuario de Agencia Virtual SAT",
+        "url": "https://portal.sat.gob.gt/portal/solicitud-usuario-agencia-virtual/",
+        "externo": true
+      },
+      "eyebrow_continuidad": "Resultado de la gestión",
+      "h2_continuidad": "¿Qué recibes al presentar el formulario?",
+      "que_sigue": [
+        {
+          "titulo": "Confirmación y número de documento SAT",
+          "descripcion": "Recibes un correo electrónico confirmando si la solicitud fue aceptada e incluyendo el número de documento SAT generado para seguimiento."
+        },
+        {
+          "titulo": "Posibilidad de reingreso tras subsanar requisitos",
+          "descripcion": "Si la solicitud no fue aceptada, el correo detallará los motivos para que puedas subsanar el requisito y presentar nuevamente la gestión."
+        }
+      ]
+    },
+    {
+      "slug": "presentacion-y-analisis-de-declaracion",
+      "arquetipo": "TIPO-1",
+      "titulo_h1": "Presentar declaración complementaria de exportación para análisis aduanero",
+      "bajada_lead": "Perfecciona tus exportaciones amparadas en declaraciones simplificadas o provisionales presentando la Declaración Complementaria y sus documentos de soporte ante la aduana de salida de la Superintendencia de Administración Tributaria (SAT).",
+      "menu_lateral": [
+        {
+          "id": "seccion-requisitos",
+          "label": "Plazos (3 o 5 días) y documentos"
+        },
+        {
+          "id": "seccion-pasos",
+          "label": "Paso a paso en la Aduana de salida"
+        },
+        {
+          "id": "seccion-audios",
+          "label": "Sanciones y audios en idiomas mayas"
+        }
+      ],
+      "eyebrow_requisitos": "Antes de empezar",
+      "h2_requisitos": "¿Qué plazos y documentos debes cumplir?",
+      "intro_requisitos": "Pueden realizar la gestión el Agente Aduanero o su asistente autorizado por la SAT, o el exportador (representante legal, propietario o mandatario).",
+      "requisitos": [
+        {
+          "titulo": "Documentos de transporte y soporte aduanero",
+          "descripcion": "1) Carta de porte, conocimiento de embarque o guía aérea; 2) Factura comercial o documento equivalente; 3) Declaración de mercancías provisional o simplificada; y 4) Licencias, permisos o certificados de origen si aplican."
+        },
+        {
+          "titulo": "Plazo legal de presentación",
+          "descripcion": "De conformidad con el Artículo 334 del Reglamento del Código Aduanero Uniforme Centroamericano (RECAUCA), la Declaración Complementaria debe presentarse dentro del plazo improrrogable establecido por la normativa aduanera."
+        },
+        {
+          "titulo": "Documentos de soporte obligatorios",
+          "descripcion": "Adjunta a la Declaración Complementaria: 1) Factura comercial; 2) Declaración para el Registro y Control de Exportación (DEPREX); 3) Certificado de la Asociación Nacional del Café (ANACAFÉ) según corresponda; 4) Documento de transporte (y fotocopia del documento de transporte máster en carga consolidada); y 5) Ejemplar de transportista firmado y sellado por el funcionario aduanero que procesó el ingreso al recinto."
+        }
+      ],
+      "nota_requisito": "Importante: Si presentas de forma extemporánea la Declaración Complementaria de una Declaración Provisional, aplica una sanción de 300.00 pesos centroamericanos (equivalente a USD 300.00), sin eximir al exportador de las consecuencias tributarias y legales derivadas de las facultades fiscalizadoras de la SAT.",
+      "eyebrow_pasos": "Paso a paso",
+      "h2_pasos": "Cómo presentar la Declaración Complementaria ante la Aduana",
+      "intro_pasos": "Acude a la Aduana por donde salió la mercancía del país dentro del plazo legal.",
+      "pasos": [
+        "Paso 1 — Transmite electrónicamente la Declaración Complementaria a través del sistema aduanero de la SAT dentro del plazo legal normado.",
+        "Paso 2 — Presenta físicamente ante la aduana de salida el expediente foliado con la copia de la declaración provisional y todos los documentos de soporte requeridos.",
+        "Paso 3 — La autoridad aduanera efectúa el análisis documental y la conciliación arancelaria para registrar la culminación definitiva de la exportación."
+      ],
+      "cta_principal": {
+        "texto": "Escuchar guía en idioma k'iche' (MP3)",
+        "url": "https://mx.ivoox.com/es/presentacion-y-analisis-de-declaracion-complementarias-de-exportacion-k-039-iche-039_md_45167495_wp_1.mp3",
+        "externo": true
+      },
+      "enlaces_secundarios": [
+        {
+          "texto": "Escuchar guía en idioma mam (MP3)",
+          "url": "https://mx.ivoox.com/es/presentacion-y-analisis-de-declaracion-complementarias-de-exportacion-mam_md_45166660_wp_1.mp3",
+          "externo": true
+        },
+        {
+          "texto": "Escuchar guía en idioma q'eqchi' (MP3)",
+          "url": "https://mx.ivoox.com/es/presentacion-y-analisis-de-declaracion-complementarias-de-exportacion-q-039-eqchi-039_md_45168101_wp_1.mp3",
+          "externo": true
+        }
+      ],
+      "eyebrow_continuidad": "Resultado de la gestión",
+      "h2_continuidad": "¿Qué obtienes al finalizar?",
+      "que_sigue": [
+        {
+          "titulo": "Ejemplar de la Declaración firmada y sellada",
+          "descripcion": "Se te entrega el ejemplar de la Declaración de Mercancías del Transportista firmado y sellado como constancia del perfeccionamiento de la exportación."
+        }
+      ]
+    },
+    {
+      "slug": "autorizacion-de-cartas-de-ingreso-a-zona",
+      "arquetipo": "TIPO-1",
+      "titulo_h1": "Solicitar autorización de cartas de ingreso de herramientas o maquinaria a zona primaria",
+      "bajada_lead": "Obtén ante la Administración de la Aduana de la Superintendencia de Administración Tributaria (SAT) la autorización para ingresar temporalmente herramientas o maquinaria de trabajo a la zona primaria de un recinto aduanero.",
+      "menu_lateral": [
+        {
+          "id": "seccion-requisitos",
+          "label": "Solicitud y documentos de soporte"
+        },
+        {
+          "id": "seccion-pasos",
+          "label": "Paso a paso y control de egreso"
+        },
+        {
+          "id": "seccion-audios",
+          "label": "Resultado y audios en idiomas mayas"
+        }
+      ],
+      "eyebrow_requisitos": "Antes de empezar",
+      "h2_requisitos": "¿Qué documentos debes presentar ante la Aduana?",
+      "intro_requisitos": "Pueden presentar la solicitud el consignatario, representante legal, Agente Aduanero, Apoderado Especial Aduanero, desconsolidador o empresa de entrega rápida (Courier).",
+      "requisitos": [
+        {
+          "titulo": "Carta formal de solicitud con firma legalizada",
+          "descripcion": "Carta en papel membretado dirigida al Administrador de Aduana firmada por el representante legal con firma legalizada por notario, especificando el motivo del ingreso y plazo estimado."
+        },
+        {
+          "titulo": "Listado detallado de herramientas y equipos",
+          "descripcion": "Inventario descriptivo con marca, modelo, número de serie y valor estimado de las herramientas o maquinaria a ingresar al recinto aduanero."
+        },
+        {
+          "titulo": "Identificación y seguro del personal técnico",
+          "descripcion": "Fotocopia del Documento Personal de Identificación (DPI) o pasaporte del personal técnico, fotocopia del carné de afiliación al Seguro Social o póliza de seguro de accidentes laborales vigente."
+        }
+      ],
+      "nota_requisito": "Advertencia: El personal de los módulos de ingreso y egreso verificará que las herramientas o maquinaria que salen del recinto sean exactamente las mismas autorizadas al ingresar. Si se detecta cualquier anomalía al retirarlas de la zona primaria, serán retenidas y se deberá responder por los tributos y responsabilidades penales por defraudación o contrabando aduanero.",
+      "eyebrow_pasos": "Paso a paso",
+      "h2_pasos": "Cómo autorizar el ingreso y retiro en zona primaria",
+      "intro_pasos": "Realiza la gestión directamente en la Aduana donde se efectuará el trabajo.",
+      "pasos": [
+        "Paso 1 — Redacta la carta de solicitud dirigida a la Administración de la Aduana correspondiente adjuntando el listado detallado de maquinaria y copias de DPI del personal.",
+        "Paso 2 — Presenta el expediente en la ventanilla de recepción de la Administración de Aduana con al menos 48 horas de anticipación al trabajo programado.",
+        "Paso 3 — Recibe la carta de ingreso autorizada y sellada para presentarla en la garita de control de acceso a la zona primaria aduanera."
+      ],
+      "cta_principal": {
+        "texto": "Escuchar guía en idioma k'iche' (MP3)",
+        "url": "https://mx.ivoox.com/es/autorizacion-de-cartas-de-ingreso-a-zona-primaria-k-039-iche-039_md_45167403_wp_1.mp3",
+        "externo": true
+      },
+      "enlaces_secundarios": [
+        {
+          "texto": "Escuchar guía en idioma mam (MP3)",
+          "url": "https://mx.ivoox.com/es/autorizacion-de-cartas-de-ingreso-a-zona-primaria-mam_md_45166340_wp_1.mp3",
+          "externo": true
+        },
+        {
+          "texto": "Escuchar guía en idioma q'eqchi' (MP3)",
+          "url": "https://mx.ivoox.com/es/autorizacion-de-cartas-de-ingreso-a-zona-primaria-q-039-eqchi-039_md_45168016_wp_1.mp3",
+          "externo": true
+        }
+      ],
+      "eyebrow_continuidad": "Resultado de la gestión",
+      "h2_continuidad": "¿Qué obtienes según el tipo de equipo?",
+      "que_sigue": [
+        {
+          "titulo": "Copia sellada (para ingreso de herramientas)",
+          "descripcion": "Si tu solicitud corresponde al ingreso de herramientas, recibes la copia de tu carta con el sello oficial de autorización."
+        },
+        {
+          "titulo": "Providencia administrativa (para ingreso de maquinaria)",
+          "descripcion": "Si corresponde al ingreso de maquinaria, la Administración de la Aduana elabora y entrega una providencia que autoriza el ingreso temporal."
+        }
+      ]
+    },
+    {
+      "slug": "cambio-de-regimen-especial-al-regimen-optativo",
+      "arquetipo": "TIPO-1",
+      "titulo_h1": "Cambiar del Régimen Especial al Régimen Optativo de Devolución de Crédito Fiscal del Impuesto al Valor Agregado (IVA) por Exportaciones",
+      "bajada_lead": "Realiza desde tu Agencia Virtual el cambio del Régimen Especial al Régimen Optativo de devolución de crédito fiscal del IVA por exportaciones ante la Superintendencia de Administración Tributaria (SAT), previo al inicio del siguiente período impositivo.",
+      "menu_lateral": [
+        {
+          "id": "seccion-requisitos",
+          "label": "Requisitos de cambio de régimen"
+        },
+        {
+          "id": "seccion-pasos",
+          "label": "Paso a paso en Agencia Virtual"
+        }
+      ],
+      "eyebrow_requisitos": "Antes de empezar",
+      "h2_requisitos": "¿Qué necesitas para cambiar al Régimen Optativo?",
+      "intro_requisitos": "Aplica para personas individuales y jurídicas inscritas como exportadores.",
+      "requisitos": [
+        {
+          "titulo": "Inscripción activa en Régimen Especial",
+          "descripcion": "Estar inscrito y activo en el Régimen Especial de Devolución de Crédito Fiscal a Exportadores."
+        },
+        {
+          "titulo": "Acceso activo a Agencia Virtual",
+          "descripcion": "Contar con usuario y contraseña habilitados en el Sistema Agencia Virtual de la SAT con tu Número de Identificación Tributaria (NIT)."
+        },
+        {
+          "titulo": "Solicitud previa al nuevo período impositivo",
+          "descripcion": "Presentar la solicitud de cambio de régimen con anterioridad al inicio del siguiente período mensual del IVA."
+        }
+      ],
+      "eyebrow_pasos": "Paso a paso",
+      "h2_pasos": "Cómo gestionar el cambio de régimen en Agencia Virtual",
+      "intro_pasos": "El proceso se realiza en línea desde el módulo de servicios al contribuyente.",
+      "pasos": [
+        "Paso 1 — Ingresa al Portal SAT, accede a Agencia Virtual (“Sistema Agencia Virtual”) e inicia sesión con tu NIT y contraseña.",
+        "Paso 2 — En el “Menú”, selecciona la opción “Servicios”, elige “Datos del Contribuyente” y haz clic en “Inscripción y Actualización a los Regímenes de Devolución de Crédito Fiscal”.",
+        "Paso 3 — En el formulario SAT-0471, selecciona la opción de cambio al Régimen Optativo y confirma el envío de la solicitud."
+      ],
+      "cta_principal": {
+        "texto": "Solicitar usuario de Agencia Virtual SAT",
+        "url": "https://portal.sat.gob.gt/portal/solicitud-usuario-agencia-virtual",
+        "externo": true
+      },
+      "enlaces_secundarios": [
+        {
+          "texto": "Ir al Portal SAT para ingresar a Agencia Virtual",
+          "url": "https://portal.sat.gob.gt/portal/",
+          "externo": true
+        }
+      ]
+    },
+    {
+      "slug": "cambio-de-regimen-optativo-al-regimen-especial",
+      "arquetipo": "TIPO-1",
+      "titulo_h1": "Cambiar del Régimen Optativo al Régimen Especial de Devolución de Crédito Fiscal del Impuesto al Valor Agregado (IVA) por Exportaciones",
+      "bajada_lead": "Solicita en línea desde tu Agencia Virtual el cambio del Régimen Optativo al Régimen Especial de devolución de crédito fiscal del IVA por exportaciones ante la Superintendencia de Administración Tributaria (SAT).",
+      "menu_lateral": [
+        {
+          "id": "seccion-requisitos",
+          "label": "Requisitos de cambio de régimen"
+        },
+        {
+          "id": "seccion-pasos",
+          "label": "Paso a paso en Agencia Virtual"
+        }
+      ],
+      "eyebrow_requisitos": "Antes de empezar",
+      "h2_requisitos": "¿Qué necesitas para cambiar al Régimen Especial?",
+      "intro_requisitos": "Aplica tanto para personas individuales como para personas jurídicas.",
+      "requisitos": [
+        {
+          "titulo": "Código de exportador en VUPE y Agencia Virtual",
+          "descripcion": "Contar con código de exportador vigente emitido por la Ventanilla Única para las Exportaciones (VUPE) y acceso activo a Agencia Virtual con tu Número de Identificación Tributaria (NIT)."
+        },
+        {
+          "titulo": "12 declaraciones de IVA del período anterior",
+          "descripcion": "Contar con 12 declaraciones presentadas del IVA del período inmediato anterior en las que hayas reportado exportaciones."
+        },
+        {
+          "titulo": "Solicitud previa al nuevo período impositivo",
+          "descripcion": "Realiza el cambio de régimen con anticipación al inicio del siguiente período impositivo."
+        }
+      ],
+      "eyebrow_pasos": "Paso a paso",
+      "h2_pasos": "Cómo realizar el cambio al Régimen Especial en Agencia Virtual",
+      "intro_pasos": "Sigue estos pasos dentro del Sistema Agencia Virtual.",
+      "pasos": [
+        "Paso 1 — Ingresa al Portal SAT, entra a Agencia Virtual (“Sistema Agencia Virtual”) y autentícate con tu NIT y contraseña.",
+        "Paso 2 — En el “Menú”, dirígete a la sección “Servicios”, elige “Datos del Contribuyente” y selecciona “Inscripción y Actualización a los Regímenes de Devolución de Crédito Fiscal”.",
+        "Paso 3 — Revisa tus datos registrados en el formulario SAT-0471, selecciona el cambio al Régimen Especial y envía la solicitud."
+      ],
+      "cta_principal": {
+        "texto": "Gestionar código de exportador en VUPE",
+        "url": "http://vupe.export.com.gt/",
+        "externo": true
+      },
+      "enlaces_secundarios": [
+        {
+          "texto": "Solicitar usuario de Agencia Virtual SAT",
+          "url": "https://portal.sat.gob.gt/portal/solicitud-usuario-agencia-virtual",
+          "externo": true
+        },
+        {
+          "texto": "Ir al Portal SAT para ingresar a Agencia Virtual",
+          "url": "https://portal.sat.gob.gt/portal/",
+          "externo": true
+        }
+      ]
+    },
+    {
+      "slug": "inscripcion-al-regimen-especial-de-devolucion",
+      "arquetipo": "TIPO-1",
+      "titulo_h1": "Inscribirse al Régimen Especial de Devolución de Crédito Fiscal del Impuesto al Valor Agregado (IVA) por Exportaciones",
+      "bajada_lead": "Inscríbete en línea desde tu Agencia Virtual al Régimen Especial de Devolución de Crédito Fiscal del IVA por exportaciones ante la Superintendencia de Administración Tributaria (SAT).",
+      "menu_lateral": [
+        {
+          "id": "seccion-requisitos",
+          "label": "Requisitos de inscripción"
+        },
+        {
+          "id": "seccion-pasos",
+          "label": "Paso a paso en Agencia Virtual"
+        }
+      ],
+      "eyebrow_requisitos": "Antes de empezar",
+      "h2_requisitos": "¿Qué requisitos debes cumplir?",
+      "intro_requisitos": "Aplica para personas individuales y jurídicas que realizan actividades de exportación.",
+      "requisitos": [
+        {
+          "titulo": "Código de exportador en VUPE",
+          "descripcion": "Contar con código de exportador vigente obtenido en la Ventanilla Única para las Exportaciones (VUPE)."
+        },
+        {
+          "titulo": "Usuario activo de Agencia Virtual",
+          "descripcion": "Contar con acceso activo al Sistema Agencia Virtual de la SAT con tu Número de Identificación Tributaria (NIT)."
+        },
+        {
+          "titulo": "12 declaraciones de IVA con exportaciones",
+          "descripcion": "Contar con 12 declaraciones presentadas del IVA del período inmediato anterior en las que reportes exportaciones."
+        }
+      ],
+      "eyebrow_pasos": "Paso a paso",
+      "h2_pasos": "Cómo inscribirte al Régimen Especial desde Agencia Virtual",
+      "intro_pasos": "Completa la inscripción electrónica siguiendo estos pasos.",
+      "pasos": [
+        "Paso 1 — Ingresa al Portal SAT, selecciona Agencia Virtual (“Sistema Agencia Virtual”) e inicia sesión con tu NIT y contraseña.",
+        "Paso 2 — Abre el “Menú”, ingresa a “Servicios” > “Datos del Contribuyente” y selecciona “Inscripción y Actualización a los Regímenes de Devolución de Crédito Fiscal”.",
+        "Paso 3 — Completa el formulario SAT-0471 “Inscripción y Actualización a los Regímenes de Devolución de Crédito Fiscal”, selecciona el Régimen Especial y envía la solicitud."
+      ],
+      "cta_principal": {
+        "texto": "Gestionar código de exportador en VUPE",
+        "url": "http://vupe.export.com.gt/",
+        "externo": true
+      },
+      "enlaces_secundarios": [
+        {
+          "texto": "Solicitar usuario de Agencia Virtual SAT",
+          "url": "https://portal.sat.gob.gt/portal/solicitud-usuario-agencia-virtual",
+          "externo": true
+        },
+        {
+          "texto": "Ir al Portal SAT para ingresar a Agencia Virtual",
+          "url": "https://portal.sat.gob.gt/portal/",
+          "externo": true
+        }
+      ]
+    },
+    {
+      "slug": "actualizacion-al-regimen-especial-de-devolucion",
+      "arquetipo": "TIPO-1",
+      "titulo_h1": "Actualizar datos en el Régimen Especial de Devolución de Crédito Fiscal a los Exportadores",
+      "bajada_lead": "Presenta en línea desde tu Agencia Virtual la actualización semestral de datos en el Régimen Especial de Devolución de Crédito Fiscal del Impuesto al Valor Agregado (IVA) para exportadores ante la Superintendencia de Administración Tributaria (SAT).",
+      "menu_lateral": [
+        {
+          "id": "seccion-requisitos",
+          "label": "Requisitos, formato de divisas y Libro Mayor"
+        },
+        {
+          "id": "seccion-pasos",
+          "label": "Paso a paso en Agencia Virtual"
+        }
+      ],
+      "eyebrow_requisitos": "Antes de empezar",
+      "h2_requisitos": "¿Qué documentos y archivos debes preparar?",
+      "intro_requisitos": "Prepara el archivo Excel de divisas y el Libro Mayor certificado en PDF antes de ingresar al formulario.",
+      "requisitos": [
+        {
+          "titulo": "Código VUPE y acceso a Agencia Virtual",
+          "descripcion": "1) Contar con código de exportador obtenido en la Ventanilla Única para las Exportaciones (VUPE); y 2) Contar con acceso activo a Agencia Virtual con tu Número de Identificación Tributaria (NIT)."
+        },
+        {
+          "titulo": "Formato de divisas en archivo Excel (.xls)",
+          "descripcion": "Completar el formato oficial de divisas en archivo Excel con extensión .xls (Libro de Excel 97-2003) con la información del semestre."
+        },
+        {
+          "titulo": "Libro Mayor certificado en PDF (máximo 5 MB)",
+          "descripcion": "Libro Mayor donde se consignen las ventas de exportación del semestre a reportar, debidamente certificado (firmado y sellado por el contador registrado), en formato PDF con peso no mayor a 5 megabytes (MB)."
+        }
+      ],
+      "documentos_previos": [
+        {
+          "texto": "Descargar formato oficial de divisas para actualización (XLS)",
+          "url": "https://portal.sat.gob.gt/portal/descarga/4236/exportadores/27958/formato-divisas.xls",
+          "externo": true
+        }
+      ],
+      "eyebrow_pasos": "Paso a paso",
+      "h2_pasos": "Cómo enviar tu actualización semestral en Agencia Virtual",
+      "intro_pasos": "Adjunta tus archivos directamente dentro del Sistema Agencia Virtual.",
+      "pasos": [
+        "Paso 1 — Descarga y llena el formato de divisas (.xls) y digitaliza el Libro Mayor del semestre certificado por contador en PDF.",
+        "Paso 2 — Ingresa al Portal SAT, entra a Agencia Virtual (“Sistema Agencia Virtual”) e inicia sesión con tu NIT y contraseña.",
+        "Paso 3 — En el “Menú” selecciona “Servicios” > “Datos del Contribuyente” > “Inscripción y Actualización a los Regímenes de Devolución de Crédito Fiscal”.",
+        "Paso 4 — En el formulario SAT-0471 adjunta el formato de divisas y el Libro Mayor certificado, valida la información y envía la actualización."
+      ],
+      "cta_principal": {
+        "texto": "Gestionar código de exportador en VUPE",
+        "url": "http://vupe.export.com.gt/",
+        "externo": true
+      },
+      "enlaces_secundarios": [
+        {
+          "texto": "Solicitar usuario de Agencia Virtual SAT",
+          "url": "https://portal.sat.gob.gt/portal/solicitud-usuario-agencia-virtual",
+          "externo": true
+        },
+        {
+          "texto": "Ir al Portal SAT para ingresar a Agencia Virtual",
+          "url": "https://portal.sat.gob.gt/portal/",
+          "externo": true
+        }
+      ]
+    },
+    {
+      "slug": "inscripcion-al-regimen-optativo-de-devolucion",
+      "arquetipo": "TIPO-1",
+      "titulo_h1": "Inscribirse al Régimen Optativo de Devolución de Crédito Fiscal del Impuesto al Valor Agregado (IVA) por Exportaciones",
+      "bajada_lead": "Realiza en línea desde tu Agencia Virtual la inscripción al Régimen Optativo de Devolución de Crédito Fiscal del IVA por exportaciones ante la Superintendencia de Administración Tributaria (SAT).",
+      "menu_lateral": [
+        {
+          "id": "seccion-requisitos",
+          "label": "Requisitos de inscripción"
+        },
+        {
+          "id": "seccion-pasos",
+          "label": "Paso a paso en Agencia Virtual"
+        }
+      ],
+      "eyebrow_requisitos": "Antes de empezar",
+      "h2_requisitos": "¿Qué necesitas para inscribirte al Régimen Optativo?",
+      "intro_requisitos": "Aplica para personas individuales y jurídicas exportadoras.",
+      "requisitos": [
+        {
+          "titulo": "Código de exportador en VUPE",
+          "descripcion": "Contar con código de exportador obtenido en la Ventanilla Única para las Exportaciones (VUPE)."
+        },
+        {
+          "titulo": "Agencia Virtual activa",
+          "descripcion": "Contar con usuario y contraseña activos en el Sistema Agencia Virtual de la SAT con tu Número de Identificación Tributaria (NIT)."
+        },
+        {
+          "titulo": "12 declaraciones de IVA con exportaciones",
+          "descripcion": "Contar con 12 declaraciones presentadas del IVA del período inmediato anterior en las que se reporten exportaciones."
+        }
+      ],
+      "eyebrow_pasos": "Paso a paso",
+      "h2_pasos": "Cómo inscribirte al Régimen Optativo desde Agencia Virtual",
+      "intro_pasos": "Realiza el registro en línea siguiendo estos pasos.",
+      "pasos": [
+        "Paso 1 — Ingresa al Portal SAT, selecciona Agencia Virtual (“Sistema Agencia Virtual”) e inicia sesión con tu NIT y contraseña.",
+        "Paso 2 — Abre el “Menú”, ingresa a “Servicios” > “Datos del Contribuyente” y selecciona “Inscripción y Actualización a los Regímenes de Devolución de Crédito Fiscal”.",
+        "Paso 3 — Completa el formulario SAT-0471 seleccionando el Régimen Optativo de Devolución de Crédito Fiscal y presiona “Enviar”."
+      ],
+      "cta_principal": {
+        "texto": "Solicitar usuario de Agencia Virtual SAT",
+        "url": "https://portal.sat.gob.gt/portal/solicitud-usuario-agencia-virtual",
+        "externo": true
+      },
+      "enlaces_secundarios": [
+        {
+          "texto": "Ir al Portal SAT para ingresar a Agencia Virtual",
+          "url": "https://portal.sat.gob.gt/portal/",
+          "externo": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3542 @@
+{
+  "metadata": {
+    "lote": "ola-2a",
+    "generated_at": "2026-11-15T21:26:34.047891+00:00",
+    "total_paginas": 13,
+    "urls_base_extraidas": 13,
+    "cache_dir_usado": null
+  },
+  "paginas": {
+    "curso-aduanas": {
+      "slug": "curso-aduanas",
+      "url": "https://sites.google.com/capacitacionessat.page/cultura-tributariad/cursos-virtuales-sat/aduanas",
+      "url_base": "https://sites.google.com/capacitacionessat.page/cultura-tributariad/cursos-virtuales-sat/aduanas",
+      "ancla_fragmento": "",
+      "arquetipo_matriz": "TIPO-2",
+      "criterio_arquetipo": "Recurso descargable directo (.pdf/wpfd), instalador o capacitación externa; puente compacto de 1 pantalla (TIPO-2).",
+      "ids_sat_ges": [
+        "SAT-GES-0343"
+      ],
+      "niveles_2": [
+        "Importadores"
+      ],
+      "niveles_3": [
+        "Registro y Padrón de Importadores"
+      ],
+      "titulos_excel": [
+        "Curso Virtual: Guía Básica para el Nuevo Importador"
+      ],
+      "descripciones_excel": [
+        "Cápsula interactiva y curso en línea del portal de cultura tributaria con conceptos clave, costos y pasos para importar por primera vez."
+      ],
+      "bases_legales_excel": [
+        "Código Tributario, Decreto 6-91 (Art. 120) y Acuerdo de Directorio SAT 08-2020."
+      ],
+      "observaciones_excel": [],
+      "notas_extra_col24": [],
+      "http_status": 200,
+      "origen_extraccion": "https://sites.google.com/capacitacionessat.page/cultura-tributariad/cursos-virtuales-sat/aduanas",
+      "fuente_viva": {
+        "tipo_fuente": "google_sites_curso",
+        "titulo_fuente": "Aduanas",
+        "lineas_texto": [
+          "Aduanas",
+          "Contrabando y Defraudación Aduaneros",
+          "Declaración Única Centroamericana -DUCA-",
+          "Curso 3",
+          "Curso 4"
+        ],
+        "secciones": [
+          {
+            "texto": "Aduanas",
+            "links": []
+          },
+          {
+            "texto": "Contrabando y Defraudación Aduaneros | Declaración Única Centroamericana -DUCA- | Curso 3 | Curso 4",
+            "links": [
+              {
+                "texto": "declaración única centroamericana duca",
+                "url": "https://sites.google.com/capacitacionessat.page/cultura-tributariad/cursos-virtuales-sat/aduanas/declaraci%C3%B3n-%C3%BAnica-centroamericana-duca"
+              },
+              {
+                "texto": "contrabando y defraudación aduaneros",
+                "url": "https://sites.google.com/capacitacionessat.page/cultura-tributariad/cursos-virtuales-sat/aduanas/contrabando-y-defraudaci%C3%B3n-aduaneros"
+              }
+            ]
+          }
+        ],
+        "videos": [],
+        "enlaces_evaluacion": [],
+        "enlaces_contenido": [
+          {
+            "texto": "declaración única centroamericana duca",
+            "url": "https://sites.google.com/capacitacionessat.page/cultura-tributariad/cursos-virtuales-sat/aduanas/declaraci%C3%B3n-%C3%BAnica-centroamericana-duca"
+          },
+          {
+            "texto": "contrabando y defraudación aduaneros",
+            "url": "https://sites.google.com/capacitacionessat.page/cultura-tributariad/cursos-virtuales-sat/aduanas/contrabando-y-defraudaci%C3%B3n-aduaneros"
+          }
+        ],
+        "links_planos": [
+          {
+            "texto": "declaración única centroamericana duca",
+            "url": "https://sites.google.com/capacitacionessat.page/cultura-tributariad/cursos-virtuales-sat/aduanas/declaraci%C3%B3n-%C3%BAnica-centroamericana-duca"
+          },
+          {
+            "texto": "contrabando y defraudación aduaneros",
+            "url": "https://sites.google.com/capacitacionessat.page/cultura-tributariad/cursos-virtuales-sat/aduanas/contrabando-y-defraudaci%C3%B3n-aduaneros"
+          }
+        ]
+      }
+    },
+    "curso-26-factura-y-declaracion-unica-centroamericana": {
+      "slug": "curso-26-factura-y-declaracion-unica-centroamericana",
+      "url": "https://sites.google.com/capacitacionessat.page/cultura-tributariad/cursos-virtuales-sat/aduanas/26-factura-y-declaraci%C3%B3n-%C3%BAnica-centroamericana-fyduca",
+      "url_base": "https://sites.google.com/capacitacionessat.page/cultura-tributariad/cursos-virtuales-sat/aduanas/26-factura-y-declaraci%C3%B3n-%C3%BAnica-centroamericana-fyduca",
+      "ancla_fragmento": "",
+      "arquetipo_matriz": "TIPO-2",
+      "criterio_arquetipo": "Recurso descargable directo (.pdf/wpfd), instalador o capacitación externa; puente compacto de 1 pantalla (TIPO-2).",
+      "ids_sat_ges": [
+        "SAT-GES-0347"
+      ],
+      "niveles_2": [
+        "Importadores"
+      ],
+      "niveles_3": [
+        "Declaraciones Aduaneras y DUCAs"
+      ],
+      "titulos_excel": [
+        "Capacitación virtual de la SAT sobre Factura y DUCA (FYDUCA)."
+      ],
+      "descripciones_excel": [
+        "Varias categorías de operadores de comercio exterior"
+      ],
+      "bases_legales_excel": [
+        "Resolución COMIECO 409-2018 (Régimen DUCA), CAUCA IV y RECAUCA IV."
+      ],
+      "observaciones_excel": [],
+      "notas_extra_col24": [],
+      "http_status": 200,
+      "origen_extraccion": "https://sites.google.com/capacitacionessat.page/cultura-tributariad/cursos-virtuales-sat/aduanas/26-factura-y-declaraci%C3%B3n-%C3%BAnica-centroamericana-fyduca",
+      "fuente_viva": {
+        "tipo_fuente": "google_sites_curso",
+        "titulo_fuente": "Factura y Declaración Única Centroamericana -FYDUCA-",
+        "lineas_texto": [
+          "Factura y Declaración Única Centroamericana -FYDUCA-",
+          "Dirigido a: público en general",
+          "Costo: Gratuito. Requisitos: Ninguno. Duración: 1 hora y 6 minutos.",
+          "Estructura:",
+          "Bienvenida",
+          "Tres módulos",
+          "Evaluación de satisfacción",
+          "Evaluación de conocimiento",
+          "Bienvenida y presentación del curso",
+          "Duración 2 minutos",
+          "Módulo I: Aspectos básicos",
+          "¿Qué es la FYDUCA?",
+          "Hecho generador",
+          "Requisitos",
+          "Ventajas",
+          "Tipos de FYDUCA",
+          "Fundamento legal",
+          "Duración 12 minutos",
+          "Módulo II: Unión Aduanera",
+          "Unión Aduanera",
+          "Puestos Fronterizos Integrados",
+          "Instrumentos bilaterales",
+          "Protocolo habilitante",
+          "Duración 9 minutos",
+          "Módulo III: Proceso de Transferencia/Adquisición",
+          "Proceso de transferencia/adquisición",
+          "Impuesto al Valor Agregado",
+          "Impuesto Sobre la Renta",
+          "Impuestos específicos o selectivos",
+          "Crédito fiscal en función del convenio de compatibilización",
+          "Libros y registros contables tributarios",
+          "Duración 13 minutos",
+          "¿Qué te pareció el curso?",
+          "Evaluación de contenido para obtener diploma",
+          "Recuerda que puedes contactarnos a través de nuestros canales oficiales de información."
+        ],
+        "secciones": [
+          {
+            "texto": "Factura y Declaración Única Centroamericana -FYDUCA-",
+            "links": []
+          },
+          {
+            "texto": "Dirigido a: | público en general | Costo: | Gratuito. | Requisitos: | Ninguno. | Duración: | 1 hora y 6 minutos.",
+            "links": []
+          },
+          {
+            "texto": "Estructura: | Bienvenida | Tres | módulos | Evaluación de satisfacción | Evaluación de conocimiento",
+            "links": []
+          },
+          {
+            "texto": "Bienvenida y presentación del curso | Duración 2 minutos | Módulo I: | Aspectos básicos | ¿Qué es la FYDUCA? | Hecho generador | Requisitos | Ventajas | Tipos de FYDUCA | Fundamento legal | Duración 12 minutos",
+            "links": []
+          },
+          {
+            "texto": "Módulo II: | Unión Aduanera | Unión Aduanera | Puestos Fronterizos Integrados | Instrumentos bilaterales | Protocolo habilitante | Duración | 9 | minutos | Módulo III: | Proceso de Transferencia/Adquisición | Proceso de transferencia/adquisición | Impuesto al Valor Agregado | Impuesto Sobre la Renta | Impuestos específicos o selectivos | Crédito fiscal en función del convenio de compatibilización | Libros y registros contables tributarios | Duración | 13 | minutos",
+            "links": []
+          },
+          {
+            "texto": "¿Qué te pareció el curso? | Evaluación de contenido para obtener diploma",
+            "links": [
+              {
+                "texto": "¿Qué te pareció el curso?",
+                "url": "https://cdn.c.sat.gob.gt/sistema-encuestas/2026ESS00007-ENS-2600001-INT-IAC-DCC-PST-2026-09-01-al-31-12-26/a0ZOenRGODlyeE9MbzQ4V2VoU0RUVm5NWWFrUHpnM20"
+              },
+              {
+                "texto": "Evaluación de contenido para obtener diploma",
+                "url": "https://forms.gle/xSJbW3kYjqkqFCrK6"
+              }
+            ]
+          },
+          {
+            "texto": "Recuerda que puedes contactarnos a través de nuestros canales oficiales de información.",
+            "links": []
+          },
+          {
+            "texto": "Todos los derechos reservados. Superintendencia de Administración Tributaria 202 | 5 | .",
+            "links": []
+          }
+        ],
+        "videos": [
+          {
+            "titulo": "YouTube Video, Bienvenida, Factura y declaración única centroamericana -FYDUCA-",
+            "youtube_id": "I_fpghpojI0",
+            "url_watch": "https://www.youtube.com/watch?v=I_fpghpojI0",
+            "url_embed": "https://www.youtube.com/embed/I_fpghpojI0?embed_config=%7B%22enc%22:%22AXH1ezkPY_7ZBhZVhfLEHEd3IWKIxaRyiVTa9VDuGhwQfdg8eea8xF_O2Bdow1Hn4nsbfOZgPsKDcZ05bBjEnC8WZkSLgfPE4MRp30qh4L2YG7CtAE7CABDSQaN1mKXS7F07nZpmSVL_ptDBymt8U3sEHwk56OagrWq2Um2ccx8ciDE9%22%7D&enablejsapi=1&errorlinks=1&origin=https://sites.google.com&vl=1"
+          },
+          {
+            "titulo": "YouTube Video, Módulo I, Factura y declaración única centroamericana -FYDUCA-",
+            "youtube_id": "4-hp5m_uo8w",
+            "url_watch": "https://www.youtube.com/watch?v=4-hp5m_uo8w",
+            "url_embed": "https://www.youtube.com/embed/4-hp5m_uo8w?embed_config=%7B%22enc%22:%22AXH1ezkisDJ1Egthc02iSKaiE1rJZcjh5jvnfLMVzxaWZa-1aJdnVZSw_PoB7dnAnmMLgTZcFEViIt9i1-ZPygtFcOpD6EklFFcelbo0NCdKzlo-SXp62uYl8xlXu7pesLCpQfdQhrvNqYvc-FjoCPifjCqGrweItvgr1IkKCNLNyApo%22%7D&enablejsapi=1&errorlinks=1&origin=https://sites.google.com&vl=1"
+          },
+          {
+            "titulo": "YouTube Video, Módulo II, Factura y declaración única centroamericana -FYDUCA-",
+            "youtube_id": "5wgzuw-_pFY",
+            "url_watch": "https://www.youtube.com/watch?v=5wgzuw-_pFY",
+            "url_embed": "https://www.youtube.com/embed/5wgzuw-_pFY?embed_config=%7B%22enc%22:%22AXH1ezl_1M-jUwAQoZDSUeVgbLe_z7jLaL2hO1fym654z9iGFYmIjCPm4Xg0LXAIzNAmbOsG_XakMo4iwsIAoI8m1PVTkNn5f3E-pDYwz39RhGAL8hTk1xEEma77f_iuB1EHfPTc8BytQlV3-KKoJQ5S5Kapn4nFnp5RGKfX3CKT2GXE%22%7D&enablejsapi=1&errorlinks=1&origin=https://sites.google.com&vl=1"
+          },
+          {
+            "titulo": "YouTube Video, Módulo III, Factura y declaración única centroamericana -FYDUCA-",
+            "youtube_id": "8z3_gij1CBI",
+            "url_watch": "https://www.youtube.com/watch?v=8z3_gij1CBI",
+            "url_embed": "https://www.youtube.com/embed/8z3_gij1CBI?embed_config=%7B%22enc%22:%22AXH1ezkGZgGqOdmDLEfax92vqJCMuoAiwZyz5vg42UQvxrUzeqeUoUDM_HPc6apng_av9-kAnplJjfwGxIXO7FIZCuOElmN7b836tazbj13snrR7t9GLA42KeB8wCQvECpTwkJCvLxjkJPOY2MS6p8vB1rleiszOUFF_ms7oh7z8YLy4%22%7D&enablejsapi=1&errorlinks=1&origin=https://sites.google.com&vl=1"
+          }
+        ],
+        "enlaces_evaluacion": [
+          {
+            "texto": "¿Qué te pareció el curso?",
+            "url": "https://cdn.c.sat.gob.gt/sistema-encuestas/2026ESS00007-ENS-2600001-INT-IAC-DCC-PST-2026-09-01-al-31-12-26/a0ZOenRGODlyeE9MbzQ4V2VoU0RUVm5NWWFrUHpnM20"
+          },
+          {
+            "texto": "Evaluación de contenido para obtener diploma",
+            "url": "https://forms.gle/xSJbW3kYjqkqFCrK6"
+          }
+        ],
+        "enlaces_contenido": [],
+        "links_planos": [
+          {
+            "texto": "YouTube Video, Bienvenida, Factura y declaración única centroamericana -FYDUCA-",
+            "url": "https://www.youtube.com/watch?v=I_fpghpojI0"
+          },
+          {
+            "texto": "YouTube Video, Módulo I, Factura y declaración única centroamericana -FYDUCA-",
+            "url": "https://www.youtube.com/watch?v=4-hp5m_uo8w"
+          },
+          {
+            "texto": "YouTube Video, Módulo II, Factura y declaración única centroamericana -FYDUCA-",
+            "url": "https://www.youtube.com/watch?v=5wgzuw-_pFY"
+          },
+          {
+            "texto": "YouTube Video, Módulo III, Factura y declaración única centroamericana -FYDUCA-",
+            "url": "https://www.youtube.com/watch?v=8z3_gij1CBI"
+          },
+          {
+            "texto": "¿Qué te pareció el curso?",
+            "url": "https://cdn.c.sat.gob.gt/sistema-encuestas/2026ESS00007-ENS-2600001-INT-IAC-DCC-PST-2026-09-01-al-31-12-26/a0ZOenRGODlyeE9MbzQ4V2VoU0RUVm5NWWFrUHpnM20"
+          },
+          {
+            "texto": "Evaluación de contenido para obtener diploma",
+            "url": "https://forms.gle/xSJbW3kYjqkqFCrK6"
+          }
+        ]
+      }
+    },
+    "curso-declaracion-unica-centroamericana-duca": {
+      "slug": "curso-declaracion-unica-centroamericana-duca",
+      "url": "https://sites.google.com/capacitacionessat.page/cultura-tributariad/cursos-virtuales-sat/aduanas/declaraci%C3%B3n-%C3%BAnica-centroamericana-duca",
+      "url_base": "https://sites.google.com/capacitacionessat.page/cultura-tributariad/cursos-virtuales-sat/aduanas/declaraci%C3%B3n-%C3%BAnica-centroamericana-duca",
+      "ancla_fragmento": "",
+      "arquetipo_matriz": "TIPO-2",
+      "criterio_arquetipo": "Recurso descargable directo (.pdf/wpfd), instalador o capacitación externa; puente compacto de 1 pantalla (TIPO-2).",
+      "ids_sat_ges": [
+        "SAT-GES-0415"
+      ],
+      "niveles_2": [
+        "Auxiliares de la Función Pública Aduanera (AFPA)"
+      ],
+      "niveles_3": [
+        "Agentes Aduaneros"
+      ],
+      "titulos_excel": [
+        "Curso Virtual: Generalidades de la Declaración Única Centroamericana (DUCA)"
+      ],
+      "descripciones_excel": [
+        "Capacitación oficial interactiva sobre llenado, transmisión y soporte legal de la DUCA (modalidades D, F y T) para el despacho de mercancías."
+      ],
+      "bases_legales_excel": [
+        "CAUCA IV (Arts. 22 al 28), RECAUCA IV (Auxiliares de la Función Pública) y Ley Nacional de Aduanas."
+      ],
+      "observaciones_excel": [],
+      "notas_extra_col24": [],
+      "http_status": 200,
+      "origen_extraccion": "https://sites.google.com/capacitacionessat.page/cultura-tributariad/cursos-virtuales-sat/aduanas/declaraci%C3%B3n-%C3%BAnica-centroamericana-duca",
+      "fuente_viva": {
+        "tipo_fuente": "google_sites_curso",
+        "titulo_fuente": "Declaración Única Centroamericana -DUCA-",
+        "lineas_texto": [
+          "Declaración Única Centroamericana -DUCA-",
+          "Dirigido a : Contribuyentes y público en general que realizan operaciones con el comercio exterior.",
+          "C osto: Gratuito. Requisitos: Ninguno. Duración: 2 horas y 5 minutos",
+          "Estructura:",
+          "4 módulos",
+          "Evaluación de satisfacción",
+          "Evaluación de conocimiento",
+          "Módulo I",
+          "Duración de 22 minutos",
+          "Módulo II",
+          "Duración de 30 minutos",
+          "Módulo III",
+          "Duración de 20 minutos",
+          "Módulo IV",
+          "Duración de 15 minutos",
+          "¿Qué te pareció el curso?",
+          "Evaluación de conocimiento para obtener diploma",
+          "Recuerda que puedes contactarnos a través de nuestros canales oficiales de información."
+        ],
+        "secciones": [
+          {
+            "texto": "Declaración Única Centroamericana -DUCA-",
+            "links": []
+          },
+          {
+            "texto": "Dirigido a | : Contribuyentes y público en general que realizan operaciones con el comercio exterior. | C | osto: | Gratuito. | Requisitos: | Ninguno. | Duración: | 2 horas y 5 minutos",
+            "links": []
+          },
+          {
+            "texto": "Estructura: | 4 módulos | Evaluación de satisfacción | Evaluación de conocimiento",
+            "links": []
+          },
+          {
+            "texto": "Módulo I | Duración de 22 minutos | Módulo II | Duración de 30 minutos",
+            "links": []
+          },
+          {
+            "texto": "Módulo III | Duración de 20 minutos | Módulo IV | Duración de 15 minutos",
+            "links": []
+          },
+          {
+            "texto": "¿Qué te pareció el curso? | Evaluación de conocimiento para obtener diploma",
+            "links": [
+              {
+                "texto": "¿Qué te pareció el curso?",
+                "url": "https://cdn.c.sat.gob.gt/sistema-encuestas/2026ESS00007-ENS-2600001-INT-IAC-DCC-PST-2026-09-01-al-31-12-26/a0ZOenRGODlyeE9MbzQ4V2VoU0RUVm5NWWFrUHpnM20"
+              },
+              {
+                "texto": "Evaluación de conocimiento para obtener diploma",
+                "url": "https://forms.gle/PDwhoMqSrkcgNDKw9"
+              }
+            ]
+          },
+          {
+            "texto": "Recuerda que puedes contactarnos a través de nuestros canales oficiales de información.",
+            "links": []
+          },
+          {
+            "texto": "Todos los derechos reservados . Superintendencia de Administración Tributaria | 202 | 5.",
+            "links": []
+          }
+        ],
+        "videos": [
+          {
+            "titulo": "YouTube Video, aplicación de la DUCA video 1 7OkGX6otaII 360p",
+            "youtube_id": "r5mxvYX8DO0",
+            "url_watch": "https://www.youtube.com/watch?v=r5mxvYX8DO0",
+            "url_embed": "https://www.youtube.com/embed/r5mxvYX8DO0?embed_config=%7B%22enc%22:%22AXH1ezlSypI88gkkwzFyvnZhEvPDJXUAeuwwS3B8CN1Hs9U6AiAfJT9W-0vIvlTIKovBLkghJ9u_eJgURj-NH3sdPYe6AMBocngcrd4tRmwnNFojGoghoqNbFmUS9K7GvaVChex1aBVRBbJufle6x3UjMODrYcevkjYKy9h3Vk3tW5HV%22%7D&enablejsapi=1&errorlinks=1&origin=https://sites.google.com&vl=1"
+          },
+          {
+            "titulo": "YouTube Video, Curso aplicación de la DUCA video 2 T9runwM77uk 360p",
+            "youtube_id": "k7oQfjIrY9Y",
+            "url_watch": "https://www.youtube.com/watch?v=k7oQfjIrY9Y",
+            "url_embed": "https://www.youtube.com/embed/k7oQfjIrY9Y?embed_config=%7B%22enc%22:%22AXH1ezlXWBIxrE_Md7Tcg1wqc5hXe-VOCS3g2tAIG3DNy3Adb9x-M6NSfEGvkiZVSO3XiekpYxbypogBS5T777GT8Kya9qYcBqSYiCNxJzAa8wELADW_wDkWXlOh_-t-tcApORwMnHzd_lpGPJWgv4Rfuuvenm-wvZ93EVH0fUkFg2At%22%7D&enablejsapi=1&errorlinks=1&origin=https://sites.google.com&vl=1"
+          },
+          {
+            "titulo": "YouTube Video, Curso aplicación de la DUCA video 3 FBszriGXDxY 360p",
+            "youtube_id": "avj_BDvGNCo",
+            "url_watch": "https://www.youtube.com/watch?v=avj_BDvGNCo",
+            "url_embed": "https://www.youtube.com/embed/avj_BDvGNCo?embed_config=%7B%22enc%22:%22AXH1ezkDutrjc5sZJphn3_fUmIxRc1tAEucz6YHUgLH8BsWBRB-VRJL2__SbCJ15Dm_rY_-VUaGwnrxsFfPmDOjOhjyH83jUFjP6L97iSRZHWPghWh_RvwWkOajp7CLQ6o1PkuJ5bOdbdwGmVq3g01HWFZmF76d8s-vQu28IEubdquRd%22%7D&enablejsapi=1&errorlinks=1&origin=https://sites.google.com&vl=1"
+          },
+          {
+            "titulo": "YouTube Video, Curso aplicación de la DUCA versión 4",
+            "youtube_id": "VhTPCsuclAk",
+            "url_watch": "https://www.youtube.com/watch?v=VhTPCsuclAk",
+            "url_embed": "https://www.youtube.com/embed/VhTPCsuclAk?embed_config=%7B%22enc%22:%22AXH1ezmgBzmI31Jp3EOPbu5d-q-EVzxnOINa4_eFAeGzzw_4O5NA7MKDPESFq7Hjxhze4VAw0_KgHPc86Ppa5vvaZ5qqbWLXeLu1lUM25q_g42pkMsjFYbvoQmtb984sZq-43hU2VAyzu74abNkDxMHHCzRyUxizT1kR37spggVTzzYh%22%7D&enablejsapi=1&errorlinks=1&origin=https://sites.google.com&vl=1"
+          }
+        ],
+        "enlaces_evaluacion": [
+          {
+            "texto": "¿Qué te pareció el curso?",
+            "url": "https://cdn.c.sat.gob.gt/sistema-encuestas/2026ESS00007-ENS-2600001-INT-IAC-DCC-PST-2026-09-01-al-31-12-26/a0ZOenRGODlyeE9MbzQ4V2VoU0RUVm5NWWFrUHpnM20"
+          },
+          {
+            "texto": "Evaluación de conocimiento para obtener diploma",
+            "url": "https://forms.gle/PDwhoMqSrkcgNDKw9"
+          }
+        ],
+        "enlaces_contenido": [],
+        "links_planos": [
+          {
+            "texto": "YouTube Video, aplicación de la DUCA video 1 7OkGX6otaII 360p",
+            "url": "https://www.youtube.com/watch?v=r5mxvYX8DO0"
+          },
+          {
+            "texto": "YouTube Video, Curso aplicación de la DUCA video 2 T9runwM77uk 360p",
+            "url": "https://www.youtube.com/watch?v=k7oQfjIrY9Y"
+          },
+          {
+            "texto": "YouTube Video, Curso aplicación de la DUCA video 3 FBszriGXDxY 360p",
+            "url": "https://www.youtube.com/watch?v=avj_BDvGNCo"
+          },
+          {
+            "texto": "YouTube Video, Curso aplicación de la DUCA versión 4",
+            "url": "https://www.youtube.com/watch?v=VhTPCsuclAk"
+          },
+          {
+            "texto": "¿Qué te pareció el curso?",
+            "url": "https://cdn.c.sat.gob.gt/sistema-encuestas/2026ESS00007-ENS-2600001-INT-IAC-DCC-PST-2026-09-01-al-31-12-26/a0ZOenRGODlyeE9MbzQ4V2VoU0RUVm5NWWFrUHpnM20"
+          },
+          {
+            "texto": "Evaluación de conocimiento para obtener diploma",
+            "url": "https://forms.gle/PDwhoMqSrkcgNDKw9"
+          }
+        ]
+      }
+    },
+    "acuerdo-de-directorio-numero-23-2024-que": {
+      "slug": "acuerdo-de-directorio-numero-23-2024-que",
+      "url": "https://portal.sat.gob.gt/portal/descarga/1895/legislacion-aduanera/82513/acuerdo-de-directorio-numero-23-2024-que-aprueba-la-tabla-de-valores-imponibles-del-impuesto-al-valor-agregado-para-la-importacion-de-vehiculos-automotores-terrestres-usados-para-el-ano-2025.pdf",
+      "url_base": "https://portal.sat.gob.gt/portal/descarga/1895/legislacion-aduanera/82513/acuerdo-de-directorio-numero-23-2024-que-aprueba-la-tabla-de-valores-imponibles-del-impuesto-al-valor-agregado-para-la-importacion-de-vehiculos-automotores-terrestres-usados-para-el-ano-2025.pdf",
+      "ancla_fragmento": "",
+      "arquetipo_matriz": "TIPO-2",
+      "criterio_arquetipo": "Recurso descargable directo (.pdf/wpfd), instalador o capacitación externa; puente compacto de 1 pantalla (TIPO-2).",
+      "ids_sat_ges": [
+        "SAT-GES-0371"
+      ],
+      "niveles_2": [
+        "Importadores"
+      ],
+      "niveles_3": [
+        "Importación y Nacionalización de Vehículos"
+      ],
+      "titulos_excel": [
+        "Información sobre: Acuerdo que aprueba la tabla de IVA de vehículos usados."
+      ],
+      "descripciones_excel": [
+        "Gestión y requisitos para Información sobre: Acuerdo que aprueba la tabla de Impuesto al Valor Agregado (IVA) de vehículos usados.."
+      ],
+      "bases_legales_excel": [
+        "Decreto 10-2012 (Ley de Actualización Tributaria, Libro II - IPRIMA) y Decreto 70-94."
+      ],
+      "observaciones_excel": [],
+      "notas_extra_col24": [],
+      "http_status": 200,
+      "origen_extraccion": "https://portal.sat.gob.gt/portal/descarga/1895/legislacion-aduanera/82513/acuerdo-de-directorio-numero-23-2024-que-aprueba-la-tabla-de-valores-imponibles-del-impuesto-al-valor-agregado-para-la-importacion-de-vehiculos-automotores-terrestres-usados-para-el-ano-2025.pdf",
+      "fuente_viva": {
+        "tipo_fuente": "pdf_directo",
+        "titulo_fuente": "acuerdo-de-directorio-numero-23-2024-que-aprueba-la-tabla-de-valores-imponibles-del-impuesto-al-valor-agregado-para-la-importacion-de-vehiculos-automotores-terrestres-usados-para-el-ano-2025.pdf",
+        "content_type": "application/pdf",
+        "last_modified": "Sun, 15 Nov 2026 21:26:08 GMT",
+        "size_bytes": 1156010,
+        "size_human": "1.10 MB",
+        "num_pages": 3,
+        "es_pdf_escaneado": true,
+        "pdf_metadata": {
+          "Producer": "iLovePDF",
+          "ModDate": "D:20241127160716Z"
+        },
+        "texto_muestra": "",
+        "links_planos": [
+          {
+            "texto": "acuerdo-de-directorio-numero-23-2024-que-aprueba-la-tabla-de-valores-imponibles-del-impuesto-al-valor-agregado-para-la-importacion-de-vehiculos-automotores-terrestres-usados-para-el-ano-2025.pdf",
+            "url": "https://portal.sat.gob.gt/portal/descarga/1895/legislacion-aduanera/82513/acuerdo-de-directorio-numero-23-2024-que-aprueba-la-tabla-de-valores-imponibles-del-impuesto-al-valor-agregado-para-la-importacion-de-vehiculos-automotores-terrestres-usados-para-el-ano-2025.pdf"
+          }
+        ]
+      }
+    },
+    "tabla-de-valores-imponibles-del-impuesto-al": {
+      "slug": "tabla-de-valores-imponibles-del-impuesto-al",
+      "url": "https://portal.sat.gob.gt/portal/descarga/1895/legislacion-aduanera/82514/tabla-de-valores-imponibles-del-impuesto-al-valor-agregado-e-impuesto-especifico-a-la-primera-matricula-para-importacion-de-vehiculos-automotores-terrestres-usados-para-el-ano-2025-2.pdf",
+      "url_base": "https://portal.sat.gob.gt/portal/descarga/1895/legislacion-aduanera/82514/tabla-de-valores-imponibles-del-impuesto-al-valor-agregado-e-impuesto-especifico-a-la-primera-matricula-para-importacion-de-vehiculos-automotores-terrestres-usados-para-el-ano-2025-2.pdf",
+      "ancla_fragmento": "",
+      "arquetipo_matriz": "TIPO-2",
+      "criterio_arquetipo": "Recurso descargable directo (.pdf/wpfd), instalador o capacitación externa; puente compacto de 1 pantalla (TIPO-2).",
+      "ids_sat_ges": [
+        "SAT-GES-0372"
+      ],
+      "niveles_2": [
+        "Importadores"
+      ],
+      "niveles_3": [
+        "Importación y Nacionalización de Vehículos"
+      ],
+      "titulos_excel": [
+        "Información sobre: Tabla de valores para importar vehículos usados 2025."
+      ],
+      "descripciones_excel": [
+        "Gestión y requisitos para Información sobre: Tabla de valores para importar vehículos usados 2025.."
+      ],
+      "bases_legales_excel": [
+        "Decreto 10-2012 (Ley de Actualización Tributaria, Libro II - IPRIMA) y Decreto 70-94."
+      ],
+      "observaciones_excel": [],
+      "notas_extra_col24": [],
+      "http_status": 200,
+      "origen_extraccion": "https://portal.sat.gob.gt/portal/descarga/1895/legislacion-aduanera/82514/tabla-de-valores-imponibles-del-impuesto-al-valor-agregado-e-impuesto-especifico-a-la-primera-matricula-para-importacion-de-vehiculos-automotores-terrestres-usados-para-el-ano-2025-2.pdf",
+      "fuente_viva": {
+        "tipo_fuente": "pdf_directo",
+        "titulo_fuente": "tabla-de-valores-imponibles-del-impuesto-al-valor-agregado-e-impuesto-especifico-a-la-primera-matricula-para-importacion-de-vehiculos-automotores-terrestres-usados-para-el-ano-2025-2.pdf",
+        "content_type": "application/pdf",
+        "last_modified": "Sun, 15 Nov 2026 21:26:10 GMT",
+        "size_bytes": 821533,
+        "size_human": "802.28 KB",
+        "num_pages": 46,
+        "es_pdf_escaneado": false,
+        "pdf_metadata": {
+          "Author": "Garcia Rojas, Juan Pablo",
+          "CreationDate": "D:20241106143907-06'00'",
+          "Creator": "Microsoft® Excel® para Microsoft 365",
+          "Producer": "iLovePDF",
+          "ModDate": "D:20241128133818Z"
+        },
+        "texto_muestra": "Tipo Marca Línea C.C. Cilindraje Puertas Combustible Asientos 2024 2023 2022 2021 2020 2019 2018 2017 2016 2015 2014 2013 2012 2011 2010 Resto de Años AMBULANCIA AM GENERAL M997A3 6500 6 2 DI 2 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 69,932.36 63,574.87 47,977.32 AMBULANCIA FIAT DUCATO 2500 4 4 GA 2 531,111.80 482,828.91 438,935.38 399,032.16 362,756.50 329,778.64 299,798.77 269,818.89 242,837.00 218,553.30 196,697.97 177,028.17 159,325.36 143,392.82 129,053.54 97,391.33 AMBULANCIA FORD E-350 SUPER DUTY 6000 6 4 GA 2 368,226.01 334,750.92 304,319.02 276,653.65 251,503.32 228,639.38 207,853.98 188,958.17 171,780.15 156,163.77 141,967.07 129,060.97 117,328.16 106,661.96 96,965.42 73,914.91 AMBULANCIA FORD ECOLINE E-450 7300 8 5 DI 2 1,332,921.92 1,211,747.20 1,101,588.36 1,001,443.96 910,403.60 827,639.64 752,399.67 683,999.70 621,817.91 565,289.01 513,899.10 467,181.00 424,710.00 386,100.00 347,490.00 312,741.00 AMBULANCIA FORD ECONOLINE 4900 6 5 GA 2 554,053.42 503,684.93 457,895.39 416,268.54 378,425.94 344,023.59 312,748.71 284,317.01 258,470.01 234,972.74 213,611.58 192,250.42 173,025.38 155,722.84 140,150.55 105,765.79 AMBULANCIA FORD F-350 7300 8 5 DI ",
+        "links_planos": [
+          {
+            "texto": "tabla-de-valores-imponibles-del-impuesto-al-valor-agregado-e-impuesto-especifico-a-la-primera-matricula-para-importacion-de-vehiculos-automotores-terrestres-usados-para-el-ano-2025-2.pdf",
+            "url": "https://portal.sat.gob.gt/portal/descarga/1895/legislacion-aduanera/82514/tabla-de-valores-imponibles-del-impuesto-al-valor-agregado-e-impuesto-especifico-a-la-primera-matricula-para-importacion-de-vehiculos-automotores-terrestres-usados-para-el-ano-2025-2.pdf"
+          }
+        ]
+      }
+    },
+    "componente-activex-pki-dua": {
+      "slug": "componente-activex-pki-dua",
+      "url": "https://portal.sat.gob.gt/portal/componente-activex-pki-dua/",
+      "url_base": "https://portal.sat.gob.gt/portal/componente-activex-pki-dua/",
+      "ancla_fragmento": "",
+      "arquetipo_matriz": "TIPO-2",
+      "criterio_arquetipo": "Recurso descargable directo (.pdf/wpfd), instalador o capacitación externa; puente compacto de 1 pantalla (TIPO-2).",
+      "ids_sat_ges": [
+        "SAT-GES-0412"
+      ],
+      "niveles_2": [
+        "Auxiliares de la Función Pública Aduanera (AFPA)"
+      ],
+      "niveles_3": [
+        "Agentes Aduaneros"
+      ],
+      "titulos_excel": [
+        "Instalador y Soporte de Firma Digital ActiveX PKI / DUA"
+      ],
+      "descripciones_excel": [
+        "Descarga oficial y soporte técnico del componente ActiveX PKI necesario para firmar digitalmente y transmitir la declaración aduanera (DUCA)."
+      ],
+      "bases_legales_excel": [
+        "CAUCA IV (Arts. 22 al 28), RECAUCA IV (Auxiliares de la Función Pública) y Ley Nacional de Aduanas."
+      ],
+      "observaciones_excel": [],
+      "notas_extra_col24": [],
+      "http_status": 200,
+      "origen_extraccion": "https://portal.sat.gob.gt/portal/componente-activex-pki-dua/",
+      "fuente_viva": {
+        "tipo_fuente": "wpbakery_page",
+        "titulo_fuente": "Componente ActiveX PKI/DUA",
+        "headings": [
+          {
+            "tag": "h1",
+            "texto": "Componente ActiveX PKI/DUA"
+          },
+          {
+            "tag": "h3",
+            "texto": "AresPKI"
+          }
+        ],
+        "correos_cf_decodificados": [],
+        "parrafos_intro": [
+          "Problema",
+          "No es posible realizar la adhesión del certificado digital por medio de la opción disponible en el menú de SAQB’E, a pesar que el certificado está vigente y se ha asignado correctamente el PIN de la tarjeta.",
+          "Causa",
+          "No se ha realizado correctamente la instalación del componente ActiveX que se requiere para la adhesión, lo cual puede deberse a configuraciones especiales en el Internet Explorer o una falla al momento de la instalación automática.",
+          "Solución",
+          "Asegúrese de permitir la instalación de componentes ActiveX en Internet Explorer, el proceso de instalación es automático luego de ingresar a la siguiente Link:",
+          "Una vez que ha instalado el componente AresPKIatx puede proceder a activar el certificado digital.",
+          "Más información",
+          "Para problemas con el uso de la tarjeta o si no sabe como cambiar su PIN visite la página de EBCLOSION."
+        ],
+        "listas_intro": [
+          "Gestiones Aduaneras",
+          "Procedimientos de la Intendencia de Aduanas",
+          "Requisitos de Aduanas",
+          "Aduana Sin Papeles"
+        ],
+        "tarjetas_fuente": [],
+        "tablas_generales": [],
+        "acordeones": [],
+        "videos": [],
+        "iframes_aplicativos": [],
+        "links_fuera_acordeon": [
+          {
+            "texto": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5664%26wpfd_file_id%3D21363%26token%3D%26preview%3D1&embedded=true",
+            "url": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5664%26wpfd_file_id%3D21363%26token%3D%26preview%3D1&embedded=true"
+          },
+          {
+            "texto": "AresPKI",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5664/aduanas/21363/arespki"
+          },
+          {
+            "texto": "Descargar",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5664/aduanas/21363/arespki"
+          },
+          {
+            "texto": "Vista previa",
+            "url": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5664%26wpfd_file_id%3D21363%26token%3D%26preview%3D1&embedded=true"
+          },
+          {
+            "texto": "EBCLOSION.",
+            "url": "http://www.ebclosion.com/certificadosdigitales.php"
+          },
+          {
+            "texto": "Gestiones Aduaneras",
+            "url": "https://portal.sat.gob.gt/portal/procedimientos-aduanas/"
+          },
+          {
+            "texto": "Procedimientos de la Intendencia de Aduanas",
+            "url": "https://portal.sat.gob.gt/portal/manual-de-procedimientos-de-la-intendencia-de-aduanas"
+          },
+          {
+            "texto": "Requisitos de Aduanas",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-aduanas/"
+          },
+          {
+            "texto": "Aduana Sin Papeles",
+            "url": "https://portal.sat.gob.gt/portal/aduana-sin-papeles/"
+          }
+        ],
+        "links_planos": [
+          {
+            "texto": "Vista previa",
+            "url": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5664%26wpfd_file_id%3D21363%26token%3D%26preview%3D1&embedded=true"
+          },
+          {
+            "texto": "AresPKI",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5664/aduanas/21363/arespki"
+          },
+          {
+            "texto": "EBCLOSION.",
+            "url": "http://www.ebclosion.com/certificadosdigitales.php"
+          },
+          {
+            "texto": "Gestiones Aduaneras",
+            "url": "https://portal.sat.gob.gt/portal/procedimientos-aduanas/"
+          },
+          {
+            "texto": "Procedimientos de la Intendencia de Aduanas",
+            "url": "https://portal.sat.gob.gt/portal/manual-de-procedimientos-de-la-intendencia-de-aduanas"
+          },
+          {
+            "texto": "Requisitos de Aduanas",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-aduanas/"
+          },
+          {
+            "texto": "Aduana Sin Papeles",
+            "url": "https://portal.sat.gob.gt/portal/aduana-sin-papeles/"
+          }
+        ],
+        "wpfd_archivo_unico": {
+          "titulo": "AresPKI",
+          "metadatos_texto": "Tamaño del archivo: 888.53 KB Creado: 22-02-2018 Actualizado: 22-02-2018 Descargas: 2087"
+        }
+      }
+    },
+    "puestos-de-control-interinstitucional-pci": {
+      "slug": "puestos-de-control-interinstitucional-pci",
+      "url": "https://portal.sat.gob.gt/portal/puestos-de-control-interinstitucional-pci/",
+      "url_base": "https://portal.sat.gob.gt/portal/puestos-de-control-interinstitucional-pci/",
+      "ancla_fragmento": "",
+      "arquetipo_matriz": "TIPO-4",
+      "criterio_arquetipo": "Colisión resuelta a TIPO-4 por tratarse de directorio tabular o especificación técnica.",
+      "ids_sat_ges": [
+        "SAT-GES-0366",
+        "SAT-GES-0513"
+      ],
+      "niveles_2": [
+        "Importadores",
+        "Regímenes Territoriales y Zonas Especiales"
+      ],
+      "niveles_3": [
+        "Despacho Aduanero, Levante y Selectivo",
+        "Zonas de Desarrollo Económico Especial Público (ZDEEP)"
+      ],
+      "titulos_excel": [
+        "Información sobre: Puestos de Control Interinstitucional (PCI).",
+        "Puestos de control interinstitucional (PCI) y rutas fiscales"
+      ],
+      "descripciones_excel": [
+        "Importadores y Exportadores, Auxiliares de la Función Pública Aduanera",
+        "Gestión y especificaciones para Puestos de control interinstitucional (PCI) y rutas fiscales conforme a normativa aduanera aplicable."
+      ],
+      "bases_legales_excel": [
+        "Código Aduanero Uniforme Centroamericano (CAUCA IV) y su Reglamento (RECAUCA IV).",
+        "Decreto 22-73 (Ley Orgánica de ZOLIC / ZDEEP), CAUCA IV y RECAUCA IV."
+      ],
+      "observaciones_excel": [],
+      "notas_extra_col24": [
+        "PCI"
+      ],
+      "http_status": 200,
+      "origen_extraccion": "https://portal.sat.gob.gt/portal/puestos-de-control-interinstitucional-pci/",
+      "fuente_viva": {
+        "tipo_fuente": "wpbakery_page",
+        "titulo_fuente": "– PCI- Puestos de Control Interinstitucional",
+        "headings": [
+          {
+            "tag": "h1",
+            "texto": "– PCI- Puestos de Control Interinstitucional"
+          }
+        ],
+        "correos_cf_decodificados": [],
+        "parrafos_intro": [
+          "Los Puestos de Control Interinstitucional -PCI – Son una medida implementada por las autoridades guatemaltecas para fortalecer los controles y cumplimiento en beneficio del País, ubicados en diferentes puntos estratégicos del territorio guatemalteco ejerciendo controles en la zona secundaria del territorio aduanero nacional.",
+          "En estos puestos, participan varias instituciones gubernamentales, como la Superintendencia de Administración Tributaria -SAT-, Policía Nacional Civil, Ministerio de Salud Pública y Ministerio de Agricultura, Ganadería y Alimentación.",
+          "El propósito principal del PCI es garantizar el cumplimiento de las leyes y regulaciones aduaneras, así como prevenir el contrabando, el lavado de dinero y otras actividades ilícitas relacionadas con el comercio internacional.",
+          "Directorio de Aduanas de destino de mercancías decomisadas en Puestos de Control Interinstitucional.",
+          "Aduanas de destino según ubicación del PCI"
+        ],
+        "listas_intro": [],
+        "tarjetas_fuente": [],
+        "tablas_generales": [
+          {
+            "filas": [
+              {
+                "celdas": [
+                  "PCI",
+                  "Aduana de destino",
+                  "Teléfono"
+                ],
+                "links": []
+              },
+              {
+                "celdas": [
+                  "Patzicía",
+                  "Aduana Central, Ciudad de Guatemala",
+                  "2329-7070 Ext.: 3315"
+                ],
+                "links": []
+              },
+              {
+                "celdas": [
+                  "Pajapita",
+                  "Aduana Tecún Umán II (Puerto Fronterizo Ingeniero Juan Luis Lizarralde Arrillaga), San Marcos.",
+                  "2329-7070 Ext.: 6700-6702"
+                ],
+                "links": []
+              },
+              {
+                "celdas": [
+                  "Entre Ríos / Río Dulce",
+                  "Aduana Santo Tomás de Castilla, Izabal",
+                  "2329-7070 Ext.: 7317"
+                ],
+                "links": []
+              },
+              {
+                "celdas": [
+                  "Chiquimula",
+                  "Aduana Integrada El Florido, Honduras",
+                  "2329-7070 Ext.: 7431-7430"
+                ],
+                "links": []
+              },
+              {
+                "celdas": [
+                  "Escuintla / Retalhuleu",
+                  "Puerto Quetzal, Escuintla",
+                  "2329-7070 Ext.: 6137- 6130 – 6131"
+                ],
+                "links": []
+              },
+              {
+                "celdas": [
+                  "Pasaco",
+                  "Pedro de Alvarado, Jutiapa",
+                  "2329-7070 Ext.: 6200"
+                ],
+                "links": []
+              },
+              {
+                "celdas": [
+                  "Jerez",
+                  "San Cristóbal, Jutiapa",
+                  "2329-7070 Ext.: 6190 – 6192"
+                ],
+                "links": []
+              },
+              {
+                "celdas": [
+                  "*o a donde corresponda según casos fortuitos o de fuerza mayor"
+                ],
+                "links": []
+              }
+            ]
+          }
+        ],
+        "acordeones": [],
+        "videos": [],
+        "iframes_aplicativos": [
+          {
+            "titulo": "Mapa de Aduanas PCI",
+            "url": "https://view.genial.ly/648b72ad1cb4180011757f6d"
+          }
+        ],
+        "links_fuera_acordeon": [],
+        "links_planos": [
+          {
+            "texto": "Mapa de Aduanas PCI",
+            "url": "https://view.genial.ly/648b72ad1cb4180011757f6d"
+          }
+        ]
+      }
+    },
+    "tablas-y-acuerdos-vehiculos": {
+      "slug": "tablas-y-acuerdos-vehiculos",
+      "url": "https://portal.sat.gob.gt/portal/tablas-y-acuerdos-vehiculos/",
+      "url_base": "https://portal.sat.gob.gt/portal/tablas-y-acuerdos-vehiculos/",
+      "ancla_fragmento": "",
+      "arquetipo_matriz": "TIPO-4",
+      "criterio_arquetipo": "Directorio oficial, tabla de valores o especificación técnica aduanera (TIPO-4).",
+      "ids_sat_ges": [
+        "SAT-GES-0370"
+      ],
+      "niveles_2": [
+        "Importadores"
+      ],
+      "niveles_3": [
+        "Importación y Nacionalización de Vehículos"
+      ],
+      "titulos_excel": [
+        "Servicio en línea para consultar tablas de valores de vehículos."
+      ],
+      "descripciones_excel": [
+        "Importadores y Exportadores, Auxiliares de la Función Pública Aduanera"
+      ],
+      "bases_legales_excel": [
+        "Decreto 10-2012 (Ley de Actualización Tributaria, Libro II - IPRIMA) y Decreto 70-94."
+      ],
+      "observaciones_excel": [],
+      "notas_extra_col24": [],
+      "http_status": 200,
+      "origen_extraccion": "https://portal.sat.gob.gt/portal/tablas-y-acuerdos-vehiculos/",
+      "fuente_viva": {
+        "tipo_fuente": "wpbakery_page",
+        "titulo_fuente": "Acuerdos y Tablas de Valores de Vehículos",
+        "headings": [
+          {
+            "tag": "h1",
+            "texto": "Acuerdos y Tablas de Valores de Vehículos"
+          },
+          {
+            "tag": "h4",
+            "texto": "Acuerdos y tablas de valores 2026"
+          }
+        ],
+        "correos_cf_decodificados": [],
+        "parrafos_intro": [],
+        "listas_intro": [
+          "Aviso Robo Vehículos",
+          "Consulta de Vehículos",
+          "IVA-IPRIMA para Vehículos Usados",
+          "Código Único de Verificación",
+          "Expertaje a Vehículos",
+          "Requisitos de Vehículos"
+        ],
+        "tarjetas_fuente": [],
+        "tablas_generales": [],
+        "acordeones": [
+          {
+            "panel_id": "1575048002180-95e60bf8-4ff5",
+            "titulo": "Acuerdos y tablas de valores 2026",
+            "tablas": [
+              {
+                "filas": [
+                  {
+                    "celdas": [
+                      "",
+                      "Acuerdo de Directorio Número 18-2025 que aprueba la Tabla de Valores Imponibles del Impuesto Sobre Circulación de Vehículos Terrestres 2026."
+                    ],
+                    "links": [
+                      {
+                        "texto": "Acuerdo de Directorio Número 18-2025 que aprueba la Tabla de Valores Imponibles del Impuesto Sobre Circulación de Vehículos Terrestres 2026.",
+                        "url": "https://portal.sat.gob.gt/portal/descarga/1899/legislacion-tributaria/91640/acuerdo-de-directorio-numero-18-2025-que-aprueba-la-tabla-de-valores-imponibles-del-impuesto-sobre-circulacion-de-vehiculos-terrestres-2026"
+                      },
+                      {
+                        "texto": "Acuerdo de Directorio Número 18-2025 que aprueba la Tabla de Valores Imponibles del Impuesto Sobre Circulación de Vehículos Terrestres 2026.",
+                        "url": "https://portal.sat.gob.gt/portal/descarga/1899/legislacion-tributaria/91640/acuerdo-de-directorio-numero-18-2025-que-aprueba-la-tabla-de-valores-imponibles-del-impuesto-sobre-circulacion-de-vehiculos-terrestres-2026"
+                      }
+                    ]
+                  },
+                  {
+                    "celdas": [
+                      "",
+                      "Acuerdo de Directorio Número 19-2025 que aprueba la Tabla de Valores Imponibles del Impuesto al Valor Agregado por Enajenación de Vehículos 2026."
+                    ],
+                    "links": [
+                      {
+                        "texto": "Acuerdo de Directorio Número 19-2025 que aprueba la Tabla de Valores Imponibles del Impuesto al Valor Agregado por Enajenación de Vehículos 2026.",
+                        "url": "https://portal.sat.gob.gt/portal/descarga/1899/legislacion-tributaria/91641/acuerdo-de-directorio-numero-19-2025-que-aprueba-la-tabla-de-valores-imponibles-del-impuesto-al-valor-agregado-por-enajenacion-de-vehiculos-2026"
+                      },
+                      {
+                        "texto": "Acuerdo de Directorio Número 19-2025 que aprueba la Tabla de Valores Imponibles del Impuesto al Valor Agregado por Enajenación de Vehículos 2026.",
+                        "url": "https://portal.sat.gob.gt/portal/descarga/1899/legislacion-tributaria/91641/acuerdo-de-directorio-numero-19-2025-que-aprueba-la-tabla-de-valores-imponibles-del-impuesto-al-valor-agregado-por-enajenacion-de-vehiculos-2026"
+                      }
+                    ]
+                  },
+                  {
+                    "celdas": [
+                      "",
+                      "Tabla de Valores Imponibles del ISCV e IVA por Enajenación de Vehículos Terrestres 2026."
+                    ],
+                    "links": [
+                      {
+                        "texto": "Tabla de Valores Imponibles del ISCV e IVA por Enajenación de Vehículos Terrestres 2026.",
+                        "url": "https://portal.sat.gob.gt/portal/descarga/1899/legislacion-tributaria/91642/tabla-de-valores-imponibles-del-iscv-e-iva-por-enajenacion-de-vehiculos-terrestres-2026"
+                      },
+                      {
+                        "texto": "Tabla de Valores Imponibles del ISCV e IVA por Enajenación de Vehículos Terrestres 2026.",
+                        "url": "https://portal.sat.gob.gt/portal/descarga/1899/legislacion-tributaria/91642/tabla-de-valores-imponibles-del-iscv-e-iva-por-enajenacion-de-vehiculos-terrestres-2026"
+                      }
+                    ]
+                  },
+                  {
+                    "celdas": [
+                      "",
+                      "Acuerdo de Directorio Número 16-2025 Que aprueba la Tabla de Valores Imponibles del Impuesto al Valor Agregado para la importación de Vehículos Automotores Terrestres Usados para el año 2026"
+                    ],
+                    "links": [
+                      {
+                        "texto": "Acuerdo de Directorio Número 16-2025 Que aprueba la Tabla de Valores Imponibles del Impuesto al Valor Agregado para la importación de Vehículos Automotores Terrestres Usados para el año 2026",
+                        "url": "https://portal.sat.gob.gt/portal/descarga/1895/legislacion-aduanera/91645/acuerdo-de-directorio-numero-16-2025-que-aprueba-la-tabla-de-valores-imponibles-del-impuesto-al-valor-agregad"
+                      },
+                      {
+                        "texto": "Acuerdo de Directorio Número 16-2025 Que aprueba la Tabla de Valores Imponibles del Impuesto al Valor Agregado para la importación de Vehículos Automotores Terrestres Usados para el año 2026",
+                        "url": "https://portal.sat.gob.gt/portal/descarga/1895/legislacion-aduanera/91645/acuerdo-de-directorio-numero-16-2025-que-aprueba-la-tabla-de-valores-imponibles-del-impuesto-al-valor-agregad"
+                      }
+                    ]
+                  },
+                  {
+                    "celdas": [
+                      "",
+                      "Acuerdo de Directorio Número 17-2025 que aprueba la Tabla de Valores Imponibles del Impuesto Específico a la Primera Matrícula para la Importación de Vehículos Automotores Terrestre Usados para el año 2026"
+                    ],
+                    "links": [
+                      {
+                        "texto": "Acuerdo de Directorio Número 17-2025 que aprueba la Tabla de Valores Imponibles del Impuesto Específico a la Primera Matrícula para la Importación de Vehículos Automotores Terrestre Usados para el año 2026",
+                        "url": "https://portal.sat.gob.gt/portal/descarga/1895/legislacion-aduanera/91647/acuerdo-de-directorio-numero-17-2025-que-aprueba-la-tabla-de-valores-imponibles-del-impuesto-especifi"
+                      },
+                      {
+                        "texto": "Acuerdo de Directorio Número 17-2025 que aprueba la Tabla de Valores Imponibles del Impuesto Específico a la Primera Matrícula para la Importación de Vehículos Automotores Terrestre Usados para el año 2026",
+                        "url": "https://portal.sat.gob.gt/portal/descarga/1895/legislacion-aduanera/91647/acuerdo-de-directorio-numero-17-2025-que-aprueba-la-tabla-de-valores-imponibles-del-impuesto-especifi"
+                      }
+                    ]
+                  },
+                  {
+                    "celdas": [
+                      "",
+                      "Tabla de Valores Imponibles del Impuesto al Valor Agregado e Impuesto Específico a la Primera Matrícula para Importación de Vehículos Automotores Terrestres usados para el Año 2026"
+                    ],
+                    "links": [
+                      {
+                        "texto": "Tabla de Valores Imponibles del Impuesto al Valor Agregado e Impuesto Específico a la Primera Matrícula para Importación de Vehículos Automotores Terrestres usados para el Año 2026",
+                        "url": "https://portal.sat.gob.gt/portal/descarga/1895/legislacion-aduanera/91646/tabla-de-valores-iva-iprima-2026"
+                      },
+                      {
+                        "texto": "Tabla de Valores Imponibles del Impuesto al Valor Agregado e Impuesto Específico a la Primera Matrícula para Importación de Vehículos Automotores Terrestres usados para el Año 2026",
+                        "url": "https://portal.sat.gob.gt/portal/descarga/1895/legislacion-aduanera/91646/tabla-de-valores-iva-iprima-2026"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "links": [
+              {
+                "texto": "acuerdo-de-directorio-numero-18-2025-que-aprueba-la-tabla-de-valores-imponibles-del-impuesto-sobre-circulacion-de-vehiculos-terrestres-2026",
+                "url": "https://portal.sat.gob.gt/portal/descarga/1899/legislacion-tributaria/91640/acuerdo-de-directorio-numero-18-2025-que-aprueba-la-tabla-de-valores-imponibles-del-impuesto-sobre-circulacion-de-vehiculos-terrestres-2026",
+                "img_src": "https://portal.sat.gob.gt/portal/wp-content/uploads/2017/09/icono-pdf.png"
+              },
+              {
+                "texto": "Acuerdo de Directorio Número 18-2025 que aprueba la Tabla de Valores Imponibles del Impuesto Sobre Circulación de Vehículos Terrestres 2026.",
+                "url": "https://portal.sat.gob.gt/portal/descarga/1899/legislacion-tributaria/91640/acuerdo-de-directorio-numero-18-2025-que-aprueba-la-tabla-de-valores-imponibles-del-impuesto-sobre-circulacion-de-vehiculos-terrestres-2026"
+              },
+              {
+                "texto": "acuerdo-de-directorio-numero-19-2025-que-aprueba-la-tabla-de-valores-imponibles-del-impuesto-al-valor-agregado-por-enajenacion-de-vehiculos-2026",
+                "url": "https://portal.sat.gob.gt/portal/descarga/1899/legislacion-tributaria/91641/acuerdo-de-directorio-numero-19-2025-que-aprueba-la-tabla-de-valores-imponibles-del-impuesto-al-valor-agregado-por-enajenacion-de-vehiculos-2026",
+                "img_src": "https://portal.sat.gob.gt/portal/wp-content/uploads/2017/09/icono-pdf.png"
+              },
+              {
+                "texto": "Acuerdo de Directorio Número 19-2025 que aprueba la Tabla de Valores Imponibles del Impuesto al Valor Agregado por Enajenación de Vehículos 2026.",
+                "url": "https://portal.sat.gob.gt/portal/descarga/1899/legislacion-tributaria/91641/acuerdo-de-directorio-numero-19-2025-que-aprueba-la-tabla-de-valores-imponibles-del-impuesto-al-valor-agregado-por-enajenacion-de-vehiculos-2026"
+              },
+              {
+                "texto": "tabla-de-valores-imponibles-del-iscv-e-iva-por-enajenacion-de-vehiculos-terrestres-2026",
+                "url": "https://portal.sat.gob.gt/portal/descarga/1899/legislacion-tributaria/91642/tabla-de-valores-imponibles-del-iscv-e-iva-por-enajenacion-de-vehiculos-terrestres-2026",
+                "img_src": "https://portal.sat.gob.gt/portal/wp-content/uploads/2017/09/icono-pdf.png"
+              },
+              {
+                "texto": "Tabla de Valores Imponibles del ISCV e IVA por Enajenación de Vehículos Terrestres 2026.",
+                "url": "https://portal.sat.gob.gt/portal/descarga/1899/legislacion-tributaria/91642/tabla-de-valores-imponibles-del-iscv-e-iva-por-enajenacion-de-vehiculos-terrestres-2026"
+              },
+              {
+                "texto": "acuerdo-de-directorio-numero-16-2025-que-aprueba-la-tabla-de-valores-imponibles-del-impuesto-al-valor-agregad",
+                "url": "https://portal.sat.gob.gt/portal/descarga/1895/legislacion-aduanera/91645/acuerdo-de-directorio-numero-16-2025-que-aprueba-la-tabla-de-valores-imponibles-del-impuesto-al-valor-agregad",
+                "img_src": "https://portal.sat.gob.gt/portal/wp-content/uploads/2017/09/icono-pdf.png"
+              },
+              {
+                "texto": "Acuerdo de Directorio Número 16-2025 Que aprueba la Tabla de Valores Imponibles del Impuesto al Valor Agregado para la importación de Vehículos Automotores Terrestres Usados para el año 2026",
+                "url": "https://portal.sat.gob.gt/portal/descarga/1895/legislacion-aduanera/91645/acuerdo-de-directorio-numero-16-2025-que-aprueba-la-tabla-de-valores-imponibles-del-impuesto-al-valor-agregad"
+              },
+              {
+                "texto": "acuerdo-de-directorio-numero-17-2025-que-aprueba-la-tabla-de-valores-imponibles-del-impuesto-especifi",
+                "url": "https://portal.sat.gob.gt/portal/descarga/1895/legislacion-aduanera/91647/acuerdo-de-directorio-numero-17-2025-que-aprueba-la-tabla-de-valores-imponibles-del-impuesto-especifi",
+                "img_src": "https://portal.sat.gob.gt/portal/wp-content/uploads/2017/09/icono-pdf.png"
+              },
+              {
+                "texto": "Acuerdo de Directorio Número 17-2025 que aprueba la Tabla de Valores Imponibles del Impuesto Específico a la Primera Matrícula para la Importación de Vehículos Automotores Terrestre Usados para el año 2026",
+                "url": "https://portal.sat.gob.gt/portal/descarga/1895/legislacion-aduanera/91647/acuerdo-de-directorio-numero-17-2025-que-aprueba-la-tabla-de-valores-imponibles-del-impuesto-especifi"
+              },
+              {
+                "texto": "tabla-de-valores-iva-iprima-2026",
+                "url": "https://portal.sat.gob.gt/portal/descarga/1895/legislacion-aduanera/91646/tabla-de-valores-iva-iprima-2026",
+                "img_src": "https://portal.sat.gob.gt/portal/wp-content/uploads/2017/09/icono-pdf.png"
+              },
+              {
+                "texto": "Tabla de Valores Imponibles del Impuesto al Valor Agregado e Impuesto Específico a la Primera Matrícula para Importación de Vehículos Automotores Terrestres usados para el Año 2026",
+                "url": "https://portal.sat.gob.gt/portal/descarga/1895/legislacion-aduanera/91646/tabla-de-valores-iva-iprima-2026"
+              }
+            ],
+            "videos": []
+          }
+        ],
+        "videos": [],
+        "iframes_aplicativos": [],
+        "links_fuera_acordeon": [
+          {
+            "texto": "Aviso Robo Vehículos",
+            "url": "https://portal.sat.gob.gt/portal/aviso-robo-vehiculos/"
+          },
+          {
+            "texto": "Consulta de Vehículos",
+            "url": "https://portal.sat.gob.gt/portal/impresion-calcomania/"
+          },
+          {
+            "texto": "IVA-IPRIMA para Vehículos Usados",
+            "url": "https://portal.sat.gob.gt/portal/iva-iprima/"
+          },
+          {
+            "texto": "Código Único de Verificación",
+            "url": "https://portal.sat.gob.gt/portal/codigo-unico-de-verificacion/"
+          },
+          {
+            "texto": "Expertaje a Vehículos",
+            "url": "https://portal.sat.gob.gt/portal/expertaje-a-vehiculos/"
+          },
+          {
+            "texto": "Requisitos de Vehículos",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-vehiculos/"
+          }
+        ],
+        "links_planos": [
+          {
+            "texto": "Acuerdo de Directorio Número 18-2025 que aprueba la Tabla de Valores Imponibles del Impuesto Sobre Circulación de Vehículos Terrestres 2026.",
+            "url": "https://portal.sat.gob.gt/portal/descarga/1899/legislacion-tributaria/91640/acuerdo-de-directorio-numero-18-2025-que-aprueba-la-tabla-de-valores-imponibles-del-impuesto-sobre-circulacion-de-vehiculos-terrestres-2026"
+          },
+          {
+            "texto": "Acuerdo de Directorio Número 19-2025 que aprueba la Tabla de Valores Imponibles del Impuesto al Valor Agregado por Enajenación de Vehículos 2026.",
+            "url": "https://portal.sat.gob.gt/portal/descarga/1899/legislacion-tributaria/91641/acuerdo-de-directorio-numero-19-2025-que-aprueba-la-tabla-de-valores-imponibles-del-impuesto-al-valor-agregado-por-enajenacion-de-vehiculos-2026"
+          },
+          {
+            "texto": "Tabla de Valores Imponibles del ISCV e IVA por Enajenación de Vehículos Terrestres 2026.",
+            "url": "https://portal.sat.gob.gt/portal/descarga/1899/legislacion-tributaria/91642/tabla-de-valores-imponibles-del-iscv-e-iva-por-enajenacion-de-vehiculos-terrestres-2026"
+          },
+          {
+            "texto": "Acuerdo de Directorio Número 16-2025 Que aprueba la Tabla de Valores Imponibles del Impuesto al Valor Agregado para la importación de Vehículos Automotores Terrestres Usados para el año 2026",
+            "url": "https://portal.sat.gob.gt/portal/descarga/1895/legislacion-aduanera/91645/acuerdo-de-directorio-numero-16-2025-que-aprueba-la-tabla-de-valores-imponibles-del-impuesto-al-valor-agregad"
+          },
+          {
+            "texto": "Acuerdo de Directorio Número 17-2025 que aprueba la Tabla de Valores Imponibles del Impuesto Específico a la Primera Matrícula para la Importación de Vehículos Automotores Terrestre Usados para el año 2026",
+            "url": "https://portal.sat.gob.gt/portal/descarga/1895/legislacion-aduanera/91647/acuerdo-de-directorio-numero-17-2025-que-aprueba-la-tabla-de-valores-imponibles-del-impuesto-especifi"
+          },
+          {
+            "texto": "Tabla de Valores Imponibles del Impuesto al Valor Agregado e Impuesto Específico a la Primera Matrícula para Importación de Vehículos Automotores Terrestres usados para el Año 2026",
+            "url": "https://portal.sat.gob.gt/portal/descarga/1895/legislacion-aduanera/91646/tabla-de-valores-iva-iprima-2026"
+          },
+          {
+            "texto": "Aviso Robo Vehículos",
+            "url": "https://portal.sat.gob.gt/portal/aviso-robo-vehiculos/"
+          },
+          {
+            "texto": "Consulta de Vehículos",
+            "url": "https://portal.sat.gob.gt/portal/impresion-calcomania/"
+          },
+          {
+            "texto": "IVA-IPRIMA para Vehículos Usados",
+            "url": "https://portal.sat.gob.gt/portal/iva-iprima/"
+          },
+          {
+            "texto": "Código Único de Verificación",
+            "url": "https://portal.sat.gob.gt/portal/codigo-unico-de-verificacion/"
+          },
+          {
+            "texto": "Expertaje a Vehículos",
+            "url": "https://portal.sat.gob.gt/portal/expertaje-a-vehiculos/"
+          },
+          {
+            "texto": "Requisitos de Vehículos",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-vehiculos/"
+          }
+        ]
+      }
+    },
+    "documentos-manifiesto": {
+      "slug": "documentos-manifiesto",
+      "url": "https://portal.sat.gob.gt/portal/documentos-manifiesto/",
+      "url_base": "https://portal.sat.gob.gt/portal/documentos-manifiesto/",
+      "ancla_fragmento": "",
+      "arquetipo_matriz": "TIPO-4",
+      "criterio_arquetipo": "Directorio oficial, tabla de valores o especificación técnica aduanera (TIPO-4).",
+      "ids_sat_ges": [
+        "SAT-GES-0471",
+        "SAT-GES-0558"
+      ],
+      "niveles_2": [
+        "Auxiliares de la Función Pública Aduanera (AFPA)",
+        "Normativa y Operaciones Aduaneras Generales"
+      ],
+      "niveles_3": [
+        "Modernización e Infraestructura Aduanera",
+        "Transportistas Aduaneros"
+      ],
+      "titulos_excel": [
+        "Consulta y Verificación de Documentos del Manifiesto de Carga",
+        "Información sobre: Repositorio de documentos."
+      ],
+      "descripciones_excel": [
+        "Consulta en línea de documentos de transporte asociados al manifiesto (Carta de Porte, Guía Aérea, BL) transmitido por el transportista.",
+        "Gestiones para agentes de aduanas, transporte y logística que operan en el comercio exterior."
+      ],
+      "bases_legales_excel": [
+        "CAUCA IV (Arts. 18 al 28), RECAUCA IV (Tránsito Aduanero Internacional Terrestre) y Ley de Aduanas.",
+        "Convenio sobre el Régimen Arancelario y Aduanero Centroamericano (SAC) y Ley de Aduanas."
+      ],
+      "observaciones_excel": [],
+      "notas_extra_col24": [
+        "Repositorio de documentos aduaneros"
+      ],
+      "http_status": 200,
+      "origen_extraccion": "https://portal.sat.gob.gt/portal/documentos-manifiesto/",
+      "fuente_viva": {
+        "tipo_fuente": "wpbakery_page",
+        "titulo_fuente": "Documentos Manifiesto",
+        "headings": [
+          {
+            "tag": "h1",
+            "texto": "Documentos Manifiesto"
+          }
+        ],
+        "correos_cf_decodificados": [],
+        "parrafos_intro": [
+          "﻿"
+        ],
+        "listas_intro": [],
+        "tarjetas_fuente": [],
+        "tablas_generales": [],
+        "acordeones": [],
+        "videos": [],
+        "iframes_aplicativos": [
+          {
+            "titulo": "Consulta",
+            "url": "https://farm3.sat.gob.gt/consultas-publicas-aduanas/public/consultas-publicas/documentosManifiesto.jsf"
+          }
+        ],
+        "links_fuera_acordeon": [],
+        "links_planos": [
+          {
+            "texto": "Consulta",
+            "url": "https://farm3.sat.gob.gt/consultas-publicas-aduanas/public/consultas-publicas/documentosManifiesto.jsf"
+          }
+        ]
+      }
+    },
+    "mensaje-carga-aduanera-cuscar": {
+      "slug": "mensaje-carga-aduanera-cuscar",
+      "url": "https://portal.sat.gob.gt/portal/mensaje-carga-aduanera-cuscar/",
+      "url_base": "https://portal.sat.gob.gt/portal/mensaje-carga-aduanera-cuscar/",
+      "ancla_fragmento": "",
+      "arquetipo_matriz": "TIPO-4",
+      "criterio_arquetipo": "Directorio oficial, tabla de valores o especificación técnica aduanera (TIPO-4).",
+      "ids_sat_ges": [
+        "SAT-GES-0472"
+      ],
+      "niveles_2": [
+        "Auxiliares de la Función Pública Aduanera (AFPA)"
+      ],
+      "niveles_3": [
+        "Transportistas Aduaneros"
+      ],
+      "titulos_excel": [
+        "Transmisión Electrónica de Mensaje de Carga Aduanera (CUSCAR)"
+      ],
+      "descripciones_excel": [
+        "Manual de especificaciones y transmisión electrónica EDI del manifiesto de carga bajo el estándar CUSCAR hacia el sistema de aduanas."
+      ],
+      "bases_legales_excel": [
+        "CAUCA IV (Arts. 18 al 28), RECAUCA IV (Tránsito Aduanero Internacional Terrestre) y Ley de Aduanas."
+      ],
+      "observaciones_excel": [],
+      "notas_extra_col24": [],
+      "http_status": 200,
+      "origen_extraccion": "https://portal.sat.gob.gt/portal/mensaje-carga-aduanera-cuscar/",
+      "fuente_viva": {
+        "tipo_fuente": "wpbakery_page",
+        "titulo_fuente": "Mensaje de Carga Aduanera (CUSCAR)",
+        "headings": [
+          {
+            "tag": "h1",
+            "texto": "Mensaje de Carga Aduanera (CUSCAR)"
+          }
+        ],
+        "correos_cf_decodificados": [],
+        "parrafos_intro": [],
+        "listas_intro": [],
+        "tarjetas_fuente": [],
+        "tablas_generales": [
+          {
+            "filas": [
+              {
+                "celdas": [
+                  "Título",
+                  "Tamaño",
+                  "Descargas",
+                  "Fecha Agregada",
+                  "Descargar",
+                  ""
+                ],
+                "links": []
+              },
+              {
+                "celdas": [
+                  "Guía de usuario para la transmisión de la solicitud y consulta de la carta de correccion v2",
+                  "1.10 MB",
+                  "3663",
+                  "08-12-2017",
+                  "Descargar Vista previa"
+                ],
+                "links": [
+                  {
+                    "texto": "Guía de usuario para la transmisión de la solicitud y consulta de la carta de correccion v2",
+                    "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/18115/guia-de-usuario-para-la-transmision-de-la-solicitud-y-consulta-de-la-carta-de-correccion-v2"
+                  },
+                  {
+                    "texto": "Descargar",
+                    "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/18115/guia-de-usuario-para-la-transmision-de-la-solicitud-y-consulta-de-la-carta-de-correccion-v2"
+                  },
+                  {
+                    "texto": "Vista previa",
+                    "url": "https://portal.sat.gob.gt/portal/wp-admin/admin-ajax.php?juwpfisadmin=false&action=wpfd&task=file.download&wpfd_category_id=5032&wpfd_file_id=18115&token=&preview=1"
+                  }
+                ]
+              },
+              {
+                "celdas": [
+                  "ANEXO 12 PUERTOS",
+                  "903.25 KB",
+                  "1586",
+                  "14-11-2017",
+                  "Descargar Vista previa"
+                ],
+                "links": [
+                  {
+                    "texto": "ANEXO 12 PUERTOS",
+                    "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17521/anexo-12-puertos-2"
+                  },
+                  {
+                    "texto": "Descargar",
+                    "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17521/anexo-12-puertos-2"
+                  },
+                  {
+                    "texto": "Vista previa",
+                    "url": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5032%26wpfd_file_id%3D17521%26token%3D%26preview%3D1&embedded=true"
+                  }
+                ]
+              },
+              {
+                "celdas": [
+                  "ANEXO 19 REQUERIMIENTOS DE SERVICIO",
+                  "16.50 KB",
+                  "1153",
+                  "14-11-2017",
+                  "Descargar Vista previa"
+                ],
+                "links": [
+                  {
+                    "texto": "ANEXO 19 REQUERIMIENTOS DE SERVICIO",
+                    "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17520/anexo-19-requerimientos-de-servicio-2"
+                  },
+                  {
+                    "texto": "Descargar",
+                    "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17520/anexo-19-requerimientos-de-servicio-2"
+                  },
+                  {
+                    "texto": "Vista previa",
+                    "url": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5032%26wpfd_file_id%3D17520%26token%3D%26preview%3D1&embedded=true"
+                  }
+                ]
+              },
+              {
+                "celdas": [
+                  "ANEXO 18 PROPORCION DE OCUPACION DEL EQUIPO",
+                  "13.50 KB",
+                  "1122",
+                  "14-11-2017",
+                  "Descargar Vista previa"
+                ],
+                "links": [
+                  {
+                    "texto": "ANEXO 18 PROPORCION DE OCUPACION DEL EQUIPO",
+                    "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17519/anexo-18-proporcion-de-ocupacion-del-equipo-2"
+                  },
+                  {
+                    "texto": "Descargar",
+                    "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17519/anexo-18-proporcion-de-ocupacion-del-equipo-2"
+                  },
+                  {
+                    "texto": "Vista previa",
+                    "url": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5032%26wpfd_file_id%3D17519%26token%3D%26preview%3D1&embedded=true"
+                  }
+                ]
+              },
+              {
+                "celdas": [
+                  "ANEXO 17 ESTATUS DEL EQUIPO",
+                  "13.50 KB",
+                  "1208",
+                  "14-11-2017",
+                  "Descargar Vista previa"
+                ],
+                "links": [
+                  {
+                    "texto": "ANEXO 17 ESTATUS DEL EQUIPO",
+                    "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17518/anexo-17-estatus-del-equipo-2"
+                  },
+                  {
+                    "texto": "Descargar",
+                    "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17518/anexo-17-estatus-del-equipo-2"
+                  },
+                  {
+                    "texto": "Vista previa",
+                    "url": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5032%26wpfd_file_id%3D17518%26token%3D%26preview%3D1&embedded=true"
+                  }
+                ]
+              },
+              {
+                "celdas": [
+                  "ANEXO 15 TIPO Y TAMAÑO EQUIPO MARITIMO",
+                  "52.00 KB",
+                  "1333",
+                  "14-11-2017",
+                  "Descargar Vista previa"
+                ],
+                "links": [
+                  {
+                    "texto": "ANEXO 15 TIPO Y TAMAÑO EQUIPO MARITIMO",
+                    "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17517/anexo-15-tipo-y-tamano-equipo-maritimo"
+                  },
+                  {
+                    "texto": "Descargar",
+                    "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17517/anexo-15-tipo-y-tamano-equipo-maritimo"
+                  },
+                  {
+                    "texto": "Vista previa",
+                    "url": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5032%26wpfd_file_id%3D17517%26token%3D%26preview%3D1&embedded=true"
+                  }
+                ]
+              },
+              {
+                "celdas": [
+                  "ANEXO 14 CALIFICADOR DE EQUIPO",
+                  "13.50 KB",
+                  "1224",
+                  "14-11-2017",
+                  "Descargar Vista previa"
+                ],
+                "links": [
+                  {
+                    "texto": "ANEXO 14 CALIFICADOR DE EQUIPO",
+                    "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17515/anexo-14-calificador-de-equipo-2"
+                  },
+                  {
+                    "texto": "Descargar",
+                    "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17515/anexo-14-calificador-de-equipo-2"
+                  },
+                  {
+                    "texto": "Vista previa",
+                    "url": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5032%26wpfd_file_id%3D17515%26token%3D%26preview%3D1&embedded=true"
+                  }
+                ]
+              },
+              {
+                "celdas": [
+                  "ANEXO 13 AEROPUERTOS",
+                  "335.50 KB",
+                  "2551",
+                  "14-11-2017",
+                  "Descargar Vista previa"
+                ],
+                "links": [
+                  {
+                    "texto": "ANEXO 13 AEROPUERTOS",
+                    "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17516/anexo-13-aeropuertos"
+                  },
+                  {
+                    "texto": "Descargar",
+                    "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17516/anexo-13-aeropuertos"
+                  },
+                  {
+                    "texto": "Vista previa",
+                    "url": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5032%26wpfd_file_id%3D17516%26token%3D%26preview%3D1&embedded=true"
+                  }
+                ]
+              },
+              {
+                "celdas": [
+                  "ANEXO 10 AGENCIAS RESPONSABLES DE IDENTIFICACI+ôN DE MEDIOS DE TRANSPORTE",
+                  "13.50 KB",
+                  "1125",
+                  "14-11-2017",
+                  "Descargar Vista previa"
+                ],
+                "links": [
+                  {
+                    "texto": "ANEXO 10 AGENCIAS RESPONSABLES DE IDENTIFICACI+ôN DE MEDIOS DE TRANSPORTE",
+                    "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17512/anexo-10-agencias-responsables-de-identificacion-de-medios-de-transporte-2"
+                  },
+                  {
+                    "texto": "Descargar",
+                    "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17512/anexo-10-agencias-responsables-de-identificacion-de-medios-de-transporte-2"
+                  },
+                  {
+                    "texto": "Vista previa",
+                    "url": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5032%26wpfd_file_id%3D17512%26token%3D%26preview%3D1&embedded=true"
+                  }
+                ]
+              },
+              {
+                "celdas": [
+                  "ANEXO 11 PAISES",
+                  "29.00 KB",
+                  "1303",
+                  "14-11-2017",
+                  "Descargar Vista previa"
+                ],
+                "links": [
+                  {
+                    "texto": "ANEXO 11 PAISES",
+                    "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17513/anexo-11-paises-2"
+                  },
+                  {
+                    "texto": "Descargar",
+                    "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17513/anexo-11-paises-2"
+                  },
+                  {
+                    "texto": "Vista previa",
+                    "url": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5032%26wpfd_file_id%3D17513%26token%3D%26preview%3D1&embedded=true"
+                  }
+                ]
+              },
+              {
+                "celdas": [
+                  "ANEXO 9 MEDIOS DE TRANSPORTE",
+                  "14.00 KB",
+                  "1176",
+                  "14-11-2017",
+                  "Descargar Vista previa"
+                ],
+                "links": [
+                  {
+                    "texto": "ANEXO 9 MEDIOS DE TRANSPORTE",
+                    "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17511/anexo-9-medios-de-transporte-2"
+                  },
+                  {
+                    "texto": "Descargar",
+                    "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17511/anexo-9-medios-de-transporte-2"
+                  },
+                  {
+                    "texto": "Vista previa",
+                    "url": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5032%26wpfd_file_id%3D17511%26token%3D%26preview%3D1&embedded=true"
+                  }
+                ]
+              },
+              {
+                "celdas": [
+                  "ANEXO 8 MODOS DE TRANSPORTE",
+                  "13.50 KB",
+                  "1156",
+                  "14-11-2017",
+                  "Descargar Vista previa"
+                ],
+                "links": [
+                  {
+                    "texto": "ANEXO 8 MODOS DE TRANSPORTE",
+                    "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17510/anexo-8-modos-de-transporte-2"
+                  },
+                  {
+                    "texto": "Descargar",
+                    "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17510/anexo-8-modos-de-transporte-2"
+                  },
+                  {
+                    "texto": "Vista previa",
+                    "url": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5032%26wpfd_file_id%3D17510%26token%3D%26preview%3D1&embedded=true"
+                  }
+                ]
+              },
+              {
+                "celdas": [
+                  "ANEXO 7 RESPONSABLE DEL MENSAJE",
+                  "13.50 KB",
+                  "1124",
+                  "14-11-2017",
+                  "Descargar Vista previa"
+                ],
+                "links": [
+                  {
+                    "texto": "ANEXO 7 RESPONSABLE DEL MENSAJE",
+                    "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17509/anexo-7-responsable-del-mensaje-2"
+                  },
+                  {
+                    "texto": "Descargar",
+                    "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17509/anexo-7-responsable-del-mensaje-2"
+                  },
+                  {
+                    "texto": "Vista previa",
+                    "url": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5032%26wpfd_file_id%3D17509%26token%3D%26preview%3D1&embedded=true"
+                  }
+                ]
+              },
+              {
+                "celdas": [
+                  "ANEXO 6 CALIFICADORES DE REFERENCIA",
+                  "13.50 KB",
+                  "1202",
+                  "14-11-2017",
+                  "Descargar Vista previa"
+                ],
+                "links": [
+                  {
+                    "texto": "ANEXO 6 CALIFICADORES DE REFERENCIA",
+                    "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17508/anexo-6-calificadores-de-referencia-2"
+                  },
+                  {
+                    "texto": "Descargar",
+                    "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17508/anexo-6-calificadores-de-referencia-2"
+                  },
+                  {
+                    "texto": "Vista previa",
+                    "url": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5032%26wpfd_file_id%3D17508%26token%3D%26preview%3D1&embedded=true"
+                  }
+                ]
+              },
+              {
+                "celdas": [
+                  "ANEXO 5 FUNCION DEL MENSAJE",
+                  "13.50 KB",
+                  "1197",
+                  "14-11-2017",
+                  "Descargar Vista previa"
+                ],
+                "links": [
+                  {
+                    "texto": "ANEXO 5 FUNCION DEL MENSAJE",
+                    "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17506/anexo-5-funcion-del-mensaje-2"
+                  },
+                  {
+                    "texto": "Descargar",
+                    "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17506/anexo-5-funcion-del-mensaje-2"
+                  },
+                  {
+                    "texto": "Vista previa",
+                    "url": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5032%26wpfd_file_id%3D17506%26token%3D%26preview%3D1&embedded=true"
+                  }
+                ]
+              },
+              {
+                "celdas": [
+                  "ANEXO 4 CODIGOS DEL NOMBRE DEL MENSAJE",
+                  "13.50 KB",
+                  "1220",
+                  "14-11-2017",
+                  "Descargar Vista previa"
+                ],
+                "links": [
+                  {
+                    "texto": "ANEXO 4 CODIGOS DEL NOMBRE DEL MENSAJE",
+                    "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17507/anexo-4-codigos-del-nombre-del-mensaje-2"
+                  },
+                  {
+                    "texto": "Descargar",
+                    "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17507/anexo-4-codigos-del-nombre-del-mensaje-2"
+                  },
+                  {
+                    "texto": "Vista previa",
+                    "url": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5032%26wpfd_file_id%3D17507%26token%3D%26preview%3D1&embedded=true"
+                  }
+                ]
+              },
+              {
+                "celdas": [
+                  "ANEXO 2 GLN DE ADUANAS DE GUATEMALA",
+                  "32.00 KB",
+                  "1217",
+                  "14-11-2017",
+                  "Descargar Vista previa"
+                ],
+                "links": [
+                  {
+                    "texto": "ANEXO 2 GLN DE ADUANAS DE GUATEMALA",
+                    "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17504/anexo-2-gln-de-aduanas-de-guatemala-2"
+                  },
+                  {
+                    "texto": "Descargar",
+                    "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17504/anexo-2-gln-de-aduanas-de-guatemala-2"
+                  },
+                  {
+                    "texto": "Vista previa",
+                    "url": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5032%26wpfd_file_id%3D17504%26token%3D%26preview%3D1&embedded=true"
+                  }
+                ]
+              },
+              {
+                "celdas": [
+                  "ANEXO 3 TIPO DE MENSAJE",
+                  "13.50 KB",
+                  "1220",
+                  "14-11-2017",
+                  "Descargar Vista previa"
+                ],
+                "links": [
+                  {
+                    "texto": "ANEXO 3 TIPO DE MENSAJE",
+                    "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17505/anexo-3-tipo-de-mensaje-2"
+                  },
+                  {
+                    "texto": "Descargar",
+                    "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17505/anexo-3-tipo-de-mensaje-2"
+                  },
+                  {
+                    "texto": "Vista previa",
+                    "url": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5032%26wpfd_file_id%3D17505%26token%3D%26preview%3D1&embedded=true"
+                  }
+                ]
+              },
+              {
+                "celdas": [
+                  "RESUMEN SEGMENTOS CUSCAR - 20170926",
+                  "30.03 KB",
+                  "3449",
+                  "14-11-2017",
+                  "Descargar Vista previa"
+                ],
+                "links": [
+                  {
+                    "texto": "RESUMEN SEGMENTOS CUSCAR - 20170926",
+                    "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17502/resumen-segmentos-cuscar-20170926"
+                  },
+                  {
+                    "texto": "Descargar",
+                    "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17502/resumen-segmentos-cuscar-20170926"
+                  },
+                  {
+                    "texto": "Vista previa",
+                    "url": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5032%26wpfd_file_id%3D17502%26token%3D%26preview%3D1&embedded=true"
+                  }
+                ]
+              },
+              {
+                "celdas": [
+                  "ANEXO 1 GLN DE EMPRESAS TRANSMISORAS",
+                  "18.00 KB",
+                  "1380",
+                  "14-11-2017",
+                  "Descargar Vista previa"
+                ],
+                "links": [
+                  {
+                    "texto": "ANEXO 1 GLN DE EMPRESAS TRANSMISORAS",
+                    "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17503/anexo-1-gln-de-empresas-transmisoras-2"
+                  },
+                  {
+                    "texto": "Descargar",
+                    "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17503/anexo-1-gln-de-empresas-transmisoras-2"
+                  },
+                  {
+                    "texto": "Vista previa",
+                    "url": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5032%26wpfd_file_id%3D17503%26token%3D%26preview%3D1&embedded=true"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "acordeones": [],
+        "videos": [],
+        "iframes_aplicativos": [],
+        "links_fuera_acordeon": [
+          {
+            "texto": "Guía de usuario para la transmisión de la solicitud y consulta de la carta de correccion v2",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/18115/guia-de-usuario-para-la-transmision-de-la-solicitud-y-consulta-de-la-carta-de-correccion-v2"
+          },
+          {
+            "texto": "Descargar",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/18115/guia-de-usuario-para-la-transmision-de-la-solicitud-y-consulta-de-la-carta-de-correccion-v2"
+          },
+          {
+            "texto": "Vista previa",
+            "url": "https://portal.sat.gob.gt/portal/wp-admin/admin-ajax.php?juwpfisadmin=false&action=wpfd&task=file.download&wpfd_category_id=5032&wpfd_file_id=18115&token=&preview=1"
+          },
+          {
+            "texto": "ANEXO 12 PUERTOS",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17521/anexo-12-puertos-2"
+          },
+          {
+            "texto": "Descargar",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17521/anexo-12-puertos-2"
+          },
+          {
+            "texto": "Vista previa",
+            "url": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5032%26wpfd_file_id%3D17521%26token%3D%26preview%3D1&embedded=true"
+          },
+          {
+            "texto": "ANEXO 19 REQUERIMIENTOS DE SERVICIO",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17520/anexo-19-requerimientos-de-servicio-2"
+          },
+          {
+            "texto": "Descargar",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17520/anexo-19-requerimientos-de-servicio-2"
+          },
+          {
+            "texto": "Vista previa",
+            "url": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5032%26wpfd_file_id%3D17520%26token%3D%26preview%3D1&embedded=true"
+          },
+          {
+            "texto": "ANEXO 18 PROPORCION DE OCUPACION DEL EQUIPO",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17519/anexo-18-proporcion-de-ocupacion-del-equipo-2"
+          },
+          {
+            "texto": "Descargar",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17519/anexo-18-proporcion-de-ocupacion-del-equipo-2"
+          },
+          {
+            "texto": "Vista previa",
+            "url": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5032%26wpfd_file_id%3D17519%26token%3D%26preview%3D1&embedded=true"
+          },
+          {
+            "texto": "ANEXO 17 ESTATUS DEL EQUIPO",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17518/anexo-17-estatus-del-equipo-2"
+          },
+          {
+            "texto": "Descargar",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17518/anexo-17-estatus-del-equipo-2"
+          },
+          {
+            "texto": "Vista previa",
+            "url": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5032%26wpfd_file_id%3D17518%26token%3D%26preview%3D1&embedded=true"
+          },
+          {
+            "texto": "ANEXO 15 TIPO Y TAMAÑO EQUIPO MARITIMO",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17517/anexo-15-tipo-y-tamano-equipo-maritimo"
+          },
+          {
+            "texto": "Descargar",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17517/anexo-15-tipo-y-tamano-equipo-maritimo"
+          },
+          {
+            "texto": "Vista previa",
+            "url": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5032%26wpfd_file_id%3D17517%26token%3D%26preview%3D1&embedded=true"
+          },
+          {
+            "texto": "ANEXO 14 CALIFICADOR DE EQUIPO",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17515/anexo-14-calificador-de-equipo-2"
+          },
+          {
+            "texto": "Descargar",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17515/anexo-14-calificador-de-equipo-2"
+          },
+          {
+            "texto": "Vista previa",
+            "url": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5032%26wpfd_file_id%3D17515%26token%3D%26preview%3D1&embedded=true"
+          },
+          {
+            "texto": "ANEXO 13 AEROPUERTOS",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17516/anexo-13-aeropuertos"
+          },
+          {
+            "texto": "Descargar",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17516/anexo-13-aeropuertos"
+          },
+          {
+            "texto": "Vista previa",
+            "url": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5032%26wpfd_file_id%3D17516%26token%3D%26preview%3D1&embedded=true"
+          },
+          {
+            "texto": "ANEXO 10 AGENCIAS RESPONSABLES DE IDENTIFICACI+ôN DE MEDIOS DE TRANSPORTE",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17512/anexo-10-agencias-responsables-de-identificacion-de-medios-de-transporte-2"
+          },
+          {
+            "texto": "Descargar",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17512/anexo-10-agencias-responsables-de-identificacion-de-medios-de-transporte-2"
+          },
+          {
+            "texto": "Vista previa",
+            "url": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5032%26wpfd_file_id%3D17512%26token%3D%26preview%3D1&embedded=true"
+          },
+          {
+            "texto": "ANEXO 11 PAISES",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17513/anexo-11-paises-2"
+          },
+          {
+            "texto": "Descargar",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17513/anexo-11-paises-2"
+          },
+          {
+            "texto": "Vista previa",
+            "url": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5032%26wpfd_file_id%3D17513%26token%3D%26preview%3D1&embedded=true"
+          },
+          {
+            "texto": "ANEXO 9 MEDIOS DE TRANSPORTE",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17511/anexo-9-medios-de-transporte-2"
+          },
+          {
+            "texto": "Descargar",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17511/anexo-9-medios-de-transporte-2"
+          },
+          {
+            "texto": "Vista previa",
+            "url": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5032%26wpfd_file_id%3D17511%26token%3D%26preview%3D1&embedded=true"
+          },
+          {
+            "texto": "ANEXO 8 MODOS DE TRANSPORTE",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17510/anexo-8-modos-de-transporte-2"
+          },
+          {
+            "texto": "Descargar",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17510/anexo-8-modos-de-transporte-2"
+          },
+          {
+            "texto": "Vista previa",
+            "url": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5032%26wpfd_file_id%3D17510%26token%3D%26preview%3D1&embedded=true"
+          },
+          {
+            "texto": "ANEXO 7 RESPONSABLE DEL MENSAJE",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17509/anexo-7-responsable-del-mensaje-2"
+          },
+          {
+            "texto": "Descargar",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17509/anexo-7-responsable-del-mensaje-2"
+          },
+          {
+            "texto": "Vista previa",
+            "url": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5032%26wpfd_file_id%3D17509%26token%3D%26preview%3D1&embedded=true"
+          },
+          {
+            "texto": "ANEXO 6 CALIFICADORES DE REFERENCIA",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17508/anexo-6-calificadores-de-referencia-2"
+          },
+          {
+            "texto": "Descargar",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17508/anexo-6-calificadores-de-referencia-2"
+          },
+          {
+            "texto": "Vista previa",
+            "url": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5032%26wpfd_file_id%3D17508%26token%3D%26preview%3D1&embedded=true"
+          },
+          {
+            "texto": "ANEXO 5 FUNCION DEL MENSAJE",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17506/anexo-5-funcion-del-mensaje-2"
+          },
+          {
+            "texto": "Descargar",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17506/anexo-5-funcion-del-mensaje-2"
+          },
+          {
+            "texto": "Vista previa",
+            "url": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5032%26wpfd_file_id%3D17506%26token%3D%26preview%3D1&embedded=true"
+          },
+          {
+            "texto": "ANEXO 4 CODIGOS DEL NOMBRE DEL MENSAJE",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17507/anexo-4-codigos-del-nombre-del-mensaje-2"
+          },
+          {
+            "texto": "Descargar",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17507/anexo-4-codigos-del-nombre-del-mensaje-2"
+          },
+          {
+            "texto": "Vista previa",
+            "url": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5032%26wpfd_file_id%3D17507%26token%3D%26preview%3D1&embedded=true"
+          },
+          {
+            "texto": "ANEXO 2 GLN DE ADUANAS DE GUATEMALA",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17504/anexo-2-gln-de-aduanas-de-guatemala-2"
+          },
+          {
+            "texto": "Descargar",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17504/anexo-2-gln-de-aduanas-de-guatemala-2"
+          },
+          {
+            "texto": "Vista previa",
+            "url": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5032%26wpfd_file_id%3D17504%26token%3D%26preview%3D1&embedded=true"
+          },
+          {
+            "texto": "ANEXO 3 TIPO DE MENSAJE",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17505/anexo-3-tipo-de-mensaje-2"
+          },
+          {
+            "texto": "Descargar",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17505/anexo-3-tipo-de-mensaje-2"
+          },
+          {
+            "texto": "Vista previa",
+            "url": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5032%26wpfd_file_id%3D17505%26token%3D%26preview%3D1&embedded=true"
+          },
+          {
+            "texto": "RESUMEN SEGMENTOS CUSCAR - 20170926",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17502/resumen-segmentos-cuscar-20170926"
+          },
+          {
+            "texto": "Descargar",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17502/resumen-segmentos-cuscar-20170926"
+          },
+          {
+            "texto": "Vista previa",
+            "url": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5032%26wpfd_file_id%3D17502%26token%3D%26preview%3D1&embedded=true"
+          },
+          {
+            "texto": "ANEXO 1 GLN DE EMPRESAS TRANSMISORAS",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17503/anexo-1-gln-de-empresas-transmisoras-2"
+          },
+          {
+            "texto": "Descargar",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17503/anexo-1-gln-de-empresas-transmisoras-2"
+          },
+          {
+            "texto": "Vista previa",
+            "url": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5032%26wpfd_file_id%3D17503%26token%3D%26preview%3D1&embedded=true"
+          }
+        ],
+        "links_planos": [
+          {
+            "texto": "Guía de usuario para la transmisión de la solicitud y consulta de la carta de correccion v2",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/18115/guia-de-usuario-para-la-transmision-de-la-solicitud-y-consulta-de-la-carta-de-correccion-v2"
+          },
+          {
+            "texto": "Vista previa",
+            "url": "https://portal.sat.gob.gt/portal/wp-admin/admin-ajax.php?juwpfisadmin=false&action=wpfd&task=file.download&wpfd_category_id=5032&wpfd_file_id=18115&token=&preview=1"
+          },
+          {
+            "texto": "ANEXO 12 PUERTOS",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17521/anexo-12-puertos-2"
+          },
+          {
+            "texto": "Vista previa",
+            "url": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5032%26wpfd_file_id%3D17521%26token%3D%26preview%3D1&embedded=true"
+          },
+          {
+            "texto": "ANEXO 19 REQUERIMIENTOS DE SERVICIO",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17520/anexo-19-requerimientos-de-servicio-2"
+          },
+          {
+            "texto": "Vista previa",
+            "url": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5032%26wpfd_file_id%3D17520%26token%3D%26preview%3D1&embedded=true"
+          },
+          {
+            "texto": "ANEXO 18 PROPORCION DE OCUPACION DEL EQUIPO",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17519/anexo-18-proporcion-de-ocupacion-del-equipo-2"
+          },
+          {
+            "texto": "Vista previa",
+            "url": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5032%26wpfd_file_id%3D17519%26token%3D%26preview%3D1&embedded=true"
+          },
+          {
+            "texto": "ANEXO 17 ESTATUS DEL EQUIPO",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17518/anexo-17-estatus-del-equipo-2"
+          },
+          {
+            "texto": "Vista previa",
+            "url": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5032%26wpfd_file_id%3D17518%26token%3D%26preview%3D1&embedded=true"
+          },
+          {
+            "texto": "ANEXO 15 TIPO Y TAMAÑO EQUIPO MARITIMO",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17517/anexo-15-tipo-y-tamano-equipo-maritimo"
+          },
+          {
+            "texto": "Vista previa",
+            "url": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5032%26wpfd_file_id%3D17517%26token%3D%26preview%3D1&embedded=true"
+          },
+          {
+            "texto": "ANEXO 14 CALIFICADOR DE EQUIPO",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17515/anexo-14-calificador-de-equipo-2"
+          },
+          {
+            "texto": "Vista previa",
+            "url": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5032%26wpfd_file_id%3D17515%26token%3D%26preview%3D1&embedded=true"
+          },
+          {
+            "texto": "ANEXO 13 AEROPUERTOS",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17516/anexo-13-aeropuertos"
+          },
+          {
+            "texto": "Vista previa",
+            "url": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5032%26wpfd_file_id%3D17516%26token%3D%26preview%3D1&embedded=true"
+          },
+          {
+            "texto": "ANEXO 10 AGENCIAS RESPONSABLES DE IDENTIFICACI+ôN DE MEDIOS DE TRANSPORTE",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17512/anexo-10-agencias-responsables-de-identificacion-de-medios-de-transporte-2"
+          },
+          {
+            "texto": "Vista previa",
+            "url": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5032%26wpfd_file_id%3D17512%26token%3D%26preview%3D1&embedded=true"
+          },
+          {
+            "texto": "ANEXO 11 PAISES",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17513/anexo-11-paises-2"
+          },
+          {
+            "texto": "Vista previa",
+            "url": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5032%26wpfd_file_id%3D17513%26token%3D%26preview%3D1&embedded=true"
+          },
+          {
+            "texto": "ANEXO 9 MEDIOS DE TRANSPORTE",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17511/anexo-9-medios-de-transporte-2"
+          },
+          {
+            "texto": "Vista previa",
+            "url": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5032%26wpfd_file_id%3D17511%26token%3D%26preview%3D1&embedded=true"
+          },
+          {
+            "texto": "ANEXO 8 MODOS DE TRANSPORTE",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17510/anexo-8-modos-de-transporte-2"
+          },
+          {
+            "texto": "Vista previa",
+            "url": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5032%26wpfd_file_id%3D17510%26token%3D%26preview%3D1&embedded=true"
+          },
+          {
+            "texto": "ANEXO 7 RESPONSABLE DEL MENSAJE",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17509/anexo-7-responsable-del-mensaje-2"
+          },
+          {
+            "texto": "Vista previa",
+            "url": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5032%26wpfd_file_id%3D17509%26token%3D%26preview%3D1&embedded=true"
+          },
+          {
+            "texto": "ANEXO 6 CALIFICADORES DE REFERENCIA",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17508/anexo-6-calificadores-de-referencia-2"
+          },
+          {
+            "texto": "Vista previa",
+            "url": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5032%26wpfd_file_id%3D17508%26token%3D%26preview%3D1&embedded=true"
+          },
+          {
+            "texto": "ANEXO 5 FUNCION DEL MENSAJE",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17506/anexo-5-funcion-del-mensaje-2"
+          },
+          {
+            "texto": "Vista previa",
+            "url": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5032%26wpfd_file_id%3D17506%26token%3D%26preview%3D1&embedded=true"
+          },
+          {
+            "texto": "ANEXO 4 CODIGOS DEL NOMBRE DEL MENSAJE",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17507/anexo-4-codigos-del-nombre-del-mensaje-2"
+          },
+          {
+            "texto": "Vista previa",
+            "url": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5032%26wpfd_file_id%3D17507%26token%3D%26preview%3D1&embedded=true"
+          },
+          {
+            "texto": "ANEXO 2 GLN DE ADUANAS DE GUATEMALA",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17504/anexo-2-gln-de-aduanas-de-guatemala-2"
+          },
+          {
+            "texto": "Vista previa",
+            "url": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5032%26wpfd_file_id%3D17504%26token%3D%26preview%3D1&embedded=true"
+          },
+          {
+            "texto": "ANEXO 3 TIPO DE MENSAJE",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17505/anexo-3-tipo-de-mensaje-2"
+          },
+          {
+            "texto": "Vista previa",
+            "url": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5032%26wpfd_file_id%3D17505%26token%3D%26preview%3D1&embedded=true"
+          },
+          {
+            "texto": "RESUMEN SEGMENTOS CUSCAR - 20170926",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17502/resumen-segmentos-cuscar-20170926"
+          },
+          {
+            "texto": "Vista previa",
+            "url": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5032%26wpfd_file_id%3D17502%26token%3D%26preview%3D1&embedded=true"
+          },
+          {
+            "texto": "ANEXO 1 GLN DE EMPRESAS TRANSMISORAS",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17503/anexo-1-gln-de-empresas-transmisoras-2"
+          },
+          {
+            "texto": "Vista previa",
+            "url": "https://docs.google.com/viewer?url=https%3A%2F%2Fportal.sat.gob.gt%2Fportal%2Fwp-admin%2Fadmin-ajax.php%3Fjuwpfisadmin%3Dfalse%26action%3Dwpfd%26task%3Dfile.download%26wpfd_category_id%3D5032%26wpfd_file_id%3D17503%26token%3D%26preview%3D1&embedded=true"
+          },
+          {
+            "texto": "Registro de Codigos Internos Manifiesto Aereo",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17500/registro-de-codigos-internos-manifiesto-aereo"
+          },
+          {
+            "texto": "Mercancias peligrosas",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17501/mercancias-peligrosas"
+          },
+          {
+            "texto": "GUIA CUSCAR - 20170926",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17499/guia-cuscar-20170926"
+          },
+          {
+            "texto": "GLN Transmisores-Manifiestos al 17-03-2015",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17498/gln-transmisores-manifiestos-al-17-03-2015"
+          },
+          {
+            "texto": "Catalogo de errores ACTUALIZADO",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17496/catalogo-de-errores-actualizado"
+          },
+          {
+            "texto": "GLN NAVIERAS Y PUERTOS 240103",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17497/gln-navieras-y-puertos-240103"
+          },
+          {
+            "texto": "ANEXO 38 TIPO DE MOVIMIENTO",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17494/anexo-38-tipo-de-movimiento-2"
+          },
+          {
+            "texto": "Catalogo de Codigos de Mercancias 24-06-2005 de Entrega Rapida o Courier FINAL",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17495/catalogo-de-codigos-de-mercancias-24-06-2005-de-entrega-rapida-o-courier-final"
+          },
+          {
+            "texto": "ANEXO 37 CLASIFICACION ARANCELARIA FINAL",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17492/anexo-37-clasificacion-arancelaria-final"
+          },
+          {
+            "texto": "ANEXO 36 INSTRUCCIONES DE MARCADO",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17493/anexo-36-instrucciones-de-marcado-2"
+          },
+          {
+            "texto": "ANEXO 32 ENTIDADES REGULADORAS DE MERCANCIAS PELIGROSAS",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17490/anexo-32-entidades-reguladoras-de-mercancias-peligrosas-2"
+          },
+          {
+            "texto": "ANEXO 31 COMMODITIES",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17491/anexo-31-commodities-2"
+          },
+          {
+            "texto": "ANEXO 30 IDENTIFICADOR GENERICO DE LA CARGA",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17489/anexo-30-identificador-generico-de-la-carga-2"
+          },
+          {
+            "texto": "ANEXO 29 TIPO DE PAQUETES",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17488/anexo-29-tipo-de-paquetes-2"
+          },
+          {
+            "texto": "ANEXO 27 NATURALEZA DE LA CARGA",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17486/anexo-27-naturaleza-de-la-carga-2"
+          },
+          {
+            "texto": "ANEXO 28 TIPO DE DOCUMENTO DE IDENTIFICACION",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17487/anexo-28-tipo-de-documento-de-identificacion-2"
+          },
+          {
+            "texto": "ANEXO 26 CONDICION DE CONTRATO DE TRANSPORTE",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17484/anexo-26-condicion-de-contrato-de-transporte-2"
+          },
+          {
+            "texto": "ANEXO 25 TIPO DE DESPACHO",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17485/anexo-25-tipo-de-despacho-2"
+          },
+          {
+            "texto": "ANEXO 23 GLN DEPOSITOS TEMPORALES",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17482/anexo-23-gln-depositos-temporales-3"
+          },
+          {
+            "texto": "ANEXO 24 TIPO DE OPERACION",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17483/anexo-24-tipo-de-operacion-2"
+          },
+          {
+            "texto": "ANEXO 22 MONEDAS",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17481/anexo-22-monedas"
+          },
+          {
+            "texto": "ANEXO 21 TIPOS DE DOCUMENTOS DE TRANSPORTE",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17478/anexo-21-tipos-de-documentos-de-transporte-2"
+          },
+          {
+            "texto": "ANEXO 20 EMISOR DEL PRECINTO",
+            "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17479/anexo-20-emisor-del-precinto-2"
+          }
+        ],
+        "wpfd_bibliotecas": [
+          {
+            "wpfd_category_id": "5032",
+            "wpfd_meta": {
+              "term_id": 5032,
+              "name": "CUSCAR",
+              "reported_count": 43
+            },
+            "total_documentos": 43,
+            "documentos": [
+              {
+                "id": 18115,
+                "titulo": "Guía de usuario para la transmisión de la solicitud y consulta de la carta de correccion v2",
+                "ext": "pdf",
+                "size_bytes": 1152316,
+                "size_human": "1.10 MB",
+                "fecha": "08-12-2017",
+                "fecha_actualizado": "08-12-2017",
+                "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/18115/guia-de-usuario-para-la-transmision-de-la-solicitud-y-consulta-de-la-carta-de-correccion-v2"
+              },
+              {
+                "id": 17521,
+                "titulo": "ANEXO 12 PUERTOS",
+                "ext": "csv",
+                "size_bytes": 924931,
+                "size_human": "903.25 KB",
+                "fecha": "14-11-2017",
+                "fecha_actualizado": "14-11-2017",
+                "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17521/anexo-12-puertos-2"
+              },
+              {
+                "id": 17520,
+                "titulo": "ANEXO 19 REQUERIMIENTOS DE SERVICIO",
+                "ext": "xls",
+                "size_bytes": 16896,
+                "size_human": "16.50 KB",
+                "fecha": "14-11-2017",
+                "fecha_actualizado": "14-11-2017",
+                "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17520/anexo-19-requerimientos-de-servicio-2"
+              },
+              {
+                "id": 17519,
+                "titulo": "ANEXO 18 PROPORCION DE OCUPACION DEL EQUIPO",
+                "ext": "xls",
+                "size_bytes": 13824,
+                "size_human": "13.50 KB",
+                "fecha": "14-11-2017",
+                "fecha_actualizado": "14-11-2017",
+                "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17519/anexo-18-proporcion-de-ocupacion-del-equipo-2"
+              },
+              {
+                "id": 17518,
+                "titulo": "ANEXO 17 ESTATUS DEL EQUIPO",
+                "ext": "xls",
+                "size_bytes": 13824,
+                "size_human": "13.50 KB",
+                "fecha": "14-11-2017",
+                "fecha_actualizado": "14-11-2017",
+                "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17518/anexo-17-estatus-del-equipo-2"
+              },
+              {
+                "id": 17517,
+                "titulo": "ANEXO 15 TIPO Y TAMAÑO EQUIPO MARITIMO",
+                "ext": "xls",
+                "size_bytes": 53248,
+                "size_human": "52.00 KB",
+                "fecha": "14-11-2017",
+                "fecha_actualizado": "14-11-2017",
+                "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17517/anexo-15-tipo-y-tamano-equipo-maritimo"
+              },
+              {
+                "id": 17515,
+                "titulo": "ANEXO 14 CALIFICADOR DE EQUIPO",
+                "ext": "xls",
+                "size_bytes": 13824,
+                "size_human": "13.50 KB",
+                "fecha": "14-11-2017",
+                "fecha_actualizado": "14-11-2017",
+                "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17515/anexo-14-calificador-de-equipo-2"
+              },
+              {
+                "id": 17516,
+                "titulo": "ANEXO 13 AEROPUERTOS",
+                "ext": "xls",
+                "size_bytes": 343552,
+                "size_human": "335.50 KB",
+                "fecha": "14-11-2017",
+                "fecha_actualizado": "14-11-2017",
+                "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17516/anexo-13-aeropuertos"
+              },
+              {
+                "id": 17512,
+                "titulo": "ANEXO 10 AGENCIAS RESPONSABLES DE IDENTIFICACI+ôN DE MEDIOS DE TRANSPORTE",
+                "ext": "xls",
+                "size_bytes": 13824,
+                "size_human": "13.50 KB",
+                "fecha": "14-11-2017",
+                "fecha_actualizado": "14-11-2017",
+                "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17512/anexo-10-agencias-responsables-de-identificacion-de-medios-de-transporte-2"
+              },
+              {
+                "id": 17513,
+                "titulo": "ANEXO 11 PAISES",
+                "ext": "xls",
+                "size_bytes": 29696,
+                "size_human": "29.00 KB",
+                "fecha": "14-11-2017",
+                "fecha_actualizado": "14-11-2017",
+                "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17513/anexo-11-paises-2"
+              },
+              {
+                "id": 17511,
+                "titulo": "ANEXO 9 MEDIOS DE TRANSPORTE",
+                "ext": "xls",
+                "size_bytes": 14336,
+                "size_human": "14.00 KB",
+                "fecha": "14-11-2017",
+                "fecha_actualizado": "14-11-2017",
+                "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17511/anexo-9-medios-de-transporte-2"
+              },
+              {
+                "id": 17510,
+                "titulo": "ANEXO 8 MODOS DE TRANSPORTE",
+                "ext": "xls",
+                "size_bytes": 13824,
+                "size_human": "13.50 KB",
+                "fecha": "14-11-2017",
+                "fecha_actualizado": "14-11-2017",
+                "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17510/anexo-8-modos-de-transporte-2"
+              },
+              {
+                "id": 17509,
+                "titulo": "ANEXO 7 RESPONSABLE DEL MENSAJE",
+                "ext": "xls",
+                "size_bytes": 13824,
+                "size_human": "13.50 KB",
+                "fecha": "14-11-2017",
+                "fecha_actualizado": "14-11-2017",
+                "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17509/anexo-7-responsable-del-mensaje-2"
+              },
+              {
+                "id": 17508,
+                "titulo": "ANEXO 6 CALIFICADORES DE REFERENCIA",
+                "ext": "xls",
+                "size_bytes": 13824,
+                "size_human": "13.50 KB",
+                "fecha": "14-11-2017",
+                "fecha_actualizado": "14-11-2017",
+                "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17508/anexo-6-calificadores-de-referencia-2"
+              },
+              {
+                "id": 17506,
+                "titulo": "ANEXO 5 FUNCION DEL MENSAJE",
+                "ext": "xls",
+                "size_bytes": 13824,
+                "size_human": "13.50 KB",
+                "fecha": "14-11-2017",
+                "fecha_actualizado": "14-11-2017",
+                "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17506/anexo-5-funcion-del-mensaje-2"
+              },
+              {
+                "id": 17507,
+                "titulo": "ANEXO 4 CODIGOS DEL NOMBRE DEL MENSAJE",
+                "ext": "xls",
+                "size_bytes": 13824,
+                "size_human": "13.50 KB",
+                "fecha": "14-11-2017",
+                "fecha_actualizado": "14-11-2017",
+                "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17507/anexo-4-codigos-del-nombre-del-mensaje-2"
+              },
+              {
+                "id": 17504,
+                "titulo": "ANEXO 2 GLN DE ADUANAS DE GUATEMALA",
+                "ext": "xls",
+                "size_bytes": 32768,
+                "size_human": "32.00 KB",
+                "fecha": "14-11-2017",
+                "fecha_actualizado": "14-11-2017",
+                "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17504/anexo-2-gln-de-aduanas-de-guatemala-2"
+              },
+              {
+                "id": 17505,
+                "titulo": "ANEXO 3 TIPO DE MENSAJE",
+                "ext": "xls",
+                "size_bytes": 13824,
+                "size_human": "13.50 KB",
+                "fecha": "14-11-2017",
+                "fecha_actualizado": "14-11-2017",
+                "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17505/anexo-3-tipo-de-mensaje-2"
+              },
+              {
+                "id": 17502,
+                "titulo": "RESUMEN SEGMENTOS CUSCAR - 20170926",
+                "ext": "docx",
+                "size_bytes": 30750,
+                "size_human": "30.03 KB",
+                "fecha": "14-11-2017",
+                "fecha_actualizado": "14-11-2017",
+                "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17502/resumen-segmentos-cuscar-20170926"
+              },
+              {
+                "id": 17503,
+                "titulo": "ANEXO 1 GLN DE EMPRESAS TRANSMISORAS",
+                "ext": "xls",
+                "size_bytes": 18432,
+                "size_human": "18.00 KB",
+                "fecha": "14-11-2017",
+                "fecha_actualizado": "14-11-2017",
+                "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17503/anexo-1-gln-de-empresas-transmisoras-2"
+              },
+              {
+                "id": 17500,
+                "titulo": "Registro de Codigos Internos Manifiesto Aereo",
+                "ext": "xls",
+                "size_bytes": 14848,
+                "size_human": "14.50 KB",
+                "fecha": "14-11-2017",
+                "fecha_actualizado": "14-11-2017",
+                "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17500/registro-de-codigos-internos-manifiesto-aereo"
+              },
+              {
+                "id": 17501,
+                "titulo": "Mercancias peligrosas",
+                "ext": "xls",
+                "size_bytes": 259072,
+                "size_human": "253.00 KB",
+                "fecha": "14-11-2017",
+                "fecha_actualizado": "14-11-2017",
+                "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17501/mercancias-peligrosas"
+              },
+              {
+                "id": 17499,
+                "titulo": "GUIA CUSCAR - 20170926",
+                "ext": "docx",
+                "size_bytes": 192611,
+                "size_human": "188.10 KB",
+                "fecha": "14-11-2017",
+                "fecha_actualizado": "14-11-2017",
+                "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17499/guia-cuscar-20170926"
+              },
+              {
+                "id": 17498,
+                "titulo": "GLN Transmisores-Manifiestos al 17-03-2015",
+                "ext": "xlsx",
+                "size_bytes": 93472,
+                "size_human": "91.28 KB",
+                "fecha": "14-11-2017",
+                "fecha_actualizado": "14-11-2017",
+                "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17498/gln-transmisores-manifiestos-al-17-03-2015"
+              },
+              {
+                "id": 17496,
+                "titulo": "Catalogo de errores ACTUALIZADO",
+                "ext": "xls",
+                "size_bytes": 26624,
+                "size_human": "26.00 KB",
+                "fecha": "14-11-2017",
+                "fecha_actualizado": "14-11-2017",
+                "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17496/catalogo-de-errores-actualizado"
+              },
+              {
+                "id": 17497,
+                "titulo": "GLN NAVIERAS Y PUERTOS 240103",
+                "ext": "xls",
+                "size_bytes": 16896,
+                "size_human": "16.50 KB",
+                "fecha": "14-11-2017",
+                "fecha_actualizado": "14-11-2017",
+                "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17497/gln-navieras-y-puertos-240103"
+              },
+              {
+                "id": 17494,
+                "titulo": "ANEXO 38 TIPO DE MOVIMIENTO",
+                "ext": "xls",
+                "size_bytes": 14848,
+                "size_human": "14.50 KB",
+                "fecha": "14-11-2017",
+                "fecha_actualizado": "14-11-2017",
+                "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17494/anexo-38-tipo-de-movimiento-2"
+              },
+              {
+                "id": 17495,
+                "titulo": "Catalogo de Codigos de Mercancias 24-06-2005 de Entrega Rapida o Courier FINAL",
+                "ext": "xls",
+                "size_bytes": 94720,
+                "size_human": "92.50 KB",
+                "fecha": "14-11-2017",
+                "fecha_actualizado": "14-11-2017",
+                "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17495/catalogo-de-codigos-de-mercancias-24-06-2005-de-entrega-rapida-o-courier-final"
+              },
+              {
+                "id": 17492,
+                "titulo": "ANEXO 37 CLASIFICACION ARANCELARIA FINAL",
+                "ext": "xls",
+                "size_bytes": 94720,
+                "size_human": "92.50 KB",
+                "fecha": "14-11-2017",
+                "fecha_actualizado": "14-11-2017",
+                "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17492/anexo-37-clasificacion-arancelaria-final"
+              },
+              {
+                "id": 17493,
+                "titulo": "ANEXO 36 INSTRUCCIONES DE MARCADO",
+                "ext": "xls",
+                "size_bytes": 18432,
+                "size_human": "18.00 KB",
+                "fecha": "14-11-2017",
+                "fecha_actualizado": "14-11-2017",
+                "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17493/anexo-36-instrucciones-de-marcado-2"
+              },
+              {
+                "id": 17490,
+                "titulo": "ANEXO 32 ENTIDADES REGULADORAS DE MERCANCIAS PELIGROSAS",
+                "ext": "xls",
+                "size_bytes": 13824,
+                "size_human": "13.50 KB",
+                "fecha": "14-11-2017",
+                "fecha_actualizado": "14-11-2017",
+                "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17490/anexo-32-entidades-reguladoras-de-mercancias-peligrosas-2"
+              },
+              {
+                "id": 17491,
+                "titulo": "ANEXO 31 COMMODITIES",
+                "ext": "xls",
+                "size_bytes": 23552,
+                "size_human": "23.00 KB",
+                "fecha": "14-11-2017",
+                "fecha_actualizado": "14-11-2017",
+                "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17491/anexo-31-commodities-2"
+              },
+              {
+                "id": 17489,
+                "titulo": "ANEXO 30 IDENTIFICADOR GENERICO DE LA CARGA",
+                "ext": "xls",
+                "size_bytes": 13824,
+                "size_human": "13.50 KB",
+                "fecha": "14-11-2017",
+                "fecha_actualizado": "14-11-2017",
+                "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17489/anexo-30-identificador-generico-de-la-carga-2"
+              },
+              {
+                "id": 17488,
+                "titulo": "ANEXO 29 TIPO DE PAQUETES",
+                "ext": "xls",
+                "size_bytes": 41984,
+                "size_human": "41.00 KB",
+                "fecha": "14-11-2017",
+                "fecha_actualizado": "14-11-2017",
+                "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17488/anexo-29-tipo-de-paquetes-2"
+              },
+              {
+                "id": 17486,
+                "titulo": "ANEXO 27 NATURALEZA DE LA CARGA",
+                "ext": "xls",
+                "size_bytes": 13824,
+                "size_human": "13.50 KB",
+                "fecha": "14-11-2017",
+                "fecha_actualizado": "14-11-2017",
+                "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17486/anexo-27-naturaleza-de-la-carga-2"
+              },
+              {
+                "id": 17487,
+                "titulo": "ANEXO 28 TIPO DE DOCUMENTO DE IDENTIFICACION",
+                "ext": "xls",
+                "size_bytes": 13824,
+                "size_human": "13.50 KB",
+                "fecha": "14-11-2017",
+                "fecha_actualizado": "14-11-2017",
+                "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17487/anexo-28-tipo-de-documento-de-identificacion-2"
+              },
+              {
+                "id": 17484,
+                "titulo": "ANEXO 26 CONDICION DE CONTRATO DE TRANSPORTE",
+                "ext": "xls",
+                "size_bytes": 13824,
+                "size_human": "13.50 KB",
+                "fecha": "14-11-2017",
+                "fecha_actualizado": "14-11-2017",
+                "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17484/anexo-26-condicion-de-contrato-de-transporte-2"
+              },
+              {
+                "id": 17485,
+                "titulo": "ANEXO 25 TIPO DE DESPACHO",
+                "ext": "xls",
+                "size_bytes": 13824,
+                "size_human": "13.50 KB",
+                "fecha": "14-11-2017",
+                "fecha_actualizado": "14-11-2017",
+                "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17485/anexo-25-tipo-de-despacho-2"
+              },
+              {
+                "id": 17482,
+                "titulo": "ANEXO 23 GLN DEPOSITOS TEMPORALES",
+                "ext": "xls",
+                "size_bytes": 26112,
+                "size_human": "25.50 KB",
+                "fecha": "14-11-2017",
+                "fecha_actualizado": "14-11-2017",
+                "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17482/anexo-23-gln-depositos-temporales-3"
+              },
+              {
+                "id": 17483,
+                "titulo": "ANEXO 24 TIPO DE OPERACION",
+                "ext": "xls",
+                "size_bytes": 13824,
+                "size_human": "13.50 KB",
+                "fecha": "14-11-2017",
+                "fecha_actualizado": "14-11-2017",
+                "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17483/anexo-24-tipo-de-operacion-2"
+              },
+              {
+                "id": 17481,
+                "titulo": "ANEXO 22 MONEDAS",
+                "ext": "xls",
+                "size_bytes": 37888,
+                "size_human": "37.00 KB",
+                "fecha": "14-11-2017",
+                "fecha_actualizado": "14-11-2017",
+                "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17481/anexo-22-monedas"
+              },
+              {
+                "id": 17478,
+                "titulo": "ANEXO 21 TIPOS DE DOCUMENTOS DE TRANSPORTE",
+                "ext": "xls",
+                "size_bytes": 14336,
+                "size_human": "14.00 KB",
+                "fecha": "14-11-2017",
+                "fecha_actualizado": "14-11-2017",
+                "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17478/anexo-21-tipos-de-documentos-de-transporte-2"
+              },
+              {
+                "id": 17479,
+                "titulo": "ANEXO 20 EMISOR DEL PRECINTO",
+                "ext": "xls",
+                "size_bytes": 13824,
+                "size_human": "13.50 KB",
+                "fecha": "14-11-2017",
+                "fecha_actualizado": "14-11-2017",
+                "url": "https://portal.sat.gob.gt/portal/descarga/5032/cuscar/17479/anexo-20-emisor-del-precinto-2"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "marchamo-electronico": {
+      "slug": "marchamo-electronico",
+      "url": "https://portal.sat.gob.gt/portal/marchamo-electronico/",
+      "url_base": "https://portal.sat.gob.gt/portal/marchamo-electronico/",
+      "ancla_fragmento": "",
+      "arquetipo_matriz": "TIPO-4",
+      "criterio_arquetipo": "Directorio oficial, tabla de valores o especificación técnica aduanera (TIPO-4).",
+      "ids_sat_ges": [
+        "SAT-GES-0473"
+      ],
+      "niveles_2": [
+        "Auxiliares de la Función Pública Aduanera (AFPA)"
+      ],
+      "niveles_3": [
+        "Transportistas Aduaneros"
+      ],
+      "titulos_excel": [
+        "Especificaciones y Uso del Marchamo Electrónico Aduanero"
+      ],
+      "descripciones_excel": [
+        "Guía técnica y normativa para la colocación, monitoreo satelital GPS y desinstalación del precinto electrónico en unidades de carga."
+      ],
+      "bases_legales_excel": [
+        "CAUCA IV (Arts. 18 al 28), RECAUCA IV (Tránsito Aduanero Internacional Terrestre) y Ley de Aduanas."
+      ],
+      "observaciones_excel": [],
+      "notas_extra_col24": [],
+      "http_status": 200,
+      "origen_extraccion": "https://portal.sat.gob.gt/portal/marchamo-electronico/",
+      "fuente_viva": {
+        "tipo_fuente": "wpbakery_page",
+        "titulo_fuente": "Marchamo Electrónico",
+        "headings": [
+          {
+            "tag": "h1",
+            "texto": "Marchamo Electrónico"
+          }
+        ],
+        "correos_cf_decodificados": [
+          "SAC.gt@yantarnisecurity.com",
+          "Yanlock@yantarnisecurity.com",
+          "marchamoelectronico@grupodisatel.com",
+          "marchamoselectronicos@deltanueve.com",
+          "serviciomarchamoelectronico@sat.gob.gt"
+        ],
+        "parrafos_intro": [
+          "Preguntas frecuentes de marchamo electrónico",
+          "Infografía del Proceso de Solicitud, Colocación y Funcionamiento del Marchamo Electrónico",
+          "Inventario de áreas de activación y desactivación de marchamo electrónico en recintos aduaneros",
+          "“Trifoliar con el resumen de los requisitos”.",
+          "Para consultas relacionadas al marchamo electrónico, favor de comunicarse al correo electrónico serviciomarchamoelectronico@sat.gob.gt o al teléfono (502) 23297070 extensión 1338 y 1390."
+        ],
+        "listas_intro": [
+          "Gestiones Aduaneras",
+          "Procedimientos de la Intendencia de Aduanas",
+          "Requisitos de Aduanas",
+          "Aduana Sin Papeles",
+          "Invitación Pública para entidades interesadas en prestar el servicio de Marchamo Electrónico.",
+          "Resolución de Superintendencia Número SAT-DSI-871-2017 , Puesta en Funcionamiento y Control del Marchamo Electrónico para los Sujetos Obligados en el Despacho de los Tránsitos Aduaneros Internos.",
+          "Resolución de Superintendencia Número SAT-DSI-241-2018 , Creación y Regulación de la Junta de Calificación Técnica, para Evaluar los Marchamos Electrónicos, sus Sistemas y Componentes Tecnológicos de las Entidades Interesadas en Prestar el Servicio de Marchamo Electrónico.",
+          "Resolución de Intendente de Aduanas Número SAT-IAD-06-2018 , Disposiciones Administrativas que definen las Fases de Implementación del Marchamo Electrónico.",
+          "Resolución de Intendente de Aduanas Número SAT-IAD-02-2019 , Disposiciones Relativas que Establecen las Especificaciones Generales y Técnicas que deberán cumplir los Marchamos Electrónicos, sus Sistemas y Componentes Tecnológicos y Obligaciones de las Entidades Interesadas y las que están Constituidas como Entidades Prestadoras del Servicio de Marchamo Electrónico -EPSME-.",
+          "Resolución De Superintendencia Número SAT-DSI-1917-2023 . Reformas a la Resolución De Superintendencia Número SAT-DSI-241-2018, creación y regulación de la junta de calificación técnica, para evaluar los marchamos electrónicos, sus sistemas y componentes tecnológicos de las entidades interesadas en prestar el servicio de Marchamo Electrónico.",
+          "Procedimiento de Calificación y Autorización de Entidades Prestadoras del Servicio de Marchamo Electrónico -EPSME-, PR-IAD/DNO-ADU-AYR-10, el cual se puede consultar en el siguiente link: https://portal.sat.gob.gt/portal/manual-de-procedimientos-de-la-intendencia-de-aduanas/",
+          "Estadísticas de Tránsitos Aduaneros Internos de los años 2016 al 2018: Estadísticas de unidades de transporte consignadas en regímenes 150-DA,150-DX, 150-FA, 150-ZA, 150-ZD, 154-ZI y 154-ZX Estadísticas de unidades de transporte consignadas en régimen 24-TO Estadísticas de unidades de transporte consignadas en regímenes 154-ZE, 154-ZR y 157-DR Estadísticas de unidades de transporte consignadas en regímenes 24-DT, 24-DZ y 24-ZT",
+          "Estadísticas de unidades de transporte consignadas en regímenes 150-DA,150-DX, 150-FA, 150-ZA, 150-ZD, 154-ZI y 154-ZX",
+          "Estadísticas de unidades de transporte consignadas en régimen 24-TO",
+          "Estadísticas de unidades de transporte consignadas en regímenes 154-ZE, 154-ZR y 157-DR",
+          "Estadísticas de unidades de transporte consignadas en regímenes 24-DT, 24-DZ y 24-ZT",
+          "Estadística de Tránsitos Aduaneros Internos del año 2020",
+          "Estadística de Tránsitos Aduaneros Internos del año 2021",
+          "Estadística de Tránsitos Aduaneros Internos del año 2022",
+          "Estadística de Tránsitos Aduaneros Internos del año 2023",
+          "Estadística de Tránsitos Aduaneros Internos del año 2024",
+          "Estadística de Tránsitos Aduaneros Internos del año 2025"
+        ],
+        "tarjetas_fuente": [],
+        "tablas_generales": [
+          {
+            "filas": [
+              {
+                "celdas": [
+                  "Entidades Prestadoras del Servicio de Marchamo Electrónico -EPSME- Autorizadas:"
+                ],
+                "links": []
+              },
+              {
+                "celdas": [
+                  "No.",
+                  "EPSME",
+                  "Dirección",
+                  "Contacto",
+                  "Resolución N°",
+                  "Fecha"
+                ],
+                "links": []
+              },
+              {
+                "celdas": [
+                  "1",
+                  "Corporación DISATEL, Sociedad Anónima www.marchamoelectronicogt.com www.grupodisatel.com",
+                  "21 Avenida 34-96 zona 12, Ciudad de Guatemala",
+                  "Teléfono: (502) 2427-3415 marchamoelectronico@grupodisatel.com WhatsApp +502 5922-0437 / +502 5495-8333",
+                  "R-2019-04-01-013703",
+                  "26/12/2019"
+                ],
+                "links": [
+                  {
+                    "texto": "www.marchamoelectronicogt.com",
+                    "url": "http://www.marchamoelectronicogt.com"
+                  },
+                  {
+                    "texto": "www.grupodisatel.com",
+                    "url": "http://www.grupodisatel.com"
+                  },
+                  {
+                    "texto": "marchamoelectronico@grupodisatel.com",
+                    "url": "mailto:marchamoelectronico@grupodisatel.com"
+                  },
+                  {
+                    "texto": "+502 5922-0437",
+                    "url": "https://wa.me/50259220437"
+                  },
+                  {
+                    "texto": "+502 5495-8333",
+                    "url": "https://wa.me/50254958333"
+                  }
+                ]
+              },
+              {
+                "celdas": [
+                  "2",
+                  "Corporación YANTARNI Sociedad Anónima www.yantarnisecurity.com",
+                  "1ª. Avenida, 44-73 Zona 12, Colonia Monte María 1, Villa Nueva, Guatemala.",
+                  "Teléfono: PBX +502 2412-9898 Yanlock@yantarnisecurity.com SAC.gt@yantarnisecurity.com WhatsApp +502 2412-9898",
+                  "R-2021-04-01-010890",
+                  "12/11/2021"
+                ],
+                "links": [
+                  {
+                    "texto": "www.yantarnisecurity.com",
+                    "url": "http://www.yantarnisecurity.com"
+                  },
+                  {
+                    "texto": "Yanlock@yantarnisecurity.com",
+                    "url": "mailto:Yanlock@yantarnisecurity.com"
+                  },
+                  {
+                    "texto": "SAC.gt@yantarnisecurity.com",
+                    "url": "mailto:SAC.gt@yantarnisecurity.com"
+                  },
+                  {
+                    "texto": "+502 2412-9898",
+                    "url": "https://wa.me/50224129898"
+                  }
+                ]
+              },
+              {
+                "celdas": [
+                  "3",
+                  "Organización de Sistemas de Seguridad Integral e Investigaciones, S.A. www.deltanueve.com.gt",
+                  "5ª Calle 3-74 Zona 9 Guatemala, Guatemala",
+                  "marchamoselectronicos@deltanueve.com Teléfono: 2506-9999 WhatsApp +502 5016-4335",
+                  "R-2023-04-01-008139",
+                  "29/09/2023"
+                ],
+                "links": [
+                  {
+                    "texto": "www.deltanueve.com.gt",
+                    "url": "http://www.deltanueve.com.gt"
+                  },
+                  {
+                    "texto": "marchamoselectronicos@deltanueve.com",
+                    "url": "mailto:marchamoselectronicos@deltanueve.com"
+                  },
+                  {
+                    "texto": "+502 5016-4335",
+                    "url": "https://wa.me/50250164335"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "acordeones": [],
+        "videos": [],
+        "iframes_aplicativos": [],
+        "links_fuera_acordeon": [
+          {
+            "texto": "Preguntas frecuentes de marchamo electrónico",
+            "url": "https://portal.sat.gob.gt/portal/preguntas-frecuentes/temas-aduaneros/#1712605945521-99fc8631-e7ff"
+          },
+          {
+            "texto": "Infografía del Proceso de Solicitud, Colocación y Funcionamiento del Marchamo Electrónico",
+            "url": "https://portal.sat.gob.gt/portal/descarga/7745/marchamo-electronico/45795/infografia-marchamo-electronico.pdf"
+          },
+          {
+            "texto": "Inventario de áreas de activación y desactivación de marchamo electrónico en recintos aduaneros",
+            "url": "https://portal.sat.gob.gt/portal/descarga/7745/marchamo-electronico/92789/inventario-de-areas-de-activacion-y-desactivacion-de-marchamo-electronico-en-recintos-aduaneros-04022026"
+          },
+          {
+            "texto": "Gestiones Aduaneras",
+            "url": "https://portal.sat.gob.gt/portal/procedimientos-aduanas/"
+          },
+          {
+            "texto": "Procedimientos de la Intendencia de Aduanas",
+            "url": "https://portal.sat.gob.gt/portal/manual-de-procedimientos-de-la-intendencia-de-aduanas"
+          },
+          {
+            "texto": "Requisitos de Aduanas",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-aduanas/"
+          },
+          {
+            "texto": "Aduana Sin Papeles",
+            "url": "https://portal.sat.gob.gt/portal/aduana-sin-papeles/"
+          },
+          {
+            "texto": "www.marchamoelectronicogt.com",
+            "url": "http://www.marchamoelectronicogt.com"
+          },
+          {
+            "texto": "www.grupodisatel.com",
+            "url": "http://www.grupodisatel.com"
+          },
+          {
+            "texto": "marchamoelectronico@grupodisatel.com",
+            "url": "mailto:marchamoelectronico@grupodisatel.com"
+          },
+          {
+            "texto": "+502 5922-0437",
+            "url": "https://wa.me/50259220437"
+          },
+          {
+            "texto": "+502 5495-8333",
+            "url": "https://wa.me/50254958333"
+          },
+          {
+            "texto": "www.yantarnisecurity.com",
+            "url": "http://www.yantarnisecurity.com"
+          },
+          {
+            "texto": "Yanlock@yantarnisecurity.com",
+            "url": "mailto:Yanlock@yantarnisecurity.com"
+          },
+          {
+            "texto": "SAC.gt@yantarnisecurity.com",
+            "url": "mailto:SAC.gt@yantarnisecurity.com"
+          },
+          {
+            "texto": "+502 2412-9898",
+            "url": "https://wa.me/50224129898"
+          },
+          {
+            "texto": "www.deltanueve.com.gt",
+            "url": "http://www.deltanueve.com.gt"
+          },
+          {
+            "texto": "marchamoselectronicos@deltanueve.com",
+            "url": "mailto:marchamoselectronicos@deltanueve.com"
+          },
+          {
+            "texto": "+502 5016-4335",
+            "url": "https://wa.me/50250164335"
+          },
+          {
+            "texto": "“Trifoliar con el resumen de los requisitos”.",
+            "url": "https://portal.sat.gob.gt/portal/descarga/7745/marchamo-electronico/45821/trifoliar-con-el-resumen-de-los-requisitos.pdf"
+          },
+          {
+            "texto": "Marchamo Electrónico.",
+            "url": "https://portal.sat.gob.gt/portal/wp-content/uploads/2018/07/Invitación-Pública-para-entidades-interesadas-en-prestar-el-servicio-de-marchamo-electrónico.png"
+          },
+          {
+            "texto": "SAT-DSI-871-2017",
+            "url": "https://portal.sat.gob.gt/portal/descarga/7745/marchamo-electronico/27552/resolucion-de-superintendencia-numero-sat-dsi-871-2017.pdf"
+          },
+          {
+            "texto": "SAT-DSI-241-2018",
+            "url": "https://portal.sat.gob.gt/portal/descarga/7745/marchamo-electronico/27553/resolucion-de-superintendencia-numero-sat-dsi-241-2018.pdf"
+          },
+          {
+            "texto": "SAT-IAD-06-2018",
+            "url": "https://portal.sat.gob.gt/portal/descarga/7745/marchamo-electronico/29683/resolucion-numero-sat-iad-06-2018-fases-de-implementacion-diario-oficial.pdf"
+          },
+          {
+            "texto": "SAT-IAD-02-2019",
+            "url": "https://portal.sat.gob.gt/portal/descarga/7745/marchamo-electronico/37567/resolucion-numero-sat-iad-02-2019.pdf"
+          },
+          {
+            "texto": "SAT-DSI-1917-2023",
+            "url": "https://portal.sat.gob.gt/portal/descarga/7745/marchamo-electronico/73855/resolucion-de-superintendencia-numero-sat-dsi-1917-2023-reformas-a-la-resolucion-de-superintendencia-numero-sat-dsi-241-2018-creacion-y-regulacion-de-la-junta-de-calificacion-tecnica-para-evaluar-l.pdf"
+          },
+          {
+            "texto": "https://portal.sat.gob.gt/portal/manual-de-procedimientos-de-la-intendencia-de-aduanas/",
+            "url": "https://portal.sat.gob.gt/portal/manual-de-procedimientos-de-la-intendencia-de-aduanas/"
+          },
+          {
+            "texto": "150-DA,150-DX, 150-FA, 150-ZA, 150-ZD, 154-ZI y 154-ZX",
+            "url": "https://portal.sat.gob.gt/portal/descarga/7745/marchamo-electronico/37458/estadisticas-de-unidades-de-transporte-consignadas-en-regimenes-150-da-150-dx-150-fa-150-za-150-zd-154-zi-y-154-zx.pdf"
+          },
+          {
+            "texto": "24-TO",
+            "url": "https://portal.sat.gob.gt/portal/descarga/7745/marchamo-electronico/37457/estadisticas-de-unidades-de-transporte-consignadas-en-regimen-24-to-2.pdf"
+          },
+          {
+            "texto": "154-ZE, 154-ZR y 157-DR",
+            "url": "https://portal.sat.gob.gt/portal/descarga/7745/marchamo-electronico/37460/estadisticas-de-unidades-de-transporte-consignadas-en-regimenes-154-ze-154-zr-y-157-dr-2.pdf"
+          },
+          {
+            "texto": "24-DT, 24-DZ y 24-ZT",
+            "url": "https://portal.sat.gob.gt/portal/descarga/7745/marchamo-electronico/37459/estadisticas-de-unidades-de-transporte-consignadas-en-regimenes-24-dt-24-dz-y-24-zt-2.pdf"
+          },
+          {
+            "texto": "Estadística de Tránsitos Aduaneros Internos del año 2020",
+            "url": "https://portal.sat.gob.gt/portal/descarga/7745/marchamo-electronico/51974/cantidad-de-transitos-internos-en-el-ano-2020.pdf"
+          },
+          {
+            "texto": "Estadística de Tránsitos Aduaneros Internos del año 2021",
+            "url": "https://portal.sat.gob.gt/portal/descarga/7745/marchamo-electronico/62156/cantidad-de-transitos-internos-en-el-ano-2021.pdf"
+          },
+          {
+            "texto": "Estadística de Tránsitos Aduaneros Internos del año 2022",
+            "url": "https://portal.sat.gob.gt/portal/descarga/7745/marchamo-electronico/68568/transitos-aduaneros-2022.pdf"
+          },
+          {
+            "texto": "Estadística de Tránsitos Aduaneros Internos del año 2023",
+            "url": "https://portal.sat.gob.gt/portal/descarga/7745/marchamo-electronico/77950/estadisticas-transitos-aduaneros-internos-ano-2023.pdf"
+          },
+          {
+            "texto": "Estadística de Tránsitos Aduaneros Internos del año 2024",
+            "url": "https://portal.sat.gob.gt/portal/descarga/7745/marchamo-electronico/89104/estadistica-de-transitos-aduaneros-internos-del-ano-2024.pdf"
+          },
+          {
+            "texto": "Estadística de Tránsitos Aduaneros Internos del año 2025",
+            "url": "https://portal.sat.gob.gt/portal/descarga/7745/marchamo-electronico/92791/estadistica-de-transitos-aduaneros-internos-del-ano-2025"
+          },
+          {
+            "texto": "serviciomarchamoelectronico@sat.gob.gt",
+            "url": "mailto:serviciomarchamoelectronico@sat.gob.gt"
+          }
+        ],
+        "links_planos": [
+          {
+            "texto": "www.marchamoelectronicogt.com",
+            "url": "http://www.marchamoelectronicogt.com"
+          },
+          {
+            "texto": "www.grupodisatel.com",
+            "url": "http://www.grupodisatel.com"
+          },
+          {
+            "texto": "marchamoelectronico@grupodisatel.com",
+            "url": "mailto:marchamoelectronico@grupodisatel.com"
+          },
+          {
+            "texto": "+502 5922-0437",
+            "url": "https://wa.me/50259220437"
+          },
+          {
+            "texto": "+502 5495-8333",
+            "url": "https://wa.me/50254958333"
+          },
+          {
+            "texto": "www.yantarnisecurity.com",
+            "url": "http://www.yantarnisecurity.com"
+          },
+          {
+            "texto": "Yanlock@yantarnisecurity.com",
+            "url": "mailto:Yanlock@yantarnisecurity.com"
+          },
+          {
+            "texto": "SAC.gt@yantarnisecurity.com",
+            "url": "mailto:SAC.gt@yantarnisecurity.com"
+          },
+          {
+            "texto": "+502 2412-9898",
+            "url": "https://wa.me/50224129898"
+          },
+          {
+            "texto": "www.deltanueve.com.gt",
+            "url": "http://www.deltanueve.com.gt"
+          },
+          {
+            "texto": "marchamoselectronicos@deltanueve.com",
+            "url": "mailto:marchamoselectronicos@deltanueve.com"
+          },
+          {
+            "texto": "+502 5016-4335",
+            "url": "https://wa.me/50250164335"
+          },
+          {
+            "texto": "Preguntas frecuentes de marchamo electrónico",
+            "url": "https://portal.sat.gob.gt/portal/preguntas-frecuentes/temas-aduaneros/#1712605945521-99fc8631-e7ff"
+          },
+          {
+            "texto": "Infografía del Proceso de Solicitud, Colocación y Funcionamiento del Marchamo Electrónico",
+            "url": "https://portal.sat.gob.gt/portal/descarga/7745/marchamo-electronico/45795/infografia-marchamo-electronico.pdf"
+          },
+          {
+            "texto": "Inventario de áreas de activación y desactivación de marchamo electrónico en recintos aduaneros",
+            "url": "https://portal.sat.gob.gt/portal/descarga/7745/marchamo-electronico/92789/inventario-de-areas-de-activacion-y-desactivacion-de-marchamo-electronico-en-recintos-aduaneros-04022026"
+          },
+          {
+            "texto": "Gestiones Aduaneras",
+            "url": "https://portal.sat.gob.gt/portal/procedimientos-aduanas/"
+          },
+          {
+            "texto": "Procedimientos de la Intendencia de Aduanas",
+            "url": "https://portal.sat.gob.gt/portal/manual-de-procedimientos-de-la-intendencia-de-aduanas"
+          },
+          {
+            "texto": "Requisitos de Aduanas",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-aduanas/"
+          },
+          {
+            "texto": "Aduana Sin Papeles",
+            "url": "https://portal.sat.gob.gt/portal/aduana-sin-papeles/"
+          },
+          {
+            "texto": "“Trifoliar con el resumen de los requisitos”.",
+            "url": "https://portal.sat.gob.gt/portal/descarga/7745/marchamo-electronico/45821/trifoliar-con-el-resumen-de-los-requisitos.pdf"
+          },
+          {
+            "texto": "Marchamo Electrónico.",
+            "url": "https://portal.sat.gob.gt/portal/wp-content/uploads/2018/07/Invitación-Pública-para-entidades-interesadas-en-prestar-el-servicio-de-marchamo-electrónico.png"
+          },
+          {
+            "texto": "SAT-DSI-871-2017",
+            "url": "https://portal.sat.gob.gt/portal/descarga/7745/marchamo-electronico/27552/resolucion-de-superintendencia-numero-sat-dsi-871-2017.pdf"
+          },
+          {
+            "texto": "SAT-DSI-241-2018",
+            "url": "https://portal.sat.gob.gt/portal/descarga/7745/marchamo-electronico/27553/resolucion-de-superintendencia-numero-sat-dsi-241-2018.pdf"
+          },
+          {
+            "texto": "SAT-IAD-06-2018",
+            "url": "https://portal.sat.gob.gt/portal/descarga/7745/marchamo-electronico/29683/resolucion-numero-sat-iad-06-2018-fases-de-implementacion-diario-oficial.pdf"
+          },
+          {
+            "texto": "SAT-IAD-02-2019",
+            "url": "https://portal.sat.gob.gt/portal/descarga/7745/marchamo-electronico/37567/resolucion-numero-sat-iad-02-2019.pdf"
+          },
+          {
+            "texto": "SAT-DSI-1917-2023",
+            "url": "https://portal.sat.gob.gt/portal/descarga/7745/marchamo-electronico/73855/resolucion-de-superintendencia-numero-sat-dsi-1917-2023-reformas-a-la-resolucion-de-superintendencia-numero-sat-dsi-241-2018-creacion-y-regulacion-de-la-junta-de-calificacion-tecnica-para-evaluar-l.pdf"
+          },
+          {
+            "texto": "https://portal.sat.gob.gt/portal/manual-de-procedimientos-de-la-intendencia-de-aduanas/",
+            "url": "https://portal.sat.gob.gt/portal/manual-de-procedimientos-de-la-intendencia-de-aduanas/"
+          },
+          {
+            "texto": "150-DA,150-DX, 150-FA, 150-ZA, 150-ZD, 154-ZI y 154-ZX",
+            "url": "https://portal.sat.gob.gt/portal/descarga/7745/marchamo-electronico/37458/estadisticas-de-unidades-de-transporte-consignadas-en-regimenes-150-da-150-dx-150-fa-150-za-150-zd-154-zi-y-154-zx.pdf"
+          },
+          {
+            "texto": "24-TO",
+            "url": "https://portal.sat.gob.gt/portal/descarga/7745/marchamo-electronico/37457/estadisticas-de-unidades-de-transporte-consignadas-en-regimen-24-to-2.pdf"
+          },
+          {
+            "texto": "154-ZE, 154-ZR y 157-DR",
+            "url": "https://portal.sat.gob.gt/portal/descarga/7745/marchamo-electronico/37460/estadisticas-de-unidades-de-transporte-consignadas-en-regimenes-154-ze-154-zr-y-157-dr-2.pdf"
+          },
+          {
+            "texto": "24-DT, 24-DZ y 24-ZT",
+            "url": "https://portal.sat.gob.gt/portal/descarga/7745/marchamo-electronico/37459/estadisticas-de-unidades-de-transporte-consignadas-en-regimenes-24-dt-24-dz-y-24-zt-2.pdf"
+          },
+          {
+            "texto": "Estadística de Tránsitos Aduaneros Internos del año 2020",
+            "url": "https://portal.sat.gob.gt/portal/descarga/7745/marchamo-electronico/51974/cantidad-de-transitos-internos-en-el-ano-2020.pdf"
+          },
+          {
+            "texto": "Estadística de Tránsitos Aduaneros Internos del año 2021",
+            "url": "https://portal.sat.gob.gt/portal/descarga/7745/marchamo-electronico/62156/cantidad-de-transitos-internos-en-el-ano-2021.pdf"
+          },
+          {
+            "texto": "Estadística de Tránsitos Aduaneros Internos del año 2022",
+            "url": "https://portal.sat.gob.gt/portal/descarga/7745/marchamo-electronico/68568/transitos-aduaneros-2022.pdf"
+          },
+          {
+            "texto": "Estadística de Tránsitos Aduaneros Internos del año 2023",
+            "url": "https://portal.sat.gob.gt/portal/descarga/7745/marchamo-electronico/77950/estadisticas-transitos-aduaneros-internos-ano-2023.pdf"
+          },
+          {
+            "texto": "Estadística de Tránsitos Aduaneros Internos del año 2024",
+            "url": "https://portal.sat.gob.gt/portal/descarga/7745/marchamo-electronico/89104/estadistica-de-transitos-aduaneros-internos-del-ano-2024.pdf"
+          },
+          {
+            "texto": "Estadística de Tránsitos Aduaneros Internos del año 2025",
+            "url": "https://portal.sat.gob.gt/portal/descarga/7745/marchamo-electronico/92791/estadistica-de-transitos-aduaneros-internos-del-ano-2025"
+          },
+          {
+            "texto": "serviciomarchamoelectronico@sat.gob.gt",
+            "url": "mailto:serviciomarchamoelectronico@sat.gob.gt"
+          }
+        ]
+      }
+    },
+    "temas-aduaneros--preguntas-frecuentes": {
+      "slug": "temas-aduaneros--preguntas-frecuentes",
+      "url": "https://portal.sat.gob.gt/portal/preguntas-frecuentes/temas-aduaneros/#1712605945521-99fc8631-e7ff",
+      "url_base": "https://portal.sat.gob.gt/portal/preguntas-frecuentes/temas-aduaneros/",
+      "ancla_fragmento": "1712605945521-99fc8631-e7ff",
+      "arquetipo_matriz": "TIPO-6",
+      "criterio_arquetipo": "URL de preguntas frecuentes (/preguntas-frecuentes/).",
+      "ids_sat_ges": [
+        "SAT-GES-0474"
+      ],
+      "niveles_2": [
+        "Auxiliares de la Función Pública Aduanera (AFPA)"
+      ],
+      "niveles_3": [
+        "Transportistas Aduaneros"
+      ],
+      "titulos_excel": [
+        "Preguntas Frecuentes sobre Marchamo Electrónico y Corredores Fiscales"
+      ],
+      "descripciones_excel": [
+        "Respuestas oficiales sobre funcionamiento del marchamo satelital, incidencias técnicas en ruta y puestos de control interinstitucional."
+      ],
+      "bases_legales_excel": [
+        "CAUCA IV (Arts. 18 al 28), RECAUCA IV (Tránsito Aduanero Internacional Terrestre) y Ley de Aduanas."
+      ],
+      "observaciones_excel": [],
+      "notas_extra_col24": [],
+      "http_status": 200,
+      "origen_extraccion": "https://portal.sat.gob.gt/portal/preguntas-frecuentes/temas-aduaneros/",
+      "fuente_viva": {
+        "tipo_fuente": "wpbakery_faq_section",
+        "ancla_objetivo": "1712605945521-99fc8631-e7ff",
+        "titulo_fuente": "Marchamo Electrónico",
+        "correos_cf_decodificados": [],
+        "total_preguntas": 43,
+        "preguntas": [
+          {
+            "panel_id": "1712605945521-99fc8631-e7ff",
+            "pregunta": "¿Qué son los dispositivos de seguridad?",
+            "respuesta_html": "<p>Según el Artículo 96 del Código Aduanero Uniforme Centroamericano (CAUCA), los dispositivos de seguridad son los que se colocan en las unidades de transporte, de acuerdo con las normas de construcción prefijadas, de forma tal que no pueda<br/> extraerse o introducirse ninguna mercancía sin dejar huella de haberse violentado, fracturado o roto.</p><p>Los dispositivos de seguridad pueden ser los siguientes:</p><p>a. Precintos,<br/> b. Marchamos mecánicos,<br/> c. Marchamos electrónicos,<br/> d. Sellos aduaneros.</p>",
+            "links": []
+          },
+          {
+            "panel_id": "1712605945632-039d8bf5-f694",
+            "pregunta": "¿Qué es un marchamo electrónico?",
+            "respuesta_html": "<p>Dispositivo de control reutilizable, con mecanismos de seguridad y de localización para el rastreo satelital, el cual puede ser colocado en las unidades de transporte de mercancías (contenedores, furgones, etc.) o en medios de transporte que se movilicen por sus propios medios, entre otros.</p>",
+            "links": []
+          },
+          {
+            "panel_id": "1712605945745-6d69da1d-87fe",
+            "pregunta": "¿Qué es el Sistema de Monitoreo del marchamo electrónico?",
+            "respuesta_html": "<p>Consiste en las aplicaciones informáticas propias del marchamo electrónico, sistema de monitoreo de la trazabilidad del dispositivo, relacionadas a su funcionamiento, conectividad, mensajería en tiempo real, entre otros.</p>",
+            "links": []
+          },
+          {
+            "panel_id": "1712605945865-3bc4cd1b-cbec",
+            "pregunta": "¿Cómo se identificará el marchamo electrónico?",
+            "respuesta_html": "<p>El marchamo electrónico deberá identificarse mediante letras y números legibles para el usuario, que permitan una rápida y fácil lectura y estará integrado de la forma siguiente:<br/> i. Identificador “EPSME”: 3 caracteres tipo texto; y,<br/> ii. Correlativo: 6 caracteres tipo entero.</p>",
+            "links": []
+          },
+          {
+            "panel_id": "1712605945986-2b4cb778-8ddd",
+            "pregunta": "¿Qué es tránsito aduanero?",
+            "respuesta_html": "<p>Es el régimen bajo el cual las mercancías sujetas a control aduanero son transportadas de una aduana a otra por cualquier vía, con suspensión total de los tributos respectivos.<br/> Las mercancías en tránsito aduanero estarán bajo custodia y responsabilidad del transportista, sin perjuicio de las responsabilidades de terceros.</p>",
+            "links": []
+          },
+          {
+            "panel_id": "1712605946101-7c0807a7-95e9",
+            "pregunta": "¿Qué tipo de tránsitos aduaneros existen?",
+            "respuesta_html": "<p>Los tránsitos aduaneros pueden ser:<br/> i. Internacionales, e<br/> ii. Internos.</p>",
+            "links": []
+          },
+          {
+            "panel_id": "1712605946223-b33e2275-7160",
+            "pregunta": "¿Qué es tránsito aduanero internacional?",
+            "respuesta_html": "<p>Es el Régimen aduanero con arreglo al cual las mercancías son transportadas bajo control aduanero desde una aduana de partida hasta una aduana de destino en una misma operación, en el curso de la cual se cruzan una o más fronteras;</p>",
+            "links": []
+          },
+          {
+            "panel_id": "1712605946339-ce67eb58-c2fe",
+            "pregunta": "¿Qué es tránsito aduanero interno?",
+            "respuesta_html": "<p>Es el régimen bajo el cual las mercancías sujetas a control aduanero son transportadas de una aduana o zona bajo control aduanero o de operación aduanera a otra.</p>",
+            "links": []
+          },
+          {
+            "panel_id": "1712605946456-bb55f9c9-1118",
+            "pregunta": "¿Quién es el transportista aduanero?",
+            "respuesta_html": "<p>El transportista aduanero es el auxiliar encargado de las operaciones y los trámites aduaneros relacionados con la presentación ante el Servicio Aduanero, del medio de transporte y carga, a fin de gestionar su ingreso, tránsito o salida de las mercancías.</p><p>El transportista será responsable directo ante el Servicio Aduanero, por el traslado o transporte de las mercancías objeto de control aduanero.</p>",
+            "links": []
+          },
+          {
+            "panel_id": "1712605946574-400a80c1-a666",
+            "pregunta": "¿Cuál es la ley que establece la obligatoriedad de la utilización del marchamo electrónico?",
+            "respuesta_html": "<p>Es el Decreto Número 14-2013 del Congreso de la República de Guatemala, Ley Nacional de Aduanas, en su Artículo 55.</p>",
+            "links": []
+          },
+          {
+            "panel_id": "1712605946694-b634ee38-fd00",
+            "pregunta": "¿Cuál es el objeto de exigir la utilización del marchamo electrónico?",
+            "respuesta_html": "<p>Según el Decreto Número 14-2013 del Congreso de la República de Guatemala, Ley Nacional de Aduanas, Artículo 55, el objeto de exigir la utilización del marchamo electrónico es asegurar la finalización del tránsito aduanero interno o el arribo del medio de transporte en el que se trasladan mercancías sometidas a los regímenes aduaneros de depósito aduanero, reexportación, zona franca, o traslados de mercancías entre depósitos aduaneros o almacenes fiscales, entre zonas francas, o desde depósitos aduaneros o almacenes fiscales a zonas francas y viceversa o que sean objeto de retorno al exterior del territorio aduanero nacional desde una zona franca o de la Zona Libre de Industria y Comercio Santo Tomás de Castilla, sus agencias y las zonas de desarrollo económico especial públicas de dicha Zona Libre.</p>",
+            "links": []
+          },
+          {
+            "panel_id": "1712605946821-b4e512b4-6c69",
+            "pregunta": "¿Para qué regímenes aduaneros está enfocada la utilización del marchamo electrónico?",
+            "respuesta_html": "<p>Para los tránsitos aduaneros internos, así como para los regímenes aduaneros de depósito aduanero, reexportación, zona franca o traslados de mercancías entre depósitos aduaneros o almacenes fiscales, entre zonas francas, o desde depósitos<br/> aduaneros o almacenes fiscales a zonas francas y viceversa o que sean objeto de retorno al exterior del territorio aduanero nacional desde una zona franca o de ZOLIC y sus agencias y las zonas de desarrollo económico especial públicas de<br/> dicha Zona Libre.</p>",
+            "links": []
+          },
+          {
+            "panel_id": "1712605946950-c4583103-7d6c",
+            "pregunta": "¿Para cuál régimen de tránsito la Intendencia de Aduanas no tiene contemplada la utilización del marchamo electrónico?",
+            "respuesta_html": "<p>Régimen de transito aduanero internacional terrestre.</p>",
+            "links": []
+          },
+          {
+            "panel_id": "1712605947079-123c3caf-a205",
+            "pregunta": "¿Quiénes son los sujetos obligados de utilizar el marchamo electrónico?",
+            "respuesta_html": "<p>Los sujetos obligados para la utilización en forma obligatoria del marchamo electrónico son:<br/> a. El transportista aduanero,<br/> b. El importador,<br/> c. El consignatario,<br/> d. Quien comprobare derecho sobre las mercancías</p>",
+            "links": []
+          },
+          {
+            "panel_id": "1712605947204-dfbb717d-52c5",
+            "pregunta": "¿Por qué el marchamo electrónico se considera como un dispositivo reutilizable?",
+            "respuesta_html": "<p>Porque puede utilizarse en más de una operación de tránsito aduanero, pudiéndose reprogramar y recargar para cada viaje.</p>",
+            "links": []
+          },
+          {
+            "panel_id": "1712605947335-9e1a9936-40ac",
+            "pregunta": "¿Cuánto tiempo durará la carga de los marchamos electrónico?",
+            "respuesta_html": "<p>La SAT requiere a las Entidades Prestadoras del Servicio de Marchamo Electrónico que, sus marchamos tengan una duración de batería de al menos ocho días calendario en operación completa y veinte días calendario en operaciones con pausa.</p>",
+            "links": []
+          },
+          {
+            "panel_id": "1712605947461-41f072a4-07c7",
+            "pregunta": "¿Cómo se identifican las empresas particulares que presten el servicio del marchamo electrónico?",
+            "respuesta_html": "<p>Entidades Prestadoras del Servicio de Marchamo Electrónico (EPSME) y su información está publicada en el portal de la SAT para conocimiento general de los usuarios del Servicio Aduanero.</p>",
+            "links": []
+          },
+          {
+            "panel_id": "1712605947588-bf91c53e-9dc1",
+            "pregunta": "¿Existe un límite de entidades prestadoras del servicio del marchamo electrónico?",
+            "respuesta_html": "<p>No existe un límite para la cantidad de Entidades Prestadoras del Servicio de Marchamo Electrónico -EPSME-.</p>",
+            "links": []
+          },
+          {
+            "panel_id": "1712605947716-da00887e-3fce",
+            "pregunta": "¿Cualquier persona jurídica puede realizar su solicitud para ser una EPSME?",
+            "respuesta_html": "<p>Cualquier empresa puede participar en el proceso de calificación y autorización para ser una EPSME, siempre y cuando, cumpla con los requisitos solicitados por el Servicio Aduanero.</p>",
+            "links": []
+          },
+          {
+            "panel_id": "1712605947852-1bfd05e4-d936",
+            "pregunta": "¿Cómo poder contactar a una EPSME?",
+            "respuesta_html": "<p>Al estar autorizadas por el Servicio Aduanero, la información de cada una de las Entidades Prestadoras del Servicio de Marchamo Electrónico es publicada en el Portal SAT.</p>",
+            "links": []
+          },
+          {
+            "panel_id": "1712605948010-b109c484-7333",
+            "pregunta": "¿Existen otros países en donde se utilice el marchamo electrónico en las operaciones aduaneras?",
+            "respuesta_html": "<p>Actualmente existen varios países en América del Sur y en Centroamérica lo tiene implementado Costa Rica.</p>",
+            "links": []
+          },
+          {
+            "panel_id": "1712605948168-8d20fb97-c067",
+            "pregunta": "¿Se utilizará el marchamo electrónico juntamente con el mecánico?",
+            "respuesta_html": "<p>Sí se utilizarán juntamente los dos dispositivos. El marchamo mecánico se utiliza por el Servicio Aduanero como un dispositivo de seguridad, para que no pueda extraerse o introducirse ninguna mercancía sin dejar huella de haberse violentado; mientras que el marchamo electrónico, es un dispositivo de control que proporciona información de su posicionamiento en tiempo real, que permitirá el seguimiento del medio de transporte a través del Centro de Monitoreo del marchamo electrónico.</p>",
+            "links": []
+          },
+          {
+            "panel_id": "1712605948332-b32d1e5f-3fab",
+            "pregunta": "¿Se utilizará un mismo tipo de marchamo electrónico para todos los tránsitos aduaneros, o existen diferentes?",
+            "respuesta_html": "<p>Pueden utilizarse varios tipos de marchamos electrónicos, siempre que cumplan las especificaciones técnicas establecidas por la SAT y que estén autorizados por el Servicio Aduanero.</p>",
+            "links": []
+          },
+          {
+            "panel_id": "1712605948495-c4817592-045c",
+            "pregunta": "¿Cuál es el valor estimado que el usuario del servicio del marchamo electrónico debe pagar por el mismo?",
+            "respuesta_html": "<p>Cada EPSME establecerá el precio conforme al sistema de libre mercado, sin embargo, la SAT velará para que los precios no sean excesivos.</p>",
+            "links": []
+          },
+          {
+            "panel_id": "1712605948635-eb43b65c-76ac",
+            "pregunta": "¿Las EPSME estarán obligadas a unificar los precios de los marchamos electrónicos?",
+            "respuesta_html": "<p>No estarán obligadas, sin embargo, los usuarios pueden seleccionar a la EPSME que les ofrezca el mejor servicio, incluyendo su costo.</p>",
+            "links": []
+          },
+          {
+            "panel_id": "1712605948771-9de1b4d6-107b",
+            "pregunta": "¿Las EPSME deben tener personal en cada una de las zonas bajo control aduanero o de operación aduanera en forma puntual, para realiz ar la colocación y retiro del marchamo electrónico a los medios de transporte?",
+            "respuesta_html": "<p>El personal de las EPSME deberá estar presente de manera anticipada para la colocación y retiro del marchamo electrónico, lo cual se realizará en presencia y autorización de la Autoridad Aduanera.</p>",
+            "links": []
+          },
+          {
+            "panel_id": "1712605948928-72ef9e9d-b4b2",
+            "pregunta": "¿Cómo se identificará el personal de las EPSME?",
+            "respuesta_html": "<p>El personal de cada EPSME, debe estar plenamente identificado con su respectivo carné, y para poder ingresar a las distintas áreas de activación y desactivación del marchamo electrónico deberá contar con la autorización respectiva de los auxiliares de la función pública duanera.</p>",
+            "links": []
+          },
+          {
+            "panel_id": "1712605949094-f21262b1-107e",
+            "pregunta": "¿Existen rutas fiscales autorizadas para el tránsito aduanero interno en los distintos Departamentos de la República de Guatemala?",
+            "respuesta_html": "<p>Las rutas fiscales y los plazos que deben cumplir los transportistas que trasladen mercancías bajo el régimen de tránsito aduanero, están establecidos en el Acuerdo de Superintendente Número SAT-DSI-1253-2022.</p>",
+            "links": []
+          },
+          {
+            "panel_id": "1712609763804-15a118f9-df19",
+            "pregunta": "¿Hay rutas fiscales autorizadas en la ciudad capital?",
+            "respuesta_html": "<p>No existen rutas fiscales en la ciudad capital, solo para los Departamentos de Guatemala.</p>",
+            "links": []
+          },
+          {
+            "panel_id": "1712609795410-07ad5d13-4737",
+            "pregunta": "¿Cuál es la consecuencia de utilizar una ruta fiscal no autorizada?",
+            "respuesta_html": "Se considera como la introducción de mercancías de contrabando, según el Decreto Número 58-90 del Congreso de la República y sus reformas, Ley Contra la Defraudación y el Contrabando Aduaneros, Artículo 5, literal “f” numerales 1 y 2. Artículo 5, literal “f” numerales 1: «El propietario de la mercancía, el consignatario, importador, el transportista o el conductor del vehículo, que realizando un tránsito aduanero declarado y autorizado, de una aduana de entrada a otra aduana de salida, no lo haga por la ruta fiscal o vía autorizada para el efecto por la autoridad aduanera; abandone dicha ruta con el propósito de descargar la mercancía en lugar distinto del destino que declaró; no concluya el tránsito aduanero dentro del plazo fijado en el documento que autorizó dicha operación aduanera; o no se presente para egresar la mercancía en la aduana de salida que declaró al ingresar al territorio nacional. « Artículo 5, literal “f” numerales 2: «El propietario de la mercancía, el consignatario, importador, el transportista o el conductor del vehículo, que realizando un tránsito interno o traslado aduanero declarado y autorizado, hacia y desde zonas francas, almacenes fiscales o depósitos aduaneros, no lo haga por la ruta fiscal o vía autorizada para el efecto por la autoridad aduanera; abandone dicha ruta con el propósito de descargar la mercancía en lugar distinto del destino que declaró; no concluya el tránsito o traslado aduanero, dentro del plazo fijado por el Servicio Aduanero; o no ingrese la mercancía en el almacén fiscal o depósito aduanero, que consignó al ingresar al territorio nacional; o que habiendo declarado que la mercancía ingresada a territorio nacional se procesaría en zona franca, viola el régimen legal correspondiente.» Artículo 7. De las sanciones.: «Los actos constitutivos de defraudación o contrabando en el ramo aduanero, serán sancionados de la siguiente manera: <ol><li>Los autores, con prisión de siete a diez años.</li><li>Los cómplices, con prisión de dos a cuatro años.</li><li>Los encubridores, con prisión de uno a dos años.</li></ol> Cuando los encubridores o cómplices sean funcionarios, cualquier servidor público o Agente Aduanero, se les aplicará la pena correspondiente a los autores. En todos los casos se aplicarán además, multa equivalente al valor de la mercancía o bienes involucrados en la infracción, la cancelación de la patente de comercio, tomando en cuenta el beneficio obtenido o pretendido obtener por el infractor, sin perjuicio de las otras sanciones establecidas en la legislación aduanera y en la ordinaria.»",
+            "links": []
+          },
+          {
+            "panel_id": "1712609896623-fbe2e18b-db4d",
+            "pregunta": "¿La utilización del marchamo electrónico, únicamente es para los contenedores o para cualquier medio de transporte que traslade mercancías bajo el régimen de transito aduanero interno?",
+            "respuesta_html": "<p>La utilización del marchamo electrónico es para todos los medios de transporte, únicamente se exceptúan las mercancías a granel, cuando no utilice medio de transporte terrestre (artículo 55 del Decreto 14-2013)</p>",
+            "links": []
+          },
+          {
+            "panel_id": "1712609895947-06d51a30-f3a7",
+            "pregunta": "¿Cuáles son las fases de implementación del proyecto del marchamo electrónico?",
+            "respuesta_html": "<p>La implementación del proyecto del marchamo electrónico se planificó por la Intendencia de Aduanas en tres fases:</p><ol><li><strong>Primera fase:</strong> La SAT publicará en los medios de difusión que estime convenientes, para conocimiento del público en general, las aduanas, puestos fronterizos integrados, almacenes fiscales, depósitos aduaneros, depósitos aduaneros temporales, zonas francas, Zona Libre de Industria y Comercio Santo Tomás de Castilla, sus agencias y las zonas de desarrollo económico especial públicas de dicha Zona Libre, entre otros; con los que se iniciará la implementación del marchamo electrónico; así mismo, se publicarán las rutas fiscales con las que se iniciará la implementación del marchamo electrónico. El uso del marchamo electrónico se iniciará con las unidades de transporte cerradas y en vehículos automotores terrestres que se movilicen por sus propios medios, hasta que se cuente con modelos que permitan precintar unidades de transporte abiertas como plataformas, o unidades para transportar mercancías a granel o carga suelta. Para estos casos la Intendencia de Aduanas informará de manera oportuna su obligatoriedad.</li><li><strong>Segunda fase:</strong> La SAT conforme a estándares que determine la Gerencia de Informática, implementará el sistema de monitoreo propio del marchamo electrónico;</li><li><strong>Tercera fase:</strong> Para esta fase se implementará en el resto de las aduanas, puestos fronterizos integrados, almacenes fiscales, depósitos aduaneros, depósitos aduaneros temporales, zonas francas, Zona Libre de Industria y Comercio Santo Tomás de Castilla, sus agencias y las zonas de desarrollo económico especial públicas de dicha Zona Libre, entre otros; para el efecto la SAT publicará en los medios de difusión que estime convenientes, para conocimiento del público en general; así mismo, se publicarán las rutas fiscales con las que se culminará la implementación del marchamo electrónico.</li></ol>",
+            "links": []
+          },
+          {
+            "panel_id": "1712609895171-24988e92-4f30",
+            "pregunta": "Si en una declaración de mercancías están asociados dos o más medios de transporte para trasladar la totalidad de las mercancías consignadas en la misma, ¿A cada unidad de transporte debe colocársele un marchamo electrónico?",
+            "respuesta_html": "<p>La Ley Nacional de Aduanas en el Artículo 55, establece que todo medio de transporte terrestre que traslade mercancías sometidas a los regímenes de tránsito aduanero interno, deben portar marchamo electrónico, independientemente que sean varias unidades asociadas a una sola declaración de mercancías. Así también, según el Procedimiento de la Intendencia de Aduanas Número PR-IAD/DNO-DE-01, norma 75, establece lo siguiente: “Cuando se presente una declaración de mercancía de tránsito aduanero interno, que ampare varias unidades de transporte, cada una de las unidades relacionadas deben portar un marchamo electrónico. Si la unidad de transporte cuenta con más de una puerta, debe utilizar un marchamo electrónico para asegurar la puerta principal y para las restantes se debe utilizar el precinto de SAT”.</p>",
+            "links": []
+          },
+          {
+            "panel_id": "1712609894273-b61b042b-a1c8",
+            "pregunta": "¿El marchamo electrónico emite algún tipo de radiación que afecten a las mercancías?",
+            "respuesta_html": "<p>No emiten radiación. Emiten y reciben señal para la identificación del posicionamiento satelital.</p>",
+            "links": []
+          },
+          {
+            "panel_id": "1712609888930-7af69006-1dcd",
+            "pregunta": "¿Cómo es el proceso de colocación del marchamo electrónico?",
+            "respuesta_html": "<p>El dispositivo puede ser colocado en las puertas de las unidades de transporte de mercancías (contenedores, furgones, etc.) y están diseñados con el fin de controlar la integridad de la carga, mediante el registro de eventos de apertura/cierre o manipulación de las puertas de acceso de las unidades de transporte de mercancías. El responsable de colocar y retirar el dispositivo es el delegado de la EPSME con la supervisión y autorización de la Autoridad Aduanera.</p>",
+            "links": []
+          },
+          {
+            "panel_id": "1738358490600-b28ec228-49c2",
+            "pregunta": "¿En cuánto tiempo se tiene planificado realizar la colocación o retiro del marchamo electrónico, para el inicio o finalización de tránsito aduanero?",
+            "respuesta_html": "<p>Deberá colocarse en un tiempo inferior a los tres (3) minutos para el caso de los medios de transporte cerrados (contenedores, furgones, etc.) y vehículos que se movilizan por sus propios medios. Y de un tiempo inferior a los quince (15) minutos para otros medios de transporte tales como para carga suelta.</p>",
+            "links": []
+          },
+          {
+            "panel_id": "1769033535791-9b90ecc1-f090",
+            "pregunta": "¿Cuáles son los requisitos para ser una Empresa Prestadora de Marchamo Electrónico -EPSME-?",
+            "respuesta_html": "<p>La Ley Nacional de Aduanas en el Artículo 55, establece que todo medio de transporte terrestre que traslade mercancías sometidas a los regímenes de tránsito aduanero interno, deben portar marchamo electrónico, independientemente que sean varias unidades asociadas a una sola declaración de mercancías. Así también, según el Procedimiento de la Intendencia de Aduanas Número PR-IAD/DNO-DE-01, norma 75, establece lo siguiente: “Cuando se presente una declaración de mercancía de tránsito aduanero interno, que ampare varias unidades de transporte, cada una de las unidades relacionadas deben portar un marchamo electrónico. Si la unidad de transporte cuenta con más de una puerta, debe utilizar un marchamo electrónico para asegurar la puerta principal y para las restantes se debe utilizar el precinto de SAT”.</p>",
+            "links": []
+          },
+          {
+            "panel_id": "1769192947016-4fe88f8f-00e3",
+            "pregunta": "¿Qué es Duda Razonable?",
+            "respuesta_html": "<p>Es el derecho que tiene la Autoridad Aduanera de dudar sobre la veracidad o exactitud de los datos o documentos presentados como prueba de valor declarado.</p>",
+            "links": []
+          },
+          {
+            "panel_id": "1769192946544-9a3d1b98-1a30",
+            "pregunta": "¿Por qué surge el proceso de Duda Razonable?",
+            "respuesta_html": "<p>Surge como resultado del análisis comparativo del valor declarado, con la información disponible por el Servicio Aduanero. Art. 3 del Reglamento al Código Aduanero Centroamericano -RECAUCA-.</p>",
+            "links": []
+          },
+          {
+            "panel_id": "1769192945336-73303561-f563",
+            "pregunta": "¿Quiénes participan en el proceso de Duda Razonable?",
+            "respuesta_html": "<p>En la automatización, reducción de tiempos, transparencia, evita discrecionalidad y trazabilidad para el importador.</p>",
+            "links": []
+          },
+          {
+            "panel_id": "1769192944401-f9763d06-978c",
+            "pregunta": "¿Beneficios del nuevo proceso de Duda Razonable?",
+            "respuesta_html": "<p>En la automatización, reducción de tiempos, transparencia, evita discrecionalidad y trazabilidad para el importador.</p>",
+            "links": []
+          },
+          {
+            "panel_id": "1769192943509-41add813-967d",
+            "pregunta": "¿Cómo se formaliza la notificación del inicio de un proceso de Duda Razonable?",
+            "respuesta_html": "1. Requerimiento de información DRD, el cual contiene anexo en que se especifica las mercancías objeto de duda y las referencias de valor utilizadas. 2. Declarante recibe avisos electrónicos de todos los eventos que surgen del proceso de duda razonable y puede consultarlos vía web en Agencia Virtual. 3. Se segregan las actuaciones, al designar personal aduanero especializado en valor (analista de valoración).",
+            "links": []
+          },
+          {
+            "panel_id": "1769194387318-112973be-8e8a",
+            "pregunta": "¿Cuáles son los requisitos para ser una Entidad Prestadora del Servicio de Marchamo Electrónico -EPSME-?",
+            "respuesta_html": "Se encuentran contenidos en el Procedimiento de Calificación y Autorización de Entidades Prestadores del Servicio de Marchamo Electrónico -EPSME- número PR-IAD/DNO-ADU-AYR-10 versión II, de ser así, podrá ingresar su solicitud en la ventanilla ubicada en el primer nivel del Edificio Torre SAT.",
+            "links": []
+          }
+        ],
+        "links_planos": []
+      }
+    },
+    "procedimientos-aduanas--obligaciones-decreto-29-89": {
+      "slug": "procedimientos-aduanas--obligaciones-decreto-29-89",
+      "url": "https://portal.sat.gob.gt/portal/procedimientos-aduanas/#1774965265742-b33a96d6-e1b8",
+      "url_base": "https://portal.sat.gob.gt/portal/procedimientos-aduanas/",
+      "ancla_fragmento": "1774965265742-b33a96d6-e1b8",
+      "arquetipo_matriz": "TIPO-5",
+      "criterio_arquetipo": "Tipología declarada Normativa y Criterio Legal (TIPO-5).",
+      "ids_sat_ges": [
+        "SAT-GES-0477"
+      ],
+      "niveles_2": [
+        "Regímenes Territoriales y Zonas Especiales"
+      ],
+      "niveles_3": [
+        "Maquilas (Decreto 29-89)"
+      ],
+      "titulos_excel": [
+        "Gestiones y obligaciones del Decreto 29-89"
+      ],
+      "descripciones_excel": [
+        "Marco legal compilado, reglamentos y resoluciones de intendencia aplicables al sector maquilador."
+      ],
+      "bases_legales_excel": [
+        "Decreto 29-89 (Ley de Fomento y Desarrollo de la Actividad Exportadora y de Maquila)."
+      ],
+      "observaciones_excel": [],
+      "notas_extra_col24": [],
+      "http_status": 200,
+      "origen_extraccion": "https://portal.sat.gob.gt/portal/procedimientos-aduanas/",
+      "fuente_viva": {
+        "tipo_fuente": "wpbakery_accordion_panel",
+        "panel_id": "1774965265742-b33a96d6-e1b8",
+        "titulo_fuente": "Gestiones y Obligaciones Decreto Número 29-89",
+        "correos_cf_decodificados": [],
+        "subtitulos_detectados": [
+          "Gestiones y Obligaciones Decreto Número 29-89"
+        ],
+        "total_bloques_tabla": 1,
+        "bloques": [
+          {
+            "subtitulo": "Gestiones y Obligaciones Decreto Número 29-89",
+            "filas": [
+              {
+                "texto": "Obligaciones Decreto Número 29-89",
+                "links": [
+                  {
+                    "texto": "Obligaciones Decreto Número 29-89",
+                    "url": "https://portal.sat.gob.gt/portal/descarga/74/aduanas/93991/obligaciones-29-89"
+                  }
+                ]
+              },
+              {
+                "texto": "Trifoliar interinstitucional sobre gestiones y obligaciones Dto. No. 29-89",
+                "links": [
+                  {
+                    "texto": "Trifoliar interinstitucional sobre gestiones y obligaciones Dto. No. 29-89",
+                    "url": "https://portal.sat.gob.gt/portal/descarga/74/aduanas/94639/trifoliar-interinstitucional-decreto-no-29-89"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "total_links": 2,
+        "links_planos": [
+          {
+            "texto": "Obligaciones Decreto Número 29-89",
+            "url": "https://portal.sat.gob.gt/portal/descarga/74/aduanas/93991/obligaciones-29-89"
+          },
+          {
+            "texto": "Trifoliar interinstitucional sobre gestiones y obligaciones Dto. No. 29-89",
+            "url": "https://portal.sat.gob.gt/portal/descarga/74/aduanas/94639/trifoliar-interinstitucional-decreto-no-29-89"
+          }
+        ],
+        "documentos_pdf": [
+          {
+            "titulo_enlace": "Obligaciones Decreto Número 29-89",
+            "url": "https://portal.sat.gob.gt/portal/descarga/74/aduanas/93991/obligaciones-29-89",
+            "size_human": "39.76 KB",
+            "num_pages": 3,
+            "texto_muestra": "Página 1 de 3 Obligaciones de las empresas calificadas al amparo del Decreto Número 29-89 del Congreso de la República de Guatemala, Ley de Fomento y Desarrollo de la Actividad Exportadora y de Maquila y sus reformas MENSUALES OBLIGACIÓN PLAZO PRESENTACIÓN FUNDAMENTO LEGAL SANCIONES Declaración Jurada Mensual de inventario perpetuo Dentro de los primeros 20 días hábiles del mes A través de SEADEX Web Artículo 33 b) de la Ley de Fomento y Desarrollo de la Actividad Exportadora y de Maquila y sus reformas. Código Tributario Art.94 Q.50.00 por día/hasta un máximo deQ.1,000.00 Informe de Coeficiente de Transformación Dentro de los primeros 20 días hábiles del mes A través de SEADEX Web Artículo 33 h) de la Ley de Fomento y Desarrollo de la Actividad Exportadora y de Maquila y sus reformas. Art. 30 \"C\" de su reglamento Revocatoria de la Resolución de Calificación por MINECO Planillas electrónicas de seguridad social del IGSS correspondiente a los últimos 3 meses previos al mes que corresponde la información de la declaración jurada mensual Dentro de los primeros 20 días hábiles del mes A través de SEADEX Web Artículo 33 c) y 34 de la Ley de Fomento y Desarrollo de la Actividad Exportado"
+          },
+          {
+            "titulo_enlace": "Trifoliar interinstitucional sobre gestiones y obligaciones Dto. No. 29-89",
+            "url": "https://portal.sat.gob.gt/portal/descarga/74/aduanas/94639/trifoliar-interinstitucional-decreto-no-29-89",
+            "size_human": "10.71 MB",
+            "num_pages": 2,
+            "texto_muestra": "C M Y CM MY CY CMY K Trifoliar 29-89.pdf 1 22/04/26 10:09 PM C M Y CM MY CY CMY K Trifoliar 29-89.pdf 2 22/04/26 10:09 PM"
+          }
+        ]
+      }
+    }
+  }
+}

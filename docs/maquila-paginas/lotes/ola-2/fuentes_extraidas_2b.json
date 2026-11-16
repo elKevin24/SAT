@@ -1,0 +1,1734 @@
+{
+  "metadata": {
+    "lote": "ola-2b",
+    "generated_at": "2026-11-15T21:32:28.818498+00:00",
+    "total_paginas": 13,
+    "urls_base_extraidas": 13,
+    "cache_dir_usado": null
+  },
+  "paginas": {
+    "consulta-declaracion-unica-aduanera": {
+      "slug": "consulta-declaracion-unica-aduanera",
+      "url": "https://portal.sat.gob.gt/portal/consulta-declaracion-unica-aduanera/",
+      "url_base": "https://portal.sat.gob.gt/portal/consulta-declaracion-unica-aduanera/",
+      "ancla_fragmento": "",
+      "arquetipo_matriz": "TIPO-2",
+      "criterio_arquetipo": "Colisión resuelta a TIPO-2 (Puente a Buscador/Consulta) frente a tipología descriptiva/transaccional.",
+      "ids_sat_ges": [
+        "SAT-GES-0351",
+        "SAT-GES-0363"
+      ],
+      "niveles_2": [
+        "Importadores"
+      ],
+      "niveles_3": [
+        "Declaraciones Aduaneras y DUCAs",
+        "Despacho Aduanero, Levante y Selectivo"
+      ],
+      "titulos_excel": [
+        "Consulta de Transmisión de Declaración Única Centroamericana (DUCA-D / DUCA)",
+        "Consulta de la Declaración de Mercancías"
+      ],
+      "descripciones_excel": [
+        "Servicio web para la transmisión electrónica y firma digital de la declaración aduanera de importación definitiva sin papeles.",
+        "Herramienta para monitorear el estatus de despacho, levante y selectivo asignado a cualquier declaración aduanera."
+      ],
+      "bases_legales_excel": [
+        "Resolución COMIECO 409-2018 (Régimen DUCA), CAUCA IV y RECAUCA IV."
+      ],
+      "observaciones_excel": [],
+      "notas_extra_col24": [],
+      "http_status": 200,
+      "origen_extraccion": "https://portal.sat.gob.gt/portal/consulta-declaracion-unica-aduanera/",
+      "fuente_viva": {
+        "tipo_fuente": "wpbakery_page",
+        "titulo_fuente": "Consultas Declaración de Mercancías",
+        "headings": [
+          {
+            "tag": "h1",
+            "texto": "Consultas Declaración de Mercancías"
+          }
+        ],
+        "correos_cf_decodificados": [],
+        "parrafos_intro": [],
+        "listas_intro": [],
+        "tarjetas_fuente": [],
+        "tablas_generales": [],
+        "acordeones": [],
+        "videos": [],
+        "iframes_aplicativos": [
+          {
+            "titulo": "Consulta",
+            "url": "https://farm3.sat.gob.gt/consultas-publicas-aduanas/public/consultas-publicas/consultasDua.jsf"
+          }
+        ],
+        "links_fuera_acordeon": [],
+        "links_planos": [
+          {
+            "texto": "Consulta",
+            "url": "https://farm3.sat.gob.gt/consultas-publicas-aduanas/public/consultas-publicas/consultasDua.jsf"
+          }
+        ]
+      }
+    },
+    "polizas-de-importacion": {
+      "slug": "polizas-de-importacion",
+      "url": "https://portal.sat.gob.gt/portal/polizas-de-importacion/",
+      "url_base": "https://portal.sat.gob.gt/portal/polizas-de-importacion/",
+      "ancla_fragmento": "",
+      "arquetipo_matriz": "TIPO-2",
+      "criterio_arquetipo": "Puente directo a aplicativo o consulta operativa (TIPO-2).",
+      "ids_sat_ges": [
+        "SAT-GES-0352"
+      ],
+      "niveles_2": [
+        "Importadores"
+      ],
+      "niveles_3": [
+        "Declaraciones Aduaneras y DUCAs"
+      ],
+      "titulos_excel": [
+        "Consulta de pólizas de importación."
+      ],
+      "descripciones_excel": [
+        "Gestión y requisitos para Información sobre: Pólizas de importación.."
+      ],
+      "bases_legales_excel": [
+        "Resolución COMIECO 409-2018 (Régimen DUCA), CAUCA IV y RECAUCA IV."
+      ],
+      "observaciones_excel": [],
+      "notas_extra_col24": [],
+      "http_status": 200,
+      "origen_extraccion": "https://portal.sat.gob.gt/portal/polizas-de-importacion/",
+      "fuente_viva": {
+        "tipo_fuente": "wpbakery_page",
+        "titulo_fuente": "Pólizas de Importación",
+        "headings": [
+          {
+            "tag": "h1",
+            "texto": "Pólizas de Importación"
+          }
+        ],
+        "correos_cf_decodificados": [],
+        "parrafos_intro": [],
+        "listas_intro": [],
+        "tarjetas_fuente": [],
+        "tablas_generales": [],
+        "acordeones": [],
+        "videos": [],
+        "iframes_aplicativos": [
+          {
+            "titulo": "Consulta",
+            "url": "https://farm3.sat.gob.gt/consultas-publicas-aduanas/public/consultas-publicas/fcrPolizasDeImportacion.jsf"
+          }
+        ],
+        "links_fuera_acordeon": [],
+        "links_planos": [
+          {
+            "texto": "Consulta",
+            "url": "https://farm3.sat.gob.gt/consultas-publicas-aduanas/public/consultas-publicas/fcrPolizasDeImportacion.jsf"
+          }
+        ]
+      }
+    },
+    "consultas-de-faucas-duca-f": {
+      "slug": "consultas-de-faucas-duca-f",
+      "url": "https://portal.sat.gob.gt/portal/consultas-de-faucas-duca-f/",
+      "url_base": "https://portal.sat.gob.gt/portal/consultas-de-faucas-duca-f/",
+      "ancla_fragmento": "",
+      "arquetipo_matriz": "TIPO-2",
+      "criterio_arquetipo": "Buscador o consulta pública en línea (TIPO-2).",
+      "ids_sat_ges": [
+        "SAT-GES-0354"
+      ],
+      "niveles_2": [
+        "Importadores"
+      ],
+      "niveles_3": [
+        "Declaraciones Aduaneras y DUCAs"
+      ],
+      "titulos_excel": [
+        "Consulta y Verificación de Declaraciones DUCA-F / FAUCA"
+      ],
+      "descripciones_excel": [
+        "Buscador público para verificar el estado de transmisión y validez de declaraciones originarias de Centroamérica."
+      ],
+      "bases_legales_excel": [
+        "Resolución COMIECO 409-2018 (Régimen DUCA), CAUCA IV y RECAUCA IV."
+      ],
+      "observaciones_excel": [],
+      "notas_extra_col24": [],
+      "http_status": 200,
+      "origen_extraccion": "https://portal.sat.gob.gt/portal/consultas-de-faucas-duca-f/",
+      "fuente_viva": {
+        "tipo_fuente": "wpbakery_page",
+        "titulo_fuente": "Consultas de FAUCAS/DUCA F",
+        "headings": [
+          {
+            "tag": "h1",
+            "texto": "Consultas de FAUCAS/DUCA F"
+          }
+        ],
+        "correos_cf_decodificados": [],
+        "parrafos_intro": [
+          "﻿"
+        ],
+        "listas_intro": [],
+        "tarjetas_fuente": [],
+        "tablas_generales": [],
+        "acordeones": [],
+        "videos": [],
+        "iframes_aplicativos": [
+          {
+            "titulo": "Consulta",
+            "url": "https://farm3.sat.gob.gt/consultas-publicas-aduanas/public/consultas-publicas/consultasFaucas.jsf"
+          }
+        ],
+        "links_fuera_acordeon": [],
+        "links_planos": [
+          {
+            "texto": "Consulta",
+            "url": "https://farm3.sat.gob.gt/consultas-publicas-aduanas/public/consultas-publicas/consultasFaucas.jsf"
+          }
+        ]
+      }
+    },
+    "consulta-de-manifiestos-documentos-de": {
+      "slug": "consulta-de-manifiestos-documentos-de",
+      "url": "https://portal.sat.gob.gt/portal/consulta-de-manifiestos-documentos-de-transporte-pantalla-externa-union-aduanera-guatemala-honduras/",
+      "url_base": "https://portal.sat.gob.gt/portal/consulta-de-manifiestos-documentos-de-transporte-pantalla-externa-union-aduanera-guatemala-honduras/",
+      "ancla_fragmento": "",
+      "arquetipo_matriz": "TIPO-2",
+      "criterio_arquetipo": "Interacción de consulta en línea o base de datos (TIPO-2).",
+      "ids_sat_ges": [
+        "SAT-GES-0361"
+      ],
+      "niveles_2": [
+        "Importadores"
+      ],
+      "niveles_3": [
+        "Despacho Aduanero, Levante y Selectivo"
+      ],
+      "titulos_excel": [
+        "Consulta de manifiestos, documentos de transporte y de la Unión Aduanera Guatemala-Honduras"
+      ],
+      "descripciones_excel": [
+        "Gestión y requisitos para Servicio en línea para consultar manifiestos de la Unión Aduanera.."
+      ],
+      "bases_legales_excel": [
+        "Código Aduanero Uniforme Centroamericano (CAUCA IV) y su Reglamento (RECAUCA IV)."
+      ],
+      "observaciones_excel": [],
+      "notas_extra_col24": [],
+      "http_status": 200,
+      "origen_extraccion": "https://portal.sat.gob.gt/portal/consulta-de-manifiestos-documentos-de-transporte-pantalla-externa-union-aduanera-guatemala-honduras/",
+      "fuente_viva": {
+        "tipo_fuente": "wpbakery_page",
+        "titulo_fuente": "Consulta de manifiestos/ Documentos de transporte pantalla externa/ Unión Aduanera Guatemala-Honduras",
+        "headings": [
+          {
+            "tag": "h1",
+            "texto": "Consulta de manifiestos/ Documentos de transporte pantalla externa/ Unión Aduanera Guatemala-Honduras"
+          }
+        ],
+        "correos_cf_decodificados": [],
+        "parrafos_intro": [],
+        "listas_intro": [],
+        "tarjetas_fuente": [],
+        "tablas_generales": [],
+        "acordeones": [],
+        "videos": [],
+        "iframes_aplicativos": [
+          {
+            "titulo": "Consulta",
+            "url": "https://farm3.sat.gob.gt/union-aduanera-publico/views/consultaManifiestoExterno.jsf"
+          }
+        ],
+        "links_fuera_acordeon": [],
+        "links_planos": [
+          {
+            "texto": "Consulta",
+            "url": "https://farm3.sat.gob.gt/union-aduanera-publico/views/consultaManifiestoExterno.jsf"
+          }
+        ]
+      }
+    },
+    "consulta-publica-retencion-liberacion": {
+      "slug": "consulta-publica-retencion-liberacion",
+      "url": "https://portal.sat.gob.gt/portal/consulta-publica-retencion-liberacion/",
+      "url_base": "https://portal.sat.gob.gt/portal/consulta-publica-retencion-liberacion/",
+      "ancla_fragmento": "",
+      "arquetipo_matriz": "TIPO-2",
+      "criterio_arquetipo": "Buscador o consulta pública en línea (TIPO-2).",
+      "ids_sat_ges": [
+        "SAT-GES-0362",
+        "SAT-GES-0432"
+      ],
+      "niveles_2": [
+        "Auxiliares de la Función Pública Aduanera (AFPA)",
+        "Importadores"
+      ],
+      "niveles_3": [
+        "Depósitos Aduaneros",
+        "Despacho Aduanero, Levante y Selectivo"
+      ],
+      "titulos_excel": [
+        "Consulta Pública de Mercancías Retenidas y Liberadas en Aduana",
+        "Consultas de aduanas (Retención y liberación de mercancías)"
+      ],
+      "descripciones_excel": [
+        "Verificador oficial para conocer motivos de retención, requerimientos no arancelarios pendientes o confirmación de liberación de carga.",
+        "Verificar en tiempo real estatus de retención, órdenes de liberación y clasificación en el Sistema Arancelario Centroamericano (SAC)."
+      ],
+      "bases_legales_excel": [
+        "Código Aduanero Uniforme Centroamericano (CAUCA IV) y su Reglamento (RECAUCA IV).",
+        "Decreto 1236 (Ley de Almacenes Generales de Depósito) y RECAUCA IV Art. 119."
+      ],
+      "observaciones_excel": [],
+      "notas_extra_col24": [],
+      "http_status": 200,
+      "origen_extraccion": "https://portal.sat.gob.gt/portal/consulta-publica-retencion-liberacion/",
+      "fuente_viva": {
+        "tipo_fuente": "wpbakery_page",
+        "titulo_fuente": "Consulta Pública Retención/Liberación",
+        "headings": [
+          {
+            "tag": "h1",
+            "texto": "Consulta Pública Retención/Liberación"
+          }
+        ],
+        "correos_cf_decodificados": [],
+        "parrafos_intro": [
+          "﻿"
+        ],
+        "listas_intro": [],
+        "tarjetas_fuente": [],
+        "tablas_generales": [],
+        "acordeones": [],
+        "videos": [],
+        "iframes_aplicativos": [
+          {
+            "titulo": "Consulta",
+            "url": "https://farm3.sat.gob.gt/consultas-publicas-aduanas/public/consultas-publicas/retencionesLiberaciones.jsf"
+          }
+        ],
+        "links_fuera_acordeon": [],
+        "links_planos": [
+          {
+            "texto": "Consulta",
+            "url": "https://farm3.sat.gob.gt/consultas-publicas-aduanas/public/consultas-publicas/retencionesLiberaciones.jsf"
+          }
+        ]
+      }
+    },
+    "consulta-del-estado-o-actuaciones-de": {
+      "slug": "consulta-del-estado-o-actuaciones-de",
+      "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/consulta-del-estado-o-actuaciones-de-expedientes-de-las-unidades-del-departamento-de-gestion-aduanera/",
+      "url_base": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/consulta-del-estado-o-actuaciones-de-expedientes-de-las-unidades-del-departamento-de-gestion-aduanera/",
+      "ancla_fragmento": "",
+      "arquetipo_matriz": "TIPO-2",
+      "criterio_arquetipo": "Colisión resuelta a TIPO-2 (Puente a Buscador/Consulta) frente a tipología descriptiva/transaccional.",
+      "ids_sat_ges": [
+        "SAT-GES-0364",
+        "SAT-GES-0413",
+        "SAT-GES-0417",
+        "SAT-GES-0440",
+        "SAT-GES-0454",
+        "SAT-GES-0500",
+        "SAT-GES-0515"
+      ],
+      "niveles_2": [
+        "Auxiliares de la Función Pública Aduanera (AFPA)",
+        "Importadores",
+        "Regímenes Territoriales y Zonas Especiales"
+      ],
+      "niveles_3": [
+        "Agentes Aduaneros",
+        "Apoderados Especiales Aduaneros",
+        "Depósitos Aduaneros",
+        "Despacho Aduanero, Levante y Selectivo",
+        "Zonas de Desarrollo Económico Especial Público (ZDEEP)"
+      ],
+      "titulos_excel": [
+        "Información sobre la consulta del estado o actuaciones de expedientes de las Unidades del Departamento de Gestión Aduanera.",
+        "Requisitos para la Consulta del Estado o Actuaciones de Expedientes de las Unidades del Departamento de Gestión Aduanera",
+        "Requisitos para Consulta del Estado o Actuaciones de Expedientes de las Unidades del Departamento de Gestión Aduanera",
+        "Requisitos para consulta de expedientes de gestión aduanera"
+      ],
+      "descripciones_excel": [
+        "Importadores y Exportadores, Auxiliares de la Función Pública Aduanera",
+        "Servicio web para consultar el avance, estado procesal y unidad responsable de expedientes administrativos en la Intendencia de Aduanas.",
+        "Guía de requisitos y acreditación de representación legal para solicitar y consultar expedientes de gestión aduanera ante la SAT.",
+        "Requisitos y acreditación para consultar el estado procesal de expedientes y resoluciones operativas de almacenes generales.",
+        "Requisitos documentales para consultar el avance de expedientes técnicos y administrativos de recintos temporales ante SAT.",
+        "Gestión y especificaciones para Requisitos para consulta de expedientes de gestión aduanera conforme a normativa aduanera aplicable."
+      ],
+      "bases_legales_excel": [
+        "CAUCA IV, RECAUCA IV (Procedimiento Sancionatorio e Impugnaciones) y Ley Nacional de Aduanas.",
+        "CAUCA IV (Arts. 22 al 28), RECAUCA IV (Auxiliares de la Función Pública) y Ley Nacional de Aduanas.",
+        "CAUCA IV y RECAUCA IV (Arts. 86 al 90, Apoderados Especiales Aduaneros).",
+        "Decreto 1236 (Ley de Almacenes Generales de Depósito) y RECAUCA IV Art. 119.",
+        "CAUCA IV y RECAUCA IV (Depósitos Aduaneros Temporales en puertos y aeropuertos).",
+        "Decreto 22-73 (Ley Orgánica de ZOLIC / ZDEEP), CAUCA IV y RECAUCA IV."
+      ],
+      "observaciones_excel": [],
+      "notas_extra_col24": [
+        "Expedientes aduaneros"
+      ],
+      "http_status": 200,
+      "origen_extraccion": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/consulta-del-estado-o-actuaciones-de-expedientes-de-las-unidades-del-departamento-de-gestion-aduanera/",
+      "fuente_viva": {
+        "tipo_fuente": "wpbakery_page",
+        "titulo_fuente": "Consulta del Estado o Actuaciones de Expedientes de las Unidades del Departamento de Gestión Aduanera",
+        "headings": [
+          {
+            "tag": "h1",
+            "texto": "Consulta del Estado o Actuaciones de Expedientes de las Unidades del Departamento de Gestión Aduanera"
+          },
+          {
+            "tag": "h4",
+            "texto": "Persona Individual"
+          },
+          {
+            "tag": "h4",
+            "texto": "Representante Legal o Mandatario"
+          },
+          {
+            "tag": "h4",
+            "texto": "Agente Aduanero o Apoderado Especial Aduanero."
+          },
+          {
+            "tag": "h4",
+            "texto": "Empleado o Profesional Universitario que Asesora al Contribuyente"
+          },
+          {
+            "tag": "h4",
+            "texto": "Audios en Idiomas Mayas"
+          },
+          {
+            "tag": "h4",
+            "texto": "K´ICHE´"
+          },
+          {
+            "tag": "h4",
+            "texto": "MAM"
+          },
+          {
+            "tag": "h4",
+            "texto": "Q´EQCHI´"
+          },
+          {
+            "tag": "h4",
+            "texto": "Aduanas para realizar el trámite"
+          },
+          {
+            "tag": "h4",
+            "texto": "Región Central"
+          },
+          {
+            "tag": "h4",
+            "texto": "Región Occidente"
+          },
+          {
+            "tag": "h4",
+            "texto": "Región Nororiente"
+          },
+          {
+            "tag": "h4",
+            "texto": "Región Sur"
+          }
+        ],
+        "correos_cf_decodificados": [],
+        "parrafos_intro": [
+          "Consulta de estado: verificar el estatus en las diferentes etapas del proceso que lleva el expediente.",
+          "Consulta de Actuaciones: tener acceso a las actuaciones del expediente, según articulo 30 de la Constitución Política de la República de Guatemala y articulo 126 del Código Tributario.",
+          "Unidades del Departamento de Gestión Aduanera, que se encuentran ubicada en tercer nivel, Edificio Torre SAT, zona 9.",
+          "1. Preséntate a la Unidad del Departamento de Gestión Aduanera o Aduana correspondiente:",
+          "2. Dirígete al centralizador de la unidad o Aduana correspondiente.",
+          "3. Presenta los requisitos requeridos.",
+          "4. Indica el número de documento o expediente que deseas consultar.",
+          "1. Cuando no cuentes con el Documento Personal de Identificación (DPI).",
+          "2. Tu consulta será atendida por el centralizador, en caso de ser necesario, por el Supervisor o Jefe de Unidad.",
+          "3. No se te proporcionará información sobre el sentido en que sera resuelta tu solicitud, esta se dará a conocer únicamente mediante la notificación del documento correspondiente."
+        ],
+        "listas_intro": [
+          "Unidad de Recursos y Resoluciones",
+          "Unidad de Regímenes Especiales",
+          "Unidad de Franquicias y Asuntos Aduanales",
+          "Unidad de Administración de Auxiliares de la Función Pública Aduanera.",
+          "Unidad de Calificación, Registro y Control de Auxiliares de la Función Pública.",
+          "Información del estado o actuaciones del expediente, no se te entrega ningún documento, esta información se proporciona de forma verbal.",
+          "Adjunta documento emitido por RENAP, en el que conste el proceso de obtención del documento y se consigne el Código Único de Identificación (CUI), con o sin fotografía.",
+          "Express Aéreo",
+          "Central de Aviación",
+          "Central",
+          "Fardos Postales",
+          "Vehículos",
+          "Tecún Umán",
+          "El Carmen",
+          "La Mesilla",
+          "Santo Tomás de Castilla",
+          "Puerto Barrios",
+          "Melchor de Mencos",
+          "El Ceibo",
+          "Aduana Integrada El Florido",
+          "Aduana Integrada Agua Caliente",
+          "La Ermita",
+          "Puerto Quetzal",
+          "Pedro de Alvarado",
+          "San Cristóbal",
+          "Valle Nuevo"
+        ],
+        "tarjetas_fuente": [],
+        "tablas_generales": [],
+        "acordeones": [
+          {
+            "panel_id": "1528300955038-bbfd8a5d-631e",
+            "titulo": "Persona Individual",
+            "tablas": [
+              {
+                "filas": [
+                  {
+                    "celdas": [
+                      "1",
+                      "",
+                      "Documento Personal de Identificación (DPI) del Contribuyente."
+                    ],
+                    "links": []
+                  },
+                  {
+                    "celdas": [
+                      "2",
+                      "",
+                      "Pasaporte en caso de ser extranjero."
+                    ],
+                    "links": []
+                  }
+                ]
+              }
+            ],
+            "links": [],
+            "videos": [],
+            "textos_panel": [],
+            "iframes_panel": []
+          },
+          {
+            "panel_id": "1538493936427-e93f5d0d-7b06",
+            "titulo": "Representante Legal o Mandatario",
+            "tablas": [
+              {
+                "filas": [
+                  {
+                    "celdas": [
+                      "1",
+                      "",
+                      "Documento Personal de Identificación (DPI)."
+                    ],
+                    "links": []
+                  },
+                  {
+                    "celdas": [
+                      "2",
+                      "",
+                      "Pasaporte en caso de ser extranjero."
+                    ],
+                    "links": []
+                  },
+                  {
+                    "celdas": [
+                      "3",
+                      "",
+                      "Acredita tu representación vigente, con copia simple."
+                    ],
+                    "links": []
+                  },
+                  {
+                    "celdas": [
+                      "4",
+                      "",
+                      "En caso de ser Mandatario, presenta el mandato original o copia legalizada por Notario activo."
+                    ],
+                    "links": []
+                  }
+                ]
+              }
+            ],
+            "links": [],
+            "videos": [],
+            "textos_panel": [],
+            "iframes_panel": []
+          },
+          {
+            "panel_id": "1538495057023-b44c9a42-68af",
+            "titulo": "Agente Aduanero o Apoderado Especial Aduanero.",
+            "tablas": [
+              {
+                "filas": [
+                  {
+                    "celdas": [
+                      "1",
+                      "",
+                      "Documento Personal de Identificación (DPI) del Agente Aduanero."
+                    ],
+                    "links": []
+                  },
+                  {
+                    "celdas": [
+                      "2",
+                      "",
+                      "Carné del Agente Aduanero."
+                    ],
+                    "links": []
+                  }
+                ]
+              }
+            ],
+            "links": [],
+            "videos": [],
+            "textos_panel": [
+              "Puede realizar la consulta Únicamente el Agente Aduanero o Apoderado Especial Aduanero que ingreso la solicitud."
+            ],
+            "iframes_panel": []
+          },
+          {
+            "panel_id": "1538495499488-19e1b9be-3382",
+            "titulo": "Empleado o Profesional Universitario que Asesora al Contribuyente",
+            "tablas": [
+              {
+                "filas": [
+                  {
+                    "celdas": [
+                      "1",
+                      "",
+                      "Documento Personal de Identificación (DPI)."
+                    ],
+                    "links": []
+                  },
+                  {
+                    "celdas": [
+                      "2",
+                      "",
+                      "Pasaporte en caso de ser extranjero."
+                    ],
+                    "links": []
+                  },
+                  {
+                    "celdas": [
+                      "3",
+                      "",
+                      "Carta de autorización por el contribuyente o Representante Legal, con firma legalizada por Notario activo."
+                    ],
+                    "links": []
+                  },
+                  {
+                    "celdas": [
+                      "4",
+                      "",
+                      "En caso de ser Profesional Universitario, debes presentar carné o constancia de colegiado activo."
+                    ],
+                    "links": []
+                  },
+                  {
+                    "celdas": [
+                      "5",
+                      "",
+                      "En caso de ser empleado debes presentar tu gafete de empresa."
+                    ],
+                    "links": []
+                  }
+                ]
+              }
+            ],
+            "links": [],
+            "videos": [],
+            "textos_panel": [],
+            "iframes_panel": []
+          }
+        ],
+        "videos": [],
+        "iframes_aplicativos": [],
+        "links_fuera_acordeon": [
+          {
+            "texto": "https://mx.ivoox.com/es/consulta-del-estado-o-actuaciones-de-expedientes-de_md_43648099_wp_1.mp3",
+            "url": "https://mx.ivoox.com/es/consulta-del-estado-o-actuaciones-de-expedientes-de_md_43648099_wp_1.mp3"
+          },
+          {
+            "texto": "https://mx.ivoox.com/es/consulta-del-estado-o-actuaciones-expedientes-de_md_43531405_wp_1.mp3",
+            "url": "https://mx.ivoox.com/es/consulta-del-estado-o-actuaciones-expedientes-de_md_43531405_wp_1.mp3"
+          },
+          {
+            "texto": "https://mx.ivoox.com/es/consulta-del-estado-o-actuaciones-de-expedientes-de_md_43648099_wp_1.mp3",
+            "url": "https://mx.ivoox.com/es/consulta-del-estado-o-actuaciones-de-expedientes-de_md_43648099_wp_1.mp3"
+          }
+        ],
+        "links_planos": [
+          {
+            "texto": "https://mx.ivoox.com/es/consulta-del-estado-o-actuaciones-de-expedientes-de_md_43648099_wp_1.mp3",
+            "url": "https://mx.ivoox.com/es/consulta-del-estado-o-actuaciones-de-expedientes-de_md_43648099_wp_1.mp3"
+          },
+          {
+            "texto": "https://mx.ivoox.com/es/consulta-del-estado-o-actuaciones-expedientes-de_md_43531405_wp_1.mp3",
+            "url": "https://mx.ivoox.com/es/consulta-del-estado-o-actuaciones-expedientes-de_md_43531405_wp_1.mp3"
+          }
+        ],
+        "links_post_meta_excluidos": [
+          {
+            "texto": "Requisitos para trámites en Agencias",
+            "url": "https://portal.sat.gob.gt/portal/categoria/requisitos-tramites-agencias/"
+          },
+          {
+            "texto": "13/11/2018",
+            "url": "https://portal.sat.gob.gt/portal/2018/11/13/"
+          }
+        ],
+        "audios_idiomas_mayas": [
+          {
+            "idioma": "K´ICHE´",
+            "url": "https://mx.ivoox.com/es/consulta-del-estado-o-actuaciones-de-expedientes-de_md_43648099_wp_1.mp3"
+          },
+          {
+            "idioma": "MAM",
+            "url": "https://mx.ivoox.com/es/consulta-del-estado-o-actuaciones-expedientes-de_md_43531405_wp_1.mp3"
+          },
+          {
+            "idioma": "Q´EQCHI´",
+            "url": "https://mx.ivoox.com/es/consulta-del-estado-o-actuaciones-de-expedientes-de_md_43648099_wp_1.mp3"
+          }
+        ]
+      }
+    },
+    "selectivo-de-declaraciones-de-exportacion": {
+      "slug": "selectivo-de-declaraciones-de-exportacion",
+      "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-aduanas/selectivo-de-declaraciones-de-exportacion/",
+      "url_base": "https://portal.sat.gob.gt/portal/requisitos-tramites-aduanas/selectivo-de-declaraciones-de-exportacion/",
+      "ancla_fragmento": "",
+      "arquetipo_matriz": "TIPO-2",
+      "criterio_arquetipo": "Buscador o consulta pública en línea (TIPO-2).",
+      "ids_sat_ges": [
+        "SAT-GES-0394"
+      ],
+      "niveles_2": [
+        "Exportadores"
+      ],
+      "niveles_3": [
+        "Declaraciones Aduaneras, Embarques y Mercancías"
+      ],
+      "titulos_excel": [
+        "Requisitos para Selectivo de Declaraciones de Exportación"
+      ],
+      "descripciones_excel": [
+        "Verificación en tiempo real del canal de selectividad asignado (Verde o Rojo) en rampa de embarque o puesto fronterizo."
+      ],
+      "bases_legales_excel": [
+        "CAUCA IV, RECAUCA IV (Procedimiento Sancionatorio e Impugnaciones) y Ley Nacional de Aduanas."
+      ],
+      "observaciones_excel": [],
+      "notas_extra_col24": [],
+      "http_status": 200,
+      "origen_extraccion": "https://portal.sat.gob.gt/portal/requisitos-tramites-aduanas/selectivo-de-declaraciones-de-exportacion/",
+      "fuente_viva": {
+        "tipo_fuente": "wpbakery_page",
+        "titulo_fuente": "Selectivo de Declaraciones de Exportación",
+        "headings": [
+          {
+            "tag": "h1",
+            "texto": "Selectivo de Declaraciones de Exportación"
+          },
+          {
+            "tag": "h4",
+            "texto": "Transportista, Agente Aduanero, Asistente del Agente Aduanero autorizado por la SAT, Representante Legal, Propietario o Mandatario."
+          },
+          {
+            "tag": "h4",
+            "texto": "Audios en Idiomas Mayas"
+          },
+          {
+            "tag": "h4",
+            "texto": "K´ICHE´"
+          },
+          {
+            "tag": "h4",
+            "texto": "MAM"
+          },
+          {
+            "tag": "h4",
+            "texto": "Q´EQCHI´"
+          },
+          {
+            "tag": "h4",
+            "texto": "Aduanas para realizar el trámite"
+          },
+          {
+            "tag": "h4",
+            "texto": "Región Central"
+          },
+          {
+            "tag": "h4",
+            "texto": "Trámite para terceros autorizados:"
+          },
+          {
+            "tag": "h4",
+            "texto": "Región Occidente"
+          },
+          {
+            "tag": "h4",
+            "texto": "Región Nororiente"
+          },
+          {
+            "tag": "h4",
+            "texto": "Región Sur"
+          }
+        ],
+        "correos_cf_decodificados": [],
+        "parrafos_intro": [
+          "1. Preséntate a la Aduana por donde saliste."
+        ],
+        "listas_intro": [
+          "Tu Declaración de Mercancías Certificada con el resultado del proceso de análisis de riesgo impreso en todos los ejemplares de la declaración.",
+          "El resultado puede ser: Levante inmediato (No se realiza revisión) selectivo verde; Verificación inmediata (se realiza revisión) selectivo rojo.",
+          "Levante inmediato (No se realiza revisión) selectivo verde;",
+          "Verificación inmediata (se realiza revisión) selectivo rojo.",
+          "Te debes presentar en la Ventanilla de procesamiento del selectivo u otra área habilitada para el efecto.",
+          "No será necesario que presentes el medio de transporte en el área de procesamiento de selectivo, en los casos que por el tipo de infraestructura de la Aduana no sea posible realizarlo.",
+          "Debes responder por las obligaciones tributarias y penales en caso la mercancía no sea exportada o no corresponda con lo declarado.",
+          "Galerías Prima",
+          "Plaza San Rafael",
+          "Pacific Villa Hermosa",
+          "Chimaltenango",
+          "El Progreso",
+          "Sacatepéquez",
+          "Plaza San Rafael (Anexo)",
+          "Quetzaltenango",
+          "Huehuetenango",
+          "San Marcos",
+          "Quiché",
+          "Sololá",
+          "Totonicapán",
+          "Zacapa",
+          "Baja Verapaz",
+          "Alta Verapaz",
+          "Jalapa",
+          "Petén",
+          "Izabal",
+          "Chiquimula",
+          "Escuintla",
+          "Retalhuleu",
+          "Jutiapa",
+          "Santa Rosa",
+          "Suchitepéquez"
+        ],
+        "tarjetas_fuente": [],
+        "tablas_generales": [],
+        "acordeones": [
+          {
+            "panel_id": "1528300955038-bbfd8a5d-631e",
+            "titulo": "Transportista, Agente Aduanero, Asistente del Agente Aduanero autorizado por la SAT, Representante Legal, Propietario o Mandatario.",
+            "tablas": [
+              {
+                "filas": [
+                  {
+                    "celdas": [
+                      "1",
+                      "",
+                      "Presenta la Declaración de Mercancías de Exportación en el Módulo de Ingreso al Recinto Aduanero o en la Zona Primaria: Debes someterla al sistema de análisis de riesgo. Debe estar presente el medio de transporte que lleva la mercancía. Debes adjuntar las licencias DEPREX o Licencia de ANACAFÉ."
+                    ],
+                    "links": []
+                  }
+                ]
+              }
+            ],
+            "links": [],
+            "videos": [],
+            "textos_panel": [
+              "Debes someterla al sistema de análisis de riesgo.",
+              "Debe estar presente el medio de transporte que lleva la mercancía.",
+              "Debes adjuntar las licencias DEPREX o Licencia de ANACAFÉ."
+            ],
+            "iframes_panel": []
+          }
+        ],
+        "videos": [],
+        "iframes_aplicativos": [],
+        "links_fuera_acordeon": [
+          {
+            "texto": "https://mx.ivoox.com/es/selectivo-de-declaraciones-de-exportacion-k-039-iche-039_md_45167466_wp_1.mp3",
+            "url": "https://mx.ivoox.com/es/selectivo-de-declaraciones-de-exportacion-k-039-iche-039_md_45167466_wp_1.mp3"
+          },
+          {
+            "texto": "https://mx.ivoox.com/es/selectivo-de-declaraciones-de-exportacion-mam_md_45166639_wp_1.mp3",
+            "url": "https://mx.ivoox.com/es/selectivo-de-declaraciones-de-exportacion-mam_md_45166639_wp_1.mp3"
+          },
+          {
+            "texto": "https://mx.ivoox.com/es/selectivo-de-declaraciones-de-exportacion-q-039-eqchi-039_md_45168076_wp_1.mp3",
+            "url": "https://mx.ivoox.com/es/selectivo-de-declaraciones-de-exportacion-q-039-eqchi-039_md_45168076_wp_1.mp3"
+          }
+        ],
+        "links_planos": [
+          {
+            "texto": "https://mx.ivoox.com/es/selectivo-de-declaraciones-de-exportacion-k-039-iche-039_md_45167466_wp_1.mp3",
+            "url": "https://mx.ivoox.com/es/selectivo-de-declaraciones-de-exportacion-k-039-iche-039_md_45167466_wp_1.mp3"
+          },
+          {
+            "texto": "https://mx.ivoox.com/es/selectivo-de-declaraciones-de-exportacion-mam_md_45166639_wp_1.mp3",
+            "url": "https://mx.ivoox.com/es/selectivo-de-declaraciones-de-exportacion-mam_md_45166639_wp_1.mp3"
+          },
+          {
+            "texto": "https://mx.ivoox.com/es/selectivo-de-declaraciones-de-exportacion-q-039-eqchi-039_md_45168076_wp_1.mp3",
+            "url": "https://mx.ivoox.com/es/selectivo-de-declaraciones-de-exportacion-q-039-eqchi-039_md_45168076_wp_1.mp3"
+          }
+        ],
+        "links_post_meta_excluidos": [
+          {
+            "texto": "Requisitos para trámites en Aduanas",
+            "url": "https://portal.sat.gob.gt/portal/categoria/requisitos-tramites-aduanas/"
+          },
+          {
+            "texto": "13/11/2018",
+            "url": "https://portal.sat.gob.gt/portal/2018/11/13/"
+          }
+        ],
+        "audios_idiomas_mayas": [
+          {
+            "idioma": "K´ICHE´",
+            "url": "https://mx.ivoox.com/es/selectivo-de-declaraciones-de-exportacion-k-039-iche-039_md_45167466_wp_1.mp3"
+          },
+          {
+            "idioma": "MAM",
+            "url": "https://mx.ivoox.com/es/selectivo-de-declaraciones-de-exportacion-mam_md_45166639_wp_1.mp3"
+          },
+          {
+            "idioma": "Q´EQCHI´",
+            "url": "https://mx.ivoox.com/es/selectivo-de-declaraciones-de-exportacion-q-039-eqchi-039_md_45168076_wp_1.mp3"
+          }
+        ]
+      }
+    },
+    "consultas-aduanas": {
+      "slug": "consultas-aduanas",
+      "url": "https://portal.sat.gob.gt/portal/consultas-aduanas/",
+      "url_base": "https://portal.sat.gob.gt/portal/consultas-aduanas/",
+      "ancla_fragmento": "",
+      "arquetipo_matriz": "TIPO-2",
+      "criterio_arquetipo": "Buscador o consulta pública en línea (TIPO-2).",
+      "ids_sat_ges": [
+        "SAT-GES-0416",
+        "SAT-GES-0490",
+        "SAT-GES-0505"
+      ],
+      "niveles_2": [
+        "Auxiliares de la Función Pública Aduanera (AFPA)",
+        "Regímenes Territoriales y Zonas Especiales"
+      ],
+      "niveles_3": [
+        "Apoderados Especiales Aduaneros",
+        "Zonas de Desarrollo Económico Especial Público (ZDEEP)"
+      ],
+      "titulos_excel": [
+        "Consultas de aduanas",
+        "Consultas de aduanas (Arancel integrado, rampa de revisión, retención y liberación)",
+        "Consultas de aduanas (Retención, liberación, rampa y manifiestos de transporte)"
+      ],
+      "descripciones_excel": [
+        "Consultar en tiempo real el estatus de rampa de revisión, revisores asignados, retención y levante de mercancías para despachos aduaneros.",
+        "Gestión y especificaciones para Consultas de aduanas (Arancel integrado, rampa de revisión, retención y liberación) conforme a normativa aduanera aplicable.",
+        "Gestión y especificaciones para Consultas de aduanas (Retención, liberación, rampa y manifiestos de transporte) conforme a normativa aduanera aplicable."
+      ],
+      "bases_legales_excel": [
+        "CAUCA IV y RECAUCA IV (Arts. 86 al 90, Apoderados Especiales Aduaneros).",
+        "Decreto 22-73 (Ley Orgánica de ZOLIC / ZDEEP), CAUCA IV y RECAUCA IV."
+      ],
+      "observaciones_excel": [],
+      "notas_extra_col24": [],
+      "http_status": 200,
+      "origen_extraccion": "https://portal.sat.gob.gt/portal/consultas-aduanas/",
+      "fuente_viva": {
+        "tipo_fuente": "wpbakery_page",
+        "titulo_fuente": "Consultas Aduaneras",
+        "headings": [
+          {
+            "tag": "h1",
+            "texto": "Consultas Aduaneras"
+          },
+          {
+            "tag": "h4",
+            "texto": "Consultas"
+          },
+          {
+            "tag": "h2",
+            "texto": "Monitoreo de Sistemas Informáticos de Aduanas"
+          },
+          {
+            "tag": "h4",
+            "texto": "Monitoreo de Sistemas Informáticos en las Aduanas"
+          },
+          {
+            "tag": "h4",
+            "texto": "Monitoreo Histórico de Selectivo en Aduanas"
+          },
+          {
+            "tag": "h4",
+            "texto": "Monitoreo de comunicación SIECA, AGEXPORT- OPA y Depósitos Temporales (Combex y Portuarias)"
+          }
+        ],
+        "correos_cf_decodificados": [],
+        "parrafos_intro": [],
+        "listas_intro": [
+          "Consulta de Expedientes",
+          "Documentos para importación y admisión temporal",
+          "Importación y Exportación",
+          "Reexportación",
+          "Renovación de operación de auxiliares de la función pública",
+          "Documento Compromisorio"
+        ],
+        "tarjetas_fuente": [],
+        "tablas_generales": [],
+        "acordeones": [
+          {
+            "panel_id": "1569967613202-bbf73b4e-6209",
+            "titulo": "Consultas",
+            "tablas": [
+              {
+                "filas": [
+                  {
+                    "celdas": [
+                      "Consulta Pública Retención/Liberación"
+                    ],
+                    "links": [
+                      {
+                        "texto": "Consulta Pública Retención/Liberación",
+                        "url": "https://portal.sat.gob.gt/portal/consulta-publica-retencion-liberacion/"
+                      }
+                    ]
+                  },
+                  {
+                    "celdas": [
+                      "Documentos Manifiesto"
+                    ],
+                    "links": [
+                      {
+                        "texto": "Documentos Manifiesto",
+                        "url": "https://portal.sat.gob.gt/portal/documentos-manifiesto/"
+                      }
+                    ]
+                  },
+                  {
+                    "celdas": [
+                      "Documentos de transporte pantalla externa/ Unión Aduanera Guatemala-Honduras"
+                    ],
+                    "links": [
+                      {
+                        "texto": "Documentos de transporte pantalla externa/ Unión Aduanera Guatemala-Honduras",
+                        "url": "https://portal.sat.gob.gt/portal/consulta-de-manifiestos-documentos-de-transporte-pantalla-externa-union-aduanera-guatemala-honduras/"
+                      }
+                    ]
+                  },
+                  {
+                    "celdas": [
+                      "Sistema de Cobro Por Permanencia"
+                    ],
+                    "links": [
+                      {
+                        "texto": "Sistema de Cobro Por Permanencia",
+                        "url": "https://portal.sat.gob.gt/portal/sistema-de-cobro-por-permanencia/"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "filas": [
+                  {
+                    "celdas": [
+                      "Rampa"
+                    ],
+                    "links": [
+                      {
+                        "texto": "Rampa",
+                        "url": "https://portal.sat.gob.gt/portal/asignacion-rampa-pq/"
+                      }
+                    ]
+                  },
+                  {
+                    "celdas": [
+                      "Revisiones"
+                    ],
+                    "links": [
+                      {
+                        "texto": "Revisiones",
+                        "url": "https://portal.sat.gob.gt/portal/asignacion-de-revisores/"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "filas": [
+                  {
+                    "celdas": [
+                      "Arancel Integrado"
+                    ],
+                    "links": [
+                      {
+                        "texto": "Arancel Integrado",
+                        "url": "https://portal.sat.gob.gt/portal/arancel-integrado/"
+                      }
+                    ]
+                  },
+                  {
+                    "celdas": [
+                      "Declaración de Mercancías"
+                    ],
+                    "links": [
+                      {
+                        "texto": "Declaración de Mercancías",
+                        "url": "https://portal.sat.gob.gt/portal/consulta-declaracion-unica-aduanera/"
+                      }
+                    ]
+                  },
+                  {
+                    "celdas": [
+                      "Consultas FAUCAS/DUCA F"
+                    ],
+                    "links": [
+                      {
+                        "texto": "Consultas FAUCAS/DUCA F",
+                        "url": "https://portal.sat.gob.gt/portal/consultas-de-faucas-duca-f/"
+                      }
+                    ]
+                  },
+                  {
+                    "celdas": [
+                      "Consultas Pago DUCA-F país Destino"
+                    ],
+                    "links": [
+                      {
+                        "texto": "Consultas Pago DUCA-F país Destino",
+                        "url": "https://portal.sat.gob.gt/portal/consultas-pago-duca-f-pais-destino/"
+                      }
+                    ]
+                  },
+                  {
+                    "celdas": [
+                      "Pólizas de Importación"
+                    ],
+                    "links": [
+                      {
+                        "texto": "Pólizas de Importación",
+                        "url": "https://portal.sat.gob.gt/portal/polizas-de-importacion/"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "filas": [
+                  {
+                    "celdas": [
+                      "Registro ATC Terrestres"
+                    ],
+                    "links": [
+                      {
+                        "texto": "Registro ATC Terrestres",
+                        "url": "https://portal.sat.gob.gt/portal/registro-atc-terrestre/"
+                      }
+                    ]
+                  },
+                  {
+                    "celdas": [
+                      "Registro de Ampliación ATC"
+                    ],
+                    "links": [
+                      {
+                        "texto": "Registro de Ampliación ATC",
+                        "url": "https://portal.sat.gob.gt/portal/registro-ampliacion-atc/"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "filas": [
+                  {
+                    "celdas": [
+                      "Tránsito Pendiente"
+                    ],
+                    "links": [
+                      {
+                        "texto": "Tránsito Pendiente",
+                        "url": "https://portal.sat.gob.gt/portal/transito-pendiente/"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "links": [
+              {
+                "texto": "Consulta Pública Retención/Liberación",
+                "url": "https://portal.sat.gob.gt/portal/consulta-publica-retencion-liberacion/"
+              },
+              {
+                "texto": "Documentos Manifiesto",
+                "url": "https://portal.sat.gob.gt/portal/documentos-manifiesto/"
+              },
+              {
+                "texto": "Documentos de transporte pantalla externa/ Unión Aduanera Guatemala-Honduras",
+                "url": "https://portal.sat.gob.gt/portal/consulta-de-manifiestos-documentos-de-transporte-pantalla-externa-union-aduanera-guatemala-honduras/"
+              },
+              {
+                "texto": "Sistema de Cobro Por Permanencia",
+                "url": "https://portal.sat.gob.gt/portal/sistema-de-cobro-por-permanencia/"
+              },
+              {
+                "texto": "Rampa",
+                "url": "https://portal.sat.gob.gt/portal/asignacion-rampa-pq/"
+              },
+              {
+                "texto": "Revisiones",
+                "url": "https://portal.sat.gob.gt/portal/asignacion-de-revisores/"
+              },
+              {
+                "texto": "Arancel Integrado",
+                "url": "https://portal.sat.gob.gt/portal/arancel-integrado/"
+              },
+              {
+                "texto": "Declaración de Mercancías",
+                "url": "https://portal.sat.gob.gt/portal/consulta-declaracion-unica-aduanera/"
+              },
+              {
+                "texto": "Consultas FAUCAS/DUCA F",
+                "url": "https://portal.sat.gob.gt/portal/consultas-de-faucas-duca-f/"
+              },
+              {
+                "texto": "Consultas Pago DUCA-F país Destino",
+                "url": "https://portal.sat.gob.gt/portal/consultas-pago-duca-f-pais-destino/"
+              },
+              {
+                "texto": "Pólizas de Importación",
+                "url": "https://portal.sat.gob.gt/portal/polizas-de-importacion/"
+              },
+              {
+                "texto": "Registro ATC Terrestres",
+                "url": "https://portal.sat.gob.gt/portal/registro-atc-terrestre/"
+              },
+              {
+                "texto": "Registro de Ampliación ATC",
+                "url": "https://portal.sat.gob.gt/portal/registro-ampliacion-atc/"
+              },
+              {
+                "texto": "Tránsito Pendiente",
+                "url": "https://portal.sat.gob.gt/portal/transito-pendiente/"
+              }
+            ],
+            "videos": [],
+            "textos_panel": [
+              "Consulta Pública Retención/Liberación",
+              "Documentos Manifiesto",
+              "Documentos de transporte pantalla externa/ Unión Aduanera Guatemala-Honduras",
+              "Sistema de Cobro Por Permanencia",
+              "Asignación",
+              "Rampa",
+              "Revisiones",
+              "Arancel Integrado",
+              "Declaración de Mercancías",
+              "Consultas FAUCAS/DUCA F",
+              "Consultas Pago DUCA-F país Destino",
+              "Pólizas de Importación",
+              "Admisión Temporal de Contenedores",
+              "Registro ATC Terrestres",
+              "Registro de Ampliación ATC",
+              "Tránsito Pendiente"
+            ],
+            "iframes_panel": []
+          },
+          {
+            "panel_id": "1507054605628-6418edea-e908",
+            "titulo": "Monitoreo de Sistemas Informáticos en las Aduanas",
+            "tablas": [],
+            "links": [],
+            "videos": [],
+            "textos_panel": [],
+            "iframes_panel": [
+              "https://farm4.sat.gob.gt/dashboard-aduanas/aduanas.xhtml"
+            ]
+          },
+          {
+            "panel_id": "1507054761278-36cb86bc-8c2d",
+            "titulo": "Monitoreo Histórico de Selectivo en Aduanas",
+            "tablas": [],
+            "links": [],
+            "videos": [],
+            "textos_panel": [],
+            "iframes_panel": [
+              "https://farm4.sat.gob.gt/dashboard-aduanas/selectivo.xhtml"
+            ]
+          },
+          {
+            "panel_id": "1507061366602-79f23883-c44c",
+            "titulo": "Monitoreo de comunicación SIECA, AGEXPORT- OPA y Depósitos Temporales (Combex y Portuarias)",
+            "tablas": [],
+            "links": [],
+            "videos": [],
+            "textos_panel": [],
+            "iframes_panel": [
+              "https://farm4.sat.gob.gt/dashboard-aduanas/serviciosExternosAduanas.xhtml"
+            ]
+          }
+        ],
+        "videos": [],
+        "iframes_aplicativos": [
+          {
+            "titulo": "Consulta",
+            "url": "https://farm4.sat.gob.gt/dashboard-aduanas/aduanas.xhtml"
+          },
+          {
+            "titulo": "Consulta",
+            "url": "https://farm4.sat.gob.gt/dashboard-aduanas/selectivo.xhtml"
+          },
+          {
+            "titulo": "Consulta",
+            "url": "https://farm4.sat.gob.gt/dashboard-aduanas/serviciosExternosAduanas.xhtml"
+          }
+        ],
+        "links_fuera_acordeon": [
+          {
+            "texto": "Consulta de Expedientes",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-aduanas/#1542142398181-8db4844a-6760"
+          },
+          {
+            "texto": "Documentos para importación y admisión temporal",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-aduanas/#1542142298663-bee160b4-5362"
+          },
+          {
+            "texto": "Importación y Exportación",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-aduanas/#1542209620324-5bd6722c-fbd7"
+          },
+          {
+            "texto": "Reexportación",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-aduanas/#1542142298723-7d324078-07a5"
+          },
+          {
+            "texto": "Renovación de operación de auxiliares de la función pública",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-aduanas/#1608063945646-f9ebd644-65ff"
+          },
+          {
+            "texto": "Documento Compromisorio",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-aduanas/#1738949698794-09454143-7939"
+          }
+        ],
+        "links_planos": [
+          {
+            "texto": "Consulta Pública Retención/Liberación",
+            "url": "https://portal.sat.gob.gt/portal/consulta-publica-retencion-liberacion/"
+          },
+          {
+            "texto": "Documentos Manifiesto",
+            "url": "https://portal.sat.gob.gt/portal/documentos-manifiesto/"
+          },
+          {
+            "texto": "Documentos de transporte pantalla externa/ Unión Aduanera Guatemala-Honduras",
+            "url": "https://portal.sat.gob.gt/portal/consulta-de-manifiestos-documentos-de-transporte-pantalla-externa-union-aduanera-guatemala-honduras/"
+          },
+          {
+            "texto": "Sistema de Cobro Por Permanencia",
+            "url": "https://portal.sat.gob.gt/portal/sistema-de-cobro-por-permanencia/"
+          },
+          {
+            "texto": "Rampa",
+            "url": "https://portal.sat.gob.gt/portal/asignacion-rampa-pq/"
+          },
+          {
+            "texto": "Revisiones",
+            "url": "https://portal.sat.gob.gt/portal/asignacion-de-revisores/"
+          },
+          {
+            "texto": "Arancel Integrado",
+            "url": "https://portal.sat.gob.gt/portal/arancel-integrado/"
+          },
+          {
+            "texto": "Declaración de Mercancías",
+            "url": "https://portal.sat.gob.gt/portal/consulta-declaracion-unica-aduanera/"
+          },
+          {
+            "texto": "Consultas FAUCAS/DUCA F",
+            "url": "https://portal.sat.gob.gt/portal/consultas-de-faucas-duca-f/"
+          },
+          {
+            "texto": "Consultas Pago DUCA-F país Destino",
+            "url": "https://portal.sat.gob.gt/portal/consultas-pago-duca-f-pais-destino/"
+          },
+          {
+            "texto": "Pólizas de Importación",
+            "url": "https://portal.sat.gob.gt/portal/polizas-de-importacion/"
+          },
+          {
+            "texto": "Registro ATC Terrestres",
+            "url": "https://portal.sat.gob.gt/portal/registro-atc-terrestre/"
+          },
+          {
+            "texto": "Registro de Ampliación ATC",
+            "url": "https://portal.sat.gob.gt/portal/registro-ampliacion-atc/"
+          },
+          {
+            "texto": "Tránsito Pendiente",
+            "url": "https://portal.sat.gob.gt/portal/transito-pendiente/"
+          },
+          {
+            "texto": "Consulta de Expedientes",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-aduanas/#1542142398181-8db4844a-6760"
+          },
+          {
+            "texto": "Documentos para importación y admisión temporal",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-aduanas/#1542142298663-bee160b4-5362"
+          },
+          {
+            "texto": "Importación y Exportación",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-aduanas/#1542209620324-5bd6722c-fbd7"
+          },
+          {
+            "texto": "Reexportación",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-aduanas/#1542142298723-7d324078-07a5"
+          },
+          {
+            "texto": "Renovación de operación de auxiliares de la función pública",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-aduanas/#1608063945646-f9ebd644-65ff"
+          },
+          {
+            "texto": "Documento Compromisorio",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-aduanas/#1738949698794-09454143-7939"
+          },
+          {
+            "texto": "Consulta",
+            "url": "https://farm4.sat.gob.gt/dashboard-aduanas/aduanas.xhtml"
+          },
+          {
+            "texto": "Consulta",
+            "url": "https://farm4.sat.gob.gt/dashboard-aduanas/selectivo.xhtml"
+          },
+          {
+            "texto": "Consulta",
+            "url": "https://farm4.sat.gob.gt/dashboard-aduanas/serviciosExternosAduanas.xhtml"
+          }
+        ]
+      }
+    },
+    "sistema-de-cobro-por-permanencia": {
+      "slug": "sistema-de-cobro-por-permanencia",
+      "url": "https://portal.sat.gob.gt/portal/sistema-de-cobro-por-permanencia/",
+      "url_base": "https://portal.sat.gob.gt/portal/sistema-de-cobro-por-permanencia/",
+      "ancla_fragmento": "",
+      "arquetipo_matriz": "TIPO-2",
+      "criterio_arquetipo": "Colisión resuelta a TIPO-2 por ser puente directo a aplicativo o consulta operativa.",
+      "ids_sat_ges": [
+        "SAT-GES-0444",
+        "SAT-GES-0457"
+      ],
+      "niveles_2": [
+        "Auxiliares de la Función Pública Aduanera (AFPA)"
+      ],
+      "niveles_3": [
+        "Depósitos Aduaneros"
+      ],
+      "titulos_excel": [
+        "Sistema de Cobro por Permanencia de Mercancías (SCP)",
+        "Sistema de cobro por permanencia en el país"
+      ],
+      "descripciones_excel": [
+        "Aplicativo web oficial para consultar y liquidar las tarifas por días de permanencia de mercancías bajo control aduanero en almacén fiscal antes del levante.",
+        "Plataforma para calcular y gestionar el cobro por días de permanencia de contenedores y medios de transporte en el país."
+      ],
+      "bases_legales_excel": [
+        "CAUCA IV y RECAUCA IV (Arts. 119 al 129, Régimen de Depósito Aduanero o Fiscal)."
+      ],
+      "observaciones_excel": [],
+      "notas_extra_col24": [],
+      "http_status": 200,
+      "origen_extraccion": "https://portal.sat.gob.gt/portal/sistema-de-cobro-por-permanencia/",
+      "fuente_viva": {
+        "tipo_fuente": "wpbakery_page",
+        "titulo_fuente": "Sistema de Cobro Por Permanencia -SCP-",
+        "headings": [
+          {
+            "tag": "h1",
+            "texto": "Sistema de Cobro Por Permanencia -SCP-"
+          }
+        ],
+        "correos_cf_decodificados": [],
+        "parrafos_intro": [
+          "﻿"
+        ],
+        "listas_intro": [],
+        "tarjetas_fuente": [],
+        "tablas_generales": [],
+        "acordeones": [],
+        "videos": [],
+        "iframes_aplicativos": [
+          {
+            "titulo": "Consulta",
+            "url": "https://farm3.sat.gob.gt/consultas-publicas-aduanas/public/consultas-publicas/consultaSCP.jsf"
+          }
+        ],
+        "links_fuera_acordeon": [],
+        "links_planos": [
+          {
+            "texto": "Consulta",
+            "url": "https://farm3.sat.gob.gt/consultas-publicas-aduanas/public/consultas-publicas/consultaSCP.jsf"
+          }
+        ]
+      }
+    },
+    "registro-atc-terrestre": {
+      "slug": "registro-atc-terrestre",
+      "url": "https://portal.sat.gob.gt/portal/registro-atc-terrestre/",
+      "url_base": "https://portal.sat.gob.gt/portal/registro-atc-terrestre/",
+      "ancla_fragmento": "",
+      "arquetipo_matriz": "TIPO-2",
+      "criterio_arquetipo": "Colisión resuelta a TIPO-2 (Puente a Buscador/Consulta) frente a tipología descriptiva/transaccional.",
+      "ids_sat_ges": [
+        "SAT-GES-0453",
+        "SAT-GES-0470",
+        "SAT-GES-0487"
+      ],
+      "niveles_2": [
+        "Auxiliares de la Función Pública Aduanera (AFPA)",
+        "Regímenes Territoriales y Zonas Especiales"
+      ],
+      "niveles_3": [
+        "Depósitos Aduaneros",
+        "Maquilas (Decreto 29-89)",
+        "Transportistas Aduaneros"
+      ],
+      "titulos_excel": [
+        "Registro de admisión temporal de contenedores terrestres",
+        "Registro y Habilitación de Equipo de Carga Terrestre (ATC)",
+        "Consulta de admisión tempral de contenedores terrestres"
+      ],
+      "descripciones_excel": [
+        "Control y registro de ingreso y ampliación de plazo para la admisión temporal de contenedores y chasises terrestres.",
+        "Registro oficial de cabezales y plataformas de transporte internacional previo a su arribo a puestos fronterizos.",
+        "Consulta del tiempo restante del plazo de un año prorrogable de permanencia legal en el país."
+      ],
+      "bases_legales_excel": [
+        "CAUCA IV y RECAUCA IV (Depósitos Aduaneros Temporales en puertos y aeropuertos).",
+        "CAUCA IV (Arts. 18 al 28), RECAUCA IV (Tránsito Aduanero Internacional Terrestre) y Ley de Aduanas.",
+        "Decreto 29-89 (Ley de Fomento y Desarrollo de la Actividad Exportadora y de Maquila)."
+      ],
+      "observaciones_excel": [],
+      "notas_extra_col24": [
+        "No hay tarjeta"
+      ],
+      "http_status": 200,
+      "origen_extraccion": "https://portal.sat.gob.gt/portal/registro-atc-terrestre/",
+      "fuente_viva": {
+        "tipo_fuente": "wpbakery_page",
+        "titulo_fuente": "Registro ATC Terrestre",
+        "headings": [
+          {
+            "tag": "h1",
+            "texto": "Registro ATC Terrestre"
+          }
+        ],
+        "correos_cf_decodificados": [],
+        "parrafos_intro": [],
+        "listas_intro": [],
+        "tarjetas_fuente": [],
+        "tablas_generales": [],
+        "acordeones": [],
+        "videos": [],
+        "iframes_aplicativos": [
+          {
+            "titulo": "Consulta",
+            "url": "https://farm2.sat.gob.gt/aduana-publico/aduana/carga/registroATCTerrestre/registroATCTerrestre.jsf"
+          }
+        ],
+        "links_fuera_acordeon": [],
+        "links_planos": [
+          {
+            "texto": "Consulta",
+            "url": "https://farm2.sat.gob.gt/aduana-publico/aduana/carga/registroATCTerrestre/registroATCTerrestre.jsf"
+          }
+        ]
+      }
+    },
+    "asignacion-de-revisores": {
+      "slug": "asignacion-de-revisores",
+      "url": "https://portal.sat.gob.gt/portal/asignacion-de-revisores/",
+      "url_base": "https://portal.sat.gob.gt/portal/asignacion-de-revisores/",
+      "ancla_fragmento": "",
+      "arquetipo_matriz": "TIPO-2",
+      "criterio_arquetipo": "Interacción de consulta en línea o base de datos (TIPO-2).",
+      "ids_sat_ges": [
+        "SAT-GES-0463"
+      ],
+      "niveles_2": [
+        "Auxiliares de la Función Pública Aduanera (AFPA)"
+      ],
+      "niveles_3": [
+        "Transportistas Aduaneros"
+      ],
+      "titulos_excel": [
+        "Consulta de Asignación de Revisores Aduaneros"
+      ],
+      "descripciones_excel": [
+        "Herramienta de transparencia que consulta el técnico aduanero asignado por sistema aleatorio para la verificación de carga."
+      ],
+      "bases_legales_excel": [
+        "CAUCA IV (Arts. 18 al 28), RECAUCA IV (Tránsito Aduanero Internacional Terrestre) y Ley de Aduanas."
+      ],
+      "observaciones_excel": [],
+      "notas_extra_col24": [],
+      "http_status": 200,
+      "origen_extraccion": "https://portal.sat.gob.gt/portal/asignacion-de-revisores/",
+      "fuente_viva": {
+        "tipo_fuente": "wpbakery_page",
+        "titulo_fuente": "Asignación de Revisores",
+        "headings": [
+          {
+            "tag": "h1",
+            "texto": "Asignación de Revisores"
+          }
+        ],
+        "correos_cf_decodificados": [],
+        "parrafos_intro": [],
+        "listas_intro": [],
+        "tarjetas_fuente": [],
+        "tablas_generales": [],
+        "acordeones": [],
+        "videos": [],
+        "iframes_aplicativos": [
+          {
+            "titulo": "Consulta",
+            "url": "https://farm3.sat.gob.gt/aduana-publico/aduana/comunes/asignacionVerificadores/consultarSorteo.jsf"
+          }
+        ],
+        "links_fuera_acordeon": [],
+        "links_planos": [
+          {
+            "texto": "Consulta",
+            "url": "https://farm3.sat.gob.gt/aduana-publico/aduana/comunes/asignacionVerificadores/consultarSorteo.jsf"
+          }
+        ]
+      }
+    },
+    "asignacion-rampa-pq": {
+      "slug": "asignacion-rampa-pq",
+      "url": "https://portal.sat.gob.gt/portal/asignacion-rampa-pq/",
+      "url_base": "https://portal.sat.gob.gt/portal/asignacion-rampa-pq/",
+      "ancla_fragmento": "",
+      "arquetipo_matriz": "TIPO-2",
+      "criterio_arquetipo": "Interacción de consulta en línea o base de datos (TIPO-2).",
+      "ids_sat_ges": [
+        "SAT-GES-0464"
+      ],
+      "niveles_2": [
+        "Auxiliares de la Función Pública Aduanera (AFPA)"
+      ],
+      "niveles_3": [
+        "Transportistas Aduaneros"
+      ],
+      "titulos_excel": [
+        "Consulta de Asignación de Rampa en Puertos y Depósitos"
+      ],
+      "descripciones_excel": [
+        "Buscador en línea que asigna el muelle, andén o rampa de inspección para la descarga y revisión no intrusiva de contenedores."
+      ],
+      "bases_legales_excel": [
+        "CAUCA IV (Arts. 18 al 28), RECAUCA IV (Tránsito Aduanero Internacional Terrestre) y Ley de Aduanas."
+      ],
+      "observaciones_excel": [],
+      "notas_extra_col24": [],
+      "http_status": 200,
+      "origen_extraccion": "https://portal.sat.gob.gt/portal/asignacion-rampa-pq/",
+      "fuente_viva": {
+        "tipo_fuente": "wpbakery_page",
+        "titulo_fuente": "Asignación de Rampa",
+        "headings": [
+          {
+            "tag": "h1",
+            "texto": "Asignación de Rampa"
+          }
+        ],
+        "correos_cf_decodificados": [],
+        "parrafos_intro": [],
+        "listas_intro": [],
+        "tarjetas_fuente": [],
+        "tablas_generales": [],
+        "acordeones": [],
+        "videos": [],
+        "iframes_aplicativos": [
+          {
+            "titulo": "Consulta",
+            "url": "https://farm3.sat.gob.gt/consultas-publicas-aduanas/public/consultas-publicas/asignacionRampaPQ.jsf"
+          }
+        ],
+        "links_fuera_acordeon": [],
+        "links_planos": [
+          {
+            "texto": "Consulta",
+            "url": "https://farm3.sat.gob.gt/consultas-publicas-aduanas/public/consultas-publicas/asignacionRampaPQ.jsf"
+          }
+        ]
+      }
+    },
+    "transito-pendiente": {
+      "slug": "transito-pendiente",
+      "url": "https://portal.sat.gob.gt/portal/transito-pendiente/",
+      "url_base": "https://portal.sat.gob.gt/portal/transito-pendiente/",
+      "ancla_fragmento": "",
+      "arquetipo_matriz": "TIPO-2",
+      "criterio_arquetipo": "Interacción de consulta en línea o base de datos (TIPO-2).",
+      "ids_sat_ges": [
+        "SAT-GES-0475"
+      ],
+      "niveles_2": [
+        "Auxiliares de la Función Pública Aduanera (AFPA)"
+      ],
+      "niveles_3": [
+        "Transportistas Aduaneros"
+      ],
+      "titulos_excel": [
+        "Consulta de Tránsitos Aduaneros Pendientes en Ruta"
+      ],
+      "descripciones_excel": [
+        "Monitoreo de declaraciones de tránsito interno e internacional en curso, mostrando aduana de partida, destino y tiempo restante."
+      ],
+      "bases_legales_excel": [
+        "CAUCA IV (Arts. 18 al 28), RECAUCA IV (Tránsito Aduanero Internacional Terrestre) y Ley de Aduanas."
+      ],
+      "observaciones_excel": [],
+      "notas_extra_col24": [],
+      "http_status": 200,
+      "origen_extraccion": "https://portal.sat.gob.gt/portal/transito-pendiente/",
+      "fuente_viva": {
+        "tipo_fuente": "wpbakery_page",
+        "titulo_fuente": "Tránsito Pendiente",
+        "headings": [
+          {
+            "tag": "h1",
+            "texto": "Tránsito Pendiente"
+          }
+        ],
+        "correos_cf_decodificados": [],
+        "parrafos_intro": [],
+        "listas_intro": [],
+        "tarjetas_fuente": [],
+        "tablas_generales": [],
+        "acordeones": [],
+        "videos": [],
+        "iframes_aplicativos": [
+          {
+            "titulo": "Consulta",
+            "url": "https://farm3.sat.gob.gt/consultas-publicas-aduanas/public/consultas-publicas/transitoPendiente.jsf"
+          }
+        ],
+        "links_fuera_acordeon": [],
+        "links_planos": [
+          {
+            "texto": "Consulta",
+            "url": "https://farm3.sat.gob.gt/consultas-publicas-aduanas/public/consultas-publicas/transitoPendiente.jsf"
+          }
+        ]
+      }
+    }
+  }
+}

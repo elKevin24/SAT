@@ -1,0 +1,1092 @@
+{
+  "https://portal.sat.gob.gt/portal/programa-miad/componente-procesos/": {
+    "url_base": "https://portal.sat.gob.gt/portal/programa-miad/componente-procesos/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/programa-miad/componente-procesos/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Componente de Procesos - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:39:34.477573+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/requisitos-para-inscripccion-en-el-registro-de-importadores/": {
+    "url_base": "https://portal.sat.gob.gt/portal/requisitos-para-inscripccion-en-el-registro-de-importadores/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/requisitos-para-inscripccion-en-el-registro-de-importadores/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Requisitos para Inscripcción en el Registro de importadores - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:39:34.479086+00:00"
+  },
+  "https://sites.google.com/capacitacionessat.page/cultura-tributariad/cursos-virtuales-sat/aduanas": {
+    "url_base": "https://sites.google.com/capacitacionessat.page/cultura-tributariad/cursos-virtuales-sat/aduanas",
+    "http_status": 200,
+    "final_url": "https://sites.google.com/capacitacionessat.page/cultura-tributariad/cursos-virtuales-sat/aduanas",
+    "content_type": "text/html; charset=utf-8",
+    "page_title": "Cursos Virtuales SAT - Aduanas",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:39:38.624234+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/biblioteca-en-linea-sat/legislacion-aduanera/": {
+    "url_base": "https://portal.sat.gob.gt/portal/biblioteca-en-linea-sat/legislacion-aduanera/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/biblioteca-en-linea-sat/legislacion-aduanera/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Legislación Aduanera - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:39:38.807969+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/programa-miad/": {
+    "url_base": "https://portal.sat.gob.gt/portal/programa-miad/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/programa-miad/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Programa MIAD - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:39:38.804919+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/programa-miad/componente-procesos/importacion/": {
+    "url_base": "https://portal.sat.gob.gt/portal/programa-miad/componente-procesos/importacion/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/programa-miad/componente-procesos/importacion/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Importacion - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:39:39.851867+00:00"
+  },
+  "https://sites.google.com/capacitacionessat.page/cultura-tributariad/cursos-virtuales-sat/aduanas/26-factura-y-declaraci%C3%B3n-%C3%BAnica-centroamericana-fyduca": {
+    "url_base": "https://sites.google.com/capacitacionessat.page/cultura-tributariad/cursos-virtuales-sat/aduanas/26-factura-y-declaraci%C3%B3n-%C3%BAnica-centroamericana-fyduca",
+    "http_status": 200,
+    "final_url": "https://sites.google.com/capacitacionessat.page/cultura-tributariad/cursos-virtuales-sat/aduanas/26-factura-y-declaraci%C3%B3n-%C3%BAnica-centroamericana-fyduca",
+    "content_type": "text/html; charset=utf-8",
+    "page_title": "Cursos Virtuales SAT - 26. Factura y declaración única centroamericana -FYDUCA-",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:39:41.598239+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/procedimientos-aduanas/": {
+    "url_base": "https://portal.sat.gob.gt/portal/procedimientos-aduanas/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/procedimientos-aduanas/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Gestiones Aduaneras - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:39:40.955522+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/declaracion-unica-centroamericana-duca/": {
+    "url_base": "https://portal.sat.gob.gt/portal/declaracion-unica-centroamericana-duca/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/declaracion-unica-centroamericana-duca/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Declaración Única Centroamericana (DUCA) - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:39:45.090020+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/declaracion-unica-aduanera-dua-gt/": {
+    "url_base": "https://portal.sat.gob.gt/portal/declaracion-unica-aduanera-dua-gt/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/declaracion-unica-aduanera-dua-gt/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Declaración Única Aduanera - DUA-GT",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:39:42.540594+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/consulta-declaracion-unica-aduanera/": {
+    "url_base": "https://portal.sat.gob.gt/portal/consulta-declaracion-unica-aduanera/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/consulta-declaracion-unica-aduanera/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Consultas Declaración de Mercancías - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:39:43.760863+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/polizas-de-importacion/": {
+    "url_base": "https://portal.sat.gob.gt/portal/polizas-de-importacion/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/polizas-de-importacion/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Pólizas de Importación - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:39:46.233745+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/requisitos-tramites-aduanas/presentacion-de-declaracion-de-mercancias-de-importacion-y-admisiones-temporales-para-cargos-y-fianza/": {
+    "url_base": "https://portal.sat.gob.gt/portal/requisitos-tramites-aduanas/presentacion-de-declaracion-de-mercancias-de-importacion-y-admisiones-temporales-para-cargos-y-fianza/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/requisitos-tramites-aduanas/presentacion-de-declaracion-de-mercancias-de-importacion-y-admisiones-temporales-para-cargos-y-fianza/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Presentación de declaración de mercancías de admisión temporal con cargo a fianza",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:39:49.464197+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/consultas-de-faucas-duca-f/": {
+    "url_base": "https://portal.sat.gob.gt/portal/consultas-de-faucas-duca-f/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/consultas-de-faucas-duca-f/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Consultas de FAUCAS/DUCA F - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:39:48.589624+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/requisitos-tramites-aduanas/recepcion-documentos-parcialidades/": {
+    "url_base": "https://portal.sat.gob.gt/portal/requisitos-tramites-aduanas/recepcion-documentos-parcialidades/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/requisitos-tramites-aduanas/recepcion-documentos-parcialidades/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Recepción de Documentos de Parcialidades",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:39:49.291454+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/despacho-de-distintivos-de-control-de-productos-importados-a-los-fabricantes-o-importadores-domiciliados-en-el-pais-y-a-las-personas-individuales-y-juridicas/": {
+    "url_base": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/despacho-de-distintivos-de-control-de-productos-importados-a-los-fabricantes-o-importadores-domiciliados-en-el-pais-y-a-las-personas-individuales-y-juridicas/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/despacho-de-distintivos-de-control-de-productos-importados-a-los-fabricantes-o-importadores-domiciliados-en-el-pais-y-a-las-personas-individuales-y-juridicas/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Entrega de Distintivos de Control de Productos Importados en SAT a los Importadores Registrados en el Registro de Importadores Domiciliados en el País y a las Personas Individuales y Jurídicas que no sean Fabricantes ni Importadores.",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:39:49.619131+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/facilitacion-de-comercio/": {
+    "url_base": "https://portal.sat.gob.gt/portal/facilitacion-de-comercio/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/facilitacion-de-comercio/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Facilitación de Comercio - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:39:51.242451+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/consultas-aduanas/": {
+    "url_base": "https://portal.sat.gob.gt/portal/consultas-aduanas/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/consultas-aduanas/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Consultas Aduanas - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:39:51.239442+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/consulta-de-manifiestos-documentos-de-transporte-pantalla-externa-union-aduanera-guatemala-honduras/": {
+    "url_base": "https://portal.sat.gob.gt/portal/consulta-de-manifiestos-documentos-de-transporte-pantalla-externa-union-aduanera-guatemala-honduras/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/consulta-de-manifiestos-documentos-de-transporte-pantalla-externa-union-aduanera-guatemala-honduras/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Consulta de manifiestos/Documentos de transporte pantalla externa - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:39:52.186312+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/consulta-publica-retencion-liberacion/": {
+    "url_base": "https://portal.sat.gob.gt/portal/consulta-publica-retencion-liberacion/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/consulta-publica-retencion-liberacion/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Consulta Pública Retención/Liberación - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:39:56.184095+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/consulta-del-estado-o-actuaciones-de-expedientes-de-las-unidades-del-departamento-de-gestion-aduanera/": {
+    "url_base": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/consulta-del-estado-o-actuaciones-de-expedientes-de-las-unidades-del-departamento-de-gestion-aduanera/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/consulta-del-estado-o-actuaciones-de-expedientes-de-las-unidades-del-departamento-de-gestion-aduanera/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Consulta del Estado o Actuaciones de Expedientes de las Unidades del Departamento de Gestión Aduanera",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:39:56.182484+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/requisitos-de-aduanas/": {
+    "url_base": "https://portal.sat.gob.gt/portal/requisitos-de-aduanas/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/requisitos-de-aduanas/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Requisitos de Aduanas",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:39:58.408538+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/puestos-de-control-interinstitucional-pci/": {
+    "url_base": "https://portal.sat.gob.gt/portal/puestos-de-control-interinstitucional-pci/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/puestos-de-control-interinstitucional-pci/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | PCI Puestos de Control Interinstitucional - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:39:59.836942+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/estudio-de-tiempos-de-despacho/": {
+    "url_base": "https://portal.sat.gob.gt/portal/estudio-de-tiempos-de-despacho/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/estudio-de-tiempos-de-despacho/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Estudio de Tiempos de Despacho - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:39:59.870407+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/union-aduanera/": {
+    "url_base": "https://portal.sat.gob.gt/portal/union-aduanera/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/union-aduanera/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Unión Aduanera - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:39:59.997373+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/comprobacion-valor-de-importacion/": {
+    "url_base": "https://portal.sat.gob.gt/portal/comprobacion-valor-de-importacion/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/comprobacion-valor-de-importacion/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Comprobación valor de importación - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:40:05.812860+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/tablas-y-acuerdos-vehiculos/": {
+    "url_base": "https://portal.sat.gob.gt/portal/tablas-y-acuerdos-vehiculos/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/tablas-y-acuerdos-vehiculos/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Tablas y Acuerdos de Vehiculos - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:40:05.811346+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/descarga/1895/legislacion-aduanera/82513/acuerdo-de-directorio-numero-23-2024-que-aprueba-la-tabla-de-valores-imponibles-del-impuesto-al-valor-agregado-para-la-importacion-de-vehiculos-automotores-terrestres-usados-para-el-ano-2025.pdf": {
+    "url_base": "https://portal.sat.gob.gt/portal/descarga/1895/legislacion-aduanera/82513/acuerdo-de-directorio-numero-23-2024-que-aprueba-la-tabla-de-valores-imponibles-del-impuesto-al-valor-agregado-para-la-importacion-de-vehiculos-automotores-terrestres-usados-para-el-ano-2025.pdf",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/descarga/1895/legislacion-aduanera/82513/acuerdo-de-directorio-numero-23-2024-que-aprueba-la-tabla-de-valores-imponibles-del-impuesto-al-valor-agregado-para-la-importacion-de-vehiculos-automotores-terrestres-usados-para-el-ano-2025.pdf",
+    "content_type": "application/pdf",
+    "page_title": "[Documento PDF]",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:40:05.942189+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/descarga/1895/legislacion-aduanera/82514/tabla-de-valores-imponibles-del-impuesto-al-valor-agregado-e-impuesto-especifico-a-la-primera-matricula-para-importacion-de-vehiculos-automotores-terrestres-usados-para-el-ano-2025-2.pdf": {
+    "url_base": "https://portal.sat.gob.gt/portal/descarga/1895/legislacion-aduanera/82514/tabla-de-valores-imponibles-del-impuesto-al-valor-agregado-e-impuesto-especifico-a-la-primera-matricula-para-importacion-de-vehiculos-automotores-terrestres-usados-para-el-ano-2025-2.pdf",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/descarga/1895/legislacion-aduanera/82514/tabla-de-valores-imponibles-del-impuesto-al-valor-agregado-e-impuesto-especifico-a-la-primera-matricula-para-importacion-de-vehiculos-automotores-terrestres-usados-para-el-ano-2025-2.pdf",
+    "content_type": "application/pdf",
+    "page_title": "[Documento PDF]",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:40:09.860054+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/requisitos-tramites-aduanas/importacion-y-exportacion-menor-con-declaracion-de-oficio/": {
+    "url_base": "https://portal.sat.gob.gt/portal/requisitos-tramites-aduanas/importacion-y-exportacion-menor-con-declaracion-de-oficio/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/requisitos-tramites-aduanas/importacion-y-exportacion-menor-con-declaracion-de-oficio/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Importación y Exportación Menor con Declaración de Oficio",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:40:09.793951+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/documentacion-a-presentar-ante-la-aduana-de-vehiculos-trifoliar/": {
+    "url_base": "https://portal.sat.gob.gt/portal/documentacion-a-presentar-ante-la-aduana-de-vehiculos-trifoliar/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/documentacion-a-presentar-ante-la-aduana-de-vehiculos-trifoliar/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Documentación a presentar ante la Aduana de Vehículos trifoliar - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:40:09.789219+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/alza-e-importacion-vehiculos/": {
+    "url_base": "https://portal.sat.gob.gt/portal/alza-e-importacion-vehiculos/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/alza-e-importacion-vehiculos/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Alza e Importación de Vehículos - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:40:13.271135+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/inscripcion-de-vehiculos-para-importadores-de-vehiculos-nuevos/": {
+    "url_base": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/inscripcion-de-vehiculos-para-importadores-de-vehiculos-nuevos/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/inscripcion-de-vehiculos-para-importadores-de-vehiculos-nuevos/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Inscripción de Vehículos para Importadores de Vehículos Nuevos",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:40:13.272666+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/devolucion-de-depositos-aduanales/": {
+    "url_base": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/devolucion-de-depositos-aduanales/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/devolucion-de-depositos-aduanales/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Devolución de Depósitos Aduanales",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:40:13.181557+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/rescate-de-mercancias-caidas-en-abandono/": {
+    "url_base": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/rescate-de-mercancias-caidas-en-abandono/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/requisitos-tramites-aduanas/rescate-de-mercancias-caidas-en-abandono/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Rescate de Mercancías Caídas en Abandono",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:40:25.594075+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/recepcion-de-seguro-de-caucion-importacion-y-admision-temporal/": {
+    "url_base": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/recepcion-de-seguro-de-caucion-importacion-y-admision-temporal/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/recepcion-de-seguro-de-caucion-importacion-y-admision-temporal/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Recepción de seguro de caución importacion y admisión temporal",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:40:18.499860+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/franquicias-electronicas/": {
+    "url_base": "https://portal.sat.gob.gt/portal/franquicias-electronicas/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/franquicias-electronicas/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Franquicias Electrónicas - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:40:18.498343+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/declaracion-jurada-regional-de-viajero/": {
+    "url_base": "https://portal.sat.gob.gt/portal/declaracion-jurada-regional-de-viajero/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/declaracion-jurada-regional-de-viajero/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Declaración Jurada Regional de Viajero - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:40:29.238665+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/inscripcion-al-regimen-habitual-de-exportaciones/": {
+    "url_base": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/inscripcion-al-regimen-habitual-de-exportaciones/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/inscripcion-al-regimen-habitual-de-exportaciones/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Inscripción al Régimen Habitual de Exportaciones",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:40:25.668085+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-para-la-inactivacion-en-el-registro-de-exportadores/": {
+    "url_base": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-para-la-inactivacion-en-el-registro-de-exportadores/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-para-la-inactivacion-en-el-registro-de-exportadores/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Requisitos para la Inactivación en el Registro de Exportadores",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:40:32.998409+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-para-solicitud-de-permiso-temporal-en-el-registro-de-exportadores/": {
+    "url_base": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-para-solicitud-de-permiso-temporal-en-el-registro-de-exportadores/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-para-solicitud-de-permiso-temporal-en-el-registro-de-exportadores/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Requisitos para Solicitud de Permiso Temporal en el Registro de Exportadores",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:40:32.995878+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-para-la-actualizacion-en-el-registro-de-exportadores/": {
+    "url_base": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-para-la-actualizacion-en-el-registro-de-exportadores/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-para-la-actualizacion-en-el-registro-de-exportadores/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Requisitos para la Actualización en el Registro de Exportadores",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:40:30.860920+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-para-la-inscripcion-en-el-registro-de-exportadores/": {
+    "url_base": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-para-la-inscripcion-en-el-registro-de-exportadores/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-para-la-inscripcion-en-el-registro-de-exportadores/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Requisitos para la Inscripción en el Registro de Exportadores",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:40:32.363522+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/registro-de-exportadores-en-agencia-virtual/": {
+    "url_base": "https://portal.sat.gob.gt/portal/registro-de-exportadores-en-agencia-virtual/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/registro-de-exportadores-en-agencia-virtual/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Registro de Exportadores En Agencia Virtual",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:40:33.976040+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-formulario-sat-2125/": {
+    "url_base": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-formulario-sat-2125/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-formulario-sat-2125/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Requisitos Formulario SAT-2125",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:40:34.310929+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/requisitos-tramites-aduanas/presentacion-y-analisis-de-declaracion-complementarias-de-exportacion/": {
+    "url_base": "https://portal.sat.gob.gt/portal/requisitos-tramites-aduanas/presentacion-y-analisis-de-declaracion-complementarias-de-exportacion/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/requisitos-tramites-aduanas/presentacion-y-analisis-de-declaracion-complementarias-de-exportacion/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Presentación y Análisis de Declaración Complementarias de Exportación",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:40:34.309410+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/requisitos-tramites-aduanas/selectivo-de-declaraciones-de-exportacion/": {
+    "url_base": "https://portal.sat.gob.gt/portal/requisitos-tramites-aduanas/selectivo-de-declaraciones-de-exportacion/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/requisitos-tramites-aduanas/selectivo-de-declaraciones-de-exportacion/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Selectivo de Declaraciones de Exportación",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:40:36.594526+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/dec-expo-sim-prov-com/": {
+    "url_base": "https://portal.sat.gob.gt/portal/dec-expo-sim-prov-com/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/dec-expo-sim-prov-com/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Declaraciones de Exportación Simplificadas, Provisionales y Complementarias - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:40:36.813832+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/requisitos-tramites-aduanas/confirmacion-de-declaraciones-de-mercancias/": {
+    "url_base": "https://portal.sat.gob.gt/portal/requisitos-tramites-aduanas/confirmacion-de-declaraciones-de-mercancias/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/requisitos-tramites-aduanas/confirmacion-de-declaraciones-de-mercancias/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Confirmación de Declaraciones de Mercancías",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:40:36.812321+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/requisitos-tramites-aduanas/rescate-de-mercancias-caidas-en-abandono/": {
+    "url_base": "https://portal.sat.gob.gt/portal/requisitos-tramites-aduanas/rescate-de-mercancias-caidas-en-abandono/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/requisitos-tramites-aduanas/rescate-de-mercancias-caidas-en-abandono/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Rescate de Mercancías Caídas en Abandono",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:40:38.688193+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/requisitos-tramites-aduanas/autorizacion-de-cartas-de-ingreso-a-zona-primaria/": {
+    "url_base": "https://portal.sat.gob.gt/portal/requisitos-tramites-aduanas/autorizacion-de-cartas-de-ingreso-a-zona-primaria/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/requisitos-tramites-aduanas/autorizacion-de-cartas-de-ingreso-a-zona-primaria/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Autorización de Cartas de Ingreso a Zona Primaria",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:40:38.686639+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/cambio-de-regimen-especial-al-regimen-optativo-de-devolucion-de-credito-fiscal-de-iva-por-exportaciones/": {
+    "url_base": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/cambio-de-regimen-especial-al-regimen-optativo-de-devolucion-de-credito-fiscal-de-iva-por-exportaciones/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/cambio-de-regimen-especial-al-regimen-optativo-de-devolucion-de-credito-fiscal-de-iva-por-exportaciones/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Cambio de Régimen Especial al Régimen Optativo de Devolución de Crédito Fiscal de IVA por Exportaciones",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:40:38.692557+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/cambio-de-regimen-optativo-al-regimen-especial-de-devolucion-de-credito-fiscal-de-iva-por-exportaciones/": {
+    "url_base": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/cambio-de-regimen-optativo-al-regimen-especial-de-devolucion-de-credito-fiscal-de-iva-por-exportaciones/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/cambio-de-regimen-optativo-al-regimen-especial-de-devolucion-de-credito-fiscal-de-iva-por-exportaciones/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Cambio de Régimen Optativo al Régimen Especial de Devolución de Crédito Fiscal de IVA por Exportaciones",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:40:44.780286+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/inscripcion-al-regimen-especial-de-devolucion-de-credito-fiscal-de-iva-por-exportaciones/": {
+    "url_base": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/inscripcion-al-regimen-especial-de-devolucion-de-credito-fiscal-de-iva-por-exportaciones/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/inscripcion-al-regimen-especial-de-devolucion-de-credito-fiscal-de-iva-por-exportaciones/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Inscripción al Régimen Especial de Devolución de Crédito Fiscal de IVA por exportaciones",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:40:44.774922+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/actualizacion-al-regimen-especial-de-devolucion-de-credito-fiscal-a-los-exportadores-desde-agencia-virtual/": {
+    "url_base": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/actualizacion-al-regimen-especial-de-devolucion-de-credito-fiscal-a-los-exportadores-desde-agencia-virtual/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/actualizacion-al-regimen-especial-de-devolucion-de-credito-fiscal-a-los-exportadores-desde-agencia-virtual/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Actualización al Régimen Especial de Devolución de Crédito Fiscal a los Exportadores desde Agencia Virtual",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:40:43.596265+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/inscripcion-al-regimen-optativo-de-devolucion-de-credito-fiscal-de-iva-por-exportaciones/": {
+    "url_base": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/inscripcion-al-regimen-optativo-de-devolucion-de-credito-fiscal-de-iva-por-exportaciones/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/inscripcion-al-regimen-optativo-de-devolucion-de-credito-fiscal-de-iva-por-exportaciones/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Inscripción al Régimen Optativo de Devolución de Crédito Fiscal de IVA por Exportaciones",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:40:51.029871+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/operador-economico-autorizado/": {
+    "url_base": "https://portal.sat.gob.gt/portal/operador-economico-autorizado/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/operador-economico-autorizado/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Operador Económico Autorizado - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:40:47.426537+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/manual-de-procedimientos-de-la-intendencia-de-aduanas/": {
+    "url_base": "https://portal.sat.gob.gt/portal/manual-de-procedimientos-de-la-intendencia-de-aduanas/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/manual-de-procedimientos-de-la-intendencia-de-aduanas/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Procedimientos - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:40:47.425464+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/requisitos-tramites-aduanas/solicitud-de-renovacion-de-auxiliares-de-la-funcion-publica-en-unidad-de-calificacion-registro-y-control-de-auxiliares-de-la-funcion-publica/": {
+    "url_base": "https://portal.sat.gob.gt/portal/requisitos-tramites-aduanas/solicitud-de-renovacion-de-auxiliares-de-la-funcion-publica-en-unidad-de-calificacion-registro-y-control-de-auxiliares-de-la-funcion-publica/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/requisitos-tramites-aduanas/solicitud-de-renovacion-de-auxiliares-de-la-funcion-publica-en-unidad-de-calificacion-registro-y-control-de-auxiliares-de-la-funcion-publica/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Solicitud de Renovación de Auxiliar de la Función Pública en la Unidad de Administración de Auxiliares de la Función Pública Aduanera",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:40:51.028345+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/componente-activex-pki-dua/": {
+    "url_base": "https://portal.sat.gob.gt/portal/componente-activex-pki-dua/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/componente-activex-pki-dua/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Componente ActiveX PKI/DUA",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:40:49.741349+00:00"
+  },
+  "https://sites.google.com/capacitacionessat.page/cultura-tributariad/cursos-virtuales-sat/aduanas/declaraci%C3%B3n-%C3%BAnica-centroamericana-duca": {
+    "url_base": "https://sites.google.com/capacitacionessat.page/cultura-tributariad/cursos-virtuales-sat/aduanas/declaraci%C3%B3n-%C3%BAnica-centroamericana-duca",
+    "http_status": 200,
+    "final_url": "https://sites.google.com/capacitacionessat.page/cultura-tributariad/cursos-virtuales-sat/aduanas/declaraci%C3%B3n-%C3%BAnica-centroamericana-duca",
+    "content_type": "text/html; charset=utf-8",
+    "page_title": "Cursos Virtuales SAT - Declaración Única Centroamericana -DUCA-",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:41:04.643273+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/preguntas-frecuentes/temas-aduaneros/": {
+    "url_base": "https://portal.sat.gob.gt/portal/preguntas-frecuentes/temas-aduaneros/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/preguntas-frecuentes/temas-aduaneros/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Temas Aduaneros - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:40:53.140602+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/solvencia-fiscal/": {
+    "url_base": "https://portal.sat.gob.gt/portal/solvencia-fiscal/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/solvencia-fiscal/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Solvencia Fiscal - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:40:53.138630+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/consulta-movimiento-convenio/": {
+    "url_base": "https://portal.sat.gob.gt/portal/consulta-movimiento-convenio/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/consulta-movimiento-convenio/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Consulta Movimiento Convenio - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:41:01.738718+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/sanciones-aplicables-a-la-importacion-exportacion-o-transito/": {
+    "url_base": "https://portal.sat.gob.gt/portal/sanciones-aplicables-a-la-importacion-exportacion-o-transito/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/sanciones-aplicables-a-la-importacion-exportacion-o-transito/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Sanciones Aplicables a la Importación, Exportación o Tránsito - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:41:01.740796+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/subastas-y-donaciones-aduaneras/": {
+    "url_base": "https://portal.sat.gob.gt/portal/subastas-y-donaciones-aduaneras/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/subastas-y-donaciones-aduaneras/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Subastas y Donaciones Aduaneras - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:41:04.634971+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/sistema-de-cobro-por-permanencia/": {
+    "url_base": "https://portal.sat.gob.gt/portal/sistema-de-cobro-por-permanencia/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/sistema-de-cobro-por-permanencia/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Sistema de Cobro Por Permanencia -SCP- - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:41:03.985044+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/registro-ampliacion-atc/": {
+    "url_base": "https://portal.sat.gob.gt/portal/registro-ampliacion-atc/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/registro-ampliacion-atc/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Registro de Ampliación ATC - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:41:05.675384+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/registro-atc-terrestre/": {
+    "url_base": "https://portal.sat.gob.gt/portal/registro-atc-terrestre/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/registro-atc-terrestre/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Registro ATC Terrestre - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:41:05.858444+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/asignacion-de-revisores/": {
+    "url_base": "https://portal.sat.gob.gt/portal/asignacion-de-revisores/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/asignacion-de-revisores/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Asignación de Revisores - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:41:09.456187+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/asignacion-rampa-pq/": {
+    "url_base": "https://portal.sat.gob.gt/portal/asignacion-rampa-pq/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/asignacion-rampa-pq/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT| Asignación Rampa PQ - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:41:11.142139+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/requisitos-tramites-aduanas/culminacion-de-admision-temporal-de-equipo-de-carga/": {
+    "url_base": "https://portal.sat.gob.gt/portal/requisitos-tramites-aduanas/culminacion-de-admision-temporal-de-equipo-de-carga/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/requisitos-tramites-aduanas/culminacion-de-admision-temporal-de-equipo-de-carga/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Culminación de Admisión Temporal de Equipo de Carga",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:41:12.893486+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/devolucion-de-impuestos-de-admision-temporal-de-equipo-de-carga-atc/": {
+    "url_base": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/devolucion-de-impuestos-de-admision-temporal-de-equipo-de-carga-atc/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/devolucion-de-impuestos-de-admision-temporal-de-equipo-de-carga-atc/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Devolución del Impuesto de Admisión Temporal de Equipos de Carga (ATC)",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:41:14.820173+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/documentos-manifiesto/": {
+    "url_base": "https://portal.sat.gob.gt/portal/documentos-manifiesto/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/documentos-manifiesto/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Documentos Manifiesto - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:41:13.297344+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/mensaje-carga-aduanera-cuscar/": {
+    "url_base": "https://portal.sat.gob.gt/portal/mensaje-carga-aduanera-cuscar/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/mensaje-carga-aduanera-cuscar/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Mensaje de Carga Aduanera (CUSCAR) - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:41:14.814052+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/marchamo-electronico/": {
+    "url_base": "https://portal.sat.gob.gt/portal/marchamo-electronico/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/marchamo-electronico/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Marchamo Electrónico - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:41:15.191057+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/transito-pendiente/": {
+    "url_base": "https://portal.sat.gob.gt/portal/transito-pendiente/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/transito-pendiente/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Tránsito Pendiente - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:41:16.139362+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/requisitos-tramites-agencia-virtual/habilitacion-emision-cais/": {
+    "url_base": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencia-virtual/habilitacion-emision-cais/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencia-virtual/habilitacion-emision-cais/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Habilitación para emisión de Constancias de Adquisición de Insumos y Servicios -CAIS-",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:41:16.140873+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/auxiliares-de-la-funcion-publica/": {
+    "url_base": "https://portal.sat.gob.gt/portal/auxiliares-de-la-funcion-publica/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/auxiliares-de-la-funcion-publica/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Auxiliares de la Función Pública Aduanera - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:41:16.659798+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/efactura/": {
+    "url_base": "https://portal.sat.gob.gt/portal/efactura/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/efactura/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Factura Electrónica en Línea - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:41:17.752595+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/catalogo-de-permisos-no-arancelarios/": {
+    "url_base": "https://portal.sat.gob.gt/portal/catalogo-de-permisos-no-arancelarios/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/catalogo-de-permisos-no-arancelarios/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Catálogo de Permisos No Arancelarios - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:41:20.349289+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/valoracion-y-clasificacion-de-las-mercancias/sistema-arancelario-centroamericano-sac/": {
+    "url_base": "https://portal.sat.gob.gt/portal/valoracion-y-clasificacion-de-las-mercancias/sistema-arancelario-centroamericano-sac/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/valoracion-y-clasificacion-de-las-mercancias/sistema-arancelario-centroamericano-sac/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Sistema Arancelario Centroamericano (SAC) - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:41:20.925802+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/arancel-integrado/": {
+    "url_base": "https://portal.sat.gob.gt/portal/arancel-integrado/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/arancel-integrado/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Arancel Integrado - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:41:20.927319+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/convenios-interinstitucionales-sat/": {
+    "url_base": "https://portal.sat.gob.gt/portal/convenios-interinstitucionales-sat/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/convenios-interinstitucionales-sat/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Convenios Interinstitucionales SAT - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:41:23.313610+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/valoracion-y-clasificacion-de-las-mercancias/": {
+    "url_base": "https://portal.sat.gob.gt/portal/valoracion-y-clasificacion-de-las-mercancias/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/valoracion-y-clasificacion-de-las-mercancias/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Valoración - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:41:23.567946+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/acuerdos-y-tratados-internacionales/": {
+    "url_base": "https://portal.sat.gob.gt/portal/acuerdos-y-tratados-internacionales/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/acuerdos-y-tratados-internacionales/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Acuerdos y Tratados Internacionales - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:41:25.065538+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/estrategia-centroamericana-de-facilitacion-de-comercio-y-competitividad/": {
+    "url_base": "https://portal.sat.gob.gt/portal/estrategia-centroamericana-de-facilitacion-de-comercio-y-competitividad/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/estrategia-centroamericana-de-facilitacion-de-comercio-y-competitividad/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Estrategia Centroamericana de facilitación de comercio y competitividad",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:41:25.360520+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/operador-economico-autorizado/informacion-comercio-internacional/": {
+    "url_base": "https://portal.sat.gob.gt/portal/operador-economico-autorizado/informacion-comercio-internacional/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/operador-economico-autorizado/informacion-comercio-internacional/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Información Comercio Internacional - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:41:32.286688+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/contacto/denuncias-por-comercio-ilicito/": {
+    "url_base": "https://portal.sat.gob.gt/portal/contacto/denuncias-por-comercio-ilicito/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/contacto/denuncias-por-comercio-ilicito/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Denuncias por Comercio Ilícito - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:41:26.388115+00:00"
+  },
+  "https://sites.google.com/capacitacionessat.page/cultura-tributariad/cursos-virtuales-sat/aduanas/10-consecuencias-de-la-defraudaci%C3%B3n-y-contrabando-aduanero": {
+    "url_base": "https://sites.google.com/capacitacionessat.page/cultura-tributariad/cursos-virtuales-sat/aduanas/10-consecuencias-de-la-defraudaci%C3%B3n-y-contrabando-aduanero",
+    "http_status": 200,
+    "final_url": "https://sites.google.com/capacitacionessat.page/cultura-tributariad/cursos-virtuales-sat/aduanas/10-consecuencias-de-la-defraudaci%C3%B3n-y-contrabando-aduanero",
+    "content_type": "text/html; charset=utf-8",
+    "page_title": "Cursos Virtuales SAT - 10. Consecuencias de la defraudación y Contrabando Aduanero",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:41:28.467319+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/noticias/politica-nacional-de-prevencion-y-combate-de-la-defraudacion-y-el-contrabando-aduaneros/": {
+    "url_base": "https://portal.sat.gob.gt/portal/noticias/politica-nacional-de-prevencion-y-combate-de-la-defraudacion-y-el-contrabando-aduaneros/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/noticias/politica-nacional-de-prevencion-y-combate-de-la-defraudacion-y-el-contrabando-aduaneros/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT |",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:41:29.110606+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/contacto/informacion-y-consultas/": {
+    "url_base": "https://portal.sat.gob.gt/portal/contacto/informacion-y-consultas/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/consultas-tributarias-y-aduaneras/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Consultas Tributarias y Aduaneras - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:41:38.326149+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/recursos-aduaneros/": {
+    "url_base": "https://portal.sat.gob.gt/portal/recursos-aduaneros/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/recursos-aduaneros/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Recursos Aduaneros - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:41:38.341081+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/wpfd_file/pacto-de-integridad-del-serv-aduanero/": {
+    "url_base": "https://portal.sat.gob.gt/portal/wpfd_file/pacto-de-integridad-del-serv-aduanero/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/wpfd_file/pacto-de-integridad-del-serv-aduanero/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Pacto de integridad del serv Aduanero - Portal SAT",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:41:35.859459+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/programa-miad/componente-de-infraestructura/complejo-lavarreda-aduana-central/": {
+    "url_base": "https://portal.sat.gob.gt/portal/programa-miad/componente-de-infraestructura/complejo-lavarreda-aduana-central/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/programa-miad/componente-de-infraestructura/complejo-lavarreda-aduana-central/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Complejo Lavarreda (Aduana Central) - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:41:39.619722+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/programa-miad/componente-de-infraestructura/": {
+    "url_base": "https://portal.sat.gob.gt/portal/programa-miad/componente-de-infraestructura/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/programa-miad/componente-de-infraestructura/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Componente de Infraestructura - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:41:40.212556+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/programa-miad/componente-de-infraestructura/plan-maestro-puerto-fronterizo-el-ceibo/": {
+    "url_base": "https://portal.sat.gob.gt/portal/programa-miad/componente-de-infraestructura/plan-maestro-puerto-fronterizo-el-ceibo/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/programa-miad/componente-de-infraestructura/plan-maestro-puerto-fronterizo-el-ceibo/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Componente de Infraestructura - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:41:40.215620+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/programa-miad/componente-de-infraestructura/plan-maestro-puesto-fronterizo-pedro-de-alvarado/": {
+    "url_base": "https://portal.sat.gob.gt/portal/programa-miad/componente-de-infraestructura/plan-maestro-puesto-fronterizo-pedro-de-alvarado/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/programa-miad/componente-de-infraestructura/plan-maestro-puesto-fronterizo-pedro-de-alvarado/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Plan Maestro Puesto Fronterizo Pedro de Alvarado - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:41:50.942612+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/programa-miad/componente-de-infraestructura/plan-maestro-tecun-uman-i/": {
+    "url_base": "https://portal.sat.gob.gt/portal/programa-miad/componente-de-infraestructura/plan-maestro-tecun-uman-i/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/programa-miad/componente-de-infraestructura/plan-maestro-tecun-uman-i/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Plan Maestro Tecún Umán I - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:41:52.941972+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/ubicacion-y-horario-de-aduanas/": {
+    "url_base": "https://portal.sat.gob.gt/portal/ubicacion-y-horario-de-aduanas/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/ubicacion-y-horario-de-aduanas/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Ubicación y horario de Aduanas - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:41:52.951326+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/programa-miad/Componente-de-Seguridad/": {
+    "url_base": "https://portal.sat.gob.gt/portal/programa-miad/Componente-de-Seguridad/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/programa-miad/Componente-de-Seguridad/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Componente de Seguridad - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:41:58.073061+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/programa-miad/componente-de-tecnologia/": {
+    "url_base": "https://portal.sat.gob.gt/portal/programa-miad/componente-de-tecnologia/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/programa-miad/componente-de-tecnologia/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Componente de Tecnología - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:41:55.908362+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/programa-miad/componente-de-tecnologia/equipos-no-intrusivos/": {
+    "url_base": "https://portal.sat.gob.gt/portal/programa-miad/componente-de-tecnologia/equipos-no-intrusivos/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/programa-miad/componente-de-tecnologia/equipos-no-intrusivos/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Equipos No Intrusivos - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:41:53.789782+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/programa-miad/componente-de-tecnologia/rfid/": {
+    "url_base": "https://portal.sat.gob.gt/portal/programa-miad/componente-de-tecnologia/rfid/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/programa-miad/componente-de-tecnologia/rfid/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | RFID - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:42:06.955787+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/transparencia/listado-de-contribuyentes-morosos/": {
+    "url_base": "https://portal.sat.gob.gt/portal/transparencia/listado-de-contribuyentes-morosos/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/transparencia/listado-de-contribuyentes-morosos/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Listado de Contribuyentes Morosos - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:42:03.437599+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/estadisticas-tributarias-sat/": {
+    "url_base": "https://portal.sat.gob.gt/portal/estadisticas-tributarias-sat/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/estadisticas-tributarias-sat/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Estadísticas Tributarias - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:42:12.604394+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/memoria-de-labores/": {
+    "url_base": "https://portal.sat.gob.gt/portal/memoria-de-labores/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/memoria-de-labores/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Memoria de Labores - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:42:12.508551+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/recepcion-de-objeciones-y-recomendaciones-procedimientos-de-la-sat/objeciones-y-recomendaciones-a-los-procedimientos-de-la-intendencia-de-asuntos-juridicos/": {
+    "url_base": "https://portal.sat.gob.gt/portal/recepcion-de-objeciones-y-recomendaciones-procedimientos-de-la-sat/objeciones-y-recomendaciones-a-los-procedimientos-de-la-intendencia-de-asuntos-juridicos/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/recepcion-de-objeciones-y-recomendaciones-procedimientos-de-la-sat/objeciones-y-recomendaciones-a-los-procedimientos-de-la-intendencia-de-asuntos-juridicos/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Objeciones y Recomendaciones a los procedimientos de la Intendencia de Asuntos Jurídicos",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:42:09.564457+00:00"
+  },
+  "https://portal.sat.gob.gt/portal/programa-miad/componente-de-recursos/": {
+    "url_base": "https://portal.sat.gob.gt/portal/programa-miad/componente-de-recursos/",
+    "http_status": 200,
+    "final_url": "https://portal.sat.gob.gt/portal/programa-miad/componente-de-recursos/",
+    "content_type": "text/html; charset=UTF-8",
+    "page_title": "Portal SAT | Componente de Recursos - Guatemala",
+    "redirect_home": false,
+    "http_error": null,
+    "checked_at": "2026-11-15T18:42:12.675104+00:00"
+  }
+}

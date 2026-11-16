@@ -1,0 +1,238 @@
+{
+  "nota_uso": "Archivo de prueba sintética para validar el compilador generate_maquila_batch.py (--dry-run) sobre los 6 arquetipos sin inventar datos reales del portal.",
+  "paginas": [
+    {
+      "slug": "ejemplo-sintetico-tipo-1",
+      "arquetipo": "TIPO-1",
+      "titulo_h1": "Completar gestión de ejemplo operativo (EJEMPLO SINTÉTICO)",
+      "bajada_lead": "Ejemplo sintético de estructura para ficha de gestión y requisitos. Permite validar el flujo completo sin representar una página real.",
+      "requisitos": [
+        {
+          "titulo": "1. Número de Identificación Tributaria (NIT) activo",
+          "descripcion": "Requisito sintético de verificación previa en el Registro Tributario Unificado (RTU)."
+        },
+        {
+          "titulo": "2. Usuario de Agencia Virtual",
+          "descripcion": "Acceso habilitado en línea para validar credenciales de ejemplo."
+        },
+        {
+          "titulo": "3. Documento de respaldo",
+          "descripcion": "Archivo de referencia en formato PDF listo para adjuntar."
+        }
+      ],
+      "nota_requisito": "Aviso sintético de prueba: verifica tus datos antes de iniciar.",
+      "documentos_previos": [
+        {
+          "texto": "Descargar guía sintética de apoyo (PDF)",
+          "url": "https://portal.sat.gob.gt/portal/ejemplo-guia.pdf",
+          "externo": true
+        }
+      ],
+      "pasos": [
+        "Paso 1 — Ingresa al sistema de ejemplo con tu usuario habilitado.",
+        "Paso 2 — Completa los campos solicitados y adjunta el documento de respaldo.",
+        "Paso 3 — Confirma la solicitud y guarda tu constancia electrónica."
+      ],
+      "cta_principal": {
+        "texto": "Iniciar gestión en Agencia Virtual",
+        "url": "https://agenciavirtual.sat.gob.gt/",
+        "externo": true
+      },
+      "enlaces_secundarios": [
+        {
+          "texto": "Consultar estado de solicitud",
+          "url": "https://portal.sat.gob.gt/portal/ejemplo-consulta/",
+          "externo": true
+        }
+      ],
+      "que_sigue": [
+        {
+          "titulo": "1. Revisión automática",
+          "descripcion": "El sistema valida los datos ingresados en línea."
+        },
+        {
+          "titulo": "2. Emisión de constancia",
+          "descripcion": "Descargas el comprobante en formato PDF."
+        },
+        {
+          "titulo": "3. Seguimiento",
+          "descripcion": "Consultas el historial desde tu tablero."
+        }
+      ],
+      "normativa": [
+        {
+          "descripcion": "Instrumento legal de prueba sintética para validar la Capa 3 colapsable.",
+          "boton_texto": "Descargar norma de ejemplo (PDF)",
+          "url": "https://portal.sat.gob.gt/portal/ejemplo-norma.pdf",
+          "externo": true
+        }
+      ]
+    },
+    {
+      "slug": "ejemplo-sintetico-tipo-2",
+      "arquetipo": "TIPO-2",
+      "titulo_h1": "Consultar buscador de ejemplo aduanero (EJEMPLO SINTÉTICO)",
+      "bajada_lead": "Ejemplo sintético de ficha puente de una pantalla hacia un aplicativo o buscador en línea. No corresponde a un servicio real.",
+      "datos_previos": [
+        {
+          "titulo": "1. Número de Identificación Tributaria (NIT)",
+          "descripcion": "Ten a la mano el identificador de la persona o empresa a consultar."
+        },
+        {
+          "titulo": "2. Número de Declaración Única Centroamericana (DUCA - Aduanas)",
+          "descripcion": "Código correlativo de referencia asignado al envío."
+        },
+        {
+          "titulo": "3. Fecha aproximada",
+          "descripcion": "Rango de fechas de transmisión para acotar la búsqueda."
+        }
+      ],
+      "cta_principal": {
+        "texto": "Abrir buscador en línea",
+        "url": "https://portal.sat.gob.gt/portal/ejemplo-buscador/",
+        "externo": true
+      },
+      "enlaces_secundarios": [
+        {
+          "texto": "Descargar manual rápido (PDF)",
+          "url": "https://portal.sat.gob.gt/portal/ejemplo-manual.pdf",
+          "externo": true
+        }
+      ],
+      "nota_soporte": "Nota sintética de orientación: si el código no aparece, verifica los caracteres ingresados."
+    },
+    {
+      "slug": "ejemplo-sintetico-tipo-3",
+      "arquetipo": "TIPO-3",
+      "titulo_h1": "Hub de ejemplo modular (EJEMPLO SINTÉTICO)",
+      "bajada_lead": "Ejemplo sintético para páginas madre con tarjetas de navegación o desglose de acordeón en página dedicada.",
+      "tarjetas": [
+        {
+          "titulo": "Explorar primer módulo de ejemplo",
+          "descripcion": "Tarjeta destacada inicial en fila completa dentro del Hub sintético.",
+          "url": "https://prototipo.sat.gob.gt/comercio-exterior/ejemplo-1/",
+          "externo": false
+        },
+        {
+          "titulo": "Consultar segundo módulo",
+          "descripcion": "Segunda tarjeta sintética en grilla de dos columnas.",
+          "url": "https://prototipo.sat.gob.gt/comercio-exterior/ejemplo-2/",
+          "externo": false
+        },
+        {
+          "titulo": "Revisar tercer módulo",
+          "descripcion": "Tercera tarjeta sintética en grilla de dos columnas.",
+          "url": "https://prototipo.sat.gob.gt/comercio-exterior/ejemplo-3/",
+          "externo": false
+        }
+      ],
+      "pasos": [
+        "1. Selecciona el módulo correspondiente a tu perfil operativo.",
+        "2. Revisa los requisitos previos antes de abrir el aplicativo."
+      ],
+      "documentos": [
+        {
+          "titulo": "Documento sintético de consulta directa",
+          "descripcion": "Archivo único que no compite como tarjeta principal del Hub.",
+          "boton_texto": "Descargar archivo (PDF)",
+          "url": "https://portal.sat.gob.gt/portal/ejemplo-doc.pdf",
+          "externo": true
+        }
+      ],
+      "enlace_retorno_hub": {
+        "texto": "Volver al índice de Comercio Exterior",
+        "url": "https://prototipo.sat.gob.gt/comercio-exterior/",
+        "externo": false
+      }
+    },
+    {
+      "slug": "ejemplo-sintetico-tipo-4",
+      "arquetipo": "TIPO-4",
+      "titulo_h1": "Directorio técnico de ejemplo (EJEMPLO SINTÉTICO)",
+      "bajada_lead": "Ejemplo sintético para directorios oficiales y especificaciones técnicas con esquemas de validación (XSD) y tabla HTML semántica resistente a TinyMCE.",
+      "cta_principal": {
+        "texto": "Descargar paquete técnico (ZIP)",
+        "url": "https://portal.sat.gob.gt/portal/ejemplo-esquemas.zip",
+        "externo": true
+      },
+      "pasos": [
+        "1. Descarga las especificaciones técnicas en formato abierto.",
+        "2. Valida la estructura conforme a la Tabla 1."
+      ],
+      "tabla": {
+        "caption": "Tabla 1. Ejemplo sintético de especificaciones oficiales",
+        "columnas": ["No.", "Documento", "Formato", "Descarga"],
+        "filas": [
+          [
+            {"texto": "1", "strong": true, "nowrap": true},
+            {"texto": "Especificación técnica sintética A", "strong": true},
+            {"texto": "Documento PDF", "nowrap": true},
+            {"texto": "Descargar (PDF)", "url": "https://portal.sat.gob.gt/portal/ejemplo-a.pdf"}
+          ],
+          [
+            {"texto": "2", "strong": true, "nowrap": true},
+            {"texto": "Esquema XSD sintético B", "strong": true},
+            {"texto": "Archivo XSD", "nowrap": true},
+            {"texto": "Descargar (ZIP)", "url": "https://portal.sat.gob.gt/portal/ejemplo-b.zip"}
+          ]
+        ]
+      }
+    },
+    {
+      "slug": "ejemplo-sintetico-tipo-5",
+      "arquetipo": "TIPO-5",
+      "titulo_h1": "Normativa aduanera de ejemplo (EJEMPLO SINTÉTICO)",
+      "bajada_lead": "Ejemplo sintético de compendio normativo con resumen ciudadano al inicio, tabla de vigencia y acordeones por tipo de instrumento.",
+      "puntos_alcance": [
+        "Aplica a operadores registrados que realizan operaciones de comercio exterior.",
+        "Reúne leyes vigentes y resoluciones administrativas en formato PDF."
+      ],
+      "tabla": {
+        "caption": "Tabla 1. Resumen sintético de normativa vigente",
+        "columnas": ["Instrumento", "Vigencia", "Qué regula", "Documento"],
+        "filas": [
+          [
+            {"texto": "Acuerdo de ejemplo 01-2026", "strong": true},
+            {"texto": "1 de enero de 2026", "nowrap": true},
+            {"texto": "Disposiciones operativas de ejemplo."},
+            {"texto": "Descargar (PDF)", "url": "https://portal.sat.gob.gt/portal/ejemplo-acuerdo.pdf"}
+          ]
+        ]
+      },
+      "grupos_normas": [
+        {
+          "titulo": "Acuerdos y resoluciones de ejemplo",
+          "items": [
+            {
+              "descripcion": "Acuerdo de ejemplo 01-2026: Disposiciones generales sintéticas.",
+              "boton_texto": "Descargar Acuerdo (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/ejemplo-acuerdo.pdf",
+              "externo": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "ejemplo-sintetico-tipo-6",
+      "arquetipo": "TIPO-6",
+      "titulo_h1": "Preguntas frecuentes de ejemplo (EJEMPLO SINTÉTICO)",
+      "bajada_lead": "Ejemplo sintético para bloques de preguntas frecuentes con encabezados H2 directos y acordeones cerrados por defecto.",
+      "temas": [
+        {
+          "titulo": "Conceptos generales de ejemplo",
+          "preguntas": [
+            {
+              "pregunta": "¿Cómo funciona este ejemplo de pregunta frecuente?",
+              "respuesta": "Muestra la estructura validada con acordeón colapsado por defecto y lenguaje claro."
+            },
+            {
+              "pregunta": "¿Dónde consulto la guía completa?",
+              "respuesta": "Revisa el documento GUIA_USO_MAQUILA.md dentro de la carpeta de plantillas maestras."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

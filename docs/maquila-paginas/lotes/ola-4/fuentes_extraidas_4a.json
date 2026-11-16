@@ -1,0 +1,3246 @@
+{
+  "metadata": {
+    "lote": "ola-4a",
+    "generated_at": "2026-11-15T22:13:38.634522+00:00",
+    "total_paginas": 14
+  },
+  "paginas": {
+    "inscripcion-al-regimen-habitual-de-exportaciones": {
+      "slug": "inscripcion-al-regimen-habitual-de-exportaciones",
+      "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/inscripcion-al-regimen-habitual-de-exportaciones/",
+      "url_base": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/inscripcion-al-regimen-habitual-de-exportaciones/",
+      "ancla_fragmento": "",
+      "arquetipo_matriz": "TIPO-1",
+      "criterio_arquetipo": "Tipología operativa/informativa de origen mapeada a Ficha de Gestión y Requisitos (TIPO-1).",
+      "ids_sat_ges": [
+        "SAT-GES-0386"
+      ],
+      "niveles_2": [
+        "Exportadores"
+      ],
+      "niveles_3": [
+        "Padrón y Registro de Exportadores"
+      ],
+      "titulos_excel": [
+        "Requisitos y pasos para la Inscripción al Régimen Habitual de Exportaciones"
+      ],
+      "descripciones_excel": [
+        "Gestión digital para obtener el código aduanero de exportador ante la Ventanilla Única para las Exportaciones (VUPE) e interconexión con la SAT."
+      ],
+      "bases_legales_excel": [
+        "Código Aduanero Uniforme Centroamericano (CAUCA IV) y su Reglamento (RECAUCA IV)."
+      ],
+      "observaciones_excel": [],
+      "notas_extra_col24": [],
+      "http_status": 200,
+      "origen_extraccion": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/inscripcion-al-regimen-habitual-de-exportaciones/",
+      "fuente_viva": {
+        "tipo_fuente": "wpbakery_page",
+        "titulo_fuente": "Inscripción al Régimen Habitual de Exportaciones",
+        "headings": [
+          {
+            "tag": "h1",
+            "texto": "Inscripción al Régimen Habitual de Exportaciones"
+          },
+          {
+            "tag": "h4",
+            "texto": "Persona Individual"
+          },
+          {
+            "tag": "h4",
+            "texto": "Persona Jurídica"
+          },
+          {
+            "tag": "h4",
+            "texto": "Oficinas o Agencias para realizar el trámite"
+          },
+          {
+            "tag": "h4",
+            "texto": "Gestión a través de Agencia Virtual"
+          }
+        ],
+        "correos_cf_decodificados": [],
+        "parrafos_intro": [
+          "1 . Ingresa a Portal SAT. https://portal.sat.gob.gt/portal/",
+          "2 . Dirígete a Agencia Virtual.",
+          "3. Dentro de Agencia Virtual Selecciona: “Sistema Agencia Virtual”.",
+          "4. Seguidamente del ingreso:",
+          "5. Se visualiza el formulario SAT-0471 “Inscripción y Actualización de Exportadores”.",
+          "6. Verifica nuevamente la información, si hay datos incorrectos después de validar la información; selecciona botón “Regresar” para modificar.",
+          "7. Después de seleccionar botón “Si presentar” se transmitirá el formulario."
+        ],
+        "listas_intro": [
+          "Ingresa Usuario: Número de Identificación Tributaria (sin guiones)",
+          "Ingresa: contraseña.",
+          "Selecciona: botón Aceptar",
+          "Selecciona “Menú”",
+          "Busca sección Servicios",
+          "Selecciona “Datos del Contribuyente”",
+          "Selecciona la opción “Inscripción y Actualización de Exportadores”.",
+          "Se muestra el NIT, Nombre o Razón Social, dirección fiscal.",
+          "Completa la información de las casillas en blanco.",
+          "El sistema de forma automática tiene seleccionada la opción Inscripción al Régimen Habitual (no mostrará ninguna información).",
+          "Verifica la información ingresada y modifica si hay datos incorrectos.",
+          "Selecciona botón “validar”.",
+          "Después de realizar la modificación; selecciona botón “Validar” y después botón “Si presentar”.",
+          "Correo electrónico donde indica que la solicitud ha sido realizada de forma exitosa.",
+          "Adjunto al correo electrónico y en formato PDF el formulario presentado y dentro de este en la sección de Gestión visualiza el período activo.",
+          "Revisión a posterior de la información por parte de la Administración Tributaria."
+        ],
+        "tarjetas_fuente": [],
+        "tablas_generales": [],
+        "acordeones": [
+          {
+            "panel_id": "1530735495054-84881f6d-4841",
+            "titulo": "Persona Individual",
+            "tablas": [
+              {
+                "filas": [
+                  {
+                    "celdas": [
+                      "1",
+                      "",
+                      "Contar con código de exportador obtenido en Ventanilla Única para las Exportaciones -VUPE- ."
+                    ],
+                    "links": [
+                      {
+                        "texto": "-VUPE-",
+                        "url": "http://vupe.export.com.gt/"
+                      }
+                    ]
+                  },
+                  {
+                    "celdas": [
+                      "2",
+                      "",
+                      "Contar con Agencia Virtual. Si no cuentas con la Agencia Virtual, haz clic acá para solicitarla"
+                    ],
+                    "links": [
+                      {
+                        "texto": "acá para solicitarla",
+                        "url": "https://portal.sat.gob.gt/portal/solicitud-usuario-agencia-virtual"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "links": [
+              {
+                "texto": "-VUPE-",
+                "url": "http://vupe.export.com.gt/"
+              },
+              {
+                "texto": "acá para solicitarla",
+                "url": "https://portal.sat.gob.gt/portal/solicitud-usuario-agencia-virtual"
+              }
+            ],
+            "videos": [],
+            "textos_panel": []
+          },
+          {
+            "panel_id": "1541801313188-a762c391-7f9c",
+            "titulo": "Persona Jurídica",
+            "tablas": [
+              {
+                "filas": [
+                  {
+                    "celdas": [
+                      "1",
+                      "",
+                      "Contar con código de exportador obtenido en Ventanilla Única para las Exportaciones -VUPE- ."
+                    ],
+                    "links": [
+                      {
+                        "texto": "-VUPE-",
+                        "url": "http://vupe.export.com.gt/"
+                      }
+                    ]
+                  },
+                  {
+                    "celdas": [
+                      "2",
+                      "",
+                      "Contar con Agencia Virtual. Si no cuentas con la Agencia Virtual, haz clic acá para solicitarla"
+                    ],
+                    "links": [
+                      {
+                        "texto": "acá para solicitarla",
+                        "url": "https://portal.sat.gob.gt/portal/solicitud-usuario-agencia-virtual"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "links": [
+              {
+                "texto": "-VUPE-",
+                "url": "http://vupe.export.com.gt/"
+              },
+              {
+                "texto": "acá para solicitarla",
+                "url": "https://portal.sat.gob.gt/portal/solicitud-usuario-agencia-virtual"
+              }
+            ],
+            "videos": [],
+            "textos_panel": []
+          }
+        ],
+        "videos": [],
+        "iframes_aplicativos": [],
+        "links_fuera_acordeon": [],
+        "links_planos": [
+          {
+            "texto": "-VUPE-",
+            "url": "http://vupe.export.com.gt/"
+          },
+          {
+            "texto": "acá para solicitarla",
+            "url": "https://portal.sat.gob.gt/portal/solicitud-usuario-agencia-virtual"
+          }
+        ],
+        "es_ancla_aislada": false,
+        "links_post_meta_excluidos": [
+          {
+            "texto": "Requisitos para trámites en Agencias",
+            "url": "https://portal.sat.gob.gt/portal/categoria/requisitos-tramites-agencias/"
+          },
+          {
+            "texto": "15/11/2018",
+            "url": "https://portal.sat.gob.gt/portal/2018/11/15/"
+          }
+        ]
+      }
+    },
+    "requisitos-para-la-inactivacion-en-el-registro": {
+      "slug": "requisitos-para-la-inactivacion-en-el-registro",
+      "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-para-la-inactivacion-en-el-registro-de-exportadores/",
+      "url_base": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-para-la-inactivacion-en-el-registro-de-exportadores/",
+      "ancla_fragmento": "",
+      "arquetipo_matriz": "TIPO-1",
+      "criterio_arquetipo": "Tipología operativa/informativa de origen mapeada a Ficha de Gestión y Requisitos (TIPO-1).",
+      "ids_sat_ges": [
+        "SAT-GES-0387"
+      ],
+      "niveles_2": [
+        "Exportadores"
+      ],
+      "niveles_3": [
+        "Padrón y Registro de Exportadores"
+      ],
+      "titulos_excel": [
+        "Requisitos y pasos para la Inactivación y Cese en el Registro de Exportadores"
+      ],
+      "descripciones_excel": [
+        "Procedimiento para solicitar la baja o suspensión temporal voluntaria en el padrón de exportadores de la SAT y VUPE."
+      ],
+      "bases_legales_excel": [
+        "Código Aduanero Uniforme Centroamericano (CAUCA IV) y su Reglamento (RECAUCA IV)."
+      ],
+      "observaciones_excel": [],
+      "notas_extra_col24": [],
+      "http_status": 200,
+      "origen_extraccion": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-para-la-inactivacion-en-el-registro-de-exportadores/",
+      "fuente_viva": {
+        "tipo_fuente": "wpbakery_page",
+        "titulo_fuente": "Requisitos para la Inactivación en el Registro de Exportadores",
+        "headings": [
+          {
+            "tag": "h1",
+            "texto": "Requisitos para la Inactivación en el Registro de Exportadores"
+          },
+          {
+            "tag": "h4",
+            "texto": "Persona Individual"
+          },
+          {
+            "tag": "h4",
+            "texto": "Persona Jurídica"
+          },
+          {
+            "tag": "h4",
+            "texto": "Oficinas o Agencias para realizar el trámite"
+          },
+          {
+            "tag": "h4",
+            "texto": "Gestión a través de Agencia Virtual"
+          }
+        ],
+        "correos_cf_decodificados": [],
+        "parrafos_intro": [
+          "1. Estar inscrito como Exportador. 2. Estar Ratificado/Actualizado en el Registro Tributario Unificado (RTU) Digital, con número de teléfono celular y/o línea fija registrado en domicilio fiscal, y correo electrónico para notificaciones. 3. Estar solvente con el cumplimiento de sus obligaciones tributarias y aduaneras, incluyendo las relativas a vehículos. 4. En el caso de personas jurídicas, contar con un representante legal activo, vigente y actualizado en RTU Digital. 5. Tener registrado un contador y que el mismo se encuentre activo en el registro correspondiente y solvente en sus obligaciones tributarias. 6. No tener requerimientos pendientes ante la Administración Tributaria (plan operativo). 7. No tener marca de dirección inválida (plan operativo no localizado). 8. No contar con cuotas vencidas de convenio de pago."
+        ],
+        "listas_intro": [
+          "Una vez completados los pasos anteriores, podrá acceder a la Agencia Virtual o al portal SAT para imprimir su “Constancia de inscripción y Actualización de datos al Registro Tributario Unificado” , en la cual podrá verificar que ya no contará con la característica especial de Exportador."
+        ],
+        "tarjetas_fuente": [],
+        "tablas_generales": [],
+        "acordeones": [
+          {
+            "panel_id": "1530735495054-84881f6d-4841",
+            "titulo": "Persona Individual",
+            "tablas": [
+              {
+                "filas": [
+                  {
+                    "celdas": [
+                      "1",
+                      "",
+                      "Contar con acceso a la Agencia Virtual, ubicada en el menú « Servicios al Contribuyente» . Selecciona el menú “Servicios al Contribuyente” . En el apartado “RTU” selecciona la opción “Otros Registros de SAT” . Selecciona la opción “Inactivación Exportador” ."
+                    ],
+                    "links": []
+                  }
+                ]
+              }
+            ],
+            "links": [],
+            "videos": [],
+            "textos_panel": []
+          },
+          {
+            "panel_id": "1541801313188-a762c391-7f9c",
+            "titulo": "Persona Jurídica",
+            "tablas": [
+              {
+                "filas": [
+                  {
+                    "celdas": [
+                      "1",
+                      "",
+                      "Contar con acceso a la Agencia Virtual, ubicada en el menú ‘Servicios al Contribuyente’ . Selecciona el menú “Servicios al Contribuyente” . En el apartado “RTU” selecciona la opción “Otros Registros de SAT” . Selecciona la opción “Inactivación Exportador” ."
+                    ],
+                    "links": []
+                  }
+                ]
+              }
+            ],
+            "links": [],
+            "videos": [],
+            "textos_panel": []
+          }
+        ],
+        "videos": [],
+        "iframes_aplicativos": [],
+        "links_fuera_acordeon": [],
+        "links_planos": [],
+        "es_ancla_aislada": false,
+        "links_post_meta_excluidos": [
+          {
+            "texto": "Requisitos para trámites en Agencias",
+            "url": "https://portal.sat.gob.gt/portal/categoria/requisitos-tramites-agencias/"
+          },
+          {
+            "texto": "03/03/2025",
+            "url": "https://portal.sat.gob.gt/portal/2025/03/03/"
+          }
+        ]
+      }
+    },
+    "requisitos-para-solicitud-de-permiso-temporal": {
+      "slug": "requisitos-para-solicitud-de-permiso-temporal",
+      "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-para-solicitud-de-permiso-temporal-en-el-registro-de-exportadores/",
+      "url_base": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-para-solicitud-de-permiso-temporal-en-el-registro-de-exportadores/",
+      "ancla_fragmento": "",
+      "arquetipo_matriz": "TIPO-1",
+      "criterio_arquetipo": "Tipología operativa/informativa de origen mapeada a Ficha de Gestión y Requisitos (TIPO-1).",
+      "ids_sat_ges": [
+        "SAT-GES-0388"
+      ],
+      "niveles_2": [
+        "Exportadores"
+      ],
+      "niveles_3": [
+        "Padrón y Registro de Exportadores"
+      ],
+      "titulos_excel": [
+        "Requisitos y pasos para Permiso Temporal de Exportación"
+      ],
+      "descripciones_excel": [
+        "Autorización para personas o entidades que exportan muestras, bienes personales o carga sin contar con registro habitual en VUPE."
+      ],
+      "bases_legales_excel": [
+        "Código Aduanero Uniforme Centroamericano (CAUCA IV) y su Reglamento (RECAUCA IV)."
+      ],
+      "observaciones_excel": [],
+      "notas_extra_col24": [],
+      "http_status": 200,
+      "origen_extraccion": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-para-solicitud-de-permiso-temporal-en-el-registro-de-exportadores/",
+      "fuente_viva": {
+        "tipo_fuente": "wpbakery_page",
+        "titulo_fuente": "Requisitos para Solicitud de Permiso Temporal en el Registro de Exportadores",
+        "headings": [
+          {
+            "tag": "h1",
+            "texto": "Requisitos para Solicitud de Permiso Temporal en el Registro de Exportadores"
+          },
+          {
+            "tag": "h4",
+            "texto": "Persona Individual"
+          },
+          {
+            "tag": "h4",
+            "texto": "Persona Jurídica"
+          },
+          {
+            "tag": "h4",
+            "texto": "Oficinas o Agencias para realizar el trámite"
+          },
+          {
+            "tag": "h4",
+            "texto": "Gestión a través de Agencia Virtual"
+          }
+        ],
+        "correos_cf_decodificados": [],
+        "parrafos_intro": [
+          "1. Estar Ratificado/Actualizado en el Registro Tributario Unificado (RTU) Digital, con número de teléfono celular y/o línea fija registrado en el domicilio fiscal, y correo electrónico para notificaciones. 2. En el caso de personas jurídicas, contar con un representante legal activo, vigente y actualizado en RTU Digital. 3. No es necesario contar con un establecimiento, sin embargo, sí cuenta con establecimiento activo, debe cumplir con lo siguiente:",
+          "a) Afiliación en estado activa al Impuesto al Valor Agregado (IVA). b) Estar habilitado en el Régimen de Factura Electrónica en Línea. c) Contar con libro(s) habilitado(s) en estado activo, conforme al régimen fiscal en el que esté inscrito. d) Tener registrado un contador y que el mismo se encuentre activo en el registro correspondiente y solvente en sus obligaciones tributarias.",
+          "4. Estar solvente con el cumplimiento de sus obligaciones tributarias y aduaneras, incluyendo las relativas a vehículos. 5. No tener requerimientos pendientes ante la Administración Tributaria (plan operativo). 6. No tener marca de dirección inválida (plan operativo no localizado). 7. No contar con cuotas vencidas de convenio de pago. 8. Que la suma del valor FOB no sobrepase los diez mil ($CA10,000.00) pesos centroamericanos o equivalente en dólares de los Estados Unidos de América del Valor FOB; durante el periodo de 365 días más un día desde la última declaración de mercancías transmitida. 9. No contar con más de 3 permisos temporales en el mismo año calendario."
+        ],
+        "listas_intro": [
+          "Una vez completados los pasos anteriores, podrá acceder a la Agencia Virtual o al portal SAT para imprimir su “Constancia de inscripción y Actualización de datos al Registro Tributario Unificado” , en la cual podrá verificar la característica especial de Permiso Temporal Exportador."
+        ],
+        "tarjetas_fuente": [],
+        "tablas_generales": [],
+        "acordeones": [
+          {
+            "panel_id": "1530735495054-84881f6d-4841",
+            "titulo": "Persona Individual",
+            "tablas": [
+              {
+                "filas": [
+                  {
+                    "celdas": [
+                      "1",
+                      "",
+                      "Contar con acceso a la Agencia Virtual. Selecciona el menú “Servicios al Contribuyente”. En el apartado “ RTU ” selecciona la opción “ Otros Registros de SAT ”. Selecciona la opción Permiso Temporal Exportador ."
+                    ],
+                    "links": []
+                  }
+                ]
+              }
+            ],
+            "links": [],
+            "videos": [],
+            "textos_panel": []
+          },
+          {
+            "panel_id": "1541801313188-a762c391-7f9c",
+            "titulo": "Persona Jurídica",
+            "tablas": [
+              {
+                "filas": [
+                  {
+                    "celdas": [
+                      "1",
+                      "",
+                      "Contar con acceso a la Agencia Virtual. Selecciona el menú “Servicios al Contribuyente”. En el apartado “ RTU ” selecciona la opción “ Otros Registros de SAT ”. Selecciona la opción Permiso Temporal Exportador ."
+                    ],
+                    "links": []
+                  }
+                ]
+              }
+            ],
+            "links": [],
+            "videos": [],
+            "textos_panel": []
+          }
+        ],
+        "videos": [],
+        "iframes_aplicativos": [],
+        "links_fuera_acordeon": [],
+        "links_planos": [],
+        "es_ancla_aislada": false,
+        "links_post_meta_excluidos": [
+          {
+            "texto": "Requisitos para trámites en Agencias",
+            "url": "https://portal.sat.gob.gt/portal/categoria/requisitos-tramites-agencias/"
+          },
+          {
+            "texto": "03/03/2025",
+            "url": "https://portal.sat.gob.gt/portal/2025/03/03/"
+          }
+        ]
+      }
+    },
+    "requisitos-para-la-actualizacion-en-el-registro": {
+      "slug": "requisitos-para-la-actualizacion-en-el-registro",
+      "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-para-la-actualizacion-en-el-registro-de-exportadores/",
+      "url_base": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-para-la-actualizacion-en-el-registro-de-exportadores/",
+      "ancla_fragmento": "",
+      "arquetipo_matriz": "TIPO-1",
+      "criterio_arquetipo": "Tipología operativa/informativa de origen mapeada a Ficha de Gestión y Requisitos (TIPO-1).",
+      "ids_sat_ges": [
+        "SAT-GES-0389"
+      ],
+      "niveles_2": [
+        "Exportadores"
+      ],
+      "niveles_3": [
+        "Padrón y Registro de Exportadores"
+      ],
+      "titulos_excel": [
+        "Requisitos para la Actualización en el Registro de Exportadores"
+      ],
+      "descripciones_excel": [
+        "Gestión y requisitos para Requisitos, pasos y documentos para actualizar tus datos como exportador.."
+      ],
+      "bases_legales_excel": [
+        "CAUCA IV y RECAUCA IV (Depósitos Aduaneros Temporales en puertos y aeropuertos)."
+      ],
+      "observaciones_excel": [],
+      "notas_extra_col24": [],
+      "http_status": 200,
+      "origen_extraccion": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-para-la-actualizacion-en-el-registro-de-exportadores/",
+      "fuente_viva": {
+        "tipo_fuente": "wpbakery_page",
+        "titulo_fuente": "Requisitos para la Actualización en el Registro de Exportadores",
+        "headings": [
+          {
+            "tag": "h1",
+            "texto": "Requisitos para la Actualización en el Registro de Exportadores"
+          },
+          {
+            "tag": "h4",
+            "texto": "Persona Individual"
+          },
+          {
+            "tag": "h4",
+            "texto": "Persona Jurídica"
+          }
+        ],
+        "correos_cf_decodificados": [],
+        "parrafos_intro": [
+          "1. Estar inscrito como Exportador. 2. Estar Ratificado/Actualizado en el Registro Tributario Unificado (RTU) Digital, con número de teléfono celular y/o línea fija registrado en domicilio fiscal, y correo electrónico para notificaciones. 3. Contar con establecimiento en estado activo. 4. Tener afiliación activa al Impuesto al Valor Agregado (IVA). 5. Estar habilitado en el Régimen de Factura Electrónica en Línea. 6. Contar con libro(s) habilitado(s) en estado activo, conforme al régimen fiscal en el que esté inscrito. 7. Estar solvente con el cumplimiento de sus obligaciones tributarias y aduaneras, incluyendo las relativas a vehículos. 8. En el caso de personas jurídicas, contar con un representante legal activo, vigente y actualizado en RTU Digital. 9. Tener registrado un contador y que el mismo se encuentre activo en el registro correspondiente y solvente en sus obligaciones tributarias. 10. No tener requerimientos pendientes ante la Administración Tributaria (plan operativo). 11. No tener marca de dirección inválida (plan operativo no localizado). 12. No contar con cuota vencida de convenio de pago.",
+          "Oficinas o Agencias para realizar el trámite",
+          "Gestión a través de Agencia Virtual"
+        ],
+        "listas_intro": [
+          "Una vez completados los pasos anteriores, podrá acceder a la Agencia Virtual o al portal SAT para imprimir su “Constancia de inscripción y Actualización de datos al Registro Tributario Unificado” , en la cual podrá verificar la característica especial de Exportador."
+        ],
+        "tarjetas_fuente": [],
+        "tablas_generales": [
+          {
+            "filas": [
+              {
+                "celdas": [
+                  "1",
+                  "",
+                  "Contar con acceso a la Agencia Virtual. Selecciona el menú “Servicios al Contribuyente”. En el apartado “RTU” selecciona la opción “Otros Registros de SAT”. Selecciona la opción Inscripción/Actualización Exportador."
+                ],
+                "links": []
+              }
+            ]
+          }
+        ],
+        "acordeones": [
+          {
+            "panel_id": "1530735495054-84881f6d-4841",
+            "titulo": "Persona Individual",
+            "tablas": [
+              {
+                "filas": [
+                  {
+                    "celdas": [
+                      "1",
+                      "",
+                      "Contar con acceso a la Agencia Virtual. Selecciona el menú “Servicios al Contribuyente”. En el apartado “RTU” selecciona la opción “Otros Registros de SAT”. Selecciona la opción Inscripción/Actualización Exportador."
+                    ],
+                    "links": []
+                  }
+                ]
+              }
+            ],
+            "links": [],
+            "videos": [],
+            "textos_panel": []
+          },
+          {
+            "panel_id": "1541801313188-a762c391-7f9c",
+            "titulo": "Persona Jurídica",
+            "tablas": [],
+            "links": [],
+            "videos": [],
+            "textos_panel": []
+          }
+        ],
+        "videos": [],
+        "iframes_aplicativos": [],
+        "links_fuera_acordeon": [],
+        "links_planos": [],
+        "es_ancla_aislada": false,
+        "links_post_meta_excluidos": [
+          {
+            "texto": "Requisitos para trámites en Agencias",
+            "url": "https://portal.sat.gob.gt/portal/categoria/requisitos-tramites-agencias/"
+          },
+          {
+            "texto": "03/03/2025",
+            "url": "https://portal.sat.gob.gt/portal/2025/03/03/"
+          }
+        ]
+      }
+    },
+    "requisitos-para-la-inscripcion-en-el-registro": {
+      "slug": "requisitos-para-la-inscripcion-en-el-registro",
+      "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-para-la-inscripcion-en-el-registro-de-exportadores/",
+      "url_base": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-para-la-inscripcion-en-el-registro-de-exportadores/",
+      "ancla_fragmento": "",
+      "arquetipo_matriz": "TIPO-1",
+      "criterio_arquetipo": "Tipología operativa/informativa de origen mapeada a Ficha de Gestión y Requisitos (TIPO-1).",
+      "ids_sat_ges": [
+        "SAT-GES-0390"
+      ],
+      "niveles_2": [
+        "Exportadores"
+      ],
+      "niveles_3": [
+        "Padrón y Registro de Exportadores"
+      ],
+      "titulos_excel": [
+        "Requisitos para la Inscripción en el Registro de Exportadores"
+      ],
+      "descripciones_excel": [
+        "Gestión y requisitos para Requisitos, pasos y documentos para inscribirte como exportador.."
+      ],
+      "bases_legales_excel": [
+        "Código Aduanero Uniforme Centroamericano (CAUCA IV) y su Reglamento (RECAUCA IV)."
+      ],
+      "observaciones_excel": [],
+      "notas_extra_col24": [],
+      "http_status": 200,
+      "origen_extraccion": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-para-la-inscripcion-en-el-registro-de-exportadores/",
+      "fuente_viva": {
+        "tipo_fuente": "wpbakery_page",
+        "titulo_fuente": "Requisitos para la Inscripción en el Registro de Exportadores",
+        "headings": [
+          {
+            "tag": "h1",
+            "texto": "Requisitos para la Inscripción en el Registro de Exportadores"
+          },
+          {
+            "tag": "h4",
+            "texto": "Persona Individual"
+          },
+          {
+            "tag": "h4",
+            "texto": "Persona Jurídica"
+          },
+          {
+            "tag": "h4",
+            "texto": "Oficinas o Agencias para realizar el trámite"
+          },
+          {
+            "tag": "h4",
+            "texto": "Gestión a través de Agencia Virtual"
+          }
+        ],
+        "correos_cf_decodificados": [],
+        "parrafos_intro": [
+          "1. Estar Ratificado/Actualizado en el Registro Tributario Unificado (RTU) Digital, con número de teléfono celular y/o línea fija en el domicilio fiscal y correo electrónico para notificaciones. 2. Contar con establecimiento en estado activo. 3. Tener afiliación activa al Impuesto al Valor Agregado (IVA). 4. Estar habilitado en el Régimen de Factura Electrónica en Línea. 5. Contar con libro(s) habilitado(s) en estado activo, conforme al régimen fiscal en el que esté inscrito. 6. Estar solvente con el cumplimiento de sus obligaciones tributarias y aduaneras, incluyendo las relativas a vehículos. 7. En el caso de personas jurídicas, contar con un representante legal activo, vigente y actualizado en el RTU Digital. 8. Tener registrado un contador y que el mismo se encuentre activo en el registro correspondiente y solvente en sus obligaciones tributarias. 9. No tener requerimientos pendientes ante la Administración Tributaria (plan operativo). 10. No tener marca de dirección inválida (plan operativo no localizado). 11. No contar con cuotas vencidas de convenio de pago."
+        ],
+        "listas_intro": [
+          "Una vez completados los pasos anteriores, podrá acceder a la Agencia Virtual o al portal SAT para imprimir su “Constancia de inscripción y Actualización de datos al Registro Tributario Unificado” , en la cual podrá verificar la característica especial de Exportador."
+        ],
+        "tarjetas_fuente": [],
+        "tablas_generales": [],
+        "acordeones": [
+          {
+            "panel_id": "1530735495054-84881f6d-4841",
+            "titulo": "Persona Individual",
+            "tablas": [
+              {
+                "filas": [
+                  {
+                    "celdas": [
+                      "1",
+                      "",
+                      "Contar con acceso a la Agencia Virtual. Selecciona el menú “Servicios al Contribuyente”. En el apartado “RTU” selecciona la opción “Otros Registros de SAT” . Selecciona la opción Inscripción/Actualización Exportador ."
+                    ],
+                    "links": []
+                  }
+                ]
+              }
+            ],
+            "links": [],
+            "videos": [],
+            "textos_panel": []
+          },
+          {
+            "panel_id": "1541801313188-a762c391-7f9c",
+            "titulo": "Persona Jurídica",
+            "tablas": [
+              {
+                "filas": [
+                  {
+                    "celdas": [
+                      "1",
+                      "",
+                      "Contar con acceso a la Agencia Virtual. Selecciona el menú “Servicios al Contribuyente”. En el apartado “RTU” selecciona la opción “Otros Registros de SAT” . Selecciona la opción Inscripción/Actualización Exportador ."
+                    ],
+                    "links": []
+                  }
+                ]
+              }
+            ],
+            "links": [],
+            "videos": [],
+            "textos_panel": []
+          }
+        ],
+        "videos": [],
+        "iframes_aplicativos": [],
+        "links_fuera_acordeon": [],
+        "links_planos": [],
+        "es_ancla_aislada": false,
+        "links_post_meta_excluidos": [
+          {
+            "texto": "Requisitos para trámites en Agencias",
+            "url": "https://portal.sat.gob.gt/portal/categoria/requisitos-tramites-agencias/"
+          },
+          {
+            "texto": "03/03/2025",
+            "url": "https://portal.sat.gob.gt/portal/2025/03/03/"
+          }
+        ]
+      }
+    },
+    "registro-de-exportadores-en-agencia-virtual": {
+      "slug": "registro-de-exportadores-en-agencia-virtual",
+      "url": "https://portal.sat.gob.gt/portal/registro-de-exportadores-en-agencia-virtual/",
+      "url_base": "https://portal.sat.gob.gt/portal/registro-de-exportadores-en-agencia-virtual/",
+      "ancla_fragmento": "",
+      "arquetipo_matriz": "TIPO-1",
+      "criterio_arquetipo": "Tipología operativa/informativa de origen mapeada a Ficha de Gestión y Requisitos (TIPO-1).",
+      "ids_sat_ges": [
+        "SAT-GES-0391"
+      ],
+      "niveles_2": [
+        "Exportadores"
+      ],
+      "niveles_3": [
+        "Padrón y Registro de Exportadores"
+      ],
+      "titulos_excel": [
+        "Requisitos, pasos y documentos para registrarte como exportador en Agencia Virtual."
+      ],
+      "descripciones_excel": [
+        "Gestión y requisitos para Requisitos, pasos y documentos para registrarte como exportador en Agencia Virtual.."
+      ],
+      "bases_legales_excel": [
+        "Código Tributario, Decreto 6-91 (Art. 120) y Acuerdo de Directorio SAT 08-2020."
+      ],
+      "observaciones_excel": [],
+      "notas_extra_col24": [],
+      "http_status": 200,
+      "origen_extraccion": "https://portal.sat.gob.gt/portal/registro-de-exportadores-en-agencia-virtual/",
+      "fuente_viva": {
+        "tipo_fuente": "wpbakery_page",
+        "titulo_fuente": "Registro de Exportadores En Agencia Virtual",
+        "headings": [
+          {
+            "tag": "h1",
+            "texto": "Registro de Exportadores En Agencia Virtual"
+          },
+          {
+            "tag": "h4",
+            "texto": "Personas / Empresas"
+          },
+          {
+            "tag": "h4",
+            "texto": "Vehículos"
+          },
+          {
+            "tag": "h4",
+            "texto": "Aduanas"
+          }
+        ],
+        "correos_cf_decodificados": [],
+        "parrafos_intro": [
+          "Registro de Exportadores en Agencia Virtual SAT en línea es una herramienta que los contribuyentes tienen a su disposición para efectos de consultas y gestiones ante la Administración Tributaria. Dentro de las nuevas opciones y cumpliendo con los proyectos institucionales, a partir del 04 marzo de 2025, están disponibles las gestiones del Registro de Exportadores en Agencia Virtual.",
+          "¿Qué es el Registro de Exportadores? Es el sistema por medio del cual la Superintendencia de Administración Tributaria realizó la modernización y automatización del registro Exportadores, facilitándoles las gestiones disponibles en la Agencia Virtual.",
+          "¿Qué gestiones estarán disponibles en Agencia Virtual?",
+          "¿Qué trámite será sustituido del formulario SAT-0471 a la solicitud electrónica en Agencia Virtual?",
+          "¿Qué gestiones se pueden a solicitud electrónica en Agencia Virtual?",
+          "Guía para el llenado de solicitudes en Agencia Virtual",
+          "A continuación, encontrará los manuales de usuario para el llenado de las solicitudes a través de Agencia Virtual.",
+          "Para mayor información, comunicarse al 1550"
+        ],
+        "listas_intro": [
+          "Inscripción Exportador",
+          "Actualización Exportador",
+          "Inactivación Exportador",
+          "Permiso Temporal Exportador",
+          "Permiso temporal Exportador"
+        ],
+        "tarjetas_fuente": [],
+        "tablas_generales": [
+          {
+            "filas": [
+              {
+                "celdas": [
+                  "Formulario Anterior",
+                  "Tipo de trámite",
+                  "Solicitud electrónica (Agencia Virtual)",
+                  "Requisitos"
+                ],
+                "links": []
+              },
+              {
+                "celdas": [
+                  "SAT-0471 Inscripción y Actualización de Exportadores",
+                  "Inscripción y Actualización de Exportador Habitual",
+                  "Sección RTU Menú Otros Registros de SAT Opción Registro de Exportadores",
+                  "• Conoce los requisitos de inscripción de Exportador en el siguiente Link: Requisitos de inscripción en el registro de exportadores"
+                ],
+                "links": [
+                  {
+                    "texto": "Requisitos de inscripción en el registro de exportadores",
+                    "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-para-la-inscripcion-en-el-registro-de-exportadores/"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "filas": [
+              {
+                "celdas": [
+                  "Formulario Anterior",
+                  "Tipo de trámite",
+                  "Solicitud electrónica (Agencia Virtual)"
+                ],
+                "links": []
+              },
+              {
+                "celdas": [
+                  "1. Actualización Exportador",
+                  "Sección RTU Menú Otros Registros de SAT Opción Registro de Exportadores",
+                  "Conoce los requisitos de actualización de Exportador en el siguiente link: https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-para-la-actualizacion-en-el-registro-de-exportadores/"
+                ],
+                "links": [
+                  {
+                    "texto": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-para-la-actualizacion-en-el-registro-de-exportadores/",
+                    "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-para-la-actualizacion-en-el-registro-de-exportadores/"
+                  }
+                ]
+              },
+              {
+                "celdas": [
+                  "2. Inactivación Exportador",
+                  "Sección RTU Menú Otros Registros de SAT Opción Registro de Exportadores",
+                  "Conoce los requisitos para inactivación Exportador en el siguiente link: https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-para-la-inactivacion-en-el-registro-de-exportadores/"
+                ],
+                "links": [
+                  {
+                    "texto": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-para-la-inactivacion-en-el-registro-de-exportadores/",
+                    "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-para-la-inactivacion-en-el-registro-de-exportadores/"
+                  }
+                ]
+              },
+              {
+                "celdas": [
+                  "3. Permiso Temporal exportador",
+                  "Sección RTU Menú Otros Registros de SAT Opción Registro de Exportadores",
+                  "Conoce los requisitos para permiso Temporal de Exportador en el siguiente link: https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-para-solicitud-de-permiso-temporal-en-el-registro-de-exportadores/"
+                ],
+                "links": [
+                  {
+                    "texto": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-para-solicitud-de-permiso-temporal-en-el-registro-de-exportadores/",
+                    "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-para-solicitud-de-permiso-temporal-en-el-registro-de-exportadores/"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "acordeones": [
+          {
+            "panel_id": "1505762844966-e1d952eb-40fd",
+            "titulo": "Personas / Empresas",
+            "tablas": [],
+            "links": [
+              {
+                "texto": "Cita Controlada",
+                "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1541621044137-760c94bf-b56c"
+              },
+              {
+                "texto": "Inscripción RTU",
+                "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1615485066841-639e67c5-51e3"
+              },
+              {
+                "texto": "Actualización RTU",
+                "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1541621044169-4198d06d-693f"
+              },
+              {
+                "texto": "Cancelación de Negocios",
+                "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1541698042332-5a32c823-6bb4"
+              },
+              {
+                "texto": "Tercera Persona Autorizada en Gestiones de RTU",
+                "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1541718919329-b32e6928-0a05"
+              },
+              {
+                "texto": "Facilidades de Pago",
+                "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1606494573178-22f9effd-91cc"
+              },
+              {
+                "texto": "Registro de Productores",
+                "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1672421718793-730bbcd0-8130"
+              },
+              {
+                "texto": "Solvencia Fiscal",
+                "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1541698952183-d90ed325-d915"
+              },
+              {
+                "texto": "Entidades Exentas",
+                "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1541711155323-6e281078-3daf"
+              },
+              {
+                "texto": "Trámites en Gerencias Especiales",
+                "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1541695993129-3a5733fd-bd87"
+              },
+              {
+                "texto": "Operaciones a través de la Agencia Virtual",
+                "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1544737166940-7b221c49-789f"
+              },
+              {
+                "texto": "Registro Fiscal de Imprentas en Agencia Virtual",
+                "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1544757949626-63b98f1e-c5df"
+              },
+              {
+                "texto": "Autorizaciones y Habilitaciones",
+                "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1541695409144-7032754f-f93a"
+              },
+              {
+                "texto": "Autorización de Fabricas de Alcohol y Bebidas Alcohólicas",
+                "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1579811504227-cd799de1-5751"
+              },
+              {
+                "texto": "Solicitud de Alcoholes, Bebidas Alcohólicas y Fermentadas",
+                "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1610574994900-e9efee21-f878"
+              },
+              {
+                "texto": "Cambio de Regímenes",
+                "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1541710775060-c48ed303-d21d"
+              },
+              {
+                "texto": "Requisitos de Correcciones por errores en Declaraciones",
+                "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1541721863086-9194f94d-dd70"
+              },
+              {
+                "texto": "Registro de Contadores",
+                "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1716843898760-3ebbb433-f083"
+              },
+              {
+                "texto": "Abogados y Notarios",
+                "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1541715112091-e300506b-54b6"
+              },
+              {
+                "texto": "Planilla de IVA",
+                "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1541695403691-42e37d8c-5c14"
+              },
+              {
+                "texto": "Gestión de devolución por pagos indebidos",
+                "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1544742215300-58052f9f-10b1"
+              },
+              {
+                "texto": "Devolución o Compensación de Pagos en Exceso del Impuesto Sobre la Renta Anual",
+                "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1567533858813-166b89e0-9449"
+              },
+              {
+                "texto": "Formularios Electrónicos Solicitud Dev. C.F. Régimen Especial Electrónico y Régimen General",
+                "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1573597244944-61668ad5-acf7"
+              },
+              {
+                "texto": "Distintivos y sus requisitos",
+                "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1715356603270-207da69d-8699"
+              },
+              {
+                "texto": "Agentes de Retención del IVA",
+                "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1580160685000-92f05ffc-54c3"
+              },
+              {
+                "texto": "Remanentes por Retenciones de IVA",
+                "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1561561637360-f7d03262-922b"
+              },
+              {
+                "texto": "Gestores Tributarios",
+                "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1544743843603-94d9dcb9-d83e"
+              },
+              {
+                "texto": "Listado de Formularios",
+                "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1544743943508-2272c2f0-3b39"
+              }
+            ],
+            "videos": [],
+            "textos_panel": [
+              "Cita Controlada",
+              "Inscripción RTU",
+              "Actualización RTU",
+              "Cancelación de Negocios",
+              "Tercera Persona Autorizada en Gestiones de RTU",
+              "Facilidades de Pago",
+              "Registro de Productores",
+              "Solvencia Fiscal",
+              "Entidades Exentas",
+              "Trámites en Gerencias Especiales",
+              "Operaciones a través de la Agencia Virtual",
+              "Registro Fiscal de Imprentas en Agencia Virtual",
+              "Autorizaciones y Habilitaciones",
+              "Autorización de Fabricas de Alcohol y Bebidas Alcohólicas",
+              "Solicitud de Alcoholes, Bebidas Alcohólicas y Fermentadas",
+              "Cambio de Regímenes",
+              "Requisitos de Correcciones por errores en Declaraciones",
+              "Registro de Contadores",
+              "Abogados y Notarios",
+              "Planilla de IVA",
+              "Gestión de devolución por pagos indebidos",
+              "Devolución o Compensación de Pagos en Exceso del Impuesto Sobre la Renta Anual",
+              "Formularios Electrónicos Solicitud Dev. C.F. Régimen Especial Electrónico y Régimen General",
+              "Distintivos y sus requisitos",
+              "Agentes de Retención del IVA",
+              "Remanentes por Retenciones de IVA",
+              "Gestores Tributarios",
+              "Listado de Formularios"
+            ]
+          },
+          {
+            "panel_id": "1505762845070-f56e7dc0-cbe2",
+            "titulo": "Vehículos",
+            "tablas": [],
+            "links": [
+              {
+                "texto": "Inscripción",
+                "url": "https://portal.sat.gob.gt/portal/requisitos-de-vehiculos/#1541722263760-bed533a1-d75d"
+              },
+              {
+                "texto": "Autorización de Carpetas",
+                "url": "https://portal.sat.gob.gt/portal/requisitos-de-vehiculos/#1764787533600-5f808581-2d8a"
+              },
+              {
+                "texto": "Registro de Marca y Código de Fabricante",
+                "url": "https://portal.sat.gob.gt/portal/requisitos-de-vehiculos/#1642106578727-c83d17c4-34da"
+              },
+              {
+                "texto": "Traspaso de Vehículos ante la SAT",
+                "url": "https://portal.sat.gob.gt/portal/requisitos-de-vehiculos/#1541722263997-e0d7cba3-7daf"
+              },
+              {
+                "texto": "Traspaso Electrónico de Vehículos a través de Notarios",
+                "url": "https://portal.sat.gob.gt/portal/requisitos-de-vehiculos/#1541780077723-c74e470e-b935"
+              },
+              {
+                "texto": "Cambios, Rectificaciones o Transformaciones en Datos de Vehículos",
+                "url": "https://portal.sat.gob.gt/portal/requisitos-de-vehiculos/#1541722264551-ab829ede-22f8"
+              },
+              {
+                "texto": "Reposición de Distintivos (Certificado de Propiedad, Tarjeta y Placas de Circulación)",
+                "url": "https://portal.sat.gob.gt/portal/requisitos-de-vehiculos/#1541722264271-487e21fd-d904"
+              },
+              {
+                "texto": "Cambio de Placas Temporales",
+                "url": "https://portal.sat.gob.gt/portal/requisitos-de-vehiculos/#1662393570133-d90819b2-32d3"
+              },
+              {
+                "texto": "Reposiciones con Formularios en Papel",
+                "url": "https://portal.sat.gob.gt/portal/requisitos-de-vehiculos/#1541776381173-61f2f55a-46dc"
+              },
+              {
+                "texto": "Activación o inactivación",
+                "url": "https://portal.sat.gob.gt/portal/requisitos-de-vehiculos/#1541777125986-97d04375-37ee"
+              },
+              {
+                "texto": "Gestores Tributarios",
+                "url": "https://portal.sat.gob.gt/portal/requisitos-de-vehiculos/#1541776888584-73400ddd-b78d"
+              },
+              {
+                "texto": "Tercera Persona",
+                "url": "https://portal.sat.gob.gt/portal/requisitos-de-vehiculos/#1666628292136-94f65fcc-f79f"
+              }
+            ],
+            "videos": [],
+            "textos_panel": [
+              "Inscripción",
+              "Autorización de Carpetas",
+              "Registro de Marca y Código de Fabricante",
+              "Traspaso de Vehículos ante la SAT",
+              "Traspaso Electrónico de Vehículos a través de Notarios",
+              "Cambios, Rectificaciones o Transformaciones en Datos de Vehículos",
+              "Reposición de Distintivos (Certificado de Propiedad, Tarjeta y Placas de Circulación)",
+              "Cambio de Placas Temporales",
+              "Reposiciones con Formularios en Papel",
+              "Activación o inactivación",
+              "Gestores Tributarios",
+              "Tercera Persona"
+            ]
+          },
+          {
+            "panel_id": "1505784290624-8a1692b9-c4fe",
+            "titulo": "Aduanas",
+            "tablas": [],
+            "links": [
+              {
+                "texto": "Consulta de Expedientes",
+                "url": "https://portal.sat.gob.gt/portal/requisitos-de-aduanas/#1542142398181-8db4844a-6760"
+              },
+              {
+                "texto": "Documentos para importación y admisión temporal",
+                "url": "https://portal.sat.gob.gt/portal/requisitos-de-aduanas/#1542142298663-bee160b4-5362"
+              },
+              {
+                "texto": "Importación y Exportación",
+                "url": "https://portal.sat.gob.gt/portal/requisitos-de-aduanas/#1542209620324-5bd6722c-fbd7"
+              },
+              {
+                "texto": "Reexportación",
+                "url": "https://portal.sat.gob.gt/portal/requisitos-de-aduanas/#1542142298723-7d324078-07a5"
+              },
+              {
+                "texto": "Renovación de operación de auxiliares de la función pública",
+                "url": "https://portal.sat.gob.gt/portal/requisitos-de-aduanas/#1608063945646-f9ebd644-65ff"
+              },
+              {
+                "texto": "Documento Compromisorio",
+                "url": "https://portal.sat.gob.gt/portal/requisitos-de-aduanas/#1738949698794-09454143-7939"
+              }
+            ],
+            "videos": [],
+            "textos_panel": [
+              "Consulta de Expedientes",
+              "Documentos para importación y admisión temporal",
+              "Importación y Exportación",
+              "Reexportación",
+              "Renovación de operación de auxiliares de la función pública",
+              "Documento Compromisorio"
+            ]
+          }
+        ],
+        "videos": [],
+        "iframes_aplicativos": [],
+        "links_fuera_acordeon": [
+          {
+            "texto": "Requisitos de inscripción en el registro de exportadores",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-para-la-inscripcion-en-el-registro-de-exportadores/"
+          },
+          {
+            "texto": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-para-la-actualizacion-en-el-registro-de-exportadores/",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-para-la-actualizacion-en-el-registro-de-exportadores/"
+          },
+          {
+            "texto": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-para-la-inactivacion-en-el-registro-de-exportadores/",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-para-la-inactivacion-en-el-registro-de-exportadores/"
+          },
+          {
+            "texto": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-para-solicitud-de-permiso-temporal-en-el-registro-de-exportadores/",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-para-solicitud-de-permiso-temporal-en-el-registro-de-exportadores/"
+          },
+          {
+            "texto": "Inscripción Exportador",
+            "url": "https://portal.sat.gob.gt/portal/descarga/16682/registro-de-contadores-en-agencia-virtual/84781/manual-de-inscripcion-exportadores.pdf"
+          },
+          {
+            "texto": "Actualización Exportador",
+            "url": "https://portal.sat.gob.gt/portal/descarga/16682/registro-de-contadores-en-agencia-virtual/84783/manual-de-actualizacion-exportadores.pdf"
+          },
+          {
+            "texto": "Inactivación Exportador",
+            "url": "https://portal.sat.gob.gt/portal/descarga/16682/registro-de-contadores-en-agencia-virtual/84782/manual-de-inactivacion.pdf"
+          },
+          {
+            "texto": "Permiso temporal Exportador",
+            "url": "https://portal.sat.gob.gt/portal/descarga/16682/registro-de-contadores-en-agencia-virtual/84784/manual-de-permiso-temporal-exportadores.pdf"
+          }
+        ],
+        "links_planos": [
+          {
+            "texto": "Requisitos de inscripción en el registro de exportadores",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-para-la-inscripcion-en-el-registro-de-exportadores/"
+          },
+          {
+            "texto": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-para-la-actualizacion-en-el-registro-de-exportadores/",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-para-la-actualizacion-en-el-registro-de-exportadores/"
+          },
+          {
+            "texto": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-para-la-inactivacion-en-el-registro-de-exportadores/",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-para-la-inactivacion-en-el-registro-de-exportadores/"
+          },
+          {
+            "texto": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-para-solicitud-de-permiso-temporal-en-el-registro-de-exportadores/",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-para-solicitud-de-permiso-temporal-en-el-registro-de-exportadores/"
+          },
+          {
+            "texto": "Cita Controlada",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1541621044137-760c94bf-b56c"
+          },
+          {
+            "texto": "Inscripción RTU",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1615485066841-639e67c5-51e3"
+          },
+          {
+            "texto": "Actualización RTU",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1541621044169-4198d06d-693f"
+          },
+          {
+            "texto": "Cancelación de Negocios",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1541698042332-5a32c823-6bb4"
+          },
+          {
+            "texto": "Tercera Persona Autorizada en Gestiones de RTU",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1541718919329-b32e6928-0a05"
+          },
+          {
+            "texto": "Facilidades de Pago",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1606494573178-22f9effd-91cc"
+          },
+          {
+            "texto": "Registro de Productores",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1672421718793-730bbcd0-8130"
+          },
+          {
+            "texto": "Solvencia Fiscal",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1541698952183-d90ed325-d915"
+          },
+          {
+            "texto": "Entidades Exentas",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1541711155323-6e281078-3daf"
+          },
+          {
+            "texto": "Trámites en Gerencias Especiales",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1541695993129-3a5733fd-bd87"
+          },
+          {
+            "texto": "Operaciones a través de la Agencia Virtual",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1544737166940-7b221c49-789f"
+          },
+          {
+            "texto": "Registro Fiscal de Imprentas en Agencia Virtual",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1544757949626-63b98f1e-c5df"
+          },
+          {
+            "texto": "Autorizaciones y Habilitaciones",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1541695409144-7032754f-f93a"
+          },
+          {
+            "texto": "Autorización de Fabricas de Alcohol y Bebidas Alcohólicas",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1579811504227-cd799de1-5751"
+          },
+          {
+            "texto": "Solicitud de Alcoholes, Bebidas Alcohólicas y Fermentadas",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1610574994900-e9efee21-f878"
+          },
+          {
+            "texto": "Cambio de Regímenes",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1541710775060-c48ed303-d21d"
+          },
+          {
+            "texto": "Requisitos de Correcciones por errores en Declaraciones",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1541721863086-9194f94d-dd70"
+          },
+          {
+            "texto": "Registro de Contadores",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1716843898760-3ebbb433-f083"
+          },
+          {
+            "texto": "Abogados y Notarios",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1541715112091-e300506b-54b6"
+          },
+          {
+            "texto": "Planilla de IVA",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1541695403691-42e37d8c-5c14"
+          },
+          {
+            "texto": "Gestión de devolución por pagos indebidos",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1544742215300-58052f9f-10b1"
+          },
+          {
+            "texto": "Devolución o Compensación de Pagos en Exceso del Impuesto Sobre la Renta Anual",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1567533858813-166b89e0-9449"
+          },
+          {
+            "texto": "Formularios Electrónicos Solicitud Dev. C.F. Régimen Especial Electrónico y Régimen General",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1573597244944-61668ad5-acf7"
+          },
+          {
+            "texto": "Distintivos y sus requisitos",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1715356603270-207da69d-8699"
+          },
+          {
+            "texto": "Agentes de Retención del IVA",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1580160685000-92f05ffc-54c3"
+          },
+          {
+            "texto": "Remanentes por Retenciones de IVA",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1561561637360-f7d03262-922b"
+          },
+          {
+            "texto": "Gestores Tributarios",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1544743843603-94d9dcb9-d83e"
+          },
+          {
+            "texto": "Listado de Formularios",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1544743943508-2272c2f0-3b39"
+          },
+          {
+            "texto": "Inscripción",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-vehiculos/#1541722263760-bed533a1-d75d"
+          },
+          {
+            "texto": "Autorización de Carpetas",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-vehiculos/#1764787533600-5f808581-2d8a"
+          },
+          {
+            "texto": "Registro de Marca y Código de Fabricante",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-vehiculos/#1642106578727-c83d17c4-34da"
+          },
+          {
+            "texto": "Traspaso de Vehículos ante la SAT",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-vehiculos/#1541722263997-e0d7cba3-7daf"
+          },
+          {
+            "texto": "Traspaso Electrónico de Vehículos a través de Notarios",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-vehiculos/#1541780077723-c74e470e-b935"
+          },
+          {
+            "texto": "Cambios, Rectificaciones o Transformaciones en Datos de Vehículos",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-vehiculos/#1541722264551-ab829ede-22f8"
+          },
+          {
+            "texto": "Reposición de Distintivos (Certificado de Propiedad, Tarjeta y Placas de Circulación)",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-vehiculos/#1541722264271-487e21fd-d904"
+          },
+          {
+            "texto": "Cambio de Placas Temporales",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-vehiculos/#1662393570133-d90819b2-32d3"
+          },
+          {
+            "texto": "Reposiciones con Formularios en Papel",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-vehiculos/#1541776381173-61f2f55a-46dc"
+          },
+          {
+            "texto": "Activación o inactivación",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-vehiculos/#1541777125986-97d04375-37ee"
+          },
+          {
+            "texto": "Gestores Tributarios",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-vehiculos/#1541776888584-73400ddd-b78d"
+          },
+          {
+            "texto": "Tercera Persona",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-vehiculos/#1666628292136-94f65fcc-f79f"
+          },
+          {
+            "texto": "Consulta de Expedientes",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-aduanas/#1542142398181-8db4844a-6760"
+          },
+          {
+            "texto": "Documentos para importación y admisión temporal",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-aduanas/#1542142298663-bee160b4-5362"
+          },
+          {
+            "texto": "Importación y Exportación",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-aduanas/#1542209620324-5bd6722c-fbd7"
+          },
+          {
+            "texto": "Reexportación",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-aduanas/#1542142298723-7d324078-07a5"
+          },
+          {
+            "texto": "Renovación de operación de auxiliares de la función pública",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-aduanas/#1608063945646-f9ebd644-65ff"
+          },
+          {
+            "texto": "Documento Compromisorio",
+            "url": "https://portal.sat.gob.gt/portal/requisitos-de-aduanas/#1738949698794-09454143-7939"
+          },
+          {
+            "texto": "Inscripción Exportador",
+            "url": "https://portal.sat.gob.gt/portal/descarga/16682/registro-de-contadores-en-agencia-virtual/84781/manual-de-inscripcion-exportadores.pdf"
+          },
+          {
+            "texto": "Actualización Exportador",
+            "url": "https://portal.sat.gob.gt/portal/descarga/16682/registro-de-contadores-en-agencia-virtual/84783/manual-de-actualizacion-exportadores.pdf"
+          },
+          {
+            "texto": "Inactivación Exportador",
+            "url": "https://portal.sat.gob.gt/portal/descarga/16682/registro-de-contadores-en-agencia-virtual/84782/manual-de-inactivacion.pdf"
+          },
+          {
+            "texto": "Permiso temporal Exportador",
+            "url": "https://portal.sat.gob.gt/portal/descarga/16682/registro-de-contadores-en-agencia-virtual/84784/manual-de-permiso-temporal-exportadores.pdf"
+          }
+        ],
+        "es_ancla_aislada": false
+      }
+    },
+    "requisitos-formulario-sat-2125": {
+      "slug": "requisitos-formulario-sat-2125",
+      "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-formulario-sat-2125/",
+      "url_base": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-formulario-sat-2125/",
+      "ancla_fragmento": "",
+      "arquetipo_matriz": "TIPO-1",
+      "criterio_arquetipo": "Tipología operativa/informativa de origen mapeada a Ficha de Gestión y Requisitos (TIPO-1).",
+      "ids_sat_ges": [
+        "SAT-GES-0392"
+      ],
+      "niveles_2": [
+        "Exportadores"
+      ],
+      "niveles_3": [
+        "Padrón y Registro de Exportadores"
+      ],
+      "titulos_excel": [
+        "Lista de requisitos y documentos: requisitos del formulario SAT-2125."
+      ],
+      "descripciones_excel": [
+        "Gestión y requisitos para Lista de requisitos y documentos: requisitos del formulario SAT-2125.."
+      ],
+      "bases_legales_excel": [
+        "Código Aduanero Uniforme Centroamericano (CAUCA IV) y su Reglamento (RECAUCA IV)."
+      ],
+      "observaciones_excel": [],
+      "notas_extra_col24": [],
+      "http_status": 200,
+      "origen_extraccion": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/requisitos-formulario-sat-2125/",
+      "fuente_viva": {
+        "tipo_fuente": "wpbakery_page",
+        "titulo_fuente": "Requisitos Formulario SAT-2125",
+        "headings": [
+          {
+            "tag": "h1",
+            "texto": "Requisitos Formulario SAT-2125"
+          },
+          {
+            "tag": "h4",
+            "texto": "Persona Individual"
+          },
+          {
+            "tag": "h4",
+            "texto": "Persona jurídica"
+          },
+          {
+            "tag": "h4",
+            "texto": "Oficinas o Agencias para realizar el trámite"
+          },
+          {
+            "tag": "h4",
+            "texto": "Gestión a través de Agencia Virtual"
+          }
+        ],
+        "correos_cf_decodificados": [],
+        "parrafos_intro": [
+          "Antes de iniciar su solicitud de devolución de crédito fiscal Régimen General, lea cuidadosamente los siguientes documentos",
+          "Teniendo esto continúe con los siguientes pasos.",
+          "Un correo en el cual me confirman la recepción de la solicitud de devolución y el número de documento SAT generado para realizar consultas.",
+          "En caso una solicitud no fue aceptada, el contribuyente al cumplir con el requisito podrá realizar nuevamente la solicitud."
+        ],
+        "listas_intro": [
+          "Guía del Usuario para la Utilización del Formulario Electrónico SAT 2125",
+          "Instrucciones previas a cargar los anexos del formulario electrónico SAT-2125",
+          "libros",
+          "Ingresar a la Agencia Virtual",
+          "Llenar el formulario SAT-2125 “Formulario Electrónico de Solicitud de Devolución de Crédito Fiscal Régimen General”",
+          "Presentarlo de forma electrónica dentro de Agencia Virtual",
+          "A la dirección de correo electrónica registrada en el formulario, se le enviará un mensaje en cual se le indicará si fue aceptada para tramite la solicitud, en dado caso se incluirá el número de documento SAT asignado, en caso no fuera aceptada se le indicarán los motivos."
+        ],
+        "tarjetas_fuente": [],
+        "tablas_generales": [],
+        "acordeones": [
+          {
+            "panel_id": "1524835532161-47ceaa89-b60a",
+            "titulo": "Persona Individual",
+            "tablas": [
+              {
+                "filas": [
+                  {
+                    "celdas": [
+                      "1",
+                      "",
+                      "Contar con accesos (usuario y contraseña) de Agencia Virtual. Si no cuentas con Agencia Virtual, haz clic aquí para solicitarla."
+                    ],
+                    "links": [
+                      {
+                        "texto": "aquí",
+                        "url": "https://portal.sat.gob.gt/portal/solicitud-usuario-agencia-virtual/"
+                      }
+                    ]
+                  },
+                  {
+                    "celdas": [
+                      "2",
+                      "",
+                      "Tener un establecimiento activo"
+                    ],
+                    "links": []
+                  },
+                  {
+                    "celdas": [
+                      "3",
+                      "",
+                      "Ser exportador registrado en alguno de los regímenes establecidos."
+                    ],
+                    "links": []
+                  },
+                  {
+                    "celdas": [
+                      "4",
+                      "",
+                      "Llenar el formulario SAT 2125"
+                    ],
+                    "links": []
+                  },
+                  {
+                    "celdas": [
+                      "5",
+                      "",
+                      "Las solicitudes las podrá realizar en forma trimestral o semestralmente, de períodos no prescritos, (de la fecha de presentación, cuatro años a tras)."
+                    ],
+                    "links": []
+                  },
+                  {
+                    "celdas": [
+                      "6",
+                      "",
+                      "Anexar archivos en formato CSV de los libros de Compras y ventas del periodo solicitado."
+                    ],
+                    "links": []
+                  }
+                ]
+              }
+            ],
+            "links": [
+              {
+                "texto": "aquí",
+                "url": "https://portal.sat.gob.gt/portal/solicitud-usuario-agencia-virtual/"
+              }
+            ],
+            "videos": [],
+            "textos_panel": []
+          },
+          {
+            "panel_id": "1540825201824-a2de64d0-1039",
+            "titulo": "Persona jurídica",
+            "tablas": [
+              {
+                "filas": [
+                  {
+                    "celdas": [
+                      "1",
+                      "",
+                      "Contar con accesos (usuario y contraseña) de Agencia Virtual. Si no cuentas con Agencia Virtual, haz clic aquí para solicitarla."
+                    ],
+                    "links": [
+                      {
+                        "texto": "aquí",
+                        "url": "https://portal.sat.gob.gt/portal/solicitud-usuario-agencia-virtual/"
+                      }
+                    ]
+                  },
+                  {
+                    "celdas": [
+                      "2",
+                      "",
+                      "Tener un establecimiento activo"
+                    ],
+                    "links": []
+                  },
+                  {
+                    "celdas": [
+                      "3",
+                      "",
+                      "Contar con un Representante legal inscrito que se encuentre al día en sus obligaciones tributarias, localizado y en color verde."
+                    ],
+                    "links": []
+                  },
+                  {
+                    "celdas": [
+                      "4",
+                      "",
+                      "Ser exportador registrado en alguno de los regímenes establecidos."
+                    ],
+                    "links": []
+                  },
+                  {
+                    "celdas": [
+                      "5",
+                      "",
+                      "Llenar el formulario SAT 2125"
+                    ],
+                    "links": []
+                  },
+                  {
+                    "celdas": [
+                      "6",
+                      "",
+                      "Las solicitudes las podrá realizar en forma trimestral o semestralmente, de períodos no prescritos, (de la fecha de presentación, cuatro años a tras)."
+                    ],
+                    "links": []
+                  },
+                  {
+                    "celdas": [
+                      "7",
+                      "",
+                      "Anexar archivos en formato CSV de los libros de Compras y ventas del periodo solicitado."
+                    ],
+                    "links": []
+                  }
+                ]
+              }
+            ],
+            "links": [
+              {
+                "texto": "aquí",
+                "url": "https://portal.sat.gob.gt/portal/solicitud-usuario-agencia-virtual/"
+              }
+            ],
+            "videos": [],
+            "textos_panel": []
+          }
+        ],
+        "videos": [],
+        "iframes_aplicativos": [],
+        "links_fuera_acordeon": [
+          {
+            "texto": "Guía del Usuario para la Utilización del Formulario Electrónico SAT 2125",
+            "url": "https://portal.sat.gob.gt/portal/descarga/15345/devoluciones-de-credito-fiscal/41601/guia-del-usuario-para-la-utilizacion-del-formulario-electronico-sat2125.pdf"
+          },
+          {
+            "texto": "Instrucciones previas a cargar los anexos del formulario electrónico SAT-2125",
+            "url": "https://portal.sat.gob.gt/portal/descarga/15345/devoluciones-de-credito-fiscal/73971/instruccionescsv-formulario-sat-2125-05_12_2023.pdf"
+          },
+          {
+            "texto": "libros",
+            "url": "https://portal.sat.gob.gt/portal/descarga/15345/devoluciones-de-credito-fiscal/41603/libros-2125.xlsx"
+          }
+        ],
+        "links_planos": [
+          {
+            "texto": "aquí",
+            "url": "https://portal.sat.gob.gt/portal/solicitud-usuario-agencia-virtual/"
+          },
+          {
+            "texto": "Guía del Usuario para la Utilización del Formulario Electrónico SAT 2125",
+            "url": "https://portal.sat.gob.gt/portal/descarga/15345/devoluciones-de-credito-fiscal/41601/guia-del-usuario-para-la-utilizacion-del-formulario-electronico-sat2125.pdf"
+          },
+          {
+            "texto": "Instrucciones previas a cargar los anexos del formulario electrónico SAT-2125",
+            "url": "https://portal.sat.gob.gt/portal/descarga/15345/devoluciones-de-credito-fiscal/73971/instruccionescsv-formulario-sat-2125-05_12_2023.pdf"
+          },
+          {
+            "texto": "libros",
+            "url": "https://portal.sat.gob.gt/portal/descarga/15345/devoluciones-de-credito-fiscal/41603/libros-2125.xlsx"
+          }
+        ],
+        "es_ancla_aislada": false,
+        "links_post_meta_excluidos": [
+          {
+            "texto": "Requisitos para trámites en Agencias",
+            "url": "https://portal.sat.gob.gt/portal/categoria/requisitos-tramites-agencias/"
+          },
+          {
+            "texto": "14/11/2019",
+            "url": "https://portal.sat.gob.gt/portal/2019/11/14/"
+          }
+        ]
+      }
+    },
+    "presentacion-y-analisis-de-declaracion": {
+      "slug": "presentacion-y-analisis-de-declaracion",
+      "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-aduanas/presentacion-y-analisis-de-declaracion-complementarias-de-exportacion/",
+      "url_base": "https://portal.sat.gob.gt/portal/requisitos-tramites-aduanas/presentacion-y-analisis-de-declaracion-complementarias-de-exportacion/",
+      "ancla_fragmento": "",
+      "arquetipo_matriz": "TIPO-1",
+      "criterio_arquetipo": "Tipología operativa/informativa de origen mapeada a Ficha de Gestión y Requisitos (TIPO-1).",
+      "ids_sat_ges": [
+        "SAT-GES-0393"
+      ],
+      "niveles_2": [
+        "Exportadores"
+      ],
+      "niveles_3": [
+        "Declaraciones Aduaneras, Embarques y Mercancías"
+      ],
+      "titulos_excel": [
+        "Requisitos para la Presentación y Análisis de Declaración Complementarias de Exportación"
+      ],
+      "descripciones_excel": [
+        "Gestión y requisitos para Requisitos, pasos y documentos para presentar declaración complementaria de exportación.."
+      ],
+      "bases_legales_excel": [
+        "CAUCA IV, RECAUCA IV (Procedimiento Sancionatorio e Impugnaciones) y Ley Nacional de Aduanas."
+      ],
+      "observaciones_excel": [],
+      "notas_extra_col24": [],
+      "http_status": 200,
+      "origen_extraccion": "https://portal.sat.gob.gt/portal/requisitos-tramites-aduanas/presentacion-y-analisis-de-declaracion-complementarias-de-exportacion/",
+      "fuente_viva": {
+        "tipo_fuente": "wpbakery_page",
+        "titulo_fuente": "Presentación y Análisis de Declaración Complementarias de Exportación",
+        "headings": [
+          {
+            "tag": "h1",
+            "texto": "Presentación y Análisis de Declaración Complementarias de Exportación"
+          },
+          {
+            "tag": "h4",
+            "texto": "Agente Aduanero, Exportador (Representante Legal, Propietario o Mandatario), Asistente del Agente Aduanero autorizado por la SAT."
+          },
+          {
+            "tag": "h4",
+            "texto": "Audios en Idiomas Mayas"
+          },
+          {
+            "tag": "h4",
+            "texto": "K´ICHE´"
+          },
+          {
+            "tag": "h4",
+            "texto": "MAM"
+          },
+          {
+            "tag": "h4",
+            "texto": "Q´EQCHI´"
+          },
+          {
+            "tag": "h4",
+            "texto": "Aduanas para realizar el trámite"
+          },
+          {
+            "tag": "h4",
+            "texto": "Región Central"
+          },
+          {
+            "tag": "h4",
+            "texto": "Trámite para terceros autorizados:"
+          },
+          {
+            "tag": "h4",
+            "texto": "Región Occidente"
+          },
+          {
+            "tag": "h4",
+            "texto": "Región Nororiente"
+          },
+          {
+            "tag": "h4",
+            "texto": "Región Sur"
+          }
+        ],
+        "correos_cf_decodificados": [],
+        "parrafos_intro": [
+          "1. Preséntate a la Aduana por donde saliste del país.",
+          "El Ejemplar de la Declaración de Mercancías del Transportista firmada y sellada.",
+          "1. Sanción si se presenta extemporáneamente la Declaración Complementaria de una Declaración Provisional $CA 300.00 (Pesos Centroamericanos equivalen a USD$ 300.00), lo cual no exime al exportador de las consecuencias tributarias y legales que se originen de las actividades fiscalizadoras de la SAT."
+        ],
+        "listas_intro": [
+          "Galerías Prima",
+          "Plaza San Rafael",
+          "Pacific Villa Hermosa",
+          "Chimaltenango",
+          "El Progreso",
+          "Sacatepéquez",
+          "Plaza San Rafael (Anexo)",
+          "Quetzaltenango",
+          "Huehuetenango",
+          "San Marcos",
+          "Quiché",
+          "Sololá",
+          "Totonicapán",
+          "Zacapa",
+          "Baja Verapaz",
+          "Alta Verapaz",
+          "Jalapa",
+          "Petén",
+          "Izabal",
+          "Chiquimula",
+          "Escuintla",
+          "Retalhuleu",
+          "Jutiapa",
+          "Santa Rosa",
+          "Suchitepéquez"
+        ],
+        "tarjetas_fuente": [],
+        "tablas_generales": [],
+        "acordeones": [
+          {
+            "panel_id": "1528300955038-bbfd8a5d-631e",
+            "titulo": "Agente Aduanero, Exportador (Representante Legal, Propietario o Mandatario), Asistente del Agente Aduanero autorizado por la SAT.",
+            "tablas": [
+              {
+                "filas": [
+                  {
+                    "celdas": [
+                      "1",
+                      "",
+                      "Si esta relacionada con una Declaración Simplificada, debes perfeccionar la exportación con una Declaración complementaria presentándola ante la Aduana de salida en el plazo de 3 días a partir de efectuado el embarque. (Artículo 372 de RECAUCA)."
+                    ],
+                    "links": []
+                  },
+                  {
+                    "celdas": [
+                      "2",
+                      "",
+                      "Si está relacionada con una Declaración Provisional, debes perfeccionar la exportación con una Declaración complementaria presentándola ante la Aduana de salida en el plazo de 5 días siguientes a partir de la fecha de finalización de la carga de la mercancía. (Artículo 331 y 332 del RECAUCA)"
+                    ],
+                    "links": []
+                  },
+                  {
+                    "celdas": [
+                      "3",
+                      "",
+                      "Adjunta a la Declaración Complementaria: Factura comercial. Declaración para el Registro y Control de Exportación (DEPREX). Certificado de ANACAFÉ según corresponda. Documento de transporte. Para el caso de empresas consolidadas de carga, debes presentar fotocopia del documento de transporte máster. En ambos casos; tanto para la Declaración Simplificada como para la Provisional, debes presentar el ejemplar de transportista firmado y sellado por el Funcionario Aduanero que procesó el ingreso al Recinto Aduanero."
+                    ],
+                    "links": []
+                  }
+                ]
+              }
+            ],
+            "links": [],
+            "videos": [],
+            "textos_panel": []
+          }
+        ],
+        "videos": [],
+        "iframes_aplicativos": [],
+        "links_fuera_acordeon": [
+          {
+            "texto": "https://mx.ivoox.com/es/presentacion-y-analisis-de-declaracion-complementarias-de-exportacion-k-039-iche-039_md_45167495_wp_1.mp3",
+            "url": "https://mx.ivoox.com/es/presentacion-y-analisis-de-declaracion-complementarias-de-exportacion-k-039-iche-039_md_45167495_wp_1.mp3"
+          },
+          {
+            "texto": "https://mx.ivoox.com/es/presentacion-y-analisis-de-declaracion-complementarias-de-exportacion-mam_md_45166660_wp_1.mp3",
+            "url": "https://mx.ivoox.com/es/presentacion-y-analisis-de-declaracion-complementarias-de-exportacion-mam_md_45166660_wp_1.mp3"
+          },
+          {
+            "texto": "https://mx.ivoox.com/es/presentacion-y-analisis-de-declaracion-complementarias-de-exportacion-q-039-eqchi-039_md_45168101_wp_1.mp3",
+            "url": "https://mx.ivoox.com/es/presentacion-y-analisis-de-declaracion-complementarias-de-exportacion-q-039-eqchi-039_md_45168101_wp_1.mp3"
+          }
+        ],
+        "links_planos": [
+          {
+            "texto": "https://mx.ivoox.com/es/presentacion-y-analisis-de-declaracion-complementarias-de-exportacion-k-039-iche-039_md_45167495_wp_1.mp3",
+            "url": "https://mx.ivoox.com/es/presentacion-y-analisis-de-declaracion-complementarias-de-exportacion-k-039-iche-039_md_45167495_wp_1.mp3"
+          },
+          {
+            "texto": "https://mx.ivoox.com/es/presentacion-y-analisis-de-declaracion-complementarias-de-exportacion-mam_md_45166660_wp_1.mp3",
+            "url": "https://mx.ivoox.com/es/presentacion-y-analisis-de-declaracion-complementarias-de-exportacion-mam_md_45166660_wp_1.mp3"
+          },
+          {
+            "texto": "https://mx.ivoox.com/es/presentacion-y-analisis-de-declaracion-complementarias-de-exportacion-q-039-eqchi-039_md_45168101_wp_1.mp3",
+            "url": "https://mx.ivoox.com/es/presentacion-y-analisis-de-declaracion-complementarias-de-exportacion-q-039-eqchi-039_md_45168101_wp_1.mp3"
+          }
+        ],
+        "es_ancla_aislada": false,
+        "links_post_meta_excluidos": [
+          {
+            "texto": "Requisitos para trámites en Aduanas",
+            "url": "https://portal.sat.gob.gt/portal/categoria/requisitos-tramites-aduanas/"
+          },
+          {
+            "texto": "13/11/2018",
+            "url": "https://portal.sat.gob.gt/portal/2018/11/13/"
+          }
+        ]
+      }
+    },
+    "autorizacion-de-cartas-de-ingreso-a-zona": {
+      "slug": "autorizacion-de-cartas-de-ingreso-a-zona",
+      "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-aduanas/autorizacion-de-cartas-de-ingreso-a-zona-primaria/",
+      "url_base": "https://portal.sat.gob.gt/portal/requisitos-tramites-aduanas/autorizacion-de-cartas-de-ingreso-a-zona-primaria/",
+      "ancla_fragmento": "",
+      "arquetipo_matriz": "TIPO-1",
+      "criterio_arquetipo": "Tipología operativa/informativa de origen mapeada a Ficha de Gestión y Requisitos (TIPO-1).",
+      "ids_sat_ges": [
+        "SAT-GES-0401",
+        "SAT-GES-0462"
+      ],
+      "niveles_2": [
+        "Auxiliares de la Función Pública Aduanera (AFPA)",
+        "Exportadores"
+      ],
+      "niveles_3": [
+        "Declaraciones Aduaneras, Embarques y Mercancías",
+        "Transportistas Aduaneros"
+      ],
+      "titulos_excel": [
+        "Requisitos para la Autorización de Cartas de Ingreso a Zona Primaria",
+        "Autorización de Cartas de Ingreso a Zona Primaria Aduanera"
+      ],
+      "descripciones_excel": [
+        "Requisitos para autorizar el ingreso de unidades de transporte de carga y sus conductores a las zonas primarias aduaneras.",
+        "Procedimiento y requisitos para autorizar el ingreso temporal de unidades de transporte de carga y conductores a áreas primarias portuarias y terrestres."
+      ],
+      "bases_legales_excel": [
+        "CAUCA IV (Arts. 18 al 28), RECAUCA IV (Tránsito Aduanero Internacional Terrestre) y Ley de Aduanas."
+      ],
+      "observaciones_excel": [],
+      "notas_extra_col24": [],
+      "http_status": 200,
+      "origen_extraccion": "https://portal.sat.gob.gt/portal/requisitos-tramites-aduanas/autorizacion-de-cartas-de-ingreso-a-zona-primaria/",
+      "fuente_viva": {
+        "tipo_fuente": "wpbakery_page",
+        "titulo_fuente": "Autorización de Cartas de Ingreso a Zona Primaria",
+        "headings": [
+          {
+            "tag": "h1",
+            "texto": "Autorización de Cartas de Ingreso a Zona Primaria"
+          },
+          {
+            "tag": "h4",
+            "texto": "Consignatario, Representante Legal, Agente Aduanero o Apoderado Especial Aduanero, Desconsolidador o Empresa de Entrega rápida o Courier."
+          },
+          {
+            "tag": "h4",
+            "texto": "Audios en Idiomas Mayas"
+          },
+          {
+            "tag": "h4",
+            "texto": "K´ICHE´"
+          },
+          {
+            "tag": "h4",
+            "texto": "MAM"
+          },
+          {
+            "tag": "h4",
+            "texto": "Q´EQCHI´"
+          },
+          {
+            "tag": "h4",
+            "texto": "Aduanas para realizar el trámite"
+          },
+          {
+            "tag": "h4",
+            "texto": "Región Central"
+          },
+          {
+            "tag": "h4",
+            "texto": "Trámite para terceros autorizados:"
+          },
+          {
+            "tag": "h4",
+            "texto": "Región Occidente"
+          },
+          {
+            "tag": "h4",
+            "texto": "Región Nororiente"
+          },
+          {
+            "tag": "h4",
+            "texto": "Región Sur"
+          }
+        ],
+        "correos_cf_decodificados": [],
+        "parrafos_intro": [
+          "1. Preséntate a la Aduana por donde ingresaste o salistes del país.",
+          "1. Adjunta a la solicitud documentación de soporte que ampare las herramientas o maquinaria a ingresar siguiente:",
+          "2 . El personal asignado en los Módulos de ingreso o egreso de la Aduana verificará que las herramientas o maquinaria sea la autorizada.",
+          "3 . En la solicitud, el interesado debe responsabilizarse de retirar las mismas herramientas o maquinaria de la zona primaria que le fue autorizada al momento del ingreso.",
+          "4. Velar que las herramientas o maquinaria que ingresan al recinto aduanero sean las mismas que egresan, en caso de que el personal de la Aduana detecte cualquier anomalía respecto a las herramientas o maquinaria que están retirando de la zona primaria de la Aduana, las mismas serán retenidas y deberán responder por el pago de tributos y por las responsabilidades penales que correspondan en caso se presuma de un caso especial de defraudación o contrabando aduaneros."
+        ],
+        "listas_intro": [
+          "Si corresponde al ingreso de herramientas, se devuelve la copia de la solicitud con sello de autorización.",
+          "Si corresponde a maquinaria, la Administración de Aduana elabora una providencia que autoriza el ingreso.",
+          "Factura u otro documento que ampare la propiedad de las herramientas o maquinaria.",
+          "Declaración Aduanera.",
+          "Documento de Identificación Personal (DPI).",
+          "Si la persona que ingresa las herramientas o maquinaria es extranjera, debe presentar Pasaporte.",
+          "Cualquier documento que sirva para identificar las herramientas o maquinaria a ingresar a la zona primaria.",
+          "Galerías Prima",
+          "Plaza San Rafael",
+          "Pacific Villa Hermosa",
+          "Chimaltenango",
+          "El Progreso",
+          "Sacatepéquez",
+          "Plaza San Rafael (Anexo)",
+          "Quetzaltenango",
+          "Huehuetenango",
+          "San Marcos",
+          "Quiché",
+          "Sololá",
+          "Totonicapán",
+          "Zacapa",
+          "Baja Verapaz",
+          "Alta Verapaz",
+          "Jalapa",
+          "Petén",
+          "Izabal",
+          "Chiquimula",
+          "Escuintla",
+          "Retalhuleu",
+          "Jutiapa",
+          "Santa Rosa",
+          "Suchitepéquez"
+        ],
+        "tarjetas_fuente": [],
+        "tablas_generales": [],
+        "acordeones": [
+          {
+            "panel_id": "1528300955038-bbfd8a5d-631e",
+            "titulo": "Consignatario, Representante Legal, Agente Aduanero o Apoderado Especial Aduanero, Desconsolidador o Empresa de Entrega rápida o Courier.",
+            "tablas": [
+              {
+                "filas": [
+                  {
+                    "celdas": [
+                      "1",
+                      "",
+                      "Presenta una solicitud detallada de las herramientas o maquinaria a ingresar en original y copia. Tu solicitud debe indicar qué actividad realizaras con las herramientas o maquinaria, área y el plazo que permanecerás realizando el trabajo. (fechas específicas)."
+                    ],
+                    "links": []
+                  },
+                  {
+                    "celdas": [
+                      "2",
+                      "",
+                      "Adjunta a la solicitud documentación de soporte que ampare las herramientas o maquinaria a ingresar. (Ver «Casos especiales)."
+                    ],
+                    "links": []
+                  }
+                ]
+              }
+            ],
+            "links": [],
+            "videos": [],
+            "textos_panel": []
+          }
+        ],
+        "videos": [],
+        "iframes_aplicativos": [],
+        "links_fuera_acordeon": [
+          {
+            "texto": "https://mx.ivoox.com/es/autorizacion-de-cartas-de-ingreso-a-zona-primaria-k-039-iche-039_md_45167403_wp_1.mp3",
+            "url": "https://mx.ivoox.com/es/autorizacion-de-cartas-de-ingreso-a-zona-primaria-k-039-iche-039_md_45167403_wp_1.mp3"
+          },
+          {
+            "texto": "https://mx.ivoox.com/es/autorizacion-de-cartas-de-ingreso-a-zona-primaria-mam_md_45166340_wp_1.mp3",
+            "url": "https://mx.ivoox.com/es/autorizacion-de-cartas-de-ingreso-a-zona-primaria-mam_md_45166340_wp_1.mp3"
+          },
+          {
+            "texto": "https://mx.ivoox.com/es/autorizacion-de-cartas-de-ingreso-a-zona-primaria-q-039-eqchi-039_md_45168016_wp_1.mp3",
+            "url": "https://mx.ivoox.com/es/autorizacion-de-cartas-de-ingreso-a-zona-primaria-q-039-eqchi-039_md_45168016_wp_1.mp3"
+          }
+        ],
+        "links_planos": [
+          {
+            "texto": "https://mx.ivoox.com/es/autorizacion-de-cartas-de-ingreso-a-zona-primaria-k-039-iche-039_md_45167403_wp_1.mp3",
+            "url": "https://mx.ivoox.com/es/autorizacion-de-cartas-de-ingreso-a-zona-primaria-k-039-iche-039_md_45167403_wp_1.mp3"
+          },
+          {
+            "texto": "https://mx.ivoox.com/es/autorizacion-de-cartas-de-ingreso-a-zona-primaria-mam_md_45166340_wp_1.mp3",
+            "url": "https://mx.ivoox.com/es/autorizacion-de-cartas-de-ingreso-a-zona-primaria-mam_md_45166340_wp_1.mp3"
+          },
+          {
+            "texto": "https://mx.ivoox.com/es/autorizacion-de-cartas-de-ingreso-a-zona-primaria-q-039-eqchi-039_md_45168016_wp_1.mp3",
+            "url": "https://mx.ivoox.com/es/autorizacion-de-cartas-de-ingreso-a-zona-primaria-q-039-eqchi-039_md_45168016_wp_1.mp3"
+          }
+        ],
+        "es_ancla_aislada": false,
+        "links_post_meta_excluidos": [
+          {
+            "texto": "Requisitos para trámites en Aduanas",
+            "url": "https://portal.sat.gob.gt/portal/categoria/requisitos-tramites-aduanas/"
+          },
+          {
+            "texto": "13/11/2018",
+            "url": "https://portal.sat.gob.gt/portal/2018/11/13/"
+          }
+        ]
+      }
+    },
+    "cambio-de-regimen-especial-al-regimen-optativo": {
+      "slug": "cambio-de-regimen-especial-al-regimen-optativo",
+      "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/cambio-de-regimen-especial-al-regimen-optativo-de-devolucion-de-credito-fiscal-de-iva-por-exportaciones/",
+      "url_base": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/cambio-de-regimen-especial-al-regimen-optativo-de-devolucion-de-credito-fiscal-de-iva-por-exportaciones/",
+      "ancla_fragmento": "",
+      "arquetipo_matriz": "TIPO-1",
+      "criterio_arquetipo": "Tipología operativa/informativa de origen mapeada a Ficha de Gestión y Requisitos (TIPO-1).",
+      "ids_sat_ges": [
+        "SAT-GES-0402"
+      ],
+      "niveles_2": [
+        "Exportadores"
+      ],
+      "niveles_3": [
+        "Devolución de Crédito Fiscal"
+      ],
+      "titulos_excel": [
+        "Requisitos para el Cambio de Régimen Especial al Régimen Optativo de Devolución de Crédito Fiscal de IVA por Exportaciones"
+      ],
+      "descripciones_excel": [
+        "Gestión y requisitos para Requisitos, pasos y documentos para pasar del Régimen Especial al Optativo.."
+      ],
+      "bases_legales_excel": [
+        "Decreto 27-92 (Ley del IVA, Arts. 23 al 25 bis) y Acuerdo de Directorio SAT 07-2007."
+      ],
+      "observaciones_excel": [],
+      "notas_extra_col24": [],
+      "http_status": 200,
+      "origen_extraccion": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/cambio-de-regimen-especial-al-regimen-optativo-de-devolucion-de-credito-fiscal-de-iva-por-exportaciones/",
+      "fuente_viva": {
+        "tipo_fuente": "wpbakery_page",
+        "titulo_fuente": "Cambio de Régimen Especial al Régimen Optativo de Devolución de Crédito Fiscal de IVA por Exportaciones",
+        "headings": [
+          {
+            "tag": "h1",
+            "texto": "Cambio de Régimen Especial al Régimen Optativo de Devolución de Crédito Fiscal de IVA por Exportaciones"
+          },
+          {
+            "tag": "h4",
+            "texto": "Persona Individual"
+          },
+          {
+            "tag": "h4",
+            "texto": "Persona Jurídica"
+          },
+          {
+            "tag": "h4",
+            "texto": "Oficinas o Agencias para realizar el trámite"
+          },
+          {
+            "tag": "h4",
+            "texto": "Gestión a través de Agencia Virtual"
+          }
+        ],
+        "correos_cf_decodificados": [],
+        "parrafos_intro": [
+          "1 . Ingresa a Portal SAT. https://portal.sat.gob.gt/portal/",
+          "2 . Dirígete a Agencia Virtual.",
+          "3. Dentro de Agencia Virtual Selecciona “Sistema Agencia Virtual”.",
+          "4. Seguidamente del ingreso:",
+          "5 . Se visualiza el formulario SAT-0471 “Inscripción y Actualización de Exportadores”:",
+          "6. Verifica nuevamente la información, si hay datos incorrectos después de validar la información; selecciona botón “Regresar” para modificar.",
+          "7 . Después de seleccionar botón “Si presentar” se transmitirá el formulario."
+        ],
+        "listas_intro": [
+          "Ingresa Usuario: Número de Identificación Tributaria (sin guiones).",
+          "Ingresa contraseña.",
+          "Selecciona botón Aceptar.",
+          "Selecciona “Menú”.",
+          "Busca sección Servicios.",
+          "Selecciona “Datos del Contribuyente”",
+          "Selecciona la opción “Inscripción y Actualización de Exportadores”.",
+          "Se muestra el NIT, Nombre o Razón Social, dirección fiscal.",
+          "Completa la información de las casillas en blanco.",
+          "Selecciona: la opción “Cambió al Régimen Optativo”.",
+          "El sistema despliega la información de las 12 declaraciones del Impuesto al Valor Agregado -IVA- del período inmediato anterior (enero a diciembre).",
+          "Verifica la información ingresada y modifica si hay datos incorrectos.",
+          "Selecciona botón validar.",
+          "Después de realizar la modificación; seleccionar botón “Validar” y después botón “Si presentar”.",
+          "Correo electrónico donde indica que la solicitud ha sido realizada de forma exitosa.",
+          "Adjunto al correo electrónico y en formato PDF el formulario presentado y dentro de este en la sección de Gestión visualiza el período activo.",
+          "Revisión a posterior de la información por parte de la Administración Tributaria.",
+          "La Actualización al Régimen Especial se realiza en enero y julio de cada año, si no realiza la actualización en los meses establecidos será excluido temporalmente del Régimen Especial."
+        ],
+        "tarjetas_fuente": [],
+        "tablas_generales": [],
+        "acordeones": [
+          {
+            "panel_id": "1530735495054-84881f6d-4841",
+            "titulo": "Persona Individual",
+            "tablas": [
+              {
+                "filas": [
+                  {
+                    "celdas": [
+                      "1",
+                      "",
+                      "Contar con código de exportador obtenido en Ventanilla Única para las Exportaciones -VUPE-."
+                    ],
+                    "links": []
+                  },
+                  {
+                    "celdas": [
+                      "2",
+                      "",
+                      "Contar con Agencia Virtual. Si no cuentas con la Agencia Virtual, haz clic acá para solicitarla"
+                    ],
+                    "links": [
+                      {
+                        "texto": "acá para solicitarla",
+                        "url": "https://portal.sat.gob.gt/portal/solicitud-usuario-agencia-virtual"
+                      }
+                    ]
+                  },
+                  {
+                    "celdas": [
+                      "3",
+                      "",
+                      "Contar con 12 Declaraciones presentadas de Impuesto al Valor Agregado del período inmediato anterior (ejemplo de enero a diciembre de 2017) y que en las mismas reporte exportaciones"
+                    ],
+                    "links": []
+                  },
+                  {
+                    "celdas": [
+                      "4",
+                      "",
+                      "El Cambio de Régimen puedes realizarlo siempre que lo efectúes con anticipación al inicio del siguiente período impositivo."
+                    ],
+                    "links": []
+                  }
+                ]
+              }
+            ],
+            "links": [
+              {
+                "texto": "acá para solicitarla",
+                "url": "https://portal.sat.gob.gt/portal/solicitud-usuario-agencia-virtual"
+              }
+            ],
+            "videos": [],
+            "textos_panel": []
+          },
+          {
+            "panel_id": "1541796383469-d6613dd7-4b3d",
+            "titulo": "Persona Jurídica",
+            "tablas": [
+              {
+                "filas": [
+                  {
+                    "celdas": [
+                      "1",
+                      "",
+                      "Contar con código de exportador obtenido en Ventanilla Única para las Exportaciones -VUPE-."
+                    ],
+                    "links": []
+                  },
+                  {
+                    "celdas": [
+                      "2",
+                      "",
+                      "Contar con Agencia Virtual. Si no cuentas con la Agencia Virtual, haz clic acá para solicitarla"
+                    ],
+                    "links": [
+                      {
+                        "texto": "acá para solicitarla",
+                        "url": "https://portal.sat.gob.gt/portal/solicitud-usuario-agencia-virtual"
+                      }
+                    ]
+                  },
+                  {
+                    "celdas": [
+                      "3",
+                      "",
+                      "Contar con 12 Declaraciones presentadas de Impuesto al Valor Agregado del período inmediato anterior (ejemplo de enero a diciembre de 2017) y que en las mismas reporte exportaciones"
+                    ],
+                    "links": []
+                  },
+                  {
+                    "celdas": [
+                      "4",
+                      "",
+                      "El Cambio de Régimen puedes realizarlo siempre que lo efectúes con anticipación al inicio del siguiente período impositivo."
+                    ],
+                    "links": []
+                  }
+                ]
+              }
+            ],
+            "links": [
+              {
+                "texto": "acá para solicitarla",
+                "url": "https://portal.sat.gob.gt/portal/solicitud-usuario-agencia-virtual"
+              }
+            ],
+            "videos": [],
+            "textos_panel": []
+          }
+        ],
+        "videos": [],
+        "iframes_aplicativos": [],
+        "links_fuera_acordeon": [
+          {
+            "texto": "https://portal.sat.gob.gt/portal/",
+            "url": "https://portal.sat.gob.gt/portal/"
+          }
+        ],
+        "links_planos": [
+          {
+            "texto": "acá para solicitarla",
+            "url": "https://portal.sat.gob.gt/portal/solicitud-usuario-agencia-virtual"
+          },
+          {
+            "texto": "https://portal.sat.gob.gt/portal/",
+            "url": "https://portal.sat.gob.gt/portal/"
+          }
+        ],
+        "es_ancla_aislada": false,
+        "links_post_meta_excluidos": [
+          {
+            "texto": "Requisitos para trámites en Agencias",
+            "url": "https://portal.sat.gob.gt/portal/categoria/requisitos-tramites-agencias/"
+          },
+          {
+            "texto": "11/12/2018",
+            "url": "https://portal.sat.gob.gt/portal/2018/12/11/"
+          }
+        ]
+      }
+    },
+    "cambio-de-regimen-optativo-al-regimen-especial": {
+      "slug": "cambio-de-regimen-optativo-al-regimen-especial",
+      "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/cambio-de-regimen-optativo-al-regimen-especial-de-devolucion-de-credito-fiscal-de-iva-por-exportaciones/",
+      "url_base": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/cambio-de-regimen-optativo-al-regimen-especial-de-devolucion-de-credito-fiscal-de-iva-por-exportaciones/",
+      "ancla_fragmento": "",
+      "arquetipo_matriz": "TIPO-1",
+      "criterio_arquetipo": "Tipología operativa/informativa de origen mapeada a Ficha de Gestión y Requisitos (TIPO-1).",
+      "ids_sat_ges": [
+        "SAT-GES-0403"
+      ],
+      "niveles_2": [
+        "Exportadores"
+      ],
+      "niveles_3": [
+        "Devolución de Crédito Fiscal"
+      ],
+      "titulos_excel": [
+        "Requisitos para el Cambio de Régimen Optativo al Régimen Especial de Devolución de Crédito Fiscal de IVA por Exportaciones"
+      ],
+      "descripciones_excel": [
+        "Importadores y Exportadores: OEA, Exportadores"
+      ],
+      "bases_legales_excel": [
+        "Decreto 27-92 (Ley del IVA, Arts. 23 al 25 bis) y Acuerdo de Directorio SAT 07-2007."
+      ],
+      "observaciones_excel": [],
+      "notas_extra_col24": [],
+      "http_status": 200,
+      "origen_extraccion": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/cambio-de-regimen-optativo-al-regimen-especial-de-devolucion-de-credito-fiscal-de-iva-por-exportaciones/",
+      "fuente_viva": {
+        "tipo_fuente": "wpbakery_page",
+        "titulo_fuente": "Cambio de Régimen Optativo al Régimen Especial de Devolución de Crédito Fiscal de IVA por Exportaciones",
+        "headings": [
+          {
+            "tag": "h1",
+            "texto": "Cambio de Régimen Optativo al Régimen Especial de Devolución de Crédito Fiscal de IVA por Exportaciones"
+          },
+          {
+            "tag": "h4",
+            "texto": "Persona Individual"
+          },
+          {
+            "tag": "h4",
+            "texto": "Persona Jurídica"
+          },
+          {
+            "tag": "h4",
+            "texto": "Oficinas o Agencias para realizar el trámite"
+          },
+          {
+            "tag": "h4",
+            "texto": "Gestión a través de Agencia Virtual"
+          }
+        ],
+        "correos_cf_decodificados": [],
+        "parrafos_intro": [
+          "1 . Ingresa a Portal SAT. https://portal.sat.gob.gt/portal/",
+          "2 . Dirígete a Agencia Virtual.",
+          "3. Dentro de Agencia Virtual Selecciona “Sistema Agencia Virtual”.",
+          "4. Seguidamente del ingreso:",
+          "5 . Se visualiza el formulario SAT-0471 “Inscripción y Actualización de Exportadores”:",
+          "6. Verifica nuevamente la información, si hay datos incorrectos después de validar la información; selecciona botón “Regresar” para modificar.",
+          "7 . Después de seleccionar botón “Si presentar” se transmitirá el formulario."
+        ],
+        "listas_intro": [
+          "Ingresa Usuario: Número de Identificación Tributaria (sin guiones).",
+          "Ingresa contraseña.",
+          "Selecciona botón Aceptar.",
+          "Selecciona “Menú”.",
+          "Busca sección Servicios.",
+          "Selecciona “Datos del Contribuyente”",
+          "Selecciona la opción “Inscripción y Actualización de Exportadores”.",
+          "Se muestra el NIT, Nombre o Razón Social, dirección fiscal.",
+          "Completa la información de las casillas en blanco.",
+          "Selecciona: la opción “Cambio al Régimen Especial”.",
+          "El sistema despliega la información de las 12 declaraciones del Impuesto al Valor Agregado -IVA- del período inmediato anterior (enero a diciembre).",
+          "Verifica la información ingresada y modifica si hay datos incorrectos.",
+          "Selecciona botón validar.",
+          "Después de realizar la modificación; selecciona botón “Validar” y después botón “Si presentar”.",
+          "Correo electrónico donde indica que la solicitud ha sido realizada de forma exitosa.",
+          "Adjunto al correo electrónico y en formato PDF el formulario presentado y dentro de este en la sección de Gestión visualiza el período activo.",
+          "Revisión a posterior de la información por parte de la Administración Tributaria.",
+          "La Actualización al Régimen Especial se realiza en enero y julio de cada año, si no realizas la actualización en los meses establecidos serás excluido temporalmente del Régimen Especial."
+        ],
+        "tarjetas_fuente": [],
+        "tablas_generales": [],
+        "acordeones": [
+          {
+            "panel_id": "1530735495054-84881f6d-4841",
+            "titulo": "Persona Individual",
+            "tablas": [
+              {
+                "filas": [
+                  {
+                    "celdas": [
+                      "1",
+                      "",
+                      "Contar con código de exportador obtenido en Ventanilla Única para las Exportaciones -VUPE- ."
+                    ],
+                    "links": [
+                      {
+                        "texto": "-VUPE-",
+                        "url": "http://vupe.export.com.gt/"
+                      }
+                    ]
+                  },
+                  {
+                    "celdas": [
+                      "2",
+                      "",
+                      "Contar con Agencia Virtual. Si no cuentas con la Agencia Virtual, haz clic acá para solicitarla"
+                    ],
+                    "links": [
+                      {
+                        "texto": "acá para solicitarla",
+                        "url": "https://portal.sat.gob.gt/portal/solicitud-usuario-agencia-virtual"
+                      }
+                    ]
+                  },
+                  {
+                    "celdas": [
+                      "3",
+                      "",
+                      "Contar con 12 Declaraciones presentadas de Impuesto al Valor Agregado del período inmediato anterior (ejemplo de enero a diciembre de 2017) y que en las mismas reporte exportaciones"
+                    ],
+                    "links": []
+                  },
+                  {
+                    "celdas": [
+                      "4",
+                      "",
+                      "El Cambio de Régimen puedes realizarlo siempre que lo efectúes con anticipación al inicio del siguiente período impositivo."
+                    ],
+                    "links": []
+                  }
+                ]
+              }
+            ],
+            "links": [
+              {
+                "texto": "-VUPE-",
+                "url": "http://vupe.export.com.gt/"
+              },
+              {
+                "texto": "acá para solicitarla",
+                "url": "https://portal.sat.gob.gt/portal/solicitud-usuario-agencia-virtual"
+              }
+            ],
+            "videos": [],
+            "textos_panel": []
+          },
+          {
+            "panel_id": "1541796383469-d6613dd7-4b3d",
+            "titulo": "Persona Jurídica",
+            "tablas": [
+              {
+                "filas": [
+                  {
+                    "celdas": [
+                      "1",
+                      "",
+                      "Contar con código de exportador obtenido en Ventanilla Única para las Exportaciones -VUPE- ."
+                    ],
+                    "links": [
+                      {
+                        "texto": "-VUPE-",
+                        "url": "http://vupe.export.com.gt/"
+                      }
+                    ]
+                  },
+                  {
+                    "celdas": [
+                      "2",
+                      "",
+                      "Contar con Agencia Virtual. Si no cuentas con la Agencia Virtual, haz clic acá para solicitarla"
+                    ],
+                    "links": [
+                      {
+                        "texto": "acá para solicitarla",
+                        "url": "https://portal.sat.gob.gt/portal/solicitud-usuario-agencia-virtual"
+                      }
+                    ]
+                  },
+                  {
+                    "celdas": [
+                      "3",
+                      "",
+                      "Contar con 12 Declaraciones presentadas de Impuesto al Valor Agregado del período inmediato anterior (ejemplo de enero a diciembre de 2017) y que en las mismas reporte exportaciones"
+                    ],
+                    "links": []
+                  },
+                  {
+                    "celdas": [
+                      "4",
+                      "",
+                      "El Cambio de Régimen puedes realizarlo siempre que lo efectúes con anticipación al inicio del siguiente período impositivo."
+                    ],
+                    "links": []
+                  }
+                ]
+              }
+            ],
+            "links": [
+              {
+                "texto": "-VUPE-",
+                "url": "http://vupe.export.com.gt/"
+              },
+              {
+                "texto": "acá para solicitarla",
+                "url": "https://portal.sat.gob.gt/portal/solicitud-usuario-agencia-virtual"
+              }
+            ],
+            "videos": [],
+            "textos_panel": []
+          }
+        ],
+        "videos": [],
+        "iframes_aplicativos": [],
+        "links_fuera_acordeon": [
+          {
+            "texto": "https://portal.sat.gob.gt/portal/",
+            "url": "https://portal.sat.gob.gt/portal/"
+          }
+        ],
+        "links_planos": [
+          {
+            "texto": "-VUPE-",
+            "url": "http://vupe.export.com.gt/"
+          },
+          {
+            "texto": "acá para solicitarla",
+            "url": "https://portal.sat.gob.gt/portal/solicitud-usuario-agencia-virtual"
+          },
+          {
+            "texto": "https://portal.sat.gob.gt/portal/",
+            "url": "https://portal.sat.gob.gt/portal/"
+          }
+        ],
+        "es_ancla_aislada": false,
+        "links_post_meta_excluidos": [
+          {
+            "texto": "Requisitos para trámites en Agencias",
+            "url": "https://portal.sat.gob.gt/portal/categoria/requisitos-tramites-agencias/"
+          },
+          {
+            "texto": "27/11/2018",
+            "url": "https://portal.sat.gob.gt/portal/2018/11/27/"
+          }
+        ]
+      }
+    },
+    "inscripcion-al-regimen-especial-de-devolucion": {
+      "slug": "inscripcion-al-regimen-especial-de-devolucion",
+      "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/inscripcion-al-regimen-especial-de-devolucion-de-credito-fiscal-de-iva-por-exportaciones/",
+      "url_base": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/inscripcion-al-regimen-especial-de-devolucion-de-credito-fiscal-de-iva-por-exportaciones/",
+      "ancla_fragmento": "",
+      "arquetipo_matriz": "TIPO-1",
+      "criterio_arquetipo": "Tipología operativa/informativa de origen mapeada a Ficha de Gestión y Requisitos (TIPO-1).",
+      "ids_sat_ges": [
+        "SAT-GES-0404"
+      ],
+      "niveles_2": [
+        "Exportadores"
+      ],
+      "niveles_3": [
+        "Devolución de Crédito Fiscal"
+      ],
+      "titulos_excel": [
+        "Requisitos para la Inscripción al Régimen Especial de Devolución de Crédito Fiscal de IVA por exportaciones"
+      ],
+      "descripciones_excel": [
+        "Requisitos para inscribirte en el Régimen Especial y obtener la devolución ágil del IVA pagado en compras para tus exportaciones."
+      ],
+      "bases_legales_excel": [
+        "Decreto 27-92 (Ley del IVA, Arts. 23 al 25 bis) y Acuerdo de Directorio SAT 07-2007."
+      ],
+      "observaciones_excel": [],
+      "notas_extra_col24": [],
+      "http_status": 200,
+      "origen_extraccion": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/inscripcion-al-regimen-especial-de-devolucion-de-credito-fiscal-de-iva-por-exportaciones/",
+      "fuente_viva": {
+        "tipo_fuente": "wpbakery_page",
+        "titulo_fuente": "Inscripción al Régimen Especial de Devolución de Crédito Fiscal de IVA por exportaciones",
+        "headings": [
+          {
+            "tag": "h1",
+            "texto": "Inscripción al Régimen Especial de Devolución de Crédito Fiscal de IVA por exportaciones"
+          },
+          {
+            "tag": "h4",
+            "texto": "Persona Individual"
+          },
+          {
+            "tag": "h4",
+            "texto": "Persona Jurídica"
+          },
+          {
+            "tag": "h4",
+            "texto": "Oficinas o Agencias para realizar el trámite"
+          },
+          {
+            "tag": "h4",
+            "texto": "Gestión a través de Agencia Virtual"
+          }
+        ],
+        "correos_cf_decodificados": [],
+        "parrafos_intro": [
+          "1 . Ingresa a Portal SAT. https://portal.sat.gob.gt/portal/",
+          "2 . Dirígete a Agencia Virtual.",
+          "3. Dentro de Agencia Virtual Selecciona: “Sistema Agencia Virtual”.",
+          "4. Seguidamente del ingreso:",
+          "5. Se visualiza el formulario SAT-0471 «Inscripción y Actualización a los Regímenes de Devolución de Crédito Fiscal para Exportadores».",
+          "6. Verifica nuevamente la información, si hay datos incorrectos después de validar la información; selecciona botón “Regresar” para modificar. Después de realizar la modificación; selecciona botón “Validar” y después botón “Si presentar”.",
+          "7. Después de seleccionar botón “Si presentar” se transmitirá el formulario"
+        ],
+        "listas_intro": [
+          "Ingresa Usuario: Número de Identificación Tributaria (sin guiones)",
+          "Ingresa: contraseña.",
+          "Selecciona: botón Aceptar",
+          "Selecciona “Menú”",
+          "Busca sección Servicios",
+          "Selecciona “Datos del Contribuyente”",
+          "Selecciona la opción “Inscripción y Actualización de Exportadores”.",
+          "Se muestra el NIT, Nombre o Razón Social, dirección fiscal.",
+          "Completa la información de las casillas en blanco.",
+          "Selecciona: opción “Inscripción al Régimen Especial”.",
+          "El sistema despliega la información de las 12 declaraciones del Impuesto al Valor Agregado -IVA- del período inmediato anterior (enero a diciembre).",
+          "Revisa la información y si algún dato de los que digitaste se encuentra incorrecto puedes modificarlo.",
+          "Selecciona: botón “Validar”.",
+          "Correo electrónico donde indica que la solicitud ha sido realizada de forma exitosa.",
+          "Adjunto al correo electrónico y en formato PDF el formulario presentado y dentro de este en la sección de Gestión visualiza el período activo.",
+          "Revisión a posterior de la información por parte de la Administración Tributaria.",
+          "La Actualización al Régimen Especial se realiza en enero y julio de cada año, si no realiza la actualización en los meses establecidos será excluido temporalmente del Régimen Especial."
+        ],
+        "tarjetas_fuente": [],
+        "tablas_generales": [],
+        "acordeones": [
+          {
+            "panel_id": "1530735495054-84881f6d-4841",
+            "titulo": "Persona Individual",
+            "tablas": [
+              {
+                "filas": [
+                  {
+                    "celdas": [
+                      "1",
+                      "",
+                      "Contar con código de exportador obtenido en Ventanilla Única para las Exportaciones -VUPE- ."
+                    ],
+                    "links": [
+                      {
+                        "texto": "-VUPE-",
+                        "url": "http://vupe.export.com.gt/"
+                      }
+                    ]
+                  },
+                  {
+                    "celdas": [
+                      "2",
+                      "",
+                      "Contar con Agencia Virtual. Si no cuentas con la Agencia Virtual, haz clic acá para solicitarla"
+                    ],
+                    "links": [
+                      {
+                        "texto": "acá para solicitarla",
+                        "url": "https://portal.sat.gob.gt/portal/solicitud-usuario-agencia-virtual"
+                      }
+                    ]
+                  },
+                  {
+                    "celdas": [
+                      "3",
+                      "",
+                      "Contar con 12 Declaraciones presentadas de Impuesto al Valor Agregado del período inmediato anterior (ejemplo de enero a diciembre de 2017) y que en las mismas reporte exportaciones"
+                    ],
+                    "links": []
+                  }
+                ]
+              }
+            ],
+            "links": [
+              {
+                "texto": "-VUPE-",
+                "url": "http://vupe.export.com.gt/"
+              },
+              {
+                "texto": "acá para solicitarla",
+                "url": "https://portal.sat.gob.gt/portal/solicitud-usuario-agencia-virtual"
+              }
+            ],
+            "videos": [],
+            "textos_panel": []
+          },
+          {
+            "panel_id": "1541800313605-560ffd82-3440",
+            "titulo": "Persona Jurídica",
+            "tablas": [
+              {
+                "filas": [
+                  {
+                    "celdas": [
+                      "1",
+                      "",
+                      "Contar con código de exportador obtenido en Ventanilla Única para las Exportaciones -VUPE- ."
+                    ],
+                    "links": [
+                      {
+                        "texto": "-VUPE-",
+                        "url": "http://vupe.export.com.gt/"
+                      }
+                    ]
+                  },
+                  {
+                    "celdas": [
+                      "2",
+                      "",
+                      "Contar con Agencia Virtual. Si no cuentas con la Agencia Virtual, haz clic acá para solicitarla"
+                    ],
+                    "links": [
+                      {
+                        "texto": "acá para solicitarla",
+                        "url": "https://portal.sat.gob.gt/portal/solicitud-usuario-agencia-virtual"
+                      }
+                    ]
+                  },
+                  {
+                    "celdas": [
+                      "3",
+                      "",
+                      "Contar con 12 Declaraciones presentadas de Impuesto al Valor Agregado del período inmediato anterior (ejemplo de enero a diciembre de 2017) y que en las mismas reporte exportaciones"
+                    ],
+                    "links": []
+                  }
+                ]
+              }
+            ],
+            "links": [
+              {
+                "texto": "-VUPE-",
+                "url": "http://vupe.export.com.gt/"
+              },
+              {
+                "texto": "acá para solicitarla",
+                "url": "https://portal.sat.gob.gt/portal/solicitud-usuario-agencia-virtual"
+              }
+            ],
+            "videos": [],
+            "textos_panel": []
+          }
+        ],
+        "videos": [],
+        "iframes_aplicativos": [],
+        "links_fuera_acordeon": [
+          {
+            "texto": "https://portal.sat.gob.gt/portal/",
+            "url": "https://portal.sat.gob.gt/portal/"
+          }
+        ],
+        "links_planos": [
+          {
+            "texto": "-VUPE-",
+            "url": "http://vupe.export.com.gt/"
+          },
+          {
+            "texto": "acá para solicitarla",
+            "url": "https://portal.sat.gob.gt/portal/solicitud-usuario-agencia-virtual"
+          },
+          {
+            "texto": "https://portal.sat.gob.gt/portal/",
+            "url": "https://portal.sat.gob.gt/portal/"
+          }
+        ],
+        "es_ancla_aislada": false,
+        "links_post_meta_excluidos": [
+          {
+            "texto": "Requisitos para trámites en Agencias",
+            "url": "https://portal.sat.gob.gt/portal/categoria/requisitos-tramites-agencias/"
+          },
+          {
+            "texto": "16/11/2018",
+            "url": "https://portal.sat.gob.gt/portal/2018/11/16/"
+          }
+        ]
+      }
+    },
+    "actualizacion-al-regimen-especial-de-devolucion": {
+      "slug": "actualizacion-al-regimen-especial-de-devolucion",
+      "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/actualizacion-al-regimen-especial-de-devolucion-de-credito-fiscal-a-los-exportadores-desde-agencia-virtual/",
+      "url_base": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/actualizacion-al-regimen-especial-de-devolucion-de-credito-fiscal-a-los-exportadores-desde-agencia-virtual/",
+      "ancla_fragmento": "",
+      "arquetipo_matriz": "TIPO-1",
+      "criterio_arquetipo": "Tipología operativa/informativa de origen mapeada a Ficha de Gestión y Requisitos (TIPO-1).",
+      "ids_sat_ges": [
+        "SAT-GES-0406"
+      ],
+      "niveles_2": [
+        "Exportadores"
+      ],
+      "niveles_3": [
+        "Devolución de Crédito Fiscal"
+      ],
+      "titulos_excel": [
+        "Requisitos para Actualización al Régimen Especial de Devolución de Crédito Fiscal a los Exportadores desde Agencia Virtual"
+      ],
+      "descripciones_excel": [
+        "Gestión y requisitos para Requisitos, pasos y documentos para actualizar tus datos en el Régimen Especial.."
+      ],
+      "bases_legales_excel": [
+        "Decreto 27-92 (Ley del IVA, Arts. 23 al 25 bis) y Acuerdo de Directorio SAT 07-2007."
+      ],
+      "observaciones_excel": [],
+      "notas_extra_col24": [],
+      "http_status": 200,
+      "origen_extraccion": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/actualizacion-al-regimen-especial-de-devolucion-de-credito-fiscal-a-los-exportadores-desde-agencia-virtual/",
+      "fuente_viva": {
+        "tipo_fuente": "wpbakery_page",
+        "titulo_fuente": "Actualización al Régimen Especial de Devolución de Crédito Fiscal a los Exportadores desde Agencia Virtual",
+        "headings": [
+          {
+            "tag": "h1",
+            "texto": "Actualización al Régimen Especial de Devolución de Crédito Fiscal a los Exportadores desde Agencia Virtual"
+          },
+          {
+            "tag": "h4",
+            "texto": "Persona Individual"
+          },
+          {
+            "tag": "h4",
+            "texto": "Persona Jurídica"
+          },
+          {
+            "tag": "h4",
+            "texto": "Oficinas o Agencias para realizar el trámite"
+          },
+          {
+            "tag": "h4",
+            "texto": "Gestión a través de Agencia Virtual"
+          }
+        ],
+        "correos_cf_decodificados": [],
+        "parrafos_intro": [
+          "1 . Ingresa a Portal SAT. https://portal.sat.gob.gt/portal/",
+          "2 . Dirígete a Agencia Virtual.",
+          "3. Dentro de Agencia Virtual Selecciona: “Sistema Agencia Virtual”.",
+          "4. Seguidamente del ingreso:",
+          "5. Se visualiza el formulario SAT-0471 “Inscripción y Actualización de Exportadores”.",
+          "6. Verifica nuevamente la información, si hay datos incorrectos después de validar la información; selecciona botón “Regresar” para modificar.",
+          "7. Después de seleccionar botón “Si presentar” se transmitirá el formulario."
+        ],
+        "listas_intro": [
+          "Ingresa Usuario: Número de Identificación Tributaria (sin guiones).",
+          "Ingresa: contraseña",
+          "Selecciona botón Aceptar.",
+          "Selecciona “Menú”",
+          "Busca: sección “Servicios”",
+          "Selecciona “Datos del Contribuyente”",
+          "Selecciona: la opción “Inscripción y Actualización de Exportadores”.",
+          "Se muestra el NIT, Nombre o Razón Social, dirección fiscal.",
+          "Completa la información de las casillas en blanco.",
+          "Selecciona: la opción “Actualización al Régimen Especial”.",
+          "El sistema despliega la siguiente información:",
+          "Declaraciones de Impuesto al Valor Agregado – IVA- y Declaraciones Aduaneras y FAUCAS, del semestre a reportar.",
+          "En la sección de divisas debes de cargar archivo de divisas.",
+          "En la sección Certificado Libro Mayor debes subir archivo en PDF.",
+          "Verifica la información ingresada y modifica si hay datos incorrectos.",
+          "Selecciona: botón “validar”.",
+          "Después de realizar la modificación; selecciona botón “Validar” y después botón “Si presentar”",
+          "Correo electrónico donde indica que la solicitud ha sido realizada de forma exitosa.",
+          "Adjunto al correo electrónico y en formato PDF el formulario presentado y dentro de este en la sección de Gestión visualiza el período activo.",
+          "Revisión a posterior de la información por parte de la Administración Tributaria.",
+          "La Actualización al Régimen Especial se realiza en enero y julio de cada año, si no realizas la actualización en los meses establecidos serás excluido temporalmente del Régimen Especial."
+        ],
+        "tarjetas_fuente": [],
+        "tablas_generales": [],
+        "acordeones": [
+          {
+            "panel_id": "1530735495054-84881f6d-4841",
+            "titulo": "Persona Individual",
+            "tablas": [
+              {
+                "filas": [
+                  {
+                    "celdas": [
+                      "1",
+                      "",
+                      "Contar con código de exportador obtenido en Ventanilla Única para las Exportaciones -VUPE- ."
+                    ],
+                    "links": [
+                      {
+                        "texto": "-VUPE-",
+                        "url": "http://vupe.export.com.gt/"
+                      }
+                    ]
+                  },
+                  {
+                    "celdas": [
+                      "2",
+                      "",
+                      "Contar con Agencia Virtual. Si no cuentas con la Agencia Virtual, haz clic acá para solicitarla"
+                    ],
+                    "links": [
+                      {
+                        "texto": "acá para solicitarla",
+                        "url": "https://portal.sat.gob.gt/portal/solicitud-usuario-agencia-virtual"
+                      }
+                    ]
+                  },
+                  {
+                    "celdas": [
+                      "3",
+                      "",
+                      "Formato de divisas en archivo Excel con extensión .xls o libro Excel 97-2003, descargue aquí el formato de divisas y coloque la información que corresponda."
+                    ],
+                    "links": [
+                      {
+                        "texto": "descargue aquí",
+                        "url": "https://portal.sat.gob.gt/portal/descarga/4236/exportadores/27958/formato-divisas.xls"
+                      }
+                    ]
+                  },
+                  {
+                    "celdas": [
+                      "4",
+                      "",
+                      "Libro mayor donde se consignen las ventas de exportación del semestre a reportar; certificado (firmado y sellado por el contador registrado) en formato PDF no mayor a 5 MB (Megabyte)."
+                    ],
+                    "links": []
+                  }
+                ]
+              }
+            ],
+            "links": [
+              {
+                "texto": "-VUPE-",
+                "url": "http://vupe.export.com.gt/"
+              },
+              {
+                "texto": "acá para solicitarla",
+                "url": "https://portal.sat.gob.gt/portal/solicitud-usuario-agencia-virtual"
+              },
+              {
+                "texto": "descargue aquí",
+                "url": "https://portal.sat.gob.gt/portal/descarga/4236/exportadores/27958/formato-divisas.xls"
+              }
+            ],
+            "videos": [],
+            "textos_panel": []
+          },
+          {
+            "panel_id": "1541792755075-6f30a236-8f76",
+            "titulo": "Persona Jurídica",
+            "tablas": [
+              {
+                "filas": [
+                  {
+                    "celdas": [
+                      "1",
+                      "",
+                      "Contar con código de exportador obtenido en Ventanilla Única para las Exportaciones -VUPE- ."
+                    ],
+                    "links": [
+                      {
+                        "texto": "-VUPE-",
+                        "url": "http://vupe.export.com.gt/"
+                      }
+                    ]
+                  },
+                  {
+                    "celdas": [
+                      "2",
+                      "",
+                      "Contar con Agencia Virtual. Si no cuentas con la Agencia Virtual, haz clic acá para solicitarla"
+                    ],
+                    "links": [
+                      {
+                        "texto": "acá para solicitarla",
+                        "url": "https://portal.sat.gob.gt/portal/solicitud-usuario-agencia-virtual"
+                      }
+                    ]
+                  },
+                  {
+                    "celdas": [
+                      "3",
+                      "",
+                      "Formato de divisas en archivo Excel con extensión .xls o libro Excel 97-2003, descargue aquí el formato de divisas y coloque la información que corresponda."
+                    ],
+                    "links": [
+                      {
+                        "texto": "descargue aquí",
+                        "url": "https://portal.sat.gob.gt/portal/descarga/4236/exportadores/27958/formato-divisas.xls"
+                      }
+                    ]
+                  },
+                  {
+                    "celdas": [
+                      "4",
+                      "",
+                      "Libro mayor donde se consignen las ventas de exportación del semestre a reportar; certificado (firmado y sellado por el contador registrado) en formato PDF no mayor a 5 MB (Megabyte)."
+                    ],
+                    "links": []
+                  }
+                ]
+              }
+            ],
+            "links": [
+              {
+                "texto": "-VUPE-",
+                "url": "http://vupe.export.com.gt/"
+              },
+              {
+                "texto": "acá para solicitarla",
+                "url": "https://portal.sat.gob.gt/portal/solicitud-usuario-agencia-virtual"
+              },
+              {
+                "texto": "descargue aquí",
+                "url": "https://portal.sat.gob.gt/portal/descarga/4236/exportadores/27958/formato-divisas.xls"
+              }
+            ],
+            "videos": [],
+            "textos_panel": []
+          }
+        ],
+        "videos": [],
+        "iframes_aplicativos": [],
+        "links_fuera_acordeon": [
+          {
+            "texto": "https://portal.sat.gob.gt/portal/",
+            "url": "https://portal.sat.gob.gt/portal/"
+          }
+        ],
+        "links_planos": [
+          {
+            "texto": "-VUPE-",
+            "url": "http://vupe.export.com.gt/"
+          },
+          {
+            "texto": "acá para solicitarla",
+            "url": "https://portal.sat.gob.gt/portal/solicitud-usuario-agencia-virtual"
+          },
+          {
+            "texto": "descargue aquí",
+            "url": "https://portal.sat.gob.gt/portal/descarga/4236/exportadores/27958/formato-divisas.xls"
+          },
+          {
+            "texto": "https://portal.sat.gob.gt/portal/",
+            "url": "https://portal.sat.gob.gt/portal/"
+          }
+        ],
+        "es_ancla_aislada": false,
+        "links_post_meta_excluidos": [
+          {
+            "texto": "Requisitos para trámites en Agencias",
+            "url": "https://portal.sat.gob.gt/portal/categoria/requisitos-tramites-agencias/"
+          },
+          {
+            "texto": "15/11/2018",
+            "url": "https://portal.sat.gob.gt/portal/2018/11/15/"
+          }
+        ]
+      }
+    },
+    "inscripcion-al-regimen-optativo-de-devolucion": {
+      "slug": "inscripcion-al-regimen-optativo-de-devolucion",
+      "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/inscripcion-al-regimen-optativo-de-devolucion-de-credito-fiscal-de-iva-por-exportaciones/",
+      "url_base": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/inscripcion-al-regimen-optativo-de-devolucion-de-credito-fiscal-de-iva-por-exportaciones/",
+      "ancla_fragmento": "",
+      "arquetipo_matriz": "TIPO-1",
+      "criterio_arquetipo": "Tipología operativa/informativa de origen mapeada a Ficha de Gestión y Requisitos (TIPO-1).",
+      "ids_sat_ges": [
+        "SAT-GES-0407"
+      ],
+      "niveles_2": [
+        "Exportadores"
+      ],
+      "niveles_3": [
+        "Devolución de Crédito Fiscal"
+      ],
+      "titulos_excel": [
+        "Requisitos para la Inscripción al Régimen Optativo de Devolución de Crédito Fiscal de IVA por Exportaciones"
+      ],
+      "descripciones_excel": [
+        "Afiliación voluntaria al régimen optativo de reintegro bancario del crédito fiscal acumulado por actividades de exportación (Art. 23 Decreto 27-92)."
+      ],
+      "bases_legales_excel": [
+        "Decreto 27-92 (Ley del IVA, Arts. 23 al 25 bis) y Acuerdo de Directorio SAT 07-2007."
+      ],
+      "observaciones_excel": [],
+      "notas_extra_col24": [],
+      "http_status": 200,
+      "origen_extraccion": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/inscripcion-al-regimen-optativo-de-devolucion-de-credito-fiscal-de-iva-por-exportaciones/",
+      "fuente_viva": {
+        "tipo_fuente": "wpbakery_page",
+        "titulo_fuente": "Inscripción al Régimen Optativo de Devolución de Crédito Fiscal de IVA por Exportaciones",
+        "headings": [
+          {
+            "tag": "h1",
+            "texto": "Inscripción al Régimen Optativo de Devolución de Crédito Fiscal de IVA por Exportaciones"
+          },
+          {
+            "tag": "h4",
+            "texto": "Persona Individual"
+          },
+          {
+            "tag": "h4",
+            "texto": "Persona Jurídica"
+          },
+          {
+            "tag": "h4",
+            "texto": "Oficinas o Agencias para realizar el trámite"
+          },
+          {
+            "tag": "h4",
+            "texto": "Gestión a través de Agencia Virtual"
+          }
+        ],
+        "correos_cf_decodificados": [],
+        "parrafos_intro": [
+          "1 . Ingresa a Portal SAT. https://portal.sat.gob.gt/portal/",
+          "2 . Dirígete a Agencia Virtual.",
+          "3. Dentro de Agencia Virtual Seleccionar: “Sistema Agencia Virtual”.",
+          "4. Seguidamente del ingreso:",
+          "5. Se visualiza el formulario SAT-0471 “Inscripción y Actualización de Exportadores”:",
+          "6. Verifica nuevamente la información, si hay datos incorrectos después de validar la información; selecciona botón “Regresar” para modificar.",
+          "7. Después de selecciona botón “Si presentar” se transmitirá el formulario."
+        ],
+        "listas_intro": [
+          "Ingresa Usuario: Número de Identificación Tributaria (sin guiones)",
+          "Ingresa: contraseña.",
+          "Selecciona: botón Aceptar",
+          "Selecciona “Menú”",
+          "Busca sección Servicios",
+          "Selecciona “Datos del Contribuyente”",
+          "Selecciona la opción “Inscripción y Actualización de Exportadores”.",
+          "Se muestra el NIT, Nombre o Razón Social, dirección fiscal.",
+          "Completa la información de las casillas en blanco.",
+          "Selecciona opción “Inscripción al Régimen Optativo”.",
+          "El sistema desplegará la información de las 12 declaraciones del Impuesto al Valor Agregado -IVA- del período inmediato anterior (enero a diciembre).",
+          "Verifica la información ingresada y modifica si hay datos incorrectos.",
+          "Selecciona botón “validar”.",
+          "Después de realizar la modificación; selecciona botón “Validar” y después botón “Si presentar”.",
+          "Correo electrónico donde indica que la solicitud ha sido realizada de forma exitosa.",
+          "Adjunto al correo electrónico y en formato PDF el formulario presentado y dentro de este en la sección de Gestión visualiza la gestión que realizó.",
+          "Revisión a posterior de la información por parte de la Administración Tributaria."
+        ],
+        "tarjetas_fuente": [],
+        "tablas_generales": [],
+        "acordeones": [
+          {
+            "panel_id": "1530735495054-84881f6d-4841",
+            "titulo": "Persona Individual",
+            "tablas": [
+              {
+                "filas": [
+                  {
+                    "celdas": [
+                      "1",
+                      "",
+                      "Contar con código de exportador obtenido en Ventanilla Única para las Exportaciones -VUPE-."
+                    ],
+                    "links": []
+                  },
+                  {
+                    "celdas": [
+                      "2",
+                      "",
+                      "Contar con Agencia Virtual. Si no cuentas con la Agencia Virtual, haz clic acá para solicitarla"
+                    ],
+                    "links": [
+                      {
+                        "texto": "acá para solicitarla",
+                        "url": "https://portal.sat.gob.gt/portal/solicitud-usuario-agencia-virtual"
+                      }
+                    ]
+                  },
+                  {
+                    "celdas": [
+                      "3",
+                      "",
+                      "Contar con 12 declaraciones presentadas de Impuesto al Valor Agregado del período inmediato anterior (ejemplo de enero a diciembre de 2017) y que en las mismas reporte exportaciones."
+                    ],
+                    "links": []
+                  }
+                ]
+              }
+            ],
+            "links": [
+              {
+                "texto": "acá para solicitarla",
+                "url": "https://portal.sat.gob.gt/portal/solicitud-usuario-agencia-virtual"
+              }
+            ],
+            "videos": [],
+            "textos_panel": []
+          },
+          {
+            "panel_id": "1541801909030-ab5468d5-fb7a",
+            "titulo": "Persona Jurídica",
+            "tablas": [
+              {
+                "filas": [
+                  {
+                    "celdas": [
+                      "1",
+                      "",
+                      "Contar con código de exportador obtenido en Ventanilla Única para las Exportaciones -VUPE-."
+                    ],
+                    "links": []
+                  },
+                  {
+                    "celdas": [
+                      "2",
+                      "",
+                      "Contar con Agencia Virtual. Si no cuentas con la Agencia Virtual, haz clic acá para solicitarla"
+                    ],
+                    "links": [
+                      {
+                        "texto": "acá para solicitarla",
+                        "url": "https://portal.sat.gob.gt/portal/solicitud-usuario-agencia-virtual"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "links": [
+              {
+                "texto": "acá para solicitarla",
+                "url": "https://portal.sat.gob.gt/portal/solicitud-usuario-agencia-virtual"
+              }
+            ],
+            "videos": [],
+            "textos_panel": []
+          }
+        ],
+        "videos": [],
+        "iframes_aplicativos": [],
+        "links_fuera_acordeon": [
+          {
+            "texto": "https://portal.sat.gob.gt/portal/",
+            "url": "https://portal.sat.gob.gt/portal/"
+          }
+        ],
+        "links_planos": [
+          {
+            "texto": "acá para solicitarla",
+            "url": "https://portal.sat.gob.gt/portal/solicitud-usuario-agencia-virtual"
+          },
+          {
+            "texto": "https://portal.sat.gob.gt/portal/",
+            "url": "https://portal.sat.gob.gt/portal/"
+          }
+        ],
+        "es_ancla_aislada": false,
+        "links_post_meta_excluidos": [
+          {
+            "texto": "Requisitos para trámites en Agencias",
+            "url": "https://portal.sat.gob.gt/portal/categoria/requisitos-tramites-agencias/"
+          },
+          {
+            "texto": "15/11/2018",
+            "url": "https://portal.sat.gob.gt/portal/2018/11/15/"
+          }
+        ]
+      }
+    }
+  }
+}

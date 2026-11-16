@@ -1,0 +1,669 @@
+{
+  "lote": "ola-2b",
+  "descripcion": "Sub-lote 2B (13 URLs de Consultas y Sistemas Aduaneros de Ola 2) — Comercio Exterior SAT Guatemala.",
+  "total_paginas": 13,
+  "paginas": [
+    {
+      "slug": "consulta-declaracion-unica-aduanera",
+      "arquetipo": "TIPO-2",
+      "titulo_h1": "Consultar declaración de mercancías y Declaración Única Aduanera (DUA)",
+      "bajada_lead": "Verifica en línea el estado de transmisión, selectivo y despacho de tus declaraciones de mercancías ante la Superintendencia de Administración Tributaria (SAT). Solo necesitas ingresar al buscador público y completar la verificación de seguridad.",
+      "eyebrow_previos": "Antes de consultar",
+      "h2_previos": "Qué debes saber para usar el buscador",
+      "intro_previos": "Prepara los datos de tu Declaración Única Aduanera (DUA) o Declaración Única Centroamericana (DUCA) antes de abrir el consultor en línea.",
+      "datos_previos": [
+        {
+          "titulo": "Acceso público en línea",
+          "descripcion": "El consultor está disponible sin costo para importadores, exportadores y agentes aduaneros para verificar cualquier Declaración Única Aduanera (DUA) o Declaración Única Centroamericana (DUCA)."
+        },
+        {
+          "titulo": "Verificación de seguridad",
+          "descripcion": "Al abrir el sistema debes ingresar los caracteres que aparecen en la imagen de control y presionar el botón Verificar para habilitar la búsqueda."
+        },
+        {
+          "titulo": "Respaldo normativo y sesión",
+          "descripcion": "Operación enmarcada en la Resolución 409-2018 del Consejo de Ministros de Integración Económica (COMIECO), el Código Aduanero Uniforme Centroamericano (CAUCA) y el Reglamento del Código Aduanero Uniforme Centroamericano (RECAUCA). Por seguridad, la sesión expira tras unos minutos de inactividad."
+        }
+      ],
+      "cta_principal": {
+        "texto": "Abrir buscador de declaraciones de mercancías",
+        "url": "https://farm3.sat.gob.gt/consultas-publicas-aduanas/public/consultas-publicas/consultasDua.jsf",
+        "externo": true
+      },
+      "nota_soporte": "Este servicio se abre directamente en la plataforma de consultas públicas de aduanas de la SAT para evitar errores de visualización y expiración de sesión en pantallas móviles."
+    },
+    {
+      "slug": "polizas-de-importacion",
+      "arquetipo": "TIPO-2",
+      "titulo_h1": "Consultar pólizas de importación",
+      "bajada_lead": "Verifica en línea los datos y el estado de tus pólizas de importación registradas ante la Superintendencia de Administración Tributaria (SAT). Ingresa al consultor público de aduanas y valida el código de seguridad para realizar tu búsqueda.",
+      "eyebrow_previos": "Antes de consultar",
+      "h2_previos": "Qué necesitas para realizar la consulta",
+      "intro_previos": "Reúne la información de la operación aduanera antes de acceder al verificador en línea.",
+      "datos_previos": [
+        {
+          "titulo": "Datos de la póliza",
+          "descripcion": "Ten a la mano el número o referencia de la póliza de importación o Declaración Única Centroamericana (DUCA) que deseas verificar."
+        },
+        {
+          "titulo": "Control de seguridad",
+          "descripcion": "El sistema solicita escribir los caracteres de la imagen de verificación y presionar Verificar antes de habilitar el formulario de búsqueda."
+        },
+        {
+          "titulo": "Acceso directo y marco legal",
+          "descripcion": "Puedes consultar sin usuario de Agencia Virtual conforme a la Resolución 409-2018 del Consejo de Ministros de Integración Económica (COMIECO), el Código Aduanero Uniforme Centroamericano (CAUCA) y el Reglamento del Código Aduanero Uniforme Centroamericano (RECAUCA)."
+        }
+      ],
+      "cta_principal": {
+        "texto": "Abrir consulta de pólizas de importación",
+        "url": "https://farm3.sat.gob.gt/consultas-publicas-aduanas/public/consultas-publicas/fcrPolizasDeImportacion.jsf",
+        "externo": true
+      },
+      "nota_soporte": "Si el buscador muestra el mensaje de sesión expirada por inactividad, recarga la ventana del sistema e ingresa nuevamente los caracteres de verificación."
+    },
+    {
+      "slug": "consultas-de-faucas-duca-f",
+      "arquetipo": "TIPO-2",
+      "titulo_h1": "Consultar declaraciones centroamericanas (DUCA-F y FAUCA)",
+      "bajada_lead": "Verifica en línea la transmisión y validez de una Declaración Única Centroamericana para mercancías originarias de Centroamérica (DUCA-F) o de un Formulario Aduanero Único Centroamericano (FAUCA). Accede al buscador público de la Superintendencia de Administración Tributaria (SAT) para consultar el estado de tu documento.",
+      "eyebrow_previos": "Antes de consultar",
+      "h2_previos": "Qué debes tener en cuenta",
+      "intro_previos": "Ten listos los identificadores de tu declaración regional antes de iniciar la búsqueda.",
+      "datos_previos": [
+        {
+          "titulo": "Alcance regional",
+          "descripcion": "Permite consultar declaraciones que amparan el comercio de mercancías originarias de la región centroamericana (DUCA-F y registros históricos FAUCA)."
+        },
+        {
+          "titulo": "Validación en pantalla",
+          "descripcion": "Para acceder al formulario de búsqueda debes ingresar los caracteres que muestra la imagen de seguridad y seleccionar Verificar."
+        },
+        {
+          "titulo": "Marco normativo y sesión",
+          "descripcion": "Respaldado en la Resolución 409-2018 del Consejo de Ministros de Integración Económica (COMIECO), el Código Aduanero Uniforme Centroamericano (CAUCA) y el Reglamento del Código Aduanero Uniforme Centroamericano (RECAUCA). La sesión se cierra automáticamente por inactividad."
+        }
+      ],
+      "cta_principal": {
+        "texto": "Abrir buscador de declaraciones DUCA-F y FAUCA",
+        "url": "https://farm3.sat.gob.gt/consultas-publicas-aduanas/public/consultas-publicas/consultasFaucas.jsf",
+        "externo": true
+      },
+      "nota_soporte": "El botón principal abre directamente el aplicativo oficial de consultas públicas aduaneras de la SAT en una pestaña dedicada."
+    },
+    {
+      "slug": "consulta-de-manifiestos-documentos-de",
+      "arquetipo": "TIPO-2",
+      "titulo_h1": "Consultar manifiestos y documentos de transporte de la Unión Aduanera Guatemala-Honduras",
+      "bajada_lead": "Verifica en línea el estado de los manifiestos de carga y documentos de transporte registrados en las operaciones de la Unión Aduanera entre Guatemala y Honduras. Accede a la consulta pública externa de la Superintendencia de Administración Tributaria (SAT) para revisar tus envíos.",
+      "eyebrow_previos": "Antes de consultar",
+      "h2_previos": "Qué debes saber sobre esta consulta",
+      "intro_previos": "Revisa los datos del manifiesto o medio de transporte antes de abrir la plataforma de consulta externa.",
+      "datos_previos": [
+        {
+          "titulo": "Operaciones bilaterales",
+          "descripcion": "Aplica a manifiestos y documentos de transporte transmitidos dentro del esquema de la Unión Aduanera (UA) entre Guatemala y Honduras."
+        },
+        {
+          "titulo": "Verificación de imagen",
+          "descripcion": "En la pantalla inicial debes escribir los caracteres que aparecen en la imagen y presionar el botón Verificar."
+        },
+        {
+          "titulo": "Acceso externo y base legal",
+          "descripcion": "Disponible sin contraseña para transportistas, importadores y exportadores conforme al Código Aduanero Uniforme Centroamericano (CAUCA) y al Reglamento del Código Aduanero Uniforme Centroamericano (RECAUCA)."
+        }
+      ],
+      "cta_principal": {
+        "texto": "Abrir consulta de manifiestos de la Unión Aduanera",
+        "url": "https://farm3.sat.gob.gt/union-aduanera-publico/views/consultaManifiestoExterno.jsf",
+        "externo": true
+      },
+      "nota_soporte": "El sistema se abre en una ventana completa del portal aduanero de la SAT para facilitar la lectura de tablas y resultados."
+    },
+    {
+      "slug": "consulta-publica-retencion-liberacion",
+      "arquetipo": "TIPO-2",
+      "titulo_h1": "Consultar retención y liberación de mercancías en aduana",
+      "bajada_lead": "Verifica en tiempo real si tu carga tiene una retención activa o si ya cuenta con orden de liberación en las aduanas del país. Utiliza el buscador público de la Superintendencia de Administración Tributaria (SAT) para dar seguimiento al despacho de tus mercancías.",
+      "eyebrow_previos": "Antes de consultar",
+      "h2_previos": "Qué debes tener en cuenta",
+      "intro_previos": "Asegúrate de contar con los datos del despacho o documento de transporte antes de iniciar la verificación.",
+      "datos_previos": [
+        {
+          "titulo": "A quién sirve",
+          "descripcion": "Dirigido a importadores, depósitos aduaneros y Auxiliares de la Función Pública Aduanera (AFPA) que monitorean el estado de la carga."
+        },
+        {
+          "titulo": "Validación inicial",
+          "descripcion": "El paso uno dentro del sistema consiste en ingresar los caracteres de la imagen de control y presionar Verificar."
+        },
+        {
+          "titulo": "Guía de apoyo y marco legal",
+          "descripcion": "Enmarcado en el Código Aduanero Uniforme Centroamericano (CAUCA), el Reglamento del Código Aduanero Uniforme Centroamericano (RECAUCA, artículo 119) y el Decreto 1236. En despacho aéreo puedes apoyarte en la guía operativa GU-IAD/DNO-ADU-GCA-35."
+        }
+      ],
+      "cta_principal": {
+        "texto": "Abrir consulta de retención y liberación",
+        "url": "https://farm3.sat.gob.gt/consultas-publicas-aduanas/public/consultas-publicas/retencionesLiberaciones.jsf",
+        "externo": true
+      },
+      "nota_soporte": "Si tu sesión expira por inactividad, actualiza la página del consultor y vuelve a ingresar los caracteres de validación."
+    },
+    {
+      "slug": "consulta-del-estado-o-actuaciones-de",
+      "arquetipo": "TIPO-3",
+      "titulo_h1": "Consultar el estado o actuaciones de expedientes del Departamento de Gestión Aduanera",
+      "bajada_lead": "Conoce los requisitos y pasos para consultar de forma presencial el avance o las actuaciones de tus expedientes ante las unidades del Departamento de Gestión Aduanera de la Superintendencia de Administración Tributaria (SAT). Revisa los documentos que debes presentar según tu perfil y las aduanas habilitadas en cada región.",
+      "eyebrow_previos": "Antes de acudir",
+      "h2_previos": "Qué debes saber sobre esta consulta presencial",
+      "intro_previos": "La consulta presencial se atiende a través de la persona centralizadora de la unidad o aduana donde se encuentra radicado el expediente.",
+      "datos_previos": [
+        {
+          "titulo": "Dos tipos de consulta",
+          "descripcion": "Puedes solicitar la consulta de estado (etapa actual del proceso) o la consulta de actuaciones (acceso al expediente conforme al artículo 30 de la Constitución Política de la República de Guatemala y al artículo 126 del Código Tributario)."
+        },
+        {
+          "titulo": "Unidades en Torre SAT (zona 9)",
+          "descripcion": "En el tercer nivel del Edificio Torre SAT (zona 9) atienden la Unidad de Recursos y Resoluciones, la Unidad de Regímenes Especiales, la Unidad de Franquicias y Asuntos Aduanales, la Unidad de Administración de Auxiliares de la Función Pública Aduanera (AFPA) y la Unidad de Calificación, Registro y Control de Auxiliares de la Función Pública."
+        },
+        {
+          "titulo": "Respuesta verbal y alcance",
+          "descripcion": "El centralizador, supervisor o jefe de unidad brinda la información de forma verbal (sin entrega de documento) y no adelanta el sentido de la resolución, el cual se conoce únicamente mediante notificación oficial."
+        }
+      ],
+      "nota_soporte": "Si no cuentas con tu Documento Personal de Identificación (DPI), adjunta el documento emitido por el Registro Nacional de las Personas (RENAP) en el que conste el proceso de obtención del documento y se consigne el Código Único de Identificación (CUI), con o sin fotografía.",
+      "eyebrow_pasos": "Paso a paso",
+      "h2_pasos": "Cómo realizar la consulta en la unidad o aduana",
+      "intro_pasos": "Sigue estos pasos en la unidad administrativa o aduana correspondiente (información vigente publicada el 13 de noviembre de 2018):",
+      "pasos": [
+        "Paso 1 — Preséntate en la unidad del Departamento de Gestión Aduanera (Unidad de Recursos y Resoluciones, Unidad de Regímenes Especiales, Unidad de Franquicias y Asuntos Aduanales, Unidad de Administración de AFPA o Unidad de Calificación, Registro y Control de AFPA) o en la aduana correspondiente.",
+        "Paso 2 — Dirígete con la persona centralizadora de la unidad o aduana; de ser necesario, tu consulta será atendida por el supervisor o jefe de unidad.",
+        "Paso 3 — Presenta los documentos requeridos según tu perfil de solicitante.",
+        "Paso 4 — Indica el número de documento o expediente que deseas consultar para recibir de forma verbal el estado o acceso a las actuaciones."
+      ],
+      "eyebrow_documentos": "Inclusión lingüística",
+      "h2_documentos": "Guías en audio en idiomas mayas",
+      "intro_documentos": "Escucha las grabaciones oficiales con los requisitos y pasos de esta gestión en idiomas K'iche', Mam y Q'eqchi':",
+      "documentos": [
+        {
+          "titulo": "Guía en idioma K'iche'",
+          "descripcion": "Audio informativo con los requisitos y pasos para consultar el estado o actuaciones de expedientes en formato de audio digital (MP3).",
+          "boton_texto": "Escuchar audio en K'iche' (MP3)",
+          "url": "https://mx.ivoox.com/es/consulta-del-estado-o-actuaciones-de-expedientes-de_md_43648099_wp_1.mp3",
+          "externo": true
+        },
+        {
+          "titulo": "Guía en idioma Mam",
+          "descripcion": "Audio informativo con los requisitos y pasos para consultar el estado o actuaciones de expedientes (MP3).",
+          "boton_texto": "Escuchar audio en Mam (MP3)",
+          "url": "https://mx.ivoox.com/es/consulta-del-estado-o-actuaciones-expedientes-de_md_43531405_wp_1.mp3",
+          "externo": true
+        },
+        {
+          "titulo": "Guía en idioma Q'eqchi'",
+          "descripcion": "Audio informativo con los requisitos y pasos para consultar el estado o actuaciones de expedientes (MP3).",
+          "boton_texto": "Escuchar audio en Q'eqchi' (MP3)",
+          "url": "https://mx.ivoox.com/es/consulta-del-estado-o-actuaciones-de-expedientes-de_md_43648099_wp_1.mp3",
+          "externo": true
+        }
+      ],
+      "acordeon_desglose_titulo": "Requisitos específicos según quién realiza la gestión (4 perfiles)",
+      "acordeon_desglose": [
+        {
+          "descripcion": "<strong>Persona individual:</strong> 1) Documento Personal de Identificación (DPI) del contribuyente; 2) Pasaporte vigente, en caso de ser persona extranjera."
+        },
+        {
+          "descripcion": "<strong>Representante legal o mandatario:</strong> 1) Documento Personal de Identificación (DPI); 2) Pasaporte vigente, en caso de ser persona extranjera; 3) Copia simple que acredite tu representación legal vigente; 4) En caso de ser mandatario, original o copia legalizada del mandato por notario activo."
+        },
+        {
+          "descripcion": "<strong>Agente aduanero o apoderado especial aduanero:</strong> 1) Documento Personal de Identificación (DPI) del agente aduanero; 2) Carné vigente del agente aduanero. Nota importante: únicamente puede realizar la consulta el agente aduanero o apoderado especial aduanero que ingresó la solicitud."
+        },
+        {
+          "descripcion": "<strong>Empleado o profesional universitario que asesora al contribuyente:</strong> 1) Documento Personal de Identificación (DPI); 2) Pasaporte vigente, en caso de ser persona extranjera; 3) Carta de autorización firmada por el contribuyente o representante legal, con firma legalizada por notario activo; 4) En caso de ser profesional universitario, carné o constancia de colegiado activo; 5) En caso de ser empleado, gafete de identificación de la empresa."
+        }
+      ],
+      "eyebrow_tabla": "Ubicaciones habilitadas",
+      "h2_tabla": "Unidades y aduanas habilitadas para realizar la gestión por región",
+      "intro_tabla": "Acude a la unidad del Departamento de Gestión Aduanera o a la aduana regional correspondiente conforme al Código Aduanero Uniforme Centroamericano (CAUCA), al Reglamento del Código Aduanero Uniforme Centroamericano (RECAUCA) y a la Ley Nacional de Aduanas:",
+      "tabla": {
+        "caption": "Tabla 1. Unidades del Departamento de Gestión Aduanera y aduanas habilitadas por región",
+        "columnas": [
+          "Sede o región",
+          "Unidades administrativas y aduanas habilitadas"
+        ],
+        "filas": [
+          [
+            "Unidades del Departamento de Gestión Aduanera (tercer nivel, Edificio Torre SAT, zona 9)",
+            "Unidad de Recursos y Resoluciones; Unidad de Regímenes Especiales; Unidad de Franquicias y Asuntos Aduanales; Unidad de Administración de Auxiliares de la Función Pública Aduanera; Unidad de Calificación, Registro y Control de Auxiliares de la Función Pública."
+          ],
+          [
+            "Región Central",
+            "Express Aéreo, Central de Aviación, Central, Fardos Postales y Vehículos."
+          ],
+          [
+            "Región Occidente",
+            "Tecún Umán, El Carmen y La Mesilla."
+          ],
+          [
+            "Región Nororiente",
+            "Santo Tomás de Castilla, Puerto Barrios, Melchor de Mencos, El Ceibo, Aduana Integrada El Florido, Aduana Integrada Agua Caliente y La Ermita."
+          ],
+          [
+            "Región Sur",
+            "Puerto Quetzal, Pedro de Alvarado, San Cristóbal y Valle Nuevo."
+          ]
+        ]
+      }
+    },
+    {
+      "slug": "selectivo-de-declaraciones-de-exportacion",
+      "arquetipo": "TIPO-1",
+      "titulo_h1": "Presentar el selectivo de declaraciones de exportación",
+      "bajada_lead": "Conoce los requisitos y pasos para someter tu declaración de mercancías de exportación al sistema de análisis de riesgo en la aduana de salida ante la Superintendencia de Administración Tributaria (SAT). Verifica qué documentos adjuntar y cómo actuar según el resultado verde o rojo del selectivo.",
+      "eyebrow_requisitos": "Antes de presentarte en la aduana",
+      "h2_requisitos": "Quiénes pueden realizar la gestión y qué exige el sistema",
+      "intro_requisitos": "Pueden presentar la declaración el transportista, agente aduanero, asistente del agente aduanero autorizado por la SAT, representante legal, propietario o mandatario:",
+      "requisitos": [
+        {
+          "titulo": "Declaración de Mercancías de Exportación",
+          "descripcion": "Preséntala en el módulo de ingreso al recinto aduanero o en la zona primaria para someterla al sistema de análisis de riesgo conforme al Código Aduanero Uniforme Centroamericano (CAUCA) y al Reglamento del Código Aduanero Uniforme Centroamericano (RECAUCA)."
+        },
+        {
+          "titulo": "Medio de transporte con la mercancía",
+          "descripcion": "Debe estar presente el medio de transporte que lleva la mercancía al momento de procesar el selectivo en la aduana de salida."
+        },
+        {
+          "titulo": "Permisos y licencias aplicables",
+          "descripcion": "Adjunta las licencias de Declaraciones para Registro y Control de Exportaciones (DEPREX) o la licencia de la Asociación Nacional del Café (ANACAFÉ), cuando correspondan."
+        }
+      ],
+      "nota_requisito": "No será necesario que presentes el medio de transporte en el área de procesamiento de selectivo en los casos en que por el tipo de infraestructura de la aduana no sea posible realizarlo. Debes responder por las obligaciones tributarias y penales en caso de que la mercancía no sea exportada o no corresponda con lo declarado.",
+      "eyebrow_pasos": "Paso a paso",
+      "h2_pasos": "Cómo procesar el selectivo en la aduana de salida",
+      "intro_pasos": "Sigue estos pasos en la aduana de salida (ficha publicada el 13 de noviembre de 2018). También dispones de guías en idiomas K'iche', Mam y Q'eqchi' en formato de audio digital (MP3) en los botones inferiores:",
+      "pasos": [
+        "Paso 1 — Presenta la Declaración de Mercancías de Exportación en el módulo de ingreso al recinto aduanero o en la zona primaria junto con las licencias DEPREX o de ANACAFÉ aplicables.",
+        "Paso 2 — Somete la declaración al sistema de análisis de riesgo en la ventanilla de procesamiento del selectivo o área habilitada.",
+        "Paso 3 — Recibe tu Declaración de Mercancías certificada con el resultado del análisis de riesgo impreso en todos los ejemplares de la declaración.",
+        "Paso 4 — Sedes registradas por región: Región Central (Galerías Prima, Plaza San Rafael, Pacific Villa Hermosa, Chimaltenango, El Progreso, Sacatepéquez y, para gestiones de terceros autorizados, Plaza San Rafael Anexo); Región Occidente (Quetzaltenango, Huehuetenango, San Marcos, Quiché, Sololá y Totonicapán); Región Nororiente (Zacapa, Baja Verapaz, Alta Verapaz, Jalapa, Petén, Izabal y Chiquimula); Región Sur (Escuintla, Retalhuleu, Jutiapa, Santa Rosa y Suchitepéquez)."
+      ],
+      "cta_principal": {
+        "texto": "Escuchar audio en K'iche' (MP3)",
+        "url": "https://mx.ivoox.com/es/selectivo-de-declaraciones-de-exportacion-k-039-iche-039_md_45167466_wp_1.mp3",
+        "externo": true
+      },
+      "enlaces_secundarios": [
+        {
+          "texto": "Escuchar audio en Mam (MP3)",
+          "url": "https://mx.ivoox.com/es/selectivo-de-declaraciones-de-exportacion-mam_md_45166639_wp_1.mp3",
+          "externo": true
+        },
+        {
+          "texto": "Escuchar audio en Q'eqchi' (MP3)",
+          "url": "https://mx.ivoox.com/es/selectivo-de-declaraciones-de-exportacion-q-039-eqchi-039_md_45168076_wp_1.mp3",
+          "externo": true
+        }
+      ],
+      "eyebrow_continuidad": "Qué sigue después",
+      "h2_continuidad": "Resultado del análisis de riesgo",
+      "intro_continuidad": "En tu Declaración de Mercancías certificada se imprimirá uno de los dos canales de selectividad:",
+      "que_sigue": [
+        {
+          "titulo": "Selectivo verde (levante inmediato)",
+          "descripcion": "No se realiza revisión física de la mercancía; el embarque o salida queda autorizado de forma inmediata con la declaración certificada."
+        },
+        {
+          "titulo": "Selectivo rojo (verificación inmediata)",
+          "descripcion": "Se realiza la revisión física y documental de la carga por parte de la autoridad aduanera antes de autorizar el levante."
+        }
+      ]
+    },
+    {
+      "slug": "consultas-aduanas",
+      "arquetipo": "TIPO-3",
+      "titulo_h1": "Consultas aduaneras en línea y monitoreo de sistemas",
+      "bajada_lead": "Accede en un solo lugar a los buscadores públicos de la Superintendencia de Administración Tributaria (SAT) para verificar declaraciones, manifiestos, retenciones, rampas, revisores y contenedores. Consulta también en tiempo real el estado operativo de los sistemas informáticos en las aduanas del país.",
+      "eyebrow_previos": "Guía del centro de consultas",
+      "h2_previos": "Qué incluye este directorio aduanero",
+      "intro_previos": "Los servicios están organizados en tres bloques según el tipo de verificación operativa o técnica que necesites realizar.",
+      "datos_previos": [
+        {
+          "titulo": "Consultas operativas de carga y declaraciones",
+          "descripcion": "Reúne 14 accesos directos a buscadores de retención y liberación, manifiestos, Sistema de Cobro por Permanencia (SCP), rampas, revisores, arancel integrado, declaraciones de mercancías, Formulario Aduanero Único Centroamericano (FAUCA) / Declaración Única Centroamericana para mercancías originarias de Centroamérica (DUCA-F), pólizas de importación, Admisión Temporal de Contenedores (ATC) y tránsitos pendientes."
+        },
+        {
+          "titulo": "Requisitos de gestiones en aduanas",
+          "descripcion": "Incluye 6 enlaces directos a los requisitos oficiales para consulta de expedientes, admisión temporal, importación y exportación, reexportación, renovación de Auxiliares de la Función Pública Aduanera (AFPA) y documento compromisorio."
+        },
+        {
+          "titulo": "Monitoreo informático en tiempo real",
+          "descripcion": "Permite verificar cada 15 minutos la disponibilidad de sistemas en aduanas, el comportamiento histórico del selectivo rojo y verde, y la comunicación con la Secretaría de Integración Económica Centroamericana (SIECA), la Asociación Guatemalteca de Exportadores (AGEXPORT), la Oficina de Regímenes de Perfeccionamiento Activo (OPA) y los depósitos temporales."
+        }
+      ],
+      "eyebrow_documentos": "Tableros en tiempo real",
+      "h2_documentos": "Monitoreo de sistemas informáticos de aduanas",
+      "intro_documentos": "Abre los tableros públicos de disponibilidad operativa, histórico de selectivo y comunicación interinstitucional (actualizados cada 15 minutos):",
+      "documentos": [
+        {
+          "titulo": "Monitoreo de sistemas informáticos en las aduanas",
+          "descripcion": "Tablero en vivo que indica si cada aduana se encuentra con operación normal, con alerta en algún servicio o sin operación.",
+          "url": "https://farm4.sat.gob.gt/dashboard-aduanas/aduanas.xhtml",
+          "boton_texto": "Abrir tablero de estado por aduana",
+          "externo": true
+        },
+        {
+          "titulo": "Monitoreo histórico de selectivo en aduanas",
+          "descripcion": "Consulta por día el total de declaraciones procesadas en cada aduana y el porcentaje de selectivo rojo y verde asignado.",
+          "url": "https://farm4.sat.gob.gt/dashboard-aduanas/selectivo.xhtml",
+          "boton_texto": "Abrir monitoreo histórico de selectivo",
+          "externo": true
+        },
+        {
+          "titulo": "Monitoreo de comunicación con SIECA, AGEXPORT-OPA y depósitos temporales",
+          "descripcion": "Verifica cada 15 minutos la disponibilidad de los servicios de interconexión con SIECA, AGEXPORT-OPA, Combex-IM y empresas portuarias.",
+          "url": "https://farm4.sat.gob.gt/dashboard-aduanas/serviciosExternosAduanas.xhtml",
+          "boton_texto": "Abrir monitoreo de servicios externos",
+          "externo": true
+        }
+      ],
+      "eyebrow_grupos_documentos": "Buscadores públicos y requisitos",
+      "h2_grupos_documentos": "Selecciona la consulta en línea o ficha de requisitos",
+      "intro_grupos_documentos": "Despliega la categoría que deseas consultar conforme al Código Aduanero Uniforme Centroamericano (CAUCA), al Reglamento del Código Aduanero Uniforme Centroamericano (RECAUCA) y al Decreto 22-73 sobre la Zona Libre de Industria y Comercio Santo Tomás de Castilla (ZOLIC) y las Zonas de Desarrollo Económico Especial Público (ZDEEP):",
+      "grupos_documentos": [
+        {
+          "titulo": "Declaraciones, arancel integrado y pólizas (5)",
+          "tab_id": "consultas-aduanas-declaraciones",
+          "items": [
+            {
+              "descripcion": "<strong>Consultar declaración de mercancías:</strong> Verifica el estado de despacho, selectivo y levante de tu declaración aduanera.",
+              "url": "https://portal.sat.gob.gt/portal/consulta-declaracion-unica-aduanera/",
+              "boton_texto": "Abrir consulta de declaraciones",
+              "externo": true
+            },
+            {
+              "descripcion": "<strong>Consultar declaraciones FAUCA y DUCA-F:</strong> Verifica la transmisión y validez de declaraciones centroamericanas FAUCA y DUCA-F.",
+              "url": "https://portal.sat.gob.gt/portal/consultas-de-faucas-duca-f/",
+              "boton_texto": "Abrir consulta FAUCA y DUCA-F",
+              "externo": true
+            },
+            {
+              "descripcion": "<strong>Consultar pago de DUCA-F en país de destino:</strong> Comprueba la confirmación de pago de tributos de una declaración DUCA-F en el país de destino.",
+              "url": "https://portal.sat.gob.gt/portal/consultas-pago-duca-f-pais-destino/",
+              "boton_texto": "Abrir consulta de pago DUCA-F",
+              "externo": true
+            },
+            {
+              "descripcion": "<strong>Consultar pólizas de importación:</strong> Revisa la información registrada de tus pólizas de importación.",
+              "url": "https://portal.sat.gob.gt/portal/polizas-de-importacion/",
+              "boton_texto": "Abrir consulta de pólizas",
+              "externo": true
+            },
+            {
+              "descripcion": "<strong>Consultar el Arancel Integrado:</strong> Busca incisos arancelarios, derechos aplicables y notas técnicas vigentes en el Sistema Arancelario Centroamericano (SAC).",
+              "url": "https://portal.sat.gob.gt/portal/arancel-integrado/",
+              "boton_texto": "Abrir Arancel Integrado",
+              "externo": true
+            }
+          ]
+        },
+        {
+          "titulo": "Manifiestos, retención/liberación y asignación en recinto (5)",
+          "tab_id": "consultas-aduanas-manifiestos",
+          "items": [
+            {
+              "descripcion": "<strong>Consultar retención y liberación de mercancías:</strong> Verifica si tu carga tiene una retención activa o cuenta con orden de liberación en aduana.",
+              "url": "https://portal.sat.gob.gt/portal/consulta-publica-retencion-liberacion/",
+              "boton_texto": "Abrir consulta de retención y liberación",
+              "externo": true
+            },
+            {
+              "descripcion": "<strong>Consultar documentos de manifiesto:</strong> Revisa el estado de los documentos de manifiesto transmitidos al sistema aduanero.",
+              "url": "https://portal.sat.gob.gt/portal/documentos-manifiesto/",
+              "boton_texto": "Abrir consulta de manifiestos",
+              "externo": true
+            },
+            {
+              "descripcion": "<strong>Consultar manifiestos de la Unión Aduanera Guatemala-Honduras:</strong> Verifica documentos de transporte en la pantalla externa de la Unión Aduanera.",
+              "url": "https://portal.sat.gob.gt/portal/consulta-de-manifiestos-documentos-de-transporte-pantalla-externa-union-aduanera-guatemala-honduras/",
+              "boton_texto": "Abrir consulta Unión Aduanera",
+              "externo": true
+            },
+            {
+              "descripcion": "<strong>Consultar asignación de rampa:</strong> Verifica la rampa o muelle asignado para la revisión de contenedores en puerto o depósito.",
+              "url": "https://portal.sat.gob.gt/portal/asignacion-rampa-pq/",
+              "boton_texto": "Abrir asignación de rampa",
+              "externo": true
+            },
+            {
+              "descripcion": "<strong>Consultar asignación de revisores:</strong> Verifica el técnico verificador asignado por sorteo a tu expediente o declaración.",
+              "url": "https://portal.sat.gob.gt/portal/asignacion-de-revisores/",
+              "boton_texto": "Abrir asignación de revisores",
+              "externo": true
+            }
+          ]
+        },
+        {
+          "titulo": "Permanencia, Admisión Temporal de Contenedores (ATC) y tránsito (4)",
+          "tab_id": "consultas-aduanas-atc-transito",
+          "items": [
+            {
+              "descripcion": "<strong>Consultar el Sistema de Cobro por Permanencia (SCP):</strong> Verifica días y cargos por permanencia de contenedores o mercancías bajo control aduanero.",
+              "url": "https://portal.sat.gob.gt/portal/sistema-de-cobro-por-permanencia/",
+              "boton_texto": "Abrir consulta SCP",
+              "externo": true
+            },
+            {
+              "descripcion": "<strong>Consultar registro de Admisión Temporal de Contenedores (ATC) terrestres:</strong> Verifica el registro electrónico de ingreso y permanencia de contenedores terrestres.",
+              "url": "https://portal.sat.gob.gt/portal/registro-atc-terrestre/",
+              "boton_texto": "Abrir registro ATC terrestre",
+              "externo": true
+            },
+            {
+              "descripcion": "<strong>Consultar ampliación de plazo ATC:</strong> Registra o verifica la ampliación de plazo de Admisión Temporal de Contenedores (ATC).",
+              "url": "https://portal.sat.gob.gt/portal/registro-ampliacion-atc/",
+              "boton_texto": "Abrir ampliación ATC",
+              "externo": true
+            },
+            {
+              "descripcion": "<strong>Consultar tránsitos aduaneros pendientes:</strong> Monitorea las declaraciones de tránsito terrestre en ruta por código de transportista o pasaporte.",
+              "url": "https://portal.sat.gob.gt/portal/transito-pendiente/",
+              "boton_texto": "Abrir consulta de tránsito pendiente",
+              "externo": true
+            }
+          ]
+        },
+        {
+          "titulo": "Requisitos para gestiones presenciales y operativas en aduanas (6)",
+          "tab_id": "consultas-aduanas-requisitos",
+          "items": [
+            {
+              "descripcion": "<strong>Consulta de expedientes en gestión aduanera:</strong> Requisitos para consultar el estado o actuaciones de expedientes aduaneros.",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-aduanas/#1542142398181-8db4844a-6760",
+              "boton_texto": "Ver requisitos de consulta de expedientes",
+              "externo": true
+            },
+            {
+              "descripcion": "<strong>Documentos para importación y admisión temporal:</strong> Requisitos documentales aplicables a regímenes de importación y admisión temporal.",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-aduanas/#1542142298663-bee160b4-5362",
+              "boton_texto": "Ver documentos de importación y admisión temporal",
+              "externo": true
+            },
+            {
+              "descripcion": "<strong>Gestiones de importación y exportación:</strong> Requisitos operativos para despachos de importación y exportación.",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-aduanas/#1542209620324-5bd6722c-fbd7",
+              "boton_texto": "Ver requisitos de importación y exportación",
+              "externo": true
+            },
+            {
+              "descripcion": "<strong>Gestiones de reexportación:</strong> Requisitos para gestionar la reexportación de mercancías ante el servicio aduanero.",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-aduanas/#1542142298723-7d324078-07a5",
+              "boton_texto": "Ver requisitos de reexportación",
+              "externo": true
+            },
+            {
+              "descripcion": "<strong>Renovación de operación de Auxiliares de la Función Pública Aduanera (AFPA):</strong> Requisitos para renovar la autorización anual de operación.",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-aduanas/#1608063945646-f9ebd644-65ff",
+              "boton_texto": "Ver requisitos de renovación de auxiliares",
+              "externo": true
+            },
+            {
+              "descripcion": "<strong>Presentación de documento compromisorio:</strong> Requisitos y condiciones para presentar documento compromisorio ante la aduana.",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-aduanas/#1738949698794-09454143-7939",
+              "boton_texto": "Ver requisitos de documento compromisorio",
+              "externo": true
+            }
+          ]
+        }
+      ],
+      "cta_principal": {
+        "texto": "Abrir tablero de monitoreo de aduanas en vivo",
+        "url": "https://farm4.sat.gob.gt/dashboard-aduanas/aduanas.xhtml",
+        "externo": true
+      }
+    },
+    {
+      "slug": "sistema-de-cobro-por-permanencia",
+      "arquetipo": "TIPO-2",
+      "titulo_h1": "Consultar el Sistema de Cobro por Permanencia (SCP)",
+      "bajada_lead": "Verifica y calcula en línea los cargos por días de permanencia de mercancías, contenedores y medios de transporte bajo control aduanero ante la Superintendencia de Administración Tributaria (SAT). Accede al consultor público del Sistema de Cobro por Permanencia (SCP) antes de gestionar el levante.",
+      "eyebrow_previos": "Antes de consultar",
+      "h2_previos": "Qué debes tener en cuenta",
+      "intro_previos": "Prepara los datos de la declaración o del medio de transporte antes de abrir el aplicativo oficial.",
+      "datos_previos": [
+        {
+          "titulo": "A quién está dirigido",
+          "descripcion": "Orientado a importadores, depósitos aduaneros y Auxiliares de la Función Pública Aduanera (AFPA) que verifican tarifas de estadía bajo control aduanero."
+        },
+        {
+          "titulo": "Verificación de seguridad",
+          "descripcion": "Para abrir la consulta debes escribir los caracteres que muestra la imagen de control y presionar el botón Verificar."
+        },
+        {
+          "titulo": "Marco legal y sesión activa",
+          "descripcion": "Regulado por el Código Aduanero Uniforme Centroamericano (CAUCA) y el Reglamento del Código Aduanero Uniforme Centroamericano (RECAUCA, artículos 119 al 129). La plataforma cierra la sesión automáticamente tras un período de inactividad."
+        }
+      ],
+      "cta_principal": {
+        "texto": "Abrir consulta del Sistema de Cobro por Permanencia (SCP)",
+        "url": "https://farm3.sat.gob.gt/consultas-publicas-aduanas/public/consultas-publicas/consultaSCP.jsf",
+        "externo": true
+      },
+      "nota_soporte": "También puedes consultar la guía de usuario externo del Sistema de Control de Permanencia (GU-IAD-DNO-ADU-GDE-14) en la sección de procedimientos, instructivos, manuales y guías aduaneras."
+    },
+    {
+      "slug": "registro-atc-terrestre",
+      "arquetipo": "TIPO-2",
+      "titulo_h1": "Registrar y consultar la Admisión Temporal de Contenedores (ATC) terrestres",
+      "bajada_lead": "Registra en línea la Admisión Temporal de Contenedores (ATC), chasises y equipo de carga terrestre o consulta el plazo de permanencia autorizado ante la Superintendencia de Administración Tributaria (SAT). Ingresa directamente a la plataforma electrónica aduanera antes de tu arribo al puesto fronterizo.",
+      "eyebrow_previos": "Antes de registrar o consultar",
+      "h2_previos": "Qué debes saber sobre el registro ATC terrestre",
+      "intro_previos": "Verifica los datos de identificación del equipo de carga terrestre antes de ingresar al sistema.",
+      "datos_previos": [
+        {
+          "titulo": "Equipos que comprende",
+          "descripcion": "Aplica al control de ingreso y permanencia legal en el país de contenedores, cabezales, plataformas y chasises de transporte terrestre internacional."
+        },
+        {
+          "titulo": "Usuarios del servicio",
+          "descripcion": "Dirigido a transportistas aduaneros, depósitos aduaneros, empresas bajo régimen de maquila (Decreto 29-89) y demás Auxiliares de la Función Pública Aduanera (AFPA)."
+        },
+        {
+          "titulo": "Validación y base normativa",
+          "descripcion": "Al abrir el aplicativo debes completar el campo Valor Imagen. Operación normada por el Código Aduanero Uniforme Centroamericano (CAUCA, artículos 18 al 28), el Reglamento del Código Aduanero Uniforme Centroamericano (RECAUCA) y la Ley Nacional de Aduanas."
+        }
+      ],
+      "cta_principal": {
+        "texto": "Abrir registro electrónico ATC terrestre",
+        "url": "https://farm2.sat.gob.gt/aduana-publico/aduana/carga/registroATCTerrestre/registroATCTerrestre.jsf",
+        "externo": true
+      },
+      "nota_soporte": "Si necesitas ampliar el plazo de permanencia autorizado, utiliza la opción de Registro de Ampliación ATC disponible en el directorio de consultas aduaneras."
+    },
+    {
+      "slug": "asignacion-de-revisores",
+      "arquetipo": "TIPO-2",
+      "titulo_h1": "Consultar la asignación de revisores de expedientes aduaneros",
+      "bajada_lead": "Verifica en línea qué técnico o verificador aduanero fue asignado por sorteo electrónico para revisar tu carga o expediente ante la Superintendencia de Administración Tributaria (SAT). Ingresa al consultor público para dar seguimiento transparente a tu despacho.",
+      "eyebrow_previos": "Antes de consultar",
+      "h2_previos": "Qué debes saber sobre el sorteo de revisores",
+      "intro_previos": "Ten lista la referencia de tu declaración aduanera sujeta a revisión antes de consultar el sorteo.",
+      "datos_previos": [
+        {
+          "titulo": "Asignación aleatoria y transparente",
+          "descripcion": "El sistema informático de la SAT asigna mediante sorteo al revisor encargado de la verificación de tu expediente o declaración."
+        },
+        {
+          "titulo": "A quién sirve",
+          "descripcion": "Disponible para transportistas aduaneros, agentes aduaneros, importadores, exportadores y demás Auxiliares de la Función Pública Aduanera (AFPA)."
+        },
+        {
+          "titulo": "Código de imagen y base legal",
+          "descripcion": "Escribe los caracteres del control Valor Imagen para consultar conforme al Código Aduanero Uniforme Centroamericano (CAUCA, artículos 18 al 28), al Reglamento del Código Aduanero Uniforme Centroamericano (RECAUCA) y a la Ley Nacional de Aduanas."
+        }
+      ],
+      "cta_principal": {
+        "texto": "Abrir consulta de asignación de revisores",
+        "url": "https://farm3.sat.gob.gt/aduana-publico/aduana/comunes/asignacionVerificadores/consultarSorteo.jsf",
+        "externo": true
+      },
+      "nota_soporte": "El enlace abre directamente el módulo público de consulta de sorteos en el servidor aduanero de la SAT."
+    },
+    {
+      "slug": "asignacion-rampa-pq",
+      "arquetipo": "TIPO-2",
+      "titulo_h1": "Consultar la asignación de rampa en puertos y recintos aduaneros",
+      "bajada_lead": "Verifica en línea el muelle, andén o rampa asignado por la Superintendencia de Administración Tributaria (SAT) para ubicar y revisar tu contenedor en puerto o depósito aduanero. Accede al buscador público y valida el código de imagen para realizar tu consulta.",
+      "eyebrow_previos": "Antes de consultar",
+      "h2_previos": "Qué debes tener en cuenta",
+      "intro_previos": "Reúne los datos del contenedor o declaración aduanera antes de abrir el verificador en línea.",
+      "datos_previos": [
+        {
+          "titulo": "Inspección y descarga",
+          "descripcion": "Permite conocer la rampa asignada para posicionar contenedores sujetos a revisión física o no intrusiva en recintos portuarios como Puerto Quetzal (PQ) y depósitos aduaneros."
+        },
+        {
+          "titulo": "Usuarios principales",
+          "descripcion": "Herramienta de consulta directa para transportistas aduaneros, agentes aduaneros, importadores y Auxiliares de la Función Pública Aduanera (AFPA)."
+        },
+        {
+          "titulo": "Validación y marco legal",
+          "descripcion": "Ingresa los caracteres de la imagen de verificación y presiona Verificar. Regulado por el Código Aduanero Uniforme Centroamericano (CAUCA, artículos 18 al 28), el Reglamento del Código Aduanero Uniforme Centroamericano (RECAUCA) y la Ley Nacional de Aduanas."
+        }
+      ],
+      "cta_principal": {
+        "texto": "Abrir consulta de asignación de rampa",
+        "url": "https://farm3.sat.gob.gt/consultas-publicas-aduanas/public/consultas-publicas/asignacionRampaPQ.jsf",
+        "externo": true
+      },
+      "nota_soporte": "Si la pantalla muestra el aviso de sesión expirada por inactividad, actualiza la ventana del navegador y vuelve a ingresar el código de imagen."
+    },
+    {
+      "slug": "transito-pendiente",
+      "arquetipo": "TIPO-2",
+      "titulo_h1": "Consultar tránsitos aduaneros pendientes en ruta",
+      "bajada_lead": "Monitorea en línea las declaraciones de tránsito aduanero interno o internacional que se encuentran en curso ante la Superintendencia de Administración Tributaria (SAT). Puedes realizar la búsqueda por código de transportista registrado en la Secretaría de Integración Económica Centroamericana (SIECA) o por código de transmigrante.",
+      "eyebrow_previos": "Instrucciones oficiales del buscador",
+      "h2_previos": "Cómo ingresar el código según tu tipo de operación",
+      "intro_previos": "Revisa los criterios de búsqueda indicados en las instrucciones de uso del aplicativo antes de iniciar la consulta.",
+      "datos_previos": [
+        {
+          "titulo": "Transportista nacional o internacional",
+          "descripcion": "Selecciona el tipo de búsqueda e ingresa tu código de transportista exactamente como está registrado en la base de datos de transportistas de la SIECA. Herramienta útil para transportistas y Auxiliares de la Función Pública Aduanera (AFPA)."
+        },
+        {
+          "titulo": "Declaraciones de transmigrantes (régimen TO)",
+          "descripcion": "Si consultas una declaración transmitida para una persona transmigrante bajo el régimen de Tránsito de Transmigrante (régimen TO), ingresa el código genérico formado por el prefijo de código para transmigrante (TRA) seguido del número de pasaporte."
+        },
+        {
+          "titulo": "Validación y base normativa",
+          "descripcion": "Completa los caracteres de la imagen de control y presiona Verificar. Sustentado en el Código Aduanero Uniforme Centroamericano (CAUCA, artículos 18 al 28), el Reglamento del Código Aduanero Uniforme Centroamericano (RECAUCA) y la Ley Nacional de Aduanas."
+        }
+      ],
+      "cta_principal": {
+        "texto": "Abrir consulta de tránsitos pendientes",
+        "url": "https://farm3.sat.gob.gt/consultas-publicas-aduanas/public/consultas-publicas/transitoPendiente.jsf",
+        "externo": true
+      },
+      "nota_soporte": "Este servicio abre directamente el buscador público en una ventana dedicada para que puedas revisar aduana de partida, aduana de destino y estado de tus tránsitos sin cortes de pantalla."
+    }
+  ]
+}

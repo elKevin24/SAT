@@ -1,0 +1,1315 @@
+{
+  "lote": "ola-4b",
+  "descripcion": "Borrador estructural Sub-lote 4B (siguientes 13 URLs de Ola 4 — AFPA, ATC, Subastas, ZDEEP y FEL) — Comercio Exterior SAT Guatemala.",
+  "total_paginas": 13,
+  "paginas": [
+    {
+      "slug": "manual-de-procedimientos-de-la-intendencia-de--autorizacion-registro",
+      "arquetipo": "TIPO-3",
+      "titulo_h1": "Procedimientos de autorización y registro de Auxiliares de la Función Pública Aduanera (AFPA) y otros usuarios",
+      "bajada_lead": "Descarga los 5 procedimientos oficiales vigentes de la Intendencia de Aduanas de la Superintendencia de Administración Tributaria (SAT) para la autorización, registro, administración, carnetización de asistentes, marchamo electrónico y Operador Económico Autorizado (OEA).",
+      "menu_lateral": [
+        {
+          "id": "seccion-alcance",
+          "label": "Alcance de los procedimientos"
+        },
+        {
+          "id": "seccion-documentos",
+          "label": "5 procedimientos oficiales (PDF)"
+        }
+      ],
+      "eyebrow_previos": "Manual de Procedimientos de la Intendencia de Aduanas",
+      "h2_previos": "Qué regulan los procedimientos de Autorización y Registro",
+      "intro_previos": "Establecen los requisitos normativos y operativos para habilitar y administrar a los actores que operan ante el Servicio Aduanero.",
+      "datos_previos": [
+        {
+          "titulo": "Auxiliares y asistentes (AYR-01, AYR-02 y AYR-04)",
+          "descripcion": "Norma la autorización, registro y administración de AFPA, así como el registro y carnetización de sus asistentes y empleados."
+        },
+        {
+          "titulo": "Marchamo electrónico y programa OEA (AYR-10 y AYR-11)",
+          "descripcion": "Define la calificación de Entidades Prestadoras del Servicio de Marchamo Electrónico (EPSME) y el funcionamiento del programa del OEA."
+        }
+      ],
+      "eyebrow_documentos": "Descargas oficiales",
+      "h2_documentos": "Procedimientos vigentes de Autorización y Registro (PR-IAD/DNO-ADU-AYR)",
+      "intro_documentos": "Abre o descarga en formato PDF el procedimiento específico que necesitas consultar.",
+      "documentos": [
+        {
+          "titulo": "PR-IAD/DNO-ADU-AYR-01 Versión V — Autorización y registro de AFPA y otros usuarios",
+          "descripcion": "Procedimiento para autorización y registro de AFPA y otros usuarios del Servicio Aduanero, Versión V (vigente a partir del 13 de noviembre de 2025) (PDF).",
+          "url": "https://portal.sat.gob.gt/portal/descarga/4563/autorizacion-y-registro/91193/pr-iad-dno-adu-ayr-01-procedimiento-para-autorizacion-y-registro-de-auxiliares-de-la-funcion-publica-aduanera-y-otros-usuarios-del-servicio-aduanero-version-v-vigente-a-partir-del-13-11-2025.pdf",
+          "boton_texto": "Descargar procedimiento AYR-01 (PDF)",
+          "externo": true
+        },
+        {
+          "titulo": "PR-IAD/DNO-ADU-AYR-02 Versión III — Administración de AFPA y otros usuarios",
+          "descripcion": "Procedimiento para la administración de AFPA y otros usuarios del Servicio Aduanero, Versión III (vigente a partir del 1 de febrero de 2024) (PDF).",
+          "url": "https://portal.sat.gob.gt/portal/descarga/4563/autorizacion-y-registro/75595/pr-iad-dno-adu-ayr-02-admon-de-afp-y-otros-usuarios-vig-desde-1-2-2024.pdf",
+          "boton_texto": "Descargar procedimiento AYR-02 (PDF)",
+          "externo": true
+        },
+        {
+          "titulo": "PR-IAD/DNO-ADU-AYR-04 Versión III — Registro de asistentes o empleados y carnetización",
+          "descripcion": "Procedimiento para el registro de asistentes o empleados de AFPA ante la SAT y parámetros de carnetización, Versión III (vigente a partir del 28 de abril de 2026) (PDF).",
+          "url": "https://portal.sat.gob.gt/portal/descarga/4563/autorizacion-y-registro/94209/pr-iad-dno-adu-ayr-04-proc-registro-asistentes-o-empeados-de-los-adpa-ante-sat-y-parametros-de-carnetizacion-vers-iii-vig",
+          "boton_texto": "Descargar procedimiento AYR-04 (PDF)",
+          "externo": true
+        },
+        {
+          "titulo": "PR-IAD/DNO-ADU-AYR-10 — Entidades Prestadoras del Servicio de Marchamo Electrónico (EPSME)",
+          "descripcion": "Procedimiento para la habilitación, control y supervisión de las Entidades Prestadoras del Servicio de Marchamo Electrónico (EPSME) (vigente a partir del 26 de diciembre de 2024) (PDF).",
+          "url": "https://portal.sat.gob.gt/portal/descarga/4563/autorizacion-y-registro/38125/pr-iad-dno-adu-ayr-10-1-2.pdf",
+          "boton_texto": "Descargar procedimiento AYR-10 (PDF)",
+          "externo": true
+        },
+        {
+          "titulo": "PR-IAD/DNO-ADU-AYR-11 Versión VI — Funcionamiento del Programa OEA",
+          "descripcion": "Procedimiento para el funcionamiento y certificación del Programa del OEA de Guatemala, Versión VI (vigente a partir del 8 de julio de 2025) (PDF).",
+          "url": "https://portal.sat.gob.gt/portal/descarga/4563/autorizacion-y-registro/82934/pr-iad-dno-adu-ayr-11-ve-vi-procedimiento-para-el-funcionamiento-del-programa-del-operador-economico-autorizado-vig-26-12-2024.pdf",
+          "boton_texto": "Descargar procedimiento AYR-11 (PDF)",
+          "externo": true
+        }
+      ]
+    },
+    {
+      "slug": "solicitud-de-renovacion-de-auxiliares-de-la",
+      "arquetipo": "TIPO-1",
+      "titulo_h1": "Solicitar renovación anual de Auxiliares de la Función Pública Aduanera (AFPA) y seguro de caución",
+      "bajada_lead": "Realiza la renovación anual de operación y presenta el seguro de caución ante la Unidad de Administración de Auxiliares de la Función Pública Aduanera de la Superintendencia de Administración Tributaria (SAT).",
+      "menu_lateral": [
+        {
+          "id": "seccion-requisitos",
+          "label": "Formulario RE-IAD/DNO-ADU-AYR-11 y requisitos"
+        },
+        {
+          "id": "seccion-pasos",
+          "label": "Paso a paso y manuales por auxiliar"
+        },
+        {
+          "id": "seccion-resultado",
+          "label": "Sello de recibido y notificaciones"
+        }
+      ],
+      "eyebrow_requisitos": "Antes de empezar",
+      "h2_requisitos": "¿A quiénes aplica y qué documentos debes descargar?",
+      "intro_requisitos": "Aplica para Agentes Aduaneros, Apoderados Especiales Aduaneros, Transportistas Aduaneros (nacionales e internacionales), Empresas de Entrega Rápida o Courier, Empresas Desconsolidadoras, Depósitos Aduaneros (públicos y privados), Almacenes Fiscales y Depósitos Aduaneros Temporales.",
+      "requisitos": [
+        {
+          "titulo": "Formulario de presentación de documentos (RE-IAD/DNO-ADU-AYR-11)",
+          "descripcion": "Completa el formulario oficial RE-IAD/DNO-ADU-AYR-11 en formato Excel para la presentación de documentos en el proceso de renovación de garantías de operación y solvencia fiscal."
+        },
+        {
+          "titulo": "Requisitos específicos según tu figura de Auxiliar",
+          "descripcion": "Reúne la documentación específica correspondiente a tu categoría de Auxiliar de la Función Pública Aduanera y la póliza vigente del seguro de caución."
+        }
+      ],
+      "documentos_previos": [
+        {
+          "texto": "Descargar formulario RE-IAD/DNO-ADU-AYR-11 de renovación de auxiliares (XLSX)",
+          "url": "https://portal.sat.gob.gt/portal/descarga/4563/autorizacion-y-registro/77987/re-iad-dno-adu-ayr-11-renovacion-de-auxiliares-1.xlsx",
+          "externo": true
+        },
+        {
+          "texto": "Descargar requisitos específicos de documentación para la renovación de AFPA (PDF)",
+          "url": "https://portal.sat.gob.gt/portal/descarga/74/aduanas/4324/documentacion-para-la-renovacion-de-auxiliares-de-la-funcion-publica.pdf",
+          "externo": true
+        }
+      ],
+      "eyebrow_pasos": "Paso a paso",
+      "h2_pasos": "Cómo gestionar la renovación y presentar el seguro de caución",
+      "intro_pasos": "Sigue los lineamientos del manual de usuario externo aplicable a tu modalidad de auxiliar.",
+      "pasos": [
+        "Paso 1 — Descarga y completa el formulario RE-IAD/DNO-ADU-AYR-11 y verifica los requisitos específicos según tu categoría de Auxiliar.",
+        "Paso 2 — Ingresa tu solicitud de renovación siguiendo el manual aplicable (Manual general DG-IAD/DNO-ADU-AYR-22 o manuales específicos de transportistas, agentes aduaneros o courier).",
+        "Paso 3 — Presenta el seguro de caución conforme al Manual DG-IAD/DNO-ADU-AYR-23 ante la Unidad de Administración de Auxiliares de la Intendencia de Aduanas.",
+        "Paso 4 — Verifica la recepción del aviso automático en tu correo electrónico registrado y da seguimiento a la resolución favorable emitida por la autoridad aduanera."
+      ],
+      "cta_principal": {
+        "texto": "Descargar formulario RE-IAD/DNO-ADU-AYR-11 (XLSX)",
+        "url": "https://portal.sat.gob.gt/portal/descarga/15356/documentos-guia-u-orientacion/48359/manual-para-la-renovacion-de-auxiliares-de-la-funcion-publica.pdf",
+        "externo": true
+      },
+      "enlaces_secundarios": [
+        {
+          "texto": "Descargar Manual de Renovación de Transportista Aduanero DG-IAD-DNO-ADU-AYR-46 V.II (PDF)",
+          "url": "https://portal.sat.gob.gt/portal/descarga/15356/documentos-guia-u-orientacion/72085/dg-iad-dno-adu-ayr-46-ver-ii-manual-usua-ext-renov-transp-aduanero-vig-22-8-2023.pdf",
+          "externo": true
+        },
+        {
+          "texto": "Descargar Manual de Renovación de Depósito Aduanero y otros usuarios DG-IAD-DNO-AYR-50 V.I (PDF)",
+          "url": "https://portal.sat.gob.gt/portal/descarga/15356/documentos-guia-u-orientacion/73799/dg-iad-dno-ayr-50-ver-i-manual-de-renovacion-deposito-aduanero-y-otros-usuarios-2.pdf",
+          "externo": true
+        },
+        {
+          "texto": "Descargar manual de seguro de caución DG-IAD/DNO-ADU-AYR-23 (PDF)",
+          "url": "https://portal.sat.gob.gt/portal/descarga/15356/documentos-guia-u-orientacion/48361/manual-para-la-presentacion-del-seguro-de-caucion-a-la-unidad-de-auxiliares.pdf",
+          "externo": true
+        }
+      ],
+      "eyebrow_continuidad": "Resultado de la gestión",
+      "h2_continuidad": "¿Qué obtienes al finalizar?",
+      "que_sigue": [
+        {
+          "titulo": "Sello de recibido del Seguro de Caución",
+          "descripcion": "Recibes la constancia con el sello de recibido del seguro de caución presentado ante la unidad."
+        },
+        {
+          "titulo": "Aviso por correo y notificación en Agencia Virtual",
+          "descripcion": "Recibes el aviso automático en el correo electrónico consignado en tu solicitud y la notificación oficial en el buzón de tu Agencia Virtual."
+        }
+      ]
+    },
+    {
+      "slug": "procedimientos-aduanas--importacion-software",
+      "arquetipo": "TIPO-3",
+      "titulo_h1": "Guías para el proceso de importación de software (por descarga digital o en dispositivo físico)",
+      "bajada_lead": "Consulta las 2 guías oficiales de orientación de la Superintendencia de Administración Tributaria (SAT) para declarar y liquidar correctamente la importación de software adquirido por descarga digital o almacenado en un soporte físico.",
+      "menu_lateral": [
+        {
+          "id": "seccion-modalidades",
+          "label": "Modalidades de importación"
+        },
+        {
+          "id": "seccion-documentos",
+          "label": "Guías oficiales descargables (PDF)"
+        }
+      ],
+      "eyebrow_previos": "Orientación aduanera y tributaria",
+      "h2_previos": "Dos modalidades para importar software en Guatemala",
+      "intro_previos": "Selecciona la guía que corresponde al medio por el cual adquiriste o recibiste el programa informático.",
+      "datos_previos": [
+        {
+          "titulo": "Importación por descarga digital (vía electrónica)",
+          "descripcion": "Aplica cuando el software o licencia se adquiere y descarga directamente por internet sin que ingrese un soporte físico por las aduanas del país."
+        },
+        {
+          "titulo": "Importación almacenada en dispositivo físico",
+          "descripcion": "Aplica cuando el software ingresa al territorio aduanero nacional contenido en un medio o dispositivo de almacenamiento físico."
+        }
+      ],
+      "eyebrow_documentos": "Descargas oficiales",
+      "h2_documentos": "Guías operativas para la importación de software",
+      "intro_documentos": "Descarga el documento oficial en formato PDF según tu modalidad.",
+      "documentos": [
+        {
+          "titulo": "Guía para el proceso de importación de software por descarga digital",
+          "descripcion": "Lineamientos oficiales de la SAT sobre el tratamiento aduanero y tributario en la adquisición de software por vía electrónica (PDF).",
+          "url": "https://portal.sat.gob.gt/portal/descarga/15356/documentos-guia-u-orientacion/92456/guia-para-el-proceso-de-importacion-de-software",
+          "boton_texto": "Descargar guía de descarga digital (PDF)",
+          "externo": true
+        },
+        {
+          "titulo": "Guía para el proceso de importación de software almacenado en dispositivo",
+          "descripcion": "Lineamientos oficiales de la SAT para el despacho aduanero de software contenido en soportes o dispositivos físicos (PDF).",
+          "url": "https://portal.sat.gob.gt/portal/descarga/15356/documentos-guia-u-orientacion/92458/guia-para-el-proceso-de-importacion-de-software-almacenado-en-dispositivo",
+          "boton_texto": "Descargar guía en dispositivo físico (PDF)",
+          "externo": true
+        }
+      ]
+    },
+    {
+      "slug": "facilitacion-de-comercio--declaracion-anticipada",
+      "arquetipo": "TIPO-3",
+      "titulo_h1": "Declaración Anticipada de Mercancías: procedimientos, Aduana Digital y resoluciones",
+      "bajada_lead": "Accede a los 13 documentos oficiales de orientación, manuales de carga en el repositorio de Aduana Digital, resoluciones de la Instancia Ministerial y boletines sobre la transmisión anticipada de mercancías mediante la Declaración Única Centroamericana (DUCA) en formatos DUCA-F y DUCA-D ante la Superintendencia de Administración Tributaria (SAT).",
+      "menu_lateral": [
+        {
+          "id": "seccion-alcance",
+          "label": "Alcance de la Declaración Anticipada"
+        },
+        {
+          "id": "seccion-biblioteca",
+          "label": "Procedimientos, resoluciones y boletines (13 PDF)"
+        }
+      ],
+      "eyebrow_previos": "Agilización del despacho aduanero",
+      "h2_previos": "En qué consiste la modalidad de Declaración Anticipada",
+      "intro_previos": "Permite transmitir y validar la DUCA (formatos DUCA-F o DUCA-D) previo al arribo de las mercancías al puesto fronterizo o recinto aduanero, reduciendo tiempos de despacho.",
+      "datos_previos": [
+        {
+          "titulo": "Implementación en Puestos Fronterizos Integrados (GT-HN)",
+          "descripcion": "Incluye los procedimientos obligatorios y de orientación al usuario para operaciones entre Guatemala y Honduras bajo DUCA-F y DUCA-D."
+        },
+        {
+          "titulo": "Repositorio de documentos digitalizados «Aduana Digital»",
+          "descripcion": "Cuenta con el manual de usuario para la carga y consulta electrónica de los documentos de soporte bajo el esquema sin papeles."
+        },
+        {
+          "titulo": "Respaldo de la Instancia Ministerial",
+          "descripcion": "Compila las resoluciones vigentes (108-2023, 104-2022, 59-2019, 67-2019 y 91-2021) y los boletines informativos oficiales."
+        }
+      ],
+      "eyebrow_grupos_documentos": "Biblioteca oficial de Declaración Anticipada",
+      "h2_grupos_documentos": "Procedimientos de orientación, manuales de Aduana Digital y resoluciones (13)",
+      "intro_grupos_documentos": "Despliega el listado para descargar cualquiera de los 13 documentos en formato PDF.",
+      "grupos_documentos": [
+        {
+          "titulo": "Documentos oficiales de Declaración Anticipada (13)",
+          "tab_id": "DeclaraciónAnticipada",
+          "items": [
+            {
+              "descripcion": "Procedimiento de orientación para la implementación de la declaración anticipada de forma obligatoria entre Guatemala y honduras en los puestos fronterizos integrados (pdf)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/15429/declaracion-anticipada/81188/procedimiento-de-orientacion-al-usuario-duca-f-y-duca-d-declaracion-anticipada-gt-hn-2.pdf",
+              "boton_texto": "Descargar guía técnica (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Documento general de orientación para la carga y consulta de documentos, en el esquema documentos digitalizados en el repositorio de «aduana digital», para uso de usuarios internos y externos (pdf)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/15429/declaracion-anticipada/72290/manual-de-usuario-para-carga-y-consulta-de-documentos-aduana-digital-v-iv-3.pdf",
+              "boton_texto": "Descargar guía técnica (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Procedimiento de orientación al usuario DUCA-f y DUCA-d, declaración anticipada GT-hn (pdf)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/15429/declaracion-anticipada/52213/procedimiento-de-orientacion-al-usuario-duca-f-y-duca-d-declaracion-anticipada-gt-hn.pdf",
+              "boton_texto": "Descargar guía técnica (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Dg-iad-dno-adu-gde-80 documento de orientación al usuario interno y externo para el despacho aduanero de mercancías a través de la declaración anticipada de la DUCA-f (pdf)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/15429/declaracion-anticipada/71977/dg-iad-dno-adu-gde-80-para-el-despacho-aduanero-de-mercancias-de-la-declaracion-anticipada-duca-f-v1-1.pdf",
+              "boton_texto": "Descargar guía técnica (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Resolución instancia ministerial 108-2023 (pdf)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4376/declaracion-unica-aduanera-dua-gt/77813/resolucion-instancia-ministerial-no-108-2023.pdf",
+              "boton_texto": "Descargar resolución (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Resolución instancia ministerial-ua no.104-2022 (pdf)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4376/declaracion-unica-aduanera-dua-gt/64741/resolucion-instancia-ministerial-ua-no-104-2022.pdf",
+              "boton_texto": "Descargar resolución (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Resolución instancia ministerial-ua No. 59-2019 (pdf)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/12207/declaracion-unica-centroamericana-duca/38924/res-im-ua-59-2019.pdf",
+              "boton_texto": "Descargar resolución (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Resolución instancia ministerial-ua No. 67-2019 (pdf)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/12207/declaracion-unica-centroamericana-duca/39038/resolucion-instan-minis-ua-no-67-2019.pdf",
+              "boton_texto": "Descargar resolución (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Resolución UA-88-2021 de la instancia ministerial – Autorización repositorio de sieca documentos digitalizados para DUCA (pdf)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/15429/declaracion-anticipada/51395/resolucion-im-ua-88-2021-autorizacion-de-repositorio-de-sieca-documentos-digitalizados-para-duca.pdf",
+              "boton_texto": "Descargar resolución (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Resolución UA-83-2020 de la instancia ministerial – Prorroga de la implementación de declaración anticipada al 01 de junio de 2021 y declaración anticipada en aduana integrada corinto al 01 de marzo de 2021 (pdf)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/15429/declaracion-anticipada/49985/resolucion-im-ua-83-2020-prorroga-declaracion-anticipada-y-da-duca-f-aduana-integrada-corinto.pdf",
+              "boton_texto": "Descargar resolución (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Resolución UA-70-2019 de la instancia ministerial – Prorroga declaración anticipada al 04 de mayo del 2020 (pdf)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/15429/declaracion-anticipada/49984/resolucion-im-ua-70-2019-prorroga-plazo-declaracion-anticipada.pdf",
+              "boton_texto": "Descargar resolución (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Resolución UA-77-2020 de la instancia ministerial – Prorroga declaración anticipada al 01 de octubre del 2021 (pdf)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/15429/declaracion-anticipada/49983/resolucion-im-ua-77-2020-prorroga-plazo-declaracion-anticipada.pdf",
+              "boton_texto": "Descargar resolución (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Preguntas frecuentes",
+              "url": "https://portal.sat.gob.gt/portal/preguntas-frecuentes/temas-aduaneros/#1652982842610-e3187245-a17b",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            }
+          ]
+        }
+      ],
+      "cta_principal": {
+        "texto": "Descargar procedimiento de Declaración Anticipada GT-HN (PDF)",
+        "url": "https://portal.sat.gob.gt/portal/descarga/15429/declaracion-anticipada/81188/procedimiento-de-orientacion-al-usuario-duca-f-y-duca-d-declaracion-anticipada-gt-hn-2.pdf",
+        "externo": true
+      }
+    },
+    {
+      "slug": "sanciones-aplicables-a-la-importacion",
+      "arquetipo": "TIPO-3",
+      "titulo_h1": "Sanciones aplicables a la importación, exportación o tránsito aduanero de mercancías",
+      "bajada_lead": "Consulta la Ley Nacional de Aduanas (Decreto Número 14-2013 del Congreso de la República) y el procedimiento administrativo vigente de la Superintendencia de Administración Tributaria (SAT) para la aplicación de sanciones aduaneras.",
+      "menu_lateral": [
+        {
+          "id": "seccion-alcance",
+          "label": "Marco legal sancionatorio"
+        },
+        {
+          "id": "seccion-documentos",
+          "label": "Ley Nacional de Aduanas y procedimiento (PDF)"
+        },
+        {
+          "id": "seccion-enlaces",
+          "label": "Enlaces aduaneros relacionados"
+        }
+      ],
+      "eyebrow_previos": "Cumplimiento normativo aduanero",
+      "h2_previos": "Instrumentos que regulan las infracciones y sanciones aduaneras",
+      "intro_previos": "El régimen sancionatorio aplicable a las operaciones de importación, exportación y tránsito se rige por la legislación nacional y el procedimiento estandarizado de audiencia y resolución.",
+      "datos_previos": [
+        {
+          "titulo": "Ley Nacional de Aduanas (Decreto 14-2013)",
+          "descripcion": "Tipifica las infracciones aduaneras administrativas y tributarias y establece las multas y sanciones aplicables en Guatemala."
+        },
+        {
+          "titulo": "Procedimiento administrativo PR-IAD-DNO-PO-17",
+          "descripcion": "Regula paso a paso la notificación de audiencias, presentación de pruebas de descargo y emisión de resoluciones sancionatorias por parte del Servicio Aduanero."
+        }
+      ],
+      "eyebrow_documentos": "Descargas normativas",
+      "h2_documentos": "Ley Nacional de Aduanas y procedimiento de aplicación de sanciones",
+      "intro_documentos": "Descarga directamente ambos documentos oficiales en formato PDF.",
+      "documentos": [
+        {
+          "titulo": "Ley Nacional de Aduanas (Decreto Número 14-2013 del Congreso de la República)",
+          "descripcion": "Texto completo del Decreto Número 14-2013 que regula las infracciones y sanciones aduaneras (PDF).",
+          "url": "https://portal.sat.gob.gt/portal/descarga/2335/leyes-y-reformas/18384/decreto-numero-14-2013-ley-nacional-de-aduanas.pdf",
+          "boton_texto": "Descargar Decreto 14-2013 (PDF)",
+          "externo": true
+        },
+        {
+          "titulo": "Procedimiento para la aplicación de las sanciones reguladas en la Ley Nacional de Aduanas (PR-IAD-DNO-PO-17)",
+          "descripcion": "Procedimiento oficial de la Intendencia de Aduanas para el diligenciamiento de sanciones administrativas (PDF).",
+          "url": "https://portal.sat.gob.gt/portal/descarga/4566/gestion-posterior/30033/pr-iad-dno-po-17-procedimiento-para-la-aplicacion-de-las-sanciones-reguladas-en-la-ley-nacional-de-aduanas-publicar.pdf",
+          "boton_texto": "Descargar procedimiento PO-17 (PDF)",
+          "externo": true
+        }
+      ],
+      "eyebrow_grupos_documentos": "Navegación aduanera",
+      "h2_grupos_documentos": "Enlaces relacionados de la Intendencia de Aduanas",
+      "intro_grupos_documentos": "Consulta otros procedimientos, requisitos y servicios aduaneros.",
+      "grupos_documentos": [
+        {
+          "titulo": "Servicios y procedimientos de la Intendencia de Aduanas (4)",
+          "tab_id": "recursos-adicionales",
+          "items": [
+            {
+              "descripcion": "Gestiones Aduaneras",
+              "url": "https://portal.sat.gob.gt/portal/procedimientos-aduanas/",
+              "boton_texto": "Consultar gestiones aduaneras",
+              "externo": true
+            },
+            {
+              "descripcion": "Procedimientos de la Intendencia de Aduanas",
+              "url": "https://portal.sat.gob.gt/portal/manual-de-procedimientos-de-la-intendencia-de-aduanas",
+              "boton_texto": "Consultar procedimientos de aduanas",
+              "externo": true
+            },
+            {
+              "descripcion": "Requisitos de Aduanas",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-aduanas/",
+              "boton_texto": "Consultar requisitos aduaneros",
+              "externo": true
+            },
+            {
+              "descripcion": "Aduana Sin Papeles",
+              "url": "https://portal.sat.gob.gt/portal/aduana-sin-papeles/",
+              "boton_texto": "Consultar servicio aduanero",
+              "externo": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "subastas-y-donaciones-aduaneras",
+      "arquetipo": "TIPO-3",
+      "titulo_h1": "Subastas públicas aduaneras y donación de mercancías no adjudicadas",
+      "bajada_lead": "Consulta los avisos oficiales, bases de participación, listados de partidas de mercancías y vehículos para subasta pública o donación aduanera en las intendencias regionales de la Superintendencia de Administración Tributaria (SAT).",
+      "menu_lateral": [
+        {
+          "id": "seccion-modalidades",
+          "label": "Subastas (CAUCA) y Donaciones (RECAUCA)"
+        },
+        {
+          "id": "seccion-detalles",
+          "label": "Convocatorias por Gerencia Regional"
+        },
+        {
+          "id": "seccion-documentos",
+          "label": "Avisos, bases, listados y presentaciones"
+        }
+      ],
+      "eyebrow_previos": "Transparencia en disposición de mercancías",
+      "h2_previos": "Dos procesos públicos organizados por Gerencia Regional",
+      "intro_previos": "La Intendencia de Aduanas publica las convocatorias activas en las Gerencias Regionales Central, Occidente, Nororiente y Sur.",
+      "datos_previos": [
+        {
+          "titulo": "Marco legal de subastas y donaciones",
+          "descripcion": "Regulado conforme a los artículos 119 al 124 del Código Aduanero Uniforme Centroamericano (CAUCA) y los artículos 604 al 618 de su Reglamento (RECAUCA). Las mercancías no adjudicadas en subasta pueden ser objeto de donación a instituciones benéficas o dependencias del Estado."
+        },
+        {
+          "titulo": "Exención de impuestos en donaciones aduaneras",
+          "descripcion": "Las adjudicaciones de mercancías en donación no generan pago de tributos de importación, Impuesto al Valor Agregado (IVA) ni Impuesto Específico a la Primera Matrícula (IPRIMA)."
+        },
+        {
+          "titulo": "Presentaciones visuales de partidas",
+          "descripcion": "Incluye los catálogos ilustrados de las partidas de mercancías y vehículos disponibles tanto en subasta como en donación."
+        }
+      ],
+      "eyebrow_pasos": "Resumen de eventos publicados por región",
+      "h2_pasos": "Estado actual de subastas y donaciones por Gerencia Regional",
+      "intro_pasos": "Revisa los detalles de cada evento antes de descargar sus bases y formatos en el bloque inferior.",
+      "pasos": [
+        "Subasta Gerencia Regional Central (No. GRC-08-2026) — Aduana Interna ALPASA G3: 11 partidas con precio base total de Q366,584.08, programada el 13 de noviembre de 2026 a las 09:00 horas en 26 calle 7-25 Zona 11, oficina No. 2, Aduana Central SAT, Ciudad de Guatemala.",
+        "Subasta Gerencia Regional Nororiente (No. GRN-07-2026) — Aduana Santo Tomás de Castilla: 18 partidas con precio base total de Q214,330.75, programada el 27 de noviembre de 2026 a las 09:00 horas en el Centro de Formación Portuario de la Empresa Portuaria Nacional Santo Tomás de Castilla (Barrio El Pueblito).",
+        "Subasta Gerencia Regional Sur (No. GRS-06-2026) — Aduana Puerto Quetzal: 9 partidas con precio base total de Q49,617.60, programada el 19 de noviembre de 2026 a las 09:00 horas en el Centro de Formación y Capacitación de la Empresa Portuaria Quetzal (Aldea Puerta de Hierro, San José, Escuintla). En la Gerencia Regional Occidente no existen eventos activos en este momento.",
+        "Donaciones activas (Nororiente SPA GRN-05-2026 y Sur GRS-05-2026) — En Aduana Santo Tomás de Castilla se disponen 14 partidas libres de IVA de importación (SPA GRN-05-2026); y en Aduana Puerto Quetzal se disponen 2 partidas libres de tributos (No. GRS-05-2026, recepción de solicitudes del 8 de octubre de 2026 al 7 de enero de 2027). En las Gerencias Central y Occidente no existen donaciones activas en este momento."
+      ],
+      "eyebrow_grupos_documentos": "Documentación oficial por Gerencia Regional (26 documentos)",
+      "h2_grupos_documentos": "Avisos, bases de participación, listados de partidas, formatos y presentaciones",
+      "intro_grupos_documentos": "Despliega la Gerencia Regional de tu interés para descargar los avisos, bases, formatos de oferta y presentaciones de mercancías.",
+      "grupos_documentos": [
+        {
+          "titulo": "Gerencia regional central (5)",
+          "tab_id": "SubastaGRC",
+          "items": [
+            {
+              "descripcion": "Aviso de subasta pública aduanera No. GRC-08-2026",
+              "url": "https://portal.sat.gob.gt/portal/descarga/16508/grc/97599/1-aviso-de-subasta-publica-aduanera-no-grc-08-2026",
+              "boton_texto": "Descargar aviso oficial (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Bases de participación subasta pública aduanera No. GRC-08-2026",
+              "url": "https://portal.sat.gob.gt/portal/descarga/16508/grc/97601/2-bases-participacion-subasta-publica-aduanera",
+              "boton_texto": "Descargar bases de participación (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Formato de pago y retiro subasta pública aduanera No. GRC-08-2026",
+              "url": "https://portal.sat.gob.gt/portal/descarga/16508/grc/97598/3-formato-de-pago-y-retiro-de-mercancias-adjudicadas-spa-grc-08-2026",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Formato de lista de mercancías a subastarse para el público en general",
+              "url": "https://portal.sat.gob.gt/portal/descarga/16508/grc/97600/4-lista-de-mercancias-a-subastarse-spa-grc-08-2026",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Formato presentación partida de interés subasta No. GRN-08-2026",
+              "url": "https://portal.sat.gob.gt/portal/descarga/16508/grc/97602/5-presentacion-partida-de-interes-2",
+              "boton_texto": "Descargar presentación visual (PDF)",
+              "externo": true
+            }
+          ]
+        },
+        {
+          "titulo": "Gerencia regional nororiente (7)",
+          "tab_id": "SubastasGRN",
+          "items": [
+            {
+              "descripcion": "Aviso de subasta publica aduanera No. GRN-07-2026 astc",
+              "url": "https://portal.sat.gob.gt/portal/descarga/16514/grn/98125/1-aviso-de-subasta-publica-aduanera-no-grn-07-2026-astc",
+              "boton_texto": "Descargar aviso oficial (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Bases de participacion subasta publica aduanera No. GRN-07-2026 astc",
+              "url": "https://portal.sat.gob.gt/portal/descarga/16514/grn/98127/2-bases-de-participacion-subasta-publica-aduanera-no-grn-07-2026-astc",
+              "boton_texto": "Descargar bases de participación (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Formato de pago y retiro subasta publica aduanera No. GRN-07-2026 astc",
+              "url": "https://portal.sat.gob.gt/portal/descarga/16514/grn/98128/3-formato-de-pago-y-retiro-subasta-publica-aduanera-no-grn-07-2026-astc",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Listado de vehículos automotores spa GRN-07-2026 astc",
+              "url": "https://portal.sat.gob.gt/portal/descarga/16514/grn/98126/4-listado-de-vehiculos-automotores-spa-grn-07-2026-astc",
+              "boton_texto": "Descargar listado de mercancías (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Listado de mercancias spa GRN-07-2026 astc",
+              "url": "https://portal.sat.gob.gt/portal/descarga/16514/grn/98129/5-listado-de-mercancias-spa-grn-07-2026-astc",
+              "boton_texto": "Descargar listado de mercancías (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Formato presentacion partida de interes spa No. GRN-07-2026",
+              "url": "https://portal.sat.gob.gt/portal/descarga/16514/grn/98130/6-formato-presentacion-partida-de-interes-spa-no-grn-07-2026",
+              "boton_texto": "Descargar presentación visual (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Informacion adicional (IPRIMA y 25% del precio base)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/16514/grn/98131/7-informacion-adicional-iprima-y-25-del-precio-base-22",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            }
+          ]
+        },
+        {
+          "titulo": "Gerencia regional sur (5)",
+          "tab_id": "SubastasGRS",
+          "items": [
+            {
+              "descripcion": "Aviso de subasta pública aduanera No. GRS-06-2026",
+              "url": "https://portal.sat.gob.gt/portal/descarga/16474/grs/97652/1-subasta-publica-grs-06-2026-vf",
+              "boton_texto": "Descargar aviso oficial (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Bases de participación subasta pública aduanera No. GRS-06-2026",
+              "url": "https://portal.sat.gob.gt/portal/descarga/16474/grs/97653/2-formato-bases-grs-06-2026",
+              "boton_texto": "Descargar bases de participación (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Formato de pago y retiro subasta pública aduanera No. GRS-06-2026",
+              "url": "https://portal.sat.gob.gt/portal/descarga/16474/grs/97649/3-pago-y-retiro-grs-06-2026",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Formato de lista de mercancías a subastarse para el público en general",
+              "url": "https://portal.sat.gob.gt/portal/descarga/16474/grs/97650/4-re-iad-dno-adu-goa-28-lista-merc-diversas-a-subastarse-para-publico-gral-2",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Formato presentación partida de interés subasta No. GRS-06-2026",
+              "url": "https://portal.sat.gob.gt/portal/descarga/16474/grs/97651/5-re-iad-dno-adu-goa-07-presentacion-partida-de-interes-grs-06-2026",
+              "boton_texto": "Descargar presentación visual (PDF)",
+              "externo": true
+            }
+          ]
+        },
+        {
+          "titulo": "Gerencia regional nororiente (3)",
+          "tab_id": "DonacionesGRN",
+          "items": [
+            {
+              "descripcion": "Aviso de donación spa GRN-05-2026",
+              "url": "https://portal.sat.gob.gt/portal/descarga/16549/grn/97317/1-aviso-donacion-spa-grn-05-2026",
+              "boton_texto": "Descargar aviso oficial (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Listado de mercancías para donación spa GRN-05-2026",
+              "url": "https://portal.sat.gob.gt/portal/descarga/16549/grn/97319/2-listado-mercancias-para-donacion-spa-grn-05-2026",
+              "boton_texto": "Descargar listado de mercancías (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Información adicional sobre el proceso de donación de mercancías spa GRN-05-2026",
+              "url": "https://portal.sat.gob.gt/portal/descarga/16549/grn/97318/3-informacion-adicional-sobre-el-proceso-de-donacion-de-mercancias-spa-grn-05-2026",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            }
+          ]
+        },
+        {
+          "titulo": "Gerencia regional sur (3)",
+          "tab_id": "DonacionesGRS",
+          "items": [
+            {
+              "descripcion": "Aviso de donación GRS-05-2026",
+              "url": "https://portal.sat.gob.gt/portal/descarga/16513/grs/97283/1-aviso-de-donacion-grs-05-2026",
+              "boton_texto": "Descargar aviso oficial (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Información sobre el proceso GRS-05-2026",
+              "url": "https://portal.sat.gob.gt/portal/descarga/16513/grs/97282/2-informacion-sobre-el-proceso-grs-05-2026",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Listado de mercancías No. GRS-05-2026",
+              "url": "https://portal.sat.gob.gt/portal/descarga/16513/grs/97284/3-listado-de-mercancias-no-grs-05-2026",
+              "boton_texto": "Descargar listado de mercancías (PDF)",
+              "externo": true
+            }
+          ]
+        },
+        {
+          "titulo": "Presentaciones visuales de partidas de subastas y donaciones (pdf) (3)",
+          "tab_id": "recursos-adicionales",
+          "items": [
+            {
+              "descripcion": "Presentación de mercancías No. GRC-08-2026 (pdf)",
+              "url": "https://portal.sat.gob.gt/portal/wp-content/uploads/2026/11/PRESENTACION-SUBASTA-NO.-GRC-08-2026.pdf",
+              "boton_texto": "Descargar presentación visual (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Presentación mercancías en donación spa GRN-05-2026",
+              "url": "https://portal.sat.gob.gt/portal/descarga/16549/grn/97320/4-presentacion-mercancias-en-donacion-spa-grn-05-2026",
+              "boton_texto": "Descargar presentación visual (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Presentación donación GRS-03-2026",
+              "url": "https://portal.sat.gob.gt/portal/descarga/16513/grs/97285/4-presentacion-donacion-grs-03-2026-2",
+              "boton_texto": "Descargar presentación visual (PDF)",
+              "externo": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "registro-ampliacion-atc",
+      "arquetipo": "TIPO-4",
+      "titulo_h1": "Registrar solicitud de ampliación de Admisión Temporal de Equipo de Carga (ATC)",
+      "bajada_lead": "Ingresa al formulario electrónico público de la Superintendencia de Administración Tributaria (SAT) para registrar solicitudes de ampliación del plazo de permanencia en el país de contenedores y equipo de carga bajo el régimen de ATC.",
+      "menu_lateral": [
+        {
+          "id": "seccion-alcance",
+          "label": "Datos requeridos"
+        },
+        {
+          "id": "seccion-pasos",
+          "label": "Cómo registrar la ampliación"
+        }
+      ],
+      "eyebrow_previos": "Antes de consultar",
+      "h2_previos": "Qué necesitas para registrar la ampliación en línea",
+      "intro_previos": "Ten a la mano los datos del formulario ATC original antes de abrir el aplicativo.",
+      "datos_previos": [
+        {
+          "titulo": "Datos del formulario ATC original",
+          "descripcion": "Ten a la mano el número de formulario ATC original y los datos del transportista registrado."
+        },
+        {
+          "titulo": "Solicitud dentro del plazo legal",
+          "descripcion": "Recuerda presentar la solicitud de ampliación antes del vencimiento del plazo de permanencia autorizado inicialmente."
+        }
+      ],
+      "cta_principal": {
+        "texto": "Ingresar al formulario de ampliación de ATC",
+        "url": "https://farm3.sat.gob.gt/aduana-publico/aduana/carga/solicitud/registrarAmpliacionATC.jsf",
+        "externo": true
+      },
+      "eyebrow_panel": "Cómo funciona",
+      "h2_panel": "Pasos para registrar tu solicitud de ampliación ATC",
+      "intro_panel": "El servicio se ejecuta directamente en el portal aduanero de la SAT.",
+      "pasos": [
+        "Paso 1 — Haz clic en el botón principal para abrir el formulario electrónico de Registro de Ampliación ATC.",
+        "Paso 2 — Ingresa los datos de identificación del equipo de carga y del formulario ATC vigente.",
+        "Paso 3 — Completa la justificación de la ampliación, envía el registro y conserva tu comprobante de operación."
+      ]
+    },
+    {
+      "slug": "culminacion-de-admision-temporal-de-equipo-de",
+      "arquetipo": "TIPO-1",
+      "titulo_h1": "Culminar el régimen de Admisión Temporal de Equipo de Carga (ATC) en aduana de salida",
+      "bajada_lead": "Presenta ante una aduana de salida de la Superintendencia de Administración Tributaria (SAT) el medio de transporte y el formulario ATC número SAT-8349. La autoridad aduanera inspecciona el equipo, valida el plazo de permanencia y efectúa el cierre definitivo del régimen.",
+      "menu_lateral": [
+        {
+          "id": "seccion-requisitos",
+          "label": "Formulario SAT-8349 y condiciones"
+        },
+        {
+          "id": "seccion-pasos",
+          "label": "Paso a paso en garita de salida"
+        },
+        {
+          "id": "seccion-normativa",
+          "label": "Procedimiento PR-IAD/DNO-CA-03 y audios"
+        }
+      ],
+      "eyebrow_requisitos": "Antes de empezar",
+      "h2_requisitos": "¿Quién realiza la gestión y qué requisitos aplican?",
+      "intro_requisitos": "La gestión es realizada por el transportista o piloto autorizado por la SAT en cualquiera de las aduanas de salida del país.",
+      "requisitos": [
+        {
+          "titulo": "Formulario ATC No. SAT-8349 original",
+          "descripcion": "Presentar el ejemplar del formulario ATC No. SAT-8349 ante el personal asignado en la garita de ingreso o área habilitada de la aduana de salida."
+        },
+        {
+          "titulo": "Coincidencia física del equipo y vigencia del plazo",
+          "descripcion": "Los datos consignados en el formulario ATC deben coincidir exactamente con el medio de transporte presentado físicamente y encontrarse dentro del plazo legal según el procedimiento PR-IAD/DNO-CA-03."
+        }
+      ],
+      "eyebrow_pasos": "Paso a paso",
+      "h2_pasos": "Cómo operar la culminación del formulario ATC en la aduana de salida",
+      "intro_pasos": "Se ejecuta conforme a las normas 20, 21 y 22 del Procedimiento PR-IAD/DNO-CA-03.",
+      "pasos": [
+        "Paso 1 — Conduce el medio de transporte al área de inspección aduanera designada en la aduana de salida correspondiente.",
+        "Paso 2 — Presenta el formulario SAT-8349 y la documentación de transporte ante el oficial aduanero para la revisión física y documental.",
+        "Paso 3 — El funcionario de aduana verifica el número de contenedor, marchamos y plazo de permanencia, y registra en el sistema informático la culminación oficial del régimen."
+      ],
+      "cta_principal": {
+        "texto": "Consultar procedimiento PR-IAD/DNO-CA-03 en el Manual de Procedimientos",
+        "url": "https://portal.sat.gob.gt/portal/manual-de-procedimientos-de-la-intendencia-de-aduanas/#1604422356006-e9c121f8-3e22",
+        "externo": true
+      },
+      "enlaces_secundarios": [
+        {
+          "texto": "Escuchar guía en idioma K'iche' (MP3)",
+          "url": "https://mx.ivoox.com/es/culminacion-de-admision-temporal-de-equipo-de-carga-k-039-iche-039_md_45167511_wp_1.mp3",
+          "externo": true
+        },
+        {
+          "texto": "Escuchar guía en idioma Mam (MP3)",
+          "url": "https://mx.ivoox.com/es/culminacion-de-admision-temporal-de-equipo-de-carga-mam_md_45166688_wp_1.mp3",
+          "externo": true
+        },
+        {
+          "texto": "Escuchar guía en idioma Q'eqchi' (MP3)",
+          "url": "https://mx.ivoox.com/es/culminacion-de-admision-temporal-de-equipo-de-carga-q-039-eqchi-039_md_45168109_wp_1.mp3",
+          "externo": true
+        }
+      ],
+      "eyebrow_continuidad": "Resultado de la gestión",
+      "h2_continuidad": "¿Qué obtienes al finalizar?",
+      "que_sigue": [
+        {
+          "titulo": "Ejemplar del formulario ATC No. 8349 firmado y sellado",
+          "descripcion": "Recibes el ejemplar del formulario con fecha, firma y sello aduanero acreditando la culminación del régimen de admisión temporal."
+        }
+      ]
+    },
+    {
+      "slug": "devolucion-de-impuestos-de-admision-temporal-de",
+      "arquetipo": "TIPO-1",
+      "titulo_h1": "Solicitar devolución del impuesto de Admisión Temporal de Equipos de Carga (ATC)",
+      "bajada_lead": "Presenta en línea desde tu Agencia Virtual la solicitud de devolución de pagos indebidos del impuesto de ATC ante la Superintendencia de Administración Tributaria (SAT) mediante el formulario electrónico SAT-2410.",
+      "menu_lateral": [
+        {
+          "id": "seccion-requisitos",
+          "label": "Memorial, acta notarial y copias certificadas"
+        },
+        {
+          "id": "seccion-pasos",
+          "label": "Paso a paso en Agencia Virtual (SAT-2410)"
+        },
+        {
+          "id": "seccion-resultado",
+          "label": "Confirmación por correo"
+        }
+      ],
+      "eyebrow_requisitos": "Antes de empezar",
+      "h2_requisitos": "¿Qué documentos debes adjuntar a tu solicitud?",
+      "intro_requisitos": "Asegúrate de cumplir con los siguientes requisitos antes de presentar tu solicitud de devolución ante la SAT:",
+      "requisitos": [
+        {
+          "titulo": "RTU Digital y personería jurídica",
+          "descripcion": "Estar inscrito y actualizado en el Registro Tributario Unificado (RTU) Digital con representante legal vigente (para personas jurídicas) y datos de contacto activos."
+        },
+        {
+          "titulo": "Comprobante de pago y boleta SAT-2410",
+          "descripcion": "Copia digitalizada del formulario electrónico SAT-2410 y comprobantes bancarios donde conste el pago indebido o en exceso realizado a la SAT."
+        },
+        {
+          "titulo": "Justificación técnica y legal",
+          "descripcion": "Memorial o documento explicativo con los motivos claros y el fundamento fáctico de la solicitud de devolución del tributo aduanero."
+        }
+      ],
+      "eyebrow_pasos": "Paso a paso",
+      "h2_pasos": "Cómo enviar la solicitud de devolución en Agencia Virtual",
+      "intro_pasos": "Realiza el envío electrónico desde el menú de solicitudes del contribuyente.",
+      "pasos": [
+        "Paso 1 — Ingresa a tu Agencia Virtual en el Portal SAT con tu Número de Identificación Tributaria (NIT) y dirígete al menú de Solicitudes.",
+        "Paso 2 — Completa el formulario electrónico SAT-2410, adjunta los comprobantes de pago y la justificación técnica en formato PDF.",
+        "Paso 3 — Envía la solicitud y da seguimiento a la resolución electrónica emitida por la Intendencia de Aduanas en tu buzón de notificaciones."
+      ],
+      "eyebrow_continuidad": "Resultado de la gestión",
+      "h2_continuidad": "¿Qué obtienes al enviar el formulario?",
+      "que_sigue": [
+        {
+          "titulo": "Correo de confirmación de recepción",
+          "descripcion": "Recibes un correo electrónico en la dirección registrada en Agencia Virtual confirmando que la SAT recibió satisfactoriamente tu solicitud."
+        }
+      ]
+    },
+    {
+      "slug": "habilitacion-emision-cais",
+      "arquetipo": "TIPO-1",
+      "titulo_h1": "Habilitarse para emitir Constancias de Adquisición de Insumos y Servicios (CAIS)",
+      "bajada_lead": "Obtén el acceso en tu Agencia Virtual para emitir CAIS de producción local no afectos al Impuesto al Valor Agregado (IVA), exclusivo para empresas calificadas bajo el Decreto Número 29-89 del Congreso de la República ante la Superintendencia de Administración Tributaria (SAT).",
+      "menu_lateral": [
+        {
+          "id": "seccion-requisitos",
+          "label": "Requisitos en RTU Digital y FEL"
+        },
+        {
+          "id": "seccion-pasos",
+          "label": "Paso a paso para habilitarse"
+        },
+        {
+          "id": "seccion-resultado",
+          "label": "Emisión de CAIS en Agencia Virtual"
+        }
+      ],
+      "eyebrow_requisitos": "Antes de empezar",
+      "h2_requisitos": "¿Qué condiciones debes cumplir antes de solicitar la habilitación?",
+      "intro_requisitos": "Aplica tanto para Persona Individual como para Persona Jurídica amparada en el Decreto 29-89 (Ley de Fomento y Desarrollo de la Actividad Exportadora y de Maquila) y sus reformas.",
+      "requisitos": [
+        {
+          "titulo": "Establecimiento calificado bajo Decreto 29-89 en RTU Digital",
+          "descripcion": "Estar actualizado en el Registro Tributario Unificado (RTU) Digital con al menos un establecimiento activo registrado con: Clasificación “Beneficio Fiscal Temporal”, Tipo “Maquila Decreto 29-89 y sus Reformas” y Característica Especial “Decreto 29-89”."
+        },
+        {
+          "titulo": "Habilitación en el Régimen FEL",
+          "descripcion": "Encontrarse formalmente habilitado como emisor en el Régimen de Factura Electrónica en Línea (FEL)."
+        }
+      ],
+      "nota_requisito": "Importante: Las CAIS tienen una vigencia vinculada a la resolución de calificación de maquila y exención fiscal emitida por el Ministerio de Economía.",
+      "eyebrow_pasos": "Paso a paso",
+      "h2_pasos": "Cómo habilitar la emisión de constancias CAIS",
+      "intro_pasos": "Cumple estos dos pasos desde tu Agencia Virtual.",
+      "pasos": [
+        "Paso 1 — Actualiza tus datos en el RTU Digital verificando que tu establecimiento activo cuente con la clasificación formal del Decreto 29-89.",
+        "Paso 2 — Habilítate como emisor en el Régimen FEL desde tu Agencia Virtual de la SAT.",
+        "Paso 3 — Ingresa a tu Agencia Virtual para acceder al módulo de emisión de CAIS y comenzar a generar constancias electrónicas para tus proveedores locales."
+      ],
+      "cta_principal": {
+        "texto": "Solicitar usuario de Agencia Virtual SAT",
+        "url": "https://portal.sat.gob.gt/portal/solicitud-usuario-agencia-virtual",
+        "externo": true
+      },
+      "eyebrow_continuidad": "Resultado de la gestión",
+      "h2_continuidad": "¿Qué obtienes al finalizar?",
+      "que_sigue": [
+        {
+          "titulo": "Acceso habilitado para emitir CAIS en Agencia Virtual",
+          "descripcion": "Queda activo en tu Agencia Virtual el servicio para emitir CAIS a tus proveedores locales."
+        }
+      ]
+    },
+    {
+      "slug": "manual-de-procedimientos-de-la-intendencia-de--aduanero-traslado",
+      "arquetipo": "TIPO-3",
+      "titulo_h1": "Procedimientos aduaneros de Gestión Posterior, transferencias en regímenes especiales, garantías y tránsito",
+      "bajada_lead": "Descarga los 13 procedimientos oficiales de Gestión Posterior de la Intendencia de Aduanas de la Superintendencia de Administración Tributaria (SAT), incluyendo la transferencia de mercancías entre usuarios de Zona Franca, Zona Libre de Industria y Comercio Santo Tomás de Castilla (ZOLIC) y Zonas de Desarrollo Económico Especial Público (ZDEEP).",
+      "menu_lateral": [
+        {
+          "id": "seccion-alcance",
+          "label": "Ámbitos de Gestión Posterior"
+        },
+        {
+          "id": "seccion-biblioteca",
+          "label": "13 procedimientos oficiales (PDF)"
+        }
+      ],
+      "eyebrow_previos": "Manual de Procedimientos de la Intendencia de Aduanas",
+      "h2_previos": "Qué regulan los procedimientos de Gestión Posterior",
+      "intro_previos": "Agrupa los procedimientos normativos posteriores al despacho aduanero, operaciones en regímenes especiales y zonas francas/ZDEEP, control de garantías y régimen sancionatorio.",
+      "datos_previos": [
+        {
+          "titulo": "Zonas Francas, ZOLIC y ZDEEP (GPO-01, GPO-02 y GPO-03)",
+          "descripcion": "Regula el control posterior de regímenes especiales, la transferencia de mercancías entre usuarios de una misma Zona Franca, ZOLIC o ZDEEP y el cierre de operaciones de usuarios y entidades administradoras."
+        },
+        {
+          "titulo": "Destrucción, donación, garantías y muestras (GPO-07 al GPO-13)",
+          "descripcion": "Establece los pasos para destrucción de mercancías bajo control aduanero, donación de mercancías, administración de garantías y manejo de muestras en el Departamento de Gestión Técnica."
+        },
+        {
+          "titulo": "Impugnaciones, tránsito y sanciones (GPO-18 al PO-17)",
+          "descripcion": "Norma el tratamiento de mercancía incautada, procedimientos administrativos derivados del despacho, impugnación de resoluciones, control del tránsito aduanero, venta de mercancías perecederas y aplicación de sanciones de la Ley Nacional de Aduanas."
+        }
+      ],
+      "eyebrow_grupos_documentos": "Biblioteca oficial de Gestión Posterior (13 procedimientos)",
+      "h2_grupos_documentos": "Procedimientos vigentes para descarga directa (PDF)",
+      "intro_grupos_documentos": "Despliega el listado para descargar el procedimiento oficial que necesitas aplicar.",
+      "grupos_documentos": [
+        {
+          "titulo": "Procedimientos de Gestión Posterior y regímenes especiales (13)",
+          "tab_id": "1604422422212-34e75916-0886",
+          "items": [
+            {
+              "descripcion": "PR-IAD/DNO-ADU-GPO-01 — Procedimiento para el control posterior de los regímenes aduaneros especiales, versión II . (vigente a partir del 12 de diciembre de 2022) (pdf)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4566/gestion-posterior/66854/procedimiento-para-el-control-posterior-de-los-regimenes-aduaneros-especiales-pr-iad-dno-adu-gpo-01.pdf",
+              "boton_texto": "Descargar procedimiento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "PR-IAD/DNO-ADU-GPO-02 — Procedimiento para la transferencia de mercancías entre usuarios de una misma zona franca, de la zona libre de industria y comercio Santo Tomás de Castilla –ZOLIC– y de una misma zona de desarrollo económico especial pública – ZDEEP– , versión II (vigente a partir del 27 de mayo del 2021) (pdf)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4566/gestion-posterior/51859/pr-iad-dno-adu-gpo-02-procedimiento-para-la-transferencia-de-mercancia-entre-usuarios-de-una-misma-zona-franca.pdf",
+              "boton_texto": "Descargar procedimiento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "PR-IAD-DNO-ADU-GPO-03 — Cierre operac usua y entid. Administ. Zf y ZDEEP; usua ZOLIC y usua ZDEEP, versión III (vigente a partir del 2 junio del 2023) (pdf)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4566/gestion-posterior/70571/pr-iad-dno-adu-gpo-03-cierre-operac-usua-y-entid-administ-zf-y-zdeep-usua-zolic-y-usua-zdeep-vig-desde-2-6-2023.pdf",
+              "boton_texto": "Descargar procedimiento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "PR-IAD/DNO-ADU-GPO-07 — Procedimiento para la destrucción de mercancías bajo control aduanero . v. IV (vig. 20 de diciembre de 2024) (pdf)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4566/gestion-posterior/82891/pr-iad-dno-adu-gpo-07-v-iv-procedimiento-para-la-destruccion-de-mercancias-bajo-control-aduanero-vig-20-12-2024.pdf",
+              "boton_texto": "Descargar procedimiento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "PR-IAD/DNO-ADU-GPO-09 — Procedimiento para la donación de mercancías versión II (vigente a partir del 11 de mayo de 2022) (pdf)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4566/gestion-posterior/61721/procedimiento-donacion-de-mercancias-1.pdf",
+              "boton_texto": "Descargar procedimiento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "PR-IAD-DNO-ADU-GPO-10 — Procedimiento para la administración de garantías, (versión III, vig. 5 de diciembre de 2025)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4566/gestion-posterior/91495/pr-iad-dno-adu-gpo-10-proc-para-la-administracion-de-garantias-version-iii-vig-05-12-2025",
+              "boton_texto": "Descargar procedimiento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "PR-IAD/DNO-ADU-GPO-13 — Procedimiento para la recepción, almacenamiento y devolución de muestras en las unidades que integran el departamento de gestión técnica de las mercancías versión II (vigente a partir del 02 de octubre de 2024) (pdf)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4566/gestion-posterior/81310/pr-iad-dno-adu-gpo-13-version-ii-vigente-a-partir-del-02-de-octubre-de-2024.pdf",
+              "boton_texto": "Descargar procedimiento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "PR-IAD/DNO-ADU-GPO-18 — Procedimiento administrativo para el tratamiento de la mercancía incautada que constituye infracción tributaria, versión II ( (vigente a partir del 13 de noviembre de 2020) (pdf)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4566/gestion-posterior/47829/pr-iad-dno-adu-gpo-18-procedimiento-administrativo-para-el-tratamiento-de-la-mercancia-incautada-que-constituye-infraccion-tributaria.pdf",
+              "boton_texto": "Descargar procedimiento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "PR-IAD/DNO-ADU-GPO-19 — Procedimiento administrativo derivado del despacho aduanero versión I (vigente a partir del 14 de julio de 2022) (pdf)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4566/gestion-posterior/63684/procedimiento-administrativo-derivado-del-despacho-aduanero_pr-iad-dno-adu-gpo-19-version-i.pdf",
+              "boton_texto": "Descargar procedimiento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "PR-IAD/DNO-ADU-GPO-20 — Procedimiento para la impugnación de resoluciones y actos del servicio aduanero versión II (vigente a partir del 20 de junio de 2025) (pdf)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4566/gestion-posterior/87293/pr-iad-dno-adu-gpo-20-v-ii-procedimiento-para-la-impugnacion-de-resoluciones-y-actos-del-servicio-aduanero-vig-20-06-2025.pdf",
+              "boton_texto": "Descargar procedimiento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "PR-IAD/DNO-PO-04 — Procedimiento para el control del tránsito aduanero (vigente a partir del 02 de enero de 2018) (pdf)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4566/gestion-posterior/18555/pr-iad-dno-po-04-procedimiento-para-el-control-del-transito-aduanero-2.pdf",
+              "boton_texto": "Descargar procedimiento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "PR-IAD/DNO-PO-08 — Procedimiento para la venta de mercancías objeto del delito de defraudación aduanera que sean de fácil deterioro o descomposición. (Vigente a partir del 1 de octubre de 2018) (pdf)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4566/gestion-posterior/29812/pr-iad-dno-po-08-procedimiento-para-la-venta-de-mercancias-objeto-del-delito-de-defraudacion-aduanera-que-sean-de-facil-deterioro-o-descomposicion-vigente-a-partir-del-1-de-octubre-de-2018.pdf",
+              "boton_texto": "Descargar procedimiento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "PR-IAD/DNO-PO-17 — Procedimiento para la aplicación de las sanciones reguladas en la ley nacional de aduanas. (Vigente a partir del 8 de octubre de 2018) (pdf)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4566/gestion-posterior/30033/pr-iad-dno-po-17-procedimiento-para-la-aplicacion-de-las-sanciones-reguladas-en-la-ley-nacional-de-aduanas-publicar.pdf",
+              "boton_texto": "Descargar procedimiento (PDF)",
+              "externo": true
+            }
+          ]
+        }
+      ],
+      "cta_principal": {
+        "texto": "Descargar procedimiento de transferencia en Zona Franca, ZOLIC y ZDEEP GPO-02 (PDF)",
+        "url": "https://portal.sat.gob.gt/portal/descarga/4566/gestion-posterior/51859/pr-iad-dno-adu-gpo-02-procedimiento-para-la-transferencia-de-mercancia-entre-usuarios-de-una-misma-zona-franca.pdf",
+        "externo": true
+      }
+    },
+    {
+      "slug": "auxiliares-de-la-funcion-publica",
+      "arquetipo": "TIPO-3",
+      "titulo_h1": "Directorio de Auxiliares de la Función Pública Aduanera (AFPA) activos y récord de transmisión",
+      "bajada_lead": "Consulta y descarga los listados oficiales actualizados de Auxiliares de la Función Pública Aduanera registrados y activos ante la Superintendencia de Administración Tributaria (SAT) conforme al Artículo 18 del Código Aduanero Uniforme Centroamericano (CAUCA).",
+      "menu_lateral": [
+        {
+          "id": "seccion-alcance",
+          "label": "Categorías de AFPA (Art. 18 CAUCA)"
+        },
+        {
+          "id": "seccion-biblioteca",
+          "label": "Listados de AFPA activos y récord de transmisión"
+        }
+      ],
+      "eyebrow_previos": "Registro público aduanero",
+      "h2_previos": "¿Quiénes integran los listados de Auxiliares de la Función Pública Aduanera?",
+      "intro_previos": "De conformidad con el Artículo 18 del CAUCA, son las personas naturales o jurídicas, públicas o privadas, que participan habitualmente ante el Servicio Aduanero en nombre propio o de terceros en la gestión aduanera.",
+      "datos_previos": [
+        {
+          "titulo": "8 listados oficiales de AFPA activos",
+          "descripcion": "Incluye los padrones vigentes de: 1) Agentes Aduaneros, 2) Almacenes Fiscales, 3) Apoderados Especiales Aduaneros, 4) Consolidadoras y Desconsolidadoras de Carga, 5) Empresas de Entrega Rápida o Courier, 6) Depósitos Aduaneros, 7) Transportistas Aduaneros y 8) Desarrolladores de Zonas de Desarrollo Económico Especial Públicas (ZDEEP)."
+        },
+        {
+          "titulo": "Récord de transmisión de declaraciones aduaneras",
+          "descripcion": "Publica también el reporte estadístico del récord de transmisión de declaraciones aduaneras de los Agentes Aduaneros activos."
+        }
+      ],
+      "eyebrow_grupos_documentos": "Listados oficiales descargables",
+      "h2_grupos_documentos": "Padrones de Auxiliares activos, récord de transmisión y enlaces aduaneros",
+      "intro_grupos_documentos": "Despliega cada sección para descargar el listado oficial actualizado.",
+      "grupos_documentos": [
+        {
+          "titulo": "Listados oficiales de AFPA activos (PDF)",
+          "tab_id": "1640803066735-182c7521-8c7f",
+          "items": [
+            {
+              "descripcion": "Agentes aduaneros",
+              "url": "https://portal.sat.gob.gt/portal/descarga/5321/auxiliares-de-la-funcion-publica/97660/agentes-aduaneros-activos-31-de-octubre-de-2026",
+              "boton_texto": "Descargar listado oficial (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Almacenes fiscales",
+              "url": "https://portal.sat.gob.gt/portal/descarga/5321/auxiliares-de-la-funcion-publica/97656/almacenes-fiscalesactivos-31-de-octubre-de-2026",
+              "boton_texto": "Descargar listado oficial (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Apoderado especial aduanero",
+              "url": "https://portal.sat.gob.gt/portal/descarga/5321/auxiliares-de-la-funcion-publica/97655/apoderado-especial-aduaneroactivo-31-de-octubre-de-2026",
+              "boton_texto": "Descargar listado oficial (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Consolidadora y desconsolidadoras de carga",
+              "url": "https://portal.sat.gob.gt/portal/descarga/5321/auxiliares-de-la-funcion-publica/97657/consolidadoras-y-desconsolidadoras-de-carga-activos-31-de-octubre-de-2026",
+              "boton_texto": "Descargar listado oficial (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Courier",
+              "url": "https://portal.sat.gob.gt/portal/descarga/5321/auxiliares-de-la-funcion-publica/97662/empresas-de-entrega-rapida-o-courier-activos-al-31-de-octubre-de-2026",
+              "boton_texto": "Descargar listado oficial (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Depósitos aduaneros",
+              "url": "https://portal.sat.gob.gt/portal/descarga/5321/auxiliares-de-la-funcion-publica/97659/depositos-aduaneros-activos-al-31-de-ocrubre-de-2026",
+              "boton_texto": "Descargar listado oficial (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Transportistas aduaneros",
+              "url": "https://portal.sat.gob.gt/portal/descarga/5321/auxiliares-de-la-funcion-publica/97661/transportistas-aduaneros-activos-al-31-de-octubre-de-2026",
+              "boton_texto": "Descargar listado oficial (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "-Zdeep-",
+              "url": "https://portal.sat.gob.gt/portal/descarga/5321/auxiliares-de-la-funcion-publica/97658/desarrolladores-de-las-zonas-de-desarrollo-economico-especial-publicas-zdeep-activos-al-31-de-octubre-de-2026",
+              "boton_texto": "Descargar listado oficial (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Agentes aduaneros",
+              "url": "https://portal.sat.gob.gt/portal/descarga/16297/record-de-transmision-de-declaraciones-aduaneras/97604/02_record-de-transmision-de-declaraciones-agentes-aduaneros-01-01-2026-al-30-09-2026",
+              "boton_texto": "Descargar listado oficial (PDF)",
+              "externo": true
+            }
+          ]
+        },
+        {
+          "titulo": "Servicios y procedimientos aduaneros relacionados",
+          "tab_id": "recursos-adicionales",
+          "items": [
+            {
+              "descripcion": "Gestiones Aduaneras",
+              "url": "https://portal.sat.gob.gt/portal/procedimientos-aduanas/",
+              "boton_texto": "Consultar gestiones aduaneras",
+              "externo": true
+            },
+            {
+              "descripcion": "Procedimientos de la Intendencia de Aduanas",
+              "url": "https://portal.sat.gob.gt/portal/manual-de-procedimientos-de-la-intendencia-de-aduanas",
+              "boton_texto": "Consultar procedimientos aduaneros",
+              "externo": true
+            },
+            {
+              "descripcion": "Requisitos de Aduanas",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-aduanas/",
+              "boton_texto": "Consultar requisitos de aduanas",
+              "externo": true
+            },
+            {
+              "descripcion": "Aduana Sin Papeles",
+              "url": "https://portal.sat.gob.gt/portal/aduana-sin-papeles/",
+              "boton_texto": "Consultar servicio aduanero",
+              "externo": true
+            }
+          ]
+        }
+      ],
+      "cta_principal": {
+        "texto": "Descargar listado de Desarrolladores de ZDEEP activos (PDF)",
+        "url": "https://portal.sat.gob.gt/portal/descarga/5321/auxiliares-de-la-funcion-publica/97658/desarrolladores-de-las-zonas-de-desarrollo-economico-especial-publicas-zdeep-activos-al-31-de-octubre-de-2026",
+        "externo": true
+      }
+    },
+    {
+      "slug": "efactura",
+      "arquetipo": "TIPO-3",
+      "titulo_h1": "Régimen de Factura Electrónica en Línea (FEL): acuerdos, módulos y aplicación móvil",
+      "bajada_lead": "Conoce el modelo operativo del régimen de facturación electrónica de la Superintendencia de Administración Tributaria (SAT), creado mediante el Acuerdo de Directorio Número 13-2018 para la emisión, transmisión, certificación y conservación electrónica de Documentos Tributarios Electrónicos (DTE).",
+      "menu_lateral": [
+        {
+          "id": "seccion-alcance",
+          "label": "¿Qué es el Régimen FEL?"
+        },
+        {
+          "id": "seccion-modulos",
+          "label": "Módulos FEL (Emisor, Certificador, Documentación)"
+        },
+        {
+          "id": "seccion-pasos",
+          "label": "Flujo de emisión y certificación DTE"
+        },
+        {
+          "id": "seccion-biblioteca",
+          "label": "Acuerdos de Directorio, App móvil y Renuentes"
+        }
+      ],
+      "eyebrow_previos": "Marco general del modelo operativo",
+      "h2_previos": "Marco legal y vigencia del Régimen FEL",
+      "intro_previos": "Vigente desde el 23 de mayo de 2018 (Acuerdo de Directorio No. 13-2018 y sus reformas en los Acuerdos 26-2019 y 15-2020), facilita el cumplimiento de las obligaciones tributarias mediante documentos electrónicos con firma electrónica.",
+      "datos_previos": [
+        {
+          "titulo": "Documentos Tributarios Electrónicos (DTE)",
+          "descripcion": "Comprende la emisión, transmisión, certificación y conservación por medios electrónicos de facturas, notas de crédito y débito, recibos y otros documentos autorizados por la SAT."
+        },
+        {
+          "titulo": "Aplicación móvil FEL (Android, iOS y Huawei)",
+          "descripcion": "Disponible de forma gratuita en Google Play, App Store y Huawei AppGallery para emitir y consultar DTE desde dispositivos móviles."
+        },
+        {
+          "titulo": "Ecosistema de Emisores, Certificadores y Auditores",
+          "descripcion": "Articula portales específicos para emisores de DTE, certificadores autorizados, documentación técnica de esquemas XML y auditores de seguridad de la información."
+        }
+      ],
+      "eyebrow_modulos": "Portales especializados del ecosistema FEL",
+      "h2_modulos": "Selecciona el módulo que deseas consultar",
+      "intro_modulos": "Accede a los requisitos y guías específicas según tu rol dentro del Régimen FEL.",
+      "tarjetas_pares": false,
+      "tarjetas": [
+        {
+          "titulo": "Emisor de Documentos Tributarios Electrónicos (DTE)",
+          "descripcion": "Consulta cómo habilitarse como emisor en el Régimen FEL, emitir facturas electrónicas y utilizar el certificador gratuito de la SAT.",
+          "url": "https://portal.sat.gob.gt/portal/emisor-de-dte/",
+          "externo": true
+        },
+        {
+          "titulo": "Certificador de DTE",
+          "descripcion": "Revisa los requisitos técnicos y administrativos para autorizarse como Certificador de Documentos Tributarios Electrónicos.",
+          "url": "https://portal.sat.gob.gt/portal/certificador-de-dte/",
+          "externo": true
+        },
+        {
+          "titulo": "Documentación Técnica del Régimen FEL",
+          "descripcion": "Descarga las reglas y validaciones, esquemas XSD, catálogos y especificaciones técnicas para integración de sistemas con FEL.",
+          "url": "https://portal.sat.gob.gt/portal/documentacion-tecnica-del-regimen-fel",
+          "externo": true
+        },
+        {
+          "titulo": "Auditor del Certificador (Seguridad de la Información)",
+          "descripcion": "Conoce los lineamientos para auditores de seguridad de la información de los certificadores de DTE.",
+          "url": "https://portal.sat.gob.gt/portal/auditor-de-seguridad-de-la-informacion/",
+          "externo": true
+        },
+        {
+          "titulo": "Preguntas frecuentes sobre el Régimen FEL",
+          "descripcion": "Resuelve tus dudas frecuentes sobre habilitación, emisión, anulación y consulta de Documentos Tributarios Electrónicos.",
+          "url": "https://portal.sat.gob.gt/portal/preguntas-frecuentes/cumplimiento-tributario/#1674938805376-f6c4abc5-cfda",
+          "externo": true
+        }
+      ],
+      "eyebrow_pasos": "Flujo operativo accesible (reemplazo textual del diagrama)",
+      "h2_pasos": "Cómo funciona el proceso de emisión y certificación electrónica",
+      "intro_pasos": "El ciclo electrónico de una factura en el Régimen FEL se desarrolla en cuatro etapas:",
+      "pasos": [
+        "Etapa 1 (Generación del DTE por el emisor) — El contribuyente emisor registra los datos de la operación comercial y genera el documento tributario electrónico utilizando la firma electrónica avanzada (proporcionada sin costo por la SAT o por un prestador de servicios de certificación).",
+        "Etapa 2 (Validación y certificación en línea) — El certificador autorizado (o la SAT como certificador gratuito) recibe el archivo electrónico, valida los requisitos tributarios y la firma digital, asigna el número de autorización único (código de autorización) y devuelve el DTE certificado en milisegundos.",
+        "Etapa 3 (Entrega al receptor y remisión a la SAT) — El DTE certificado se entrega al comprador o receptor por vía electrónica (correo electrónico, consulta web o descarga en Agencia Virtual) o en representación gráfica impresa cuando sea requerido, y se transmite automáticamente al repositorio de la SAT.",
+        "Etapa 4 (Verificación y conservación electrónica) — Tanto el emisor como el receptor pueden verificar la autenticidad y validez tributaria del comprobante en el portal de la SAT en tiempo real, manteniéndose el resguardo digital seguro en los servidores tributarios."
+      ],
+      "eyebrow_grupos_documentos": "Normativa, presentación, aplicación móvil y listados FEL",
+      "h2_grupos_documentos": "Acuerdos de Directorio, generalidades, descarga de App FEL y renuentes",
+      "intro_grupos_documentos": "Despliega cada sección para descargar los acuerdos constitutivos del Régimen FEL, la presentación general, el listado de renuentes o la aplicación móvil oficial.",
+      "grupos_documentos": [
+        {
+          "titulo": "Acuerdos de Directorio del Régimen FEL (PDF)",
+          "tab_id": "1678285255453-8f308d18-9763",
+          "items": [
+            {
+              "descripcion": "Acuerdo de Directorio No. 13-2018 (pdf)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/1897/normativa-sat/25094/acuerdo-de-directorio-13-2018.pdf",
+              "boton_texto": "Descargar acuerdo (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Acuerdo de Directorio No. 26-2019 (pdf)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/1897/normativa-sat/45898/acuerdo-de-directorio-26-2019-reformas-al-regimen-de-factura-electronica-en-linea-fel.pdf",
+              "boton_texto": "Descargar acuerdo (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Acuerdo de Directorio No. 15-2020 (pdf)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/1897/normativa-sat/49283/acuerdo-de-directorio-numero-15-2020.pdf",
+              "boton_texto": "Descargar acuerdo (PDF)",
+              "externo": true
+            }
+          ]
+        },
+        {
+          "titulo": "Material informativo del Régimen FEL (PDF)",
+          "tab_id": "1678285255471-0a4ab3b6-ae5a",
+          "items": [
+            {
+              "descripcion": "Presentación Generalidades del Régimen FEL",
+              "url": "https://portal.sat.gob.gt/portal/descarga/6524/factura-electronica-fel/92802/proceso-de-factura-electronica-en-linea-2026-2",
+              "boton_texto": "Descargar presentación informativa (PDF)",
+              "externo": true
+            }
+          ]
+        },
+        {
+          "titulo": "Aplicación móvil FEL, infografía y consulta de renuentes",
+          "tab_id": "recursos-adicionales",
+          "items": [
+            {
+              "descripcion": "Google Play (Android) — Descargar la aplicación móvil oficial de FEL en tu teléfono o tableta.",
+              "url": "https://play.google.com/store/apps/details?id=gob.sat.fel",
+              "boton_texto": "Descargar en Google Play (Android)",
+              "externo": true
+            },
+            {
+              "descripcion": "App Store (iOS) — Descargar la aplicación móvil oficial de FEL para iPhone y iPad.",
+              "url": "https://apps.apple.com/gt/app/fel/id1555900357",
+              "boton_texto": "Descargar en App Store (iOS)",
+              "externo": true
+            },
+            {
+              "descripcion": "AppGallery (Huawei) — Descargar la aplicación móvil oficial de FEL para dispositivos Huawei.",
+              "url": "https://appgallery.cloud.huawei.com/ag/n/app/C104282259?locale=en_US&source=appshare&subsource=C104282259",
+              "boton_texto": "Descargar en AppGallery (Huawei)",
+              "externo": true
+            },
+            {
+              "descripcion": "Consulta pública del listado oficial de contribuyentes renuentes a incorporarse al Régimen FEL.",
+              "url": "https://portal.sat.gob.gt/portal/descarga/15595/renuentes-fel/98108/renuentes-pequenos-contribuyentes-31-10-2026",
+              "boton_texto": "Consultar listado de renuentes",
+              "externo": true
+            },
+            {
+              "descripcion": "Infografía del proceso de emisión y certificación del Régimen FEL (JPG).",
+              "url": "https://portal.sat.gob.gt/portal/wp-content/uploads/2026/01/PROCESO-DE-EMISION-FEL.jpg",
+              "boton_texto": "Descargar infografía del proceso (JPG)",
+              "externo": true
+            },
+            {
+              "descripcion": "Factura Electrónica",
+              "url": "https://portal.sat.gob.gt/portal/efactura/",
+              "boton_texto": "Abrir recurso oficial",
+              "externo": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

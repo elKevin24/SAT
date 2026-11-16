@@ -1,0 +1,2178 @@
+{
+  "lote": "ola-3a",
+  "descripcion": "Borrador estructural Sub-lote 3A (primeras 11 URLs de Ola 3 — Importadores y OEA) — Comercio Exterior SAT Guatemala.",
+  "total_paginas": 11,
+  "paginas": [
+    {
+      "slug": "requisitos-para-inscripccion-en-el-registro-de",
+      "arquetipo": "TIPO-3",
+      "titulo_h1": "Inscribirse, cesar o solicitar permisos temporales en el Padrón de Importadores",
+      "bajada_lead": "Consulta los requisitos vigentes ante la Superintendencia de Administración Tributaria (SAT) para inscribirte en el Padrón de Importadores desde tu Agencia Virtual, solicitar el cese de inscripción o gestionar un permiso temporal de importación.",
+      "menu_lateral": [
+        {
+          "id": "seccion-modalidades",
+          "label": "Modalidades en el Registro"
+        },
+        {
+          "id": "seccion-pasos",
+          "label": "Requisitos y pasos por gestión"
+        },
+        {
+          "id": "seccion-normativa",
+          "label": "Procedimiento y enlaces"
+        }
+      ],
+      "sub_gestiones": [
+        {
+          "id": "sub-inscripcion-padron",
+          "titulo": "Inscripción en el Registro de Importadores",
+          "resumen": "Obligatoria para contribuyentes con importaciones comerciales o cuyo valor libre a bordo —Free On Board (FOB)— supere los 10,000.00 dólares estadounidenses (USD) en un año más un día."
+        },
+        {
+          "id": "sub-cese-padron",
+          "titulo": "Cese en el Registro de Importadores",
+          "resumen": "Procede únicamente a requerimiento del importador con datos actualizados en el Registro Tributario Unificado (RTU) Digital y sin incumplimientos."
+        },
+        {
+          "id": "sub-permiso-temporal",
+          "titulo": "Permisos temporales en el Registro de Importadores",
+          "resumen": "Para contribuyentes que importan mercancías eventualmente y cuyo giro comercial no es la importación, mediante solicitud por correo electrónico."
+        }
+      ],
+      "eyebrow_previos": "Antes de iniciar",
+      "h2_previos": "Tres gestiones disponibles en el Padrón de Importadores",
+      "intro_previos": "Identifica cuál de las tres modalidades aplica a tu operación aduanera antes de presentar tu solicitud.",
+      "datos_previos": [
+        {
+          "titulo": "Inscripción obligatoria en el Padrón",
+          "descripcion": "Aplica a contribuyentes que realizan importaciones con carácter comercial o cuyas importaciones superen diez mil pesos centroamericanos —equivalentes a 10,000.00 dólares estadounidenses (USD)— de valor libre a bordo —Free On Board (FOB)— en el plazo de un año más un día."
+        },
+        {
+          "titulo": "Cese a solicitud del importador",
+          "descripcion": "Procede únicamente a requerimiento del importador que tenga su establecimiento activo, afiliación al Impuesto al Valor Agregado (IVA) y no presente incumplimientos tributarios, aduaneros ni formales."
+        },
+        {
+          "titulo": "Permiso temporal de importación",
+          "descripcion": "Dirigido a contribuyentes que desean importar mercancías de forma eventual y cuyo giro comercial no es la importación, enviando solicitud firmada al correo <a href=\"mailto:padrondeimportadores@sat.gob.gt\">padrondeimportadores@sat.gob.gt</a>."
+        }
+      ],
+      "nota_soporte": "Recuerda registrar en el Registro Tributario Unificado (RTU) Digital las direcciones adicionales de locales, bodegas, recintos, patios o casas de habitación donde almacenes las mercancías importadas.",
+      "eyebrow_pasos": "Requisitos detallados por modalidad",
+      "h2_pasos": "Qué debes cumplir según tu gestión",
+      "intro_pasos": "Revisa los requisitos específicos de inscripción, cese o permiso temporal conforme al Procedimiento PR-IAD/DNO-ADU-GOA-10 Versión V.",
+      "pasos": [
+        "Modalidad 1 (Inscripción en el Registro de Importadores) — Contar con Número de Identificación Tributaria (NIT), tener establecimiento registrado y activo en el RTU Digital, estar afiliado a un régimen del IVA y estar solvente en obligaciones tributarias y aduaneras.",
+        "Modalidad 1 (Bodegas y Agente Aduanero) — Actualizar en el RTU Digital las direcciones adicionales de locales, bodegas, recintos o edificaciones donde almacenes mercancías, y autorizar al menos a un Agente Aduanero activo ante la SAT como representante para tus importaciones.",
+        "Modalidad 2 (Cese en el Registro de Importadores) — Estar actualizado en el RTU Digital conforme al Código Tributario y leyes específicas, no presentar incumplimientos tributarios, aduaneros ni formales, mantener establecimiento activo, estar afiliado al IVA y cumplir los requerimientos del Servicio Aduanero.",
+        "Modalidad 3 (Permiso temporal de importación) — Enviar al correo <a href=\"mailto:padrondeimportadores@sat.gob.gt\">padrondeimportadores@sat.gob.gt</a> la solicitud firmada por el propietario o representante legal incluyendo: indicación y justificación de la solicitud, nombre, NIT y Código Único de Identificación (CUI) del Documento Personal de Identificación (DPI), número de declaración aduanera de mercancías asociada, valor FOB en dólares y la documentación requerida en la norma 15 del procedimiento PR-IAD/DNO-ADU-GOA-10 Versión V."
+      ],
+      "cta_principal": {
+        "texto": "Consultar procedimiento PR-IAD/DNO-ADU-GOA-10 Versión V",
+        "url": "https://portal.sat.gob.gt/portal/manual-de-procedimientos-de-la-intendencia-de-aduanas/#1604420674940-61c1f01c-3d8c",
+        "externo": true
+      },
+      "eyebrow_grupos_documentos": "Navegación aduanera",
+      "h2_grupos_documentos": "Enlaces relacionados de la Intendencia de Aduanas",
+      "intro_grupos_documentos": "Accede a los manuales de procedimientos, requisitos y servicios complementarios de aduanas.",
+      "grupos_documentos": [
+        {
+          "titulo": "Servicios y procedimientos aduaneros relacionados (4)",
+          "tab_id": "recursos-adicionales",
+          "items": [
+            {
+              "descripcion": "Catálogo de gestiones aduaneras",
+              "url": "https://portal.sat.gob.gt/portal/procedimientos-aduanas/",
+              "boton_texto": "Ir a gestiones aduaneras",
+              "externo": true
+            },
+            {
+              "descripcion": "Manual de procedimientos de la Intendencia de Aduanas",
+              "url": "https://portal.sat.gob.gt/portal/manual-de-procedimientos-de-la-intendencia-de-aduanas",
+              "boton_texto": "Consultar manual de procedimientos",
+              "externo": true
+            },
+            {
+              "descripcion": "Requisitos para gestiones de aduanas",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-aduanas/",
+              "boton_texto": "Consultar requisitos de aduanas",
+              "externo": true
+            },
+            {
+              "descripcion": "Programa Aduana sin papeles",
+              "url": "https://portal.sat.gob.gt/portal/aduana-sin-papeles/",
+              "boton_texto": "Ir a Aduana sin papeles",
+              "externo": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "componente-procesos-importacion--conceptos-generales",
+      "arquetipo": "TIPO-3",
+      "titulo_h1": "Consultar los conceptos generales de importación del Programa de Modernización Integral Aduanera (MIAD)",
+      "bajada_lead": "Conoce los conceptos fundamentales sobre la importación definitiva de mercancías, su registro contable como activo y las buenas prácticas recomendadas por la Superintendencia de Administración Tributaria (SAT).",
+      "menu_lateral": [
+        {
+          "id": "seccion-alcance",
+          "label": "Conceptos clave"
+        },
+        {
+          "id": "seccion-documentos",
+          "label": "Materiales informativos"
+        }
+      ],
+      "eyebrow_previos": "Antes de importar",
+      "h2_previos": "Qué comprende el proceso de importación aduanera",
+      "intro_previos": "Este módulo del Componente de Procesos de Importación reúne tres guías conceptuales para orientar tus operaciones de comercio exterior.",
+      "datos_previos": [
+        {
+          "titulo": "Registro en tus activos",
+          "descripcion": "Explica cómo la mercancía que importas pasa a formar parte de tus activos y su impacto en el cumplimiento tributario y contable."
+        },
+        {
+          "titulo": "Definición de importación definitiva",
+          "descripcion": "Detalla en qué consiste el régimen de importación definitiva para el ingreso legal de mercancías extranjeras al territorio aduanero nacional."
+        },
+        {
+          "titulo": "Buenas prácticas sugeridas",
+          "descripcion": "Reúne recomendaciones operativas para agilizar el despacho aduanero y prevenir incidencias en tus declaraciones de mercancías."
+        }
+      ],
+      "eyebrow_documentos": "Recursos del Componente de Procesos",
+      "h2_documentos": "Guías y fichas informativas de importación",
+      "intro_documentos": "Abre cada ficha oficial publicada por el MIAD.",
+      "documentos": [
+        {
+          "titulo": "¿Sabías que la mercancía que importas pasa a formar parte de tus activos?",
+          "descripcion": "Ficha informativa sobre la incorporación de las mercancías importadas a los activos del contribuyente.",
+          "url": "https://portal.sat.gob.gt/portal/programa-miad/componente-procesos/attachment/sabias-que-la-mercancia-que-importas-pasa-a-formar-parte-de-tus-activos/",
+          "boton_texto": "Abrir ficha informativa",
+          "externo": true
+        },
+        {
+          "titulo": "¿Qué es una importación definitiva?",
+          "descripcion": "Guía conceptual sobre el alcance y requisitos generales de una importación definitiva en Guatemala.",
+          "url": "https://portal.sat.gob.gt/portal/programa-miad/componente-procesos/attachment/que-es-una-importacion-definitiva/",
+          "boton_texto": "Abrir guía conceptual",
+          "externo": true
+        },
+        {
+          "titulo": "Buenas prácticas sugeridas para importadores",
+          "descripcion": "Recomendaciones oficiales del Servicio Aduanero para preparar y respaldar tus operaciones de importación.",
+          "url": "https://portal.sat.gob.gt/portal/programa-miad/componente-procesos/attachment/buenas-practivas-sugeridas/",
+          "boton_texto": "Abrir buenas prácticas",
+          "externo": true
+        }
+      ],
+      "cta_principal": {
+        "texto": "Consultar ¿Qué es una importación definitiva?",
+        "url": "https://portal.sat.gob.gt/portal/programa-miad/componente-procesos/attachment/que-es-una-importacion-definitiva/",
+        "externo": true
+      }
+    },
+    {
+      "slug": "declaracion-unica-centroamericana-duca",
+      "arquetipo": "TIPO-3",
+      "titulo_h1": "Consultar manuales, catálogos y normativa de la Declaración Única Centroamericana (DUCA)",
+      "bajada_lead": "Consulta los instructivos de llenado, esquemas técnicos, tablas de catálogos y resoluciones vigentes de la DUCA, aprobada por el Consejo de Ministros de Integración Económica (COMIECO) y administrada por la Superintendencia de Administración Tributaria (SAT).",
+      "menu_lateral": [
+        {
+          "id": "seccion-modalidades",
+          "label": "Modalidades DUCA"
+        },
+        {
+          "id": "seccion-consultas",
+          "label": "Consultas en línea"
+        },
+        {
+          "id": "seccion-biblioteca",
+          "label": "Manuales y documentos técnicos"
+        }
+      ],
+      "eyebrow_previos": "Marco regional centroamericano",
+      "h2_previos": "Qué integra el formato de la DUCA",
+      "intro_previos": "De conformidad con la Resolución No. 409-2018 (COMIECO LXXXV), vigente desde el 1 de abril de 2019, la DUCA unifica las tres declaraciones aduaneras que amparan el comercio de mercancías en Centroamérica.",
+      "datos_previos": [
+        {
+          "titulo": "DUCA-F (comercio intrarregional)",
+          "descripcion": "Sustituye al Formulario Aduanero Único Centroamericano (FAUCA) para el comercio de mercancías originarias de la región centroamericana."
+        },
+        {
+          "titulo": "DUCA-D (terceros países)",
+          "descripcion": "Sustituye a la Declaración Única Aduanera de Guatemala (DUA-GT) para la importación o exportación de mercancías con terceros países fuera de la región."
+        },
+        {
+          "titulo": "DUCA-T (tránsito internacional)",
+          "descripcion": "Sustituye a la Declaración Única de Mercancías para el Tránsito Aduanero Internacional Terrestre (DUT) en traslados terrestres regionales."
+        }
+      ],
+      "eyebrow_grupos_documentos": "Biblioteca oficial DUCA",
+      "h2_grupos_documentos": "Manuales, planes de contingencia, normativa y especificaciones técnicas",
+      "intro_grupos_documentos": "Despliega cada categoría para descargar los instructivos de llenado, esquemas técnicos de Definición de Esquema XML (XSD), tablas de catálogos en formato de Documento Portátil (PDF) o en hoja de cálculo de Microsoft Excel (XLSX), y resoluciones vigentes.",
+      "grupos_documentos": [
+        {
+          "titulo": "¿Qué es la DUCA? (1)",
+          "tab_id": "1558031105823-d506be23-c3f7",
+          "items": [
+            {
+              "descripcion": "Información general sobre el alcance y modalidades de la DUCA (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/12207/declaracion-unica-centroamericana-duca/37438/que-es-la-duca.pdf",
+              "boton_texto": "Descargar guía informativa (PDF)",
+              "externo": true
+            }
+          ]
+        },
+        {
+          "titulo": "Consulta de errores de transmisión de la DUCA (1)",
+          "tab_id": "1558031146851-312ac186-e1c6",
+          "items": [
+            {
+              "descripcion": "Consultar estado y errores de transmisión de la DUCA-D",
+              "url": "https://portal.sat.gob.gt/portal/consulta-declaracion-unica-aduanera/",
+              "boton_texto": "Abrir consulta de errores DUCA-D",
+              "externo": true
+            }
+          ]
+        },
+        {
+          "titulo": "Consulta de monto de tributos de la DUCA-F (1)",
+          "tab_id": "1558118072757-d86f2825-8662",
+          "items": [
+            {
+              "descripcion": "Consultar monto de tributos de FAUCA y DUCA-F",
+              "url": "https://portal.sat.gob.gt/portal/consultas-de-faucas-duca-f",
+              "boton_texto": "Abrir consulta de tributos DUCA-F",
+              "externo": true
+            }
+          ]
+        },
+        {
+          "titulo": "Manuales de uso e instructivos de llenado de la DUCA (14)",
+          "tab_id": "1558031216940-a20d24fc-900b",
+          "items": [
+            {
+              "descripcion": "Manual de usuario del portal de gestión para transportistas autorizados en el llenado electrónico de la DUCA-T (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/12207/declaracion-unica-centroamericana-duca/65598/manual-de-usuario-del-portal-de-gestion-para-transportistas-autorizados-para-el-llenado-electronico-de-la-duca-t.pdf",
+              "boton_texto": "Descargar manual (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Presentación general sobre el uso de la DUCA-D (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/12207/declaracion-unica-centroamericana-duca/38227/presentacion-duca-d.pdf",
+              "boton_texto": "Descargar presentación (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Instructivo de llenado de la DUCA, Anexo II de la Resolución No. 409-2018 (COMIECO LXXXV) (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/12207/declaracion-unica-centroamericana-duca/36618/anexo-ii-res-409-2018-comieco-lxxxv-instructivo-de-llenado.pdf",
+              "boton_texto": "Descargar instructivo (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Instructivo de llenado de la Declaración del Valor en Aduana (DVA) (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/12207/declaracion-unica-centroamericana-duca/38088/instructivo-de-llenado-declaracion-del-valor.pdf",
+              "boton_texto": "Descargar instructivo (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Guía técnica para generar el código de respuesta rápida (QR) en la DUCA resumida, versión 1.5 (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/12207/declaracion-unica-centroamericana-duca/38565/guia-tecnica-para-la-generacion-del-codigo-qr-en-la-duca-resumida-v1-5.pdf",
+              "boton_texto": "Descargar guía técnica (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Casillas obligatorias de impresión de la DUCA-T (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/5402/manuales/42591/casillas-obligatorias-impresion-duca-t-3.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Casillas impresas de la DUCA-F de importación (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/12207/declaracion-unica-centroamericana-duca/46667/casillas-impresas-duca-f-de-importacion.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Casillas impresas de la DUCA-F de exportación (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/12207/declaracion-unica-centroamericana-duca/46663/casillas-impresas-duca-f-de-exportacion.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Formato oficial de la DUCA, Anexo I de la Resolución No. 409-2018 (COMIECO LXXXV) (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/12207/declaracion-unica-centroamericana-duca/36620/anexo-i-res-409-2018-comieco-lxxxv-duca-formato.pdf",
+              "boton_texto": "Descargar formato (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Formato de impresión de la DUCA resumida (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/12207/declaracion-unica-centroamericana-duca/38471/formato-duca-resumida.pdf",
+              "boton_texto": "Descargar formato (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Formato de impresión de la DUCA-T resumida (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/5402/manuales/42593/formato-duca-t-resumida.pdf",
+              "boton_texto": "Descargar formato (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Formato de la DVA de mercancías (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/12207/declaracion-unica-centroamericana-duca/38089/formato-de-la-declaracion-del-valor-de-mercancias.pdf",
+              "boton_texto": "Descargar formato (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Validación y llenado de casillas de la DVA (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/12207/declaracion-unica-centroamericana-duca/38090/validaciones-de-campos-dva-2.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Validación y llenado de casillas de la DUCA-D por régimen y clase, versión 2.0 (XLSX)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/12207/declaracion-unica-centroamericana-duca/52166/validacion-de-campos-duca-d-por-regimen-y-clase-version-2-0.xlsx",
+              "boton_texto": "Descargar archivo (XLSX)",
+              "externo": true
+            }
+          ]
+        },
+        {
+          "titulo": "Planes de contingencia de la DUCA (2)",
+          "tab_id": "1558031257979-a564dd5f-43b9",
+          "items": [
+            {
+              "descripcion": "Plan de contingencia regional para operaciones con DUCA (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4305/union-aduanera/38525/plan-de-contingencia-regional.pdf",
+              "boton_texto": "Descargar plan regional (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Directrices para aplicar el plan de contingencia por implementación de la DUCA, versión 4.0 (21 de mayo de 2019) (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/12207/declaracion-unica-centroamericana-duca/38776/directrices-para-aplicacion-del-plan-de-contingencia-version-4-0-21052019.pdf",
+              "boton_texto": "Descargar directrices (PDF)",
+              "externo": true
+            }
+          ]
+        },
+        {
+          "titulo": "Documentos generales y resoluciones de la DUCA (5)",
+          "tab_id": "1558031306158-7c12ffcb-c8ae",
+          "items": [
+            {
+              "descripcion": "Resolución No. 430-2020 (COMIECO-EX): modificación de la casilla 61 del formato de la DUCA (vigente desde el 24 de marzo de 2021) (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/12207/declaracion-unica-centroamericana-duca/51175/resolucion-no-430-2020-comieco-ex-consejo-de-ministros-de-integracion-economica.pdf",
+              "boton_texto": "Descargar resolución (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Resolución No. SAT-IAD-05-2019 publicada en el Diario de Centro América (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/12207/declaracion-unica-centroamericana-duca/38473/resolucion-numero-sat-iad-05-2019-diario-de-centroamerica.pdf",
+              "boton_texto": "Descargar resolución (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Resolución No. 410-2019 (COMIECO-EX) sobre la entrada en vigencia de la DUCA (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/12207/declaracion-unica-centroamericana-duca/38156/res-410-2019-comieco-ex.pdf",
+              "boton_texto": "Descargar resolución (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Resolución No. 409-2018 (COMIECO LXXXV) que aprueba el formato único de la DUCA (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/12207/declaracion-unica-centroamericana-duca/36619/res-409-2018-comieco-lxxxv-duca.pdf",
+              "boton_texto": "Descargar resolución (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Resolución No. SAT-IAD-05-2019: disposiciones administrativas para aplicar el formato de la DUCA y su instructivo de llenado (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/12207/declaracion-unica-centroamericana-duca/38470/resolucion-numero-sat-iad-05-2019.pdf",
+              "boton_texto": "Descargar resolución (PDF)",
+              "externo": true
+            }
+          ]
+        },
+        {
+          "titulo": "Documentos técnicos y tablas de catálogos de la DUCA (13)",
+          "tab_id": "1507051131410-0f11753b-8f23",
+          "items": [
+            {
+              "descripcion": "Tablas de catálogos de la DUCA (vigentes desde el 20 de agosto de 2026) (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/15533/tablas-duca/96174/tablas-duca-vigente-20-de-agosto-2026",
+              "boton_texto": "Descargar tablas (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Tabla SAT-IA-011: código adicional 2025, versión 1 (XLSX)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/15987/tabla-sat-iad-011-codigo-adicional/87973/sat-ia-011-codigo-adicional-2025-v-1.xlsx",
+              "boton_texto": "Descargar tabla (XLSX)",
+              "externo": true
+            },
+            {
+              "descripcion": "Especificación del caso de uso «Procesar DUCA», versión 1.5 (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/12207/declaracion-unica-centroamericana-duca/51651/caso-de-uso-procesar-duca-v1-5.pdf",
+              "boton_texto": "Descargar especificación (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Guía técnica para generar el código QR en la DUCA resumida, versión 1.5 (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/12207/declaracion-unica-centroamericana-duca/38565/guia-tecnica-para-la-generacion-del-codigo-qr-en-la-duca-resumida-v1-5.pdf",
+              "boton_texto": "Descargar guía técnica (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Definición de datos para el código de barras de la DUCA, versión 1.1 (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/12207/declaracion-unica-centroamericana-duca/67473/definicion-de-datos-para-el-codigo-de-barras-duca.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Tabla SAT-IA-015-2025: código de contingente arancelario 2025 (XLSX)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/12207/declaracion-unica-centroamericana-duca/87977/sat-ia-015-codigo-contingente-2025.xlsx",
+              "boton_texto": "Descargar tabla (XLSX)",
+              "externo": true
+            },
+            {
+              "descripcion": "Tabla SAT-IA-025: unidad de medida por inciso arancelario (XLSX)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/12207/declaracion-unica-centroamericana-duca/58441/tabla-sat-ia-025-unidad-de-medida-por-inciso-3.xlsx",
+              "boton_texto": "Descargar tabla (XLSX)",
+              "externo": true
+            },
+            {
+              "descripcion": "Tabla SAT-IA-027: forma de pago de tributos por régimen aduanero (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/12207/declaracion-unica-centroamericana-duca/68755/tabla-sat-ia-027-forma-de-pago-por-tributos-por-regimen-3.pdf",
+              "boton_texto": "Descargar tabla (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Tabla SAT-IA-028-2025: permisos no arancelarios (vigente desde el 28 de junio de 2025) (XLSX)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/12207/declaracion-unica-centroamericana-duca/87979/tabla-sat-iad-028-vig-28-06-2025.xlsx",
+              "boton_texto": "Descargar tabla (XLSX)",
+              "externo": true
+            },
+            {
+              "descripcion": "Tabla de Códigos de las Naciones Unidas para Localidades Comerciales y de Transporte (UN/LOCODE) de puertos y aeropuertos (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/12207/declaracion-unica-centroamericana-duca/38000/tabla-un-locode-de-puertos-y-aeropuertos.pdf",
+              "boton_texto": "Descargar tabla (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Estructura de Intercambio Electrónico de Datos para la Administración, el Comercio y el Transporte (EDIFACT) 1001 para la DUCA-F (XLSX)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/12207/declaracion-unica-centroamericana-duca/38030/edifact-1001-duca-f.xlsx",
+              "boton_texto": "Descargar estructura (XLSX)",
+              "externo": true
+            },
+            {
+              "descripcion": "Definición de Tipo de Documento (DTD) técnico para transmisión electrónica de la DUCA y FAUCA (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/12207/declaracion-unica-centroamericana-duca/38605/dtd-duca-fauca-reg-fi-fe-doc-tecnico.pdf",
+              "boton_texto": "Descargar documento técnico (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Catálogo de descripciones mínimas de mercancías (XLSX)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/16041/catalogos-de-descripciones-minimas/73724/catalogos-de-descripciones-minimas-5.xlsx",
+              "boton_texto": "Descargar catálogo (XLSX)",
+              "externo": true
+            }
+          ]
+        },
+        {
+          "titulo": "Servicios y procedimientos aduaneros relacionados (4)",
+          "tab_id": "recursos-adicionales",
+          "items": [
+            {
+              "descripcion": "Catálogo de gestiones aduaneras",
+              "url": "https://portal.sat.gob.gt/portal/procedimientos-aduanas/",
+              "boton_texto": "Ir a gestiones aduaneras",
+              "externo": true
+            },
+            {
+              "descripcion": "Manual de procedimientos de la Intendencia de Aduanas",
+              "url": "https://portal.sat.gob.gt/portal/manual-de-procedimientos-de-la-intendencia-de-aduanas",
+              "boton_texto": "Consultar manual de procedimientos",
+              "externo": true
+            },
+            {
+              "descripcion": "Requisitos para gestiones de aduanas",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-aduanas/",
+              "boton_texto": "Consultar requisitos de aduanas",
+              "externo": true
+            },
+            {
+              "descripcion": "Programa Aduana sin papeles",
+              "url": "https://portal.sat.gob.gt/portal/aduana-sin-papeles/",
+              "boton_texto": "Ir a Aduana sin papeles",
+              "externo": true
+            }
+          ]
+        }
+      ],
+      "cta_principal": {
+        "texto": "Ver video explicativo oficial sobre la DUCA (YouTube)",
+        "url": "https://www.youtube.com/watch?v=eZ9LLMEhF4M",
+        "externo": true
+      }
+    },
+    {
+      "slug": "declaracion-unica-aduanera-dua-gt",
+      "arquetipo": "TIPO-3",
+      "titulo_h1": "Consultar especificaciones técnicas, resoluciones y acuerdos de la Declaración Única Aduanera (DUA-GT)",
+      "bajada_lead": "Accede al repositorio histórico y técnico de la DUA-GT de la Superintendencia de Administración Tributaria (SAT), incluyendo el procedimiento de pago del formulario SAT-8331, documentos técnicos de transmisión electrónica, resoluciones y acuerdos.",
+      "menu_lateral": [
+        {
+          "id": "seccion-alcance",
+          "label": "Alcance y características"
+        },
+        {
+          "id": "seccion-documentos",
+          "label": "Acuerdos constitutivos y pago SAT-8331"
+        },
+        {
+          "id": "seccion-biblioteca",
+          "label": "Documentos técnicos y resoluciones"
+        }
+      ],
+      "eyebrow_previos": "Contexto operativo",
+      "h2_previos": "Objetivo y características de la DUA-GT",
+      "intro_previos": "Creada mediante el Acuerdo de Superintendente No. 934-2005 (29 de junio de 2005) y formalizada por el Acuerdo de Superintendente No. 1018-2005 (22 de julio de 2005), la DUA-GT estandarizó la declaración electrónica de mercancías en Guatemala.",
+      "datos_previos": [
+        {
+          "titulo": "Estándar internacional de transmisión electrónica",
+          "descripcion": "La transmisión electrónica de la Declaración Única Aduanera (DUA) en su formato nacional DUA-GT se fundamenta en el estándar de Intercambio Electrónico de Datos para la Administración, el Comercio y el Transporte (EDIFACT) mediante el mensaje de Declaración de Aduanas (CUSDEC), asegurando la validación de cada régimen aduanero."
+        },
+        {
+          "titulo": "Estándar internacional EDIFACT",
+          "descripcion": "Incluye los acuerdos de directorio y de superintendencia que crearon y reformaron la DUA-GT, los formatos de documentos de compensación y descargo parcial, las tablas de validación en hoja de cálculo de Microsoft Excel (XLSX) y documentos en formato de Documento Portátil (PDF), además del procedimiento de pago del formulario SAT-8331."
+        },
+        {
+          "titulo": "Autoliquidación y pago electrónico",
+          "descripcion": "Permite el cálculo y pago electrónico de tributos aduaneros y la consulta de catálogos, tablas condicionales e instructivos técnicos."
+        }
+      ],
+      "eyebrow_grupos_documentos": "Repositorio técnico y normativo DUA-GT",
+      "h2_grupos_documentos": "Documentos técnicos, resoluciones, acuerdos y enlaces relacionados",
+      "intro_grupos_documentos": "Abre la sección correspondiente para descargar los manuales técnicos, tablas de catálogos, resoluciones de la Intendencia de Aduanas y acuerdos.",
+      "grupos_documentos": [
+        {
+          "titulo": "Base legal, formatos técnicos y tablas de validación de la DUA-GT (26)",
+          "tab_id": "1507051131410-0f11753b-8f23",
+          "items": [
+            {
+              "descripcion": "Base legal: Acuerdo Número SAT-DSI-089-2018 (1 de marzo de 2018) (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4376/declaracion-unica-aduanera-dua-gt/21439/acuerdo-numero-sat-dsi-089-2018.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Acuerdo Número 934-2005 de la Superintendencia de Administración Tributaria (15 de julio de 2005) (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4376/declaracion-unica-aduanera-dua-gt/15461/acuerdo-934-2005-2.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Reformas al Acuerdo 934-2005 — Acuerdo Número 1018-2005 de la Superintendencia de Administración Tributaria (9 de agosto de 2005) (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4376/declaracion-unica-aduanera-dua-gt/15460/acuerdo-1018-2005-2.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Instructivo para la rectificación de la declaración de mercancías (IN-IAD/DNO-ADU-GDE-32) (Vigente a partir del 14 de abril de 2021) (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4376/declaracion-unica-aduanera-dua-gt/51506/in-iad-dno-adu-gde-32-instructivo-para-la-rectificacion-de-la-declaracion-de-mercancias_para-publicar.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Especificaciones técnicas para el envío de la DUA (16 de noviembre de 2007) (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4376/declaracion-unica-aduanera-dua-gt/15459/especificaciones-tecnicas-para-el-env-o-de-la-dua.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Definición de datos para el código de barras (17 de mayo de 2006) (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4376/declaracion-unica-aduanera-dua-gt/15457/definicion-de-datos-para-el-codigo-de-barras.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Clases de declaración (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4376/declaracion-unica-aduanera-dua-gt/38199/clases-de-declaracion.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Formato de la Declaración del Valor en Aduana (DVA) (7 de julio de 2005) (XLSX)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4376/declaracion-unica-aduanera-dua-gt/15490/declaracion-del-valor.xls",
+              "boton_texto": "Descargar archivo (XLSX)",
+              "externo": true
+            },
+            {
+              "descripcion": "Instructivo de llenado de la DVA (7 de julio de 2005) (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4376/declaracion-unica-aduanera-dua-gt/15453/instructivo-de-llenado-declaraci-n-del-valor-v2.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Formato del Documento de Descargo Parcial (DDP) (15 de julio de 2005) (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4376/declaracion-unica-aduanera-dua-gt/15452/ddp-oficial-vsd.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Instructivo de llenado del DDP (15 de julio de 2005) (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4376/declaracion-unica-aduanera-dua-gt/15451/instructivo-llenado-de-la-ddp.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Formato de documento de compensación sin transformación (7 de julio de 2005) (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4376/declaracion-unica-aduanera-dua-gt/15450/documento-de-compensacion-sin-transformacion-2.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Instructivo de llenado del documento de compensación sin transformación (7 de julio de 2005) (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4376/declaracion-unica-aduanera-dua-gt/15469/instructivo-de-llenado-de-compensaci-n-sin-transformaci-n.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Formato de documento de compensación con transformación (7 de julio de 2005) (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4376/declaracion-unica-aduanera-dua-gt/15468/documento-de-compensacion-con-transformacion-2.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Instructivo de llenado del documento de compensación con transformación (7 de julio de 2005) (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4376/declaracion-unica-aduanera-dua-gt/15467/instructivo-de-llenado-de-compensaci-n-con-transformaci-n.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Formato de la Declaración de Mercancías DUA-GT (1 de marzo de 2018) (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4376/declaracion-unica-aduanera-dua-gt/21438/formato-de-la-declaracion-de-mercancias-dua-gt.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Formato de reembarque y transbordo (16 de junio de 2005) (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4376/declaracion-unica-aduanera-dua-gt/15465/formato-reembarque-transbordo.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Tablas de catálogos de la DUA (abril de 2018) (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/74/aduanas/23318/tablas-dua-abril-2018.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Tabla SAT-IA-011 Código Adicional (XLSX)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4376/declaracion-unica-aduanera-dua-gt/38201/tabla-sat-ia-011-codigo-adicional-2.xlsx",
+              "boton_texto": "Descargar archivo (XLSX)",
+              "externo": true
+            },
+            {
+              "descripcion": "Tabla SAT-IA-025 Unidades de medida por inciso (XLSX)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4376/declaracion-unica-aduanera-dua-gt/38202/tabla-sat-ia-025-unidad-de-medida-por-inciso-2.xlsx",
+              "boton_texto": "Descargar archivo (XLSX)",
+              "externo": true
+            },
+            {
+              "descripcion": "Tabla SAT-IA-027 Forma de pago por tributo por régimen (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4376/declaracion-unica-aduanera-dua-gt/38204/tabla-sat-ia-027-forma-de-pago-por-tributos-por-regimen-2.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Tabla SAT-IA-028 Permiso no arancelario (XLSX)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4376/declaracion-unica-aduanera-dua-gt/38203/tabla-sat-ia-028-permiso-no-arancelario-2.xlsx",
+              "boton_texto": "Descargar archivo (XLSX)",
+              "externo": true
+            },
+            {
+              "descripcion": "Validación de campos de la DVA (29 de junio de 2007) (XLSX)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4376/declaracion-unica-aduanera-dua-gt/15486/validaciones-de-campos-dva.xls",
+              "boton_texto": "Descargar archivo (XLSX)",
+              "externo": true
+            },
+            {
+              "descripcion": "Tabla de Códigos de las Naciones Unidas para Localidades Comerciales y de Transporte (UN/LOCODE) de puertos y aeropuertos (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4376/declaracion-unica-aduanera-dua-gt/38205/tabla-un-locode-de-puertos-y-aeropuertos-2.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Validación de campos de la DUA por régimen (16 de junio de 2005) (XLSX)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4376/declaracion-unica-aduanera-dua-gt/15487/validacion-de-campos-de-dua-por-regimen.xls",
+              "boton_texto": "Descargar archivo (XLSX)",
+              "externo": true
+            },
+            {
+              "descripcion": "Mapeo de regímenes por clase de declaración (16 de junio de 2005) (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4376/declaracion-unica-aduanera-dua-gt/15462/mapeo-regimenes-por-clase-de-declaracion.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            }
+          ]
+        },
+        {
+          "titulo": "Resoluciones de la Instancia Ministerial de la Unión Aduanera (38)",
+          "tab_id": "1720643945088-5088badc-44cc",
+          "items": [
+            {
+              "descripcion": "Resolución de la Instancia Ministerial Unión Aduanera (UA) No. 01-2016, Creación Instancia Ministerial (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4333/resoluciones-del-proceso-de-union-aduanera-guatemala-honduras/15328/resolucion-instancia-ministerial-ua-no-01-2016.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Resolución de la Instancia Ministerial UA No. 02-2016, Aprobación Reglamento Instancia Ministerial (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4333/resoluciones-del-proceso-de-union-aduanera-guatemala-honduras/15335/resolucion-instancia-ministerial-ua-no-02-2016.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Resolución de la Instancia Ministerial UA No. 03-2016, Reglamento Fondo Estructural de la UA entre Guatemala y Honduras (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4333/resoluciones-del-proceso-de-union-aduanera-guatemala-honduras/15336/resolucion-instancia-ministerial-ua-no-03-2016.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Resolución de la Instancia Ministerial UA No. 04-2016, Reglamento Comité Consultivo de la UA entre Guatemala y Honduras (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4333/resoluciones-del-proceso-de-union-aduanera-guatemala-honduras/15329/resolucion-instancia-ministerial-ua-no-04-2016.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Resolución de la Instancia Ministerial UA No. 05-2016, Incorporación Corinto y Entre Ríos (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4333/resoluciones-del-proceso-de-union-aduanera-guatemala-honduras/15337/resolucion-instancia-ministerial-ua-no-05-2016-ua-no-_05-2016.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Resolución de la Instancia Ministerial UA No. 07-2016, Mercancías sujetas a medidas fitosanitarias (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4333/resoluciones-del-proceso-de-union-aduanera-guatemala-honduras/15324/resollucion_intancia_ministerial_ua-no-7-2016-2.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "7.1 — Anexo Resolución de la Instancia Ministerial UA No. 07-2016 (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4333/resoluciones-del-proceso-de-union-aduanera-guatemala-honduras/15311/anexo_resolucion_instancia_ministerial_ua-no-_07-2016.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Resolución de la Instancia Ministerial UA No. 08-2016, Reglamento Operaciones Aéreas (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4333/resoluciones-del-proceso-de-union-aduanera-guatemala-honduras/15330/resolucion-instancia-ministerial-ua-no-08-2016.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Resolución de la Instancia Ministerial UA No. 10-2017, Incorporación nuevas categorías de productos (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4333/resoluciones-del-proceso-de-union-aduanera-guatemala-honduras/15341/resolucion-instancia-ministerial-ua-no-10-2017.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Resolución de la Instancia Ministerial UA No. 11-2017: aprobación del formato de la Factura y Declaración Única Centroamericana (FYDUCA) (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4333/resoluciones-del-proceso-de-union-aduanera-guatemala-honduras/15342/resolucion-instancia-ministerial-ua-no-11-2017.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Resolución de la Instancia Ministerial UA No. 12-2017, Sustitución de Anexo de la Instancia Ministerial UA-05-2016 (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4333/resoluciones-del-proceso-de-union-aduanera-guatemala-honduras/15325/resolucion-instancia-ministerial-ua-no-12-2017.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Resolución de la Instancia Ministerial UA No. 14-2017, Ampliación la Instancia Ministerial UA-07-2016 (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4333/resoluciones-del-proceso-de-union-aduanera-guatemala-honduras/15332/resolucion-instancia-ministerial-ua-no-14-2017.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Resolución de la Instancia Ministerial UA No. 15-2017, Aprobación de formato de Medidas Sanitarias y Fitosanitarias (MSF) (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4333/resoluciones-del-proceso-de-union-aduanera-guatemala-honduras/15334/resolucion-instancia-ministerial-ua-no-15-2017.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Resolución de la Instancia Ministerial UA No. 16-2017, Aprobación de Procedimientos y Controles (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4333/resoluciones-del-proceso-de-union-aduanera-guatemala-honduras/15327/resolucion-instancia-miisterial-ua-no-16-2017.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Resolución de la Instancia Ministerial UA No. 17-2017, Reglamento Funcionamiento Integración (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4333/resoluciones-del-proceso-de-union-aduanera-guatemala-honduras/15339/resolucion-instancia-ministerial-ua-no-17-2017.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "16.1 — Anexo de la Resolución de la Instancia Ministerial UA No. 17-2017 en archivo comprimido (ZIP)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4333/resoluciones-del-proceso-de-union-aduanera-guatemala-honduras/15318/anexo_resolucion_instancia_ministerial_ua-no_17-2017.zip",
+              "boton_texto": "Descargar paquete (ZIP)",
+              "externo": true
+            },
+            {
+              "descripcion": "Resolución de la Instancia Ministerial UA No. 18-2017, Aduanas Periféricas (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4333/resoluciones-del-proceso-de-union-aduanera-guatemala-honduras/15316/res_im_ua_gt-hn_18-2017_-_aduanas_perifericas_de_la_ua-2.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Resolución de la Instancia Ministerial UA No. 19-2017, Mercancías exceptuadas por diferencias arancelarias (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4333/resoluciones-del-proceso-de-union-aduanera-guatemala-honduras/15317/res_im_ua_gt-hn_19-2017_-_listados_exceptuados_por_acuerdos_comerciales_internacionales-2.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "18.1.1 — (Belice) Lista de excepciones del Acuerdo de Alcance Parcial (AAP) con Belice (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4333/resoluciones-del-proceso-de-union-aduanera-guatemala-honduras/15295/bz_lista_excepciones_-acuerdo_de_alcance_parcial_belice.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "18.1.2 — (Chile) Lista de excepciones del Tratado de Libre Comercio (TLC) entre Centroamérica y Chile (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4333/resoluciones-del-proceso-de-union-aduanera-guatemala-honduras/15296/ch_lista_excepciones_-tlc_entre_centroamerica_y_chile.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "18.1.3 — (Canadá) Lista de excepciones del TLC entre Canadá y Honduras (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4333/resoluciones-del-proceso-de-union-aduanera-guatemala-honduras/15297/cn_lista_excepciones_-tlc_canada-honduras.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "18.1.4 — (Colombia) Lista de excepciones del TLC entre Colombia y el Triángulo Norte de Centroamérica (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4333/resoluciones-del-proceso-de-union-aduanera-guatemala-honduras/15298/co_lista_excepciones_-tlc_colombia_-_triangulo_norte_de_ca.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "18.1.5 — (Cuba) Lista de excepciones del AAP con Cuba y Guatemala (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4333/resoluciones-del-proceso-de-union-aduanera-guatemala-honduras/15299/cu_lista_excepciones_-acuerdo_de_alcance_parcial_cuba-gt.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "18.1.6 — (Ecuador) Lista de excepciones del AAP con Ecuador y Guatemala (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4333/resoluciones-del-proceso-de-union-aduanera-guatemala-honduras/15300/ec_lista_excepciones_-acuerdo_de_alcance_parcial_ecuador-gt.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "18.1.7 — (Unión Europea) Lista de excepciones del Acuerdo de Asociación (ADA) con la Unión Europea (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4333/resoluciones-del-proceso-de-union-aduanera-guatemala-honduras/15301/eu_lista_excepciones_-acuerdo_de_asociacion_union_europea.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "18.1.8 — (México) Lista de excepciones del TLC entre Centroamérica y México (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4333/resoluciones-del-proceso-de-union-aduanera-guatemala-honduras/15302/mx_lista_excepciones_-tlc_entre_centroamerica_y_mexico.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "18.1.9 — (Panamá) Lista de excepciones del TLC entre Centroamérica y Panamá (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4333/resoluciones-del-proceso-de-union-aduanera-guatemala-honduras/15303/pa_lista_excepciones_-tlc_entre_centroamerica_y_panama.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "18.1.10 — (Perú) Lista de excepciones del TLC entre Perú y Honduras (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4333/resoluciones-del-proceso-de-union-aduanera-guatemala-honduras/15305/pe_lista_excepciones_-tratado_de_libre_comercio_peru-hn.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "18.1.11 — (República Dominicana) Lista de excepciones del TLC entre Centroamérica y República Dominicana (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4333/resoluciones-del-proceso-de-union-aduanera-guatemala-honduras/15304/rd_lista_excepciones_-_tlc_entre_ca_y_republica_dominicana.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "18.1.12 — (Taiwán) Lista de excepciones del TLC entre Centroamérica y Taiwán (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4333/resoluciones-del-proceso-de-union-aduanera-guatemala-honduras/15307/tw_lista_excepciones_-tlc_con_la_republica_de_taiwan.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Resolución de la Instancia Ministerial UA No. 20-2017, Nueva categoría de productos (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4333/resoluciones-del-proceso-de-union-aduanera-guatemala-honduras/15319/res_im_ua_gt-hn_20-2017_-_excepciones_al_libre_comercio_en_razon_del_origen-2.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Resolución de la Instancia Ministerial UA No. 21-2017, Mercancías exceptuadas por origen (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4333/resoluciones-del-proceso-de-union-aduanera-guatemala-honduras/15320/res_im_ua_gt-hn_21-2017_-_listado_de_mcia_excepciones_por_origen-2.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "20.1 — Anexo de la Resolución 21-2017: listados de excepción de origen (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4333/resoluciones-del-proceso-de-union-aduanera-guatemala-honduras/15309/anexo_res-_21-2017_listados_de_excecion_tlc_origen_16017.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "22.1 — Anexo I de la Resolución de la Instancia Ministerial UA-23-2017 (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4333/resoluciones-del-proceso-de-union-aduanera-guatemala-honduras/15306/anexo_i_res-_instancia_ministerial_ua-23-2017.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Resolución de la Instancia Ministerial UA No. 25-2017, Listado de envíos y mercancías sujetos a MSF (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4333/resoluciones-del-proceso-de-union-aduanera-guatemala-honduras/15310/anexo_resolucion_instancia_ministerial_ua_no-_25-2017.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "24.1 — Anexo Resolución de la Instancia Ministerial UA No. 25-2017 (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4333/resoluciones-del-proceso-de-union-aduanera-guatemala-honduras/15340/resolucion-instancia-ministerial-ua-no-25-2017.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Resolución de la Instancia Ministerial UA No. 26-2017, derogar numerales 2 y 3 del anexo de la Resolución 05-2016 de la Instancia Ministerial (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4333/resoluciones-del-proceso-de-union-aduanera-guatemala-honduras/15326/resolucion-instancia-ministerial-ua-no-26-2017.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Resolución de la Instancia Ministerial UA No. 27-2017, Implementación de primera etapa (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4333/resoluciones-del-proceso-de-union-aduanera-guatemala-honduras/15333/resolucion-instancia-ministerial-ua-no-27-2017.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            }
+          ]
+        },
+        {
+          "titulo": "Acuerdos de la Instancia Ejecutiva y Ministerial (11)",
+          "tab_id": "1720643945117-cbe7eb6b-afee",
+          "items": [
+            {
+              "descripcion": "Acuerdo Instancia Ejecutiva UA No. 01-2016 (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4354/acuerdos-instancia-ejecutiva-y-ministerial/15400/acuerdo-instancia-ejecutiva-ua-no-01-2016-2.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "1.1 — Anexo Acuerdo Instancia Ejecutiva UA No. 01-2016 (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4354/acuerdos-instancia-ejecutiva-y-ministerial/15406/anexo-acuerdo-instancia-ministerial-ua-01-2016-min-gua-hon-2.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Acuerdo Instancia Ministerial UA No. 01-2016 (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4354/acuerdos-instancia-ejecutiva-y-ministerial/15401/acuerdo-instancia-ministerial-ua-no-01-2016-2.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "2.1 — Anexo Acuerdo Instancia Ministerial UA No. 01-2016 entre Guatemala y Honduras (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4333/resoluciones-del-proceso-de-union-aduanera-guatemala-honduras/15328/resolucion-instancia-ministerial-ua-no-01-2016.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Acuerdo Instancia Ministerial UA No. 02-2016 (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4354/acuerdos-instancia-ejecutiva-y-ministerial/15404/acuerdo-instancia-ministerial-ua-no-2-2016-2.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Acuerdo Instancia Ministerial UA No. 03-2016 (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4354/acuerdos-instancia-ejecutiva-y-ministerial/15403/acuerdo-instancia-ministerial-ua-no-03-2016-2.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Acuerdo Instancia Ministerial UA No. 01-2017 (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4354/acuerdos-instancia-ejecutiva-y-ministerial/15402/acuerdo-instancia-ministerial-ua-no-01-2017-2.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Acuerdo Instancia Ministerial UA No. 04-2017 (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4354/acuerdos-instancia-ejecutiva-y-ministerial/15398/acuerdo-im-ua-gt-hn-04-2017-horarios-2.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Acuerdo Instancia Ministerial UA No. 05-2017 (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4354/acuerdos-instancia-ejecutiva-y-ministerial/15399/acuerdo-im-ua-gt-hn-05-2017-aduanas-integradas-2.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Acuerdo Instancia Ministerial UA No. 06-2017 (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/1897/normativa-sat/6175/resolucion-sat-dsi-006-2017-superintendente-deposito-aduanero-temporal.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Anexo del Acuerdo de la Instancia Ministerial UA No. 06-2017 entre Guatemala y Honduras (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/wp-admin/admin-ajax.php?juwpfisadmin=false&action=wpfd&task=file.download&wpfd_category_id=1897&wpfd_file_id=6175",
+              "boton_texto": "Descargar anexo (PDF)",
+              "externo": true
+            }
+          ]
+        },
+        {
+          "titulo": "Acuerdos constitutivos, pago de formulario SAT-8331 y enlaces relacionados (7)",
+          "tab_id": "recursos-adicionales",
+          "items": [
+            {
+              "descripcion": "Acuerdo de Superintendente No. 934-2005 (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/74/aduanas/4159/acuerdo-934-2005.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Acuerdo de Superintendente No. 1018-2005 (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/74/aduanas/4160/acuerdo-1018-2005.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Procedimiento para el pago de formularios SAT-8331 (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/74/aduanas/15449/pago-de-formulario-8331-actualizacion-24092015.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Catálogo de gestiones aduaneras",
+              "url": "https://portal.sat.gob.gt/portal/procedimientos-aduanas/",
+              "boton_texto": "Ir a gestiones aduaneras",
+              "externo": true
+            },
+            {
+              "descripcion": "Manual de procedimientos de la Intendencia de Aduanas",
+              "url": "https://portal.sat.gob.gt/portal/manual-de-procedimientos-de-la-intendencia-de-aduanas",
+              "boton_texto": "Consultar manual de procedimientos",
+              "externo": true
+            },
+            {
+              "descripcion": "Requisitos para gestiones de aduanas",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-aduanas/",
+              "boton_texto": "Consultar requisitos de aduanas",
+              "externo": true
+            },
+            {
+              "descripcion": "Programa Aduana sin papeles",
+              "url": "https://portal.sat.gob.gt/portal/aduana-sin-papeles/",
+              "boton_texto": "Ir a Aduana sin papeles",
+              "externo": true
+            }
+          ]
+        }
+      ],
+      "cta_principal": {
+        "texto": "Descargar procedimiento para pago de formularios SAT-8331 (PDF)",
+        "url": "https://portal.sat.gob.gt/portal/descarga/74/aduanas/22989/procedimiento_pago_formularios_sat_8331.pdf",
+        "externo": true
+      }
+    },
+    {
+      "slug": "presentacion-de-declaracion-de-mercancias-de",
+      "arquetipo": "TIPO-1",
+      "titulo_h1": "Presentar declaración de mercancías de admisión temporal con cargo a fianza",
+      "bajada_lead": "Realiza la presentación presencial de tu Declaración Única Centroamericana (DUCA) de admisión temporal con cargo a fianza ante la Unidad de Regímenes Aduaneros Especiales de la Superintendencia de Administración Tributaria (SAT) para obtener el sello de cargo a cuenta corriente.",
+      "menu_lateral": [
+        {
+          "id": "seccion-requisitos",
+          "label": "Requisitos previos"
+        },
+        {
+          "id": "seccion-pasos",
+          "label": "Paso a paso"
+        },
+        {
+          "id": "seccion-resultado",
+          "label": "Qué obtienes"
+        }
+      ],
+      "eyebrow_requisitos": "Antes de empezar",
+      "h2_requisitos": "¿Qué necesitas presentar?",
+      "intro_requisitos": "Pueden realizar esta gestión el contribuyente, representante legal, mandatario, propietario, Agente Aduanero, asistente de Agente Aduanero o persona autorizada mediante carta o en la solicitud inicial.",
+      "requisitos": [
+        {
+          "titulo": "Declaración o impresión de DUCA resumida",
+          "descripcion": "Original de la declaración o impresión de la DUCA resumida cuando opere bajo la modalidad de documentos digitalizados, acompañada de un juego de copias para la Unidad de Regímenes Aduaneros Especiales."
+        },
+        {
+          "titulo": "Documentación de soporte de la declaración",
+          "descripcion": "Documentos de soporte de la declaración conforme al Artículo 321 del Reglamento del Código Aduanero Uniforme Centroamericano (RECAUCA): factura comercial, documento de transporte y permisos aplicables."
+        }
+      ],
+      "nota_requisito": "Importante: Si no reexportas las mercancías dentro del plazo autorizado, corresponde el pago de una multa de 300 pesos centroamericanos (equivalente a 300.00 dólares estadounidenses (USD)) según el Artículo 27 del Decreto 14-2013 del Congreso de la República (Ley Nacional de Aduanas), más intereses y tributos de importación definitiva.",
+      "eyebrow_pasos": "Paso a paso",
+      "h2_pasos": "Cómo presentar la declaración para cargo a cuenta corriente",
+      "intro_pasos": "La atención se brinda de forma presencial en las oficinas centrales de la SAT.",
+      "pasos": [
+        "Paso 1 — Reúne la declaración o impresión de la DUCA resumida junto con su documentación de soporte completa (1 juego para archivo de la unidad).",
+        "Paso 2 — Preséntate en la Unidad de Regímenes Aduaneros Especiales, ubicada en el tercer nivel del Edificio Torre SAT (7.ª avenida 3-73, Zona 9, Ciudad de Guatemala), y entrega el expediente en ventanilla.",
+        "Paso 3 — Recibe tu declaración original con el sello de cargo a cuenta corriente aplicado por la Unidad de Regímenes Aduaneros Especiales.",
+        "Paso 4 — Posterior al despacho de la reexportación o de la nacionalización, presenta nuevamente ante la Unidad de Regímenes Aduaneros Especiales la declaración de mercancías debidamente sellada y firmada por la aduana donde se efectuó el despacho."
+      ],
+      "eyebrow_continuidad": "Resultado de la gestión",
+      "h2_continuidad": "¿Qué obtienes al finalizar?",
+      "que_sigue": [
+        {
+          "titulo": "Sello de cargo a cuenta corriente",
+          "descripcion": "Se te entrega la declaración original con el sello de cargo a cuenta corriente emitido por la Unidad de Regímenes Aduaneros Especiales."
+        },
+        {
+          "titulo": "Descargo posterior tras reexportar o nacionalizar",
+          "descripcion": "Recuerda entregar la declaración firmada y sellada por la aduana de salida o nacionalización para liberar el cargo de tu cuenta corriente."
+        }
+      ]
+    },
+    {
+      "slug": "recepcion-documentos-parcialidades",
+      "arquetipo": "TIPO-1",
+      "titulo_h1": "Presentar documentos para despacho aduanero por parcialidades",
+      "bajada_lead": "Solicita la autorización de despacho por parcialidades y presenta las hojas de descargo parcial ante la Administración de la Aduana de la Superintendencia de Administración Tributaria (SAT) cuando tus mercancías requieran retirarse o embarcarse en varios viajes.",
+      "menu_lateral": [
+        {
+          "id": "seccion-requisitos",
+          "label": "Requisitos y contenido de la solicitud"
+        },
+        {
+          "id": "seccion-pasos",
+          "label": "Paso a paso y plazos"
+        },
+        {
+          "id": "seccion-normativa",
+          "label": "Procedimiento y audios en idiomas mayas"
+        }
+      ],
+      "eyebrow_requisitos": "Antes de empezar",
+      "h2_requisitos": "¿Qué documentos debes reunir?",
+      "intro_requisitos": "Pueden realizar la gestión el Agente Aduanero o su asistente autorizado por la SAT, el importador, exportador, representante legal, mandatario o transportista aduanero.",
+      "requisitos": [
+        {
+          "titulo": "Carta de solicitud de despacho por parcialidades (original)",
+          "descripcion": "Debe incluir: nombre y firma del importador, exportador, Agente Aduanero o representante legal; número de Declaración de Mercancías; cantidad y tipo de mercancías; número de documento de transporte; identificación de contenedores o equipos; número de descargos parciales (viajes) y fecha/hora de inicio con el tiempo estimado de toda la operación (Norma 8 del procedimiento PR-IAD-DNO-ADU-GDE-20)."
+        },
+        {
+          "titulo": "Fotocopia de la Declaración y documentos de soporte",
+          "descripcion": "Adjunta fotocopia de la Declaración de Mercancías de la que se derivan las parcialidades, fotocopia del documento de transporte, factura comercial y documentos de requisitos no arancelarios cuando aplique."
+        },
+        {
+          "titulo": "Hojas de descargo parcial",
+          "descripcion": "Para el control de salida en medios de transporte cerrados, presenta las hojas de descargo parcial llenas, firmadas y selladas por el Administrador de la Aduana. Si el transporte no es cerrado, es obligatoria la autorización de la primera parcialidad y la Autoridad Aduanera indicará si deben autorizarse las demás previo al retiro."
+        }
+      ],
+      "eyebrow_pasos": "Paso a paso",
+      "h2_pasos": "Cómo realizar el despacho por parcialidades y presentar la declaración complementaria",
+      "intro_pasos": "Acude a la Administración de la Aduana por donde ingresaste o saliste del país.",
+      "pasos": [
+        "Paso 1 — Preséntate en la Administración de la Aduana donde se ejecutará el proceso y entrega la solicitud de Autorización de Despacho por Parcialidades junto con los documentos de soporte.",
+        "Paso 2 — Para iniciar las salidas parciales, presenta junto con el medio de transporte la Declaración Provisional o Normal debidamente autorizada para la primera parcialidad.",
+        "Paso 3 — Si tu declaración aduanera precedente fue una Declaración Aduanera Simplificada clase 11, presenta la Declaración de Mercancías complementaria clase 37 dentro de los 3 días siguientes de haber efectuado el embarque.",
+        "Paso 4 — Si tu declaración aduanera precedente fue una clase 54, presenta la Declaración de Mercancías complementaria dentro de un plazo de 5 días.",
+        "Paso 5 — Paga los Derechos Arancelarios a la Importación (DAI), el Impuesto al Valor Agregado (IVA) y demás tributos cuando corresponda, y consulta el procedimiento oficial en formato de Documento Portátil (PDF) o las guías de audio en formato de audio digital (MP3)."
+      ],
+      "cta_principal": {
+        "texto": "Descargar procedimiento PR-IAD-DNO-ADU-GDE-20 Versión II (PDF)",
+        "url": "https://portal.sat.gob.gt/portal/descarga/4565/gestion-de-despacho/49030/pr-iad-dno-adu-gde-20-version-ii-vigente-a-partir-del-08-de-enero-de-2021.pdf",
+        "externo": true
+      },
+      "enlaces_secundarios": [
+        {
+          "texto": "Escuchar guía en idioma K'iche' (MP3)",
+          "url": "https://mx.ivoox.com/es/recepcion-de-documentos-de-parcialidades-k-039-iche-039_md_45167283_wp_1.mp3",
+          "externo": true
+        },
+        {
+          "texto": "Escuchar guía en idioma Mam (MP3)",
+          "url": "https://mx.ivoox.com/es/recepcion-de-documentos-de-parcialidades-mam_md_45166267_wp_1.mp3",
+          "externo": true
+        },
+        {
+          "texto": "Escuchar guía en idioma Q'eqchi' (MP3)",
+          "url": "https://mx.ivoox.com/es/recepcion-de-documentos-de-parcialidades-q-039-eqchi-039_md_45167982_wp_1.mp3",
+          "externo": true
+        }
+      ],
+      "eyebrow_continuidad": "Resultado de la gestión",
+      "h2_continuidad": "¿Qué obtienes al completar el proceso?",
+      "que_sigue": [
+        {
+          "titulo": "Solicitud y hojas de descargo autorizadas",
+          "descripcion": "Recibes la solicitud de despacho por parcialidades autorizada (para importación o exportación) y la hoja de descargo parcial autorizada cuando el medio de transporte sea cerrado."
+        },
+        {
+          "titulo": "Declaración certificada con autorización de salida",
+          "descripcion": "Al concluir el control aduanero, se te entrega tu Declaración de Mercancías certificada con la autorización de salida de la mercancía."
+        }
+      ]
+    },
+    {
+      "slug": "despacho-de-distintivos-de-control-de-productos",
+      "arquetipo": "TIPO-1",
+      "titulo_h1": "Solicitar y retirar distintivos de control de productos importados",
+      "bajada_lead": "Gestiona el pago, la solicitud en Agencia Virtual y el retiro presencial de los Distintivos de Control de Productos Importados ante la Unidad de Especies Fiscales de la Superintendencia de Administración Tributaria (SAT).",
+      "menu_lateral": [
+        {
+          "id": "seccion-requisitos",
+          "label": "Requisitos"
+        },
+        {
+          "id": "seccion-pasos",
+          "label": "Paso a paso"
+        },
+        {
+          "id": "seccion-resultado",
+          "label": "Entrega de distintivos"
+        }
+      ],
+      "eyebrow_requisitos": "Antes de empezar",
+      "h2_requisitos": "¿Qué requisitos debes cumplir?",
+      "intro_requisitos": "Aplica para importadores inscritos en el Registro de Importadores domiciliados en el país y para personas individuales o jurídicas que no sean fabricantes ni importadores.",
+      "requisitos": [
+        {
+          "titulo": "Agencia Virtual y registro tributario actualizados",
+          "descripcion": "Contar con usuario activo de Agencia Virtual y tener tus datos actualizados en el Registro Tributario Unificado (RTU) Digital."
+        },
+        {
+          "titulo": "Formulario SAT-8028 pagado y presentado",
+          "descripcion": "Formulario SAT-8028 “Privativos SAT” (o versión vigente) en Declaraguate con estado 4 de 4 “Presentado”, habiendo pagado la boleta SAT-2000."
+        },
+        {
+          "titulo": "Declaración aduanera confirmada",
+          "descripcion": "Declaración Única Centroamericana (DUCA) o su versión resumida en estado 9 de 9 «Confirmación de Aduana»."
+        }
+      ],
+      "eyebrow_pasos": "Paso a paso",
+      "h2_pasos": "Cómo pagar, solicitar y retirar los distintivos",
+      "intro_pasos": "Realiza el pago y la solicitud en línea antes de acudir a la Unidad de Especies Fiscales.",
+      "pasos": [
+        "Paso 1 — Ingresa a Declaraguate, llena el formulario SAT-8028 “Privativos SAT” y genera la Boleta SAT-2000 para efectuar el pago en bancos autorizados o mediante banca electrónica.",
+        "Paso 2 — Envía los documentos y requisitos completos al correo electrónico institucional: <a href=\"mailto:distintivosproductosimportados@sat.gob.gt\">distintivosproductosimportados@sat.gob.gt</a>.",
+        "Paso 3 — Inicia sesión en tu Agencia Virtual y en el menú principal selecciona: Servicios Tributarios > Distintivos Electrónicos > Solicitud de Distintivos. Completa los datos solicitados y envía tu solicitud.",
+        "Paso 4 — Preséntate en la Unidad de Especies Fiscales, ubicada en el Edificio Torre SAT (7.ª avenida 3-73, Zona 9, Ciudad de Guatemala), para retirar físicamente los Distintivos de Control de Productos Importados."
+      ],
+      "cta_principal": {
+        "texto": "Llenar formulario SAT-8028 en Declaraguate",
+        "url": "https://declaraguate.sat.gob.gt/declaraguate-web/",
+        "externo": true
+      },
+      "eyebrow_continuidad": "Resultado de la gestión",
+      "h2_continuidad": "¿Qué obtienes al finalizar?",
+      "que_sigue": [
+        {
+          "titulo": "Entrega física de los distintivos",
+          "descripcion": "Recibes en la Unidad de Especies Fiscales los Distintivos de Control de Productos Importados correspondientes a tu declaración autorizada."
+        },
+        {
+          "titulo": "Respaldo electrónico en Agencia Virtual",
+          "descripcion": "Tu solicitud queda registrada dentro del módulo de Distintivos Electrónicos de tu Agencia Virtual."
+        }
+      ]
+    },
+    {
+      "slug": "facilitacion-de-comercio",
+      "arquetipo": "TIPO-3",
+      "titulo_h1": "Consultar acuerdos, despacho anticipado y normativa de facilitación del comercio exterior",
+      "bajada_lead": "Conoce las acciones, estudios, procedimientos y resoluciones con los que la Superintendencia de Administración Tributaria (SAT) simplifica, armoniza y estandariza los procedimientos aduaneros en Guatemala conforme al Acuerdo sobre Facilitación del Comercio de la Organización Mundial del Comercio (OMC).",
+      "menu_lateral": [
+        {
+          "id": "seccion-pilares",
+          "label": "Ejes de facilitación"
+        },
+        {
+          "id": "seccion-biblioteca",
+          "label": "Acuerdos, despacho anticipado y guías"
+        }
+      ],
+      "eyebrow_previos": "Modernización aduanera",
+      "h2_previos": "Objetivos de la facilitación del comercio en Guatemala",
+      "intro_previos": "La SAT implementa iniciativas orientadas a reducir tiempos y costos en la importación, exportación y tránsito de mercancías, fortaleciendo la transparencia y la seguridad en la cadena logística internacional.",
+      "datos_previos": [
+        {
+          "titulo": "Acuerdo sobre Facilitación del Comercio de la OMC",
+          "descripcion": "Alinea los procedimientos aduaneros nacionales con los compromisos internacionales de transparencia, publicación de normativa y cooperación interinstitucional."
+        },
+        {
+          "titulo": "Despacho anticipado y valoración",
+          "descripcion": "Integra los lineamientos de orientación al usuario y las resoluciones ministeriales para el despacho anticipado con la Declaración Única Centroamericana (DUCA) en sus modalidades para mercancías originarias (DUCA-F) y para terceros países (DUCA-D) en puestos fronterizos integrados, así como documentos descargables en formato de Documento Portátil (PDF)."
+        },
+        {
+          "titulo": "No exigibilidad de declaración de exportación",
+          "descripcion": "De conformidad con la normativa aduanera vigente, se eliminó la exigibilidad de presentar la declaración de exportación del país de procedencia para la importación de mercancías."
+        }
+      ],
+      "eyebrow_grupos_documentos": "Biblioteca de Facilitación del Comercio",
+      "h2_grupos_documentos": "Documentos por eje estratégico y procedimientos",
+      "intro_grupos_documentos": "Despliega cada sección para consultar los acuerdos internacionales, documentos de Declaración Anticipada, guías de valoración y enlaces institucionales.",
+      "grupos_documentos": [
+        {
+          "titulo": "Acuerdo sobre Facilitación del Comercio de la OMC (1)",
+          "tab_id": "AcuerdodeFacilitacióndelComercio–OMC-",
+          "items": [
+            {
+              "descripcion": "Acuerdo sobre Facilitación del Comercio de la OMC (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/12718/facilitacion-de-comercio/38429/acuerdo-facilitacion-de-comercio-de-la-omc.pdf",
+              "boton_texto": "Descargar acuerdo (PDF)",
+              "externo": true
+            }
+          ]
+        },
+        {
+          "titulo": "Estudio de tiempos de despacho (1)",
+          "tab_id": "EstudiodeTiemposdeDespacho",
+          "items": [
+            {
+              "descripcion": "Informes nacionales, regionales y planes de acción del estudio de tiempos de despacho",
+              "url": "https://portal.sat.gob.gt/portal/estudio-de-tiempos-de-despacho/",
+              "boton_texto": "Consultar estudio de tiempos",
+              "externo": true
+            }
+          ]
+        },
+        {
+          "titulo": "Estrategia Centroamericana de Facilitación del Comercio y Competitividad (2)",
+          "tab_id": "EstrategiaCentroamericanadeFacilitacióndelComercioyCompetitividad",
+          "items": [
+            {
+              "descripcion": "Acuerdo No. 02-2023 del Consejo de Ministros de Integración Económica (COMIECO) en su sesión COMIECO-CV: actualización de la Estrategia Centroamericana de Facilitación del Comercio y Competitividad (ECFCC) (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/12718/facilitacion-de-comercio/77807/acuerdo-02-2023-comieco-cv-ecfcc.pdf",
+              "boton_texto": "Descargar acuerdo (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Anexo del Acuerdo No. 02-2023 (COMIECO-CV) de la ECFCC (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/12718/facilitacion-de-comercio/77808/anexo-del-acuerdo-02-2023-comieco-cv-ecfcc.pdf",
+              "boton_texto": "Descargar anexo (PDF)",
+              "externo": true
+            }
+          ]
+        },
+        {
+          "titulo": "Valoración y clasificación de mercancías (1)",
+          "tab_id": "ValoracióndeMercancías",
+          "items": [
+            {
+              "descripcion": "Guías y criterios sobre valoración y clasificación arancelaria de las mercancías",
+              "url": "https://portal.sat.gob.gt/portal/valoracion-y-clasificacion-de-las-mercancias/",
+              "boton_texto": "Consultar valoración aduanera",
+              "externo": true
+            }
+          ]
+        },
+        {
+          "titulo": "Procedimientos de importación, exportación y tránsito de mercancías (4)",
+          "tab_id": "ProcedimientodeImportaciónExportaciónyTránsitodeMercancías",
+          "items": [
+            {
+              "descripcion": "Manual de procedimientos de la Intendencia de Aduanas",
+              "url": "https://portal.sat.gob.gt/portal/manual-de-procedimientos-de-la-intendencia-de-aduanas/",
+              "boton_texto": "Consultar manual de procedimientos",
+              "externo": true
+            },
+            {
+              "descripcion": "Procedimientos y guías de recursos aduaneros",
+              "url": "https://portal.sat.gob.gt/portal/recursos-aduaneros/",
+              "boton_texto": "Consultar recursos aduaneros",
+              "externo": true
+            },
+            {
+              "descripcion": "Formularios y documentos técnicos de la Declaración Única Aduanera (DUA) de Guatemala (DUA-GT)",
+              "url": "https://portal.sat.gob.gt/portal/declaracion-unica-aduanera-dua-gt/",
+              "boton_texto": "Consultar documentos DUA-GT",
+              "externo": true
+            },
+            {
+              "descripcion": "Formularios y documentos técnicos de la DUCA",
+              "url": "https://portal.sat.gob.gt/portal/declaracion-unica-centroamericana-duca/",
+              "boton_texto": "Consultar documentos DUCA",
+              "externo": true
+            }
+          ]
+        },
+        {
+          "titulo": "Unión Aduanera Centroamericana (2)",
+          "tab_id": "UniónAduanera",
+          "items": [
+            {
+              "descripcion": "Información general y normativa de la Unión Aduanera (UA)",
+              "url": "https://portal.sat.gob.gt/portal/union-aduanera/",
+              "boton_texto": "Ir a Unión Aduanera",
+              "externo": true
+            },
+            {
+              "descripcion": "Procedimientos conjuntos en puestos fronterizos integrados",
+              "url": "https://portal.sat.gob.gt/portal/union-aduanera/#1507051131410-0f11753b-8f23",
+              "boton_texto": "Consultar procedimientos conjuntos",
+              "externo": true
+            }
+          ]
+        },
+        {
+          "titulo": "Consulta pública de proyectos normativos (1)",
+          "tab_id": "ConsultaPública",
+          "items": [
+            {
+              "descripcion": "Recepción de comentarios, objeciones y recomendaciones sobre proyectos de procedimientos de la Intendencia de Aduanas",
+              "url": "https://portal.sat.gob.gt/portal/recepcion-de-objeciones-y-recomendaciones-procedimientos-de-la-sat/objeciones-y-recomendaciones-a-los-procedimientos-de-la-intendencia-de-aduanas/",
+              "boton_texto": "Participar en consulta pública",
+              "externo": true
+            }
+          ]
+        },
+        {
+          "titulo": "Declaración anticipada de mercancías (13)",
+          "tab_id": "DeclaraciónAnticipada",
+          "items": [
+            {
+              "descripcion": "Procedimiento de orientación para implementar la declaración anticipada obligatoria entre Guatemala y Honduras en puestos fronterizos integrados (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/15429/declaracion-anticipada/81188/procedimiento-de-orientacion-al-usuario-duca-f-y-duca-d-declaracion-anticipada-gt-hn-2.pdf",
+              "boton_texto": "Descargar procedimiento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Documento general de orientación para cargar y consultar documentos digitalizados en el repositorio de «Aduana Digital» para usuarios internos y externos (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/15429/declaracion-anticipada/72290/manual-de-usuario-para-carga-y-consulta-de-documentos-aduana-digital-v-iv-3.pdf",
+              "boton_texto": "Descargar guía de orientación (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Procedimiento de orientación al usuario para declaración anticipada de DUCA-F y DUCA-D entre Guatemala y Honduras (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/15429/declaracion-anticipada/52213/procedimiento-de-orientacion-al-usuario-duca-f-y-duca-d-declaracion-anticipada-gt-hn.pdf",
+              "boton_texto": "Descargar procedimiento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Documento de orientación al usuario interno y externo para el despacho aduanero mediante declaración anticipada de la DUCA-F (DG-IAD-DNO-ADU-GDE-80) (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/15429/declaracion-anticipada/71977/dg-iad-dno-adu-gde-80-para-el-despacho-aduanero-de-mercancias-de-la-declaracion-anticipada-duca-f-v1-1.pdf",
+              "boton_texto": "Descargar documento (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Resolución de la Instancia Ministerial UA No. 108-2023 (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4376/declaracion-unica-aduanera-dua-gt/77813/resolucion-instancia-ministerial-no-108-2023.pdf",
+              "boton_texto": "Descargar resolución (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Resolución de la Instancia Ministerial UA No. 104-2022 (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/4376/declaracion-unica-aduanera-dua-gt/64741/resolucion-instancia-ministerial-ua-no-104-2022.pdf",
+              "boton_texto": "Descargar resolución (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Resolución de la Instancia Ministerial UA No. 59-2019 (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/12207/declaracion-unica-centroamericana-duca/38924/res-im-ua-59-2019.pdf",
+              "boton_texto": "Descargar resolución (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Resolución de la Instancia Ministerial UA No. 67-2019 (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/12207/declaracion-unica-centroamericana-duca/39038/resolucion-instan-minis-ua-no-67-2019.pdf",
+              "boton_texto": "Descargar resolución (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Resolución de la Instancia Ministerial UA No. 88-2021: autorización del repositorio de la Secretaría de Integración Económica Centroamericana (SIECA) para documentos digitalizados de la DUCA (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/15429/declaracion-anticipada/51395/resolucion-im-ua-88-2021-autorizacion-de-repositorio-de-sieca-documentos-digitalizados-para-duca.pdf",
+              "boton_texto": "Descargar resolución (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Resolución de la Instancia Ministerial UA No. 83-2020: prórroga de la declaración anticipada al 1 de junio de 2021 y en la Aduana Integrada Corinto al 1 de marzo de 2021 (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/15429/declaracion-anticipada/49985/resolucion-im-ua-83-2020-prorroga-declaracion-anticipada-y-da-duca-f-aduana-integrada-corinto.pdf",
+              "boton_texto": "Descargar resolución (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Resolución de la Instancia Ministerial UA No. 70-2019: prórroga del plazo de la declaración anticipada al 4 de mayo de 2020 (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/15429/declaracion-anticipada/49984/resolucion-im-ua-70-2019-prorroga-plazo-declaracion-anticipada.pdf",
+              "boton_texto": "Descargar resolución (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Resolución de la Instancia Ministerial UA No. 77-2020: prórroga del plazo de la declaración anticipada al 1 de octubre de 2021 (PDF)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/15429/declaracion-anticipada/49983/resolucion-im-ua-77-2020-prorroga-plazo-declaracion-anticipada.pdf",
+              "boton_texto": "Descargar resolución (PDF)",
+              "externo": true
+            },
+            {
+              "descripcion": "Preguntas frecuentes sobre temas aduaneros y declaración anticipada",
+              "url": "https://portal.sat.gob.gt/portal/preguntas-frecuentes/temas-aduaneros/#1652982842610-e3187245-a17b",
+              "boton_texto": "Consultar preguntas frecuentes",
+              "externo": true
+            }
+          ]
+        },
+        {
+          "titulo": "Servicios y portales institucionales de apoyo (8)",
+          "tab_id": "recursos-adicionales",
+          "items": [
+            {
+              "descripcion": "Calendario tributario de la SAT",
+              "url": "https://portal.sat.gob.gt/portal/calendario-tributario/",
+              "boton_texto": "Consultar calendario",
+              "externo": true
+            },
+            {
+              "descripcion": "Biblioteca virtual de la SAT",
+              "url": "https://portal.sat.gob.gt/portal/biblioteca-en-linea-sat/",
+              "boton_texto": "Ir a biblioteca virtual",
+              "externo": true
+            },
+            {
+              "descripcion": "Descarga de aplicativos y software tributario",
+              "url": "https://portal.sat.gob.gt/portal/biblioteca-en-linea-sat/software/",
+              "boton_texto": "Consultar aplicativos",
+              "externo": true
+            },
+            {
+              "descripcion": "Compromiso y transparencia institucional de la SAT",
+              "url": "https://portal.sat.gob.gt/portal/transparencia/compromiso-sat/",
+              "boton_texto": "Consultar portal de transparencia",
+              "externo": true
+            },
+            {
+              "descripcion": "Portal de capacitaciones y formación al contribuyente",
+              "url": "https://portal.sat.gob.gt/portal/#capacitacion",
+              "boton_texto": "Ver capacitaciones",
+              "externo": true
+            },
+            {
+              "descripcion": "Programa de cultura tributaria",
+              "url": "https://portal.sat.gob.gt/portal/cultura-tributaria/",
+              "boton_texto": "Ir a cultura tributaria",
+              "externo": true
+            },
+            {
+              "descripcion": "Noticias y comunicados oficiales de la SAT",
+              "url": "https://portal.sat.gob.gt/portal/categoria/noticias/",
+              "boton_texto": "Ver noticias",
+              "externo": true
+            },
+            {
+              "descripcion": "Formas y canales de pago autorizados",
+              "url": "https://portal.sat.gob.gt/portal/forma-de-pago/",
+              "boton_texto": "Consultar formas de pago",
+              "externo": true
+            }
+          ]
+        }
+      ],
+      "cta_principal": {
+        "texto": "Consultar Acuerdo sobre Facilitación del Comercio OMC (PDF)",
+        "url": "https://portal.sat.gob.gt/portal/descarga/12718/facilitacion-de-comercio/32265/acuerdo-facilitacion-de-comercio-omc.pdf",
+        "externo": true
+      }
+    },
+    {
+      "slug": "consultas-aduanas--monitoreo-historico",
+      "arquetipo": "TIPO-4",
+      "titulo_h1": "Consultar el monitoreo histórico de selectivo en aduanas",
+      "bajada_lead": "Accede al tablero estadístico interactivo de la Superintendencia de Administración Tributaria (SAT) para consultar el comportamiento histórico del análisis de riesgo (selectivo rojo y verde) en las declaraciones aduaneras.",
+      "menu_lateral": [
+        {
+          "id": "seccion-alcance",
+          "label": "Qué incluye el tablero"
+        },
+        {
+          "id": "seccion-pasos",
+          "label": "Cómo consultar"
+        }
+      ],
+      "eyebrow_previos": "Antes de consultar",
+      "h2_previos": "Qué información ofrece esta herramienta",
+      "intro_previos": "El tablero público muestra indicadores estadísticos sobre la asignación de selectivo en los despachos aduaneros del país.",
+      "datos_previos": [
+        {
+          "titulo": "Comportamiento histórico del selectivo",
+          "descripcion": "Visualiza la proporción de declaraciones con levante sin revisión (selectivo verde) y con verificación inmediata (selectivo rojo)."
+        },
+        {
+          "titulo": "Filtros por aduana y período",
+          "descripcion": "Permite segmentar las estadísticas por aduana operativa, año, mes y régimen aduanero."
+        }
+      ],
+      "cta_principal": {
+        "texto": "Abrir tablero de monitoreo histórico de selectivo",
+        "url": "https://farm4.sat.gob.gt/dashboard-aduanas/selectivo.xhtml",
+        "externo": true
+      },
+      "eyebrow_panel": "Cómo funciona",
+      "h2_panel": "Pasos para consultar las estadísticas de selectivo",
+      "intro_panel": "La consulta es pública, gratuita y no requiere contraseña.",
+      "pasos": [
+        "Paso 1 — Ingresa al tablero interactivo de Monitoreo Histórico de Selectivo en Aduanas desde el botón principal.",
+        "Paso 2 — Selecciona el período (año y mes) y la aduana o régimen que deseas analizar.",
+        "Paso 3 — Revisa las gráficas y tablas comparativas de asignaciones de selectivo generadas por el sistema."
+      ]
+    },
+    {
+      "slug": "requisitos-de-aduanas",
+      "arquetipo": "TIPO-3",
+      "titulo_h1": "Consultar requisitos para gestiones de aduanas, contribuyentes y vehículos",
+      "bajada_lead": "Consulta en un solo lugar las fichas oficiales de requisitos y pasos de la Superintendencia de Administración Tributaria (SAT) para consulta de expedientes, admisión temporal, importación y exportación, reexportación, renovación de Auxiliares de la Función Pública Aduanera (AFPA) y documento compromisorio.",
+      "menu_lateral": [
+        {
+          "id": "seccion-orientacion",
+          "label": "Áreas de gestión"
+        },
+        {
+          "id": "seccion-catalogo",
+          "label": "Fichas de requisitos por categoría"
+        }
+      ],
+      "eyebrow_previos": "Guía de navegación",
+      "h2_previos": "Cómo está organizado el catálogo de requisitos aduaneros",
+      "intro_previos": "Selecciona la categoría que corresponde a tu operación para abrir la ficha detallada con requisitos, pasos y formularios aplicables.",
+      "datos_previos": [
+        {
+          "titulo": "Importación, exportación y regímenes temporales",
+          "descripcion": "Reúne las fichas de requisitos para consulta de expedientes, importación y admisión temporal, importación y exportación menor, reexportación y renovación de AFPA."
+        },
+        {
+          "titulo": "Expedientes, AFPA y documento compromisorio",
+          "descripcion": "Incluye accesos directos a los requisitos del Registro Tributario Unificado (RTU), Impuesto al Valor Agregado (IVA), Impuesto Sobre la Renta (ISR), Registro Fiscal de Vehículos (RFV) y formatos de documento compromisorio en documento de Microsoft Word (DOC)."
+        },
+        {
+          "titulo": "Directorios complementarios (RTU y Vehículos)",
+          "descripcion": "Conecta también con las fichas de requisitos de Personas/Empresas (Registro Tributario Unificado) y del RFV."
+        }
+      ],
+      "eyebrow_grupos_documentos": "Directorio de fichas de requisitos",
+      "h2_grupos_documentos": "Requisitos clasificados por tipo de operación y área",
+      "intro_grupos_documentos": "Despliega la categoría de tu interés para ir directamente a la página de requisitos de cada gestión.",
+      "grupos_documentos": [
+        {
+          "titulo": "Consulta de expedientes aduaneros (1)",
+          "tab_id": "1542142398181-8db4844a-6760",
+          "items": [
+            {
+              "descripcion": "Consulta del estado o actuaciones de expedientes de las unidades del Departamento de Gestión Aduanera",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/consulta-del-estado-o-actuaciones-de-expedientes-de-las-unidades-del-departamento-de-gestion-aduanera/",
+              "boton_texto": "Consultar estado de expedientes",
+              "externo": true
+            }
+          ]
+        },
+        {
+          "titulo": "Documentos para importación y admisión temporal (3)",
+          "tab_id": "1542142298663-bee160b4-5362",
+          "items": [
+            {
+              "descripcion": "Recepción de seguro de caución para importación y admisión temporal",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/recepcion-de-seguro-de-caucion-importacion-y-admision-temporal/",
+              "boton_texto": "Consultar requisitos",
+              "externo": true
+            },
+            {
+              "descripcion": "Presentación de declaración de mercancías de importación y admisión temporal con cargo a fianza",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-aduanas/presentacion-de-declaracion-de-mercancias-de-importacion-y-admisiones-temporales-para-cargos-y-fianza/",
+              "boton_texto": "Consultar requisitos",
+              "externo": true
+            },
+            {
+              "descripcion": "Requisitos para la importación temporal de vehículos de turismo",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/importacion-temporal-para-vehiculos-de-turismo/",
+              "boton_texto": "Consultar requisitos",
+              "externo": true
+            }
+          ]
+        },
+        {
+          "titulo": "Gestiones de importación y exportación (8)",
+          "tab_id": "1542209620324-5bd6722c-fbd7",
+          "items": [
+            {
+              "descripcion": "Importación y exportación menor con declaración de oficio",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-aduanas/importacion-y-exportacion-menor-con-declaracion-de-oficio/",
+              "boton_texto": "Consultar requisitos",
+              "externo": true
+            },
+            {
+              "descripcion": "Confirmación de declaraciones de mercancías",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-aduanas/confirmacion-de-declaraciones-de-mercancias/",
+              "boton_texto": "Consultar requisitos",
+              "externo": true
+            },
+            {
+              "descripcion": "Recepción de documentos para despacho aduanero por parcialidades",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-aduanas/recepcion-documentos-parcialidades/",
+              "boton_texto": "Consultar requisitos",
+              "externo": true
+            },
+            {
+              "descripcion": "Rescate de mercancías caídas en abandono",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-aduanas/rescate-de-mercancias-caidas-en-abandono/",
+              "boton_texto": "Consultar requisitos",
+              "externo": true
+            },
+            {
+              "descripcion": "Autorización de cartas de ingreso a zona primaria",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-aduanas/autorizacion-de-cartas-de-ingreso-a-zona-primaria/",
+              "boton_texto": "Consultar requisitos",
+              "externo": true
+            },
+            {
+              "descripcion": "Autorización de lista de embarque",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-aduanas/autorizacion-de-lista-de-embarque/",
+              "boton_texto": "Consultar requisitos",
+              "externo": true
+            },
+            {
+              "descripcion": "Selectivo de declaraciones de exportación",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-aduanas/selectivo-de-declaraciones-de-exportacion/",
+              "boton_texto": "Consultar requisitos",
+              "externo": true
+            },
+            {
+              "descripcion": "Presentación y análisis de declaraciones complementarias de exportación",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-aduanas/presentacion-y-analisis-de-declaracion-complementarias-de-exportacion/",
+              "boton_texto": "Consultar requisitos",
+              "externo": true
+            }
+          ]
+        },
+        {
+          "titulo": "Gestiones de reexportación (1)",
+          "tab_id": "1542142298723-7d324078-07a5",
+          "items": [
+            {
+              "descripcion": "Culminación de admisión temporal de equipo de carga",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-aduanas/culminacion-de-admision-temporal-de-equipo-de-carga/",
+              "boton_texto": "Consultar requisitos",
+              "externo": true
+            }
+          ]
+        },
+        {
+          "titulo": "Renovación de operación de AFPA (1)",
+          "tab_id": "1608063945646-f9ebd644-65ff",
+          "items": [
+            {
+              "descripcion": "Solicitud de renovación de AFPA ante la unidad de registro y control",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-aduanas/solicitud-de-renovacion-de-auxiliares-de-la-funcion-publica-en-unidad-de-calificacion-registro-y-control-de-auxiliares-de-la-funcion-publica/",
+              "boton_texto": "Consultar requisitos",
+              "externo": true
+            }
+          ]
+        },
+        {
+          "titulo": "Formatos de documento compromisorio (2)",
+          "tab_id": "1738949698794-09454143-7939",
+          "items": [
+            {
+              "descripcion": "Formato de documento compromisorio para persona individual (DOC)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/74/aduanas/84197/documento-compromisorio-persona-individual.doc",
+              "boton_texto": "Descargar formato (DOC)",
+              "externo": true
+            },
+            {
+              "descripcion": "Formato de documento compromisorio para persona jurídica (DOC)",
+              "url": "https://portal.sat.gob.gt/portal/descarga/74/aduanas/84196/documento-compromisorio-persona-juridica.doc",
+              "boton_texto": "Descargar formato (DOC)",
+              "externo": true
+            }
+          ]
+        },
+        {
+          "titulo": "Requisitos para personas y empresas (28)",
+          "tab_id": "1505762844966-e1d952eb-40fd",
+          "items": [
+            {
+              "descripcion": "Solicitud de cita controlada",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1541621044137-760c94bf-b56c",
+              "boton_texto": "Consultar requisitos",
+              "externo": true
+            },
+            {
+              "descripcion": "Inscripción en el RTU",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1615485066841-639e67c5-51e3",
+              "boton_texto": "Consultar requisitos",
+              "externo": true
+            },
+            {
+              "descripcion": "Actualización de datos en el RTU",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1541621044169-4198d06d-693f",
+              "boton_texto": "Consultar requisitos",
+              "externo": true
+            },
+            {
+              "descripcion": "Cancelación de negocios y establecimientos",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1541698042332-5a32c823-6bb4",
+              "boton_texto": "Consultar requisitos",
+              "externo": true
+            },
+            {
+              "descripcion": "Tercera persona autorizada en gestiones del RTU",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1541718919329-b32e6928-0a05",
+              "boton_texto": "Consultar requisitos",
+              "externo": true
+            },
+            {
+              "descripcion": "Solicitud de facilidades de pago",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1606494573178-22f9effd-91cc",
+              "boton_texto": "Consultar requisitos",
+              "externo": true
+            },
+            {
+              "descripcion": "Inscripción en el Registro de Productores",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1672421718793-730bbcd0-8130",
+              "boton_texto": "Consultar requisitos",
+              "externo": true
+            },
+            {
+              "descripcion": "Emisión de solvencia fiscal",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1541698952183-d90ed325-d915",
+              "boton_texto": "Consultar requisitos",
+              "externo": true
+            },
+            {
+              "descripcion": "Gestiones para entidades exentas",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1541711155323-6e281078-3daf",
+              "boton_texto": "Consultar requisitos",
+              "externo": true
+            },
+            {
+              "descripcion": "Gestiones en Gerencias de Contribuyentes Especiales",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1541695993129-3a5733fd-bd87",
+              "boton_texto": "Consultar requisitos",
+              "externo": true
+            },
+            {
+              "descripcion": "Operaciones a través de Agencia Virtual",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1544737166940-7b221c49-789f",
+              "boton_texto": "Consultar requisitos",
+              "externo": true
+            },
+            {
+              "descripcion": "Registro Fiscal de Imprentas en Agencia Virtual",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1544757949626-63b98f1e-c5df",
+              "boton_texto": "Consultar requisitos",
+              "externo": true
+            },
+            {
+              "descripcion": "Autorizaciones y habilitaciones tributarias",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1541695409144-7032754f-f93a",
+              "boton_texto": "Consultar requisitos",
+              "externo": true
+            },
+            {
+              "descripcion": "Autorización de fábricas de alcohol y bebidas alcohólicas",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1579811504227-cd799de1-5751",
+              "boton_texto": "Consultar requisitos",
+              "externo": true
+            },
+            {
+              "descripcion": "Solicitudes sobre alcoholes, bebidas alcohólicas y fermentadas",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1610574994900-e9efee21-f878",
+              "boton_texto": "Consultar requisitos",
+              "externo": true
+            },
+            {
+              "descripcion": "Cambio de regímenes tributarios",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1541710775060-c48ed303-d21d",
+              "boton_texto": "Consultar requisitos",
+              "externo": true
+            },
+            {
+              "descripcion": "Correcciones por errores en declaraciones tributarias",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1541721863086-9194f94d-dd70",
+              "boton_texto": "Consultar requisitos",
+              "externo": true
+            },
+            {
+              "descripcion": "Inscripción y actualización en el Registro de Contadores",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1716843898760-3ebbb433-f083",
+              "boton_texto": "Consultar requisitos",
+              "externo": true
+            },
+            {
+              "descripcion": "Gestiones para abogados y notarios",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1541715112091-e300506b-54b6",
+              "boton_texto": "Consultar requisitos",
+              "externo": true
+            },
+            {
+              "descripcion": "Presentación de la planilla del IVA",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1541695403691-42e37d8c-5c14",
+              "boton_texto": "Consultar requisitos",
+              "externo": true
+            },
+            {
+              "descripcion": "Solicitud de devolución por pagos indebidos",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1544742215300-58052f9f-10b1",
+              "boton_texto": "Consultar requisitos",
+              "externo": true
+            },
+            {
+              "descripcion": "Devolución o compensación de pagos en exceso del ISR anual",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1567533858813-166b89e0-9449",
+              "boton_texto": "Consultar requisitos",
+              "externo": true
+            },
+            {
+              "descripcion": "Formularios electrónicos de solicitud de devolución de crédito fiscal (régimen especial electrónico y régimen general)",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1573597244944-61668ad5-acf7",
+              "boton_texto": "Consultar requisitos",
+              "externo": true
+            },
+            {
+              "descripcion": "Distintivos tributarios y sus requisitos",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1715356603270-207da69d-8699",
+              "boton_texto": "Consultar requisitos",
+              "externo": true
+            },
+            {
+              "descripcion": "Gestiones para agentes de retención del IVA",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1580160685000-92f05ffc-54c3",
+              "boton_texto": "Consultar requisitos",
+              "externo": true
+            },
+            {
+              "descripcion": "Gestión de remanentes por retenciones del IVA",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1561561637360-f7d03262-922b",
+              "boton_texto": "Consultar requisitos",
+              "externo": true
+            },
+            {
+              "descripcion": "Registro y gestiones de gestores tributarios",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1544743843603-94d9dcb9-d83e",
+              "boton_texto": "Consultar requisitos",
+              "externo": true
+            },
+            {
+              "descripcion": "Listado general de formularios tributarios",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-personas-empresas/#1544743943508-2272c2f0-3b39",
+              "boton_texto": "Consultar requisitos",
+              "externo": true
+            }
+          ]
+        },
+        {
+          "titulo": "Requisitos de gestiones de vehículos en el RFV (12)",
+          "tab_id": "1505762845070-f56e7dc0-cbe2",
+          "items": [
+            {
+              "descripcion": "Inscripción de vehículos en el RFV",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-vehiculos/#1541722263760-bed533a1-d75d",
+              "boton_texto": "Consultar requisitos",
+              "externo": true
+            },
+            {
+              "descripcion": "Autorización de carpetas de vehículos",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-vehiculos/#1764787533600-5f808581-2d8a",
+              "boton_texto": "Consultar requisitos",
+              "externo": true
+            },
+            {
+              "descripcion": "Registro de marca y código de fabricante",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-vehiculos/#1642106578727-c83d17c4-34da",
+              "boton_texto": "Consultar requisitos",
+              "externo": true
+            },
+            {
+              "descripcion": "Traspaso de vehículos ante la SAT",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-vehiculos/#1541722263997-e0d7cba3-7daf",
+              "boton_texto": "Consultar requisitos",
+              "externo": true
+            },
+            {
+              "descripcion": "Traspaso electrónico de vehículos a través de notarios",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-vehiculos/#1541780077723-c74e470e-b935",
+              "boton_texto": "Consultar requisitos",
+              "externo": true
+            },
+            {
+              "descripcion": "Cambios, rectificaciones o transformaciones en datos de vehículos",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-vehiculos/#1541722264551-ab829ede-22f8",
+              "boton_texto": "Consultar requisitos",
+              "externo": true
+            },
+            {
+              "descripcion": "Reposición de distintivos (certificado de propiedad, tarjeta y placas de circulación)",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-vehiculos/#1541722264271-487e21fd-d904",
+              "boton_texto": "Consultar requisitos",
+              "externo": true
+            },
+            {
+              "descripcion": "Cambio de placas temporales",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-vehiculos/#1662393570133-d90819b2-32d3",
+              "boton_texto": "Consultar requisitos",
+              "externo": true
+            },
+            {
+              "descripcion": "Reposiciones con formularios en papel",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-vehiculos/#1541776381173-61f2f55a-46dc",
+              "boton_texto": "Consultar requisitos",
+              "externo": true
+            },
+            {
+              "descripcion": "Activación o inactivación de vehículos",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-vehiculos/#1541777125986-97d04375-37ee",
+              "boton_texto": "Consultar requisitos",
+              "externo": true
+            },
+            {
+              "descripcion": "Gestores tributarios autorizados para vehículos",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-vehiculos/#1541776888584-73400ddd-b78d",
+              "boton_texto": "Consultar requisitos",
+              "externo": true
+            },
+            {
+              "descripcion": "Tercera persona autorizada para gestiones de vehículos",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-vehiculos/#1666628292136-94f65fcc-f79f",
+              "boton_texto": "Consultar requisitos",
+              "externo": true
+            }
+          ]
+        },
+        {
+          "titulo": "Accesos por categoría de requisitos de aduanas (6)",
+          "tab_id": "1505784290624-8a1692b9-c4fe",
+          "items": [
+            {
+              "descripcion": "Consulta de expedientes aduaneros",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-aduanas/#1542142398181-8db4844a-6760",
+              "boton_texto": "Ir a la sección",
+              "externo": true
+            },
+            {
+              "descripcion": "Documentos para importación y admisión temporal",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-aduanas/#1542142298663-bee160b4-5362",
+              "boton_texto": "Ir a la sección",
+              "externo": true
+            },
+            {
+              "descripcion": "Gestiones de importación y exportación",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-aduanas/#1542209620324-5bd6722c-fbd7",
+              "boton_texto": "Ir a la sección",
+              "externo": true
+            },
+            {
+              "descripcion": "Gestiones de reexportación",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-aduanas/#1542142298723-7d324078-07a5",
+              "boton_texto": "Ir a la sección",
+              "externo": true
+            },
+            {
+              "descripcion": "Renovación de operación de AFPA",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-aduanas/#1608063945646-f9ebd644-65ff",
+              "boton_texto": "Ir a la sección",
+              "externo": true
+            },
+            {
+              "descripcion": "Formatos de documento compromisorio",
+              "url": "https://portal.sat.gob.gt/portal/requisitos-de-aduanas/#1738949698794-09454143-7939",
+              "boton_texto": "Ir a la sección",
+              "externo": true
+            }
+          ]
+        }
+      ],
+      "cta_principal": {
+        "texto": "Consultar estado de expedientes de Gestión Aduanera",
+        "url": "https://portal.sat.gob.gt/portal/requisitos-tramites-agencias/consulta-del-estado-o-actuaciones-de-expedientes-de-las-unidades-del-departamento-de-gestion-aduanera/",
+        "externo": true
+      }
+    },
+    {
+      "slug": "estudio-de-tiempos-de-despacho",
+      "arquetipo": "TIPO-3",
+      "titulo_h1": "Consultar informes y planes de acción del Estudio de Tiempos de Despacho (ETD)",
+      "bajada_lead": "Descarga los informes oficiales de resultados, planes de acción nacional, estudio regional y preguntas frecuentes del ETD elaborado por la Superintendencia de Administración Tributaria (SAT) con metodología de la Organización Mundial de Aduanas (OMA).",
+      "menu_lateral": [
+        {
+          "id": "seccion-metodologia",
+          "label": "Qué mide el estudio"
+        },
+        {
+          "id": "seccion-documentos",
+          "label": "Informes y planes de acción (PDF)"
+        }
+      ],
+      "eyebrow_previos": "Herramienta estratégica de facilitación",
+      "h2_previos": "Alcance y respaldo internacional del Estudio de Tiempos de Despacho",
+      "intro_previos": "Desarrollado a través del Programa de Modernización Integral Aduanera (MIAD) en cumplimiento del Acuerdo sobre Facilitación del Comercio de la Organización Mundial del Comercio (OMC), con asistencia técnica del Programa Mercator de la OMA y participación del sector público y privado.",
+      "datos_previos": [
+        {
+          "titulo": "Medición desde el arribo hasta el levante",
+          "descripcion": "Mide con rigor estadístico el tiempo requerido para el despacho y liberación de las mercancías desde su llegada al punto de entrada hasta su salida efectiva del recinto aduanero."
+        },
+        {
+          "titulo": "Importación definitiva y exportación marítima",
+          "descripcion": "Incluye tanto la primera edición enfocada en importaciones definitivas (Plan de 2020 a 2023) como la segunda edición enfocada en exportación marítima (Plan de 2026 a 2029) y el estudio regional."
+        },
+        {
+          "titulo": "Planes de acción interinstitucionales",
+          "descripcion": "Identifica cuellos de botella en el flujo comercial y define acciones concretas para cada autoridad gubernamental y actor privado de la cadena logística."
+        }
+      ],
+      "eyebrow_documentos": "Publicaciones oficiales",
+      "h2_documentos": "Informes de resultados, planes de acción y preguntas frecuentes",
+      "intro_documentos": "Descarga directamente en formato de Documento Portátil (PDF) los estudios completos, el folleto resumen de resultados y el documento de preguntas frecuentes.",
+      "documentos": [
+        {
+          "titulo": "Resultados del Estudio de Tiempos de Despacho (1.ª edición: importación)",
+          "descripcion": "Informe nacional con la medición de tiempos de despacho en importaciones definitivas (PDF).",
+          "url": "https://portal.sat.gob.gt/portal/descarga/12718/facilitacion-de-comercio/42801/resultados-estudio-tiempos-de-despacho.pdf",
+          "boton_texto": "Descargar informe 1.ª edición (PDF)",
+          "externo": true
+        },
+        {
+          "titulo": "Plan de Acción Nacional para reducir tiempos de despacho (de 2020 a 2023)",
+          "descripcion": "Hoja de ruta interinstitucional para reducir tiempos en las importaciones definitivas (PDF).",
+          "url": "https://portal.sat.gob.gt/portal/descarga/12718/facilitacion-de-comercio/42802/plan-de-accion-nacional.pdf",
+          "boton_texto": "Descargar plan de 2020 a 2023 (PDF)",
+          "externo": true
+        },
+        {
+          "titulo": "Estudio de Tiempos de Despacho Regional Centroamericano",
+          "descripcion": "Documento comparativo regional de medición de tiempos de despacho en Centroamérica (PDF).",
+          "url": "https://portal.sat.gob.gt/portal/descarga/12718/facilitacion-de-comercio/59548/etd-regional-comprimido-1.pdf",
+          "boton_texto": "Descargar estudio regional (PDF)",
+          "externo": true
+        },
+        {
+          "titulo": "Informe de resultados del Plan de Acción Nacional (de 2020 a 2023)",
+          "descripcion": "Evaluación del cumplimiento de metas del Plan de Acción Nacional de 2020 a 2023 (PDF).",
+          "url": "https://portal.sat.gob.gt/portal/descarga/12718/facilitacion-de-comercio/74121/informe_resultados-del-plan-de-accion-nacional-2020-2023.pdf",
+          "boton_texto": "Descargar informe de resultados (PDF)",
+          "externo": true
+        },
+        {
+          "titulo": "Folleto de resultados del Plan de Acción Nacional (de 2020 a 2023)",
+          "descripcion": "Resumen ejecutivo ilustrado con los principales logros del plan de 2020 a 2023 en importaciones (PDF).",
+          "url": "https://portal.sat.gob.gt/portal/descarga/12718/facilitacion-de-comercio/74294/broshure-resultados-plan-2020-2023.pdf",
+          "boton_texto": "Descargar folleto resumen (PDF)",
+          "externo": true
+        },
+        {
+          "titulo": "Estudio de Tiempos de Despacho (2.ª edición: exportación)",
+          "descripcion": "Informe oficial de la segunda edición del ETD enfocado en procesos de exportación (PDF).",
+          "url": "https://portal.sat.gob.gt/portal/descarga/12718/facilitacion-de-comercio/91564/estudio-de-tiempos-de-despacho",
+          "boton_texto": "Descargar informe 2.ª edición (PDF)",
+          "externo": true
+        },
+        {
+          "titulo": "Plan de Acción Nacional de 2026 a 2029 (exportación en aduanas con despacho marítimo)",
+          "descripcion": "Plan estratégico de 2026 a 2029 para optimizar el proceso de exportación en aduanas marítimas (PDF).",
+          "url": "https://portal.sat.gob.gt/portal/descarga/12718/facilitacion-de-comercio/91565/plan-de-accion-nacional-2026-2029-proceso-de-exportacion-en-aduanas-con-modalidad-de-despacho-maritimo",
+          "boton_texto": "Descargar plan de 2026 a 2029 (PDF)",
+          "externo": true
+        },
+        {
+          "titulo": "Preguntas frecuentes del Estudio de Tiempos de Despacho",
+          "descripcion": "Guía de respuestas oficiales sobre la metodología de la OMA, alcance y fases del ETD (PDF).",
+          "url": "https://portal.sat.gob.gt/portal/wp-content/uploads/2025/03/Preguntas-Frecuentes.pdf",
+          "boton_texto": "Descargar preguntas frecuentes (PDF)",
+          "externo": true
+        }
+      ]
+    }
+  ]
+}
